@@ -1,0 +1,84 @@
+/*!\file $CPNT$.h
+** \author SMFSW
+** \version v0.1
+** \date 2017
+** \copyright MIT (c) 2017, SMFSW
+** \brief $CPNT$ Driver declarations
+**/
+/****************************************************************/
+#ifndef __$CPNT$_H__
+	#define __$CPNT$_H__
+
+#include "I2C_component.h"
+#include "FctERR.h"
+
+#include "sarmfsw.h"
+#include CMSIS_INC
+#include CMSIS_CFG
+
+#if defined(HAL_I2C_MODULE_ENABLED)
+#include "i2c.h"
+/****************************************************************/
+
+
+// *****************************************************************************
+// Section: Constants
+// *****************************************************************************
+#define $CPNT$_ADDR			(0x50 << 1)		//!< $CPNT$ address
+
+#define $CPNT$_BASE_ADDR	$CPNT$_ADDR		//!< $CPNT$ Base address
+
+
+// *****************************************************************************
+// Section: Types
+// *****************************************************************************
+/*!\enum $CPNT$_reg_map
+** \brief Register map enum of $CPNT$
+**/
+typedef enum PACK__ $CPNT$_reg_map {
+	$CPNT$__REG1 = 0,	//!< default value for reference
+	$CPNT$__REG2,		//!< default value for reference
+} $CPNT$_reg;
+
+
+/*!\union u$CPNT$_REG__REG1
+** \brief Union for REG1 of $CPNT$
+**/
+typedef union u$CPNT$_REG__REG1 {
+	uint8_t Byte;
+	struct {
+		uint8_t BIT1			:1;		//!< BIT1 description
+		uint8_t 				:6;
+		uint8_t BIT2			:1;		//!< BIT2 description
+	} Bits;
+} u$CPNT$_REG__REG1;
+
+
+/*!\union u$CPNT$_REG_MAP
+** \brief Union of $CPNT$ registry map
+**/
+typedef union u$CPNT$_REG_MAP {
+	uint8_t Bytes[2];
+	struct {
+		u$CPNT$_REG__REG1	Reg_1;
+		u$CPNT$_REG__REG1	Reg_2;
+	} Reg;
+} u$CPNT$_REG_MAP;
+
+
+// *****************************************************************************
+// Section: Interface Routines
+// *****************************************************************************
+// Slave init
+FctERR $CPNT$_Init(void);
+
+// Low level access
+FctERR $CPNT$_Write(uint8_t * Buffer, uint16_t Addr, uint16_t nb);
+FctERR $CPNT$_Read(uint8_t * Buffer, uint16_t Addr, uint16_t nb);
+
+
+/****************************************************************/
+#include "$CPNT$_ex.h"
+#endif
+#endif /* __$CPNT$_H__ */
+/****************************************************************/

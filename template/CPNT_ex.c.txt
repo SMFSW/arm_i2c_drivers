@@ -1,0 +1,38 @@
+/*!\file $CPNT$_ex.c
+** \author SMFSW
+** \version v0.1
+** \date 2017
+** \copyright MIT (c) 2017, SMFSW
+** \brief $CPNT$ Driver extensions code
+**/
+/****************************************************************/
+#include "$CPNT$.h"
+#include "globals.h"
+
+//#if defined(HAL_IWDG_MODULE_ENABLED)
+//#include "iwdg.h"
+//#endif
+
+#if defined(HAL_I2C_MODULE_ENABLED)
+#if defined(I2C_$CPNT$)
+/****************************************************************/
+// std libs
+//#include <math.h>
+//#include <stdlib.h>
+//#include <string.h>
+/****************************************************************/
+
+
+/*!\brief fct for $CPNT$ peripheral
+**/
+FctERR $CPNT$_fct(void)
+{
+	FctERR err = ERR_OK;
+	return err;
+}
+
+
+/****************************************************************/
+#endif
+#endif
+/****************************************************************/
