@@ -1,37 +1,44 @@
-/*!\file FM24C16B_ex.c
+/*!\file FM24C_ex.c
 ** \author SMFSW
-** \version v0.1
+** \version v0.2
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
-** \brief FM24C16B Driver extensions code
+** \brief FM24C Driver extensions code
+** \details FM24C16B: 16-Kbit (2K * 8) Serial I2C F-RAM
+**			FM24C04B: 4-Kbit (512 * 8) Serial I2C F-RAM
 **/
 /****************************************************************/
-#include "FM24C16B.h"
+#include "FM24C.h"
 #include "globals.h"
 
+#if defined(HAL_IWDG_MODULE_ENABLED)
+#include "iwdg.h"
+#endif
+
 #if defined(HAL_I2C_MODULE_ENABLED)
-#if defined(I2C_FM24C16B)
+#if defined(I2C_FM24C)
 /****************************************************************/
 // std libs
 #include <string.h>
 /****************************************************************/
 
 
-#define VAL_CLR	0xFF	//!< Mass erase value for FM24C16B
+#define VAL_CLR	0xFF	//!< Mass erase value for FM24C
 
-/*!\brief Mass erase of FM24C16B
-** \return FctERR - error code
-**/
-FctERR FM24C16B_Mass_Erase(void)
+
+FctERR FM24C_Mass_Erase(void)
 {
 	FctERR	err;
 	int		i;
-	uint8_t	bankData[FM24C16B_BANK_SIZE];
+	uint8_t	bankData[FM24C_BANK_SIZE];
 	memset(&bankData, VAL_CLR, sizeof(bankData));
 
-	for (i = 0 ; i < (FM24C16B_SIZE / FM24C16B_BANK_SIZE) ; i++)
+	for (i = 0 ; i < (FM24C_SIZE / FM24C_BANK_SIZE) ; i++)
 	{
-		err = FM24C16B_Write_Banked(bankData, 0, i, FM24C16B_BANK_SIZE);
+		#if defined(HAL_IWDG_MODULE_ENABLED)
+			HAL_IWDG_Refresh(&hiwdg);
+		#endif
+		err = FM24C_Write_Banked(bankData, 0, i, FM24C_BANK_SIZE);
 		if (err) { break; }
 	}
 

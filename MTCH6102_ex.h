@@ -1,9 +1,10 @@
 /*!\file MTCH6102_ex.h
 ** \author SMFSW
-** \version v0.1
+** \version v0.2
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
-** \brief Microchip Capacitive Driver extensions declarations
+** \brief MTCH6102 Driver extensions declarations
+** \details MTCH6102: Low-Power Projected Capacitive Touch Controller
 **/
 /****************************************************************/
 #ifndef __MTCH6102_EX_H__
@@ -33,11 +34,24 @@
 #define		per100ms	0x0C99		//!< example period register value for 100ms
 
 
-extern uint8_t MTCH6102_default_core[MTCH__MODE_CON - MTCH__FW_MAJOR + 1];
-extern uint8_t MTCH6102_default_cfg[MTCH__I2CADDR - MTCH__NUMBER_OF_X_CHANNELS + 1];
+// *****************************************************************************
+// Section: Types
+// *****************************************************************************
+typedef struct MTCH6102_raw {
+	uint8_t	sensor[16];
+} MTCH6102_raw_sense;
+
+typedef struct MTCH6102_gest {
+	uMTCH_REG__TOUCHSTATE		Touch_state;
+	uMTCH_REG__TOUCHX			Touch_x;
+	uMTCH_REG__TOUCHY			Touch_y;
+	uMTCH_REG__TOUCHLSB			Touch_lsb;
+	MTCH6102_GESTURE_STATE		Gest_state;
+	MTCH6102_GESTURE_DIAGNOSTIC	Gest_diag;
+} MTCH6102_raw_gest;
 
 
-typedef struct StructDecodedTouch {
+typedef struct MTCH6102_gesture {
 	uint16_t						X_pos;
 	uint16_t						Y_pos;
 	MTCH6102_GESTURE_STATE			State;
@@ -46,19 +60,22 @@ typedef struct StructDecodedTouch {
 	bool							Touch;
 	bool							Gesture;
 	bool							Large;
-} DecodedTouch;
+} MTCH6102_gesture;
 
 
 // *****************************************************************************
 // Section: Interface Routines
 // *****************************************************************************
-// High level functions
-FctERR MTCH6102_init(uint8_t i2caddr);
-FctERR MTCH6102_read_regs(uint8_t addr, uint8_t * dat, uint8_t sz);
-FctERR MTCH6102_write_regs(uint8_t addr, uint8_t * dat, uint8_t sz);
-FctERR MTCH6102_decode_touch_datas(uint8_t * dat, DecodedTouch * touch);
-FctERR MTCH6102_gesture_to_str(char * str, MTCH6102_GESTURE_STATE state);
-FctERR MTCH6102_diag_to_str(char * str, MTCH6102_GESTURE_DIAGNOSTIC diag);
+/****************************************/
+/*** High level methods and functions ***/
+/****************************************/
+
+__INLINE FctERR INLINE__ MTCH6102_Get_Raw(MTCH6102_raw_sense * raw) {
+	return MTCH6102_Read((uint8_t *) raw, MTCH__SENSOR_VALUE_RX0, sizeof(MTCH6102_raw_sense)); }
+
+__INLINE FctERR INLINE__ MTCH6102_Get_Gest(MTCH6102_raw_gest * gest) {
+	return MTCH6102_Read((uint8_t *) gest, MTCH__TOUCH_STATE, sizeof(MTCH6102_raw_gest)); }
+
 
 #define MTCH6102_raz()	{	uMTCH_REG__CMD cmd;		\
 							cmd.Bits.DEF = true;	\

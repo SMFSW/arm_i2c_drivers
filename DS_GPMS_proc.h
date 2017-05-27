@@ -1,0 +1,108 @@
+/*!\file DS_GPMS_proc.h
+** \author SMFSW
+** \version v0.2
+** \date 2017
+** \copyright MIT (c) 2017, SMFSW
+** \brief DS-GPM.S Driver procedures declarations
+** \details DS-GPM.S: 99 Channel Positioning System (GPS + GLONASS) Shield
+**/
+/****************************************************************/
+#ifndef __DS_GPMS_PROC_H__
+	#define __DS_GPMS_PROC_H__
+
+#include "DS_GPMS.h"
+
+#include "sarmfsw.h"
+#include CMSIS_INC
+#include CMSIS_CFG
+
+#if defined(HAL_I2C_MODULE_ENABLED)
+#include "i2c.h"
+/****************************************************************/
+// TODO: doxygen
+
+
+// *****************************************************************************
+// Section: Constants
+// *****************************************************************************
+
+
+// *****************************************************************************
+// Section: Types
+// *****************************************************************************
+/*!\struct GPMS_date
+** \brief DS-GPM.S Date struct
+**/
+typedef struct GPMS_date {
+	uint16_t	Year;	//!< Year
+	uint8_t		Month;	//!< Month
+	uint8_t		Day;	//!< Day
+} GPMS_date;
+
+/*!\struct GPMS_hour
+** \brief DS-GPM.S Time of day struct
+**/
+typedef struct GPMS_hour {
+	uint8_t	Hours;		//!< Hours
+	uint8_t	Minutes;	//!< Minutes
+	uint8_t	Seconds;	//!< Seconds
+} GPMS_hour;
+
+/*!\struct GPMS_coord
+** \brief DS-GPM.S coordinate struct
+**/
+typedef struct GPMS_coord {
+	uint8_t			Degrees;	//!< Degrees coordinate
+	float			Minutes;	//!< Minutes coordinate
+	GPMS_direction	Direction;	//!< Direction coordinate
+} GPMS_coord;
+
+
+typedef struct GPMS_proc {
+	GPMS_date	Date;
+	GPMS_hour	Hour;
+	GPMS_coord	Latitude;
+	GPMS_coord	Longitude;
+	uint16_t	Altitude;
+	float		Speed;
+	float		Heading_True;
+	float		Heading_Magnetic;
+	struct {
+	GPMS_mode	Mode;
+	} cfg;
+} GPMS_proc;
+
+
+// *****************************************************************************
+// Section: Interface Routines
+// *****************************************************************************
+/******************/
+/*** Procedures ***/
+/******************/
+
+/*!\brief Initialization Sequence for GPMS peripheral
+** \return FctERR - error code
+**/
+FctERR GPMS_Init_Sequence(void);
+
+
+FctERR GPMS_Get_Date(GPMS_date * date);
+
+FctERR GPMS_Get_Hour(GPMS_hour * hour);
+
+FctERR GPMS_Get_Latitude(GPMS_coord * lat);
+
+FctERR GPMS_Get_Longitude(GPMS_coord * lon);
+
+FctERR GPMS_Get_Heading(float * heading, GPMS_north type);
+
+FctERR GPMS_Get_Speed(float * speed);
+
+FctERR GPMS_Get_Altitude(uint16_t * altitude);
+
+FctERR GPMS_handler(void);
+
+/****************************************************************/
+#endif
+#endif /* __DS_GPMS_PROC_H__ */
+/****************************************************************/

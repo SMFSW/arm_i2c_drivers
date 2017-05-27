@@ -1,9 +1,10 @@
 /*!\file $CPNT$.h
 ** \author SMFSW
-** \version v0.1
+** \version v0.2
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief $CPNT$ Driver declarations
+** \details $CPNT$:
 **/
 /****************************************************************/
 #ifndef __$CPNT$_H__
@@ -24,9 +25,15 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define $CPNT$_ADDR			(0x50 << 1)		//!< $CPNT$ address
+#define $CPNT$_ADDR			0x00			//!< $CPNT$ address
 
 #define $CPNT$_BASE_ADDR	$CPNT$_ADDR		//!< $CPNT$ Base address
+
+
+// *****************************************************************************
+// Section: Datas
+// *****************************************************************************
+extern I2C_slave $CPNT$_hal;	//!< $CPNT$ Slave instance
 
 
 // *****************************************************************************
@@ -41,44 +48,66 @@ typedef enum PACK__ $CPNT$_reg_map {
 } $CPNT$_reg;
 
 
+/*!\enum $CPNT$_enum
+** \brief Values enum for $CPNT$
+**/
+typedef enum PACK__ $CPNT$_reg_map {
+	$CPNT$__VAL1 = 0,	//!< default value for reference
+	$CPNT$__VAL2,		//!< default value for reference
+} $CPNT$_enum;
+
+
 /*!\union u$CPNT$_REG__REG1
-** \brief Union for REG1 of $CPNT$
+** \brief Union for REG1 for $CPNT$
 **/
 typedef union u$CPNT$_REG__REG1 {
 	uint8_t Byte;
 	struct {
-		uint8_t BIT1			:1;		//!< BIT1 description
+		uint8_t BIT0			:1;		//!< BIT0 description (LSB first)
 		uint8_t 				:6;
-		uint8_t BIT2			:1;		//!< BIT2 description
+		uint8_t BIT1			:1;		//!< BIT1 description (MSB last)
 	} Bits;
 } u$CPNT$_REG__REG1;
-
-
-/*!\union u$CPNT$_REG_MAP
-** \brief Union of $CPNT$ registry map
-**/
-typedef union u$CPNT$_REG_MAP {
-	uint8_t Bytes[2];
-	struct {
-		u$CPNT$_REG__REG1	Reg_1;
-		u$CPNT$_REG__REG1	Reg_2;
-	} Reg;
-} u$CPNT$_REG_MAP;
 
 
 // *****************************************************************************
 // Section: Interface Routines
 // *****************************************************************************
-// Slave init
+/******************/
+/*** Slave init ***/
+/******************/
+
+/*!\brief Initialization for $CPNT$ peripheral
+** \return FctERR - error code
+**/
 FctERR $CPNT$_Init(void);
 
-// Low level access
-FctERR $CPNT$_Write(uint8_t * Buffer, uint16_t Addr, uint16_t nb);
-FctERR $CPNT$_Read(uint8_t * Buffer, uint16_t Addr, uint16_t nb);
+
+/************************/
+/*** Low level access ***/
+/************************/
+
+/*!\brief I2C Write function for $CPNT$
+** \param[in] data - pointer to write from
+** \param[in] addr - Address to write to
+** \param[in] nb - Number of bytes to write
+** \return FctERR - error code
+**/
+FctERR $CPNT$_Write(uint8_t * data, uint16_t addr, uint16_t nb);
+
+
+/*!\brief I2C Read function for $CPNT$
+** \param[in,out] data - pointer to read to
+** \param[in] addr - Address to read from
+** \param[in] nb - Number of bytes to read
+** \return FctERR - error code
+**/
+FctERR $CPNT$_Read(uint8_t * data, uint16_t addr, uint16_t nb);
 
 
 /****************************************************************/
-#include "$CPNT$_ex.h"
+#include "$CPNT$_ex.h"		// Include extensions
+#include "$CPNT$_proc.h"	// Include procedures
 #endif
 #endif /* __$CPNT$_H__ */
 /****************************************************************/

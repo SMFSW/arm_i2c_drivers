@@ -1,9 +1,10 @@
 /*!\file $CPNT$_ex.c
 ** \author SMFSW
-** \version v0.1
+** \version v0.2
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief $CPNT$ Driver extensions code
+** \details $CPNT$:
 **/
 /****************************************************************/
 #include "$CPNT$.h"
@@ -23,11 +24,15 @@
 /****************************************************************/
 
 
-/*!\brief fct for $CPNT$ peripheral
-**/
+extern $CPNT$_proc $CPNT$;
+
+
 FctERR $CPNT$_fct(void)
 {
 	FctERR err = ERR_OK;
+	
+	if (err)	{ return err; }
+	
 	return err;
 }
 

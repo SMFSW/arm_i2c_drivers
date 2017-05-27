@@ -1,9 +1,10 @@
 /*!\file $CPNT$.c
 ** \author SMFSW
-** \version v0.1
+** \version v0.2
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief $CPNT$ Driver code
+** \details $CPNT$:
 **/
 /****************************************************************/
 #include "$CPNT$.h"
@@ -23,47 +24,49 @@
 /****************************************************************/
 
 
-static I2C_slave			$CPNT$ = { { pNull, $CPNT$_BASE_ADDR, I2C_MEMADD_SIZE_8BIT, I2C_slave_timeout }, 0, HAL_OK, false };
+I2C_slave $CPNT$_hal = { { pNull, I2C_ADDR($CPNT$_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, false };
 
 
-/*!\brief Initialization of the $CPNT$ peripheral
-**/
+/****************************************************************/
+
+
 FctERR $CPNT$_Init(void)
 {
-	I2C_slave_init(&$CPNT$, I2C_$CPNT$, $CPNT$_BASE_ADDR, I2C_MEMADD_SIZE_8BIT, I2C_slave_timeout);
-	return ERR_OK;
+	I2C_slave_init(&$CPNT$_hal, I2C_$CPNT$, $CPNT$_BASE_ADDR, I2C_slave_timeout);
+	return $CPNT$_Init_Sequence();
 }
 
 
-/*!\brief I2C Write function for $CPNT$
-** \param[in] Buffer - pointer to write from
-** \param[in] Addr - Address to write to
-** \param[in] NbChar - Number of bytes to write
-** \return FctERR - error code
-**/
-FctERR $CPNT$_Write(uint8_t * Buffer, uint16_t Addr, uint16_t nb)
-{
-	//if (Addr > )				{ return ERR_RANGE; }		// Unknown register
-	//if ((Addr + NbChar) > )	{ return ERR_OVERFLOW; }	// More bytes than registers
+/****************************************************************/
 
-	$CPNT$.status = HAL_I2C_Mem_Write($CPNT$.cfg.inst, $CPNT$.cfg.addr, Addr, $CPNT$.cfg.mem_size, Buffer, nb, $CPNT$.cfg.timeout);
-	return HALERRtoFCTERR($CPNT$.status);
+
+FctERR $CPNT$_Write(uint8_t * data, uint16_t addr, uint16_t nb)
+{
+	if (!data)							{ return ERR_MEMORY; }		// Null pointer
+	//if (addr > )				{ return ERR_RANGE; }		// Unknown register
+	//if ((addr + nb -1) > )	{ return ERR_OVERFLOW; }	// More bytes than registers
+
+	I2C_set_busy(&$CPNT$_hal, true);
+	
+	$CPNT$_hal.status = HAL_I2C_Mem_Write($CPNT$_hal.cfg.inst, $CPNT$_hal.cfg.addr, addr, $CPNT$_hal.cfg.mem_size, data, nb, $CPNT$_hal.cfg.timeout);
+	
+	I2C_set_busy(&$CPNT$_hal, false);
+	return HALERRtoFCTERR($CPNT$_hal.status);
 }
 
 
-/*!\brief I2C Read function for $CPNT$
-** \param[in] Buffer - pointer to read to
-** \param[in] Addr - Address to read from
-** \param[in] nb - Number of bytes to read
-** \return FctERR - error code
-**/
-FctERR $CPNT$_Read(uint8_t * Buffer, uint16_t Addr, uint16_t nb)
+FctERR $CPNT$_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
-	//if (Addr > )				{ return ERR_RANGE; }		// Unknown register
-	//if ((Addr + NbChar) > )	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if (!data)							{ return ERR_MEMORY; }		// Null pointer
+	//if (addr > )				{ return ERR_RANGE; }		// Unknown register
+	//if ((addr + nb - 1) > )	{ return ERR_OVERFLOW; }	// More bytes than registers
 
-	$CPNT$.status = HAL_I2C_Mem_Read($CPNT$.cfg.inst, $CPNT$.cfg.addr, Addr, $CPNT$.cfg.mem_size, Buffer, nb, $CPNT$.cfg.timeout);
-	return HALERRtoFCTERR($CPNT$.status);
+	I2C_set_busy(&$CPNT$_hal, true);
+	
+	$CPNT$_hal.status = HAL_I2C_Mem_Read($CPNT$_hal.cfg.inst, $CPNT$_hal.cfg.addr, addr, $CPNT$_hal.cfg.mem_size, data, nb, $CPNT$_hal.cfg.timeout);
+	
+	I2C_set_busy(&$CPNT$_hal, false);
+	return HALERRtoFCTERR($CPNT$_hal.status);
 }
 
 

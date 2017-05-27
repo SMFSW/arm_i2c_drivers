@@ -1,9 +1,10 @@
 /*!\file PCA9624_ex.c
 ** \author SMFSW
-** \version v0.1
+** \version v0.2
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
-** \brief PCA9624 Driver extensions code (8 channels 8b PWM driver)
+** \brief PCA9624 Driver extensions code
+** \details PCA9624: 8-bit Fm+ I2C-bus 100mA 40V LED driver
 **/
 /****************************************************************/
 #include "PCA9624.h"
@@ -15,191 +16,140 @@
 // std libs
 #include <stdlib.h>
 /****************************************************************/
-// TODO: doxygen
-
-
-extern I2C_slave PCA9624;
 
 
 FctERR PCA9624_Set_Latch(PCA96xx_latch latch)
 {
+	uPCA9624_REG__MODE2	MODE2;
 	FctERR				err;
-	uPCA9624_REG__MODE2	mode2;
 
 	if (latch > PCA96xx__LATCH_ON_ACK)	{ return ERR_VALUE; }	// Unknown latch mode
 
-	err = PCA9624_Read((uint8_t *) &mode2, PCA9624__MODE2, 1);
+	err = PCA9624_Read((uint8_t *) &MODE2, PCA9624__MODE2, 1);
 	if (err)	{ return err; }
 
-	mode2.Bits.OCH = latch;
-	return PCA9624_Write((uint8_t *) &mode2, PCA9624__MODE2, 1);
+	MODE2.Bits.OCH = latch;
+	return PCA9624_Write((uint8_t *) &MODE2, PCA9624__MODE2, 1);
 }
 
-FctERR PCA9624_Set_Mode_LED(PCA96xx_chan Chan, PCA9624_ledout mode)
-{
-	uint8_t					idx = (Chan > PCA96xx__PWM4) ? 1 : 0;
-	FctERR					err;
-	uPCA9624_REG__LEDOUT0	led;
 
-	if ((Chan < PCA96xx__PWM1) && (Chan > PCA96xx__PWM8))	{ return ERR_RANGE; }	// Unknown channel
+FctERR PCA9624_Set_Mode_LED(PCA96xx_chan chan, PCA9624_ledout mode)
+{
+	uPCA9624_REG__LEDOUT0	LED;
+	FctERR					err;
+	uint8_t					idx = (chan > PCA96xx__PWM4) ? 1 : 0;
+
+	if ((chan < PCA96xx__PWM1) && (chan > PCA96xx__PWM8))	{ return ERR_RANGE; }	// Unknown channel
 	if (mode > PCA9624__GROUP_BRIGHT)						{ return ERR_VALUE; }	// Unknown control mode
 
-	err = PCA9624_Read((uint8_t *) &led, PCA9624__LEDOUT0 + idx, 1);
+	err = PCA9624_Read((uint8_t *) &LED, PCA9624__LEDOUT0 + idx, 1);
 	if (err)	{ return err; }
 
-	switch (Chan)
+	switch (chan)
 	{
 		case PCA96xx__PWM1:
 		case PCA96xx__PWM5:
-			led.Bits.LDR0 = mode;
+			LED.Bits.LDR0 = mode;
 			break;
 
 		case PCA96xx__PWM2:
 		case PCA96xx__PWM6:
-			led.Bits.LDR1 = mode;
+			LED.Bits.LDR1 = mode;
 			break;
 
 		case PCA96xx__PWM3:
 		case PCA96xx__PWM7:
-			led.Bits.LDR2 = mode;
+			LED.Bits.LDR2 = mode;
 			break;
 
 		case PCA96xx__PWM4:
 		case PCA96xx__PWM8:
-			led.Bits.LDR3 = mode;
+			LED.Bits.LDR3 = mode;
 			break;
 
 		default:
 			break;
 	}
 
-	return PCA9624_Write((uint8_t *) &led, PCA9624__LEDOUT0 + idx, 1);
+	return PCA9624_Write((uint8_t *) &LED, PCA9624__LEDOUT0 + idx, 1);
 }
 
-FctERR PCA9624_Set_Mode_LEDs(uint8_t Chans, PCA9624_ledout mode)
-{
-	FctERR					err;
-	uPCA9624_REG__LEDOUT0	led[2];
 
-	if (!Chans)							{ return ERR_OK; }		// Nothing to do
+FctERR PCA9624_Set_Mode_LEDs(uint8_t chans, PCA9624_ledout mode)
+{
+	uPCA9624_REG__LEDOUT0	LED[2];
+	FctERR					err;
+
+	if (!chans)							{ return ERR_OK; }		// Nothing to do
 	if (mode > PCA9624__GROUP_BRIGHT)	{ return ERR_VALUE; }	// Unknown control mode
 
-	err = PCA9624_Read((uint8_t *) led, PCA9624__LEDOUT0, 2);
+	err = PCA9624_Read((uint8_t *) LED, PCA9624__LEDOUT0, 2);
 	if (err)	{ return err; }
 
 	for (int i = PCA96xx__PWM1, j = 1 ; i <= PCA96xx__PWM8 ; i++, j <<= 1)
 	{
-		if (Chans & j)
+		if (chans & j)
 		{
 			div_t tmp = div(i, 4);
 
-			if (tmp.rem == 0)		{ led[tmp.quot].Bits.LDR0 = mode; }
-			else if (tmp.rem == 1)	{ led[tmp.quot].Bits.LDR1 = mode; }
-			else if (tmp.rem == 2)	{ led[tmp.quot].Bits.LDR2 = mode; }
-			else if (tmp.rem == 3)	{ led[tmp.quot].Bits.LDR3 = mode; }
+			if (tmp.rem == 0)		{ LED[tmp.quot].Bits.LDR0 = mode; }
+			else if (tmp.rem == 1)	{ LED[tmp.quot].Bits.LDR1 = mode; }
+			else if (tmp.rem == 2)	{ LED[tmp.quot].Bits.LDR2 = mode; }
+			else if (tmp.rem == 3)	{ LED[tmp.quot].Bits.LDR3 = mode; }
 		}
 	}
 
-	return PCA9624_Write((uint8_t *) led, PCA9624__LEDOUT0, 2);
+	return PCA9624_Write((uint8_t *) LED, PCA9624__LEDOUT0, 2);
 }
 
 
-/*!\brief Reset of the PCA9624 peripheral
-** \param [in] all - Reset all devices
-**/
 FctERR PCA9624_Reset(bool all)
 {
 	uint8_t Data = 0x06;
-	PCA9624.status = HAL_I2C_Master_Transmit(PCA9624.cfg.inst, all ? PCA96xx_GENERAL_CALL_ADDR : PCA9624.cfg.addr, &Data, 1, PCA9624.cfg.timeout);
-	return HALERRtoFCTERR(PCA9624.status);
+	PCA9624_hal.status = HAL_I2C_Master_Transmit(PCA9624_hal.cfg.inst, all ? PCA96xx_GENERAL_CALL_ADDR : PCA9624_hal.cfg.addr, &Data, 1, PCA9624_hal.cfg.timeout);
+	return HALERRtoFCTERR(PCA9624_hal.status);
 }
 
 
 
-/*!\brief Reads I2C register from PCA9624
-**
-** \param [in] Reg - Register address to read from
-** \param [in,out] Value - Pointer to the data for receive
-** \return FctERR - ErrorCode
-** \retval ERR_OK - OK
-** \retval ERR_RANGE - Wrong Chan number
-** \retval Some others possible from called func
-**/
-FctERR PCA9624_ReadRegister(PCA9624_reg Reg, uint8_t * Value)
+FctERR PCA9624_ReadRegister(PCA9624_reg reg, uint8_t * val)
 {
-	*Value = 0;
+	*val = 0;
 
-	if (Reg > PCA9624__ALLCALLADR)		{ return ERR_RANGE; }		// Unknown register
+	if (reg > PCA9624__ALLCALLADR)		{ return ERR_RANGE; }		// Unknown register
 
-	return PCA9624_Read(Value, Reg, 1);
+	return PCA9624_Read(val, reg, 1);
 }
 
 
-/*!\brief Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8_t)
-**
-** \param [in] Chan - channel number
-** \param [in,out] DutyCycle - Pointer to the data for receive coded on a uint8_t
-** \return FctERR - ErrorCode
-** \retval ERR_OK - OK
-** \retval ERR_RANGE - Wrong channel number
-** \retval Some others possible from called func
-**/
-FctERR PCA9624_ReadVal(PCA96xx_chan Chan, uint8_t * DutyCycle)
+FctERR PCA9624_ReadVal(PCA96xx_chan chan, uint8_t * duty)
 {
-	*DutyCycle = 0;
-
-	if ((Chan < PCA96xx__PWM1) && (Chan > PCA96xx__PWM8))	{ return ERR_RANGE; }	// Unknown channel
-
-	return PCA9624_Read(DutyCycle, PCA9624__PWM0 + Chan - 1, 1);
+	*duty = 0;
+	if ((chan < PCA96xx__PWM1) && (chan > PCA96xx__PWM8))	{ return ERR_RANGE; }	// Unknown channel
+	return PCA9624_Read(duty, PCA9624__PWM0 + chan - 1, 1);
 }
 
 
-/*!\brief Computes and send I2C lighting values to apply to a particular or all channels of the PCA9624
-**
-** \param [in] Chan - channel number
-** \param [in] DutyCycle - Duty cycle coded on a uint8_t
-** \return FctERR - ErrorCode
-** \retval ERR_OK - OK
-** \retval ERR_RANGE - Wrong channel number
-**/
-FctERR PCA9624_PutVal(PCA96xx_chan Chan, uint8_t DutyCycle)
+FctERR PCA9624_PutVal(PCA96xx_chan chan, uint8_t duty)
 {
-	if ((Chan < PCA96xx__PWM1) && (Chan > PCA96xx__PWM8))	{ return ERR_RANGE; }	// Unknown channel
-
-	return PCA9624_Write(&DutyCycle, PCA9624__PWM0 + Chan - 1, 1);
-}
-
-/*!\brief Sends I2C lighting ON values to apply to a particular or all channels of the PCA9624
-**
-** \param [in] Chan - channel number
-** \return FctERR - ErrorCode
-** \retval ERR_OK - OK
-** \retval ERR_RANGE - Wrong channel number
-**/
-FctERR PCA9624_SetVal(PCA96xx_chan Chan)
-{
-	const uint8_t Val = 0xFF;
-
-	if ((Chan < PCA96xx__PWM1) && (Chan > PCA96xx__PWM8))	{ return ERR_RANGE; }	// Unknown channel
-
-	return PCA9624_Write((uint8_t *) &Val, PCA9624__PWM0 + Chan - 1, 1);
+	if ((chan < PCA96xx__PWM1) && (chan > PCA96xx__PWM8))	{ return ERR_RANGE; }	// Unknown channel
+	return PCA9624_Write(&duty, PCA9624__PWM0 + chan - 1, 1);
 }
 
 
-/*!\brief Sends I2C PWm OFF values to apply to a particular or all channels of the PCA9624
-**
-** \param [in] Chan - channel number
-** \return FctERR - ErrorCode
-** \retval ERR_OK - OK
-** \retval ERR_RANGE - Wrong channel number
-**/
-FctERR PCA9624_ClrVal(PCA96xx_chan Chan)
+FctERR PCA9624_SetVal(PCA96xx_chan chan)
 {
-	const uint8_t Val = 0;
+	const uint8_t val = 0xFF;
+	if ((chan < PCA96xx__PWM1) && (chan > PCA96xx__PWM8))	{ return ERR_RANGE; }	// Unknown channel
+	return PCA9624_Write((uint8_t *) &val, PCA9624__PWM0 + chan - 1, 1);
+}
 
-	if ((Chan < PCA96xx__PWM1) && (Chan > PCA96xx__PWM8))	{ return ERR_RANGE; }	// Unknown channel
 
-	return PCA9624_Write((uint8_t *) &Val, PCA9624__PWM0 + Chan - 1, 1);
+FctERR PCA9624_ClrVal(PCA96xx_chan chan)
+{
+	const uint8_t val = 0;
+	if ((chan < PCA96xx__PWM1) && (chan > PCA96xx__PWM8))	{ return ERR_RANGE; }	// Unknown channel
+	return PCA9624_Write((uint8_t *) &val, PCA9624__PWM0 + chan - 1, 1);
 }
 
 

@@ -1,9 +1,10 @@
 /*!\file PCA9685.c
 ** \author SMFSW
-** \version v0.1
+** \version v0.2
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
-** \brief PCA9685 Driver code (16 channels 16b PWM driver)
+** \brief PCA9685 Driver code
+** \details PCA9685: 16-channel, 12-bit PWM Fm+ I2C-bus LED controller
 **/
 /****************************************************************/
 #include "PCA9685.h"
@@ -13,84 +14,53 @@
 #if defined(I2C_PCA9685)
 /****************************************************************/
 #if defined(I2C_PCA9624)
-#warning "PCA9685 -> Multiple PCA96xx types: beware if using CALL addresses!!!"
+#warning "PCA9685 -> Multiple PCA96xx types: use with caution if using CALL addresses if on same I2C bus!!!"
 #endif
 /****************************************************************/
 
 
-static I2C_slave	PCA9685 = { { pNull, PCA9685_BASE_ADDR, I2C_MEMADD_SIZE_8BIT, I2C_slave_timeout }, 0, HAL_OK, false };
+I2C_slave PCA9685_hal = { { pNull, I2C_ADDR(PCA9685_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FMP }, 0, HAL_OK, false };
 
 
-/*!\brief Initialization of the PCA9685 peripheral
-**			- Set slave PCA address
-**			- Send values OFF + ON_delay (fixed) to ALL_LED
-**			- Send sleep & respond to ALL_CALL
-**			- Send prescaler (only available when in sleep mode)
-**			- Send wake
-**/
+/****************************************************************/
+
+
 FctERR PCA9685_Init(void)
 {
-	FctERR err = ERR_OK;
-	uint8_t Data[5];
-
-	I2C_slave_init(&PCA9685, I2C_PCA9685, PCA9685_BASE_ADDR, I2C_MEMADD_SIZE_8BIT, I2C_slave_timeout);
-
-	// Set Delay time & all led OFF
-	Data[0] = DefValDelayON;	// ALL_LED_ON_L (1% delay to write once)
-	Data[1] = 0x00U;			// ALL_LED_ON_H
-	Data[2] = 0x00U;			// ALL_LED_OFF_L
-	Data[3] = DefBitFullOnOff;	// ALL_LED_OFF_H (b4 pour LED full OFF)
-	err = PCA9685_Write(Data, PCA9685__ALL_LED_ON_L, 4);
-	if (err)	{ return err; }
-
-	// MODE1: SLEEP + Respond to ALLCALL
-	Data[0] = 0x11U;
-	err = PCA9685_Write(Data, PCA9685__MODE1, 1);
-	if (err)	{ return err; }
-
-	// Send prescaler to obtain desired frequency (only in SLEEP)
-	Data[0] = PCA9685_Get_PWM_Prescaler(PCA9685_FREQ);
-	err = PCA9685_Write(Data, PCA9685__PRE_SCALE, 1);
-	if (err)	{ return err; }
-
-	// MODE1: Restart Enabled + Auto Increment + Respond to ALLCALL
-	Data[0] = 0xA1U;
-	err = PCA9685_Write(Data, PCA9685__MODE1, 1);
-	return err;
+	I2C_slave_init(&PCA9685_hal, I2C_PCA9685, PCA9685_BASE_ADDR, I2C_slave_timeout);
+	return PCA9685_Init_Sequence();
 }
 
 
-/*!\brief I2C Write function for PCA9685
-**
-** \param[in] Buffer - pointer to write from
-** \param[in] Addr - Address to write to
-** \param[in] NbChar - Number of bytes to write
-** \return FctERR - error code
-**/
-FctERR PCA9685_Write(uint8_t * Buffer, uint16_t Addr, uint16_t nb)
-{
-	if (Addr > PCA9685__TestMode)			{ return ERR_RANGE; }		// Unknown register
-	if ((Addr + nb) > PCA9685__TestMode)	{ return ERR_OVERFLOW; }	// More bytes than registers
+/****************************************************************/
 
-	PCA9685.status = HAL_I2C_Mem_Write(PCA9685.cfg.inst, PCA9685.cfg.addr, Addr, PCA9685.cfg.mem_size, Buffer, nb, PCA9685.cfg.timeout);
-	return HALERRtoFCTERR(PCA9685.status);
+
+FctERR PCA9685_Write(uint8_t * data, uint16_t addr, uint16_t nb)
+{
+	if (!data)									{ return ERR_MEMORY; }		// Null pointer
+	if (addr > PCA9685__TestMode)				{ return ERR_RANGE; }		// Unknown register
+	if ((addr + nb - 1) > PCA9685__TestMode)	{ return ERR_OVERFLOW; }	// More bytes than registers
+
+	I2C_set_busy(&PCA9685_hal, true);
+
+	PCA9685_hal.status = HAL_I2C_Mem_Write(PCA9685_hal.cfg.inst, PCA9685_hal.cfg.addr, addr, PCA9685_hal.cfg.mem_size, data, nb, PCA9685_hal.cfg.timeout);
+
+	I2C_set_busy(&PCA9685_hal, false);
+	return HALERRtoFCTERR(PCA9685_hal.status);
 }
 
 
-/*!\brief I2C Read function for PCA9685
-**
-** \param[in] Buffer - pointer to read to
-** \param[in] Addr - Address to read from
-** \param[in] nb - Number of bytes to read
-** \return FctERR - error code
-**/
-FctERR PCA9685_Read(uint8_t * Buffer, uint16_t Addr, uint16_t nb)
+FctERR PCA9685_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
-	if (Addr > PCA9685__TestMode)			{ return ERR_RANGE; }		// Unknown register
-	if ((Addr + nb) > PCA9685__TestMode)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if (!data)									{ return ERR_MEMORY; }		// Null pointer
+	if (addr > PCA9685__TestMode)				{ return ERR_RANGE; }		// Unknown register
+	if ((addr + nb - 1) > PCA9685__TestMode)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
-	PCA9685.status = HAL_I2C_Mem_Read(PCA9685.cfg.inst, PCA9685.cfg.addr, Addr, PCA9685.cfg.mem_size, Buffer, nb, PCA9685.cfg.timeout);
-	return HALERRtoFCTERR(PCA9685.status);
+	I2C_set_busy(&PCA9685_hal, true);
+	PCA9685_hal.status = HAL_I2C_Mem_Read(PCA9685_hal.cfg.inst, PCA9685_hal.cfg.addr, addr, PCA9685_hal.cfg.mem_size, data, nb, PCA9685_hal.cfg.timeout);
+
+	I2C_set_busy(&PCA9685_hal, false);
+	return HALERRtoFCTERR(PCA9685_hal.status);
 }
 
 

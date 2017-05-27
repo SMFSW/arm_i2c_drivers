@@ -1,9 +1,10 @@
 /*!\file MTCH6102.h
 ** \author SMFSW
-** \version v0.1
+** \version v0.2
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
-** \brief Microchip Capacitive Driver declarations
+** \brief MTCH6102 Driver declarations
+** \details MTCH6102: Low-Power Projected Capacitive Touch Controller
 **/
 /****************************************************************/
 #ifndef __MTCH6102_H__
@@ -25,9 +26,18 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define		MTCH6102_BASE_ADDR	(0x25 << 1)		//!< MTCH6102 default address value
+#define MTCH6102_BASE_ADDR	0x25		//!< MTCH6102 default address value
 
 
+// *****************************************************************************
+// Section: Datas
+// *****************************************************************************
+extern I2C_slave MTCH6102_hal;	//!< MTCH6102 Slave instance
+
+
+// *****************************************************************************
+// Section: Types
+// *****************************************************************************
 /*** REGISTERS MEMORY MAP ENUMERATIONS ***/
 
 typedef enum PACK__ MTCH6102_touch_addr_map {
@@ -295,11 +305,11 @@ typedef enum PACK__ MTCH6102_GESTURE_DIAGNOSTICs {
 typedef union {
 	uint8_t Byte;
 	struct {
-		uint8_t TCH		:1;		//!< Touch is present
-		uint8_t GES		:1;		//!< Gesture is present
-		uint8_t LRG		:1;		//!<Large activation is present
-		uint8_t			:1;
 		uint8_t FRAME	:4;		//!< Increments on every touch frame
+		uint8_t			:1;
+		uint8_t LRG		:1;		//!<Large activation is present
+		uint8_t GES		:1;		//!< Gesture is present
+		uint8_t TCH		:1;		//!< Touch is present
 	} Bits;
 } uMTCH_REG__TOUCHSTATE;
 
@@ -320,8 +330,8 @@ typedef union {
 typedef union {
 	uint8_t Byte;
 	struct {
-		uint8_t TOUCHY3_0	:4;		//!< coord TOUCHY<3:0>
 		uint8_t TOUCHX3_0	:4;		//!< coord TOUCHX<3:0>
+		uint8_t TOUCHY3_0	:4;		//!< coord TOUCHY<3:0>
 	} Bits;
 } uMTCH_REG__TOUCHLSB;
 
@@ -329,29 +339,29 @@ typedef union {
 typedef union {
 	uint8_t Byte;
 	struct {
-		uint8_t BS	:1;
-		uint8_t		:2;
-		uint8_t MFG	:1;
-		uint8_t 	:1;
-		uint8_t CFG	:1;
-		uint8_t DEF	:1;
 		uint8_t NV	:1;
+		uint8_t DEF	:1;
+		uint8_t CFG	:1;
+		uint8_t 	:1;
+		uint8_t MFG	:1;
+		uint8_t		:2;
+		uint8_t BS	:1;
 	} Bits;
 } uMTCH_REG__CMD;
 
 typedef union {
 	uint8_t Byte;
 	struct {
-		MTCH6102_MODE MODE	:4;		//!< Working mode
 		uint8_t				:4;
+		MTCH6102_MODE MODE	:4;		//!< Working mode
 	} Bits;
 } uMTCH_REG__MODE;
 
 typedef union {
 	uint8_t Byte;
 	struct {
-		MTCH6102_CH CH		:4;		//!< Channel
-		MTCH6102_TYPE TYPE	:4;		//!< Type of result
+		MTCH6102_TYPE	TYPE	:4;		//!< Type of result
+		MTCH6102_CH		CH		:4;		//!< Channel
 	} Bits;
 } uMTCH_REG__MODE_CON;
 
@@ -359,16 +369,42 @@ typedef union {
 // *****************************************************************************
 // Section: Interface Routines
 // *****************************************************************************
-// Slave init
+/******************/
+/*** Slave init ***/
+/******************/
+
+/*!\brief Initialization for MTCH6102 peripheral
+** \return FctERR - error code
+**/
 FctERR MTCH6102_Init(void);
 
-// Low level access
-FctERR MTCH6102_Write(uint8_t * Buffer, uint16_t Addr, uint16_t nb);
-FctERR MTCH6102_Read(uint8_t * Buffer, uint16_t Addr, uint16_t nb);
+
+/************************/
+/*** Low level access ***/
+/************************/
+
+/*!\brief I2C Write function for MTCH6102
+** \param[in] data - pointer to write from
+** \param[in] addr - Address to write to
+** \param[in] nb - Number of bytes to write
+** \return FctERR - error code
+**/
+FctERR MTCH6102_Write(uint8_t * data, uint16_t addr, uint16_t nb);
+
+
+/*!\brief I2C Read function for MTCH6102
+**
+** \param[in,out] data - pointer to read to
+** \param[in] addr - Address to read from
+** \param[in] nb - Number of bytes to read
+** \return FctERR - error code
+**/
+FctERR MTCH6102_Read(uint8_t * data, uint16_t addr, uint16_t nb);
 
 
 /****************************************************************/
-#include "MTCH6102_ex.h"
+#include "MTCH6102_ex.h"	// Include extensions
+#include "MTCH6102_proc.h"	// Include procedures
 #endif
 #endif	/* __MTCH6102_H__ */
 /****************************************************************/

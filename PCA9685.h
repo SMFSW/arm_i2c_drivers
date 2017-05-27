@@ -1,9 +1,10 @@
 /*!\file PCA9685.h
 ** \author SMFSW
-** \version v0.1
+** \version v0.2
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
-** \brief PCA9685 Driver declarations (16 channels 16b PWM driver)
+** \brief PCA9685 Driver declarations
+** \details PCA9685: 16-channel, 12-bit PWM Fm+ I2C-bus LED controller
 **/
 /****************************************************************/
 #ifndef __PCA9685_H__
@@ -25,7 +26,13 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define	PCA9685_BASE_ADDR		(0x40 << 1)	//!< PCA9685 Base Address
+#define	PCA9685_BASE_ADDR		0x40		//!< PCA9685 Base Address
+
+
+// *****************************************************************************
+// Section: Datas
+// *****************************************************************************
+extern I2C_slave PCA9685_hal;	//!< PCA9685 Slave instance
 
 
 // *****************************************************************************
@@ -117,16 +124,43 @@ typedef enum PACK__ PCA9685_reg_map {
 // *****************************************************************************
 // Section: Interface Routines
 // *****************************************************************************
-// Slave init
+/******************/
+/*** Slave init ***/
+/******************/
+
+/*!\brief Initialization for PCA9685 peripheral
+** \return FctERR - error code
+**/
 FctERR PCA9685_Init(void);
 
-// Low level access
-FctERR PCA9685_Write(uint8_t * Buffer, uint16_t Addr, uint16_t nb);
-FctERR PCA9685_Read(uint8_t * Buffer, uint16_t Addr, uint16_t nb);
+
+/************************/
+/*** Low level access ***/
+/************************/
+
+/*!\brief I2C Write function for PCA9685
+**
+** \param[in] data - pointer to write from
+** \param[in] addr - Address to write to
+** \param[in] nb - Number of bytes to write
+** \return FctERR - error code
+**/
+FctERR PCA9685_Write(uint8_t * data, uint16_t addr, uint16_t nb);
+
+
+/*!\brief I2C Read function for PCA9685
+**
+** \param[in,out] data - pointer to read to
+** \param[in] addr - Address to read from
+** \param[in] nb - Number of bytes to read
+** \return FctERR - error code
+**/
+FctERR PCA9685_Read(uint8_t * data, uint16_t addr, uint16_t nb);
 
 
 /****************************************************************/
-#include "PCA9685_ex.h"
+#include "PCA9685_ex.h"		// Include extensions
+#include "PCA9685_proc.h"	// Include procedures
 #endif
 #endif	/* __PCA9685_H__ */
 /****************************************************************/

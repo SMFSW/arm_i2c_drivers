@@ -1,9 +1,10 @@
 /*!\file DRV2605L.c
 ** \author SMFSW
-** \version v0.1
+** \version v0.2
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
-** \brief TI Haptic Driver code
+** \brief DRV2605L Driver code
+** \details DRV2605L: 2 to 5.2V Haptic Driver for LRA and ERM With Effect Library and Smart-Loop Architecture
 **/
 /****************************************************************/
 #include "DRV2605L.h"
@@ -14,55 +15,55 @@
 /****************************************************************/
 
 
-static I2C_slave	DRV2605L = { { pNull, DRV2605L_BASE_ADDR, I2C_MEMADD_SIZE_8BIT, I2C_slave_timeout }, 0, HAL_OK, false };
-//static uDRV_REG_MAP		DRV2605L_Mem;
+I2C_slave DRV2605_hal = { { pNull, I2C_ADDR(DRV2605L_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, false };
 
 
-/*!\brief Initialization of the PCA9624 peripheral
-**/
+/****************************************************************/
+
+
 FctERR DRV2605L_Init(void)
 {
-	I2C_slave_init(&DRV2605L, I2C_DRV2605L, DRV2605L_BASE_ADDR, I2C_MEMADD_SIZE_8BIT, I2C_slave_timeout);
-	return ERR_OK;
+	I2C_slave_init(&DRV2605_hal, I2C_DRV2605L, DRV2605L_BASE_ADDR, I2C_slave_timeout);
+	return DRV2605L_Init_Sequence();
 }
 
 
-/*!\brief I2C Write function for DRV2605L
-** \param[in] Buffer - pointer to write from
-** \param[in] Addr - Address to write to
-** \param[in] nb - Number of bytes to write
-** \return FctERR - error code
-**/
-FctERR DRV2605L_Write(uint8_t * Buffer, uint16_t Addr, uint16_t nb)
-{
-	if (Addr > DRV__LRA_RESONNANCE_PERIOD)			{ return ERR_RANGE; }		// Unknown register
-	if ((Addr + nb) > DRV__LRA_RESONNANCE_PERIOD)	{ return ERR_OVERFLOW; }	// More bytes than registers
+/****************************************************************/
 
-	DRV2605L.status = HAL_I2C_Mem_Write(DRV2605L.cfg.inst, DRV2605L.cfg.addr, Addr, DRV2605L.cfg.mem_size, Buffer, nb, DRV2605L.cfg.timeout);
-	return HALERRtoFCTERR(DRV2605L.status);
+
+FctERR DRV2605L_Write(uint8_t * data, uint16_t addr, uint16_t nb)
+{
+	if (!data)											{ return ERR_MEMORY; }		// Null pointer
+	if (addr > DRV__LRA_RESONANCE_PERIOD)				{ return ERR_RANGE; }		// Unknown register
+	if ((addr + nb - 1) > DRV__LRA_RESONANCE_PERIOD)	{ return ERR_OVERFLOW; }	// More bytes than registers
+
+	I2C_set_busy(&DRV2605_hal, true);
+
+	DRV2605_hal.status = HAL_I2C_Mem_Write(DRV2605_hal.cfg.inst, DRV2605_hal.cfg.addr, addr, DRV2605_hal.cfg.mem_size, data, nb, DRV2605_hal.cfg.timeout);
+
+	I2C_set_busy(&DRV2605_hal, false);
+	return HALERRtoFCTERR(DRV2605_hal.status);
 }
 
 
-/*!\brief I2C Read function for DRV2605L
-**
-** \param[in] Buffer - pointer to read to
-** \param[in] Addr - Address to read from
-** \param[in] nb - Number of bytes to read
-** \return FctERR - error code
-**/
-FctERR DRV2605L_Read(uint8_t * Buffer, uint16_t Addr, uint16_t nb)
+FctERR DRV2605L_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
-	if (Addr > DRV__LRA_RESONNANCE_PERIOD)			{ return ERR_RANGE; }		// Unknown register
-	if ((Addr + nb) > DRV__LRA_RESONNANCE_PERIOD)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if (!data)											{ return ERR_MEMORY; }		// Null pointer
+	if (addr > DRV__LRA_RESONANCE_PERIOD)				{ return ERR_RANGE; }		// Unknown register
+	if ((addr + nb - 1) > DRV__LRA_RESONANCE_PERIOD)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
-	DRV2605L.status = HAL_I2C_Mem_Read(DRV2605L.cfg.inst, DRV2605L.cfg.addr, Addr, DRV2605L.cfg.mem_size, Buffer, nb, DRV2605L.cfg.timeout);
-	return HALERRtoFCTERR(DRV2605L.status);
+	I2C_set_busy(&DRV2605_hal, true);
+
+	DRV2605_hal.status = HAL_I2C_Mem_Read(DRV2605_hal.cfg.inst, DRV2605_hal.cfg.addr, addr, DRV2605_hal.cfg.mem_size, data, nb, DRV2605_hal.cfg.timeout);
+
+	I2C_set_busy(&DRV2605_hal, false);
+	return HALERRtoFCTERR(DRV2605_hal.status);
 }
 
 
 /****************************************************************/
 #else
-#warning "You have to define I2C_DRV in globals.h with an I2C instance for this to work!"
+#warning "You have to define I2C_DRV2605L in globals.h with an I2C instance for this to work!"
 #endif
 #endif
 /****************************************************************/

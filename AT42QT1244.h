@@ -1,9 +1,10 @@
 /*!\file AT42QT1244.h
 ** \author SMFSW
-** \version v0.1
+** \version v0.2
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
-** \brief Atmel Capacitive Driver declarations
+** \brief AT42QT1244 Driver declarations
+** \details AT42QT1244: 24-key QMatrix FMEA IEC/EN/UL60730 Touch Sensor
 **/
 /****************************************************************/
 #ifndef __AT42QT1244_H__
@@ -25,12 +26,18 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define AT42QT1244_ADDR			(57 << 1)			//!< AT42QT1244 address (A0 & A1 tied to GND)
-#define AT42QT1244_ADDR_A0		(7 << 1)			//!< AT42QT1244 address (A0 tied to PWR & A1 tied to GND)
-#define AT42QT1244_ADDR_A1		(17 << 1)			//!< AT42QT1244 address (A0 tied to GND & A1 tied to PWR)
-#define AT42QT1244_ADDR_A01		(117 << 1)			//!< AT42QT1244 address (A0 & A1 tied to PWR)
+#define AT42QT1244_ADDR			57					//!< AT42QT1244 address (A0 & A1 tied to GND)
+#define AT42QT1244_ADDR_A0		7					//!< AT42QT1244 address (A0 tied to PWR & A1 tied to GND)
+#define AT42QT1244_ADDR_A1		17					//!< AT42QT1244 address (A0 tied to GND & A1 tied to PWR)
+#define AT42QT1244_ADDR_A01		117					//!< AT42QT1244 address (A0 & A1 tied to PWR)
 
 #define AT42QT1244_BASE_ADDR	AT42QT1244_ADDR		//!< AT42QT1244 Base address
+
+
+// *****************************************************************************
+// Section: Datas
+// *****************************************************************************
+extern I2C_slave AT42QT1244_hal;	//!< AT42QT1244 Slave instance
 
 
 // *****************************************************************************
@@ -159,24 +166,24 @@ typedef enum PACK__ AT42QT_fhm_mode {
 typedef union uAT42QT_REG__KEY_DATA {
 	uint32_t Raw;
 	struct {
-		uint32_t Normal_Detector_Integrator	:4;		//!< Normal detector integrator
-		uint32_t Signal						:12;	//!< Signal
-		uint32_t 							:2;
-		uint32_t FMEA_Failure				:1;		//!< FMEA failure
-		uint32_t LSL_Failure				:1;		//!< LSL failure
 		uint32_t Reference					:12;	//!< Reference
+		uint32_t LSL_Failure				:1;		//!< LSL failure
+		uint32_t FMEA_Failure				:1;		//!< FMEA failure
+		uint32_t 							:2;
+		uint32_t Signal						:12;	//!< Signal
+		uint32_t Normal_Detector_Integrator	:4;		//!< Normal detector integrator
 	} Data;
 } uAT42QT_REG__KEY_DATA;
 
 typedef union uAT42QT_REG__DEVICE_STATUS {
 	uint8_t Byte;
 	struct {
-		uint8_t Reserved			:3;		//!< Reserved bits
-		uint8_t FMEA_Failure		:1;		//!< FMEA failure
-		uint8_t LSL_Failure			:1;		//!< LSL failure
-		uint8_t Key_In_Calib		:1;		//!< Key in calibration
-		uint8_t Mains_Sync_Error	:1;		//!< Mains sync error
 		uint8_t CRC_Incorrect		:1;		//!< Setups CRC does not match HCRC
+		uint8_t Mains_Sync_Error	:1;		//!< Mains sync error
+		uint8_t Key_In_Calib		:1;		//!< Key in calibration
+		uint8_t LSL_Failure			:1;		//!< LSL failure
+		uint8_t FMEA_Failure		:1;		//!< FMEA failure
+		uint8_t Reserved			:3;		//!< Reserved bits
 	} Bits;
 } uAT42QT_REG__DEVICE_STATUS;
 
@@ -184,128 +191,112 @@ typedef union uAT42QT_REG__DEVICE_STATUS {
 typedef union uAT42QT_REG__SETUP_141_164 {
 	uint8_t Byte;
 	struct {
-		uint8_t BL				:2;		//!< Burst length
-		uint8_t NDRIFT			:3;		//!< Drift compensation
-		uint8_t NTHR_PTHR		:2;		//!< Threshold
+		uint8_t NTHR_PTHR	:2;		//!< Threshold
+		uint8_t NDRIFT		:3;		//!< Drift compensation
+		uint8_t BL			:2;		//!< Burst length
 	} Bits;
 } uAT42QT_REG__SETUP_141_164;
 
 typedef union uAT42QT_REG__SETUP_165_188 {
 	uint8_t Byte;
 	struct {
-		uint8_t WAKE			:1;		//!< Wake on touch
-		uint8_t AKS				:1;		//!< Adjacent Key suppression technology
-		uint8_t FDIL			:3;		//!< False detection
-		uint8_t NDIL			:3;		//!< No detection
+		uint8_t NDIL	:3;		//!< No detection
+		uint8_t FDIL	:3;		//!< False detection
+		uint8_t AKS		:1;		//!< Adjacent Key suppression technology
+		uint8_t WAKE	:1;		//!< Wake on touch
 	} Bits;
 } uAT42QT_REG__SETUP_165_188;
 
 typedef union uAT42QT_REG__SETUP_238 {
 	uint8_t Byte;
 	struct {
-		uint8_t DEBUG			:1;		//!< Debug output
-		uint8_t NHYST			:2;		//!< Negative hysteresis
-		uint8_t MSYNC			:1;		//!< Main sync
-		uint8_t SLEEP			:3;		//!< Sleep duration
+		uint8_t SLEEP	:3;		//!< Sleep duration
+		uint8_t MSYNC	:1;		//!< Main sync
+		uint8_t NHYST	:2;		//!< Negative hysteresis
+		uint8_t DEBUG	:1;		//!< Debug output
 	} Bits;
 } uAT42QT_REG__SETUP_238;
 
 typedef union uAT42QT_REG__SETUP_241 {
 	uint8_t Byte;
 	struct {
-		uint8_t SSYNC			:5;		//!< Oscilloscope sync
-		uint8_t PDRIFT			:3;		//!< Positive drift compensation
+		uint8_t PDRIFT	:3;		//!< Positive drift compensation
+		uint8_t SSYNC	:5;		//!< Oscilloscope sync
 	} Bits;
 } uAT42QT_REG__SETUP_241;
 
 typedef union uAT42QT_REG__SETUP_242 {
 	uint8_t Byte;
 	struct {
-		uint8_t LSL				:8;		//!< Lower signal limit (LSB)
+		uint8_t LSL		:8;		//!< Lower signal limit (LSB)
 	} Bits;
 } uAT42QT_REG__SETUP_242;
 
 typedef union uAT42QT_REG__SETUP_243 {
 	uint8_t Byte;
 	struct {
-		uint8_t KGTT			:5;		//!< Key gain test threshold
-		uint8_t LSL				:3;		//!< Lower signal limit (MSB)
+		uint8_t LSL		:3;		//!< Lower signal limit (MSB)
+		uint8_t KGTT	:5;		//!< Key gain test threshold
 	} Bits;
 } uAT42QT_REG__SETUP_243;
 
 typedef union uAT42QT_REG__SETUP_244 {
 	uint8_t Byte;
 	struct {
-		AT42QT_FHM FHM			:2;		//!< Frequency hoping mode
-		uint8_t THRM			:2;		//!< Threshold multiplier
-		uint8_t RIB				:1;		//!< Restart interrupted burst
-		uint8_t DWELL			:3;		//!< Dwell time
+		uint8_t		DWELL	:3;		//!< Dwell time
+		uint8_t		RIB		:1;		//!< Restart interrupted burst
+		uint8_t		THRM	:2;		//!< Threshold multiplier
+		AT42QT_FHM	FHM		:2;		//!< Frequency hoping mode
 	} Bits;
 } uAT42QT_REG__SETUP_244;
 
 typedef union uAT42QT_REG__SETUP_248 {
 	uint8_t Byte;
 	struct {
-		uint8_t NIL				:4;		//!< Noise integrator limit
-		uint8_t NSTHR			:4;		//!< Noise threshold
+		uint8_t NSTHR	:4;		//!< Noise threshold
+		uint8_t NIL		:4;		//!< Noise integrator limit
 	} Bits;
 } uAT42QT_REG__SETUP_248;
-
-
-
-typedef union uAT42QT_REG_MAP {
-	uint8_t Bytes[251];
-	struct {
-		uint8_t						Res_1;
-		uint8_t						Res_2;
-		uint8_t						Counter_100ms;
-		uint8_t						Counter_Signal_Fail;
-		uint8_t						Counter_Matrix_Scan;
-		uAT42QT_REG__DEVICE_STATUS	Device_Status;
-		uint8_t						Detect_Status_0_7;
-		uint8_t						Detect_Status_8_15;
-		uint8_t						Detect_Status_16_23;
-		uint8_t						Res_3;
-		uint8_t						Current_Frequency;
-		uint8_t						Current_Pulse_Spacing;
-		uAT42QT_REG__KEY_DATA		KeyData[24];
-		uint8_t						Res_4[31];
-		uint8_t						Control_Command;
-		uAT42QT_REG__SETUP_141_164	Setup_Key_Thr[24];
-		uAT42QT_REG__SETUP_165_188	Setup_Key_Mode[24];
-		uint8_t						Setup_Calib_Frequency_Offset_1[24];
-		uint8_t						Setup_Calib_Frequency_Offset_2[24];
-		uint8_t						Setup_Negative_Recall_Delay;
-		uAT42QT_REG__SETUP_238		Setup_Debug_MSync;
-		uint8_t						Setup_Awake_Timeout;
-		uint8_t						Setup_Drift_Hold_Time;
-		uAT42QT_REG__SETUP_241		Setup_Drift;
-		uAT42QT_REG__SETUP_242		Setup_Lower_Signal_Limit_1;
-		uAT42QT_REG__SETUP_243		Setup_Lower_Signal_Limit_2;
-		uAT42QT_REG__SETUP_244		Setup_Freq_Hoping_Dwell;
-		uint8_t						Setup_Frequency_0;
-		uint8_t						Setup_Frequency_1;
-		uint8_t						Setup_Frequency_2;
-		uAT42QT_REG__SETUP_248		Setup_Noise;
-		uint8_t						Setup_Host_CRC[2];	//!< Host CRC (LSB at addr 249, MSB at addr 250)
-		uint8_t						Setup_Positive_Recalibration_Delay;
-	} Reg;
-} uAT42QT_REG_MAP;
 
 
 // *****************************************************************************
 // Section: Interface Routines
 // *****************************************************************************
-// Slave init
+/******************/
+/*** Slave init ***/
+/******************/
+
+/*!\brief Initialization for AT42QT1244 peripheral
+** \return FctERR - error code
+**/
 FctERR AT42QT1244_Init(void);
 
-// Low level access
-FctERR AT42QT1244_Write(uint8_t * Buffer, uint16_t Addr, uint16_t nb);
-FctERR AT42QT1244_Read(uint8_t * Buffer, uint16_t Addr, uint16_t nb);
+
+/************************/
+/*** Low level access ***/
+/************************/
+
+/*!\brief I2C Write function for AT42QT1244
+** \param[in] data - pointer to write from
+** \param[in] addr - Address to write to
+** \param[in] nb - Number of bytes to write
+** \return FctERR - error code
+**/
+FctERR AT42QT1244_Write(uint8_t * data, uint16_t addr, uint16_t nb);
+
+
+/*!\brief I2C Read function for AT42QT1244
+** \param[in,out] data - pointer to read to
+** \param[in] addr - Address to read from
+** \param[in] nb - Number of bytes to read
+** \return FctERR - error code
+**/
+FctERR AT42QT1244_Read(uint8_t * data, uint16_t addr, uint16_t nb);
 
 
 /****************************************************************/
-#include "AT42QT1244_ex.h"
+#include "AT42QT1244_ex.h"		// Include extensions
+#include "AT42QT1244_proc.h"	// Include procedures
 #endif
 #endif /* __AT42QT1244_H__ */
 /****************************************************************/

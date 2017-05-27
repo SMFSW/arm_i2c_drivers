@@ -1,15 +1,16 @@
-/*!\file FM24C16B_ex.h
+/*!\file MB85RC256V_ex.h
 ** \author SMFSW
-** \version v0.1
+** \version v0.2
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
-** \brief FM24C16B Driver extensions declarations
-*/
+** \brief MB85RC256V Driver extensions declarations
+** \details MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM
+**/
 /****************************************************************/
-#ifndef __FM24C16B_EX_H__
-	#define __FM24C16B_EX_H__
+#ifndef __MB85RC256V_EX_H__
+	#define __MB85RC256V_EX_H__
 
-#include "FM24C16B.h"
+#include "MB85RC256V.h"
 
 #include "sarmfsw.h"
 #include CMSIS_INC
@@ -23,11 +24,17 @@
 // *****************************************************************************
 // Section: Interface Routines
 // *****************************************************************************
-// High level functions
-FctERR FM24C16B_Mass_Erase(void);
+/****************************************/
+/*** High level methods and functions ***/
+/****************************************/
+
+/*!\brief Mass erase of MB85RC256V
+** \return FctERR - error code
+**/
+FctERR MB85RC256V_Mass_Erase(void);
 
 
 /****************************************************************/
 #endif
-#endif /* __FM24C16B_EX_H__ */
+#endif /* __MB85RC256V_EX_H__ */
 /****************************************************************/

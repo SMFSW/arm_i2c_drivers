@@ -1,0 +1,65 @@
+/*!\file $CPNT$_proc.h
+** \author SMFSW
+** \version v0.2
+** \date 2017
+** \copyright MIT (c) 2017, SMFSW
+** \brief $CPNT$ Driver procedures declarations
+** \details $CPNT$:
+**/
+/****************************************************************/
+#ifndef __$CPNT$_PROC_H__
+	#define __$CPNT$_PROC_H__
+
+#include "$CPNT$.h"
+
+#include "sarmfsw.h"
+#include CMSIS_INC
+#include CMSIS_CFG
+
+#if defined(HAL_I2C_MODULE_ENABLED)
+#include "i2c.h"
+/****************************************************************/
+
+
+// *****************************************************************************
+// Section: Constants
+// *****************************************************************************
+#define $CPNT$_CHIP_ID		0x00		//!< $CPNT$ Chip ID to check against
+
+
+
+// *****************************************************************************
+// Section: Types
+// *****************************************************************************
+typedef struct $CPNT$_proc {
+	uint16_t	$CPNT$_val_1;
+	struct {
+	uint16_t	$CPNT$_param_1;
+	uint8_t		Id;
+	} cfg;
+} $CPNT$_proc;
+
+
+// *****************************************************************************
+// Section: Interface Routines
+// *****************************************************************************
+/******************/
+/*** Procedures ***/
+/******************/
+
+/*!\brief Initialization Sequence for $CPNT$ peripheral
+** \return FctERR - error code
+**/
+FctERR $CPNT$_Init_Sequence(void);
+
+
+/*!\brief Handler for $CPNT$ peripheral
+** \return FctERR - error code
+**/
+FctERR $CPNT$_handler(void);
+
+
+/****************************************************************/
+#endif
+#endif /* __$CPNT$_PROC_H__ */
+/****************************************************************/
