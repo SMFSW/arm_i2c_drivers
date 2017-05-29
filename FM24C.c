@@ -1,6 +1,6 @@
 /*!\file FM24C.c
 ** \author SMFSW
-** \version v0.2
+** \version v0.3
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief FM24C Driver code
@@ -14,7 +14,7 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_FM24C)
 /****************************************************************/
-#if defined(I2C_MB85RC256V)
+#if defined(I2C_MB85RC256V) && !defined(NO_WARN_I2C_DRIVERS)
 #warning "FM24CxxB -> Defined along with MB85RC256V: use with caution, might have same I2C addresses if on same I2C bus!!!"
 #endif
 /****************************************************************/
@@ -106,7 +106,7 @@ FctERR FM24C_ReadWrite(uint8_t * data, uint16_t addr, uint16_t nb, bool wr)
 
 
 /****************************************************************/
-#else
+#elif !defined(NO_WARN_I2C_DRIVERS)
 #warning "You have to define I2C_FM24C in globals.h with an I2C instance for this to work!"
 #endif
 #endif

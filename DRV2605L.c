@@ -1,6 +1,6 @@
 /*!\file DRV2605L.c
 ** \author SMFSW
-** \version v0.2
+** \version v0.3
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief DRV2605L Driver code
@@ -62,7 +62,7 @@ FctERR DRV2605L_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 
 
 /****************************************************************/
-#else
+#elif !defined(NO_WARN_I2C_DRIVERS)
 #warning "You have to define I2C_DRV2605L in globals.h with an I2C instance for this to work!"
 #endif
 #endif

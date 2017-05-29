@@ -18,6 +18,8 @@ ARM I2C Drivers for various components
 - use $CPNT$_Init() once
 - start using $CPNT$_funcs()
 
+- if you find warning messages annoying, you could define NO_WARN_I2C_DRIVERS (underscores between words) in compiler options to hide warning messages
+
 
 ## Remarks
 

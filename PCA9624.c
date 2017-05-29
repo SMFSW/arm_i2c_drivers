@@ -1,6 +1,6 @@
 /*!\file PCA9624.c
 ** \author SMFSW
-** \version v0.2
+** \version v0.3
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief PCA9624 Driver code
@@ -13,7 +13,7 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_PCA9624)
 /****************************************************************/
-#if defined(I2C_PCA9685)
+#if defined(I2C_PCA9685) && !defined(NO_WARN_I2C_DRIVERS)
 #warning "PCA9624 -> Multiple PCA96xx types: use with caution if using CALL addresses if on same I2C bus!!!"
 #endif
 /****************************************************************/
@@ -66,7 +66,7 @@ FctERR PCA9624_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 
 
 /****************************************************************/
-#else
+#elif !defined(NO_WARN_I2C_DRIVERS)
 #warning "You have to define I2C_PCA9624 in globals.h with an I2C instance for this to work!"
 #endif
 #endif

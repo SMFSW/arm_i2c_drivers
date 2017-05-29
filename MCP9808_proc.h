@@ -35,8 +35,8 @@
 // *****************************************************************************
 typedef struct MCP9808_proc {
 	float		Temperature;
-	bool		TLower;
 	bool		TUpper;
+	bool		TLower;
 	bool		TCrit;
 	bool		NewData;
 	uint32_t	hLast;

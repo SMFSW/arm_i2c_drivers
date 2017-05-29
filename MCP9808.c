@@ -1,6 +1,6 @@
 /*!\file MCP9808.c
 ** \author SMFSW
-** \version v0.2
+** \version v0.3
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief MCP9808 Driver code
@@ -97,7 +97,7 @@ FctERR MCP9808_Read(uint16_t * data, uint16_t addr, uint16_t nb)
 
 
 /****************************************************************/
-#else
+#elif !defined(NO_WARN_I2C_DRIVERS)
 #warning "You have to define I2C_MCP9808 in globals.h with an I2C instance for this to work!"
 #endif
 #endif

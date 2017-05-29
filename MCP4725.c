@@ -1,6 +1,6 @@
 /*!\file MCP4725.c
 ** \author SMFSW
-** \version v0.2
+** \version v0.3
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief MCP4725 Driver code
@@ -73,7 +73,7 @@ FctERR MCP4725_General_Call(uint8_t cmd)
 
 
 /****************************************************************/
-#else
+#elif !defined(NO_WARN_I2C_DRIVERS)
 #warning "You have to define I2C_MCP4725 in globals.h with an I2C instance for this to work!"
 #endif
 #endif
