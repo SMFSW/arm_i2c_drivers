@@ -54,14 +54,6 @@ ARM I2C Drivers for various components
 
   -> _NOT TESTED YET_
 
-- **L3GD20H**: MEMS motion sensor, three-axis digital output gyroscope
-
-  -> _CODING IN PROGRESS / NO TESTS YET_
-
-- **LSM303DLHC**: Ultra compact high performance e-compass 3D accelerometer and 3D magnetometer module
-
-  -> _CODING IN PROGRESS / NO TESTS YET_
-
 - **MB85RC256V**: 256-Kbit (32K * 8) I2C Memory FRAM -> Should work for **FM24CL64B**
 
   -> _WORKING_
@@ -105,11 +97,19 @@ ARM I2C Drivers for various components
 
 ## Next peripherals
 
+- **L3GD20H**: MEMS motion sensor, three-axis digital output gyroscope
+
+  -> _CODING IN PROGRESS / NO TESTS YET_
+
+- **LSM303DLHC**: Ultra compact high performance e-compass 3D accelerometer and 3D magnetometer module
+
+  -> _CODING IN PROGRESS / NO TESTS YET_
+
 - EEPROM/FRAM (few others?)
 - Capacitive (MPR121)
 - OLED
-- Clock Generator (SI5351 with help of [etherkit](https://github.com/etherkit/Si5351Arduino))
-- Accelerometer/Gyro (GY521 MPU6050 with help of [jrowberg](https://github.com/jrowberg/i2cdevlib/))
+- Clock Generator (SI5351)
+- Accelerometer/Gyro (GY521 MPU6050)
 - ...
 
 You may also:
