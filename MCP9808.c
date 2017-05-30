@@ -1,6 +1,5 @@
 /*!\file MCP9808.c
 ** \author SMFSW
-** \version v0.3
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief MCP9808 Driver code
@@ -37,7 +36,7 @@ FctERR MCP9808_Write(uint16_t * data, uint16_t addr, uint16_t nb)
 
 	if (!data)									{ return ERR_MEMORY; }		// Null pointer
 	if (addr > MCP9808__RESOLUTION)				{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb - 1) > MCP9808__RESOLUTION)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > MCP9808__RESOLUTION + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&MCP9808_hal, true);
 
@@ -70,7 +69,7 @@ FctERR MCP9808_Read(uint16_t * data, uint16_t addr, uint16_t nb)
 
 	if (!data)									{ return ERR_MEMORY; }		// Null pointer
 	if (addr > MCP9808__RESOLUTION)				{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb - 1) > MCP9808__RESOLUTION)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > MCP9808__RESOLUTION + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&MCP9808_hal, true);
 

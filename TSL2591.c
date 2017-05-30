@@ -1,6 +1,5 @@
 /*!\file TSL2591.c
 ** \author SMFSW
-** \version v0.3
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief TSL2591 Driver code
@@ -37,7 +36,7 @@ FctERR TSL2591_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 
 	if (!data)								{ return ERR_MEMORY; }		// Null pointer
 	if (addr > TSL2591__PERSIST)			{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb - 1) > TSL2591__PERSIST)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > TSL2591__PERSIST + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&TSL2591_hal, true);
 
@@ -58,7 +57,7 @@ FctERR TSL2591_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 
 	if (!data)								{ return ERR_MEMORY; }		// Null pointer
 	if (addr > TSL2591__C1DATAH)			{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb - 1) > TSL2591__C1DATAH)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > TSL2591__C1DATAH + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&TSL2591_hal, true);
 

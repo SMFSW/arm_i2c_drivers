@@ -1,6 +1,5 @@
 /*!\file DS_GPMS.c
 ** \author SMFSW
-** \version v0.3
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief DS-GPM.S Driver code
@@ -35,7 +34,7 @@ FctERR GPMS_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 {
 	if (!data)									{ return ERR_MEMORY; }		// Null pointer
 	if (addr > GPMS__IO_PORT_OUTPUT)			{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb - 1) > GPMS__IO_PORT_OUTPUT)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > GPMS__IO_PORT_OUTPUT + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&GPMS_hal, true);
 
@@ -50,7 +49,7 @@ FctERR GPMS_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
 	if (!data)							{ return ERR_MEMORY; }		// Null pointer
 	if (addr > GPMS__STATUS)			{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb - 1) > GPMS__STATUS)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > GPMS__STATUS + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&GPMS_hal, true);
 

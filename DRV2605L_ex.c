@@ -1,6 +1,5 @@
 /*!\file DRV2605L_ex.c
 ** \author SMFSW
-** \version v0.2
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief DRV2605L Driver extensions code

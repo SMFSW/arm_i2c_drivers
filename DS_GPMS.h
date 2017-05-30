@@ -1,6 +1,5 @@
 /*!\file DS_GPMS.h
 ** \author SMFSW
-** \version v0.2
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief DS-GPM.S Driver declarations

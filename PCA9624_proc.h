@@ -1,6 +1,5 @@
 /*!\file PCA9624_proc.h
 ** \author SMFSW
-** \version v0.2
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief PCA9624 Driver procedures declarations

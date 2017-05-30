@@ -1,6 +1,5 @@
 /*!\file MCP4725_ex.c
 ** \author SMFSW
-** \version v0.2
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief MCP4725 Driver extensions code

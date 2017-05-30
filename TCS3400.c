@@ -1,6 +1,5 @@
 /*!\file TCS3400.c
 ** \author SMFSW
-** \version v0.3
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief TCS3400 Driver code
@@ -39,7 +38,7 @@ FctERR TCS3400_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 {
 	if (!data)								{ return ERR_MEMORY; }		// Null pointer
 	if (addr > TCS3400__AICLEAR)			{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb - 1) > TCS3400__AICLEAR)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > TCS3400__AICLEAR + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&TCS3400_hal, true);
 
@@ -54,7 +53,7 @@ FctERR TCS3400_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
 	if (!data)							{ return ERR_MEMORY; }		// Null pointer
 	if (addr > TCS3400__IR)				{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb - 1) > TCS3400__IR)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > TCS3400__IR + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&TCS3400_hal, true);
 

@@ -1,6 +1,5 @@
 /*!\file AT42QT1244.c
 ** \author SMFSW
-** \version v0.3
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief AT42QT1244 Driver code
@@ -61,7 +60,7 @@ FctERR AT42QT1244_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 {
 	if (!data)											{ return ERR_MEMORY; }		// Null pointer
 	if (addr > AT42QT__SETUP_HOST_CRC_MSB)				{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb - 1) > AT42QT__SETUP_HOST_CRC_MSB)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > AT42QT__SETUP_HOST_CRC_MSB + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&AT42QT1244_hal, true);
 
@@ -83,7 +82,7 @@ FctERR AT42QT1244_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 
 	if ((!data) || (!tmp_read))							{ return ERR_MEMORY; }		// Null pointer or not malloc failed
 	if (addr > AT42QT__SETUP_HOST_CRC_MSB)				{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb - 1) > AT42QT__SETUP_HOST_CRC_MSB)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > AT42QT__SETUP_HOST_CRC_MSB + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&AT42QT1244_hal, true);
 

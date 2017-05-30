@@ -1,6 +1,5 @@
 /*!\file $CPNT$.c
 ** \author SMFSW
-** \version v0.3
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief $CPNT$ Driver code
@@ -44,7 +43,7 @@ FctERR $CPNT$_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 {
 	if (!data)							{ return ERR_MEMORY; }		// Null pointer
 	//if (addr > )				{ return ERR_RANGE; }		// Unknown register
-	//if ((addr + nb -1) > )	{ return ERR_OVERFLOW; }	// More bytes than registers
+	//if ((addr + nb) > last_reg + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&$CPNT$_hal, true);
 	
@@ -59,7 +58,7 @@ FctERR $CPNT$_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
 	if (!data)							{ return ERR_MEMORY; }		// Null pointer
 	//if (addr > )				{ return ERR_RANGE; }		// Unknown register
-	//if ((addr + nb - 1) > )	{ return ERR_OVERFLOW; }	// More bytes than registers
+	//if ((addr + nb) > last_reg + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&$CPNT$_hal, true);
 	

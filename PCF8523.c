@@ -1,6 +1,5 @@
 /*!\file PCF8523.c
 ** \author SMFSW
-** \version v0.3
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief PCF8523 Driver code
@@ -35,7 +34,7 @@ FctERR PCF8523_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 {
 	if (!data)									{ return ERR_MEMORY; }		// Null pointer
 	if (addr > PCF8523__TMR_B_REG)				{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb -1) > PCF8523__TMR_B_REG)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > PCF8523__TMR_B_REG + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&PCF8523_hal, true);
 
@@ -50,7 +49,7 @@ FctERR PCF8523_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
 	if (!data)									{ return ERR_MEMORY; }		// Null pointer
 	if (addr > PCF8523__TMR_B_REG)				{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb - 1) > PCF8523__TMR_B_REG)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > PCF8523__TMR_B_REG + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&PCF8523_hal, true);
 

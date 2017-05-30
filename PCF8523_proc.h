@@ -1,6 +1,5 @@
 /*!\file PCF8523_proc.h
 ** \author SMFSW
-** \version v0.2
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief PCF8523 Driver procedures declarations

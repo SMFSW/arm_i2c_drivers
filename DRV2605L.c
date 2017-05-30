@@ -1,6 +1,5 @@
 /*!\file DRV2605L.c
 ** \author SMFSW
-** \version v0.3
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief DRV2605L Driver code
@@ -35,7 +34,7 @@ FctERR DRV2605L_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 {
 	if (!data)											{ return ERR_MEMORY; }		// Null pointer
 	if (addr > DRV__LRA_RESONANCE_PERIOD)				{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb - 1) > DRV__LRA_RESONANCE_PERIOD)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > DRV__LRA_RESONANCE_PERIOD + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&DRV2605_hal, true);
 
@@ -50,7 +49,7 @@ FctERR DRV2605L_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
 	if (!data)											{ return ERR_MEMORY; }		// Null pointer
 	if (addr > DRV__LRA_RESONANCE_PERIOD)				{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb - 1) > DRV__LRA_RESONANCE_PERIOD)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > DRV__LRA_RESONANCE_PERIOD + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&DRV2605_hal, true);
 

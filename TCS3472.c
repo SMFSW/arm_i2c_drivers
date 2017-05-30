@@ -1,6 +1,5 @@
 /*!\file TCS3472.c
 ** \author SMFSW
-** \version v0.3
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief TCS3472 Driver code
@@ -41,7 +40,7 @@ FctERR TCS3472_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 
 	if (!data)								{ return ERR_MEMORY; }		// Null pointer
 	if (addr > TCS3472__CONTROL)			{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb - 1) > TCS3472__CONTROL)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > TCS3472__CONTROL + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&TCS3472_hal, true);
 
@@ -62,7 +61,7 @@ FctERR TCS3472_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 
 	if (!data)								{ return ERR_MEMORY; }		// Null pointer
 	if (addr > TCS3472__BDATAH)				{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb - 1) > TCS3472__BDATAH)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > TCS3472__BDATAH + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&TCS3472_hal, true);
 

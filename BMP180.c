@@ -1,6 +1,5 @@
 /*!\file BMP180.c
 ** \author SMFSW
-** \version v0.3
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief BMP180 Driver code
@@ -39,7 +38,7 @@ FctERR BMP180_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 {
 	if (!data)								{ return ERR_MEMORY; }		// Null pointer
 	if (addr > BMP180__OUT_XLSB)			{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb - 1) > BMP180__OUT_XLSB)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > BMP180__OUT_XLSB + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&BMP180_hal, true);
 
@@ -54,7 +53,7 @@ FctERR BMP180_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
 	if (!data)								{ return ERR_MEMORY; }		// Null pointer
 	if (addr > BMP180__OUT_XLSB)			{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb - 1) > BMP180__OUT_XLSB)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > BMP180__OUT_XLSB + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&BMP180_hal, true);
 

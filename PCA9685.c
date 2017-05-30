@@ -1,6 +1,5 @@
 /*!\file PCA9685.c
 ** \author SMFSW
-** \version v0.3
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief PCA9685 Driver code
@@ -39,7 +38,7 @@ FctERR PCA9685_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 {
 	if (!data)									{ return ERR_MEMORY; }		// Null pointer
 	if (addr > PCA9685__TestMode)				{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb - 1) > PCA9685__TestMode)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > PCA9685__TestMode + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&PCA9685_hal, true);
 
@@ -54,7 +53,7 @@ FctERR PCA9685_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
 	if (!data)									{ return ERR_MEMORY; }		// Null pointer
 	if (addr > PCA9685__TestMode)				{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb - 1) > PCA9685__TestMode)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > PCA9685__TestMode + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&PCA9685_hal, true);
 	PCA9685_hal.status = HAL_I2C_Mem_Read(PCA9685_hal.cfg.inst, PCA9685_hal.cfg.addr, addr, PCA9685_hal.cfg.mem_size, data, nb, PCA9685_hal.cfg.timeout);

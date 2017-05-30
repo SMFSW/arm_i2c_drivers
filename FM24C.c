@@ -1,6 +1,5 @@
 /*!\file FM24C.c
 ** \author SMFSW
-** \version v0.3
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief FM24C Driver code

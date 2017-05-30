@@ -1,6 +1,5 @@
 /*!\file MB85RC256V_ex.c
 ** \author SMFSW
-** \version v0.2
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief MB85RC256V Driver extensions code

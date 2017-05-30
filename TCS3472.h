@@ -1,6 +1,5 @@
 /*!\file TCS3472.h
 ** \author SMFSW
-** \version v0.3
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief TCS3472 Driver declarations

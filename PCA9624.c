@@ -1,6 +1,5 @@
 /*!\file PCA9624.c
 ** \author SMFSW
-** \version v0.3
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief PCA9624 Driver code
@@ -39,7 +38,7 @@ FctERR PCA9624_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 {
 	if (!data)									{ return ERR_MEMORY; }		// Null pointer
 	if (addr > PCA9624__ALLCALLADR)				{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb - 1) > PCA9624__ALLCALLADR)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > PCA9624__ALLCALLADR + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&PCA9624_hal, true);
 
@@ -54,7 +53,7 @@ FctERR PCA9624_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
 	if (!data)									{ return ERR_MEMORY; }		// Null pointer
 	if (addr > PCA9624__ALLCALLADR)				{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb - 1) > PCA9624__ALLCALLADR)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > PCA9624__ALLCALLADR + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&PCA9624_hal, true);
 

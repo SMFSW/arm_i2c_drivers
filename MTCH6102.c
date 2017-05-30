@@ -1,6 +1,5 @@
 /*!\file MTCH6102.c
 ** \author SMFSW
-** \version v0.3
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief MTCH6102 Driver code
@@ -38,7 +37,7 @@ FctERR MTCH6102_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 {
 	if (!data)								{ return ERR_MEMORY; }		// Null pointer
 	if (addr > MTCH__RAW_ADC_31)			{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb - 1) > MTCH__RAW_ADC_31)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > MTCH__RAW_ADC_31 + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&MTCH6102_hal, true);
 
@@ -53,7 +52,7 @@ FctERR MTCH6102_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
 	if (!data)								{ return ERR_MEMORY; }		// Null pointer
 	if (addr > MTCH__RAW_ADC_31)			{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb - 1) > MTCH__RAW_ADC_31)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > MTCH__RAW_ADC_31 + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&MTCH6102_hal, true);
 

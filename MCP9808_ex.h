@@ -1,6 +1,5 @@
 /*!\file MCP9808_ex.h
 ** \author SMFSW
-** \version v0.2
 ** \date 2017
 ** \copyright MIT (c) 2017, SMFSW
 ** \brief MCP9808 Driver extensions declarations
