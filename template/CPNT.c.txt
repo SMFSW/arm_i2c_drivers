@@ -23,7 +23,7 @@
 /****************************************************************/
 
 
-I2C_slave $CPNT$_hal = { { pNull, I2C_ADDR($CPNT$_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, false };
+I2C_slave $CPNT$_hal = { { pNull, I2C_ADDR($CPNT$_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
 
 /****************************************************************/
@@ -32,7 +32,11 @@ I2C_slave $CPNT$_hal = { { pNull, I2C_ADDR($CPNT$_BASE_ADDR), I2C_slave_timeout,
 FctERR $CPNT$_Init(void)
 {
 	I2C_slave_init(&$CPNT$_hal, I2C_$CPNT$, $CPNT$_BASE_ADDR, I2C_slave_timeout);
-	return $CPNT$_Init_Sequence();
+	
+	FctERR err = $CPNT$_Init_Sequence();
+	if (err)	{ I2C_set_enable(&$CPNT$_hal, false); }
+	
+	return err;
 }
 
 
@@ -41,8 +45,9 @@ FctERR $CPNT$_Init(void)
 
 FctERR $CPNT$_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 {
+	if (!I2C_is_enabled(&$CPNT$_hal))	{ return ERR_DISABLED; }	// Peripheral disabled
 	if (!data)							{ return ERR_MEMORY; }		// Null pointer
-	//if (addr > )				{ return ERR_RANGE; }		// Unknown register
+	//if (addr > )						{ return ERR_RANGE; }		// Unknown register
 	//if ((addr + nb) > last_reg + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&$CPNT$_hal, true);
@@ -56,8 +61,9 @@ FctERR $CPNT$_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 
 FctERR $CPNT$_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
+	if (!I2C_is_enabled(&$CPNT$))		{ return ERR_DISABLED; }	// Peripheral disabled
 	if (!data)							{ return ERR_MEMORY; }		// Null pointer
-	//if (addr > )				{ return ERR_RANGE; }		// Unknown register
+	//if (addr > )						{ return ERR_RANGE; }		// Unknown register
 	//if ((addr + nb) > last_reg + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&$CPNT$_hal, true);

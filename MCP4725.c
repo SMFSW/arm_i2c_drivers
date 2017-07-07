@@ -14,7 +14,7 @@
 /****************************************************************/
 
 
-I2C_slave MCP4725_hal = { { pNull, I2C_ADDR(MCP4725_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_HS }, 0, HAL_OK, false };
+I2C_slave MCP4725_hal = { { pNull, I2C_ADDR(MCP4725_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_HS }, 0, HAL_OK, true, false };
 
 
 /****************************************************************/
@@ -23,7 +23,11 @@ I2C_slave MCP4725_hal = { { pNull, I2C_ADDR(MCP4725_BASE_ADDR), I2C_slave_timeou
 FctERR MCP4725_Init(void)
 {
 	I2C_slave_init(&MCP4725_hal, I2C_MCP4725, MCP4725_BASE_ADDR, I2C_slave_timeout);
-	return MCP4725_Init_Sequence();
+
+	FctERR err = MCP4725_Init_Sequence();
+	if (err)	{ I2C_set_enable(&MCP4725_hal, false); }
+
+	return err;
 }
 
 
@@ -32,6 +36,7 @@ FctERR MCP4725_Init(void)
 
 FctERR MCP4725_Write(uint8_t * data, uint16_t nb)
 {
+	if (!I2C_is_enabled(&MCP4725_hal))	{ return ERR_DISABLED; }	// Peripheral disabled
 	if (!data)							{ return ERR_MEMORY; }		// Null pointer
 	if (nb > 3)							{ return ERR_RANGE; }		// More bytes than registers
 
@@ -46,6 +51,7 @@ FctERR MCP4725_Write(uint8_t * data, uint16_t nb)
 
 FctERR MCP4725_Read(uint8_t * data, uint16_t nb)
 {
+	if (!I2C_is_enabled(&MCP4725_hal))	{ return ERR_DISABLED; }	// Peripheral disabled
 	if (!data)							{ return ERR_MEMORY; }		// Null pointer
 	if (nb > 3)							{ return ERR_RANGE; }		// More bytes than registers
 

@@ -154,7 +154,7 @@ FctERR TSL2591_handler(void)
 	err = calculateLux(TSL2591.Full, TSL2591.IR);
 
 	#if defined(VERBOSE)
-		if (err == ERR_OVERFLOW)	{ printf("TSL2591; Sensor saturation reached!"); }
+		if (err == ERR_OVERFLOW)	{ printf("TSL2591; Sensor saturation reached!\r\n"); }
 		else						{ printf("TSL2591: Full %d IR %d Lux: %lul\r\n", TSL2591.Full, TSL2591.IR, TSL2591.Lux); }
 	#endif
 

@@ -17,7 +17,7 @@
 /****************************************************************/
 
 
-I2C_slave MTCH6102_hal = { { pNull, I2C_ADDR(MTCH6102_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, false };
+I2C_slave MTCH6102_hal = { { pNull, I2C_ADDR(MTCH6102_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
 
 /****************************************************************/
@@ -26,7 +26,11 @@ I2C_slave MTCH6102_hal = { { pNull, I2C_ADDR(MTCH6102_BASE_ADDR), I2C_slave_time
 FctERR MTCH6102_Init(void)
 {
 	I2C_slave_init(&MTCH6102_hal, I2C_MTCH6102, MTCH6102_BASE_ADDR, I2C_slave_timeout);
-	return MTCH6102_Init_Sequence();
+
+	FctERR err = MTCH6102_Init_Sequence();
+	if (err)	{ I2C_set_enable(&MTCH6102_hal, false); }
+
+	return err;
 }
 
 
@@ -35,6 +39,7 @@ FctERR MTCH6102_Init(void)
 
 FctERR MTCH6102_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 {
+	if (!I2C_is_enabled(&MTCH6102_hal))		{ return ERR_DISABLED; }	// Peripheral disabled
 	if (!data)								{ return ERR_MEMORY; }		// Null pointer
 	if (addr > MTCH__RAW_ADC_31)			{ return ERR_RANGE; }		// Unknown register
 	if ((addr + nb) > MTCH__RAW_ADC_31 + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
@@ -50,6 +55,7 @@ FctERR MTCH6102_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 
 FctERR MTCH6102_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
+	if (!I2C_is_enabled(&MTCH6102_hal))		{ return ERR_DISABLED; }	// Peripheral disabled
 	if (!data)								{ return ERR_MEMORY; }		// Null pointer
 	if (addr > MTCH__RAW_ADC_31)			{ return ERR_RANGE; }		// Unknown register
 	if ((addr + nb) > MTCH__RAW_ADC_31 + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers

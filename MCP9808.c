@@ -14,7 +14,7 @@
 /****************************************************************/
 
 
-I2C_slave MCP9808_hal = { { pNull, I2C_ADDR(MCP9808_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, false };
+I2C_slave MCP9808_hal = { { pNull, I2C_ADDR(MCP9808_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
 
 /****************************************************************/
@@ -23,7 +23,11 @@ I2C_slave MCP9808_hal = { { pNull, I2C_ADDR(MCP9808_BASE_ADDR), I2C_slave_timeou
 FctERR MCP9808_Init(void)
 {
 	I2C_slave_init(&MCP9808_hal, I2C_MCP9808, MCP9808_BASE_ADDR, I2C_slave_timeout);
-	return MCP9808_Init_Sequence();
+
+	FctERR err = MCP9808_Init_Sequence();
+	if (err)	{ I2C_set_enable(&MCP9808_hal, false); }
+
+	return err;
 }
 
 
@@ -34,6 +38,7 @@ FctERR MCP9808_Write(uint16_t * data, uint16_t addr, uint16_t nb)
 {
 	uint8_t DATA[2];
 
+	if (!I2C_is_enabled(&MCP9808_hal))			{ return ERR_DISABLED; }	// Peripheral disabled
 	if (!data)									{ return ERR_MEMORY; }		// Null pointer
 	if (addr > MCP9808__RESOLUTION)				{ return ERR_RANGE; }		// Unknown register
 	if ((addr + nb) > MCP9808__RESOLUTION + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
@@ -67,6 +72,7 @@ FctERR MCP9808_Read(uint16_t * data, uint16_t addr, uint16_t nb)
 {
 	uint8_t DATA[2];
 
+	if (!I2C_is_enabled(&MCP9808_hal))			{ return ERR_DISABLED; }	// Peripheral disabled
 	if (!data)									{ return ERR_MEMORY; }		// Null pointer
 	if (addr > MCP9808__RESOLUTION)				{ return ERR_RANGE; }		// Unknown register
 	if ((addr + nb) > MCP9808__RESOLUTION + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers

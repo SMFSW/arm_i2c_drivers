@@ -70,6 +70,7 @@ typedef struct PACK__ StructI2Cslave {	// TODO: check if the struct really needs
 	} cfg;
 	uint16_t				addr;		//!< Current internal register address (not used yet)
 	HAL_StatusTypeDef		status;		//!< Status of the last transaction
+	bool					en;			//!< State of slave (disabled/enabled)
 	bool					busy;		//!< TODO: implement to be checked if transaction pending (it?)
 } I2C_slave;
 
@@ -124,6 +125,16 @@ __INLINE FctERR INLINE__ I2C_set_current_mem_address(I2C_slave * slave, uint16_t
 	slave->addr = addr;
 	return ERR_OK; }
 
+/*!\brief Set I2C Slave device disabled/enabled state
+** \param[in,out] slave - pointer to I2C slave instance
+** \param[in] en - I2C device state (disabled/enabled)
+** \return Nothing
+**/
+__INLINE FctERR INLINE__ I2C_set_enable(I2C_slave * slave, bool en) {
+	slave->en = en;
+	return ERR_OK; }
+
+
 /*!\brief Set I2C Slave bus/device business
 ** \param[in,out] slave - pointer to I2C slave instance
 ** \param[in] busy - I2C bus/device state
@@ -143,6 +154,13 @@ __INLINE FctERR INLINE__ I2C_set_busy(I2C_slave * slave, bool busy) {
 **/
 __INLINE uint32_t INLINE__ I2C_get_current_mem_address(I2C_slave * slave) {
 	return slave->addr; }
+
+/*!\brief Get I2C Slave device enabled state
+** \param[in,out] slave - pointer to I2C slave instance
+** \return true if I2C slave is enabled
+**/
+__INLINE bool INLINE__ I2C_is_enabled(I2C_slave * slave) {
+	return slave->en; }
 
 /*!\brief Get I2C Slave device busy state
 ** \param[in,out] slave - pointer to I2C slave instance

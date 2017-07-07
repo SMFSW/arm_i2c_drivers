@@ -18,7 +18,7 @@
 /****************************************************************/
 
 
-I2C_slave TCS3400_hal = { { pNull, I2C_ADDR(TCS3400_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, false };
+I2C_slave TCS3400_hal = { { pNull, I2C_ADDR(TCS3400_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
 
 /****************************************************************/
@@ -27,7 +27,11 @@ I2C_slave TCS3400_hal = { { pNull, I2C_ADDR(TCS3400_BASE_ADDR), I2C_slave_timeou
 FctERR TCS3400_Init(void)
 {
 	I2C_slave_init(&TCS3400_hal, I2C_TCS3400, TCS3400_BASE_ADDR, I2C_slave_timeout);
-	return TCS3400_Init_Sequence();
+
+	FctERR err = TCS3400_Init_Sequence();
+	if (err)	{ I2C_set_enable(&TCS3400_hal, false); }
+
+	return err;
 }
 
 
@@ -36,6 +40,7 @@ FctERR TCS3400_Init(void)
 
 FctERR TCS3400_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 {
+	if (!I2C_is_enabled(&TCS3400_hal))		{ return ERR_DISABLED; }	// Peripheral disabled
 	if (!data)								{ return ERR_MEMORY; }		// Null pointer
 	if (addr > TCS3400__AICLEAR)			{ return ERR_RANGE; }		// Unknown register
 	if ((addr + nb) > TCS3400__AICLEAR + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
@@ -51,6 +56,7 @@ FctERR TCS3400_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 
 FctERR TCS3400_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
+	if (!I2C_is_enabled(&TCS3400_hal))		{ return ERR_DISABLED; }	// Peripheral disabled
 	if (!data)							{ return ERR_MEMORY; }		// Null pointer
 	if (addr > TCS3400__IR)				{ return ERR_RANGE; }		// Unknown register
 	if ((addr + nb) > TCS3400__IR + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers

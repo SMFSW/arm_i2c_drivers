@@ -21,6 +21,17 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
+## v0.5
+
+* added en variable in slave struct and getters/setters (to disable peripheral if init goes wrong)
+* added test if slave is enabled before sending/getting messages on I2C bus
+* disable peripheral if Init_Sequence goes wrong (except for EEPROM/FRAM peripherals which are somewhat generic)
+* fixed some casts in library (from gcc strict warnings)
+* TCSxxxx, TSLxxxx: added missing carriage returns in verbose parts
+* TCSxxxx: fixed McCamy's formula to calculate cct
+* DRV2605L: fixed missing inline returns in base header
+* DRV2605L: fixed registers definitions for: Status, FeedbackControl
+
 ## v0.4
 
 * minor change in component base to calculate max address in pre-comp

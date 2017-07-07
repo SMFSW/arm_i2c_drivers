@@ -97,20 +97,19 @@ static FctERR TCS3472_calc(uint16_t r, uint16_t g, uint16_t b)
 	if ((r >= sat) || (g >= sat) || (b >= sat))	{ TCS3472.SaturationRipple = true; }
 	else										{ TCS3472.SaturationRipple = false; }
 
-	// Map RGB values to XYZ space
-	// Based on 6500K fluorescent, 3000K fluorescent and 60W incandescent values for a wide range.
-	// Note: Y = Illuminance or lux
+	// Convert RGB to XYZ (based on TAOS DN25 application note)
+	// These equations are the result of a transformation matrix composed of correlations at different light sources
 	X = (-0.14282f * r) + (1.54924f * g) + (-0.95641f * b);
-	Y = (-0.32466f * r) + (1.57837f * g) + (-0.73191f * b);
+	Y = (-0.32466f * r) + (1.57837f * g) + (-0.73191f * b);		// Note: Y = Illuminance (lux)
 	Z = (-0.68202f * r) + (0.77073f * g) + ( 0.56332f * b);
 
 	// Calculate the chromaticity coordinates
 	xc = X / (X + Y + Z);
 	yc = Y / (X + Y + Z);
 
-	// Use McCamy's formula to determine the CCT
-	n = (xc - 0.3320f) / (0.1858f - yc);
-	TCS3472.Temp = (uint32_t) ((449.0f * powf(n, 3)) + (3525.0f * powf(n, 2)) + (6823.3f * n) + 5520.33f);
+	// Use McCamy's formula to determine the CCT (original formula, not taken from TAOS DN25 application note)
+	n = (xc - 0.3320f) / (yc - 0.1858f);
+	TCS3472.Temp = (uint32_t) ((-449.0 * powf(n, 3)) + (3525.0 * powf(n, 2)) - (6823.3 * n) + 5520.33);
 	TCS3472.Lux = (uint32_t) Y;
 
 	return ERR_OK;
@@ -132,7 +131,7 @@ FctERR TCS3472_handler(void)
 	err = TCS3472_calc(TCS3472.Red, TCS3472.Green, TCS3472.Blue);
 
 	#if defined(VERBOSE)
-		if (err == ERR_OVERFLOW)	{ printf("TCS3472: Sensor saturation reached!"); }
+		if (err == ERR_OVERFLOW)	{ printf("TCS3472: Sensor saturation reached!\r\n"); }
 		else						{ printf("TCS3472: C%d R%d G%d B%d Lux: %lul Temp: %luK\r\n", TCS3472.Clear, TCS3472.Red, TCS3472.Green, TCS3472.Blue, TCS3472.Lux, TCS3472.Temp); }
 	#endif
 
@@ -144,6 +143,7 @@ FctERR TCS3472_handler(void)
 
 	return ERR_OK;
 }
+
 
 /****************************************************************/
 #endif

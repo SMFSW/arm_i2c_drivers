@@ -82,10 +82,10 @@ __INLINE FctERR INLINE__ DRV2605L_Reset(void) {
 FctERR DRV2605L_Set_ActType(DRV2605L_act act);
 
 __INLINE FctERR INLINE__ DRV2605L_Set_LRA(void) {
-	DRV2605L_Set_ActType(DRV__ACT_LRA); }
+	return DRV2605L_Set_ActType(DRV__ACT_LRA); }
 
 __INLINE FctERR INLINE__ DRV2605L_Set_ERM(void) {
-	DRV2605L_Set_ActType(DRV__ACT_ERM); }
+	return DRV2605L_Set_ActType(DRV__ACT_ERM); }
 
 FctERR DRV2605L_Set_OperatingMode(DRV2605L_mode mode);
 FctERR DRV2605L_Set_Standby(bool stdby);

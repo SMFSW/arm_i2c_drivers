@@ -14,7 +14,7 @@
 /****************************************************************/
 
 
-I2C_slave GPMS_hal = { { pNull, I2C_ADDR(GPMS_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, false };
+I2C_slave GPMS_hal = { { pNull, I2C_ADDR(GPMS_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
 
 /****************************************************************/
@@ -23,7 +23,11 @@ I2C_slave GPMS_hal = { { pNull, I2C_ADDR(GPMS_BASE_ADDR), I2C_slave_timeout, I2C
 FctERR GPMS_Init(void)
 {
 	I2C_slave_init(&GPMS_hal, I2C_GPMS, GPMS_BASE_ADDR, I2C_slave_timeout);
-	return GPMS_Init_Sequence();
+
+	FctERR err = GPMS_Init_Sequence();
+	if (err)	{ I2C_set_enable(&GPMS_hal, false); }
+
+	return err;
 }
 
 
@@ -32,6 +36,7 @@ FctERR GPMS_Init(void)
 
 FctERR GPMS_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 {
+	if (!I2C_is_enabled(&GPMS_hal))				{ return ERR_DISABLED; }	// Peripheral disabled
 	if (!data)									{ return ERR_MEMORY; }		// Null pointer
 	if (addr > GPMS__IO_PORT_OUTPUT)			{ return ERR_RANGE; }		// Unknown register
 	if ((addr + nb) > GPMS__IO_PORT_OUTPUT + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
@@ -47,6 +52,7 @@ FctERR GPMS_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 
 FctERR GPMS_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
+	if (!I2C_is_enabled(&GPMS_hal))		{ return ERR_DISABLED; }	// Peripheral disabled
 	if (!data)							{ return ERR_MEMORY; }		// Null pointer
 	if (addr > GPMS__STATUS)			{ return ERR_RANGE; }		// Unknown register
 	if ((addr + nb) > GPMS__STATUS + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers

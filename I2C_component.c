@@ -8,6 +8,11 @@
 #include "I2C_component.h"
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
+#include <string.h>
+/****************************************************************/
+
+
+//static const I2C_slave slave_hal = { { pNull, 0, I2C_slave_timeout, 0, I2C_STD }, 0, HAL_OK, true, false };	//!< default slave hal values
 
 
 FctERR I2C_slave_init(I2C_slave * slave, I2C_HandleTypeDef * hi2c, uint16_t devAddress, uint32_t timeout)
@@ -18,6 +23,8 @@ FctERR I2C_slave_init(I2C_slave * slave, I2C_HandleTypeDef * hi2c, uint16_t devA
 	assert_param(IS_I2C_7B_ADDR(devAddress));
 
 	if ((!slave) || (!hi2c))	{ return ERR_INSTANCE; }	// Unknown instance (null pointer)
+
+	//memcpy(slave, &slave_hal, sizeof(I2C_slave));		//! \note max_speed is const and should be set at init
 
 	slave->cfg.inst = hi2c;
 	slave->cfg.addr = I2C_ADDR(devAddress);

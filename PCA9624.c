@@ -18,7 +18,7 @@
 /****************************************************************/
 
 
-I2C_slave PCA9624_hal = { { pNull, I2C_ADDR(PCA9624_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FMP }, 0, HAL_OK, false };
+I2C_slave PCA9624_hal = { { pNull, I2C_ADDR(PCA9624_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FMP }, 0, HAL_OK, true, false };
 
 
 /****************************************************************/
@@ -27,7 +27,11 @@ I2C_slave PCA9624_hal = { { pNull, I2C_ADDR(PCA9624_BASE_ADDR), I2C_slave_timeou
 FctERR PCA9624_Init(void)
 {
 	I2C_slave_init(&PCA9624_hal, I2C_PCA9624, PCA9624_BASE_ADDR, I2C_slave_timeout);
-	return PCA9624_Init_Sequence();
+
+	FctERR err = PCA9624_Init_Sequence();
+	if (err)	{ I2C_set_enable(&PCA9624_hal, false); }
+
+	return err;
 }
 
 
@@ -36,6 +40,7 @@ FctERR PCA9624_Init(void)
 
 FctERR PCA9624_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 {
+	if (!I2C_is_enabled(&PCA9624_hal))			{ return ERR_DISABLED; }	// Peripheral disabled
 	if (!data)									{ return ERR_MEMORY; }		// Null pointer
 	if (addr > PCA9624__ALLCALLADR)				{ return ERR_RANGE; }		// Unknown register
 	if ((addr + nb) > PCA9624__ALLCALLADR + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
@@ -51,6 +56,7 @@ FctERR PCA9624_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 
 FctERR PCA9624_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
+	if (!I2C_is_enabled(&PCA9624_hal))			{ return ERR_DISABLED; }	// Peripheral disabled
 	if (!data)									{ return ERR_MEMORY; }		// Null pointer
 	if (addr > PCA9624__ALLCALLADR)				{ return ERR_RANGE; }		// Unknown register
 	if ((addr + nb) > PCA9624__ALLCALLADR + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers

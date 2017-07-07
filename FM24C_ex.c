@@ -28,11 +28,10 @@
 FctERR FM24C_Mass_Erase(void)
 {
 	FctERR	err;
-	int		i;
 	uint8_t	bankData[FM24C_BANK_SIZE];
 	memset(&bankData, VAL_CLR, sizeof(bankData));
 
-	for (i = 0 ; i < (FM24C_SIZE / FM24C_BANK_SIZE) ; i++)
+	for (int i = 0 ; i < (FM24C_SIZE / FM24C_BANK_SIZE) ; i++)
 	{
 		#if defined(HAL_IWDG_MODULE_ENABLED)
 			HAL_IWDG_Refresh(&hiwdg);

@@ -14,7 +14,7 @@
 /****************************************************************/
 
 
-I2C_slave PCF8523_hal = { { pNull, I2C_ADDR(PCF8523_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FMP }, 0, HAL_OK, false };
+I2C_slave PCF8523_hal = { { pNull, I2C_ADDR(PCF8523_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FMP }, 0, HAL_OK, true, false };
 
 
 /****************************************************************/
@@ -23,7 +23,11 @@ I2C_slave PCF8523_hal = { { pNull, I2C_ADDR(PCF8523_BASE_ADDR), I2C_slave_timeou
 FctERR PCF8523_Init(void)
 {
 	I2C_slave_init(&PCF8523_hal, I2C_PCF8523, PCF8523_BASE_ADDR, I2C_slave_timeout);
-	return PCF8523_Init_Sequence();
+
+	FctERR err = PCF8523_Init_Sequence();
+	if (err)	{ I2C_set_enable(&PCF8523_hal, false); }
+
+	return err;
 }
 
 
@@ -32,6 +36,7 @@ FctERR PCF8523_Init(void)
 
 FctERR PCF8523_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 {
+	if (!I2C_is_enabled(&PCF8523_hal))			{ return ERR_DISABLED; }	// Peripheral disabled
 	if (!data)									{ return ERR_MEMORY; }		// Null pointer
 	if (addr > PCF8523__TMR_B_REG)				{ return ERR_RANGE; }		// Unknown register
 	if ((addr + nb) > PCF8523__TMR_B_REG + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
@@ -47,6 +52,7 @@ FctERR PCF8523_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 
 FctERR PCF8523_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
+	if (!I2C_is_enabled(&PCF8523_hal))			{ return ERR_DISABLED; }	// Peripheral disabled
 	if (!data)									{ return ERR_MEMORY; }		// Null pointer
 	if (addr > PCF8523__TMR_B_REG)				{ return ERR_RANGE; }		// Unknown register
 	if ((addr + nb) > PCF8523__TMR_B_REG + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers

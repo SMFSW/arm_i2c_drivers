@@ -22,7 +22,7 @@
 /****************************************************************/
 
 
-I2C_slave FM24C_hal = { { pNull, I2C_ADDR(FM24C_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, false };
+I2C_slave FM24C_hal = { { pNull, I2C_ADDR(FM24C_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
 
 /****************************************************************/
@@ -42,6 +42,7 @@ FctERR FM24C_Write_Banked(uint8_t * data, uint16_t addr, uint8_t bank, uint16_t 
 {
 	uint16_t i2c_addr = FM24C_hal.cfg.addr + (bank << 1);
 
+	if (!I2C_is_enabled(&FM24C_hal))				{ return ERR_DISABLED; }	// Peripheral disabled
 	if (!data)										{ return ERR_MEMORY; }		// Null pointer
 	if (bank >= (FM24C_SIZE / FM24C_BANK_SIZE))		{ return ERR_RANGE; }		// Unknown bank
 	if (addr >= FM24C_BANK_SIZE)					{ return ERR_RANGE; }		// Unknown address
@@ -60,6 +61,7 @@ FctERR FM24C_Read_Banked(uint8_t * data, uint16_t addr, uint8_t bank, uint16_t n
 {
 	uint16_t i2c_addr = FM24C_hal.cfg.addr + (bank << 1);
 
+	if (!I2C_is_enabled(&FM24C_hal))				{ return ERR_DISABLED; }	// Peripheral disabled
 	if (!data)										{ return ERR_MEMORY; }		// Null pointer
 	if (bank >= (FM24C_SIZE / FM24C_BANK_SIZE))		{ return ERR_RANGE; }		// Unknown bank
 	if (addr >= FM24C_BANK_SIZE)					{ return ERR_RANGE; }		// Unknown address
@@ -77,27 +79,26 @@ FctERR FM24C_Read_Banked(uint8_t * data, uint16_t addr, uint8_t bank, uint16_t n
 FctERR FM24C_ReadWrite(uint8_t * data, uint16_t addr, uint16_t nb, bool wr)
 {
 	FctERR		err = ERR_OK;
-	int			i;
 	uint16_t	subaddr, bank, n;
 
 	if (nb > FM24C_BANK_SIZE * 2)	{ return ERR_VALUE; }	// The function handle only one bank crossing
 
 	div_t temp = div(addr, FM24C_BANK_SIZE);	// Divide address by bank size
-	int16_t nbBank2 = max(0, ((int16_t) temp.rem + (int16_t) nb - (int16_t) FM24C_BANK_SIZE));	// Number of bytes for bank+1 (if bank crossing)
-	int16_t nbBank1 = nb - nbBank2;																// Number of bytes for bank
-	int nbloop = nbBank2 ? 2 : 1;																// Number of for loop iterations
+	uint16_t nbBank2 = max(0, (temp.rem + nb - FM24C_BANK_SIZE));	// Number of bytes for bank+1 (if bank crossing)
+	uint16_t nbBank1 = nb - nbBank2;								// Number of bytes for bank
+	int nbloop = nbBank2 ? 2 : 1;									// Number of for loop iterations
 
-	for (i = 0 ; i < nbloop ; i++)
+	for (int i = 0 ; i < nbloop ; i++)
 	{
 		n = i ? nbBank2 : nbBank1;
 		subaddr = i ? 0 : temp.rem;
 		bank = temp.quot + i;
 
 		if (wr)		{ err = FM24C_Write_Banked(&data[nbBank1 * i], subaddr, bank, n); }	// Write
-		if (err)	{ break; }																// Break if error occurred
+		if (err)	{ break; }															// Break if error occurred
 
 		err = FM24C_Read_Banked(&data[nbBank1 * i], subaddr, bank, n);					// Read in all cases (simple read or write)
-		if (err)	{ break; }																// Break if error occurred
+		if (err)	{ break; }															// Break if error occurred
 	}
 
 	return err;

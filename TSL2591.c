@@ -14,7 +14,7 @@
 /****************************************************************/
 
 
-I2C_slave TSL2591_hal = { { pNull, I2C_ADDR(TSL2591_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, false };
+I2C_slave TSL2591_hal = { { pNull, I2C_ADDR(TSL2591_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
 
 /****************************************************************/
@@ -23,7 +23,11 @@ I2C_slave TSL2591_hal = { { pNull, I2C_ADDR(TSL2591_BASE_ADDR), I2C_slave_timeou
 FctERR TSL2591_Init(void)
 {
 	I2C_slave_init(&TSL2591_hal, I2C_TSL2591, TSL2591_BASE_ADDR, I2C_slave_timeout);
-	return TSL2591_Init_Sequence();
+
+	FctERR err = TSL2591_Init_Sequence();
+	if (err)	{ I2C_set_enable(&TSL2591_hal, false); }
+
+	return err;
 }
 
 
@@ -34,6 +38,7 @@ FctERR TSL2591_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 {
 	uTSL2591_CMD CMD;
 
+	if (!I2C_is_enabled(&TSL2591_hal))		{ return ERR_DISABLED; }	// Peripheral disabled
 	if (!data)								{ return ERR_MEMORY; }		// Null pointer
 	if (addr > TSL2591__PERSIST)			{ return ERR_RANGE; }		// Unknown register
 	if ((addr + nb) > TSL2591__PERSIST + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
@@ -55,6 +60,7 @@ FctERR TSL2591_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
 	uTSL2591_CMD CMD;
 
+	if (!I2C_is_enabled(&TSL2591_hal))		{ return ERR_DISABLED; }	// Peripheral disabled
 	if (!data)								{ return ERR_MEMORY; }		// Null pointer
 	if (addr > TSL2591__C1DATAH)			{ return ERR_RANGE; }		// Unknown register
 	if ((addr + nb) > TSL2591__C1DATAH + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers

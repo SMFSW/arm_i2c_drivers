@@ -19,7 +19,6 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 #include "i2c.h"
 /****************************************************************/
-// TODO: doxygen
 
 
 // *****************************************************************************
@@ -311,7 +310,7 @@ typedef union uDRV_REG__STATUS {
 		uint8_t					:1;
 		uint8_t DIAG_RESULT		:1;		//!< Auto Calibration routine diagnostic
 		uint8_t 				:1;
-		uint8_t DEVICE_ID		:2;		//!< Device identifier
+		uint8_t DEVICE_ID		:3;		//!< Device identifier
 	} Bits;
 } uDRV_REG__STATUS;
 
@@ -383,7 +382,7 @@ typedef union uDRV_REG__FEEDBACK_CONTROL {
 	struct {
 		uint8_t			BEMF_GAIN		:2;		//!< Analog gain for back-EMF amplifier
 		uint8_t			LOOP_GAIN		:2;		//!< Loop gain for the feedback control
-		uint8_t			FB_BRAKE_FACTOR	:2;		//!< Feedback gain ratio between braking gain and driving gain
+		uint8_t			FB_BRAKE_FACTOR	:3;		//!< Feedback gain ratio between braking gain and driving gain
 		DRV2605L_act	N_ERM_LRA		:1;		//!< ERM/LRA Mode
 	} Bits;
 } uDRV_REG__FEEDBACK_CONTROL;

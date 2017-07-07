@@ -14,7 +14,7 @@
 /****************************************************************/
 
 
-I2C_slave DRV2605_hal = { { pNull, I2C_ADDR(DRV2605L_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, false };
+I2C_slave DRV2605_hal = { { pNull, I2C_ADDR(DRV2605L_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
 
 /****************************************************************/
@@ -23,7 +23,11 @@ I2C_slave DRV2605_hal = { { pNull, I2C_ADDR(DRV2605L_BASE_ADDR), I2C_slave_timeo
 FctERR DRV2605L_Init(void)
 {
 	I2C_slave_init(&DRV2605_hal, I2C_DRV2605L, DRV2605L_BASE_ADDR, I2C_slave_timeout);
-	return DRV2605L_Init_Sequence();
+
+	FctERR err = DRV2605L_Init_Sequence();
+	if (err)	{ I2C_set_enable(&DRV2605_hal, false); }
+
+	return err;
 }
 
 
@@ -32,6 +36,7 @@ FctERR DRV2605L_Init(void)
 
 FctERR DRV2605L_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 {
+	if (!I2C_is_enabled(&DRV2605_hal))					{ return ERR_DISABLED; }	// Peripheral disabled
 	if (!data)											{ return ERR_MEMORY; }		// Null pointer
 	if (addr > DRV__LRA_RESONANCE_PERIOD)				{ return ERR_RANGE; }		// Unknown register
 	if ((addr + nb) > DRV__LRA_RESONANCE_PERIOD + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
@@ -47,6 +52,7 @@ FctERR DRV2605L_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 
 FctERR DRV2605L_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
+	if (!I2C_is_enabled(&DRV2605_hal))					{ return ERR_DISABLED; }	// Peripheral disabled
 	if (!data)											{ return ERR_MEMORY; }		// Null pointer
 	if (addr > DRV__LRA_RESONANCE_PERIOD)				{ return ERR_RANGE; }		// Unknown register
 	if ((addr + nb) > DRV__LRA_RESONANCE_PERIOD + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
