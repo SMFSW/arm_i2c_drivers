@@ -17,6 +17,9 @@
 extern DRV2605L_proc DRV2605L;
 
 
+/*!\union uDRV_CFG
+** \brief DRV2605L Config registers union
+**/
 typedef union uDRV_CFG {
 	uint8_t Bytes[6];
 	struct {
@@ -31,12 +34,23 @@ typedef union uDRV_CFG {
 
 
 static const uint16_t DRV2605L_time_table_ERM[4] = { 45, 75, 150, 225 };
+//! Time table for ERM actuators
+
 static const uint16_t DRV2605L_time_table_LRA[16] = { 15, 25, 50 , 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 235, 260, 285 };
+//! Time table for LRA actuators
 
 
+/*!\brief Read configuration block of DRV2605L peripheral
+** \param[in,out] cfg - pointer to DRV2605L configuration in RAM to write to
+** \return FctERR - error code
+**/
 __STATIC_INLINE FctERR INLINE__ _read_cfg(uDRV_CFG * cfg) {
 	return DRV2605L_Read(cfg->Bytes, DRV__FEEDBACK_CONTROL, sizeof(uDRV_CFG)); }
 
+/*!\brief Write configuration block of DRV2605L peripheral
+** \param[in,out] cfg - pointer to DRV2605L configuration in RAM to read from
+** \return FctERR - error code
+**/
 __STATIC_INLINE FctERR INLINE__ _write_cfg(uDRV_CFG * cfg) {
 	return DRV2605L_Write(cfg->Bytes, DRV__FEEDBACK_CONTROL, sizeof(uDRV_CFG)); }
 
@@ -177,32 +191,32 @@ FctERR DRV2605L_Set_RTPDataFormat(DRV2605L_rtp_format format)
 }
 
 
-FctERR DRV2605L_Set_ATVPeakTime(DRV2605L_peak val)
+FctERR DRV2605L_Set_ATVPeakTime(DRV2605L_peak peak)
 {
 	uDRV_REG__ATV_CONTROL	ATV;
 	FctERR					err;
 
-	if (val > DRV__PEAK_40MS)	{ return ERR_VALUE; }	// Unknown peak time
+	if (peak > DRV__PEAK_40MS)	{ return ERR_VALUE; }	// Unknown peak time
 
 	err = DRV2605L_Read(&ATV.Byte, DRV__ATV_CONTROL, 1);
 	if (err)	{ return err; }
 
-	ATV.Bits.ATH_PEAK_TIME = val;
+	ATV.Bits.ATH_PEAK_TIME = peak;
 	return DRV2605L_Write(&ATV.Byte, DRV__ATV_CONTROL, 1);
 }
 
 
-FctERR DRV2605L_Set_ATVLowPassFilter(DRV2605L_filter val)
+FctERR DRV2605L_Set_ATVLowPassFilter(DRV2605L_filter filt)
 {
 	uDRV_REG__ATV_CONTROL	ATV;
 	FctERR					err;
 
-	if (val > DRV__FILTER_200HZ)	{ return ERR_VALUE; }	// Unknown low pass filter frequency
+	if (filt > DRV__FILTER_200HZ)	{ return ERR_VALUE; }	// Unknown low pass filter frequency
 
 	err = DRV2605L_Read(&ATV.Byte, DRV__ATV_CONTROL, 1);
 	if (err)	{ return err; }
 
-	ATV.Bits.ATH_FILTER = val;
+	ATV.Bits.ATH_FILTER = filt;
 	return DRV2605L_Write(&ATV.Byte, DRV__ATV_CONTROL, 1);
 }
 

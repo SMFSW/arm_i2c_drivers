@@ -52,17 +52,9 @@ ARM I2C Drivers for various components
 
 - **FM24C**: 4/16-Kbit (512/2K * 8) Serial I2C F-RAM
 
-  -> _WORKING_
+  -> _NOT TESTED YET_
 
-- **L3GD20H**: MEMS motion sensor, three-axis digital output gyroscope
-
-  -> _CODING IN PROGRESS / NO TESTS YET_
-
-- **LSM303DLHC**: Ultra compact high performance e-compass 3D accelerometer and 3D magnetometer module
-
-  -> _CODING IN PROGRESS / NO TESTS YET_
-
-- **MB85RC256V**: 256-Kbit (32K * 8) I2C Memory FRAM
+- **MB85RC256V**: 256-Kbit (32K * 8) I2C Memory FRAM -> Should work for **FM24CL64B**
 
   -> _WORKING_
 
@@ -103,27 +95,21 @@ ARM I2C Drivers for various components
   -> _TESTS PENDING (communication OK, auto-integration, persistence & conversions in the works)_
 
 
-## FRAM / EEPROM
-
-- Use FM24C for I2C address banked components (with 8b internal address):
-  - Tested on:
-    - FM24C16B
-    - FM24C04B
-    - BR24T04FVM
-
-- Use MB85RC256V for 16b internal address components:
-  - Tested on:
-    - MB85RC256V
-    - FM24CL64B
-
-
 ## Next peripherals
 
-- EEPROM/FRAM (few others if needed?)
+- **L3GD20H**: MEMS motion sensor, three-axis digital output gyroscope
+
+  -> _CODING IN PROGRESS / NO TESTS YET_
+
+- **LSM303DLHC**: Ultra compact high performance e-compass 3D accelerometer and 3D magnetometer module
+
+  -> _CODING IN PROGRESS / NO TESTS YET_
+
+- EEPROM/FRAM (few others?)
 - Capacitive (MPR121)
 - OLED
-- Clock Generator (SI5351 with help of [etherkit](https://github.com/etherkit/Si5351Arduino))
-- Accelerometer/Gyro (GY521 MPU6050 with help of [jrowberg](https://github.com/jrowberg/i2cdevlib/))
+- Clock Generator (SI5351)
+- Accelerometer/Gyro (GY521 MPU6050)
 - ...
 
 You may also:
@@ -139,16 +125,6 @@ Feel free to share your thoughts @ xgarmanboziax@gmail.com about:
 - issues encountered (might also raise issue on github directly)
 - optimisations
 - improvements & new functionalities
-
-
-## Documentation
-
-Doxygen documentation can be generated using "Doxyfile"
-
-
-## Release Notes
-
-See [release notes](https://github.com/SMFSW/arm_i2c_drivers/ReleaseNotes.md)
 
 
 ## License

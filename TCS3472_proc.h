@@ -18,7 +18,6 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 #include "i2c.h"
 /****************************************************************/
-// TODO: doxygen
 
 
 // *****************************************************************************
@@ -38,26 +37,29 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
+/*!\struct TCS3472_proc
+** \brief TCS3472 user interface struct
+**/
 typedef struct TCS3472_proc {
-	uint16_t		Red;
-	uint16_t		Green;
-	uint16_t		Blue;
-	uint16_t		Clear;
-	uint32_t		Lux;				//!< Illuminance (lux)
-	uint32_t		Temp;				//!< Color temperature (in Kelvin)
-	float			IR_Ratio;			//!< (in percent)
-	float			Saturation_Ratio;	//!< (in percent)
-	bool			SaturationRipple;	//!< Ripple saturation reached (75% of saturation value)
-	bool			Saturation;			//!< Sensor saturation reached
+	uint16_t		Red;				//!< Current Red conversion
+	uint16_t		Green;				//!< Current Green conversion
+	uint16_t		Blue;				//!< Current Blue conversion
+	uint16_t		Clear;				//!< Current Clear conversion
+	uint32_t		Lux;				//!< Current Illuminance (lux)
+	uint32_t		Temp;				//!< Current Color temperature (in Kelvin)
+	float			IR_Ratio;			//!< Current IR Ratio (in percent)
+	float			Saturation_Ratio;	//!< Current Saturation ration(in percent)
+	bool			SaturationRipple;	//!< Current Ripple saturation status (75% of saturation value)
+	bool			Saturation;			//!< Current Sensor saturation status
 	struct {
-	TCS3472_gain	Gain;				//!< Sensor gain
-	uint16_t		Integ;				//!< Sensor integration time
-	uint16_t		Wait;				//!< Sensor wait time
-	uint16_t		LowThreshold;
-	uint16_t		HighThreshold;
-	bool			AIEN;				//!< Sensor ALS (Ambient Light Sensing) interrupts enabled
-	bool			WEN;				//!< Wait between ALS conversions enabled
-	uint8_t			Id;					//!< Chip ID
+	TCS3472_gain	Gain;				//!< Sensor gain config
+	uint16_t		Integ;				//!< Sensor integration time config
+	uint16_t		Wait;				//!< Sensor wait time config
+	uint16_t		LowThreshold;		//!< Low Threshold config
+	uint16_t		HighThreshold;		//!< High Threshold config
+	bool			AIEN;				//!< Sensor ALS (Ambient Light Sensing) interrupts enabled config
+	bool			WEN;				//!< Wait between ALS conversions enabled config
+	uint8_t			Id;					//!< TCS34xx Chip ID
 	} cfg;
 } TCS3472_proc;
 
@@ -74,9 +76,21 @@ typedef struct TCS3472_proc {
 **/
 FctERR TCS3472_Init_Sequence(void);
 
+/*!\brief Get current Color temperature (in Kelvin)
+** \return FctERR - error code
+**/
 uint32_t TCS3472_Get_Temp(void);
+
+/*!\brief Get current Illuminance (in lux)
+** \return FctERR - error code
+**/
 uint32_t TCS3472_Get_Lux(void);
 
+/*!\brief Handler for TCS3472 peripheral
+** \note May be called periodically to handle TCS3472 tasks
+** \note Alternately may be called when event occurs on TCS3472 pin
+** \return FctERR - error code
+**/
 FctERR TCS3472_handler(void);
 
 

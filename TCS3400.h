@@ -19,7 +19,6 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 #include "i2c.h"
 /****************************************************************/
-// TODO: doxygen
 
 
 // *****************************************************************************
@@ -109,6 +108,9 @@ typedef enum PACK__ TCS3400_it_persist {
 } TCS3400_it_persist;
 
 
+/*!\union uTCS3400_REG__ENABLE
+** \brief Union for ENABLE register of TCS3400
+**/
 typedef union uTCS3400_REG__ENABLE {
 	uint8_t Byte;
 	struct {
@@ -124,6 +126,9 @@ typedef union uTCS3400_REG__ENABLE {
 } uTCS3400_REG__ENABLE;
 
 
+/*!\union uTCS3400_REG__PERSIST
+** \brief Union for PERSIST register of TCS3400
+**/
 typedef union uTCS3400_REG__PERSIST {
 	uint8_t Byte;
 	struct {
@@ -133,6 +138,9 @@ typedef union uTCS3400_REG__PERSIST {
 } uTCS3400_REG__PERSIST;
 
 
+/*!\union uTCS3400_REG__CONFIG
+** \brief Union for CONFIG register of TCS3400
+**/
 typedef union uTCS3400_REG__CONFIG {
 	uint8_t Byte;
 	struct {
@@ -143,6 +151,9 @@ typedef union uTCS3400_REG__CONFIG {
 } uTCS3400_REG__CONFIG;
 
 
+/*!\union uTCS3400_REG__CONTROL
+** \brief Union for CONTROL register of TCS3400
+**/
 typedef union uTCS3400_REG__CONTROL {
 	uint8_t Byte;
 	struct {
@@ -152,6 +163,9 @@ typedef union uTCS3400_REG__CONTROL {
 } uTCS3400_REG__CONTROL;
 
 
+/*!\union uTCS3400_REG__AUX
+** \brief Union for AUX register of TCS3400
+**/
 typedef union uTCS3400_REG__AUX {
 	uint8_t Byte;
 	struct {
@@ -162,6 +176,9 @@ typedef union uTCS3400_REG__AUX {
 } uTCS3400_REG__AUX;
 
 
+/*!\union uTCS3400_REG__STATUS
+** \brief Union for STATUS register of TCS3400
+**/
 typedef union uTCS3400_REG__STATUS {
 	uint8_t Byte;
 	struct {
@@ -174,6 +191,9 @@ typedef union uTCS3400_REG__STATUS {
 } uTCS3400_REG__STATUS;
 
 
+/*!\union uTCS3400_REG__IR
+** \brief Union for IR sensor access register of TCS3400
+**/
 typedef union uTCS3400_REG__IR {
 	uint8_t Byte;
 	struct {

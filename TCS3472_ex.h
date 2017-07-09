@@ -18,7 +18,6 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 #include "i2c.h"
 /****************************************************************/
-// TODO: doxygen
 
 
 // *****************************************************************************
@@ -41,34 +40,34 @@ typedef enum PACK__ TCS3472_chan {
 typedef union uTCS3472_REG_MAP {
 	uint8_t Bytes[28];
 	struct {
-		uTCS3472_REG__ENABLE	ENABLE;
-		uint8_t					ATIME;
+		uTCS3472_REG__ENABLE	ENABLE;		//!< Enables states and interrupts
+		uint8_t					ATIME;		//!< RGBC time
 		uint8_t					:8;
-		uint8_t					WTIME;
-		uint8_t					AILTL;
-		uint8_t					AILTH;
-		uint8_t					AIHTL;
-		uint8_t					AIHTH;
-		uint8_t					:8;
-		uint8_t					:8;
+		uint8_t					WTIME;		//!< Wait time
+		uint8_t					AILTL;		//!< Clear interrupt low threshold low byte
+		uint8_t					AILTH;		//!< Clear interrupt low threshold high byte
+		uint8_t					AIHTL;		//!< Clear interrupt high threshold low byte
+		uint8_t					AIHTH;		//!< Clear interrupt high threshold high byte
 		uint8_t					:8;
 		uint8_t					:8;
-		uTCS3472_REG__PERSIST	PERS;
-		uTCS3472_REG__CONFIG	CONFIG;
-		uint8_t					:8;
-		uTCS3472_REG__CONTROL	CONTROL;
 		uint8_t					:8;
 		uint8_t					:8;
-		uint8_t					ID;
-		uTCS3472_REG__STATUS	STATUS;
-		uint8_t					CDATAL;
-		uint8_t					CDATAH;
-		uint8_t					RDATAL;
-		uint8_t					RDATAH;
-		uint8_t					GDATAL;
-		uint8_t					GDATAH;
-		uint8_t					BDATAL;
-		uint8_t					BDATAH;
+		uTCS3472_REG__PERSIST	PERS;		//!< Interrupt persistence filter
+		uTCS3472_REG__CONFIG	CONFIG;		//!< Configuration
+		uint8_t					:8;
+		uTCS3472_REG__CONTROL	CONTROL;	//!< Control
+		uint8_t					:8;
+		uint8_t					:8;
+		uint8_t					ID;			//!< Device ID
+		uTCS3472_REG__STATUS	STATUS;		//!< Device status
+		uint8_t					CDATAL;		//!< Clear data low byte
+		uint8_t					CDATAH;		//!< Clear data high byte
+		uint8_t					RDATAL;		//!< Red data low byte
+		uint8_t					RDATAH;		//!< Red data high byte
+		uint8_t					GDATAL;		//!< Green data low byte
+		uint8_t					GDATAH;		//!< Green data high byte
+		uint8_t					BDATAL;		//!< Blue data low byte
+		uint8_t					BDATAH;		//!< Blue data high byte
 		} Reg;
 } uTCS3472_REG_MAP;
 
@@ -81,84 +80,156 @@ typedef union uTCS3472_REG_MAP {
 /****************************************/
 
 /*** Configuration ***/
+/*!\brief Write TCS3472 Enable register
+** \param[in] en - 0 Disable, 1 Enable
+** \return FctERR - error code
+**/
 __INLINE FctERR INLINE__ TCS3472_Write_En(uint8_t en) {
 	return TCS3472_Write(&en, TCS3472__ENABLE, 1); }
 
+/*!\brief Write TCS3472 Config register
+** \param[in] cfg - Configuration register value
+** \return FctERR - error code
+**/
 __INLINE FctERR INLINE__ TCS3472_Write_Cfg(uint8_t cfg) {
 	return TCS3472_Write(&cfg, TCS3472__CONFIG, 1); }
 
+/*!\brief Write TCS3472 Control register
+** \param[in] ctl - Control register value
+** \return FctERR - error code
+**/
 __INLINE FctERR INLINE__ TCS3472_Write_Ctl(uint8_t ctl) {
 	return TCS3472_Write(&ctl, TCS3472__CONTROL, 1); }
 
 
-/*!\brief TCS3472 oscillator Enable / Disable
+/*!\brief oscillator Enable / Disable
+** \param[in] en - 0 Disable, 1 Enable
+** \return FctERR - error code
 **/
 FctERR TCS3472_Set_PON(bool en);
 
-/*!\brief TCS3472 Clear module Enable / Disable
+/*!\brief Clear module Enable / Disable
+** \param[in] en - 0 Disable, 1 Enable
+** \return FctERR - error code
 **/
 FctERR TCS3472_Set_AEN(bool en);
 
-/*!\brief TCS3472 Clear interrupt module Enable / Disable
+/*!\brief Clear interrupt module Enable / Disable
+** \param[in] en - 0 Disable, 1 Enable
+** \return FctERR - error code
 **/
 FctERR TCS3472_Set_AIEN(bool en);
 
-/*!\brief TCS3472 WAIT module Enable / Disable
+/*!\brief WAIT module Enable / Disable
+** \param[in] en - 0 Disable, 1 Enable
+** \return FctERR - error code
 **/
 FctERR TCS3472_Set_WEN(bool en);
 
 
-/*!\brief TCS3472 gain configuration
+/*!\brief Gain configuration
+** \param[in] gain - Gain value
+** \return FctERR - error code
 **/
 FctERR TCS3472_Set_Gain(TCS3472_gain gain);
 
-/*!\brief TCS3472 integration time configuration
+/*!\brief Integration time configuration
+** \param[in] integ - Integration time value
+** \return FctERR - error code
 **/
 FctERR TCS3472_Set_Integration_Time(uint16_t integ);
 
-/*!\brief TCS3472 wait time configuration
+/*!\brief Wait time configuration
+** \param[in] wait - Wait time value
+** \return FctERR - error code
 **/
 FctERR TCS3472_Set_Wait_Time(uint16_t wait);
 
 
+/*!\brief ALS interrupt low threshold configuration
+** \param[in] thr - Low threshold value
+** \return FctERR - error code
+**/
 __INLINE FctERR INLINE__ TCS3472_Set_AILT(uint16_t thr) {
 	return TCS3472_Write_Word(&thr, TCS3472__AILTL); }
 
+/*!\brief ALS interrupt high threshold configuration
+** \param[in] thr - High threshold value
+** \return FctERR - error code
+**/
 __INLINE FctERR INLINE__ TCS3472_Set_AIHT(uint16_t thr) {
 	return TCS3472_Write_Word(&thr, TCS3472__AIHTL); }
 
+/*!\brief ALS interrupt thresholds configuration
+** \param[in] lthr - Low threshold value
+** \param[in] hthr - High threshold value
+** \return FctERR - error code
+**/
 __INLINE FctERR INLINE__ TCS3472_Set_AIT(uint16_t lthr, uint16_t hthr) {
 	uint8_t DAT[4] = { (hthr & 0xFF), (hthr / 0x100), (lthr & 0xFF), (lthr / 0x100) };
 	return TCS3472_Write(DAT, TCS3472__AILTL, sizeof(DAT)); }
 
 
 /*** Special Functions ***/
+/*!\brief Clear pending interruption
+** \warning if event pin enabled, shall be called after read to reset pin
+** \return FctERR - error code
+**/
 __INLINE FctERR INLINE__ TCS3472_SF_Clear_IT(void) {
 	return TCS3472_Write_Special(TCS3472__SF_CLR_IT); }
 
 
 /*** Operation ***/
+/*!\brief Get TCS3472 chip ID
+** \param[in,out] id - pointer to chip ID result
+** \return FctERR - error code
+**/
 __INLINE FctERR INLINE__ TCS3472_Get_ChipID(uint8_t * id) {
 	return TCS3472_Read(id, TCS3472__ID, 1); }
 
 
-FctERR TCS3472_Get_Channels(uint16_t buf[]);
+/*!\brief Get All channels conversions
+** \param[in,out] tab - pointer to conversions tab result
+** \return FctERR - error code
+**/
+FctERR TCS3472_Get_Channels(uint16_t tab[]);
 
+/*!\brief Get Specific channel conversion
+** \param[in,out] buf - pointer to conversions result
+** \param[in] chan - Channel to get
+** \return FctERR - error code
+**/
 __INLINE FctERR INLINE__ TCS3472_Get_Channel(uint16_t * buf, TCS3472_chan chan) {
 	if (chan > TCS3472__CHAN_BLUE)	{ return ERR_VALUE; }	// Unknown channel
 	return TCS3472_Read_Word(buf, TCS3472__CDATAL + (2 * chan)); }
 
-__INLINE FctERR INLINE__ TCS3472_Get_Clear(uint16_t * buf) {
-	return TCS3472_Read_Word(buf, TCS3472__CDATAL); }
+/*!\brief Get Clear channel conversion
+** \param[in,out] clr - pointer to Clear conversion result
+** \return FctERR - error code
+**/
+__INLINE FctERR INLINE__ TCS3472_Get_Clear(uint16_t * clr) {
+	return TCS3472_Read_Word(clr, TCS3472__CDATAL); }
 
-__INLINE FctERR INLINE__ TCS3472_Get_Red(uint16_t * buf) {
-	return TCS3472_Read_Word(buf, TCS3472__RDATAL); }
+/*!\brief Get Red channel conversion
+** \param[in,out] r - pointer to Red conversion result
+** \return FctERR - error code
+**/
+__INLINE FctERR INLINE__ TCS3472_Get_Red(uint16_t * r) {
+	return TCS3472_Read_Word(r, TCS3472__RDATAL); }
 
-__INLINE FctERR INLINE__ TCS3472_Get_Green(uint16_t * buf) {
-	return TCS3472_Read_Word(buf, TCS3472__GDATAL); }
+/*!\brief Get Green channel conversion
+** \param[in,out] g - pointer to Green conversion result
+** \return FctERR - error code
+**/
+__INLINE FctERR INLINE__ TCS3472_Get_Green(uint16_t * g) {
+	return TCS3472_Read_Word(g, TCS3472__GDATAL); }
 
-__INLINE FctERR INLINE__ TCS3472_Get_Blue(uint16_t * buf) {
-	return TCS3472_Read_Word(buf, TCS3472__BDATAL); }
+/*!\brief Get Blue channel conversion
+** \param[in,out] b - pointer to Blue conversion result
+** \return FctERR - error code
+**/
+__INLINE FctERR INLINE__ TCS3472_Get_Blue(uint16_t * b) {
+	return TCS3472_Read_Word(b, TCS3472__BDATAL); }
 
 
 /****************************************************************/

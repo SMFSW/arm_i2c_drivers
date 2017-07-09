@@ -16,7 +16,6 @@
 #include <math.h>
 #include <string.h>
 /****************************************************************/
-// TODO: doxygen for static functions
 
 
 TCS3472_proc TCS3472 = { 0, 0, 0, 0, 0, 0, 0.0f, 0.0f, false, false, { TCS3472__LOW_GAIN, 200, 1000, 0x8FF, 0x8FF, true, true, 0 } };
@@ -74,7 +73,11 @@ uint32_t TCS3472_Get_Lux(void) {
 	return TCS3472.Lux; }
 
 
-/**!\brief  Converts the RGB values to color temperature in degrees Kelvin
+/*!\brief Converts the RGB values to color temperature in degrees Kelvin
+** \param[in] r - Red value
+** \param[in] g - Green value
+** \param[in] b - Blue value
+** \return FctERR - error code
 **/
 static FctERR TCS3472_calc(uint16_t r, uint16_t g, uint16_t b)
 {

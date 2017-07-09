@@ -33,19 +33,39 @@
 /*** High level methods and functions ***/
 /****************************************/
 
+/*!\brief Start BMP180 Temperature/Pressure conversion
+** \param[in] meas - Temperature / Pressure
+** \return FctERR - error code
+**/
 FctERR BMP180_Start_Conversion(BMP180_meas meas);
 
 
+/*!\brief Get BMP180 chip ID
+** \param[in,out] id - pointer to chip ID result
+** \return FctERR - error code
+**/
 __INLINE FctERR INLINE__ BMP180_Get_ChipID(uint8_t * id) {
 	return BMP180_Read(id, BMP180__ID, 1); }
 
+/*!\brief Reset BMP180 chip
+** \return FctERR - error code
+**/
 __INLINE FctERR INLINE__ BMP180_Reset(void) {
 	uint8_t rst = BMP180_RESET_VAL;
 	return BMP180_Write(&rst, BMP180__SOFT_RESET, 1); }
 
 
-FctERR BMP180_Get_Temperature_Raw(uint32_t * temp);
-FctERR BMP180_Get_Pressure_Raw(uint32_t * temp);
+/*!\brief Get Raw Temperature
+** \param[in,out] tp - pointer to raw temperature result
+** \return FctERR - error code
+**/
+FctERR BMP180_Get_Temperature_Raw(uint32_t * tp);
+
+/*!\brief Get Raw Pressure
+** \param[in,out] pr - pointer to raw pressure result
+** \return FctERR - error code
+**/
+FctERR BMP180_Get_Pressure_Raw(uint32_t * pr);
 
 
 /****************************************************************/

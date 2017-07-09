@@ -15,7 +15,6 @@
 // std libs
 #include <string.h>
 /****************************************************************/
-// TODO: doxygen for static functions
 
 
 TSL2591_proc TSL2591 = { 0, 0, 0, 0, 0.0f, false, false, { 0, 0.0f,TSL2591__MEDIUM_GAIN, TSL2591__INTEG_100MS, true, 0 } };
@@ -85,6 +84,11 @@ void TSL2591_Set_CPL(void)
 
 #define ADAFRUIT_LUX_TSL2591
 
+/*!\brief Computes an approximation of Illuminance (in lux) from Full and IR values
+** \param[in] full - Red value
+** \param[in] ir - Green value
+** \return FctERR - error code
+**/
 static FctERR calculateLux(uint16_t full, uint16_t ir)
 {
 	uint32_t	LUX1, LUX2;

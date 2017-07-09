@@ -18,7 +18,6 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 #include "i2c.h"
 /****************************************************************/
-// TODO: doxygen
 
 
 // *****************************************************************************
@@ -39,21 +38,24 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
+/*!\struct TSL2591_proc
+** \brief TSL2591 user interface struct
+**/
 typedef struct TSL2591_proc {
-	uint16_t		Full;				//!< Full spectrum raw value
-	uint16_t		IR;					//!< IR raw value
-	uint32_t		Lux;				//!< Illuminance (lux)
-	uint32_t		MaxLux;				//!< Max illuminance in current conditions (lux)
-	float			IRF;				//!< Infra Red Factor
-	bool			SaturationRipple;	//!< Ripple saturation reached (75% of saturation value)
-	bool			Saturation;			//!< Sensor saturation reached
+	uint16_t		Full;				//!< Current Full spectrum raw value
+	uint16_t		IR;					//!< Current IR raw value
+	uint32_t		Lux;				//!< Current Illuminance (lux)
+	uint32_t		MaxLux;				//!< Current Max illuminance in current conditions (lux)
+	float			IRF;				//!< Current Current IR ratio
+	bool			SaturationRipple;	//!< Current Ripple saturation status (75% of saturation value)
+	bool			Saturation;			//!< Current Sensor saturation status
 	struct {
-	uint32_t		CPkL;				//!< Counts Per kiloLux
-	float			DER;				//!< Accuracy (+/- DER lux)
-	TSL2591_gain	Gain;				//!< Sensor gain
-	TSL2591_integ	Integ;				//!< Sensor integration time
-	bool			AIEN;				//!< Sensor ALS (Ambient Light Sensing) interrupts enabled
-	uint8_t			Id;					//!< Chip ID
+	uint32_t		CPkL;				//!< Counts Per kiloLux config
+	float			DER;				//!< Accuracy (+/- DER lux) config
+	TSL2591_gain	Gain;				//!< Sensor gain config
+	TSL2591_integ	Integ;				//!< Sensor integration time config
+	bool			AIEN;				//!< Sensor ALS (Ambient Light Sensing) interrupts enabled config
+	uint8_t			Id;					//!< TSL2591 Chip ID
 	} cfg;
 } TSL2591_proc;
 
@@ -70,10 +72,22 @@ typedef struct TSL2591_proc {
 FctERR TSL2591_Init_Sequence(void);
 
 
+/*!\brief Set proper CPL value (Counts per kiloLux)
+ * \note Should be called after Configuration change of Integration time or Gain
+** \return FctERR - error code
+**/
 void TSL2591_Set_CPL(void);
 
+/*!\brief Get current Illuminance (in lux)
+** \return FctERR - error code
+**/
 uint32_t TSL2591_Get_Lux(void);
 
+/*!\brief Handler for TSL2591 peripheral
+** \note May be called periodically to handle TSL2591 tasks
+** \note Alternately may be called when event occurs on TSL2591 pin
+** \return FctERR - error code
+**/
 FctERR TSL2591_handler(void);
 
 

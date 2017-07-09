@@ -31,6 +31,11 @@ SOFTWARE.
 * TCSxxxx: fixed McCamy's formula to calculate cct
 * DRV2605L: fixed missing inline returns in base header
 * DRV2605L: fixed registers definitions for: Status, FeedbackControl
+* TCSxxxx, TSLxxxx: added missing Doxygen comments
+* DRV2605L: added missing Doxygen comments
+* BMP180: added missing Doxygen comments
+* MCP9808: added missing Doxygen comments
+* MCP4725: added missing Doxygen comments
 
 ## v0.4
 

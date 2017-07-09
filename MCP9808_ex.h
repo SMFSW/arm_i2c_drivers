@@ -18,12 +18,6 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 #include "i2c.h"
 /****************************************************************/
-// TODO: doxygen
-
-
-// *****************************************************************************
-// Section: Constants
-// *****************************************************************************
 
 
 // *****************************************************************************
@@ -45,15 +39,15 @@ typedef enum PACK__ MCP9808_alert {
 typedef union uMCP9808_REG_MAP {
 	uint16_t Words[9];
 	struct {
-		uint16_t				RFU;
-		uMCP9808_REG__CFG		CONFIG;
-		uMCP9808_REG__TEMP_LIM	TUpper;
-		uMCP9808_REG__TEMP_LIM	TLower;
-		uMCP9808_REG__TEMP_LIM	TCrit;
-		uMCP9808_REG__TEMP_AMB	TA;
-		uint16_t				ManufacturerID;
-		uint16_t				DeviceID;
-		uint16_t				Resolution;		// is a 8b register in reality
+		uint16_t				RFU;				//!< RFU, Reserved for Future Use (Read-Only register)
+		uMCP9808_REG__CFG		CONFIG;				//!< Configuration register (CONFIG)
+		uMCP9808_REG__TEMP_LIM	TUpper;				//!< Alert Temperature Upper Boundary Trip register (T_upper)
+		uMCP9808_REG__TEMP_LIM	TLower;				//!< Alert Temperature Lower Boundary Trip register (T_lower)
+		uMCP9808_REG__TEMP_LIM	TCrit;				//!< Critical Temperature Trip register (T_crit)
+		uMCP9808_REG__TEMP_AMB	TA;					//!< Temperature register (T_A)
+		uint16_t				ManufacturerID;		//!< Manufacturer ID register
+		uint16_t				DeviceID;			//!< Device ID/Revision register
+		uint16_t				Resolution;			//!< Resolution register (is a 8b register in reality)
 	} Reg;
 } uMCP9808_REG_MAP;
 
@@ -64,34 +58,84 @@ typedef union uMCP9808_REG_MAP {
 /****************************************/
 /*** High level methods and functions ***/
 /****************************************/
+/*!\brief Write MCP9808 configuration
+** \param[in] cfg - Configuration value
+** \return FctERR - error code
+**/
 FctERR MCP9808_Write_Config(uint16_t cfg);
 //	return  MCP9808_Write(&cfg, MCP9808__CONFIGURATION, 1); }
 
+/*!\brief Write MCP9808 configuration
+** \param[in] shutdown - 0 Normal operation, 1 Shutdown
+** \return FctERR - error code
+**/
 FctERR MCP9808_Shutdown(bool shutdown);
 
+/*!\brief Set MCP9808 alert hysteresis
+** \param[in] hys - Alert hysteresis
+** \return FctERR - error code
+**/
 FctERR MCP9808_Set_AlertHysteresis(MCP9808_hyst hys);
 
+/*!\brief Set MCP9808 alert type
+** \param[in] comparator - 0 ???, 1 Comparator
+** \return FctERR - error code
+**/
 FctERR MCP9808_Set_AlertType(bool comparator);
 
+/*!\brief Set MCP9808 alert enable
+** \param[in] en - 0 Disabled, 1 Enabled
+** \param[in] alt - 0 Low, 1 High
+** \return FctERR - error code
+**/
 FctERR MCP9808_Set_AlertOutput(bool en, bool alt);
 
+/*!\brief Set MCP9808 alert lock
+** \param[in] alt - Alert type
+** \param[in] lock - 0 Unlocked, 1 Locked
+** \return FctERR - error code
+**/
 FctERR MCP9808_Set_AlertLock(MCP9808_alert alt, bool lock);
 
+/*!\brief Set MCP9808 Resolution
+** \param[in] res - Resolution for MCP9808
+** \return FctERR - error code
+**/
 FctERR MCP9808_Set_Resolution(MCP9808_res res);
 
 
+/*!\brief Get MCP9808 Configuration
+** \param[in,out] cfg - pointer to Configuration value to read to
+** \return FctERR - error code
+**/
 __INLINE FctERR INLINE__ MCP9808_Read_Config(uint16_t * cfg) {
 	return MCP9808_Read(cfg, MCP9808__CONFIGURATION, 1); }
 
+/*!\brief Get MCP9808 Configuration
+** \param[in,out] temp - pointer to Temperature value to read to
+** \return FctERR - error code
+**/
 __INLINE FctERR INLINE__ MCP9808_Get_Temperature_Raw(uint16_t * temp) {
 	return MCP9808_Read(temp, MCP9808__TEMPERATURE, 1); }
 
+/*!\brief Get MCP9808 Resolution
+** \param[in,out] res - pointer to Resolution to read to
+** \return FctERR - error code
+**/
 FctERR MCP9808_Get_Resolution(MCP9808_res * res);
 
 
+/*!\brief Get MCP9808 Manufacturer ID
+** \param[in,out] id - pointer to Manufacturer ID result
+** \return FctERR - error code
+**/
 __INLINE FctERR INLINE__ MCP9808_Get_ManufacturerID(uint16_t * id) {
 	return MCP9808_Read(id, MCP9808__MANUFACTURER_ID, 1); }
 
+/*!\brief Get MCP9808 chip ID
+** \param[in,out] id - pointer to chip ID result
+** \return FctERR - error code
+**/
 __INLINE FctERR INLINE__ MCP9808_Get_ChipID(uint16_t * id) {
 	return MCP9808_Read(id, MCP9808__DEVICE_ID, 1); }
 

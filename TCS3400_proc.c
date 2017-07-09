@@ -16,7 +16,6 @@
 #include <math.h>
 #include <string.h>
 /****************************************************************/
-// TODO: doxygen for static functions
 
 
 TCS3400_proc TCS3400 = { 0, 0, 0, 0, 0, 0, 0.0f, 0.0f, false, false, { TCS3400__LOW_GAIN, 200, 1000, 0x8FF, 0x8FF,  true, true, 0, 0 } };
@@ -77,7 +76,11 @@ uint32_t TCS3400_Get_Lux(void) {
 	return TCS3400.Lux; }
 
 
-/**!\brief  Converts the RGB values to color temperature in degrees Kelvin
+/*!\brief Converts the RGB values to color temperature in degrees Kelvin
+** \param[in] r - Red value
+** \param[in] g - Green value
+** \param[in] b - Blue value
+** \return FctERR - error code
 **/
 static FctERR TCS3400_calc(uint16_t r, uint16_t g, uint16_t b)
 {

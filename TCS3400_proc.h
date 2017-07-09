@@ -18,7 +18,6 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 #include "i2c.h"
 /****************************************************************/
-// TODO: doxygen
 
 
 // *****************************************************************************
@@ -38,27 +37,30 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
+/*!\struct TCS3400_proc
+** \brief TCS3400 user interface struct
+**/
 typedef struct TCS3400_proc {
-	uint16_t		Red;
-	uint16_t		Green;
-	uint16_t		Blue;
-	uint16_t		Clear;
-	uint32_t		Lux;				//!< Illuminance (lux)
-	uint32_t		Temp;				//!< Color temperature (in Kelvin)
-	float			IR_Ratio;			//!< (in percent)
-	float			Saturation_Ratio;	//!< (in percent)
-	bool			SaturationRipple;	//!< Ripple saturation reached (75% of saturation value)
-	bool			Saturation;			//!< Sensor saturation reached
+	uint16_t		Red;				//!< Current Red conversion
+	uint16_t		Green;				//!< Current Green conversion
+	uint16_t		Blue;				//!< Current Blue conversion
+	uint16_t		Clear;				//!< Current Clear conversion
+	uint32_t		Lux;				//!< Current Illuminance (lux)
+	uint32_t		Temp;				//!< Current Color temperature (in Kelvin)
+	float			IR_Ratio;			//!< Current IR ratio (in percent)
+	float			Saturation_Ratio;	//!< Current Saturation ratio (in percent)
+	bool			SaturationRipple;	//!< Current Ripple saturation status (75% of saturation value)
+	bool			Saturation;			//!< Current Sensor saturation status
 	struct {
-	TCS3400_gain	Gain;				//!< Sensor gain
-	uint16_t		Integ;				//!< Sensor integration time
-	uint16_t		Wait;				//!< Sensor wait time
-	uint16_t		LowThreshold;
-	uint16_t		HighThreshold;
-	bool			AIEN;				//!< Sensor ALS (Ambient Light Sensing) interrupts enabled
-	bool			WEN;				//!< Wait between ALS conversions enabled
-	uint8_t			Revision_Id;		//!< Revision ID
-	uint8_t			Device_Id;			//!< Chip ID
+	TCS3400_gain	Gain;				//!< Sensor gain config
+	uint16_t		Integ;				//!< Sensor integration time config
+	uint16_t		Wait;				//!< Sensor wait time config
+	uint16_t		LowThreshold;		//!< Low Threshold config
+	uint16_t		HighThreshold;		//!< High Threshold config
+	bool			AIEN;				//!< Sensor ALS (Ambient Light Sensing) interrupts enabled config
+	bool			WEN;				//!< Wait between ALS conversions enabled config
+	uint8_t			Revision_Id;		//!< TCS3472xx Revision ID
+	uint8_t			Device_Id;			//!< TCS3472xx Chip ID
 	} cfg;
 } TCS3400_proc;
 
@@ -75,9 +77,21 @@ typedef struct TCS3400_proc {
 **/
 FctERR TCS3400_Init_Sequence(void);
 
+/*!\brief Get current Color temperature (in Kelvin)
+** \return FctERR - error code
+**/
 uint32_t TCS3400_Get_Temp(void);
+
+/*!\brief Get current Illuminance (in lux)
+** \return FctERR - error code
+**/
 uint32_t TCS3400_Get_Lux(void);
 
+/*!\brief Handler for TCS3400 peripheral
+** \note May be called periodically to handle TCS3400 tasks
+** \note Alternately may be called when event occurs on TCS3400 pin
+** \return FctERR - error code
+**/
 FctERR TCS3400_handler(void);
 
 

@@ -14,7 +14,7 @@
 /****************************************************************/
 
 
-static uint8_t BMP180_OSS_time[4] = { 5, 8, 14, 26 };	//!< Values with 1.5ms than given in datasheet
+static uint8_t BMP180_OSS_time[4] = { 5, 8, 14, 26 };	//!< BMP180 Oversampling values with +1.5ms than given in datasheet
 
 extern BMP180_proc BMP180;
 
@@ -42,7 +42,7 @@ FctERR BMP180_Start_Conversion(BMP180_meas meas)
 }
 
 
-FctERR BMP180_Get_Temperature_Raw(uint32_t * temp)
+FctERR BMP180_Get_Temperature_Raw(uint32_t * tp)
 {
 	uint16_t	RES;
 	FctERR		err;
@@ -55,12 +55,12 @@ FctERR BMP180_Get_Temperature_Raw(uint32_t * temp)
 	err = BMP180_Read_Word(&RES, BMP180__OUT_MSB);
 	if (err)	{ return err; }
 
-	*temp = RES;
+	*tp = RES;
 	return err;
 }
 
 
-FctERR BMP180_Get_Pressure_Raw(uint32_t * pres)
+FctERR BMP180_Get_Pressure_Raw(uint32_t * pr)
 {
 	uint8_t		RES[3];
 	FctERR		err;
@@ -73,7 +73,7 @@ FctERR BMP180_Get_Pressure_Raw(uint32_t * pres)
 	err = BMP180_Read(RES, BMP180__OUT_MSB, 3);
 	if (err)	{ return err; }
 
-	*pres = ((RES[0] * 0x10000) + (RES[1] * 0x100) + RES[2]) >> (8 - BMP180.cfg.OSS);
+	*pr = ((RES[0] * 0x10000) + (RES[1] * 0x100) + RES[2]) >> (8 - BMP180.cfg.OSS);
 	return err;
 }
 

@@ -19,7 +19,6 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 #include "i2c.h"
 /****************************************************************/
-// TODO: doxygen
 
 
 // *****************************************************************************
@@ -137,6 +136,9 @@ typedef union uTSL2591_CMD {
 } uTSL2591_CMD;
 
 
+/*!\union uTSL2591_REG__ENABLE
+** \brief Union for ENABLE register of TSL2591
+**/
 typedef union uTSL2591_REG__ENABLE {
 	uint8_t Byte;
 	struct {
@@ -151,6 +153,9 @@ typedef union uTSL2591_REG__ENABLE {
 } uTSL2591_REG__ENABLE;
 
 
+/*!\union uTSL2591_REG__CONFIG
+** \brief Union for CONFIG register of TSL2591
+**/
 typedef union uTSL2591_REG__CONFIG {
 	uint8_t Byte;
 	struct {
@@ -163,6 +168,9 @@ typedef union uTSL2591_REG__CONFIG {
 } uTSL2591_REG__CONFIG;
 
 
+/*!\union uTSL2591_REG__PERSIST
+** \brief Union for PERSIST register of TSL2591
+**/
 typedef union uTSL2591_REG__PERSIST {
 	uint8_t Byte;
 	struct {
@@ -172,6 +180,9 @@ typedef union uTSL2591_REG__PERSIST {
 } uTSL2591_REG__PERSIST;
 
 
+/*!\union uTSL2591_REG__STATUS
+** \brief Union for STATUS register of TSL2591
+**/
 typedef union uTSL2591_REG__STATUS {
 	uint8_t Byte;
 	struct {

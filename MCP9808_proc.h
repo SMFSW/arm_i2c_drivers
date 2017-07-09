@@ -18,7 +18,6 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 #include "i2c.h"
 /****************************************************************/
-// TODO: doxygen
 
 
 // *****************************************************************************
@@ -32,20 +31,23 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
+/*!\struct MCP9808_proc
+** \brief MCP9808 user interface struct
+**/
 typedef struct MCP9808_proc {
-	float		Temperature;
-	bool		TUpper;
-	bool		TLower;
-	bool		TCrit;
-	bool		NewData;
-	uint32_t	hLast;
+	float		Temperature;		//!< Current temperature
+	bool		TUpper;				//!< Upper alert reached
+	bool		TLower;				//!< Lower alert reached
+	bool		TCrit;				//!< Critical alert reached
+	bool		NewData;			//!< New data available
+	uint32_t	hLast;				//!< Tick from last data
 	struct {
-	MCP9808_res	Resolution;
-	float		HighAlert;
-	float		LowAlert;
-	float		CriticalAlert;
-	uint16_t	Manufacturer_Id;
-	uint16_t	Device_Id;
+	MCP9808_res	Resolution;			//!< Resolution config
+	float		HighAlert;			//!< High alert config
+	float		LowAlert;			//!< Low alert config
+	float		CriticalAlert;		//!< Critical alert config
+	uint16_t	Manufacturer_Id;	//!< MCP9808 Manufacturer ID
+	uint16_t	Device_Id;			//!< MCP9808 Device ID
 	} cfg;
 } MCP9808_proc;
 
@@ -62,14 +64,32 @@ typedef struct MCP9808_proc {
 **/
 FctERR MCP9808_Init_Sequence(void);
 
+/*!\brief Set the high/low/crit Alert temperature
+** \param[in,out] temp - temperature (in Celsius degrees)
+** \param[in] alt - Alert type
+** \return FctERR - error code
+**/
 FctERR MCP9808_Set_AlertTemp(float temp, MCP9808_alert alt);
 
 
+/*!\brief Get the high/low/crit Alert temperature
+** \param[in,out] temp - pointer to temperature to read to (in Celsius degrees)
+** \param[in] alt - Alert type
+** \return FctERR - error code
+**/
 FctERR MCP9808_Get_AlertTemp(float * temp, MCP9808_alert alt);
 
+/*!\brief Get the temperature
+** \param[in,out] temp - pointer to temperature to read to (in Celsius degrees)
+** \return FctERR - error code
+**/
 FctERR MCP9808_Get_Temperature(float * temp);
 
 
+/*!\brief Handler for MCP9808 peripheral
+** \note Should be called periodically to handle BMP180 tasks
+** \return FctERR - error code
+**/
 FctERR MCP9808_handler(void);
 
 

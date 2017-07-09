@@ -19,7 +19,6 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 #include "i2c.h"
 /****************************************************************/
-// TODO: doxygen
 
 
 // *****************************************************************************
@@ -130,6 +129,9 @@ typedef union uTCS3472_CMD {
 } uTCS3472_CMD;
 
 
+/*!\union uTCS3472_REG__ENABLE
+** \brief Union for ENABLE register of TCS3472
+**/
 typedef union uTCS3472_REG__ENABLE {
 	uint8_t Byte;
 	struct {
@@ -143,6 +145,9 @@ typedef union uTCS3472_REG__ENABLE {
 } uTCS3472_REG__ENABLE;
 
 
+/*!\union uTCS3472_REG__PERSIST
+** \brief Union for PERSIST register of TCS3472
+**/
 typedef union uTCS3472_REG__PERSIST {
 	uint8_t Byte;
 	struct {
@@ -152,6 +157,9 @@ typedef union uTCS3472_REG__PERSIST {
 } uTCS3472_REG__PERSIST;
 
 
+/*!\union uTCS3472_REG__CONFIG
+** \brief Union for CONFIG register of TCS3472
+**/
 typedef union uTCS3472_REG__CONFIG {
 	uint8_t Byte;
 	struct {
@@ -162,6 +170,9 @@ typedef union uTCS3472_REG__CONFIG {
 } uTCS3472_REG__CONFIG;
 
 
+/*!\union uTCS3472_REG__CONTROL
+** \brief Union for CONTROL register of TCS3472
+**/
 typedef union uTCS3472_REG__CONTROL {
 	uint8_t Byte;
 	struct {
@@ -171,6 +182,9 @@ typedef union uTCS3472_REG__CONTROL {
 } uTCS3472_REG__CONTROL;
 
 
+/*!\union uTCS3472_REG__STATUS
+** \brief Union for STATUS register of TCS3472
+**/
 typedef union uTCS3472_REG__STATUS {
 	uint8_t Byte;
 	struct {

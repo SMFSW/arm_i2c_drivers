@@ -31,30 +31,36 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
+/*!\struct BMP180_calibration
+** \brief BMP180 calibration parameters structure
+**/
 typedef struct BMP180_calibration {
-	int16_t		AC1;
-	int16_t		AC2;
-	int16_t		AC3;
-	uint16_t	AC4;
-	uint16_t	AC5;
-	uint16_t	AC6;
-	int16_t		B1;
-	int16_t		B2;
-	int16_t		MB;
-	int16_t		MC;
-	int16_t		MD;
+	int16_t		AC1;	//!< ac1 calibration value
+	int16_t		AC2;	//!< ac2 calibration value
+	int16_t		AC3;	//!< ac3 calibration value
+	uint16_t	AC4;	//!< ac4 calibration value
+	uint16_t	AC5;	//!< ac5 calibration value
+	uint16_t	AC6;	//!< ac6 calibration value
+	int16_t		B1;		//!< b1 calibration value
+	int16_t		B2;		//!< b2 calibration value
+	int16_t		MB;		//!< mb calibration value
+	int16_t		MC;		//!< mc calibration value
+	int16_t		MD;		//!< md calibration value
 } BMP180_calib;
 
+/*!\struct BMP180_proc
+** \brief BMP180 user interface struct
+**/
 typedef struct BMP180_proc {
-	float				Pressure;
-	float				Temperature;
-	float				Altitude;
-	float				SeaLevelPressure;
-	uint32_t			hStartConversion;
+	float				Pressure;			//!< Current atmospheric pressure
+	float				Temperature;		//!< Current temperature
+	float				Altitude;			//!< Current altitude
+	float				SeaLevelPressure;	//!< Current atmospheric pressure at sea level
+	uint32_t			hStartConversion;	//!< Last conversion start tick
 	struct {
-	BMP180_oversampling	OSS;
-	BMP180_calib		Calib;
-	uint8_t				Id;
+	BMP180_oversampling	OSS;				//!< BMP180 Oversampling
+	BMP180_calib		Calib;				//!< BMP180 calibration values
+	uint8_t				Id;					//!< BMP180 chip ID
 	} cfg;
 } BMP180_proc;
 
@@ -72,20 +78,36 @@ typedef struct BMP180_proc {
 FctERR BMP180_Init_Sequence(void);
 
 
+/*!\brief Set oversampling for BMP180 peripheral
+** \param[in,out] oss - oversampling value
+** \return FctERR - error code
+**/
 FctERR BMP180_Set_Oversampling(BMP180_oversampling oss);
 
 
+/*!\brief Get calibration parameters from BMP180 peripheral
+** \param[in,out] calib - pointer to calibration structure to read to
+** \return FctERR - error code
+**/
 FctERR BMP180_Get_Calibration(BMP180_calib * calib);
 
-/**!\brief  Gets the compensated pressure level in hPa
+/*!\brief Gets the compensated pressure level
+** \param[in,out] pres - pointer to atmospheric pressure level to read to (in hPa)
+** \return FctERR - error code
 **/
 FctERR BMP180_Get_Pressure(float * pres);
 
-/**!\brief  Reads the temperatures in degrees Celsius
+/*!\brief Get the temperature
+** \param[in,out] temp - pointer to temperature to read to (in Celsius degrees)
+** \return FctERR - error code
 **/
 FctERR BMP180_Get_Temperature(float * temp);
 
 
+/*!\brief Handler for BMP180 peripheral
+** \note Should be called periodically to handle BMP180 tasks
+** \return FctERR - error code
+**/
 FctERR BMP180_handler(void);
 
 
