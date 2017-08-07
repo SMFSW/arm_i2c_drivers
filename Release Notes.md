@@ -27,6 +27,7 @@ SOFTWARE.
 * added test if slave is enabled before sending/getting messages on I2C bus
 * disable peripheral if Init_Sequence goes wrong (except for EEPROM/FRAM peripherals which are somewhat generic)
 * fixed some casts in library (from gcc strict warnings)
+* FM24C: fixed max speed to 1MHz
 * TCSxxxx, TSLxxxx: added missing carriage returns in verbose parts
 * TCSxxxx: fixed McCamy's formula to calculate cct
 * DRV2605L: fixed missing inline returns in base header
