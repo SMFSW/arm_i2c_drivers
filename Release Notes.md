@@ -27,6 +27,7 @@ SOFTWARE.
 * added test if slave is enabled before sending/getting messages on I2C bus
 * disable peripheral if Init_Sequence goes wrong (except for EEPROM/FRAM peripherals which are somewhat generic)
 * fixed some casts in library (from gcc strict warnings)
+* added external declaration of CPNT in CPNT_proc.h (removed CPNT_ex.c files)
 * FM24C: fixed max speed to 1MHz
 * TCSxxxx, TSLxxxx: added missing carriage returns in verbose parts
 * TCSxxxx: fixed McCamy's formula to calculate cct
@@ -41,7 +42,6 @@ SOFTWARE.
 * MTCH6102: added min/max x/y depending on RX/TX number
 * MTCH6102: added Centered Coords to proc struct
 * MTCH6102: added coordinate rotation function (most valuable when coordinates are set to pad center)
-* all CPNT_proc: added external declaration of CPNT
 
 ## v0.4
 

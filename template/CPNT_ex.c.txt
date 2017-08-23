@@ -23,9 +23,6 @@
 /****************************************************************/
 
 
-extern $CPNT$_proc $CPNT$;
-
-
 FctERR $CPNT$_fct(void)
 {
 	FctERR err = ERR_OK;

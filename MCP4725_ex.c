@@ -14,9 +14,6 @@
 /****************************************************************/
 
 
-extern MCP4725_proc MCP4725;
-
-
 FctERR MCP4725_Write_Command(uint16_t val)
 {
 	uint8_t	CMD[3];

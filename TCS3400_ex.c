@@ -14,9 +14,6 @@
 /****************************************************************/
 
 
-extern TCS3400_proc TCS3400;
-
-
 FctERR TCS3400_Set_PON(bool en)
 {
 	uTCS3400_REG__ENABLE EN;

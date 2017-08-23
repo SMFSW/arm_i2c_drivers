@@ -14,9 +14,6 @@
 /****************************************************************/
 
 
-extern DRV2605L_proc DRV2605L;
-
-
 /*!\union uDRV_CFG
 ** \brief DRV2605L Config registers union
 **/

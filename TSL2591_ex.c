@@ -14,9 +14,6 @@
 /****************************************************************/
 
 
-extern TSL2591_proc TSL2591;
-
-
 /*!\brief TSL2591 oscillator Enable / Disable
 **/
 FctERR TSL2591_Set_PON(bool en)

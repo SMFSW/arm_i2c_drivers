@@ -18,9 +18,6 @@
 /****************************************************************/
 
 
-extern MCP9808_proc MCP9808;
-
-
 FctERR MCP9808_Write_Config(uint16_t cfg)
 {
 	uMCP9808_REG__CFG	CFG;

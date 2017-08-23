@@ -14,9 +14,6 @@
 /****************************************************************/
 
 
-extern TCS3472_proc TCS3472;
-
-
 FctERR TCS3472_Set_PON(bool en)
 {
 	uTCS3472_REG__ENABLE EN;

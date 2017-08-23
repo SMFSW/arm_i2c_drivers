@@ -41,6 +41,8 @@ typedef struct $CPNT$_proc {
 	} cfg;
 } $CPNT$_proc;
 
+extern $CPNT$_proc $CPNT$;
+
 
 // *****************************************************************************
 // Section: Interface Routines
