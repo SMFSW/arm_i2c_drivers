@@ -14,9 +14,10 @@
 /****************************************************************/
 // std libs
 #include <string.h>
+#include <math.h>
 /****************************************************************/
 
-MTCH6102_proc MTCH6102 = { { 9, 6, 0, 0, 0 } };
+MTCH6102_proc MTCH6102 = { 0, 0, 0, 0, { 9, 6, 0, 0, 0, false } };
 
 
 uint8_t MTCH6102_default_core[MTCH__MODE_CON - MTCH__FW_MAJOR + 1] = {
@@ -84,6 +85,20 @@ FctERR MTCH6102_Init_Sequence(void)
 	MTCH6102.cfg.FW_Minor = MTCH_CORE[1];
 	MTCH6102.cfg.APP_ID = (MTCH_CORE[2] * 0x100) + MTCH_CORE[3];
 
+	if (MTCH6102.cfg.Centered)
+	{
+		MTCH6102.max_x = (MTCH6102.cfg.nb_x * MTCH_RES_STEP) / 2;
+		MTCH6102.min_x = -MTCH6102.max_x;
+		MTCH6102.max_y = (MTCH6102.cfg.nb_y * MTCH_RES_STEP) / 2;
+		MTCH6102.min_y = -MTCH6102.max_y;
+	}
+	else
+	{
+		MTCH6102.max_x = MTCH6102.cfg.nb_x * MTCH_RES_STEP;
+		MTCH6102.max_y = MTCH6102.cfg.nb_y * MTCH_RES_STEP;
+		MTCH6102.min_x = MTCH6102.min_y = 0;
+	}
+
 	return err;
 }
 
@@ -100,16 +115,70 @@ FctERR MTCH6102_decode_touch_datas(MTCH6102_gesture * touch, MTCH6102_raw_gest *
 	touch->Touch = dat->Touch_state.Bits.TCH;
 	touch->Frame = dat->Touch_state.Bits.FRAME;
 
-	touch->X_pos = (dat->Touch_x.Byte * 16) & 0x0FF0;
-	touch->X_pos |= dat->Touch_lsb.Bits.TOUCHX3_0 & 0x000F;
+	touch->Coords.x = (dat->Touch_x.Byte * 16) & 0x0FF0;
+	touch->Coords.x |= dat->Touch_lsb.Bits.TOUCHX3_0 & 0x000F;
 
-	touch->Y_pos = (dat->Touch_y.Byte * 16) & 0x0FF0;
-	touch->Y_pos |= dat->Touch_lsb.Bits.TOUCHY3_0 & 0x000F;
+	touch->Coords.y = (dat->Touch_y.Byte * 16) & 0x0FF0;
+	touch->Coords.y |= dat->Touch_lsb.Bits.TOUCHY3_0 & 0x000F;
+
+	if (MTCH6102.cfg.Centered)
+	{
+		// Translating 0,0 point at the center of the ring (thus allowing centered rotation of the point afterwards)
+		touch->Coords.x -= ((MTCH6102.cfg.nb_x * MTCH_RES_STEP) / 2);
+		touch->Coords.y -= ((MTCH6102.cfg.nb_y * MTCH_RES_STEP) / 2);
+	}
 
 	touch->State = dat->Gest_state;
 	touch->Diag = dat->Gest_diag;
 
 	return ERR_OK;
+}
+
+
+MTCH6102_Coord MTCH6102_rotate(MTCH6102_Coord c, int16_t deg)
+{
+	float			rad;
+	MTCH6102_Coord	r;
+
+	deg %= 360;
+
+	switch (deg)
+	{
+		case 0:
+			return c;
+
+		case 90:
+		case -270:
+			r.x = -c.y;
+			r.y = c.x;
+			break;
+
+		case 180:
+		case -180:
+			r.x = -c.x;
+			r.y = -c.y;
+			break;
+
+		case 270:
+		case -90:
+			r.x = c.y;
+			r.y = -c.x;
+			break;
+
+		// case 45:
+		// case -315:
+		// ---
+		// case 315:
+		// case -45:
+		// TODO: see if +/-45 & +/-315 can be simplified, as they will be most often used rotation values
+		// TODO: see how to apply +/-45 to 90/-270 & +/-180, just in case
+		default:
+			rad = (M_PI * deg) / 180.0f;
+			r.x = (int16_t) ((c.x * cos(rad)) - (c.y * sin(rad)));
+			r.y = (int16_t) ((c.x * sin(rad)) + (c.y * cos(rad)));
+	}
+
+	return r;
 }
 
 
@@ -185,7 +254,7 @@ FctERR MTCH6102_handler(void)
 
 	#if defined(VERBOSE)
 		printf("%i %i %i STATE: 0x%X\t DIAG:0x%X", touch.Touch, touch.Gesture, touch.Large, touch.State, touch.Diag);
-		printf("\tX: %i\tY: %i\tFrm: %i", touch.X_pos, touch.Y_pos, touch.Frame);
+		printf("\tX: %i\tY: %i\tFrm: %i", touch.Coords.x, touch.Coords.y, touch.Frame);
 		printf("\tST: %s\tDG: %s\r\n", str_gest, str_diag);
 
 		printf("Sensor Values:");

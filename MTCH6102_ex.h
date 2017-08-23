@@ -24,6 +24,8 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
+#define		MTCH_RES_STEP		64		//!< MTCH6102 Resolution of a single RX/TX
+
 #define		perVal2perReg(ms)	(uint16_t) ((((float) ms * 1000.0f) / 31.0f) + 1.0f)	//!< Compute reg value for period \b ms
 #define		perReg2perVal(rv)	(uint16_t) (((rv - 1.0f) * 31.0f) / 1000.0f)			//!< Get period in ms from register \b rv
 
@@ -40,6 +42,13 @@ typedef struct MTCH6102_raw {
 	uint8_t	sensor[16];
 } MTCH6102_raw_sense;
 
+
+typedef struct MTCH6102_Coordinate {
+	int16_t	x;	//!< x coordinate (0 at the center of the capacitive pad)
+	int16_t	y;	//!< y coordinate (0 at the center of the capacitive pad)
+} MTCH6102_Coord;
+
+
 typedef struct MTCH6102_gest {
 	uMTCH_REG__TOUCHSTATE		Touch_state;
 	uMTCH_REG__TOUCHX			Touch_x;
@@ -51,8 +60,7 @@ typedef struct MTCH6102_gest {
 
 
 typedef struct MTCH6102_gesture {
-	uint16_t						X_pos;
-	uint16_t						Y_pos;
+	MTCH6102_Coord					Coords;
 	MTCH6102_GESTURE_STATE			State;
 	MTCH6102_GESTURE_DIAGNOSTIC		Diag;
 	uint8_t							Frame;

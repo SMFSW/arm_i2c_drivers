@@ -373,6 +373,8 @@ typedef union {
 /******************/
 
 /*!\brief Initialization for MTCH6102 peripheral
+** \warning write rx/tx number if needed other than default (9,6), (prior to calling init function)
+** \note set MTCH6102_Set_Centered_Coord(true) if 0,0 point needs to be centered on the pad (prior to calling init function)
 ** \return FctERR - error code
 **/
 FctERR MTCH6102_Init(void);

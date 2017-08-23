@@ -31,15 +31,21 @@ extern uint8_t MTCH6102_default_cfg[MTCH__I2CADDR - MTCH__NUMBER_OF_X_CHANNELS +
 // Section: Types
 // *****************************************************************************
 typedef struct MTCH6102_proc {
+	int16_t		min_x;
+	int16_t		max_x;
+	int16_t		min_y;
+	int16_t		max_y;
 	struct {
 	uint8_t		nb_x;
 	uint8_t		nb_y;
 	uint8_t		FW_Major;
 	uint8_t		FW_Minor;
 	uint16_t	APP_ID;
+	bool		Centered;	//!< Centering 0,0 point on the middle of the pad (allowing it's rotation afterwards using MTCH6102_rotate)
 	} cfg;
 } MTCH6102_proc;
 
+extern MTCH6102_proc MTCH6102;
 
 // *****************************************************************************
 // Section: Interface Routines
@@ -54,9 +60,14 @@ typedef struct MTCH6102_proc {
 FctERR MTCH6102_Init_Sequence(void);
 
 FctERR MTCH6102_decode_touch_datas(MTCH6102_gesture * touch, MTCH6102_raw_gest * dat);
+
+MTCH6102_Coord MTCH6102_rotate(MTCH6102_Coord c, int16_t deg);
+
 FctERR MTCH6102_gesture_to_str(char * str, MTCH6102_GESTURE_STATE state);
 FctERR MTCH6102_diag_to_str(char * str, MTCH6102_GESTURE_DIAGNOSTIC diag);
 
+__INLINE void INLINE__ MTCH6102_Set_Centered_Coord(bool centered) {
+	MTCH6102.cfg.Centered = centered; }
 
 FctERR MTCH6102_handler(void);
 

@@ -36,6 +36,8 @@ typedef struct MCP4725_proc {
 	} cfg;
 } MCP4725_proc;
 
+extern MCP4725_proc	MCP4725;
+
 
 // *****************************************************************************
 // Section: Interface Routines

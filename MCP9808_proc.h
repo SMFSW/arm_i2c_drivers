@@ -51,6 +51,8 @@ typedef struct MCP9808_proc {
 	} cfg;
 } MCP9808_proc;
 
+extern MCP9808_proc	MCP9808;
+
 
 // *****************************************************************************
 // Section: Interface Routines

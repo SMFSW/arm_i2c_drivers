@@ -63,6 +63,8 @@ typedef struct TCS3472_proc {
 	} cfg;
 } TCS3472_proc;
 
+extern TCS3472_proc TCS3472;
+
 
 // *****************************************************************************
 // Section: Interface Routines

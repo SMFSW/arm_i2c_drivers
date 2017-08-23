@@ -46,6 +46,8 @@ typedef struct DRV2605L_proc {
 	} cfg;
 } DRV2605L_proc;
 
+extern DRV2605L_proc	DRV2605L;
+
 
 // *****************************************************************************
 // Section: Interface Routines

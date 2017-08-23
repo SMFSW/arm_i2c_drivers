@@ -64,6 +64,8 @@ typedef struct TCS3400_proc {
 	} cfg;
 } TCS3400_proc;
 
+extern TCS3400_proc	TCS3400;
+
 
 // *****************************************************************************
 // Section: Interface Routines

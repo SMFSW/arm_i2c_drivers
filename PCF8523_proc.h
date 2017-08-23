@@ -59,6 +59,8 @@ typedef struct PCF8523_proc {
 	} cfg;
 } PCF8523_proc;
 
+extern PCF8523_proc	PCF8523;
+
 
 // *****************************************************************************
 // Section: Interface Routines

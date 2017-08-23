@@ -37,6 +37,8 @@ typedef struct MB85RC256V_proc {
 	uint8_t		Product_ID;
 } MB85RC256V_proc;
 
+extern MB85RC256V_proc	MB85RC256V;
+
 
 // *****************************************************************************
 // Section: Interface Routines

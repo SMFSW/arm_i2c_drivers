@@ -71,6 +71,8 @@ typedef struct GPMS_proc {
 	} cfg;
 } GPMS_proc;
 
+extern GPMS_proc	GPMS;
+
 
 // *****************************************************************************
 // Section: Interface Routines

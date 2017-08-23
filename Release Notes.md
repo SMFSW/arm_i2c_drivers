@@ -37,6 +37,11 @@ SOFTWARE.
 * BMP180: added missing Doxygen comments
 * MCP9808: added missing Doxygen comments
 * MCP4725: added missing Doxygen comments
+* MTCH6102: added single RX/TX pin resolution define
+* MTCH6102: added min/max x/y depending on RX/TX number
+* MTCH6102: added Centered Coords to proc struct
+* MTCH6102: added coordinate rotation function (most valuable when coordinates are set to pad center)
+* all CPNT_proc: added external declaration of CPNT
 
 ## v0.4
 

@@ -64,6 +64,8 @@ typedef struct BMP180_proc {
 	} cfg;
 } BMP180_proc;
 
+extern BMP180_proc BMP180;
+
 
 // *****************************************************************************
 // Section: Interface Routines
