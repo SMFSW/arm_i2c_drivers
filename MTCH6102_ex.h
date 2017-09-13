@@ -60,13 +60,13 @@ typedef struct MTCH6102_gest {
 
 
 typedef struct MTCH6102_gesture {
-	MTCH6102_Coord					Coords;
-	MTCH6102_GESTURE_STATE			State;
-	MTCH6102_GESTURE_DIAGNOSTIC		Diag;
-	uint8_t							Frame;
-	bool							Touch;
-	bool							Gesture;
-	bool							Large;
+	MTCH6102_Coord					Coords;		//!< Coordinates
+	MTCH6102_GESTURE_STATE			State;		//!< State
+	MTCH6102_GESTURE_DIAGNOSTIC		Diag;		//!< Diagnostic
+	uint8_t							Frame;		//!< Frame count
+	bool							Touch;		//!< Is Touch
+	bool							Gesture;	//!< Is Gesture
+	bool							Large;		//!< Is Large
 } MTCH6102_gesture;
 
 
