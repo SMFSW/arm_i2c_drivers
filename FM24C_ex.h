@@ -13,8 +13,6 @@
 #include "FM24C.h"
 
 #include "sarmfsw.h"
-#include CMSIS_INC
-#include CMSIS_CFG
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 #include "i2c.h"

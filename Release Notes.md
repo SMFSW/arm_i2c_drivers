@@ -42,6 +42,7 @@ SOFTWARE.
 * MTCH6102: added min/max x/y depending on RX/TX number
 * MTCH6102: added Centered Coords to proc struct
 * MTCH6102: added coordinate rotation function (most valuable when coordinates are set to pad center)
+* Removed CMSIS & HAL includes from files (already included by sarmfsw library)
 
 ## v0.4
 
