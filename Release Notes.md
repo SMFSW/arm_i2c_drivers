@@ -21,6 +21,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
+## v0.6
+
+* removed peripheral includes (already done by sarmfsw library)
+
 ## v0.5
 
 * added en variable in slave struct and getters/setters (to disable peripheral if init goes wrong)
