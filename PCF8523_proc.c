@@ -47,7 +47,7 @@ FctERR PCF8523_Init_Sequence(void)
 **/
 static FctERR hex2bcd(uint8_t * bcd, uint8_t hex)
 {
-	*bcd = (uint8_t) (((hex / 10) * 0x10) | (hex % 10));
+	*bcd = (uint8_t) (LSHIFT((hex / 10), 4) | (hex % 10));
 	return ERR_OK;
 }
 
@@ -59,8 +59,8 @@ static FctERR hex2bcd(uint8_t * bcd, uint8_t hex)
 **/
 static FctERR bcd2hex(uint8_t * hex, uint8_t bcd)
 {
-	uint8_t	ms = (uint8_t) ((bcd & 0xF0) / 0x10);
-	uint8_t	ls = (uint8_t) (bcd & 0x0F);
+	uint8_t	ms = RSHIFT(bcd & 0xF0, 4);
+	uint8_t	ls = bcd & 0x0F;
 
 	if ((ms > 9) || (ls > 9))	{ return ERR_VALUE; }
 
@@ -121,7 +121,9 @@ FctERR PCF8523_Set_Time(PCF8523_time time, bool BCD)
 		// Conversion to BCD for PCF8523
 		hex2bcd(&TIME[0], time.Seconds);
 		hex2bcd(&TIME[1], time.Minutes);
-		hex2bcd(&TIME[2], time.Hours);
+
+		if (PCF8523.cfg.Hour_Format)	{ /* TODO: handle 12 hours mode too */ }
+		else							{ hex2bcd(&TIME[2], time.Hours); }
 	}
 	else
 	{
@@ -130,7 +132,9 @@ FctERR PCF8523_Set_Time(PCF8523_time time, bool BCD)
 		if (err)	{ return err; }
 		err = bcd2hex(&TIME[1], time.Minutes);
 		if (err)	{ return err; }
-		err = bcd2hex(&TIME[2], time.Hours);
+
+		if (PCF8523.cfg.Hour_Format)	{ /* TODO: handle 12 hours mode too */ }
+		else							{ err = bcd2hex(&TIME[2], time.Hours); }
 		if (err)	{ return err; }
 
 		if ((TIME[0] >= 60) || (TIME[1] >= 60) || (TIME[2] >= 24))	{ return ERR_RANGE; }	// Time outside range

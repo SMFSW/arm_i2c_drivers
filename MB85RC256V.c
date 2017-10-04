@@ -12,7 +12,7 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_MB85RC256V)
 /****************************************************************/
-#if defined(I2C_FM24C) && !defined(NO_WARN_I2C_DRIVERS)
+#if defined(I2C_FM24C)
 #warning "MB85RC256V -> Defined along with FM24CxxB: use with caution, might have same I2C addresses if on same I2C bus!!!"
 #endif
 /****************************************************************/

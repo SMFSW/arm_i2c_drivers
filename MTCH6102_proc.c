@@ -83,7 +83,7 @@ FctERR MTCH6102_Init_Sequence(void)
 
 	MTCH6102.cfg.FW_Major = MTCH_CORE[0];
 	MTCH6102.cfg.FW_Minor = MTCH_CORE[1];
-	MTCH6102.cfg.APP_ID = (MTCH_CORE[2] * 0x100) + MTCH_CORE[3];
+	MTCH6102.cfg.APP_ID = MAKEWORD(MTCH_CORE[3], MTCH_CORE[2]);
 
 	if (MTCH6102.cfg.Centered)
 	{
@@ -115,10 +115,10 @@ FctERR MTCH6102_decode_touch_datas(MTCH6102_gesture * touch, MTCH6102_raw_gest *
 	touch->Touch = dat->Touch_state.Bits.TCH;
 	touch->Frame = dat->Touch_state.Bits.FRAME;
 
-	touch->Coords.x = (dat->Touch_x.Byte * 16) & 0x0FF0;
+	touch->Coords.x = LSHIFT(dat->Touch_x.Byte, 4) & 0x0FF0;
 	touch->Coords.x |= dat->Touch_lsb.Bits.TOUCHX3_0 & 0x000F;
 
-	touch->Coords.y = (dat->Touch_y.Byte * 16) & 0x0FF0;
+	touch->Coords.y = LSHIFT(dat->Touch_y.Byte, 4) & 0x0FF0;
 	touch->Coords.y |= dat->Touch_lsb.Bits.TOUCHY3_0 & 0x000F;
 
 	if (MTCH6102.cfg.Centered)
@@ -253,12 +253,12 @@ FctERR MTCH6102_handler(void)
 	(void) MTCH6102_diag_to_str(str_diag, touch.Diag);
 
 	#if defined(VERBOSE)
-		printf("%i %i %i STATE: 0x%X\t DIAG:0x%X", touch.Touch, touch.Gesture, touch.Large, touch.State, touch.Diag);
-		printf("\tX: %i\tY: %i\tFrm: %i", touch.Coords.x, touch.Coords.y, touch.Frame);
+		printf("%d %d %d STATE: 0x%X\t DIAG:0x%X", touch.Touch, touch.Gesture, touch.Large, touch.State, touch.Diag);
+		printf("\tX: %d\tY: %d\tFrm: %d", touch.Coords.x, touch.Coords.y, touch.Frame);
 		printf("\tST: %s\tDG: %s\r\n", str_gest, str_diag);
 
 		printf("Sensor Values:");
-		for (int i = 0; i < sizeof(SensValues) ; i++)	{ printf("%i ", SensValues.sensor[i]); }
+		for (int i = 0; i < sizeof(SensValues) ; i++)	{ printf("%d ", SensValues.sensor[i]); }
 		printf("\r\n");
 	#endif
 

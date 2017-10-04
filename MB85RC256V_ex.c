@@ -9,10 +9,6 @@
 #include "MB85RC256V.h"
 #include "globals.h"
 
-#if defined(HAL_IWDG_MODULE_ENABLED)
-#include "iwdg.h"
-#endif
-
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_MB85RC256V)
 /****************************************************************/
@@ -30,11 +26,10 @@
 FctERR MB85RC256V_Mass_Erase(void)
 {
 	FctERR	err = ERR_OK;
-	int		i;
 	uint8_t	bankData[32];
 	memset(&bankData, VAL_CLR, sizeof(bankData));
 
-	for (i = 0 ; i < (MB85RC256V_SIZE / sizeof(bankData)) ; i++)
+	for (int i = 0 ; i < (MB85RC256V_SIZE / sizeof(bankData)) ; i++)
 	{
 		#if defined(HAL_IWDG_MODULE_ENABLED)
 			HAL_IWDG_Refresh(&hiwdg);

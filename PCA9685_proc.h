@@ -20,7 +20,7 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define PCA9685_FREQ			500//82		//!< Frequency to affect to PCA9685 register (in Hz, range from 26 to 1700Hz)
+#define PCA9685_FREQ			500			//!< Frequency to affect to PCA9685 register (in Hz, range from 26 to 1700Hz)
 //\warning Outputs frequency in Hz may range from 26 to 1700Hz
 
 #define	PCA9685_FREQ_HZ_MIN		0x1AU		//!< Lower bound of interval for method PCA9685_Get_PWM_Prescaler

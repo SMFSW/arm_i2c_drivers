@@ -46,7 +46,7 @@ FctERR MB85RC256V_Get_ID(void)
 	err = MB85RC256V_Read_ID(ID);
 	if (err)	{ return err; }
 	
-	MB85RC256V.Manufacture_ID = (ID[0] * 0x10) + (ID[1] / 0x10);
+	MB85RC256V.Manufacture_ID = LSHIFT(ID[0], 4) + RSHIFT(ID[1], 4);
 	MB85RC256V.Density = ID[1] & 0x0F;
 	MB85RC256V.Product_ID = ID[2];
 	

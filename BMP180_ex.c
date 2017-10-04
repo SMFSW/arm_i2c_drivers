@@ -40,7 +40,7 @@ FctERR BMP180_Start_Conversion(BMP180_meas meas)
 }
 
 
-FctERR BMP180_Get_Temperature_Raw(uint32_t * tp)
+FctERR BMP180_Get_Temperature_Raw(int32_t * tp)
 {
 	uint16_t	RES;
 	FctERR		err;
@@ -58,7 +58,7 @@ FctERR BMP180_Get_Temperature_Raw(uint32_t * tp)
 }
 
 
-FctERR BMP180_Get_Pressure_Raw(uint32_t * pr)
+FctERR BMP180_Get_Pressure_Raw(int32_t * pr)
 {
 	uint8_t		RES[3];
 	FctERR		err;
@@ -71,7 +71,7 @@ FctERR BMP180_Get_Pressure_Raw(uint32_t * pr)
 	err = BMP180_Read(RES, BMP180__OUT_MSB, 3);
 	if (err)	{ return err; }
 
-	*pr = ((RES[0] * 0x10000) + (RES[1] * 0x100) + RES[2]) >> (8 - BMP180.cfg.OSS);
+	*pr = (LSHIFT(RES[0], 16) + LSHIFT(RES[1], 8) + RES[2]) >> (8 - BMP180.cfg.OSS);
 	return err;
 }
 

@@ -153,8 +153,8 @@ FctERR TSL2591_handler(void)
 	err = TSL2591_Read(DATA, TSL2591__C0DATAL, 4);
 	if (err)	{ return err; }
 
-	TSL2591.Full = (DATA[1] * 0x100) + DATA[0];
-	TSL2591.IR = (DATA[3] * 0x100) + DATA[2];
+	TSL2591.Full = MAKEWORD(DATA[0], DATA[1]);
+	TSL2591.IR = MAKEWORD(DATA[2], DATA[3]);
 	err = calculateLux(TSL2591.Full, TSL2591.IR);
 
 	#if defined(VERBOSE)

@@ -22,15 +22,15 @@ FctERR MCP4725_Write_Command(uint16_t val)
 
 	if (MCP4725.cfg.Mode == MCP4725__FAST_MODE)
 	{
-		CMD[0] = (MCP4725.cfg.PowerDown * 0x10) + (uint8_t) ((val / 0x100) & 0x0F);
+		CMD[0] = LSHIFT(MCP4725.cfg.PowerDown, 4) + (RSHIFT(val, 8) & 0x0F);
 		CMD[1] = (uint8_t) val;
 		return MCP4725_Write(CMD, 2);
 	}
 	else
 	{
-		CMD[0] = (MCP4725.cfg.Mode * 0x20) + (MCP4725.cfg.PowerDown * 0x02);
-		CMD[1] = (uint8_t) (val / 0x10);
-		CMD[2] = ((uint8_t) val & 0x0F) * 0x10;
+		CMD[0] = LSHIFT(MCP4725.cfg.Mode, 5) + (MCP4725.cfg.PowerDown << 1);
+		CMD[1] = RSHIFT(val, 4);
+		CMD[2] = LSHIFT(val & 0x0F, 4);
 		return MCP4725_Write(CMD, 3);
 	}
 }
@@ -44,7 +44,7 @@ FctERR MCP4725_Read_DAC(uint16_t * val)
 	err = MCP4725_Read(REG, 3);
 	if (err)	{ return err; }
 
-	*val = (REG[2] / 0x10) + (REG[1] * 0x100);
+	*val = RSHIFT(REG[2], 4) | LSHIFT(REG[1], 4);
 	return ERR_OK;
 }
 

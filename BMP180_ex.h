@@ -56,13 +56,13 @@ __INLINE FctERR INLINE__ BMP180_Reset(void) {
 ** \param[in,out] tp - pointer to raw temperature result
 ** \return FctERR - error code
 **/
-FctERR BMP180_Get_Temperature_Raw(uint32_t * tp);
+FctERR BMP180_Get_Temperature_Raw(int32_t * tp);
 
 /*!\brief Get Raw Pressure
 ** \param[in,out] pr - pointer to raw pressure result
 ** \return FctERR - error code
 **/
-FctERR BMP180_Get_Pressure_Raw(uint32_t * pr);
+FctERR BMP180_Get_Pressure_Raw(int32_t * pr);
 
 
 /****************************************************************/

@@ -151,7 +151,7 @@ FctERR TCS3472_Get_Channels(uint16_t buf[])
 	{
 		err = TCS3472_Read(TMP, TCS3472__CDATAL + (2 * i), 2);
 		if (err)	{ return err; }
-		buf[i] = (TMP[1] * 0x100) + TMP[0];
+		buf[i] = MAKEWORD(TMP[0], TMP[1]);
 	}
 
 	return err;

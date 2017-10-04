@@ -23,7 +23,14 @@ SOFTWARE.
 
 ## v0.6
 
+* overhaul update due to updates from sarmfsw
 * removed peripheral includes (already done by sarmfsw library)
+* warnings about sharing same address on bus re-enabled
+* BMP180: reworked pressure and temperature calculations
+* BMP180: added datasheet example for testing purposes
+* MCP4725: fixed ReadDAC function & WriteCommand for Fast Mode
+* PCF8523: notes & changes for 12/24 hours formats handling
+* TCSxxxx, TSL2591: Fixed WriteWord functions (low byte first)
 
 ## v0.5
 

@@ -131,7 +131,7 @@ __INLINE FctERR INLINE__ TCS3400_Set_AIHT(uint16_t thr) {
 ** \return FctERR - error code
 **/
 __INLINE FctERR INLINE__ TCS3400_Set_AIT(uint16_t lthr, uint16_t hthr) {
-	uint8_t DAT[4] = { (hthr & 0xFF), (hthr / 0x100), (lthr & 0xFF), (lthr / 0x100) };
+	uint8_t DAT[4] = { LOBYTE(hthr), HIBYTE(hthr), LOBYTE(lthr), HIBYTE(lthr) };
 	return TCS3400_Write(DAT, TCS3400__AILTL, sizeof(DAT)); }
 
 

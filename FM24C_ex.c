@@ -10,10 +10,6 @@
 #include "FM24C.h"
 #include "globals.h"
 
-#if defined(HAL_IWDG_MODULE_ENABLED)
-#include "iwdg.h"
-#endif
-
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_FM24C)
 /****************************************************************/

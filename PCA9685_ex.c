@@ -111,7 +111,7 @@ FctERR PCA9685_PutVal256(PCA96xx_chan chan, uint8_t duty)
 	else
 	{// DIM
 		Data[1] = 0;				// xxx_LED_ON_H (LED not fully ON)
-		OFFCount = (uint16_t) ((DefValDelayON - 1) + ((uint16_t) duty * 16));	// 4096 = (DelayTime - 1) + ((Duty(255)) * 16)
+		OFFCount = (uint16_t) ((DefValDelayON - 1) + (duty * 16));		// 4096 = (DelayTime - 1) + ((Duty(255)) * 16)
 	}
 
 	Data[0] = 0;					// xxx_LED_ON_H
@@ -145,7 +145,7 @@ FctERR PCA9685_PutVal1024(PCA96xx_chan chan, uint16_t duty)
 	else
 	{// DIM
 		Data[1] = 0;				// xxx_LED_ON_H (LED not fully ON)
-		OFFCount = (uint16_t) ((DefValDelayON - 1) + ((uint16_t) duty * 4));	// 4096 = (DelayTime - 1) + ((Duty(1023)) * 4)
+		OFFCount = (uint16_t) ((DefValDelayON - 1) + (duty * 4));		// 4096 = (DelayTime - 1) + ((Duty(1023)) * 4)
 	}
 
 	Data[0] = 0;					// xxx_LED_ON_H

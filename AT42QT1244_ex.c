@@ -66,7 +66,7 @@ FctERR AT42QT1244_Get_Keys(uint32_t * Keys)
 	FctERR	err = AT42QT1244_Read(TMP, AT42QT__DETECT_STATUS_1, sizeof(TMP));
 	if (err)	{ return err; }
 
-	*Keys = ((TMP[2] * 0x10000UL) + (TMP[1] * 0x100UL) + TMP[0]) & 0x00FFFFFFUL;
+	*Keys = (LSHIFT(TMP[2], 16) + LSHIFT(TMP[1], 8) + TMP[0]) & 0x00FFFFFFUL;
 	return ERR_OK;
 }
 

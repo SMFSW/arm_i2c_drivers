@@ -130,10 +130,10 @@ FctERR TCS3400_handler(void)
 	err = TCS3400_Read(DATA, TCS3400__CDATAL, 8);
 	if (err)	{ return err; }
 
-	TCS3400.Clear = (DATA[1] * 0x100) + DATA[0];
-	TCS3400.Red = (DATA[3] * 0x100) + DATA[2];
-	TCS3400.Green = (DATA[5] * 0x100) + DATA[4];
-	TCS3400.Blue = (DATA[7] * 0x100) + DATA[6];
+	TCS3400.Clear = MAKEWORD(DATA[0], DATA[1]);
+	TCS3400.Red = MAKEWORD(DATA[2], DATA[3]);
+	TCS3400.Green = MAKEWORD(DATA[4], DATA[5]);
+	TCS3400.Blue = MAKEWORD(DATA[6], DATA[7]);
 	err = TCS3400_calc(TCS3400.Red, TCS3400.Green, TCS3400.Blue);
 
 	#if defined(VERBOSE)

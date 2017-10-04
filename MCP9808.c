@@ -55,8 +55,8 @@ FctERR MCP9808_Write(uint16_t * data, uint16_t addr, uint16_t nb)
 	{
 		for (int i = 0; i < nb ; i++)
 		{
-			DATA[0] = data[i] / 0x100;
-			DATA[1] = (uint8_t) data[i];
+			DATA[0] = HIBYTE(data[i]);
+			DATA[1] = LOBYTE(data[i]);
 
 			MCP9808_hal.status = HAL_I2C_Mem_Write(MCP9808_hal.cfg.inst, MCP9808_hal.cfg.addr, addr, MCP9808_hal.cfg.mem_size, DATA, 2, MCP9808_hal.cfg.timeout);
 			if (MCP9808_hal.status != HAL_OK)	{ break; }
@@ -92,7 +92,7 @@ FctERR MCP9808_Read(uint16_t * data, uint16_t addr, uint16_t nb)
 			MCP9808_hal.status = HAL_I2C_Mem_Read(MCP9808_hal.cfg.inst, MCP9808_hal.cfg.addr, addr, MCP9808_hal.cfg.mem_size, DATA, 2, MCP9808_hal.cfg.timeout);
 			if (MCP9808_hal.status != HAL_OK)	{ break; }
 
-			data[i] = (DATA[0] * 0x100) + DATA[1];
+			data[i] = MAKEWORD(DATA[1], DATA[0]);
 		}
 	}
 

@@ -127,10 +127,10 @@ FctERR TCS3472_handler(void)
 	err = TCS3472_Read(DATA, TCS3472__CDATAL, 8);
 	if (err)	{ return err; }
 
-	TCS3472.Clear = (DATA[1] * 0x100) + DATA[0];
-	TCS3472.Red = (DATA[3] * 0x100) + DATA[2];
-	TCS3472.Green = (DATA[5] * 0x100) + DATA[4];
-	TCS3472.Blue = (DATA[7] * 0x100) + DATA[6];
+	TCS3472.Clear = MAKEWORD(DATA[0], DATA[1]);
+	TCS3472.Red = MAKEWORD(DATA[2], DATA[3]);
+	TCS3472.Green = MAKEWORD(DATA[4], DATA[5]);
+	TCS3472.Blue = MAKEWORD(DATA[6], DATA[7]);
 	err = TCS3472_calc(TCS3472.Red, TCS3472.Green, TCS3472.Blue);
 
 	#if defined(VERBOSE)

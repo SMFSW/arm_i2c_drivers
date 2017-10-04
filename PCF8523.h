@@ -81,6 +81,7 @@ typedef enum PACK__ PCF8523_weekdays {
 
 
 /*!\enum PCF8523_months
+** \note BCD coded values
 ** \brief Weekdays enum for PCF8523 peripheral
 **/
 typedef enum PACK__ PCF8523_months {

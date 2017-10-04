@@ -9,10 +9,6 @@
 #include "BMP180.h"
 #include "globals.h"
 
-//#if defined(HAL_IWDG_MODULE_ENABLED)
-//#include "iwdg.h"
-//#endif
-
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_BMP180)
 /****************************************************************/
@@ -21,8 +17,13 @@
 #include <string.h>
 /****************************************************************/
 
+//#define BMP180_TST	//!< Defined to check calculations with datasheet
 
-BMP180_proc BMP180 = { 0.0f, 0.0f, 0.0f, 0.0f, 0, { BMP180__OSS_8_TIME, { 408, -72, -14383, 32741, 32757, 23153, 6190, 4, -32768, -8711, 2868 }, 0 } };
+#if !defined(BMP180_TST)
+BMP180_proc BMP180 = { 0.0f, 0.0f, 0.0f, 0.0f, 0, { BMP180__OSS_8_TIME, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 0 } };
+#else
+BMP180_proc BMP180 = { 0.0f, 0.0f, 0.0f, 0.0f, 0, { BMP180__OSS_1_TIME, { 408, -72, -14383, 32741, 32757, 23153, 6190, 4, -32768, -8711, 2868 }, 0 } };
+#endif
 
 extern uint8_t BMP180_OSS_time[4];
 
@@ -38,8 +39,10 @@ FctERR BMP180_Init_Sequence(void)
 	if (err)								{ return err; }
 	if (BMP180.cfg.Id != BMP180_CHIP_ID)	{ return ERR_COMMON; }	// Unknown device
 
-	err = BMP180_Get_Calibration(&BMP180.cfg.Calib);
-	if (err)								{ return err; }
+	#if !defined(BMP180_TST)
+		err = BMP180_Get_Calibration(&BMP180.cfg.Calib);
+		if (err)							{ return err; }
+	#endif
 
 	return err;
 }
@@ -103,8 +106,9 @@ FctERR BMP180_Get_Calibration(BMP180_calib * calib)
 **/
 static int32_t computeB5(int32_t UT)
 {
-	int32_t X1 = (UT - (int32_t) BMP180.cfg.Calib.AC6) * ((int32_t) BMP180.cfg.Calib.AC5) / 0x8000;
-	int32_t X2 = ((int32_t) BMP180.cfg.Calib.MC * 0x800) / (X1 + (int32_t) BMP180.cfg.Calib.MD);
+	// TODO: find what's wrong here
+	int32_t X1 = (UT - BMP180.cfg.Calib.AC6) * BMP180.cfg.Calib.AC5 / LSHIFT(1, 15);
+	int32_t X2 = BMP180.cfg.Calib.MC * LSHIFT(1, 11) / (X1 + BMP180.cfg.Calib.MD);
 	return X1 + X2;
 }
 
@@ -115,41 +119,47 @@ FctERR BMP180_Get_Pressure(float * pres)
 	int32_t		x1, x2, b5, b6, x3, b3, p;
 	uint32_t	b4, b7;
 	float		t;
-	FctERR		err;
+	FctERR		err = ERR_OK;
 
 	/* Get the raw pressure and temperature values */
-	err = BMP180_Get_Temperature_Raw((uint32_t *) &UT);
-	if (err)	{ return err; }
-	err = BMP180_Get_Pressure_Raw((uint32_t *) &UP);
-	if (err)	{ return err; }
+	#if !defined(BMP180_TST)
+		err = BMP180_Get_Temperature_Raw(&UT);
+		if (err)	{ return err; }
+		err = BMP180_Get_Pressure_Raw(&UP);
+		if (err)	{ return err; }
+	#else
+		UT = 27898;		//!< For test purposes
+		UP = 23843;		//!< For test purposes
+	#endif
 
 	/* Temperature compensation */
 	b5 = computeB5(UT);
 
 	/* Pressure compensation */
 	b6 = b5 - 4000;
-	x1 = (BMP180.cfg.Calib.B2 * ((b6 * b6) / 0x1000)) / 0x800;
-	x2 = (BMP180.cfg.Calib.AC2 * b6) / 0x800;
+	x1 = RSHIFT(BMP180.cfg.Calib.B2 * RSHIFT(b6 * b6, 12), 11);
+	x2 = RSHIFT(BMP180.cfg.Calib.AC2 * b6, 11);
 	x3 = x1 + x2;
-	b3 = (((((int32_t) BMP180.cfg.Calib.AC1) * 4 + x3) << BMP180.cfg.OSS) + 2) / 4;
-	x1 = (BMP180.cfg.Calib.AC3 * b6) / 0x2000;
-	x2 = (BMP180.cfg.Calib.B1 * ((b6 * b6) / 0x1000)) / 0x10000;
-	x3 = ((x1 + x2) + 2) / 4;
-	b4 = (BMP180.cfg.Calib.AC4 * (uint32_t) (x3 + 32768)) / 0x8000;
-	b7 = ((uint32_t) (UP - b3) * (50000 >> BMP180.cfg.OSS));
+	b3 = ((((BMP180.cfg.Calib.AC1 * 4) + x3) << BMP180.cfg.OSS) + 2) / 4;
+	x1 = RSHIFT(BMP180.cfg.Calib.AC3 * b6, 13);
+	x2 = RSHIFT(BMP180.cfg.Calib.B1 * RSHIFT(b6 * b6, 12), 16);
+	x3 = RSHIFT(((x1 + x2) + 2), 2);
+	b4 = BMP180.cfg.Calib.AC4 * (x3 + 32768) / LSHIFT(1, 15);
+	b7 = (UP - b3) * (50000 >> BMP180.cfg.OSS);
 
-	if (b7 < 0x80000000)	{ p = (b7 << 1) / b4; }
-	else					{ p = (b7 / b4) << 1; }
+	if (b7 < 0x80000000)	{ p = (b7 * 2) / b4; }
+	else					{ p = (b7 / b4) * 2; }
 
-	x1 = (p / 0x100) * (p / 0x100);
-	x1 = (x1 * 3038) / 0x10000;
-	x2 = (-7357 * p) / 0x10000;
-	compp = p + ((x1 + x2 + 3791) / 16);
+	x1 = RSHIFT(p, 8);
+	x1 *= x1;
+	x1 = RSHIFT((x1 * 3038), 16);
+	x2 = RSHIFT((-7357 * p), 16);
+	compp = p + RSHIFT((x1 + x2 + 3791), 4);
 
 	/* Assign compensated pressure value */
-	BMP180.Pressure = compp / 100.0f;	// From kPa to hPa
+	BMP180.Pressure = compp / 100;	// From kPa to hPa
 
-	t = (b5 + 8.0f) / 16.0f;
+	t = ((float) b5 + 8) / 16;
 	BMP180.Temperature = t / 10;	// temperature given in 0.1°C (thus divide by 10 to get °C)
 
 	BMP180.Altitude = BMP180_Pressure_To_Altitude(BMP180.Pressure);
@@ -165,13 +175,17 @@ FctERR BMP180_Get_Temperature(float * temp)
 {
 	int32_t	UT = 0, b5;
 	float	t;
-	FctERR	err;
+	FctERR	err = ERR_OK;
 
-	err = BMP180_Get_Temperature_Raw((uint32_t *) &UT);
-	if (err)	{ return err; }
+	#if !defined(BMP180_TST)
+		err = BMP180_Get_Temperature_Raw(&UT);
+		if (err)	{ return err; }
+	#else
+		UT = 27898;		//!< For test purposes
+	#endif
 
 	b5 = computeB5(UT);
-	t = (b5 + 8) / 16;
+	t = ((float) b5 + 8) / 16;
 
 	BMP180.Temperature = t / 10;	// temperature given in 0.1°C (thus divide by 10 to get °C)
 

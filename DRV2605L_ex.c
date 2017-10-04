@@ -262,7 +262,7 @@ FctERR DRV2605L_Set_BlankingTime(uint16_t time)
 	}
 
 	CFG.Reg.ctl2.Bits.BLANKING_TIME = idx & 0x02;
-	CFG.Reg.ctl5.Bits.BLANKING_TIME = (idx >> 2) & 0x02;
+	CFG.Reg.ctl5.Bits.BLANKING_TIME = RSHIFT(idx, 2) & 0x02;
 
 	return _write_cfg(&CFG);
 }
@@ -289,7 +289,7 @@ FctERR DRV2605L_Set_CurrentDissipationTime(uint16_t time)
 	}
 
 	CFG.Reg.ctl2.Bits.IDISS_TIME = idx & 0x02;
-	CFG.Reg.ctl5.Bits.IDISS_TIME = (idx >> 2) & 0x02;
+	CFG.Reg.ctl5.Bits.IDISS_TIME = RSHIFT(idx, 2) & 0x02;
 
 	return _write_cfg(&CFG);
 }
@@ -321,7 +321,7 @@ FctERR DRV2605L_Get_BlankingTime(uint16_t * time)
 
 	if (CFG.Reg.fdbck_ctl.Bits.N_ERM_LRA)
 	{// LRA mode
-		idx = CFG.Reg.ctl2.Bits.BLANKING_TIME | (CFG.Reg.ctl5.Bits.BLANKING_TIME << 2);
+		idx = CFG.Reg.ctl2.Bits.BLANKING_TIME | LSHIFT(CFG.Reg.ctl5.Bits.BLANKING_TIME, 2);
 		*time = DRV2605L_time_table_LRA[idx];
 	}
 	else
@@ -371,7 +371,7 @@ FctERR DRV2605L_Get_CurrentDissipationTime(uint16_t * time)
 
 	if (CFG.Reg.fdbck_ctl.Bits.N_ERM_LRA)
 	{// LRA mode
-		idx = CFG.Reg.ctl2.Bits.IDISS_TIME | (CFG.Reg.ctl5.Bits.IDISS_TIME << 2);
+		idx = CFG.Reg.ctl2.Bits.IDISS_TIME | LSHIFT(CFG.Reg.ctl5.Bits.IDISS_TIME, 2);
 		*time = DRV2605L_time_table_LRA[idx];
 	}
 	else

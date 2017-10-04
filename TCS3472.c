@@ -12,7 +12,7 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_TCS3472)
 /****************************************************************/
-#if defined(I2C_TCS3400) && !defined(NO_WARN_I2C_DRIVERS)
+#if defined(I2C_TCS3400)
 #warning "TCS3472 -> Multiple TCS34xx types: use with caution, might have same I2C addresses if on same I2C bus!!!"
 #endif
 /****************************************************************/
@@ -88,8 +88,8 @@ FctERR TCS3472_Write_Word(uint16_t * data, uint16_t addr)
 
 	if (addr > TCS3472__CONTROL)		{ return ERR_RANGE; }		// Unknown register
 
-	WREG[0] = (uint8_t) (*data / 0x100);
-	WREG[1] = (uint8_t) *data;
+	WREG[0] = LOBYTE(*data);
+	WREG[1] = HIBYTE(*data);
 	return TCS3472_Write(WREG, addr, 2);
 }
 
@@ -104,7 +104,7 @@ FctERR TCS3472_Read_Word(uint16_t * data, uint16_t addr)
 	err = TCS3472_Read(WREG, addr, 2);
 	if (err)	{ return err; }
 
-	*data = (WREG[0] * 0x100) + WREG[1];
+	*data = MAKEWORD(WREG[0], WREG[1]);
 	return ERR_OK;
 }
 

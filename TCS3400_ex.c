@@ -164,7 +164,7 @@ FctERR TCS3400_Get_Channels(uint16_t buf[])
 	{
 		err = TCS3400_Read(TMP, TCS3400__CDATAL + (2 * i), 2);
 		if (err)	{ return err; }
-		buf[i] = (TMP[1] * 0x100) + TMP[0];
+		buf[i] = LSHIFT(TMP[1], 8) + TMP[0];
 	}
 
 	return err;

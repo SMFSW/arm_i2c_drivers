@@ -32,23 +32,23 @@
 ** \brief Channels for PCA96xx
 **/
 typedef enum PCA96xx_channels {
-	PCA96xx__PWM1	= 1U,
-	PCA96xx__PWM2	= 2U,
-	PCA96xx__PWM3	= 3U,
-	PCA96xx__PWM4	= 4U,
-	PCA96xx__PWM5	= 5U,
-	PCA96xx__PWM6	= 6U,
-	PCA96xx__PWM7	= 7U,
-	PCA96xx__PWM8	= 8U,
-	PCA96xx__PWM9	= 9U,
-	PCA96xx__PWM10	= 10U,
-	PCA96xx__PWM11	= 11U,
-	PCA96xx__PWM12	= 12U,
-	PCA96xx__PWM13	= 13U,
-	PCA96xx__PWM14	= 14U,
-	PCA96xx__PWM15	= 15U,
-	PCA96xx__PWM16	= 16U,
-	PCA96xx__ALL	= 0xFF
+	PCA96xx__PWM1	= 1U,	//!< PCA96xx Channel 1 PWM
+	PCA96xx__PWM2	= 2U,	//!< PCA96xx Channel 2 PWM
+	PCA96xx__PWM3	= 3U,	//!< PCA96xx Channel 3 PWM
+	PCA96xx__PWM4	= 4U,	//!< PCA96xx Channel 4 PWM
+	PCA96xx__PWM5	= 5U,	//!< PCA96xx Channel 5 PWM
+	PCA96xx__PWM6	= 6U,	//!< PCA96xx Channel 6 PWM
+	PCA96xx__PWM7	= 7U,	//!< PCA96xx Channel 7 PWM
+	PCA96xx__PWM8	= 8U,	//!< PCA96xx Channel 8 PWM
+	PCA96xx__PWM9	= 9U,	//!< PCA96xx Channel 9 PWM
+	PCA96xx__PWM10	= 10U,	//!< PCA96xx Channel 10 PWM
+	PCA96xx__PWM11	= 11U,	//!< PCA96xx Channel 11 PWM
+	PCA96xx__PWM12	= 12U,	//!< PCA96xx Channel 12 PWM
+	PCA96xx__PWM13	= 13U,	//!< PCA96xx Channel 13 PWM
+	PCA96xx__PWM14	= 14U,	//!< PCA96xx Channel 14 PWM
+	PCA96xx__PWM15	= 15U,	//!< PCA96xx Channel 15 PWM
+	PCA96xx__PWM16	= 16U,	//!< PCA96xx Channel 16 PWM
+	PCA96xx__ALL	= 0xFF	//!< PCA96xx All PWM Channels
 } PCA96xx_chan;
 
 
@@ -56,8 +56,8 @@ typedef enum PCA96xx_channels {
 ** \brief Latch type enum for PCA96xx
 **/
 typedef enum PACK__ PCA96xx_latchs {
-	PCA96xx__LATCH_ON_STOP = 0,
-	PCA96xx__LATCH_ON_ACK
+	PCA96xx__LATCH_ON_STOP = 0,	//!< Duty cycle update on I2C stop
+	PCA96xx__LATCH_ON_ACK		//!< Duty cycle update on I2C acknowledge
 } PCA96xx_latch;
 
 

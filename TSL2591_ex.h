@@ -138,7 +138,7 @@ __INLINE FctERR INLINE__ TSL2591_Set_AIHT(uint16_t thr) {
 ** \return FctERR - error code
 **/
 __INLINE FctERR INLINE__ TSL2591_Set_AIT(uint16_t lthr, uint16_t hthr) {
-	uint8_t DAT[4] = { (hthr & 0xFF), (hthr / 0x100), (lthr & 0xFF), (lthr / 0x100) };
+	uint8_t DAT[4] = { LOBYTE(hthr), HIBYTE(hthr), LOBYTE(lthr), HIBYTE(lthr) };
 	return TSL2591_Write(DAT, TSL2591__AILTL, sizeof(DAT)); }
 
 
@@ -162,7 +162,7 @@ __INLINE FctERR INLINE__ TSL2591_Set_NPAIHT(uint16_t thr) {
 ** \return FctERR - error code
 **/
 __INLINE FctERR INLINE__ TSL2591_Set_NPAIT(uint16_t lthr, uint16_t hthr) {
-	uint8_t DAT[4] = { (hthr & 0xFF), (hthr / 0x100), (lthr & 0xFF), (lthr / 0x100) };
+	uint8_t DAT[4] = { LOBYTE(hthr), HIBYTE(hthr), LOBYTE(lthr), HIBYTE(lthr) };
 	return TSL2591_Write(DAT, TSL2591__NPAILTL, sizeof(DAT)); }
 
 /*** Special Functions ***/

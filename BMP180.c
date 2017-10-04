@@ -9,10 +9,6 @@
 #include "BMP180.h"
 #include "globals.h"
 
-//#if defined(HAL_IWDG_MODULE_ENABLED)
-//#include "iwdg.h"
-//#endif
-
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_BMP180)
 /****************************************************************/
@@ -80,7 +76,7 @@ FctERR BMP180_Read_Word(uint16_t * data, uint16_t addr)
 	err = BMP180_Read(WREG, addr, 2);
 	if (err)	{ return err; }
 
-	*data = (WREG[0] * 0x100) + WREG[1];
+	*data = MAKEWORD(WREG[1], WREG[0]);
 	return HALERRtoFCTERR(BMP180_hal.status);
 }
 

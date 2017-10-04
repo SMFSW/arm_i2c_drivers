@@ -84,8 +84,8 @@ FctERR TSL2591_Write_Word(uint16_t * data, uint16_t addr)
 
 	if (addr > TSL2591__PERSIST)		{ return ERR_RANGE; }		// Unknown register
 
-	WREG[0] = (uint8_t) (*data / 0x100);
-	WREG[1] = (uint8_t) *data;
+	WREG[0] = LOBYTE(*data);
+	WREG[1] = HIBYTE(*data);
 	return TSL2591_Write(WREG, addr, 2);
 }
 
@@ -100,7 +100,7 @@ FctERR TSL2591_Read_Word(uint16_t * data, uint16_t addr)
 	err = TSL2591_Read(WREG, addr, 2);
 	if (err)	{ return err; }
 
-	*data = (WREG[0] * 0x100) + WREG[1];
+	*data = MAKEWORD(WREG[0], WREG[1]);
 	return ERR_OK;
 }
 
