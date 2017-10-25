@@ -9,10 +9,8 @@
 #ifndef __DRV2605L_H__
 	#define __DRV2605L_H__
 
-#include "I2C_component.h"
-#include "FctERR.h"
-
 #include "sarmfsw.h"
+#include "I2C_component.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -465,9 +463,10 @@ typedef union uDRV_REG__CONTROL_5 {
 /******************/
 
 /*!\brief Initialization for DRV2605L peripheral
+** \weak DRV2605L Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-FctERR DRV2605L_Init(void);
+__weak FctERR DRV2605L_Init(void);
 
 
 /************************/

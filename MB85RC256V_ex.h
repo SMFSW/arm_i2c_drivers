@@ -9,9 +9,8 @@
 #ifndef __MB85RC256V_EX_H__
 	#define __MB85RC256V_EX_H__
 
-#include "MB85RC256V.h"
-
 #include "sarmfsw.h"
+#include "MB85RC256V.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/

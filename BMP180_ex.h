@@ -9,9 +9,8 @@
 #ifndef __BMP180_EX_H__
 	#define __BMP180_EX_H__
 
-#include "BMP180.h"
-
 #include "sarmfsw.h"
+#include "BMP180.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/

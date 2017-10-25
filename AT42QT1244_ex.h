@@ -9,9 +9,8 @@
 #ifndef __AT42QT1244_EX_H__
 	#define __AT42QT1244_EX_H__
 
-#include "AT42QT1244.h"
-
 #include "sarmfsw.h"
+#include "AT42QT1244.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/

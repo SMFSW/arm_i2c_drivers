@@ -8,8 +8,6 @@
 #ifndef __I2C_COMPONENT_H__
 	#define __I2C_COMPONENT_H__
 
-#include "FctERR.h"
-
 #include "sarmfsw.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)

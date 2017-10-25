@@ -9,9 +9,8 @@
 #ifndef __MCP9808_EX_H__
 	#define __MCP9808_EX_H__
 
-#include "MCP9808.h"
-
 #include "sarmfsw.h"
+#include "MCP9808.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/

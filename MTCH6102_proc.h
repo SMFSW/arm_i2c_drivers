@@ -9,9 +9,8 @@
 #ifndef __MTCH6102_PROC_H__
 	#define __MTCH6102_PROC_H__
 
-#include "MTCH6102.h"
-
 #include "sarmfsw.h"
+#include "MTCH6102.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -52,9 +51,10 @@ extern MTCH6102_proc MTCH6102;
 /******************/
 
 /*!\brief Initialization Sequence for MTCH6102 peripheral
+** \weak MTCH6102 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-FctERR MTCH6102_Init_Sequence(void);
+__weak FctERR MTCH6102_Init_Sequence(void);
 
 FctERR MTCH6102_decode_touch_datas(MTCH6102_gesture * touch, MTCH6102_raw_gest * dat);
 
@@ -66,7 +66,13 @@ FctERR MTCH6102_diag_to_str(char * str, MTCH6102_GESTURE_DIAGNOSTIC diag);
 __INLINE void INLINE__ MTCH6102_Set_Centered_Coord(bool centered) {
 	MTCH6102.cfg.Centered = centered; }
 
-FctERR MTCH6102_handler(void);
+/*!\brief Handler for MTCH6102 peripheral
+** \weak MTCH6102 handler may be user implemented to suit custom needs
+** \note May be called periodically to handle MTCH6102 tasks
+** \note Alternately may be called when event occurs on MTCH6102 pin
+** \return FctERR - error code
+**/
+__weak FctERR MTCH6102_handler(void);
 
 /****************************************************************/
 #endif

@@ -9,9 +9,8 @@
 #ifndef __DS_GPMS_EX_H__
 	#define __DS_GPMS_EX_H__
 
-#include "DS_GPMS.h"
-
 #include "sarmfsw.h"
+#include "DS_GPMS.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/

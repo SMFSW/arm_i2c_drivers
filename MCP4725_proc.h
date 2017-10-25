@@ -9,9 +9,8 @@
 #ifndef __MCP4725_PROC_H__
 	#define __MCP4725_PROC_H__
 
-#include "MCP4725.h"
-
 #include "sarmfsw.h"
+#include "MCP4725.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -44,9 +43,10 @@ extern MCP4725_proc	MCP4725;
 /******************/
 
 /*!\brief Initialization Sequence of the MCP4725 peripheral
+** \weak MCP4725 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-FctERR MCP4725_Init_Sequence(void);
+__weak FctERR MCP4725_Init_Sequence(void);
 
 
 /*!\brief Set mode of the MCP4725 peripheral

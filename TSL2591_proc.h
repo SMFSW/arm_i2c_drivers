@@ -9,9 +9,8 @@
 #ifndef __TSL2591_PROC_H__
 	#define __TSL2591_PROC_H__
 
-#include "TSL2591.h"
-
 #include "sarmfsw.h"
+#include "TSL2591.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -67,9 +66,10 @@ extern TSL2591_proc	TSL2591;
 /******************/
 
 /*!\brief Initialization Sequence for TSL2591 peripheral
+** \weak TSL2591 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-FctERR TSL2591_Init_Sequence(void);
+__weak FctERR TSL2591_Init_Sequence(void);
 
 
 /*!\brief Set proper CPL value (Counts per kiloLux)
@@ -84,11 +84,12 @@ void TSL2591_Set_CPL(void);
 uint32_t TSL2591_Get_Lux(void);
 
 /*!\brief Handler for TSL2591 peripheral
+** \weak TSL2591 handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle TSL2591 tasks
 ** \note Alternately may be called when event occurs on TSL2591 pin
 ** \return FctERR - error code
 **/
-FctERR TSL2591_handler(void);
+__weak FctERR TSL2591_handler(void);
 
 
 /****************************************************************/

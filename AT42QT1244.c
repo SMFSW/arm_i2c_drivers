@@ -46,7 +46,7 @@ static uint16_t crc16(uint16_t crc, uint8_t data)
 /****************************************************************/
 
 
-FctERR AT42QT1244_Init(void)
+__weak FctERR AT42QT1244_Init(void)
 {
 	I2C_slave_init(&AT42QT1244_hal, I2C_AT42QT1244, AT42QT1244_BASE_ADDR, I2C_slave_timeout);
 

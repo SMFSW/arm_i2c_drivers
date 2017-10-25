@@ -9,9 +9,8 @@
 #ifndef __TCS3472_PROC_H__
 	#define __TCS3472_PROC_H__
 
-#include "TCS3472.h"
-
 #include "sarmfsw.h"
+#include "TCS3472.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -71,9 +70,10 @@ extern TCS3472_proc TCS3472;
 /******************/
 
 /*!\brief Initialization Sequence for TCS3472 peripheral
+** \weak TCS3472 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-FctERR TCS3472_Init_Sequence(void);
+__weak FctERR TCS3472_Init_Sequence(void);
 
 /*!\brief Get current Color temperature (in Kelvin)
 ** \return FctERR - error code
@@ -86,11 +86,12 @@ uint32_t TCS3472_Get_Temp(void);
 uint32_t TCS3472_Get_Lux(void);
 
 /*!\brief Handler for TCS3472 peripheral
+** \weak TCS3472 handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle TCS3472 tasks
 ** \note Alternately may be called when event occurs on TCS3472 pin
 ** \return FctERR - error code
 **/
-FctERR TCS3472_handler(void);
+__weak FctERR TCS3472_handler(void);
 
 
 /****************************************************************/

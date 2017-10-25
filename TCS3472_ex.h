@@ -9,9 +9,8 @@
 #ifndef __TCS3472_EX_H__
 	#define __TCS3472_EX_H__
 
-#include "TCS3472.h"
-
 #include "sarmfsw.h"
+#include "TCS3472.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/

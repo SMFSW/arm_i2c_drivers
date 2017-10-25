@@ -9,10 +9,8 @@
 #ifndef __MCP4725_H__
 	#define __MCP4725_H__
 
-#include "I2C_component.h"
-#include "FctERR.h"
-
 #include "sarmfsw.h"
+#include "I2C_component.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -87,9 +85,10 @@ typedef union uMCP4725_REG__CMD {
 /******************/
 
 /*!\brief Initialization of the MCP4725 peripheral
+** \weak MCP4725 Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-FctERR MCP4725_Init(void);
+__weak FctERR MCP4725_Init(void);
 
 
 /************************/

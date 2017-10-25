@@ -9,9 +9,8 @@
 #ifndef __TCS3400_EX_H__
 	#define __TCS3400_EX_H__
 
-#include "TCS3400.h"
-
 #include "sarmfsw.h"
+#include "TCS3400.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/

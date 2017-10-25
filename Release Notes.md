@@ -26,9 +26,12 @@ SOFTWARE.
 * overhaul update due to updates from sarmfsw
 * removed peripheral includes (already done by sarmfsw library)
 * warnings about sharing same address on bus re-enabled
+* changed CPNT_Init, CPNT_Init_Sequence & CPNT_handler as weak functions
+* removed inclusion of FctERR.h now handled by sarmfsw
 * BMP180: reworked pressure and temperature calculations
 * BMP180: added datasheet example for testing purposes
 * MCP4725: fixed ReadDAC function & WriteCommand for Fast Mode
+* MTCH6102: added example init sequence to ensure MTCH6102 takes changed parameters into account
 * PCF8523: notes & changes for 12/24 hours formats handling
 * TCSxxxx, TSL2591: Fixed WriteWord functions (low byte first)
 

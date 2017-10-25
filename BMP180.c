@@ -20,7 +20,7 @@ I2C_slave BMP180_hal = { { pNull, I2C_ADDR(BMP180_BASE_ADDR), I2C_slave_timeout,
 /****************************************************************/
 
 
-FctERR BMP180_Init(void)
+__weak FctERR BMP180_Init(void)
 {
 	I2C_slave_init(&BMP180_hal, I2C_BMP180, BMP180_BASE_ADDR, I2C_slave_timeout);
 

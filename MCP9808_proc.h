@@ -9,9 +9,8 @@
 #ifndef __MCP9808_PROC_H__
 	#define __MCP9808_PROC_H__
 
-#include "MCP9808.h"
-
 #include "sarmfsw.h"
+#include "MCP9808.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -59,9 +58,10 @@ extern MCP9808_proc	MCP9808;
 /******************/
 
 /*!\brief Initialization Sequence of the MCP9808 peripheral
+** \weak MCP9808 handler may be user implemented to suit custom needs
 ** \return FctERR - error code
 **/
-FctERR MCP9808_Init_Sequence(void);
+__weak FctERR MCP9808_Init_Sequence(void);
 
 /*!\brief Set the high/low/crit Alert temperature
 ** \param[in,out] temp - temperature (in Celsius degrees)
@@ -86,10 +86,11 @@ FctERR MCP9808_Get_Temperature(float * temp);
 
 
 /*!\brief Handler for MCP9808 peripheral
+** \weak MCP9808 handler may be user implemented to suit custom needs
 ** \note Should be called periodically to handle BMP180 tasks
 ** \return FctERR - error code
 **/
-FctERR MCP9808_handler(void);
+__weak FctERR MCP9808_handler(void);
 
 
 /****************************************************************/

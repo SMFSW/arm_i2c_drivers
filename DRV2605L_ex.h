@@ -9,9 +9,8 @@
 #ifndef __DRV2605L_EX_H__
 	#define __DRV2605L_EX_H__
 
-#include "DRV2605L.h"
-
 #include "sarmfsw.h"
+#include "DRV2605L.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/

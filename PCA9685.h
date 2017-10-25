@@ -9,11 +9,9 @@
 #ifndef __PCA9685_H__
 	#define __PCA9685_H__
 
+#include "sarmfsw.h"
 #include "I2C_component.h"
 #include "PCA96xx.h"
-#include "FctERR.h"
-
-#include "sarmfsw.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -125,9 +123,10 @@ typedef enum PACK__ PCA9685_reg_map {
 /******************/
 
 /*!\brief Initialization for PCA9685 peripheral
+** \weak PCA9685 Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-FctERR PCA9685_Init(void);
+__weak FctERR PCA9685_Init(void);
 
 
 /************************/

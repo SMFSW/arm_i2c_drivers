@@ -9,9 +9,8 @@
 #ifndef __DRV2605L_PROC_H__
 	#define __DRV2605L_PROC_H__
 
-#include "DRV2605L.h"
-
 #include "sarmfsw.h"
+#include "DRV2605L.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -20,8 +19,8 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define DRV2605_CHIP_ID			0x60	//!< DRV2605 Chip ID to check against
 #define DRV2604_CHIP_ID			0x80	//!< DRV2604 Chip ID to check against
+#define DRV2605_CHIP_ID			0x60	//!< DRV2605 Chip ID to check against
 #define DRV2604L_CHIP_ID		0xA0	//!< DRV2604L Chip ID to check against
 #define DRV2605L_CHIP_ID		0xE0	//!< DRV2605L Chip ID to check against
 
@@ -54,9 +53,10 @@ extern DRV2605L_proc	DRV2605L;
 /******************/
 
 /*!\brief Initialization Sequence for DRV2605L peripheral
+** \weak DRV2605L Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-FctERR DRV2605L_Init_Sequence(void);
+__weak FctERR DRV2605L_Init_Sequence(void);
 
 
 /*!\brief Auto-calibration procedure for DRV2605L peripheral

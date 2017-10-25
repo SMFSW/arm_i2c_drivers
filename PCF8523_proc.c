@@ -23,7 +23,7 @@ PCF8523_proc PCF8523 = { { 0, 0, 0, 0}, { 0, 0, 0}, { 0, 0, false } };
 /****************************************************************/
 
 
-FctERR PCF8523_Init_Sequence(void)
+__weak FctERR PCF8523_Init_Sequence(void)
 {
 	FctERR err = ERR_OK;
 
@@ -158,8 +158,8 @@ FctERR PCF8523_Get_Date(PCF8523_date * date, bool BCD)
 
 	err = bcd2hex(&PCF8523.date.Day, DATE[0]);
 	PCF8523.date.Weekday = DATE[1];
-	err = bcd2hex(&PCF8523.date.Month, DATE[2]);
-	err = bcd2hex(&year, DATE[3]);
+	err |= bcd2hex(&PCF8523.date.Month, DATE[2]);
+	err |= bcd2hex(&year, DATE[3]);
 	PCF8523.date.Year = 2000 + year;	// Add year 2000
 
 	if (date)
@@ -177,7 +177,7 @@ FctERR PCF8523_Get_Date(PCF8523_date * date, bool BCD)
 		}
 	}
 
-	return ERR_OK;
+	return err;
 }
 
 
@@ -190,19 +190,19 @@ FctERR PCF8523_Get_Time(PCF8523_time * time, bool BCD)
 	if (err)	{ return err; }
 
 	TIME.Seconds &= 0x7F;	// Remove OS bit from Seconds
-	TIME.Minutes &= 0x7F;	// Remove OS bit from Seconds
-	TIME.Hours &= 0x7F;	// Remove OS bit from Seconds
+	TIME.Minutes &= 0x7F;	// Remove OS bit from Minutes
+	TIME.Hours &= 0x7F;		// Remove OS bit from Hours
 	err = bcd2hex(&PCF8523.time.Seconds, TIME.Seconds);
-	err = bcd2hex(&PCF8523.time.Minutes, TIME.Minutes);
-	err = bcd2hex(&PCF8523.time.Hours, TIME.Hours);		// TODO: make it work for 12h format too
+	err |= bcd2hex(&PCF8523.time.Minutes, TIME.Minutes);
+	err |= bcd2hex(&PCF8523.time.Hours, TIME.Hours);		// TODO: make it work for 12h format too
 
 	if (time)	{ memcpy(time, (uint8_t *) (BCD ? &TIME : &PCF8523.time), sizeof(PCF8523_time)); }
 
-	return ERR_OK;
+	return err;
 }
 
 
-FctERR PCF8523_handler(void)
+__weak FctERR PCF8523_handler(void)
 {
 	FctERR	err = ERR_OK;
 

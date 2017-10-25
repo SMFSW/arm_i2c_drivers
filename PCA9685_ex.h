@@ -9,9 +9,8 @@
 #ifndef __PCA9685_EX_H__
 	#define __PCA9685_EX_H__
 
-#include "PCA9685.h"
-
 #include "sarmfsw.h"
+#include "PCA9685.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/

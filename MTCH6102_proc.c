@@ -73,11 +73,20 @@ uint8_t MTCH6102_default_cfg[MTCH__I2CADDR - MTCH__NUMBER_OF_X_CHANNELS + 1] = {
 /****************************************************************/
 
 
-FctERR MTCH6102_Init_Sequence(void)
+__weak FctERR MTCH6102_Init_Sequence(void)
 {
-	uint8_t MTCH_CORE[4];
-	FctERR	err;
+	uMTCH_REG__CMD	MTCH_CMD = { 0 };
+	MTCH6102_MODE	MTCH_MODE = Standby;
+	uint8_t			MTCH_CORE[4];
+	uint8_t			MTCH_CFG[2] = { MTCH6102.cfg.nb_x, MTCH6102.cfg.nb_y };
+	FctERR			err;
 
+	// Put in standby mode for configuration
+	err = MTCH6102_Write(&MTCH_MODE, MTCH__MODE, 1);
+	if (err)	{ return err; }
+
+
+	// Read Version & ID
 	err = MTCH6102_Read(&MTCH_CORE[0], MTCH__FW_MAJOR, 4);
 	if (err)	{ return err; }
 
@@ -85,6 +94,29 @@ FctERR MTCH6102_Init_Sequence(void)
 	MTCH6102.cfg.FW_Minor = MTCH_CORE[1];
 	MTCH6102.cfg.APP_ID = MAKEWORD(MTCH_CORE[3], MTCH_CORE[2]);
 
+
+	// Send configuration parameters
+	err = MTCH6102_Write(&MTCH_CFG[0], MTCH__NUMBER_OF_X_CHANNELS, 2);
+	if (err)	{ return err; }
+
+	// Send configuration request
+	MTCH_CMD.Bits.CFG = 1;
+	err = MTCH6102_Write(&MTCH_CMD.Byte, MTCH__CMD, 1);
+	if (err)	{ return err; }
+
+	// Wait for configuration to complete
+	while (MTCH_CMD.Byte != 0)
+	{
+		err = MTCH6102_Read(&MTCH_CMD.Byte, MTCH__CMD, 1);
+		if (err)	{ return err; }
+	}
+
+	// Put in Gesture & Touch mode
+	MTCH_MODE = Full;
+	err = MTCH6102_Write(&MTCH_MODE, MTCH__MODE, 1);
+	if (err)	{ return err; }
+
+	// Set min & max possible values
 	if (MTCH6102.cfg.Centered)
 	{
 		MTCH6102.max_x = (MTCH6102.cfg.nb_x * MTCH_RES_STEP) / 2;
@@ -229,7 +261,7 @@ FctERR MTCH6102_diag_to_str(char * str, MTCH6102_GESTURE_DIAGNOSTIC diag)
 }
 
 
-FctERR MTCH6102_handler(void)
+__weak FctERR MTCH6102_handler(void)
 {
 	FctERR				err;
 	MTCH6102_raw_gest	Gesture;

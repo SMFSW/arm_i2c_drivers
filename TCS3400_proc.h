@@ -9,9 +9,8 @@
 #ifndef __TCS3400_PROC_H__
 	#define __TCS3400_PROC_H__
 
-#include "TCS3400.h"
-
 #include "sarmfsw.h"
+#include "TCS3400.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -72,9 +71,10 @@ extern TCS3400_proc	TCS3400;
 /******************/
 
 /*!\brief Initialization Sequence for TCS3400 peripheral
+** \weak TCS3400 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-FctERR TCS3400_Init_Sequence(void);
+__weak FctERR TCS3400_Init_Sequence(void);
 
 /*!\brief Get current Color temperature (in Kelvin)
 ** \return FctERR - error code
@@ -87,11 +87,12 @@ uint32_t TCS3400_Get_Temp(void);
 uint32_t TCS3400_Get_Lux(void);
 
 /*!\brief Handler for TCS3400 peripheral
+** \weak TCS3400 handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle TCS3400 tasks
 ** \note Alternately may be called when event occurs on TCS3400 pin
 ** \return FctERR - error code
 **/
-FctERR TCS3400_handler(void);
+__weak FctERR TCS3400_handler(void);
 
 
 /****************************************************************/

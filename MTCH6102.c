@@ -23,7 +23,7 @@ I2C_slave MTCH6102_hal = { { pNull, I2C_ADDR(MTCH6102_BASE_ADDR), I2C_slave_time
 /****************************************************************/
 
 
-FctERR MTCH6102_Init(void)
+__weak FctERR MTCH6102_Init(void)
 {
 	I2C_slave_init(&MTCH6102_hal, I2C_MTCH6102, MTCH6102_BASE_ADDR, I2C_slave_timeout);
 

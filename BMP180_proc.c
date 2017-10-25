@@ -31,7 +31,7 @@ extern uint8_t BMP180_OSS_time[4];
 /****************************************************************/
 
 
-FctERR BMP180_Init_Sequence(void)
+__weak FctERR BMP180_Init_Sequence(void)
 {
 	FctERR	err;
 
@@ -195,7 +195,7 @@ FctERR BMP180_Get_Temperature(float * temp)
 }
 
 
-FctERR BMP180_handler(void)
+__weak FctERR BMP180_handler(void)
 {
 	FctERR	err;
 

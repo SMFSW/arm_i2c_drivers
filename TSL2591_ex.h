@@ -9,9 +9,8 @@
 #ifndef __TSL2591_EX_H__
 	#define __TSL2591_EX_H__
 
-#include "TSL2591.h"
-
 #include "sarmfsw.h"
+#include "TSL2591.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/

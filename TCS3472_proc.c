@@ -26,7 +26,7 @@ const uint16_t TCS3472_gain_tab[4] = { 1, 4, 16, 60 };
 /****************************************************************/
 
 
-FctERR TCS3472_Init_Sequence(void)
+__weak FctERR TCS3472_Init_Sequence(void)
 {
 	uTCS3472_REG__ENABLE	EN;
 	FctERR					err = ERR_OK;
@@ -119,7 +119,7 @@ static FctERR TCS3472_calc(uint16_t r, uint16_t g, uint16_t b)
 }
 
 
-FctERR TCS3472_handler(void)
+__weak FctERR TCS3472_handler(void)
 {
 	uint8_t	DATA[8];
 	FctERR	err;

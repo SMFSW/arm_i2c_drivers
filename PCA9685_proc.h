@@ -9,9 +9,8 @@
 #ifndef __PCA9685_PROC_H__
 	#define __PCA9685_PROC_H__
 
-#include "PCA9685.h"
-
 #include "sarmfsw.h"
+#include "PCA9685.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -35,14 +34,10 @@
 /******************/
 
 /*!\brief Initialization Sequence for PCA9685 peripheral
-**			- Set slave PCA address
-**			- Send values OFF + ON_delay (fixed) to ALL_LED
-**			- Send sleep & respond to ALL_CALL
-**			- Send prescaler (only available when in sleep mode)
-**			- Send wake
+** \weak PCA9685 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - ErrorCode
 **/
-FctERR PCA9685_Init_Sequence(void);
+__weak FctERR PCA9685_Init_Sequence(void);
 
 
 /*!\brief Sets register value for PCA9685 according to desired output frequency

@@ -9,9 +9,8 @@
 #ifndef __PCF8523_EX_H__
 	#define __PCF8523_EX_H__
 
-#include "PCF8523.h"
-
 #include "sarmfsw.h"
+#include "PCF8523.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/

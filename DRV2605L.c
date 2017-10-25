@@ -20,7 +20,7 @@ I2C_slave DRV2605_hal = { { pNull, I2C_ADDR(DRV2605L_BASE_ADDR), I2C_slave_timeo
 /****************************************************************/
 
 
-FctERR DRV2605L_Init(void)
+__weak FctERR DRV2605L_Init(void)
 {
 	I2C_slave_init(&DRV2605_hal, I2C_DRV2605L, DRV2605L_BASE_ADDR, I2C_slave_timeout);
 

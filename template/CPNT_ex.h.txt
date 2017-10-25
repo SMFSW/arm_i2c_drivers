@@ -9,9 +9,8 @@
 #ifndef __$CPNT$_EX_H__
 	#define __$CPNT$_EX_H__
 
-#include "$CPNT$.h"
-
 #include "sarmfsw.h"
+#include "$CPNT$.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/

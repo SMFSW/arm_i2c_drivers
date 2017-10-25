@@ -9,9 +9,8 @@
 #ifndef __$CPNT$_PROC_H__
 	#define __$CPNT$_PROC_H__
 
-#include "$CPNT$.h"
-
 #include "sarmfsw.h"
+#include "$CPNT$.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -49,17 +48,19 @@ extern $CPNT$_proc $CPNT$;
 /******************/
 
 /*!\brief Initialization Sequence for $CPNT$ peripheral
+** \weak $CPNT$ Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-FctERR $CPNT$_Init_Sequence(void);
+__weak FctERR $CPNT$_Init_Sequence(void);
 
 
 /*!\brief Handler for $CPNT$ peripheral
+** \weak $CPNT$ handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle $CPNT$ tasks
 ** \note Alternately may be called when event occurs on $CPNT$ pin
 ** \return FctERR - error code
 **/
-FctERR $CPNT$_handler(void);
+__weak FctERR $CPNT$_handler(void);
 
 
 /****************************************************************/

@@ -9,9 +9,8 @@
 #ifndef __MTCH6102_EX_H__
 	#define __MTCH6102_EX_H__
 
-#include "MTCH6102.h"
-
 #include "sarmfsw.h"
+#include "MTCH6102.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/

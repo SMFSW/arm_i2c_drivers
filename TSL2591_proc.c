@@ -26,7 +26,7 @@ const uint16_t TSL2591_integ_tab[6] = { 100, 200, 300, 400, 500, 600 };
 /****************************************************************/
 
 
-FctERR TSL2591_Init_Sequence(void)
+__weak FctERR TSL2591_Init_Sequence(void)
 {
 	uTSL2591_REG__ENABLE	EN;
 	uTSL2591_REG__CONFIG	CFG;
@@ -145,7 +145,7 @@ static FctERR calculateLux(uint16_t full, uint16_t ir)
 }
 
 
-FctERR TSL2591_handler(void)
+__weak FctERR TSL2591_handler(void)
 {
 	uint8_t	DATA[4];
 	FctERR	err;

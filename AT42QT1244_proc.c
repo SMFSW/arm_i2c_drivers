@@ -17,7 +17,7 @@
 /****************************************************************/
 
 
-FctERR AT42QT1244_Init_Sequence(void)
+__weak FctERR AT42QT1244_Init_Sequence(void)
 {
 	return ERR_OK;
 }
@@ -102,6 +102,15 @@ FctERR AT42QT1244_Calibrate_Freq_Offset(void)
 
 	// Enable frequency hoping mode
 	return AT42QT1244_Setup_FHM(AT42QT__FHM_ADJ_KEYS_REF_DURING_HOP);
+}
+
+
+/****************************************************************/
+
+
+__weak FctERR AT42QT1244_handler(void)
+{
+	return ERR_OK;
 }
 
 

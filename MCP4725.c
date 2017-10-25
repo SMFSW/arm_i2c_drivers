@@ -20,7 +20,7 @@ I2C_slave MCP4725_hal = { { pNull, I2C_ADDR(MCP4725_BASE_ADDR), I2C_slave_timeou
 /****************************************************************/
 
 
-FctERR MCP4725_Init(void)
+__weak FctERR MCP4725_Init(void)
 {
 	I2C_slave_init(&MCP4725_hal, I2C_MCP4725, MCP4725_BASE_ADDR, I2C_slave_timeout);
 

@@ -9,10 +9,8 @@
 #ifndef __MB85RC256V_H__
 	#define __MB85RC256V_H__
 
-#include "I2C_component.h"
-#include "FctERR.h"
-
 #include "sarmfsw.h"
+#include "I2C_component.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -40,9 +38,10 @@ extern I2C_slave MB85RC256V_hal;	//!< MB85RC256V Slave instance
 /******************/
 
 /*!\brief Initialization for MB85RC256V peripheral
+** \weak MB85RC256V Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-FctERR MB85RC256V_Init(void);
+__weak FctERR MB85RC256V_Init(void);
 
 
 /************************/

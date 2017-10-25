@@ -9,9 +9,8 @@
 #ifndef __AT42QT1244_PROC_H__
 	#define __AT42QT1244_PROC_H__
 
-#include "AT42QT1244.h"
-
 #include "sarmfsw.h"
+#include "AT42QT1244.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -31,9 +30,10 @@
 /******************/
 
 /*!\brief Initialization Sequence for AT42QT1244 peripheral
+** \weak AT42QT1244 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-FctERR AT42QT1244_Init_Sequence(void);
+__weak FctERR AT42QT1244_Init_Sequence(void);
 
 FctERR AT42QT1244_Calibrate_Freq_Offset(void);
 
@@ -52,6 +52,15 @@ __INLINE FctERR INLINE__ AT42QT1244_Calibrate_Key(uint8_t Key) {
 	if (Key > AT42QT__CALIBRATE_KEY_23)	{ return ERR_VALUE; }
 	if (AT42QT1244_is_Calib_Pending())	{ return ERR_BUSY; }
 	return AT42QT1244_Send_Command(Key); }
+
+
+/*!\brief Handler for AT42QT1244 peripheral
+** \weak AT42QT1244 handler may be user implemented to suit custom needs
+** \note May be called periodically to handle AT42QT1244 tasks
+** \note Alternately may be called when event occurs on AT42QT1244 pin
+** \return FctERR - error code
+**/
+__weak FctERR AT42QT1244_handler(void);
 
 
 /****************************************************************/

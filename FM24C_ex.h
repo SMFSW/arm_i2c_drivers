@@ -10,9 +10,8 @@
 #ifndef __FM24C_EX_H__
 	#define __FM24C_EX_H__
 
-#include "FM24C.h"
-
 #include "sarmfsw.h"
+#include "FM24C.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/

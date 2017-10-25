@@ -9,9 +9,8 @@
 #ifndef __PCA9624_PROC_H__
 	#define __PCA9624_PROC_H__
 
-#include "PCA9624.h"
-
 #include "sarmfsw.h"
+#include "PCA9624.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -25,9 +24,10 @@
 /******************/
 
 /*!\brief Initialization Sequence for PCA9624 peripheral
+** \weak PCA9624 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-FctERR PCA9624_Init_Sequence(void);
+__weak FctERR PCA9624_Init_Sequence(void);
 
 /****************************************************************/
 #endif

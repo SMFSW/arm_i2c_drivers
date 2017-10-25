@@ -9,10 +9,8 @@
 #ifndef __MTCH6102_H__
 	#define __MTCH6102_H__
 
-#include "I2C_component.h"
-#include "FctERR.h"
-
 #include "sarmfsw.h"
+#include "I2C_component.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -370,11 +368,12 @@ typedef union {
 /******************/
 
 /*!\brief Initialization for MTCH6102 peripheral
-** \warning write rx/tx number if needed other than default (9,6), (prior to calling init function)
-** \note set MTCH6102_Set_Centered_Coord(true) if 0,0 point needs to be centered on the pad (prior to calling init function)
+** \weak MTCH6102 Base address may be changed if user implemented
+** \warning write rx/tx number if needed other than default (9,6), (prior to calling init function, or by implementing your own init sequence)
+** \note set MTCH6102_Set_Centered_Coord(true) if 0,0 point needs to be centered on the pad (prior to calling init function, or by implementing your own init sequence)
 ** \return FctERR - error code
 **/
-FctERR MTCH6102_Init(void);
+__weak FctERR MTCH6102_Init(void);
 
 
 /************************/

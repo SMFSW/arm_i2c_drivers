@@ -9,9 +9,8 @@
 #ifndef __DS_GPMS_PROC_H__
 	#define __DS_GPMS_PROC_H__
 
-#include "DS_GPMS.h"
-
 #include "sarmfsw.h"
+#include "DS_GPMS.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -79,10 +78,10 @@ extern GPMS_proc	GPMS;
 /******************/
 
 /*!\brief Initialization Sequence for GPMS peripheral
+** \weak GPMS Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-FctERR GPMS_Init_Sequence(void);
-
+__weak FctERR GPMS_Init_Sequence(void);
 
 FctERR GPMS_Get_Date(GPMS_date * date);
 
@@ -98,7 +97,12 @@ FctERR GPMS_Get_Speed(float * speed);
 
 FctERR GPMS_Get_Altitude(uint16_t * altitude);
 
-FctERR GPMS_handler(void);
+/*!\brief Handler for GPMS peripheral
+** \weak GPMS handler may be user implemented to suit custom needs
+** \note May be called periodically to handle GPMS tasks
+** \return FctERR - error code
+**/
+__weak FctERR GPMS_handler(void);
 
 /****************************************************************/
 #endif

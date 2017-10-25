@@ -9,11 +9,9 @@
 #ifndef __PCA9624_H__
 	#define __PCA9624_H__
 
+#include "sarmfsw.h"
 #include "I2C_component.h"
 #include "PCA96xx.h"
-#include "FctERR.h"
-
-#include "sarmfsw.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -126,9 +124,10 @@ typedef union uPCA9624_REG__LEDOUT1 {
 /******************/
 
 /*!\brief Initialization for PCA9624 peripheral
+** \weak PCA9624 Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-FctERR PCA9624_Init(void);
+__weak FctERR PCA9624_Init(void);
 
 
 /************************/

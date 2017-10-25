@@ -9,9 +9,8 @@
 #ifndef __BMP180_PROC_H__
 	#define __BMP180_PROC_H__
 
-#include "BMP180.h"
-
 #include "sarmfsw.h"
+#include "BMP180.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -72,9 +71,10 @@ extern BMP180_proc BMP180;
 /******************/
 
 /*!\brief Initialization Sequence for BMP180 peripheral
+** \weak BMP180 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-FctERR BMP180_Init_Sequence(void);
+__weak FctERR BMP180_Init_Sequence(void);
 
 
 /*!\brief Set oversampling for BMP180 peripheral
@@ -104,10 +104,11 @@ FctERR BMP180_Get_Temperature(float * temp);
 
 
 /*!\brief Handler for BMP180 peripheral
+** \weak BMP180 handler may be user implemented to suit custom needs
 ** \note Should be called periodically to handle BMP180 tasks
 ** \return FctERR - error code
 **/
-FctERR BMP180_handler(void);
+__weak FctERR BMP180_handler(void);
 
 
 /****************************************************************/

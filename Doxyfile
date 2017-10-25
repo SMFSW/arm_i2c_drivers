@@ -230,6 +230,7 @@ TAB_SIZE               = 4
 
 ALIASES                = "issue=\xrefitem issue \"Issue\" \"Issues List\"" \
                          "isr=\xrefitem isr \"Interrupt\" \"ISR List\"" \
+                         "weak=\xrefitem isr \"Weak Functions\" \"Weak Functions List\"" \
                          "attribute=\xrefitem attribute \"GCC Attributes\" \"GCC Attributes List\""
 
 # This tag can be used to specify a number of word-keyword mappings (TCL only).

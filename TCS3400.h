@@ -9,10 +9,8 @@
 #ifndef __TCS3400_H__
 	#define __TCS3400_H__
 
-#include "I2C_component.h"
-#include "FctERR.h"
-
 #include "sarmfsw.h"
+#include "I2C_component.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -208,9 +206,10 @@ typedef union uTCS3400_REG__IR {
 /******************/
 
 /*!\brief Initialization for TCS3400 peripheral
+** \weak TCS3400 Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-FctERR TCS3400_Init(void);
+__weak FctERR TCS3400_Init(void);
 
 
 /************************/

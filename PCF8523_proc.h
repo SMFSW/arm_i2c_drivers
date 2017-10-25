@@ -9,9 +9,8 @@
 #ifndef __PCF8523_PROC_H__
 	#define __PCF8523_PROC_H__
 
-#include "PCF8523.h"
-
 #include "sarmfsw.h"
+#include "PCF8523.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -67,9 +66,10 @@ extern PCF8523_proc	PCF8523;
 /******************/
 
 /*!\brief Initialization Sequence for PCF8523 peripheral
+** \weak PCF8523 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-FctERR PCF8523_Init_Sequence(void);
+__weak FctERR PCF8523_Init_Sequence(void);
 
 
 FctERR PCF8523_Set_Date(PCF8523_date date, bool BCD);
@@ -82,7 +82,13 @@ FctERR PCF8523_Get_Date(PCF8523_date * date, bool BCD);
 FctERR PCF8523_Get_Time(PCF8523_time * time, bool BCD);
 
 
-FctERR PCF8523_handler(void);
+/*!\brief Handler for PCF8523 peripheral
+** \weak PCF8523 handler may be user implemented to suit custom needs
+** \note May be called periodically to handle PCF8523 tasks
+** \note Alternately may be called when event occurs on PCF8523 pin
+** \return FctERR - error code
+**/
+__weak FctERR PCF8523_handler(void);
 
 
 /****************************************************************/

@@ -24,7 +24,7 @@ I2C_slave PCA9685_hal = { { pNull, I2C_ADDR(PCA9685_BASE_ADDR), I2C_slave_timeou
 /****************************************************************/
 
 
-FctERR PCA9685_Init(void)
+__weak FctERR PCA9685_Init(void)
 {
 	I2C_slave_init(&PCA9685_hal, I2C_PCA9685, PCA9685_BASE_ADDR, I2C_slave_timeout);
 

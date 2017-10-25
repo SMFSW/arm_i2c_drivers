@@ -10,10 +10,8 @@
 #ifndef __FM24C_H__
 	#define __FM24C_H__
 
-#include "I2C_component.h"
-#include "FctERR.h"
-
 #include "sarmfsw.h"
+#include "I2C_component.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -47,9 +45,10 @@ extern I2C_slave FM24C_hal;	//!< FM24C Slave instance
 /******************/
 
 /*!\brief Initialization for FM24C peripheral
+** \weak FM24C Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-FctERR FM24C_Init(void);
+__weak FctERR FM24C_Init(void);
 
 
 /************************/

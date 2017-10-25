@@ -9,9 +9,8 @@
 #ifndef __MCP4725_EX_H__
 	#define __MCP4725_EX_H__
 
-#include "MCP4725.h"
-
 #include "sarmfsw.h"
+#include "MCP4725.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/

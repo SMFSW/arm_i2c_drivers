@@ -9,9 +9,8 @@
 #ifndef __MB85RC256V_PROC_H__
 	#define __MB85RC256V_PROC_H__
 
-#include "MB85RC256V.h"
-
 #include "sarmfsw.h"
+#include "MB85RC256V.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -45,9 +44,10 @@ extern MB85RC256V_proc	MB85RC256V;
 /******************/
 
 /*!\brief Initialization Sequence for MB85RC256V peripheral
+** \weak MB85RC256V Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-FctERR MB85RC256V_Init_Sequence(void);
+__weak FctERR MB85RC256V_Init_Sequence(void);
 
 
 /*!\brief Get ID from MB85RC256V peripheral

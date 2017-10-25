@@ -9,10 +9,8 @@
 #ifndef __TCS3472_H__
 	#define __TCS3472_H__
 
-#include "I2C_component.h"
-#include "FctERR.h"
-
 #include "sarmfsw.h"
+#include "I2C_component.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -201,9 +199,10 @@ typedef union uTCS3472_REG__STATUS {
 /******************/
 
 /*!\brief Initialization for TCS3472 peripheral
+** \weak TCS3472 Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-FctERR TCS3472_Init(void);
+__weak FctERR TCS3472_Init(void);
 
 
 /************************/
