@@ -75,7 +75,7 @@ typedef union u$CPNT$_REG__REG1 {
 ** \weak $CPNT$ Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-__weak FctERR $CPNT$_Init(void);
+__WEAK FctERR $CPNT$_Init(void);
 
 
 /************************/

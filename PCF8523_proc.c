@@ -23,7 +23,7 @@ PCF8523_proc PCF8523 = { { 0, 0, 0, 0}, { 0, 0, 0}, { 0, 0, false } };
 /****************************************************************/
 
 
-__weak FctERR PCF8523_Init_Sequence(void)
+__WEAK FctERR PCF8523_Init_Sequence(void)
 {
 	FctERR err = ERR_OK;
 
@@ -202,7 +202,7 @@ FctERR PCF8523_Get_Time(PCF8523_time * time, bool BCD)
 }
 
 
-__weak FctERR PCF8523_handler(void)
+__WEAK FctERR PCF8523_handler(void)
 {
 	FctERR	err = ERR_OK;
 

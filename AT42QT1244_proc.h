@@ -33,7 +33,7 @@
 ** \weak AT42QT1244 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-__weak FctERR AT42QT1244_Init_Sequence(void);
+__WEAK FctERR AT42QT1244_Init_Sequence(void);
 
 FctERR AT42QT1244_Calibrate_Freq_Offset(void);
 
@@ -60,7 +60,7 @@ __INLINE FctERR INLINE__ AT42QT1244_Calibrate_Key(uint8_t Key) {
 ** \note Alternately may be called when event occurs on AT42QT1244 pin
 ** \return FctERR - error code
 **/
-__weak FctERR AT42QT1244_handler(void);
+__WEAK FctERR AT42QT1244_handler(void);
 
 
 /****************************************************************/

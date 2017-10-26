@@ -25,7 +25,7 @@ $CPNT$_proc $CPNT$ = { 0, { 0, 0 } };
 /****************************************************************/
 
 
-__weak FctERR $CPNT$_Init_Sequence(void)
+__WEAK FctERR $CPNT$_Init_Sequence(void)
 {
 	FctERR err;
 	
@@ -43,7 +43,7 @@ __weak FctERR $CPNT$_Init_Sequence(void)
 /****************************************************************/
 
 
-__weak FctERR $CPNT$_handler(void)
+__WEAK FctERR $CPNT$_handler(void)
 {
 	FctERR err;
 	

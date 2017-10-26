@@ -48,7 +48,7 @@ extern I2C_slave FM24C_hal;	//!< FM24C Slave instance
 ** \weak FM24C Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-__weak FctERR FM24C_Init(void);
+__WEAK FctERR FM24C_Init(void);
 
 
 /************************/

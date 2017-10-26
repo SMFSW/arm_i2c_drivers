@@ -74,7 +74,7 @@ extern TCS3400_proc	TCS3400;
 ** \weak TCS3400 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-__weak FctERR TCS3400_Init_Sequence(void);
+__WEAK FctERR TCS3400_Init_Sequence(void);
 
 /*!\brief Get current Color temperature (in Kelvin)
 ** \return FctERR - error code
@@ -92,7 +92,7 @@ uint32_t TCS3400_Get_Lux(void);
 ** \note Alternately may be called when event occurs on TCS3400 pin
 ** \return FctERR - error code
 **/
-__weak FctERR TCS3400_handler(void);
+__WEAK FctERR TCS3400_handler(void);
 
 
 /****************************************************************/

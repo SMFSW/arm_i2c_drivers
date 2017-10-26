@@ -20,7 +20,7 @@ I2C_slave GPMS_hal = { { pNull, I2C_ADDR(GPMS_BASE_ADDR), I2C_slave_timeout, I2C
 /****************************************************************/
 
 
-__weak FctERR GPMS_Init(void)
+__WEAK FctERR GPMS_Init(void)
 {
 	I2C_slave_init(&GPMS_hal, I2C_GPMS, GPMS_BASE_ADDR, I2C_slave_timeout);
 

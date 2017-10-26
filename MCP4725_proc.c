@@ -20,7 +20,7 @@ MCP4725_proc MCP4725 = { 0, 0.0f, { MCP4725__FAST_MODE, MCP4725__PWR_NORMAL, 0.0
 /****************************************************************/
 
 
-__weak FctERR MCP4725_Init_Sequence(void)
+__WEAK FctERR MCP4725_Init_Sequence(void)
 {
 	FctERR err = ERR_OK;
 

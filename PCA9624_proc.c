@@ -17,7 +17,7 @@
 /****************************************************************/
 
 
-__weak FctERR PCA9624_Init_Sequence(void)
+__WEAK FctERR PCA9624_Init_Sequence(void)
 {
 	uint8_t Data[2];
 

@@ -81,7 +81,7 @@ extern GPMS_proc	GPMS;
 ** \weak GPMS Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-__weak FctERR GPMS_Init_Sequence(void);
+__WEAK FctERR GPMS_Init_Sequence(void);
 
 FctERR GPMS_Get_Date(GPMS_date * date);
 
@@ -102,7 +102,7 @@ FctERR GPMS_Get_Altitude(uint16_t * altitude);
 ** \note May be called periodically to handle GPMS tasks
 ** \return FctERR - error code
 **/
-__weak FctERR GPMS_handler(void);
+__WEAK FctERR GPMS_handler(void);
 
 /****************************************************************/
 #endif

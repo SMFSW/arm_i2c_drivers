@@ -69,7 +69,7 @@ extern PCF8523_proc	PCF8523;
 ** \weak PCF8523 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-__weak FctERR PCF8523_Init_Sequence(void);
+__WEAK FctERR PCF8523_Init_Sequence(void);
 
 
 FctERR PCF8523_Set_Date(PCF8523_date date, bool BCD);
@@ -88,7 +88,7 @@ FctERR PCF8523_Get_Time(PCF8523_time * time, bool BCD);
 ** \note Alternately may be called when event occurs on PCF8523 pin
 ** \return FctERR - error code
 **/
-__weak FctERR PCF8523_handler(void);
+__WEAK FctERR PCF8523_handler(void);
 
 
 /****************************************************************/

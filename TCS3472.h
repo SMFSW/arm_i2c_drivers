@@ -202,7 +202,7 @@ typedef union uTCS3472_REG__STATUS {
 ** \weak TCS3472 Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-__weak FctERR TCS3472_Init(void);
+__WEAK FctERR TCS3472_Init(void);
 
 
 /************************/

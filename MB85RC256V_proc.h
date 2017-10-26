@@ -47,7 +47,7 @@ extern MB85RC256V_proc	MB85RC256V;
 ** \weak MB85RC256V Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-__weak FctERR MB85RC256V_Init_Sequence(void);
+__WEAK FctERR MB85RC256V_Init_Sequence(void);
 
 
 /*!\brief Get ID from MB85RC256V peripheral

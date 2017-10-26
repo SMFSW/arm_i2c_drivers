@@ -24,7 +24,7 @@ I2C_slave TCS3400_hal = { { pNull, I2C_ADDR(TCS3400_BASE_ADDR), I2C_slave_timeou
 /****************************************************************/
 
 
-__weak FctERR TCS3400_Init(void)
+__WEAK FctERR TCS3400_Init(void)
 {
 	I2C_slave_init(&TCS3400_hal, I2C_TCS3400, TCS3400_BASE_ADDR, I2C_slave_timeout);
 

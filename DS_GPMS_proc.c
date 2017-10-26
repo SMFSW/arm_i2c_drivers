@@ -23,7 +23,7 @@ GPMS_proc GPMS = { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0.0f, '\0' }, { 0, 0.0f, '\0' 
 /****************************************************************/
 
 
-__weak FctERR GPMS_Init_Sequence(void)
+__WEAK FctERR GPMS_Init_Sequence(void)
 {
 	// TODO: remove init sequence if not used
 	FctERR err = ERR_OK;
@@ -176,7 +176,7 @@ FctERR GPMS_Get_Altitude(uint16_t * altitude)
 }
 
 
-__weak FctERR GPMS_handler(void)
+__WEAK FctERR GPMS_handler(void)
 {
 	FctERR	err;
 

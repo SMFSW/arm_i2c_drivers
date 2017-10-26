@@ -17,7 +17,7 @@
 /****************************************************************/
 
 
-__weak FctERR AT42QT1244_Init_Sequence(void)
+__WEAK FctERR AT42QT1244_Init_Sequence(void)
 {
 	return ERR_OK;
 }
@@ -108,7 +108,7 @@ FctERR AT42QT1244_Calibrate_Freq_Offset(void)
 /****************************************************************/
 
 
-__weak FctERR AT42QT1244_handler(void)
+__WEAK FctERR AT42QT1244_handler(void)
 {
 	return ERR_OK;
 }

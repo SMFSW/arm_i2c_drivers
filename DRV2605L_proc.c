@@ -20,7 +20,7 @@ DRV2605L_proc DRV2605L = { { DRV__MODE_INTERNAL_TRIGGER, DRV__ACT_ERM, DRV__OPEN
 /****************************************************************/
 
 
-__weak FctERR DRV2605L_Init_Sequence(void)
+__WEAK FctERR DRV2605L_Init_Sequence(void)
 {
 	uDRV_REG__CONTROL_1	CTL1;
 	uint8_t				EFFECT[3] = { DRV__EFF_TRANS_RAMP_DWN_LONG_SMOOTH_1, 0, 0 };

@@ -51,7 +51,7 @@ extern $CPNT$_proc $CPNT$;
 ** \weak $CPNT$ Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-__weak FctERR $CPNT$_Init_Sequence(void);
+__WEAK FctERR $CPNT$_Init_Sequence(void);
 
 
 /*!\brief Handler for $CPNT$ peripheral
@@ -60,7 +60,7 @@ __weak FctERR $CPNT$_Init_Sequence(void);
 ** \note Alternately may be called when event occurs on $CPNT$ pin
 ** \return FctERR - error code
 **/
-__weak FctERR $CPNT$_handler(void);
+__WEAK FctERR $CPNT$_handler(void);
 
 
 /****************************************************************/

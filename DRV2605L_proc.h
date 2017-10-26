@@ -56,7 +56,7 @@ extern DRV2605L_proc	DRV2605L;
 ** \weak DRV2605L Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-__weak FctERR DRV2605L_Init_Sequence(void);
+__WEAK FctERR DRV2605L_Init_Sequence(void);
 
 
 /*!\brief Auto-calibration procedure for DRV2605L peripheral

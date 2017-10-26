@@ -27,7 +27,7 @@
 ** \weak PCA9624 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-__weak FctERR PCA9624_Init_Sequence(void);
+__WEAK FctERR PCA9624_Init_Sequence(void);
 
 /****************************************************************/
 #endif

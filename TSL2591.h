@@ -201,7 +201,7 @@ typedef union uTSL2591_REG__STATUS {
 ** \weak TSL2591 Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-__weak FctERR TSL2591_Init(void);
+__WEAK FctERR TSL2591_Init(void);
 
 
 /************************/

@@ -37,7 +37,7 @@
 ** \weak PCA9685 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - ErrorCode
 **/
-__weak FctERR PCA9685_Init_Sequence(void);
+__WEAK FctERR PCA9685_Init_Sequence(void);
 
 
 /*!\brief Sets register value for PCA9685 according to desired output frequency

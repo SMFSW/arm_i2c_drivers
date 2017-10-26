@@ -20,7 +20,7 @@ MB85RC256V_proc MB85RC256V = { 0, 0, 0 };
 /****************************************************************/
 
 
-__weak FctERR MB85RC256V_Init_Sequence(void)
+__WEAK FctERR MB85RC256V_Init_Sequence(void)
 {
 	FctERR err = ERR_OK;
 	

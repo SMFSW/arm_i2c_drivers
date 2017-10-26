@@ -54,7 +54,7 @@ extern MTCH6102_proc MTCH6102;
 ** \weak MTCH6102 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-__weak FctERR MTCH6102_Init_Sequence(void);
+__WEAK FctERR MTCH6102_Init_Sequence(void);
 
 FctERR MTCH6102_decode_touch_datas(MTCH6102_gesture * touch, MTCH6102_raw_gest * dat);
 
@@ -72,7 +72,7 @@ __INLINE void INLINE__ MTCH6102_Set_Centered_Coord(bool centered) {
 ** \note Alternately may be called when event occurs on MTCH6102 pin
 ** \return FctERR - error code
 **/
-__weak FctERR MTCH6102_handler(void);
+__WEAK FctERR MTCH6102_handler(void);
 
 /****************************************************************/
 #endif

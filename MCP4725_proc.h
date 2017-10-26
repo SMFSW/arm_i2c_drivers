@@ -46,7 +46,7 @@ extern MCP4725_proc	MCP4725;
 ** \weak MCP4725 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-__weak FctERR MCP4725_Init_Sequence(void);
+__WEAK FctERR MCP4725_Init_Sequence(void);
 
 
 /*!\brief Set mode of the MCP4725 peripheral

@@ -373,7 +373,7 @@ typedef union {
 ** \note set MTCH6102_Set_Centered_Coord(true) if 0,0 point needs to be centered on the pad (prior to calling init function, or by implementing your own init sequence)
 ** \return FctERR - error code
 **/
-__weak FctERR MTCH6102_Init(void);
+__WEAK FctERR MTCH6102_Init(void);
 
 
 /************************/

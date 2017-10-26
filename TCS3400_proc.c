@@ -26,7 +26,7 @@ const uint16_t TCS3400_gain_tab[4] = { 1, 4, 16, 64 };
 /****************************************************************/
 
 
-__weak FctERR TCS3400_Init_Sequence(void)
+__WEAK FctERR TCS3400_Init_Sequence(void)
 {
 	uTCS3400_REG__ENABLE	EN;
 	FctERR					err = ERR_OK;
@@ -122,7 +122,7 @@ static FctERR TCS3400_calc(uint16_t r, uint16_t g, uint16_t b)
 }
 
 
-__weak FctERR TCS3400_handler(void)
+__WEAK FctERR TCS3400_handler(void)
 {
 	uint8_t	DATA[8];
 	FctERR	err;

@@ -25,7 +25,7 @@ I2C_slave $CPNT$_hal = { { pNull, I2C_ADDR($CPNT$_BASE_ADDR), I2C_slave_timeout,
 /****************************************************************/
 
 
-__weak FctERR $CPNT$_Init(void)
+__WEAK FctERR $CPNT$_Init(void)
 {
 	I2C_slave_init(&$CPNT$_hal, I2C_$CPNT$, $CPNT$_BASE_ADDR, I2C_slave_timeout);
 	

@@ -74,7 +74,7 @@ extern BMP180_proc BMP180;
 ** \weak BMP180 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-__weak FctERR BMP180_Init_Sequence(void);
+__WEAK FctERR BMP180_Init_Sequence(void);
 
 
 /*!\brief Set oversampling for BMP180 peripheral
@@ -108,7 +108,7 @@ FctERR BMP180_Get_Temperature(float * temp);
 ** \note Should be called periodically to handle BMP180 tasks
 ** \return FctERR - error code
 **/
-__weak FctERR BMP180_handler(void);
+__WEAK FctERR BMP180_handler(void);
 
 
 /****************************************************************/

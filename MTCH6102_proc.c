@@ -73,7 +73,7 @@ uint8_t MTCH6102_default_cfg[MTCH__I2CADDR - MTCH__NUMBER_OF_X_CHANNELS + 1] = {
 /****************************************************************/
 
 
-__weak FctERR MTCH6102_Init_Sequence(void)
+__WEAK FctERR MTCH6102_Init_Sequence(void)
 {
 	uMTCH_REG__CMD	MTCH_CMD = { 0 };
 	MTCH6102_MODE	MTCH_MODE = Standby;
@@ -261,7 +261,7 @@ FctERR MTCH6102_diag_to_str(char * str, MTCH6102_GESTURE_DIAGNOSTIC diag)
 }
 
 
-__weak FctERR MTCH6102_handler(void)
+__WEAK FctERR MTCH6102_handler(void)
 {
 	FctERR				err;
 	MTCH6102_raw_gest	Gesture;

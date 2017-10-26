@@ -209,7 +209,7 @@ typedef union uTCS3400_REG__IR {
 ** \weak TCS3400 Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-__weak FctERR TCS3400_Init(void);
+__WEAK FctERR TCS3400_Init(void);
 
 
 /************************/

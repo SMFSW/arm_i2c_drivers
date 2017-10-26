@@ -134,7 +134,7 @@ typedef union uMCP9808_REG__TEMP_AMB {
 ** \weak MCP9808 Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-__weak FctERR MCP9808_Init(void);
+__WEAK FctERR MCP9808_Init(void);
 
 
 /************************/

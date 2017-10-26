@@ -27,7 +27,7 @@ static float MCP9808_resolution_steps[4] = { 0.5f, 0.25f, 0.125f, 0.0625f };	//!
 /****************************************************************/
 
 
-__weak FctERR MCP9808_Init_Sequence(void)
+__WEAK FctERR MCP9808_Init_Sequence(void)
 {
 	FctERR err;
 
@@ -137,7 +137,7 @@ FctERR MCP9808_Get_Temperature(float * temp)
 }
 
 
-__weak FctERR MCP9808_handler(void)
+__WEAK FctERR MCP9808_handler(void)
 {
 	FctERR	err = ERR_NOTAVAIL;	// In case no new data available
 

@@ -140,7 +140,7 @@ typedef union uBMP180_REG__MEAS_CTRL {
 ** \weak BMP180 Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-__weak FctERR BMP180_Init(void);
+__WEAK FctERR BMP180_Init(void);
 
 
 /************************/
