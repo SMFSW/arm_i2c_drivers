@@ -2053,6 +2053,7 @@ INCLUDE_FILE_PATTERNS  = *.h
 
 PREDEFINED             = DOXY=1 \
                          HAL_I2C_MODULE_ENABLED \
+                         HAL_IWDG_MODULE_ENABLED \
                          I2C_AT42QT1244=&hi2c \
                          I2C_BMP180=&hi2c \
                          I2C_DRV2605L=&hi2c \
@@ -2070,12 +2071,11 @@ PREDEFINED             = DOXY=1 \
                          I2C_TCS3400=&hi2c \
                          I2C_TCS3472=&hi2c \
                          I2C_TSL2591=&hi2c \
+                         __WEAK \
                          PACK__ \
-                         WEAK__ \
                          INLINE__ \
                          __INLINE=inline \
                          "__STATIC_INLINE=static inline" \
-                         __WEAK \
                          __IO=volatile \
                          __O=volatile \
                          "__I=volatile const" \
