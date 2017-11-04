@@ -132,7 +132,7 @@ __INLINE FctERR INLINE__ GPMS_Get_Status(uint8_t * status) {
 	return GPMS_Read(status, GPMS__STATUS, 1); }
 
 __INLINE FctERR INLINE__ GPMS_Get_IO_Value(uint8_t * io, uint8_t chan) {
-	if (chan > 4)	{ return ERR_VALUE; }	// Unknown analogic input
+	if (chan > 4)	{ return ERROR_VALUE; }	// Unknown analogic input
 	return GPMS_Read(io, GPMS__AN0_VALUE + chan, 1); }
 
 

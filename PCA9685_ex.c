@@ -30,7 +30,7 @@ FctERR PCA9685_ReadRegister(PCA9685_reg reg, uint8_t * val)
 {
 	*val = 0;
 
-	if ((reg >= PCA9685__LED15_OFF_H) && (reg <= PCA9685__ALL_LED_ON_L))	{ return ERR_RANGE; } // Unknown channel
+	if ((reg >= PCA9685__LED15_OFF_H) && (reg <= PCA9685__ALL_LED_ON_L))	{ return ERROR_RANGE; } // Unknown channel
 
 	return PCA9685_Read(val, reg, 1);
 }
@@ -38,13 +38,13 @@ FctERR PCA9685_ReadRegister(PCA9685_reg reg, uint8_t * val)
 
 FctERR PCA9685_ReadVal256(PCA96xx_chan chan, uint8_t * duty)
 {
-	FctERR		err = ERR_OK;
+	FctERR		err = ERROR_OK;
 	uint16_t	ONCount = 0, OFFCount = 0;
 	uint8_t		Data[4];
 
 	*duty = 0;
 
-	if (!((chan >= PCA96xx__PWM1) && (chan <= PCA96xx__PWM16)))	{ return ERR_RANGE; } // Unknown channel
+	if (!((chan >= PCA96xx__PWM1) && (chan <= PCA96xx__PWM16)))	{ return ERROR_RANGE; } // Unknown channel
 
 	err = PCA9685_Read(Data, LED_OFFSET_L(chan), 4);
 
@@ -71,7 +71,7 @@ FctERR PCA9685_ReadVal1024(PCA96xx_chan chan, uint16_t * duty)
 
 	*duty = 0;
 
-	if (!((chan >= PCA96xx__PWM1) && (chan <= PCA96xx__PWM16)))	{ return ERR_RANGE; } // Unknown channel
+	if (!((chan >= PCA96xx__PWM1) && (chan <= PCA96xx__PWM16)))	{ return ERROR_RANGE; } // Unknown channel
 
 	err = PCA9685_Read(Data, LED_OFFSET_L(chan), 4);
 
@@ -97,7 +97,7 @@ FctERR PCA9685_PutVal256(PCA96xx_chan chan, uint8_t duty)
 
 	if ((chan >= PCA96xx__PWM1) && (chan <= PCA96xx__PWM16))	{ RegAddr = LED_OFFSET_H(chan); }		// Regular channel
 	else if (chan == PCA96xx__ALL)								{ RegAddr = PCA9685__ALL_LED_ON_L; }	// All channels at once
-	else														{ return ERR_RANGE; }					// Unknown channel
+	else														{ return ERROR_RANGE; }					// Unknown channel
 
 	if (!duty)
 	{// Full OFF
@@ -127,11 +127,11 @@ FctERR PCA9685_PutVal1024(PCA96xx_chan chan, uint16_t duty)
 	uint16_t	RegAddr, OFFCount = 0;
 	uint8_t		Data[4];
 
-	if (duty > 1023)	{ return ERR_VALUE; }
+	if (duty > 1023)	{ return ERROR_VALUE; }
 
 	if ((chan >= PCA96xx__PWM1) && (chan <= PCA96xx__PWM16))	{ RegAddr = LED_OFFSET_H(chan); }		// Regular channel
 	else if (chan == PCA96xx__ALL)								{ RegAddr = PCA9685__ALL_LED_ON_L; }	// All channels at once
-	else														{ return ERR_RANGE; }					// Unknown channel
+	else														{ return ERROR_RANGE; }					// Unknown channel
 
 	if (!duty)
 	{// Full OFF
@@ -163,7 +163,7 @@ FctERR PCA9685_SetVal(PCA96xx_chan chan)
 
 	if ((chan >= PCA96xx__PWM1) && (chan <= PCA96xx__PWM16))	{ RegAddr = LED_OFFSET_H(chan); }		// Regular channel
 	else if (chan == PCA96xx__ALL)								{ RegAddr = PCA9685__ALL_LED_ON_L; }	// All channels at once
-	else														{ return ERR_RANGE; }					// Unknown channel
+	else														{ return ERROR_RANGE; }					// Unknown channel
 
 	Data[0] = DefBitFullOnOff;	// xxx_LED_ON_H (b4 pour LED full OFF)
 	Data[1] = 0x00U;			// xxx_LED_OFF_L
@@ -180,7 +180,7 @@ FctERR PCA9685_ClrVal(PCA96xx_chan chan)
 
 	if ((chan >= PCA96xx__PWM1) && (chan <= PCA96xx__PWM16))	{ RegAddr = LED_OFFSET_H(chan); }		// Regular channel
 	else if (chan == PCA96xx__ALL)								{ RegAddr = PCA9685__ALL_LED_ON_L; }	// All channels at once
-	else														{ return ERR_RANGE; }					// Unknown channel
+	else														{ return ERROR_RANGE; }					// Unknown channel
 
 	Data[0] = 0x00U;			// xxx_LED_ON_H
 	Data[1] = 0x00U;			// xxx_LED_OFF_L

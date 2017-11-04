@@ -84,7 +84,7 @@ FctERR TCS3400_Set_Gain(TCS3400_gain gain)
 	uTCS3400_REG__CONTROL	CTL;
 	FctERR					err;
 
-	if (gain > TCS3400__MAXIMUM_GAIN)	{ return ERR_VALUE; }	// Unknown gain
+	if (gain > TCS3400__MAXIMUM_GAIN)	{ return ERROR_VALUE; }	// Unknown gain
 
 	err = TCS3400_Read(&CTL.Byte, TCS3400__CONTROL, 1);
 	if (err)	{ return err; }
@@ -105,7 +105,7 @@ FctERR TCS3400_Set_Integration_Time(uint16_t integ)
 	uint8_t	ATIME;
 	FctERR	err;
 
-	if ((integ < 3) || (integ > 712))	{ return ERR_RANGE; }	// Integration time out of range
+	if ((integ < 3) || (integ > 712))	{ return ERROR_RANGE; }	// Integration time out of range
 
 	// 2.78ms (0xFF) to 712ms (0x00)
 	//ATIME = (uint8_t) ((integ - 2.78f) * (0x00 - 0xFF) / (712.0f - 2.78f) + 0xFF);
@@ -125,7 +125,7 @@ FctERR TCS3400_Set_Wait_Time(uint16_t wait)
 	uint8_t					WAIT;
 	FctERR					err;
 
-	if ((wait < 3) || (wait > 8540))	{ return ERR_RANGE; }	// Wait time out of range
+	if ((wait < 3) || (wait > 8540))	{ return ERROR_RANGE; }	// Wait time out of range
 
 	CFG.Byte = 0x40;	// Bit Reserved1 shall be set to 1
 

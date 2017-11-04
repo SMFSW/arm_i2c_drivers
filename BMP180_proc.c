@@ -37,7 +37,7 @@ __WEAK FctERR BMP180_Init_Sequence(void)
 
 	err = BMP180_Get_ChipID(&BMP180.cfg.Id);
 	if (err)								{ return err; }
-	if (BMP180.cfg.Id != BMP180_CHIP_ID)	{ return ERR_COMMON; }	// Unknown device
+	if (BMP180.cfg.Id != BMP180_CHIP_ID)	{ return ERROR_COMMON; }	// Unknown device
 
 	#if !defined(BMP180_TST)
 		err = BMP180_Get_Calibration(&BMP180.cfg.Calib);
@@ -79,10 +79,10 @@ __STATIC_INLINE float INLINE__ BMP180_seaLevel_Pressure_For_Altitude(float altit
 
 FctERR BMP180_Set_Oversampling(BMP180_oversampling oss)
 {
-	if (oss > BMP180__OSS_8_TIME)	{ return ERR_VALUE; }	// Unknown Oversampling
+	if (oss > BMP180__OSS_8_TIME)	{ return ERROR_VALUE; }	// Unknown Oversampling
 
 	BMP180.cfg.OSS = oss;
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -119,7 +119,7 @@ FctERR BMP180_Get_Pressure(float * pres)
 	int32_t		x1, x2, b5, b6, x3, b3, p;
 	uint32_t	b4, b7;
 	float		t;
-	FctERR		err = ERR_OK;
+	FctERR		err = ERROR_OK;
 
 	/* Get the raw pressure and temperature values */
 	#if !defined(BMP180_TST)
@@ -175,7 +175,7 @@ FctERR BMP180_Get_Temperature(float * temp)
 {
 	int32_t	UT = 0, b5;
 	float	t;
-	FctERR	err = ERR_OK;
+	FctERR	err = ERROR_OK;
 
 	#if !defined(BMP180_TST)
 		err = BMP180_Get_Temperature_Raw(&UT);

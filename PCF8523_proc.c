@@ -25,14 +25,14 @@ PCF8523_proc PCF8523 = { { 0, 0, 0, 0}, { 0, 0, 0}, { 0, 0, false } };
 
 __WEAK FctERR PCF8523_Init_Sequence(void)
 {
-	FctERR err = ERR_OK;
+	FctERR err = ERROR_OK;
 
 	err = PCF8523_Get_Date(0, false);
 	if (err)	{ return err; }
 	err = PCF8523_Get_Time(0, false);
 	if (err)	{ return err; }
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -48,7 +48,7 @@ __WEAK FctERR PCF8523_Init_Sequence(void)
 static FctERR hex2bcd(uint8_t * bcd, uint8_t hex)
 {
 	*bcd = (uint8_t) (LSHIFT((hex / 10), 4) | (hex % 10));
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 /*!\brief Converts uint8_t from BCD to hexadecimal
@@ -62,10 +62,10 @@ static FctERR bcd2hex(uint8_t * hex, uint8_t bcd)
 	uint8_t	ms = RSHIFT(bcd & 0xF0, 4);
 	uint8_t	ls = bcd & 0x0F;
 
-	if ((ms > 9) || (ls > 9))	{ return ERR_VALUE; }
+	if ((ms > 9) || (ls > 9))	{ return ERROR_VALUE; }
 
 	*hex = (uint8_t) ((ms * 10) + ls);
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -80,7 +80,7 @@ FctERR PCF8523_Set_Date(PCF8523_date date, bool BCD)
 	if (!BCD)
 	{
 		// Consistency check
-		if ((date.Day > 31) || (date.Weekday > PCF8523__SATURDAY) || (date.Month > 12) || (date.Year - 2000 > 99))	{ return ERR_RANGE; }	// Date outside range
+		if ((date.Day > 31) || (date.Weekday > PCF8523__SATURDAY) || (date.Month > 12) || (date.Year - 2000 > 99))	{ return ERROR_RANGE; }	// Date outside range
 
 		// Conversion to BCD for PCF8523
 		hex2bcd(&DATE[0], date.Day);
@@ -98,7 +98,7 @@ FctERR PCF8523_Set_Date(PCF8523_date date, bool BCD)
 		err = bcd2hex(&DATE[3], date.Year - 0x2000);
 		if (err)	{ return err; }
 
-		if ((DATE[0] > 31) || (date.Weekday > PCF8523__SATURDAY) || (DATE[2] > 12) || (DATE[3] > 99))	{ return ERR_RANGE; }	// Time outside range
+		if ((DATE[0] > 31) || (date.Weekday > PCF8523__SATURDAY) || (DATE[2] > 12) || (DATE[3] > 99))	{ return ERROR_RANGE; }	// Time outside range
 
 		// Year is uint16_t and shall already be between 0 & 99
 		memcpy(DATE, (uint8_t *) &date, 3);
@@ -116,7 +116,7 @@ FctERR PCF8523_Set_Time(PCF8523_time time, bool BCD)
 
 	if (!BCD)
 	{
-		if ((time.Seconds >= 60) || (time.Minutes >= 60) || (time.Hours >= 24))		{ return ERR_RANGE; }	// Time outside range
+		if ((time.Seconds >= 60) || (time.Minutes >= 60) || (time.Hours >= 24))		{ return ERROR_RANGE; }	// Time outside range
 
 		// Conversion to BCD for PCF8523
 		hex2bcd(&TIME[0], time.Seconds);
@@ -137,7 +137,7 @@ FctERR PCF8523_Set_Time(PCF8523_time time, bool BCD)
 		else							{ err = bcd2hex(&TIME[2], time.Hours); }
 		if (err)	{ return err; }
 
-		if ((TIME[0] >= 60) || (TIME[1] >= 60) || (TIME[2] >= 24))	{ return ERR_RANGE; }	// Time outside range
+		if ((TIME[0] >= 60) || (TIME[1] >= 60) || (TIME[2] >= 24))	{ return ERROR_RANGE; }	// Time outside range
 
 		memcpy(TIME, (uint8_t *) &time, sizeof(PCF8523_time));
 	}
@@ -204,7 +204,7 @@ FctERR PCF8523_Get_Time(PCF8523_time * time, bool BCD)
 
 __WEAK FctERR PCF8523_handler(void)
 {
-	FctERR	err = ERR_OK;
+	FctERR	err = ERROR_OK;
 
 	err = PCF8523_Get_Date(0, false);
 	if (err)	{ return err; }
@@ -215,7 +215,7 @@ __WEAK FctERR PCF8523_handler(void)
 		printf("Date: %d/%d/%d - Time: %d:%d:%d\r\n", PCF8523.date.Month, PCF8523.date.Day, PCF8523.date.Year, PCF8523.time.Hours, PCF8523.time.Minutes, PCF8523.time.Seconds);
 	#endif
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 

@@ -187,7 +187,7 @@ FctERR TCS3400_Get_Channels(uint16_t buf[]);
 ** \return FctERR - error code
 **/
 __INLINE FctERR INLINE__ TCS3400_Get_Channel(uint16_t * buf, TCS3400_chan chan) {
-	if (chan > TCS3400__CHAN_BLUE)	{ return ERR_VALUE; }	// Unknown channel
+	if (chan > TCS3400__CHAN_BLUE)	{ return ERROR_VALUE; }	// Unknown channel
 	return TCS3400_Read_Word(buf, TCS3400__CDATAL + (2 * chan)); }
 
 /*!\brief Get Clear channel conversion

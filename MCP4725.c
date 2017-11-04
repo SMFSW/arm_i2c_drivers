@@ -36,9 +36,9 @@ __WEAK FctERR MCP4725_Init(void)
 
 FctERR MCP4725_Write(uint8_t * data, uint16_t nb)
 {
-	if (!I2C_is_enabled(&MCP4725_hal))	{ return ERR_DISABLED; }	// Peripheral disabled
-	if (!data)							{ return ERR_MEMORY; }		// Null pointer
-	if (nb > 3)							{ return ERR_RANGE; }		// More bytes than registers
+	if (!I2C_is_enabled(&MCP4725_hal))	{ return ERROR_DISABLED; }	// Peripheral disabled
+	if (!data)							{ return ERROR_MEMORY; }		// Null pointer
+	if (nb > 3)							{ return ERROR_RANGE; }		// More bytes than registers
 
 	I2C_set_busy(&MCP4725_hal, true);
 
@@ -51,9 +51,9 @@ FctERR MCP4725_Write(uint8_t * data, uint16_t nb)
 
 FctERR MCP4725_Read(uint8_t * data, uint16_t nb)
 {
-	if (!I2C_is_enabled(&MCP4725_hal))	{ return ERR_DISABLED; }	// Peripheral disabled
-	if (!data)							{ return ERR_MEMORY; }		// Null pointer
-	if (nb > 3)							{ return ERR_RANGE; }		// More bytes than registers
+	if (!I2C_is_enabled(&MCP4725_hal))	{ return ERROR_DISABLED; }	// Peripheral disabled
+	if (!data)							{ return ERROR_MEMORY; }		// Null pointer
+	if (nb > 3)							{ return ERROR_RANGE; }		// More bytes than registers
 
 	I2C_set_busy(&MCP4725_hal, true);
 
@@ -66,7 +66,7 @@ FctERR MCP4725_Read(uint8_t * data, uint16_t nb)
 
 FctERR MCP4725_General_Call(uint8_t cmd)
 {
-	if ((cmd != MCP4725__RESET) && (cmd != MCP4725__WAKEUP))		{ return ERR_CMD; }		// Unknown command
+	if ((cmd != MCP4725__RESET) && (cmd != MCP4725__WAKEUP))		{ return ERROR_CMD; }		// Unknown command
 
 	I2C_set_busy(&MCP4725_hal, true);
 

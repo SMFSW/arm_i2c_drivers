@@ -64,7 +64,7 @@ FctERR TSL2591_Set_Gain(TSL2591_gain gain)
 	uTSL2591_REG__CONFIG	CFG;
 	FctERR					err;
 
-	if (gain > TSL2591__MAXIMUM_GAIN)	{ return ERR_VALUE; }	// Unknown gain
+	if (gain > TSL2591__MAXIMUM_GAIN)	{ return ERROR_VALUE; }	// Unknown gain
 
 	err = TSL2591_Read(&CFG.Byte, TSL2591__CONFIG, 1);
 	if (err)	{ return err; }
@@ -87,7 +87,7 @@ FctERR TSL2591_Set_Integration_Time(TSL2591_integ integ)
 	uTSL2591_REG__CONFIG	CFG;
 	FctERR					err;
 
-	if (integ > TSL2591__INTEG_600MS)	{ return ERR_VALUE; }	// Unknown integration time
+	if (integ > TSL2591__INTEG_600MS)	{ return ERROR_VALUE; }	// Unknown integration time
 
 	err = TSL2591_Read(&CFG.Byte, TSL2591__CONFIG, 1);
 	if (err)	{ return err; }

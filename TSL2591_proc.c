@@ -30,12 +30,12 @@ __WEAK FctERR TSL2591_Init_Sequence(void)
 {
 	uTSL2591_REG__ENABLE	EN;
 	uTSL2591_REG__CONFIG	CFG;
-	FctERR					err = ERR_OK;
+	FctERR					err = ERROR_OK;
 
 	// get ID & check against values for TSL2591
 	err = TSL2591_Get_ChipID(&TSL2591.cfg.Id);
 	if (err)								{ return err; }
-	if (TSL2591.cfg.Id != TSL2591_CHIP_ID)	{ return ERR_COMMON; }	// Unknown device
+	if (TSL2591.cfg.Id != TSL2591_CHIP_ID)	{ return ERROR_COMMON; }	// Unknown device
 
 	EN.Byte = 0;
 	EN.Bits.PON = true;		// Turn ON Osc
@@ -99,7 +99,7 @@ static FctERR calculateLux(uint16_t full, uint16_t ir)
 	if ((full >= sat) || (ir >= sat))
 	{
 		TSL2591.Saturation = true;
-		return ERR_OVERFLOW;	// Signal an overflow
+		return ERROR_OVERFLOW;	// Signal an overflow
 	}
 	else { TSL2591.Saturation = false; }
 
@@ -141,7 +141,7 @@ static FctERR calculateLux(uint16_t full, uint16_t ir)
 		printf("TSL2591: adafruit lux: %lul\r\n", lux);
 	#endif
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -158,7 +158,7 @@ __WEAK FctERR TSL2591_handler(void)
 	err = calculateLux(TSL2591.Full, TSL2591.IR);
 
 	#if defined(VERBOSE)
-		if (err == ERR_OVERFLOW)	{ printf("TSL2591; Sensor saturation reached!\r\n"); }
+		if (err == ERROR_OVERFLOW)	{ printf("TSL2591; Sensor saturation reached!\r\n"); }
 		else						{ printf("TSL2591: Full %d IR %d Lux: %lul\r\n", TSL2591.Full, TSL2591.IR, TSL2591.Lux); }
 	#endif
 
@@ -168,7 +168,7 @@ __WEAK FctERR TSL2591_handler(void)
 		if (err)	{ return err; }
 	}
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 

@@ -71,7 +71,7 @@ FctERR TCS3472_Set_Gain(TCS3472_gain gain)
 	uTCS3472_REG__CONTROL	CTL;
 	FctERR					err;
 
-	if (gain > TCS3472__MAXIMUM_GAIN)	{ return ERR_VALUE; }	// Unknown gain
+	if (gain > TCS3472__MAXIMUM_GAIN)	{ return ERROR_VALUE; }	// Unknown gain
 
 	err = TCS3472_Read(&CTL.Byte, TCS3472__CONTROL, 1);
 	if (err)	{ return err; }
@@ -92,7 +92,7 @@ FctERR TCS3472_Set_Integration_Time(uint16_t integ)
 	uint8_t	ATIME;
 	FctERR	err;
 
-	if ((integ < 3) || (integ > 615))	{ return ERR_RANGE; }	// Integration time out of range
+	if ((integ < 3) || (integ > 615))	{ return ERROR_RANGE; }	// Integration time out of range
 
 	// 2.4ms (0xFF) to 700ms (0x00)
 	//ATIME = (uint8_t) ((integ - 2.4f) * (0x00 - 0xFF) / (700.0f - 2.4f) + 0xFF);
@@ -112,7 +112,7 @@ FctERR TCS3472_Set_Wait_Time(uint16_t wait)
 	uint8_t					WAIT;
 	FctERR					err;
 
-	if ((wait < 3) || (wait > 7370))	{ return ERR_RANGE; }	// Wait time out of range
+	if ((wait < 3) || (wait > 7370))	{ return ERROR_RANGE; }	// Wait time out of range
 
 	CFG.Byte = 0;
 

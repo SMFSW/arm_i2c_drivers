@@ -16,7 +16,7 @@
 
 FctERR AT42QT1244_Send_Command(AT42QT_cmd cmd)
 {
-	if ((cmd > AT42QT__RESET_DEVICE) && (cmd < AT42QT__LOW_LEVEL_CALIBRATION))	{ return ERR_VALUE; }
+	if ((cmd > AT42QT__RESET_DEVICE) && (cmd < AT42QT__LOW_LEVEL_CALIBRATION))	{ return ERROR_VALUE; }
 	return AT42QT1244_Write(&cmd, AT42QT__CONTROL_COMMAND, 1);
 }
 
@@ -36,7 +36,7 @@ FctERR AT42QT1244_Setup_Key(uint8_t Key, bool use)
 	uAT42QT_REG__SETUP_165_188	TMP;
 	FctERR						err;
 
-	if (Key > AT42QT__CALIBRATE_KEY_23)	{ return ERR_VALUE; }
+	if (Key > AT42QT__CALIBRATE_KEY_23)	{ return ERROR_VALUE; }
 
 	err = AT42QT1244_Read((uint8_t *) &TMP, AT42QT__SETUP_KEYS_MODE_0 + Key, sizeof(TMP));	// 165 is the NDIL register of the 1st key
 	if (err)	{ return err; }
@@ -50,7 +50,7 @@ FctERR AT42QT1244_Setup_FHM(AT42QT_FHM FHM)
 	uAT42QT_REG__SETUP_244	TMP;
 	FctERR					err;
 
-	if (FHM > AT42QT__FHM_FREQUENCY_SWEEP)	{ return ERR_VALUE; }
+	if (FHM > AT42QT__FHM_FREQUENCY_SWEEP)	{ return ERROR_VALUE; }
 
 	err = AT42QT1244_Read((uint8_t *) &TMP, AT42QT__SETUP_FREQ_HOPING_DWELL, 1);
 	if (err)	{ return err; }
@@ -67,7 +67,7 @@ FctERR AT42QT1244_Get_Keys(uint32_t * Keys)
 	if (err)	{ return err; }
 
 	*Keys = (LSHIFT(TMP[2], 16) + LSHIFT(TMP[1], 8) + TMP[0]) & 0x00FFFFFFUL;
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 

@@ -41,10 +41,10 @@ __WEAK FctERR $CPNT$_Init(void)
 
 FctERR $CPNT$_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 {
-	if (!I2C_is_enabled(&$CPNT$_hal))	{ return ERR_DISABLED; }	// Peripheral disabled
-	if (!data)							{ return ERR_MEMORY; }		// Null pointer
-	//if (addr > )						{ return ERR_RANGE; }		// Unknown register
-	//if ((addr + nb) > last_reg + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(&$CPNT$_hal))	{ return ERROR_DISABLED; }	// Peripheral disabled
+	if (!data)							{ return ERROR_MEMORY; }		// Null pointer
+	//if (addr > )						{ return ERROR_RANGE; }		// Unknown register
+	//if ((addr + nb) > last_reg + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&$CPNT$_hal, true);
 	
@@ -57,10 +57,10 @@ FctERR $CPNT$_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 
 FctERR $CPNT$_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
-	if (!I2C_is_enabled(&$CPNT$))		{ return ERR_DISABLED; }	// Peripheral disabled
-	if (!data)							{ return ERR_MEMORY; }		// Null pointer
-	//if (addr > )						{ return ERR_RANGE; }		// Unknown register
-	//if ((addr + nb) > last_reg + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(&$CPNT$))		{ return ERROR_DISABLED; }	// Peripheral disabled
+	if (!data)							{ return ERROR_MEMORY; }		// Null pointer
+	//if (addr > )						{ return ERROR_RANGE; }		// Unknown register
+	//if ((addr + nb) > last_reg + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&$CPNT$_hal, true);
 	

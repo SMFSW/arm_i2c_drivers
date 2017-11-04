@@ -26,7 +26,7 @@ GPMS_proc GPMS = { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0.0f, '\0' }, { 0, 0.0f, '\0' 
 __WEAK FctERR GPMS_Init_Sequence(void)
 {
 	// TODO: remove init sequence if not used
-	FctERR err = ERR_OK;
+	FctERR err = ERROR_OK;
 
 	if (err)	{ return err; }
 
@@ -51,7 +51,7 @@ FctERR GPMS_Get_Date(GPMS_date * date)
 
 	if (date)	{ memcpy(date, &GPMS.Date, sizeof(GPMS_date)); }
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 FctERR GPMS_Get_Hour(GPMS_hour * hour)
@@ -68,7 +68,7 @@ FctERR GPMS_Get_Hour(GPMS_hour * hour)
 
 	if (hour)	{ memcpy(hour, &GPMS.Hour, sizeof(GPMS_hour)); }
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -107,7 +107,7 @@ FctERR GPMS_Get_Latitude(GPMS_coord * lat)
 
 	if (lat)	{ memcpy(lat, &GPMS.Latitude, sizeof(GPMS_coord)); }
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -123,7 +123,7 @@ FctERR GPMS_Get_Longitude(GPMS_coord * lon)
 
 	if (lon)	{ memcpy(lon, &GPMS.Longitude, sizeof(GPMS_coord)); }
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -132,7 +132,7 @@ FctERR GPMS_Get_Heading(float * heading, GPMS_north type)
 	uint8_t	HEADING[4];
 	FctERR	err;
 
-	if (type > GPMS__MAGNETIC_NORTH)	{ return ERR_VALUE; }	// Unknown north type
+	if (type > GPMS__MAGNETIC_NORTH)	{ return ERROR_VALUE; }	// Unknown north type
 
 	err = GPMS_Read(HEADING, (type == GPMS__MAGNETIC_NORTH) ? GPMS__HEADING_DEGREES_MAGNETIC_HUNDREDS : GPMS__HEADING_DEGREES_TRUE_HUNDREDS, sizeof(HEADING));
 	if (err)	{ return err; }
@@ -140,7 +140,7 @@ FctERR GPMS_Get_Heading(float * heading, GPMS_north type)
 	GPMS_Fill_sp_hd((type == GPMS__MAGNETIC_NORTH) ? &GPMS.Heading_Magnetic : &GPMS.Heading_True, HEADING);
 
 	if (heading)	{ *heading = (type == GPMS__MAGNETIC_NORTH) ? GPMS.Heading_Magnetic : GPMS.Heading_True; }
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -156,7 +156,7 @@ FctERR GPMS_Get_Speed(float * speed)
 
 	if (speed)	{ *speed = GPMS.Speed; }
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -172,7 +172,7 @@ FctERR GPMS_Get_Altitude(uint16_t * altitude)
 
 	if (altitude)	{ *altitude = GPMS.Altitude; }
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -216,7 +216,7 @@ __WEAK FctERR GPMS_handler(void)
 				GPMS.Altitude);
 	#endif
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 

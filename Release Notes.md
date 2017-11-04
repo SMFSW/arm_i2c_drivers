@@ -28,6 +28,7 @@ SOFTWARE.
 * warnings about sharing same address on bus re-enabled
 * changed CPNT_Init, CPNT_Init_Sequence & CPNT_handler as weak functions
 * removed inclusion of FctERR.h now handled by sarmfsw
+* ERR_xx refactored to ERROR_xx
 * BMP180: reworked pressure and temperature calculations
 * BMP180: added datasheet example for testing purposes
 * MCP4725: fixed ReadDAC function & WriteCommand for Fast Mode

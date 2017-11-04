@@ -74,14 +74,14 @@ FctERR PCF8523_Get_Countdown(uint8_t * ctdw, uint16_t period, uint8_t timer)
 	uint16_t	T_x;
 	float		Clk_Timer = PCF8523_Clock_Timer_A_B[(timer ? PCF8523.cfg.Src_Clock_B : PCF8523.cfg.Src_Clock_A)];
 	
-	if (timer > 1)	{ return ERR_VALUE; }	// Unknown timer
+	if (timer > 1)	{ return ERROR_VALUE; }	// Unknown timer
 	
 	T_x = period * Clk_Timer;
 	
-	if (T_x > 0xFF)	{ return ERR_RANGE; }	// Period too high
+	if (T_x > 0xFF)	{ return ERROR_RANGE; }	// Period too high
 	
 	*ctdw = (uint8_t) T_x;
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -94,7 +94,7 @@ FctERR PCF8523_Check_Clock_Integrity(bool * integrity)
 	if (err)	{ return err; }
 
 	*integrity = SEC.Bits.OS;
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 

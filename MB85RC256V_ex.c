@@ -25,7 +25,7 @@
 **/
 FctERR MB85RC256V_Mass_Erase(void)
 {
-	FctERR	err = ERR_OK;
+	FctERR	err = ERROR_OK;
 	uint8_t	bankData[32];
 	memset(&bankData, VAL_CLR, sizeof(bankData));
 

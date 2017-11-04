@@ -23,7 +23,7 @@ FctERR BMP180_Start_Conversion(BMP180_meas meas)
 	FctERR					err;
 
 	if (	(meas != BMP180__MEAS_PRESSURE)
-		&&	(meas != BMP180__MEAS_TEMPERATURE))	{ return ERR_VALUE; }	// Unknown conversion
+		&&	(meas != BMP180__MEAS_TEMPERATURE))	{ return ERROR_VALUE; }	// Unknown conversion
 
 	CTRL.Byte = 0;
 	CTRL.Bits.SCO = 1;
@@ -36,7 +36,7 @@ FctERR BMP180_Start_Conversion(BMP180_meas meas)
 
 	BMP180.hStartConversion = HAL_GetTick();
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 

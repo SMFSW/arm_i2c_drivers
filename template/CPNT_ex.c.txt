@@ -21,7 +21,7 @@
 
 FctERR $CPNT$_fct(void)
 {
-	FctERR err = ERR_OK;
+	FctERR err = ERROR_OK;
 	
 	if (err)	{ return err; }
 	

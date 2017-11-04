@@ -36,10 +36,10 @@ __WEAK FctERR BMP180_Init(void)
 
 FctERR BMP180_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 {
-	if (!I2C_is_enabled(&BMP180_hal))		{ return ERR_DISABLED; }	// Peripheral disabled
-	if (!data)								{ return ERR_MEMORY; }		// Null pointer
-	if (addr > BMP180__OUT_XLSB)			{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb) > BMP180__OUT_XLSB + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(&BMP180_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
+	if (!data)								{ return ERROR_MEMORY; }		// Null pointer
+	if (addr > BMP180__OUT_XLSB)			{ return ERROR_RANGE; }		// Unknown register
+	if ((addr + nb) > BMP180__OUT_XLSB + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&BMP180_hal, true);
 
@@ -52,10 +52,10 @@ FctERR BMP180_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 
 FctERR BMP180_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
-	if (!I2C_is_enabled(&BMP180_hal))		{ return ERR_DISABLED; }	// Peripheral disabled
-	if (!data)								{ return ERR_MEMORY; }		// Null pointer
-	if (addr > BMP180__OUT_XLSB)			{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb) > BMP180__OUT_XLSB + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(&BMP180_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
+	if (!data)								{ return ERROR_MEMORY; }		// Null pointer
+	if (addr > BMP180__OUT_XLSB)			{ return ERROR_RANGE; }		// Unknown register
+	if ((addr + nb) > BMP180__OUT_XLSB + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&BMP180_hal, true);
 
@@ -71,7 +71,7 @@ FctERR BMP180_Read_Word(uint16_t * data, uint16_t addr)
 	uint8_t	WREG[2];
 	FctERR	err;
 
-	if (addr > BMP180__OUT_XLSB)		{ return ERR_RANGE; }		// Unknown register
+	if (addr > BMP180__OUT_XLSB)		{ return ERROR_RANGE; }		// Unknown register
 
 	err = BMP180_Read(WREG, addr, 2);
 	if (err)	{ return err; }

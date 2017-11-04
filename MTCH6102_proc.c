@@ -140,7 +140,7 @@ __WEAK FctERR MTCH6102_Init_Sequence(void)
 
 FctERR MTCH6102_decode_touch_datas(MTCH6102_gesture * touch, MTCH6102_raw_gest * dat)
 {
-	if ((!dat) || (!touch))		{ return ERR_MEMORY; }	// Null pointer
+	if ((!dat) || (!touch))		{ return ERROR_MEMORY; }	// Null pointer
 
 	touch->Large = dat->Touch_state.Bits.LRG;
 	touch->Gesture = dat->Touch_state.Bits.GES;
@@ -163,7 +163,7 @@ FctERR MTCH6102_decode_touch_datas(MTCH6102_gesture * touch, MTCH6102_raw_gest *
 	touch->State = dat->Gest_state;
 	touch->Diag = dat->Gest_diag;
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -216,7 +216,7 @@ MTCH6102_Coord MTCH6102_rotate(MTCH6102_Coord c, int16_t deg)
 
 FctERR MTCH6102_gesture_to_str(char * str, MTCH6102_GESTURE_STATE state)
 {
-	if (!str)		{ return ERR_MEMORY; }	// Null pointer
+	if (!str)		{ return ERROR_MEMORY; }	// Null pointer
 
 	switch(state)
 	{
@@ -232,15 +232,15 @@ FctERR MTCH6102_gesture_to_str(char * str, MTCH6102_GESTURE_STATE state)
 		case UpSwipeNHold: strcpy(str, "Up Swipe n Hold"); break;
 		case LeftSwipe: strcpy(str, "Left Swipe"); break;
 		case LeftSwipeNHold: strcpy(str, "Left Swipe n Hold"); break;
-		default: strcpy(str, ""); return ERR_VALUE;
+		default: strcpy(str, ""); return ERROR_VALUE;
 	}
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 FctERR MTCH6102_diag_to_str(char * str, MTCH6102_GESTURE_DIAGNOSTIC diag)
 {
-	if (!str)		{ return ERR_MEMORY; }	// Null pointer
+	if (!str)		{ return ERROR_MEMORY; }	// Null pointer
 
 	switch(diag)
 	{
@@ -254,10 +254,10 @@ FctERR MTCH6102_diag_to_str(char * str, MTCH6102_GESTURE_DIAGNOSTIC diag)
 		case Reserved: strcpy(str, "Reserved"); break;
 		case SwipeNHoldValExceed: strcpy(str, "Swipe and Hold value exceeded"); break;
 		case OutsideSwipeAngle: strcpy(str, "Outside Swipe Angle"); break;
-		default: strcpy(str, ""); return ERR_VALUE;
+		default: strcpy(str, ""); return ERROR_VALUE;
 	}
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -294,7 +294,7 @@ __WEAK FctERR MTCH6102_handler(void)
 		printf("\r\n");
 	#endif
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 

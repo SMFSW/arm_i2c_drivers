@@ -196,7 +196,7 @@ FctERR TCS3472_Get_Channels(uint16_t tab[]);
 ** \return FctERR - error code
 **/
 __INLINE FctERR INLINE__ TCS3472_Get_Channel(uint16_t * buf, TCS3472_chan chan) {
-	if (chan > TCS3472__CHAN_BLUE)	{ return ERR_VALUE; }	// Unknown channel
+	if (chan > TCS3472__CHAN_BLUE)	{ return ERROR_VALUE; }	// Unknown channel
 	return TCS3472_Read_Word(buf, TCS3472__CDATAL + (2 * chan)); }
 
 /*!\brief Get Clear channel conversion

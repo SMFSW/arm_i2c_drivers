@@ -37,8 +37,8 @@ __WEAK FctERR MCP9808_Init_Sequence(void)
 	err = MCP9808_Get_ChipID(&MCP9808.cfg.Device_Id);
 	if (err)	{ return err; }
 
-	if (MCP9808.cfg.Device_Id != MCP9808_CHIP_ID)				{ return ERR_COMMON; }	// Unknown device
-	if (MCP9808.cfg.Manufacturer_Id != MCP9808_MANUFACTURER_ID)	{ return ERR_COMMON; }	// Unknown device
+	if (MCP9808.cfg.Device_Id != MCP9808_CHIP_ID)				{ return ERROR_COMMON; }	// Unknown device
+	if (MCP9808.cfg.Manufacturer_Id != MCP9808_MANUFACTURER_ID)	{ return ERROR_COMMON; }	// Unknown device
 
 /*	err = MCP9808_Set_AlertTemp(30.0f, MCP9808__ALERT_HIGH);
 	if (err)	{ return err; }
@@ -68,8 +68,8 @@ FctERR MCP9808_Set_AlertTemp(float temp, MCP9808_alert alt)
 	float *					alert = &MCP9808.cfg.HighAlert + alt;
 	FctERR					err;
 
-	if (alt > MCP9808__ALERT_CRIT)	{ return ERR_VALUE; }	// Unknown alert
-	if (fabs(temp) >= 256.0f)		{ return ERR_RANGE; }	// Temperature too low/high
+	if (alt > MCP9808__ALERT_CRIT)	{ return ERROR_VALUE; }	// Unknown alert
+	if (fabs(temp) >= 256.0f)		{ return ERROR_RANGE; }	// Temperature too low/high
 
 	ALT.Word = 0;
 	if (temp < 0.0f)	{ ALT.Bits.Sign = true; }
@@ -85,7 +85,7 @@ FctERR MCP9808_Set_AlertTemp(float temp, MCP9808_alert alt)
 
 	*alert = temp;
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -96,7 +96,7 @@ FctERR MCP9808_Get_AlertTemp(float * temp, MCP9808_alert alt)
 	float *					alert = &MCP9808.cfg.HighAlert + alt;
 	FctERR					err;
 
-	if (alt > MCP9808__ALERT_CRIT)	{ return ERR_VALUE; }	// Unknown alert
+	if (alt > MCP9808__ALERT_CRIT)	{ return ERROR_VALUE; }	// Unknown alert
 
 	err = MCP9808_Read(&ALT.Word, MCP9808__ALERT_UPPER + alt, 1);
 	if (err)	{ return err; }
@@ -109,7 +109,7 @@ FctERR MCP9808_Get_AlertTemp(float * temp, MCP9808_alert alt)
 
 	if (temp)	{ *temp = tmp; }
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -133,13 +133,13 @@ FctERR MCP9808_Get_Temperature(float * temp)
 
 	if (temp)	{ *temp = MCP9808.Temperature; }
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
 __WEAK FctERR MCP9808_handler(void)
 {
-	FctERR	err = ERR_NOTAVAIL;	// In case no new data available
+	FctERR	err = ERROR_NOTAVAIL;	// In case no new data available
 
 	if (TPSSUP_MS(MCP9808.hLast, MCP9808_conv_time[MCP9808.cfg.Resolution]))	{ MCP9808.NewData = true; }
 

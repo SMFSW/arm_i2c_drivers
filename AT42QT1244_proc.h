@@ -39,18 +39,18 @@ FctERR AT42QT1244_Calibrate_Freq_Offset(void);
 
 
 __INLINE FctERR INLINE__ AT42QT1244_Calibrate_Low_Level(void) {
-	if (AT42QT1244_is_Calib_Pending())	{ return ERR_BUSY; }
+	if (AT42QT1244_is_Calib_Pending())	{ return ERROR_BUSY; }
 	return AT42QT1244_Send_Command(AT42QT__LOW_LEVEL_CALIBRATION); }
 
 
 __INLINE FctERR INLINE__ AT42QT1244_Calibrate_All_Keys(void) {
-	if (AT42QT1244_is_Calib_Pending())	{ return ERR_BUSY; }
+	if (AT42QT1244_is_Calib_Pending())	{ return ERROR_BUSY; }
 	return AT42QT1244_Send_Command(AT42QT__CALIBRATE_ALL_KEYS); }
 
 
 __INLINE FctERR INLINE__ AT42QT1244_Calibrate_Key(uint8_t Key) {
-	if (Key > AT42QT__CALIBRATE_KEY_23)	{ return ERR_VALUE; }
-	if (AT42QT1244_is_Calib_Pending())	{ return ERR_BUSY; }
+	if (Key > AT42QT__CALIBRATE_KEY_23)	{ return ERROR_VALUE; }
+	if (AT42QT1244_is_Calib_Pending())	{ return ERROR_BUSY; }
 	return AT42QT1244_Send_Command(Key); }
 
 

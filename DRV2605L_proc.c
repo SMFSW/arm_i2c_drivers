@@ -24,7 +24,7 @@ __WEAK FctERR DRV2605L_Init_Sequence(void)
 {
 	uDRV_REG__CONTROL_1	CTL1;
 	uint8_t				EFFECT[3] = { DRV__EFF_TRANS_RAMP_DWN_LONG_SMOOTH_1, 0, 0 };
-	FctERR				err = ERR_OK;
+	FctERR				err = ERROR_OK;
 
 	err = DRV2605L_Set_Standby(false);
 	if (err)										{ return err; }
@@ -34,7 +34,7 @@ __WEAK FctERR DRV2605L_Init_Sequence(void)
 	if (	(DRV2605L.cfg.Id != DRV2604_CHIP_ID)
 		&&	(DRV2605L.cfg.Id != DRV2604L_CHIP_ID)
 		&&	(DRV2605L.cfg.Id != DRV2605_CHIP_ID)
-		&&	(DRV2605L.cfg.Id != DRV2605L_CHIP_ID))	{ return ERR_COMMON; }	// Unknown device
+		&&	(DRV2605L.cfg.Id != DRV2605L_CHIP_ID))	{ return ERROR_COMMON; }	// Unknown device
 
 	// TODO: write library selection reg if using lib
 	err = DRV2605L_Write(EFFECT, DRV__WAVEFORM_SEQUENCER_1, 2);
@@ -83,7 +83,7 @@ FctERR DRV2605L_Auto_Calib(void)
 	uDRV_REG__CONTROL_2			CTL2;
 	uDRV_REG__CONTROL_4			CTL4;
 	uint8_t						RATED_VOLTAGE, OD_CLAMP;
-	FctERR						err = ERR_OK;
+	FctERR						err = ERROR_OK;
 
 	MODE.Byte = 0;
 

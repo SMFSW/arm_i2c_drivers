@@ -19,7 +19,7 @@
 
 __WEAK FctERR AT42QT1244_Init_Sequence(void)
 {
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -43,7 +43,7 @@ FctERR AT42QT1244_Calibrate_Freq_Offset(void)
 			HAL_IWDG_Refresh(&hiwdg);
 		#endif
 		calib = AT42QT1244_is_Calib_Pending();
-		if (calib == -1)	{ return ERR_NOTAVAIL; }
+		if (calib == -1)	{ return ERROR_NOTAVAIL; }
 	}
 
 	// Get all FREQ
@@ -72,7 +72,7 @@ FctERR AT42QT1244_Calibrate_Freq_Offset(void)
 				HAL_IWDG_Refresh(&hiwdg);
 			#endif
 			calib = AT42QT1244_is_Calib_Pending();
-			if (calib == -1)	{ return ERR_NOTAVAIL; }
+			if (calib == -1)	{ return ERROR_NOTAVAIL; }
 		}
 
 		// Get reference for keys
@@ -110,7 +110,7 @@ FctERR AT42QT1244_Calibrate_Freq_Offset(void)
 
 __WEAK FctERR AT42QT1244_handler(void)
 {
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 

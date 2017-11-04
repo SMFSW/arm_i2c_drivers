@@ -29,7 +29,7 @@ const uint16_t TCS3472_gain_tab[4] = { 1, 4, 16, 60 };
 __WEAK FctERR TCS3472_Init_Sequence(void)
 {
 	uTCS3472_REG__ENABLE	EN;
-	FctERR					err = ERR_OK;
+	FctERR					err = ERROR_OK;
 
 	// get ID & check against values for TCS3472
 	err = TCS3472_Get_ChipID(&TCS3472.cfg.Id);
@@ -37,7 +37,7 @@ __WEAK FctERR TCS3472_Init_Sequence(void)
 
 	if (	(TCS3472.cfg.Id != TCS34725_CHIP_ID)
 		&&	(TCS3472.cfg.Id != TCS34727_CHIP_ID))
-	{ return ERR_COMMON; }	// Unknown device
+	{ return ERROR_COMMON; }	// Unknown device
 
 	EN.Byte = 0;
 	EN.Bits.PON = true;		// Turn ON Osc
@@ -91,7 +91,7 @@ static FctERR TCS3472_calc(uint16_t r, uint16_t g, uint16_t b)
 	if ((r >= sat) || (g >= sat) || (b >= sat))
 	{
 		TCS3472.Saturation = true;
-		return ERR_OVERFLOW;	// Saturation reached
+		return ERROR_OVERFLOW;	// Saturation reached
 	}
 	else { TCS3472.Saturation = false; }
 
@@ -115,7 +115,7 @@ static FctERR TCS3472_calc(uint16_t r, uint16_t g, uint16_t b)
 	TCS3472.Temp = (uint32_t) ((-449.0 * powf(n, 3)) + (3525.0 * powf(n, 2)) - (6823.3 * n) + 5520.33);
 	TCS3472.Lux = (uint32_t) Y;
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -134,7 +134,7 @@ __WEAK FctERR TCS3472_handler(void)
 	err = TCS3472_calc(TCS3472.Red, TCS3472.Green, TCS3472.Blue);
 
 	#if defined(VERBOSE)
-		if (err == ERR_OVERFLOW)	{ printf("TCS3472: Sensor saturation reached!\r\n"); }
+		if (err == ERROR_OVERFLOW)	{ printf("TCS3472: Sensor saturation reached!\r\n"); }
 		else						{ printf("TCS3472: C%d R%d G%d B%d Lux: %lul Temp: %luK\r\n", TCS3472.Clear, TCS3472.Red, TCS3472.Green, TCS3472.Blue, TCS3472.Lux, TCS3472.Temp); }
 	#endif
 
@@ -144,7 +144,7 @@ __WEAK FctERR TCS3472_handler(void)
 		if (err)	{ return err; }
 	}
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 

@@ -38,10 +38,10 @@ FctERR TSL2591_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 {
 	uTSL2591_CMD CMD;
 
-	if (!I2C_is_enabled(&TSL2591_hal))		{ return ERR_DISABLED; }	// Peripheral disabled
-	if (!data)								{ return ERR_MEMORY; }		// Null pointer
-	if (addr > TSL2591__PERSIST)			{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb) > TSL2591__PERSIST + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(&TSL2591_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
+	if (!data)								{ return ERROR_MEMORY; }		// Null pointer
+	if (addr > TSL2591__PERSIST)			{ return ERROR_RANGE; }		// Unknown register
+	if ((addr + nb) > TSL2591__PERSIST + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&TSL2591_hal, true);
 
@@ -60,10 +60,10 @@ FctERR TSL2591_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
 	uTSL2591_CMD CMD;
 
-	if (!I2C_is_enabled(&TSL2591_hal))		{ return ERR_DISABLED; }	// Peripheral disabled
-	if (!data)								{ return ERR_MEMORY; }		// Null pointer
-	if (addr > TSL2591__C1DATAH)			{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb) > TSL2591__C1DATAH + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(&TSL2591_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
+	if (!data)								{ return ERROR_MEMORY; }		// Null pointer
+	if (addr > TSL2591__C1DATAH)			{ return ERROR_RANGE; }		// Unknown register
+	if ((addr + nb) > TSL2591__C1DATAH + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&TSL2591_hal, true);
 
@@ -82,7 +82,7 @@ FctERR TSL2591_Write_Word(uint16_t * data, uint16_t addr)
 {
 	uint8_t	WREG[2];
 
-	if (addr > TSL2591__PERSIST)		{ return ERR_RANGE; }		// Unknown register
+	if (addr > TSL2591__PERSIST)		{ return ERROR_RANGE; }		// Unknown register
 
 	WREG[0] = LOBYTE(*data);
 	WREG[1] = HIBYTE(*data);
@@ -95,13 +95,13 @@ FctERR TSL2591_Read_Word(uint16_t * data, uint16_t addr)
 	uint8_t	WREG[2];
 	FctERR	err;
 
-	if (addr > TSL2591__C1DATAH)		{ return ERR_RANGE; }		// Unknown register
+	if (addr > TSL2591__C1DATAH)		{ return ERROR_RANGE; }		// Unknown register
 
 	err = TSL2591_Read(WREG, addr, 2);
 	if (err)	{ return err; }
 
 	*data = MAKEWORD(WREG[0], WREG[1]);
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -112,7 +112,7 @@ FctERR TSL2591_Write_Special(TSL2591_spec_func func)
 	if (	(func != TSL2591__SF_FORCE_IT)
 		&&	(func != TSL2591__SF_CLR_ALS_IT)
 		&&	(func != TSL2591__SF_CLR_ALS_AND_NO_PERS)
-		&&	(func != TSL2591__SF_CLR_NO_PERS))			{ return ERR_VALUE; }		// Unknown special function
+		&&	(func != TSL2591__SF_CLR_NO_PERS))			{ return ERROR_VALUE; }		// Unknown special function
 
 	I2C_set_busy(&TSL2591_hal, true);
 

@@ -118,7 +118,7 @@ FctERR I2C_set_slave_timeout(I2C_slave * slave, uint32_t timeout);
 **/
 __INLINE FctERR INLINE__ I2C_set_current_mem_address(I2C_slave * slave, uint16_t addr) {
 	slave->addr = addr;
-	return ERR_OK; }
+	return ERROR_OK; }
 
 /*!\brief Set I2C Slave device disabled/enabled state
 ** \param[in,out] slave - pointer to I2C slave instance
@@ -127,7 +127,7 @@ __INLINE FctERR INLINE__ I2C_set_current_mem_address(I2C_slave * slave, uint16_t
 **/
 __INLINE FctERR INLINE__ I2C_set_enable(I2C_slave * slave, bool en) {
 	slave->en = en;
-	return ERR_OK; }
+	return ERROR_OK; }
 
 
 /*!\brief Set I2C Slave bus/device business
@@ -137,7 +137,7 @@ __INLINE FctERR INLINE__ I2C_set_enable(I2C_slave * slave, bool en) {
 **/
 __INLINE FctERR INLINE__ I2C_set_busy(I2C_slave * slave, bool busy) {
 	slave->busy = busy;
-	return ERR_OK; }
+	return ERROR_OK; }
 
 
 /***************/

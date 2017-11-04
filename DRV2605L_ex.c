@@ -57,7 +57,7 @@ FctERR DRV2605L_Set_ActType(DRV2605L_act act)
 	uDRV_REG__FEEDBACK_CONTROL	FB_CTL;
 	FctERR						err;
 
-	if (act > DRV__ACT_LRA)	{ return ERR_VALUE; }	// Unknown actuator type
+	if (act > DRV__ACT_LRA)	{ return ERROR_VALUE; }	// Unknown actuator type
 
 	err = DRV2605L_Read(&FB_CTL.Byte, DRV__FEEDBACK_CONTROL, 1);
 	if (err)	{ return err; }
@@ -76,7 +76,7 @@ FctERR DRV2605L_Set_OperatingMode(DRV2605L_mode mode)
 	uDRV_REG__MODE	MODE;
 	FctERR			err;
 
-	if (mode > DRV__MODE_AUTO_CALIBRATION)	{ return ERR_VALUE; }	// Unknown mode
+	if (mode > DRV__MODE_AUTO_CALIBRATION)	{ return ERROR_VALUE; }	// Unknown mode
 
 	err = DRV2605L_Read(&MODE.Byte, DRV__MODE, 1);
 	if (err)	{ return err; }
@@ -108,7 +108,7 @@ FctERR DRV2605L_Set_InputMode(DRV2605L_input input)
 	uDRV_REG__CONTROL_3	CTL3;
 	FctERR				err;
 
-	if (input > DRV__IN_ANALOG)		{ return ERR_VALUE; }	// Unknown input type
+	if (input > DRV__IN_ANALOG)		{ return ERROR_VALUE; }	// Unknown input type
 
 	err = DRV2605L_Read(&CTL3.Byte, DRV__CONTROL_3, 1);
 	if (err)	{ return err; }
@@ -127,7 +127,7 @@ FctERR DRV2605L_Set_LoopMode(DRV2605L_loop loop)
 	uDRV_REG__CONTROL_3	CTL3;
 	FctERR				err;
 
-	if (loop > DRV__OPEN_LOOP)		{ return ERR_VALUE; }	// Unknown loop mode
+	if (loop > DRV__OPEN_LOOP)		{ return ERROR_VALUE; }	// Unknown loop mode
 
 	err = DRV2605L_Read(&CTL3.Byte, DRV__CONTROL_3, 1);
 	if (err)	{ return err; }
@@ -147,7 +147,7 @@ FctERR DRV2605L_Set_Library(DRV2605L_lib lib)
 {
 	uDRV_REG__LIBRARY_SELECTION LIB;
 
-	if (lib > DRV__LIB_TS2200_LIBRARY_F)	{ return ERR_VALUE; }	// Unknown library
+	if (lib > DRV__LIB_TS2200_LIBRARY_F)	{ return ERROR_VALUE; }	// Unknown library
 
 	LIB.Byte = 0;
 	LIB.Bits.LIBRARY_SEL = lib;
@@ -159,8 +159,8 @@ FctERR DRV2605L_Set_Waveform(uint16_t chan, DRV2605L_eff effect, bool wait)
 {
 	uDRV_REG__WAVEFORM_SEQUENCER WAVEFORM;
 
-	if (chan > 7)						{ return ERR_VALUE; }	// Unknown channel
-	if (effect > DRV__EFF_SMOOTH_HUM_5)	{ return ERR_VALUE; }	// Unknown effect
+	if (chan > 7)						{ return ERROR_VALUE; }	// Unknown channel
+	if (effect > DRV__EFF_SMOOTH_HUM_5)	{ return ERROR_VALUE; }	// Unknown effect
 
 	WAVEFORM.Bits.WAIT = wait;
 	WAVEFORM.Bits.WAV_FRM_SEQ = effect;
@@ -173,7 +173,7 @@ FctERR DRV2605L_Set_RTPDataFormat(DRV2605L_rtp_format format)
 	uDRV_REG__CONTROL_3	CTL3;
 	FctERR				err;
 
-	if (format > DRV__RTP_UNSIGNED)	{ return ERR_VALUE; }	// Unknown RTP data format
+	if (format > DRV__RTP_UNSIGNED)	{ return ERROR_VALUE; }	// Unknown RTP data format
 
 	err = DRV2605L_Read(&CTL3.Byte, DRV__CONTROL_3, 1);
 	if (err)	{ return err; }
@@ -193,7 +193,7 @@ FctERR DRV2605L_Set_ATVPeakTime(DRV2605L_peak peak)
 	uDRV_REG__ATV_CONTROL	ATV;
 	FctERR					err;
 
-	if (peak > DRV__PEAK_40MS)	{ return ERR_VALUE; }	// Unknown peak time
+	if (peak > DRV__PEAK_40MS)	{ return ERROR_VALUE; }	// Unknown peak time
 
 	err = DRV2605L_Read(&ATV.Byte, DRV__ATV_CONTROL, 1);
 	if (err)	{ return err; }
@@ -208,7 +208,7 @@ FctERR DRV2605L_Set_ATVLowPassFilter(DRV2605L_filter filt)
 	uDRV_REG__ATV_CONTROL	ATV;
 	FctERR					err;
 
-	if (filt > DRV__FILTER_200HZ)	{ return ERR_VALUE; }	// Unknown low pass filter frequency
+	if (filt > DRV__FILTER_200HZ)	{ return ERROR_VALUE; }	// Unknown low pass filter frequency
 
 	err = DRV2605L_Read(&ATV.Byte, DRV__ATV_CONTROL, 1);
 	if (err)	{ return err; }
@@ -223,7 +223,7 @@ FctERR DRV2605L_Set_ATVInput_Volt(float volt, bool max)
 	float	tmp = (volt * 255.0f) / 1.8f;
 	uint8_t	VAL;
 
-	if (tmp > 255.0f)	{ return ERR_VALUE; }	// voltage desired is too high
+	if (tmp > 255.0f)	{ return ERROR_VALUE; }	// voltage desired is too high
 
 	VAL = (uint8_t) tmp;
 	return DRV2605L_Set_ATVInputLevel_Raw(VAL, max);
@@ -234,7 +234,7 @@ FctERR DRV2605L_Set_ATVDrive_Percent(uint16_t perc, bool max)
 {
 	uint8_t	VAL;
 
-	if (perc > 100)	{ return ERR_VALUE; }	// percent desired is too high
+	if (perc > 100)	{ return ERROR_VALUE; }	// percent desired is too high
 
 	VAL = (uint8_t) ((perc * 255.0f) / 100.0f);
 	return DRV2605L_Set_ATVOutputDrive_Raw(VAL, max);
@@ -299,7 +299,7 @@ FctERR DRV2605L_Set_LRAOpenLoopPeriod_us(uint16_t per)
 {
 	uint8_t PER;
 
-	if (per > 25107)	{ return ERR_VALUE; }	// Period is out of range
+	if (per > 25107)	{ return ERROR_VALUE; }	// Period is out of range
 
 	PER = (uint8_t) (per / 98.46f);
 	return DRV2605L_Write(&PER, DRV__LRA_OPEN_LOOP_PERIOD, 1);

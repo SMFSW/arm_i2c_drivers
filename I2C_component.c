@@ -22,14 +22,14 @@ FctERR I2C_slave_init(I2C_slave * slave, I2C_HandleTypeDef * hi2c, uint16_t devA
 	assert_param(IS_I2C_ALL_INSTANCE(hi2c->Instance));
 	assert_param(IS_I2C_7B_ADDR(devAddress));
 
-	if ((!slave) || (!hi2c))	{ return ERR_INSTANCE; }	// Unknown instance (null pointer)
+	if ((!slave) || (!hi2c))	{ return ERROR_INSTANCE; }	// Unknown instance (null pointer)
 
 	//memcpy(slave, &slave_hal, sizeof(I2C_slave));		//! \note max_speed is const and should be set at init
 
 	slave->cfg.inst = hi2c;
 	slave->cfg.addr = I2C_ADDR(devAddress);
 	slave->cfg.timeout = timeout;
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -38,10 +38,10 @@ FctERR I2C_set_slave_instance(I2C_slave * slave, I2C_HandleTypeDef * hi2c)
 	/* Check the parameters */
 	assert_param(IS_I2C_ALL_INSTANCE(hi2c->Instance));
 
-	if ((!slave) || (!hi2c))	{ return ERR_INSTANCE; }	// Unknown instance (null pointer)
+	if ((!slave) || (!hi2c))	{ return ERROR_INSTANCE; }	// Unknown instance (null pointer)
 
 	slave->cfg.inst = hi2c;
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -50,19 +50,19 @@ FctERR I2C_set_slave_address(I2C_slave * slave, uint16_t devAddress)
 	/* Check the parameters */
 	assert_param(IS_I2C_7B_ADDR(devAddress));
 
-	if (!slave)					{ return ERR_INSTANCE; }	// Unknown instance (null pointer)
+	if (!slave)					{ return ERROR_INSTANCE; }	// Unknown instance (null pointer)
 
 	slave->cfg.addr = I2C_ADDR(devAddress);
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
 FctERR I2C_set_slave_timeout(I2C_slave * slave, uint32_t timeout)
 {
-	if (!slave)					{ return ERR_INSTANCE; }	// Unknown instance (null pointer)
+	if (!slave)					{ return ERROR_INSTANCE; }	// Unknown instance (null pointer)
 
 	slave->cfg.timeout = timeout;
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 

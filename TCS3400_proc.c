@@ -29,7 +29,7 @@ const uint16_t TCS3400_gain_tab[4] = { 1, 4, 16, 64 };
 __WEAK FctERR TCS3400_Init_Sequence(void)
 {
 	uTCS3400_REG__ENABLE	EN;
-	FctERR					err = ERR_OK;
+	FctERR					err = ERROR_OK;
 
 	err = TCS3400_Get_RevID(&TCS3400.cfg.Revision_Id);
 	if (err)			{ return err; }
@@ -40,7 +40,7 @@ __WEAK FctERR TCS3400_Init_Sequence(void)
 
 	if (	(TCS3400.cfg.Device_Id != TCS34005_CHIP_ID)
 		&&	(TCS3400.cfg.Device_Id != TCS34007_CHIP_ID))
-	{ return ERR_COMMON; }	// Unknown device
+	{ return ERROR_COMMON; }	// Unknown device
 
 	EN.Byte = 0;
 	EN.Bits.PON = true;		// Turn ON Osc
@@ -94,7 +94,7 @@ static FctERR TCS3400_calc(uint16_t r, uint16_t g, uint16_t b)
 	if ((r >= sat) || (g >= sat) || (b >= sat))
 	{
 		TCS3400.Saturation = true;
-		return ERR_OVERFLOW;	// Saturation reached
+		return ERROR_OVERFLOW;	// Saturation reached
 	}
 	else { TCS3400.Saturation = false; }
 
@@ -118,7 +118,7 @@ static FctERR TCS3400_calc(uint16_t r, uint16_t g, uint16_t b)
 	TCS3400.Temp = (uint32_t) ((-449.0 * powf(n, 3)) + (3525.0 * powf(n, 2)) - (6823.3 * n) + 5520.33);
 	TCS3400.Lux = (uint32_t) Y;
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -137,7 +137,7 @@ __WEAK FctERR TCS3400_handler(void)
 	err = TCS3400_calc(TCS3400.Red, TCS3400.Green, TCS3400.Blue);
 
 	#if defined(VERBOSE)
-		if (err == ERR_OVERFLOW)	{ printf("TCS3400: Sensor saturation reached!\r\n"); }
+		if (err == ERROR_OVERFLOW)	{ printf("TCS3400: Sensor saturation reached!\r\n"); }
 		else						{ printf("TCS3400: C%d R%d G%d B%d Lux: %lul Temp: %luK\r\n", TCS3400.Clear, TCS3400.Red, TCS3400.Green, TCS3400.Blue, TCS3400.Lux, TCS3400.Temp); }
 	#endif
 
@@ -147,7 +147,7 @@ __WEAK FctERR TCS3400_handler(void)
 		if (err)	{ return err; }
 	}
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 

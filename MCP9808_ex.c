@@ -31,7 +31,7 @@ FctERR MCP9808_Write_Config(uint16_t cfg)
 	err = MCP9808_Write(&CFG.Word, MCP9808__CONFIGURATION, 1);
 	if (err)	{ return err; }
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -74,7 +74,7 @@ FctERR MCP9808_Set_AlertType(bool comparator)
 	if (err)	{ return err; }
 
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -98,7 +98,7 @@ FctERR MCP9808_Set_AlertLock(MCP9808_alert alt, bool lock)
 	uMCP9808_REG__CFG	CFG;
 	FctERR				err;
 
-	if (alt > MCP9808__ALERT_CRIT)	{ return ERR_VALUE; }	// Unknown alert
+	if (alt > MCP9808__ALERT_CRIT)	{ return ERROR_VALUE; }	// Unknown alert
 
 	err = MCP9808_Read_Config(&CFG.Word);
 	if (err)	{ return err; }
@@ -116,7 +116,7 @@ FctERR MCP9808_Set_Resolution(MCP9808_res res)
 	uint16_t	RES = res;
 	FctERR		err;
 
-	if (res > MCP9808__RES_0_0625)	{ return ERR_VALUE; }	// Unknown resolution
+	if (res > MCP9808__RES_0_0625)	{ return ERROR_VALUE; }	// Unknown resolution
 
 	err = MCP9808_Write(&RES, MCP9808__RESOLUTION, 1);
 	if (err)	{ return err; }
@@ -124,7 +124,7 @@ FctERR MCP9808_Set_Resolution(MCP9808_res res)
 	MCP9808.NewData = false;
 	MCP9808.hLast = HAL_GetTick();
 
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -137,7 +137,7 @@ FctERR MCP9808_Get_Resolution(MCP9808_res * res)
 	if (err)	{ return err; }
 
 	*res = RES;
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 

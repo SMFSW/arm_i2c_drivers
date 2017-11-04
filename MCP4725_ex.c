@@ -18,7 +18,7 @@ FctERR MCP4725_Write_Command(uint16_t val)
 {
 	uint8_t	CMD[3];
 
-	if (MCP4725.cfg.Mode > MCP4725__WRITE_DAC_EEP)	{ return ERR_CMD; }	// Unknown command
+	if (MCP4725.cfg.Mode > MCP4725__WRITE_DAC_EEP)	{ return ERROR_CMD; }	// Unknown command
 
 	if (MCP4725.cfg.Mode == MCP4725__FAST_MODE)
 	{
@@ -45,7 +45,7 @@ FctERR MCP4725_Read_DAC(uint16_t * val)
 	if (err)	{ return err; }
 
 	*val = RSHIFT(REG[2], 4) | LSHIFT(REG[1], 4);
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
@@ -58,7 +58,7 @@ FctERR MCP4725_Read_State(bool * state)
 	if (err)	{ return err; }
 
 	*state = (REG & 0x80) ? true : false;
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 

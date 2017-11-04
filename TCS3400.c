@@ -40,10 +40,10 @@ __WEAK FctERR TCS3400_Init(void)
 
 FctERR TCS3400_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 {
-	if (!I2C_is_enabled(&TCS3400_hal))		{ return ERR_DISABLED; }	// Peripheral disabled
-	if (!data)								{ return ERR_MEMORY; }		// Null pointer
-	if (addr > TCS3400__AICLEAR)			{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb) > TCS3400__AICLEAR + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(&TCS3400_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
+	if (!data)								{ return ERROR_MEMORY; }		// Null pointer
+	if (addr > TCS3400__AICLEAR)			{ return ERROR_RANGE; }		// Unknown register
+	if ((addr + nb) > TCS3400__AICLEAR + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&TCS3400_hal, true);
 
@@ -56,10 +56,10 @@ FctERR TCS3400_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 
 FctERR TCS3400_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 {
-	if (!I2C_is_enabled(&TCS3400_hal))		{ return ERR_DISABLED; }	// Peripheral disabled
-	if (!data)							{ return ERR_MEMORY; }		// Null pointer
-	if (addr > TCS3400__IR)				{ return ERR_RANGE; }		// Unknown register
-	if ((addr + nb) > TCS3400__IR + 1)	{ return ERR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(&TCS3400_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
+	if (!data)							{ return ERROR_MEMORY; }		// Null pointer
+	if (addr > TCS3400__IR)				{ return ERROR_RANGE; }		// Unknown register
+	if ((addr + nb) > TCS3400__IR + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&TCS3400_hal, true);
 
@@ -74,7 +74,7 @@ FctERR TCS3400_Write_Word(uint16_t * data, uint16_t addr)
 {
 	uint8_t	WREG[2];
 
-	if (addr > TCS3400__CICLEAR)		{ return ERR_RANGE; }		// Unknown register
+	if (addr > TCS3400__CICLEAR)		{ return ERROR_RANGE; }		// Unknown register
 
 	WREG[0] = LOBYTE(*data);
 	WREG[1] = HIBYTE(*data);
@@ -87,13 +87,13 @@ FctERR TCS3400_Read_Word(uint16_t * data, uint16_t addr)
 	uint8_t	WREG[2];
 	FctERR	err;
 
-	if (addr > TCS3400__BDATAH)		{ return ERR_RANGE; }		// Unknown register
+	if (addr > TCS3400__BDATAH)		{ return ERROR_RANGE; }		// Unknown register
 
 	err = TCS3400_Read(WREG, addr, 2);
 	if (err)	{ return err; }
 
 	*data = MAKEWORD(WREG[0], WREG[1]);
-	return ERR_OK;
+	return ERROR_OK;
 }
 
 
