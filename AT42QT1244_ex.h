@@ -67,18 +67,18 @@ typedef union uAT42QT_REG_MAP {
 /*** High level methods and functions ***/
 /****************************************/
 
-FctERR AT42QT1244_Send_Command(AT42QT_cmd cmd);
-FctERR AT42QT1244_Send_Setup(uint8_t * setup, uint8_t addr, uint8_t nb);
+FctERR AT42QT1244_Send_Command(const AT42QT_cmd cmd);
+FctERR AT42QT1244_Send_Setup(const uint8_t * setup, const uint8_t addr, const uint8_t nb);
 
-FctERR AT42QT1244_Setup_Key(uint8_t Key, bool use);
-FctERR AT42QT1244_Setup_FHM(AT42QT_FHM FHM);
+FctERR AT42QT1244_Setup_Key(const uint8_t Key, const bool use);
+FctERR AT42QT1244_Setup_FHM(const AT42QT_FHM FHM);
 
 FctERR AT42QT1244_Get_Keys(uint32_t * Keys);
 
 int AT42QT1244_is_Calib_Pending(void);
 
 
-__INLINE FctERR INLINE__ AT42QT1244_Get_Key_Data(uAT42QT_REG__KEY_DATA * Key_Data, uint8_t Key_Num) {
+__INLINE FctERR INLINE__ AT42QT1244_Get_Key_Data(uAT42QT_REG__KEY_DATA * Key_Data, const uint8_t Key_Num) {
 	return AT42QT1244_Read((uint8_t *) Key_Data, AT42QT__DATA_KEY_1 + (Key_Num * sizeof(uAT42QT_REG__KEY_DATA)), sizeof(uAT42QT_REG__KEY_DATA)); }
 
 
@@ -90,10 +90,10 @@ __INLINE FctERR INLINE__ AT42QT1244_Reset(void) {
 	return AT42QT1244_Send_Command(AT42QT__RESET_DEVICE); }
 
 
-__INLINE FctERR INLINE__ AT42QT1244_Key_Enable(uint8_t Key) {
+__INLINE FctERR INLINE__ AT42QT1244_Key_Enable(const uint8_t Key) {
 	return AT42QT1244_Setup_Key(Key, true); }
 
-__INLINE FctERR INLINE__ AT42QT1244_Key_Disable(uint8_t Key) {
+__INLINE FctERR INLINE__ AT42QT1244_Key_Disable(const uint8_t Key) {
 	return AT42QT1244_Setup_Key(Key, false); }
 
 

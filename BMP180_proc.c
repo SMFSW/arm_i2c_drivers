@@ -55,7 +55,7 @@ __WEAK FctERR BMP180_Init_Sequence(void)
 **	pressure (in hPa), and sea-level pressure (in hPa).
 **	\param[in] pressure - Atmospheric pressure in hPa
 **/
-__STATIC_INLINE float INLINE__ BMP180_Pressure_To_Altitude(float pressure)
+__STATIC_INLINE float INLINE__ BMP180_Pressure_To_Altitude(const float pressure)
 {
 	// Equation from BMP180 datasheet from page 16
 	return (44330.0 * (1.0 - pow(pressure / SEA_LEVEL_PRESSURE, (1 / 5.255))));
@@ -67,7 +67,7 @@ __STATIC_INLINE float INLINE__ BMP180_Pressure_To_Altitude(float pressure)
 **	\param[in] altitude - Altitude in meters
 **	\param[in] pressure - Atmospheric pressure in hPa
 **/
-__STATIC_INLINE float INLINE__ BMP180_seaLevel_Pressure_For_Altitude(float altitude, float pressure)
+__STATIC_INLINE float INLINE__ BMP180_seaLevel_Pressure_For_Altitude(const float altitude, const float pressure)
 {
 	// Equation from BMP180 datasheet from page 17
 	return (pressure / pow(1.0 - (altitude / 44330.0), 5.255));
@@ -77,7 +77,7 @@ __STATIC_INLINE float INLINE__ BMP180_seaLevel_Pressure_For_Altitude(float altit
 /****************************************************************/
 
 
-FctERR BMP180_Set_Oversampling(BMP180_oversampling oss)
+FctERR BMP180_Set_Oversampling(const BMP180_oversampling oss)
 {
 	if (oss > BMP180__OSS_8_TIME)	{ return ERROR_VALUE; }	// Unknown Oversampling
 
@@ -104,7 +104,7 @@ FctERR BMP180_Get_Calibration(BMP180_calib * calib)
 
 /**!\brief  Compute B5 coefficient used in temperature & pressure calculations.
 **/
-static int32_t computeB5(int32_t UT)
+static int32_t computeB5(const int32_t UT)
 {
 	// TODO: find what's wrong here
 	int32_t X1 = (UT - BMP180.cfg.Calib.AC6) * BMP180.cfg.Calib.AC5 / LSHIFT(1, 15);

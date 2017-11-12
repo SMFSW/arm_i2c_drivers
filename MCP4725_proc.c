@@ -35,7 +35,7 @@ __WEAK FctERR MCP4725_Init_Sequence(void)
 /****************************************************************/
 
 
-FctERR MCP4725_Set_Mode(MCP4725_cmd mode)
+FctERR MCP4725_Set_Mode(const MCP4725_cmd mode)
 {
 	if (mode > MCP4725__WRITE_DAC_EEP)		{ return ERROR_VALUE; }
 
@@ -44,7 +44,7 @@ FctERR MCP4725_Set_Mode(MCP4725_cmd mode)
 }
 
 
-FctERR MCP4725_Set_PowerDown(MCP4725_pd pd)
+FctERR MCP4725_Set_PowerDown(const MCP4725_pd pd)
 {
 	if (pd > MCP4725__PWR_DOWN_500K)		{ return ERROR_VALUE; }
 
@@ -62,7 +62,7 @@ FctERR MCP4725_Set_VRef(float vref)
 }
 
 
-FctERR MCP4725_Set_Val(uint16_t val)
+FctERR MCP4725_Set_Val(const uint16_t val)
 {
 	FctERR err;
 
@@ -78,7 +78,7 @@ FctERR MCP4725_Set_Val(uint16_t val)
 	return ERROR_OK;
 }
 
-FctERR MCP4725_Set_Volts(float volts)
+FctERR MCP4725_Set_Volts(const float volts)
 {
 	uint16_t	VAL;
 	FctERR		err;

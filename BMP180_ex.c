@@ -17,7 +17,7 @@
 static uint8_t BMP180_OSS_time[4] = { 5, 8, 14, 26 };	//!< BMP180 Oversampling values with +1.5ms than given in datasheet
 
 
-FctERR BMP180_Start_Conversion(BMP180_meas meas)
+FctERR BMP180_Start_Conversion(const BMP180_meas meas)
 {
 	uBMP180_REG__MEAS_CTRL	CTRL;
 	FctERR					err;

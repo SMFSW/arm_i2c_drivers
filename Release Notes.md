@@ -21,6 +21,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
+## v0.7
+
+* Use of const qualifier in function parameters
+
 ## v0.6
 
 * overhaul update due to updates from sarmfsw

@@ -72,14 +72,14 @@ extern PCF8523_proc	PCF8523;
 __WEAK FctERR PCF8523_Init_Sequence(void);
 
 
-FctERR PCF8523_Set_Date(PCF8523_date date, bool BCD);
+FctERR PCF8523_Set_Date(const PCF8523_date date, const bool BCD);
 
-FctERR PCF8523_Set_Time(PCF8523_time time, bool BCD);
+FctERR PCF8523_Set_Time(const PCF8523_time time, const bool BCD);
 
 
-FctERR PCF8523_Get_Date(PCF8523_date * date, bool BCD);
+FctERR PCF8523_Get_Date(PCF8523_date * date, const bool BCD);
 
-FctERR PCF8523_Get_Time(PCF8523_time * time, bool BCD);
+FctERR PCF8523_Get_Time(PCF8523_time * time, const bool BCD);
 
 
 /*!\brief Handler for PCF8523 peripheral

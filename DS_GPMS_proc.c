@@ -77,7 +77,7 @@ FctERR GPMS_Get_Hour(GPMS_hour * hour)
 ** \param[in] raw - pointer to raw datas read from sensor
 ** \return Nothing
 **/
-static void GPMS_Fill_coords(GPMS_coord * coord, uint8_t * raw)
+static void GPMS_Fill_coords(GPMS_coord * coord, const uint8_t * raw)
 {
 	coord->Degrees = (raw[0] * 10) + raw[1];
 	coord->Minutes = (raw[2] * 10.0f) + raw[3] + (raw[4] * 0.1f) + (raw[5] * 0.01f) + (raw[6] * 0.001f) + (raw[7] * 0.0001f);
@@ -89,7 +89,7 @@ static void GPMS_Fill_coords(GPMS_coord * coord, uint8_t * raw)
 ** \param[in] raw - pointer to raw datas read from sensor
 ** \return Nothing
 **/
-static void GPMS_Fill_sp_hd(float * out, uint8_t * raw)
+static void GPMS_Fill_sp_hd(float * out, const uint8_t * raw)
 {
 	*out = (raw[0] * 100) + (raw[1] * 10) + raw[2] + (raw[3] * 0.1f);
 }
@@ -127,7 +127,7 @@ FctERR GPMS_Get_Longitude(GPMS_coord * lon)
 }
 
 
-FctERR GPMS_Get_Heading(float * heading, GPMS_north type)
+FctERR GPMS_Get_Heading(float * heading, const GPMS_north type)
 {
 	uint8_t	HEADING[4];
 	FctERR	err;

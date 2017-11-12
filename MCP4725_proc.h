@@ -53,32 +53,32 @@ __WEAK FctERR MCP4725_Init_Sequence(void);
 ** \param[in] mode - operating mode of MCP4725
 ** \return FctERR - error code
 **/
-FctERR MCP4725_Set_Mode(MCP4725_cmd mode);
+FctERR MCP4725_Set_Mode(const MCP4725_cmd mode);
 
 /*!\brief Set Power down mode of the MCP4725 peripheral
 ** \param[in] pd - Power down mode of MCP4725
 ** \return FctERR - error code
 **/
-FctERR MCP4725_Set_PowerDown(MCP4725_pd pd);
+FctERR MCP4725_Set_PowerDown(const MCP4725_pd pd);
 
 /*!\brief Set VRef for MCP4725 peripheral
 ** \param[in] vref - Voltage reference of MCP4725
 ** \return FctERR - error code
 **/
-FctERR MCP4725_Set_VRef(float vref);
+FctERR MCP4725_Set_VRef(const float vref);
 
 
 /*!\brief Write Raw DAC value to MCP4725 peripheral
 ** \param[in] val - Raw DAC value
 ** \return FctERR - error code
 **/
-FctERR MCP4725_Set_Val(uint16_t val);
+FctERR MCP4725_Set_Val(const uint16_t val);
 
 /*!\brief Write DAC value (in Volts) to MCP4725 peripheral
 ** \param[in] volts - Volts DAC value
 ** \return FctERR - error code
 **/
-FctERR MCP4725_Set_Volts(float volts);
+FctERR MCP4725_Set_Volts(const float volts);
 
 
 /****************************************************************/

@@ -89,25 +89,25 @@ __INLINE FctERR INLINE__ PCF8523_Disable_Weekday_Alarm(void) {
 	return PCF8523_Write(&ALARM, PCF8523__WEEKDAY_ALARM, 1); }
 
 
-FctERR PCF8523_Enable_Minute_Alarm(uint8_t min);
-FctERR PCF8523_Enable_Hour_Alarm(uint8_t hour);
-FctERR PCF8523_Enable_Day_Alarm(uint8_t day);
-FctERR PCF8523_Enable_Weekday_Alarm(uint8_t weekday);
+FctERR PCF8523_Enable_Minute_Alarm(const uint8_t min);
+FctERR PCF8523_Enable_Hour_Alarm(const uint8_t hour);
+FctERR PCF8523_Enable_Day_Alarm(const uint8_t day);
+FctERR PCF8523_Enable_Weekday_Alarm(const uint8_t weekday);
 
-FctERR PCF8523_Set_12_24(bool twelve);
+FctERR PCF8523_Set_12_24(const bool twelve);
 
 
-__INLINE FctERR INLINE__ PCF8523_Set_Date_Raw(uint8_t * date) {
-	return PCF8523_Write(date, PCF8523__DAYS, 4); }
+__INLINE FctERR INLINE__ PCF8523_Set_Date_Raw(const uint8_t date[4]) {
+	return PCF8523_Write((uint8_t *) date, PCF8523__DAYS, 4); }
 
-__INLINE FctERR INLINE__ PCF8523_Set_Time_Raw(uint8_t * time) {
-	return PCF8523_Write(time, PCF8523__SECONDS, 3); }
+__INLINE FctERR INLINE__ PCF8523_Set_Time_Raw(const uint8_t time[3]) {
+	return PCF8523_Write((uint8_t *) time, PCF8523__SECONDS, 3); }
 
 
 /*!\brief Countdown calculation for PCF8523 peripheral
 ** \return Error code
 **/
-FctERR PCF8523_Get_Countdown(uint8_t * ctdw, uint16_t period, uint8_t timer);
+FctERR PCF8523_Get_Countdown(uint8_t * ctdw, const uint16_t period, const uint8_t timer);
 
 __INLINE FctERR INLINE__ PCF8523_Get_Date_Raw(uint8_t * date) {
 	return PCF8523_Read(date, PCF8523__DAYS, 4); }

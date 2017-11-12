@@ -58,46 +58,45 @@ typedef union uMCP9808_REG_MAP {
 ** \param[in] cfg - Configuration value
 ** \return FctERR - error code
 **/
-FctERR MCP9808_Write_Config(uint16_t cfg);
-//	return  MCP9808_Write(&cfg, MCP9808__CONFIGURATION, 1); }
+FctERR MCP9808_Write_Config(const uint16_t cfg);
 
 /*!\brief Write MCP9808 configuration
 ** \param[in] shutdown - 0 Normal operation, 1 Shutdown
 ** \return FctERR - error code
 **/
-FctERR MCP9808_Shutdown(bool shutdown);
+FctERR MCP9808_Shutdown(const bool shutdown);
 
 /*!\brief Set MCP9808 alert hysteresis
 ** \param[in] hys - Alert hysteresis
 ** \return FctERR - error code
 **/
-FctERR MCP9808_Set_AlertHysteresis(MCP9808_hyst hys);
+FctERR MCP9808_Set_AlertHysteresis(const MCP9808_hyst hys);
 
 /*!\brief Set MCP9808 alert type
 ** \param[in] comparator - 0 ???, 1 Comparator
 ** \return FctERR - error code
 **/
-FctERR MCP9808_Set_AlertType(bool comparator);
+FctERR MCP9808_Set_AlertType(const bool comparator);
 
 /*!\brief Set MCP9808 alert enable
 ** \param[in] en - 0 Disabled, 1 Enabled
 ** \param[in] alt - 0 Low, 1 High
 ** \return FctERR - error code
 **/
-FctERR MCP9808_Set_AlertOutput(bool en, bool alt);
+FctERR MCP9808_Set_AlertOutput(const bool en, const bool alt);
 
 /*!\brief Set MCP9808 alert lock
 ** \param[in] alt - Alert type
 ** \param[in] lock - 0 Unlocked, 1 Locked
 ** \return FctERR - error code
 **/
-FctERR MCP9808_Set_AlertLock(MCP9808_alert alt, bool lock);
+FctERR MCP9808_Set_AlertLock(const MCP9808_alert alt, const bool lock);
 
 /*!\brief Set MCP9808 Resolution
 ** \param[in] res - Resolution for MCP9808
 ** \return FctERR - error code
 **/
-FctERR MCP9808_Set_Resolution(MCP9808_res res);
+FctERR MCP9808_Set_Resolution(const MCP9808_res res);
 
 
 /*!\brief Get MCP9808 Configuration

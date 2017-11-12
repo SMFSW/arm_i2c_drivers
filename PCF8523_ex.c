@@ -19,7 +19,7 @@ static float PCF8523_Clock_Timer_A_B[8] = { 4096.0f, 64.0f, 1.0f, (1.0f/60.0f), 
 static float PCF8523_Low_Pulse_Width_B[8] = { 46.875f, 62.5f, 78.125f, 93.750f, 125.0f, 156.250f, 187.5f, 218.75f };
 
 
-FctERR PCF8523_Enable_Minute_Alarm(uint8_t min)
+FctERR PCF8523_Enable_Minute_Alarm(const uint8_t min)
 {
 	uPCF8523_REG__MINUTES ALARM;
 	
@@ -28,7 +28,7 @@ FctERR PCF8523_Enable_Minute_Alarm(uint8_t min)
 	return PCF8523_Write(&ALARM.Byte, PCF8523__MINUTE_ALARM, 1);
 }
 
-FctERR PCF8523_Enable_Hour_Alarm(uint8_t hour)
+FctERR PCF8523_Enable_Hour_Alarm(const uint8_t hour)
 {
 	uPCF8523_REG__HOURS ALARM;
 	
@@ -37,7 +37,7 @@ FctERR PCF8523_Enable_Hour_Alarm(uint8_t hour)
 	return PCF8523_Write(&ALARM.Byte, PCF8523__HOUR_ALARM, 1);
 }
 
-FctERR PCF8523_Enable_Day_Alarm(uint8_t day)
+FctERR PCF8523_Enable_Day_Alarm(const uint8_t day)
 {
 	uPCF8523_REG__DAYS ALARM;
 	
@@ -46,7 +46,7 @@ FctERR PCF8523_Enable_Day_Alarm(uint8_t day)
 	return PCF8523_Write(&ALARM.Byte, PCF8523__DAY_ALARM, 1);
 }
 
-FctERR PCF8523_Enable_Weekday_Alarm(uint8_t weekday)
+FctERR PCF8523_Enable_Weekday_Alarm(const uint8_t weekday)
 {
 	uPCF8523_REG__WEEKDAYS ALARM;
 	
@@ -56,7 +56,7 @@ FctERR PCF8523_Enable_Weekday_Alarm(uint8_t weekday)
 }
 
 
-FctERR PCF8523_Set_12_24(bool twelve)
+FctERR PCF8523_Set_12_24(const bool twelve)
 {
 	uPCF8523_REG__CTRL1	CTRL1;
 	FctERR				err;
@@ -69,7 +69,7 @@ FctERR PCF8523_Set_12_24(bool twelve)
 }
 
 
-FctERR PCF8523_Get_Countdown(uint8_t * ctdw, uint16_t period, uint8_t timer)
+FctERR PCF8523_Get_Countdown(uint8_t * ctdw, const uint16_t period, const uint8_t timer)
 {
 	uint16_t	T_x;
 	float		Clk_Timer = PCF8523_Clock_Timer_A_B[(timer ? PCF8523.cfg.Src_Clock_B : PCF8523.cfg.Src_Clock_A)];

@@ -14,7 +14,7 @@
 /****************************************************************/
 
 
-FctERR MCP4725_Write_Command(uint16_t val)
+FctERR MCP4725_Write_Command(const uint16_t val)
 {
 	uint8_t	CMD[3];
 

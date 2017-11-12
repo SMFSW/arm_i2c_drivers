@@ -141,7 +141,7 @@ __WEAK FctERR PCA9624_Init(void);
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR PCA9624_Write(uint8_t * data, uint16_t addr, uint16_t nb);
+FctERR PCA9624_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for PCA9624
@@ -151,7 +151,7 @@ FctERR PCA9624_Write(uint8_t * data, uint16_t addr, uint16_t nb);
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR PCA9624_Read(uint8_t * data, uint16_t addr, uint16_t nb);
+FctERR PCA9624_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /****************************************************************/

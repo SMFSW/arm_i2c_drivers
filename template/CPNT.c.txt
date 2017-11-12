@@ -39,26 +39,26 @@ __WEAK FctERR $CPNT$_Init(void)
 /****************************************************************/
 
 
-FctERR $CPNT$_Write(uint8_t * data, uint16_t addr, uint16_t nb)
+FctERR $CPNT$_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&$CPNT$_hal))	{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)							{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)							{ return ERROR_MEMORY; }	// Null pointer
 	//if (addr > )						{ return ERROR_RANGE; }		// Unknown register
 	//if ((addr + nb) > last_reg + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&$CPNT$_hal, true);
 	
-	$CPNT$_hal.status = HAL_I2C_Mem_Write($CPNT$_hal.cfg.inst, $CPNT$_hal.cfg.addr, addr, $CPNT$_hal.cfg.mem_size, data, nb, $CPNT$_hal.cfg.timeout);
+	$CPNT$_hal.status = HAL_I2C_Mem_Write($CPNT$_hal.cfg.inst, $CPNT$_hal.cfg.addr, addr, $CPNT$_hal.cfg.mem_size, (uint8_t *) data, nb, $CPNT$_hal.cfg.timeout);
 	
 	I2C_set_busy(&$CPNT$_hal, false);
 	return HALERRtoFCTERR($CPNT$_hal.status);
 }
 
 
-FctERR $CPNT$_Read(uint8_t * data, uint16_t addr, uint16_t nb)
+FctERR $CPNT$_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&$CPNT$))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)							{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)							{ return ERROR_MEMORY; }	// Null pointer
 	//if (addr > )						{ return ERROR_RANGE; }		// Unknown register
 	//if ((addr + nb) > last_reg + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 

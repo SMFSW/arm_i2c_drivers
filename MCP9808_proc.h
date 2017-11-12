@@ -68,7 +68,7 @@ __WEAK FctERR MCP9808_Init_Sequence(void);
 ** \param[in] alt - Alert type
 ** \return FctERR - error code
 **/
-FctERR MCP9808_Set_AlertTemp(float temp, MCP9808_alert alt);
+FctERR MCP9808_Set_AlertTemp(const float temp, const MCP9808_alert alt);
 
 
 /*!\brief Get the high/low/crit Alert temperature

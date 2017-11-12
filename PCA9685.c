@@ -38,26 +38,26 @@ __WEAK FctERR PCA9685_Init(void)
 /****************************************************************/
 
 
-FctERR PCA9685_Write(uint8_t * data, uint16_t addr, uint16_t nb)
+FctERR PCA9685_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&PCA9685_hal))			{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)									{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)									{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > PCA9685__TestMode)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > PCA9685__TestMode + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&PCA9685_hal, true);
 
-	PCA9685_hal.status = HAL_I2C_Mem_Write(PCA9685_hal.cfg.inst, PCA9685_hal.cfg.addr, addr, PCA9685_hal.cfg.mem_size, data, nb, PCA9685_hal.cfg.timeout);
+	PCA9685_hal.status = HAL_I2C_Mem_Write(PCA9685_hal.cfg.inst, PCA9685_hal.cfg.addr, addr, PCA9685_hal.cfg.mem_size, (uint8_t *) data, nb, PCA9685_hal.cfg.timeout);
 
 	I2C_set_busy(&PCA9685_hal, false);
 	return HALERRtoFCTERR(PCA9685_hal.status);
 }
 
 
-FctERR PCA9685_Read(uint8_t * data, uint16_t addr, uint16_t nb)
+FctERR PCA9685_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&PCA9685_hal))			{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)									{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)									{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > PCA9685__TestMode)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > PCA9685__TestMode + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 

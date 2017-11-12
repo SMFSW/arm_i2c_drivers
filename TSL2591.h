@@ -214,7 +214,7 @@ __WEAK FctERR TSL2591_Init(void);
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR TSL2591_Write(uint8_t * data, uint16_t addr, uint16_t nb);
+FctERR TSL2591_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for TSL2591
@@ -223,7 +223,7 @@ FctERR TSL2591_Write(uint8_t * data, uint16_t addr, uint16_t nb);
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR TSL2591_Read(uint8_t * data, uint16_t addr, uint16_t nb);
+FctERR TSL2591_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Word Write (low endian) function for TSL2591
@@ -231,7 +231,7 @@ FctERR TSL2591_Read(uint8_t * data, uint16_t addr, uint16_t nb);
 ** \param[in] addr - Address to write to
 ** \return FctERR - error code
 **/
-FctERR TSL2591_Write_Word(uint16_t * data, uint16_t addr);
+FctERR TSL2591_Write_Word(const uint16_t * data, const uint16_t addr);
 
 
 /*!\brief I2C Word Read (low endian) function for TSL2591
@@ -239,14 +239,14 @@ FctERR TSL2591_Write_Word(uint16_t * data, uint16_t addr);
 ** \param[in] addr - Address to read from
 ** \return FctERR - error code
 **/
-FctERR TSL2591_Read_Word(uint16_t * data, uint16_t addr);
+FctERR TSL2591_Read_Word(uint16_t * data, const uint16_t addr);
 
 
 /*!\brief I2C Special function Write function for TSL2591
 ** \param[in] func - special function to execute
 ** \return FctERR - error code
 **/
-FctERR TSL2591_Write_Special(TSL2591_spec_func func);
+FctERR TSL2591_Write_Special(const TSL2591_spec_func func);
 
 
 /****************************************************************/

@@ -38,12 +38,12 @@ __WEAK FctERR TCS3472_Init(void)
 /****************************************************************/
 
 
-FctERR TCS3472_Write(uint8_t * data, uint16_t addr, uint16_t nb)
+FctERR TCS3472_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	uTCS3472_CMD CMD;
 
 	if (!I2C_is_enabled(&TCS3472_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)								{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)								{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > TCS3472__CONTROL)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > TCS3472__CONTROL + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
@@ -53,19 +53,19 @@ FctERR TCS3472_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 	CMD.Bits.TRANSACTION = TCS3472__TRANS_NORMAL_OP;
 	CMD.Bits.ADDR = addr;
 
-	TCS3472_hal.status = HAL_I2C_Mem_Write(TCS3472_hal.cfg.inst, TCS3472_hal.cfg.addr, CMD.Byte, TCS3472_hal.cfg.mem_size, data, nb, TCS3472_hal.cfg.timeout);
+	TCS3472_hal.status = HAL_I2C_Mem_Write(TCS3472_hal.cfg.inst, TCS3472_hal.cfg.addr, CMD.Byte, TCS3472_hal.cfg.mem_size, (uint8_t *) data, nb, TCS3472_hal.cfg.timeout);
 
 	I2C_set_busy(&TCS3472_hal, false);
 	return HALERRtoFCTERR(TCS3472_hal.status);
 }
 
 
-FctERR TCS3472_Read(uint8_t * data, uint16_t addr, uint16_t nb)
+FctERR TCS3472_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	uTCS3472_CMD CMD;
 
 	if (!I2C_is_enabled(&TCS3472_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)								{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)								{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > TCS3472__BDATAH)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > TCS3472__BDATAH + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
@@ -82,7 +82,7 @@ FctERR TCS3472_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 }
 
 
-FctERR TCS3472_Write_Word(uint16_t * data, uint16_t addr)
+FctERR TCS3472_Write_Word(const uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 
@@ -94,7 +94,7 @@ FctERR TCS3472_Write_Word(uint16_t * data, uint16_t addr)
 }
 
 
-FctERR TCS3472_Read_Word(uint16_t * data, uint16_t addr)
+FctERR TCS3472_Read_Word(uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 	FctERR	err;
@@ -109,7 +109,7 @@ FctERR TCS3472_Read_Word(uint16_t * data, uint16_t addr)
 }
 
 
-FctERR TCS3472_Write_Special(TCS3472_spec_func func)
+FctERR TCS3472_Write_Special(const TCS3472_spec_func func)
 {
 	uTCS3472_CMD CMD;
 

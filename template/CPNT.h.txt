@@ -88,7 +88,7 @@ __WEAK FctERR $CPNT$_Init(void);
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR $CPNT$_Write(uint8_t * data, uint16_t addr, uint16_t nb);
+FctERR $CPNT$_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for $CPNT$
@@ -97,7 +97,7 @@ FctERR $CPNT$_Write(uint8_t * data, uint16_t addr, uint16_t nb);
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR $CPNT$_Read(uint8_t * data, uint16_t addr, uint16_t nb);
+FctERR $CPNT$_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /****************************************************************/

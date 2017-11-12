@@ -30,7 +30,7 @@
 ** \param[in] val - Raw DAC value for MCP4725 to write
 ** \return FctERR - error code
 **/
-FctERR MCP4725_Write_Command(uint16_t val);
+FctERR MCP4725_Write_Command(const uint16_t val);
 
 /*!\brief General call reset function for MCP4725
 ** \return FctERR - error code

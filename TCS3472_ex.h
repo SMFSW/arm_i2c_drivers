@@ -80,88 +80,88 @@ typedef union uTCS3472_REG_MAP {
 ** \param[in] en - 0 Disable, 1 Enable
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TCS3472_Write_En(uint8_t en) {
-	return TCS3472_Write(&en, TCS3472__ENABLE, 1); }
+__INLINE FctERR INLINE__ TCS3472_Write_En(const uint8_t en) {
+	return TCS3472_Write((uint8_t *) &en, TCS3472__ENABLE, 1); }
 
 /*!\brief Write TCS3472 Config register
 ** \param[in] cfg - Configuration register value
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TCS3472_Write_Cfg(uint8_t cfg) {
-	return TCS3472_Write(&cfg, TCS3472__CONFIG, 1); }
+__INLINE FctERR INLINE__ TCS3472_Write_Cfg(const uint8_t cfg) {
+	return TCS3472_Write((uint8_t *) &cfg, TCS3472__CONFIG, 1); }
 
 /*!\brief Write TCS3472 Control register
 ** \param[in] ctl - Control register value
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TCS3472_Write_Ctl(uint8_t ctl) {
-	return TCS3472_Write(&ctl, TCS3472__CONTROL, 1); }
+__INLINE FctERR INLINE__ TCS3472_Write_Ctl(const uint8_t ctl) {
+	return TCS3472_Write((uint8_t *) &ctl, TCS3472__CONTROL, 1); }
 
 
 /*!\brief oscillator Enable / Disable
 ** \param[in] en - 0 Disable, 1 Enable
 ** \return FctERR - error code
 **/
-FctERR TCS3472_Set_PON(bool en);
+FctERR TCS3472_Set_PON(const bool en);
 
 /*!\brief Clear module Enable / Disable
 ** \param[in] en - 0 Disable, 1 Enable
 ** \return FctERR - error code
 **/
-FctERR TCS3472_Set_AEN(bool en);
+FctERR TCS3472_Set_AEN(const bool en);
 
 /*!\brief Clear interrupt module Enable / Disable
 ** \param[in] en - 0 Disable, 1 Enable
 ** \return FctERR - error code
 **/
-FctERR TCS3472_Set_AIEN(bool en);
+FctERR TCS3472_Set_AIEN(const bool en);
 
 /*!\brief WAIT module Enable / Disable
 ** \param[in] en - 0 Disable, 1 Enable
 ** \return FctERR - error code
 **/
-FctERR TCS3472_Set_WEN(bool en);
+FctERR TCS3472_Set_WEN(const bool en);
 
 
 /*!\brief Gain configuration
 ** \param[in] gain - Gain value
 ** \return FctERR - error code
 **/
-FctERR TCS3472_Set_Gain(TCS3472_gain gain);
+FctERR TCS3472_Set_Gain(const TCS3472_gain gain);
 
 /*!\brief Integration time configuration
 ** \param[in] integ - Integration time value
 ** \return FctERR - error code
 **/
-FctERR TCS3472_Set_Integration_Time(uint16_t integ);
+FctERR TCS3472_Set_Integration_Time(const uint16_t integ);
 
 /*!\brief Wait time configuration
 ** \param[in] wait - Wait time value
 ** \return FctERR - error code
 **/
-FctERR TCS3472_Set_Wait_Time(uint16_t wait);
+FctERR TCS3472_Set_Wait_Time(const uint16_t wait);
 
 
 /*!\brief ALS interrupt low threshold configuration
 ** \param[in] thr - Low threshold value
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TCS3472_Set_AILT(uint16_t thr) {
-	return TCS3472_Write_Word(&thr, TCS3472__AILTL); }
+__INLINE FctERR INLINE__ TCS3472_Set_AILT(const uint16_t thr) {
+	return TCS3472_Write_Word((uint16_t *) &thr, TCS3472__AILTL); }
 
 /*!\brief ALS interrupt high threshold configuration
 ** \param[in] thr - High threshold value
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TCS3472_Set_AIHT(uint16_t thr) {
-	return TCS3472_Write_Word(&thr, TCS3472__AIHTL); }
+__INLINE FctERR INLINE__ TCS3472_Set_AIHT(const uint16_t thr) {
+	return TCS3472_Write_Word((uint16_t *) &thr, TCS3472__AIHTL); }
 
 /*!\brief ALS interrupt thresholds configuration
 ** \param[in] lthr - Low threshold value
 ** \param[in] hthr - High threshold value
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TCS3472_Set_AIT(uint16_t lthr, uint16_t hthr) {
+__INLINE FctERR INLINE__ TCS3472_Set_AIT(const uint16_t lthr, const uint16_t hthr) {
 	uint8_t DAT[4] = { LOBYTE(hthr), HIBYTE(hthr), LOBYTE(lthr), HIBYTE(lthr) };
 	return TCS3472_Write(DAT, TCS3472__AILTL, sizeof(DAT)); }
 
@@ -195,7 +195,7 @@ FctERR TCS3472_Get_Channels(uint16_t tab[]);
 ** \param[in] chan - Channel to get
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TCS3472_Get_Channel(uint16_t * buf, TCS3472_chan chan) {
+__INLINE FctERR INLINE__ TCS3472_Get_Channel(uint16_t * buf, const TCS3472_chan chan) {
 	if (chan > TCS3472__CHAN_BLUE)	{ return ERROR_VALUE; }	// Unknown channel
 	return TCS3472_Read_Word(buf, TCS3472__CDATAL + (2 * chan)); }
 

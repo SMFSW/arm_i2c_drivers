@@ -14,9 +14,7 @@
 /****************************************************************/
 
 
-/*!\brief TSL2591 oscillator Enable / Disable
-**/
-FctERR TSL2591_Set_PON(bool en)
+FctERR TSL2591_Set_PON(const bool en)
 {
 	uTSL2591_REG__ENABLE	EN;
 	FctERR					err;
@@ -28,9 +26,8 @@ FctERR TSL2591_Set_PON(bool en)
 	return TSL2591_Write_En(EN.Byte);
 }
 
-/*!\brief TSL2591 ALS module Enable / Disable
-**/
-FctERR TSL2591_Set_AEN(bool en)
+
+FctERR TSL2591_Set_AEN(const bool en)
 {
 	uTSL2591_REG__ENABLE	EN;
 	FctERR					err;
@@ -42,9 +39,8 @@ FctERR TSL2591_Set_AEN(bool en)
 	return TSL2591_Write_En(EN.Byte);
 }
 
-/*!\brief TSL2591 ALS interrupt module Enable / Disable
-**/
-FctERR TSL2591_Set_AIEN(bool en)
+
+FctERR TSL2591_Set_AIEN(const bool en)
 {
 	uTSL2591_REG__ENABLE	EN;
 	FctERR					err;
@@ -57,9 +53,7 @@ FctERR TSL2591_Set_AIEN(bool en)
 }
 
 
-/*!\brief TSL2591 gain configuration
-**/
-FctERR TSL2591_Set_Gain(TSL2591_gain gain)
+FctERR TSL2591_Set_Gain(const TSL2591_gain gain)
 {
 	uTSL2591_REG__CONFIG	CFG;
 	FctERR					err;
@@ -80,9 +74,8 @@ FctERR TSL2591_Set_Gain(TSL2591_gain gain)
 	return err;
 }
 
-/*!\brief TSL2591 integration time configuration
-**/
-FctERR TSL2591_Set_Integration_Time(TSL2591_integ integ)
+
+FctERR TSL2591_Set_Integration_Time(const TSL2591_integ integ)
 {
 	uTSL2591_REG__CONFIG	CFG;
 	FctERR					err;

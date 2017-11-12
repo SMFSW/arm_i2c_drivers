@@ -74,46 +74,46 @@ typedef union uTSL2591_REG_MAP {
 ** \param[in] en - 0 Disable, 1 Enable
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TSL2591_Write_En(uint8_t en) {
-	return TSL2591_Write(&en, TSL2591__ENABLE, 1); }
+__INLINE FctERR INLINE__ TSL2591_Write_En(const uint8_t en) {
+	return TSL2591_Write((uint8_t *) &en, TSL2591__ENABLE, 1); }
 
 /*!\brief Write TSL2591 Config
 ** \param[in] cfg - Configuration register value
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TSL2591_Write_Cfg(uint8_t cfg) {
-	return TSL2591_Write(&cfg, TSL2591__CONFIG, 1); }
+__INLINE FctERR INLINE__ TSL2591_Write_Cfg(const uint8_t cfg) {
+	return TSL2591_Write((uint8_t *) &cfg, TSL2591__CONFIG, 1); }
 
 
 /*!\brief Oscillator Enable / Disable
 ** \param[in] en - 0 Disable, 1 Enable
 ** \return FctERR - error code
 **/
-FctERR TSL2591_Set_PON(bool en);
+FctERR TSL2591_Set_PON(const bool en);
 
 /*!\brief ALS module Enable / Disable
 ** \param[in] en - 0 Disable, 1 Enable
 ** \return FctERR - error code
 **/
-FctERR TSL2591_Set_AEN(bool en);
+FctERR TSL2591_Set_AEN(const bool en);
 
 /*!\brief ALS interrupt module Enable / Disable
 ** \param[in] en - 0 Disable, 1 Enable
 ** \return FctERR - error code
 **/
-FctERR TSL2591_Set_AIEN(bool en);
+FctERR TSL2591_Set_AIEN(const bool en);
 
 /*!\brief Gain configuration
 ** \param[in] gain - Gain value
 ** \return FctERR - error code
 **/
-FctERR TSL2591_Set_Gain(TSL2591_gain gain);
+FctERR TSL2591_Set_Gain(const TSL2591_gain gain);
 
 /*!\brief Integration time configuration
 ** \param[in] integ - Integration time value
 ** \return FctERR - error code
 **/
-FctERR TSL2591_Set_Integration_Time(TSL2591_integ integ);
+FctERR TSL2591_Set_Integration_Time(const TSL2591_integ integ);
 
 
 
@@ -121,22 +121,22 @@ FctERR TSL2591_Set_Integration_Time(TSL2591_integ integ);
 ** \param[in] thr - Low threshold value
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TSL2591_Set_AILT(uint16_t thr) {
-	return TSL2591_Write_Word(&thr, TSL2591__AILTL); }
+__INLINE FctERR INLINE__ TSL2591_Set_AILT(const uint16_t thr) {
+	return TSL2591_Write_Word((uint16_t *) &thr, TSL2591__AILTL); }
 
 /*!\brief ALS interrupt high threshold configuration
 ** \param[in] thr - High threshold value
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TSL2591_Set_AIHT(uint16_t thr) {
-	return TSL2591_Write_Word(&thr, TSL2591__AIHTL); }
+__INLINE FctERR INLINE__ TSL2591_Set_AIHT(const uint16_t thr) {
+	return TSL2591_Write_Word((uint16_t *) &thr, TSL2591__AIHTL); }
 
 /*!\brief ALS interrupt thresholds configuration
 ** \param[in] lthr - Low threshold value
 ** \param[in] hthr - High threshold value
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TSL2591_Set_AIT(uint16_t lthr, uint16_t hthr) {
+__INLINE FctERR INLINE__ TSL2591_Set_AIT(const uint16_t lthr, const uint16_t hthr) {
 	uint8_t DAT[4] = { LOBYTE(hthr), HIBYTE(hthr), LOBYTE(lthr), HIBYTE(lthr) };
 	return TSL2591_Write(DAT, TSL2591__AILTL, sizeof(DAT)); }
 
@@ -145,22 +145,22 @@ __INLINE FctERR INLINE__ TSL2591_Set_AIT(uint16_t lthr, uint16_t hthr) {
 ** \param[in] thr - Persist Low threshold filter value
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TSL2591_Set_NPAILT(uint16_t thr) {
-	return TSL2591_Write_Word(&thr, TSL2591__NPAILTL); }
+__INLINE FctERR INLINE__ TSL2591_Set_NPAILT(const uint16_t thr) {
+	return TSL2591_Write_Word((uint16_t *) &thr, TSL2591__NPAILTL); }
 
 /*!\brief ALS interrupt Persist High threshold filter configuration
 ** \param[in] thr - Persist High threshold filter value
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TSL2591_Set_NPAIHT(uint16_t thr) {
-	return TSL2591_Write_Word(&thr, TSL2591__NPAIHTL); }
+__INLINE FctERR INLINE__ TSL2591_Set_NPAIHT(const uint16_t thr) {
+	return TSL2591_Write_Word((uint16_t *) &thr, TSL2591__NPAIHTL); }
 
 /*!\brief ALS interrupt Persist threshold filters configuration
 ** \param[in] lthr - Low threshold filter value
 ** \param[in] hthr - High threshold filter value
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TSL2591_Set_NPAIT(uint16_t lthr, uint16_t hthr) {
+__INLINE FctERR INLINE__ TSL2591_Set_NPAIT(const uint16_t lthr, const uint16_t hthr) {
 	uint8_t DAT[4] = { LOBYTE(hthr), HIBYTE(hthr), LOBYTE(lthr), HIBYTE(lthr) };
 	return TSL2591_Write(DAT, TSL2591__NPAILTL, sizeof(DAT)); }
 

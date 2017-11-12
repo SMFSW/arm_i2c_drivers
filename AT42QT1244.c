@@ -30,7 +30,7 @@ I2C_slave AT42QT1244_hal = { { pNull, I2C_ADDR(AT42QT1244_BASE_ADDR), I2C_slave_
 ** \param[in] data - new data for crc
 ** \return New CRC value
 **/
-static uint16_t crc16(uint16_t crc, uint8_t data)
+static uint16_t crc16(uint16_t crc, const uint8_t data)
 {
 	crc ^= (uint16_t) LSHIFT(data, 8);
 	for (int i = 7 ; i >= 0 ; i--)
@@ -60,10 +60,10 @@ __WEAK FctERR AT42QT1244_Init(void)
 /****************************************************************/
 
 
-FctERR AT42QT1244_Write(uint8_t * data, uint16_t addr, uint16_t nb)
+FctERR AT42QT1244_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&AT42QT1244_hal))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)											{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)											{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > AT42QT__SETUP_HOST_CRC_MSB)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > AT42QT__SETUP_HOST_CRC_MSB + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
@@ -71,14 +71,14 @@ FctERR AT42QT1244_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 
 	// TODO: check if trick works
 	// MemAddress then 0x00 has to be sent, trick is to tell MEMADD size is 16 bit and send addr as the MSB
-	AT42QT1244_hal.status = HAL_I2C_Mem_Write(AT42QT1244_hal.cfg.inst, AT42QT1244_hal.cfg.addr, LSHIFT(addr, 8), I2C_MEMADD_SIZE_16BIT, data, nb, AT42QT1244_hal.cfg.timeout);
+	AT42QT1244_hal.status = HAL_I2C_Mem_Write(AT42QT1244_hal.cfg.inst, AT42QT1244_hal.cfg.addr, LSHIFT(addr, 8), I2C_MEMADD_SIZE_16BIT, (uint8_t *) data, nb, AT42QT1244_hal.cfg.timeout);
 
 	I2C_set_busy(&AT42QT1244_hal, false);
 	return HALERRtoFCTERR(AT42QT1244_hal.status);
 }
 
 
-FctERR AT42QT1244_Read(uint8_t * data, uint16_t addr, uint16_t nb)
+FctERR AT42QT1244_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	FctERR		err = ERROR_OK;
 	uint16_t	crc = 0;
@@ -86,7 +86,7 @@ FctERR AT42QT1244_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 	uint8_t *	tmp_read = malloc(nb + 2);
 
 	if (!I2C_is_enabled(&AT42QT1244_hal))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((!data) || (!tmp_read))							{ return ERROR_MEMORY; }		// Null pointer or not malloc failed
+	if ((!data) || (!tmp_read))							{ return ERROR_MEMORY; }	// Null pointer or not malloc failed
 	if (addr > AT42QT__SETUP_HOST_CRC_MSB)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > AT42QT__SETUP_HOST_CRC_MSB + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 

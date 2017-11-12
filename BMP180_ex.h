@@ -33,7 +33,7 @@
 ** \param[in] meas - Temperature / Pressure
 ** \return FctERR - error code
 **/
-FctERR BMP180_Start_Conversion(BMP180_meas meas);
+FctERR BMP180_Start_Conversion(const BMP180_meas meas);
 
 
 /*!\brief Get BMP180 chip ID

@@ -34,12 +34,12 @@ __WEAK FctERR TSL2591_Init(void)
 /****************************************************************/
 
 
-FctERR TSL2591_Write(uint8_t * data, uint16_t addr, uint16_t nb)
+FctERR TSL2591_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	uTSL2591_CMD CMD;
 
 	if (!I2C_is_enabled(&TSL2591_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)								{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)								{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > TSL2591__PERSIST)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > TSL2591__PERSIST + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
@@ -49,19 +49,19 @@ FctERR TSL2591_Write(uint8_t * data, uint16_t addr, uint16_t nb)
 	CMD.Bits.TRANSACTION = TSL2591__TRANS_NORMAL_OP;
 	CMD.Bits.ADDR = addr;
 
-	TSL2591_hal.status = HAL_I2C_Mem_Write(TSL2591_hal.cfg.inst, TSL2591_hal.cfg.addr, CMD.Byte, TSL2591_hal.cfg.mem_size, data, nb, TSL2591_hal.cfg.timeout);
+	TSL2591_hal.status = HAL_I2C_Mem_Write(TSL2591_hal.cfg.inst, TSL2591_hal.cfg.addr, CMD.Byte, TSL2591_hal.cfg.mem_size, (uint8_t *) data, nb, TSL2591_hal.cfg.timeout);
 
 	I2C_set_busy(&TSL2591_hal, false);
 	return HALERRtoFCTERR(TSL2591_hal.status);
 }
 
 
-FctERR TSL2591_Read(uint8_t * data, uint16_t addr, uint16_t nb)
+FctERR TSL2591_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	uTSL2591_CMD CMD;
 
 	if (!I2C_is_enabled(&TSL2591_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)								{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)								{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > TSL2591__C1DATAH)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > TSL2591__C1DATAH + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
@@ -78,7 +78,7 @@ FctERR TSL2591_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 }
 
 
-FctERR TSL2591_Write_Word(uint16_t * data, uint16_t addr)
+FctERR TSL2591_Write_Word(const uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 
@@ -90,7 +90,7 @@ FctERR TSL2591_Write_Word(uint16_t * data, uint16_t addr)
 }
 
 
-FctERR TSL2591_Read_Word(uint16_t * data, uint16_t addr)
+FctERR TSL2591_Read_Word(uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 	FctERR	err;
@@ -105,7 +105,7 @@ FctERR TSL2591_Read_Word(uint16_t * data, uint16_t addr)
 }
 
 
-FctERR TSL2591_Write_Special(TSL2591_spec_func func)
+FctERR TSL2591_Write_Special(const TSL2591_spec_func func)
 {
 	uTSL2591_CMD CMD;
 

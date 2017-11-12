@@ -38,31 +38,31 @@ __WEAK FctERR FM24C_Init(void)
 /****************************************************************/
 
 
-FctERR FM24C_Write_Banked(uint8_t * data, uint16_t addr, uint8_t bank, uint16_t nb)
+FctERR FM24C_Write_Banked(const uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb)
 {
 	uint16_t i2c_addr = FM24C_hal.cfg.addr + (bank << 1);
 
 	if (!I2C_is_enabled(&FM24C_hal))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)										{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)										{ return ERROR_MEMORY; }	// Null pointer
 	if (bank >= (FM24C_SIZE / FM24C_BANK_SIZE))		{ return ERROR_RANGE; }		// Unknown bank
 	if (addr >= FM24C_BANK_SIZE)					{ return ERROR_RANGE; }		// Unknown address
 	if ((addr + nb) > FM24C_BANK_SIZE)				{ return ERROR_OVERFLOW; }	// Bank overflow
 
 	I2C_set_busy(&FM24C_hal, true);
 
-	FM24C_hal.status = HAL_I2C_Mem_Write(FM24C_hal.cfg.inst, i2c_addr, addr, FM24C_hal.cfg.mem_size, data, nb, FM24C_hal.cfg.timeout);
+	FM24C_hal.status = HAL_I2C_Mem_Write(FM24C_hal.cfg.inst, i2c_addr, addr, FM24C_hal.cfg.mem_size, (uint8_t *) data, nb, FM24C_hal.cfg.timeout);
 
 	I2C_set_busy(&FM24C_hal, false);
 	return HALERRtoFCTERR(FM24C_hal.status);
 }
 
 
-FctERR FM24C_Read_Banked(uint8_t * data, uint16_t addr, uint8_t bank, uint16_t nb)
+FctERR FM24C_Read_Banked(uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb)
 {
 	uint16_t i2c_addr = FM24C_hal.cfg.addr + (bank << 1);
 
 	if (!I2C_is_enabled(&FM24C_hal))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)										{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)										{ return ERROR_MEMORY; }	// Null pointer
 	if (bank >= (FM24C_SIZE / FM24C_BANK_SIZE))		{ return ERROR_RANGE; }		// Unknown bank
 	if (addr >= FM24C_BANK_SIZE)					{ return ERROR_RANGE; }		// Unknown address
 	if ((addr + nb) > FM24C_BANK_SIZE)				{ return ERROR_OVERFLOW; }	// Bank overflow
@@ -76,7 +76,7 @@ FctERR FM24C_Read_Banked(uint8_t * data, uint16_t addr, uint8_t bank, uint16_t n
 }
 
 
-FctERR FM24C_ReadWrite(uint8_t * data, uint16_t addr, uint16_t nb, bool wr)
+FctERR FM24C_ReadWrite(uint8_t * data, const uint16_t addr, const uint16_t nb, const bool wr)
 {
 	FctERR		err = ERROR_OK;
 	uint16_t	subaddr, bank, n;

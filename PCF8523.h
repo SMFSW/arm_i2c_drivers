@@ -308,7 +308,7 @@ __WEAK FctERR PCF8523_Init(void);
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR PCF8523_Write(uint8_t * data, uint16_t addr, uint16_t nb);
+FctERR PCF8523_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for PCF8523 peripheral
@@ -317,7 +317,7 @@ FctERR PCF8523_Write(uint8_t * data, uint16_t addr, uint16_t nb);
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR PCF8523_Read(uint8_t * data, uint16_t addr, uint16_t nb);
+FctERR PCF8523_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /****************************************************************/

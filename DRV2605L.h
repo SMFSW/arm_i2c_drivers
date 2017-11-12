@@ -479,7 +479,7 @@ __WEAK FctERR DRV2605L_Init(void);
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR DRV2605L_Write(uint8_t * data, uint16_t addr, uint16_t nb);
+FctERR DRV2605L_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for DRV2605L
@@ -489,7 +489,7 @@ FctERR DRV2605L_Write(uint8_t * data, uint16_t addr, uint16_t nb);
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR DRV2605L_Read(uint8_t * data, uint16_t addr, uint16_t nb);
+FctERR DRV2605L_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /****************************************************************/

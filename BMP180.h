@@ -153,7 +153,7 @@ __WEAK FctERR BMP180_Init(void);
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR BMP180_Write(uint8_t * data, uint16_t addr, uint16_t nb);
+FctERR BMP180_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for BMP180
@@ -162,7 +162,7 @@ FctERR BMP180_Write(uint8_t * data, uint16_t addr, uint16_t nb);
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR BMP180_Read(uint8_t * data, uint16_t addr, uint16_t nb);
+FctERR BMP180_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Word Read function for BMP180
@@ -170,7 +170,7 @@ FctERR BMP180_Read(uint8_t * data, uint16_t addr, uint16_t nb);
 ** \param[in] addr - Address to read from
 ** \return FctERR - error code
 **/
-FctERR BMP180_Read_Word(uint16_t * data, uint16_t addr);
+FctERR BMP180_Read_Word(uint16_t * data, const uint16_t addr);
 
 
 /****************************************************************/

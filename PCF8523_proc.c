@@ -45,7 +45,7 @@ __WEAK FctERR PCF8523_Init_Sequence(void)
 ** \param [in] hex - Hexadecimal value to convert
 ** \return FctERR - error code
 **/
-static FctERR hex2bcd(uint8_t * bcd, uint8_t hex)
+static FctERR hex2bcd(uint8_t * bcd, const uint8_t hex)
 {
 	*bcd = (uint8_t) (LSHIFT((hex / 10), 4) | (hex % 10));
 	return ERROR_OK;
@@ -57,7 +57,7 @@ static FctERR hex2bcd(uint8_t * bcd, uint8_t hex)
 ** \param [in] bcd - BCD value to convert
 ** \return FctERR - error code
 **/
-static FctERR bcd2hex(uint8_t * hex, uint8_t bcd)
+static FctERR bcd2hex(uint8_t * hex, const uint8_t bcd)
 {
 	uint8_t	ms = RSHIFT(bcd & 0xF0, 4);
 	uint8_t	ls = bcd & 0x0F;
@@ -72,7 +72,7 @@ static FctERR bcd2hex(uint8_t * hex, uint8_t bcd)
 /****************************************************************/
 
 
-FctERR PCF8523_Set_Date(PCF8523_date date, bool BCD)
+FctERR PCF8523_Set_Date(const PCF8523_date date, const bool BCD)
 {
 	uint8_t	DATE[4];
 	FctERR	err;
@@ -109,7 +109,7 @@ FctERR PCF8523_Set_Date(PCF8523_date date, bool BCD)
 }
 
 
-FctERR PCF8523_Set_Time(PCF8523_time time, bool BCD)
+FctERR PCF8523_Set_Time(const PCF8523_time time, const bool BCD)
 {
 	uint8_t	TIME[3];
 	FctERR	err;
@@ -147,7 +147,7 @@ FctERR PCF8523_Set_Time(PCF8523_time time, bool BCD)
 
 
 
-FctERR PCF8523_Get_Date(PCF8523_date * date, bool BCD)
+FctERR PCF8523_Get_Date(PCF8523_date * date, const bool BCD)
 {
 	uint8_t		DATE[4];
 	uint8_t		year;
@@ -181,7 +181,7 @@ FctERR PCF8523_Get_Date(PCF8523_date * date, bool BCD)
 }
 
 
-FctERR PCF8523_Get_Time(PCF8523_time * time, bool BCD)
+FctERR PCF8523_Get_Time(PCF8523_time * time, const bool BCD)
 {
 	PCF8523_time	TIME;
 	FctERR			err;

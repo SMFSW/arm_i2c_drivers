@@ -81,7 +81,7 @@ __WEAK FctERR BMP180_Init_Sequence(void);
 ** \param[in,out] oss - oversampling value
 ** \return FctERR - error code
 **/
-FctERR BMP180_Set_Oversampling(BMP180_oversampling oss);
+FctERR BMP180_Set_Oversampling(const BMP180_oversampling oss);
 
 
 /*!\brief Get calibration parameters from BMP180 peripheral

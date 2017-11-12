@@ -138,7 +138,7 @@ __WEAK FctERR MTCH6102_Init_Sequence(void)
 /****************************************************************/
 
 
-FctERR MTCH6102_decode_touch_datas(MTCH6102_gesture * touch, MTCH6102_raw_gest * dat)
+FctERR MTCH6102_decode_touch_datas(MTCH6102_gesture * touch, const MTCH6102_raw_gest * dat)
 {
 	if ((!dat) || (!touch))		{ return ERROR_MEMORY; }	// Null pointer
 
@@ -167,7 +167,7 @@ FctERR MTCH6102_decode_touch_datas(MTCH6102_gesture * touch, MTCH6102_raw_gest *
 }
 
 
-MTCH6102_Coord MTCH6102_rotate(MTCH6102_Coord c, int16_t deg)
+MTCH6102_Coord MTCH6102_rotate(const MTCH6102_Coord c, int16_t deg)
 {
 	float			rad;
 	MTCH6102_Coord	r;
@@ -214,7 +214,7 @@ MTCH6102_Coord MTCH6102_rotate(MTCH6102_Coord c, int16_t deg)
 }
 
 
-FctERR MTCH6102_gesture_to_str(char * str, MTCH6102_GESTURE_STATE state)
+FctERR MTCH6102_gesture_to_str(char * str, const MTCH6102_GESTURE_STATE state)
 {
 	if (!str)		{ return ERROR_MEMORY; }	// Null pointer
 
@@ -238,7 +238,7 @@ FctERR MTCH6102_gesture_to_str(char * str, MTCH6102_GESTURE_STATE state)
 	return ERROR_OK;
 }
 
-FctERR MTCH6102_diag_to_str(char * str, MTCH6102_GESTURE_DIAGNOSTIC diag)
+FctERR MTCH6102_diag_to_str(char * str, const MTCH6102_GESTURE_DIAGNOSTIC diag)
 {
 	if (!str)		{ return ERROR_MEMORY; }	// Null pointer
 

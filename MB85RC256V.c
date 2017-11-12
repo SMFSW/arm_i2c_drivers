@@ -38,26 +38,26 @@ __WEAK FctERR MB85RC256V_Init(void)
 /****************************************************************/
 
 
-FctERR MB85RC256V_Write(uint8_t * data, uint16_t addr, uint16_t nb)
+FctERR MB85RC256V_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&MB85RC256V_hal))	{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)								{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)								{ return ERROR_MEMORY; }	// Null pointer
 	if (addr >= MB85RC256V_SIZE)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > MB85RC256V_SIZE)		{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&MB85RC256V_hal, true);
 
-	MB85RC256V_hal.status = HAL_I2C_Mem_Write(MB85RC256V_hal.cfg.inst, MB85RC256V_hal.cfg.addr, addr, MB85RC256V_hal.cfg.mem_size, data, nb, MB85RC256V_hal.cfg.timeout);
+	MB85RC256V_hal.status = HAL_I2C_Mem_Write(MB85RC256V_hal.cfg.inst, MB85RC256V_hal.cfg.addr, addr, MB85RC256V_hal.cfg.mem_size, (uint8_t *) data, nb, MB85RC256V_hal.cfg.timeout);
 
 	I2C_set_busy(&MB85RC256V_hal, false);
 	return HALERRtoFCTERR(MB85RC256V_hal.status);
 }
 
 
-FctERR MB85RC256V_Read(uint8_t * data, uint16_t addr, uint16_t nb)
+FctERR MB85RC256V_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&MB85RC256V_hal))	{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)								{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)								{ return ERROR_MEMORY; }	// Null pointer
 	if (addr >= MB85RC256V_SIZE)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > MB85RC256V_SIZE)		{ return ERROR_OVERFLOW; }	// More bytes than registers
 
@@ -72,7 +72,7 @@ FctERR MB85RC256V_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 
 FctERR MB85RC256V_Read_ID(uint8_t * data)
 {
-	if (!data)							{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)		{ return ERROR_MEMORY; }	// Null pointer
 
 	I2C_set_busy(&MB85RC256V_hal, true);
 

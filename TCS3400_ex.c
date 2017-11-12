@@ -14,7 +14,7 @@
 /****************************************************************/
 
 
-FctERR TCS3400_Set_PON(bool en)
+FctERR TCS3400_Set_PON(const bool en)
 {
 	uTCS3400_REG__ENABLE EN;
 	FctERR				err;
@@ -27,7 +27,7 @@ FctERR TCS3400_Set_PON(bool en)
 }
 
 
-FctERR TCS3400_Set_AEN(bool en)
+FctERR TCS3400_Set_AEN(const bool en)
 {
 	uTCS3400_REG__ENABLE	EN;
 	FctERR					err;
@@ -40,7 +40,7 @@ FctERR TCS3400_Set_AEN(bool en)
 }
 
 
-FctERR TCS3400_Set_AIEN(bool en)
+FctERR TCS3400_Set_AIEN(const bool en)
 {
 	uTCS3400_REG__ENABLE	EN;
 	FctERR					err;
@@ -53,7 +53,7 @@ FctERR TCS3400_Set_AIEN(bool en)
 }
 
 
-FctERR TCS3400_Set_WEN(bool en)
+FctERR TCS3400_Set_WEN(const bool en)
 {
 	uTCS3400_REG__ENABLE	EN;
 	FctERR					err;
@@ -66,7 +66,7 @@ FctERR TCS3400_Set_WEN(bool en)
 }
 
 
-FctERR TCS3400_Set_SAI(bool en)
+FctERR TCS3400_Set_SAI(const bool en)
 {
 	uTCS3400_REG__ENABLE	EN;
 	FctERR					err;
@@ -79,7 +79,7 @@ FctERR TCS3400_Set_SAI(bool en)
 }
 
 
-FctERR TCS3400_Set_Gain(TCS3400_gain gain)
+FctERR TCS3400_Set_Gain(const TCS3400_gain gain)
 {
 	uTCS3400_REG__CONTROL	CTL;
 	FctERR					err;
@@ -100,7 +100,7 @@ FctERR TCS3400_Set_Gain(TCS3400_gain gain)
 }
 
 
-FctERR TCS3400_Set_Integration_Time(uint16_t integ)
+FctERR TCS3400_Set_Integration_Time(const uint16_t integ)
 {
 	uint8_t	ATIME;
 	FctERR	err;
@@ -119,7 +119,7 @@ FctERR TCS3400_Set_Integration_Time(uint16_t integ)
 }
 
 
-FctERR TCS3400_Set_Wait_Time(uint16_t wait)
+FctERR TCS3400_Set_Wait_Time(const uint16_t wait)
 {
 	uTCS3400_REG__CONFIG	CFG;
 	uint8_t					WAIT;

@@ -37,26 +37,26 @@ __WEAK FctERR MTCH6102_Init(void)
 /****************************************************************/
 
 
-FctERR MTCH6102_Write(uint8_t * data, uint16_t addr, uint16_t nb)
+FctERR MTCH6102_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&MTCH6102_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)								{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)								{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > MTCH__RAW_ADC_31)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > MTCH__RAW_ADC_31 + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&MTCH6102_hal, true);
 
-	MTCH6102_hal.status = HAL_I2C_Mem_Write(MTCH6102_hal.cfg.inst, MTCH6102_hal.cfg.addr, addr, MTCH6102_hal.cfg.mem_size, data, nb, MTCH6102_hal.cfg.timeout);
+	MTCH6102_hal.status = HAL_I2C_Mem_Write(MTCH6102_hal.cfg.inst, MTCH6102_hal.cfg.addr, addr, MTCH6102_hal.cfg.mem_size, (uint8_t *) data, nb, MTCH6102_hal.cfg.timeout);
 
 	I2C_set_busy(&MTCH6102_hal, false);
 	return HALERRtoFCTERR(MTCH6102_hal.status);
 }
 
 
-FctERR MTCH6102_Read(uint8_t * data, uint16_t addr, uint16_t nb)
+FctERR MTCH6102_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&MTCH6102_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)								{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)								{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > MTCH__RAW_ADC_31)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > MTCH__RAW_ADC_31 + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 

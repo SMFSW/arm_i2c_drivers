@@ -197,7 +197,7 @@ __WEAK FctERR GPMS_Init(void);
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR GPMS_Write(uint8_t * data, uint16_t addr, uint16_t nb);
+FctERR GPMS_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for GPMS
@@ -206,7 +206,7 @@ FctERR GPMS_Write(uint8_t * data, uint16_t addr, uint16_t nb);
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR GPMS_Read(uint8_t * data, uint16_t addr, uint16_t nb);
+FctERR GPMS_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /****************************************************************/

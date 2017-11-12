@@ -62,7 +62,7 @@ __WEAK FctERR MCP9808_Init_Sequence(void)
 /****************************************************************/
 
 
-FctERR MCP9808_Set_AlertTemp(float temp, MCP9808_alert alt)
+FctERR MCP9808_Set_AlertTemp(const float temp, const MCP9808_alert alt)
 {
 	uMCP9808_REG__TEMP_LIM	ALT;
 	float *					alert = &MCP9808.cfg.HighAlert + alt;

@@ -18,7 +18,7 @@
 // TODO: more extensions like PCA9624
 
 
-FctERR PCA9685_Reset(bool all)
+FctERR PCA9685_Reset(const bool all)
 {
 	uint8_t Data = 0x06;
 	PCA9685_hal.status = HAL_I2C_Master_Transmit(PCA9685_hal.cfg.inst, all ? PCA96xx_GENERAL_CALL_ADDR : PCA9685_hal.cfg.addr, &Data, 1, PCA9685_hal.cfg.timeout);
@@ -26,7 +26,7 @@ FctERR PCA9685_Reset(bool all)
 }
 
 
-FctERR PCA9685_ReadRegister(PCA9685_reg reg, uint8_t * val)
+FctERR PCA9685_ReadRegister(const PCA9685_reg reg, uint8_t * val)
 {
 	*val = 0;
 
@@ -36,7 +36,7 @@ FctERR PCA9685_ReadRegister(PCA9685_reg reg, uint8_t * val)
 }
 
 
-FctERR PCA9685_ReadVal256(PCA96xx_chan chan, uint8_t * duty)
+FctERR PCA9685_ReadVal256(const PCA96xx_chan chan, uint8_t * duty)
 {
 	FctERR		err = ERROR_OK;
 	uint16_t	ONCount = 0, OFFCount = 0;
@@ -63,7 +63,7 @@ FctERR PCA9685_ReadVal256(PCA96xx_chan chan, uint8_t * duty)
 }
 
 
-FctERR PCA9685_ReadVal1024(PCA96xx_chan chan, uint16_t * duty)
+FctERR PCA9685_ReadVal1024(const PCA96xx_chan chan, uint16_t * duty)
 {
 	FctERR		err;
 	uint16_t	ONCount = 0, OFFCount = 0;
@@ -90,7 +90,7 @@ FctERR PCA9685_ReadVal1024(PCA96xx_chan chan, uint16_t * duty)
 }
 
 
-FctERR PCA9685_PutVal256(PCA96xx_chan chan, uint8_t duty)
+FctERR PCA9685_PutVal256(const PCA96xx_chan chan, const uint8_t duty)
 {
 	uint16_t	RegAddr, OFFCount = 0;
 	uint8_t		Data[4];
@@ -122,7 +122,7 @@ FctERR PCA9685_PutVal256(PCA96xx_chan chan, uint8_t duty)
 }
 
 
-FctERR PCA9685_PutVal1024(PCA96xx_chan chan, uint16_t duty)
+FctERR PCA9685_PutVal1024(const PCA96xx_chan chan, const uint16_t duty)
 {
 	uint16_t	RegAddr, OFFCount = 0;
 	uint8_t		Data[4];
@@ -156,7 +156,7 @@ FctERR PCA9685_PutVal1024(PCA96xx_chan chan, uint16_t duty)
 }
 
 
-FctERR PCA9685_SetVal(PCA96xx_chan chan)
+FctERR PCA9685_SetVal(const PCA96xx_chan chan)
 {
 	uint16_t	RegAddr;
 	uint8_t		Data[4];
@@ -173,7 +173,7 @@ FctERR PCA9685_SetVal(PCA96xx_chan chan)
 }
 
 
-FctERR PCA9685_ClrVal(PCA96xx_chan chan)
+FctERR PCA9685_ClrVal(const PCA96xx_chan chan)
 {
 	uint16_t	RegAddr;
 	uint8_t		Data[4];

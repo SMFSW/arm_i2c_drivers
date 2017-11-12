@@ -34,25 +34,25 @@ __WEAK FctERR MCP4725_Init(void)
 /****************************************************************/
 
 
-FctERR MCP4725_Write(uint8_t * data, uint16_t nb)
+FctERR MCP4725_Write(const uint8_t * data, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&MCP4725_hal))	{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)							{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)							{ return ERROR_MEMORY; }	// Null pointer
 	if (nb > 3)							{ return ERROR_RANGE; }		// More bytes than registers
 
 	I2C_set_busy(&MCP4725_hal, true);
 
-	MCP4725_hal.status = HAL_I2C_Master_Transmit(MCP4725_hal.cfg.inst, MCP4725_hal.cfg.addr, data, nb, MCP4725_hal.cfg.timeout);
+	MCP4725_hal.status = HAL_I2C_Master_Transmit(MCP4725_hal.cfg.inst, MCP4725_hal.cfg.addr, (uint8_t *) data, nb, MCP4725_hal.cfg.timeout);
 
 	I2C_set_busy(&MCP4725_hal, false);
 	return HALERRtoFCTERR(MCP4725_hal.status);
 }
 
 
-FctERR MCP4725_Read(uint8_t * data, uint16_t nb)
+FctERR MCP4725_Read(uint8_t * data, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&MCP4725_hal))	{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)							{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)							{ return ERROR_MEMORY; }	// Null pointer
 	if (nb > 3)							{ return ERROR_RANGE; }		// More bytes than registers
 
 	I2C_set_busy(&MCP4725_hal, true);
@@ -64,13 +64,13 @@ FctERR MCP4725_Read(uint8_t * data, uint16_t nb)
 }
 
 
-FctERR MCP4725_General_Call(uint8_t cmd)
+FctERR MCP4725_General_Call(const uint8_t cmd)
 {
-	if ((cmd != MCP4725__RESET) && (cmd != MCP4725__WAKEUP))		{ return ERROR_CMD; }		// Unknown command
+	if ((cmd != MCP4725__RESET) && (cmd != MCP4725__WAKEUP))	{ return ERROR_CMD; }	// Unknown command
 
 	I2C_set_busy(&MCP4725_hal, true);
 
-	MCP4725_hal.status = HAL_I2C_Master_Receive(MCP4725_hal.cfg.inst, I2C_ADDR_General_Call, &cmd, 1, MCP4725_hal.cfg.timeout);
+	MCP4725_hal.status = HAL_I2C_Master_Receive(MCP4725_hal.cfg.inst, I2C_ADDR_General_Call, (uint8_t *) &cmd, 1, MCP4725_hal.cfg.timeout);
 
 	I2C_set_busy(&MCP4725_hal, false);
 	return HALERRtoFCTERR(MCP4725_hal.status);

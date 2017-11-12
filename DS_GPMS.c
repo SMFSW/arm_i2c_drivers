@@ -34,26 +34,26 @@ __WEAK FctERR GPMS_Init(void)
 /****************************************************************/
 
 
-FctERR GPMS_Write(uint8_t * data, uint16_t addr, uint16_t nb)
+FctERR GPMS_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&GPMS_hal))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)									{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)									{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > GPMS__IO_PORT_OUTPUT)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > GPMS__IO_PORT_OUTPUT + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&GPMS_hal, true);
 
-	GPMS_hal.status = HAL_I2C_Mem_Write(GPMS_hal.cfg.inst, GPMS_hal.cfg.addr, addr, GPMS_hal.cfg.mem_size, data, nb, GPMS_hal.cfg.timeout);
+	GPMS_hal.status = HAL_I2C_Mem_Write(GPMS_hal.cfg.inst, GPMS_hal.cfg.addr, addr, GPMS_hal.cfg.mem_size, (uint8_t *) data, nb, GPMS_hal.cfg.timeout);
 
 	I2C_set_busy(&GPMS_hal, false);
 	return HALERRtoFCTERR(GPMS_hal.status);
 }
 
 
-FctERR GPMS_Read(uint8_t * data, uint16_t addr, uint16_t nb)
+FctERR GPMS_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&GPMS_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)							{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)							{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > GPMS__STATUS)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > GPMS__STATUS + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 

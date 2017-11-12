@@ -14,7 +14,7 @@
 /****************************************************************/
 
 
-FctERR MCP9808_Write_Config(uint16_t cfg)
+FctERR MCP9808_Write_Config(const uint16_t cfg)
 {
 	uMCP9808_REG__CFG	CFG;
 	FctERR				err;
@@ -35,7 +35,7 @@ FctERR MCP9808_Write_Config(uint16_t cfg)
 }
 
 
-FctERR MCP9808_Shutdown(bool shutdown)
+FctERR MCP9808_Shutdown(const bool shutdown)
 {
 	uMCP9808_REG__CFG	CFG;
 	FctERR				err;
@@ -48,7 +48,7 @@ FctERR MCP9808_Shutdown(bool shutdown)
 }
 
 
-FctERR MCP9808_Set_AlertHysteresis(MCP9808_hyst hys)
+FctERR MCP9808_Set_AlertHysteresis(const MCP9808_hyst hys)
 {
 	uMCP9808_REG__CFG	CFG;
 	FctERR				err;
@@ -61,7 +61,7 @@ FctERR MCP9808_Set_AlertHysteresis(MCP9808_hyst hys)
 }
 
 
-FctERR MCP9808_Set_AlertType(bool comparator)
+FctERR MCP9808_Set_AlertType(const bool comparator)
 {
 	uMCP9808_REG__CFG	CFG;
 	FctERR				err;
@@ -78,7 +78,7 @@ FctERR MCP9808_Set_AlertType(bool comparator)
 }
 
 
-FctERR MCP9808_Set_AlertOutput(bool en, bool alt)
+FctERR MCP9808_Set_AlertOutput(const bool en, const bool alt)
 {
 	uMCP9808_REG__CFG	CFG;
 	FctERR				err;
@@ -93,7 +93,7 @@ FctERR MCP9808_Set_AlertOutput(bool en, bool alt)
 }
 
 
-FctERR MCP9808_Set_AlertLock(MCP9808_alert alt, bool lock)
+FctERR MCP9808_Set_AlertLock(const MCP9808_alert alt, const bool lock)
 {
 	uMCP9808_REG__CFG	CFG;
 	FctERR				err;
@@ -111,7 +111,7 @@ FctERR MCP9808_Set_AlertLock(MCP9808_alert alt, bool lock)
 }
 
 
-FctERR MCP9808_Set_Resolution(MCP9808_res res)
+FctERR MCP9808_Set_Resolution(const MCP9808_res res)
 {
 	uint16_t	RES = res;
 	FctERR		err;

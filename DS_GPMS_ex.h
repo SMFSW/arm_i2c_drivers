@@ -118,7 +118,7 @@ typedef union uGPMS_RD_REG_MAP {
 /****************************************/
 
 
-__INLINE FctERR INLINE__ GPMS_Set_Mode(GPMS_mode mode) {
+__INLINE FctERR INLINE__ GPMS_Set_Mode(const GPMS_mode mode) {
 	return GPMS_Write((uint8_t *) &mode, GPMS__GPS_MODE, 1); }
 
 	

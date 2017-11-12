@@ -14,23 +14,23 @@
 /****************************************************************/
 
 
-FctERR AT42QT1244_Send_Command(AT42QT_cmd cmd)
+FctERR AT42QT1244_Send_Command(const AT42QT_cmd cmd)
 {
 	if ((cmd > AT42QT__RESET_DEVICE) && (cmd < AT42QT__LOW_LEVEL_CALIBRATION))	{ return ERROR_VALUE; }
-	return AT42QT1244_Write(&cmd, AT42QT__CONTROL_COMMAND, 1);
+	return AT42QT1244_Write((uint8_t *) &cmd, AT42QT__CONTROL_COMMAND, 1);
 }
 
 
-FctERR AT42QT1244_Send_Setup(uint8_t * setup, uint8_t addr, uint8_t Nb)
+FctERR AT42QT1244_Send_Setup(const uint8_t * setup, const uint8_t addr, const uint8_t Nb)
 {
 	FctERR	err = AT42QT1244_Send_Command(AT42QT__WRITE_SETUPS);
 	if (err)	{ return err; }
 
-	return AT42QT1244_Write(setup, addr, Nb);
+	return AT42QT1244_Write((uint8_t *) setup, addr, Nb);
 }
 
 
-FctERR AT42QT1244_Setup_Key(uint8_t Key, bool use)
+FctERR AT42QT1244_Setup_Key(const uint8_t Key, const bool use)
 {
 	const uint8_t				NDIL_Val = 4;		// 4 is the default NDIL value
 	uAT42QT_REG__SETUP_165_188	TMP;
@@ -45,7 +45,7 @@ FctERR AT42QT1244_Setup_Key(uint8_t Key, bool use)
 	return AT42QT1244_Send_Setup((uint8_t *) &TMP, AT42QT__SETUP_KEYS_MODE_0 + Key, sizeof(TMP));
 }
 
-FctERR AT42QT1244_Setup_FHM(AT42QT_FHM FHM)
+FctERR AT42QT1244_Setup_FHM(const AT42QT_FHM FHM)
 {
 	uAT42QT_REG__SETUP_244	TMP;
 	FctERR					err;

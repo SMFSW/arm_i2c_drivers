@@ -38,26 +38,26 @@ __WEAK FctERR PCA9624_Init(void)
 /****************************************************************/
 
 
-FctERR PCA9624_Write(uint8_t * data, uint16_t addr, uint16_t nb)
+FctERR PCA9624_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&PCA9624_hal))			{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)									{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)									{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > PCA9624__ALLCALLADR)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > PCA9624__ALLCALLADR + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&PCA9624_hal, true);
 
-	PCA9624_hal.status = HAL_I2C_Mem_Write(PCA9624_hal.cfg.inst, PCA9624_hal.cfg.addr, addr, PCA9624_hal.cfg.mem_size, data, nb, PCA9624_hal.cfg.timeout);
+	PCA9624_hal.status = HAL_I2C_Mem_Write(PCA9624_hal.cfg.inst, PCA9624_hal.cfg.addr, addr, PCA9624_hal.cfg.mem_size, (uint8_t *) data, nb, PCA9624_hal.cfg.timeout);
 
 	I2C_set_busy(&PCA9624_hal, false);
 	return HALERRtoFCTERR(PCA9624_hal.status);
 }
 
 
-FctERR PCA9624_Read(uint8_t * data, uint16_t addr, uint16_t nb)
+FctERR PCA9624_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&PCA9624_hal))			{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)									{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)									{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > PCA9624__ALLCALLADR)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > PCA9624__ALLCALLADR + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 

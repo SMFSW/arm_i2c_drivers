@@ -91,7 +91,7 @@ FctERR GPMS_Get_Latitude(GPMS_coord * lat);
 
 FctERR GPMS_Get_Longitude(GPMS_coord * lon);
 
-FctERR GPMS_Get_Heading(float * heading, GPMS_north type);
+FctERR GPMS_Get_Heading(float * heading, const GPMS_north type);
 
 FctERR GPMS_Get_Speed(float * speed);
 

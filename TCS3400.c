@@ -38,28 +38,28 @@ __WEAK FctERR TCS3400_Init(void)
 /****************************************************************/
 
 
-FctERR TCS3400_Write(uint8_t * data, uint16_t addr, uint16_t nb)
+FctERR TCS3400_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&TCS3400_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)								{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)								{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > TCS3400__AICLEAR)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > TCS3400__AICLEAR + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&TCS3400_hal, true);
 
-	TCS3400_hal.status = HAL_I2C_Mem_Write(TCS3400_hal.cfg.inst, TCS3400_hal.cfg.addr, addr, TCS3400_hal.cfg.mem_size, data, nb, TCS3400_hal.cfg.timeout);
+	TCS3400_hal.status = HAL_I2C_Mem_Write(TCS3400_hal.cfg.inst, TCS3400_hal.cfg.addr, addr, TCS3400_hal.cfg.mem_size, (uint8_t *) data, nb, TCS3400_hal.cfg.timeout);
 
 	I2C_set_busy(&TCS3400_hal, false);
 	return HALERRtoFCTERR(TCS3400_hal.status);
 }
 
 
-FctERR TCS3400_Read(uint8_t * data, uint16_t addr, uint16_t nb)
+FctERR TCS3400_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&TCS3400_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)							{ return ERROR_MEMORY; }		// Null pointer
-	if (addr > TCS3400__IR)				{ return ERROR_RANGE; }		// Unknown register
-	if ((addr + nb) > TCS3400__IR + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if (!data)								{ return ERROR_MEMORY; }	// Null pointer
+	if (addr > TCS3400__IR)					{ return ERROR_RANGE; }		// Unknown register
+	if ((addr + nb) > TCS3400__IR + 1)		{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&TCS3400_hal, true);
 
@@ -70,7 +70,7 @@ FctERR TCS3400_Read(uint8_t * data, uint16_t addr, uint16_t nb)
 }
 
 
-FctERR TCS3400_Write_Word(uint16_t * data, uint16_t addr)
+FctERR TCS3400_Write_Word(const uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 
@@ -82,7 +82,7 @@ FctERR TCS3400_Write_Word(uint16_t * data, uint16_t addr)
 }
 
 
-FctERR TCS3400_Read_Word(uint16_t * data, uint16_t addr)
+FctERR TCS3400_Read_Word(uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 	FctERR	err;

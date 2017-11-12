@@ -52,7 +52,7 @@ __STATIC_INLINE FctERR INLINE__ _write_cfg(uDRV_CFG * cfg) {
 	return DRV2605L_Write(cfg->Bytes, DRV__FEEDBACK_CONTROL, sizeof(uDRV_CFG)); }
 
 
-FctERR DRV2605L_Set_ActType(DRV2605L_act act)
+FctERR DRV2605L_Set_ActType(const DRV2605L_act act)
 {
 	uDRV_REG__FEEDBACK_CONTROL	FB_CTL;
 	FctERR						err;
@@ -71,7 +71,7 @@ FctERR DRV2605L_Set_ActType(DRV2605L_act act)
 }
 
 
-FctERR DRV2605L_Set_OperatingMode(DRV2605L_mode mode)
+FctERR DRV2605L_Set_OperatingMode(const DRV2605L_mode mode)
 {
 	uDRV_REG__MODE	MODE;
 	FctERR			err;
@@ -90,7 +90,7 @@ FctERR DRV2605L_Set_OperatingMode(DRV2605L_mode mode)
 }
 
 
-FctERR DRV2605L_Set_Standby(bool stdby)
+FctERR DRV2605L_Set_Standby(const bool stdby)
 {
 	uDRV_REG__MODE	MODE;
 	FctERR			err;
@@ -103,7 +103,7 @@ FctERR DRV2605L_Set_Standby(bool stdby)
 }
 
 
-FctERR DRV2605L_Set_InputMode(DRV2605L_input input)
+FctERR DRV2605L_Set_InputMode(const DRV2605L_input input)
 {
 	uDRV_REG__CONTROL_3	CTL3;
 	FctERR				err;
@@ -122,7 +122,7 @@ FctERR DRV2605L_Set_InputMode(DRV2605L_input input)
 }
 
 
-FctERR DRV2605L_Set_LoopMode(DRV2605L_loop loop)
+FctERR DRV2605L_Set_LoopMode(const DRV2605L_loop loop)
 {
 	uDRV_REG__CONTROL_3	CTL3;
 	FctERR				err;
@@ -143,7 +143,7 @@ FctERR DRV2605L_Set_LoopMode(DRV2605L_loop loop)
 }
 
 
-FctERR DRV2605L_Set_Library(DRV2605L_lib lib)
+FctERR DRV2605L_Set_Library(const DRV2605L_lib lib)
 {
 	uDRV_REG__LIBRARY_SELECTION LIB;
 
@@ -155,7 +155,7 @@ FctERR DRV2605L_Set_Library(DRV2605L_lib lib)
 }
 
 
-FctERR DRV2605L_Set_Waveform(uint16_t chan, DRV2605L_eff effect, bool wait)
+FctERR DRV2605L_Set_Waveform(const uint16_t chan, const DRV2605L_eff effect, const bool wait)
 {
 	uDRV_REG__WAVEFORM_SEQUENCER WAVEFORM;
 
@@ -168,7 +168,7 @@ FctERR DRV2605L_Set_Waveform(uint16_t chan, DRV2605L_eff effect, bool wait)
 }
 
 
-FctERR DRV2605L_Set_RTPDataFormat(DRV2605L_rtp_format format)
+FctERR DRV2605L_Set_RTPDataFormat(const DRV2605L_rtp_format format)
 {
 	uDRV_REG__CONTROL_3	CTL3;
 	FctERR				err;
@@ -188,7 +188,7 @@ FctERR DRV2605L_Set_RTPDataFormat(DRV2605L_rtp_format format)
 }
 
 
-FctERR DRV2605L_Set_ATVPeakTime(DRV2605L_peak peak)
+FctERR DRV2605L_Set_ATVPeakTime(const DRV2605L_peak peak)
 {
 	uDRV_REG__ATV_CONTROL	ATV;
 	FctERR					err;
@@ -203,7 +203,7 @@ FctERR DRV2605L_Set_ATVPeakTime(DRV2605L_peak peak)
 }
 
 
-FctERR DRV2605L_Set_ATVLowPassFilter(DRV2605L_filter filt)
+FctERR DRV2605L_Set_ATVLowPassFilter(const DRV2605L_filter filt)
 {
 	uDRV_REG__ATV_CONTROL	ATV;
 	FctERR					err;
@@ -218,7 +218,7 @@ FctERR DRV2605L_Set_ATVLowPassFilter(DRV2605L_filter filt)
 }
 
 
-FctERR DRV2605L_Set_ATVInput_Volt(float volt, bool max)
+FctERR DRV2605L_Set_ATVInput_Volt(const float volt, const bool max)
 {
 	float	tmp = (volt * 255.0f) / 1.8f;
 	uint8_t	VAL;
@@ -230,7 +230,7 @@ FctERR DRV2605L_Set_ATVInput_Volt(float volt, bool max)
 }
 
 
-FctERR DRV2605L_Set_ATVDrive_Percent(uint16_t perc, bool max)
+FctERR DRV2605L_Set_ATVDrive_Percent(const uint16_t perc, const bool max)
 {
 	uint8_t	VAL;
 
@@ -241,7 +241,7 @@ FctERR DRV2605L_Set_ATVDrive_Percent(uint16_t perc, bool max)
 }
 
 
-FctERR DRV2605L_Set_BlankingTime(uint16_t time)
+FctERR DRV2605L_Set_BlankingTime(const uint16_t time)
 {
 	FctERR		err;
 	int8_t		idx;
@@ -268,7 +268,7 @@ FctERR DRV2605L_Set_BlankingTime(uint16_t time)
 }
 
 
-FctERR DRV2605L_Set_CurrentDissipationTime(uint16_t time)
+FctERR DRV2605L_Set_CurrentDissipationTime(const uint16_t time)
 {
 	FctERR		err;
 	int8_t		idx;
@@ -295,7 +295,7 @@ FctERR DRV2605L_Set_CurrentDissipationTime(uint16_t time)
 }
 
 
-FctERR DRV2605L_Set_LRAOpenLoopPeriod_us(uint16_t per)
+FctERR DRV2605L_Set_LRAOpenLoopPeriod_us(const uint16_t per)
 {
 	uint8_t PER;
 
@@ -334,7 +334,7 @@ FctERR DRV2605L_Get_BlankingTime(uint16_t * time)
 }
 
 
-FctERR DRV2605L_Get_ATVInput_Volt(float * volt, bool max)
+FctERR DRV2605L_Get_ATVInput_Volt(float * volt, const bool max)
 {
 	uint8_t	VAL;
 	FctERR	err;
@@ -347,7 +347,7 @@ FctERR DRV2605L_Get_ATVInput_Volt(float * volt, bool max)
 }
 
 
-FctERR DRV2605L_Get_ATVDrive_Percent(float * perc, bool max)
+FctERR DRV2605L_Get_ATVDrive_Percent(float * perc, const bool max)
 {
 	uint8_t	VAL;
 	FctERR	err;

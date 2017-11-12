@@ -34,12 +34,12 @@ __WEAK FctERR MCP9808_Init(void)
 /****************************************************************/
 
 
-FctERR MCP9808_Write(uint16_t * data, uint16_t addr, uint16_t nb)
+FctERR MCP9808_Write(const uint16_t * data, const uint16_t addr, const uint16_t nb)
 {
 	uint8_t DATA[2];
 
 	if (!I2C_is_enabled(&MCP9808_hal))			{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)									{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)									{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > MCP9808__RESOLUTION)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > MCP9808__RESOLUTION + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
@@ -68,12 +68,12 @@ FctERR MCP9808_Write(uint16_t * data, uint16_t addr, uint16_t nb)
 }
 
 
-FctERR MCP9808_Read(uint16_t * data, uint16_t addr, uint16_t nb)
+FctERR MCP9808_Read(uint16_t * data, const uint16_t addr, const uint16_t nb)
 {
 	uint8_t DATA[2];
 
 	if (!I2C_is_enabled(&MCP9808_hal))			{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)									{ return ERROR_MEMORY; }		// Null pointer
+	if (!data)									{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > MCP9808__RESOLUTION)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > MCP9808__RESOLUTION + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
