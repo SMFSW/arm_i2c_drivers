@@ -22,9 +22,11 @@ I2C_slave MCP9808_hal = { { pNull, I2C_ADDR(MCP9808_BASE_ADDR), I2C_slave_timeou
 
 __WEAK FctERR MCP9808_Init(void)
 {
-	I2C_slave_init(&MCP9808_hal, I2C_MCP9808, MCP9808_BASE_ADDR, I2C_slave_timeout);
+	FctERR err;
 
-	FctERR err = MCP9808_Init_Sequence();
+	err = I2C_slave_init(&MCP9808_hal, I2C_MCP9808, MCP9808_BASE_ADDR, I2C_slave_timeout);
+	if (!err)	{ err = MCP9808_Init_Sequence(); }
+
 	if (err)	{ I2C_set_enable(&MCP9808_hal, false); }
 
 	return err;

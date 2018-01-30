@@ -20,10 +20,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-
 ## v0.7
 
 * Use of const qualifier in function parameters
+* Init sequence returns with error value if something goes wrong during initialization
 
 ## v0.6
 
@@ -68,16 +68,13 @@ SOFTWARE.
 * minor change in component base to calculate max address in pre-comp
 * removed version in files, everything will be in release notes
 
-
 ## v0.3
 
 * few fixes & added precomp define to hide warnings from component files
 
-
 ## v0.2
 
 * fixes & lots of peripheral added
-
 
 ## v0.1
 

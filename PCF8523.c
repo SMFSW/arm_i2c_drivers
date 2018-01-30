@@ -22,9 +22,11 @@ I2C_slave PCF8523_hal = { { pNull, I2C_ADDR(PCF8523_BASE_ADDR), I2C_slave_timeou
 
 __WEAK FctERR PCF8523_Init(void)
 {
-	I2C_slave_init(&PCF8523_hal, I2C_PCF8523, PCF8523_BASE_ADDR, I2C_slave_timeout);
+	FctERR err;
 
-	FctERR err = PCF8523_Init_Sequence();
+	err = I2C_slave_init(&PCF8523_hal, I2C_PCF8523, PCF8523_BASE_ADDR, I2C_slave_timeout);
+	if (!err)	{ err = PCF8523_Init_Sequence(); }
+
 	if (err)	{ I2C_set_enable(&PCF8523_hal, false); }
 
 	return err;

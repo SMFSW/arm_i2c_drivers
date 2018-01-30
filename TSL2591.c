@@ -22,9 +22,11 @@ I2C_slave TSL2591_hal = { { pNull, I2C_ADDR(TSL2591_BASE_ADDR), I2C_slave_timeou
 
 __WEAK FctERR TSL2591_Init(void)
 {
-	I2C_slave_init(&TSL2591_hal, I2C_TSL2591, TSL2591_BASE_ADDR, I2C_slave_timeout);
+	FctERR err;
 
-	FctERR err = TSL2591_Init_Sequence();
+	err = I2C_slave_init(&TSL2591_hal, I2C_TSL2591, TSL2591_BASE_ADDR, I2C_slave_timeout);
+	if (!err)	{ err = TSL2591_Init_Sequence(); }
+
 	if (err)	{ I2C_set_enable(&TSL2591_hal, false); }
 
 	return err;

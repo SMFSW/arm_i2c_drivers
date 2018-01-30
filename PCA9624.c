@@ -26,9 +26,11 @@ I2C_slave PCA9624_hal = { { pNull, I2C_ADDR(PCA9624_BASE_ADDR), I2C_slave_timeou
 
 __WEAK FctERR PCA9624_Init(void)
 {
-	I2C_slave_init(&PCA9624_hal, I2C_PCA9624, PCA9624_BASE_ADDR, I2C_slave_timeout);
+	FctERR err;
 
-	FctERR err = PCA9624_Init_Sequence();
+	err = I2C_slave_init(&PCA9624_hal, I2C_PCA9624, PCA9624_BASE_ADDR, I2C_slave_timeout);
+	if (!err)	{ err = PCA9624_Init_Sequence(); }
+
 	if (err)	{ I2C_set_enable(&PCA9624_hal, false); }
 
 	return err;

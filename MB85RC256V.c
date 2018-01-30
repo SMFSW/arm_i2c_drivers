@@ -26,10 +26,12 @@ I2C_slave MB85RC256V_hal = { { pNull, I2C_ADDR(MB85RC256V_BASE_ADDR), I2C_slave_
 
 __WEAK FctERR MB85RC256V_Init(void)
 {
-	I2C_slave_init(&MB85RC256V_hal, I2C_MB85RC256V, MB85RC256V_BASE_ADDR, I2C_slave_timeout);
+	FctERR err;
 
-	FctERR err = MB85RC256V_Init_Sequence();
-	//if (err)	{ I2C_set_enable(&MB85RC256V_hal, false); }
+	err = I2C_slave_init(&MB85RC256V_hal, I2C_MB85RC256V, MB85RC256V_BASE_ADDR, I2C_slave_timeout);
+	if (!err)	{ err = MB85RC256V_Init_Sequence(); }
+
+	if (err)	{ I2C_set_enable(&MB85RC256V_hal, false); }
 
 	return err;
 }

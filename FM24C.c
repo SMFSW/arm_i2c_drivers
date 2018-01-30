@@ -30,7 +30,12 @@ I2C_slave FM24C_hal = { { pNull, I2C_ADDR(FM24C_BASE_ADDR), I2C_slave_timeout, I
 
 __WEAK FctERR FM24C_Init(void)
 {
-	I2C_slave_init(&FM24C_hal, I2C_FM24C, FM24C_BASE_ADDR, I2C_slave_timeout);
+	FctERR err;
+
+	err = I2C_slave_init(&FM24C_hal, I2C_FM24C, FM24C_BASE_ADDR, I2C_slave_timeout);
+
+	if (err)	{ I2C_set_enable(&MB85RC256V_hal, false); }
+
 	return ERROR_OK;
 }
 

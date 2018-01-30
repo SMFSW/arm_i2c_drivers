@@ -27,9 +27,11 @@ I2C_slave $CPNT$_hal = { { pNull, I2C_ADDR($CPNT$_BASE_ADDR), I2C_slave_timeout,
 
 __WEAK FctERR $CPNT$_Init(void)
 {
-	I2C_slave_init(&$CPNT$_hal, I2C_$CPNT$, $CPNT$_BASE_ADDR, I2C_slave_timeout);
-	
-	FctERR err = $CPNT$_Init_Sequence();
+	FctERR err;
+
+	err = I2C_slave_init(&$CPNT$_hal, I2C_$CPNT$, $CPNT$_BASE_ADDR, I2C_slave_timeout);
+	if (!err)	{ err = $CPNT$_Init_Sequence(); }
+
 	if (err)	{ I2C_set_enable(&$CPNT$_hal, false); }
 	
 	return err;

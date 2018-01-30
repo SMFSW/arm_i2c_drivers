@@ -48,9 +48,11 @@ static uint16_t crc16(uint16_t crc, const uint8_t data)
 
 __WEAK FctERR AT42QT1244_Init(void)
 {
-	I2C_slave_init(&AT42QT1244_hal, I2C_AT42QT1244, AT42QT1244_BASE_ADDR, I2C_slave_timeout);
+	FctERR err;
 
-	FctERR err = AT42QT1244_Init_Sequence();
+	err = I2C_slave_init(&AT42QT1244_hal, I2C_AT42QT1244, AT42QT1244_BASE_ADDR, I2C_slave_timeout);
+	if (!err)	{ err = AT42QT1244_Init_Sequence(); }
+
 	if (err)	{ I2C_set_enable(&AT42QT1244_hal, false); }
 
 	return err;

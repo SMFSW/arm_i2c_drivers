@@ -22,9 +22,11 @@ I2C_slave BMP180_hal = { { pNull, I2C_ADDR(BMP180_BASE_ADDR), I2C_slave_timeout,
 
 __WEAK FctERR BMP180_Init(void)
 {
-	I2C_slave_init(&BMP180_hal, I2C_BMP180, BMP180_BASE_ADDR, I2C_slave_timeout);
+	FctERR err;
 
-	FctERR err = BMP180_Init_Sequence();
+	err = I2C_slave_init(&BMP180_hal, I2C_BMP180, BMP180_BASE_ADDR, I2C_slave_timeout);
+	if (!err)	{ err = BMP180_Init_Sequence(); }
+
 	if (err)	{ I2C_set_enable(&BMP180_hal, false); }
 
 	return err;
