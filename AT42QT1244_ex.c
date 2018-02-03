@@ -1,8 +1,7 @@
 /*!\file AT42QT1244_ex.c
 ** \author SMFSW
-** \date 2017
-** \copyright MIT (c) 2017, SMFSW
-** \brief AT42QT1244 Driver extensions code
+** \copyright MIT (c) 2017-2018, SMFSW
+** \brief AT42QT1244 Driver extensions
 ** \details AT42QT1244: 24-key QMatrix FMEA IEC/EN/UL60730 Touch Sensor
 **/
 /****************************************************************/

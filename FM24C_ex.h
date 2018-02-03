@@ -1,8 +1,7 @@
 /*!\file FM24C_ex.h
 ** \author SMFSW
-** \date 2017
-** \copyright MIT (c) 2017, SMFSW
-** \brief FM24C Driver extensions declarations
+** \copyright MIT (c) 2017-2018, SMFSW
+** \brief FM24C Driver extensions
 ** \details FM24C16B: 16-Kbit (2K * 8) Serial I2C F-RAM
 **			FM24C04B: 4-Kbit (512 * 8) Serial I2C F-RAM
 **/

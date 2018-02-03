@@ -1,8 +1,7 @@
 /*!\file PCF8523_ex.c
 ** \author SMFSW
-** \date 2017
-** \copyright MIT (c) 2017, SMFSW
-** \brief PCF8523 Driver extensions code
+** \copyright MIT (c) 2017-2018, SMFSW
+** \brief PCF8523 Driver extensions
 ** \details PCF8523: Real-Time Clock (RTC) and calendar
 **/
 /****************************************************************/

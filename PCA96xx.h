@@ -1,8 +1,7 @@
 /*!\file PCA96xx.h
 ** \author SMFSW
-** \date 2017
-** \copyright MIT (c) 2017, SMFSW
-** \brief PCA96xx declarations (shared)
+** \copyright MIT (c) 2017-2018, SMFSW
+** \brief PCA96xx shared declarations
 **/
 /****************************************************************/
 #ifndef __PCA96XX_H__

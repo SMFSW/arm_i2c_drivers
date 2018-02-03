@@ -2,7 +2,6 @@
 
 ARM I2C Drivers for various components
 
-
 ## Requires
 
 - sarmfsw
@@ -10,7 +9,6 @@ ARM I2C Drivers for various components
 
 - HARMcksL
   - [HARMcksL](https://github.com/SMFSW/HARMcksL)
-
 
 ## Usage
 
@@ -20,17 +18,14 @@ ARM I2C Drivers for various components
 
 - if you find warning messages annoying, you could define NO_WARN_I2C_DRIVERS (underscores between words) in compiler options to hide warning messages
 
-
 ## Remarks
 
 - define VERBOSE in compiler options to printf infos from component handlers
-
 
 ## Next
 
 - The library lacks the possibility to implement multiple identical devices:
   - This will be fixed in a later version through I2C_component and the slave struct
-
 
 ## Supported peripherals
 
@@ -116,7 +111,6 @@ ARM I2C Drivers for various components
     - MB85RC256V
     - FM24CL64B
 
-
 ## Next peripherals
 
 - EEPROM/FRAM (few others if needed?)
@@ -131,7 +125,6 @@ You may also:
 - contribute to devices additions using the template in subfolder
 - raise issue on github to ask for particular devices
 
-
 ## Misc
 
 Feel free to share your thoughts @ xgarmanboziax@gmail.com about:
@@ -140,16 +133,13 @@ Feel free to share your thoughts @ xgarmanboziax@gmail.com about:
 - optimisations
 - improvements & new functionalities
 
-
 ## Documentation
 
 Doxygen documentation can be generated using "Doxyfile"
 
-
 ## Release Notes
 
 See [release notes](https://github.com/SMFSW/arm_i2c_drivers/ReleaseNotes.md)
-
 
 ## License
 

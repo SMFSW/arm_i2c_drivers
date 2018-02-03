@@ -1,8 +1,7 @@
 /*!\file PCA9624_proc.c
 ** \author SMFSW
-** \date 2017
-** \copyright MIT (c) 2017, SMFSW
-** \brief PCA9624 Driver procedures code
+** \copyright MIT (c) 2017-2018, SMFSW
+** \brief PCA9624 Driver procedures
 ** \details PCA9624: 8-bit Fm+ I2C-bus 100mA 40V LED driver
 **/
 /****************************************************************/

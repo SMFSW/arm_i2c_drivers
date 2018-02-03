@@ -1,8 +1,7 @@
 /*!\file DRV2605L.h
 ** \author SMFSW
-** \date 2017
-** \copyright MIT (c) 2017, SMFSW
-** \brief DRV2605L Driver procedures declarations
+** \copyright MIT (c) 2017-2018, SMFSW
+** \brief DRV2605L Driver procedures
 ** \details DRV2605L: 2 to 5.2V Haptic Driver for LRA and ERM With Effect Library and Smart-Loop Architecture
 **/
 /****************************************************************/

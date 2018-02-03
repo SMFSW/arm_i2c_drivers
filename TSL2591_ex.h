@@ -1,8 +1,7 @@
 /*!\file TSL2591_ex.h
 ** \author SMFSW
-** \date 2017
-** \copyright MIT (c) 2017, SMFSW
-** \brief TSL2591 Driver extensions declarations
+** \copyright MIT (c) 2017-2018, SMFSW
+** \brief TSL2591 Driver extensions
 ** \details TSL2591: Very-high sensitivity light-to-digital converter
 **/
 /****************************************************************/

@@ -1,8 +1,7 @@
 /*!\file MCP9808_ex.h
 ** \author SMFSW
-** \date 2017
-** \copyright MIT (c) 2017, SMFSW
-** \brief MCP9808 Driver extensions declarations
+** \copyright MIT (c) 2017-2018, SMFSW
+** \brief MCP9808 Driver extensions
 ** \details MCP9808: +/-0.5C Maximum Accuracy Digital Temperature Sensor
 **/
 /****************************************************************/

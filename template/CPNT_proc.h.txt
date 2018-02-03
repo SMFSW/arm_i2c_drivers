@@ -1,8 +1,7 @@
 /*!\file $CPNT$_proc.h
 ** \author SMFSW
-** \date 2017
-** \copyright MIT (c) 2017, SMFSW
-** \brief $CPNT$ Driver procedures declarations
+** \copyright MIT (c) 2017-2018, SMFSW
+** \brief $CPNT$ Driver procedures
 ** \details $CPNT$:
 **/
 /****************************************************************/

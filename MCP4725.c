@@ -1,8 +1,7 @@
 /*!\file MCP4725.c
 ** \author SMFSW
-** \date 2017
-** \copyright MIT (c) 2017, SMFSW
-** \brief MCP4725 Driver code
+** \copyright MIT (c) 2017-2018, SMFSW
+** \brief MCP4725 Driver
 ** \details MCP4725: 12-Bit Digital-to-Analog Converter with EEPROM Memory
 **/
 /****************************************************************/

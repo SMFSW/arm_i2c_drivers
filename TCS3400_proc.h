@@ -1,8 +1,7 @@
 /*!\file TCS3400_proc.h
 ** \author SMFSW
-** \date 2017
-** \copyright MIT (c) 2017, SMFSW
-** \brief TCS3400 Driver procedures declarations
+** \copyright MIT (c) 2017-2018, SMFSW
+** \brief TCS3400 Driver procedures
 ** \details TCS3400: Color Light-to-Digital Converter
 **/
 /****************************************************************/
