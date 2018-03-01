@@ -22,8 +22,9 @@ SOFTWARE.
 
 ## v0.7
 
-* Use of const qualifier in function parameters
-* Init sequence returns with error value if something goes wrong during initialization
+* use of const qualifier in function parameters
+* init sequence returns with error value if something goes wrong during initialization
+* FM24C & MB85RC256V: added macros to create simple inlines to read/write values from addresses (to use in some header)
 
 ## v0.6
 

@@ -14,6 +14,11 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
 
+#define MB85RC256V_Read_Type(name, type, addr)	__INLINE FctERR INLINE__ MB85RC256V_Get_##name(type * rd) {	\
+													return MB85RC256V_Read(&rd, addr, sizeof(type)); }	//!< Macro to create function to read value(s) from MB85RC256V
+
+#define MB85RC256V_Write_Type(name, type, addr)	__INLINE FctERR INLINE__ MB85RC256V_Set_##name(type wr) {	\
+													return MB85RC256V_Write(&wr, addr, sizeof(type)); }	//!< Macro to create function to write value(s) to MB85RC256V
 
 // *****************************************************************************
 // Section: Interface Routines
