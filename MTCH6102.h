@@ -230,7 +230,7 @@ typedef enum PACK__ MTCH6102_reg_map {
 extern uint8_t MTCH6102_default_cfg[MTCH__I2CADDR - MTCH__NUMBER_OF_X_CHANNELS + 1];
 
 // Register fields enumerations
-typedef enum PACK__ MTCH6102_MODEs {
+typedef enum PACK__ MTCH6102_MODE {
 	Standby = 0x00,		//!< Standby
 	Gesture,			//!< Gesture only
 	Touch,				//!< Touch only
@@ -238,13 +238,13 @@ typedef enum PACK__ MTCH6102_MODEs {
 	RawADC				//!< Raw ADC values
 } MTCH6102_MODE;
 
-typedef enum PACK__ MTCH6102_TYPEs {
+typedef enum PACK__ MTCH6102_TYPE {
 	Computed = 0x00,		//!< (1023 - Res1) + Res2
 	Result1,				//!< Res1 only
 	Result2,				//!< Res2 only
 } MTCH6102_TYPE;
 
-typedef enum PACK__ MTCH6102_CHs {
+typedef enum PACK__ MTCH6102_CH {
 	RX0 = 0x00,		//!< RX0
 	RX1,			//!< RX1
 	RX2,			//!< RX2
@@ -263,7 +263,14 @@ typedef enum PACK__ MTCH6102_CHs {
 	// Reserved,	//!< Reserved, do not use
 } MTCH6102_CH;
 
-typedef enum PACK__ MTCH6102_GESTURE_STATEs {
+typedef enum PACK__ MTCH6102_FILTER_TYPE {
+	Filter_None = 0x00,	//!< No filtering
+	Filter_Median,		//!< Size of median window filtering
+	Filter_IIR,			//!< Weighting of previous to current value filtering
+	Filter_Average,		//!< Size of average window filtering
+} MTCH6102_FILTER_TYPE;
+
+typedef enum PACK__ MTCH6102_GESTURE_STATE {
 	NoGesture = 0x00,			//!< No Gesture Present
 	SingleClick = 0x10,			//!< Single Click gesture
 	ClickNHold = 0x11,			//!< Click and Hold gesture
@@ -279,7 +286,7 @@ typedef enum PACK__ MTCH6102_GESTURE_STATEs {
 } MTCH6102_GESTURE_STATE;
 
 
-typedef enum PACK__ MTCH6102_GESTURE_DIAGNOSTICs {
+typedef enum PACK__ MTCH6102_GESTURE_DIAGNOSTIC {
 	ClickTimeout = 0x00,			//!< Click Timeout
 	SwipeTimeout,					//!< Swipe Timeout
 	GeneralTimeout,					//!< General Timeout
