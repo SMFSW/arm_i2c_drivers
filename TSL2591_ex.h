@@ -115,7 +115,6 @@ FctERR TSL2591_Set_Gain(const TSL2591_gain gain);
 FctERR TSL2591_Set_Integration_Time(const TSL2591_integ integ);
 
 
-
 /*!\brief ALS interrupt low threshold configuration
 ** \param[in] thr - Low threshold value
 ** \return FctERR - error code

@@ -121,6 +121,108 @@ __WEAK FctERR MTCH6102_Init_Sequence(void)
 }
 
 
+FctERR MTCH6102_Set_Compensation(void)
+{
+	uint8_t		SENS_VAL[15];
+	uint16_t	average = 0;
+	FctERR		err = ERROR_OK;
+
+	err = MTCH6102_Read(SENS_VAL, MTCH__SENSOR_VALUE_RX0, sizeof(SENS_VAL));
+	if (err)	{ return err; }
+
+	for (unsigned int i = 0 ; i < sizeof(SENS_VAL) ; i++)	{ average += SENS_VAL[i]; }
+	average /= sizeof(SENS_VAL);
+
+	for (unsigned int i = 0 ; i < sizeof(SENS_VAL) ; i++)
+	{
+		float temp = (float) SENS_VAL[i] / average;
+
+		if (temp == 1.0)	{ SENS_VAL[i] = 0; }	// Compensation set to 0 if median is equal to sensor value for faster computing on the channel
+		else				{ SENS_VAL[i] = (uint8_t) (temp * 64); }
+	}
+
+	return MTCH6102_Write(SENS_VAL, MTCH__SENSOR_COMP_RX0, sizeof(SENS_VAL));
+}
+
+
+FctERR MTCH6102_Get_MFG_Results(uint32_t * res)
+{
+	uint8_t			RES[6];
+	uint32_t		result = 0;
+	MTCH6102_MODE	mode;
+	FctERR			err = ERROR_OK;
+
+	// Get MTCH6102 decoding mode
+	err = MTCH6102_Get_Mode(&mode);
+	if (err)	{ return err; }
+
+	// Put in standby mode for test
+	err = MTCH6102_Set_Mode(Standby);
+	if (err)	{ return err; }
+
+	// Execute manufacturing test
+	err = MTCH6102_Manufacturing_Test();
+	if (err)	{ return err; }
+
+	// Read Results
+	err = MTCH6102_Read(RES, MTCH__RAW_ADC_00, sizeof(RES));
+	if (err)	{ return err; }
+
+	for (unsigned int i = 0 ; i < 15 ; i++)
+	{
+		uint32_t gnd = 0, vdd = 0;
+
+		switch (i)	// Channel
+		{
+			case 0:
+			case 1:
+			case 2:
+				vdd |= (RES[4] & (0x20 << i)) ? 1 : 0;
+				gnd |= (RES[5] & (0x20 << i)) ? 1 : 0;
+				break;
+
+			case 3:
+			case 4:
+			case 5:
+			case 6:
+			case 7:
+			case 8:
+				vdd |= (RES[2] & (0x01 << i)) ? 1 : 0;
+				gnd |= (RES[3] & (0x01 << i)) ? 1 : 0;
+				break;
+
+			case 9:
+			case 10:
+			case 11:
+			case 12:
+				vdd |= (RES[0] & (0x01 << i)) ? 1 : 0;
+				gnd |= (RES[1] & (0x01 << i)) ? 1 : 0;
+				break;
+
+			case 13:
+				vdd |= (RES[0] & 0x20) ? 1 : 0;
+				gnd |= (RES[1] & 0x20) ? 1 : 0;
+				break;
+
+			case 14:
+				vdd |= (RES[4] & 0x04) ? 1 : 0;
+				gnd |= (RES[5] & 0x04) ? 1 : 0;
+				break;
+
+			default:
+				break;
+		}
+
+		result |= LSHIFT(gnd | LSHIFT(vdd, 16), i);
+	}
+
+	*res = result;	// Store MFG result
+
+	// Set MTCH6102 decoding mode back
+	return MTCH6102_Set_Mode(mode);
+}
+
+
 /****************************************************************/
 
 
@@ -183,13 +285,6 @@ MTCH6102_Coord MTCH6102_rotate(const MTCH6102_Coord c, int16_t deg)
 			r.y = -c.x;
 			break;
 
-		// case 45:
-		// case -315:
-		// ---
-		// case 315:
-		// case -45:
-		// TODO: see if +/-45 & +/-315 can be simplified, as they will be most often used rotation values
-		// TODO: see how to apply +/-45 to 90/-270 & +/-180, just in case
 		default:
 			rad = (M_PI * deg) / 180.0f;
 			r.x = (int16_t) ((c.x * cos(rad)) - (c.y * sin(rad)));

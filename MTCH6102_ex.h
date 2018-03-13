@@ -80,24 +80,54 @@ typedef struct MTCH6102_gesture {
 /****************************************/
 /*** High level methods and functions ***/
 /****************************************/
-__INLINE FctERR INLINE__ MTCH6102_Set_Mode(MTCH6102_MODE mode) {
+/*!\brief Set MTCH6102 gesture decoding
+** \param[in] mode - Gesture decoding mode
+** \return FctERR - error code
+**/
+__INLINE FctERR INLINE__ MTCH6102_Set_Mode(const MTCH6102_MODE mode) {
 	if (mode > RawADC)	{ return ERROR_VALUE; }
 	return MTCH6102_Write(&mode, MTCH__MODE, 1); }
 
-FctERR MTCH6102_Command(MTCH6102_COMMAND cmd);
+/*!\brief Get MTCH6102 gesture decoding
+** \param[in,out] mode - Gesture decoding mode
+** \return FctERR - error code
+**/
+__INLINE FctERR INLINE__ MTCH6102_Get_Mode(MTCH6102_MODE * mode) {
+	return MTCH6102_Read(mode, MTCH__MODE, 1); }
 
+/*!\brief Execute MTCH6102 command
+** \param[in] cmd - Command to execute
+** \return FctERR - error code
+**/
+FctERR MTCH6102_Command(const MTCH6102_COMMAND cmd);
+
+/*!\brief Restore MTCH6102 controller to default configuration values
+** \return FctERR - error code
+**/
 __INLINE FctERR INLINE__ MTCH6102_Restore_Defaults(void) {
 	return MTCH6102_Command(MTCH_RestoreDefaults); }
 
+/*!\brief Write MTCH6102 parameters to non volatile storage
+** \return FctERR - error code
+**/
 __INLINE FctERR INLINE__ MTCH6102_Store_To_Non_Volatile(void) {
 	return MTCH6102_Command(MTCH_StoreToNV); }
 
+/*!\brief Configure MTCH6102controller (after parameters have been changed)
+** \return FctERR - error code
+**/
 __INLINE FctERR INLINE__ MTCH6102_Configuration_Request(void) {
 	return MTCH6102_Command(MTCH_Configure); }
 
+/*!\brief Execute MTCH6102 manufacturing test
+** \return FctERR - error code
+**/
 __INLINE FctERR INLINE__ MTCH6102_Manufacturing_Test(void) {
 	return MTCH6102_Command(MTCH_ManufacturingTest); }
 
+/*!\brief Force MTCH6102 baseline (re-calibration) to occur
+** \return FctERR - error code
+**/
 __INLINE FctERR INLINE__ MTCH6102_Force_Baseline(void) {
 	return MTCH6102_Command(MTCH_ForceBaseline); }
 
@@ -126,7 +156,13 @@ FctERR MTCH6102_Get_Idle_Period(uint16_t * period);
 
 
 /*** Acquisition and Touch Parameters ***/
-FctERR MTCH6102_Set_Filter(const MTCH6102_FILTER_TYPE type, const uint8_t strength, const bool base_filter);
+/*!\brief Set MTCH6102 raw acquisition filter
+** \param[in] type - Filter type
+** \param[in] strength - Filter strength
+** \param[in] base_filter - 0: Acquisition filter, 1: Baseline filter
+** \return FctERR - error code
+**/
+FctERR MTCH6102_Set_Filter(const MTCH6102_FILTER_TYPE type, const uint8_t strength, const bool baseline_filter);
 
 __INLINE FctERR INLINE__ MTCH6102_Set_Scan_Count(const uint8_t count) {
 	return MTCH6102_Write(&count, MTCH__SCAN_COUNT, 1); }

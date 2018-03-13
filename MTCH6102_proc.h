@@ -55,6 +55,19 @@ extern MTCH6102_proc MTCH6102;
 **/
 __WEAK FctERR MTCH6102_Init_Sequence(void);
 
+/*!\brief Calculates compensation values regarding read values and writes them to MTCH6102
+** \note Beware, averaging is done through all read values, not picking a repeated value
+** 			(this may not suit your needs, but it appeared that the average result was close to repeated values on custom capacitive board)
+** \return FctERR - error code
+**/
+FctERR MTCH6102_Set_Compensation(void);
+
+/*!\brief Get manufacturing test results
+** \param[in,out] res - Channels shorted to GND in least significant 16b ; Channels shorted to Vdd in most significant 16b
+** \return FctERR - error code
+**/
+FctERR MTCH6102_Get_MFG_Results(uint32_t * res);
+
 FctERR MTCH6102_decode_touch_datas(MTCH6102_gesture * touch, const MTCH6102_raw_gest * dat);
 
 MTCH6102_Coord MTCH6102_rotate(const MTCH6102_Coord c, int16_t deg);

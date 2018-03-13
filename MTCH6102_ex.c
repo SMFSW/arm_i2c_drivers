@@ -86,7 +86,7 @@ FctERR MTCH6102_Get_Idle_Period(uint16_t * period)
 }
 
 
-FctERR MTCH6102_Set_Filter(const MTCH6102_FILTER_TYPE type, const uint8_t strength, const bool base_filter)
+FctERR MTCH6102_Set_Filter(const MTCH6102_FILTER_TYPE type, const uint8_t strength, const bool baseline_filter)
 {
 	uint8_t		MTCH_FILTER[2];
 	FctERR		err = ERROR_OK;
@@ -121,11 +121,11 @@ FctERR MTCH6102_Set_Filter(const MTCH6102_FILTER_TYPE type, const uint8_t streng
 	}
 
 	// Send configuration parameters
-	err = MTCH6102_Write(&MTCH_FILTER[0], base_filter ? MTCH__BASE_FILTER_TYPE : MTCH__FILTER_TYPE, 2);
+	err = MTCH6102_Write(&MTCH_FILTER[0], baseline_filter ? MTCH__BASE_FILTER_TYPE : MTCH__FILTER_TYPE, 2);
 	if (err)	{ return err; }
 
 	// Send configuration request
-	err = MTCH6102_Configuration_Request();		// TODO: see if configuration request is really needed
+	err = MTCH6102_Configuration_Request();
 
 	return err;
 }
