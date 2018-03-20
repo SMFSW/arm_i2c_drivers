@@ -52,9 +52,9 @@ FctERR MTCH6102_Command(MTCH6102_COMMAND cmd)
 	// Wait for command to complete
 	while ((MTCH_CMD.Byte & MEM_MTCH_CMD.Byte) != 0)
 	{
+		HAL_Delay(1);
 		err = MTCH6102_Read(&MTCH_CMD.Byte, MTCH__CMD, 1);
 		if (err)	{ return err; }
-		HAL_Delay(1);
 	}
 
 	return err;
