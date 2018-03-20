@@ -54,6 +54,7 @@ FctERR MTCH6102_Command(MTCH6102_COMMAND cmd)
 	{
 		err = MTCH6102_Read(&MTCH_CMD.Byte, MTCH__CMD, 1);
 		if (err)	{ return err; }
+		HAL_Delay(1);
 	}
 
 	return err;

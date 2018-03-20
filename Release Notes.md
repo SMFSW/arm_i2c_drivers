@@ -28,7 +28,8 @@ SOFTWARE.
 * MTCH6102: added standalone function for commands & inlines for configuration, restore to defaults & tests commands
 * MTCH6102: added filtering type configuration function & inlines for configuration
 * MTCH6102: added average compensation calculation for channels following datasheet & manufacturing test execution with results
-
+* MTCH6102: after testing, added delay of 1ms in MTCH6102_Command while loop waiting for operation to complete
+ 
 ## v0.6
 
 * overhaul update due to updates from sarmfsw
