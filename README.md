@@ -130,7 +130,7 @@ You may also:
 Feel free to share your thoughts @ xgarmanboziax@gmail.com about:
 
 - issues encountered (might also raise issue on github directly)
-- optimisations
+- optimizations
 - improvements & new functionalities
 
 ## Documentation
@@ -145,7 +145,7 @@ See [release notes](https://github.com/SMFSW/arm_i2c_drivers/ReleaseNotes.md)
 
 The MIT License (MIT)
 
-Copyright (c) 2017 SMFSW (Sebastien Bizien)
+Copyright (c) 2017-2018 SMFSW (Sebastien Bizien)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

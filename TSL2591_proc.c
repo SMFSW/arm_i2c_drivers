@@ -163,7 +163,7 @@ __WEAK FctERR TSL2591_handler(void)
 
 	if (TSL2591.cfg.AIEN)
 	{
-		TSL2591_SF_Clear_IT();
+		err = TSL2591_SF_Clear_IT();
 		if (err)	{ return err; }
 	}
 

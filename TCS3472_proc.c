@@ -111,7 +111,8 @@ static FctERR TCS3472_calc(uint16_t r, uint16_t g, uint16_t b)
 
 	// Use McCamy's formula to determine the CCT (original formula, not taken from TAOS DN25 application note)
 	n = (xc - 0.3320f) / (yc - 0.1858f);
-	TCS3472.Temp = (uint32_t) ((-449.0 * powf(n, 3)) + (3525.0 * powf(n, 2)) - (6823.3 * n) + 5520.33);
+	TCS3472.Temp = (uint32_t) ((449.0 * powf(n, 3)) + (3525.0 * powf(n, 2)) + (6823.3 * n) + 5520.33);
+	//TCS3472.Temp = (uint32_t) ((6253.80338 * exp(-n / 0.92159)) + (28.70599 * exp(-n / 0.20039)) + (0.00004 * exp(-n / 0.07125)) - 949.86315);
 	TCS3472.Lux = (uint32_t) Y;
 
 	return ERROR_OK;
@@ -139,7 +140,7 @@ __WEAK FctERR TCS3472_handler(void)
 
 	if (TCS3472.cfg.AIEN)
 	{
-		TCS3472_SF_Clear_IT();
+		err = TCS3472_SF_Clear_IT();
 		if (err)	{ return err; }
 	}
 
