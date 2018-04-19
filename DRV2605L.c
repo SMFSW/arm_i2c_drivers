@@ -44,7 +44,7 @@ FctERR DRV2605L_Write(const uint8_t * data, const uint16_t addr, const uint16_t 
 
 	I2C_set_busy(&DRV2605_hal, true);
 
-	DRV2605_hal.status = HAL_I2C_Mem_Write(DRV2605_hal.cfg.inst, DRV2605_hal.cfg.addr, addr, DRV2605_hal.cfg.mem_size, (uint8_t *) data, nb, DRV2605_hal.cfg.timeout);
+	DRV2605_hal.status = HAL_I2C_Mem_Write(DRV2605_hal.cfg.bus_inst, DRV2605_hal.cfg.addr, addr, DRV2605_hal.cfg.mem_size, (uint8_t *) data, nb, DRV2605_hal.cfg.timeout);
 
 	I2C_set_busy(&DRV2605_hal, false);
 	return HALERRtoFCTERR(DRV2605_hal.status);
@@ -60,7 +60,7 @@ FctERR DRV2605L_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 
 	I2C_set_busy(&DRV2605_hal, true);
 
-	DRV2605_hal.status = HAL_I2C_Mem_Read(DRV2605_hal.cfg.inst, DRV2605_hal.cfg.addr, addr, DRV2605_hal.cfg.mem_size, data, nb, DRV2605_hal.cfg.timeout);
+	DRV2605_hal.status = HAL_I2C_Mem_Read(DRV2605_hal.cfg.bus_inst, DRV2605_hal.cfg.addr, addr, DRV2605_hal.cfg.mem_size, data, nb, DRV2605_hal.cfg.timeout);
 
 	I2C_set_busy(&DRV2605_hal, false);
 	return HALERRtoFCTERR(DRV2605_hal.status);

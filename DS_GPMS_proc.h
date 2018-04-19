@@ -62,11 +62,12 @@ typedef struct GPMS_proc {
 	float		Heading_True;
 	float		Heading_Magnetic;
 	struct {
+	I2C_slave *	slave_inst;		//!< Slave structure
 	GPMS_mode	Mode;
 	} cfg;
 } GPMS_proc;
 
-extern GPMS_proc	GPMS;
+extern GPMS_proc	GPMS;		//!< GPMS User structure
 
 
 // *****************************************************************************

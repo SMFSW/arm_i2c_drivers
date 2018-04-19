@@ -48,7 +48,7 @@ FctERR PCA9685_Write(const uint8_t * data, const uint16_t addr, const uint16_t n
 
 	I2C_set_busy(&PCA9685_hal, true);
 
-	PCA9685_hal.status = HAL_I2C_Mem_Write(PCA9685_hal.cfg.inst, PCA9685_hal.cfg.addr, addr, PCA9685_hal.cfg.mem_size, (uint8_t *) data, nb, PCA9685_hal.cfg.timeout);
+	PCA9685_hal.status = HAL_I2C_Mem_Write(PCA9685_hal.cfg.bus_inst, PCA9685_hal.cfg.addr, addr, PCA9685_hal.cfg.mem_size, (uint8_t *) data, nb, PCA9685_hal.cfg.timeout);
 
 	I2C_set_busy(&PCA9685_hal, false);
 	return HALERRtoFCTERR(PCA9685_hal.status);
@@ -63,7 +63,7 @@ FctERR PCA9685_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 	if ((addr + nb) > PCA9685__TestMode + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&PCA9685_hal, true);
-	PCA9685_hal.status = HAL_I2C_Mem_Read(PCA9685_hal.cfg.inst, PCA9685_hal.cfg.addr, addr, PCA9685_hal.cfg.mem_size, data, nb, PCA9685_hal.cfg.timeout);
+	PCA9685_hal.status = HAL_I2C_Mem_Read(PCA9685_hal.cfg.bus_inst, PCA9685_hal.cfg.addr, addr, PCA9685_hal.cfg.mem_size, data, nb, PCA9685_hal.cfg.timeout);
 
 	I2C_set_busy(&PCA9685_hal, false);
 	return HALERRtoFCTERR(PCA9685_hal.status);

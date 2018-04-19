@@ -27,12 +27,15 @@
 // Section: Types
 // *****************************************************************************
 typedef struct MB85RC256V_proc {
+	struct {
+	I2C_slave *	slave_inst;			//!< Slave structure
 	uint16_t	Manufacture_ID;
 	uint8_t		Density;
 	uint8_t		Product_ID;
+	} cfg;
 } MB85RC256V_proc;
 
-extern MB85RC256V_proc	MB85RC256V;
+extern MB85RC256V_proc	MB85RC256V;	//!< MB85RC256V User structure
 
 
 // *****************************************************************************

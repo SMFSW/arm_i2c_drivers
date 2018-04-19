@@ -19,6 +19,16 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
+/*!\struct AT42QT1244_proc
+** \brief AT42QT1244 user interface struct
+**/
+typedef struct AT42QT1244_proc {
+	struct {
+	I2C_slave *	slave_inst;			//!< Slave structure
+	} cfg;
+} AT42QT1244_proc;
+
+extern AT42QT1244_proc AT42QT1244;	//!< AT42QT1244 User structure
 
 
 // *****************************************************************************

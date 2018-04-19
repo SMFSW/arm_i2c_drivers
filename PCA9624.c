@@ -48,7 +48,7 @@ FctERR PCA9624_Write(const uint8_t * data, const uint16_t addr, const uint16_t n
 
 	I2C_set_busy(&PCA9624_hal, true);
 
-	PCA9624_hal.status = HAL_I2C_Mem_Write(PCA9624_hal.cfg.inst, PCA9624_hal.cfg.addr, addr, PCA9624_hal.cfg.mem_size, (uint8_t *) data, nb, PCA9624_hal.cfg.timeout);
+	PCA9624_hal.status = HAL_I2C_Mem_Write(PCA9624_hal.cfg.bus_inst, PCA9624_hal.cfg.addr, addr, PCA9624_hal.cfg.mem_size, (uint8_t *) data, nb, PCA9624_hal.cfg.timeout);
 
 	I2C_set_busy(&PCA9624_hal, false);
 	return HALERRtoFCTERR(PCA9624_hal.status);
@@ -64,7 +64,7 @@ FctERR PCA9624_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 
 	I2C_set_busy(&PCA9624_hal, true);
 
-	PCA9624_hal.status = HAL_I2C_Mem_Read(PCA9624_hal.cfg.inst, PCA9624_hal.cfg.addr, addr, PCA9624_hal.cfg.mem_size, data, nb, PCA9624_hal.cfg.timeout);
+	PCA9624_hal.status = HAL_I2C_Mem_Read(PCA9624_hal.cfg.bus_inst, PCA9624_hal.cfg.addr, addr, PCA9624_hal.cfg.mem_size, data, nb, PCA9624_hal.cfg.timeout);
 
 	I2C_set_busy(&PCA9624_hal, false);
 	return HALERRtoFCTERR(PCA9624_hal.status);

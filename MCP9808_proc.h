@@ -37,16 +37,17 @@ typedef struct MCP9808_proc {
 	bool		NewData;			//!< New data available
 	uint32_t	hLast;				//!< Tick from last data
 	struct {
+	I2C_slave *	slave_inst;			//!< Slave structure
 	MCP9808_res	Resolution;			//!< Resolution config
 	float		HighAlert;			//!< High alert config
 	float		LowAlert;			//!< Low alert config
 	float		CriticalAlert;		//!< Critical alert config
-	uint16_t	Manufacturer_Id;	//!< MCP9808 Manufacturer ID
-	uint16_t	Device_Id;			//!< MCP9808 Device ID
+	uint16_t	Manufacturer_Id;	//!< Manufacturer ID
+	uint16_t	Device_Id;			//!< Device ID
 	} cfg;
 } MCP9808_proc;
 
-extern MCP9808_proc	MCP9808;
+extern MCP9808_proc	MCP9808;		//!< MCP9808 User structure
 
 
 // *****************************************************************************

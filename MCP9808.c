@@ -50,7 +50,7 @@ FctERR MCP9808_Write(const uint16_t * data, const uint16_t addr, const uint16_t 
 	{
 		DATA[0] = (uint8_t) *data;
 
-		MCP9808_hal.status = HAL_I2C_Mem_Write(MCP9808_hal.cfg.inst, MCP9808_hal.cfg.addr, MCP9808__RESOLUTION, MCP9808_hal.cfg.mem_size, DATA, 1, MCP9808_hal.cfg.timeout);
+		MCP9808_hal.status = HAL_I2C_Mem_Write(MCP9808_hal.cfg.bus_inst, MCP9808_hal.cfg.addr, MCP9808__RESOLUTION, MCP9808_hal.cfg.mem_size, DATA, 1, MCP9808_hal.cfg.timeout);
 	}
 	else
 	{
@@ -59,7 +59,7 @@ FctERR MCP9808_Write(const uint16_t * data, const uint16_t addr, const uint16_t 
 			DATA[0] = HIBYTE(data[i]);
 			DATA[1] = LOBYTE(data[i]);
 
-			MCP9808_hal.status = HAL_I2C_Mem_Write(MCP9808_hal.cfg.inst, MCP9808_hal.cfg.addr, addr, MCP9808_hal.cfg.mem_size, DATA, 2, MCP9808_hal.cfg.timeout);
+			MCP9808_hal.status = HAL_I2C_Mem_Write(MCP9808_hal.cfg.bus_inst, MCP9808_hal.cfg.addr, addr, MCP9808_hal.cfg.mem_size, DATA, 2, MCP9808_hal.cfg.timeout);
 			if (MCP9808_hal.status != HAL_OK)	{ break; }
 		}
 	}
@@ -82,7 +82,7 @@ FctERR MCP9808_Read(uint16_t * data, const uint16_t addr, const uint16_t nb)
 
 	if (addr == MCP9808__RESOLUTION)
 	{
-		MCP9808_hal.status = HAL_I2C_Mem_Read(MCP9808_hal.cfg.inst, MCP9808_hal.cfg.addr, MCP9808__RESOLUTION, MCP9808_hal.cfg.mem_size, DATA, 1, MCP9808_hal.cfg.timeout);
+		MCP9808_hal.status = HAL_I2C_Mem_Read(MCP9808_hal.cfg.bus_inst, MCP9808_hal.cfg.addr, MCP9808__RESOLUTION, MCP9808_hal.cfg.mem_size, DATA, 1, MCP9808_hal.cfg.timeout);
 
 		if (MCP9808_hal.status == HAL_OK)	{ *data = DATA[0]; }
 	}
@@ -90,7 +90,7 @@ FctERR MCP9808_Read(uint16_t * data, const uint16_t addr, const uint16_t nb)
 	{
 		for (int i = 0; i < nb ; i++)
 		{
-			MCP9808_hal.status = HAL_I2C_Mem_Read(MCP9808_hal.cfg.inst, MCP9808_hal.cfg.addr, addr, MCP9808_hal.cfg.mem_size, DATA, 2, MCP9808_hal.cfg.timeout);
+			MCP9808_hal.status = HAL_I2C_Mem_Read(MCP9808_hal.cfg.bus_inst, MCP9808_hal.cfg.addr, addr, MCP9808_hal.cfg.mem_size, DATA, 2, MCP9808_hal.cfg.timeout);
 			if (MCP9808_hal.status != HAL_OK)	{ break; }
 
 			data[i] = MAKEWORD(DATA[1], DATA[0]);

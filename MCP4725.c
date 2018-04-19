@@ -43,7 +43,7 @@ FctERR MCP4725_Write(const uint8_t * data, const uint16_t nb)
 
 	I2C_set_busy(&MCP4725_hal, true);
 
-	MCP4725_hal.status = HAL_I2C_Master_Transmit(MCP4725_hal.cfg.inst, MCP4725_hal.cfg.addr, (uint8_t *) data, nb, MCP4725_hal.cfg.timeout);
+	MCP4725_hal.status = HAL_I2C_Master_Transmit(MCP4725_hal.cfg.bus_inst, MCP4725_hal.cfg.addr, (uint8_t *) data, nb, MCP4725_hal.cfg.timeout);
 
 	I2C_set_busy(&MCP4725_hal, false);
 	return HALERRtoFCTERR(MCP4725_hal.status);
@@ -58,7 +58,7 @@ FctERR MCP4725_Read(uint8_t * data, const uint16_t nb)
 
 	I2C_set_busy(&MCP4725_hal, true);
 
-	MCP4725_hal.status = HAL_I2C_Master_Receive(MCP4725_hal.cfg.inst, MCP4725_hal.cfg.addr, data, nb, MCP4725_hal.cfg.timeout);
+	MCP4725_hal.status = HAL_I2C_Master_Receive(MCP4725_hal.cfg.bus_inst, MCP4725_hal.cfg.addr, data, nb, MCP4725_hal.cfg.timeout);
 
 	I2C_set_busy(&MCP4725_hal, false);
 	return HALERRtoFCTERR(MCP4725_hal.status);
@@ -71,7 +71,7 @@ FctERR MCP4725_General_Call(const uint8_t cmd)
 
 	I2C_set_busy(&MCP4725_hal, true);
 
-	MCP4725_hal.status = HAL_I2C_Master_Receive(MCP4725_hal.cfg.inst, I2C_ADDR_General_Call, (uint8_t *) &cmd, 1, MCP4725_hal.cfg.timeout);
+	MCP4725_hal.status = HAL_I2C_Master_Receive(MCP4725_hal.cfg.bus_inst, I2C_ADDR_General_Call, (uint8_t *) &cmd, 1, MCP4725_hal.cfg.timeout);
 
 	I2C_set_busy(&MCP4725_hal, false);
 	return HALERRtoFCTERR(MCP4725_hal.status);

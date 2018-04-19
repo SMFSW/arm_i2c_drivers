@@ -31,16 +31,17 @@ typedef struct MTCH6102_proc {
 	int16_t		min_y;
 	int16_t		max_y;
 	struct {
+	I2C_slave *	slave_inst;		//!< Slave structure
 	uint8_t		nb_x;
 	uint8_t		nb_y;
 	uint8_t		FW_Major;
 	uint8_t		FW_Minor;
 	uint16_t	APP_ID;
-	bool		Centered;	//!< Centering 0,0 point on the middle of the pad (allowing it's rotation afterwards using MTCH6102_rotate)
+	bool		Centered;		//!< Centering 0,0 point on the middle of the pad (allowing it's rotation afterwards using MTCH6102_rotate)
 	} cfg;
 } MTCH6102_proc;
 
-extern MTCH6102_proc MTCH6102;
+extern MTCH6102_proc MTCH6102;	//!< MTCH6102 User structure
 
 // *****************************************************************************
 // Section: Interface Routines

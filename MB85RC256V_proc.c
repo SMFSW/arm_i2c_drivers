@@ -13,7 +13,7 @@
 /****************************************************************/
 
 
-MB85RC256V_proc MB85RC256V = { 0, 0, 0 };
+MB85RC256V_proc MB85RC256V = { { &MB85RC256V_hal, 0, 0, 0 } };
 
 
 /****************************************************************/
@@ -26,8 +26,8 @@ __WEAK FctERR MB85RC256V_Init_Sequence(void)
 	err = MB85RC256V_Get_ID();
 	if (err)	{ return err; }
 	
-	if (	(MB85RC256V.Manufacture_ID != MB85RC256V_MANUFACTURE_ID)
-		||	(MB85RC256V.Product_ID != MB85RC256V_PRODUCT_ID))
+	if (	(MB85RC256V.cfg.Manufacture_ID != MB85RC256V_MANUFACTURE_ID)
+		||	(MB85RC256V.cfg.Product_ID != MB85RC256V_PRODUCT_ID))
 	{ return ERROR_COMMON; }	// Unknown device
 	
 	return err;
@@ -45,9 +45,9 @@ FctERR MB85RC256V_Get_ID(void)
 	err = MB85RC256V_Read_ID(ID);
 	if (err)	{ return err; }
 	
-	MB85RC256V.Manufacture_ID = LSHIFT(ID[0], 4) + RSHIFT(ID[1], 4);
-	MB85RC256V.Density = ID[1] & 0x0F;
-	MB85RC256V.Product_ID = ID[2];
+	MB85RC256V.cfg.Manufacture_ID = LSHIFT(ID[0], 4) + RSHIFT(ID[1], 4);
+	MB85RC256V.cfg.Density = ID[1] & 0x0F;
+	MB85RC256V.cfg.Product_ID = ID[2];
 	
 	return ERROR_OK;
 }

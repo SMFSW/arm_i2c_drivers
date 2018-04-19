@@ -31,10 +31,23 @@
 
 
 // *****************************************************************************
+// Section: Types
+// *****************************************************************************
+/*!\struct FM24C_proc
+** \brief FM24C user interface struct
+**/
+typedef struct FM24C_proc {
+	struct {
+	I2C_slave *	slave_inst;		//!< Slave structure
+	} cfg;
+} FM24C_proc;
+
+
+// *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave FM24C_hal;	//!< FM24C Slave instance
-
+extern I2C_slave	FM24C_hal;	//!< FM24C Slave structure
+extern FM24C_proc	FM24C;		//!< FM24C User structure
 
 // *****************************************************************************
 // Section: Interface Routines

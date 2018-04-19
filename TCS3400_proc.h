@@ -47,6 +47,7 @@ typedef struct TCS3400_proc {
 	bool			SaturationRipple;	//!< Current Ripple saturation status (75% of saturation value)
 	bool			Saturation;			//!< Current Sensor saturation status
 	struct {
+	I2C_slave *		slave_inst;			//!< Slave structure
 	TCS3400_gain	Gain;				//!< Sensor gain config
 	uint16_t		Integ;				//!< Sensor integration time config
 	uint16_t		Wait;				//!< Sensor wait time config
@@ -54,12 +55,12 @@ typedef struct TCS3400_proc {
 	uint16_t		HighThreshold;		//!< High Threshold config
 	bool			AIEN;				//!< Sensor ALS (Ambient Light Sensing) interrupts enabled config
 	bool			WEN;				//!< Wait between ALS conversions enabled config
-	uint8_t			Revision_Id;		//!< TCS3472xx Revision ID
-	uint8_t			Device_Id;			//!< TCS3472xx Chip ID
+	uint8_t			Revision_Id;		//!< Revision ID
+	uint8_t			Device_Id;			//!< Chip ID
 	} cfg;
 } TCS3400_proc;
 
-extern TCS3400_proc	TCS3400;
+extern TCS3400_proc	TCS3400;			//!< TCS34000 User structure
 
 
 // *****************************************************************************

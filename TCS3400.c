@@ -48,7 +48,7 @@ FctERR TCS3400_Write(const uint8_t * data, const uint16_t addr, const uint16_t n
 
 	I2C_set_busy(&TCS3400_hal, true);
 
-	TCS3400_hal.status = HAL_I2C_Mem_Write(TCS3400_hal.cfg.inst, TCS3400_hal.cfg.addr, addr, TCS3400_hal.cfg.mem_size, (uint8_t *) data, nb, TCS3400_hal.cfg.timeout);
+	TCS3400_hal.status = HAL_I2C_Mem_Write(TCS3400_hal.cfg.bus_inst, TCS3400_hal.cfg.addr, addr, TCS3400_hal.cfg.mem_size, (uint8_t *) data, nb, TCS3400_hal.cfg.timeout);
 
 	I2C_set_busy(&TCS3400_hal, false);
 	return HALERRtoFCTERR(TCS3400_hal.status);
@@ -64,7 +64,7 @@ FctERR TCS3400_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 
 	I2C_set_busy(&TCS3400_hal, true);
 
-	TCS3400_hal.status = HAL_I2C_Mem_Read(TCS3400_hal.cfg.inst, TCS3400_hal.cfg.addr, addr, TCS3400_hal.cfg.mem_size, data, nb, TCS3400_hal.cfg.timeout);
+	TCS3400_hal.status = HAL_I2C_Mem_Read(TCS3400_hal.cfg.bus_inst, TCS3400_hal.cfg.addr, addr, TCS3400_hal.cfg.mem_size, data, nb, TCS3400_hal.cfg.timeout);
 
 	I2C_set_busy(&TCS3400_hal, false);
 	return HALERRtoFCTERR(TCS3400_hal.status);

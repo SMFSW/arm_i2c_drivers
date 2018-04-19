@@ -54,7 +54,7 @@ FctERR TCS3472_Write(const uint8_t * data, const uint16_t addr, const uint16_t n
 	CMD.Bits.TRANSACTION = TCS3472__TRANS_NORMAL_OP;
 	CMD.Bits.ADDR = addr;
 
-	TCS3472_hal.status = HAL_I2C_Mem_Write(TCS3472_hal.cfg.inst, TCS3472_hal.cfg.addr, CMD.Byte, TCS3472_hal.cfg.mem_size, (uint8_t *) data, nb, TCS3472_hal.cfg.timeout);
+	TCS3472_hal.status = HAL_I2C_Mem_Write(TCS3472_hal.cfg.bus_inst, TCS3472_hal.cfg.addr, CMD.Byte, TCS3472_hal.cfg.mem_size, (uint8_t *) data, nb, TCS3472_hal.cfg.timeout);
 
 	I2C_set_busy(&TCS3472_hal, false);
 	return HALERRtoFCTERR(TCS3472_hal.status);
@@ -76,7 +76,7 @@ FctERR TCS3472_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 	CMD.Bits.TRANSACTION = TCS3472__TRANS_NORMAL_OP;
 	CMD.Bits.ADDR = addr;
 
-	TCS3472_hal.status = HAL_I2C_Mem_Read(TCS3472_hal.cfg.inst, TCS3472_hal.cfg.addr, CMD.Byte, TCS3472_hal.cfg.mem_size, data, nb, TCS3472_hal.cfg.timeout);
+	TCS3472_hal.status = HAL_I2C_Mem_Read(TCS3472_hal.cfg.bus_inst, TCS3472_hal.cfg.addr, CMD.Byte, TCS3472_hal.cfg.mem_size, data, nb, TCS3472_hal.cfg.timeout);
 
 	I2C_set_busy(&TCS3472_hal, false);
 	return HALERRtoFCTERR(TCS3472_hal.status);
@@ -122,7 +122,7 @@ FctERR TCS3472_Write_Special(const TCS3472_spec_func func)
 	CMD.Bits.TRANSACTION = TCS3472__TRANS_SPECIAL_FUNC;
 	CMD.Bits.ADDR = func;
 
-	TCS3472_hal.status = HAL_I2C_Master_Transmit(TCS3472_hal.cfg.inst, TCS3472_hal.cfg.addr, &CMD.Byte, 1, TCS3472_hal.cfg.timeout);
+	TCS3472_hal.status = HAL_I2C_Master_Transmit(TCS3472_hal.cfg.bus_inst, TCS3472_hal.cfg.addr, &CMD.Byte, 1, TCS3472_hal.cfg.timeout);
 
 	I2C_set_busy(&TCS3472_hal, false);
 	return HALERRtoFCTERR(TCS3472_hal.status);

@@ -34,9 +34,10 @@ typedef struct S11059_proc {
 	uint16_t			IR;						//!< Current IR value
 	uint32_t			hStartConversion;		//!< Last conversion start tick
 	struct {
+	I2C_slave *			slave_inst;				//!< Slave structure
 	uint32_t			FullIntegrationTime;	//!< Current integration time in us
 	S11059_prescaler	IntegrationPrescaler;	//!< Current base integration time (prescaler)
-	uint16_t			IntegrationTimeMult;		//!< Current integration time multiplier
+	uint16_t			IntegrationTimeMult;	//!< Current integration time multiplier
 	S11059_integ		IntegrationMode;		//!< Current integration mode
 	S11059_gain			GainSelection;			//!< Current gain
 	S11059_standby_fct	Standby;				//!< Current standby state
@@ -44,7 +45,7 @@ typedef struct S11059_proc {
 	} cfg;
 } S11059_proc;
 
-extern S11059_proc S11059;
+extern S11059_proc S11059;			//!< S11059 User structure
 
 
 // *****************************************************************************

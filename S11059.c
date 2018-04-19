@@ -44,7 +44,7 @@ FctERR S11059_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb
 
 	I2C_set_busy(&S11059_hal, true);
 
-	S11059_hal.status = HAL_I2C_Mem_Write(S11059_hal.cfg.inst, S11059_hal.cfg.addr, addr, S11059_hal.cfg.mem_size, (uint8_t *) data, nb, S11059_hal.cfg.timeout);
+	S11059_hal.status = HAL_I2C_Mem_Write(S11059_hal.cfg.bus_inst, S11059_hal.cfg.addr, addr, S11059_hal.cfg.mem_size, (uint8_t *) data, nb, S11059_hal.cfg.timeout);
 
 	I2C_set_busy(&S11059_hal, false);
 	return HALERRtoFCTERR(S11059_hal.status);
@@ -60,7 +60,7 @@ FctERR S11059_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 
 	I2C_set_busy(&S11059_hal, true);
 
-	S11059_hal.status = HAL_I2C_Mem_Read(S11059_hal.cfg.inst, S11059_hal.cfg.addr, addr, S11059_hal.cfg.mem_size, data, nb, S11059_hal.cfg.timeout);
+	S11059_hal.status = HAL_I2C_Mem_Read(S11059_hal.cfg.bus_inst, S11059_hal.cfg.addr, addr, S11059_hal.cfg.mem_size, data, nb, S11059_hal.cfg.timeout);
 
 	I2C_set_busy(&S11059_hal, false);
 	return HALERRtoFCTERR(S11059_hal.status);

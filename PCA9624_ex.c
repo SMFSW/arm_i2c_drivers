@@ -104,7 +104,7 @@ FctERR PCA9624_Set_Mode_LEDs(const uint8_t chans, const PCA9624_ledout mode)
 FctERR PCA9624_Reset(const bool all)
 {
 	uint8_t Data = 0x06;
-	PCA9624_hal.status = HAL_I2C_Master_Transmit(PCA9624_hal.cfg.inst, all ? PCA96xx_GENERAL_CALL_ADDR : PCA9624_hal.cfg.addr, &Data, 1, PCA9624_hal.cfg.timeout);
+	PCA9624_hal.status = HAL_I2C_Master_Transmit(PCA9624_hal.cfg.bus_inst, all ? PCA96xx_GENERAL_CALL_ADDR : PCA9624_hal.cfg.addr, &Data, 1, PCA9624_hal.cfg.timeout);
 	return HALERRtoFCTERR(PCA9624_hal.status);
 }
 

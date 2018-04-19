@@ -50,7 +50,7 @@ FctERR TSL2591_Write(const uint8_t * data, const uint16_t addr, const uint16_t n
 	CMD.Bits.TRANSACTION = TSL2591__TRANS_NORMAL_OP;
 	CMD.Bits.ADDR = addr;
 
-	TSL2591_hal.status = HAL_I2C_Mem_Write(TSL2591_hal.cfg.inst, TSL2591_hal.cfg.addr, CMD.Byte, TSL2591_hal.cfg.mem_size, (uint8_t *) data, nb, TSL2591_hal.cfg.timeout);
+	TSL2591_hal.status = HAL_I2C_Mem_Write(TSL2591_hal.cfg.bus_inst, TSL2591_hal.cfg.addr, CMD.Byte, TSL2591_hal.cfg.mem_size, (uint8_t *) data, nb, TSL2591_hal.cfg.timeout);
 
 	I2C_set_busy(&TSL2591_hal, false);
 	return HALERRtoFCTERR(TSL2591_hal.status);
@@ -72,7 +72,7 @@ FctERR TSL2591_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 	CMD.Bits.TRANSACTION = TSL2591__TRANS_NORMAL_OP;
 	CMD.Bits.ADDR = addr;
 
-	TSL2591_hal.status = HAL_I2C_Mem_Read(TSL2591_hal.cfg.inst, TSL2591_hal.cfg.addr, CMD.Byte, TSL2591_hal.cfg.mem_size, data, nb, TSL2591_hal.cfg.timeout);
+	TSL2591_hal.status = HAL_I2C_Mem_Read(TSL2591_hal.cfg.bus_inst, TSL2591_hal.cfg.addr, CMD.Byte, TSL2591_hal.cfg.mem_size, data, nb, TSL2591_hal.cfg.timeout);
 
 	I2C_set_busy(&TSL2591_hal, false);
 	return HALERRtoFCTERR(TSL2591_hal.status);
@@ -121,7 +121,7 @@ FctERR TSL2591_Write_Special(const TSL2591_spec_func func)
 	CMD.Bits.TRANSACTION = TSL2591__TRANS_SPECIAL_FUNC;
 	CMD.Bits.ADDR = func;
 
-	TSL2591_hal.status = HAL_I2C_Master_Transmit(TSL2591_hal.cfg.inst, TSL2591_hal.cfg.addr, &CMD.Byte, 1, TSL2591_hal.cfg.timeout);
+	TSL2591_hal.status = HAL_I2C_Master_Transmit(TSL2591_hal.cfg.bus_inst, TSL2591_hal.cfg.addr, &CMD.Byte, 1, TSL2591_hal.cfg.timeout);
 
 	I2C_set_busy(&TSL2591_hal, false);
 	return HALERRtoFCTERR(TSL2591_hal.status);

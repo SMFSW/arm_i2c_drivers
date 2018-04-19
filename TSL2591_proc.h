@@ -45,16 +45,17 @@ typedef struct TSL2591_proc {
 	bool			SaturationRipple;	//!< Current Ripple saturation status (75% of saturation value)
 	bool			Saturation;			//!< Current Sensor saturation status
 	struct {
+	I2C_slave *		slave_inst;			//!< Slave structure
 	uint32_t		CPkL;				//!< Counts Per kiloLux config
 	float			DER;				//!< Accuracy (+/- DER lux) config
 	TSL2591_gain	Gain;				//!< Sensor gain config
 	TSL2591_integ	Integ;				//!< Sensor integration time config
 	bool			AIEN;				//!< Sensor ALS (Ambient Light Sensing) interrupts enabled config
-	uint8_t			Id;					//!< TSL2591 Chip ID
+	uint8_t			Id;					//!< Chip ID
 	} cfg;
 } TSL2591_proc;
 
-extern TSL2591_proc	TSL2591;
+extern TSL2591_proc	TSL2591;			//!< TSL2591 User structure
 
 
 // *****************************************************************************

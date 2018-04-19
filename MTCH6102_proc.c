@@ -16,7 +16,7 @@
 #include <math.h>
 /****************************************************************/
 
-MTCH6102_proc MTCH6102 = { 0, 0, 0, 0, { 9, 6, 0, 0, 0, false } };
+MTCH6102_proc MTCH6102 = { 0, 0, 0, 0, { &MTCH6102_hal, 9, 6, 0, 0, 0, false } };
 
 
 uint8_t MTCH6102_default_core[MTCH__MODE_CON - MTCH__FW_MAJOR + 1] = {

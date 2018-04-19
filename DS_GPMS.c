@@ -44,7 +44,7 @@ FctERR GPMS_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 
 	I2C_set_busy(&GPMS_hal, true);
 
-	GPMS_hal.status = HAL_I2C_Mem_Write(GPMS_hal.cfg.inst, GPMS_hal.cfg.addr, addr, GPMS_hal.cfg.mem_size, (uint8_t *) data, nb, GPMS_hal.cfg.timeout);
+	GPMS_hal.status = HAL_I2C_Mem_Write(GPMS_hal.cfg.bus_inst, GPMS_hal.cfg.addr, addr, GPMS_hal.cfg.mem_size, (uint8_t *) data, nb, GPMS_hal.cfg.timeout);
 
 	I2C_set_busy(&GPMS_hal, false);
 	return HALERRtoFCTERR(GPMS_hal.status);
@@ -60,7 +60,7 @@ FctERR GPMS_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 
 	I2C_set_busy(&GPMS_hal, true);
 
-	GPMS_hal.status = HAL_I2C_Mem_Read(GPMS_hal.cfg.inst, GPMS_hal.cfg.addr, addr, GPMS_hal.cfg.mem_size, data, nb, GPMS_hal.cfg.timeout);
+	GPMS_hal.status = HAL_I2C_Mem_Read(GPMS_hal.cfg.bus_inst, GPMS_hal.cfg.addr, addr, GPMS_hal.cfg.mem_size, data, nb, GPMS_hal.cfg.timeout);
 
 	I2C_set_busy(&GPMS_hal, false);
 	return HALERRtoFCTERR(GPMS_hal.status);

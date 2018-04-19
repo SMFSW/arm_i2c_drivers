@@ -22,9 +22,11 @@ SOFTWARE.
 
 ## v0.7
 
-* template: some fixes
+* template: misc fixes
 * use of const qualifier in function parameters
 * init sequence returns with error value if something goes wrong during initialization
+* implementation of slave instance (slave_inst) in xxx_proc files (easier debug access to component structure except special cases)
+* I2C_component: instance inst becomes bus_inst (new slave_inst implementation in xxx_proc files to avoid name confusions) 
 * FM24C & MB85RC256V: added macros to create simple inlines to read/write values from addresses (to use in some header)
 * MTCH6102: added standalone function for commands & inlines for configuration, restore to defaults & tests commands
 * MTCH6102: added filtering type configuration function & inlines for configuration

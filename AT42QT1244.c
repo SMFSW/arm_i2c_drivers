@@ -72,7 +72,7 @@ FctERR AT42QT1244_Write(const uint8_t * data, const uint16_t addr, const uint16_
 
 	// TODO: check if trick works
 	// MemAddress then 0x00 has to be sent, trick is to tell MEMADD size is 16 bit and send addr as the MSB
-	AT42QT1244_hal.status = HAL_I2C_Mem_Write(AT42QT1244_hal.cfg.inst, AT42QT1244_hal.cfg.addr, LSHIFT(addr, 8), I2C_MEMADD_SIZE_16BIT, (uint8_t *) data, nb, AT42QT1244_hal.cfg.timeout);
+	AT42QT1244_hal.status = HAL_I2C_Mem_Write(AT42QT1244_hal.cfg.bus_inst, AT42QT1244_hal.cfg.addr, LSHIFT(addr, 8), I2C_MEMADD_SIZE_16BIT, (uint8_t *) data, nb, AT42QT1244_hal.cfg.timeout);
 
 	I2C_set_busy(&AT42QT1244_hal, false);
 	return HALERRtoFCTERR(AT42QT1244_hal.status);
@@ -93,13 +93,13 @@ FctERR AT42QT1244_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 
 	I2C_set_busy(&AT42QT1244_hal, true);
 
-	AT42QT1244_hal.status = HAL_I2C_Master_Transmit(AT42QT1244_hal.cfg.inst, AT42QT1244_hal.cfg.addr, preamble, nb, AT42QT1244_hal.cfg.timeout);
+	AT42QT1244_hal.status = HAL_I2C_Master_Transmit(AT42QT1244_hal.cfg.bus_inst, AT42QT1244_hal.cfg.addr, preamble, nb, AT42QT1244_hal.cfg.timeout);
 	err = HALERRtoFCTERR(AT42QT1244_hal.status);
 
 	// TODO: WAIT 150us to add??
 
 	if (AT42QT1244_hal.status == HAL_OK) {
-		AT42QT1244_hal.status = HAL_I2C_Master_Receive(AT42QT1244_hal.cfg.inst, AT42QT1244_hal.cfg.addr, tmp_read, nb + 2, AT42QT1244_hal.cfg.timeout);
+		AT42QT1244_hal.status = HAL_I2C_Master_Receive(AT42QT1244_hal.cfg.bus_inst, AT42QT1244_hal.cfg.addr, tmp_read, nb + 2, AT42QT1244_hal.cfg.timeout);
 		err = HALERRtoFCTERR(AT42QT1244_hal.status);
 	}
 

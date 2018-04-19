@@ -56,7 +56,7 @@ typedef struct PACK__ StructI2Cslave {	// TODO: check if the struct really needs
 	**  \brief I2C slave parameters
 	**/
 	struct {
-		I2C_HandleTypeDef *	inst;		//!< Slave I2C bus instance
+		I2C_HandleTypeDef *	bus_inst;	//!< Slave I2C bus instance
 		uint16_t			addr;		//!< Slave address
 		uint32_t			timeout;	//!< Slave transaction timeout
 		const I2C_reg_size	mem_size;	//!< Slave internal registers size
@@ -168,7 +168,7 @@ __INLINE bool INLINE__ I2C_is_busy(const I2C_slave * slave) {
 ** \return I2C Slave device HAL I2C instance
 **/
 __INLINE I2C_HandleTypeDef * INLINE__ I2C_get_slave_instance(const I2C_slave * slave) {
-	return slave->cfg.inst; }
+	return slave->cfg.bus_inst; }
 
 /*!\brief Get I2C Slave device address
 ** \param[in,out] slave - pointer to I2C slave instance

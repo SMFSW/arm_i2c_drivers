@@ -21,6 +21,8 @@ ARM I2C Drivers for various components
 ## Remarks
 
 - define VERBOSE in compiler options to printf infos from component handlers
+- Components with a xxx_proc file can access I2C_slave instance through CPNT->cfg.slave_inst.
+Please keep in mind some components are somewhat custom and needs to be accesses through CPNT->cfg.slave_inst_xxx instead if needed.
 
 ## Next
 

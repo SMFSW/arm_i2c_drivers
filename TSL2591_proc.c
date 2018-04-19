@@ -16,7 +16,7 @@
 /****************************************************************/
 
 
-TSL2591_proc TSL2591 = { 0, 0, 0, 0, 0.0f, false, false, { 0, 0.0f,TSL2591__MEDIUM_GAIN, TSL2591__INTEG_100MS, true, 0 } };
+TSL2591_proc TSL2591 = { 0, 0, 0, 0, 0.0f, false, false, { &TSL2591_hal, 0, 0.0f,TSL2591__MEDIUM_GAIN, TSL2591__INTEG_100MS, true, 0 } };
 
 const uint16_t TSL2591_gain_tab[4] = { 1, 25, 400, 9200 };	// Medium gain is 24.5, thus 25 used
 const uint16_t TSL2591_integ_tab[6] = { 100, 200, 300, 400, 500, 600 };

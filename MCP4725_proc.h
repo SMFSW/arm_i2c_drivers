@@ -22,16 +22,17 @@
 ** \brief MCP4725 user interface struct
 **/
 typedef struct MCP4725_proc {
-	uint16_t	DAC_4096;	//!< DAC output value (12bits)
-	float		DAC_Volts;	//!< DAC output in Volts
+	uint16_t	DAC_4096;		//!< DAC output value (12bits)
+	float		DAC_Volts;		//!< DAC output in Volts
 	struct {
-	MCP4725_cmd	Mode;		//!< Write commands mode config
-	MCP4725_pd	PowerDown;	//!< Power down mode config
-	float		VRef;		//!< Voltage reference config
+	I2C_slave *	slave_inst;		//!< Slave structure
+	MCP4725_cmd	Mode;			//!< Write commands mode config
+	MCP4725_pd	PowerDown;		//!< Power down mode config
+	float		VRef;			//!< Voltage reference config
 	} cfg;
 } MCP4725_proc;
 
-extern MCP4725_proc	MCP4725;
+extern MCP4725_proc	MCP4725;	//!< MCP4725 User structure
 
 
 // *****************************************************************************

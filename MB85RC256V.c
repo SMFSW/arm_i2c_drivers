@@ -48,7 +48,7 @@ FctERR MB85RC256V_Write(const uint8_t * data, const uint16_t addr, const uint16_
 
 	I2C_set_busy(&MB85RC256V_hal, true);
 
-	MB85RC256V_hal.status = HAL_I2C_Mem_Write(MB85RC256V_hal.cfg.inst, MB85RC256V_hal.cfg.addr, addr, MB85RC256V_hal.cfg.mem_size, (uint8_t *) data, nb, MB85RC256V_hal.cfg.timeout);
+	MB85RC256V_hal.status = HAL_I2C_Mem_Write(MB85RC256V_hal.cfg.bus_inst, MB85RC256V_hal.cfg.addr, addr, MB85RC256V_hal.cfg.mem_size, (uint8_t *) data, nb, MB85RC256V_hal.cfg.timeout);
 
 	I2C_set_busy(&MB85RC256V_hal, false);
 	return HALERRtoFCTERR(MB85RC256V_hal.status);
@@ -64,7 +64,7 @@ FctERR MB85RC256V_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 
 	I2C_set_busy(&MB85RC256V_hal, true);
 
-	MB85RC256V_hal.status = HAL_I2C_Mem_Read(MB85RC256V_hal.cfg.inst, MB85RC256V_hal.cfg.addr, addr, MB85RC256V_hal.cfg.mem_size, data, nb, MB85RC256V_hal.cfg.timeout);
+	MB85RC256V_hal.status = HAL_I2C_Mem_Read(MB85RC256V_hal.cfg.bus_inst, MB85RC256V_hal.cfg.addr, addr, MB85RC256V_hal.cfg.mem_size, data, nb, MB85RC256V_hal.cfg.timeout);
 
 	I2C_set_busy(&MB85RC256V_hal, false);
 	return HALERRtoFCTERR(MB85RC256V_hal.status);
@@ -77,7 +77,7 @@ FctERR MB85RC256V_Read_ID(uint8_t * data)
 
 	I2C_set_busy(&MB85RC256V_hal, true);
 
-	MB85RC256V_hal.status = HAL_I2C_Mem_Read(MB85RC256V_hal.cfg.inst, 0xF8, MB85RC256V_hal.cfg.addr, I2C_MEMADD_SIZE_8BIT, data, 3, MB85RC256V_hal.cfg.timeout);
+	MB85RC256V_hal.status = HAL_I2C_Mem_Read(MB85RC256V_hal.cfg.bus_inst, 0xF8, MB85RC256V_hal.cfg.addr, I2C_MEMADD_SIZE_8BIT, data, 3, MB85RC256V_hal.cfg.timeout);
 
 	I2C_set_busy(&MB85RC256V_hal, false);
 	return HALERRtoFCTERR(MB85RC256V_hal.status);

@@ -44,7 +44,7 @@ FctERR BMP180_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb
 
 	I2C_set_busy(&BMP180_hal, true);
 
-	BMP180_hal.status = HAL_I2C_Mem_Write(BMP180_hal.cfg.inst, BMP180_hal.cfg.addr, addr, BMP180_hal.cfg.mem_size, (uint8_t *) data, nb, BMP180_hal.cfg.timeout);
+	BMP180_hal.status = HAL_I2C_Mem_Write(BMP180_hal.cfg.bus_inst, BMP180_hal.cfg.addr, addr, BMP180_hal.cfg.mem_size, (uint8_t *) data, nb, BMP180_hal.cfg.timeout);
 
 	I2C_set_busy(&BMP180_hal, false);
 	return HALERRtoFCTERR(BMP180_hal.status);
@@ -60,7 +60,7 @@ FctERR BMP180_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 
 	I2C_set_busy(&BMP180_hal, true);
 
-	BMP180_hal.status = HAL_I2C_Mem_Read(BMP180_hal.cfg.inst, BMP180_hal.cfg.addr, addr, BMP180_hal.cfg.mem_size, data, nb, BMP180_hal.cfg.timeout);
+	BMP180_hal.status = HAL_I2C_Mem_Read(BMP180_hal.cfg.bus_inst, BMP180_hal.cfg.addr, addr, BMP180_hal.cfg.mem_size, data, nb, BMP180_hal.cfg.timeout);
 
 	I2C_set_busy(&BMP180_hal, false);
 	return HALERRtoFCTERR(BMP180_hal.status);

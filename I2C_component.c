@@ -2,6 +2,8 @@
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief Base I2C component
+** \warning Components with a xxx_proc file can access I2C_slave instance through CPNT->cfg.slave_inst.
+**			Please keep in mind some components are somewhat custom and needs to be accesses through CPNT->cfg.slave_inst_xxx instead if needed.
 **/
 /****************************************************************/
 #include "I2C_component.h"
@@ -25,7 +27,7 @@ FctERR I2C_slave_init(I2C_slave * slave, const I2C_HandleTypeDef * hi2c, const u
 
 	//memcpy(slave, &slave_hal, sizeof(I2C_slave));		//! \note max_speed is const and should be set at init
 
-	slave->cfg.inst = (I2C_HandleTypeDef *) hi2c;
+	slave->cfg.bus_inst = (I2C_HandleTypeDef *) hi2c;
 	slave->cfg.addr = I2C_ADDR(devAddress);
 	slave->cfg.timeout = timeout;
 	return ERROR_OK;
@@ -39,7 +41,7 @@ FctERR I2C_set_slave_instance(I2C_slave * slave, const I2C_HandleTypeDef * hi2c)
 
 	if ((!slave) || (!hi2c))	{ return ERROR_INSTANCE; }	// Unknown instance (null pointer)
 
-	slave->cfg.inst = (I2C_HandleTypeDef *) hi2c;
+	slave->cfg.bus_inst = (I2C_HandleTypeDef *) hi2c;
 	return ERROR_OK;
 }
 

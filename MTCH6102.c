@@ -47,7 +47,7 @@ FctERR MTCH6102_Write(const uint8_t * data, const uint16_t addr, const uint16_t 
 
 	I2C_set_busy(&MTCH6102_hal, true);
 
-	MTCH6102_hal.status = HAL_I2C_Mem_Write(MTCH6102_hal.cfg.inst, MTCH6102_hal.cfg.addr, addr, MTCH6102_hal.cfg.mem_size, (uint8_t *) data, nb, MTCH6102_hal.cfg.timeout);
+	MTCH6102_hal.status = HAL_I2C_Mem_Write(MTCH6102_hal.cfg.bus_inst, MTCH6102_hal.cfg.addr, addr, MTCH6102_hal.cfg.mem_size, (uint8_t *) data, nb, MTCH6102_hal.cfg.timeout);
 
 	I2C_set_busy(&MTCH6102_hal, false);
 	return HALERRtoFCTERR(MTCH6102_hal.status);
@@ -63,7 +63,7 @@ FctERR MTCH6102_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 
 	I2C_set_busy(&MTCH6102_hal, true);
 
-	MTCH6102_hal.status = HAL_I2C_Mem_Read(MTCH6102_hal.cfg.inst, MTCH6102_hal.cfg.addr, addr, MTCH6102_hal.cfg.mem_size, data, nb, MTCH6102_hal.cfg.timeout);
+	MTCH6102_hal.status = HAL_I2C_Mem_Read(MTCH6102_hal.cfg.bus_inst, MTCH6102_hal.cfg.addr, addr, MTCH6102_hal.cfg.mem_size, data, nb, MTCH6102_hal.cfg.timeout);
 
 	I2C_set_busy(&MTCH6102_hal, false);
 	return HALERRtoFCTERR(MTCH6102_hal.status);

@@ -16,7 +16,7 @@
 /****************************************************************/
 
 
-PCF8523_proc PCF8523 = { { 0, 0, 0, 0}, { 0, 0, 0}, { 0, 0, false } };
+PCF8523_proc PCF8523 = { { 0, 0, 0, 0}, { 0, 0, 0}, { &PCF8523_hal, 0, 0, false } };
 
 
 /****************************************************************/
@@ -149,7 +149,7 @@ FctERR PCF8523_Set_Time(const PCF8523_time time, const bool BCD)
 FctERR PCF8523_Get_Date(PCF8523_date * date, const bool BCD)
 {
 	uint8_t		DATE[4];
-	uint8_t		year;
+	uint8_t		year = 0;
 	FctERR		err;
 
 	err = PCF8523_Get_Date_Raw((uint8_t *) &DATE);

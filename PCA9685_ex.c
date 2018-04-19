@@ -20,7 +20,7 @@
 FctERR PCA9685_Reset(const bool all)
 {
 	uint8_t Data = 0x06;
-	PCA9685_hal.status = HAL_I2C_Master_Transmit(PCA9685_hal.cfg.inst, all ? PCA96xx_GENERAL_CALL_ADDR : PCA9685_hal.cfg.addr, &Data, 1, PCA9685_hal.cfg.timeout);
+	PCA9685_hal.status = HAL_I2C_Master_Transmit(PCA9685_hal.cfg.bus_inst, all ? PCA96xx_GENERAL_CALL_ADDR : PCA9685_hal.cfg.addr, &Data, 1, PCA9685_hal.cfg.timeout);
 	return HALERRtoFCTERR(PCA9685_hal.status);
 }
 

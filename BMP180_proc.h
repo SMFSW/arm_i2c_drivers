@@ -53,13 +53,14 @@ typedef struct BMP180_proc {
 	float				SeaLevelPressure;	//!< Current atmospheric pressure at sea level
 	uint32_t			hStartConversion;	//!< Last conversion start tick
 	struct {
-	BMP180_oversampling	OSS;				//!< BMP180 Oversampling
-	BMP180_calib		Calib;				//!< BMP180 calibration values
-	uint8_t				Id;					//!< BMP180 chip ID
+	I2C_slave *			slave_inst;			//!< Slave structure
+	BMP180_oversampling	OSS;				//!< Oversampling
+	BMP180_calib		Calib;				//!< Calibration values
+	uint8_t				Id;					//!< Chip ID
 	} cfg;
 } BMP180_proc;
 
-extern BMP180_proc BMP180;
+extern BMP180_proc BMP180;					//!< BMP180 User structure
 
 
 // *****************************************************************************

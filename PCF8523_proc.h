@@ -48,13 +48,14 @@ typedef struct PCF8523_proc {
 	PCF8523_date	date;
 	PCF8523_time	time;
 	struct {
+	I2C_slave *		slave_inst;		//!< Slave structure
 	uint8_t			Src_Clock_A;
 	uint8_t			Src_Clock_B;
-	bool			Hour_Format;	// 0: 24h; 1: 12h
+	bool			Hour_Format;	//!< 0: 24h; 1: 12h
 	} cfg;
 } PCF8523_proc;
 
-extern PCF8523_proc	PCF8523;
+extern PCF8523_proc	PCF8523;		//!< PCF8523 User structure
 
 
 // *****************************************************************************

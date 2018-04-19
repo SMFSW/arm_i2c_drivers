@@ -23,6 +23,8 @@
 
 I2C_slave FM24C_hal = { { pNull, I2C_ADDR(FM24C_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FMP }, 0, HAL_OK, true, false };
 
+FM24C_proc FM24C = { { &FM24C_hal } };
+
 
 /****************************************************************/
 
@@ -54,7 +56,7 @@ FctERR FM24C_Write_Banked(const uint8_t * data, const uint16_t addr, const uint8
 
 	I2C_set_busy(&FM24C_hal, true);
 
-	FM24C_hal.status = HAL_I2C_Mem_Write(FM24C_hal.cfg.inst, i2c_addr, addr, FM24C_hal.cfg.mem_size, (uint8_t *) data, nb, FM24C_hal.cfg.timeout);
+	FM24C_hal.status = HAL_I2C_Mem_Write(FM24C_hal.cfg.bus_inst, i2c_addr, addr, FM24C_hal.cfg.mem_size, (uint8_t *) data, nb, FM24C_hal.cfg.timeout);
 
 	I2C_set_busy(&FM24C_hal, false);
 	return HALERRtoFCTERR(FM24C_hal.status);
@@ -73,7 +75,7 @@ FctERR FM24C_Read_Banked(uint8_t * data, const uint16_t addr, const uint8_t bank
 
 	I2C_set_busy(&FM24C_hal, true);
 
-	FM24C_hal.status = HAL_I2C_Mem_Read(FM24C_hal.cfg.inst, i2c_addr, addr, FM24C_hal.cfg.mem_size, data, nb, FM24C_hal.cfg.timeout);
+	FM24C_hal.status = HAL_I2C_Mem_Read(FM24C_hal.cfg.bus_inst, i2c_addr, addr, FM24C_hal.cfg.mem_size, data, nb, FM24C_hal.cfg.timeout);
 
 	I2C_set_busy(&FM24C_hal, false);
 	return HALERRtoFCTERR(FM24C_hal.status);

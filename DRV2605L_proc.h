@@ -32,16 +32,17 @@
 **/
 typedef struct DRV2605L_proc {
 	struct {
+	I2C_slave *			slave_inst;	//!< Slave structure
 	DRV2605L_mode		Mode;		//!< Current haptic driver mode
 	DRV2605L_act		ERM_LRA;	//!< Current haptic actuator type
 	DRV2605L_loop		Open_Loop;	//!< Current loop type (0 closed loop / auto resonance, 1 open)
 	DRV2605L_input		Input_Mode;	//!< Current input mode(PWM / Analog)
 	DRV2605L_rtp_format	RTP_Format;	//!< Current Real Time Playback format
-	uint8_t				Id;			//!< DRV260x chip ID
+	uint8_t				Id;			//!< Chip ID
 	} cfg;
 } DRV2605L_proc;
 
-extern DRV2605L_proc	DRV2605L;
+extern DRV2605L_proc	DRV2605L;	//!< DRV2605L User structure
 
 
 // *****************************************************************************
