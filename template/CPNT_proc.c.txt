@@ -44,7 +44,7 @@ __WEAK FctERR $CPNT$_Init_Sequence(void)
 
 __WEAK FctERR $CPNT$_handler(void)
 {
-	FctERR err;
+	FctERR err = ERROR_OK;
 	
 	if (err)	{ return err; }
 	

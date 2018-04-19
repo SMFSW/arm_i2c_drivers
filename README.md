@@ -85,9 +85,13 @@ ARM I2C Drivers for various components
 
   -> _WORKING (TODO: handle clkout and alarms)_
 
+- **S11059**: I2C interface-compatible color sensor
+
+  -> _TESTS PENDING
+
 - **TCS3400**: Color light-to-digital converter
 
-  -> _NOT TESTED YET (communication OK, auto-integration, persistence & conversions in the works)_
+  -> _TESTS PENDING (communication OK, auto-integration, persistence & conversions in the works)_
 
 - **TCS3472**: Color light-to-digital converter with IR filter
 
@@ -124,6 +128,11 @@ You may also:
 
 - contribute to devices additions using the template in subfolder
 - raise issue on github to ask for particular devices
+
+## TODO
+
+- Copatibility handling multiple identical components
+- FreeRTOS compatibility using R/W functions using interrupts with callbacks
 
 ## Misc
 

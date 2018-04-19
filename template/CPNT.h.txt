@@ -44,14 +44,14 @@ typedef enum PACK__ $CPNT$_reg_map {
 /*!\enum $CPNT$_enum
 ** \brief Values enum for $CPNT$
 **/
-typedef enum PACK__ $CPNT$_reg_map {
+typedef enum PACK__ $CPNT$_enum {
 	$CPNT$__VAL1 = 0,	//!< default value for reference
 	$CPNT$__VAL2,		//!< default value for reference
 } $CPNT$_enum;
 
 
 /*!\union u$CPNT$_REG__REG1
-** \brief Union for REG1 for $CPNT$
+** \brief Union for REG1 register of $CPNT$
 **/
 typedef union u$CPNT$_REG__REG1 {
 	uint8_t Byte;

@@ -59,7 +59,7 @@ __INLINE FctERR INLINE__ TCS3400_Write_Ctl(const uint8_t ctl) {
 	return TCS3400_Write((uint8_t *) &ctl, TCS3400__CONTROL, 1); }
 
 
-/*!\brief oscillator Enable / Disable
+/*!\brief Oscillator Enable / Disable
 ** \param[in] en - 0 Disable, 1 Enable
 ** \return FctERR - error code
 **/

@@ -22,6 +22,7 @@ SOFTWARE.
 
 ## v0.7
 
+* template: some fixes
 * use of const qualifier in function parameters
 * init sequence returns with error value if something goes wrong during initialization
 * FM24C & MB85RC256V: added macros to create simple inlines to read/write values from addresses (to use in some header)
@@ -31,6 +32,7 @@ SOFTWARE.
 * MTCH6102: after testing, added delay of 1ms in MTCH6102_Command while loop waiting for operation to complete
 * TCSxxxx, TSL2591: err affected when clearing it flag in handler
 * TCSxxxx: corrected McCammy's CCT formula to get coherent results
+* S11059: Hamamatsu Color Sensor added
 
 ## v0.6
 

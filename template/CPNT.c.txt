@@ -58,7 +58,7 @@ FctERR $CPNT$_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb
 
 FctERR $CPNT$_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(&$CPNT$))		{ return ERROR_DISABLED; }	// Peripheral disabled
+	if (!I2C_is_enabled(&$CPNT$_hal))	{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (!data)							{ return ERROR_MEMORY; }	// Null pointer
 	//if (addr > )						{ return ERROR_RANGE; }		// Unknown register
 	//if ((addr + nb) > last_reg + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
