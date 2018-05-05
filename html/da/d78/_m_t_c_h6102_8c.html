@@ -87,9 +87,9 @@ Include dependency graph for MTCH6102.c:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af41f96a56e93f5ecf76b6ba489a4ee96"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d78/_m_t_c_h6102_8c.html#af41f96a56e93f5ecf76b6ba489a4ee96">MTCH6102_Init</a> (void)</td></tr>
-<tr class="memdesc:af41f96a56e93f5ecf76b6ba489a4ee96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for MTCH6102 peripheral.  <a href="#af41f96a56e93f5ecf76b6ba489a4ee96">More...</a><br /></td></tr>
-<tr class="separator:af41f96a56e93f5ecf76b6ba489a4ee96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ac096d23474a9811463ec973adf4992"><td class="memItemLeft" align="right" valign="top">__WEAK FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d78/_m_t_c_h6102_8c.html#a2ac096d23474a9811463ec973adf4992">MTCH6102_Init</a> (void)</td></tr>
+<tr class="memdesc:a2ac096d23474a9811463ec973adf4992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for MTCH6102 peripheral.  <a href="#a2ac096d23474a9811463ec973adf4992">More...</a><br /></td></tr>
+<tr class="separator:a2ac096d23474a9811463ec973adf4992"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a886bf0ab928a8940addac31edde0b1c5"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d78/_m_t_c_h6102_8c.html#a886bf0ab928a8940addac31edde0b1c5">MTCH6102_Write</a> (const uint8_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
 <tr class="memdesc:a886bf0ab928a8940addac31edde0b1c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Write function for MTCH6102.  <a href="#a886bf0ab928a8940addac31edde0b1c5">More...</a><br /></td></tr>
 <tr class="separator:a886bf0ab928a8940addac31edde0b1c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -99,7 +99,7 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a506e2dd7b00b86b4c0fdc7a1199fac21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d78/_m_t_c_h6102_8c.html#a506e2dd7b00b86b4c0fdc7a1199fac21">MTCH6102_hal</a> = { { pNull, (( 0x25 ) &lt;&lt; 1), 20 , I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false }</td></tr>
+<tr class="memitem:a506e2dd7b00b86b4c0fdc7a1199fac21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a5bb7f9cd708e57b2a07f329626eaa7a1">I2C_slave</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d78/_m_t_c_h6102_8c.html#a506e2dd7b00b86b4c0fdc7a1199fac21">MTCH6102_hal</a> = { { pNull, <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#ad5c7bd690e94d726dda8f5f183d85687">I2C_ADDR</a>(<a class="el" href="../../da/da9/_m_t_c_h6102_8h.html#a5f8bcdb203ef8791254b339f0b5ce320">MTCH6102_BASE_ADDR</a>), <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a0d8243bc88b91218d47566862e9eae2f">I2C_slave_timeout</a>, I2C_MEMADD_SIZE_8BIT, <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a32d6725dee4b0ae99f99767f6efde890">I2C_FM</a> }, 0, HAL_OK, true, false }</td></tr>
 <tr class="memdesc:a506e2dd7b00b86b4c0fdc7a1199fac21"><td class="mdescLeft">&#160;</td><td class="mdescRight">MTCH6102 Slave structure.  <a href="#a506e2dd7b00b86b4c0fdc7a1199fac21">More...</a><br /></td></tr>
 <tr class="separator:a506e2dd7b00b86b4c0fdc7a1199fac21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -109,14 +109,14 @@ Variables</h2></td></tr>
 <dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2018, SMFSW</dd></dl>
 <p>MTCH6102: Low-Power Projected Capacitive Touch Controller </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="af41f96a56e93f5ecf76b6ba489a4ee96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af41f96a56e93f5ecf76b6ba489a4ee96">&#9670;&nbsp;</a></span>MTCH6102_Init()</h2>
+<a id="a2ac096d23474a9811463ec973adf4992"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ac096d23474a9811463ec973adf4992">&#9670;&nbsp;</a></span>MTCH6102_Init()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">FctERR MTCH6102_Init </td>
+          <td class="memname">__WEAK FctERR MTCH6102_Init </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -133,17 +133,17 @@ Variables</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../da/d78/_m_t_c_h6102_8c_af41f96a56e93f5ecf76b6ba489a4ee96_cgraph.png" border="0" usemap="#da/d78/_m_t_c_h6102_8c_af41f96a56e93f5ecf76b6ba489a4ee96_cgraph" alt=""/></div>
-<map name="da/d78/_m_t_c_h6102_8c_af41f96a56e93f5ecf76b6ba489a4ee96_cgraph" id="da/d78/_m_t_c_h6102_8c_af41f96a56e93f5ecf76b6ba489a4ee96_cgraph">
+<div class="center"><img src="../../da/d78/_m_t_c_h6102_8c_a2ac096d23474a9811463ec973adf4992_cgraph.png" border="0" usemap="#da/d78/_m_t_c_h6102_8c_a2ac096d23474a9811463ec973adf4992_cgraph" alt=""/></div>
+<map name="da/d78/_m_t_c_h6102_8c_a2ac096d23474a9811463ec973adf4992_cgraph" id="da/d78/_m_t_c_h6102_8c_a2ac096d23474a9811463ec973adf4992_cgraph">
 <area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a0156af69fdc6459a92678bdb7d6300ab" title="I2C Slave device initialization. " alt="" coords="205,5,310,32"/>
-<area shape="rect" id="node3" href="../../d2/d60/_m_t_c_h6102__proc_8c.html#a9e9f1a5ae24e8649c742ea66c8d50fb5" title="Initialization Sequence for MTCH6102 peripheral. " alt="" coords="168,56,347,83"/>
-<area shape="rect" id="node11" href="../../d6/dd6/_i2_c__component_8h.html#a4aab6d6150d927201a556fea510a104c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="201,107,314,133"/>
-<area shape="rect" id="node4" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a527d7ba10c403694eb014306ebabc0b3" title="Set MTCH6102 gesture decoding. " alt="" coords="617,29,772,56"/>
+<area shape="rect" id="node3" href="../../d2/d60/_m_t_c_h6102__proc_8c.html#a83ef9012904ac5c8e55986ad9aa4b10f" title="Initialization Sequence for MTCH6102 peripheral. " alt="" coords="168,56,347,83"/>
+<area shape="rect" id="node11" href="../../d6/dd6/_i2_c__component_8h.html#a0fd045e910b4d2c5aecdca250e9d3379" title="Set I2C Slave device disabled/enabled state. " alt="" coords="201,107,314,133"/>
+<area shape="rect" id="node4" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a17fcfd698e37c5778a3b9898b6beef3d" title="Set MTCH6102 gesture decoding. " alt="" coords="617,29,772,56"/>
 <area shape="rect" id="node5" href="../../da/d78/_m_t_c_h6102_8c.html#a886bf0ab928a8940addac31edde0b1c5" title="I2C Write function for MTCH6102. " alt="" coords="822,33,949,60"/>
 <area shape="rect" id="node8" href="../../da/d78/_m_t_c_h6102_8c.html#addb332d7599bec7bb742d84ea36f8bc1" title="I2C Read function for MTCH6102. " alt="" coords="822,84,949,111"/>
-<area shape="rect" id="node9" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a7b85f0951a96a72bdb0f6a5e71b6fac4" title="Configure MTCH6102controller (after parameters have been changed) " alt="" coords="395,78,568,119"/>
-<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="997,33,1109,60"/>
-<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="1002,84,1105,111"/>
+<area shape="rect" id="node9" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a78b150e7fa294d299d52a8536d7d0c51" title="Configure MTCH6102controller (after parameters have been changed) " alt="" coords="395,78,568,119"/>
+<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="997,33,1109,60"/>
+<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="1002,84,1105,111"/>
 <area shape="rect" id="node10" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a8b3e9e1e93c3eca7b3f7ab26e10dcf1f" title="Execute MTCH6102 command. " alt="" coords="617,84,773,111"/>
 </map>
 </div>
@@ -197,8 +197,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d78/_m_t_c_h6102_8c_addb332d7599bec7bb742d84ea36f8bc1_cgraph.png" border="0" usemap="#da/d78/_m_t_c_h6102_8c_addb332d7599bec7bb742d84ea36f8bc1_cgraph" alt=""/></div>
 <map name="da/d78/_m_t_c_h6102_8c_addb332d7599bec7bb742d84ea36f8bc1_cgraph" id="da/d78/_m_t_c_h6102_8c_addb332d7599bec7bb742d84ea36f8bc1_cgraph">
-<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="181,5,293,32"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="186,56,289,83"/>
+<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="181,5,293,32"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="186,56,289,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -207,24 +207,24 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="../../da/d78/_m_t_c_h6102_8c_addb332d7599bec7bb742d84ea36f8bc1_icgraph.png" border="0" usemap="#da/d78/_m_t_c_h6102_8c_addb332d7599bec7bb742d84ea36f8bc1_icgraph" alt=""/></div>
 <map name="da/d78/_m_t_c_h6102_8c_addb332d7599bec7bb742d84ea36f8bc1_icgraph" id="da/d78/_m_t_c_h6102_8c_addb332d7599bec7bb742d84ea36f8bc1_icgraph">
 <area shape="rect" id="node2" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a8b3e9e1e93c3eca7b3f7ab26e10dcf1f" title="Execute MTCH6102 command. " alt="" coords="207,218,363,244"/>
-<area shape="rect" id="node3" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#ababd9e7fdd71629d4980b35480a0fe91" title="Get MTCH6102 gesture decoding. " alt="" coords="465,327,621,354"/>
+<area shape="rect" id="node3" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a6839d3b9a7301c4cc4feffdff00e2724" title="Get MTCH6102 gesture decoding. " alt="" coords="465,327,621,354"/>
 <area shape="rect" id="node4" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a3fd2d358b531a818af13712240b9e934" title="Get manufacturing test results. " alt="" coords="696,327,901,354"/>
-<area shape="rect" id="node10" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a9e9f1a5ae24e8649c742ea66c8d50fb5" title="Initialization Sequence for MTCH6102 peripheral. " alt="" coords="709,191,888,218"/>
+<area shape="rect" id="node10" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a83ef9012904ac5c8e55986ad9aa4b10f" title="Initialization Sequence for MTCH6102 peripheral. " alt="" coords="709,191,888,218"/>
 <area shape="rect" id="node14" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a429c715c5c6cb04ce9591ba3feb27316" title="MTCH6102_Get_Active\l_Period" alt="" coords="718,413,879,454"/>
 <area shape="rect" id="node15" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#ad2acc4db2227c5569e4ae010f940f35d" title="MTCH6102_Get_Idle_Period" alt="" coords="704,479,893,506"/>
-<area shape="rect" id="node16" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#ac6e4e806346c1e72fe726fe37c3ce1af" title="MTCH6102_Get_Raw" alt="" coords="210,530,361,556"/>
-<area shape="rect" id="node17" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a72e06f554b02239ad6a60c1a58a80bf6" title="MTCH6102_Get_Gest" alt="" coords="209,580,361,607"/>
+<area shape="rect" id="node16" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a839cef73b75c695d238ace2586ad8ae5" title="MTCH6102_Get_Raw" alt="" coords="210,530,361,556"/>
+<area shape="rect" id="node17" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#ae96439651e9f61cde44acd545a387a81" title="MTCH6102_Get_Gest" alt="" coords="209,580,361,607"/>
 <area shape="rect" id="node18" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a890036d6fbc90f0091c3e6d76c5581ab" title="Calculates compensation values regarding read values and writes them to MTCH6102. ..." alt="" coords="182,631,389,658"/>
-<area shape="rect" id="node19" href="../../db/de8/_m_t_c_h6102__proc_8h.html#aa7d2f557d7737d69f986d784e487dae2" title="Handler for MTCH6102 peripheral. " alt="" coords="216,682,355,708"/>
-<area shape="rect" id="node5" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a8b3821f0462327a4232c12ed778e12ff" title="Restore MTCH6102 controller to default configuration values. " alt="" coords="443,94,642,120"/>
-<area shape="rect" id="node6" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a5cab8c4f08f9fbb595f1774312e46373" title="Write MTCH6102 parameters to non volatile storage. " alt="" coords="453,145,633,186"/>
-<area shape="rect" id="node7" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a7b85f0951a96a72bdb0f6a5e71b6fac4" title="Configure MTCH6102controller (after parameters have been changed) " alt="" coords="456,210,629,252"/>
-<area shape="rect" id="node12" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#ad05a922a821a0de0f19c8ee02840e18c" title="Execute MTCH6102 manufacturing test. " alt="" coords="437,276,648,303"/>
-<area shape="rect" id="node13" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a538fe713612ac61cf47d5101be5f375f" title="Force MTCH6102 baseline (re&#45;calibration) to occur. " alt="" coords="449,43,636,70"/>
+<area shape="rect" id="node19" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a532b76ad4dae3f91e35fcda715af81cd" title="Handler for MTCH6102 peripheral. " alt="" coords="216,682,355,708"/>
+<area shape="rect" id="node5" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#aa8c5881c40dc635355baf67895c99f87" title="Restore MTCH6102 controller to default configuration values. " alt="" coords="443,94,642,120"/>
+<area shape="rect" id="node6" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a259db51d47da41241c85612f5d291d07" title="Write MTCH6102 parameters to non volatile storage. " alt="" coords="453,145,633,186"/>
+<area shape="rect" id="node7" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a78b150e7fa294d299d52a8536d7d0c51" title="Configure MTCH6102controller (after parameters have been changed) " alt="" coords="456,210,629,252"/>
+<area shape="rect" id="node12" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#ae2f7111624af5ffb4193a1383658acfc" title="Execute MTCH6102 manufacturing test. " alt="" coords="437,276,648,303"/>
+<area shape="rect" id="node13" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a1aa37d807d280000b773dd3d8c5efcb4" title="Force MTCH6102 baseline (re&#45;calibration) to occur. " alt="" coords="449,43,636,70"/>
 <area shape="rect" id="node8" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a0cc1358596c7c8a5224ac0a9bd2a0a41" title="Set MTCH6102 raw acquisition filter. " alt="" coords="723,246,875,272"/>
-<area shape="rect" id="node9" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#afa2135b198d8e32caf96fb37feb6aaca" title="MTCH6102_Set_Debounce" alt="" coords="950,420,1133,447"/>
-<area shape="rect" id="node11" href="../../da/da9/_m_t_c_h6102_8h.html#af41f96a56e93f5ecf76b6ba489a4ee96" title="Initialization for MTCH6102 peripheral. " alt="" coords="984,191,1099,218"/>
-<area shape="rect" id="node20" href="../../db/de8/_m_t_c_h6102__proc_8h.html#af4d5c2a417eb37babbe67c40095c3af0" title="MTCH6102_Set_Centered\l_Coord" alt="" coords="455,674,631,716"/>
+<area shape="rect" id="node9" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a1613ae39a62704cbcce89e1d879699bd" title="MTCH6102_Set_Debounce" alt="" coords="950,420,1133,447"/>
+<area shape="rect" id="node11" href="../../da/da9/_m_t_c_h6102_8h.html#a2ac096d23474a9811463ec973adf4992" title="Initialization for MTCH6102 peripheral. " alt="" coords="984,191,1099,218"/>
+<area shape="rect" id="node20" href="../../db/de8/_m_t_c_h6102__proc_8h.html#aa1909bcf6d4f12b34157f42a4801d1c1" title="MTCH6102_Set_Centered\l_Coord" alt="" coords="455,674,631,716"/>
 </map>
 </div>
 
@@ -277,8 +277,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d78/_m_t_c_h6102_8c_a886bf0ab928a8940addac31edde0b1c5_cgraph.png" border="0" usemap="#da/d78/_m_t_c_h6102_8c_a886bf0ab928a8940addac31edde0b1c5_cgraph" alt=""/></div>
 <map name="da/d78/_m_t_c_h6102_8c_a886bf0ab928a8940addac31edde0b1c5_cgraph" id="da/d78/_m_t_c_h6102_8c_a886bf0ab928a8940addac31edde0b1c5_cgraph">
-<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="181,5,293,32"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="186,56,289,83"/>
+<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="181,5,293,32"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="186,56,289,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -288,27 +288,27 @@ Here is the caller graph for this function:</div>
 <map name="da/d78/_m_t_c_h6102_8c_a886bf0ab928a8940addac31edde0b1c5_icgraph" id="da/d78/_m_t_c_h6102_8c_a886bf0ab928a8940addac31edde0b1c5_icgraph">
 <area shape="rect" id="node2" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a8b3e9e1e93c3eca7b3f7ab26e10dcf1f" title="Execute MTCH6102 command. " alt="" coords="207,173,363,200"/>
 <area shape="rect" id="node8" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a0cc1358596c7c8a5224ac0a9bd2a0a41" title="Set MTCH6102 raw acquisition filter. " alt="" coords="723,443,875,469"/>
-<area shape="rect" id="node9" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#afa2135b198d8e32caf96fb37feb6aaca" title="MTCH6102_Set_Debounce" alt="" coords="950,468,1133,495"/>
-<area shape="rect" id="node10" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a9e9f1a5ae24e8649c742ea66c8d50fb5" title="Initialization Sequence for MTCH6102 peripheral. " alt="" coords="709,333,888,360"/>
-<area shape="rect" id="node14" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a527d7ba10c403694eb014306ebabc0b3" title="Set MTCH6102 gesture decoding. " alt="" coords="465,275,620,301"/>
-<area shape="rect" id="node15" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a31c6963373571a709aa58a985768aa4e" title="MTCH6102_Set_Active\l_Period" alt="" coords="205,545,365,586"/>
-<area shape="rect" id="node16" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a2df13ca4b4d571a5fe209285528bc2b7" title="MTCH6102_Set_Idle_Period" alt="" coords="191,611,379,637"/>
-<area shape="rect" id="node17" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a969e8a8053ee870dc6e3c6cc87561503" title="MTCH6102_Set_Idle_Timeout" alt="" coords="186,661,385,688"/>
-<area shape="rect" id="node18" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a2e63f7181ecf8de639e95497683f5ac3" title="MTCH6102_Set_Scan_Count" alt="" coords="188,712,383,739"/>
-<area shape="rect" id="node19" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a607b93570cac6cc3b50228345699634c" title="MTCH6102_Set_Touch\l_Threshold" alt="" coords="206,763,365,805"/>
-<area shape="rect" id="node20" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a3ad731fa1fa9ab11ef4f7d9f0f61513a" title="MTCH6102_Set_Hysteresis" alt="" coords="192,829,379,856"/>
-<area shape="rect" id="node21" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a956a4776f58c7d74d166cb2820e4e27a" title="MTCH6102_Set_Large\l_Activation_Threshold" alt="" coords="208,881,363,922"/>
-<area shape="rect" id="node22" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a988a9ef0ad3f87d29432f89707a5250c" title="MTCH6102_Set_Base_Interval" alt="" coords="184,947,387,973"/>
-<area shape="rect" id="node23" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#af6df416e6a88f63d47fff6f02ec36f52" title="MTCH6102_Set_Base_Filter" alt="" coords="191,997,380,1024"/>
+<area shape="rect" id="node9" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a1613ae39a62704cbcce89e1d879699bd" title="MTCH6102_Set_Debounce" alt="" coords="950,468,1133,495"/>
+<area shape="rect" id="node10" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a83ef9012904ac5c8e55986ad9aa4b10f" title="Initialization Sequence for MTCH6102 peripheral. " alt="" coords="709,333,888,360"/>
+<area shape="rect" id="node14" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a17fcfd698e37c5778a3b9898b6beef3d" title="Set MTCH6102 gesture decoding. " alt="" coords="465,275,620,301"/>
+<area shape="rect" id="node15" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a6ba994bc826f87802a06e7ca03119779" title="MTCH6102_Set_Active\l_Period" alt="" coords="205,545,365,586"/>
+<area shape="rect" id="node16" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a448ee1329064158113618a8171dbcbda" title="MTCH6102_Set_Idle_Period" alt="" coords="191,611,379,637"/>
+<area shape="rect" id="node17" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#ad1779f08f12e67a2472af929a067d14c" title="MTCH6102_Set_Idle_Timeout" alt="" coords="186,661,385,688"/>
+<area shape="rect" id="node18" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#ad675db4eae849316b6597c91cc07b236" title="MTCH6102_Set_Scan_Count" alt="" coords="188,712,383,739"/>
+<area shape="rect" id="node19" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a1e55966021eb8708aa4731407b45eb92" title="MTCH6102_Set_Touch\l_Threshold" alt="" coords="206,763,365,805"/>
+<area shape="rect" id="node20" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a86760f708dd943151541deb18d3e4ffe" title="MTCH6102_Set_Hysteresis" alt="" coords="192,829,379,856"/>
+<area shape="rect" id="node21" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#ab012e6cd1ff6d7427fe652c44532caee" title="MTCH6102_Set_Large\l_Activation_Threshold" alt="" coords="208,881,363,922"/>
+<area shape="rect" id="node22" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a3618172fe9798039ee0f963d9801a92a" title="MTCH6102_Set_Base_Interval" alt="" coords="184,947,387,973"/>
+<area shape="rect" id="node23" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#ac14ab494e2e0e95b50ebd040c7131723" title="MTCH6102_Set_Base_Filter" alt="" coords="191,997,380,1024"/>
 <area shape="rect" id="node24" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a890036d6fbc90f0091c3e6d76c5581ab" title="Calculates compensation values regarding read values and writes them to MTCH6102. ..." alt="" coords="182,1048,389,1075"/>
-<area shape="rect" id="node3" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#ababd9e7fdd71629d4980b35480a0fe91" title="Get MTCH6102 gesture decoding. " alt="" coords="465,173,621,200"/>
-<area shape="rect" id="node5" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a8b3821f0462327a4232c12ed778e12ff" title="Restore MTCH6102 controller to default configuration values. " alt="" coords="443,5,642,32"/>
-<area shape="rect" id="node6" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a5cab8c4f08f9fbb595f1774312e46373" title="Write MTCH6102 parameters to non volatile storage. " alt="" coords="453,107,633,149"/>
-<area shape="rect" id="node7" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a7b85f0951a96a72bdb0f6a5e71b6fac4" title="Configure MTCH6102controller (after parameters have been changed) " alt="" coords="456,326,629,367"/>
-<area shape="rect" id="node12" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#ad05a922a821a0de0f19c8ee02840e18c" title="Execute MTCH6102 manufacturing test. " alt="" coords="437,56,648,83"/>
-<area shape="rect" id="node13" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a538fe713612ac61cf47d5101be5f375f" title="Force MTCH6102 baseline (re&#45;calibration) to occur. " alt="" coords="449,224,636,251"/>
+<area shape="rect" id="node3" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a6839d3b9a7301c4cc4feffdff00e2724" title="Get MTCH6102 gesture decoding. " alt="" coords="465,173,621,200"/>
+<area shape="rect" id="node5" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#aa8c5881c40dc635355baf67895c99f87" title="Restore MTCH6102 controller to default configuration values. " alt="" coords="443,5,642,32"/>
+<area shape="rect" id="node6" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a259db51d47da41241c85612f5d291d07" title="Write MTCH6102 parameters to non volatile storage. " alt="" coords="453,107,633,149"/>
+<area shape="rect" id="node7" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a78b150e7fa294d299d52a8536d7d0c51" title="Configure MTCH6102controller (after parameters have been changed) " alt="" coords="456,326,629,367"/>
+<area shape="rect" id="node12" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#ae2f7111624af5ffb4193a1383658acfc" title="Execute MTCH6102 manufacturing test. " alt="" coords="437,56,648,83"/>
+<area shape="rect" id="node13" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a1aa37d807d280000b773dd3d8c5efcb4" title="Force MTCH6102 baseline (re&#45;calibration) to occur. " alt="" coords="449,224,636,251"/>
 <area shape="rect" id="node4" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a3fd2d358b531a818af13712240b9e934" title="Get manufacturing test results. " alt="" coords="696,173,901,200"/>
-<area shape="rect" id="node11" href="../../da/da9/_m_t_c_h6102_8h.html#af41f96a56e93f5ecf76b6ba489a4ee96" title="Initialization for MTCH6102 peripheral. " alt="" coords="984,333,1099,360"/>
+<area shape="rect" id="node11" href="../../da/da9/_m_t_c_h6102_8h.html#a2ac096d23474a9811463ec973adf4992" title="Initialization for MTCH6102 peripheral. " alt="" coords="984,333,1099,360"/>
 </map>
 </div>
 
@@ -322,7 +322,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> MTCH6102_hal = { { pNull, (( 0x25 ) &lt;&lt; 1), 20 , I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false }</td>
+          <td class="memname"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a5bb7f9cd708e57b2a07f329626eaa7a1">I2C_slave</a> MTCH6102_hal = { { pNull, <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#ad5c7bd690e94d726dda8f5f183d85687">I2C_ADDR</a>(<a class="el" href="../../da/da9/_m_t_c_h6102_8h.html#a5f8bcdb203ef8791254b339f0b5ce320">MTCH6102_BASE_ADDR</a>), <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a0d8243bc88b91218d47566862e9eae2f">I2C_slave_timeout</a>, I2C_MEMADD_SIZE_8BIT, <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a32d6725dee4b0ae99f99767f6efde890">I2C_FM</a> }, 0, HAL_OK, true, false }</td>
         </tr>
       </table>
 </div><div class="memdoc">

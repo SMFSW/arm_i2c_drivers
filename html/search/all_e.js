@@ -11,6 +11,5 @@ var searchData=
   ['oss',['OSS',['../d9/d00/unionu_b_m_p180___r_e_g_____m_e_a_s___c_t_r_l.html#a388fb5a1d9a22346cffabf8558bc288e',1,'uBMP180_REG__MEAS_CTRL::OSS()'],['../da/dd4/struct_b_m_p180__proc.html#aceee023020392fcefc1a55036a3195f5',1,'BMP180_proc::OSS()']]],
   ['otp_5fprogram',['OTP_PROGRAM',['../d8/d53/unionu_d_r_v___r_e_g_____c_o_n_t_r_o_l__4.html#af31f80471d6c1696dfb44b201c44da85',1,'uDRV_REG__CONTROL_4']]],
   ['otp_5fstatus',['OTP_STATUS',['../d8/d53/unionu_d_r_v___r_e_g_____c_o_n_t_r_o_l__4.html#a44800d81ba7753361b548df16f908fdf',1,'uDRV_REG__CONTROL_4']]],
-  ['outsideswipeangle',['OutsideSwipeAngle',['../da/da9/_m_t_c_h6102_8h.html#a5cfcc24d4821ee013af1a9a802b33994a117ecce7c3189e3bb8e35f75f9626c02',1,'MTCH6102.h']]],
   ['over_5ftemp',['OVER_TEMP',['../db/dbf/unionu_d_r_v___r_e_g_____s_t_a_t_u_s.html#a560d46ca4d118a2c11d0c3def927d16e',1,'uDRV_REG__STATUS']]]
 ];

@@ -105,10 +105,10 @@ Macros</h2></td></tr>
 <tr class="memitem:a142ef3c71fa8edbe0d582332e5136e41"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#a142ef3c71fa8edbe0d582332e5136e41">DefBitFullOnOff</a>&#160;&#160;&#160;0x10U</td></tr>
 <tr class="memdesc:a142ef3c71fa8edbe0d582332e5136e41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Full ON / OFF bit on xxx_LED_xxx_H.  <a href="#a142ef3c71fa8edbe0d582332e5136e41">More...</a><br /></td></tr>
 <tr class="separator:a142ef3c71fa8edbe0d582332e5136e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83f4e0ea098f3ae80fda38feb661f2a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#a83f4e0ea098f3ae80fda38feb661f2a0">LED_OFFSET_H</a>(chan)&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../d4/deb/_p_c_a9685_8h.html#a81ce4599f15552f78a8bc72da160499dad9ed4e3689dce21d3c3950446b81d347">PCA9685__LED0_ON_H</a> + ((chan - 1) &lt;&lt; 2))</td></tr>
+<tr class="memitem:a83f4e0ea098f3ae80fda38feb661f2a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#a83f4e0ea098f3ae80fda38feb661f2a0">LED_OFFSET_H</a>(chan)&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../d4/deb/_p_c_a9685_8h.html#a426032d0d4a5a4156bddd62a748682a6">PCA9685__LED0_ON_H</a> + ((chan - 1) &lt;&lt; 2))</td></tr>
 <tr class="memdesc:a83f4e0ea098f3ae80fda38feb661f2a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro for address offset computation ON_H for PWM channels.  <a href="#a83f4e0ea098f3ae80fda38feb661f2a0">More...</a><br /></td></tr>
 <tr class="separator:a83f4e0ea098f3ae80fda38feb661f2a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1480c661389f245e2a397e4c116b765f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#a1480c661389f245e2a397e4c116b765f">LED_OFFSET_L</a>(chan)&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../d4/deb/_p_c_a9685_8h.html#a81ce4599f15552f78a8bc72da160499da72bf400c911ab57d63fd5ad32a1b9d29">PCA9685__LED0_ON_L</a> + ((chan - 1) &lt;&lt; 2))</td></tr>
+<tr class="memitem:a1480c661389f245e2a397e4c116b765f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#a1480c661389f245e2a397e4c116b765f">LED_OFFSET_L</a>(chan)&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../d4/deb/_p_c_a9685_8h.html#a8c820e0b43bb92c31cf029ce403af22b">PCA9685__LED0_ON_L</a> + ((chan - 1) &lt;&lt; 2))</td></tr>
 <tr class="memdesc:a1480c661389f245e2a397e4c116b765f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro for address offset computation ON_L for PWM channels.  <a href="#a1480c661389f245e2a397e4c116b765f">More...</a><br /></td></tr>
 <tr class="separator:a1480c661389f245e2a397e4c116b765f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -117,7 +117,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a1fc2d634093d4325fb563b33b3110576"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#a1fc2d634093d4325fb563b33b3110576">PCA9685_Reset</a> (const bool all)</td></tr>
 <tr class="memdesc:a1fc2d634093d4325fb563b33b3110576"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset for PCA9685 peripheral.  <a href="#a1fc2d634093d4325fb563b33b3110576">More...</a><br /></td></tr>
 <tr class="separator:a1fc2d634093d4325fb563b33b3110576"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6396eb2c07dee3f11a81dd0dd311d658"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#a6396eb2c07dee3f11a81dd0dd311d658">PCA9685_ReadRegister</a> (const <a class="el" href="../../d4/deb/_p_c_a9685_8h.html#a1f81a141ae1b490af92844063a7da8fa">PCA9685_reg</a> reg, uint8_t *val)</td></tr>
+<tr class="memitem:a6396eb2c07dee3f11a81dd0dd311d658"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#a6396eb2c07dee3f11a81dd0dd311d658">PCA9685_ReadRegister</a> (const <a class="el" href="../../d4/deb/_p_c_a9685_8h.html#a9806a4a737bb7fa052e2155a551145c3">PCA9685_reg</a> reg, uint8_t *val)</td></tr>
 <tr class="memdesc:a6396eb2c07dee3f11a81dd0dd311d658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads I2C register from PCA9685.  <a href="#a6396eb2c07dee3f11a81dd0dd311d658">More...</a><br /></td></tr>
 <tr class="separator:a6396eb2c07dee3f11a81dd0dd311d658"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5751c4a4c95339f63b55a8ba3b8d6e84"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#a5751c4a4c95339f63b55a8ba3b8d6e84">PCA9685_ReadVal256</a> (const <a class="el" href="../../da/d3d/_p_c_a96xx_8h.html#abfdbc659d0b4d396a525c882b533c8e3">PCA96xx_chan</a> chan, uint8_t *duty)</td></tr>
@@ -188,7 +188,7 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">chan</td><td>)</td>
-          <td>&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../d4/deb/_p_c_a9685_8h.html#a81ce4599f15552f78a8bc72da160499dad9ed4e3689dce21d3c3950446b81d347">PCA9685__LED0_ON_H</a> + ((chan - 1) &lt;&lt; 2))</td>
+          <td>&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../d4/deb/_p_c_a9685_8h.html#a426032d0d4a5a4156bddd62a748682a6">PCA9685__LED0_ON_H</a> + ((chan - 1) &lt;&lt; 2))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -209,7 +209,7 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">chan</td><td>)</td>
-          <td>&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../d4/deb/_p_c_a9685_8h.html#a81ce4599f15552f78a8bc72da160499da72bf400c911ab57d63fd5ad32a1b9d29">PCA9685__LED0_ON_L</a> + ((chan - 1) &lt;&lt; 2))</td>
+          <td>&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../d4/deb/_p_c_a9685_8h.html#a8c820e0b43bb92c31cf029ce403af22b">PCA9685__LED0_ON_L</a> + ((chan - 1) &lt;&lt; 2))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -249,8 +249,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_aa45fd9ec34fa5756e23e9d414f7add02_cgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_aa45fd9ec34fa5756e23e9d414f7add02_cgraph" alt=""/></div>
 <map name="d3/d57/_p_c_a9685__ex_8h_aa45fd9ec34fa5756e23e9d414f7add02_cgraph" id="d3/d57/_p_c_a9685__ex_8h_aa45fd9ec34fa5756e23e9d414f7add02_cgraph">
 <area shape="rect" id="node2" href="../../de/dca/_p_c_a9685_8c.html#a894010b631426d84cedf4e9f634c9ab2" title="I2C Write function for PCA9685. " alt="" coords="177,31,293,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="341,5,453,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="346,56,449,83"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="341,5,453,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="346,56,449,83"/>
 </map>
 </div>
 
@@ -297,8 +297,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_ac2bae7619407fa14dc70ab3db1a3810a_cgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_ac2bae7619407fa14dc70ab3db1a3810a_cgraph" alt=""/></div>
 <map name="d3/d57/_p_c_a9685__ex_8h_ac2bae7619407fa14dc70ab3db1a3810a_cgraph" id="d3/d57/_p_c_a9685__ex_8h_ac2bae7619407fa14dc70ab3db1a3810a_cgraph">
 <area shape="rect" id="node2" href="../../de/dca/_p_c_a9685_8c.html#a894010b631426d84cedf4e9f634c9ab2" title="I2C Write function for PCA9685. " alt="" coords="206,31,322,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="371,5,483,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="375,56,478,83"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="371,5,483,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="375,56,478,83"/>
 </map>
 </div>
 
@@ -345,8 +345,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_a1fc8815baea1cdc1f2a1b0da888e0c96_cgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_a1fc8815baea1cdc1f2a1b0da888e0c96_cgraph" alt=""/></div>
 <map name="d3/d57/_p_c_a9685__ex_8h_a1fc8815baea1cdc1f2a1b0da888e0c96_cgraph" id="d3/d57/_p_c_a9685__ex_8h_a1fc8815baea1cdc1f2a1b0da888e0c96_cgraph">
 <area shape="rect" id="node2" href="../../de/dca/_p_c_a9685_8c.html#a894010b631426d84cedf4e9f634c9ab2" title="I2C Write function for PCA9685. " alt="" coords="201,31,317,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="365,5,477,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="370,56,473,83"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="365,5,477,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="370,56,473,83"/>
 </map>
 </div>
 
@@ -361,7 +361,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">FctERR PCA9685_ReadRegister </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d4/deb/_p_c_a9685_8h.html#a1f81a141ae1b490af92844063a7da8fa">PCA9685_reg</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d4/deb/_p_c_a9685_8h.html#a9806a4a737bb7fa052e2155a551145c3">PCA9685_reg</a>&#160;</td>
           <td class="paramname"><em>reg</em>, </td>
         </tr>
         <tr>
@@ -393,8 +393,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_a6396eb2c07dee3f11a81dd0dd311d658_cgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_a6396eb2c07dee3f11a81dd0dd311d658_cgraph" alt=""/></div>
 <map name="d3/d57/_p_c_a9685__ex_8h_a6396eb2c07dee3f11a81dd0dd311d658_cgraph" id="d3/d57/_p_c_a9685__ex_8h_a6396eb2c07dee3f11a81dd0dd311d658_cgraph">
 <area shape="rect" id="node2" href="../../de/dca/_p_c_a9685_8c.html#a616bf195896e135b402365b2ec9aa468" title="I2C Read function for PCA9685. " alt="" coords="219,31,335,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="384,5,496,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="389,56,491,83"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="384,5,496,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="389,56,491,83"/>
 </map>
 </div>
 
@@ -441,8 +441,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_adf604f03e64e6454dd42b65ebaa06ff5_cgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_adf604f03e64e6454dd42b65ebaa06ff5_cgraph" alt=""/></div>
 <map name="d3/d57/_p_c_a9685__ex_8h_adf604f03e64e6454dd42b65ebaa06ff5_cgraph" id="d3/d57/_p_c_a9685__ex_8h_adf604f03e64e6454dd42b65ebaa06ff5_cgraph">
 <area shape="rect" id="node2" href="../../de/dca/_p_c_a9685_8c.html#a616bf195896e135b402365b2ec9aa468" title="I2C Read function for PCA9685. " alt="" coords="217,31,333,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="381,5,493,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="386,56,489,83"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="381,5,493,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="386,56,489,83"/>
 </map>
 </div>
 
@@ -489,8 +489,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_a5751c4a4c95339f63b55a8ba3b8d6e84_cgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_a5751c4a4c95339f63b55a8ba3b8d6e84_cgraph" alt=""/></div>
 <map name="d3/d57/_p_c_a9685__ex_8h_a5751c4a4c95339f63b55a8ba3b8d6e84_cgraph" id="d3/d57/_p_c_a9685__ex_8h_a5751c4a4c95339f63b55a8ba3b8d6e84_cgraph">
 <area shape="rect" id="node2" href="../../de/dca/_p_c_a9685_8c.html#a616bf195896e135b402365b2ec9aa468" title="I2C Read function for PCA9685. " alt="" coords="211,31,327,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="376,5,488,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="381,56,483,83"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="376,5,488,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="381,56,483,83"/>
 </map>
 </div>
 
@@ -552,8 +552,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_a95ad56979b70e4e4e8f29deb76c3e484_cgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_a95ad56979b70e4e4e8f29deb76c3e484_cgraph" alt=""/></div>
 <map name="d3/d57/_p_c_a9685__ex_8h_a95ad56979b70e4e4e8f29deb76c3e484_cgraph" id="d3/d57/_p_c_a9685__ex_8h_a95ad56979b70e4e4e8f29deb76c3e484_cgraph">
 <area shape="rect" id="node2" href="../../de/dca/_p_c_a9685_8c.html#a894010b631426d84cedf4e9f634c9ab2" title="I2C Write function for PCA9685. " alt="" coords="179,31,295,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="344,5,456,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="349,56,451,83"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="344,5,456,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="349,56,451,83"/>
 </map>
 </div>
 

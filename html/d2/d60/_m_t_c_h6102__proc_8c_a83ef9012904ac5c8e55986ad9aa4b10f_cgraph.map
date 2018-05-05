@@ -1,0 +1,9 @@
+<map id="MTCH6102_Init_Sequence" name="MTCH6102_Init_Sequence">
+<area shape="rect" id="node2" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a17fcfd698e37c5778a3b9898b6beef3d" title="Set MTCH6102 gesture decoding. " alt="" coords="455,29,609,55"/>
+<area shape="rect" id="node3" href="$da/d78/_m_t_c_h6102_8c.html#a886bf0ab928a8940addac31edde0b1c5" title="I2C Write function for MTCH6102. " alt="" coords="659,33,786,59"/>
+<area shape="rect" id="node6" href="$da/d78/_m_t_c_h6102_8c.html#addb332d7599bec7bb742d84ea36f8bc1" title="I2C Read function for MTCH6102. " alt="" coords="659,83,786,110"/>
+<area shape="rect" id="node7" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a78b150e7fa294d299d52a8536d7d0c51" title="Configure MTCH6102controller (after parameters have been changed) " alt="" coords="232,77,405,119"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="835,33,947,59"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="839,83,942,110"/>
+<area shape="rect" id="node8" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a8b3e9e1e93c3eca7b3f7ab26e10dcf1f" title="Execute MTCH6102 command. " alt="" coords="454,83,610,110"/>
+</map>

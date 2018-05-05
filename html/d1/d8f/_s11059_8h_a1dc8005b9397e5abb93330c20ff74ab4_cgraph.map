@@ -1,0 +1,18 @@
+<map id="S11059_Init" name="S11059_Init">
+<area shape="rect" id="node2" href="$d7/d97/_i2_c__component_8c.html#a0156af69fdc6459a92678bdb7d6300ab" title="I2C Slave device initialization. " alt="" coords="170,193,275,220"/>
+<area shape="rect" id="node3" href="$dd/dd8/_s11059__proc_8c.html#aba7e4f2b8282a7221aced23b162f2024" title="Initialization Sequence for S11059 peripheral. " alt="" coords="145,244,301,271"/>
+<area shape="rect" id="node17" href="$d6/dd6/_i2_c__component_8h.html#a0fd045e910b4d2c5aecdca250e9d3379" title="Set I2C Slave device disabled/enabled state. " alt="" coords="166,295,279,321"/>
+<area shape="rect" id="node4" href="$d9/da9/_s11059__ex_8h.html#af0c06081c3291ddfa93d9831069f2b54" title="Write S11059 Control register. " alt="" coords="372,219,500,245"/>
+<area shape="rect" id="node16" href="$dd/dd8/_s11059__proc_8c.html#ad220338cf86ad2d3f20597dcd77d7398" title="Get S11059 integration time for all channels. " alt="" coords="350,269,522,296"/>
+<area shape="rect" id="node5" href="$d2/dfe/_s11059_8c.html#a2f2b5c49457f907586695564edef70fe" title="I2C Write function for S11059. " alt="" coords="973,60,1077,87"/>
+<area shape="rect" id="node8" href="$d9/da9/_s11059__ex_8h.html#a500036248a3c9996b51ebc22450ccd19" title="ADC Operation / Reset. " alt="" coords="587,168,717,195"/>
+<area shape="rect" id="node10" href="$d9/da9/_s11059__ex_8h.html#aef6de1a8c85c148176bfd07aced2da9b" title="Set Standby / Operating mode. " alt="" coords="578,219,726,245"/>
+<area shape="rect" id="node11" href="$d9/da9/_s11059__ex_8h.html#a665bc9c07e97850bddec6aa119337bd8" title="Set ADC gain. " alt="" coords="589,269,715,296"/>
+<area shape="rect" id="node12" href="$d9/da9/_s11059__ex_8h.html#a7aced476191c883371a2875d909285ca" title="Set integration mode &amp; prescaler. " alt="" coords="571,320,733,347"/>
+<area shape="rect" id="node13" href="$d9/da9/_s11059__ex_8h.html#ab8d56c2570f5b8af8c6abedaef602ffd" title="Set S11059 integration multiplier (used when integration mode set to Manual) " alt="" coords="571,51,733,93"/>
+<area shape="rect" id="node15" href="$d9/da9/_s11059__ex_8h.html#a1fb9490f9174f2abc4e14dc517c6b7c8" title="Get Standby function monitor. " alt="" coords="577,117,727,144"/>
+<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="1125,139,1237,165"/>
+<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="1130,88,1233,115"/>
+<area shape="rect" id="node9" href="$d2/dfe/_s11059_8c.html#ad2d693c56dc5ad28c1bcad7971b19838" title="I2C Read function for S11059. " alt="" coords="801,168,905,195"/>
+<area shape="rect" id="node14" href="$d2/dfe/_s11059_8c.html#ab572db1939683f34a56efd431cf1e18c" title="I2C Word Write (big endian) function for S11059. " alt="" coords="782,60,925,87"/>
+</map>

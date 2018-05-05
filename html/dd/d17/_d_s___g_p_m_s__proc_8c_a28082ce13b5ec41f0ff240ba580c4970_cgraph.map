@@ -1,0 +1,12 @@
+<map id="GPMS_handler" name="GPMS_handler">
+<area shape="rect" id="node2" href="$dd/d17/_d_s___g_p_m_s__proc_8c.html#aaf89d2fe9019cbed8693b5687052f5c3" title="GPMS_Get_Date" alt="" coords="179,5,303,32"/>
+<area shape="rect" id="node6" href="$dd/d17/_d_s___g_p_m_s__proc_8c.html#a27eeecb198026d45c67cf038dea6a6f0" title="GPMS_Get_Hour" alt="" coords="179,56,303,83"/>
+<area shape="rect" id="node7" href="$dd/d17/_d_s___g_p_m_s__proc_8c.html#a9ebef9a986cb28be20cca130d801bb46" title="GPMS_Get_Latitude" alt="" coords="170,107,313,133"/>
+<area shape="rect" id="node8" href="$dd/d17/_d_s___g_p_m_s__proc_8c.html#a1ecdb841c1b71dc317520efedf27efae" title="GPMS_Get_Longitude" alt="" coords="165,157,317,184"/>
+<area shape="rect" id="node9" href="$dd/d17/_d_s___g_p_m_s__proc_8c.html#aeee64a7d23d01b417a41fc01635f1ed0" title="GPMS_Get_Heading" alt="" coords="169,208,313,235"/>
+<area shape="rect" id="node10" href="$dd/d17/_d_s___g_p_m_s__proc_8c.html#ac73b4d437a50c19008305078e1a8c93d" title="GPMS_Get_Speed" alt="" coords="175,259,308,285"/>
+<area shape="rect" id="node11" href="$dd/d17/_d_s___g_p_m_s__proc_8c.html#a86d0f8b7d43d9bf0b3e729a50e9d7917" title="GPMS_Get_Altitude" alt="" coords="171,309,311,336"/>
+<area shape="rect" id="node3" href="$db/d9a/_d_s___g_p_m_s_8c.html#a7bf11fa937ff423f2756d47be54a8afe" title="I2C Read function for GPMS. " alt="" coords="365,157,464,184"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="512,132,624,159"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="517,183,619,209"/>
+</map>

@@ -1,24 +1,30 @@
 <map id="DRV2605L_Read" name="DRV2605L_Read">
-<area shape="rect" id="node2" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ae077456061ec8aa83035368678d33654" title="Set haptic actuator type. " alt="" coords="209,31,378,57"/>
-<area shape="rect" id="node8" href="$df/dbb/_d_r_v2605_l__ex_8h.html#abf22c146b060501dd9a022263ededa76" title="Set haptic operating mode. " alt="" coords="189,284,397,311"/>
-<area shape="rect" id="node9" href="$d1/da7/_d_r_v2605_l__proc_8h.html#aab005330aca4063527b650aeab03a301" title="Auto&#45;calibration procedure for DRV2605L peripheral. " alt="" coords="480,309,637,336"/>
-<area shape="rect" id="node10" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a284e6d245bd1879cf59834b84c434793" title="Set haptic device to standby. " alt="" coords="209,183,377,209"/>
-<area shape="rect" id="node11" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a3c924bb51da5067ac916ba1c6678fefa" title="Set haptic device input pin type. " alt="" coords="203,81,384,108"/>
-<area shape="rect" id="node12" href="$df/dbb/_d_r_v2605_l__ex_8h.html#acba66feb5b11b174e4029d3308a14220" title="Set haptic device input pin type. " alt="" coords="203,132,383,159"/>
-<area shape="rect" id="node13" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a83361b9e2ad5346cc4424ca483e7940f" title="Set RTP format. " alt="" coords="185,385,401,412"/>
-<area shape="rect" id="node15" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a07f91af90d32d2530485d5f0085eeab6" title="Set Audio To Vibe Peak time. " alt="" coords="191,436,396,463"/>
-<area shape="rect" id="node16" href="$df/dbb/_d_r_v2605_l__ex_8h.html#af6f3993f1576399e0e20b53df8caab58" title="Set Audio To Vibe Low pass filter. " alt="" coords="179,487,408,513"/>
-<area shape="rect" id="node17" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a4a2148063f7688a696e719235795ee29" title="Get min/max Audio To Vibe Input voltage. " alt="" coords="190,537,397,564"/>
-<area shape="rect" id="node19" href="$df/dbb/_d_r_v2605_l__ex_8h.html#acf767061809b14d120e68fe8608b3fbd" title="Get min/max Audio To Vibe Drive. " alt="" coords="204,589,383,630"/>
-<area shape="rect" id="node20" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a7e1fd76610298f945c893a3c9ee3f196" title="Get haptic Voltage. " alt="" coords="211,655,376,681"/>
-<area shape="rect" id="node21" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a1dfb4395e5c55198a2e4f446daf884f1" title="Get haptic LRA Open loop period. " alt="" coords="190,706,397,747"/>
-<area shape="rect" id="node22" href="$df/dbb/_d_r_v2605_l__ex_8h.html#abb8c4c9a3709a5478c810178ce3ee22e" title="Get haptic LRA Resonance period. " alt="" coords="181,772,405,799"/>
-<area shape="rect" id="node23" href="$df/dbb/_d_r_v2605_l__ex_8h.html#aa6e8731941269bddb42633409b51d8fc" title="Get DRV260x chip ID. " alt="" coords="212,233,375,260"/>
-<area shape="rect" id="node3" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a5334e1c18245d1a1b4185d8c2da08d1a" title="Reset DRV260x chip. " alt="" coords="495,56,623,83"/>
-<area shape="rect" id="node4" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a9d1d77c79f12545a20b44a54350a6e9e" title="Set haptic actuator type to ERM. " alt="" coords="483,5,634,32"/>
-<area shape="rect" id="node5" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a56db30b67a0a8057a7b3acbf0e27b0d4" title="Set haptic device actuator type to LRA. " alt="" coords="485,132,632,159"/>
-<area shape="rect" id="node6" href="$d1/da7/_d_r_v2605_l__proc_8h.html#ad908d57c1a4cba53e09981a387145d87" title="Initialization Sequence for DRV2605L peripheral. " alt="" coords="471,183,647,209"/>
-<area shape="rect" id="node7" href="$d5/d47/_d_r_v2605_l_8h.html#a3f9967699bd1bfb66cc38395ce928151" title="Initialization for DRV2605L peripheral. " alt="" coords="710,183,821,209"/>
-<area shape="rect" id="node14" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a2b0869d2d9f5ec04b57b10b192ad6eea" title="Set RTP input level. " alt="" coords="485,436,632,463"/>
-<area shape="rect" id="node18" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a3fe01d5372aa856db4768cdd7fdd6661" title="Set haptic LRA Open loop period. " alt="" coords="456,647,661,689"/>
+<area shape="rect" id="node2" href="$da/d07/_d_r_v2605_l__ex_8c.html#a687bee31297dd2851bb16ecd46e788d3" title="Time table for LRA actuators. " alt="" coords="254,107,333,133"/>
+<area shape="rect" id="node9" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ae077456061ec8aa83035368678d33654" title="Set haptic actuator type. " alt="" coords="209,473,378,500"/>
+<area shape="rect" id="node15" href="$df/dbb/_d_r_v2605_l__ex_8h.html#abf22c146b060501dd9a022263ededa76" title="Set haptic operating mode. " alt="" coords="189,676,397,703"/>
+<area shape="rect" id="node16" href="$d1/da7/_d_r_v2605_l__proc_8h.html#aab005330aca4063527b650aeab03a301" title="Auto&#45;calibration procedure for DRV2605L peripheral. " alt="" coords="507,729,664,756"/>
+<area shape="rect" id="node17" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a284e6d245bd1879cf59834b84c434793" title="Set haptic device to standby. " alt="" coords="209,575,377,601"/>
+<area shape="rect" id="node18" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a3c924bb51da5067ac916ba1c6678fefa" title="Set haptic device input pin type. " alt="" coords="203,524,384,551"/>
+<area shape="rect" id="node19" href="$df/dbb/_d_r_v2605_l__ex_8h.html#acba66feb5b11b174e4029d3308a14220" title="Set haptic device input pin type. " alt="" coords="203,625,383,652"/>
+<area shape="rect" id="node20" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a83361b9e2ad5346cc4424ca483e7940f" title="Set RTP format. " alt="" coords="185,828,401,855"/>
+<area shape="rect" id="node22" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a07f91af90d32d2530485d5f0085eeab6" title="Set Audio To Vibe Peak time. " alt="" coords="191,879,396,905"/>
+<area shape="rect" id="node23" href="$df/dbb/_d_r_v2605_l__ex_8h.html#af6f3993f1576399e0e20b53df8caab58" title="Set Audio To Vibe Low pass filter. " alt="" coords="179,929,408,956"/>
+<area shape="rect" id="node24" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a4a2148063f7688a696e719235795ee29" title="Get min/max Audio To Vibe Input voltage. " alt="" coords="482,360,689,387"/>
+<area shape="rect" id="node25" href="$df/dbb/_d_r_v2605_l__ex_8h.html#acf767061809b14d120e68fe8608b3fbd" title="Get min/max Audio To Vibe Drive. " alt="" coords="496,411,675,453"/>
+<area shape="rect" id="node26" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a7e1fd76610298f945c893a3c9ee3f196" title="Get haptic Voltage. " alt="" coords="503,208,668,235"/>
+<area shape="rect" id="node27" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a1dfb4395e5c55198a2e4f446daf884f1" title="Get haptic LRA Open loop period. " alt="" coords="190,255,397,297"/>
+<area shape="rect" id="node28" href="$df/dbb/_d_r_v2605_l__ex_8h.html#abb8c4c9a3709a5478c810178ce3ee22e" title="Get haptic LRA Resonance period. " alt="" coords="181,321,405,348"/>
+<area shape="rect" id="node29" href="$df/dbb/_d_r_v2605_l__ex_8h.html#aae5abf21cc3649ea3b5ebfff0b4133f8" title="Get DRV260x chip ID. " alt="" coords="212,727,375,753"/>
+<area shape="rect" id="node3" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a3116be811d79fe42d5c838c87346f08e" title="Set haptic Blanking time. " alt="" coords="486,5,685,32"/>
+<area shape="rect" id="node5" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a045a9d12979e824718a810e1ca9fe7ac" title="Set haptic Current dissipation time. " alt="" coords="457,56,714,83"/>
+<area shape="rect" id="node6" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a8864f08d2e8dda0877bd7de22ac9f73f" title="Get haptic Blanking time. " alt="" coords="485,107,685,133"/>
+<area shape="rect" id="node8" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ae025bbee22c0bd497d091e8a3b80b8cc" title="Get haptic Current dissipation time. " alt="" coords="456,157,715,184"/>
+<area shape="rect" id="node4" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ab5a5cfeea2af9c27aed899db659cf9bb" title="Set haptic Overdrive Clamp. " alt="" coords="776,31,955,57"/>
+<area shape="rect" id="node7" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a89b646b1ccd845aefab081d23bf9e31e" title="Set haptic LRA Open loop period. " alt="" coords="763,251,968,293"/>
+<area shape="rect" id="node10" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a86cedacb71ee6cdab831ed83d7e20413" title="Reset DRV260x chip. " alt="" coords="521,528,649,555"/>
+<area shape="rect" id="node11" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a891514d4ec2fbf4e213d436d6789a554" title="Set haptic actuator type to ERM. " alt="" coords="510,477,661,504"/>
+<area shape="rect" id="node12" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a4a0d837d9bfd27a465c4dceaa1c72ffe" title="Set haptic device actuator type to LRA. " alt="" coords="512,579,659,605"/>
+<area shape="rect" id="node13" href="$d1/da7/_d_r_v2605_l__proc_8h.html#a85610e713257f2eaed0fd16af7de17b1" title="Initialization Sequence for DRV2605L peripheral. " alt="" coords="497,629,673,656"/>
+<area shape="rect" id="node14" href="$d5/d47/_d_r_v2605_l_8h.html#abd9fc71902a9c19877c62c9c77b8ecf2" title="Initialization for DRV2605L peripheral. " alt="" coords="810,629,921,656"/>
+<area shape="rect" id="node21" href="$df/dbb/_d_r_v2605_l__ex_8h.html#af5d1f4744817da5288bf04011dd93621" title="Set RTP input level. " alt="" coords="512,879,659,905"/>
 </map>

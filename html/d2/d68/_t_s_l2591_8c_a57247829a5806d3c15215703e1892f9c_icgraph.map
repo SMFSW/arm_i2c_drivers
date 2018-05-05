@@ -1,8 +1,8 @@
 <map id="TSL2591_Write_Word" name="TSL2591_Write_Word">
-<area shape="rect" id="node2" href="$dc/d24/_t_s_l2591__ex_8h.html#ab1b84615a6ab3186650cee27b10cf911" title="ALS interrupt low threshold configuration. " alt="" coords="217,5,353,32"/>
-<area shape="rect" id="node5" href="$dc/d24/_t_s_l2591__ex_8h.html#a624dd44a05e5e6a3be2087987707c5a1" title="ALS interrupt high threshold configuration. " alt="" coords="216,56,355,83"/>
-<area shape="rect" id="node6" href="$dc/d24/_t_s_l2591__ex_8h.html#a89cdd40b8693dbec9253d1ed8403a543" title="ALS interrupt Persist Low threshold filter configuration. " alt="" coords="208,107,363,133"/>
-<area shape="rect" id="node7" href="$dc/d24/_t_s_l2591__ex_8h.html#a1077971b7da7f6eee33cdcd3a51ae4d9" title="ALS interrupt Persist High threshold filter configuration. " alt="" coords="206,157,365,184"/>
-<area shape="rect" id="node3" href="$d7/d6e/_t_s_l2591__proc_8h.html#ae70e987b630354203c40e8626b73950b" title="Initialization Sequence for TSL2591 peripheral. " alt="" coords="414,31,578,57"/>
-<area shape="rect" id="node4" href="$da/d96/_t_s_l2591_8h.html#aa5c43dbf44ce32efc764a68fe49eaa0b" title="Initialization for TSL2591 peripheral. " alt="" coords="627,31,725,57"/>
+<area shape="rect" id="node2" href="$dc/d24/_t_s_l2591__ex_8h.html#a84c8fe94e73baf19b41814a3bf7ee137" title="ALS interrupt low threshold configuration. " alt="" coords="217,5,353,32"/>
+<area shape="rect" id="node5" href="$dc/d24/_t_s_l2591__ex_8h.html#a015869a2b54f2824c9af5c96e2338816" title="ALS interrupt high threshold configuration. " alt="" coords="216,56,355,83"/>
+<area shape="rect" id="node6" href="$dc/d24/_t_s_l2591__ex_8h.html#ab45c6cfe6d0d91bd0e9c4b54ecf9a5cd" title="ALS interrupt Persist Low threshold filter configuration. " alt="" coords="208,107,363,133"/>
+<area shape="rect" id="node7" href="$dc/d24/_t_s_l2591__ex_8h.html#ae929a367e88b5515218f79e056057a21" title="ALS interrupt Persist High threshold filter configuration. " alt="" coords="206,157,365,184"/>
+<area shape="rect" id="node3" href="$d7/d6e/_t_s_l2591__proc_8h.html#a173a41e96227df10b5d51ec369d30d01" title="Initialization Sequence for TSL2591 peripheral. " alt="" coords="414,31,578,57"/>
+<area shape="rect" id="node4" href="$da/d96/_t_s_l2591_8h.html#a9bc4ce5e43fdba854c35561c3712164c" title="Initialization for TSL2591 peripheral. " alt="" coords="627,31,725,57"/>
 </map>

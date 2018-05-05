@@ -1,0 +1,5 @@
+<map id="PCF8523_Disable_Minute_Alarm" name="PCF8523_Disable_Minute_Alarm">
+<area shape="rect" id="node2" href="$df/d5b/_p_c_f8523_8c.html#aac1b57b44dce68814b0cbe6cee5374d2" title="I2C Write function for PCF8523 peripheral. " alt="" coords="229,31,344,57"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="392,5,504,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="397,56,499,83"/>
+</map>

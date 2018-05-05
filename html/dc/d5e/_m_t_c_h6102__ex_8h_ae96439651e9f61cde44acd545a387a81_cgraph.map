@@ -1,0 +1,5 @@
+<map id="MTCH6102_Get_Gest" name="MTCH6102_Get_Gest">
+<area shape="rect" id="node2" href="$da/d78/_m_t_c_h6102_8c.html#addb332d7599bec7bb742d84ea36f8bc1" title="I2C Read function for MTCH6102. " alt="" coords="206,31,333,57"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="381,5,493,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="386,56,489,83"/>
+</map>

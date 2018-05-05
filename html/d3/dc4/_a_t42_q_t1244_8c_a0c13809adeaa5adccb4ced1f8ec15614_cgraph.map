@@ -1,5 +1,0 @@
-<map id="AT42QT1244_Init" name="AT42QT1244_Init">
-<area shape="rect" id="node2" href="$d7/d97/_i2_c__component_8c.html#a0156af69fdc6459a92678bdb7d6300ab" title="I2C Slave device initialization. " alt="" coords="221,5,326,32"/>
-<area shape="rect" id="node3" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#ad26b67c63852b22bd499c9568d8e8f6c" title="Initialization Sequence for AT42QT1244 peripheral. " alt="" coords="179,56,368,83"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a4aab6d6150d927201a556fea510a104c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="217,107,330,133"/>
-</map>

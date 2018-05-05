@@ -1,6 +1,0 @@
-<map id="TSL2591_Reset" name="TSL2591_Reset">
-<area shape="rect" id="node2" href="$dc/d24/_t_s_l2591__ex_8h.html#a58b86a0ac68b049971bf0834aabd7c91" title="Write TSL2591 Enable register. " alt="" coords="171,31,306,57"/>
-<area shape="rect" id="node3" href="$d2/d68/_t_s_l2591_8c.html#a3d9fd710dcb7c1c55ac8e3e50d2d2d89" title="I2C Write function for TSL2591. " alt="" coords="355,31,467,57"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="515,5,627,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="519,56,622,83"/>
-</map>

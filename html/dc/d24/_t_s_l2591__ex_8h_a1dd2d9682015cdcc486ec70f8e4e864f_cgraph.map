@@ -1,7 +1,7 @@
 <map id="TSL2591_Set_AEN" name="TSL2591_Set_AEN">
 <area shape="rect" id="node2" href="$d2/d68/_t_s_l2591_8c.html#a8ca44c4d37228b9136168ee2bab22880" title="I2C Read function for TSL2591. " alt="" coords="373,5,485,32"/>
-<area shape="rect" id="node5" href="$dc/d24/_t_s_l2591__ex_8h.html#a58b86a0ac68b049971bf0834aabd7c91" title="Write TSL2591 Enable register. " alt="" coords="190,56,325,83"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="533,5,645,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="538,56,641,83"/>
+<area shape="rect" id="node5" href="$dc/d24/_t_s_l2591__ex_8h.html#a3620298f32e28909dac511cb250f5b59" title="Write TSL2591 Enable register. " alt="" coords="190,56,325,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="533,5,645,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="538,56,641,83"/>
 <area shape="rect" id="node6" href="$d2/d68/_t_s_l2591_8c.html#a3d9fd710dcb7c1c55ac8e3e50d2d2d89" title="I2C Write function for TSL2591. " alt="" coords="373,56,485,83"/>
 </map>

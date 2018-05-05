@@ -1,0 +1,15 @@
+<map id="TCS3472_Write_Ctl" name="TCS3472_Write_Ctl">
+<area shape="rect" id="node2" href="$df/dfb/_t_c_s3472_8c.html#aafe764d8a7cd86bef3682ad76a1c55e3" title="I2C Write function for TCS3472. " alt="" coords="672,244,787,271"/>
+<area shape="rect" id="node5" href="$d2/dbe/_t_c_s3472__ex_8h.html#a266cba681f9bed0bb766817a090909f0" title="Oscillator Enable / Disable. " alt="" coords="210,87,350,113"/>
+<area shape="rect" id="node8" href="$d2/dbe/_t_c_s3472__ex_8h.html#ab4a8278349cfa8960b7194dfda364801" title="Clear module Enable / Disable. " alt="" coords="211,137,349,164"/>
+<area shape="rect" id="node9" href="$d2/dbe/_t_c_s3472__ex_8h.html#a81396a0304c6447ba64def64ffea16d0" title="Clear interrupt module Enable / Disable. " alt="" coords="209,188,351,215"/>
+<area shape="rect" id="node10" href="$d2/dbe/_t_c_s3472__ex_8h.html#aa74af9cc50690a2b44a7a04568717d07" title="WAIT module Enable / Disable. " alt="" coords="209,36,351,63"/>
+<area shape="rect" id="node11" href="$d2/dbe/_t_c_s3472__ex_8h.html#ace042917a1ee1f27b45b700edec24952" title="Gain configuration. " alt="" coords="211,239,349,265"/>
+<area shape="rect" id="node12" href="$d2/dbe/_t_c_s3472__ex_8h.html#a0c1d1267012aed800b60746106fcf5f0" title="Integration time configuration. " alt="" coords="416,269,624,296"/>
+<area shape="rect" id="node13" href="$d2/dbe/_t_c_s3472__ex_8h.html#a8463a12a6771529fdc140a6423876e2a" title="Wait time configuration. " alt="" coords="193,340,367,367"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="835,219,947,245"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="839,156,942,183"/>
+<area shape="rect" id="node6" href="$df/dfb/_t_c_s3472_8c.html#adb9484582124fa68b7cd555fcec177a6" title="I2C Read function for TCS3472. " alt="" coords="463,156,577,183"/>
+<area shape="rect" id="node7" href="$d2/dbe/_t_c_s3472__ex_8h.html#a22e2cc0ee57a4c6ee54ad4577659c5c6" title="Write TCS3472 Enable register. " alt="" coords="451,105,589,132"/>
+<area shape="rect" id="node14" href="$d2/dbe/_t_c_s3472__ex_8h.html#a9ada0f05a07fc1af20afae507b4a290a" title="Write TCS3472 Config register. " alt="" coords="449,320,591,347"/>
+</map>

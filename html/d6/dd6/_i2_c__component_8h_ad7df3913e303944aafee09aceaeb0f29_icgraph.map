@@ -1,0 +1,51 @@
+<map id="I2C_set_busy" name="I2C_set_busy">
+<area shape="rect" id="node2" href="$dd/d4f/_a_t42_q_t1244_8h.html#a6112c40bb1c14803cc861cc3a5981003" title="I2C Write function for AT42QT1244. " alt="" coords="171,108,309,134"/>
+<area shape="rect" id="node8" href="$dd/d4f/_a_t42_q_t1244_8h.html#abb4834a783784c48d458ced3e227661a" title="I2C Read function for AT42QT1244. " alt="" coords="650,184,787,210"/>
+<area shape="rect" id="node12" href="$d3/d7d/_b_m_p180_8h.html#a9669585d00932e41ec6acefda31eeccf" title="I2C Write function for BMP180. " alt="" coords="185,285,295,312"/>
+<area shape="rect" id="node16" href="$d3/d7d/_b_m_p180_8h.html#aabcacf3ee95fccb35e6289f2ee409af9" title="I2C Read function for BMP180. " alt="" coords="185,336,295,362"/>
+<area shape="rect" id="node19" href="$d5/d47/_d_r_v2605_l_8h.html#a09728b1c8f7cf9c03eb859253671dc95" title="I2C Write function for DRV2605L. " alt="" coords="178,386,302,413"/>
+<area shape="rect" id="node20" href="$d5/d47/_d_r_v2605_l_8h.html#aadfce835666394b45a320f79fc631e52" title="I2C Read function for DRV2605L. " alt="" coords="178,437,302,464"/>
+<area shape="rect" id="node21" href="$dd/d26/_d_s___g_p_m_s_8h.html#a047e8d2662b66f2d3a5360c20cdc45a1" title="I2C Write function for GPMS. " alt="" coords="191,488,289,514"/>
+<area shape="rect" id="node22" href="$dd/d26/_d_s___g_p_m_s_8h.html#a7bf11fa937ff423f2756d47be54a8afe" title="I2C Read function for GPMS. " alt="" coords="191,538,289,565"/>
+<area shape="rect" id="node23" href="$d5/d3b/_f_m24_c_8h.html#ae1a6833c826da21f460648e9f95f56d8" title="I2C Write function for FM24C. " alt="" coords="163,589,317,616"/>
+<area shape="rect" id="node24" href="$d5/d3b/_f_m24_c_8h.html#a58c75fa880659b77916e33d268997c03" title="I2C Read function for FM24C. " alt="" coords="163,640,317,666"/>
+<area shape="rect" id="node25" href="$d7/d3b/_m_b85_r_c256_v_8h.html#a73e73d2912711167df8a240446e9ffd4" title="I2C Write function for MB85RC256V. " alt="" coords="168,690,312,717"/>
+<area shape="rect" id="node26" href="$d7/d3b/_m_b85_r_c256_v_8h.html#a6b828947711021fff18e0dbd78febe30" title="I2C Read function for MB85RC256V. " alt="" coords="168,741,312,768"/>
+<area shape="rect" id="node27" href="$d7/d3b/_m_b85_r_c256_v_8h.html#a61d462174263aaede6e016fbe1058480" title="I2C Read ID function for MB85RC256V (reads 3 bytes) " alt="" coords="157,792,323,818"/>
+<area shape="rect" id="node28" href="$df/d9f/_m_c_p4725_8h.html#a5e208171d0fea496f20c3e3613c1ae98" title="I2C Write function for MCP4725. " alt="" coords="181,842,299,869"/>
+<area shape="rect" id="node29" href="$df/d9f/_m_c_p4725_8h.html#a4d2dc4eadb062b5e76f16ca0a473fa9c" title="I2C Read function for MCP4725. " alt="" coords="181,893,299,920"/>
+<area shape="rect" id="node30" href="$df/d9f/_m_c_p4725_8h.html#ad8815961c93a34c57c353657a6a0f304" title="MCP4725_General_Call" alt="" coords="159,944,321,970"/>
+<area shape="rect" id="node31" href="$d8/d57/_m_c_p9808_8h.html#a76f237074a82f686b1b163783abe06bb" title="I2C Write function for MCP9808. " alt="" coords="181,994,299,1021"/>
+<area shape="rect" id="node32" href="$d8/d57/_m_c_p9808_8h.html#a5f07df92b9fb162854dca25cf1a3da80" title="I2C Read function for MCP9808. " alt="" coords="181,1045,299,1072"/>
+<area shape="rect" id="node33" href="$da/da9/_m_t_c_h6102_8h.html#a886bf0ab928a8940addac31edde0b1c5" title="I2C Write function for MTCH6102. " alt="" coords="177,1096,303,1122"/>
+<area shape="rect" id="node34" href="$da/da9/_m_t_c_h6102_8h.html#addb332d7599bec7bb742d84ea36f8bc1" title="I2C Read function for MTCH6102. " alt="" coords="177,1146,303,1173"/>
+<area shape="rect" id="node35" href="$d4/dc2/_p_c_a9624_8h.html#a78ec1beed3ac5fd5fe18d3f95f89e19d" title="I2C Write function for PCA9624. " alt="" coords="182,1197,298,1224"/>
+<area shape="rect" id="node36" href="$d4/dc2/_p_c_a9624_8h.html#acc8ed9119c21ca44aedefe8923566e5b" title="I2C Read function for PCA9624. " alt="" coords="182,1248,298,1274"/>
+<area shape="rect" id="node37" href="$d4/deb/_p_c_a9685_8h.html#a894010b631426d84cedf4e9f634c9ab2" title="I2C Write function for PCA9685. " alt="" coords="182,1298,298,1325"/>
+<area shape="rect" id="node38" href="$d4/deb/_p_c_a9685_8h.html#a616bf195896e135b402365b2ec9aa468" title="I2C Read function for PCA9685. " alt="" coords="182,1349,298,1376"/>
+<area shape="rect" id="node39" href="$dd/d42/_p_c_f8523_8h.html#aac1b57b44dce68814b0cbe6cee5374d2" title="I2C Write function for PCF8523 peripheral. " alt="" coords="183,1400,297,1426"/>
+<area shape="rect" id="node40" href="$dd/d42/_p_c_f8523_8h.html#a58750b10a6bd6458855b5316af84fb5e" title="I2C Read function for PCF8523 peripheral. " alt="" coords="183,1450,297,1477"/>
+<area shape="rect" id="node41" href="$d1/d8f/_s11059_8h.html#a2f2b5c49457f907586695564edef70fe" title="I2C Write function for S11059. " alt="" coords="188,1501,292,1528"/>
+<area shape="rect" id="node42" href="$d1/d8f/_s11059_8h.html#ad2d693c56dc5ad28c1bcad7971b19838" title="I2C Read function for S11059. " alt="" coords="188,1552,292,1578"/>
+<area shape="rect" id="node43" href="$d9/d51/_t_c_s3400_8h.html#a421cf6447cb06d3c09ec6c687240c0a8" title="I2C Write function for TCS3400. " alt="" coords="183,1602,297,1629"/>
+<area shape="rect" id="node44" href="$d9/d51/_t_c_s3400_8h.html#a2d42097eccd54d872980c2dbf7bd11a0" title="I2C Read function for TCS3400. " alt="" coords="183,1653,297,1680"/>
+<area shape="rect" id="node45" href="$d8/ddc/_t_c_s3472_8h.html#aafe764d8a7cd86bef3682ad76a1c55e3" title="I2C Write function for TCS3472. " alt="" coords="183,1704,297,1730"/>
+<area shape="rect" id="node46" href="$d8/ddc/_t_c_s3472_8h.html#adb9484582124fa68b7cd555fcec177a6" title="I2C Read function for TCS3472. " alt="" coords="183,1754,297,1781"/>
+<area shape="rect" id="node47" href="$d8/ddc/_t_c_s3472_8h.html#ae47d358b21ebdfa2b6a2eafceabf9563" title="I2C Special function Write function for TCS3472. " alt="" coords="157,1805,323,1832"/>
+<area shape="rect" id="node48" href="$da/d96/_t_s_l2591_8h.html#a3d9fd710dcb7c1c55ac8e3e50d2d2d89" title="I2C Write function for TSL2591. " alt="" coords="184,1856,296,1882"/>
+<area shape="rect" id="node49" href="$da/d96/_t_s_l2591_8h.html#a8ca44c4d37228b9136168ee2bab22880" title="I2C Read function for TSL2591. " alt="" coords="184,1906,296,1933"/>
+<area shape="rect" id="node50" href="$da/d96/_t_s_l2591_8h.html#afed40846f2a653c92ba250beeea3824e" title="I2C Special function Write function for TSL2591. " alt="" coords="159,1957,321,1984"/>
+<area shape="rect" id="node3" href="$df/de4/_a_t42_q_t1244__ex_8h.html#ae469b881ff66cf79cb3a156250d7a52c" title="AT42QT1244_Send_Command" alt="" coords="371,108,573,134"/>
+<area shape="rect" id="node4" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a353cd962620f6b4d1c661b080cb751e6" title="AT42QT1244_Send_Setup" alt="" coords="630,57,807,84"/>
+<area shape="rect" id="node5" href="$df/de4/_a_t42_q_t1244__ex_8h.html#abca26e61c02a7487df0ff03b68524814" title="AT42QT1244_Setup_Key" alt="" coords="875,32,1045,58"/>
+<area shape="rect" id="node6" href="$df/de4/_a_t42_q_t1244__ex_8h.html#ac24ba4bd0c614a448efbfc4497076f47" title="AT42QT1244_Setup_FHM" alt="" coords="872,82,1048,109"/>
+<area shape="rect" id="node7" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#aa108ef1f6b82846881e7c5053f02c4b8" title="AT42QT1244_Calibrate\l_Freq_Offset" alt="" coords="1105,100,1263,142"/>
+<area shape="rect" id="node9" href="$df/de4/_a_t42_q_t1244__ex_8h.html#ab8e73a2fdeb60468a2dd99ae1db47a46" title="AT42QT1244_Get_Keys" alt="" coords="878,234,1042,261"/>
+<area shape="rect" id="node10" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a6783432989047e02f95a32dd526188b4" title="AT42QT1244_Get_Key_Data" alt="" coords="864,184,1056,210"/>
+<area shape="rect" id="node11" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a7605b97c8da18443a0ff4ae11473b01e" title="AT42QT1244_Get_Status" alt="" coords="874,285,1046,312"/>
+<area shape="rect" id="node13" href="$d8/dfb/_b_m_p180__ex_8h.html#acfafe99c51fdd4a1d3ad0cf98054ce64" title="Start BMP180 Temperature/Pressure conversion. " alt="" coords="382,285,562,312"/>
+<area shape="rect" id="node15" href="$d8/dfb/_b_m_p180__ex_8h.html#aad07e1b020f045a0040ae6d0edaa3fd7" title="Reset BMP180 chip. " alt="" coords="903,336,1017,362"/>
+<area shape="rect" id="node14" href="$d8/dfb/_b_m_p180__ex_8h.html#abc0a477e180c56c5414576450dcc579a" title="Get Raw Pressure. " alt="" coords="622,336,815,362"/>
+<area shape="rect" id="node17" href="$d3/d7d/_b_m_p180_8h.html#ad076d106074c412933c256a4a9777e85" title="I2C Word Read function for BMP180. " alt="" coords="398,386,546,413"/>
+<area shape="rect" id="node18" href="$d8/dfb/_b_m_p180__ex_8h.html#a812c75f7cac1cace03e96f752e66b22f" title="Get BMP180 chip ID. " alt="" coords="398,437,546,464"/>
+</map>

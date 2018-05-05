@@ -1,7 +1,7 @@
 <map id="S11059_Read_Word" name="S11059_Read_Word">
-<area shape="rect" id="node2" href="$d9/da9/_s11059__ex_8h.html#a377b4398d34252ec3a8c4df7fe9a2abc" title="Get Specific channel conversion. " alt="" coords="197,5,347,32"/>
-<area shape="rect" id="node3" href="$d9/da9/_s11059__ex_8h.html#ae9fa0ac38a00fed8fe4c3144aba88c3c" title="Get Red channel conversion. " alt="" coords="209,56,335,83"/>
-<area shape="rect" id="node4" href="$d9/da9/_s11059__ex_8h.html#a4ddcfdbe9296ea53c74fb65e809f4804" title="Get Green channel conversion. " alt="" coords="204,107,340,133"/>
-<area shape="rect" id="node5" href="$d9/da9/_s11059__ex_8h.html#a95a6fe5d9c10d095daf0d4e01353317f" title="Get Blue channel conversion. " alt="" coords="209,157,335,184"/>
-<area shape="rect" id="node6" href="$d9/da9/_s11059__ex_8h.html#ae8e2e6ed40be9a4b7b9a68fd83bd0514" title="Get Infra&#45;red channel conversion. " alt="" coords="206,208,338,235"/>
+<area shape="rect" id="node2" href="$d9/da9/_s11059__ex_8h.html#a9ddd091a456df1a34d98352b269c05f6" title="Get Specific channel conversion. " alt="" coords="197,5,347,32"/>
+<area shape="rect" id="node3" href="$d9/da9/_s11059__ex_8h.html#ac0219db0728ef5566a3de54bf7081442" title="Get Red channel conversion. " alt="" coords="209,56,335,83"/>
+<area shape="rect" id="node4" href="$d9/da9/_s11059__ex_8h.html#ae92afff67c7ff9a4ead6244429d7d2ce" title="Get Green channel conversion. " alt="" coords="204,107,340,133"/>
+<area shape="rect" id="node5" href="$d9/da9/_s11059__ex_8h.html#aaab14c59235f004513fb3ee546b272ee" title="Get Blue channel conversion. " alt="" coords="209,157,335,184"/>
+<area shape="rect" id="node6" href="$d9/da9/_s11059__ex_8h.html#a02bcd6e6568b5ebd88e0ab60521733ce" title="Get Infra&#45;red channel conversion. " alt="" coords="206,208,338,235"/>
 </map>

@@ -1,0 +1,11 @@
+<map id="BMP180_Init" name="BMP180_Init">
+<area shape="rect" id="node2" href="$d7/d97/_i2_c__component_8c.html#a0156af69fdc6459a92678bdb7d6300ab" title="I2C Slave device initialization. " alt="" coords="181,5,286,32"/>
+<area shape="rect" id="node3" href="$d0/d35/_b_m_p180__proc_8c.html#a050f7f68b43d61d48ac6cf42b8e11fd2" title="Initialization Sequence for BMP180 peripheral. " alt="" coords="152,56,315,83"/>
+<area shape="rect" id="node10" href="$d6/dd6/_i2_c__component_8h.html#a0fd045e910b4d2c5aecdca250e9d3379" title="Set I2C Slave device disabled/enabled state. " alt="" coords="177,107,290,133"/>
+<area shape="rect" id="node4" href="$d8/dfb/_b_m_p180__ex_8h.html#a812c75f7cac1cace03e96f752e66b22f" title="Get BMP180 chip ID. " alt="" coords="582,31,730,57"/>
+<area shape="rect" id="node8" href="$d0/d35/_b_m_p180__proc_8c.html#ad0e4baf09d4b0af6fce41cf8ea3c83c8" title="Get calibration parameters from BMP180 peripheral. " alt="" coords="363,81,533,108"/>
+<area shape="rect" id="node5" href="$d8/d11/_b_m_p180_8c.html#aabcacf3ee95fccb35e6289f2ee409af9" title="I2C Read function for BMP180. " alt="" coords="779,56,890,83"/>
+<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="939,31,1051,57"/>
+<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="943,81,1046,108"/>
+<area shape="rect" id="node9" href="$d8/d11/_b_m_p180_8c.html#ad076d106074c412933c256a4a9777e85" title="I2C Word Read function for BMP180. " alt="" coords="582,81,730,108"/>
+</map>

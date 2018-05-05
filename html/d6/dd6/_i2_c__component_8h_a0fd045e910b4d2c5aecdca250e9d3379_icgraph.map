@@ -1,0 +1,18 @@
+<map id="I2C_set_enable" name="I2C_set_enable">
+<area shape="rect" id="node2" href="$dd/d4f/_a_t42_q_t1244_8h.html#a64fb7f001f51e6d684b38d90c8009284" title="Initialization for AT42QT1244 peripheral. " alt="" coords="171,5,295,32"/>
+<area shape="rect" id="node3" href="$d3/d7d/_b_m_p180_8h.html#a933c8a53024fd452bed2f89b2b44e1bb" title="Initialization for BMP180 peripheral. " alt="" coords="185,56,282,83"/>
+<area shape="rect" id="node4" href="$d5/d47/_d_r_v2605_l_8h.html#abd9fc71902a9c19877c62c9c77b8ecf2" title="Initialization for DRV2605L peripheral. " alt="" coords="178,107,289,133"/>
+<area shape="rect" id="node5" href="$dd/d26/_d_s___g_p_m_s_8h.html#afaaa2fcca591ac0512344e0614589c27" title="Initialization for GPMS peripheral. " alt="" coords="190,157,277,184"/>
+<area shape="rect" id="node6" href="$d5/d3b/_f_m24_c_8h.html#a6cd32d00c8930b140a6d1f16530d93af" title="Initialization for FM24C peripheral. " alt="" coords="188,208,279,235"/>
+<area shape="rect" id="node7" href="$d7/d3b/_m_b85_r_c256_v_8h.html#accb117e7b47490c50adc85b619e06eb0" title="Initialization for MB85RC256V peripheral. " alt="" coords="168,259,299,285"/>
+<area shape="rect" id="node8" href="$df/d9f/_m_c_p4725_8h.html#aca635ed04cb26593c777b935ae29b412" title="Initialization of the MCP4725 peripheral. " alt="" coords="181,309,286,336"/>
+<area shape="rect" id="node9" href="$d8/d57/_m_c_p9808_8h.html#a7f8dc6e57ce593855ab462ae81b09803" title="Initialization of the MCP9808 peripheral. " alt="" coords="181,360,286,387"/>
+<area shape="rect" id="node10" href="$da/da9/_m_t_c_h6102_8h.html#a2ac096d23474a9811463ec973adf4992" title="Initialization for MTCH6102 peripheral. " alt="" coords="176,411,291,437"/>
+<area shape="rect" id="node11" href="$d4/dc2/_p_c_a9624_8h.html#a1bd9c1dee7a9941a8df42da684aa978b" title="Initialization for PCA9624 peripheral. " alt="" coords="182,461,285,488"/>
+<area shape="rect" id="node12" href="$d4/deb/_p_c_a9685_8h.html#ad3904a3b4332bc81d03f2077f1f28918" title="Initialization for PCA9685 peripheral. " alt="" coords="182,512,285,539"/>
+<area shape="rect" id="node13" href="$dd/d42/_p_c_f8523_8h.html#a530a5e2f250c19a988ef55cb8139b216" title="Initialization for PCF8523 peripheral peripheral. " alt="" coords="182,563,285,589"/>
+<area shape="rect" id="node14" href="$d1/d8f/_s11059_8h.html#a1dc8005b9397e5abb93330c20ff74ab4" title="Initialization for S11059 peripheral. " alt="" coords="188,613,279,640"/>
+<area shape="rect" id="node15" href="$d9/d51/_t_c_s3400_8h.html#af857af74701ad40d2a9748a7372e4fca" title="Initialization for TCS3400 peripheral. " alt="" coords="182,664,285,691"/>
+<area shape="rect" id="node16" href="$d8/ddc/_t_c_s3472_8h.html#a4025d52684340f5df370fc99e726a3d0" title="Initialization for TCS3472 peripheral. " alt="" coords="182,715,285,741"/>
+<area shape="rect" id="node17" href="$da/d96/_t_s_l2591_8h.html#a9bc4ce5e43fdba854c35561c3712164c" title="Initialization for TSL2591 peripheral. " alt="" coords="184,765,283,792"/>
+</map>

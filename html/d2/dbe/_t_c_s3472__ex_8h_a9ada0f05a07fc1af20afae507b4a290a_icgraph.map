@@ -1,0 +1,6 @@
+<map id="TCS3472_Write_Cfg" name="TCS3472_Write_Cfg">
+<area shape="rect" id="node2" href="$d2/dbe/_t_c_s3472__ex_8h.html#a8463a12a6771529fdc140a6423876e2a" title="Wait time configuration. " alt="" coords="198,31,373,57"/>
+<area shape="rect" id="node3" href="$d2/dbe/_t_c_s3472__ex_8h.html#ae06d451c3ee3780185bfcb224c82263c" title="Write TCS3472 Control register. " alt="" coords="436,5,575,32"/>
+<area shape="rect" id="node4" href="$d6/d96/_t_c_s3472__proc_8h.html#a42bf2cef08daa46a73f1a5ea8d6202ae" title="Initialization Sequence for TCS3472 peripheral. " alt="" coords="422,56,589,83"/>
+<area shape="rect" id="node5" href="$d8/ddc/_t_c_s3472_8h.html#a4025d52684340f5df370fc99e726a3d0" title="Initialization for TCS3472 peripheral. " alt="" coords="638,56,741,83"/>
+</map>
