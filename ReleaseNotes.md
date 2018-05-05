@@ -22,6 +22,7 @@ SOFTWARE.
 
 ## v0.7
 
+* Adding support for doxygen documentation generation with Travis CI
 * template: misc fixes
 * use of const qualifier in function parameters
 * init sequence returns with error value if something goes wrong during initialization

@@ -1,4 +1,4 @@
-# ARM I2C drivers
+# ARM I2C drivers [![Build Status](https://travis-ci.org/SMFSW/arm_i2c_drivers.svg?branch=master)](https://travis-ci.org/SMFSW/arm_i2c_drivers)
 
 ARM I2C Drivers for various components
 
@@ -12,24 +12,19 @@ ARM I2C Drivers for various components
 
 ## Usage
 
-- define I2C_$CPNT$ in a file called globals.h with the I2C instance you want it to be tied to
-- use $CPNT$_Init() once
-- start using $CPNT$_funcs()
+- define `I2C_$CPNT$` in a file called globals.h with the I2C instance you want it to be tied to
+- use `$CPNT$_Init()` once
+- start using `$CPNT$_funcs()`
 
-- if you find warning messages annoying, you could define NO_WARN_I2C_DRIVERS (underscores between words) in compiler options to hide warning messages
+- if you find warning messages annoying, you could define `NO_WARN_I2C_DRIVERS` (underscores between words) in compiler options to hide warning messages
 
 ## Remarks
 
-- define VERBOSE in compiler options to printf infos from component handlers
-- Components with a xxx_proc file can access I2C_slave instance through CPNT->cfg.slave_inst.
-Please keep in mind some components are somewhat custom and needs to be accesses through CPNT->cfg.slave_inst_xxx instead if needed.
+- define `VERBOSE` in compiler options to printf infos from component handlers
+- Components with a xxx_proc file can access `I2C_slave` instance through `CPNT->cfg.slave_inst`.
+Please keep in mind some components are somewhat custom and needs to be accesses through `CPNT->cfg.slave_inst_xxx` instead if needed.
 
-## Next
-
-- The library lacks the possibility to implement multiple identical devices:
-  - This will be fixed in a later version through I2C_component and the slave struct
-
-## Supported peripherals
+## Supported devices
 
 - **AT42QT1244**: 24-key QMatrix FMEA IEC/EN/UL60730 Touch Sensor
 
@@ -89,7 +84,7 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 
 - **S11059**: I2C interface-compatible color sensor
 
-  -> _TESTS PENDING
+  -> _TESTS PENDING_
 
 - **TCS3400**: Color light-to-digital converter
 
@@ -133,7 +128,7 @@ You may also:
 
 ## TODO
 
-- Copatibility handling multiple identical components
+- Compatibility handling multiple identical components
 - FreeRTOS compatibility using R/W functions using interrupts with callbacks
 
 ## Misc
@@ -148,28 +143,8 @@ Feel free to share your thoughts @ xgarmanboziax@gmail.com about:
 
 Doxygen documentation can be generated using "Doxyfile"
 
+See [generated documentation](https://smfsw.github.io/arm_i2c_drivers/)
+
 ## Release Notes
 
-See [release notes](https://github.com/SMFSW/arm_i2c_drivers/ReleaseNotes.md)
-
-## License
-
-The MIT License (MIT)
-
-Copyright (c) 2017-2018 SMFSW (Sebastien Bizien)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+See [release notes](ReleaseNotes.md)
