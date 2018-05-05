@@ -1,0 +1,7 @@
+<map id="uTCS3472_REG_MAP" name="uTCS3472_REG_MAP">
+<area shape="rect" id="node2" href="$d4/d69/unionu_t_c_s3472___r_e_g_____e_n_a_b_l_e.html" title="Union for ENABLE register of TCS3472. " alt="" coords="12,5,199,32"/>
+<area shape="rect" id="node3" href="$d2/d3c/unionu_t_c_s3472___r_e_g_____c_o_n_f_i_g.html" title="Union for CONFIG register of TCS3472. " alt="" coords="12,56,199,83"/>
+<area shape="rect" id="node4" href="$de/da6/unionu_t_c_s3472___r_e_g_____s_t_a_t_u_s.html" title="Union for STATUS register of TCS3472. " alt="" coords="12,107,199,133"/>
+<area shape="rect" id="node5" href="$d7/d52/unionu_t_c_s3472___r_e_g_____c_o_n_t_r_o_l.html" title="Union for CONTROL register of TCS3472. " alt="" coords="6,157,205,184"/>
+<area shape="rect" id="node6" href="$d4/d75/unionu_t_c_s3472___r_e_g_____p_e_r_s_i_s_t.html" title="Union for PERSIST register of TCS3472. " alt="" coords="9,208,201,235"/>
+</map>

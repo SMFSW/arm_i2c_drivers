@@ -1,0 +1,12 @@
+<map id="PCF8523_Read" name="PCF8523_Read">
+<area shape="rect" id="node2" href="$d1/d30/_p_c_f8523__ex_8h.html#ae82fc65ff3bb982a3a07ed43856fdfdd" title="PCF8523_Set_12_24" alt="" coords="183,12,329,39"/>
+<area shape="rect" id="node4" href="$d1/d30/_p_c_f8523__ex_8h.html#a2e5406b189e51d2f1929201d8ce73b99" title="PCF8523_Check_Clock\l_Integrity" alt="" coords="175,114,337,155"/>
+<area shape="rect" id="node5" href="$d1/d30/_p_c_f8523__ex_8h.html#ae2c8370ad357db3869fd42d64d0320d3" title="PCF8523_Get_Time_Raw" alt="" coords="401,121,575,148"/>
+<area shape="rect" id="node10" href="$d1/d30/_p_c_f8523__ex_8h.html#ad3ec27d6dc57420cc5342d30d6164317" title="PCF8523_Get_Date_Raw" alt="" coords="169,180,343,207"/>
+<area shape="rect" id="node3" href="$d1/d30/_p_c_f8523__ex_8h.html#a61666e0beb8690cff2a1e0529ad334a4" title="PCF8523_Disable_Weekday\l_Alarm" alt="" coords="393,5,583,46"/>
+<area shape="rect" id="node6" href="$d4/d61/_p_c_f8523__proc_8h.html#ad0d71f0e72ac7d36a8c735048b252b58" title="PCF8523_Get_Time" alt="" coords="632,124,773,151"/>
+<area shape="rect" id="node7" href="$d4/d61/_p_c_f8523__proc_8h.html#a04365ddacd950492c16035fb554c3b72" title="Initialization Sequence for PCF8523 peripheral. " alt="" coords="822,124,989,151"/>
+<area shape="rect" id="node9" href="$d4/d61/_p_c_f8523__proc_8h.html#a0c61d7181df53ea43460c13575563e92" title="Handler for PCF8523 peripheral. " alt="" coords="842,175,969,201"/>
+<area shape="rect" id="node8" href="$dd/d42/_p_c_f8523_8h.html#aa61e54475342c7382da01eb61e44da09" title="Initialization for PCF8523 peripheral peripheral. " alt="" coords="1038,124,1141,151"/>
+<area shape="rect" id="node11" href="$d4/d61/_p_c_f8523__proc_8h.html#a902d6eaca52b0245f92b1817ff01637a" title="PCF8523_Get_Date" alt="" coords="633,175,773,201"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="PCF8523_Disable_Weekday_Alarm" name="PCF8523_Disable_Weekday_Alarm">
+<area shape="rect" id="node2" href="$df/d5b/_p_c_f8523_8c.html#aac1b57b44dce68814b0cbe6cee5374d2" title="I2C Write function for PCF8523 peripheral. " alt="" coords="480,201,595,228"/>
+<area shape="rect" id="node5" href="$d1/d30/_p_c_f8523__ex_8h.html#a22bf958bd5bdafef5ca6c7a18d2540e8" title="PCF8523_Enable_Minute\l_Alarm" alt="" coords="253,253,424,294"/>
+<area shape="rect" id="node6" href="$d1/d30/_p_c_f8523__ex_8h.html#aa5f64c8ec415f723467d661a66578b99" title="PCF8523_Enable_Hour\l_Alarm" alt="" coords="259,5,418,46"/>
+<area shape="rect" id="node7" href="$d1/d30/_p_c_f8523__ex_8h.html#a674ff4e5da391b2296eda08f9718f4db" title="PCF8523_Enable_Day\l_Alarm" alt="" coords="261,70,416,111"/>
+<area shape="rect" id="node8" href="$d1/d30/_p_c_f8523__ex_8h.html#aae652e8aecd7fd4f0ae4617597ded765" title="PCF8523_Enable_Weekday\l_Alarm" alt="" coords="245,135,432,177"/>
+<area shape="rect" id="node9" href="$d1/d30/_p_c_f8523__ex_8h.html#ae82fc65ff3bb982a3a07ed43856fdfdd" title="PCF8523_Set_12_24" alt="" coords="265,319,412,345"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="643,201,755,228"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="647,252,750,279"/>
+<area shape="rect" id="node10" href="$df/d5b/_p_c_f8523_8c.html#a58750b10a6bd6458855b5316af84fb5e" title="I2C Read function for PCF8523 peripheral. " alt="" coords="480,252,595,279"/>
+</map>

@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['gain',['Gain',['../d9/db1/struct_t_c_s3400__proc.html#a55016e1d45feb5e7e20f525514ad6701',1,'TCS3400_proc::Gain()'],['../d3/d3b/struct_t_c_s3472__proc.html#aeaa9dd22944d83cce0270f9d56095bed',1,'TCS3472_proc::Gain()'],['../da/d6b/struct_t_s_l2591__proc.html#ade093cf228dff020fd6d5be07dc55541',1,'TSL2591_proc::Gain()']]],
+  ['gain_5fselection',['GAIN_SELECTION',['../de/d02/unionu_s11059___r_e_g_____c_o_n_t_r_o_l.html#a94c15b3c9c7ee787c18edf183d72aacd',1,'uS11059_REG__CONTROL']]],
+  ['gainselection',['GainSelection',['../d4/d14/struct_s11059__proc.html#a7eda4c1d66243cbd48137d0fc95df85a',1,'S11059_proc']]],
+  ['gdatah',['GDATAH',['../d9/d4e/unionu_t_c_s3472___r_e_g___m_a_p.html#a58a64cd8acf425a885f0a7b632dfd59a',1,'uTCS3472_REG_MAP']]],
+  ['gdatal',['GDATAL',['../d9/d4e/unionu_t_c_s3472___r_e_g___m_a_p.html#abe9a86ace8ec5172932436de61b5ea2d',1,'uTCS3472_REG_MAP']]],
+  ['ges',['GES',['../de/da6/unionu_m_t_c_h___r_e_g_____t_o_u_c_h_s_t_a_t_e.html#aef3d79436116726e19bdd269b9f9bec4',1,'uMTCH_REG__TOUCHSTATE']]],
+  ['gest_5fdiag',['Gest_diag',['../d6/d35/struct_m_t_c_h6102__gest.html#a0303848da6dadc7becf47be88bc13607',1,'MTCH6102_gest']]],
+  ['gest_5fstate',['Gest_state',['../d6/d35/struct_m_t_c_h6102__gest.html#a4559303b5a7676c53e77b73a9bf7fb54',1,'MTCH6102_gest']]],
+  ['gesture',['Gesture',['../df/d8e/struct_m_t_c_h6102__gesture.html#a3976ee84616324d5ed5b29e084c80e12',1,'MTCH6102_gesture']]],
+  ['go',['Go',['../dc/da9/unionu_d_r_v___r_e_g___m_a_p.html#a215357dd622e43073d0b37e140b43929',1,'uDRV_REG_MAP::Go()'],['../d0/d08/unionu_d_r_v___r_e_g_____g_o.html#a850350eb88136638710c11df729f2e58',1,'uDRV_REG__GO::GO()']]],
+  ['gpms',['GPMS',['../dd/d17/_d_s___g_p_m_s__proc_8c.html#a7946704b3ef744982acde41e940088ca',1,'GPMS():&#160;DS_GPMS_proc.c'],['../de/d15/_d_s___g_p_m_s__proc_8h.html#a7946704b3ef744982acde41e940088ca',1,'GPMS():&#160;DS_GPMS_proc.c']]],
+  ['gpms_5fhal',['GPMS_hal',['../db/d9a/_d_s___g_p_m_s_8c.html#a7bd089478464e1376b7f7770879ea73b',1,'GPMS_hal():&#160;DS_GPMS.c'],['../dd/d26/_d_s___g_p_m_s_8h.html#a7bd089478464e1376b7f7770879ea73b',1,'GPMS_hal():&#160;DS_GPMS.c']]],
+  ['gps_5fmode',['GPS_Mode',['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#a3e4535c9d7a589a29421ea7990964c85',1,'uGPMS_RD_REG_MAP']]],
+  ['gps_5fquality_5findicator',['GPS_Quality_Indicator',['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#ae33a2d9963cd23d8fafdf92c4c97813d',1,'uGPMS_RD_REG_MAP']]],
+  ['green',['Green',['../d4/d14/struct_s11059__proc.html#a4a19b078f40327022f499940ed13d483',1,'S11059_proc::Green()'],['../d9/db1/struct_t_c_s3400__proc.html#a195152b7e2f03f94d97d7cef88a33acd',1,'TCS3400_proc::Green()'],['../d3/d3b/struct_t_c_s3472__proc.html#ac4e23faa93a1431d2240004c83954131',1,'TCS3472_proc::Green()']]],
+  ['green_5flsb',['Green_LSB',['../d3/d2f/unionu_s11059___r_e_g___m_a_p.html#a24acd0c076d3bc9e26cdf1386d421f78',1,'uS11059_REG_MAP']]],
+  ['green_5fmsb',['Green_MSB',['../d3/d2f/unionu_s11059___r_e_g___m_a_p.html#a7bb082ce92874a06094a5aa96b757650',1,'uS11059_REG_MAP']]],
+  ['grpfreq',['GRPFREQ',['../d9/d4b/unionu_p_c_a9624___r_e_g___m_a_p.html#a13a948acd29b410783303ec242e23a27',1,'uPCA9624_REG_MAP']]],
+  ['grppwm',['GRPPWM',['../d9/d4b/unionu_p_c_a9624___r_e_g___m_a_p.html#aa8fc356716a7032a18714b2abe685f60',1,'uPCA9624_REG_MAP']]]
+];

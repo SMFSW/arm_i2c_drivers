@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['id',['ID',['../d9/d4e/unionu_t_c_s3472___r_e_g___m_a_p.html#a5fddf37cb4921340f160f8776ab0dbab',1,'uTCS3472_REG_MAP::ID()'],['../d9/d38/unionu_t_s_l2591___r_e_g___m_a_p.html#a63676420ec037e3f8d1fd00b90e0f444',1,'uTSL2591_REG_MAP::ID()'],['../da/dd4/struct_b_m_p180__proc.html#aa20995094916918f2bfc64af01a4e99b',1,'BMP180_proc::Id()'],['../d2/dce/struct_d_r_v2605_l__proc.html#a69fe611f5a05c0f9ccc1004ebf7a8415',1,'DRV2605L_proc::Id()'],['../d3/d3b/struct_t_c_s3472__proc.html#a560649e90a19b60eef26233f39a9720d',1,'TCS3472_proc::Id()'],['../da/d6b/struct_t_s_l2591__proc.html#aa582cedb47c9b89b2b05ffd77e7ea698',1,'TSL2591_proc::Id()']]],
+  ['idiss_5ftime',['IDISS_TIME',['../d0/d59/unionu_d_r_v___r_e_g_____c_o_n_t_r_o_l__2.html#a28db91462bfb84cea18f66615e6c27c5',1,'uDRV_REG__CONTROL_2::IDISS_TIME()'],['../d2/da8/unionu_d_r_v___r_e_g_____c_o_n_t_r_o_l__5.html#aece6bb1f8cb992cc1182c3f3ee08c29c',1,'uDRV_REG__CONTROL_5::IDISS_TIME()']]],
+  ['input_5fmode',['Input_Mode',['../d2/dce/struct_d_r_v2605_l__proc.html#ae7938cbc3e905424c3bf14486298c8dc',1,'DRV2605L_proc']]],
+  ['intclr',['IntClr',['../d3/d88/unionu_m_c_p9808___r_e_g_____c_f_g.html#aefd59556232339a9e40a2447184d3bf3',1,'uMCP9808_REG__CFG']]],
+  ['integ',['Integ',['../d9/db1/struct_t_c_s3400__proc.html#a9cba656462070ab19386911233fac052',1,'TCS3400_proc::Integ()'],['../d3/d3b/struct_t_c_s3472__proc.html#a68ae6f38db0ba715c18477444bd638bb',1,'TCS3472_proc::Integ()'],['../da/d6b/struct_t_s_l2591__proc.html#aa23d57e95e2a5541beba292c98f708c6',1,'TSL2591_proc::Integ()']]],
+  ['integ_5fmode',['INTEG_MODE',['../de/d02/unionu_s11059___r_e_g_____c_o_n_t_r_o_l.html#a42d1ea9eb45d661c5cf2605872d9662d',1,'uS11059_REG__CONTROL']]],
+  ['integ_5fprescl',['INTEG_PRESCL',['../de/d02/unionu_s11059___r_e_g_____c_o_n_t_r_o_l.html#a0538cf9336b4f10fc5362790dc6f8bf8',1,'uS11059_REG__CONTROL']]],
+  ['integer',['Integer',['../db/d36/unionu_m_c_p9808___r_e_g_____t_e_m_p___l_i_m.html#aa965a46229718e394503bfb3f8b0f868',1,'uMCP9808_REG__TEMP_LIM::Integer()'],['../d9/d48/unionu_m_c_p9808___r_e_g_____t_e_m_p___a_m_b.html#abd6fd854b0a2a79869f8d7fdce3cf82f',1,'uMCP9808_REG__TEMP_AMB::Integer()']]],
+  ['integrationmode',['IntegrationMode',['../d4/d14/struct_s11059__proc.html#a6cc3d25311d0b1bd7a016baa0d8b9e2f',1,'S11059_proc']]],
+  ['integrationprescaler',['IntegrationPrescaler',['../d4/d14/struct_s11059__proc.html#afb567095fe22bcea65223b2702ad45b2',1,'S11059_proc']]],
+  ['integrationtimemult',['IntegrationTimeMult',['../d4/d14/struct_s11059__proc.html#a1dd2695d642aebd980590e65b053900f',1,'S11059_proc']]],
+  ['invrt',['INVRT',['../da/d7f/unionu_p_c_a9624___r_e_g_____m_o_d_e2.html#ac9ce2d6118fcef8f37d2435573232a46',1,'uPCA9624_REG__MODE2']]],
+  ['io_5fdirection',['IO_Direction',['../d3/ddb/unionu_g_p_m_s___w_r___r_e_g___m_a_p.html#acd2b61b3a9c2e0762d547495bff7bb37',1,'uGPMS_WR_REG_MAP']]],
+  ['io_5finput',['IO_Input',['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#a0533de28965727140a8d48314438004e',1,'uGPMS_RD_REG_MAP']]],
+  ['io_5finput_5ftype',['IO_Input_Type',['../d3/ddb/unionu_g_p_m_s___w_r___r_e_g___m_a_p.html#ae919f65fdd437f25c53acb712c22da12',1,'uGPMS_WR_REG_MAP']]],
+  ['io_5fport_5foutput',['IO_Port_Output',['../d3/ddb/unionu_g_p_m_s___w_r___r_e_g___m_a_p.html#a16d556825090a4eedd4baa07590e4716',1,'uGPMS_WR_REG_MAP']]],
+  ['ir',['IR',['../d4/d14/struct_s11059__proc.html#ad5380d0ccc3466a8c9211cc13578f702',1,'S11059_proc::IR()'],['../d3/d52/unionu_t_c_s3400___r_e_g_____i_r.html#a4d49734a7d1ec5e9791643e7eb812371',1,'uTCS3400_REG__IR::IR()'],['../da/d6b/struct_t_s_l2591__proc.html#aebe876bc6d6c77312ddb14f1eb902679',1,'TSL2591_proc::IR()']]],
+  ['ir_5flsb',['IR_LSB',['../d3/d2f/unionu_s11059___r_e_g___m_a_p.html#ad2b7619ef742014895ffdbb416ba76fa',1,'uS11059_REG_MAP']]],
+  ['ir_5fmsb',['IR_MSB',['../d3/d2f/unionu_s11059___r_e_g___m_a_p.html#ad53efd32b8161e43b5e5064614d7ca53',1,'uS11059_REG_MAP']]],
+  ['ir_5fratio',['IR_Ratio',['../d9/db1/struct_t_c_s3400__proc.html#aa0354572c48a683c5edd7ea3a8c9b01b',1,'TCS3400_proc::IR_Ratio()'],['../d3/d3b/struct_t_c_s3472__proc.html#a7792005cfee6b71fca46b538d3edfeea',1,'TCS3472_proc::IR_Ratio()']]],
+  ['irf',['IRF',['../da/d6b/struct_t_s_l2591__proc.html#a96df2cc198d92ac3c518bf8d08ee90dc',1,'TSL2591_proc']]]
+];

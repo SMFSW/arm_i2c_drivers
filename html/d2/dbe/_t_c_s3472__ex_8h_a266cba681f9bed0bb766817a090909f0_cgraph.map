@@ -1,0 +1,7 @@
+<map id="TCS3472_Set_PON" name="TCS3472_Set_PON">
+<area shape="rect" id="node2" href="$df/dfb/_t_c_s3472_8c.html#adb9484582124fa68b7cd555fcec177a6" title="I2C Read function for TCS3472. " alt="" coords="381,5,496,32"/>
+<area shape="rect" id="node5" href="$d2/dbe/_t_c_s3472__ex_8h.html#a56f62596b2e430be461804aa5bf6ff5b" title="Write TCS3472 Enable register. " alt="" coords="195,56,333,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="544,5,656,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="549,56,651,83"/>
+<area shape="rect" id="node6" href="$df/dfb/_t_c_s3472_8c.html#aafe764d8a7cd86bef3682ad76a1c55e3" title="I2C Write function for TCS3472. " alt="" coords="381,56,496,83"/>
+</map>

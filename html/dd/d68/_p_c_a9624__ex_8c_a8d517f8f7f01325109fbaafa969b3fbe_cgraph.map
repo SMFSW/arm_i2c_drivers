@@ -1,0 +1,5 @@
+<map id="PCA9624_ReadRegister" name="PCA9624_ReadRegister">
+<area shape="rect" id="node2" href="$db/de1/_p_c_a9624_8c.html#acc8ed9119c21ca44aedefe8923566e5b" title="I2C Read function for PCA9624. " alt="" coords="219,31,335,57"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="384,5,496,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="389,56,491,83"/>
+</map>

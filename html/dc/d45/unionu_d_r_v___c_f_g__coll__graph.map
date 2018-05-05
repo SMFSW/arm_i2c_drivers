@@ -1,0 +1,8 @@
+<map id="uDRV_CFG" name="uDRV_CFG">
+<area shape="rect" id="node2" href="$d2/d16/unionu_d_r_v___r_e_g_____c_o_n_t_r_o_l__1.html" title="DRV2605L CONTROL 1 register union. " alt="" coords="5,5,192,32"/>
+<area shape="rect" id="node3" href="$d0/d59/unionu_d_r_v___r_e_g_____c_o_n_t_r_o_l__2.html" title="DRV2605L CONTROL 2 register union. " alt="" coords="5,56,192,83"/>
+<area shape="rect" id="node4" href="$d3/d19/unionu_d_r_v___r_e_g_____c_o_n_t_r_o_l__3.html" title="DRV2605L CONTROL 3 register union. " alt="" coords="5,107,192,133"/>
+<area shape="rect" id="node5" href="$d8/d53/unionu_d_r_v___r_e_g_____c_o_n_t_r_o_l__4.html" title="DRV2605L CONTROL 4 register union. " alt="" coords="5,157,192,184"/>
+<area shape="rect" id="node6" href="$d2/da8/unionu_d_r_v___r_e_g_____c_o_n_t_r_o_l__5.html" title="DRV2605L CONTROL 5 register union. " alt="" coords="5,208,192,235"/>
+<area shape="rect" id="node7" href="$d5/db8/unionu_d_r_v___r_e_g_____f_e_e_d_b_a_c_k___c_o_n_t_r_o_l.html" title="DRV2605L FEEDBACK CONTROL register union. " alt="" coords="8,259,189,301"/>
+</map>

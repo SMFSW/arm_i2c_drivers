@@ -1,0 +1,21 @@
+<map id="TCS3400_Read" name="TCS3400_Read">
+<area shape="rect" id="node2" href="$d9/d51/_t_c_s3400_8h.html#a1adb874685ad827db6a2779d2e954be6" title="I2C Word Read (low endian) function for TCS3400. " alt="" coords="175,107,329,133"/>
+<area shape="rect" id="node8" href="$de/d36/_t_c_s3400__ex_8h.html#a0eb7b733ddb2dd00c284376b0c5443dc" title="Oscillator Enable / Disable. " alt="" coords="182,157,322,184"/>
+<area shape="rect" id="node10" href="$de/d36/_t_c_s3400__ex_8h.html#a08ff7fc4e799dc961584d4205d6aa3e8" title="Clear module Enable / Disable. " alt="" coords="183,208,321,235"/>
+<area shape="rect" id="node11" href="$de/d36/_t_c_s3400__ex_8h.html#aac96b4abff7ddd772f48c816570eb74f" title="Clear interrupt module Enable / Disable. " alt="" coords="181,259,323,285"/>
+<area shape="rect" id="node12" href="$de/d36/_t_c_s3400__ex_8h.html#a4d3e5a9239713320eb40d39ba2dee249" title="WAIT module Enable / Disable. " alt="" coords="181,309,323,336"/>
+<area shape="rect" id="node13" href="$de/d36/_t_c_s3400__ex_8h.html#a107b6183dc2e258260209950b60124d2" title="Sleep After Interrupt Enable / Disable. " alt="" coords="185,360,319,387"/>
+<area shape="rect" id="node14" href="$de/d36/_t_c_s3400__ex_8h.html#a4c2bff56a7710dcb185f55254ea4eb47" title="Gain configuration. " alt="" coords="183,411,321,437"/>
+<area shape="rect" id="node17" href="$de/d36/_t_c_s3400__ex_8h.html#a88c962a57e5826256fb8d3a651258ae6" title="Get All channels conversions. " alt="" coords="169,461,335,488"/>
+<area shape="rect" id="node18" href="$de/d36/_t_c_s3400__ex_8h.html#af7afac4029687a311426a231794092dd" title="Get TCS3400 Device ID. " alt="" coords="385,500,551,527"/>
+<area shape="rect" id="node19" href="$de/d36/_t_c_s3400__ex_8h.html#a51ff076cbcfef4eca7985b99eea0a213" title="Get TCS3400 Revision ID. " alt="" coords="393,551,543,577"/>
+<area shape="rect" id="node20" href="$d9/d14/_t_c_s3400__proc_8h.html#a8d59cfdf57e0cba7317660f53aa2a28b" title="Handler for TCS3400 peripheral. " alt="" coords="189,613,315,640"/>
+<area shape="rect" id="node3" href="$de/d36/_t_c_s3400__ex_8h.html#a575dc699dffd86024174d998fbe3f198" title="Get Specific channel conversion. " alt="" coords="388,5,548,32"/>
+<area shape="rect" id="node4" href="$de/d36/_t_c_s3400__ex_8h.html#a3b60dc5c49f2d5f9c16e7c3574c964af" title="Get Clear channel conversion. " alt="" coords="397,56,539,83"/>
+<area shape="rect" id="node5" href="$de/d36/_t_c_s3400__ex_8h.html#a8708e8e5d47c91bf283917df0fb77d9f" title="Get Red channel conversion. " alt="" coords="400,107,536,133"/>
+<area shape="rect" id="node6" href="$de/d36/_t_c_s3400__ex_8h.html#a390fa9af68c5eb9d57f03c6080ad27d1" title="Get Green channel conversion. " alt="" coords="395,157,541,184"/>
+<area shape="rect" id="node7" href="$de/d36/_t_c_s3400__ex_8h.html#abcee1a3e557a33b1b0c629a9e8685bfb" title="Get Blue channel conversion. " alt="" coords="399,208,537,235"/>
+<area shape="rect" id="node9" href="$de/d36/_t_c_s3400__ex_8h.html#adc3d670f9dfa2f030cd18c20b6d81852" title="Write TCS3472 Control register. " alt="" coords="399,284,537,311"/>
+<area shape="rect" id="node15" href="$d9/d14/_t_c_s3400__proc_8h.html#a520ff48a4f7f5492c7d40220a70f604f" title="Initialization Sequence for TCS3400 peripheral. " alt="" coords="601,500,767,527"/>
+<area shape="rect" id="node16" href="$d9/d51/_t_c_s3400_8h.html#a9454edad7586f75569589c7503cf5a25" title="Initialization for TCS3400 peripheral. " alt="" coords="817,500,919,527"/>
+</map>

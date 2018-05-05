@@ -1,0 +1,6 @@
+<map id="TCS3400_Get_DeviceID" name="TCS3400_Get_DeviceID">
+<area shape="rect" id="node2" href="$d4/d1b/_t_c_s3400_8c.html#a2d42097eccd54d872980c2dbf7bd11a0" title="I2C Read function for TCS3400. " alt="" coords="437,31,552,57"/>
+<area shape="rect" id="node5" href="$de/d36/_t_c_s3400__ex_8h.html#a88c962a57e5826256fb8d3a651258ae6" title="Get All channels conversions. " alt="" coords="222,56,389,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="600,5,712,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="605,56,707,83"/>
+</map>

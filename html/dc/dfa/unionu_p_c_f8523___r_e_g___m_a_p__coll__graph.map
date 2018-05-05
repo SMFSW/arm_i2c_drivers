@@ -1,0 +1,13 @@
+<map id="uPCF8523_REG_MAP" name="uPCF8523_REG_MAP">
+<area shape="rect" id="node2" href="$d0/dae/unionu_p_c_f8523___r_e_g_____m_i_n_u_t_e_s.html" title="Union for Minutes and Minute Alarm when in AM/PM mode register for PCF8523 peripheral. " alt="" coords="24,24,219,51"/>
+<area shape="rect" id="node3" href="$d6/d02/unionu_p_c_f8523___r_e_g_____b___f_r_e_q___c_t_r_l.html" title="Union for Tmr_B_freq_ctrl for PCF8523 peripheral peripheral. " alt="" coords="7,75,236,101"/>
+<area shape="rect" id="node4" href="$dd/d3b/unionu_p_c_f8523___r_e_g_____c_l_k_o_u_t___c_t_r_l.html" title="Union for Tmr_CLKOUT_ctrl for PCF8523 peripheral peripheral. " alt="" coords="6,125,237,152"/>
+<area shape="rect" id="node5" href="$dc/dee/unionu_p_c_f8523___r_e_g_____h_o_u_r_s.html" title="Union for Hours and Hour Alarm when in AM/PM mode register for PCF8523 peripheral peripheral..." alt="" coords="30,177,213,204"/>
+<area shape="rect" id="node6" href="$d5/d04/unionu_p_c_f8523___r_e_g_____o_f_f_s_e_t.html" title="Union for Offset for PCF8523 peripheral peripheral. " alt="" coords="28,228,215,255"/>
+<area shape="rect" id="node7" href="$d8/ddb/unionu_p_c_f8523___r_e_g_____d_a_y_s.html" title="Union for Days and Day Alarm register for PCF8523 peripheral peripheral. " alt="" coords="36,283,207,309"/>
+<area shape="rect" id="node8" href="$d0/d42/unionu_p_c_f8523___r_e_g_____s_e_c_o_n_d_s.html" title="Union for Seconds register for PCF8523 peripheral. " alt="" coords="21,333,222,360"/>
+<area shape="rect" id="node9" href="$d3/d23/unionu_p_c_f8523___r_e_g_____w_e_e_k_d_a_y_s.html" title="Union for Weekdays and Weekday Alarm register for PCF8523 peripheral peripheral. " alt="" coords="16,387,227,413"/>
+<area shape="rect" id="node10" href="$dd/dda/unionu_p_c_f8523___r_e_g_____c_t_r_l1.html" title="Union for Control_1 register for PCF8523 peripheral. " alt="" coords="33,437,209,464"/>
+<area shape="rect" id="node11" href="$d9/df6/unionu_p_c_f8523___r_e_g_____c_t_r_l2.html" title="Union for Control_2 register for PCF8523 peripheral. " alt="" coords="33,488,209,515"/>
+<area shape="rect" id="node12" href="$d9/d62/unionu_p_c_f8523___r_e_g_____c_t_r_l3.html" title="Union for Control_3 register for PCF8523 peripheral. " alt="" coords="33,539,209,565"/>
+</map>

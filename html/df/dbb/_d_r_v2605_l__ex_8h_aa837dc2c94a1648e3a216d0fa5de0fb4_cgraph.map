@@ -1,0 +1,8 @@
+<map id="DRV2605L_Set_ATVDrive_Percent" name="DRV2605L_Set_ATVDrive_Percent">
+<area shape="rect" id="node2" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ad497075c2cc578c54b61034bfd3476dd" title="Set Audio To Vibe min/max output drive. " alt="" coords="232,31,483,57"/>
+<area shape="rect" id="node3" href="$dc/d9a/_d_r_v2605_l_8c.html#a09728b1c8f7cf9c03eb859253671dc95" title="I2C Write function for DRV2605L. " alt="" coords="1073,31,1197,57"/>
+<area shape="rect" id="node6" href="$df/dbb/_d_r_v2605_l__ex_8h.html#af42b31b6f3c17d2f818c3e3fe437286d" title="Set Audio To Vibe min/max input voltage. " alt="" coords="531,56,736,83"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="1245,5,1357,32"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="1250,56,1353,83"/>
+<area shape="rect" id="node7" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a02a06feb2b72f30bbb49e6391255eb47" title="Set Audio To Vibe min/max input level. " alt="" coords="784,56,1024,83"/>
+</map>

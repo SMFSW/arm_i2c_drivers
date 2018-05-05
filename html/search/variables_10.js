@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['rated_5fvoltage',['RATED_VOLTAGE',['../dc/da9/unionu_d_r_v___r_e_g___m_a_p.html#abc53563c5c4220cfbe510090662c1b1b',1,'uDRV_REG_MAP']]],
+  ['raw',['Raw',['../dc/d4b/unionu_a_t42_q_t___r_e_g_____k_e_y___d_a_t_a.html#a4035624f6071c3bd6832e6e83622bb96',1,'uAT42QT_REG__KEY_DATA']]],
+  ['rdatah',['RDATAH',['../d9/d4e/unionu_t_c_s3472___r_e_g___m_a_p.html#a043760057fe56b8be42c1ef5402f4760',1,'uTCS3472_REG_MAP']]],
+  ['rdatal',['RDATAL',['../d9/d4e/unionu_t_c_s3472___r_e_g___m_a_p.html#a22f67cf550109aa67089668a9ad01615',1,'uTCS3472_REG_MAP']]],
+  ['red',['Red',['../d4/d14/struct_s11059__proc.html#a8b58fa8fd5f05de523a761d62e35f0b4',1,'S11059_proc::Red()'],['../d9/db1/struct_t_c_s3400__proc.html#a8a19d66c219de5f9b1ea71b601b3ff53',1,'TCS3400_proc::Red()'],['../d3/d3b/struct_t_c_s3472__proc.html#a79ee9e3bc3830de5b348ffbfe9e08d0a',1,'TCS3472_proc::Red()']]],
+  ['red_5flsb',['Red_LSB',['../d3/d2f/unionu_s11059___r_e_g___m_a_p.html#a1ed9887db6ecb313006be9f8008d6a4f',1,'uS11059_REG_MAP']]],
+  ['red_5fmsb',['Red_MSB',['../d3/d2f/unionu_s11059___r_e_g___m_a_p.html#a9bdf591fec4ed2fba9a65b1bf8c95f49',1,'uS11059_REG_MAP']]],
+  ['reference',['Reference',['../dc/d4b/unionu_a_t42_q_t___r_e_g_____k_e_y___d_a_t_a.html#a32fecc7f67d8bf6168c7a8516043f6b4',1,'uAT42QT_REG__KEY_DATA']]],
+  ['reg',['Reg',['../d1/db6/unionu_a_t42_q_t___r_e_g___m_a_p.html#a5f51cc8c04bd3884c08fce87a5d36f32',1,'uAT42QT_REG_MAP::Reg()'],['../d6/d97/unionu_d_r_v___c_f_g.html#ab85940779a13fcb6e596e8aabd767422',1,'uDRV_CFG::Reg()'],['../dc/da9/unionu_d_r_v___r_e_g___m_a_p.html#ac081fb20eeebf4216ed29aef1ed8853a',1,'uDRV_REG_MAP::Reg()'],['../d3/ddb/unionu_g_p_m_s___w_r___r_e_g___m_a_p.html#ab192189c0360634e927b7ca2d1eb5731',1,'uGPMS_WR_REG_MAP::Reg()'],['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#a69e75902d5688dd01d4a2bee69332672',1,'uGPMS_RD_REG_MAP::Reg()'],['../d1/d02/unionu_m_c_p9808___r_e_g___m_a_p.html#a56d95fd74612fe08c9f038c41c0ab9f6',1,'uMCP9808_REG_MAP::Reg()'],['../d9/d4b/unionu_p_c_a9624___r_e_g___m_a_p.html#aad111bbcad870ea7f4deeaa46ca7ff79',1,'uPCA9624_REG_MAP::Reg()'],['../dd/d7c/unionu_p_c_f8523___r_e_g___m_a_p.html#a2fbba2ae207c7c303cbb4f3307ef4886',1,'uPCF8523_REG_MAP::Reg()'],['../d3/d2f/unionu_s11059___r_e_g___m_a_p.html#a7f852d6ce7ece1c982375fcdb9250244',1,'uS11059_REG_MAP::Reg()'],['../d9/d4e/unionu_t_c_s3472___r_e_g___m_a_p.html#afcdc50f4d68665b400994ba50bb1e381',1,'uTCS3472_REG_MAP::Reg()'],['../d9/d38/unionu_t_s_l2591___r_e_g___m_a_p.html#aca691e9c97815be39aab7d101714eb78',1,'uTSL2591_REG_MAP::Reg()']]],
+  ['res_5f1',['Res_1',['../d1/db6/unionu_a_t42_q_t___r_e_g___m_a_p.html#a6108c091f3c77ac7cb6be53368f54fb4',1,'uAT42QT_REG_MAP']]],
+  ['res_5f2',['Res_2',['../d1/db6/unionu_a_t42_q_t___r_e_g___m_a_p.html#a0e087794272ccab2d94d65018a4bc817',1,'uAT42QT_REG_MAP']]],
+  ['res_5f3',['Res_3',['../d1/db6/unionu_a_t42_q_t___r_e_g___m_a_p.html#a536969aaf081d4b62faefb6ed8ecddfd',1,'uAT42QT_REG_MAP']]],
+  ['res_5f4',['Res_4',['../d1/db6/unionu_a_t42_q_t___r_e_g___m_a_p.html#ac977968b4c6275db6d5d27bd8e99c360',1,'uAT42QT_REG_MAP']]],
+  ['reserved',['Reserved',['../d4/d1f/unionu_a_t42_q_t___r_e_g_____d_e_v_i_c_e___s_t_a_t_u_s.html#a3e02b363575690cebab50b1a90cc5e74',1,'uAT42QT_REG__DEVICE_STATUS']]],
+  ['resolution',['Resolution',['../d1/d02/unionu_m_c_p9808___r_e_g___m_a_p.html#a224b36540907eeb4c862aa19acdc6c20',1,'uMCP9808_REG_MAP::Resolution()'],['../d7/d12/struct_m_c_p9808__proc.html#a19fffe9abca5b1e3d45a98074f0a9689',1,'MCP9808_proc::Resolution()']]],
+  ['revision_5fid',['Revision_Id',['../d9/db1/struct_t_c_s3400__proc.html#adf8a940a10edf62287e4db1d20669e68',1,'TCS3400_proc']]],
+  ['rfu',['RFU',['../d1/d02/unionu_m_c_p9808___r_e_g___m_a_p.html#a78c1817f4d27e9c2ef4dd8b58321bc72',1,'uMCP9808_REG_MAP']]],
+  ['rib',['RIB',['../d5/de7/unionu_a_t42_q_t___r_e_g_____s_e_t_u_p__244.html#a81a81be49a295661073a1941da5208a8',1,'uAT42QT_REG__SETUP_244']]],
+  ['rtp_5fformat',['RTP_Format',['../d2/dce/struct_d_r_v2605_l__proc.html#ae309190721c24168a39a549bd00e24a6',1,'DRV2605L_proc']]],
+  ['rtp_5finput',['RTP_Input',['../dc/da9/unionu_d_r_v___r_e_g___m_a_p.html#a161cd0cdf1559c8f0fad5fb4331d9850',1,'uDRV_REG_MAP']]]
+];

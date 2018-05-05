@@ -1,0 +1,7 @@
+<map id="TSL2591_Set_Integration_Time" name="TSL2591_Set_Integration_Time">
+<area shape="rect" id="node2" href="$d2/d68/_t_s_l2591_8c.html#a8ca44c4d37228b9136168ee2bab22880" title="I2C Read function for TSL2591. " alt="" coords="271,56,383,83"/>
+<area shape="rect" id="node5" href="$d2/d68/_t_s_l2591_8c.html#a3d9fd710dcb7c1c55ac8e3e50d2d2d89" title="I2C Write function for TSL2591. " alt="" coords="271,5,383,32"/>
+<area shape="rect" id="node6" href="$db/dba/_t_s_l2591__proc_8c.html#aa1c267d052d8e883081c54ec41c70f60" title="Set proper CPL value (Counts per kiloLux) " alt="" coords="259,107,394,133"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="443,5,555,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="447,56,550,83"/>
+</map>

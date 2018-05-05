@@ -1,0 +1,6 @@
+<map id="GPMS_proc" name="GPMS_proc">
+<area shape="rect" id="node2" href="$d8/d05/struct_struct_i2_cslave.html" title="StructI2Cslave" alt="" coords="5,5,115,32"/>
+<area shape="rect" id="node3" href="$d7/dca/struct_g_p_m_s__coord.html" title="DS&#45;GPM.S coordinate struct. " alt="" coords="139,5,239,32"/>
+<area shape="rect" id="node4" href="$dd/d02/struct_g_p_m_s__hour.html" title="DS&#45;GPM.S Time of day struct. " alt="" coords="264,5,357,32"/>
+<area shape="rect" id="node5" href="$d0/d70/struct_g_p_m_s__date.html" title="DS&#45;GPM.S Date struct. " alt="" coords="381,5,475,32"/>
+</map>

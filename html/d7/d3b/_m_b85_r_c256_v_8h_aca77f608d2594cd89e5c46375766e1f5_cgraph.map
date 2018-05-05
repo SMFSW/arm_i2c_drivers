@@ -1,0 +1,8 @@
+<map id="MB85RC256V_Init" name="MB85RC256V_Init">
+<area shape="rect" id="node2" href="$d7/d97/_i2_c__component_8c.html#a0156af69fdc6459a92678bdb7d6300ab" title="I2C Slave device initialization. " alt="" coords="230,5,335,32"/>
+<area shape="rect" id="node3" href="$d4/dc8/_m_b85_r_c256_v__proc_8c.html#a33fa2cbd16066eef360b0f89dc6f9e90" title="Initialization Sequence for MB85RC256V peripheral. " alt="" coords="185,56,381,83"/>
+<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a4aab6d6150d927201a556fea510a104c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="226,107,339,133"/>
+<area shape="rect" id="node4" href="$d4/dc8/_m_b85_r_c256_v__proc_8c.html#a9d7d9018da8bc5566448f6abdb81dbd4" title="Get ID from MB85RC256V peripheral. " alt="" coords="429,56,584,83"/>
+<area shape="rect" id="node5" href="$d1/dc0/_m_b85_r_c256_v_8c.html#a61d462174263aaede6e016fbe1058480" title="I2C Read ID function for MB85RC256V (reads 3 bytes) " alt="" coords="632,56,797,83"/>
+<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="846,56,949,83"/>
+</map>
