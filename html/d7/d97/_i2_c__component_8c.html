@@ -91,9 +91,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a70c9dd3d71a2993cb84cdbd34c9755b5"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d97/_i2_c__component_8c.html#a70c9dd3d71a2993cb84cdbd34c9755b5">I2C_set_slave_address</a> (<a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *slave, const uint16_t devAddress)</td></tr>
 <tr class="memdesc:a70c9dd3d71a2993cb84cdbd34c9755b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Slave device address change.  <a href="#a70c9dd3d71a2993cb84cdbd34c9755b5">More...</a><br /></td></tr>
 <tr class="separator:a70c9dd3d71a2993cb84cdbd34c9755b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10cde6b42ab141e1f2d251e6263556b8"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d97/_i2_c__component_8c.html#a10cde6b42ab141e1f2d251e6263556b8">I2C_set_slave_timeout</a> (<a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *slave, const uint32_t timeout)</td></tr>
-<tr class="memdesc:a10cde6b42ab141e1f2d251e6263556b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Slave device transaction timeout change.  <a href="#a10cde6b42ab141e1f2d251e6263556b8">More...</a><br /></td></tr>
-<tr class="separator:a10cde6b42ab141e1f2d251e6263556b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base I2C component. </p>
@@ -170,44 +167,6 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">slave</td><td>- pointer to I2C slave instance </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">hi2c</td><td>- pointer to HAL I2C instance </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Error code </dd></dl>
-
-</div>
-</div>
-<a id="a10cde6b42ab141e1f2d251e6263556b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10cde6b42ab141e1f2d251e6263556b8">&#9670;&nbsp;</a></span>I2C_set_slave_timeout()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">FctERR I2C_set_slave_timeout </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *&#160;</td>
-          <td class="paramname"><em>slave</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const uint32_t&#160;</td>
-          <td class="paramname"><em>timeout</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>I2C Slave device transaction timeout change. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">slave</td><td>- pointer to I2C slave instance </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>- Transaction timeout </td></tr>
   </table>
   </dd>
 </dl>
