@@ -2012,7 +2012,7 @@ ENABLE_PREPROCESSING   = YES
 # The default value is: NO.
 # This tag requires that the tag ENABLE_PREPROCESSING is set to YES.
 
-WARN_NO_PARAMDOC       = NO
+MACRO_EXPANSION        = YES
 
 # If the EXPAND_ONLY_PREDEF and MACRO_EXPANSION tags are both set to YES then
 # the macro expansion is limited to the macros specified with the PREDEFINED and
@@ -2020,7 +2020,7 @@ WARN_NO_PARAMDOC       = NO
 # The default value is: NO.
 # This tag requires that the tag ENABLE_PREPROCESSING is set to YES.
 
-EXPAND_ONLY_PREDEF     = NO
+EXPAND_ONLY_PREDEF     = YES
 
 # If the SEARCH_INCLUDES tag is set to YES, the include files in the
 # INCLUDE_PATH will be searched if a #include is found.
@@ -2073,11 +2073,22 @@ PREDEFINED             = DOXY=1 \
                          I2C_TCS3400=&hi2c \
                          I2C_TCS3472=&hi2c \
                          I2C_TSL2591=&hi2c \
-                         __WEAK \
-                         PACK__ \
-                         INLINE__ \
                          __INLINE=inline \
                          "__STATIC_INLINE=static inline" \
+                         __WEAK= \
+                         ATTR__(...)= \
+                         ALIGN__(a)= \
+                         COLD__= \
+                         DEPRECATED__= \
+                         HOT__= \
+                         INLINE__= \
+                         NONNULL__= \
+                         NONNULLX__(...)= \
+                         NORETURN__= \
+                         SECTION__(s)= \
+                         PACK__= \
+                         PURE__= \
+                         USED__= \
                          __IO=volatile \
                          __O=volatile \
                          "__I=volatile const" \
