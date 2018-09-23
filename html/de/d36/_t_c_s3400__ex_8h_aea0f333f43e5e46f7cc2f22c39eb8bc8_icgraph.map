@@ -1,0 +1,10 @@
+<map id="TCS3400_Write_En" name="TCS3400_Write_En">
+<area shape="rect" id="node2" href="$de/d36/_t_c_s3400__ex_8h.html#a0eb7b733ddb2dd00c284376b0c5443dc" title="Oscillator Enable / Disable. " alt="" coords="206,5,346,32"/>
+<area shape="rect" id="node4" href="$de/d36/_t_c_s3400__ex_8h.html#a08ff7fc4e799dc961584d4205d6aa3e8" title="Clear module Enable / Disable. " alt="" coords="207,56,345,83"/>
+<area shape="rect" id="node5" href="$de/d36/_t_c_s3400__ex_8h.html#aac96b4abff7ddd772f48c816570eb74f" title="Clear interrupt module Enable / Disable. " alt="" coords="205,107,347,133"/>
+<area shape="rect" id="node6" href="$de/d36/_t_c_s3400__ex_8h.html#a4d3e5a9239713320eb40d39ba2dee249" title="WAIT module Enable / Disable. " alt="" coords="205,157,347,184"/>
+<area shape="rect" id="node7" href="$de/d36/_t_c_s3400__ex_8h.html#a107b6183dc2e258260209950b60124d2" title="Sleep After Interrupt Enable / Disable. " alt="" coords="209,208,343,235"/>
+<area shape="rect" id="node8" href="$d9/d14/_t_c_s3400__proc_8h.html#a520ff48a4f7f5492c7d40220a70f604f" title="Initialization Sequence for TCS3400 peripheral. " alt="" coords="193,259,359,285"/>
+<area shape="rect" id="node3" href="$de/d36/_t_c_s3400__ex_8h.html#adc3d670f9dfa2f030cd18c20b6d81852" title="Write TCS3472 Control register. " alt="" coords="408,107,547,133"/>
+<area shape="rect" id="node9" href="$d9/d51/_t_c_s3400_8h.html#a9454edad7586f75569589c7503cf5a25" title="Initialization for TCS3400 peripheral. " alt="" coords="426,259,529,285"/>
+</map>

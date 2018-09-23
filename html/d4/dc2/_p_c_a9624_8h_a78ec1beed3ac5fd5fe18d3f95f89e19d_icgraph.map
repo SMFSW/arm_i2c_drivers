@@ -5,6 +5,6 @@
 <area shape="rect" id="node5" href="$d6/dfc/_p_c_a9624__ex_8h.html#a4e58ebc32ce3a2bb6a5a8b52025e774c" title="Computes and send I2C lighting values to apply to a particular channel for PCA9624. " alt="" coords="201,157,325,184"/>
 <area shape="rect" id="node6" href="$d6/dfc/_p_c_a9624__ex_8h.html#abdc64ec79a8c0eeab9435f389bd7fad4" title="Sends I2C PWM ON values to apply to a particular channel for PCA9624. " alt="" coords="201,208,325,235"/>
 <area shape="rect" id="node7" href="$d6/dfc/_p_c_a9624__ex_8h.html#a07632d8c5881406c8319ab1680b74e90" title="Sends I2C PWM OFF values to apply to a particular channel for PCA9624. " alt="" coords="202,259,323,285"/>
-<area shape="rect" id="node8" href="$d0/de0/_p_c_a9624__proc_8h.html#ab03d2322d3d7638710c06b8a2b7c6369" title="Initialization Sequence for PCA9624 peripheral. " alt="" coords="179,309,347,336"/>
-<area shape="rect" id="node9" href="$d4/dc2/_p_c_a9624_8h.html#a1bd9c1dee7a9941a8df42da684aa978b" title="Initialization for PCA9624 peripheral. " alt="" coords="403,309,506,336"/>
+<area shape="rect" id="node8" href="$d0/de0/_p_c_a9624__proc_8h.html#abd08d28280cb9258b594294c89019077" title="Initialization Sequence for PCA9624 peripheral. " alt="" coords="179,309,347,336"/>
+<area shape="rect" id="node9" href="$d4/dc2/_p_c_a9624_8h.html#a85a3a8d4308bcca6b0eb2f8e86b1788e" title="Initialization for PCA9624 peripheral. " alt="" coords="403,309,506,336"/>
 </map>

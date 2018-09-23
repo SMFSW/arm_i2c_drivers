@@ -1,8 +1,8 @@
 <map id="DRV2605L_Auto_Calib" name="DRV2605L_Auto_Calib">
 <area shape="rect" id="node2" href="$dc/d9a/_d_r_v2605_l_8c.html#a09728b1c8f7cf9c03eb859253671dc95" title="I2C Write function for DRV2605L. " alt="" coords="467,28,591,55"/>
 <area shape="rect" id="node5" href="$dc/d9a/_d_r_v2605_l_8c.html#aadfce835666394b45a320f79fc631e52" title="I2C Read function for DRV2605L. " alt="" coords="467,79,591,106"/>
-<area shape="rect" id="node6" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a4430267839a0821e6e749ec833a1f20e" title="Start/Stop haptic pattern. " alt="" coords="255,28,374,55"/>
+<area shape="rect" id="node6" href="$df/dbb/_d_r_v2605_l__ex_8h.html#aeb46a2d56309f38154e816b215b6802f" title="Start/Stop haptic pattern. " alt="" coords="255,28,374,55"/>
 <area shape="rect" id="node7" href="$da/d07/_d_r_v2605_l__ex_8c.html#abf22c146b060501dd9a022263ededa76" title="Set haptic operating mode. " alt="" coords="211,79,419,106"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="640,28,752,55"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="645,79,747,106"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="640,28,752,55"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="645,79,747,106"/>
 </map>

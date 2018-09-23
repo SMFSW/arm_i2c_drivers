@@ -1,0 +1,12 @@
+<map id="MCP4725_Init" name="MCP4725_Init">
+<area shape="rect" id="node2" href="$d7/d97/_i2_c__component_8c.html#a0156af69fdc6459a92678bdb7d6300ab" title="I2C Slave device initialization. " alt="" coords="193,5,298,32"/>
+<area shape="rect" id="node3" href="$db/db1/_m_c_p4725__proc_8c.html#afed780d41e74e2cfd663b4ca5f1220b7" title="Initialization Sequence of the MCP4725 peripheral. " alt="" coords="160,56,331,83"/>
+<area shape="rect" id="node11" href="$d6/dd6/_i2_c__component_8h.html#a4aab6d6150d927201a556fea510a104c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="189,107,302,133"/>
+<area shape="rect" id="node4" href="$db/db1/_m_c_p4725__proc_8c.html#ad0dd0cb2269fb070f9f271d6c44e9b7a" title="Set VRef for MCP4725 peripheral. " alt="" coords="400,5,544,32"/>
+<area shape="rect" id="node5" href="$db/db1/_m_c_p4725__proc_8c.html#a8b26fdf98759bd7b6ee2d1b21ee92faa" title="Set mode of the MCP4725 peripheral. " alt="" coords="399,56,545,83"/>
+<area shape="rect" id="node6" href="$db/db1/_m_c_p4725__proc_8c.html#aaab953bf4d949cd82d82ee0b7604f8e8" title="Set Power down mode of the MCP4725 peripheral. " alt="" coords="379,107,565,133"/>
+<area shape="rect" id="node7" href="$dc/d03/_m_c_p4725__ex_8c.html#a087e876ab4fb44d4699a9ddab079c033" title="Write Command to MCP4725 peripheral. " alt="" coords="614,107,799,133"/>
+<area shape="rect" id="node8" href="$d9/d93/_m_c_p4725_8c.html#a5e208171d0fea496f20c3e3613c1ae98" title="I2C Write function for MCP4725. " alt="" coords="849,107,967,133"/>
+<area shape="rect" id="node9" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="1016,81,1128,108"/>
+<area shape="rect" id="node10" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="1021,132,1123,159"/>
+</map>

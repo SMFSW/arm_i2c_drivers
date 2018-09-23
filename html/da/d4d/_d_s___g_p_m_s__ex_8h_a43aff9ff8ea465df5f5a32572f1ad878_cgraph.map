@@ -1,5 +1,0 @@
-<map id="GPMS_Get_IO_Value" name="GPMS_Get_IO_Value">
-<area shape="rect" id="node2" href="$db/d9a/_d_s___g_p_m_s_8c.html#a7bf11fa937ff423f2756d47be54a8afe" title="I2C Read function for GPMS. " alt="" coords="205,31,304,57"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="352,5,464,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="357,56,459,83"/>
-</map>

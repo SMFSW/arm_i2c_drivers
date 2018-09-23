@@ -1,5 +1,0 @@
-<map id="GPMS_Init" name="GPMS_Init">
-<area shape="rect" id="node2" href="$d7/d97/_i2_c__component_8c.html#a0156af69fdc6459a92678bdb7d6300ab" title="I2C Slave device initialization. " alt="" coords="165,5,270,32"/>
-<area shape="rect" id="node3" href="$dd/d17/_d_s___g_p_m_s__proc_8c.html#ae61cc0d32de7c8634fdef8294b482f13" title="Initialization Sequence for GPMS peripheral. " alt="" coords="142,56,293,83"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a0fd045e910b4d2c5aecdca250e9d3379" title="Set I2C Slave device disabled/enabled state. " alt="" coords="161,107,274,133"/>
-</map>

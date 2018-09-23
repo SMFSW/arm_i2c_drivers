@@ -1,0 +1,6 @@
+<map id="TCS3400_Write_Cfg" name="TCS3400_Write_Cfg">
+<area shape="rect" id="node2" href="$de/d36/_t_c_s3400__ex_8h.html#a5ed4eeff2fb2254919e5a5a852fd5112" title="Wait time configuration. " alt="" coords="198,31,373,57"/>
+<area shape="rect" id="node3" href="$de/d36/_t_c_s3400__ex_8h.html#adc3d670f9dfa2f030cd18c20b6d81852" title="Write TCS3472 Control register. " alt="" coords="436,5,575,32"/>
+<area shape="rect" id="node4" href="$d9/d14/_t_c_s3400__proc_8h.html#a520ff48a4f7f5492c7d40220a70f604f" title="Initialization Sequence for TCS3400 peripheral. " alt="" coords="422,56,589,83"/>
+<area shape="rect" id="node5" href="$d9/d51/_t_c_s3400_8h.html#a9454edad7586f75569589c7503cf5a25" title="Initialization for TCS3400 peripheral. " alt="" coords="638,56,741,83"/>
+</map>

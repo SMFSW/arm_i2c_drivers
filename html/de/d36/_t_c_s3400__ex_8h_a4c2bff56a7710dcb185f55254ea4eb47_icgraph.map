@@ -1,5 +1,5 @@
 <map id="TCS3400_Set_Gain" name="TCS3400_Set_Gain">
-<area shape="rect" id="node2" href="$de/d36/_t_c_s3400__ex_8h.html#a0f599d5e444ae72a087562107b058c25" title="Write TCS3472 Control register. " alt="" coords="207,5,345,32"/>
-<area shape="rect" id="node3" href="$d9/d14/_t_c_s3400__proc_8h.html#a8ba567e9f41c18ebb69b972444396a89" title="Initialization Sequence for TCS3400 peripheral. " alt="" coords="193,56,359,83"/>
-<area shape="rect" id="node4" href="$d9/d51/_t_c_s3400_8h.html#af857af74701ad40d2a9748a7372e4fca" title="Initialization for TCS3400 peripheral. " alt="" coords="409,56,511,83"/>
+<area shape="rect" id="node2" href="$de/d36/_t_c_s3400__ex_8h.html#adc3d670f9dfa2f030cd18c20b6d81852" title="Write TCS3472 Control register. " alt="" coords="207,5,345,32"/>
+<area shape="rect" id="node3" href="$d9/d14/_t_c_s3400__proc_8h.html#a520ff48a4f7f5492c7d40220a70f604f" title="Initialization Sequence for TCS3400 peripheral. " alt="" coords="193,56,359,83"/>
+<area shape="rect" id="node4" href="$d9/d51/_t_c_s3400_8h.html#a9454edad7586f75569589c7503cf5a25" title="Initialization for TCS3400 peripheral. " alt="" coords="409,56,511,83"/>
 </map>

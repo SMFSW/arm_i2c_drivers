@@ -1,5 +1,5 @@
 <map id="MCP9808_Set_Resolution" name="MCP9808_Set_Resolution">
 <area shape="rect" id="node2" href="$df/d8e/_m_c_p9808_8c.html#a76f237074a82f686b1b163783abe06bb" title="I2C Write function for MCP9808. " alt="" coords="230,31,349,57"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="397,5,509,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="402,56,505,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="397,5,509,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="402,56,505,83"/>
 </map>

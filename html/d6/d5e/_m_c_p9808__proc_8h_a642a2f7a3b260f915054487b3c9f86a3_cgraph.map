@@ -1,7 +1,7 @@
 <map id="MCP9808_Get_Temperature" name="MCP9808_Get_Temperature">
-<area shape="rect" id="node2" href="$df/d2f/_m_c_p9808__ex_8h.html#ae2b394495d9b6162ff84d180170fde0e" title="Get MCP9808 Configuration. " alt="" coords="243,31,466,57"/>
+<area shape="rect" id="node2" href="$df/d2f/_m_c_p9808__ex_8h.html#a64b000a159fc5c548809f7120bfad65d" title="Get MCP9808 Configuration. " alt="" coords="243,31,466,57"/>
 <area shape="rect" id="node3" href="$df/d8e/_m_c_p9808_8c.html#a5f07df92b9fb162854dca25cf1a3da80" title="I2C Read function for MCP9808. " alt="" coords="742,31,861,57"/>
 <area shape="rect" id="node6" href="$df/d2f/_m_c_p9808__ex_8h.html#acc3c575f573622a69ee65e37c15b33eb" title="Get MCP9808 Resolution. " alt="" coords="515,56,693,83"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="909,5,1021,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="914,56,1017,83"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="909,5,1021,32"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="914,56,1017,83"/>
 </map>

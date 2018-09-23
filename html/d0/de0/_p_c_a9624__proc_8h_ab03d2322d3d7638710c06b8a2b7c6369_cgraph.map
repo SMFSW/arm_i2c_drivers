@@ -1,5 +1,0 @@
-<map id="PCA9624_Init_Sequence" name="PCA9624_Init_Sequence">
-<area shape="rect" id="node2" href="$db/de1/_p_c_a9624_8c.html#a78ec1beed3ac5fd5fe18d3f95f89e19d" title="I2C Write function for PCA9624. " alt="" coords="222,31,338,57"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="387,5,499,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="391,56,494,83"/>
-</map>

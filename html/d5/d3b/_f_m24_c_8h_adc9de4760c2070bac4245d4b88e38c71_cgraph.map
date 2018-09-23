@@ -1,7 +1,0 @@
-<map id="FM24C_Write" name="FM24C_Write">
-<area shape="rect" id="node2" href="$d5/d3b/_f_m24_c_8h.html#a4c6231a2f010f66ff34f6d4e3f12a936" title="I2C Read/Write function for FM24C. " alt="" coords="158,31,293,57"/>
-<area shape="rect" id="node3" href="$da/d47/_f_m24_c_8c.html#ae1a6833c826da21f460648e9f95f56d8" title="I2C Write function for FM24C. " alt="" coords="341,5,496,32"/>
-<area shape="rect" id="node6" href="$da/d47/_f_m24_c_8c.html#a58c75fa880659b77916e33d268997c03" title="I2C Read function for FM24C. " alt="" coords="341,56,496,83"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="544,5,656,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="549,56,651,83"/>
-</map>

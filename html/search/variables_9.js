@@ -1,10 +1,5 @@
 var searchData=
 [
-  ['i2c_5f8b_5freg',['I2C_8B_REG',['../d6/dd6/_i2_c__component_8h.html#a330c857f388f8a5be8d42984e41c6e7d',1,'I2C_component.h']]],
-  ['i2c_5ffm',['I2C_FM',['../d6/dd6/_i2_c__component_8h.html#a32d6725dee4b0ae99f99767f6efde890',1,'I2C_component.h']]],
-  ['i2c_5ffmp',['I2C_FMP',['../d6/dd6/_i2_c__component_8h.html#a445d737548fa1a715c895fb01f2ff496',1,'I2C_component.h']]],
-  ['i2c_5fno_5freg',['I2C_NO_REG',['../d6/dd6/_i2_c__component_8h.html#a490918abc6b2ec380a402f997179b5e9',1,'I2C_component.h']]],
-  ['i2c_5fstd',['I2C_STD',['../d6/dd6/_i2_c__component_8h.html#a097af1617d1a6593c7c68a21d82d358c',1,'I2C_component.h']]],
   ['id',['ID',['../d9/d4e/unionu_t_c_s3472___r_e_g___m_a_p.html#a5fddf37cb4921340f160f8776ab0dbab',1,'uTCS3472_REG_MAP::ID()'],['../d9/d38/unionu_t_s_l2591___r_e_g___m_a_p.html#a63676420ec037e3f8d1fd00b90e0f444',1,'uTSL2591_REG_MAP::ID()'],['../da/dd4/struct_b_m_p180__proc.html#aa20995094916918f2bfc64af01a4e99b',1,'BMP180_proc::Id()'],['../d2/dce/struct_d_r_v2605_l__proc.html#a69fe611f5a05c0f9ccc1004ebf7a8415',1,'DRV2605L_proc::Id()'],['../d3/d3b/struct_t_c_s3472__proc.html#a560649e90a19b60eef26233f39a9720d',1,'TCS3472_proc::Id()'],['../da/d6b/struct_t_s_l2591__proc.html#aa582cedb47c9b89b2b05ffd77e7ea698',1,'TSL2591_proc::Id()']]],
   ['idiss_5ftime',['IDISS_TIME',['../d0/d59/unionu_d_r_v___r_e_g_____c_o_n_t_r_o_l__2.html#a28db91462bfb84cea18f66615e6c27c5',1,'uDRV_REG__CONTROL_2::IDISS_TIME()'],['../d2/da8/unionu_d_r_v___r_e_g_____c_o_n_t_r_o_l__5.html#aece6bb1f8cb992cc1182c3f3ee08c29c',1,'uDRV_REG__CONTROL_5::IDISS_TIME()']]],
   ['input_5fmode',['Input_Mode',['../d2/dce/struct_d_r_v2605_l__proc.html#ae7938cbc3e905424c3bf14486298c8dc',1,'DRV2605L_proc']]],

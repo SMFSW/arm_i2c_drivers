@@ -1,8 +1,8 @@
 <map id="BMP180_Start_Conversion" name="BMP180_Start_Conversion">
 <area shape="rect" id="node2" href="$d8/dfb/_b_m_p180__ex_8h.html#a43cbe749d0faeba783ce5de9255d4fc1" title="Get Raw Temperature. " alt="" coords="235,56,450,83"/>
 <area shape="rect" id="node7" href="$d8/dfb/_b_m_p180__ex_8h.html#abc0a477e180c56c5414576450dcc579a" title="Get Raw Pressure. " alt="" coords="246,5,439,32"/>
-<area shape="rect" id="node3" href="$d8/dfb/_b_m_p180__ex_8h.html#aad07e1b020f045a0040ae6d0edaa3fd7" title="Reset BMP180 chip. " alt="" coords="532,56,647,83"/>
+<area shape="rect" id="node3" href="$d8/dfb/_b_m_p180__ex_8h.html#a336f1f014a25e1d0d424a38bf6bf0d1d" title="Reset BMP180 chip. " alt="" coords="532,56,647,83"/>
 <area shape="rect" id="node4" href="$dc/d50/_b_m_p180__proc_8h.html#a1398654938d6ecca6a7348adeb307f4e" title="Gets the compensated pressure level. " alt="" coords="510,5,669,32"/>
 <area shape="rect" id="node6" href="$dc/d50/_b_m_p180__proc_8h.html#aca2565dda5adb7d78fa8d9d39e55f48e" title="Get the temperature. " alt="" coords="499,107,679,133"/>
-<area shape="rect" id="node5" href="$dc/d50/_b_m_p180__proc_8h.html#aec133cf7dba1c92a4e27ab708c5a9b92" title="Handler for BMP180 peripheral. " alt="" coords="729,5,850,32"/>
+<area shape="rect" id="node5" href="$dc/d50/_b_m_p180__proc_8h.html#a6dd8b1e85d8e3e78e597b61bd42fba53" title="Handler for BMP180 peripheral. " alt="" coords="729,5,850,32"/>
 </map>

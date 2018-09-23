@@ -6,14 +6,14 @@
 <area shape="rect" id="node12" href="$d2/dbe/_t_c_s3472__ex_8h.html#aa74af9cc50690a2b44a7a04568717d07" title="WAIT module Enable / Disable. " alt="" coords="181,309,323,336"/>
 <area shape="rect" id="node13" href="$d2/dbe/_t_c_s3472__ex_8h.html#ace042917a1ee1f27b45b700edec24952" title="Gain configuration. " alt="" coords="183,360,321,387"/>
 <area shape="rect" id="node16" href="$d2/dbe/_t_c_s3472__ex_8h.html#a89737e63a1f9aefafff74929195be525" title="Get All channels conversions. " alt="" coords="169,411,335,437"/>
-<area shape="rect" id="node17" href="$d2/dbe/_t_c_s3472__ex_8h.html#a9cb45e27e48e02dc0bc909c7c809d56e" title="Get TCS3472 chip ID. " alt="" coords="387,411,541,437"/>
-<area shape="rect" id="node18" href="$d6/d96/_t_c_s3472__proc_8h.html#a9295fec2859a471bfdd6bbd90e910ca9" title="Handler for TCS3472 peripheral. " alt="" coords="189,512,315,539"/>
-<area shape="rect" id="node3" href="$d2/dbe/_t_c_s3472__ex_8h.html#aae13b8fed8b78d2b900149d395fc2b39" title="Get Specific channel conversion. " alt="" coords="384,5,544,32"/>
-<area shape="rect" id="node4" href="$d2/dbe/_t_c_s3472__ex_8h.html#ac3e51dbf1c7ae6d09e6dd70ee8bc38e6" title="Get Clear channel conversion. " alt="" coords="393,56,535,83"/>
-<area shape="rect" id="node5" href="$d2/dbe/_t_c_s3472__ex_8h.html#a59f514f314106f87873ccb40ef4a3b31" title="Get Red channel conversion. " alt="" coords="396,107,532,133"/>
-<area shape="rect" id="node6" href="$d2/dbe/_t_c_s3472__ex_8h.html#a75eaa81c66acb14ca12703be693d1fd4" title="Get Green channel conversion. " alt="" coords="391,157,537,184"/>
-<area shape="rect" id="node7" href="$d2/dbe/_t_c_s3472__ex_8h.html#af27255bb9422d6fcde5a1c9aa1c85658" title="Get Blue channel conversion. " alt="" coords="395,208,533,235"/>
-<area shape="rect" id="node9" href="$d2/dbe/_t_c_s3472__ex_8h.html#ae06d451c3ee3780185bfcb224c82263c" title="Write TCS3472 Control register. " alt="" coords="395,259,533,285"/>
-<area shape="rect" id="node14" href="$d6/d96/_t_c_s3472__proc_8h.html#a42bf2cef08daa46a73f1a5ea8d6202ae" title="Initialization Sequence for TCS3472 peripheral. " alt="" coords="593,385,759,412"/>
-<area shape="rect" id="node15" href="$d8/ddc/_t_c_s3472_8h.html#a4025d52684340f5df370fc99e726a3d0" title="Initialization for TCS3472 peripheral. " alt="" coords="809,385,911,412"/>
+<area shape="rect" id="node17" href="$d2/dbe/_t_c_s3472__ex_8h.html#acee4f190d13e1db6a2848d6ab9552e83" title="Get TCS3472 chip ID. " alt="" coords="387,411,541,437"/>
+<area shape="rect" id="node18" href="$d6/d96/_t_c_s3472__proc_8h.html#a6dba5c5240c5779bd9c364e4d34c3af7" title="Handler for TCS3472 peripheral. " alt="" coords="189,512,315,539"/>
+<area shape="rect" id="node3" href="$d2/dbe/_t_c_s3472__ex_8h.html#a6f661ed47f9b3a90576054d2c123f378" title="Get Specific channel conversion. " alt="" coords="384,5,544,32"/>
+<area shape="rect" id="node4" href="$d2/dbe/_t_c_s3472__ex_8h.html#a4dda18afa2321efec9e3bc0ce35ea85e" title="Get Clear channel conversion. " alt="" coords="393,56,535,83"/>
+<area shape="rect" id="node5" href="$d2/dbe/_t_c_s3472__ex_8h.html#a9012959b46fe963dec230be50cff6bb2" title="Get Red channel conversion. " alt="" coords="396,107,532,133"/>
+<area shape="rect" id="node6" href="$d2/dbe/_t_c_s3472__ex_8h.html#a742781abe1fac9edcd76596ae552125d" title="Get Green channel conversion. " alt="" coords="391,157,537,184"/>
+<area shape="rect" id="node7" href="$d2/dbe/_t_c_s3472__ex_8h.html#a4d62a883e38a677ac253b45ef5f0bdad" title="Get Blue channel conversion. " alt="" coords="395,208,533,235"/>
+<area shape="rect" id="node9" href="$d2/dbe/_t_c_s3472__ex_8h.html#a1606fd2b2bc4fc0af3d4ee3bfa76e480" title="Write TCS3472 Control register. " alt="" coords="395,259,533,285"/>
+<area shape="rect" id="node14" href="$d6/d96/_t_c_s3472__proc_8h.html#aea95b23e4889e17ea91ee21dac38d597" title="Initialization Sequence for TCS3472 peripheral. " alt="" coords="593,385,759,412"/>
+<area shape="rect" id="node15" href="$d8/ddc/_t_c_s3472_8h.html#a4d890521dbed04009713a61675c7b2e7" title="Initialization for TCS3472 peripheral. " alt="" coords="809,385,911,412"/>
 </map>

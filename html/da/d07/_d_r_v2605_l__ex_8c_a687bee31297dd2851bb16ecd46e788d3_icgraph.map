@@ -1,8 +1,0 @@
-<map id="_read_cfg" name="_read_cfg">
-<area shape="rect" id="node2" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a3116be811d79fe42d5c838c87346f08e" title="Set haptic Blanking time. " alt="" coords="163,5,362,32"/>
-<area shape="rect" id="node4" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a045a9d12979e824718a810e1ca9fe7ac" title="Set haptic Current dissipation time. " alt="" coords="134,56,391,83"/>
-<area shape="rect" id="node5" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a8864f08d2e8dda0877bd7de22ac9f73f" title="Get haptic Blanking time. " alt="" coords="163,107,363,133"/>
-<area shape="rect" id="node7" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ae025bbee22c0bd497d091e8a3b80b8cc" title="Get haptic Current dissipation time. " alt="" coords="133,157,392,184"/>
-<area shape="rect" id="node3" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ab5a5cfeea2af9c27aed899db659cf9bb" title="Set haptic Overdrive Clamp. " alt="" coords="453,41,632,68"/>
-<area shape="rect" id="node6" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a89b646b1ccd845aefab081d23bf9e31e" title="Set haptic LRA Open loop period. " alt="" coords="440,114,645,155"/>
-</map>

@@ -1,7 +1,7 @@
 <map id="TCS3472_Read_Word" name="TCS3472_Read_Word">
-<area shape="rect" id="node2" href="$d2/dbe/_t_c_s3472__ex_8h.html#aae13b8fed8b78d2b900149d395fc2b39" title="Get Specific channel conversion. " alt="" coords="208,5,368,32"/>
-<area shape="rect" id="node3" href="$d2/dbe/_t_c_s3472__ex_8h.html#ac3e51dbf1c7ae6d09e6dd70ee8bc38e6" title="Get Clear channel conversion. " alt="" coords="217,56,359,83"/>
-<area shape="rect" id="node4" href="$d2/dbe/_t_c_s3472__ex_8h.html#a59f514f314106f87873ccb40ef4a3b31" title="Get Red channel conversion. " alt="" coords="220,107,356,133"/>
-<area shape="rect" id="node5" href="$d2/dbe/_t_c_s3472__ex_8h.html#a75eaa81c66acb14ca12703be693d1fd4" title="Get Green channel conversion. " alt="" coords="215,157,361,184"/>
-<area shape="rect" id="node6" href="$d2/dbe/_t_c_s3472__ex_8h.html#af27255bb9422d6fcde5a1c9aa1c85658" title="Get Blue channel conversion. " alt="" coords="219,208,357,235"/>
+<area shape="rect" id="node2" href="$d2/dbe/_t_c_s3472__ex_8h.html#a6f661ed47f9b3a90576054d2c123f378" title="Get Specific channel conversion. " alt="" coords="208,5,368,32"/>
+<area shape="rect" id="node3" href="$d2/dbe/_t_c_s3472__ex_8h.html#a4dda18afa2321efec9e3bc0ce35ea85e" title="Get Clear channel conversion. " alt="" coords="217,56,359,83"/>
+<area shape="rect" id="node4" href="$d2/dbe/_t_c_s3472__ex_8h.html#a9012959b46fe963dec230be50cff6bb2" title="Get Red channel conversion. " alt="" coords="220,107,356,133"/>
+<area shape="rect" id="node5" href="$d2/dbe/_t_c_s3472__ex_8h.html#a742781abe1fac9edcd76596ae552125d" title="Get Green channel conversion. " alt="" coords="215,157,361,184"/>
+<area shape="rect" id="node6" href="$d2/dbe/_t_c_s3472__ex_8h.html#a4d62a883e38a677ac253b45ef5f0bdad" title="Get Blue channel conversion. " alt="" coords="219,208,357,235"/>
 </map>

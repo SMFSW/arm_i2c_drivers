@@ -1,7 +1,0 @@
-<map id="DRV2605L_Set_ATVInputLevel_Raw" name="DRV2605L_Set_ATVInputLevel_Raw">
-<area shape="rect" id="node2" href="$df/dbb/_d_r_v2605_l__ex_8h.html#af42b31b6f3c17d2f818c3e3fe437286d" title="Set Audio To Vibe min/max input voltage. " alt="" coords="293,12,499,39"/>
-<area shape="rect" id="node5" href="$d1/da7/_d_r_v2605_l__proc_8h.html#a85610e713257f2eaed0fd16af7de17b1" title="Initialization Sequence for DRV2605L peripheral. " alt="" coords="308,63,484,89"/>
-<area shape="rect" id="node3" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a80bf73e4458c87a85696904fc1855454" title="Set Audio To Vibe min/max output drive. " alt="" coords="547,12,797,39"/>
-<area shape="rect" id="node4" href="$df/dbb/_d_r_v2605_l__ex_8h.html#aa837dc2c94a1648e3a216d0fa5de0fb4" title="Set Audio To Vibe min/max Drive. " alt="" coords="846,5,1023,46"/>
-<area shape="rect" id="node6" href="$d5/d47/_d_r_v2605_l_8h.html#abd9fc71902a9c19877c62c9c77b8ecf2" title="Initialization for DRV2605L peripheral. " alt="" coords="617,63,727,89"/>
-</map>

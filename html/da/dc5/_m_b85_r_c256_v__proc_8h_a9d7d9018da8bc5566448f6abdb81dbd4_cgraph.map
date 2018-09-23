@@ -1,4 +1,4 @@
 <map id="MB85RC256V_Get_ID" name="MB85RC256V_Get_ID">
 <area shape="rect" id="node2" href="$d1/dc0/_m_b85_r_c256_v_8c.html#a61d462174263aaede6e016fbe1058480" title="I2C Read ID function for MB85RC256V (reads 3 bytes) " alt="" coords="208,5,373,32"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="422,5,525,32"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="422,5,525,32"/>
 </map>

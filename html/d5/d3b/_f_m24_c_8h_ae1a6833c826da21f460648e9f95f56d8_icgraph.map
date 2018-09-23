@@ -1,6 +1,6 @@
 <map id="FM24C_Write_Banked" name="FM24C_Write_Banked">
 <area shape="rect" id="node2" href="$d5/d3b/_f_m24_c_8h.html#a4c6231a2f010f66ff34f6d4e3f12a936" title="I2C Read/Write function for FM24C. " alt="" coords="214,31,349,57"/>
 <area shape="rect" id="node5" href="$de/d95/_f_m24_c__ex_8h.html#a8cdb9878f75a02bd223bfa26455d3d73" title="Mass erase of FM24C. " alt="" coords="209,81,354,108"/>
-<area shape="rect" id="node3" href="$d5/d3b/_f_m24_c_8h.html#adc9de4760c2070bac4245d4b88e38c71" title="I2C Write function for FM24C. " alt="" coords="403,5,506,32"/>
-<area shape="rect" id="node4" href="$d5/d3b/_f_m24_c_8h.html#aa30a45507290752a8ef348c51c888a28" title="I2C Read function for FM24C. " alt="" coords="403,56,506,83"/>
+<area shape="rect" id="node3" href="$d5/d3b/_f_m24_c_8h.html#a9e065c391bab2abfc3e55385a4e4a093" title="I2C Write function for FM24C. " alt="" coords="403,5,506,32"/>
+<area shape="rect" id="node4" href="$d5/d3b/_f_m24_c_8h.html#a0697ff851fd24fce492d6b3c56b55d1c" title="I2C Read function for FM24C. " alt="" coords="403,56,506,83"/>
 </map>

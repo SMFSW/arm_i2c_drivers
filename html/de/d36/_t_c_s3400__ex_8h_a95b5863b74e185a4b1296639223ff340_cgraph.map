@@ -1,5 +1,0 @@
-<map id="TCS3400_Set_AIT" name="TCS3400_Set_AIT">
-<area shape="rect" id="node2" href="$d4/d1b/_t_c_s3400_8c.html#a421cf6447cb06d3c09ec6c687240c0a8" title="I2C Write function for TCS3400. " alt="" coords="187,31,301,57"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="349,5,461,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="354,56,457,83"/>
-</map>

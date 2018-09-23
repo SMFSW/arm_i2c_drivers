@@ -1,15 +1,15 @@
 var searchData=
 [
-  ['drv2605l_5fact',['DRV2605L_act',['../d5/d47/_d_r_v2605_l_8h.html#a477569fda1561eea600944002f835ad7',1,'DRV2605L.h']]],
-  ['drv2605l_5feff',['DRV2605L_eff',['../d5/d47/_d_r_v2605_l_8h.html#acba41e03a0222306a95b824828d80c22',1,'DRV2605L.h']]],
-  ['drv2605l_5ffilter',['DRV2605L_filter',['../d5/d47/_d_r_v2605_l_8h.html#afceb3712428874c9ef9ed31b4c5d982b',1,'DRV2605L.h']]],
-  ['drv2605l_5fgo',['DRV2605L_go',['../d5/d47/_d_r_v2605_l_8h.html#aec0c712f5948b118af9aa3f36c48a646',1,'DRV2605L.h']]],
-  ['drv2605l_5finput',['DRV2605L_input',['../d5/d47/_d_r_v2605_l_8h.html#a8cb227d6a630653f87497e5af752302a',1,'DRV2605L.h']]],
-  ['drv2605l_5flib',['DRV2605L_lib',['../d5/d47/_d_r_v2605_l_8h.html#aa156a177166aad65bfb48dd4c555ea90',1,'DRV2605L.h']]],
-  ['drv2605l_5floop',['DRV2605L_loop',['../d5/d47/_d_r_v2605_l_8h.html#ac0c2f4483d5b5c10f0f619ee3bbb5217',1,'DRV2605L.h']]],
-  ['drv2605l_5fmode',['DRV2605L_mode',['../d5/d47/_d_r_v2605_l_8h.html#a6a3d556838d3a2998c37cf1df8afabe5',1,'DRV2605L.h']]],
-  ['drv2605l_5fpeak',['DRV2605L_peak',['../d5/d47/_d_r_v2605_l_8h.html#aef761e549b11477926cc203cfd5ac99e',1,'DRV2605L.h']]],
+  ['drv2605l_5fact',['DRV2605L_act',['../d5/d47/_d_r_v2605_l_8h.html#a4f0dcccf698b1da954c881fd941827d6',1,'DRV2605L.h']]],
+  ['drv2605l_5feff',['DRV2605L_eff',['../d5/d47/_d_r_v2605_l_8h.html#a6e40ce5ceaf5e481949435eecc7c8138',1,'DRV2605L.h']]],
+  ['drv2605l_5ffilter',['DRV2605L_filter',['../d5/d47/_d_r_v2605_l_8h.html#a5876bebd906779cc46f90d94bac03af0',1,'DRV2605L.h']]],
+  ['drv2605l_5fgo',['DRV2605L_go',['../d5/d47/_d_r_v2605_l_8h.html#aae9348dabca4a5208192e69e70129052',1,'DRV2605L.h']]],
+  ['drv2605l_5finput',['DRV2605L_input',['../d5/d47/_d_r_v2605_l_8h.html#acff86b77b853a49baa15411005b8a099',1,'DRV2605L.h']]],
+  ['drv2605l_5flib',['DRV2605L_lib',['../d5/d47/_d_r_v2605_l_8h.html#aa66c34d3b6c51385d2ef1769f5398e65',1,'DRV2605L.h']]],
+  ['drv2605l_5floop',['DRV2605L_loop',['../d5/d47/_d_r_v2605_l_8h.html#a8662e685a887ecc9e96d71d8bf55133c',1,'DRV2605L.h']]],
+  ['drv2605l_5fmode',['DRV2605L_mode',['../d5/d47/_d_r_v2605_l_8h.html#abe986c527dba49ec520ef5c6883a79be',1,'DRV2605L.h']]],
+  ['drv2605l_5fpeak',['DRV2605L_peak',['../d5/d47/_d_r_v2605_l_8h.html#a333d337a271831914c934d3dffad69c0',1,'DRV2605L.h']]],
   ['drv2605l_5fproc',['DRV2605L_proc',['../d1/da7/_d_r_v2605_l__proc_8h.html#a62cc8e7f45600c52857f847a2b7d2575',1,'DRV2605L_proc.h']]],
-  ['drv2605l_5freg',['DRV2605L_reg',['../d5/d47/_d_r_v2605_l_8h.html#abcf13686be3e8ba4282ac1553e372e58',1,'DRV2605L.h']]],
-  ['drv2605l_5frtp_5fformat',['DRV2605L_rtp_format',['../d5/d47/_d_r_v2605_l_8h.html#a2bf698bff1f55d8eb6f554da06a040b7',1,'DRV2605L.h']]]
+  ['drv2605l_5freg',['DRV2605L_reg',['../d5/d47/_d_r_v2605_l_8h.html#a7bbe7bea938e04bf733678a7f2350de8',1,'DRV2605L.h']]],
+  ['drv2605l_5frtp_5fformat',['DRV2605L_rtp_format',['../d5/d47/_d_r_v2605_l_8h.html#aeea71b72d60d9ea94f4f2ef6617469e2',1,'DRV2605L.h']]]
 ];

@@ -1,6 +1,6 @@
 <map id="TCS3400_Write_Word" name="TCS3400_Write_Word">
-<area shape="rect" id="node2" href="$de/d36/_t_c_s3400__ex_8h.html#a248721bebabf3d8731c3ca5536c2c07f" title="ALS interrupt low threshold configuration. " alt="" coords="211,5,349,32"/>
-<area shape="rect" id="node5" href="$de/d36/_t_c_s3400__ex_8h.html#ab628225dbf1dcfbb3bef444a848505f0" title="ALS interrupt high threshold configuration. " alt="" coords="209,56,351,83"/>
-<area shape="rect" id="node3" href="$d9/d14/_t_c_s3400__proc_8h.html#a8ba567e9f41c18ebb69b972444396a89" title="Initialization Sequence for TCS3400 peripheral. " alt="" coords="401,31,567,57"/>
-<area shape="rect" id="node4" href="$d9/d51/_t_c_s3400_8h.html#af857af74701ad40d2a9748a7372e4fca" title="Initialization for TCS3400 peripheral. " alt="" coords="617,31,719,57"/>
+<area shape="rect" id="node2" href="$de/d36/_t_c_s3400__ex_8h.html#ad178e95e9fa9e65ef8bc7d4f35132333" title="ALS interrupt low threshold configuration. " alt="" coords="211,5,349,32"/>
+<area shape="rect" id="node5" href="$de/d36/_t_c_s3400__ex_8h.html#acc6ba6d13e1b38a99948a8fc330e4ade" title="ALS interrupt high threshold configuration. " alt="" coords="209,56,351,83"/>
+<area shape="rect" id="node3" href="$d9/d14/_t_c_s3400__proc_8h.html#a520ff48a4f7f5492c7d40220a70f604f" title="Initialization Sequence for TCS3400 peripheral. " alt="" coords="401,31,567,57"/>
+<area shape="rect" id="node4" href="$d9/d51/_t_c_s3400_8h.html#a9454edad7586f75569589c7503cf5a25" title="Initialization for TCS3400 peripheral. " alt="" coords="617,31,719,57"/>
 </map>

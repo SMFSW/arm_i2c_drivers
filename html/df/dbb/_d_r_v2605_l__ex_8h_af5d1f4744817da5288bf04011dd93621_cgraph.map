@@ -1,9 +1,0 @@
-<map id="DRV2605L_Set_RTP" name="DRV2605L_Set_RTP">
-<area shape="rect" id="node2" href="$dc/d9a/_d_r_v2605_l_8c.html#a09728b1c8f7cf9c03eb859253671dc95" title="I2C Write function for DRV2605L. " alt="" coords="478,30,602,56"/>
-<area shape="rect" id="node5" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a83361b9e2ad5346cc4424ca483e7940f" title="Set RTP format. " alt="" coords="207,30,423,56"/>
-<area shape="rect" id="node7" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a07f91af90d32d2530485d5f0085eeab6" title="Set Audio To Vibe Peak time. " alt="" coords="212,80,417,107"/>
-<area shape="rect" id="node8" href="$df/dbb/_d_r_v2605_l__ex_8h.html#af6f3993f1576399e0e20b53df8caab58" title="Set Audio To Vibe Low pass filter. " alt="" coords="200,131,429,158"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="651,30,763,56"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="655,80,758,107"/>
-<area shape="rect" id="node6" href="$dc/d9a/_d_r_v2605_l_8c.html#aadfce835666394b45a320f79fc631e52" title="I2C Read function for DRV2605L. " alt="" coords="478,80,602,107"/>
-</map>

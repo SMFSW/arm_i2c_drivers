@@ -1,0 +1,14 @@
+<map id="DRV2605L_Set_LRAOpenLoopPeriod_Raw" name="DRV2605L_Set_LRAOpenLoopPeriod_Raw">
+<area shape="rect" id="node2" href="$dc/d9a/_d_r_v2605_l_8c.html#a09728b1c8f7cf9c03eb859253671dc95" title="I2C Write function for DRV2605L. " alt="" coords="566,104,690,131"/>
+<area shape="rect" id="node5" href="$df/dbb/_d_r_v2605_l__ex_8h.html#aaa6fd3329d4a4cbe93e361b888cc31a7" title="Set haptic LRA Open loop period. " alt="" coords="285,5,491,46"/>
+<area shape="rect" id="node6" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a4a2148063f7688a696e719235795ee29" title="Get min/max Audio To Vibe Input voltage. " alt="" coords="285,239,491,265"/>
+<area shape="rect" id="node8" href="$df/dbb/_d_r_v2605_l__ex_8h.html#acf767061809b14d120e68fe8608b3fbd" title="Get min/max Audio To Vibe Drive. " alt="" coords="299,290,477,331"/>
+<area shape="rect" id="node9" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a8864f08d2e8dda0877bd7de22ac9f73f" title="Get haptic Blanking time. " alt="" coords="288,407,488,433"/>
+<area shape="rect" id="node10" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ae025bbee22c0bd497d091e8a3b80b8cc" title="Get haptic Current dissipation time. " alt="" coords="259,457,517,484"/>
+<area shape="rect" id="node11" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a7e1fd76610298f945c893a3c9ee3f196" title="Get haptic Voltage. " alt="" coords="305,356,471,383"/>
+<area shape="rect" id="node12" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a1dfb4395e5c55198a2e4f446daf884f1" title="Get haptic LRA Open loop period. " alt="" coords="285,122,491,163"/>
+<area shape="rect" id="node13" href="$df/dbb/_d_r_v2605_l__ex_8h.html#abb8c4c9a3709a5478c810178ce3ee22e" title="Get haptic LRA Resonance period. " alt="" coords="276,188,500,215"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="739,113,851,140"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="743,172,846,199"/>
+<area shape="rect" id="node7" href="$dc/d9a/_d_r_v2605_l_8c.html#aadfce835666394b45a320f79fc631e52" title="I2C Read function for DRV2605L. " alt="" coords="566,188,690,215"/>
+</map>

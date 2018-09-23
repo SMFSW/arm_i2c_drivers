@@ -1,5 +1,5 @@
 <map id="BMP180_Start_Conversion" name="BMP180_Start_Conversion">
 <area shape="rect" id="node2" href="$d8/d11/_b_m_p180_8c.html#a9669585d00932e41ec6acefda31eeccf" title="I2C Write function for BMP180. " alt="" coords="235,31,346,57"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a437cd675cf7727f6b1973b9f8b65ce5c" title="Get I2C Slave device enabled state. " alt="" coords="395,5,507,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#ad7df3913e303944aafee09aceaeb0f29" title="Set I2C Slave bus/device business. " alt="" coords="399,56,502,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="395,5,507,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="399,56,502,83"/>
 </map>

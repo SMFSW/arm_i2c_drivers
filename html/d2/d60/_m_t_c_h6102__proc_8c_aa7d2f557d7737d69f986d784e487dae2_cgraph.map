@@ -1,0 +1,8 @@
+<map id="MTCH6102_handler" name="MTCH6102_handler">
+<area shape="rect" id="node2" href="$da/d78/_m_t_c_h6102_8c.html#addb332d7599bec7bb742d84ea36f8bc1" title="I2C Read function for MTCH6102. " alt="" coords="218,31,345,57"/>
+<area shape="rect" id="node5" href="$d2/d60/_m_t_c_h6102__proc_8c.html#a3cdfd552161e8c06e56f57aca096c22d" title="MTCH6102_decode_touch\l_datas" alt="" coords="193,82,370,123"/>
+<area shape="rect" id="node6" href="$d2/d60/_m_t_c_h6102__proc_8c.html#ad3b70946eb3e3befdfc35c54ecee36c1" title="MTCH6102_gesture_to_str" alt="" coords="192,148,371,175"/>
+<area shape="rect" id="node7" href="$d2/d60/_m_t_c_h6102__proc_8c.html#aa2d7394e5ae07064acdc8381da5deb58" title="MTCH6102_diag_to_str" alt="" coords="201,199,361,225"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="419,5,531,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="423,56,526,83"/>
+</map>
