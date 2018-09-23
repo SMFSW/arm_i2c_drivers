@@ -39,10 +39,9 @@ __WEAK FctERR MB85RC256V_Init(void)
 /****************************************************************/
 
 
-FctERR MB85RC256V_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ MB85RC256V_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&MB85RC256V_hal))	{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)								{ return ERROR_MEMORY; }	// Null pointer
 	if (addr >= MB85RC256V_SIZE)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > MB85RC256V_SIZE)		{ return ERROR_OVERFLOW; }	// More bytes than registers
 
@@ -55,10 +54,9 @@ FctERR MB85RC256V_Write(const uint8_t * data, const uint16_t addr, const uint16_
 }
 
 
-FctERR MB85RC256V_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ MB85RC256V_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&MB85RC256V_hal))	{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)								{ return ERROR_MEMORY; }	// Null pointer
 	if (addr >= MB85RC256V_SIZE)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > MB85RC256V_SIZE)		{ return ERROR_OVERFLOW; }	// More bytes than registers
 
@@ -71,7 +69,7 @@ FctERR MB85RC256V_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 }
 
 
-FctERR MB85RC256V_Read_ID(uint8_t * data)
+FctERR NONNULL__ MB85RC256V_Read_ID(uint8_t * data)
 {
 	if (!data)		{ return ERROR_MEMORY; }	// Null pointer
 

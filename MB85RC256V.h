@@ -53,7 +53,7 @@ __WEAK FctERR MB85RC256V_Init(void);
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR MB85RC256V_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ MB85RC256V_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for MB85RC256V
@@ -62,14 +62,14 @@ FctERR MB85RC256V_Write(const uint8_t * data, const uint16_t addr, const uint16_
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR MB85RC256V_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ MB85RC256V_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read ID function for MB85RC256V (reads 3 bytes)
 ** \param[in,out] data - pointer to read to
 ** \return FctERR - error code
 **/
-FctERR MB85RC256V_Read_ID(uint8_t * data);
+FctERR NONNULL__ MB85RC256V_Read_ID(uint8_t * data);
 
 
 /****************************************************************/

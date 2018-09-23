@@ -35,10 +35,9 @@ __WEAK FctERR S11059_Init(void)
 /****************************************************************/
 
 
-FctERR S11059_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ S11059_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&S11059_hal))					{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)											{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > S11059__MANUAL_TIMING_LSB)				{ return ERROR_RANGE; }		// Unknown register (or read only register)
 	if ((addr + nb) > S11059__MANUAL_TIMING_LSB + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers (or write-able registers)
 
@@ -51,10 +50,9 @@ FctERR S11059_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb
 }
 
 
-FctERR S11059_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ S11059_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&S11059_hal))			{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)									{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > S11059__IR_DATA_LSB)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > S11059__IR_DATA_LSB + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
@@ -67,7 +65,7 @@ FctERR S11059_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 }
 
 
-FctERR S11059_Write_Word(const uint16_t * data, const uint16_t addr)
+FctERR NONNULL__ S11059_Write_Word(const uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 
@@ -79,7 +77,7 @@ FctERR S11059_Write_Word(const uint16_t * data, const uint16_t addr)
 }
 
 
-FctERR S11059_Read_Word(uint16_t * data, const uint16_t addr)
+FctERR NONNULL__ S11059_Read_Word(uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 	FctERR	err;

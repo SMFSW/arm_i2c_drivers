@@ -99,7 +99,7 @@ __WEAK FctERR MCP4725_Init(void);
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR MCP4725_Write(const uint8_t * data, const uint16_t nb);
+FctERR NONNULL__ MCP4725_Write(const uint8_t * data, const uint16_t nb);
 
 
 /*!\brief I2C Read function for MCP4725
@@ -107,7 +107,7 @@ FctERR MCP4725_Write(const uint8_t * data, const uint16_t nb);
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR MCP4725_Read(uint8_t * data, const uint16_t nb);
+FctERR NONNULL__ MCP4725_Read(uint8_t * data, const uint16_t nb);
 
 
 FctERR MCP4725_General_Call(const uint8_t cmd);

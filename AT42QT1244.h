@@ -276,7 +276,7 @@ __WEAK FctERR AT42QT1244_Init(void);
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR AT42QT1244_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ AT42QT1244_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for AT42QT1244
@@ -285,7 +285,7 @@ FctERR AT42QT1244_Write(const uint8_t * data, const uint16_t addr, const uint16_
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR AT42QT1244_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ AT42QT1244_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /****************************************************************/

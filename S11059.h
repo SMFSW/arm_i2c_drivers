@@ -134,7 +134,7 @@ __WEAK FctERR S11059_Init(void);
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR S11059_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ S11059_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for S11059
@@ -143,7 +143,7 @@ FctERR S11059_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR S11059_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ S11059_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Word Write (big endian) function for S11059
@@ -151,7 +151,7 @@ FctERR S11059_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
 ** \param[in] addr - Address to write to
 ** \return FctERR - error code
 **/
-FctERR S11059_Write_Word(const uint16_t * data, const uint16_t addr);
+FctERR NONNULL__ S11059_Write_Word(const uint16_t * data, const uint16_t addr);
 
 
 /*!\brief I2C Word Read (big endian) function for S11059
@@ -159,7 +159,7 @@ FctERR S11059_Write_Word(const uint16_t * data, const uint16_t addr);
 ** \param[in] addr - Address to read from
 ** \return FctERR - error code
 **/
-FctERR S11059_Read_Word(uint16_t * data, const uint16_t addr);
+FctERR NONNULL__ S11059_Read_Word(uint16_t * data, const uint16_t addr);
 
 
 /****************************************************************/

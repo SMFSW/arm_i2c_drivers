@@ -16,14 +16,12 @@
 //static const I2C_slave slave_hal = { { pNull, 0, I2C_slave_timeout, 0, I2C_STD }, 0, HAL_OK, true, false };	//!< default slave hal values
 
 
-FctERR I2C_slave_init(I2C_slave * slave, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress, const uint32_t timeout)
+FctERR NONNULL__ I2C_slave_init(I2C_slave * slave, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress, const uint32_t timeout)
 {
 	// TODO: assert speed if possible (as there's max_speed for device now)
 	/* Check the parameters */
 	assert_param(IS_I2C_ALL_INSTANCE(hi2c->Instance));
 	assert_param(IS_I2C_7B_ADDR(devAddress));
-
-	if ((!slave) || (!hi2c))	{ return ERROR_INSTANCE; }	// Unknown instance (null pointer)
 
 	//memcpy(slave, &slave_hal, sizeof(I2C_slave));		//! \note max_speed is const and should be set at init
 
@@ -34,35 +32,22 @@ FctERR I2C_slave_init(I2C_slave * slave, const I2C_HandleTypeDef * hi2c, const u
 }
 
 
-FctERR I2C_set_slave_instance(I2C_slave * slave, const I2C_HandleTypeDef * hi2c)
+FctERR NONNULL__ I2C_set_slave_instance(I2C_slave * slave, const I2C_HandleTypeDef * hi2c)
 {
 	/* Check the parameters */
 	assert_param(IS_I2C_ALL_INSTANCE(hi2c->Instance));
-
-	if ((!slave) || (!hi2c))	{ return ERROR_INSTANCE; }	// Unknown instance (null pointer)
 
 	slave->cfg.bus_inst = (I2C_HandleTypeDef *) hi2c;
 	return ERROR_OK;
 }
 
 
-FctERR I2C_set_slave_address(I2C_slave * slave, const uint16_t devAddress)
+FctERR NONNULL__ I2C_set_slave_address(I2C_slave * slave, const uint16_t devAddress)
 {
 	/* Check the parameters */
 	assert_param(IS_I2C_7B_ADDR(devAddress));
 
-	if (!slave)					{ return ERROR_INSTANCE; }	// Unknown instance (null pointer)
-
 	slave->cfg.addr = I2C_ADDR(devAddress);
-	return ERROR_OK;
-}
-
-
-FctERR I2C_set_slave_timeout(I2C_slave * slave, const uint32_t timeout)
-{
-	if (!slave)					{ return ERROR_INSTANCE; }	// Unknown instance (null pointer)
-
-	slave->cfg.timeout = timeout;
 	return ERROR_OK;
 }
 

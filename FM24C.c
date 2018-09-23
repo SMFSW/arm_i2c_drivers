@@ -44,12 +44,11 @@ __WEAK FctERR FM24C_Init(void)
 /****************************************************************/
 
 
-FctERR FM24C_Write_Banked(const uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb)
+FctERR NONNULL__ FM24C_Write_Banked(const uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb)
 {
 	uint16_t i2c_addr = FM24C_hal.cfg.addr + (bank << 1);
 
 	if (!I2C_is_enabled(&FM24C_hal))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)										{ return ERROR_MEMORY; }	// Null pointer
 	if (bank >= (FM24C_SIZE / FM24C_BANK_SIZE))		{ return ERROR_RANGE; }		// Unknown bank
 	if (addr >= FM24C_BANK_SIZE)					{ return ERROR_RANGE; }		// Unknown address
 	if ((addr + nb) > FM24C_BANK_SIZE)				{ return ERROR_OVERFLOW; }	// Bank overflow
@@ -63,12 +62,11 @@ FctERR FM24C_Write_Banked(const uint8_t * data, const uint16_t addr, const uint8
 }
 
 
-FctERR FM24C_Read_Banked(uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb)
+FctERR NONNULL__ FM24C_Read_Banked(uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb)
 {
 	uint16_t i2c_addr = FM24C_hal.cfg.addr + (bank << 1);
 
 	if (!I2C_is_enabled(&FM24C_hal))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)										{ return ERROR_MEMORY; }	// Null pointer
 	if (bank >= (FM24C_SIZE / FM24C_BANK_SIZE))		{ return ERROR_RANGE; }		// Unknown bank
 	if (addr >= FM24C_BANK_SIZE)					{ return ERROR_RANGE; }		// Unknown address
 	if ((addr + nb) > FM24C_BANK_SIZE)				{ return ERROR_OVERFLOW; }	// Bank overflow
@@ -82,7 +80,7 @@ FctERR FM24C_Read_Banked(uint8_t * data, const uint16_t addr, const uint8_t bank
 }
 
 
-FctERR FM24C_ReadWrite(uint8_t * data, const uint16_t addr, const uint16_t nb, const bool wr)
+FctERR NONNULL__ FM24C_ReadWrite(uint8_t * data, const uint16_t addr, const uint16_t nb, const bool wr)
 {
 	FctERR		err = ERROR_OK;
 	uint16_t	subaddr, bank, n;

@@ -75,7 +75,7 @@ __WEAK FctERR FM24C_Init(void);
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR FM24C_Write_Banked(const uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb);
+FctERR NONNULL__ FM24C_Write_Banked(const uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb);
 
 /*!\brief I2C Read function for FM24C
 **
@@ -85,7 +85,7 @@ FctERR FM24C_Write_Banked(const uint8_t * data, const uint16_t addr, const uint8
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR FM24C_Read_Banked(uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb);
+FctERR NONNULL__ FM24C_Read_Banked(uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb);
 
 /*!\brief I2C Read/Write function for FM24C
 **
@@ -95,7 +95,7 @@ FctERR FM24C_Read_Banked(uint8_t * data, const uint16_t addr, const uint8_t bank
 ** \param[in] wr - 0: Read / 1: Write
 ** \return FctERR - error code
 **/
-FctERR FM24C_ReadWrite(uint8_t * data, const uint16_t addr, const uint16_t nb, const bool wr);
+FctERR NONNULL__ FM24C_ReadWrite(uint8_t * data, const uint16_t addr, const uint16_t nb, const bool wr);
 
 
 /*!\brief I2C Write function for FM24C
@@ -105,7 +105,7 @@ FctERR FM24C_ReadWrite(uint8_t * data, const uint16_t addr, const uint16_t nb, c
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ FM24C_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb) {
+__INLINE FctERR NONNULL_INLINE__ FM24C_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb) {
 	return FM24C_ReadWrite((uint8_t *) data, addr, nb, true);
 }
 
@@ -116,7 +116,7 @@ __INLINE FctERR INLINE__ FM24C_Write(const uint8_t * data, const uint16_t addr, 
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ FM24C_Read(uint8_t * data, const uint16_t addr, const uint16_t nb) {
+__INLINE FctERR NONNULL_INLINE__ FM24C_Read(uint8_t * data, const uint16_t addr, const uint16_t nb) {
 	return FM24C_ReadWrite(data, addr, nb, false);
 }
 

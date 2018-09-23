@@ -39,10 +39,9 @@ __WEAK FctERR TCS3400_Init(void)
 /****************************************************************/
 
 
-FctERR TCS3400_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ TCS3400_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&TCS3400_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)								{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > TCS3400__AICLEAR)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > TCS3400__AICLEAR + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
@@ -55,10 +54,9 @@ FctERR TCS3400_Write(const uint8_t * data, const uint16_t addr, const uint16_t n
 }
 
 
-FctERR TCS3400_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ TCS3400_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&TCS3400_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)								{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > TCS3400__IR)					{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > TCS3400__IR + 1)		{ return ERROR_OVERFLOW; }	// More bytes than registers
 
@@ -71,7 +69,7 @@ FctERR TCS3400_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 }
 
 
-FctERR TCS3400_Write_Word(const uint16_t * data, const uint16_t addr)
+FctERR NONNULL__ TCS3400_Write_Word(const uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 
@@ -83,7 +81,7 @@ FctERR TCS3400_Write_Word(const uint16_t * data, const uint16_t addr)
 }
 
 
-FctERR TCS3400_Read_Word(uint16_t * data, const uint16_t addr)
+FctERR NONNULL__ TCS3400_Read_Word(uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 	FctERR	err;

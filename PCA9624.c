@@ -39,10 +39,9 @@ __WEAK FctERR PCA9624_Init(void)
 /****************************************************************/
 
 
-FctERR PCA9624_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ PCA9624_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&PCA9624_hal))			{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)									{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > PCA9624__ALLCALLADR)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > PCA9624__ALLCALLADR + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
@@ -55,10 +54,9 @@ FctERR PCA9624_Write(const uint8_t * data, const uint16_t addr, const uint16_t n
 }
 
 
-FctERR PCA9624_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ PCA9624_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&PCA9624_hal))			{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)									{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > PCA9624__ALLCALLADR)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > PCA9624__ALLCALLADR + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 

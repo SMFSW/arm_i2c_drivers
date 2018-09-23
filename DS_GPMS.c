@@ -35,10 +35,9 @@ __WEAK FctERR GPMS_Init(void)
 /****************************************************************/
 
 
-FctERR GPMS_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ GPMS_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&GPMS_hal))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)									{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > GPMS__IO_PORT_OUTPUT)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > GPMS__IO_PORT_OUTPUT + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
@@ -51,10 +50,9 @@ FctERR GPMS_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 }
 
 
-FctERR GPMS_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ GPMS_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&GPMS_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)							{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > GPMS__STATUS)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > GPMS__STATUS + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 

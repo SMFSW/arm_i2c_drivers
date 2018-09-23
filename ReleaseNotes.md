@@ -24,6 +24,7 @@ SOFTWARE.
 
 * Doxyfile update
 * Adding support for doxygen documentation generation with Travis CI
+* Using of NONNULL__ attribute instead of checking pointer set to value in code
 * template: misc fixes
 * use of const qualifier in function parameters
 * init sequence returns with error value if something goes wrong during initialization

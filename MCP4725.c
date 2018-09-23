@@ -35,10 +35,9 @@ __WEAK FctERR MCP4725_Init(void)
 /****************************************************************/
 
 
-FctERR MCP4725_Write(const uint8_t * data, const uint16_t nb)
+FctERR NONNULL__ MCP4725_Write(const uint8_t * data, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&MCP4725_hal))	{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)							{ return ERROR_MEMORY; }	// Null pointer
 	if (nb > 3)							{ return ERROR_RANGE; }		// More bytes than registers
 
 	I2C_set_busy(&MCP4725_hal, true);
@@ -50,10 +49,9 @@ FctERR MCP4725_Write(const uint8_t * data, const uint16_t nb)
 }
 
 
-FctERR MCP4725_Read(uint8_t * data, const uint16_t nb)
+FctERR NONNULL__ MCP4725_Read(uint8_t * data, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&MCP4725_hal))	{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)							{ return ERROR_MEMORY; }	// Null pointer
 	if (nb > 3)							{ return ERROR_RANGE; }		// More bytes than registers
 
 	I2C_set_busy(&MCP4725_hal, true);

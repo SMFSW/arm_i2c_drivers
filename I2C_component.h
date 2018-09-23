@@ -82,7 +82,7 @@ typedef struct PACK__ StructI2Cslave {	// TODO: check if the struct really needs
 ** \param[in] timeout - Transaction timeout
 ** \return Error code
 **/
-FctERR I2C_slave_init(I2C_slave * slave, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress, const uint32_t timeout);
+FctERR NONNULL__ I2C_slave_init(I2C_slave * slave, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress, const uint32_t timeout);
 
 
 /***************/
@@ -93,21 +93,23 @@ FctERR I2C_slave_init(I2C_slave * slave, const I2C_HandleTypeDef * hi2c, const u
 ** \param[in] hi2c - pointer to HAL I2C instance
 ** \return Error code
 **/
-FctERR I2C_set_slave_instance(I2C_slave * slave, const I2C_HandleTypeDef * hi2c);
+FctERR NONNULL__ I2C_set_slave_instance(I2C_slave * slave, const I2C_HandleTypeDef * hi2c);
 
 /*!\brief I2C Slave device address change
 ** \param[in,out] slave - pointer to I2C slave instance
 ** \param[in] devAddress - Device Address
 ** \return Error code
 **/
-FctERR I2C_set_slave_address(I2C_slave * slave, const uint16_t devAddress);
+FctERR NONNULL__ I2C_set_slave_address(I2C_slave * slave, const uint16_t devAddress);
 
 /*!\brief I2C Slave device transaction timeout change
 ** \param[in,out] slave - pointer to I2C slave instance
 ** \param[in] timeout - Transaction timeout
 ** \return Error code
 **/
-FctERR I2C_set_slave_timeout(I2C_slave * slave, const uint32_t timeout);
+__INLINE FctERR ATTR__(always_inline, nonnull) I2C_set_slave_timeout(I2C_slave * slave, const uint32_t timeout) {
+	slave->cfg.timeout = timeout;
+	return ERROR_OK; }
 
 
 /*!\brief Set I2C Slave device current internal memory address
@@ -115,7 +117,7 @@ FctERR I2C_set_slave_timeout(I2C_slave * slave, const uint32_t timeout);
 ** \param[in] addr - address to store in slave instance
 ** \return Nothing
 **/
-__INLINE FctERR INLINE__ I2C_set_current_mem_address(I2C_slave * slave, const uint16_t addr) {
+__INLINE FctERR ATTR__(always_inline, nonnull) I2C_set_current_mem_address(I2C_slave * slave, const uint16_t addr) {
 	slave->addr = addr;
 	return ERROR_OK; }
 
@@ -124,7 +126,7 @@ __INLINE FctERR INLINE__ I2C_set_current_mem_address(I2C_slave * slave, const ui
 ** \param[in] en - I2C device state (disabled/enabled)
 ** \return Nothing
 **/
-__INLINE FctERR INLINE__ I2C_set_enable(I2C_slave * slave, const bool en) {
+__INLINE FctERR ATTR__(always_inline, nonnull) I2C_set_enable(I2C_slave * slave, const bool en) {
 	slave->en = en;
 	return ERROR_OK; }
 
@@ -134,7 +136,7 @@ __INLINE FctERR INLINE__ I2C_set_enable(I2C_slave * slave, const bool en) {
 ** \param[in] busy - I2C bus/device state
 ** \return Nothing
 **/
-__INLINE FctERR INLINE__ I2C_set_busy(I2C_slave * slave, const bool busy) {
+__INLINE FctERR ATTR__(always_inline, nonnull) I2C_set_busy(I2C_slave * slave, const bool busy) {
 	slave->busy = busy;
 	return ERROR_OK; }
 
@@ -146,56 +148,56 @@ __INLINE FctERR INLINE__ I2C_set_busy(I2C_slave * slave, const bool busy) {
 ** \param[in,out] slave - pointer to I2C slave instance
 ** \return Current internal memory address
 **/
-__INLINE uint32_t INLINE__ I2C_get_current_mem_address(const I2C_slave * slave) {
+__INLINE uint32_t ATTR__(always_inline, nonnull) I2C_get_current_mem_address(const I2C_slave * slave) {
 	return slave->addr; }
 
 /*!\brief Get I2C Slave device enabled state
 ** \param[in,out] slave - pointer to I2C slave instance
 ** \return true if I2C slave is enabled
 **/
-__INLINE bool INLINE__ I2C_is_enabled(const I2C_slave * slave) {
+__INLINE bool ATTR__(always_inline, nonnull) I2C_is_enabled(const I2C_slave * slave) {
 	return slave->en; }
 
 /*!\brief Get I2C Slave device busy state
 ** \param[in,out] slave - pointer to I2C slave instance
 ** \return true if I2C bus/slave is busy
 **/
-__INLINE bool INLINE__ I2C_is_busy(const I2C_slave * slave) {
+__INLINE bool ATTR__(always_inline, nonnull) I2C_is_busy(const I2C_slave * slave) {
 	return slave->busy; }
 
 /*!\brief Get I2C Slave device HAL I2C instance
 ** \param[in,out] slave - pointer to I2C slave instance
 ** \return I2C Slave device HAL I2C instance
 **/
-__INLINE I2C_HandleTypeDef * INLINE__ I2C_get_slave_instance(const I2C_slave * slave) {
+__INLINE I2C_HandleTypeDef * ATTR__(always_inline, nonnull) I2C_get_slave_instance(const I2C_slave * slave) {
 	return slave->cfg.bus_inst; }
 
 /*!\brief Get I2C Slave device address
 ** \param[in,out] slave - pointer to I2C slave instance
 ** \return I2C Slave device address
 **/
-__INLINE uint16_t INLINE__ I2C_get_slave_address(const I2C_slave * slave) {
+__INLINE uint16_t ATTR__(always_inline, nonnull) I2C_get_slave_address(const I2C_slave * slave) {
 	return slave->cfg.addr; }
 
 /*!\brief Get I2C Slave device transaction timeout
 ** \param[in,out] slave - pointer to I2C slave instance
 ** \return I2C Slave device transaction timeout
 **/
-__INLINE uint32_t INLINE__ I2C_get_slave_timeout(const I2C_slave * slave) {
+__INLINE uint32_t ATTR__(always_inline, nonnull) I2C_get_slave_timeout(const I2C_slave * slave) {
 	return slave->cfg.timeout; }
 
 /*!\brief Get I2C Slave device internal memory size
 ** \param[in,out] slave - pointer to I2C slave instance
 ** \return I2C Slave device internal memory size
 **/
-__INLINE uint16_t INLINE__ I2C_get_slave_mem_size(const I2C_slave * slave) {
+__INLINE uint16_t ATTR__(always_inline, nonnull) I2C_get_slave_mem_size(const I2C_slave * slave) {
 	return slave->cfg.mem_size; }
 
 /*!\brief Get I2C Slave device max speed
 ** \param[in,out] slave - pointer to I2C slave instance
 ** \return I2C Slave device maximum speed
 **/
-__INLINE uint16_t INLINE__ I2C_get_slave_max_speed(const I2C_slave * slave) {
+__INLINE uint16_t ATTR__(always_inline, nonnull) I2C_get_slave_max_speed(const I2C_slave * slave) {
 	return slave->cfg.max_speed; }
 
 

@@ -61,10 +61,9 @@ __WEAK FctERR AT42QT1244_Init(void)
 /****************************************************************/
 
 
-FctERR AT42QT1244_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ AT42QT1244_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&AT42QT1244_hal))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)											{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > AT42QT__SETUP_HOST_CRC_MSB)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > AT42QT__SETUP_HOST_CRC_MSB + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
@@ -79,7 +78,7 @@ FctERR AT42QT1244_Write(const uint8_t * data, const uint16_t addr, const uint16_
 }
 
 
-FctERR AT42QT1244_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ AT42QT1244_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	FctERR		err = ERROR_OK;
 	uint16_t	crc = 0;
@@ -87,7 +86,6 @@ FctERR AT42QT1244_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 	uint8_t *	tmp_read = malloc(nb + 2);
 
 	if (!I2C_is_enabled(&AT42QT1244_hal))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((!data) || (!tmp_read))							{ return ERROR_MEMORY; }	// Null pointer or not malloc failed
 	if (addr > AT42QT__SETUP_HOST_CRC_MSB)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > AT42QT__SETUP_HOST_CRC_MSB + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 

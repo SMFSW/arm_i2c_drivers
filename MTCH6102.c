@@ -38,10 +38,9 @@ __WEAK FctERR MTCH6102_Init(void)
 /****************************************************************/
 
 
-FctERR MTCH6102_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ MTCH6102_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&MTCH6102_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)								{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > MTCH__RAW_ADC_31)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > MTCH__RAW_ADC_31 + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
@@ -54,10 +53,9 @@ FctERR MTCH6102_Write(const uint8_t * data, const uint16_t addr, const uint16_t 
 }
 
 
-FctERR MTCH6102_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ MTCH6102_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&MTCH6102_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)								{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > MTCH__RAW_ADC_31)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > MTCH__RAW_ADC_31 + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 

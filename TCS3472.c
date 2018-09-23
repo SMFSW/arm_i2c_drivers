@@ -39,12 +39,11 @@ __WEAK FctERR TCS3472_Init(void)
 /****************************************************************/
 
 
-FctERR TCS3472_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ TCS3472_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	uTCS3472_CMD CMD;
 
 	if (!I2C_is_enabled(&TCS3472_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)								{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > TCS3472__CONTROL)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > TCS3472__CONTROL + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
@@ -61,12 +60,11 @@ FctERR TCS3472_Write(const uint8_t * data, const uint16_t addr, const uint16_t n
 }
 
 
-FctERR TCS3472_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ TCS3472_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	uTCS3472_CMD CMD;
 
 	if (!I2C_is_enabled(&TCS3472_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (!data)								{ return ERROR_MEMORY; }	// Null pointer
 	if (addr > TCS3472__BDATAH)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > TCS3472__BDATAH + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
@@ -83,7 +81,7 @@ FctERR TCS3472_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 }
 
 
-FctERR TCS3472_Write_Word(const uint16_t * data, const uint16_t addr)
+FctERR NONNULL__ TCS3472_Write_Word(const uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 
@@ -95,7 +93,7 @@ FctERR TCS3472_Write_Word(const uint16_t * data, const uint16_t addr)
 }
 
 
-FctERR TCS3472_Read_Word(uint16_t * data, const uint16_t addr)
+FctERR NONNULL__ TCS3472_Read_Word(uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 	FctERR	err;
