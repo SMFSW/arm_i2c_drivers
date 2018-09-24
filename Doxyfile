@@ -2089,6 +2089,7 @@ PREDEFINED             = DOXY=1 \
                          PACK__= \
                          PURE__= \
                          USED__= \
+                         NONNULL_INLINE__= \
                          __IO=volatile \
                          __O=volatile \
                          "__I=volatile const" \
