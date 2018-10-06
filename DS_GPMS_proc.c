@@ -1,4 +1,4 @@
-/*!\file DS_GPMS_proc.c
+/*!\file DS_GPMS_t.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief DS-GPM.S Driver procedures
@@ -11,12 +11,9 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_GPMS)
 /****************************************************************/
-// std libs
-#include <string.h>
-/****************************************************************/
 
 
-GPMS_proc GPMS = { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0.0f, '\0' }, { 0, 0.0f, '\0' }, 0, 0.0f, 0.0f, 0.0f, { &GPMS_hal, 'A' } };
+GPMS_t GPMS = { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0.0f, '\0' }, { 0, 0.0f, '\0' }, 0, 0.0f, 0.0f, 0.0f, { &GPMS_hal, 'A' } };
 
 
 /****************************************************************/

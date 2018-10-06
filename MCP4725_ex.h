@@ -8,6 +8,10 @@
 #ifndef __MCP4725_EX_H__
 	#define __MCP4725_EX_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "MCP4725.h"
 
@@ -57,6 +61,10 @@ FctERR MCP4725_Read_State(bool * state);
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __MCP4725_EX_H__ */
 /****************************************************************/

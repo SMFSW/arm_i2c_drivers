@@ -1,4 +1,4 @@
-/*!\file BMP180_proc.c
+/*!\file BMP180_t.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief BMP180 Driver procedures
@@ -13,15 +13,14 @@
 /****************************************************************/
 // std libs
 #include <math.h>
-#include <string.h>
 /****************************************************************/
 
 //#define BMP180_TST	//!< Defined to check calculations with datasheet
 
 #if !defined(BMP180_TST)
-BMP180_proc BMP180 = { 0.0f, 0.0f, 0.0f, 0.0f, 0, { &BMP180_hal, BMP180__OSS_8_TIME, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 0 } };
+BMP180_t BMP180 = { 0.0f, 0.0f, 0.0f, 0.0f, 0, { &BMP180_hal, BMP180__OSS_8_TIME, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 0 } };
 #else
-BMP180_proc BMP180 = { 0.0f, 0.0f, 0.0f, 0.0f, 0, { &BMP180_hal, BMP180__OSS_1_TIME, { 408, -72, -14383, 32741, 32757, 23153, 6190, 4, -32768, -8711, 2868 }, 0 } };
+BMP180_t BMP180 = { 0.0f, 0.0f, 0.0f, 0.0f, 0, { &BMP180_hal, BMP180__OSS_1_TIME, { 408, -72, -14383, 32741, 32757, 23153, 6190, 4, -32768, -8711, 2868 }, 0 } };
 #endif
 
 extern uint8_t BMP180_OSS_time[4];

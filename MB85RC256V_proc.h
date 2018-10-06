@@ -8,6 +8,10 @@
 #ifndef __MB85RC256V_PROC_H__
 	#define __MB85RC256V_PROC_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "MB85RC256V.h"
 
@@ -26,16 +30,16 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-typedef struct MB85RC256V_proc {
+typedef struct MB85RC256V_t {
 	struct {
-	I2C_slave *	slave_inst;			//!< Slave structure
-	uint16_t	Manufacture_ID;
-	uint8_t		Density;
-	uint8_t		Product_ID;
+	I2C_slave_t *	slave_inst;			//!< Slave structure
+	uint16_t		Manufacture_ID;
+	uint8_t			Density;
+	uint8_t			Product_ID;
 	} cfg;
-} MB85RC256V_proc;
+} MB85RC256V_t;
 
-extern MB85RC256V_proc	MB85RC256V;	//!< MB85RC256V User structure
+extern MB85RC256V_t	MB85RC256V;			//!< MB85RC256V User structure
 
 
 // *****************************************************************************
@@ -59,6 +63,10 @@ FctERR MB85RC256V_Get_ID(void);
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __MB85RC256V_PROC_H__ */
 /****************************************************************/

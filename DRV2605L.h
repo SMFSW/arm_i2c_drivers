@@ -8,6 +8,10 @@
 #ifndef __DRV2605L_H__
 	#define __DRV2605L_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "I2C_component.h"
 
@@ -24,7 +28,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave DRV2605_hal;	//!< DRV2605L Slave structure
+extern I2C_slave_t DRV2605_hal;	//!< DRV2605L Slave structure
 
 
 // *****************************************************************************
@@ -494,6 +498,11 @@ FctERR NONNULL__ DRV2605L_Read(uint8_t * data, const uint16_t addr, const uint16
 /****************************************************************/
 #include "DRV2605L_ex.h"	// Include extensions
 #include "DRV2605L_proc.h"	// Include procedures
+
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __DRV2605L_H__ */
 /****************************************************************/

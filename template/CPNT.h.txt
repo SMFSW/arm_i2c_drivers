@@ -8,6 +8,10 @@
 #ifndef __$CPNT$_H__
 	#define __$CPNT$_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "I2C_component.h"
 
@@ -26,7 +30,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave $CPNT$_hal;	//!< $CPNT$ Slave structure
+extern I2C_slave_t $CPNT$_hal;	//!< $CPNT$ Slave structure
 
 
 // *****************************************************************************
@@ -102,6 +106,11 @@ FctERR NONNULL__ $CPNT$_Read(uint8_t * data, const uint16_t addr, const uint16_t
 /****************************************************************/
 #include "$CPNT$_ex.h"		// Include extensions
 #include "$CPNT$_proc.h"	// Include procedures
+
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __$CPNT$_H__ */
 /****************************************************************/

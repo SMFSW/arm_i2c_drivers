@@ -8,6 +8,10 @@
 #ifndef __TCS3400_PROC_H__
 	#define __TCS3400_PROC_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "TCS3400.h"
 
@@ -32,10 +36,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct TCS3400_proc
+/*!\struct TCS3400_t
 ** \brief TCS3400 user interface struct
 **/
-typedef struct TCS3400_proc {
+typedef struct TCS3400_t {
 	uint16_t		Red;				//!< Current Red conversion
 	uint16_t		Green;				//!< Current Green conversion
 	uint16_t		Blue;				//!< Current Blue conversion
@@ -47,7 +51,7 @@ typedef struct TCS3400_proc {
 	bool			SaturationRipple;	//!< Current Ripple saturation status (75% of saturation value)
 	bool			Saturation;			//!< Current Sensor saturation status
 	struct {
-	I2C_slave *		slave_inst;			//!< Slave structure
+	I2C_slave_t *	slave_inst;			//!< Slave structure
 	TCS3400_gain	Gain;				//!< Sensor gain config
 	uint16_t		Integ;				//!< Sensor integration time config
 	uint16_t		Wait;				//!< Sensor wait time config
@@ -58,9 +62,9 @@ typedef struct TCS3400_proc {
 	uint8_t			Revision_Id;		//!< Revision ID
 	uint8_t			Device_Id;			//!< Chip ID
 	} cfg;
-} TCS3400_proc;
+} TCS3400_t;
 
-extern TCS3400_proc	TCS3400;			//!< TCS34000 User structure
+extern TCS3400_t	TCS3400;			//!< TCS34000 User structure
 
 
 // *****************************************************************************
@@ -96,6 +100,10 @@ __WEAK FctERR TCS3400_handler(void);
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __TCS3400_PROC_H__ */
 /****************************************************************/

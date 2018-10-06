@@ -8,6 +8,10 @@
 #ifndef __MTCH6102_H__
 	#define __MTCH6102_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "I2C_component.h"
 
@@ -25,7 +29,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave MTCH6102_hal;	//!< MTCH6102 Slave structure
+extern I2C_slave_t MTCH6102_hal;	//!< MTCH6102 Slave structure
 
 
 // *****************************************************************************
@@ -408,6 +412,11 @@ FctERR NONNULL__ MTCH6102_Read(uint8_t * data, const uint16_t addr, const uint16
 /****************************************************************/
 #include "MTCH6102_ex.h"	// Include extensions
 #include "MTCH6102_proc.h"	// Include procedures
+
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif	/* __MTCH6102_H__ */
 /****************************************************************/

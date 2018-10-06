@@ -8,6 +8,10 @@
 #ifndef __PCA9685_PROC_H__
 	#define __PCA9685_PROC_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "PCA9685.h"
 
@@ -28,16 +32,16 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct PCA9685_proc
+/*!\struct PCA9685_t
 ** \brief PCA9685 user interface struct
 **/
-typedef struct PCA9685_proc {
+typedef struct PCA9685_t {
 	struct {
-	I2C_slave *	slave_inst;		//!< Slave structure
+	I2C_slave_t *	slave_inst;		//!< Slave structure
 	} cfg;
-} PCA9685_proc;
+} PCA9685_t;
 
-extern PCA9685_proc	PCA9685;	//!< PCA9685 User structure
+extern PCA9685_t	PCA9685;		//!< PCA9685 User structure
 
 
 // *****************************************************************************
@@ -65,6 +69,10 @@ uint8_t PCA9685_Get_PWM_Prescaler(uint16_t freq);
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif	/* __PCA9685_PROC_H__ */
 /****************************************************************/

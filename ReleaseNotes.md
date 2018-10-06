@@ -22,6 +22,7 @@ SOFTWARE.
 
 ## v0.7
 
+* Added cpp preprocessor directives in headers
 * Doxyfile update
 * Adding support for doxygen documentation generation with Travis CI
 * Using of NONNULL__ attribute instead of checking pointer set to value in code

@@ -8,6 +8,10 @@
 #ifndef __MCP9808_EX_H__
 	#define __MCP9808_EX_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "MCP9808.h"
 
@@ -135,6 +139,10 @@ __INLINE FctERR INLINE__ MCP9808_Get_ChipID(uint16_t * id) {
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __MCP9808_EX_H__ */
 /****************************************************************/

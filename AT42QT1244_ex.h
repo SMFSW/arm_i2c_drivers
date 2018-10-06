@@ -8,6 +8,10 @@
 #ifndef __AT42QT1244_EX_H__
 	#define __AT42QT1244_EX_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "AT42QT1244.h"
 
@@ -97,6 +101,10 @@ __INLINE FctERR INLINE__ AT42QT1244_Key_Disable(const uint8_t Key) {
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __AT42QT1244_EX_H__ */
 /****************************************************************/

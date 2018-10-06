@@ -8,6 +8,10 @@
 #ifndef __PCA9624_EX_H__
 	#define __PCA9624_EX_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "PCA9624.h"
 
@@ -101,6 +105,10 @@ FctERR PCA9624_ClrVal(const PCA96xx_chan chan);
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif	/* __PCA9624_EX_H__ */
 /****************************************************************/

@@ -1,4 +1,4 @@
-/*!\file AT42QT1244_proc.c
+/*!\file AT42QT1244_t.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief AT42QT1244 Driver procedures
@@ -13,7 +13,7 @@
 /****************************************************************/
 
 
-AT42QT1244_proc AT42QT1244 = {  { &AT42QT1244_hal } };
+AT42QT1244_t AT42QT1244 = {  { &AT42QT1244_hal } };
 
 
 

@@ -8,6 +8,10 @@
 #ifndef __PCF8523_H__
 	#define __PCF8523_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "I2C_component.h"
 
@@ -25,7 +29,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave PCF8523_hal;	//!< PCF8523 Slave structure
+extern I2C_slave_t PCF8523_hal;	//!< PCF8523 Slave structure
 
 
 // *****************************************************************************
@@ -322,6 +326,11 @@ FctERR NONNULL__ PCF8523_Read(uint8_t * data, const uint16_t addr, const uint16_
 /****************************************************************/
 #include "PCF8523_ex.h"		// Include extensions
 #include "PCF8523_proc.h"	// Include procedures
+
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __PCF8523_H__ */
 /****************************************************************/

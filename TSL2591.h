@@ -8,6 +8,10 @@
 #ifndef __TSL2591_H__
 	#define __TSL2591_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "I2C_component.h"
 
@@ -24,7 +28,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave TSL2591_hal;	//!< TSL2591 Slave structure
+extern I2C_slave_t TSL2591_hal;	//!< TSL2591 Slave structure
 
 
 // *****************************************************************************
@@ -251,6 +255,11 @@ FctERR TSL2591_Write_Special(const TSL2591_spec_func func);
 /****************************************************************/
 #include "TSL2591_ex.h"		// Include extensions
 #include "TSL2591_proc.h"	// Include procedures
+
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __TSL2591_H__ */
 /****************************************************************/

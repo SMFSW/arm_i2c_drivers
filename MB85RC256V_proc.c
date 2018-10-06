@@ -1,4 +1,4 @@
-/*!\file MB85RC256V_proc.c
+/*!\file MB85RC256V_t.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief MB85RC256V Driver procedures
@@ -13,7 +13,7 @@
 /****************************************************************/
 
 
-MB85RC256V_proc MB85RC256V = { { &MB85RC256V_hal, 0, 0, 0 } };
+MB85RC256V_t MB85RC256V = { { &MB85RC256V_hal, 0, 0, 0 } };
 
 
 /****************************************************************/

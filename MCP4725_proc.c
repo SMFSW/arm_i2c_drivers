@@ -1,4 +1,4 @@
-/*!\file MCP4725_proc.c
+/*!\file MCP4725_t.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief MCP4725 Driver procedures
@@ -13,7 +13,7 @@
 /****************************************************************/
 
 
-MCP4725_proc MCP4725 = { 0, 0.0f, { &MCP4725_hal, MCP4725__FAST_MODE, MCP4725__PWR_NORMAL, 0.0f } };
+MCP4725_t MCP4725 = { 0, 0.0f, { &MCP4725_hal, MCP4725__FAST_MODE, MCP4725__PWR_NORMAL, 0.0f } };
 
 
 /****************************************************************/

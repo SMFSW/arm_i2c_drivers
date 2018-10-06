@@ -13,7 +13,7 @@
 /****************************************************************/
 
 
-I2C_slave TSL2591_hal = { { pNull, I2C_ADDR(TSL2591_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
+I2C_slave_t TSL2591_hal = { { pNull, I2C_ADDR(TSL2591_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
 
 /****************************************************************/

@@ -8,6 +8,10 @@
 #ifndef __AT42QT1244_H__
 	#define __AT42QT1244_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "I2C_component.h"
 
@@ -30,7 +34,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave AT42QT1244_hal;	//!< AT42QT1244 Slave structure
+extern I2C_slave_t AT42QT1244_hal;	//!< AT42QT1244 Slave structure
 
 
 // *****************************************************************************
@@ -291,6 +295,11 @@ FctERR NONNULL__ AT42QT1244_Read(uint8_t * data, const uint16_t addr, const uint
 /****************************************************************/
 #include "AT42QT1244_ex.h"		// Include extensions
 #include "AT42QT1244_proc.h"	// Include procedures
+
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __AT42QT1244_H__ */
 /****************************************************************/

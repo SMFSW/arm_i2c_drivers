@@ -8,6 +8,10 @@
 #ifndef __BMP180_PROC_H__
 	#define __BMP180_PROC_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "BMP180.h"
 
@@ -43,24 +47,24 @@ typedef struct BMP180_calibration {
 	int16_t		MD;		//!< md calibration value
 } BMP180_calib;
 
-/*!\struct BMP180_proc
+/*!\struct BMP180_t
 ** \brief BMP180 user interface struct
 **/
-typedef struct BMP180_proc {
-	float				Pressure;			//!< Current atmospheric pressure
-	float				Temperature;		//!< Current temperature
-	float				Altitude;			//!< Current altitude
-	float				SeaLevelPressure;	//!< Current atmospheric pressure at sea level
-	uint32_t			hStartConversion;	//!< Last conversion start tick
+typedef struct BMP180_t {
+	float					Pressure;			//!< Current atmospheric pressure
+	float					Temperature;		//!< Current temperature
+	float					Altitude;			//!< Current altitude
+	float					SeaLevelPressure;	//!< Current atmospheric pressure at sea level
+	uint32_t				hStartConversion;	//!< Last conversion start tick
 	struct {
-	I2C_slave *			slave_inst;			//!< Slave structure
-	BMP180_oversampling	OSS;				//!< Oversampling
-	BMP180_calib		Calib;				//!< Calibration values
-	uint8_t				Id;					//!< Chip ID
+	I2C_slave_t *			slave_inst;			//!< Slave structure
+	BMP180_oversampling		OSS;				//!< Oversampling
+	BMP180_calib			Calib;				//!< Calibration values
+	uint8_t					Id;					//!< Chip ID
 	} cfg;
-} BMP180_proc;
+} BMP180_t;
 
-extern BMP180_proc BMP180;					//!< BMP180 User structure
+extern BMP180_t BMP180;							//!< BMP180 User structure
 
 
 // *****************************************************************************
@@ -112,6 +116,10 @@ __WEAK FctERR BMP180_handler(void);
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __BMP180_PROC_H__ */
 /****************************************************************/

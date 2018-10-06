@@ -8,6 +8,10 @@
 #ifndef __BMP180_H__
 	#define __BMP180_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "I2C_component.h"
 
@@ -23,7 +27,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave BMP180_hal;	//!< BMP180 Slave structure
+extern I2C_slave_t BMP180_hal;	//!< BMP180 Slave structure
 
 
 // *****************************************************************************
@@ -175,6 +179,11 @@ FctERR NONNULL__ BMP180_Read_Word(uint16_t * data, const uint16_t addr);
 /****************************************************************/
 #include "BMP180_ex.h"		// Include extensions
 #include "BMP180_proc.h"	// Include procedures
+
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __BMP180_H__ */
 /****************************************************************/

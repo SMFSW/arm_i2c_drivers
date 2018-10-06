@@ -8,6 +8,10 @@
 #ifndef __DRV2605L_EX_H__
 	#define __DRV2605L_EX_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "DRV2605L.h"
 
@@ -323,6 +327,10 @@ __INLINE FctERR INLINE__ DRV2605L_Get_ChipID(uint8_t * id) {
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __DRV2605L_EX_H__ */
 /****************************************************************/

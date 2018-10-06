@@ -17,7 +17,7 @@
 /****************************************************************/
 
 
-I2C_slave MB85RC256V_hal = { { pNull, I2C_ADDR(MB85RC256V_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_16BIT, I2C_FMP }, 0, HAL_OK, true, false };
+I2C_slave_t MB85RC256V_hal = { { pNull, I2C_ADDR(MB85RC256V_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_16BIT, I2C_FMP }, 0, HAL_OK, true, false };
 
 
 /****************************************************************/
@@ -71,8 +71,6 @@ FctERR NONNULL__ MB85RC256V_Read(uint8_t * data, const uint16_t addr, const uint
 
 FctERR NONNULL__ MB85RC256V_Read_ID(uint8_t * data)
 {
-	if (!data)		{ return ERROR_MEMORY; }	// Null pointer
-
 	I2C_set_busy(&MB85RC256V_hal, true);
 
 	MB85RC256V_hal.status = HAL_I2C_Mem_Read(MB85RC256V_hal.cfg.bus_inst, 0xF8, MB85RC256V_hal.cfg.addr, I2C_MEMADD_SIZE_8BIT, data, 3, MB85RC256V_hal.cfg.timeout);

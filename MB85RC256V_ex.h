@@ -8,6 +8,10 @@
 #ifndef __MB85RC256V_EX_H__
 	#define __MB85RC256V_EX_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "MB85RC256V.h"
 
@@ -34,6 +38,10 @@ FctERR MB85RC256V_Mass_Erase(void);
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __MB85RC256V_EX_H__ */
 /****************************************************************/

@@ -8,6 +8,10 @@
 #ifndef __S11059_PROC_H__
 	#define __S11059_PROC_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "S11059.h"
 
@@ -24,17 +28,17 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct S11059_proc
+/*!\struct S11059_t
 ** \brief S11059 user interface struct
 **/
-typedef struct S11059_proc {
+typedef struct S11059_t {
 	uint16_t			Red;					//!< Current Red value
 	uint16_t			Green;					//!< Current Green value
 	uint16_t			Blue;					//!< Current Blue value
 	uint16_t			IR;						//!< Current IR value
 	uint32_t			hStartConversion;		//!< Last conversion start tick
 	struct {
-	I2C_slave *			slave_inst;				//!< Slave structure
+	I2C_slave_t *		slave_inst;				//!< Slave structure
 	uint32_t			FullIntegrationTime;	//!< Current integration time in us
 	S11059_prescaler	IntegrationPrescaler;	//!< Current base integration time (prescaler)
 	uint16_t			IntegrationTimeMult;	//!< Current integration time multiplier
@@ -43,9 +47,9 @@ typedef struct S11059_proc {
 	S11059_standby_fct	Standby;				//!< Current standby state
 	S11059_adc_reset	ADCMode;				//!< Current ADC state
 	} cfg;
-} S11059_proc;
+} S11059_t;
 
-extern S11059_proc S11059;			//!< S11059 User structure
+extern S11059_t S11059;			//!< S11059 User structure
 
 
 // *****************************************************************************
@@ -81,6 +85,10 @@ __WEAK FctERR S11059_handler(void);
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __S11059_PROC_H__ */
 /****************************************************************/

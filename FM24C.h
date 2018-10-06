@@ -9,6 +9,10 @@
 #ifndef __FM24C_H__
 	#define __FM24C_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "I2C_component.h"
 
@@ -33,21 +37,21 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct FM24C_proc
+/*!\struct FM24C_t
 ** \brief FM24C user interface struct
 **/
-typedef struct FM24C_proc {
+typedef struct FM24C_t {
 	struct {
-	I2C_slave *	slave_inst;		//!< Slave structure
+	I2C_slave_t *	slave_inst;		//!< Slave structure
 	} cfg;
-} FM24C_proc;
+} FM24C_t;
 
 
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave	FM24C_hal;	//!< FM24C Slave structure
-extern FM24C_proc	FM24C;		//!< FM24C User structure
+extern I2C_slave_t	FM24C_hal;	//!< FM24C Slave structure
+extern FM24C_t	FM24C;		//!< FM24C User structure
 
 // *****************************************************************************
 // Section: Interface Routines
@@ -122,6 +126,12 @@ __INLINE FctERR NONNULL_INLINE__ FM24C_Read(uint8_t * data, const uint16_t addr,
 
 
 /****************************************************************/
+#include "FM24C_ex.h"		// Include extensions
+
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __FM24C_H__ */
 /****************************************************************/

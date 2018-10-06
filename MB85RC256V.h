@@ -8,6 +8,10 @@
 #ifndef __MB85RC256V_H__
 	#define __MB85RC256V_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "I2C_component.h"
 
@@ -26,7 +30,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave MB85RC256V_hal;	//!< MB85RC256V Slave structure
+extern I2C_slave_t MB85RC256V_hal;	//!< MB85RC256V Slave structure
 
 
 // *****************************************************************************
@@ -75,6 +79,11 @@ FctERR NONNULL__ MB85RC256V_Read_ID(uint8_t * data);
 /****************************************************************/
 #include "MB85RC256V_ex.h"		// Include extensions
 #include "MB85RC256V_proc.h"	// Include procedures
+
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __MB85RC256V_H__ */
 /****************************************************************/

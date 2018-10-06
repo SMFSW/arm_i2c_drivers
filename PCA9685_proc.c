@@ -1,4 +1,4 @@
-/*!\file PCA9685_proc.c
+/*!\file PCA9685_t.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief PCA9685 Driver procedures
@@ -13,12 +13,11 @@
 /****************************************************************/
 // std libs
 #include <math.h>
-#include <string.h>
 /****************************************************************/
 // TODO: more extensions like PCA9624
 
 
-PCA9685_proc PCA9685 = { { &PCA9685_hal } };
+PCA9685_t PCA9685 = { { &PCA9685_hal } };
 
 
 /****************************************************************/

@@ -8,6 +8,10 @@
 #ifndef __TCS3400_EX_H__
 	#define __TCS3400_EX_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "TCS3400.h"
 
@@ -219,6 +223,10 @@ __INLINE FctERR INLINE__ TCS3400_Get_Blue(uint16_t * b) {
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __TCS3400_EX_H__ */
 /****************************************************************/

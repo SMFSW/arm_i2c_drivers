@@ -13,11 +13,10 @@
 /****************************************************************/
 // std libs
 #include <stdlib.h>
-#include <string.h>
 /****************************************************************/
 
 
-I2C_slave AT42QT1244_hal = { { pNull, I2C_ADDR(AT42QT1244_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
+I2C_slave_t AT42QT1244_hal = { { pNull, I2C_ADDR(AT42QT1244_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
 
 
@@ -81,13 +80,14 @@ FctERR NONNULL__ AT42QT1244_Write(const uint8_t * data, const uint16_t addr, con
 FctERR NONNULL__ AT42QT1244_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	FctERR		err = ERROR_OK;
-	uint16_t	crc = 0;
-	uint8_t		preamble[2] = { (uint8_t) addr, (uint8_t) nb };
-	uint8_t *	tmp_read = malloc(nb + 2);
 
 	if (!I2C_is_enabled(&AT42QT1244_hal))				{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (addr > AT42QT__SETUP_HOST_CRC_MSB)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > AT42QT__SETUP_HOST_CRC_MSB + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+
+	uint16_t	crc = 0;
+	uint8_t		preamble[2] = { (uint8_t) addr, (uint8_t) nb };
+	uint8_t *	tmp_read = malloc(nb + 2);
 
 	I2C_set_busy(&AT42QT1244_hal, true);
 

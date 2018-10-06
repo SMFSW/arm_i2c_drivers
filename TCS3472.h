@@ -8,6 +8,10 @@
 #ifndef __TCS3472_H__
 	#define __TCS3472_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "I2C_component.h"
 
@@ -29,7 +33,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave TCS3472_hal;	//!< TCS3472 Slave structure
+extern I2C_slave_t TCS3472_hal;	//!< TCS3472 Slave structure
 
 
 // *****************************************************************************
@@ -252,6 +256,11 @@ FctERR TCS3472_Write_Special(const TCS3472_spec_func func);
 /****************************************************************/
 #include "TCS3472_ex.h"		// Include extensions
 #include "TCS3472_proc.h"	// Include procedures
+
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __TCS3472_H__ */
 /****************************************************************/

@@ -8,6 +8,10 @@
 #ifndef __PCA9685_H__
 	#define __PCA9685_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "I2C_component.h"
 #include "PCA96xx.h"
@@ -25,7 +29,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave PCA9685_hal;	//!< PCA9685 Slave structure
+extern I2C_slave_t PCA9685_hal;	//!< PCA9685 Slave structure
 
 
 // *****************************************************************************
@@ -155,6 +159,11 @@ FctERR NONNULL__ PCA9685_Read(uint8_t * data, const uint16_t addr, const uint16_
 /****************************************************************/
 #include "PCA9685_ex.h"		// Include extensions
 #include "PCA9685_proc.h"	// Include procedures
+
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif	/* __PCA9685_H__ */
 /****************************************************************/

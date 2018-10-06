@@ -1,4 +1,4 @@
-/*!\file PCF8523_proc.c
+/*!\file PCF8523_t.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief PCF8523 Driver procedures
@@ -11,12 +11,9 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_PCF8523)
 /****************************************************************/
-// std libs
-#include <string.h>
-/****************************************************************/
 
 
-PCF8523_proc PCF8523 = { { 0, 0, 0, 0}, { 0, 0, 0}, { &PCF8523_hal, 0, 0, false } };
+PCF8523_t PCF8523 = { { 0, 0, 0, 0}, { 0, 0, 0}, { &PCF8523_hal, 0, 0, false } };
 
 
 /****************************************************************/

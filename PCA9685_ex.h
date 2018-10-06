@@ -8,6 +8,10 @@
 #ifndef __PCA9685_EX_H__
 	#define __PCA9685_EX_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "PCA9685.h"
 
@@ -115,6 +119,10 @@ __INLINE FctERR INLINE__ PCA9685_PutVal1024(const PCA96xx_chan chan, const uint1
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif	/* __PCA9685_EX_H__ */
 /****************************************************************/

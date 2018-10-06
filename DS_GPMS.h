@@ -8,6 +8,10 @@
 #ifndef __DS_GPMS_H__
 	#define __DS_GPMS_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "I2C_component.h"
 
@@ -31,7 +35,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave GPMS_hal;	//!< DS-GPM.S Slave structure
+extern I2C_slave_t GPMS_hal;	//!< DS-GPM.S Slave structure
 
 
 // *****************************************************************************
@@ -211,6 +215,11 @@ FctERR NONNULL__ GPMS_Read(uint8_t * data, const uint16_t addr, const uint16_t n
 /****************************************************************/
 #include "DS_GPMS_ex.h"		// Include extensions
 #include "DS_GPMS_proc.h"	// Include procedures
+
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __DS_GPMS_H__ */
 /****************************************************************/

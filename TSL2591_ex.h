@@ -8,6 +8,10 @@
 #ifndef __TSL2591_EX_H__
 	#define __TSL2591_EX_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "TSL2591.h"
 
@@ -218,6 +222,10 @@ __INLINE FctERR INLINE__ TSL2591_Get_IR(uint16_t * ir) {
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __TSL2591_EX_H__ */
 /****************************************************************/

@@ -1,4 +1,4 @@
-/*!\file MCP9808_proc.c
+/*!\file MCP9808_t.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief MCP9808 Driver procedures
@@ -13,11 +13,10 @@
 /****************************************************************/
 // std libs
 #include <math.h>
-#include <string.h>
 /****************************************************************/
 
 
-MCP9808_proc MCP9808 = { 0.0f, false, false, false, true, 0, { &MCP9808_hal, MCP9808__RES_0_125, 0.0f, 0.0f, 0.0f, 0, 0 } };
+MCP9808_t MCP9808 = { 0.0f, false, false, false, true, 0, { &MCP9808_hal, MCP9808__RES_0_125, 0.0f, 0.0f, 0.0f, 0, 0 } };
 
 static uint8_t MCP9808_conv_time[4] = { 30, 65, 130, 250 };						//!< Conversion times for MCP9808
 static float MCP9808_resolution_steps[4] = { 0.5f, 0.25f, 0.125f, 0.0625f };	//!< Resolution steps for MCP9808

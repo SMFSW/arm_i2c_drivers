@@ -21,9 +21,9 @@
 /****************************************************************/
 
 
-I2C_slave FM24C_hal = { { pNull, I2C_ADDR(FM24C_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FMP }, 0, HAL_OK, true, false };
+I2C_slave_t FM24C_hal = { { pNull, I2C_ADDR(FM24C_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FMP }, 0, HAL_OK, true, false };
 
-FM24C_proc FM24C = { { &FM24C_hal } };
+FM24C_t FM24C = { { &FM24C_hal } };
 
 
 /****************************************************************/
@@ -46,12 +46,12 @@ __WEAK FctERR FM24C_Init(void)
 
 FctERR NONNULL__ FM24C_Write_Banked(const uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb)
 {
-	uint16_t i2c_addr = FM24C_hal.cfg.addr + (bank << 1);
-
 	if (!I2C_is_enabled(&FM24C_hal))				{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (bank >= (FM24C_SIZE / FM24C_BANK_SIZE))		{ return ERROR_RANGE; }		// Unknown bank
 	if (addr >= FM24C_BANK_SIZE)					{ return ERROR_RANGE; }		// Unknown address
 	if ((addr + nb) > FM24C_BANK_SIZE)				{ return ERROR_OVERFLOW; }	// Bank overflow
+
+	uint16_t i2c_addr = FM24C_hal.cfg.addr + (bank << 1);
 
 	I2C_set_busy(&FM24C_hal, true);
 
@@ -64,12 +64,12 @@ FctERR NONNULL__ FM24C_Write_Banked(const uint8_t * data, const uint16_t addr, c
 
 FctERR NONNULL__ FM24C_Read_Banked(uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb)
 {
-	uint16_t i2c_addr = FM24C_hal.cfg.addr + (bank << 1);
-
 	if (!I2C_is_enabled(&FM24C_hal))				{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (bank >= (FM24C_SIZE / FM24C_BANK_SIZE))		{ return ERROR_RANGE; }		// Unknown bank
 	if (addr >= FM24C_BANK_SIZE)					{ return ERROR_RANGE; }		// Unknown address
 	if ((addr + nb) > FM24C_BANK_SIZE)				{ return ERROR_OVERFLOW; }	// Bank overflow
+
+	uint16_t i2c_addr = FM24C_hal.cfg.addr + (bank << 1);
 
 	I2C_set_busy(&FM24C_hal, true);
 

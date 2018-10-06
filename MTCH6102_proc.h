@@ -8,6 +8,10 @@
 #ifndef __MTCH6102_PROC_H__
 	#define __MTCH6102_PROC_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "MTCH6102.h"
 
@@ -25,23 +29,23 @@ extern uint8_t MTCH6102_default_cfg[MTCH__I2CADDR - MTCH__NUMBER_OF_X_CHANNELS +
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-typedef struct MTCH6102_proc {
-	int16_t		min_x;
-	int16_t		max_x;
-	int16_t		min_y;
-	int16_t		max_y;
+typedef struct MTCH6102_t {
+	int16_t			min_x;
+	int16_t			max_x;
+	int16_t			min_y;
+	int16_t			max_y;
 	struct {
-	I2C_slave *	slave_inst;		//!< Slave structure
-	uint8_t		nb_x;
-	uint8_t		nb_y;
-	uint8_t		FW_Major;
-	uint8_t		FW_Minor;
-	uint16_t	APP_ID;
-	bool		Centered;		//!< Centering 0,0 point on the middle of the pad (allowing it's rotation afterwards using MTCH6102_rotate)
+	I2C_slave_t *	slave_inst;		//!< Slave structure
+	uint8_t			nb_x;
+	uint8_t			nb_y;
+	uint8_t			FW_Major;
+	uint8_t			FW_Minor;
+	uint16_t		APP_ID;
+	bool			Centered;		//!< Centering 0,0 point on the middle of the pad (allowing it's rotation afterwards using MTCH6102_rotate)
 	} cfg;
-} MTCH6102_proc;
+} MTCH6102_t;
 
-extern MTCH6102_proc MTCH6102;	//!< MTCH6102 User structure
+extern MTCH6102_t MTCH6102;			//!< MTCH6102 User structure
 
 // *****************************************************************************
 // Section: Interface Routines
@@ -88,6 +92,10 @@ __INLINE void INLINE__ MTCH6102_Set_Centered_Coord(const bool centered) {
 __WEAK FctERR MTCH6102_handler(void);
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif	/* __MTCH6102_PROC_H__ */
 /****************************************************************/

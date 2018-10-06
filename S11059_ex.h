@@ -8,6 +8,10 @@
 #ifndef __S11059_EX_H__
 	#define __S11059_EX_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "S11059.h"
 
@@ -148,6 +152,10 @@ __INLINE FctERR INLINE__ S11059_Get_Clear(uint16_t * ir) {
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __S11059_EX_H__ */
 /****************************************************************/

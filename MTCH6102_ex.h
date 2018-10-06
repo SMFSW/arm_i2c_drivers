@@ -8,6 +8,10 @@
 #ifndef __MTCH6102_EX_H__
 	#define __MTCH6102_EX_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "MTCH6102.h"
 
@@ -198,6 +202,10 @@ __INLINE FctERR INLINE__ MTCH6102_Get_Gest(MTCH6102_raw_gest * gest) {
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif	/* __MTCH6102_EX_H__ */
 /****************************************************************/

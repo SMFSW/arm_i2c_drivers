@@ -8,6 +8,10 @@
 #ifndef __DS_GPMS_EX_H__
 	#define __DS_GPMS_EX_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "DS_GPMS.h"
 
@@ -136,6 +140,10 @@ __INLINE FctERR INLINE__ GPMS_Get_IO_Value(uint8_t * io, uint8_t chan) {
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __DS_GPMS_EX_H__ */
 /****************************************************************/

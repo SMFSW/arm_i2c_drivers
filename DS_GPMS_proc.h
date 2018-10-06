@@ -8,6 +8,10 @@
 #ifndef __DS_GPMS_PROC_H__
 	#define __DS_GPMS_PROC_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "DS_GPMS.h"
 
@@ -52,22 +56,22 @@ typedef struct GPMS_coord {
 } GPMS_coord;
 
 
-typedef struct GPMS_proc {
-	GPMS_date	Date;
-	GPMS_hour	Hour;
-	GPMS_coord	Latitude;
-	GPMS_coord	Longitude;
-	uint16_t	Altitude;
-	float		Speed;
-	float		Heading_True;
-	float		Heading_Magnetic;
+typedef struct GPMS_t {
+	GPMS_date		Date;
+	GPMS_hour		Hour;
+	GPMS_coord		Latitude;
+	GPMS_coord		Longitude;
+	uint16_t		Altitude;
+	float			Speed;
+	float			Heading_True;
+	float			Heading_Magnetic;
 	struct {
-	I2C_slave *	slave_inst;		//!< Slave structure
-	GPMS_mode	Mode;
+	I2C_slave_t *	slave_inst;			//!< Slave structure
+	GPMS_mode		Mode;
 	} cfg;
-} GPMS_proc;
+} GPMS_t;
 
-extern GPMS_proc	GPMS;		//!< GPMS User structure
+extern GPMS_t	GPMS;					//!< GPMS User structure
 
 
 // *****************************************************************************
@@ -105,6 +109,10 @@ FctERR GPMS_Get_Altitude(uint16_t * altitude);
 __WEAK FctERR GPMS_handler(void);
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __DS_GPMS_PROC_H__ */
 /****************************************************************/

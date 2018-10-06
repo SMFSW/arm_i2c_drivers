@@ -11,9 +11,6 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_MB85RC256V)
 /****************************************************************/
-// std libs
-#include <string.h>
-/****************************************************************/
 
 
 #define VAL_CLR	0xFF	//!< Mass erase value for MB85RC256V

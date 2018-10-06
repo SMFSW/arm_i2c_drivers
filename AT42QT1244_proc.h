@@ -8,6 +8,10 @@
 #ifndef __AT42QT1244_PROC_H__
 	#define __AT42QT1244_PROC_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "AT42QT1244.h"
 
@@ -19,16 +23,16 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct AT42QT1244_proc
+/*!\struct AT42QT1244_t
 ** \brief AT42QT1244 user interface struct
 **/
-typedef struct AT42QT1244_proc {
+typedef struct AT42QT1244_t {
 	struct {
-	I2C_slave *	slave_inst;			//!< Slave structure
+	I2C_slave_t *	slave_inst;			//!< Slave structure
 	} cfg;
-} AT42QT1244_proc;
+} AT42QT1244_t;
 
-extern AT42QT1244_proc AT42QT1244;	//!< AT42QT1244 User structure
+extern AT42QT1244_t AT42QT1244;			//!< AT42QT1244 User structure
 
 
 // *****************************************************************************
@@ -73,6 +77,10 @@ __WEAK FctERR AT42QT1244_handler(void);
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __AT42QT1244_PROC_H__ */
 /****************************************************************/

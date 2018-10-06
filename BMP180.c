@@ -13,7 +13,7 @@
 /****************************************************************/
 
 
-I2C_slave BMP180_hal = { { pNull, I2C_ADDR(BMP180_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_HS }, 0, HAL_OK, true, false };
+I2C_slave_t BMP180_hal = { { pNull, I2C_ADDR(BMP180_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_HS }, 0, HAL_OK, true, false };
 
 
 /****************************************************************/

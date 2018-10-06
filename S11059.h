@@ -8,6 +8,10 @@
 #ifndef __S11059_H__
 	#define __S11059_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "I2C_component.h"
 
@@ -26,7 +30,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave S11059_hal;	//!< S11059 Slave structure
+extern I2C_slave_t S11059_hal;	//!< S11059 Slave structure
 
 
 // *****************************************************************************
@@ -165,6 +169,11 @@ FctERR NONNULL__ S11059_Read_Word(uint16_t * data, const uint16_t addr);
 /****************************************************************/
 #include "S11059_ex.h"		// Include extensions
 #include "S11059_proc.h"	// Include procedures
+
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __S11059_H__ */
 /****************************************************************/

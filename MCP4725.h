@@ -8,6 +8,10 @@
 #ifndef __MCP4725_H__
 	#define __MCP4725_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "I2C_component.h"
 
@@ -31,7 +35,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave MCP4725_hal;	//!< MCP4725 Slave structure
+extern I2C_slave_t MCP4725_hal;	//!< MCP4725 Slave structure
 
 
 // *****************************************************************************
@@ -116,6 +120,11 @@ FctERR MCP4725_General_Call(const uint8_t cmd);
 /****************************************************************/
 #include "MCP4725_ex.h"		// Include extensions
 #include "MCP4725_proc.h"	// Include procedures
+
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __MCP4725_H__ */
 /****************************************************************/

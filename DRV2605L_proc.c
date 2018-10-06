@@ -1,4 +1,4 @@
-/*!\file DRV2605L_proc.c
+/*!\file DRV2605L_t.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief DRV2605L Driver procedures
@@ -13,7 +13,7 @@
 /****************************************************************/
 
 
-DRV2605L_proc DRV2605L = { { &DRV2605_hal, DRV__MODE_INTERNAL_TRIGGER, DRV__ACT_ERM, DRV__OPEN_LOOP, DRV__IN_PWM, DRV__RTP_SIGNED, 0 } };
+DRV2605L_t DRV2605L = { { &DRV2605_hal, DRV__MODE_INTERNAL_TRIGGER, DRV__ACT_ERM, DRV__OPEN_LOOP, DRV__IN_PWM, DRV__RTP_SIGNED, 0 } };
 
 
 /****************************************************************/

@@ -8,6 +8,10 @@
 #ifndef __TCS3400_H__
 	#define __TCS3400_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "I2C_component.h"
 
@@ -29,7 +33,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave TCS3400_hal;	//!< TCS3400 Slave structure
+extern I2C_slave_t TCS3400_hal;	//!< TCS3400 Slave structure
 
 
 // *****************************************************************************
@@ -252,6 +256,11 @@ FctERR NONNULL__ TCS3400_Read_Word(uint16_t * data, const uint16_t addr);
 /****************************************************************/
 #include "TCS3400_ex.h"		// Include extensions
 #include "TCS3400_proc.h"	// Include procedures
+
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __TCS3400_H__ */
 /****************************************************************/

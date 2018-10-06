@@ -1,4 +1,4 @@
-/*!\file MTCH6102_proc.c
+/*!\file MTCH6102_t.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief MTCH6102 Driver procedures
@@ -12,11 +12,10 @@
 #if defined(I2C_MTCH6102)
 /****************************************************************/
 // std libs
-#include <string.h>
 #include <math.h>
 /****************************************************************/
 
-MTCH6102_proc MTCH6102 = { 0, 0, 0, 0, { &MTCH6102_hal, 9, 6, 0, 0, 0, false } };
+MTCH6102_t MTCH6102 = { 0, 0, 0, 0, { &MTCH6102_hal, 9, 6, 0, 0, 0, false } };
 
 
 uint8_t MTCH6102_default_core[MTCH__MODE_CON - MTCH__FW_MAJOR + 1] = {

@@ -8,6 +8,10 @@
 #ifndef __TSL2591_PROC_H__
 	#define __TSL2591_PROC_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "TSL2591.h"
 
@@ -33,10 +37,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct TSL2591_proc
+/*!\struct TSL2591_t
 ** \brief TSL2591 user interface struct
 **/
-typedef struct TSL2591_proc {
+typedef struct TSL2591_t {
 	uint16_t		Full;				//!< Current Full spectrum raw value
 	uint16_t		IR;					//!< Current IR raw value
 	uint32_t		Lux;				//!< Current Illuminance (lux)
@@ -45,7 +49,7 @@ typedef struct TSL2591_proc {
 	bool			SaturationRipple;	//!< Current Ripple saturation status (75% of saturation value)
 	bool			Saturation;			//!< Current Sensor saturation status
 	struct {
-	I2C_slave *		slave_inst;			//!< Slave structure
+	I2C_slave_t *	slave_inst;			//!< Slave structure
 	uint32_t		CPkL;				//!< Counts Per kiloLux config
 	float			DER;				//!< Accuracy (+/- DER lux) config
 	TSL2591_gain	Gain;				//!< Sensor gain config
@@ -53,9 +57,9 @@ typedef struct TSL2591_proc {
 	bool			AIEN;				//!< Sensor ALS (Ambient Light Sensing) interrupts enabled config
 	uint8_t			Id;					//!< Chip ID
 	} cfg;
-} TSL2591_proc;
+} TSL2591_t;
 
-extern TSL2591_proc	TSL2591;			//!< TSL2591 User structure
+extern TSL2591_t	TSL2591;			//!< TSL2591 User structure
 
 
 // *****************************************************************************
@@ -93,6 +97,10 @@ __WEAK FctERR TSL2591_handler(void);
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __TSL2591_PROC_H__ */
 /****************************************************************/

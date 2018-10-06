@@ -1,4 +1,4 @@
-/*!\file TCS3400_proc.c
+/*!\file TCS3400_t.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief TCS3400 Driver procedures
@@ -13,11 +13,10 @@
 /****************************************************************/
 // std libs
 #include <math.h>
-#include <string.h>
 /****************************************************************/
 
 
-TCS3400_proc TCS3400 = { 0, 0, 0, 0, 0, 0, 0.0f, 0.0f, false, false, { &TCS3400_hal, TCS3400__LOW_GAIN, 200, 1000, 0x8FF, 0x8FF,  true, true, 0, 0 } };
+TCS3400_t TCS3400 = { 0, 0, 0, 0, 0, 0, 0.0f, 0.0f, false, false, { &TCS3400_hal, TCS3400__LOW_GAIN, 200, 1000, 0x8FF, 0x8FF,  true, true, 0, 0 } };
 
 const uint16_t TCS3400_gain_tab[4] = { 1, 4, 16, 64 };
 

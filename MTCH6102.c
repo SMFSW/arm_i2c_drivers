@@ -11,12 +11,9 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_MTCH6102)
 /****************************************************************/
-// std libs
-#include <string.h>
-/****************************************************************/
 
 
-I2C_slave MTCH6102_hal = { { pNull, I2C_ADDR(MTCH6102_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
+I2C_slave_t MTCH6102_hal = { { pNull, I2C_ADDR(MTCH6102_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
 
 /****************************************************************/

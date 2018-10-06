@@ -8,6 +8,10 @@
 #ifndef __BMP180_EX_H__
 	#define __BMP180_EX_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "BMP180.h"
 
@@ -64,6 +68,10 @@ FctERR BMP180_Get_Pressure_Raw(int32_t * pr);
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __BMP180_EX_H__ */
 /****************************************************************/

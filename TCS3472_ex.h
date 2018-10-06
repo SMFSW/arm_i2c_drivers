@@ -8,6 +8,10 @@
 #ifndef __TCS3472_EX_H__
 	#define __TCS3472_EX_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "TCS3472.h"
 
@@ -228,6 +232,10 @@ __INLINE FctERR INLINE__ TCS3472_Get_Blue(uint16_t * b) {
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __TCS3472_EX_H__ */
 /****************************************************************/

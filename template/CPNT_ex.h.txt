@@ -8,6 +8,10 @@
 #ifndef __$CPNT$_EX_H__
 	#define __$CPNT$_EX_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "$CPNT$.h"
 
@@ -68,6 +72,10 @@ FctERR $CPNT$_fct(void);
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __$CPNT$_EX_H__ */
 /****************************************************************/

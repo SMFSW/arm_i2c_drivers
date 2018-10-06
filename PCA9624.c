@@ -17,7 +17,7 @@
 /****************************************************************/
 
 
-I2C_slave PCA9624_hal = { { pNull, I2C_ADDR(PCA9624_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FMP }, 0, HAL_OK, true, false };
+I2C_slave_t PCA9624_hal = { { pNull, I2C_ADDR(PCA9624_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FMP }, 0, HAL_OK, true, false };
 
 
 /****************************************************************/

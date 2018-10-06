@@ -8,6 +8,10 @@
 #ifndef __PCF8523_EX_H__
 	#define __PCF8523_EX_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "PCF8523.h"
 
@@ -118,6 +122,10 @@ FctERR PCF8523_Check_Clock_Integrity(bool * integrity);
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __PCF8523_EX_H__ */
 /****************************************************************/

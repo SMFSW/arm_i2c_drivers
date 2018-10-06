@@ -8,6 +8,10 @@
 #ifndef __MCP4725_PROC_H__
 	#define __MCP4725_PROC_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "MCP4725.h"
 
@@ -18,21 +22,21 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct MCP4725_proc
+/*!\struct MCP4725_t
 ** \brief MCP4725 user interface struct
 **/
-typedef struct MCP4725_proc {
-	uint16_t	DAC_4096;		//!< DAC output value (12bits)
-	float		DAC_Volts;		//!< DAC output in Volts
+typedef struct MCP4725_t {
+	uint16_t		DAC_4096;		//!< DAC output value (12bits)
+	float			DAC_Volts;		//!< DAC output in Volts
 	struct {
-	I2C_slave *	slave_inst;		//!< Slave structure
-	MCP4725_cmd	Mode;			//!< Write commands mode config
-	MCP4725_pd	PowerDown;		//!< Power down mode config
-	float		VRef;			//!< Voltage reference config
+	I2C_slave_t *	slave_inst;		//!< Slave structure
+	MCP4725_cmd		Mode;			//!< Write commands mode config
+	MCP4725_pd		PowerDown;		//!< Power down mode config
+	float			VRef;			//!< Voltage reference config
 	} cfg;
-} MCP4725_proc;
+} MCP4725_t;
 
-extern MCP4725_proc	MCP4725;	//!< MCP4725 User structure
+extern MCP4725_t	MCP4725;		//!< MCP4725 User structure
 
 
 // *****************************************************************************
@@ -82,6 +86,10 @@ FctERR MCP4725_Set_Volts(const float volts);
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __MCP4725_PROC_H__ */
 /****************************************************************/

@@ -1,4 +1,4 @@
-/*!\file S11059_proc.c
+/*!\file S11059_t.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief S11059 Driver procedures
@@ -13,7 +13,7 @@
 /****************************************************************/
 
 
-S11059_proc S11059 = { 0, 0, 0, 0, 0, { &S11059_hal, 0, S11059__INTEG_22_4MS, 0, S11059__FIXED_PERIOD_INTEGRATION, S11059__LOW_GAIN, S11059__OPERATING_MODE, S11059__ADC_OPERATION } };
+S11059_t S11059 = { 0, 0, 0, 0, 0, { &S11059_hal, 0, S11059__INTEG_22_4MS, 0, S11059__FIXED_PERIOD_INTEGRATION, S11059__LOW_GAIN, S11059__OPERATING_MODE, S11059__ADC_OPERATION } };
 
 static float S11059_Integ_tab[4] = { 87.5f, 1400.0f, 22400.0f, 179200.0f };		//!< S11059 integration time table (in us)
 

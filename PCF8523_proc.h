@@ -8,6 +8,10 @@
 #ifndef __PCF8523_PROC_H__
 	#define __PCF8523_PROC_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "PCF8523.h"
 
@@ -44,18 +48,18 @@ typedef struct PCF8523_time {
 } PCF8523_time;
 
 
-typedef struct PCF8523_proc {
+typedef struct PCF8523_t {
 	PCF8523_date	date;
 	PCF8523_time	time;
 	struct {
-	I2C_slave *		slave_inst;		//!< Slave structure
+	I2C_slave_t *	slave_inst;		//!< Slave structure
 	uint8_t			Src_Clock_A;
 	uint8_t			Src_Clock_B;
 	bool			Hour_Format;	//!< 0: 24h; 1: 12h
 	} cfg;
-} PCF8523_proc;
+} PCF8523_t;
 
-extern PCF8523_proc	PCF8523;		//!< PCF8523 User structure
+extern PCF8523_t	PCF8523;		//!< PCF8523 User structure
 
 
 // *****************************************************************************
@@ -92,6 +96,10 @@ __WEAK FctERR PCF8523_handler(void);
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __PCF8523_PROC_H__ */
 /****************************************************************/

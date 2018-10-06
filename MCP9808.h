@@ -8,6 +8,10 @@
 #ifndef __MCP9808_H__
 	#define __MCP9808_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "I2C_component.h"
 
@@ -26,7 +30,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave MCP9808_hal;	//!< MCP9808 Slave structure
+extern I2C_slave_t MCP9808_hal;	//!< MCP9808 Slave structure
 
 
 // *****************************************************************************
@@ -161,6 +165,11 @@ FctERR NONNULL__ MCP9808_Read(uint16_t * data, const uint16_t addr, const uint16
 /****************************************************************/
 #include "MCP9808_ex.h"		// Include extensions
 #include "MCP9808_proc.h"	// Include procedures
+
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __MCP9808_H__ */
 /****************************************************************/

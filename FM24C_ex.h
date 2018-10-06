@@ -9,6 +9,10 @@
 #ifndef __FM24C_EX_H__
 	#define __FM24C_EX_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "FM24C.h"
 
@@ -37,6 +41,10 @@ FctERR FM24C_Mass_Erase(void);
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __FM24C_EX_H__ */
 /****************************************************************/

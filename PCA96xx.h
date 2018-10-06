@@ -7,6 +7,10 @@
 #ifndef __PCA96XX_H__
 	#define __PCA96XX_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
@@ -61,6 +65,10 @@ typedef enum PACK__ PCA96xx_latchs {
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif	/* __PCA96XX_H__ */
 /****************************************************************/

@@ -1,4 +1,4 @@
-/*!\file DRV2605L.h
+/*!\file DRV2605L_proc.h
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief DRV2605L Driver procedures
@@ -7,6 +7,10 @@
 /****************************************************************/
 #ifndef __DRV2605L_PROC_H__
 	#define __DRV2605L_PROC_H__
+
+#ifdef __cplusplus
+	extern "C" {
+#endif
 
 #include "sarmfsw.h"
 #include "DRV2605L.h"
@@ -27,12 +31,12 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct DRV2605L_proc
+/*!\struct DRV2605L_t
 ** \brief DRV2605L user interface struct
 **/
-typedef struct DRV2605L_proc {
+typedef struct DRV2605L_t {
 	struct {
-	I2C_slave *			slave_inst;	//!< Slave structure
+	I2C_slave_t *		slave_inst;	//!< Slave structure
 	DRV2605L_mode		Mode;		//!< Current haptic driver mode
 	DRV2605L_act		ERM_LRA;	//!< Current haptic actuator type
 	DRV2605L_loop		Open_Loop;	//!< Current loop type (0 closed loop / auto resonance, 1 open)
@@ -40,9 +44,9 @@ typedef struct DRV2605L_proc {
 	DRV2605L_rtp_format	RTP_Format;	//!< Current Real Time Playback format
 	uint8_t				Id;			//!< Chip ID
 	} cfg;
-} DRV2605L_proc;
+} DRV2605L_t;
 
-extern DRV2605L_proc	DRV2605L;	//!< DRV2605L User structure
+extern DRV2605L_t	DRV2605L;		//!< DRV2605L User structure
 
 
 // *****************************************************************************
@@ -66,6 +70,10 @@ FctERR DRV2605L_Auto_Calib(void);
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __DRV2605L_PROC_H__ */
 /****************************************************************/

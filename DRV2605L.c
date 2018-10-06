@@ -13,7 +13,7 @@
 /****************************************************************/
 
 
-I2C_slave DRV2605_hal = { { pNull, I2C_ADDR(DRV2605L_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
+I2C_slave_t DRV2605_hal = { { pNull, I2C_ADDR(DRV2605L_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
 
 /****************************************************************/

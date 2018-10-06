@@ -1,4 +1,4 @@
-/*!\file TCS3472_proc.c
+/*!\file TCS3472_t.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief TCS3472 Driver procedures
@@ -13,11 +13,10 @@
 /****************************************************************/
 // std libs
 #include <math.h>
-#include <string.h>
 /****************************************************************/
 
 
-TCS3472_proc TCS3472 = { 0, 0, 0, 0, 0, 0, 0.0f, 0.0f, false, false, { &TCS3472_hal, TCS3472__LOW_GAIN, 200, 1000, 0x8FF, 0x8FF, true, true, 0 } };
+TCS3472_t TCS3472 = { 0, 0, 0, 0, 0, 0, 0.0f, 0.0f, false, false, { &TCS3472_hal, TCS3472__LOW_GAIN, 200, 1000, 0x8FF, 0x8FF, true, true, 0 } };
 
 const uint16_t TCS3472_gain_tab[4] = { 1, 4, 16, 60 };
 

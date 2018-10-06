@@ -8,6 +8,10 @@
 #ifndef __PCA9624_PROC_H__
 	#define __PCA9624_PROC_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "PCA9624.h"
 
@@ -18,16 +22,16 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct PCA9624_proc
+/*!\struct PCA9624_t
 ** \brief PCA9624 user interface struct
 **/
-typedef struct PCA9624_proc {
+typedef struct PCA9624_t {
 	struct {
-	I2C_slave *	slave_inst;		//!< Slave structure
+	I2C_slave_t *	slave_inst;		//!< Slave structure
 	} cfg;
-} PCA9624_proc;
+} PCA9624_t;
 
-extern PCA9624_proc	PCA9624;	//!< PCA9624 User structure
+extern PCA9624_t	PCA9624;		//!< PCA9624 User structure
 
 
 // *****************************************************************************
@@ -44,6 +48,10 @@ extern PCA9624_proc	PCA9624;	//!< PCA9624 User structure
 __WEAK FctERR PCA9624_Init_Sequence(void);
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif	/* __PCA9624_PROC_H__ */
 /****************************************************************/

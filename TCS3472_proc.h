@@ -8,6 +8,10 @@
 #ifndef __TCS3472_PROC_H__
 	#define __TCS3472_PROC_H__
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 #include "sarmfsw.h"
 #include "TCS3472.h"
 
@@ -32,10 +36,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct TCS3472_proc
+/*!\struct TCS3472_t
 ** \brief TCS3472 user interface struct
 **/
-typedef struct TCS3472_proc {
+typedef struct TCS3472_t {
 	uint16_t		Red;				//!< Current Red conversion
 	uint16_t		Green;				//!< Current Green conversion
 	uint16_t		Blue;				//!< Current Blue conversion
@@ -47,7 +51,7 @@ typedef struct TCS3472_proc {
 	bool			SaturationRipple;	//!< Current Ripple saturation status (75% of saturation value)
 	bool			Saturation;			//!< Current Sensor saturation status
 	struct {
-	I2C_slave *		slave_inst;			//!< Slave structure
+	I2C_slave_t *	slave_inst;			//!< Slave structure
 	TCS3472_gain	Gain;				//!< Sensor gain config
 	uint16_t		Integ;				//!< Sensor integration time config
 	uint16_t		Wait;				//!< Sensor wait time config
@@ -57,9 +61,9 @@ typedef struct TCS3472_proc {
 	bool			WEN;				//!< Wait between ALS conversions enabled config
 	uint8_t			Id;					//!< Chip ID
 	} cfg;
-} TCS3472_proc;
+} TCS3472_t;
 
-extern TCS3472_proc TCS3472;			//!< TCSL3472 User structure
+extern TCS3472_t TCS3472;				//!< TCSL3472 User structure
 
 
 // *****************************************************************************
@@ -95,6 +99,10 @@ __WEAK FctERR TCS3472_handler(void);
 
 
 /****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
 #endif
 #endif /* __TCS3472_PROC_H__ */
 /****************************************************************/

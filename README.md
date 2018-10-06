@@ -128,7 +128,7 @@ You may also:
 
 ## TODO
 
-- Compatibility handling multiple identical components
+- Compatibility handling multiple identical components (tested define set to 1 if not def if not already set into project)
 - FreeRTOS compatibility using R/W functions using interrupts with callbacks
 
 ## Misc
