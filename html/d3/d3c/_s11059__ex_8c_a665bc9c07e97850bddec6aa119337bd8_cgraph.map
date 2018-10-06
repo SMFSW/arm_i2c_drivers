@@ -1,8 +1,8 @@
 <map id="S11059_Set_Gain" name="S11059_Set_Gain">
 <area shape="rect" id="node2" href="$d2/dfe/_s11059_8c.html#ad2d693c56dc5ad28c1bcad7971b19838" title="I2C Read function for S11059. " alt="" coords="588,150,692,176"/>
 <area shape="rect" id="node5" href="$d9/da9/_s11059__ex_8h.html#acdac3ca006ab290ce4ae10742130fb4d" title="Write S11059 Control register. " alt="" coords="181,146,309,172"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="912,195,1024,222"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="917,264,1019,291"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="912,195,1024,222"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="917,264,1019,291"/>
 <area shape="rect" id="node6" href="$d2/dfe/_s11059_8c.html#a2f2b5c49457f907586695564edef70fe" title="I2C Write function for S11059. " alt="" coords="760,295,864,322"/>
 <area shape="rect" id="node7" href="$d9/da9/_s11059__ex_8h.html#a500036248a3c9996b51ebc22450ccd19" title="ADC Operation / Reset. " alt="" coords="374,44,503,71"/>
 <area shape="rect" id="node8" href="$d9/da9/_s11059__ex_8h.html#aef6de1a8c85c148176bfd07aced2da9b" title="Set Standby / Operating mode. " alt="" coords="365,95,513,122"/>

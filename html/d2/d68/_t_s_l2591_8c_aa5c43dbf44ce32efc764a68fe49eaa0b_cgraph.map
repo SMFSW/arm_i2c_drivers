@@ -1,7 +1,7 @@
 <map id="TSL2591_Init" name="TSL2591_Init">
-<area shape="rect" id="node2" href="$d7/d97/_i2_c__component_8c.html#a0156af69fdc6459a92678bdb7d6300ab" title="I2C Slave device initialization. " alt="" coords="182,107,287,133"/>
+<area shape="rect" id="node2" href="$d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="182,107,287,133"/>
 <area shape="rect" id="node3" href="$db/dba/_t_s_l2591__proc_8c.html#ae70e987b630354203c40e8626b73950b" title="Initialization Sequence for TSL2591 peripheral. " alt="" coords="153,157,317,184"/>
-<area shape="rect" id="node20" href="$d6/dd6/_i2_c__component_8h.html#a4aab6d6150d927201a556fea510a104c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="178,208,291,235"/>
+<area shape="rect" id="node20" href="$d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="178,208,291,235"/>
 <area shape="rect" id="node4" href="$dc/d24/_t_s_l2591__ex_8h.html#a56644b59c7eb6694dd99873d7a101757" title="Get TSL2591 chip ID. " alt="" coords="366,309,517,336"/>
 <area shape="rect" id="node8" href="$dc/d24/_t_s_l2591__ex_8h.html#a58b86a0ac68b049971bf0834aabd7c91" title="Write TSL2591 Enable register. " alt="" coords="819,309,954,336"/>
 <area shape="rect" id="node10" href="$dc/d24/_t_s_l2591__ex_8h.html#ac1113d9534b40f5093e2678134dc060d" title="Write TSL2591 Config. " alt="" coords="371,208,511,235"/>
@@ -9,8 +9,8 @@
 <area shape="rect" id="node17" href="$dc/d24/_t_s_l2591__ex_8h.html#ab1b84615a6ab3186650cee27b10cf911" title="ALS interrupt low threshold configuration. " alt="" coords="373,5,509,32"/>
 <area shape="rect" id="node19" href="$dc/d24/_t_s_l2591__ex_8h.html#a624dd44a05e5e6a3be2087987707c5a1" title="ALS interrupt high threshold configuration. " alt="" coords="372,56,511,83"/>
 <area shape="rect" id="node5" href="$d2/d68/_t_s_l2591_8c.html#a8ca44c4d37228b9136168ee2bab22880" title="I2C Read function for TSL2591. " alt="" coords="831,259,943,285"/>
-<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="1163,183,1275,209"/>
-<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="1167,233,1270,260"/>
+<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1163,183,1275,209"/>
+<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1167,233,1270,260"/>
 <area shape="rect" id="node9" href="$d2/d68/_t_s_l2591_8c.html#a3d9fd710dcb7c1c55ac8e3e50d2d2d89" title="I2C Write function for TSL2591. " alt="" coords="1003,157,1115,184"/>
 <area shape="rect" id="node11" href="$dc/d24/_t_s_l2591__ex_8h.html#ae2c53653525cafb839072265649cd4ce" title="Oscillator Enable / Disable. " alt="" coords="599,259,737,285"/>
 <area shape="rect" id="node12" href="$dc/d24/_t_s_l2591__ex_8h.html#a1dd2d9682015cdcc486ec70f8e4e864f" title="ALS module Enable / Disable. " alt="" coords="600,309,736,336"/>

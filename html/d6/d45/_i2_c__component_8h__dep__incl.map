@@ -3,7 +3,7 @@
 <area shape="rect" id="node8" href="$d3/d7d/_b_m_p180_8h.html" title="BMP180 Driver. " alt="" coords="1031,80,1112,107"/>
 <area shape="rect" id="node14" href="$d5/d47/_d_r_v2605_l_8h.html" title="DRV2605L Driver. " alt="" coords="1701,80,1797,107"/>
 <area shape="rect" id="node20" href="$dd/d26/_d_s___g_p_m_s_8h.html" title="DS&#45;GPM.S Driver. " alt="" coords="2416,80,2515,107"/>
-<area shape="rect" id="node26" href="$d5/d3b/_f_m24_c_8h.html" title="FM24C Driver. " alt="" coords="3022,80,3097,107"/>
+<area shape="rect" id="node26" href="$d5/d3b/_f_m24_c_8h.html" title="FM24C Driver. " alt="" coords="2962,80,3037,107"/>
 <area shape="rect" id="node30" href="$d7/d97/_i2_c__component_8c.html" title="Base I2C component. " alt="" coords="3365,80,3491,107"/>
 <area shape="rect" id="node31" href="$d7/d3b/_m_b85_r_c256_v_8h.html" title="MB85RC256V Driver. " alt="" coords="3515,80,3631,107"/>
 <area shape="rect" id="node37" href="$df/d9f/_m_c_p4725_8h.html" title="MCP4725 Driver. " alt="" coords="3656,80,3747,107"/>
@@ -20,30 +20,30 @@
 <area shape="rect" id="node4" href="$df/de4/_a_t42_q_t1244__ex_8h.html" title="AT42QT1244 Driver extensions. " alt="" coords="140,155,269,181"/>
 <area shape="rect" id="node5" href="$d4/d47/_a_t42_q_t1244__proc_8h.html" title="AT42QT1244 Driver procedures. " alt="" coords="294,155,436,181"/>
 <area shape="rect" id="node6" href="$df/d72/_a_t42_q_t1244__ex_8c.html" title="AT42QT1244 Driver extensions. " alt="" coords="460,155,589,181"/>
-<area shape="rect" id="node7" href="$dd/de3/_a_t42_q_t1244__proc_8c.html" title="AT42QT1244 Driver procedures. " alt="" coords="614,155,756,181"/>
+<area shape="rect" id="node7" href="$dd/de3/_a_t42_q_t1244__proc_8c.html" title="AT42QT1244_proc.c" alt="" coords="614,155,756,181"/>
 <area shape="rect" id="node9" href="$d8/d11/_b_m_p180_8c.html" title="BMP180 Driver. " alt="" coords="780,155,861,181"/>
 <area shape="rect" id="node10" href="$d8/dfb/_b_m_p180__ex_8h.html" title="BMP180 Driver extensions. " alt="" coords="887,155,991,181"/>
 <area shape="rect" id="node11" href="$dc/d50/_b_m_p180__proc_8h.html" title="BMP180 Driver procedures. " alt="" coords="1015,155,1129,181"/>
 <area shape="rect" id="node12" href="$db/d0e/_b_m_p180__ex_8c.html" title="BMP180 Driver extensions. " alt="" coords="1153,155,1257,181"/>
-<area shape="rect" id="node13" href="$d0/d35/_b_m_p180__proc_8c.html" title="BMP180 Driver procedures. " alt="" coords="1281,155,1396,181"/>
+<area shape="rect" id="node13" href="$d0/d35/_b_m_p180__proc_8c.html" title="BMP180_proc.c" alt="" coords="1281,155,1396,181"/>
 <area shape="rect" id="node15" href="$dc/d9a/_d_r_v2605_l_8c.html" title="DRV2605L Driver. " alt="" coords="1421,155,1517,181"/>
 <area shape="rect" id="node16" href="$df/dbb/_d_r_v2605_l__ex_8h.html" title="DRV2605L_ex.h" alt="" coords="1542,155,1660,181"/>
-<area shape="rect" id="node17" href="$d1/da7/_d_r_v2605_l__proc_8h.html" title="DRV2605L_proc.h" alt="" coords="1685,155,1813,181"/>
+<area shape="rect" id="node17" href="$d1/da7/_d_r_v2605_l__proc_8h.html" title="DRV2605L Driver procedures. " alt="" coords="1685,155,1813,181"/>
 <area shape="rect" id="node18" href="$da/d07/_d_r_v2605_l__ex_8c.html" title="DRV2605L Driver extensions. " alt="" coords="1838,155,1956,181"/>
-<area shape="rect" id="node19" href="$df/dc7/_d_r_v2605_l__proc_8c.html" title="DRV2605L Driver procedures. " alt="" coords="1981,155,2109,181"/>
+<area shape="rect" id="node19" href="$df/dc7/_d_r_v2605_l__proc_8c.html" title="DRV2605L_proc.c" alt="" coords="1981,155,2109,181"/>
 <area shape="rect" id="node21" href="$db/d9a/_d_s___g_p_m_s_8c.html" title="DS&#45;GPM.S Driver. " alt="" coords="2135,155,2233,181"/>
 <area shape="rect" id="node22" href="$da/d4d/_d_s___g_p_m_s__ex_8h.html" title="DS&#45;GPM.S Driver extensions. " alt="" coords="2258,155,2376,181"/>
 <area shape="rect" id="node23" href="$de/d15/_d_s___g_p_m_s__proc_8h.html" title="DS&#45;GPM.S Driver procedures. " alt="" coords="2400,155,2529,181"/>
 <area shape="rect" id="node24" href="$df/df0/_d_s___g_p_m_s__ex_8c.html" title="DS&#45;GPM.S Driver extensions. " alt="" coords="2554,155,2672,181"/>
-<area shape="rect" id="node25" href="$dd/d17/_d_s___g_p_m_s__proc_8c.html" title="DS&#45;GPM.S Driver procedures. " alt="" coords="2696,155,2825,181"/>
+<area shape="rect" id="node25" href="$dd/d17/_d_s___g_p_m_s__proc_8c.html" title="DS_GPMS_proc.c" alt="" coords="2696,155,2825,181"/>
 <area shape="rect" id="node27" href="$da/d47/_f_m24_c_8c.html" title="FM24C Driver. " alt="" coords="2851,155,2927,181"/>
-<area shape="rect" id="node28" href="$d2/d07/_f_m24_c__ex_8c.html" title="FM24C Driver extensions. " alt="" coords="2951,155,3048,181"/>
-<area shape="rect" id="node29" href="$de/d95/_f_m24_c__ex_8h.html" title="FM24C Driver extensions. " alt="" coords="3073,155,3169,181"/>
+<area shape="rect" id="node28" href="$de/d95/_f_m24_c__ex_8h.html" title="FM24C Driver extensions. " alt="" coords="2951,155,3048,181"/>
+<area shape="rect" id="node29" href="$d2/d07/_f_m24_c__ex_8c.html" title="FM24C Driver extensions. " alt="" coords="3073,155,3169,181"/>
 <area shape="rect" id="node32" href="$d1/dc0/_m_b85_r_c256_v_8c.html" title="MB85RC256V Driver. " alt="" coords="3195,155,3311,181"/>
 <area shape="rect" id="node33" href="$d5/d5f/_m_b85_r_c256_v__ex_8h.html" title="MB85RC256V Driver extensions. " alt="" coords="3336,155,3475,181"/>
 <area shape="rect" id="node34" href="$da/dc5/_m_b85_r_c256_v__proc_8h.html" title="MB85RC256V Driver procedures. " alt="" coords="3499,155,3647,181"/>
 <area shape="rect" id="node35" href="$d0/d72/_m_b85_r_c256_v__ex_8c.html" title="MB85RC256V Driver extensions. " alt="" coords="3672,155,3811,181"/>
-<area shape="rect" id="node36" href="$d4/dc8/_m_b85_r_c256_v__proc_8c.html" title="MB85RC256V Driver procedures. " alt="" coords="3835,155,3983,181"/>
+<area shape="rect" id="node36" href="$d4/dc8/_m_b85_r_c256_v__proc_8c.html" title="MB85RC256V_proc.c" alt="" coords="3835,155,3983,181"/>
 <area shape="rect" id="node38" href="$d9/d93/_m_c_p4725_8c.html" title="MCP4725 Driver. " alt="" coords="4008,155,4099,181"/>
 <area shape="rect" id="node39" href="$d1/d41/_m_c_p4725__ex_8h.html" title="MCP4725 Driver extensions. " alt="" coords="4123,155,4233,181"/>
 <area shape="rect" id="node40" href="$d4/d96/_m_c_p4725__proc_8h.html" title="MCP4725 Driver procedures. " alt="" coords="4259,155,4381,181"/>

@@ -67,22 +67,18 @@ $(function() {
 <div class="title">TCS3400_proc.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>TCS3400 Driver procedures.  
-<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d9/d51/_t_c_s3400_8h_source.html">TCS3400.h</a>&quot;</code><br />
 <code>#include &quot;globals.h&quot;</code><br />
 <code>#include &lt;math.h&gt;</code><br />
-<code>#include &lt;string.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for TCS3400_proc.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d8/d50/_t_c_s3400__proc_8c__incl.png" border="0" usemap="#_t_c_s3400__proc_8c" alt=""/></div>
 <map name="_t_c_s3400__proc_8c" id="_t_c_s3400__proc_8c">
-<area shape="rect" id="node2" href="../../d9/d51/_t_c_s3400_8h.html" title="TCS3400 Driver. " alt="" coords="185,80,273,107"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="25,155,150,181"/>
-<area shape="rect" id="node5" href="../../de/d36/_t_c_s3400__ex_8h.html" title="TCS3400 Driver extensions. " alt="" coords="174,155,283,181"/>
-<area shape="rect" id="node6" href="../../d9/d14/_t_c_s3400__proc_8h.html" title="TCS3400 Driver procedures. " alt="" coords="307,155,427,181"/>
+<area shape="rect" id="node2" href="../../d9/d51/_t_c_s3400_8h.html" title="TCS3400 Driver. " alt="" coords="103,80,191,107"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="301,155,426,181"/>
+<area shape="rect" id="node6" href="../../de/d36/_t_c_s3400__ex_8h.html" title="TCS3400 Driver extensions. " alt="" coords="23,155,133,181"/>
+<area shape="rect" id="node7" href="../../d9/d14/_t_c_s3400__proc_8h.html" title="TCS3400 Driver procedures. " alt="" coords="157,155,277,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -103,18 +99,13 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:afa7354cdc282d978be66f28b055506a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db1/struct_t_c_s3400__proc.html">TCS3400_proc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dd9/_t_c_s3400__proc_8c.html#afa7354cdc282d978be66f28b055506a4">TCS3400</a> = { 0, 0, 0, 0, 0, 0, 0.0f, 0.0f, false, false, { &amp;TCS3400_hal, TCS3400__LOW_GAIN, 200, 1000, 0x8FF, 0x8FF, true, true, 0, 0 } }</td></tr>
-<tr class="memdesc:afa7354cdc282d978be66f28b055506a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCS34000 User structure.  <a href="#afa7354cdc282d978be66f28b055506a4">More...</a><br /></td></tr>
-<tr class="separator:afa7354cdc282d978be66f28b055506a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae65984d53f3115ce73b76930ba3af716"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d18/struct_t_c_s3400__t.html">TCS3400_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dd9/_t_c_s3400__proc_8c.html#ae65984d53f3115ce73b76930ba3af716">TCS3400</a> = { 0, 0, 0, 0, 0, 0, 0.0f, 0.0f, false, false, { &amp;TCS3400_hal, TCS3400__LOW_GAIN, 200, 1000, 0x8FF, 0x8FF, true, true, 0, 0 } }</td></tr>
+<tr class="memdesc:ae65984d53f3115ce73b76930ba3af716"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCS34000 User structure.  <a href="#ae65984d53f3115ce73b76930ba3af716">More...</a><br /></td></tr>
+<tr class="separator:ae65984d53f3115ce73b76930ba3af716"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bed4427fff9b4f254a75855d422af93"><td class="memItemLeft" align="right" valign="top">const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dd9/_t_c_s3400__proc_8c.html#a0bed4427fff9b4f254a75855d422af93">TCS3400_gain_tab</a> [4] = { 1, 4, 16, 64 }</td></tr>
 <tr class="separator:a0bed4427fff9b4f254a75855d422af93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>TCS3400 Driver procedures. </p>
-<dl class="section author"><dt>Author</dt><dd>SMFSW </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2018, SMFSW</dd></dl>
-<p>TCS3400: Color Light-to-Digital Converter </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="a5039aa3df5818b43a24cd36380922fa9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5039aa3df5818b43a24cd36380922fa9">&#9670;&nbsp;</a></span>TCS3400_Get_Lux()</h2>
 
@@ -185,8 +176,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../dc/dd9/_t_c_s3400__proc_8c_a8d59cfdf57e0cba7317660f53aa2a28b_cgraph.png" border="0" usemap="#dc/dd9/_t_c_s3400__proc_8c_a8d59cfdf57e0cba7317660f53aa2a28b_cgraph" alt=""/></div>
 <map name="dc/dd9/_t_c_s3400__proc_8c_a8d59cfdf57e0cba7317660f53aa2a28b_cgraph" id="dc/dd9/_t_c_s3400__proc_8c_a8d59cfdf57e0cba7317660f53aa2a28b_cgraph">
 <area shape="rect" id="node2" href="../../d4/d1b/_t_c_s3400_8c.html#a2d42097eccd54d872980c2dbf7bd11a0" title="I2C Read function for TCS3400. " alt="" coords="181,31,296,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="344,5,456,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="349,56,451,83"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="344,5,456,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="349,56,451,83"/>
 </map>
 </div>
 
@@ -225,8 +216,8 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node14" href="../../de/d36/_t_c_s3400__ex_8h.html#ad178e95e9fa9e65ef8bc7d4f35132333" title="ALS interrupt low threshold configuration. " alt="" coords="256,208,395,235"/>
 <area shape="rect" id="node16" href="../../de/d36/_t_c_s3400__ex_8h.html#acc6ba6d13e1b38a99948a8fc330e4ade" title="ALS interrupt high threshold configuration. " alt="" coords="254,259,397,285"/>
 <area shape="rect" id="node3" href="../../d4/d1b/_t_c_s3400_8c.html#a2d42097eccd54d872980c2dbf7bd11a0" title="I2C Read function for TCS3400. " alt="" coords="693,132,808,159"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="856,164,968,191"/>
-<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="861,227,963,253"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="856,164,968,191"/>
+<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="861,227,963,253"/>
 <area shape="rect" id="node7" href="../../de/d36/_t_c_s3400__ex_8h.html#a88c962a57e5826256fb8d3a651258ae6" title="Get All channels conversions. " alt="" coords="478,56,645,83"/>
 <area shape="rect" id="node9" href="../../d4/d1b/_t_c_s3400_8c.html#a421cf6447cb06d3c09ec6c687240c0a8" title="I2C Write function for TCS3400. " alt="" coords="693,252,808,279"/>
 <area shape="rect" id="node13" href="../../de/d36/_t_c_s3400__ex_8h.html#aa71c9ad372082b04444d7d956a1742b7" title="Write TCS3400 Config register. " alt="" coords="490,309,633,336"/>
@@ -245,14 +236,14 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="afa7354cdc282d978be66f28b055506a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa7354cdc282d978be66f28b055506a4">&#9670;&nbsp;</a></span>TCS3400</h2>
+<a id="ae65984d53f3115ce73b76930ba3af716"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae65984d53f3115ce73b76930ba3af716">&#9670;&nbsp;</a></span>TCS3400</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d9/db1/struct_t_c_s3400__proc.html">TCS3400_proc</a> TCS3400 = { 0, 0, 0, 0, 0, 0, 0.0f, 0.0f, false, false, { &amp;TCS3400_hal, TCS3400__LOW_GAIN, 200, 1000, 0x8FF, 0x8FF, true, true, 0, 0 } }</td>
+          <td class="memname"><a class="el" href="../../d3/d18/struct_t_c_s3400__t.html">TCS3400_t</a> TCS3400 = { 0, 0, 0, 0, 0, 0, 0.0f, 0.0f, false, false, { &amp;TCS3400_hal, TCS3400__LOW_GAIN, 200, 1000, 0x8FF, 0x8FF, true, true, 0, 0 } }</td>
         </tr>
       </table>
 </div><div class="memdoc">

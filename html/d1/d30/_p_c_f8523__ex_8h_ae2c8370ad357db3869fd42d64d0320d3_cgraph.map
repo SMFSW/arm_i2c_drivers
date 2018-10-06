@@ -1,6 +1,6 @@
 <map id="PCF8523_Get_Time_Raw" name="PCF8523_Get_Time_Raw">
 <area shape="rect" id="node2" href="$df/d5b/_p_c_f8523_8c.html#a58750b10a6bd6458855b5316af84fb5e" title="I2C Read function for PCF8523 peripheral. " alt="" coords="440,31,555,57"/>
 <area shape="rect" id="node5" href="$d1/d30/_p_c_f8523__ex_8h.html#a2e5406b189e51d2f1929201d8ce73b99" title="PCF8523_Check_Clock\l_Integrity" alt="" coords="229,53,392,94"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="603,5,715,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="607,56,710,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="603,5,715,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="607,56,710,83"/>
 </map>

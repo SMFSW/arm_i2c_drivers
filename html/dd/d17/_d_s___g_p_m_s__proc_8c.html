@@ -67,21 +67,17 @@ $(function() {
 <div class="title">DS_GPMS_proc.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>DS-GPM.S Driver procedures.  
-<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="../../dd/d26/_d_s___g_p_m_s_8h_source.html">DS_GPMS.h</a>&quot;</code><br />
 <code>#include &quot;globals.h&quot;</code><br />
-<code>#include &lt;string.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for DS_GPMS_proc.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/dec/_d_s___g_p_m_s__proc_8c__incl.png" border="0" usemap="#_d_s___g_p_m_s__proc_8c" alt=""/></div>
 <map name="_d_s___g_p_m_s__proc_8c" id="_d_s___g_p_m_s__proc_8c">
-<area shape="rect" id="node2" href="../../dd/d26/_d_s___g_p_m_s_8h.html" title="DS&#45;GPM.S Driver. " alt="" coords="185,80,284,107"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="25,155,150,181"/>
-<area shape="rect" id="node5" href="../../da/d4d/_d_s___g_p_m_s__ex_8h.html" title="DS&#45;GPM.S Driver extensions. " alt="" coords="175,155,293,181"/>
-<area shape="rect" id="node6" href="../../de/d15/_d_s___g_p_m_s__proc_8h.html" title="DS&#45;GPM.S Driver procedures. " alt="" coords="317,155,446,181"/>
+<area shape="rect" id="node2" href="../../dd/d26/_d_s___g_p_m_s_8h.html" title="DS&#45;GPM.S Driver. " alt="" coords="108,80,206,107"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="321,155,446,181"/>
+<area shape="rect" id="node6" href="../../da/d4d/_d_s___g_p_m_s__ex_8h.html" title="DS&#45;GPM.S Driver extensions. " alt="" coords="24,155,142,181"/>
+<area shape="rect" id="node7" href="../../de/d15/_d_s___g_p_m_s__proc_8h.html" title="DS&#45;GPM.S Driver procedures. " alt="" coords="166,155,296,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -110,16 +106,11 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a7946704b3ef744982acde41e940088ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d52/struct_g_p_m_s__proc.html">GPMS_proc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d17/_d_s___g_p_m_s__proc_8c.html#a7946704b3ef744982acde41e940088ca">GPMS</a> = { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0.0f, '\0' }, { 0, 0.0f, '\0' }, 0, 0.0f, 0.0f, 0.0f, { &amp;GPMS_hal, 'A' } }</td></tr>
-<tr class="memdesc:a7946704b3ef744982acde41e940088ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPMS User structure.  <a href="#a7946704b3ef744982acde41e940088ca">More...</a><br /></td></tr>
-<tr class="separator:a7946704b3ef744982acde41e940088ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82351a0ab8348d820ea277d956bcef48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dd1/struct_g_p_m_s__t.html">GPMS_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d17/_d_s___g_p_m_s__proc_8c.html#a82351a0ab8348d820ea277d956bcef48">GPMS</a> = { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0.0f, '\0' }, { 0, 0.0f, '\0' }, 0, 0.0f, 0.0f, 0.0f, { &amp;GPMS_hal, 'A' } }</td></tr>
+<tr class="memdesc:a82351a0ab8348d820ea277d956bcef48"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPMS User structure.  <a href="#a82351a0ab8348d820ea277d956bcef48">More...</a><br /></td></tr>
+<tr class="separator:a82351a0ab8348d820ea277d956bcef48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>DS-GPM.S Driver procedures. </p>
-<dl class="section author"><dt>Author</dt><dd>SMFSW </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2018, SMFSW</dd></dl>
-<p>DS-GPM.S: 99 Channel Positioning System (GPS + GLONASS) Shield </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="a86d0f8b7d43d9bf0b3e729a50e9d7917"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a86d0f8b7d43d9bf0b3e729a50e9d7917">&#9670;&nbsp;</a></span>GPMS_Get_Altitude()</h2>
 
@@ -141,8 +132,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../dd/d17/_d_s___g_p_m_s__proc_8c_a86d0f8b7d43d9bf0b3e729a50e9d7917_cgraph.png" border="0" usemap="#dd/d17/_d_s___g_p_m_s__proc_8c_a86d0f8b7d43d9bf0b3e729a50e9d7917_cgraph" alt=""/></div>
 <map name="dd/d17/_d_s___g_p_m_s__proc_8c_a86d0f8b7d43d9bf0b3e729a50e9d7917_cgraph" id="dd/d17/_d_s___g_p_m_s__proc_8c_a86d0f8b7d43d9bf0b3e729a50e9d7917_cgraph">
 <area shape="rect" id="node2" href="../../db/d9a/_d_s___g_p_m_s_8c.html#a7bf11fa937ff423f2756d47be54a8afe" title="I2C Read function for GPMS. " alt="" coords="195,31,293,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="341,5,453,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="346,56,449,83"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="341,5,453,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="346,56,449,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -177,8 +168,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../dd/d17/_d_s___g_p_m_s__proc_8c_aaf89d2fe9019cbed8693b5687052f5c3_cgraph.png" border="0" usemap="#dd/d17/_d_s___g_p_m_s__proc_8c_aaf89d2fe9019cbed8693b5687052f5c3_cgraph" alt=""/></div>
 <map name="dd/d17/_d_s___g_p_m_s__proc_8c_aaf89d2fe9019cbed8693b5687052f5c3_cgraph" id="dd/d17/_d_s___g_p_m_s__proc_8c_aaf89d2fe9019cbed8693b5687052f5c3_cgraph">
 <area shape="rect" id="node2" href="../../db/d9a/_d_s___g_p_m_s_8c.html#a7bf11fa937ff423f2756d47be54a8afe" title="I2C Read function for GPMS. " alt="" coords="179,31,277,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="325,5,437,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="330,56,433,83"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="325,5,437,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="330,56,433,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -223,8 +214,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../dd/d17/_d_s___g_p_m_s__proc_8c_aeee64a7d23d01b417a41fc01635f1ed0_cgraph.png" border="0" usemap="#dd/d17/_d_s___g_p_m_s__proc_8c_aeee64a7d23d01b417a41fc01635f1ed0_cgraph" alt=""/></div>
 <map name="dd/d17/_d_s___g_p_m_s__proc_8c_aeee64a7d23d01b417a41fc01635f1ed0_cgraph" id="dd/d17/_d_s___g_p_m_s__proc_8c_aeee64a7d23d01b417a41fc01635f1ed0_cgraph">
 <area shape="rect" id="node2" href="../../db/d9a/_d_s___g_p_m_s_8c.html#a7bf11fa937ff423f2756d47be54a8afe" title="I2C Read function for GPMS. " alt="" coords="197,31,296,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="344,5,456,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="349,56,451,83"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="344,5,456,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="349,56,451,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -259,8 +250,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../dd/d17/_d_s___g_p_m_s__proc_8c_a27eeecb198026d45c67cf038dea6a6f0_cgraph.png" border="0" usemap="#dd/d17/_d_s___g_p_m_s__proc_8c_a27eeecb198026d45c67cf038dea6a6f0_cgraph" alt=""/></div>
 <map name="dd/d17/_d_s___g_p_m_s__proc_8c_a27eeecb198026d45c67cf038dea6a6f0_cgraph" id="dd/d17/_d_s___g_p_m_s__proc_8c_a27eeecb198026d45c67cf038dea6a6f0_cgraph">
 <area shape="rect" id="node2" href="../../db/d9a/_d_s___g_p_m_s_8c.html#a7bf11fa937ff423f2756d47be54a8afe" title="I2C Read function for GPMS. " alt="" coords="179,31,277,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="325,5,437,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="330,56,433,83"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="325,5,437,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="330,56,433,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -295,8 +286,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../dd/d17/_d_s___g_p_m_s__proc_8c_a9ebef9a986cb28be20cca130d801bb46_cgraph.png" border="0" usemap="#dd/d17/_d_s___g_p_m_s__proc_8c_a9ebef9a986cb28be20cca130d801bb46_cgraph" alt=""/></div>
 <map name="dd/d17/_d_s___g_p_m_s__proc_8c_a9ebef9a986cb28be20cca130d801bb46_cgraph" id="dd/d17/_d_s___g_p_m_s__proc_8c_a9ebef9a986cb28be20cca130d801bb46_cgraph">
 <area shape="rect" id="node2" href="../../db/d9a/_d_s___g_p_m_s_8c.html#a7bf11fa937ff423f2756d47be54a8afe" title="I2C Read function for GPMS. " alt="" coords="197,31,296,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="344,5,456,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="349,56,451,83"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="344,5,456,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="349,56,451,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -331,8 +322,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../dd/d17/_d_s___g_p_m_s__proc_8c_a1ecdb841c1b71dc317520efedf27efae_cgraph.png" border="0" usemap="#dd/d17/_d_s___g_p_m_s__proc_8c_a1ecdb841c1b71dc317520efedf27efae_cgraph" alt=""/></div>
 <map name="dd/d17/_d_s___g_p_m_s__proc_8c_a1ecdb841c1b71dc317520efedf27efae_cgraph" id="dd/d17/_d_s___g_p_m_s__proc_8c_a1ecdb841c1b71dc317520efedf27efae_cgraph">
 <area shape="rect" id="node2" href="../../db/d9a/_d_s___g_p_m_s_8c.html#a7bf11fa937ff423f2756d47be54a8afe" title="I2C Read function for GPMS. " alt="" coords="205,31,304,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="352,5,464,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="357,56,459,83"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="352,5,464,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="357,56,459,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -367,8 +358,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../dd/d17/_d_s___g_p_m_s__proc_8c_ac73b4d437a50c19008305078e1a8c93d_cgraph.png" border="0" usemap="#dd/d17/_d_s___g_p_m_s__proc_8c_ac73b4d437a50c19008305078e1a8c93d_cgraph" alt=""/></div>
 <map name="dd/d17/_d_s___g_p_m_s__proc_8c_ac73b4d437a50c19008305078e1a8c93d_cgraph" id="dd/d17/_d_s___g_p_m_s__proc_8c_ac73b4d437a50c19008305078e1a8c93d_cgraph">
 <area shape="rect" id="node2" href="../../db/d9a/_d_s___g_p_m_s_8c.html#a7bf11fa937ff423f2756d47be54a8afe" title="I2C Read function for GPMS. " alt="" coords="187,31,285,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="333,5,445,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="338,56,441,83"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="333,5,445,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="338,56,441,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -415,8 +406,8 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node10" href="../../dd/d17/_d_s___g_p_m_s__proc_8c.html#ac73b4d437a50c19008305078e1a8c93d" title="GPMS_Get_Speed" alt="" coords="175,259,308,285"/>
 <area shape="rect" id="node11" href="../../dd/d17/_d_s___g_p_m_s__proc_8c.html#a86d0f8b7d43d9bf0b3e729a50e9d7917" title="GPMS_Get_Altitude" alt="" coords="171,309,311,336"/>
 <area shape="rect" id="node3" href="../../db/d9a/_d_s___g_p_m_s_8c.html#a7bf11fa937ff423f2756d47be54a8afe" title="I2C Read function for GPMS. " alt="" coords="365,157,464,184"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="512,132,624,159"/>
-<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="517,183,619,209"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="512,132,624,159"/>
+<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="517,183,619,209"/>
 </map>
 </div>
 
@@ -453,14 +444,14 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a7946704b3ef744982acde41e940088ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7946704b3ef744982acde41e940088ca">&#9670;&nbsp;</a></span>GPMS</h2>
+<a id="a82351a0ab8348d820ea277d956bcef48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82351a0ab8348d820ea277d956bcef48">&#9670;&nbsp;</a></span>GPMS</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d2/d52/struct_g_p_m_s__proc.html">GPMS_proc</a> GPMS = { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0.0f, '\0' }, { 0, 0.0f, '\0' }, 0, 0.0f, 0.0f, 0.0f, { &amp;GPMS_hal, 'A' } }</td>
+          <td class="memname"><a class="el" href="../../d6/dd1/struct_g_p_m_s__t.html">GPMS_t</a> GPMS = { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0.0f, '\0' }, { 0, 0.0f, '\0' }, 0, 0.0f, 0.0f, 0.0f, { &amp;GPMS_hal, 'A' } }</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -8,6 +8,6 @@
 <area shape="rect" id="node12" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a6ab0bb89259e2f35c3ae881211f3af52" title="Set haptic device channel in the waveform sequencer. " alt="" coords="214,259,394,285"/>
 <area shape="rect" id="node3" href="$dc/d9a/_d_r_v2605_l_8c.html#aadfce835666394b45a320f79fc631e52" title="I2C Read function for DRV2605L. " alt="" coords="457,107,581,133"/>
 <area shape="rect" id="node6" href="$dc/d9a/_d_r_v2605_l_8c.html#a09728b1c8f7cf9c03eb859253671dc95" title="I2C Write function for DRV2605L. " alt="" coords="457,157,581,184"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="629,107,741,133"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="634,157,737,184"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="629,107,741,133"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="634,157,737,184"/>
 </map>

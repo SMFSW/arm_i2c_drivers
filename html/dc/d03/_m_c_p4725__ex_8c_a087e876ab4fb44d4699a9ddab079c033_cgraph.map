@@ -1,5 +1,5 @@
 <map id="MCP4725_Write_Command" name="MCP4725_Write_Command">
 <area shape="rect" id="node2" href="$d9/d93/_m_c_p4725_8c.html#a5e208171d0fea496f20c3e3613c1ae98" title="I2C Write function for MCP4725. " alt="" coords="241,31,359,57"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="408,5,520,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="413,56,515,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="408,5,520,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="413,56,515,83"/>
 </map>

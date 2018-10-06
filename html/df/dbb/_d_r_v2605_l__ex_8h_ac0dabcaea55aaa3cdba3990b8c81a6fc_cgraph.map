@@ -2,6 +2,6 @@
 <area shape="rect" id="node2" href="$dc/d9a/_d_r_v2605_l_8c.html#a09728b1c8f7cf9c03eb859253671dc95" title="I2C Write function for DRV2605L. " alt="" coords="299,31,423,57"/>
 <area shape="rect" id="node5" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a3116be811d79fe42d5c838c87346f08e" title="Set haptic Blanking time. " alt="" coords="262,81,461,108"/>
 <area shape="rect" id="node6" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a045a9d12979e824718a810e1ca9fe7ac" title="Set haptic Current dissipation time. " alt="" coords="233,132,490,159"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="539,5,651,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="543,56,646,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="539,5,651,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="543,56,646,83"/>
 </map>

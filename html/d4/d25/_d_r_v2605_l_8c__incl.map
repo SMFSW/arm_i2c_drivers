@@ -1,6 +1,6 @@
 <map id="DRV2605L.c" name="DRV2605L.c">
-<area shape="rect" id="node2" href="$d5/d47/_d_r_v2605_l_8h.html" title="DRV2605L Driver. " alt="" coords="186,80,282,107"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="25,155,150,181"/>
-<area shape="rect" id="node5" href="$df/dbb/_d_r_v2605_l__ex_8h.html" title="DRV2605L_ex.h" alt="" coords="175,155,293,181"/>
-<area shape="rect" id="node6" href="$d1/da7/_d_r_v2605_l__proc_8h.html" title="DRV2605L_proc.h" alt="" coords="318,155,446,181"/>
+<area shape="rect" id="node2" href="$d5/d47/_d_r_v2605_l_8h.html" title="DRV2605L Driver. " alt="" coords="108,80,205,107"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="321,155,446,181"/>
+<area shape="rect" id="node6" href="$df/dbb/_d_r_v2605_l__ex_8h.html" title="DRV2605L_ex.h" alt="" coords="24,155,142,181"/>
+<area shape="rect" id="node7" href="$d1/da7/_d_r_v2605_l__proc_8h.html" title="DRV2605L Driver procedures. " alt="" coords="167,155,296,181"/>
 </map>

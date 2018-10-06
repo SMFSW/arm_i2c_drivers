@@ -1,12 +1,12 @@
 <map id="MCP9808_Init" name="MCP9808_Init">
-<area shape="rect" id="node2" href="$d7/d97/_i2_c__component_8c.html#a0156af69fdc6459a92678bdb7d6300ab" title="I2C Slave device initialization. " alt="" coords="193,5,298,32"/>
+<area shape="rect" id="node2" href="$d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="193,5,298,32"/>
 <area shape="rect" id="node3" href="$de/deb/_m_c_p9808__proc_8c.html#abf6a96ffa46d6cefe44ab57ccc7f8e65" title="Initialization Sequence of the MCP9808 peripheral. " alt="" coords="160,56,331,83"/>
-<area shape="rect" id="node11" href="$d6/dd6/_i2_c__component_8h.html#a4aab6d6150d927201a556fea510a104c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="189,107,302,133"/>
+<area shape="rect" id="node11" href="$d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="189,107,302,133"/>
 <area shape="rect" id="node4" href="$df/d2f/_m_c_p9808__ex_8h.html#aaf30c7ffda5ab0f9b310e656677823ea" title="Get MCP9808 Manufacturer ID. " alt="" coords="379,56,584,83"/>
 <area shape="rect" id="node8" href="$df/d2f/_m_c_p9808__ex_8h.html#a680d06b272532690503b1be2e796e878" title="Get MCP9808 chip ID. " alt="" coords="403,5,559,32"/>
 <area shape="rect" id="node9" href="$df/d47/_m_c_p9808__ex_8c.html#a2a279ef8af7b414055c528b70fe9a8b1" title="Set MCP9808 Resolution. " alt="" coords="393,107,569,133"/>
 <area shape="rect" id="node5" href="$df/d8e/_m_c_p9808_8c.html#a5f07df92b9fb162854dca25cf1a3da80" title="I2C Read function for MCP9808. " alt="" coords="633,56,751,83"/>
-<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="800,56,912,83"/>
-<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="805,107,907,133"/>
+<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="800,56,912,83"/>
+<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="805,107,907,133"/>
 <area shape="rect" id="node10" href="$df/d8e/_m_c_p9808_8c.html#a76f237074a82f686b1b163783abe06bb" title="I2C Write function for MCP9808. " alt="" coords="633,107,751,133"/>
 </map>

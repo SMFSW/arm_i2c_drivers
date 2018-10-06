@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['s11059_5fproc',['S11059_proc',['../d4/d14/struct_s11059__proc.html',1,'']]],
-  ['structi2cslave',['StructI2CSlave',['../d5/d75/struct_struct_i2_c_slave.html',1,'StructI2CSlave'],['../d8/d05/struct_struct_i2_cslave.html',1,'StructI2Cslave']]]
+  ['pca9624_5ft',['PCA9624_t',['../dc/df4/struct_p_c_a9624__t.html',1,'']]],
+  ['pca9685_5ft',['PCA9685_t',['../d3/d48/struct_p_c_a9685__t.html',1,'']]],
+  ['pcf8523_5fdate',['PCF8523_date',['../d3/da8/struct_p_c_f8523__date.html',1,'']]],
+  ['pcf8523_5ft',['PCF8523_t',['../da/dd3/struct_p_c_f8523__t.html',1,'']]],
+  ['pcf8523_5ftime',['PCF8523_time',['../d2/de7/struct_p_c_f8523__time.html',1,'']]]
 ];

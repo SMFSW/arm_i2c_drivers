@@ -1,6 +1,6 @@
 <map id="DRV2605L_Set_Standby" name="DRV2605L_Set_Standby">
 <area shape="rect" id="node2" href="$dc/d9a/_d_r_v2605_l_8c.html#aadfce835666394b45a320f79fc631e52" title="I2C Read function for DRV2605L. " alt="" coords="222,5,346,32"/>
 <area shape="rect" id="node5" href="$dc/d9a/_d_r_v2605_l_8c.html#a09728b1c8f7cf9c03eb859253671dc95" title="I2C Write function for DRV2605L. " alt="" coords="222,56,346,83"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="395,5,507,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="399,56,502,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="395,5,507,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="399,56,502,83"/>
 </map>

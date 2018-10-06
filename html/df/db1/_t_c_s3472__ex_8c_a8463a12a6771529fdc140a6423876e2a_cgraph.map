@@ -1,6 +1,6 @@
 <map id="TCS3472_Set_Wait_Time" name="TCS3472_Set_Wait_Time">
 <area shape="rect" id="node2" href="$d2/dbe/_t_c_s3472__ex_8h.html#a3df1d596155d9253736377906548dbf3" title="Write TCS3472 Config register. " alt="" coords="230,5,373,32"/>
 <area shape="rect" id="node3" href="$df/dfb/_t_c_s3472_8c.html#aafe764d8a7cd86bef3682ad76a1c55e3" title="I2C Write function for TCS3472. " alt="" coords="421,31,536,57"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="584,5,696,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="589,56,691,83"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="584,5,696,32"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="589,56,691,83"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="TCS3400_handler" name="TCS3400_handler">
 <area shape="rect" id="node2" href="$d4/d1b/_t_c_s3400_8c.html#a2d42097eccd54d872980c2dbf7bd11a0" title="I2C Read function for TCS3400. " alt="" coords="181,31,296,57"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="344,5,456,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="349,56,451,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="344,5,456,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="349,56,451,83"/>
 </map>

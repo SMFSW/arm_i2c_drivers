@@ -1,5 +1,5 @@
 <map id="PCF8523.h" name="PCF8523.h">
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="25,80,150,107"/>
-<area shape="rect" id="node4" href="$d1/d30/_p_c_f8523__ex_8h.html" title="PCF8523 Driver extensions. " alt="" coords="174,80,283,107"/>
-<area shape="rect" id="node5" href="$d4/d61/_p_c_f8523__proc_8h.html" title="PCF8523 Driver procedures. " alt="" coords="307,80,427,107"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="301,80,426,107"/>
+<area shape="rect" id="node5" href="$d1/d30/_p_c_f8523__ex_8h.html" title="PCF8523 Driver extensions. " alt="" coords="23,80,133,107"/>
+<area shape="rect" id="node6" href="$d4/d61/_p_c_f8523__proc_8h.html" title="PCF8523 Driver procedures. " alt="" coords="157,80,277,107"/>
 </map>

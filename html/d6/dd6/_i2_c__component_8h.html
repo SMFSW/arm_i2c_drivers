@@ -73,7 +73,8 @@ $(function() {
 
 <p>Base I2C component.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;sarmfsw.h&quot;</code><br />
+<div class="textblock"><code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;sarmfsw.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for I2C_component.h:</div>
 <div class="dyncontent">
@@ -90,7 +91,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="rect" id="node8" href="../../d3/d7d/_b_m_p180_8h.html" title="BMP180 Driver. " alt="" coords="1031,80,1112,107"/>
 <area shape="rect" id="node14" href="../../d5/d47/_d_r_v2605_l_8h.html" title="DRV2605L Driver. " alt="" coords="1701,80,1797,107"/>
 <area shape="rect" id="node20" href="../../dd/d26/_d_s___g_p_m_s_8h.html" title="DS&#45;GPM.S Driver. " alt="" coords="2416,80,2515,107"/>
-<area shape="rect" id="node26" href="../../d5/d3b/_f_m24_c_8h.html" title="FM24C Driver. " alt="" coords="3022,80,3097,107"/>
+<area shape="rect" id="node26" href="../../d5/d3b/_f_m24_c_8h.html" title="FM24C Driver. " alt="" coords="2962,80,3037,107"/>
 <area shape="rect" id="node30" href="../../d7/d97/_i2_c__component_8c.html" title="Base I2C component. " alt="" coords="3365,80,3491,107"/>
 <area shape="rect" id="node31" href="../../d7/d3b/_m_b85_r_c256_v_8h.html" title="MB85RC256V Driver. " alt="" coords="3515,80,3631,107"/>
 <area shape="rect" id="node37" href="../../df/d9f/_m_c_p4725_8h.html" title="MCP4725 Driver. " alt="" coords="3656,80,3747,107"/>
@@ -107,30 +108,30 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="rect" id="node4" href="../../df/de4/_a_t42_q_t1244__ex_8h.html" title="AT42QT1244 Driver extensions. " alt="" coords="140,155,269,181"/>
 <area shape="rect" id="node5" href="../../d4/d47/_a_t42_q_t1244__proc_8h.html" title="AT42QT1244 Driver procedures. " alt="" coords="294,155,436,181"/>
 <area shape="rect" id="node6" href="../../df/d72/_a_t42_q_t1244__ex_8c.html" title="AT42QT1244 Driver extensions. " alt="" coords="460,155,589,181"/>
-<area shape="rect" id="node7" href="../../dd/de3/_a_t42_q_t1244__proc_8c.html" title="AT42QT1244 Driver procedures. " alt="" coords="614,155,756,181"/>
+<area shape="rect" id="node7" href="../../dd/de3/_a_t42_q_t1244__proc_8c.html" title="AT42QT1244_proc.c" alt="" coords="614,155,756,181"/>
 <area shape="rect" id="node9" href="../../d8/d11/_b_m_p180_8c.html" title="BMP180 Driver. " alt="" coords="780,155,861,181"/>
 <area shape="rect" id="node10" href="../../d8/dfb/_b_m_p180__ex_8h.html" title="BMP180 Driver extensions. " alt="" coords="887,155,991,181"/>
 <area shape="rect" id="node11" href="../../dc/d50/_b_m_p180__proc_8h.html" title="BMP180 Driver procedures. " alt="" coords="1015,155,1129,181"/>
 <area shape="rect" id="node12" href="../../db/d0e/_b_m_p180__ex_8c.html" title="BMP180 Driver extensions. " alt="" coords="1153,155,1257,181"/>
-<area shape="rect" id="node13" href="../../d0/d35/_b_m_p180__proc_8c.html" title="BMP180 Driver procedures. " alt="" coords="1281,155,1396,181"/>
+<area shape="rect" id="node13" href="../../d0/d35/_b_m_p180__proc_8c.html" title="BMP180_proc.c" alt="" coords="1281,155,1396,181"/>
 <area shape="rect" id="node15" href="../../dc/d9a/_d_r_v2605_l_8c.html" title="DRV2605L Driver. " alt="" coords="1421,155,1517,181"/>
 <area shape="rect" id="node16" href="../../df/dbb/_d_r_v2605_l__ex_8h.html" title="DRV2605L_ex.h" alt="" coords="1542,155,1660,181"/>
-<area shape="rect" id="node17" href="../../d1/da7/_d_r_v2605_l__proc_8h.html" title="DRV2605L_proc.h" alt="" coords="1685,155,1813,181"/>
+<area shape="rect" id="node17" href="../../d1/da7/_d_r_v2605_l__proc_8h.html" title="DRV2605L Driver procedures. " alt="" coords="1685,155,1813,181"/>
 <area shape="rect" id="node18" href="../../da/d07/_d_r_v2605_l__ex_8c.html" title="DRV2605L Driver extensions. " alt="" coords="1838,155,1956,181"/>
-<area shape="rect" id="node19" href="../../df/dc7/_d_r_v2605_l__proc_8c.html" title="DRV2605L Driver procedures. " alt="" coords="1981,155,2109,181"/>
+<area shape="rect" id="node19" href="../../df/dc7/_d_r_v2605_l__proc_8c.html" title="DRV2605L_proc.c" alt="" coords="1981,155,2109,181"/>
 <area shape="rect" id="node21" href="../../db/d9a/_d_s___g_p_m_s_8c.html" title="DS&#45;GPM.S Driver. " alt="" coords="2135,155,2233,181"/>
 <area shape="rect" id="node22" href="../../da/d4d/_d_s___g_p_m_s__ex_8h.html" title="DS&#45;GPM.S Driver extensions. " alt="" coords="2258,155,2376,181"/>
 <area shape="rect" id="node23" href="../../de/d15/_d_s___g_p_m_s__proc_8h.html" title="DS&#45;GPM.S Driver procedures. " alt="" coords="2400,155,2529,181"/>
 <area shape="rect" id="node24" href="../../df/df0/_d_s___g_p_m_s__ex_8c.html" title="DS&#45;GPM.S Driver extensions. " alt="" coords="2554,155,2672,181"/>
-<area shape="rect" id="node25" href="../../dd/d17/_d_s___g_p_m_s__proc_8c.html" title="DS&#45;GPM.S Driver procedures. " alt="" coords="2696,155,2825,181"/>
+<area shape="rect" id="node25" href="../../dd/d17/_d_s___g_p_m_s__proc_8c.html" title="DS_GPMS_proc.c" alt="" coords="2696,155,2825,181"/>
 <area shape="rect" id="node27" href="../../da/d47/_f_m24_c_8c.html" title="FM24C Driver. " alt="" coords="2851,155,2927,181"/>
-<area shape="rect" id="node28" href="../../d2/d07/_f_m24_c__ex_8c.html" title="FM24C Driver extensions. " alt="" coords="2951,155,3048,181"/>
-<area shape="rect" id="node29" href="../../de/d95/_f_m24_c__ex_8h.html" title="FM24C Driver extensions. " alt="" coords="3073,155,3169,181"/>
+<area shape="rect" id="node28" href="../../de/d95/_f_m24_c__ex_8h.html" title="FM24C Driver extensions. " alt="" coords="2951,155,3048,181"/>
+<area shape="rect" id="node29" href="../../d2/d07/_f_m24_c__ex_8c.html" title="FM24C Driver extensions. " alt="" coords="3073,155,3169,181"/>
 <area shape="rect" id="node32" href="../../d1/dc0/_m_b85_r_c256_v_8c.html" title="MB85RC256V Driver. " alt="" coords="3195,155,3311,181"/>
 <area shape="rect" id="node33" href="../../d5/d5f/_m_b85_r_c256_v__ex_8h.html" title="MB85RC256V Driver extensions. " alt="" coords="3336,155,3475,181"/>
 <area shape="rect" id="node34" href="../../da/dc5/_m_b85_r_c256_v__proc_8h.html" title="MB85RC256V Driver procedures. " alt="" coords="3499,155,3647,181"/>
 <area shape="rect" id="node35" href="../../d0/d72/_m_b85_r_c256_v__ex_8c.html" title="MB85RC256V Driver extensions. " alt="" coords="3672,155,3811,181"/>
-<area shape="rect" id="node36" href="../../d4/dc8/_m_b85_r_c256_v__proc_8c.html" title="MB85RC256V Driver procedures. " alt="" coords="3835,155,3983,181"/>
+<area shape="rect" id="node36" href="../../d4/dc8/_m_b85_r_c256_v__proc_8c.html" title="MB85RC256V_proc.c" alt="" coords="3835,155,3983,181"/>
 <area shape="rect" id="node38" href="../../d9/d93/_m_c_p4725_8c.html" title="MCP4725 Driver. " alt="" coords="4008,155,4099,181"/>
 <area shape="rect" id="node39" href="../../d1/d41/_m_c_p4725__ex_8h.html" title="MCP4725 Driver extensions. " alt="" coords="4123,155,4233,181"/>
 <area shape="rect" id="node40" href="../../d4/d96/_m_c_p4725__proc_8h.html" title="MCP4725 Driver procedures. " alt="" coords="4259,155,4381,181"/>
@@ -142,7 +143,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d05/struct_struct_i2_cslave.html">StructI2Cslave</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ci2c slave config and control parameters  <a href="../../df/df6/struct_i2_c__slave__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -166,8 +168,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:a07404478502ece68bc6202dab5077e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4fde4bd3bfd623a26cc4ca67f60fb3f"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#ada6eaae45470f414ca83ca3bee176032">I2C_reg_size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#af4fde4bd3bfd623a26cc4ca67f60fb3f">I2C_reg_size</a></td></tr>
 <tr class="separator:af4fde4bd3bfd623a26cc4ca67f60fb3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50e85fb0d38f8899c60162bf5d22fb49"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d8/d05/struct_struct_i2_cslave.html">StructI2Cslave</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a></td></tr>
-<tr class="separator:a50e85fb0d38f8899c60162bf5d22fb49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb29b1bf7151fc561ff0691fd92f4cd5"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#afb29b1bf7151fc561ff0691fd92f4cd5">I2C_slave_t</a></td></tr>
+<tr class="separator:afb29b1bf7151fc561ff0691fd92f4cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -187,51 +189,51 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0156af69fdc6459a92678bdb7d6300ab"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a0156af69fdc6459a92678bdb7d6300ab">I2C_slave_init</a> (<a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *slave, const I2C_HandleTypeDef *hi2c, const uint16_t devAddress, const uint32_t timeout)</td></tr>
-<tr class="memdesc:a0156af69fdc6459a92678bdb7d6300ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Slave device initialization.  <a href="#a0156af69fdc6459a92678bdb7d6300ab">More...</a><br /></td></tr>
-<tr class="separator:a0156af69fdc6459a92678bdb7d6300ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55bd7542ef85ef40e5f0a1c6a1944c18"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a55bd7542ef85ef40e5f0a1c6a1944c18">I2C_set_slave_instance</a> (<a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *slave, const I2C_HandleTypeDef *hi2c)</td></tr>
-<tr class="memdesc:a55bd7542ef85ef40e5f0a1c6a1944c18"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Slave device HAL instance change.  <a href="#a55bd7542ef85ef40e5f0a1c6a1944c18">More...</a><br /></td></tr>
-<tr class="separator:a55bd7542ef85ef40e5f0a1c6a1944c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70c9dd3d71a2993cb84cdbd34c9755b5"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a70c9dd3d71a2993cb84cdbd34c9755b5">I2C_set_slave_address</a> (<a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *slave, const uint16_t devAddress)</td></tr>
-<tr class="memdesc:a70c9dd3d71a2993cb84cdbd34c9755b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Slave device address change.  <a href="#a70c9dd3d71a2993cb84cdbd34c9755b5">More...</a><br /></td></tr>
-<tr class="separator:a70c9dd3d71a2993cb84cdbd34c9755b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10cde6b42ab141e1f2d251e6263556b8"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a10cde6b42ab141e1f2d251e6263556b8">I2C_set_slave_timeout</a> (<a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *slave, const uint32_t timeout)</td></tr>
-<tr class="memdesc:a10cde6b42ab141e1f2d251e6263556b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Slave device transaction timeout change.  <a href="#a10cde6b42ab141e1f2d251e6263556b8">More...</a><br /></td></tr>
-<tr class="separator:a10cde6b42ab141e1f2d251e6263556b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a604202dceb3c4b442ba3b56383b23c36"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a604202dceb3c4b442ba3b56383b23c36">I2C_set_current_mem_address</a> (<a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *slave, const uint16_t addr)</td></tr>
-<tr class="memdesc:a604202dceb3c4b442ba3b56383b23c36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set I2C Slave device current internal memory address.  <a href="#a604202dceb3c4b442ba3b56383b23c36">More...</a><br /></td></tr>
-<tr class="separator:a604202dceb3c4b442ba3b56383b23c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4aab6d6150d927201a556fea510a104c"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a4aab6d6150d927201a556fea510a104c">I2C_set_enable</a> (<a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *slave, const bool en)</td></tr>
-<tr class="memdesc:a4aab6d6150d927201a556fea510a104c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set I2C Slave device disabled/enabled state.  <a href="#a4aab6d6150d927201a556fea510a104c">More...</a><br /></td></tr>
-<tr class="separator:a4aab6d6150d927201a556fea510a104c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a3f580cab94f75d048f71a906f96fb7"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7">I2C_set_busy</a> (<a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *slave, const bool busy)</td></tr>
-<tr class="memdesc:a8a3f580cab94f75d048f71a906f96fb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set I2C Slave bus/device business.  <a href="#a8a3f580cab94f75d048f71a906f96fb7">More...</a><br /></td></tr>
-<tr class="separator:a8a3f580cab94f75d048f71a906f96fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6384fc1d51d0caa67605ccdfb79eef08"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a6384fc1d51d0caa67605ccdfb79eef08">I2C_get_current_mem_address</a> (const <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *slave)</td></tr>
-<tr class="memdesc:a6384fc1d51d0caa67605ccdfb79eef08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get I2C Slave device current internal memory address.  <a href="#a6384fc1d51d0caa67605ccdfb79eef08">More...</a><br /></td></tr>
-<tr class="separator:a6384fc1d51d0caa67605ccdfb79eef08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad813cf477ae6a734050abf9c5da4bbb6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6">I2C_is_enabled</a> (const <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *slave)</td></tr>
-<tr class="memdesc:ad813cf477ae6a734050abf9c5da4bbb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get I2C Slave device enabled state.  <a href="#ad813cf477ae6a734050abf9c5da4bbb6">More...</a><br /></td></tr>
-<tr class="separator:ad813cf477ae6a734050abf9c5da4bbb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ab8a36938f6a30263efa5c89e4bde82"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a4ab8a36938f6a30263efa5c89e4bde82">I2C_is_busy</a> (const <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *slave)</td></tr>
-<tr class="memdesc:a4ab8a36938f6a30263efa5c89e4bde82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get I2C Slave device busy state.  <a href="#a4ab8a36938f6a30263efa5c89e4bde82">More...</a><br /></td></tr>
-<tr class="separator:a4ab8a36938f6a30263efa5c89e4bde82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78f4c7aee23c4c8c2ba5baef5e1e74e0"><td class="memItemLeft" align="right" valign="top">I2C_HandleTypeDef *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a78f4c7aee23c4c8c2ba5baef5e1e74e0">I2C_get_slave_instance</a> (const <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *slave)</td></tr>
-<tr class="memdesc:a78f4c7aee23c4c8c2ba5baef5e1e74e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get I2C Slave device HAL I2C instance.  <a href="#a78f4c7aee23c4c8c2ba5baef5e1e74e0">More...</a><br /></td></tr>
-<tr class="separator:a78f4c7aee23c4c8c2ba5baef5e1e74e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ed444ce2ee4cadaefd85358acd6b9c0"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a6ed444ce2ee4cadaefd85358acd6b9c0">I2C_get_slave_address</a> (const <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *slave)</td></tr>
-<tr class="memdesc:a6ed444ce2ee4cadaefd85358acd6b9c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get I2C Slave device address.  <a href="#a6ed444ce2ee4cadaefd85358acd6b9c0">More...</a><br /></td></tr>
-<tr class="separator:a6ed444ce2ee4cadaefd85358acd6b9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34a5fa3c1c80b9b6e0b3122428f657ee"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a34a5fa3c1c80b9b6e0b3122428f657ee">I2C_get_slave_timeout</a> (const <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *slave)</td></tr>
-<tr class="memdesc:a34a5fa3c1c80b9b6e0b3122428f657ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get I2C Slave device transaction timeout.  <a href="#a34a5fa3c1c80b9b6e0b3122428f657ee">More...</a><br /></td></tr>
-<tr class="separator:a34a5fa3c1c80b9b6e0b3122428f657ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d31eed86fe4de4024a5f2f9ad17c4d9"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a3d31eed86fe4de4024a5f2f9ad17c4d9">I2C_get_slave_mem_size</a> (const <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *slave)</td></tr>
-<tr class="memdesc:a3d31eed86fe4de4024a5f2f9ad17c4d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get I2C Slave device internal memory size.  <a href="#a3d31eed86fe4de4024a5f2f9ad17c4d9">More...</a><br /></td></tr>
-<tr class="separator:a3d31eed86fe4de4024a5f2f9ad17c4d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46329add4bf8df11ffb771b1ddc9dc02"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a46329add4bf8df11ffb771b1ddc9dc02">I2C_get_slave_max_speed</a> (const <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *slave)</td></tr>
-<tr class="memdesc:a46329add4bf8df11ffb771b1ddc9dc02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get I2C Slave device max speed.  <a href="#a46329add4bf8df11ffb771b1ddc9dc02">More...</a><br /></td></tr>
-<tr class="separator:a46329add4bf8df11ffb771b1ddc9dc02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85ccd7dd0756f8bbd9c6ee5caba804b3"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a85ccd7dd0756f8bbd9c6ee5caba804b3">I2C_slave_init</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *slave, const I2C_HandleTypeDef *hi2c, const uint16_t devAddress, const uint32_t timeout)</td></tr>
+<tr class="memdesc:a85ccd7dd0756f8bbd9c6ee5caba804b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Slave device initialization.  <a href="#a85ccd7dd0756f8bbd9c6ee5caba804b3">More...</a><br /></td></tr>
+<tr class="separator:a85ccd7dd0756f8bbd9c6ee5caba804b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af684be325bb8927282db9b3bcc7991f8"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#af684be325bb8927282db9b3bcc7991f8">I2C_set_slave_instance</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *slave, const I2C_HandleTypeDef *hi2c)</td></tr>
+<tr class="memdesc:af684be325bb8927282db9b3bcc7991f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Slave device HAL instance change.  <a href="#af684be325bb8927282db9b3bcc7991f8">More...</a><br /></td></tr>
+<tr class="separator:af684be325bb8927282db9b3bcc7991f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2903db975bae3ed441076c36e4735d9"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#ac2903db975bae3ed441076c36e4735d9">I2C_set_slave_address</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *slave, const uint16_t devAddress)</td></tr>
+<tr class="memdesc:ac2903db975bae3ed441076c36e4735d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Slave device address change.  <a href="#ac2903db975bae3ed441076c36e4735d9">More...</a><br /></td></tr>
+<tr class="separator:ac2903db975bae3ed441076c36e4735d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fd587758e81b8189dba6d79afa03211"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a7fd587758e81b8189dba6d79afa03211">I2C_set_slave_timeout</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *slave, const uint32_t timeout)</td></tr>
+<tr class="memdesc:a7fd587758e81b8189dba6d79afa03211"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Slave device transaction timeout change.  <a href="#a7fd587758e81b8189dba6d79afa03211">More...</a><br /></td></tr>
+<tr class="separator:a7fd587758e81b8189dba6d79afa03211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8391158fd72e02e64f6dcb0fafe00999"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a8391158fd72e02e64f6dcb0fafe00999">I2C_set_current_mem_address</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *slave, const uint16_t addr)</td></tr>
+<tr class="memdesc:a8391158fd72e02e64f6dcb0fafe00999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set I2C Slave device current internal memory address.  <a href="#a8391158fd72e02e64f6dcb0fafe00999">More...</a><br /></td></tr>
+<tr class="separator:a8391158fd72e02e64f6dcb0fafe00999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90f8c21c43066d39afaebd13b149c95c"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c">I2C_set_enable</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *slave, const bool en)</td></tr>
+<tr class="memdesc:a90f8c21c43066d39afaebd13b149c95c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set I2C Slave device disabled/enabled state.  <a href="#a90f8c21c43066d39afaebd13b149c95c">More...</a><br /></td></tr>
+<tr class="separator:a90f8c21c43066d39afaebd13b149c95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1700226397c6e3cd291802c365e3aed9"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9">I2C_set_busy</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *slave, const bool busy)</td></tr>
+<tr class="memdesc:a1700226397c6e3cd291802c365e3aed9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set I2C Slave bus/device business.  <a href="#a1700226397c6e3cd291802c365e3aed9">More...</a><br /></td></tr>
+<tr class="separator:a1700226397c6e3cd291802c365e3aed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bacc15f0d9442efe9cdb83c3774e63d"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a1bacc15f0d9442efe9cdb83c3774e63d">I2C_get_current_mem_address</a> (const <a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *slave)</td></tr>
+<tr class="memdesc:a1bacc15f0d9442efe9cdb83c3774e63d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get I2C Slave device current internal memory address.  <a href="#a1bacc15f0d9442efe9cdb83c3774e63d">More...</a><br /></td></tr>
+<tr class="separator:a1bacc15f0d9442efe9cdb83c3774e63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94200f647d83e4b42b5c3d9cdb31fa0b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b">I2C_is_enabled</a> (const <a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *slave)</td></tr>
+<tr class="memdesc:a94200f647d83e4b42b5c3d9cdb31fa0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get I2C Slave device enabled state.  <a href="#a94200f647d83e4b42b5c3d9cdb31fa0b">More...</a><br /></td></tr>
+<tr class="separator:a94200f647d83e4b42b5c3d9cdb31fa0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afff88c363380c933bb70b1e6da18c2cf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#afff88c363380c933bb70b1e6da18c2cf">I2C_is_busy</a> (const <a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *slave)</td></tr>
+<tr class="memdesc:afff88c363380c933bb70b1e6da18c2cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get I2C Slave device busy state.  <a href="#afff88c363380c933bb70b1e6da18c2cf">More...</a><br /></td></tr>
+<tr class="separator:afff88c363380c933bb70b1e6da18c2cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa384b9340070d2d1b1c0ab4e1a022375"><td class="memItemLeft" align="right" valign="top">I2C_HandleTypeDef *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#aa384b9340070d2d1b1c0ab4e1a022375">I2C_get_slave_instance</a> (const <a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *slave)</td></tr>
+<tr class="memdesc:aa384b9340070d2d1b1c0ab4e1a022375"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get I2C Slave device HAL I2C instance.  <a href="#aa384b9340070d2d1b1c0ab4e1a022375">More...</a><br /></td></tr>
+<tr class="separator:aa384b9340070d2d1b1c0ab4e1a022375"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af587716b61d67b02b48facfb4c2ba46f"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#af587716b61d67b02b48facfb4c2ba46f">I2C_get_slave_address</a> (const <a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *slave)</td></tr>
+<tr class="memdesc:af587716b61d67b02b48facfb4c2ba46f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get I2C Slave device address.  <a href="#af587716b61d67b02b48facfb4c2ba46f">More...</a><br /></td></tr>
+<tr class="separator:af587716b61d67b02b48facfb4c2ba46f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d2f3e48292b55bf8bd8e7a5c854f5b3"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a3d2f3e48292b55bf8bd8e7a5c854f5b3">I2C_get_slave_timeout</a> (const <a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *slave)</td></tr>
+<tr class="memdesc:a3d2f3e48292b55bf8bd8e7a5c854f5b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get I2C Slave device transaction timeout.  <a href="#a3d2f3e48292b55bf8bd8e7a5c854f5b3">More...</a><br /></td></tr>
+<tr class="separator:a3d2f3e48292b55bf8bd8e7a5c854f5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a259468c62f4da27328291d7c7c896586"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a259468c62f4da27328291d7c7c896586">I2C_get_slave_mem_size</a> (const <a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *slave)</td></tr>
+<tr class="memdesc:a259468c62f4da27328291d7c7c896586"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get I2C Slave device internal memory size.  <a href="#a259468c62f4da27328291d7c7c896586">More...</a><br /></td></tr>
+<tr class="separator:a259468c62f4da27328291d7c7c896586"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a604abed1fdaed5074f15c047fa814159"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a604abed1fdaed5074f15c047fa814159">I2C_get_slave_max_speed</a> (const <a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *slave)</td></tr>
+<tr class="memdesc:a604abed1fdaed5074f15c047fa814159"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get I2C Slave device max speed.  <a href="#a604abed1fdaed5074f15c047fa814159">More...</a><br /></td></tr>
+<tr class="separator:a604abed1fdaed5074f15c047fa814159"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base I2C component. </p>
@@ -325,14 +327,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a50e85fb0d38f8899c60162bf5d22fb49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50e85fb0d38f8899c60162bf5d22fb49">&#9670;&nbsp;</a></span>I2C_slave</h2>
+<a id="afb29b1bf7151fc561ff0691fd92f4cd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb29b1bf7151fc561ff0691fd92f4cd5">&#9670;&nbsp;</a></span>I2C_slave_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct <a class="el" href="../../d8/d05/struct_struct_i2_cslave.html">StructI2Cslave</a>  <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a></td>
+          <td class="memname">typedef struct <a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a>  <a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -405,8 +407,8 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a6384fc1d51d0caa67605ccdfb79eef08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6384fc1d51d0caa67605ccdfb79eef08">&#9670;&nbsp;</a></span>I2C_get_current_mem_address()</h2>
+<a id="a1bacc15f0d9442efe9cdb83c3774e63d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bacc15f0d9442efe9cdb83c3774e63d">&#9670;&nbsp;</a></span>I2C_get_current_mem_address()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -417,7 +419,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">uint32_t I2C_get_current_mem_address </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
           <td class="paramname"><em>slave</em></td><td>)</td>
           <td></td>
         </tr>
@@ -440,8 +442,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6ed444ce2ee4cadaefd85358acd6b9c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ed444ce2ee4cadaefd85358acd6b9c0">&#9670;&nbsp;</a></span>I2C_get_slave_address()</h2>
+<a id="af587716b61d67b02b48facfb4c2ba46f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af587716b61d67b02b48facfb4c2ba46f">&#9670;&nbsp;</a></span>I2C_get_slave_address()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -452,7 +454,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">uint16_t I2C_get_slave_address </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
           <td class="paramname"><em>slave</em></td><td>)</td>
           <td></td>
         </tr>
@@ -475,8 +477,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a78f4c7aee23c4c8c2ba5baef5e1e74e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78f4c7aee23c4c8c2ba5baef5e1e74e0">&#9670;&nbsp;</a></span>I2C_get_slave_instance()</h2>
+<a id="aa384b9340070d2d1b1c0ab4e1a022375"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa384b9340070d2d1b1c0ab4e1a022375">&#9670;&nbsp;</a></span>I2C_get_slave_instance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -487,7 +489,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">I2C_HandleTypeDef* I2C_get_slave_instance </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
           <td class="paramname"><em>slave</em></td><td>)</td>
           <td></td>
         </tr>
@@ -510,8 +512,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a46329add4bf8df11ffb771b1ddc9dc02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46329add4bf8df11ffb771b1ddc9dc02">&#9670;&nbsp;</a></span>I2C_get_slave_max_speed()</h2>
+<a id="a604abed1fdaed5074f15c047fa814159"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a604abed1fdaed5074f15c047fa814159">&#9670;&nbsp;</a></span>I2C_get_slave_max_speed()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -522,7 +524,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">uint16_t I2C_get_slave_max_speed </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
           <td class="paramname"><em>slave</em></td><td>)</td>
           <td></td>
         </tr>
@@ -545,8 +547,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a3d31eed86fe4de4024a5f2f9ad17c4d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d31eed86fe4de4024a5f2f9ad17c4d9">&#9670;&nbsp;</a></span>I2C_get_slave_mem_size()</h2>
+<a id="a259468c62f4da27328291d7c7c896586"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a259468c62f4da27328291d7c7c896586">&#9670;&nbsp;</a></span>I2C_get_slave_mem_size()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -557,7 +559,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">uint16_t I2C_get_slave_mem_size </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
           <td class="paramname"><em>slave</em></td><td>)</td>
           <td></td>
         </tr>
@@ -580,8 +582,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a34a5fa3c1c80b9b6e0b3122428f657ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34a5fa3c1c80b9b6e0b3122428f657ee">&#9670;&nbsp;</a></span>I2C_get_slave_timeout()</h2>
+<a id="a3d2f3e48292b55bf8bd8e7a5c854f5b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d2f3e48292b55bf8bd8e7a5c854f5b3">&#9670;&nbsp;</a></span>I2C_get_slave_timeout()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -592,7 +594,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">uint32_t I2C_get_slave_timeout </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
           <td class="paramname"><em>slave</em></td><td>)</td>
           <td></td>
         </tr>
@@ -615,8 +617,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4ab8a36938f6a30263efa5c89e4bde82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ab8a36938f6a30263efa5c89e4bde82">&#9670;&nbsp;</a></span>I2C_is_busy()</h2>
+<a id="afff88c363380c933bb70b1e6da18c2cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afff88c363380c933bb70b1e6da18c2cf">&#9670;&nbsp;</a></span>I2C_is_busy()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -627,7 +629,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool I2C_is_busy </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
           <td class="paramname"><em>slave</em></td><td>)</td>
           <td></td>
         </tr>
@@ -650,8 +652,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad813cf477ae6a734050abf9c5da4bbb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad813cf477ae6a734050abf9c5da4bbb6">&#9670;&nbsp;</a></span>I2C_is_enabled()</h2>
+<a id="a94200f647d83e4b42b5c3d9cdb31fa0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94200f647d83e4b42b5c3d9cdb31fa0b">&#9670;&nbsp;</a></span>I2C_is_enabled()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -662,7 +664,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool I2C_is_enabled </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
           <td class="paramname"><em>slave</em></td><td>)</td>
           <td></td>
         </tr>
@@ -685,8 +687,8 @@ Functions</h2></td></tr>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d6/dd6/_i2_c__component_8h_ad813cf477ae6a734050abf9c5da4bbb6_icgraph.png" border="0" usemap="#d6/dd6/_i2_c__component_8h_ad813cf477ae6a734050abf9c5da4bbb6_icgraph" alt=""/></div>
-<map name="d6/dd6/_i2_c__component_8h_ad813cf477ae6a734050abf9c5da4bbb6_icgraph" id="d6/dd6/_i2_c__component_8h_ad813cf477ae6a734050abf9c5da4bbb6_icgraph">
+<div class="center"><img src="../../d6/dd6/_i2_c__component_8h_a94200f647d83e4b42b5c3d9cdb31fa0b_icgraph.png" border="0" usemap="#d6/dd6/_i2_c__component_8h_a94200f647d83e4b42b5c3d9cdb31fa0b_icgraph" alt=""/></div>
+<map name="d6/dd6/_i2_c__component_8h_a94200f647d83e4b42b5c3d9cdb31fa0b_icgraph" id="d6/dd6/_i2_c__component_8h_a94200f647d83e4b42b5c3d9cdb31fa0b_icgraph">
 <area shape="rect" id="node2" href="../../dd/d4f/_a_t42_q_t1244_8h.html#a6112c40bb1c14803cc861cc3a5981003" title="I2C Write function for AT42QT1244. " alt="" coords="174,137,311,164"/>
 <area shape="rect" id="node8" href="../../dd/d4f/_a_t42_q_t1244_8h.html#abb4834a783784c48d458ced3e227661a" title="I2C Read function for AT42QT1244. " alt="" coords="653,188,790,215"/>
 <area shape="rect" id="node12" href="../../d3/d7d/_b_m_p180_8h.html#a9669585d00932e41ec6acefda31eeccf" title="I2C Write function for BMP180. " alt="" coords="187,289,298,316"/>
@@ -741,8 +743,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a8a3f580cab94f75d048f71a906f96fb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a3f580cab94f75d048f71a906f96fb7">&#9670;&nbsp;</a></span>I2C_set_busy()</h2>
+<a id="a1700226397c6e3cd291802c365e3aed9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1700226397c6e3cd291802c365e3aed9">&#9670;&nbsp;</a></span>I2C_set_busy()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -753,7 +755,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR I2C_set_busy </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
           <td class="paramname"><em>slave</em>, </td>
         </tr>
         <tr>
@@ -787,8 +789,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d6/dd6/_i2_c__component_8h_a8a3f580cab94f75d048f71a906f96fb7_icgraph.png" border="0" usemap="#d6/dd6/_i2_c__component_8h_a8a3f580cab94f75d048f71a906f96fb7_icgraph" alt=""/></div>
-<map name="d6/dd6/_i2_c__component_8h_a8a3f580cab94f75d048f71a906f96fb7_icgraph" id="d6/dd6/_i2_c__component_8h_a8a3f580cab94f75d048f71a906f96fb7_icgraph">
+<div class="center"><img src="../../d6/dd6/_i2_c__component_8h_a1700226397c6e3cd291802c365e3aed9_icgraph.png" border="0" usemap="#d6/dd6/_i2_c__component_8h_a1700226397c6e3cd291802c365e3aed9_icgraph" alt=""/></div>
+<map name="d6/dd6/_i2_c__component_8h_a1700226397c6e3cd291802c365e3aed9_icgraph" id="d6/dd6/_i2_c__component_8h_a1700226397c6e3cd291802c365e3aed9_icgraph">
 <area shape="rect" id="node2" href="../../dd/d4f/_a_t42_q_t1244_8h.html#a6112c40bb1c14803cc861cc3a5981003" title="I2C Write function for AT42QT1244. " alt="" coords="171,108,309,134"/>
 <area shape="rect" id="node8" href="../../dd/d4f/_a_t42_q_t1244_8h.html#abb4834a783784c48d458ced3e227661a" title="I2C Read function for AT42QT1244. " alt="" coords="650,184,787,210"/>
 <area shape="rect" id="node12" href="../../d3/d7d/_b_m_p180_8h.html#a9669585d00932e41ec6acefda31eeccf" title="I2C Write function for BMP180. " alt="" coords="185,285,295,312"/>
@@ -843,8 +845,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a604202dceb3c4b442ba3b56383b23c36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a604202dceb3c4b442ba3b56383b23c36">&#9670;&nbsp;</a></span>I2C_set_current_mem_address()</h2>
+<a id="a8391158fd72e02e64f6dcb0fafe00999"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8391158fd72e02e64f6dcb0fafe00999">&#9670;&nbsp;</a></span>I2C_set_current_mem_address()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -855,7 +857,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR I2C_set_current_mem_address </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
           <td class="paramname"><em>slave</em>, </td>
         </tr>
         <tr>
@@ -889,8 +891,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a4aab6d6150d927201a556fea510a104c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4aab6d6150d927201a556fea510a104c">&#9670;&nbsp;</a></span>I2C_set_enable()</h2>
+<a id="a90f8c21c43066d39afaebd13b149c95c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90f8c21c43066d39afaebd13b149c95c">&#9670;&nbsp;</a></span>I2C_set_enable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -901,7 +903,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR I2C_set_enable </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
           <td class="paramname"><em>slave</em>, </td>
         </tr>
         <tr>
@@ -935,8 +937,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d6/dd6/_i2_c__component_8h_a4aab6d6150d927201a556fea510a104c_icgraph.png" border="0" usemap="#d6/dd6/_i2_c__component_8h_a4aab6d6150d927201a556fea510a104c_icgraph" alt=""/></div>
-<map name="d6/dd6/_i2_c__component_8h_a4aab6d6150d927201a556fea510a104c_icgraph" id="d6/dd6/_i2_c__component_8h_a4aab6d6150d927201a556fea510a104c_icgraph">
+<div class="center"><img src="../../d6/dd6/_i2_c__component_8h_a90f8c21c43066d39afaebd13b149c95c_icgraph.png" border="0" usemap="#d6/dd6/_i2_c__component_8h_a90f8c21c43066d39afaebd13b149c95c_icgraph" alt=""/></div>
+<map name="d6/dd6/_i2_c__component_8h_a90f8c21c43066d39afaebd13b149c95c_icgraph" id="d6/dd6/_i2_c__component_8h_a90f8c21c43066d39afaebd13b149c95c_icgraph">
 <area shape="rect" id="node2" href="../../dd/d4f/_a_t42_q_t1244_8h.html#a0c13809adeaa5adccb4ced1f8ec15614" title="Initialization for AT42QT1244 peripheral. " alt="" coords="171,5,295,32"/>
 <area shape="rect" id="node3" href="../../d3/d7d/_b_m_p180_8h.html#a91b803abfdf9648359cd570b8608e074" title="Initialization for BMP180 peripheral. " alt="" coords="185,56,282,83"/>
 <area shape="rect" id="node4" href="../../d5/d47/_d_r_v2605_l_8h.html#a3f9967699bd1bfb66cc38395ce928151" title="Initialization for DRV2605L peripheral. " alt="" coords="178,107,289,133"/>
@@ -958,8 +960,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a70c9dd3d71a2993cb84cdbd34c9755b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70c9dd3d71a2993cb84cdbd34c9755b5">&#9670;&nbsp;</a></span>I2C_set_slave_address()</h2>
+<a id="ac2903db975bae3ed441076c36e4735d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2903db975bae3ed441076c36e4735d9">&#9670;&nbsp;</a></span>I2C_set_slave_address()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -967,7 +969,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR I2C_set_slave_address </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
           <td class="paramname"><em>slave</em>, </td>
         </tr>
         <tr>
@@ -996,8 +998,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a55bd7542ef85ef40e5f0a1c6a1944c18"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55bd7542ef85ef40e5f0a1c6a1944c18">&#9670;&nbsp;</a></span>I2C_set_slave_instance()</h2>
+<a id="af684be325bb8927282db9b3bcc7991f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af684be325bb8927282db9b3bcc7991f8">&#9670;&nbsp;</a></span>I2C_set_slave_instance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1005,7 +1007,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR I2C_set_slave_instance </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
           <td class="paramname"><em>slave</em>, </td>
         </tr>
         <tr>
@@ -1034,8 +1036,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a10cde6b42ab141e1f2d251e6263556b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10cde6b42ab141e1f2d251e6263556b8">&#9670;&nbsp;</a></span>I2C_set_slave_timeout()</h2>
+<a id="a7fd587758e81b8189dba6d79afa03211"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fd587758e81b8189dba6d79afa03211">&#9670;&nbsp;</a></span>I2C_set_slave_timeout()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1046,7 +1048,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR I2C_set_slave_timeout </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
           <td class="paramname"><em>slave</em>, </td>
         </tr>
         <tr>
@@ -1080,8 +1082,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a0156af69fdc6459a92678bdb7d6300ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0156af69fdc6459a92678bdb7d6300ab">&#9670;&nbsp;</a></span>I2C_slave_init()</h2>
+<a id="a85ccd7dd0756f8bbd9c6ee5caba804b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85ccd7dd0756f8bbd9c6ee5caba804b3">&#9670;&nbsp;</a></span>I2C_slave_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1089,7 +1091,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR I2C_slave_init </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
           <td class="paramname"><em>slave</em>, </td>
         </tr>
         <tr>
@@ -1132,8 +1134,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d6/dd6/_i2_c__component_8h_a0156af69fdc6459a92678bdb7d6300ab_icgraph.png" border="0" usemap="#d6/dd6/_i2_c__component_8h_a0156af69fdc6459a92678bdb7d6300ab_icgraph" alt=""/></div>
-<map name="d6/dd6/_i2_c__component_8h_a0156af69fdc6459a92678bdb7d6300ab_icgraph" id="d6/dd6/_i2_c__component_8h_a0156af69fdc6459a92678bdb7d6300ab_icgraph">
+<div class="center"><img src="../../d6/dd6/_i2_c__component_8h_a85ccd7dd0756f8bbd9c6ee5caba804b3_icgraph.png" border="0" usemap="#d6/dd6/_i2_c__component_8h_a85ccd7dd0756f8bbd9c6ee5caba804b3_icgraph" alt=""/></div>
+<map name="d6/dd6/_i2_c__component_8h_a85ccd7dd0756f8bbd9c6ee5caba804b3_icgraph" id="d6/dd6/_i2_c__component_8h_a85ccd7dd0756f8bbd9c6ee5caba804b3_icgraph">
 <area shape="rect" id="node2" href="../../dd/d4f/_a_t42_q_t1244_8h.html#a0c13809adeaa5adccb4ced1f8ec15614" title="Initialization for AT42QT1244 peripheral. " alt="" coords="163,5,287,32"/>
 <area shape="rect" id="node3" href="../../d3/d7d/_b_m_p180_8h.html#a91b803abfdf9648359cd570b8608e074" title="Initialization for BMP180 peripheral. " alt="" coords="177,56,274,83"/>
 <area shape="rect" id="node4" href="../../d5/d47/_d_r_v2605_l_8h.html#a3f9967699bd1bfb66cc38395ce928151" title="Initialization for DRV2605L peripheral. " alt="" coords="170,107,281,133"/>

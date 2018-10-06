@@ -75,12 +75,14 @@ $(function() {
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;sarmfsw.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d6/dd6/_i2_c__component_8h_source.html">I2C_component.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../de/d95/_f_m24_c__ex_8h_source.html">FM24C_ex.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for FM24C.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d8/d7d/_f_m24_c_8h__incl.png" border="0" usemap="#_f_m24_c_8h" alt=""/></div>
 <map name="_f_m24_c_8h" id="_f_m24_c_8h">
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="33,80,159,107"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="143,80,269,107"/>
+<area shape="rect" id="node5" href="../../de/d95/_f_m24_c__ex_8h.html" title="FM24C Driver extensions. " alt="" coords="21,80,118,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -89,8 +91,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="center"><img src="../../d9/d2d/_f_m24_c_8h__dep__incl.png" border="0" usemap="#_f_m24_c_8hdep" alt=""/></div>
 <map name="_f_m24_c_8hdep" id="_f_m24_c_8hdep">
 <area shape="rect" id="node2" href="../../da/d47/_f_m24_c_8c.html" title="FM24C Driver. " alt="" coords="5,80,80,107"/>
-<area shape="rect" id="node3" href="../../d2/d07/_f_m24_c__ex_8c.html" title="FM24C Driver extensions. " alt="" coords="105,80,201,107"/>
-<area shape="rect" id="node4" href="../../de/d95/_f_m24_c__ex_8h.html" title="FM24C Driver extensions. " alt="" coords="226,80,323,107"/>
+<area shape="rect" id="node3" href="../../de/d95/_f_m24_c__ex_8h.html" title="FM24C Driver extensions. " alt="" coords="105,80,201,107"/>
+<area shape="rect" id="node4" href="../../d2/d07/_f_m24_c__ex_8c.html" title="FM24C Driver extensions. " alt="" coords="226,80,323,107"/>
 </map>
 </div>
 </div>
@@ -98,8 +100,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9d/struct_f_m24_c__proc.html">FM24C_proc</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FM24C user interface struct.  <a href="../../dd/d9d/struct_f_m24_c__proc.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d34/struct_f_m24_c__t.html">FM24C_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FM24C user interface struct.  <a href="../../d6/d34/struct_f_m24_c__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -122,8 +124,8 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a09d4947faf97c2a578ee54c6bfad187f"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../dd/d9d/struct_f_m24_c__proc.html">FM24C_proc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3b/_f_m24_c_8h.html#a09d4947faf97c2a578ee54c6bfad187f">FM24C_proc</a></td></tr>
-<tr class="separator:a09d4947faf97c2a578ee54c6bfad187f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39c143c7ae2fcf11824cd52ab882e56b"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d6/d34/struct_f_m24_c__t.html">FM24C_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3b/_f_m24_c_8h.html#a39c143c7ae2fcf11824cd52ab882e56b">FM24C_t</a></td></tr>
+<tr class="separator:a39c143c7ae2fcf11824cd52ab882e56b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -148,12 +150,12 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ac2142e2b7145ad2ec2d39be527f5829d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3b/_f_m24_c_8h.html#ac2142e2b7145ad2ec2d39be527f5829d">FM24C_hal</a></td></tr>
-<tr class="memdesc:ac2142e2b7145ad2ec2d39be527f5829d"><td class="mdescLeft">&#160;</td><td class="mdescRight">FM24C Slave structure.  <a href="#ac2142e2b7145ad2ec2d39be527f5829d">More...</a><br /></td></tr>
-<tr class="separator:ac2142e2b7145ad2ec2d39be527f5829d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a926b61cdc9767abae168c8a233c57b7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d9d/struct_f_m24_c__proc.html">FM24C_proc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3b/_f_m24_c_8h.html#a926b61cdc9767abae168c8a233c57b7a">FM24C</a></td></tr>
-<tr class="memdesc:a926b61cdc9767abae168c8a233c57b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">FM24C User structure.  <a href="#a926b61cdc9767abae168c8a233c57b7a">More...</a><br /></td></tr>
-<tr class="separator:a926b61cdc9767abae168c8a233c57b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec61ec9b71ecaa2ad0e1ea49daae833c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3b/_f_m24_c_8h.html#aec61ec9b71ecaa2ad0e1ea49daae833c">FM24C_hal</a></td></tr>
+<tr class="memdesc:aec61ec9b71ecaa2ad0e1ea49daae833c"><td class="mdescLeft">&#160;</td><td class="mdescRight">FM24C Slave structure.  <a href="#aec61ec9b71ecaa2ad0e1ea49daae833c">More...</a><br /></td></tr>
+<tr class="separator:aec61ec9b71ecaa2ad0e1ea49daae833c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae426f9f6f7cdcd8120c1bd2ceed9b9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d34/struct_f_m24_c__t.html">FM24C_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3b/_f_m24_c_8h.html#aae426f9f6f7cdcd8120c1bd2ceed9b9a">FM24C</a></td></tr>
+<tr class="memdesc:aae426f9f6f7cdcd8120c1bd2ceed9b9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">FM24C User structure.  <a href="#aae426f9f6f7cdcd8120c1bd2ceed9b9a">More...</a><br /></td></tr>
+<tr class="separator:aae426f9f6f7cdcd8120c1bd2ceed9b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>FM24C Driver. </p>
@@ -242,14 +244,14 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a id="a09d4947faf97c2a578ee54c6bfad187f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09d4947faf97c2a578ee54c6bfad187f">&#9670;&nbsp;</a></span>FM24C_proc</h2>
+<a id="a39c143c7ae2fcf11824cd52ab882e56b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39c143c7ae2fcf11824cd52ab882e56b">&#9670;&nbsp;</a></span>FM24C_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct <a class="el" href="../../dd/d9d/struct_f_m24_c__proc.html">FM24C_proc</a>  <a class="el" href="../../dd/d9d/struct_f_m24_c__proc.html">FM24C_proc</a></td>
+          <td class="memname">typedef struct <a class="el" href="../../d6/d34/struct_f_m24_c__t.html">FM24C_t</a>  <a class="el" href="../../d6/d34/struct_f_m24_c__t.html">FM24C_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -281,8 +283,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/d3b/_f_m24_c_8h_a8696675cbbbe04c9aefe0dc2b9549117_cgraph.png" border="0" usemap="#d5/d3b/_f_m24_c_8h_a8696675cbbbe04c9aefe0dc2b9549117_cgraph" alt=""/></div>
 <map name="d5/d3b/_f_m24_c_8h_a8696675cbbbe04c9aefe0dc2b9549117_cgraph" id="d5/d3b/_f_m24_c_8h_a8696675cbbbe04c9aefe0dc2b9549117_cgraph">
-<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a0156af69fdc6459a92678bdb7d6300ab" title="I2C Slave device initialization. " alt="" coords="149,5,254,32"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a4aab6d6150d927201a556fea510a104c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="145,56,258,83"/>
+<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="149,5,254,32"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="145,56,258,83"/>
 </map>
 </div>
 
@@ -346,8 +348,8 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node2" href="../../d5/d3b/_f_m24_c_8h.html#a4c6231a2f010f66ff34f6d4e3f12a936" title="I2C Read/Write function for FM24C. " alt="" coords="158,31,293,57"/>
 <area shape="rect" id="node3" href="../../da/d47/_f_m24_c_8c.html#ae1a6833c826da21f460648e9f95f56d8" title="I2C Write function for FM24C. " alt="" coords="341,5,496,32"/>
 <area shape="rect" id="node6" href="../../da/d47/_f_m24_c_8c.html#a58c75fa880659b77916e33d268997c03" title="I2C Read function for FM24C. " alt="" coords="341,56,496,83"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="544,5,656,32"/>
-<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="549,56,651,83"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="544,5,656,32"/>
+<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="549,56,651,83"/>
 </map>
 </div>
 
@@ -407,8 +409,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/d3b/_f_m24_c_8h_a58c75fa880659b77916e33d268997c03_cgraph.png" border="0" usemap="#d5/d3b/_f_m24_c_8h_a58c75fa880659b77916e33d268997c03_cgraph" alt=""/></div>
 <map name="d5/d3b/_f_m24_c_8h_a58c75fa880659b77916e33d268997c03_cgraph" id="d5/d3b/_f_m24_c_8h_a58c75fa880659b77916e33d268997c03_cgraph">
-<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="208,5,320,32"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="213,56,315,83"/>
+<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="208,5,320,32"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="213,56,315,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -480,8 +482,8 @@ Here is the call graph for this function:</div>
 <map name="d5/d3b/_f_m24_c_8h_a4c6231a2f010f66ff34f6d4e3f12a936_cgraph" id="d5/d3b/_f_m24_c_8h_a4c6231a2f010f66ff34f6d4e3f12a936_cgraph">
 <area shape="rect" id="node2" href="../../da/d47/_f_m24_c_8c.html#ae1a6833c826da21f460648e9f95f56d8" title="I2C Write function for FM24C. " alt="" coords="189,5,344,32"/>
 <area shape="rect" id="node5" href="../../da/d47/_f_m24_c_8c.html#a58c75fa880659b77916e33d268997c03" title="I2C Read function for FM24C. " alt="" coords="189,56,344,83"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="392,5,504,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="397,56,499,83"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="392,5,504,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="397,56,499,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -554,8 +556,8 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node2" href="../../d5/d3b/_f_m24_c_8h.html#a4c6231a2f010f66ff34f6d4e3f12a936" title="I2C Read/Write function for FM24C. " alt="" coords="158,31,293,57"/>
 <area shape="rect" id="node3" href="../../da/d47/_f_m24_c_8c.html#ae1a6833c826da21f460648e9f95f56d8" title="I2C Write function for FM24C. " alt="" coords="341,5,496,32"/>
 <area shape="rect" id="node6" href="../../da/d47/_f_m24_c_8c.html#a58c75fa880659b77916e33d268997c03" title="I2C Read function for FM24C. " alt="" coords="341,56,496,83"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="544,5,656,32"/>
-<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="549,56,651,83"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="544,5,656,32"/>
+<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="549,56,651,83"/>
 </map>
 </div>
 
@@ -615,8 +617,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/d3b/_f_m24_c_8h_ae1a6833c826da21f460648e9f95f56d8_cgraph.png" border="0" usemap="#d5/d3b/_f_m24_c_8h_ae1a6833c826da21f460648e9f95f56d8_cgraph" alt=""/></div>
 <map name="d5/d3b/_f_m24_c_8h_ae1a6833c826da21f460648e9f95f56d8_cgraph" id="d5/d3b/_f_m24_c_8h_ae1a6833c826da21f460648e9f95f56d8_cgraph">
-<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="208,5,320,32"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="213,56,315,83"/>
+<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="208,5,320,32"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="213,56,315,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -634,14 +636,14 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a926b61cdc9767abae168c8a233c57b7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a926b61cdc9767abae168c8a233c57b7a">&#9670;&nbsp;</a></span>FM24C</h2>
+<a id="aae426f9f6f7cdcd8120c1bd2ceed9b9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae426f9f6f7cdcd8120c1bd2ceed9b9a">&#9670;&nbsp;</a></span>FM24C</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dd/d9d/struct_f_m24_c__proc.html">FM24C_proc</a> FM24C</td>
+          <td class="memname"><a class="el" href="../../d6/d34/struct_f_m24_c__t.html">FM24C_t</a> FM24C</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -650,14 +652,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ac2142e2b7145ad2ec2d39be527f5829d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2142e2b7145ad2ec2d39be527f5829d">&#9670;&nbsp;</a></span>FM24C_hal</h2>
+<a id="aec61ec9b71ecaa2ad0e1ea49daae833c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec61ec9b71ecaa2ad0e1ea49daae833c">&#9670;&nbsp;</a></span>FM24C_hal</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a50e85fb0d38f8899c60162bf5d22fb49">I2C_slave</a> FM24C_hal</td>
+          <td class="memname"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> FM24C_hal</td>
         </tr>
       </table>
 </div><div class="memdoc">

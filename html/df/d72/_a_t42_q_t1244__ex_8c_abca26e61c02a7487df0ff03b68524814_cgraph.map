@@ -1,8 +1,8 @@
 <map id="AT42QT1244_Setup_Key" name="AT42QT1244_Setup_Key">
 <area shape="rect" id="node2" href="$d3/dc4/_a_t42_q_t1244_8c.html#abb4834a783784c48d458ced3e227661a" title="I2C Read function for AT42QT1244. " alt="" coords="702,5,839,32"/>
 <area shape="rect" id="node5" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a3a5ee1f93057b9561f0b1b965ab439f1" title="AT42QT1244_Send_Setup" alt="" coords="225,56,402,83"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="888,5,1000,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="893,56,995,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="888,5,1000,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="893,56,995,83"/>
 <area shape="rect" id="node6" href="$df/d72/_a_t42_q_t1244__ex_8c.html#ae469b881ff66cf79cb3a156250d7a52c" title="AT42QT1244_Send_Command" alt="" coords="451,107,653,133"/>
 <area shape="rect" id="node7" href="$d3/dc4/_a_t42_q_t1244_8c.html#a6112c40bb1c14803cc861cc3a5981003" title="I2C Write function for AT42QT1244. " alt="" coords="702,56,839,83"/>
 </map>

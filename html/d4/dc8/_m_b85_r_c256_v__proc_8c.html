@@ -67,9 +67,6 @@ $(function() {
 <div class="title">MB85RC256V_proc.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>MB85RC256V Driver procedures.  
-<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d7/d3b/_m_b85_r_c256_v_8h_source.html">MB85RC256V.h</a>&quot;</code><br />
 <code>#include &quot;globals.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -77,10 +74,10 @@ Include dependency graph for MB85RC256V_proc.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/d14/_m_b85_r_c256_v__proc_8c__incl.png" border="0" usemap="#_m_b85_r_c256_v__proc_8c" alt=""/></div>
 <map name="_m_b85_r_c256_v__proc_8c" id="_m_b85_r_c256_v__proc_8c">
-<area shape="rect" id="node2" href="../../d7/d3b/_m_b85_r_c256_v_8h.html" title="MB85RC256V Driver. " alt="" coords="185,80,301,107"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="25,155,150,181"/>
-<area shape="rect" id="node5" href="../../d5/d5f/_m_b85_r_c256_v__ex_8h.html" title="MB85RC256V Driver extensions. " alt="" coords="174,155,313,181"/>
-<area shape="rect" id="node6" href="../../da/dc5/_m_b85_r_c256_v__proc_8h.html" title="MB85RC256V Driver procedures. " alt="" coords="337,155,485,181"/>
+<area shape="rect" id="node2" href="../../d7/d3b/_m_b85_r_c256_v_8h.html" title="MB85RC256V Driver. " alt="" coords="119,80,235,107"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="361,155,486,181"/>
+<area shape="rect" id="node6" href="../../d5/d5f/_m_b85_r_c256_v__ex_8h.html" title="MB85RC256V Driver extensions. " alt="" coords="25,155,163,181"/>
+<area shape="rect" id="node7" href="../../da/dc5/_m_b85_r_c256_v__proc_8h.html" title="MB85RC256V Driver procedures. " alt="" coords="187,155,335,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -95,16 +92,11 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a4d9090cd38d55b3cfdf4535e4f0046c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dff/struct_m_b85_r_c256_v__proc.html">MB85RC256V_proc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc8/_m_b85_r_c256_v__proc_8c.html#a4d9090cd38d55b3cfdf4535e4f0046c2">MB85RC256V</a> = { { &amp;<a class="el" href="../../d7/d3b/_m_b85_r_c256_v_8h.html#abc2815333fa76814a5569b97d8ed655e">MB85RC256V_hal</a>, 0, 0, 0 } }</td></tr>
-<tr class="memdesc:a4d9090cd38d55b3cfdf4535e4f0046c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">MB85RC256V User structure.  <a href="#a4d9090cd38d55b3cfdf4535e4f0046c2">More...</a><br /></td></tr>
-<tr class="separator:a4d9090cd38d55b3cfdf4535e4f0046c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48a893d47b99d1ebe3ee5717ec3bf947"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dcf/struct_m_b85_r_c256_v__t.html">MB85RC256V_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc8/_m_b85_r_c256_v__proc_8c.html#a48a893d47b99d1ebe3ee5717ec3bf947">MB85RC256V</a> = { { &amp;<a class="el" href="../../d7/d3b/_m_b85_r_c256_v_8h.html#a68c2d75d92fa76f5aabd53c0e17f0452">MB85RC256V_hal</a>, 0, 0, 0 } }</td></tr>
+<tr class="memdesc:a48a893d47b99d1ebe3ee5717ec3bf947"><td class="mdescLeft">&#160;</td><td class="mdescRight">MB85RC256V User structure.  <a href="#a48a893d47b99d1ebe3ee5717ec3bf947">More...</a><br /></td></tr>
+<tr class="separator:a48a893d47b99d1ebe3ee5717ec3bf947"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>MB85RC256V Driver procedures. </p>
-<dl class="section author"><dt>Author</dt><dd>SMFSW </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2018, SMFSW</dd></dl>
-<p>MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="a9d7d9018da8bc5566448f6abdb81dbd4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9d7d9018da8bc5566448f6abdb81dbd4">&#9670;&nbsp;</a></span>MB85RC256V_Get_ID()</h2>
 
@@ -129,7 +121,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../d4/dc8/_m_b85_r_c256_v__proc_8c_a9d7d9018da8bc5566448f6abdb81dbd4_cgraph.png" border="0" usemap="#d4/dc8/_m_b85_r_c256_v__proc_8c_a9d7d9018da8bc5566448f6abdb81dbd4_cgraph" alt=""/></div>
 <map name="d4/dc8/_m_b85_r_c256_v__proc_8c_a9d7d9018da8bc5566448f6abdb81dbd4_cgraph" id="d4/dc8/_m_b85_r_c256_v__proc_8c_a9d7d9018da8bc5566448f6abdb81dbd4_cgraph">
 <area shape="rect" id="node2" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a61d462174263aaede6e016fbe1058480" title="I2C Read ID function for MB85RC256V (reads 3 bytes) " alt="" coords="208,5,373,32"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="422,5,525,32"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="422,5,525,32"/>
 </map>
 </div>
 <div class="dynheader">
@@ -170,7 +162,7 @@ Here is the call graph for this function:</div>
 <map name="d4/dc8/_m_b85_r_c256_v__proc_8c_a33fa2cbd16066eef360b0f89dc6f9e90_cgraph" id="d4/dc8/_m_b85_r_c256_v__proc_8c_a33fa2cbd16066eef360b0f89dc6f9e90_cgraph">
 <area shape="rect" id="node2" href="../../d4/dc8/_m_b85_r_c256_v__proc_8c.html#a9d7d9018da8bc5566448f6abdb81dbd4" title="Get ID from MB85RC256V peripheral. " alt="" coords="251,5,405,32"/>
 <area shape="rect" id="node3" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a61d462174263aaede6e016fbe1058480" title="I2C Read ID function for MB85RC256V (reads 3 bytes) " alt="" coords="453,5,619,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="667,5,770,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="667,5,770,32"/>
 </map>
 </div>
 <div class="dynheader">
@@ -185,14 +177,14 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a4d9090cd38d55b3cfdf4535e4f0046c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d9090cd38d55b3cfdf4535e4f0046c2">&#9670;&nbsp;</a></span>MB85RC256V</h2>
+<a id="a48a893d47b99d1ebe3ee5717ec3bf947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48a893d47b99d1ebe3ee5717ec3bf947">&#9670;&nbsp;</a></span>MB85RC256V</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/dff/struct_m_b85_r_c256_v__proc.html">MB85RC256V_proc</a> MB85RC256V = { { &amp;<a class="el" href="../../d7/d3b/_m_b85_r_c256_v_8h.html#abc2815333fa76814a5569b97d8ed655e">MB85RC256V_hal</a>, 0, 0, 0 } }</td>
+          <td class="memname"><a class="el" href="../../dc/dcf/struct_m_b85_r_c256_v__t.html">MB85RC256V_t</a> MB85RC256V = { { &amp;<a class="el" href="../../d7/d3b/_m_b85_r_c256_v_8h.html#a68c2d75d92fa76f5aabd53c0e17f0452">MB85RC256V_hal</a>, 0, 0, 0 } }</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -67,23 +67,19 @@ $(function() {
 <div class="title">PCA9685_proc.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>PCA9685 Driver procedures.  
-<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d4/deb/_p_c_a9685_8h_source.html">PCA9685.h</a>&quot;</code><br />
 <code>#include &quot;globals.h&quot;</code><br />
 <code>#include &lt;math.h&gt;</code><br />
-<code>#include &lt;string.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for PCA9685_proc.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/d67/_p_c_a9685__proc_8c__incl.png" border="0" usemap="#_p_c_a9685__proc_8c" alt=""/></div>
 <map name="_p_c_a9685__proc_8c" id="_p_c_a9685__proc_8c">
-<area shape="rect" id="node2" href="../../d4/deb/_p_c_a9685_8h.html" title="PCA9685 Driver. " alt="" coords="302,80,390,107"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="28,155,153,181"/>
-<area shape="rect" id="node5" href="../../da/d3d/_p_c_a96xx_8h.html" title="PCA96xx shared declarations. " alt="" coords="178,155,266,181"/>
-<area shape="rect" id="node6" href="../../d3/d57/_p_c_a9685__ex_8h.html" title="PCA9685 Driver extensions. " alt="" coords="291,155,401,181"/>
-<area shape="rect" id="node7" href="../../d5/d22/_p_c_a9685__proc_8h.html" title="PCA9685 Driver procedures. " alt="" coords="426,155,546,181"/>
+<area shape="rect" id="node2" href="../../d4/deb/_p_c_a9685_8h.html" title="PCA9685 Driver. " alt="" coords="150,80,239,107"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="420,155,545,181"/>
+<area shape="rect" id="node6" href="../../da/d3d/_p_c_a96xx_8h.html" title="PCA96xx shared declarations. " alt="" coords="26,155,115,181"/>
+<area shape="rect" id="node7" href="../../d3/d57/_p_c_a9685__ex_8h.html" title="PCA9685 Driver extensions. " alt="" coords="139,155,249,181"/>
+<area shape="rect" id="node8" href="../../d5/d22/_p_c_a9685__proc_8h.html" title="PCA9685 Driver procedures. " alt="" coords="274,155,395,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -98,16 +94,11 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ab3f9371484dfe82be0e6a4e6622cbc73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/struct_p_c_a9685__proc.html">PCA9685_proc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d97/_p_c_a9685__proc_8c.html#ab3f9371484dfe82be0e6a4e6622cbc73">PCA9685</a> = { { &amp;<a class="el" href="../../d4/deb/_p_c_a9685_8h.html#a6f2905f447233edc0d04270392596689">PCA9685_hal</a> } }</td></tr>
-<tr class="memdesc:ab3f9371484dfe82be0e6a4e6622cbc73"><td class="mdescLeft">&#160;</td><td class="mdescRight">PCA9685 User structure.  <a href="#ab3f9371484dfe82be0e6a4e6622cbc73">More...</a><br /></td></tr>
-<tr class="separator:ab3f9371484dfe82be0e6a4e6622cbc73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35af799ed19f9cc8d52ffff65ff07887"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d48/struct_p_c_a9685__t.html">PCA9685_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d97/_p_c_a9685__proc_8c.html#a35af799ed19f9cc8d52ffff65ff07887">PCA9685</a> = { { &amp;<a class="el" href="../../d4/deb/_p_c_a9685_8h.html#a911853d5ecf5e40be1226f83f290e5af">PCA9685_hal</a> } }</td></tr>
+<tr class="memdesc:a35af799ed19f9cc8d52ffff65ff07887"><td class="mdescLeft">&#160;</td><td class="mdescRight">PCA9685 User structure.  <a href="#a35af799ed19f9cc8d52ffff65ff07887">More...</a><br /></td></tr>
+<tr class="separator:a35af799ed19f9cc8d52ffff65ff07887"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>PCA9685 Driver procedures. </p>
-<dl class="section author"><dt>Author</dt><dd>SMFSW </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2018, SMFSW</dd></dl>
-<p>PCA9685: 16-channel, 12-bit PWM Fm+ I2C-bus LED controller </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="adb90e85f8bfdabb2baa5742a5e07ea87"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adb90e85f8bfdabb2baa5742a5e07ea87">&#9670;&nbsp;</a></span>PCA9685_Get_PWM_Prescaler()</h2>
 
@@ -172,8 +163,8 @@ Here is the call graph for this function:</div>
 <map name="d4/d97/_p_c_a9685__proc_8c_a3a8798b058cc663b9c982f906a718c8c_cgraph" id="d4/d97/_p_c_a9685__proc_8c_a3a8798b058cc663b9c982f906a718c8c_cgraph">
 <area shape="rect" id="node2" href="../../de/dca/_p_c_a9685_8c.html#a894010b631426d84cedf4e9f634c9ab2" title="I2C Write function for PCA9685. " alt="" coords="267,31,383,57"/>
 <area shape="rect" id="node5" href="../../d4/d97/_p_c_a9685__proc_8c.html#adb90e85f8bfdabb2baa5742a5e07ea87" title="Sets register value for PCA9685 according to desired output frequency. " alt="" coords="221,81,429,108"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="477,5,589,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="482,56,585,83"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="477,5,589,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="482,56,585,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -188,14 +179,14 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="ab3f9371484dfe82be0e6a4e6622cbc73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3f9371484dfe82be0e6a4e6622cbc73">&#9670;&nbsp;</a></span>PCA9685</h2>
+<a id="a35af799ed19f9cc8d52ffff65ff07887"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35af799ed19f9cc8d52ffff65ff07887">&#9670;&nbsp;</a></span>PCA9685</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d5/dc1/struct_p_c_a9685__proc.html">PCA9685_proc</a> PCA9685 = { { &amp;<a class="el" href="../../d4/deb/_p_c_a9685_8h.html#a6f2905f447233edc0d04270392596689">PCA9685_hal</a> } }</td>
+          <td class="memname"><a class="el" href="../../d3/d48/struct_p_c_a9685__t.html">PCA9685_t</a> PCA9685 = { { &amp;<a class="el" href="../../d4/deb/_p_c_a9685_8h.html#a911853d5ecf5e40be1226f83f290e5af">PCA9685_hal</a> } }</td>
         </tr>
       </table>
 </div><div class="memdoc">

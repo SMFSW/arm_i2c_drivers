@@ -1,7 +1,7 @@
 <map id="TCS3472_Init" name="TCS3472_Init">
-<area shape="rect" id="node2" href="$d7/d97/_i2_c__component_8c.html#a0156af69fdc6459a92678bdb7d6300ab" title="I2C Slave device initialization. " alt="" coords="189,134,294,161"/>
+<area shape="rect" id="node2" href="$d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="189,134,294,161"/>
 <area shape="rect" id="node3" href="$d7/d71/_t_c_s3472__proc_8c.html#aea95b23e4889e17ea91ee21dac38d597" title="Initialization Sequence for TCS3472 peripheral. " alt="" coords="158,185,325,211"/>
-<area shape="rect" id="node18" href="$d6/dd6/_i2_c__component_8h.html#a4aab6d6150d927201a556fea510a104c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="185,235,298,262"/>
+<area shape="rect" id="node18" href="$d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="185,235,298,262"/>
 <area shape="rect" id="node4" href="$d2/dbe/_t_c_s3472__ex_8h.html#acee4f190d13e1db6a2848d6ab9552e83" title="Get TCS3472 chip ID. " alt="" coords="401,33,554,59"/>
 <area shape="rect" id="node9" href="$d2/dbe/_t_c_s3472__ex_8h.html#a56f62596b2e430be461804aa5bf6ff5b" title="Write TCS3472 Enable register. " alt="" coords="644,337,783,363"/>
 <area shape="rect" id="node11" href="$df/db1/_t_c_s3472__ex_8c.html#ace042917a1ee1f27b45b700edec24952" title="Gain configuration. " alt="" coords="644,83,783,110"/>
@@ -11,8 +11,8 @@
 <area shape="rect" id="node17" href="$d2/dbe/_t_c_s3472__ex_8h.html#ac0775d3edd4180961dbb732a7fc1a8a7" title="ALS interrupt high threshold configuration. " alt="" coords="406,235,549,262"/>
 <area shape="rect" id="node5" href="$df/dfb/_t_c_s3472_8c.html#adb9484582124fa68b7cd555fcec177a6" title="I2C Read function for TCS3472. " alt="" coords="845,83,960,110"/>
 <area shape="rect" id="node8" href="$d2/dbe/_t_c_s3472__ex_8h.html#a89737e63a1f9aefafff74929195be525" title="Get All channels conversions. " alt="" coords="630,33,797,59"/>
-<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="1008,90,1120,117"/>
-<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="1013,153,1115,179"/>
+<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1008,90,1120,117"/>
+<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1013,153,1115,179"/>
 <area shape="rect" id="node10" href="$df/dfb/_t_c_s3472_8c.html#aafe764d8a7cd86bef3682ad76a1c55e3" title="I2C Write function for TCS3472. " alt="" coords="845,178,960,205"/>
 <area shape="rect" id="node14" href="$d2/dbe/_t_c_s3472__ex_8h.html#a3df1d596155d9253736377906548dbf3" title="Write TCS3472 Config register. " alt="" coords="642,235,785,262"/>
 <area shape="rect" id="node16" href="$df/dfb/_t_c_s3472_8c.html#a9300be89bfd4cfc3d0eeb93e4757718e" title="I2C Word Write (low endian) function for TCS3472. " alt="" coords="637,286,790,313"/>

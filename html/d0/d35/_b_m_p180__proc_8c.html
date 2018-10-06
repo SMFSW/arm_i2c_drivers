@@ -67,22 +67,18 @@ $(function() {
 <div class="title">BMP180_proc.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>BMP180 Driver procedures.  
-<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d3/d7d/_b_m_p180_8h_source.html">BMP180.h</a>&quot;</code><br />
 <code>#include &quot;globals.h&quot;</code><br />
 <code>#include &lt;math.h&gt;</code><br />
-<code>#include &lt;string.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for BMP180_proc.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/daa/_b_m_p180__proc_8c__incl.png" border="0" usemap="#_b_m_p180__proc_8c" alt=""/></div>
 <map name="_b_m_p180__proc_8c" id="_b_m_p180__proc_8c">
-<area shape="rect" id="node2" href="../../d3/d7d/_b_m_p180_8h.html" title="BMP180 Driver. " alt="" coords="185,80,266,107"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="25,155,150,181"/>
-<area shape="rect" id="node5" href="../../d8/dfb/_b_m_p180__ex_8h.html" title="BMP180 Driver extensions. " alt="" coords="174,155,278,181"/>
-<area shape="rect" id="node6" href="../../dc/d50/_b_m_p180__proc_8h.html" title="BMP180 Driver procedures. " alt="" coords="302,155,417,181"/>
+<area shape="rect" id="node2" href="../../d3/d7d/_b_m_p180_8h.html" title="BMP180 Driver. " alt="" coords="100,80,182,107"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="290,155,415,181"/>
+<area shape="rect" id="node6" href="../../d8/dfb/_b_m_p180__ex_8h.html" title="BMP180 Driver extensions. " alt="" coords="23,155,127,181"/>
+<area shape="rect" id="node7" href="../../dc/d50/_b_m_p180__proc_8h.html" title="BMP180 Driver procedures. " alt="" coords="151,155,266,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -109,18 +105,13 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ac3c321c688956997688cfaf726f4b6e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/dd4/struct_b_m_p180__proc.html">BMP180_proc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d35/_b_m_p180__proc_8c.html#ac3c321c688956997688cfaf726f4b6e5">BMP180</a> = { 0.0f, 0.0f, 0.0f, 0.0f, 0, { &amp;BMP180_hal, BMP180__OSS_8_TIME, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 0 } }</td></tr>
-<tr class="memdesc:ac3c321c688956997688cfaf726f4b6e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">BMP180 User structure.  <a href="#ac3c321c688956997688cfaf726f4b6e5">More...</a><br /></td></tr>
-<tr class="separator:ac3c321c688956997688cfaf726f4b6e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f8910ec3d82bd5f8c0e48a7ebe1e3b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/db8/struct_b_m_p180__t.html">BMP180_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d35/_b_m_p180__proc_8c.html#a4f8910ec3d82bd5f8c0e48a7ebe1e3b9">BMP180</a> = { 0.0f, 0.0f, 0.0f, 0.0f, 0, { &amp;BMP180_hal, BMP180__OSS_8_TIME, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 0 } }</td></tr>
+<tr class="memdesc:a4f8910ec3d82bd5f8c0e48a7ebe1e3b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">BMP180 User structure.  <a href="#a4f8910ec3d82bd5f8c0e48a7ebe1e3b9">More...</a><br /></td></tr>
+<tr class="separator:a4f8910ec3d82bd5f8c0e48a7ebe1e3b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacf3d550c82275494054b0eb468b22a5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d35/_b_m_p180__proc_8c.html#aacf3d550c82275494054b0eb468b22a5">BMP180_OSS_time</a> [4]</td></tr>
 <tr class="separator:aacf3d550c82275494054b0eb468b22a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>BMP180 Driver procedures. </p>
-<dl class="section author"><dt>Author</dt><dd>SMFSW </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2018, SMFSW</dd></dl>
-<p>BMP180: Digital pressure sensor </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="ad0e4baf09d4b0af6fce41cf8ea3c83c8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad0e4baf09d4b0af6fce41cf8ea3c83c8">&#9670;&nbsp;</a></span>BMP180_Get_Calibration()</h2>
 
@@ -152,8 +143,8 @@ Here is the call graph for this function:</div>
 <map name="d0/d35/_b_m_p180__proc_8c_ad0e4baf09d4b0af6fce41cf8ea3c83c8_cgraph" id="d0/d35/_b_m_p180__proc_8c_ad0e4baf09d4b0af6fce41cf8ea3c83c8_cgraph">
 <area shape="rect" id="node2" href="../../d8/d11/_b_m_p180_8c.html#ad076d106074c412933c256a4a9777e85" title="I2C Word Read function for BMP180. " alt="" coords="225,31,373,57"/>
 <area shape="rect" id="node3" href="../../d8/d11/_b_m_p180_8c.html#aabcacf3ee95fccb35e6289f2ee409af9" title="I2C Read function for BMP180. " alt="" coords="422,31,533,57"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="581,5,693,32"/>
-<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="586,56,689,83"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="581,5,693,32"/>
+<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="586,56,689,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -202,8 +193,8 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node3" href="../../db/d0e/_b_m_p180__ex_8c.html#acfafe99c51fdd4a1d3ad0cf98054ce64" title="Start BMP180 Temperature/Pressure conversion. " alt="" coords="478,56,658,83"/>
 <area shape="rect" id="node7" href="../../d8/d11/_b_m_p180_8c.html#ad076d106074c412933c256a4a9777e85" title="I2C Word Read function for BMP180. " alt="" coords="494,107,642,133"/>
 <area shape="rect" id="node4" href="../../d8/d11/_b_m_p180_8c.html#a9669585d00932e41ec6acefda31eeccf" title="I2C Write function for BMP180. " alt="" coords="707,56,818,83"/>
-<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="867,5,979,32"/>
-<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="871,56,974,83"/>
+<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="867,5,979,32"/>
+<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="871,56,974,83"/>
 <area shape="rect" id="node8" href="../../d8/d11/_b_m_p180_8c.html#aabcacf3ee95fccb35e6289f2ee409af9" title="I2C Read function for BMP180. " alt="" coords="707,5,818,32"/>
 </map>
 </div>
@@ -251,8 +242,8 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node3" href="../../db/d0e/_b_m_p180__ex_8c.html#acfafe99c51fdd4a1d3ad0cf98054ce64" title="Start BMP180 Temperature/Pressure conversion. " alt="" coords="499,5,679,32"/>
 <area shape="rect" id="node7" href="../../d8/d11/_b_m_p180_8c.html#ad076d106074c412933c256a4a9777e85" title="I2C Word Read function for BMP180. " alt="" coords="515,56,663,83"/>
 <area shape="rect" id="node4" href="../../d8/d11/_b_m_p180_8c.html#a9669585d00932e41ec6acefda31eeccf" title="I2C Write function for BMP180. " alt="" coords="729,5,839,32"/>
-<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="888,5,1000,32"/>
-<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="893,56,995,83"/>
+<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="888,5,1000,32"/>
+<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="893,56,995,83"/>
 <area shape="rect" id="node8" href="../../d8/d11/_b_m_p180_8c.html#aabcacf3ee95fccb35e6289f2ee409af9" title="I2C Read function for BMP180. " alt="" coords="729,56,839,83"/>
 </map>
 </div>
@@ -290,8 +281,8 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node4" href="../../db/d0e/_b_m_p180__ex_8c.html#acfafe99c51fdd4a1d3ad0cf98054ce64" title="Start BMP180 Temperature/Pressure conversion. " alt="" coords="649,56,829,83"/>
 <area shape="rect" id="node8" href="../../d8/d11/_b_m_p180_8c.html#ad076d106074c412933c256a4a9777e85" title="I2C Word Read function for BMP180. " alt="" coords="665,107,813,133"/>
 <area shape="rect" id="node5" href="../../d8/d11/_b_m_p180_8c.html#a9669585d00932e41ec6acefda31eeccf" title="I2C Write function for BMP180. " alt="" coords="878,56,989,83"/>
-<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="1037,5,1149,32"/>
-<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="1042,56,1145,83"/>
+<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1037,5,1149,32"/>
+<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1042,56,1145,83"/>
 <area shape="rect" id="node9" href="../../d8/d11/_b_m_p180_8c.html#aabcacf3ee95fccb35e6289f2ee409af9" title="I2C Read function for BMP180. " alt="" coords="878,5,989,32"/>
 </map>
 </div>
@@ -325,8 +316,8 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node2" href="../../d8/dfb/_b_m_p180__ex_8h.html#a8d3a9e26b7ceff9106392c7b740af14b" title="Get BMP180 chip ID. " alt="" coords="435,5,583,32"/>
 <area shape="rect" id="node6" href="../../d0/d35/_b_m_p180__proc_8c.html#ad0e4baf09d4b0af6fce41cf8ea3c83c8" title="Get calibration parameters from BMP180 peripheral. " alt="" coords="217,56,386,83"/>
 <area shape="rect" id="node3" href="../../d8/d11/_b_m_p180_8c.html#aabcacf3ee95fccb35e6289f2ee409af9" title="I2C Read function for BMP180. " alt="" coords="633,31,743,57"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#ad813cf477ae6a734050abf9c5da4bbb6" title="Get I2C Slave device enabled state. " alt="" coords="792,5,904,32"/>
-<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a8a3f580cab94f75d048f71a906f96fb7" title="Set I2C Slave bus/device business. " alt="" coords="797,56,899,83"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="792,5,904,32"/>
+<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="797,56,899,83"/>
 <area shape="rect" id="node7" href="../../d8/d11/_b_m_p180_8c.html#ad076d106074c412933c256a4a9777e85" title="I2C Word Read function for BMP180. " alt="" coords="435,56,583,83"/>
 </map>
 </div>
@@ -369,14 +360,14 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="ac3c321c688956997688cfaf726f4b6e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3c321c688956997688cfaf726f4b6e5">&#9670;&nbsp;</a></span>BMP180</h2>
+<a id="a4f8910ec3d82bd5f8c0e48a7ebe1e3b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f8910ec3d82bd5f8c0e48a7ebe1e3b9">&#9670;&nbsp;</a></span>BMP180</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../da/dd4/struct_b_m_p180__proc.html">BMP180_proc</a> BMP180 = { 0.0f, 0.0f, 0.0f, 0.0f, 0, { &amp;BMP180_hal, BMP180__OSS_8_TIME, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 0 } }</td>
+          <td class="memname"><a class="el" href="../../d6/db8/struct_b_m_p180__t.html">BMP180_t</a> BMP180 = { 0.0f, 0.0f, 0.0f, 0.0f, 0, { &amp;BMP180_hal, BMP180__OSS_8_TIME, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 0 } }</td>
         </tr>
       </table>
 </div><div class="memdoc">
