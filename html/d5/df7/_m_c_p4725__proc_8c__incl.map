@@ -1,6 +1,6 @@
 <map id="MCP4725_proc.c" name="MCP4725_proc.c">
-<area shape="rect" id="node2" href="$df/d9f/_m_c_p4725_8h.html" title="MCP4725 Driver. " alt="" coords="105,80,196,107"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="306,155,432,181"/>
-<area shape="rect" id="node6" href="$d1/d41/_m_c_p4725__ex_8h.html" title="MCP4725 Driver extensions. " alt="" coords="24,155,134,181"/>
-<area shape="rect" id="node7" href="$d4/d96/_m_c_p4725__proc_8h.html" title="MCP4725 Driver procedures. " alt="" coords="160,155,282,181"/>
+<area shape="rect" id="node2" href="$df/d9f/_m_c_p4725_8h.html" title="MCP4725 Driver. " alt="" coords="135,80,226,107"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="407,155,532,181"/>
+<area shape="rect" id="node7" href="$d1/d41/_m_c_p4725__ex_8h.html" title="MCP4725 Driver extensions. " alt="" coords="124,155,235,181"/>
+<area shape="rect" id="node8" href="$d4/d96/_m_c_p4725__proc_8h.html" title="MCP4725 Driver procedures. " alt="" coords="260,155,383,181"/>
 </map>

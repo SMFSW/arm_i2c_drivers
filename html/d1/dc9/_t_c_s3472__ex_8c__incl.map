@@ -1,6 +1,6 @@
 <map id="TCS3472_ex.c" name="TCS3472_ex.c">
-<area shape="rect" id="node2" href="$d8/ddc/_t_c_s3472_8h.html" title="TCS3472 Driver. " alt="" coords="103,80,191,107"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="301,155,426,181"/>
-<area shape="rect" id="node6" href="$d2/dbe/_t_c_s3472__ex_8h.html" title="TCS3472 Driver extensions. " alt="" coords="23,155,133,181"/>
-<area shape="rect" id="node7" href="$d6/d96/_t_c_s3472__proc_8h.html" title="TCS3472 Driver procedures. " alt="" coords="157,155,277,181"/>
+<area shape="rect" id="node2" href="$d8/ddc/_t_c_s3472_8h.html" title="TCS3472 Driver. " alt="" coords="135,80,223,107"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="402,155,527,181"/>
+<area shape="rect" id="node7" href="$d2/dbe/_t_c_s3472__ex_8h.html" title="TCS3472 Driver extensions. " alt="" coords="124,155,234,181"/>
+<area shape="rect" id="node8" href="$d6/d96/_t_c_s3472__proc_8h.html" title="TCS3472 Driver procedures. " alt="" coords="258,155,378,181"/>
 </map>

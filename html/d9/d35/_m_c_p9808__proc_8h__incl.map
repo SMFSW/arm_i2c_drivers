@@ -1,5 +1,5 @@
 <map id="MCP9808_proc.h" name="MCP9808_proc.h">
-<area shape="rect" id="node3" href="$d8/d57/_m_c_p9808_8h.html" title="MCP9808 Driver. " alt="" coords="48,80,139,107"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="173,155,299,181"/>
-<area shape="rect" id="node6" href="$df/d2f/_m_c_p9808__ex_8h.html" title="MCP9808 Driver extensions. " alt="" coords="37,155,148,181"/>
+<area shape="rect" id="node3" href="$d8/d57/_m_c_p9808_8h.html" title="MCP9808 Driver. " alt="" coords="81,80,172,107"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="265,155,390,181"/>
+<area shape="rect" id="node7" href="$df/d2f/_m_c_p9808__ex_8h.html" title="MCP9808 Driver extensions. " alt="" coords="129,155,240,181"/>
 </map>

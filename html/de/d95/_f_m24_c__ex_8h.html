@@ -77,8 +77,8 @@ Include dependency graph for FM24C_ex.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/d8a/_f_m24_c__ex_8h__incl.png" border="0" usemap="#_f_m24_c__ex_8h" alt=""/></div>
 <map name="_f_m24_c__ex_8h" id="_f_m24_c__ex_8h">
-<area shape="rect" id="node3" href="../../d5/d3b/_f_m24_c_8h.html" title="FM24C Driver. " alt="" coords="34,80,109,107"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="84,155,209,181"/>
+<area shape="rect" id="node3" href="../../d5/d3b/_f_m24_c_8h.html" title="FM24C Driver. " alt="" coords="58,80,133,107"/>
+<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="183,155,308,181"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -146,7 +146,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">__INLINE FctERR INLINE__ FM24C_Get_##name(type * rd) {  \</div><div class="line">                                                return <a class="code" href="../../da/d47/_f_m24_c_8c.html#a58c75fa880659b77916e33d268997c03">FM24C_Read_Banked</a>(&amp;rd, LOBYTE(addr), HIBYTE(addr), <span class="keyword">sizeof</span>(type)); }</div><div class="ttc" id="_f_m24_c_8c_html_a58c75fa880659b77916e33d268997c03"><div class="ttname"><a href="../../da/d47/_f_m24_c_8c.html#a58c75fa880659b77916e33d268997c03">FM24C_Read_Banked</a></div><div class="ttdeci">FctERR FM24C_Read_Banked(uint8_t *data, const uint16_t addr, const uint8_t bank, const uint16_t nb)</div><div class="ttdoc">I2C Read function for FM24C. </div><div class="ttdef"><b>Definition:</b> FM24C.c:65</div></div>
+<b>Value:</b><div class="fragment"><div class="line">__INLINE FctERR INLINE__ FM24C_Get_##name(type * rd) {  \</div><div class="line">                                                return <a class="code" href="../../da/d47/_f_m24_c_8c.html#a58c75fa880659b77916e33d268997c03">FM24C_Read_Banked</a>(&amp;rd, LOBYTE(addr), HIBYTE(addr), <span class="keyword">sizeof</span>(type)); }</div><div class="ttc" id="_f_m24_c_8c_html_a58c75fa880659b77916e33d268997c03"><div class="ttname"><a href="../../da/d47/_f_m24_c_8c.html#a58c75fa880659b77916e33d268997c03">FM24C_Read_Banked</a></div><div class="ttdeci">FctERR FM24C_Read_Banked(uint8_t *data, const uint16_t addr, const uint8_t bank, const uint16_t nb)</div><div class="ttdoc">I2C Read function for FM24C. </div><div class="ttdef"><b>Definition:</b> FM24C.c:64</div></div>
 </div><!-- fragment -->
 <p>Macro to create function to read value(s) from FM24C. </p>
 
@@ -183,7 +183,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">__INLINE FctERR INLINE__ FM24C_Set_##name(type wr) {    \</div><div class="line">                                                return <a class="code" href="../../da/d47/_f_m24_c_8c.html#ae1a6833c826da21f460648e9f95f56d8">FM24C_Write_Banked</a>(&amp;wr, LOBYTE(addr), HIBYTE(addr), <span class="keyword">sizeof</span>(type)); }</div><div class="ttc" id="_f_m24_c_8c_html_ae1a6833c826da21f460648e9f95f56d8"><div class="ttname"><a href="../../da/d47/_f_m24_c_8c.html#ae1a6833c826da21f460648e9f95f56d8">FM24C_Write_Banked</a></div><div class="ttdeci">FctERR FM24C_Write_Banked(const uint8_t *data, const uint16_t addr, const uint8_t bank, const uint16_t nb)</div><div class="ttdoc">I2C Write function for FM24C. </div><div class="ttdef"><b>Definition:</b> FM24C.c:47</div></div>
+<b>Value:</b><div class="fragment"><div class="line">__INLINE FctERR INLINE__ FM24C_Set_##name(type wr) {    \</div><div class="line">                                                return <a class="code" href="../../da/d47/_f_m24_c_8c.html#ae1a6833c826da21f460648e9f95f56d8">FM24C_Write_Banked</a>(&amp;wr, LOBYTE(addr), HIBYTE(addr), <span class="keyword">sizeof</span>(type)); }</div><div class="ttc" id="_f_m24_c_8c_html_ae1a6833c826da21f460648e9f95f56d8"><div class="ttname"><a href="../../da/d47/_f_m24_c_8c.html#ae1a6833c826da21f460648e9f95f56d8">FM24C_Write_Banked</a></div><div class="ttdeci">FctERR FM24C_Write_Banked(const uint8_t *data, const uint16_t addr, const uint8_t bank, const uint16_t nb)</div><div class="ttdoc">I2C Write function for FM24C. </div><div class="ttdef"><b>Definition:</b> FM24C.c:46</div></div>
 </div><!-- fragment -->
 <p>Macro to create function to write value(s) to FM24C. </p>
 
