@@ -6,7 +6,6 @@
 **/
 /****************************************************************/
 #include "MCP4725.h"
-#include "globals.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_MCP4725)

@@ -14,6 +14,8 @@
 #endif
 
 #include "sarmfsw.h"
+#include "globals.h"
+
 #include "I2C_component.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)

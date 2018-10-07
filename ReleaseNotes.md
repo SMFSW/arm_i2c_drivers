@@ -28,6 +28,7 @@ SOFTWARE.
 * Using of NONNULL__ attribute instead of checking pointer set to value in code
 * template: misc fixes
 * use of const qualifier in function parameters
+* rationalization of includes
 * init sequence returns with error value if something goes wrong during initialization
 * implementation of slave instance (slave_inst) in xxx_proc files (easier debug access to component structure except special cases)
 * I2C_component: instance inst becomes bus_inst (new slave_inst implementation in xxx_proc files to avoid name confusions) 

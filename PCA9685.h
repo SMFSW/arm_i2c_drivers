@@ -13,6 +13,8 @@
 #endif
 
 #include "sarmfsw.h"
+#include "globals.h"
+
 #include "I2C_component.h"
 #include "PCA96xx.h"
 

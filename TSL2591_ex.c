@@ -6,7 +6,6 @@
 **/
 /****************************************************************/
 #include "TSL2591.h"
-#include "globals.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_TSL2591)
