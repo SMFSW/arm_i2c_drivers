@@ -167,14 +167,14 @@ __INLINE FctERR INLINE__ TCS3400_Clear_All_IT(void) {
 ** \param[in,out] id - pointer to Revision ID result
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TCS3400_Get_RevID(uint8_t * id) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Get_RevID(uint8_t * id) {
 	return TCS3400_Read(id, TCS3400__REVID, 1); }
 
 /*!\brief Get TCS3400 Device ID
 ** \param[in,out] id - pointer to Device ID result
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TCS3400_Get_DeviceID(uint8_t * id) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Get_DeviceID(uint8_t * id) {
 	return TCS3400_Read(id, TCS3400__ID, 1); }
 
 
@@ -182,14 +182,14 @@ __INLINE FctERR INLINE__ TCS3400_Get_DeviceID(uint8_t * id) {
 ** \param[in,out] buf - pointer to conversions tab result
 ** \return FctERR - error code
 **/
-FctERR TCS3400_Get_Channels(uint16_t buf[]);
+FctERR NONNULL__ TCS3400_Get_Channels(uint16_t buf[]);
 
 /*!\brief Get Specific channel conversion
 ** \param[in,out] buf - pointer to conversions result
 ** \param[in] chan - Channel to get
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TCS3400_Get_Channel(uint16_t * buf, const TCS3400_chan chan) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Get_Channel(uint16_t * buf, const TCS3400_chan chan) {
 	if (chan > TCS3400__CHAN_BLUE)	{ return ERROR_VALUE; }	// Unknown channel
 	return TCS3400_Read_Word(buf, TCS3400__CDATAL + (2 * chan)); }
 
@@ -197,28 +197,28 @@ __INLINE FctERR INLINE__ TCS3400_Get_Channel(uint16_t * buf, const TCS3400_chan 
 ** \param[in,out] clr - pointer to Clear conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TCS3400_Get_Clear(uint16_t * clr) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Get_Clear(uint16_t * clr) {
 	return TCS3400_Read_Word(clr, TCS3400__CDATAL); }
 
 /*!\brief Get Red channel conversion
 ** \param[in,out] r - pointer to Red conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TCS3400_Get_Red(uint16_t * r) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Get_Red(uint16_t * r) {
 	return TCS3400_Read_Word(r, TCS3400__RDATAL); }
 
 /*!\brief Get Green channel conversion
 ** \param[in,out] g - pointer to Green conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TCS3400_Get_Green(uint16_t * g) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Get_Green(uint16_t * g) {
 	return TCS3400_Read_Word(g, TCS3400__GDATAL); }
 
 /*!\brief Get Blue channel conversion
 ** \param[in,out] b - pointer to Blue conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TCS3400_Get_Blue(uint16_t * b) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Get_Blue(uint16_t * b) {
 	return TCS3400_Read_Word(b, TCS3400__BDATAL); }
 
 

@@ -20,6 +20,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+## v1.0
+
+* more NONNULL__ checks
+* FM24C: added possibility to customize FM24C_SIZE define if needed
+* MCP4725: Fixed general call function (transmit command, not receive), and taking I2C_HandleTypeDef pointer as parameter
+
 ## v0.7
 
 * Added cpp preprocessor directives in headers

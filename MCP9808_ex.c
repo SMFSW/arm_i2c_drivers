@@ -126,7 +126,7 @@ FctERR MCP9808_Set_Resolution(const MCP9808_res res)
 }
 
 
-FctERR MCP9808_Get_Resolution(MCP9808_res * res)
+FctERR NONNULL__ MCP9808_Get_Resolution(MCP9808_res * res)
 {
 	uint16_t	RES;
 	FctERR		err;

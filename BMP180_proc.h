@@ -78,7 +78,7 @@ extern BMP180_t BMP180;							//!< BMP180 User structure
 ** \weak BMP180 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-__WEAK FctERR BMP180_Init_Sequence(void);
+FctERR BMP180_Init_Sequence(void);
 
 
 /*!\brief Set oversampling for BMP180 peripheral
@@ -92,7 +92,7 @@ FctERR BMP180_Set_Oversampling(const BMP180_oversampling oss);
 ** \param[in,out] calib - pointer to calibration structure to read to
 ** \return FctERR - error code
 **/
-FctERR BMP180_Get_Calibration(BMP180_calib * calib);
+FctERR NONNULL__ BMP180_Get_Calibration(BMP180_calib * calib);
 
 /*!\brief Gets the compensated pressure level
 ** \param[in,out] pres - pointer to atmospheric pressure level to read to (in hPa)
@@ -112,7 +112,7 @@ FctERR BMP180_Get_Temperature(float * temp);
 ** \note Should be called periodically to handle BMP180 tasks
 ** \return FctERR - error code
 **/
-__WEAK FctERR BMP180_handler(void);
+FctERR BMP180_handler(void);
 
 
 /****************************************************************/

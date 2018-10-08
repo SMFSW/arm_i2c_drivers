@@ -153,7 +153,7 @@ FctERR TCS3400_Set_Wait_Time(const uint16_t wait)
 }
 
 
-FctERR TCS3400_Get_Channels(uint16_t buf[])
+FctERR NONNULL__ TCS3400_Get_Channels(uint16_t buf[])
 {
 	uint8_t	TMP[2];
 	FctERR	err;

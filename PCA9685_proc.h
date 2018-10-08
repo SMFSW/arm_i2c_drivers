@@ -55,7 +55,7 @@ extern PCA9685_t	PCA9685;		//!< PCA9685 User structure
 ** \weak PCA9685 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - ErrorCode
 **/
-__WEAK FctERR PCA9685_Init_Sequence(void);
+FctERR PCA9685_Init_Sequence(void);
 
 
 /*!\brief Sets register value for PCA9685 according to desired output frequency

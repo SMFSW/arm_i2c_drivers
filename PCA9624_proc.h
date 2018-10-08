@@ -45,7 +45,7 @@ extern PCA9624_t	PCA9624;		//!< PCA9624 User structure
 ** \weak PCA9624 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-__WEAK FctERR PCA9624_Init_Sequence(void);
+FctERR PCA9624_Init_Sequence(void);
 
 /****************************************************************/
 #ifdef __cplusplus

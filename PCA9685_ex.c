@@ -24,7 +24,7 @@ FctERR PCA9685_Reset(const bool all)
 }
 
 
-FctERR PCA9685_ReadRegister(const PCA9685_reg reg, uint8_t * val)
+FctERR NONNULL__ PCA9685_ReadRegister(const PCA9685_reg reg, uint8_t * val)
 {
 	*val = 0;
 
@@ -34,7 +34,7 @@ FctERR PCA9685_ReadRegister(const PCA9685_reg reg, uint8_t * val)
 }
 
 
-FctERR PCA9685_ReadVal256(const PCA96xx_chan chan, uint8_t * duty)
+FctERR NONNULL__ PCA9685_ReadVal256(const PCA96xx_chan chan, uint8_t * duty)
 {
 	FctERR		err = ERROR_OK;
 	uint16_t	ONCount = 0, OFFCount = 0;
@@ -61,7 +61,7 @@ FctERR PCA9685_ReadVal256(const PCA96xx_chan chan, uint8_t * duty)
 }
 
 
-FctERR PCA9685_ReadVal1024(const PCA96xx_chan chan, uint16_t * duty)
+FctERR NONNULL__ PCA9685_ReadVal1024(const PCA96xx_chan chan, uint16_t * duty)
 {
 	FctERR		err;
 	uint16_t	ONCount = 0, OFFCount = 0;

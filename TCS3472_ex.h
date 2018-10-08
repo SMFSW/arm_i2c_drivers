@@ -183,7 +183,7 @@ __INLINE FctERR INLINE__ TCS3472_SF_Clear_IT(void) {
 ** \param[in,out] id - pointer to chip ID result
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TCS3472_Get_ChipID(uint8_t * id) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_ChipID(uint8_t * id) {
 	return TCS3472_Read(id, TCS3472__ID, 1); }
 
 
@@ -191,14 +191,14 @@ __INLINE FctERR INLINE__ TCS3472_Get_ChipID(uint8_t * id) {
 ** \param[in,out] tab - pointer to conversions tab result
 ** \return FctERR - error code
 **/
-FctERR TCS3472_Get_Channels(uint16_t tab[]);
+FctERR NONNULL__ TCS3472_Get_Channels(uint16_t tab[]);
 
 /*!\brief Get Specific channel conversion
 ** \param[in,out] buf - pointer to conversions result
 ** \param[in] chan - Channel to get
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TCS3472_Get_Channel(uint16_t * buf, const TCS3472_chan chan) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Channel(uint16_t * buf, const TCS3472_chan chan) {
 	if (chan > TCS3472__CHAN_BLUE)	{ return ERROR_VALUE; }	// Unknown channel
 	return TCS3472_Read_Word(buf, TCS3472__CDATAL + (2 * chan)); }
 
@@ -206,28 +206,28 @@ __INLINE FctERR INLINE__ TCS3472_Get_Channel(uint16_t * buf, const TCS3472_chan 
 ** \param[in,out] clr - pointer to Clear conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TCS3472_Get_Clear(uint16_t * clr) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Clear(uint16_t * clr) {
 	return TCS3472_Read_Word(clr, TCS3472__CDATAL); }
 
 /*!\brief Get Red channel conversion
 ** \param[in,out] r - pointer to Red conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TCS3472_Get_Red(uint16_t * r) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Red(uint16_t * r) {
 	return TCS3472_Read_Word(r, TCS3472__RDATAL); }
 
 /*!\brief Get Green channel conversion
 ** \param[in,out] g - pointer to Green conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TCS3472_Get_Green(uint16_t * g) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Green(uint16_t * g) {
 	return TCS3472_Read_Word(g, TCS3472__GDATAL); }
 
 /*!\brief Get Blue channel conversion
 ** \param[in,out] b - pointer to Blue conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TCS3472_Get_Blue(uint16_t * b) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Blue(uint16_t * b) {
 	return TCS3472_Read_Word(b, TCS3472__BDATAL); }
 
 

@@ -51,13 +51,13 @@ __INLINE FctERR INLINE__ MCP4725_WakeUp(void) {
 ** \param[in] val - pointer to DAC value to read to
 ** \return FctERR - error code
 **/
-FctERR MCP4725_Read_DAC(uint16_t * val);
+FctERR NONNULL__ MCP4725_Read_DAC(uint16_t * val);
 
 /*!\brief Read DAC state
 ** \param[in] state - pointer to state to read to (0 Ready, 1 Busy)
 ** \return FctERR - error code
 **/
-FctERR MCP4725_Read_State(bool * state);
+FctERR NONNULL__ MCP4725_Read_State(bool * state);
 
 
 /****************************************************************/

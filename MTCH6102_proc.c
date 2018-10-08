@@ -143,7 +143,7 @@ FctERR MTCH6102_Set_Compensation(void)
 }
 
 
-FctERR MTCH6102_Get_MFG_Results(uint32_t * res)
+FctERR NONNULL__ MTCH6102_Get_MFG_Results(uint32_t * res)
 {
 	uint8_t			RES[6];
 	uint32_t		result = 0;
@@ -224,10 +224,8 @@ FctERR MTCH6102_Get_MFG_Results(uint32_t * res)
 /****************************************************************/
 
 
-FctERR MTCH6102_decode_touch_datas(MTCH6102_gesture * touch, const MTCH6102_raw_gest * dat)
+FctERR NONNULL__ MTCH6102_decode_touch_datas(MTCH6102_gesture * touch, const MTCH6102_raw_gest * dat)
 {
-	if ((!dat) || (!touch))		{ return ERROR_MEMORY; }	// Null pointer
-
 	touch->Large = dat->Touch_state.Bits.LRG;
 	touch->Gesture = dat->Touch_state.Bits.GES;
 	touch->Touch = dat->Touch_state.Bits.TCH;
@@ -293,10 +291,8 @@ MTCH6102_Coord MTCH6102_rotate(const MTCH6102_Coord c, int16_t deg)
 }
 
 
-FctERR MTCH6102_gesture_to_str(char * str, const MTCH6102_GESTURE_STATE state)
+FctERR NONNULL__ MTCH6102_gesture_to_str(char * str, const MTCH6102_GESTURE_STATE state)
 {
-	if (!str)		{ return ERROR_MEMORY; }	// Null pointer
-
 	switch(state)
 	{
 		case NoGesture: strcpy(str, "No Gesture"); break;
@@ -317,10 +313,8 @@ FctERR MTCH6102_gesture_to_str(char * str, const MTCH6102_GESTURE_STATE state)
 	return ERROR_OK;
 }
 
-FctERR MTCH6102_diag_to_str(char * str, const MTCH6102_GESTURE_DIAGNOSTIC diag)
+FctERR NONNULL__ MTCH6102_diag_to_str(char * str, const MTCH6102_GESTURE_DIAGNOSTIC diag)
 {
-	if (!str)		{ return ERROR_MEMORY; }	// Null pointer
-
 	switch(diag)
 	{
 		case ClickTimeout: strcpy(str, "Click Timeout"); break;

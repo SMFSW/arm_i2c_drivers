@@ -38,7 +38,7 @@ FctERR BMP180_Start_Conversion(const BMP180_meas meas)
 }
 
 
-FctERR BMP180_Get_Temperature_Raw(int32_t * tp)
+FctERR NONNULL__ BMP180_Get_Temperature_Raw(int32_t * tp)
 {
 	uint16_t	RES;
 	FctERR		err;
@@ -56,7 +56,7 @@ FctERR BMP180_Get_Temperature_Raw(int32_t * tp)
 }
 
 
-FctERR BMP180_Get_Pressure_Raw(int32_t * pr)
+FctERR NONNULL__ BMP180_Get_Pressure_Raw(int32_t * pr)
 {
 	uint8_t		RES[3];
 	FctERR		err;

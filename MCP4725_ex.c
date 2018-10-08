@@ -34,7 +34,7 @@ FctERR MCP4725_Write_Command(const uint16_t val)
 }
 
 
-FctERR MCP4725_Read_DAC(uint16_t * val)
+FctERR NONNULL__ MCP4725_Read_DAC(uint16_t * val)
 {
 	uint8_t	REG[3];
 	FctERR	err;
@@ -47,7 +47,7 @@ FctERR MCP4725_Read_DAC(uint16_t * val)
 }
 
 
-FctERR MCP4725_Read_State(bool * state)
+FctERR NONNULL__ MCP4725_Read_State(bool * state)
 {
 	uint8_t	REG;
 	FctERR	err;

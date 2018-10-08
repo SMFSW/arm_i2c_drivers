@@ -33,7 +33,10 @@
 #define	FM24C04B_SIZE		0x100				//!< FM24C04B size (in bytes)
 #define	FM24C16B_SIZE		0x800				//!< FM24C size (in bytes)
 
+#ifndef FM24C_SIZE
+//!< FM24C_SIZE defaults to FM24C16B size, but can be defined in globals.h or at project level for FM24C04B for example
 #define FM24C_SIZE			FM24C16B_SIZE		//!< FM24C size
+#endif
 
 
 // *****************************************************************************
@@ -66,7 +69,7 @@ extern FM24C_t	FM24C;		//!< FM24C User structure
 ** \weak FM24C Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-__WEAK FctERR FM24C_Init(void);
+FctERR FM24C_Init(void);
 
 
 /************************/

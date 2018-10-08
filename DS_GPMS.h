@@ -189,7 +189,7 @@ typedef union uGPMS_REG__STATUS {
 ** \weak GPMS Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-__WEAK FctERR GPMS_Init(void);
+FctERR GPMS_Init(void);
 
 
 /************************/

@@ -127,7 +127,7 @@ typedef union uS11059_REG__CONTROL {
 ** \weak S11059 Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-__WEAK FctERR S11059_Init(void);
+FctERR S11059_Init(void);
 
 
 /************************/

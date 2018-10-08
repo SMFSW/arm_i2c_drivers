@@ -93,7 +93,7 @@ typedef union uMCP4725_REG__CMD {
 ** \weak MCP4725 Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-__WEAK FctERR MCP4725_Init(void);
+FctERR MCP4725_Init(void);
 
 
 /************************/

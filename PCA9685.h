@@ -131,7 +131,7 @@ typedef enum PACK__ PCA9685_reg_map {
 ** \weak PCA9685 Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-__WEAK FctERR PCA9685_Init(void);
+FctERR PCA9685_Init(void);
 
 
 /************************/

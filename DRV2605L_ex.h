@@ -272,51 +272,51 @@ FctERR DRV2605L_Set_LRAOpenLoopPeriod_us(const uint16_t per);
 ** \param[in] max - 0 Min, 1 Max
 ** \return FctERR - error code
 **/
-FctERR DRV2605L_Get_ATVInput_Volt(float * volt, const bool max);
+FctERR NONNULL__ DRV2605L_Get_ATVInput_Volt(float * volt, const bool max);
 
 /*!\brief Get min/max Audio To Vibe Drive
 ** \param[in,out] perc - pointer to Audio To Vibe Drive result
 ** \param[in] max - 0 Min, 1 Max
 ** \return FctERR - error code
 **/
-FctERR DRV2605L_Get_ATVDrive_Percent(float * perc, const bool max);
+FctERR NONNULL__ DRV2605L_Get_ATVDrive_Percent(float * perc, const bool max);
 
 /*!\brief Get haptic Blanking time
 ** \param[in,out] time - pointer to Blanking time value result
 ** \return FctERR - error code
 **/
-FctERR DRV2605L_Get_BlankingTime(uint16_t * time);
+FctERR NONNULL__ DRV2605L_Get_BlankingTime(uint16_t * time);
 
 /*!\brief Get haptic Current dissipation time
 ** \param[in,out] time - pointer to Blanking time value result
 ** \return FctERR - error code
 **/
-FctERR DRV2605L_Get_CurrentDissipationTime(uint16_t * time);
+FctERR NONNULL__ DRV2605L_Get_CurrentDissipationTime(uint16_t * time);
 
 /*!\brief Get haptic Voltage
 ** \param[in,out] vbat - pointer to Battery voltage result
 ** \return FctERR - error code
 **/
-FctERR DRV2605L_Get_Voltage(uint16_t * vbat);
+FctERR NONNULL__ DRV2605L_Get_Voltage(uint16_t * vbat);
 
 /*!\brief Get haptic LRA Open loop period
 ** \param[in,out] per - pointer to LRA open loop period result
 ** \return FctERR - error code
 **/
-FctERR DRV2605L_Get_LRAOpenLoopPeriod(uint16_t * per);
+FctERR NONNULL__ DRV2605L_Get_LRAOpenLoopPeriod(uint16_t * per);
 
 /*!\brief Get haptic LRA Resonance period
 ** \param[in,out] per - pointer to LRA Resonance period result
 ** \return FctERR - error code
 **/
-FctERR DRV2605L_Get_ResonancePeriod(uint16_t * per);
+FctERR NONNULL__ DRV2605L_Get_ResonancePeriod(uint16_t * per);
 
 
 /*!\brief Get DRV260x chip ID
 ** \param[in,out] id - pointer to chip ID result
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ DRV2605L_Get_ChipID(uint8_t * id) {
+__INLINE FctERR NONNULL_INLINE__ DRV2605L_Get_ChipID(uint8_t * id) {
 	FctERR	err;
 	uint8_t	ID;
 

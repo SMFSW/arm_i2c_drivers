@@ -109,7 +109,7 @@ FctERR PCA9624_Reset(const bool all)
 
 
 
-FctERR PCA9624_ReadRegister(const PCA9624_reg reg, uint8_t * val)
+FctERR NONNULL__ PCA9624_ReadRegister(const PCA9624_reg reg, uint8_t * val)
 {
 	*val = 0;
 
@@ -119,7 +119,7 @@ FctERR PCA9624_ReadRegister(const PCA9624_reg reg, uint8_t * val)
 }
 
 
-FctERR PCA9624_ReadVal(const PCA96xx_chan chan, uint8_t * duty)
+FctERR NONNULL__ PCA9624_ReadVal(const PCA96xx_chan chan, uint8_t * duty)
 {
 	*duty = 0;
 	if ((chan < PCA96xx__PWM1) && (chan > PCA96xx__PWM8))	{ return ERROR_RANGE; }	// Unknown channel

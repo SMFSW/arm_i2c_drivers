@@ -19,7 +19,7 @@ FctERR AT42QT1244_Send_Command(const AT42QT_cmd cmd)
 }
 
 
-FctERR AT42QT1244_Send_Setup(const uint8_t * setup, const uint8_t addr, const uint8_t Nb)
+FctERR NONNULL__ AT42QT1244_Send_Setup(const uint8_t * setup, const uint8_t addr, const uint8_t Nb)
 {
 	FctERR	err = AT42QT1244_Send_Command(AT42QT__WRITE_SETUPS);
 	if (err)	{ return err; }
@@ -58,7 +58,7 @@ FctERR AT42QT1244_Setup_FHM(const AT42QT_FHM FHM)
 }
 
 
-FctERR AT42QT1244_Get_Keys(uint32_t * Keys)
+FctERR NONNULL__ AT42QT1244_Get_Keys(uint32_t * Keys)
 {
 	uint8_t TMP[3];
 	FctERR	err = AT42QT1244_Read(TMP, AT42QT__DETECT_STATUS_1, sizeof(TMP));

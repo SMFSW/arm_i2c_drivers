@@ -43,7 +43,7 @@ FctERR BMP180_Start_Conversion(const BMP180_meas meas);
 ** \param[in,out] id - pointer to chip ID result
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ BMP180_Get_ChipID(uint8_t * id) {
+__INLINE FctERR NONNULL_INLINE__ BMP180_Get_ChipID(uint8_t * id) {
 	return BMP180_Read(id, BMP180__ID, 1); }
 
 /*!\brief Reset BMP180 chip
@@ -58,13 +58,13 @@ __INLINE FctERR INLINE__ BMP180_Reset(void) {
 ** \param[in,out] tp - pointer to raw temperature result
 ** \return FctERR - error code
 **/
-FctERR BMP180_Get_Temperature_Raw(int32_t * tp);
+FctERR NONNULL__ BMP180_Get_Temperature_Raw(int32_t * tp);
 
 /*!\brief Get Raw Pressure
 ** \param[in,out] pr - pointer to raw pressure result
 ** \return FctERR - error code
 **/
-FctERR BMP180_Get_Pressure_Raw(int32_t * pr);
+FctERR NONNULL__ BMP180_Get_Pressure_Raw(int32_t * pr);
 
 
 /****************************************************************/

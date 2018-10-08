@@ -106,35 +106,35 @@ FctERR MCP9808_Set_Resolution(const MCP9808_res res);
 ** \param[in,out] cfg - pointer to Configuration value to read to
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ MCP9808_Read_Config(uint16_t * cfg) {
+__INLINE FctERR NONNULL_INLINE__ MCP9808_Read_Config(uint16_t * cfg) {
 	return MCP9808_Read(cfg, MCP9808__CONFIGURATION, 1); }
 
 /*!\brief Get MCP9808 Configuration
 ** \param[in,out] temp - pointer to Temperature value to read to
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ MCP9808_Get_Temperature_Raw(uint16_t * temp) {
+__INLINE FctERR NONNULL_INLINE__ MCP9808_Get_Temperature_Raw(uint16_t * temp) {
 	return MCP9808_Read(temp, MCP9808__TEMPERATURE, 1); }
 
 /*!\brief Get MCP9808 Resolution
 ** \param[in,out] res - pointer to Resolution to read to
 ** \return FctERR - error code
 **/
-FctERR MCP9808_Get_Resolution(MCP9808_res * res);
+FctERR NONNULL__ MCP9808_Get_Resolution(MCP9808_res * res);
 
 
 /*!\brief Get MCP9808 Manufacturer ID
 ** \param[in,out] id - pointer to Manufacturer ID result
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ MCP9808_Get_ManufacturerID(uint16_t * id) {
+__INLINE FctERR NONNULL_INLINE__ MCP9808_Get_ManufacturerID(uint16_t * id) {
 	return MCP9808_Read(id, MCP9808__MANUFACTURER_ID, 1); }
 
 /*!\brief Get MCP9808 chip ID
 ** \param[in,out] id - pointer to chip ID result
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ MCP9808_Get_ChipID(uint16_t * id) {
+__INLINE FctERR NONNULL_INLINE__ MCP9808_Get_ChipID(uint16_t * id) {
 	return MCP9808_Read(id, MCP9808__DEVICE_ID, 1); }
 
 

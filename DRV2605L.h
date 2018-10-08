@@ -471,7 +471,7 @@ typedef union uDRV_REG__CONTROL_5 {
 ** \weak DRV2605L Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-__WEAK FctERR DRV2605L_Init(void);
+FctERR DRV2605L_Init(void);
 
 
 /************************/

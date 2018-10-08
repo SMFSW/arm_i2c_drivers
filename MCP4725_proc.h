@@ -50,7 +50,7 @@ extern MCP4725_t	MCP4725;		//!< MCP4725 User structure
 ** \weak MCP4725 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-__WEAK FctERR MCP4725_Init_Sequence(void);
+FctERR MCP4725_Init_Sequence(void);
 
 
 /*!\brief Set mode of the MCP4725 peripheral

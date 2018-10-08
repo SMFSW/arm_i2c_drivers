@@ -132,7 +132,7 @@ typedef union uPCA9624_REG__LEDOUT1 {
 ** \weak PCA9624 Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-__WEAK FctERR PCA9624_Init(void);
+FctERR PCA9624_Init(void);
 
 
 /************************/

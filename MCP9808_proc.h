@@ -65,7 +65,7 @@ extern MCP9808_t	MCP9808;			//!< MCP9808 User structure
 ** \weak MCP9808 handler may be user implemented to suit custom needs
 ** \return FctERR - error code
 **/
-__WEAK FctERR MCP9808_Init_Sequence(void);
+FctERR MCP9808_Init_Sequence(void);
 
 /*!\brief Set the high/low/crit Alert temperature
 ** \param[in,out] temp - temperature (in Celsius degrees)
@@ -94,7 +94,7 @@ FctERR MCP9808_Get_Temperature(float * temp);
 ** \note Should be called periodically to handle BMP180 tasks
 ** \return FctERR - error code
 **/
-__WEAK FctERR MCP9808_handler(void);
+FctERR MCP9808_handler(void);
 
 
 /****************************************************************/

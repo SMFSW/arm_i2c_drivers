@@ -67,7 +67,7 @@ FctERR PCF8523_Set_12_24(const bool twelve)
 }
 
 
-FctERR PCF8523_Get_Countdown(uint8_t * ctdw, const uint16_t period, const uint8_t timer)
+FctERR NONNULL__ PCF8523_Get_Countdown(uint8_t * ctdw, const uint16_t period, const uint8_t timer)
 {
 	uint16_t	T_x;
 	float		Clk_Timer = PCF8523_Clock_Timer_A_B[(timer ? PCF8523.cfg.Src_Clock_B : PCF8523.cfg.Src_Clock_A)];
@@ -83,7 +83,7 @@ FctERR PCF8523_Get_Countdown(uint8_t * ctdw, const uint16_t period, const uint8_
 }
 
 
-FctERR PCF8523_Check_Clock_Integrity(bool * integrity)
+FctERR NONNULL__ PCF8523_Check_Clock_Integrity(bool * integrity)
 {
 	uPCF8523_REG__SECONDS	SEC;
 	FctERR					err;

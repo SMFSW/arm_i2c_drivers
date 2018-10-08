@@ -197,7 +197,7 @@ __INLINE FctERR INLINE__ TSL2591_SF_Clear_PERS(void) {
 ** \param[in,out] id - pointer to chip ID result
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TSL2591_Get_ChipID(uint8_t * id) {
+__INLINE FctERR NONNULL_INLINE__ TSL2591_Get_ChipID(uint8_t * id) {
 	return TSL2591_Read(id, TSL2591__ID, 1); }
 
 /*!\brief Reset TSL2591 chip
@@ -210,14 +210,14 @@ __INLINE FctERR INLINE__ TSL2591_Reset(void) {
 ** \param[in,out] full - pointer to Full conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TSL2591_Get_Full(uint16_t * full) {
+__INLINE FctERR NONNULL_INLINE__ TSL2591_Get_Full(uint16_t * full) {
 	return TSL2591_Read_Word(full, TSL2591__C0DATAL); }
 
 /*!\brief Get IR conversion (Channel 1)
 ** \param[in,out] ir - pointer to IR conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ TSL2591_Get_IR(uint16_t * ir) {
+__INLINE FctERR NONNULL_INLINE__ TSL2591_Get_IR(uint16_t * ir) {
 	return TSL2591_Read_Word(ir, TSL2591__C1DATAL); }
 
 

@@ -300,7 +300,7 @@ typedef union uPCF8523_REG__B_FREQ_CTRL {
 ** \weak PCF8523 Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-__WEAK FctERR PCF8523_Init(void);
+FctERR PCF8523_Init(void);
 
 
 /************************/

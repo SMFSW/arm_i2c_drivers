@@ -73,7 +73,7 @@ extern TSL2591_t	TSL2591;			//!< TSL2591 User structure
 ** \weak TSL2591 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-__WEAK FctERR TSL2591_Init_Sequence(void);
+FctERR TSL2591_Init_Sequence(void);
 
 
 /*!\brief Set proper CPL value (Counts per kiloLux)
@@ -93,7 +93,7 @@ uint32_t TSL2591_Get_Lux(void);
 ** \note Alternately may be called when event occurs on TSL2591 pin
 ** \return FctERR - error code
 **/
-__WEAK FctERR TSL2591_handler(void);
+FctERR TSL2591_handler(void);
 
 
 /****************************************************************/

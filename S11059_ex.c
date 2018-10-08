@@ -99,7 +99,7 @@ FctERR S11059_Set_Integration_Multiplier(const uint16_t mult)
 }
 
 
-FctERR S11059_Get_Standby(S11059_standby_fct * standby)
+FctERR NONNULL__ S11059_Get_Standby(S11059_standby_fct * standby)
 {
 	uS11059_REG__CONTROL	CTL;
 	FctERR					err;

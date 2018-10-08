@@ -58,7 +58,7 @@ extern MTCH6102_t MTCH6102;			//!< MTCH6102 User structure
 ** \weak MTCH6102 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-__WEAK FctERR MTCH6102_Init_Sequence(void);
+FctERR MTCH6102_Init_Sequence(void);
 
 /*!\brief Calculates compensation values regarding read values and writes them to MTCH6102
 ** \note Beware, averaging is done through all read values, not picking a repeated value
@@ -71,14 +71,14 @@ FctERR MTCH6102_Set_Compensation(void);
 ** \param[in,out] res - Channels shorted to GND in least significant 16b ; Channels shorted to Vdd in most significant 16b
 ** \return FctERR - error code
 **/
-FctERR MTCH6102_Get_MFG_Results(uint32_t * res);
+FctERR NONNULL__ MTCH6102_Get_MFG_Results(uint32_t * res);
 
-FctERR MTCH6102_decode_touch_datas(MTCH6102_gesture * touch, const MTCH6102_raw_gest * dat);
+FctERR NONNULL__ MTCH6102_decode_touch_datas(MTCH6102_gesture * touch, const MTCH6102_raw_gest * dat);
 
 MTCH6102_Coord MTCH6102_rotate(const MTCH6102_Coord c, int16_t deg);
 
-FctERR MTCH6102_gesture_to_str(char * str, const MTCH6102_GESTURE_STATE state);
-FctERR MTCH6102_diag_to_str(char * str, const MTCH6102_GESTURE_DIAGNOSTIC diag);
+FctERR NONNULL__ MTCH6102_gesture_to_str(char * str, const MTCH6102_GESTURE_STATE state);
+FctERR NONNULL__ MTCH6102_diag_to_str(char * str, const MTCH6102_GESTURE_DIAGNOSTIC diag);
 
 __INLINE void INLINE__ MTCH6102_Set_Centered_Coord(const bool centered) {
 	MTCH6102.cfg.Centered = centered; }
@@ -89,7 +89,7 @@ __INLINE void INLINE__ MTCH6102_Set_Centered_Coord(const bool centered) {
 ** \note Alternately may be called when event occurs on MTCH6102 pin
 ** \return FctERR - error code
 **/
-__WEAK FctERR MTCH6102_handler(void);
+FctERR MTCH6102_handler(void);
 
 /****************************************************************/
 #ifdef __cplusplus

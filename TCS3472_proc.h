@@ -77,7 +77,7 @@ extern TCS3472_t TCS3472;				//!< TCSL3472 User structure
 ** \weak TCS3472 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-__WEAK FctERR TCS3472_Init_Sequence(void);
+FctERR TCS3472_Init_Sequence(void);
 
 /*!\brief Get current Color temperature (in Kelvin)
 ** \return FctERR - error code
@@ -95,7 +95,7 @@ uint32_t TCS3472_Get_Lux(void);
 ** \note Alternately may be called when event occurs on TCS3472 pin
 ** \return FctERR - error code
 **/
-__WEAK FctERR TCS3472_handler(void);
+FctERR TCS3472_handler(void);
 
 
 /****************************************************************/

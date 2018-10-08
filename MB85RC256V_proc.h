@@ -53,7 +53,7 @@ extern MB85RC256V_t	MB85RC256V;			//!< MB85RC256V User structure
 ** \weak MB85RC256V Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-__WEAK FctERR MB85RC256V_Init_Sequence(void);
+FctERR MB85RC256V_Init_Sequence(void);
 
 
 /*!\brief Get ID from MB85RC256V peripheral

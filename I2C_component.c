@@ -18,8 +18,6 @@ FctERR NONNULL__ I2C_slave_init(I2C_slave_t * slave, const I2C_HandleTypeDef * h
 	assert_param(IS_I2C_ALL_INSTANCE(hi2c->Instance));
 	assert_param(IS_I2C_7B_ADDR(devAddress));
 
-	//memcpy(slave, &slave_hal, sizeof(I2C_slave_t));		//! \note max_speed is const and should be set at init
-
 	slave->cfg.bus_inst = (I2C_HandleTypeDef *) hi2c;
 	slave->cfg.addr = I2C_ADDR(devAddress);
 	slave->cfg.timeout = timeout;

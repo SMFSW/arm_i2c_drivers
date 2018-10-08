@@ -20,7 +20,7 @@
 /****************************************************************/
 
 
-#define FM24C_Read_Type(name, type, addr)	__INLINE FctERR INLINE__ FM24C_Get_##name(type * rd) {	\
+#define FM24C_Read_Type(name, type, addr)	__INLINE FctERR NONNULL_INLINE__ FM24C_Get_##name(type * rd) {	\
 												return FM24C_Read_Banked(&rd, LOBYTE(addr), HIBYTE(addr), sizeof(type)); }	//!< Macro to create function to read value(s) from FM24C
 
 #define FM24C_Write_Type(name, type, addr)	__INLINE FctERR INLINE__ FM24C_Set_##name(type wr) {	\

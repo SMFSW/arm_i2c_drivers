@@ -39,14 +39,14 @@ static const uint16_t DRV2605L_time_table_LRA[16] = { 15, 25, 50 , 75, 90, 105, 
 ** \param[in,out] cfg - pointer to DRV2605L configuration in RAM to write to
 ** \return FctERR - error code
 **/
-__STATIC_INLINE FctERR INLINE__ _read_cfg(uDRV_CFG * cfg) {
+__STATIC_INLINE FctERR NONNULL_INLINE__ _read_cfg(uDRV_CFG * cfg) {
 	return DRV2605L_Read(cfg->Bytes, DRV__FEEDBACK_CONTROL, sizeof(uDRV_CFG)); }
 
 /*!\brief Write configuration block of DRV2605L peripheral
 ** \param[in,out] cfg - pointer to DRV2605L configuration in RAM to read from
 ** \return FctERR - error code
 **/
-__STATIC_INLINE FctERR INLINE__ _write_cfg(uDRV_CFG * cfg) {
+__STATIC_INLINE FctERR NONNULL_INLINE__ _write_cfg(uDRV_CFG * cfg) {
 	return DRV2605L_Write(cfg->Bytes, DRV__FEEDBACK_CONTROL, sizeof(uDRV_CFG)); }
 
 
@@ -308,7 +308,7 @@ FctERR DRV2605L_Set_LRAOpenLoopPeriod_us(const uint16_t per)
 /****************************************************************/
 
 
-FctERR DRV2605L_Get_BlankingTime(uint16_t * time)
+FctERR NONNULL__ DRV2605L_Get_BlankingTime(uint16_t * time)
 {
 	FctERR		err;
 	uint8_t		idx;
@@ -332,7 +332,7 @@ FctERR DRV2605L_Get_BlankingTime(uint16_t * time)
 }
 
 
-FctERR DRV2605L_Get_ATVInput_Volt(float * volt, const bool max)
+FctERR NONNULL__ DRV2605L_Get_ATVInput_Volt(float * volt, const bool max)
 {
 	uint8_t	VAL;
 	FctERR	err;
@@ -345,7 +345,7 @@ FctERR DRV2605L_Get_ATVInput_Volt(float * volt, const bool max)
 }
 
 
-FctERR DRV2605L_Get_ATVDrive_Percent(float * perc, const bool max)
+FctERR NONNULL__ DRV2605L_Get_ATVDrive_Percent(float * perc, const bool max)
 {
 	uint8_t	VAL;
 	FctERR	err;
@@ -358,7 +358,7 @@ FctERR DRV2605L_Get_ATVDrive_Percent(float * perc, const bool max)
 }
 
 
-FctERR DRV2605L_Get_CurrentDissipationTime(uint16_t * time)
+FctERR NONNULL__ DRV2605L_Get_CurrentDissipationTime(uint16_t * time)
 {
 	uDRV_CFG	CFG;
 	FctERR		err;
@@ -382,10 +382,7 @@ FctERR DRV2605L_Get_CurrentDissipationTime(uint16_t * time)
 }
 
 
-/*!\brief get DRV2605L voltage (in V)
-** \param[in,out] vbat - pointer to voltage variable
-**/
-FctERR DRV2605L_Get_Voltage(uint16_t * vbat)
+FctERR NONNULL__ DRV2605L_Get_Voltage(uint16_t * vbat)
 {
 	uint8_t VBAT = 0;
 	FctERR	err;
@@ -396,10 +393,7 @@ FctERR DRV2605L_Get_Voltage(uint16_t * vbat)
 }
 
 
-/*!\brief get DRV2605L LRA Open Loop period (in us)
-** \param[in,out] per - pointer to open loop period variable
-**/
-FctERR DRV2605L_Get_LRAOpenLoopPeriod(uint16_t * per)
+FctERR NONNULL__ DRV2605L_Get_LRAOpenLoopPeriod(uint16_t * per)
 {
 	uint8_t PER = 0;
 	FctERR	err;
@@ -410,10 +404,7 @@ FctERR DRV2605L_Get_LRAOpenLoopPeriod(uint16_t * per)
 }
 
 
-/*!\brief get DRV2605L resonance period (in us)
-** \param[in,out] per - pointer to period variable
-**/
-FctERR DRV2605L_Get_ResonancePeriod(uint16_t * per)
+FctERR NONNULL__ DRV2605L_Get_ResonancePeriod(uint16_t * per)
 {
 	uint8_t PER = 0;
 	FctERR	err;

@@ -51,7 +51,7 @@ FctERR PCA9685_Reset(const bool all);
 ** \param [in,out] val - Pointer to the data for receive
 ** \return FctERR - ErrorCode
 **/
-FctERR PCA9685_ReadRegister(const PCA9685_reg reg, uint8_t * val);
+FctERR NONNULL__ PCA9685_ReadRegister(const PCA9685_reg reg, uint8_t * val);
 
 
 /*!\brief Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8_t)
@@ -59,7 +59,7 @@ FctERR PCA9685_ReadRegister(const PCA9685_reg reg, uint8_t * val);
 ** \param [in,out] duty - Pointer to the DutyCycle data for receive coded on a uint8_t
 ** \return FctERR - ErrorCode
 **/
-FctERR PCA9685_ReadVal256(const PCA96xx_chan chan, uint8_t * duty);
+FctERR NONNULL__ PCA9685_ReadVal256(const PCA96xx_chan chan, uint8_t * duty);
 
 
 /*!\brief Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint16_t)
@@ -67,7 +67,7 @@ FctERR PCA9685_ReadVal256(const PCA96xx_chan chan, uint8_t * duty);
 ** \param [in,out] duty - Pointer to the DutyCycle data for receive coded on a uint16_t
 ** \return FctERR - ErrorCode
 **/
-FctERR PCA9685_ReadVal1024(const PCA96xx_chan chan, uint16_t * duty);
+FctERR NONNULL__ PCA9685_ReadVal1024(const PCA96xx_chan chan, uint16_t * duty);
 
 
 /*!\brief Computes and send I2C lighting values to apply to a particular or all channels for PCA9685
@@ -99,16 +99,16 @@ FctERR PCA9685_SetVal(const PCA96xx_chan chan);
 FctERR PCA9685_ClrVal(const PCA96xx_chan chan);
 
 /*
-FctERR PCA9685_ReadVal(const PCA96xx_chan chan, uint16_t * duty, const uint8_t downscale);
+FctERR NONNULL__ PCA9685_ReadVal(const PCA96xx_chan chan, uint16_t * duty, const uint8_t downscale);
 FctERR PCA9685_PutVal(const PCA96xx_chan chan, const uint16_t duty, const uint8_t upscale);
 
-__INLINE FctERR INLINE__ PCA9685_ReadVal256(const PCA96xx_chan chan, uint8_t * duty) {
+__INLINE FctERR NONNULL_INLINE__ PCA9685_ReadVal256(const PCA96xx_chan chan, uint8_t * duty) {
 	return PCA9685_ReadVal(chan, (uint16_t *) duty, 4); }		// Doute sur la transformation du pointeur de 8b en pointeur de 16b pour écrire le résultat
 
-__INLINE FctERR INLINE__ PCA9685_ReadVal1024(const PCA96xx_chan chan, uint16_t * duty) {
+__INLINE FctERR NONNULL_INLINE__ PCA9685_ReadVal1024(const PCA96xx_chan chan, uint16_t * duty) {
 	return PCA9685_ReadVal(chan, duty, 2); }
 
-__INLINE FctERR INLINE__ PCA9685_ReadVal4096(const PCA96xx_chan chan, uint16_t * duty) {
+__INLINE FctERR NONNULL_INLINE__ PCA9685_ReadVal4096(const PCA96xx_chan chan, uint16_t * duty) {
 	return PCA9685_ReadVal(chan, duty, 0); }
 
 __INLINE FctERR INLINE__ PCA9685_PutVal256(const PCA96xx_chan chan, const uint8_t duty) {

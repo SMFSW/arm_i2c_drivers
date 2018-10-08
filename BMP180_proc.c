@@ -83,7 +83,7 @@ FctERR BMP180_Set_Oversampling(const BMP180_oversampling oss)
 }
 
 
-FctERR BMP180_Get_Calibration(BMP180_calib * calib)
+FctERR NONNULL__ BMP180_Get_Calibration(BMP180_calib * calib)
 {
 	int16_t *	adr = (int16_t *) calib;
 	FctERR		err;

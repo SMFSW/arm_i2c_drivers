@@ -71,7 +71,7 @@ FctERR PCA9624_Reset(const bool all);
 ** \param [in,out] val - Pointer to the data for receive
 ** \return FctERR - ErrorCode
 **/
-FctERR PCA9624_ReadRegister(const PCA9624_reg reg, uint8_t * val);
+FctERR NONNULL__ PCA9624_ReadRegister(const PCA9624_reg reg, uint8_t * val);
 
 
 /*!\brief Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8_t)
@@ -79,7 +79,7 @@ FctERR PCA9624_ReadRegister(const PCA9624_reg reg, uint8_t * val);
 ** \param [in,out] duty - Pointer to the DutyCycle data for receive coded on a uint8_t
 ** \return FctERR - ErrorCode
 **/
-FctERR PCA9624_ReadVal(const PCA96xx_chan chan, uint8_t * duty);
+FctERR NONNULL__ PCA9624_ReadVal(const PCA96xx_chan chan, uint8_t * duty);
 
 
 /*!\brief Computes and send I2C lighting values to apply to a particular channel for PCA9624

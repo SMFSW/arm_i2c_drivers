@@ -60,7 +60,7 @@ FctERR MTCH6102_Command(MTCH6102_COMMAND cmd)
 }
 
 
-FctERR MTCH6102_Get_Active_Period(uint16_t * period)
+FctERR NONNULL__ MTCH6102_Get_Active_Period(uint16_t * period)
 {
 	uint8_t DAT[2];
 	FctERR	err = ERROR_OK;
@@ -73,7 +73,7 @@ FctERR MTCH6102_Get_Active_Period(uint16_t * period)
 }
 
 
-FctERR MTCH6102_Get_Idle_Period(uint16_t * period)
+FctERR NONNULL__ MTCH6102_Get_Idle_Period(uint16_t * period)
 {
 	uint8_t DAT[2];
 	FctERR	err = ERROR_OK;

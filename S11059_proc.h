@@ -63,7 +63,7 @@ extern S11059_t S11059;			//!< S11059 User structure
 ** \weak S11059 Init sequence may be user implemented if custom initialization sequence needed
 ** \return FctERR - error code
 **/
-__WEAK FctERR S11059_Init_Sequence(void);
+FctERR S11059_Init_Sequence(void);
 
 
 /*!\brief Get S11059 integration time for all channels
@@ -81,7 +81,7 @@ uint32_t get_Full_Integration_Time(const S11059_integ mode, const S11059_prescal
 ** \note Alternately may be called when event occurs on S11059 pin
 ** \return FctERR - error code
 **/
-__WEAK FctERR S11059_handler(void);
+FctERR S11059_handler(void);
 
 
 /****************************************************************/

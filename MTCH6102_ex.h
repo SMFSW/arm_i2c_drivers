@@ -96,7 +96,7 @@ __INLINE FctERR INLINE__ MTCH6102_Set_Mode(const MTCH6102_MODE mode) {
 ** \param[in,out] mode - Gesture decoding mode
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ MTCH6102_Get_Mode(MTCH6102_MODE * mode) {
+__INLINE FctERR NONNULL_INLINE__ MTCH6102_Get_Mode(MTCH6102_MODE * mode) {
 	return MTCH6102_Read(mode, MTCH__MODE, 1); }
 
 /*!\brief Execute MTCH6102 command
@@ -154,9 +154,9 @@ __INLINE FctERR INLINE__ MTCH6102_Set_Debounce(const uint8_t touch, const uint8_
 	uint8_t DAT[2] = { release, touch };
 	return MTCH6102_Write(DAT, MTCH__DEBOUNCE_UP, sizeof(DAT)); }
 
-FctERR MTCH6102_Get_Active_Period(uint16_t * period);
+FctERR NONNULL__ MTCH6102_Get_Active_Period(uint16_t * period);
 
-FctERR MTCH6102_Get_Idle_Period(uint16_t * period);
+FctERR NONNULL__ MTCH6102_Get_Idle_Period(uint16_t * period);
 
 
 /*** Acquisition and Touch Parameters ***/
@@ -194,10 +194,10 @@ __INLINE FctERR INLINE__ MTCH6102_Set_Base_Filter(const uint8_t pos, const uint8
 
 
 /*** Acquisition ***/
-__INLINE FctERR INLINE__ MTCH6102_Get_Raw(MTCH6102_raw_sense * raw) {
+__INLINE FctERR NONNULL_INLINE__ MTCH6102_Get_Raw(MTCH6102_raw_sense * raw) {
 	return MTCH6102_Read((uint8_t *) raw, MTCH__SENSOR_VALUE_RX0, sizeof(MTCH6102_raw_sense)); }
 
-__INLINE FctERR INLINE__ MTCH6102_Get_Gest(MTCH6102_raw_gest * gest) {
+__INLINE FctERR NONNULL_INLINE__ MTCH6102_Get_Gest(MTCH6102_raw_gest * gest) {
 	return MTCH6102_Read((uint8_t *) gest, MTCH__TOUCH_STATE, sizeof(MTCH6102_raw_gest)); }
 
 

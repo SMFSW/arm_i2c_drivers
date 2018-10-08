@@ -111,14 +111,14 @@ FctERR S11059_Set_Integration_Multiplier(const uint16_t mult);
 ** \param[in,out] standby - pointer to standby function result
 ** \return FctERR - error code
 **/
-FctERR S11059_Get_Standby(S11059_standby_fct * standby);
+FctERR NONNULL__ S11059_Get_Standby(S11059_standby_fct * standby);
 
 /*!\brief Get Specific channel conversion
 ** \param[in,out] buf - pointer to conversions result
 ** \param[in] chan - Channel to get
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ S11059_Get_Channel(uint16_t * buf, const S11059_chan chan) {
+__INLINE FctERR NONNULL_INLINE__ S11059_Get_Channel(uint16_t * buf, const S11059_chan chan) {
 	if (chan > S11059__CHAN_IR)	{ return ERROR_VALUE; }	// Unknown channel
 	return S11059_Read_Word(buf, S11059__RED_DATA_MSB + (2 * chan)); }
 
@@ -126,28 +126,28 @@ __INLINE FctERR INLINE__ S11059_Get_Channel(uint16_t * buf, const S11059_chan ch
 ** \param[in,out] r - pointer to Red conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ S11059_Get_Red(uint16_t * r) {
+__INLINE FctERR NONNULL_INLINE__ S11059_Get_Red(uint16_t * r) {
 	return S11059_Read_Word(r, S11059__RED_DATA_MSB); }
 
 /*!\brief Get Green channel conversion
 ** \param[in,out] g - pointer to Green conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ S11059_Get_Green(uint16_t * g) {
+__INLINE FctERR NONNULL_INLINE__ S11059_Get_Green(uint16_t * g) {
 	return S11059_Read_Word(g, S11059__GREEN_DATA_MSB); }
 
 /*!\brief Get Blue channel conversion
 ** \param[in,out] b - pointer to Blue conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ S11059_Get_Blue(uint16_t * b) {
+__INLINE FctERR NONNULL_INLINE__ S11059_Get_Blue(uint16_t * b) {
 	return S11059_Read_Word(b, S11059__BLUE_DATA_MSB); }
 
 /*!\brief Get Infra-red channel conversion
 ** \param[in,out] clr - pointer to Clear conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ S11059_Get_Clear(uint16_t * ir) {
+__INLINE FctERR NONNULL_INLINE__ S11059_Get_Clear(uint16_t * ir) {
 	return S11059_Read_Word(ir, S11059__IR_DATA_MSB); }
 
 

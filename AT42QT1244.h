@@ -269,7 +269,7 @@ typedef union uAT42QT_REG__SETUP_248 {
 ** \weak AT42QT1244 Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-__WEAK FctERR AT42QT1244_Init(void);
+FctERR AT42QT1244_Init(void);
 
 
 /************************/

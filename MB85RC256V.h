@@ -46,7 +46,7 @@ extern I2C_slave_t MB85RC256V_hal;	//!< MB85RC256V Slave structure
 ** \weak MB85RC256V Base address may be changed if user implemented
 ** \return FctERR - error code
 **/
-__WEAK FctERR MB85RC256V_Init(void);
+FctERR MB85RC256V_Init(void);
 
 
 /************************/
