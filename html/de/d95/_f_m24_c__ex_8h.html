@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">I2C_Drivers (ARM)
-   &#160;<span id="projectnumber">0.7</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">SMFSW collection of HAL I2C Drivers for ARM</div>
   </td>
@@ -146,7 +146,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">__INLINE FctERR INLINE__ FM24C_Get_##name(type * rd) {  \</div><div class="line">                                                return <a class="code" href="../../da/d47/_f_m24_c_8c.html#a58c75fa880659b77916e33d268997c03">FM24C_Read_Banked</a>(&amp;rd, LOBYTE(addr), HIBYTE(addr), <span class="keyword">sizeof</span>(type)); }</div><div class="ttc" id="_f_m24_c_8c_html_a58c75fa880659b77916e33d268997c03"><div class="ttname"><a href="../../da/d47/_f_m24_c_8c.html#a58c75fa880659b77916e33d268997c03">FM24C_Read_Banked</a></div><div class="ttdeci">FctERR FM24C_Read_Banked(uint8_t *data, const uint16_t addr, const uint8_t bank, const uint16_t nb)</div><div class="ttdoc">I2C Read function for FM24C. </div><div class="ttdef"><b>Definition:</b> FM24C.c:64</div></div>
+<b>Value:</b><div class="fragment"><div class="line">__INLINE FctERR NONNULL_INLINE__ FM24C_Get_##name(type * rd) {  \</div><div class="line">                                                return <a class="code" href="../../da/d47/_f_m24_c_8c.html#a58c75fa880659b77916e33d268997c03">FM24C_Read_Banked</a>(&amp;rd, LOBYTE(addr), HIBYTE(addr), <span class="keyword">sizeof</span>(type)); }</div><div class="ttc" id="_f_m24_c_8c_html_a58c75fa880659b77916e33d268997c03"><div class="ttname"><a href="../../da/d47/_f_m24_c_8c.html#a58c75fa880659b77916e33d268997c03">FM24C_Read_Banked</a></div><div class="ttdeci">FctERR FM24C_Read_Banked(uint8_t *data, const uint16_t addr, const uint8_t bank, const uint16_t nb)</div><div class="ttdoc">I2C Read function for FM24C. </div><div class="ttdef"><b>Definition:</b> FM24C.c:64</div></div>
 </div><!-- fragment -->
 <p>Macro to create function to read value(s) from FM24C. </p>
 

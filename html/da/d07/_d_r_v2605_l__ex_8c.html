@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">I2C_Drivers (ARM)
-   &#160;<span id="projectnumber">0.7</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">SMFSW collection of HAL I2C Drivers for ARM</div>
   </td>
@@ -155,13 +155,13 @@ Functions</h2></td></tr>
 <tr class="memdesc:ae025bbee22c0bd497d091e8a3b80b8cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get haptic Current dissipation time.  <a href="#ae025bbee22c0bd497d091e8a3b80b8cc">More...</a><br /></td></tr>
 <tr class="separator:ae025bbee22c0bd497d091e8a3b80b8cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e1fd76610298f945c893a3c9ee3f196"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d07/_d_r_v2605_l__ex_8c.html#a7e1fd76610298f945c893a3c9ee3f196">DRV2605L_Get_Voltage</a> (uint16_t *vbat)</td></tr>
-<tr class="memdesc:a7e1fd76610298f945c893a3c9ee3f196"><td class="mdescLeft">&#160;</td><td class="mdescRight">get DRV2605L voltage (in V)  <a href="#a7e1fd76610298f945c893a3c9ee3f196">More...</a><br /></td></tr>
+<tr class="memdesc:a7e1fd76610298f945c893a3c9ee3f196"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get haptic Voltage.  <a href="#a7e1fd76610298f945c893a3c9ee3f196">More...</a><br /></td></tr>
 <tr class="separator:a7e1fd76610298f945c893a3c9ee3f196"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1dfb4395e5c55198a2e4f446daf884f1"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d07/_d_r_v2605_l__ex_8c.html#a1dfb4395e5c55198a2e4f446daf884f1">DRV2605L_Get_LRAOpenLoopPeriod</a> (uint16_t *per)</td></tr>
-<tr class="memdesc:a1dfb4395e5c55198a2e4f446daf884f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">get DRV2605L LRA Open Loop period (in us)  <a href="#a1dfb4395e5c55198a2e4f446daf884f1">More...</a><br /></td></tr>
+<tr class="memdesc:a1dfb4395e5c55198a2e4f446daf884f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get haptic LRA Open loop period.  <a href="#a1dfb4395e5c55198a2e4f446daf884f1">More...</a><br /></td></tr>
 <tr class="separator:a1dfb4395e5c55198a2e4f446daf884f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb8c4c9a3709a5478c810178ce3ee22e"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d07/_d_r_v2605_l__ex_8c.html#abb8c4c9a3709a5478c810178ce3ee22e">DRV2605L_Get_ResonancePeriod</a> (uint16_t *per)</td></tr>
-<tr class="memdesc:abb8c4c9a3709a5478c810178ce3ee22e"><td class="mdescLeft">&#160;</td><td class="mdescRight">get DRV2605L resonance period (in us)  <a href="#abb8c4c9a3709a5478c810178ce3ee22e">More...</a><br /></td></tr>
+<tr class="memdesc:abb8c4c9a3709a5478c810178ce3ee22e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get haptic LRA Resonance period.  <a href="#abb8c4c9a3709a5478c810178ce3ee22e">More...</a><br /></td></tr>
 <tr class="separator:abb8c4c9a3709a5478c810178ce3ee22e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -383,14 +383,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>get DRV2605L LRA Open Loop period (in us) </p>
-<p>Get haptic LRA Open loop period.</p>
+<p>Get haptic LRA Open loop period. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">per</td><td>- pointer to open loop period variable </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">per</td><td>- pointer to LRA open loop period result </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -428,14 +428,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>get DRV2605L resonance period (in us) </p>
-<p>Get haptic LRA Resonance period.</p>
+<p>Get haptic LRA Resonance period. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">per</td><td>- pointer to period variable </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">per</td><td>- pointer to LRA Resonance period result </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -473,14 +473,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>get DRV2605L voltage (in V) </p>
-<p>Get haptic Voltage.</p>
+<p>Get haptic Voltage. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">vbat</td><td>- pointer to voltage variable </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">vbat</td><td>- pointer to Battery voltage result </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
