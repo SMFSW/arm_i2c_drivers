@@ -1,4 +1,4 @@
-/*!\file TCS3400_t.c
+/*!\file TCS3400_proc.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief TCS3400 Driver procedures

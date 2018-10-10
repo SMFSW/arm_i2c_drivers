@@ -1,4 +1,4 @@
-/*!\file MCP9808_t.c
+/*!\file MCP9808_proc.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief MCP9808 Driver procedures

@@ -1,4 +1,4 @@
-/*!\file PCA9624_t.c
+/*!\file PCA9624_proc.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief PCA9624 Driver procedures

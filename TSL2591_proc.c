@@ -1,4 +1,4 @@
-/*!\file TSL2591_t.c
+/*!\file TSL2591_proc.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief TSL2591 Driver procedures

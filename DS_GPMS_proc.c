@@ -1,4 +1,4 @@
-/*!\file DS_GPMS_t.c
+/*!\file DS_GPMS_proc.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief DS-GPM.S Driver procedures

@@ -1,4 +1,4 @@
-/*!\file AT42QT1244_t.c
+/*!\file AT42QT1244_proc.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief AT42QT1244 Driver procedures

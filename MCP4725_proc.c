@@ -1,4 +1,4 @@
-/*!\file MCP4725_t.c
+/*!\file MCP4725_proc.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief MCP4725 Driver procedures

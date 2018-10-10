@@ -1,4 +1,4 @@
-/*!\file MB85RC256V_t.c
+/*!\file MB85RC256V_proc.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief MB85RC256V Driver procedures

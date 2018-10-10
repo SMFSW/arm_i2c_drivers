@@ -1,4 +1,4 @@
-/*!\file MTCH6102_t.c
+/*!\file MTCH6102_proc.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief MTCH6102 Driver procedures

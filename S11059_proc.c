@@ -1,4 +1,4 @@
-/*!\file S11059_t.c
+/*!\file S11059_proc.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief S11059 Driver procedures

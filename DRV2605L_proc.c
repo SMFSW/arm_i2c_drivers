@@ -1,4 +1,4 @@
-/*!\file DRV2605L_t.c
+/*!\file DRV2605L_proc.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief DRV2605L Driver procedures

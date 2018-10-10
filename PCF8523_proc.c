@@ -1,4 +1,4 @@
-/*!\file PCF8523_t.c
+/*!\file PCF8523_proc.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief PCF8523 Driver procedures

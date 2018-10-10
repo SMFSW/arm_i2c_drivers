@@ -1,4 +1,4 @@
-/*!\file BMP180_t.c
+/*!\file BMP180_proc.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2018, SMFSW
 ** \brief BMP180 Driver procedures
