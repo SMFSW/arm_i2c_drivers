@@ -2,7 +2,7 @@ var searchData=
 [
   ['mcp4725_5fcmd',['MCP4725_cmd',['../df/d9f/_m_c_p4725_8h.html#af34ea0d00cc2f26dff0d96540f447e93',1,'MCP4725.h']]],
   ['mcp4725_5fpd',['MCP4725_pd',['../df/d9f/_m_c_p4725_8h.html#adbd7261328dd0a213d5d6f4353aaaf52',1,'MCP4725.h']]],
-  ['mcp9808_5falert',['MCP9808_alert',['../df/d2f/_m_c_p9808__ex_8h.html#ab5f623656adf0683301ba47a8fcf3d4f',1,'MCP9808_ex.h']]],
+  ['mcp9808_5falert',['MCP9808_alert',['../d6/d5e/_m_c_p9808__proc_8h.html#ab5f623656adf0683301ba47a8fcf3d4f',1,'MCP9808_proc.h']]],
   ['mcp9808_5fhyst',['MCP9808_hyst',['../d8/d57/_m_c_p9808_8h.html#a28f884cabea67edc507c0e5491d7c61e',1,'MCP9808.h']]],
   ['mcp9808_5freg_5fmap',['MCP9808_reg_map',['../d8/d57/_m_c_p9808_8h.html#a6ac40263ca86dcdab9f06a80f8fa63dd',1,'MCP9808.h']]],
   ['mcp9808_5fres',['MCP9808_res',['../d8/d57/_m_c_p9808_8h.html#a523ec7d6d20cf01f2bce43570a8e99ca',1,'MCP9808.h']]],

@@ -1,0 +1,9 @@
+<map id="PCA9685_Write" name="PCA9685_Write">
+<area shape="rect" id="node2" href="$d3/d57/_p_c_a9685__ex_8h.html#a4cbc1660cc4452ee0ffc216f5f8f9251" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685..." alt="" coords="182,5,327,32"/>
+<area shape="rect" id="node3" href="$d3/d57/_p_c_a9685__ex_8h.html#a061e34c7ba24cfdcf9c9a7a362d660b0" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685..." alt="" coords="179,56,331,83"/>
+<area shape="rect" id="node4" href="$d3/d57/_p_c_a9685__ex_8h.html#a9db359b7086cda33cb453b5b515b863f" title="Sends I2C lighting ON values to apply to a particular or all channels for PCA9685. " alt="" coords="193,107,317,133"/>
+<area shape="rect" id="node5" href="$d3/d57/_p_c_a9685__ex_8h.html#a0652d52e5f0796d4889dd176978d7c7f" title="Sends I2C PWm OFF values to apply to a particular or all channels for PCA9685. " alt="" coords="194,157,315,184"/>
+<area shape="rect" id="node6" href="$d5/d22/_p_c_a9685__proc_8h.html#a6e9b5100a9232482cb86ed5b115ac8ad" title="Initialization Sequence for PCA9685 peripheral. " alt="" coords="171,208,339,235"/>
+<area shape="rect" id="node7" href="$d4/deb/_p_c_a9685_8h.html#a7fa0e558a2f028f6261ca45db11d623a" title="Initialization for PCA9685 peripheral. " alt="" coords="387,208,490,235"/>
+<area shape="rect" id="node8" href="$d4/deb/_p_c_a9685_8h.html#a5446c995c445067011d256bc587b164e" title="Initialization for PCA9685 peripheral. " alt="" coords="539,208,685,235"/>
+</map>

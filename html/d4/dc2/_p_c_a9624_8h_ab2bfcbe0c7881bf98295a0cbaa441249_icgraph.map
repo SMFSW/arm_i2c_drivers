@@ -1,0 +1,7 @@
+<map id="PCA9624_Read" name="PCA9624_Read">
+<area shape="rect" id="node2" href="$d6/dfc/_p_c_a9624__ex_8h.html#a0d71cdeac6e79c2af950ec956e248d52" title="PCA9624_Set_Latch" alt="" coords="191,5,335,32"/>
+<area shape="rect" id="node3" href="$d6/dfc/_p_c_a9624__ex_8h.html#ae16aac54b0abe408a6fe1460c61bd20e" title="PCA9624_Set_Mode_LED" alt="" coords="174,56,351,83"/>
+<area shape="rect" id="node4" href="$d6/dfc/_p_c_a9624__ex_8h.html#a53e77ffd08ae6189e6facfebbb4ee415" title="PCA9624_Set_Mode_LEDs" alt="" coords="171,107,355,133"/>
+<area shape="rect" id="node5" href="$d6/dfc/_p_c_a9624__ex_8h.html#a641c5fa2997e9c75fb6ea12509a16687" title="Reads I2C register from PCA9624. " alt="" coords="180,157,345,184"/>
+<area shape="rect" id="node6" href="$d6/dfc/_p_c_a9624__ex_8h.html#afa699f7875f092b05b76b9dd48d1b6f4" title="Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8..." alt="" coords="195,208,330,235"/>
+</map>

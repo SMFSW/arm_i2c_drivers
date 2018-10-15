@@ -1,0 +1,10 @@
+<map id="PCA9685_Init_Single" name="PCA9685_Init_Single">
+<area shape="rect" id="node2" href="$de/dca/_p_c_a9685_8c.html#a7fa0e558a2f028f6261ca45db11d623a" title="Initialization for PCA9685 peripheral. " alt="" coords="201,56,303,83"/>
+<area shape="rect" id="node3" href="$d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="383,5,489,32"/>
+<area shape="rect" id="node4" href="$d4/d97/_p_c_a9685__proc_8c.html#a6e9b5100a9232482cb86ed5b115ac8ad" title="Initialization Sequence for PCA9685 peripheral. " alt="" coords="352,56,520,83"/>
+<area shape="rect" id="node9" href="$d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="379,107,493,133"/>
+<area shape="rect" id="node5" href="$de/dca/_p_c_a9685_8c.html#a19e471c9dd64911bd669d77edf64850f" title="I2C Write function for PCA9685. " alt="" coords="614,31,730,57"/>
+<area shape="rect" id="node8" href="$d4/d97/_p_c_a9685__proc_8c.html#ac8e4b4197d25eefe877657db5179c37d" title="Sets register value for PCA9685 according to desired output frequency. " alt="" coords="568,81,776,108"/>
+<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="824,5,936,32"/>
+<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="829,56,931,83"/>
+</map>

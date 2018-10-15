@@ -1,5 +1,6 @@
 <map id="TSL2591_ex.h" name="TSL2591_ex.h">
-<area shape="rect" id="node3" href="$da/d96/_t_s_l2591_8h.html" title="TSL2591 Driver. " alt="" coords="85,80,170,107"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="270,155,396,181"/>
-<area shape="rect" id="node7" href="$d7/d6e/_t_s_l2591__proc_8h.html" title="TSL2591 Driver procedures. " alt="" coords="129,155,245,181"/>
+<area shape="rect" id="node3" href="$da/d96/_t_s_l2591_8h.html" title="TSL2591 Driver. " alt="" coords="155,80,240,107"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="280,155,406,181"/>
+<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="430,155,546,181"/>
+<area shape="rect" id="node8" href="$d7/d6e/_t_s_l2591__proc_8h.html" title="TSL2591 Driver procedures. " alt="" coords="139,155,255,181"/>
 </map>

@@ -1,5 +1,6 @@
 <map id="TCS3472_proc.h" name="TCS3472_proc.h">
-<area shape="rect" id="node3" href="$d8/ddc/_t_c_s3472_8h.html" title="TCS3472 Driver. " alt="" coords="81,80,169,107"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="262,155,388,181"/>
-<area shape="rect" id="node7" href="$d2/dbe/_t_c_s3472__ex_8h.html" title="TCS3472 Driver extensions. " alt="" coords="129,155,238,181"/>
+<area shape="rect" id="node3" href="$d8/ddc/_t_c_s3472_8h.html" title="TCS3472 Driver. " alt="" coords="150,80,238,107"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="272,155,398,181"/>
+<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="422,155,538,181"/>
+<area shape="rect" id="node8" href="$d2/dbe/_t_c_s3472__ex_8h.html" title="TCS3472 Driver extensions. " alt="" coords="139,155,248,181"/>
 </map>

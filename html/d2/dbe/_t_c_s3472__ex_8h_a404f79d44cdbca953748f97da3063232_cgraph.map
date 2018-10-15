@@ -1,0 +1,6 @@
+<map id="TCS3472_Set_AIHT" name="TCS3472_Set_AIHT">
+<area shape="rect" id="node2" href="$df/dfb/_t_c_s3472_8c.html#ad6c358bb4478dffca4b450f6ab6307a9" title="I2C Word Write (low endian) function for TCS3472. " alt="" coords="198,31,351,57"/>
+<area shape="rect" id="node3" href="$df/dfb/_t_c_s3472_8c.html#a466c991d1a8eda55bef3e6efa6f25a75" title="I2C Write function for TCS3472. " alt="" coords="400,31,515,57"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="563,5,675,32"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="567,56,670,83"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="MTCH6102_Set_Hysteresis" name="MTCH6102_Set_Hysteresis">
+<area shape="rect" id="node2" href="$da/d78/_m_t_c_h6102_8c.html#a7d23a0da90fbc047e384e603c436be75" title="I2C Write function for MTCH6102. " alt="" coords="241,31,367,57"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="416,5,528,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="421,56,523,83"/>
+</map>

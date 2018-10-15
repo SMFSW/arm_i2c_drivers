@@ -1,0 +1,5 @@
+<map id="S11059_handler" name="S11059_handler">
+<area shape="rect" id="node2" href="$d2/dfe/_s11059_8c.html#ab91130bef195a07881a36f08d2cda6ab" title="I2C Read function for S11059. " alt="" coords="168,31,272,57"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="320,5,432,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="325,56,427,83"/>
+</map>

@@ -1,0 +1,19 @@
+<map id="TCS3472_Write" name="TCS3472_Write">
+<area shape="rect" id="node2" href="$d8/ddc/_t_c_s3472_8h.html#ad6c358bb4478dffca4b450f6ab6307a9" title="I2C Word Write (low endian) function for TCS3472. " alt="" coords="169,56,322,83"/>
+<area shape="rect" id="node8" href="$d2/dbe/_t_c_s3472__ex_8h.html#a56e6f8ead8bbb8c8cb372d4221045b66" title="Gain configuration. " alt="" coords="405,157,544,184"/>
+<area shape="rect" id="node9" href="$d2/dbe/_t_c_s3472__ex_8h.html#a6a38df8f4d231ee6248dd808e83a69d9" title="Write TCS3472 Control register. " alt="" coords="641,335,780,361"/>
+<area shape="rect" id="node10" href="$d2/dbe/_t_c_s3472__ex_8h.html#a64c9f2b7536ad7db4019a1ea7cc36438" title="Integration time configuration. " alt="" coords="371,208,579,235"/>
+<area shape="rect" id="node11" href="$d2/dbe/_t_c_s3472__ex_8h.html#aa7bb5702df46ec9b941427c585c7aad0" title="Wait time configuration. " alt="" coords="387,107,562,133"/>
+<area shape="rect" id="node12" href="$d2/dbe/_t_c_s3472__ex_8h.html#a786481326f17dae01bcb84f74ed3f42f" title="Write TCS3472 Enable register. " alt="" coords="176,335,315,361"/>
+<area shape="rect" id="node17" href="$d2/dbe/_t_c_s3472__ex_8h.html#a6c29de5f0accadce54295c64cf92ebed" title="Write TCS3472 Config register. " alt="" coords="174,157,317,184"/>
+<area shape="rect" id="node18" href="$d2/dbe/_t_c_s3472__ex_8h.html#a48b3886ee097b8e7c6e8bfde21feecbd" title="ALS interrupt thresholds configuration. " alt="" coords="179,563,311,589"/>
+<area shape="rect" id="node3" href="$d2/dbe/_t_c_s3472__ex_8h.html#aaaa8caa8a594187a682ded0669cf368f" title="ALS interrupt low threshold configuration. " alt="" coords="405,56,544,83"/>
+<area shape="rect" id="node7" href="$d2/dbe/_t_c_s3472__ex_8h.html#a404f79d44cdbca953748f97da3063232" title="ALS interrupt high threshold configuration. " alt="" coords="403,5,546,32"/>
+<area shape="rect" id="node4" href="$d6/d96/_t_c_s3472__proc_8h.html#aa3932aaece6a7b7d1a711dfa32e3765d" title="Initialization Sequence for TCS3472 peripheral. " alt="" coords="627,132,794,159"/>
+<area shape="rect" id="node5" href="$d8/ddc/_t_c_s3472_8h.html#a84f70b0cac4b182e04ee6a95ab466d3b" title="Initialization for TCS3472 peripheral. " alt="" coords="843,132,946,159"/>
+<area shape="rect" id="node6" href="$d8/ddc/_t_c_s3472_8h.html#a3a35824646bde380a0d9bb1be68e8002" title="Initialization for TCS3472 peripheral. " alt="" coords="995,132,1141,159"/>
+<area shape="rect" id="node13" href="$d2/dbe/_t_c_s3472__ex_8h.html#a69b71a6d2396eddc312aeb252dd7cf9a" title="Oscillator Enable / Disable. " alt="" coords="405,309,545,336"/>
+<area shape="rect" id="node14" href="$d2/dbe/_t_c_s3472__ex_8h.html#a62af3faf107d160f4e766b608841dfc1" title="Clear module Enable / Disable. " alt="" coords="405,360,544,387"/>
+<area shape="rect" id="node15" href="$d2/dbe/_t_c_s3472__ex_8h.html#a1419380b712e9564bc8fdc00d5921dfe" title="Clear interrupt module Enable / Disable. " alt="" coords="403,411,546,437"/>
+<area shape="rect" id="node16" href="$d2/dbe/_t_c_s3472__ex_8h.html#a6883bb2414c9327862e2f746a19b99cd" title="WAIT module Enable / Disable. " alt="" coords="403,461,546,488"/>
+</map>

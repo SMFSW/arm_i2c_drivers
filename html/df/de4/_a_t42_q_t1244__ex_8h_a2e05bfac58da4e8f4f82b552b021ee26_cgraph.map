@@ -1,0 +1,5 @@
+<map id="AT42QT1244_Get_Key_Data" name="AT42QT1244_Get_Key_Data">
+<area shape="rect" id="node2" href="$d3/dc4/_a_t42_q_t1244_8c.html#ab867525e9212e042aec44bc34932ae44" title="I2C Read function for AT42QT1244. " alt="" coords="246,31,383,57"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="432,5,544,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="437,56,539,83"/>
+</map>

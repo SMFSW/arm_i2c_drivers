@@ -1,0 +1,5 @@
+<map id="TSL2591_Read_Word" name="TSL2591_Read_Word">
+<area shape="rect" id="node2" href="$d2/d68/_t_s_l2591_8c.html#aae82321862139e3bf12261885445e5a7" title="I2C Read function for TSL2591. " alt="" coords="205,31,317,57"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="365,5,477,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="370,56,473,83"/>
+</map>

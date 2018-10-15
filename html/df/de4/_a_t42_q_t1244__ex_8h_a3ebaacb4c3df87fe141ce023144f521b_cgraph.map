@@ -1,0 +1,6 @@
+<map id="AT42QT1244_Reset" name="AT42QT1244_Reset">
+<area shape="rect" id="node2" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a89daac54238bdbdc92cba12f647a6910" title="AT42QT1244_Send_Command" alt="" coords="195,31,397,57"/>
+<area shape="rect" id="node3" href="$d3/dc4/_a_t42_q_t1244_8c.html#aefc0247934f27b0e2fc64979aee373b7" title="I2C Write function for AT42QT1244. " alt="" coords="446,31,583,57"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="632,5,744,32"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="637,56,739,83"/>
+</map>

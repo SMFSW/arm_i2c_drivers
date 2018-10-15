@@ -76,33 +76,40 @@ Include dependency graph for MB85RC256V.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/d6c/_m_b85_r_c256_v_8c__incl.png" border="0" usemap="#_m_b85_r_c256_v_8c" alt=""/></div>
 <map name="_m_b85_r_c256_v_8c" id="_m_b85_r_c256_v_8c">
-<area shape="rect" id="node2" href="../../d7/d3b/_m_b85_r_c256_v_8h.html" title="MB85RC256V Driver. " alt="" coords="136,80,252,107"/>
-<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="461,155,586,181"/>
-<area shape="rect" id="node7" href="../../d5/d5f/_m_b85_r_c256_v__ex_8h.html" title="MB85RC256V Driver extensions. " alt="" coords="125,155,264,181"/>
-<area shape="rect" id="node8" href="../../da/dc5/_m_b85_r_c256_v__proc_8h.html" title="MB85RC256V Driver procedures. " alt="" coords="288,155,436,181"/>
+<area shape="rect" id="node2" href="../../d7/d3b/_m_b85_r_c256_v_8h.html" title="MB85RC256V Driver. " alt="" coords="212,80,328,107"/>
+<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="364,155,490,181"/>
+<area shape="rect" id="node7" href="../../dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="514,155,630,181"/>
+<area shape="rect" id="node8" href="../../da/dc5/_m_b85_r_c256_v__proc_8h.html" title="MB85RC256V Driver procedures. " alt="" coords="28,155,176,181"/>
+<area shape="rect" id="node9" href="../../d5/d5f/_m_b85_r_c256_v__ex_8h.html" title="MB85RC256V Driver extensions. " alt="" coords="202,155,340,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aca77f608d2594cd89e5c46375766e1f5"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#aca77f608d2594cd89e5c46375766e1f5">MB85RC256V_Init</a> (void)</td></tr>
-<tr class="memdesc:aca77f608d2594cd89e5c46375766e1f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for MB85RC256V peripheral.  <a href="#aca77f608d2594cd89e5c46375766e1f5">More...</a><br /></td></tr>
-<tr class="separator:aca77f608d2594cd89e5c46375766e1f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73e73d2912711167df8a240446e9ffd4"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a73e73d2912711167df8a240446e9ffd4">MB85RC256V_Write</a> (const uint8_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
-<tr class="memdesc:a73e73d2912711167df8a240446e9ffd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Write function for MB85RC256V.  <a href="#a73e73d2912711167df8a240446e9ffd4">More...</a><br /></td></tr>
-<tr class="separator:a73e73d2912711167df8a240446e9ffd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b828947711021fff18e0dbd78febe30"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a6b828947711021fff18e0dbd78febe30">MB85RC256V_Read</a> (uint8_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
-<tr class="memdesc:a6b828947711021fff18e0dbd78febe30"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Read function for MB85RC256V.  <a href="#a6b828947711021fff18e0dbd78febe30">More...</a><br /></td></tr>
-<tr class="separator:a6b828947711021fff18e0dbd78febe30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61d462174263aaede6e016fbe1058480"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a61d462174263aaede6e016fbe1058480">MB85RC256V_Read_ID</a> (uint8_t *data)</td></tr>
-<tr class="memdesc:a61d462174263aaede6e016fbe1058480"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Read ID function for MB85RC256V (reads 3 bytes)  <a href="#a61d462174263aaede6e016fbe1058480">More...</a><br /></td></tr>
-<tr class="separator:a61d462174263aaede6e016fbe1058480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2724446e33528e0d0e3990a66c52efd"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#ae2724446e33528e0d0e3990a66c52efd">MB85RC256V_Init</a> (const uint8_t idx, const I2C_HandleTypeDef *hi2c, const uint16_t devAddress)</td></tr>
+<tr class="memdesc:ae2724446e33528e0d0e3990a66c52efd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for MB85RC256V peripheral.  <a href="#ae2724446e33528e0d0e3990a66c52efd">More...</a><br /></td></tr>
+<tr class="separator:ae2724446e33528e0d0e3990a66c52efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d60789413410e0b1183068d4b467543"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a7d60789413410e0b1183068d4b467543">MB85RC256V_Init_Single</a> (void)</td></tr>
+<tr class="memdesc:a7d60789413410e0b1183068d4b467543"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for MB85RC256V peripheral.  <a href="#a7d60789413410e0b1183068d4b467543">More...</a><br /></td></tr>
+<tr class="separator:a7d60789413410e0b1183068d4b467543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a640bd37b33711d5c0b32bde7c603cabe"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a640bd37b33711d5c0b32bde7c603cabe">MB85RC256V_Write</a> (<a class="el" href="../../dc/dcf/struct_m_b85_r_c256_v__t.html">MB85RC256V_t</a> *pCpnt, const uint8_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
+<tr class="memdesc:a640bd37b33711d5c0b32bde7c603cabe"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Write function for MB85RC256V.  <a href="#a640bd37b33711d5c0b32bde7c603cabe">More...</a><br /></td></tr>
+<tr class="separator:a640bd37b33711d5c0b32bde7c603cabe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00a005a9513a3f509187ba881fabd163"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a00a005a9513a3f509187ba881fabd163">MB85RC256V_Read</a> (<a class="el" href="../../dc/dcf/struct_m_b85_r_c256_v__t.html">MB85RC256V_t</a> *pCpnt, uint8_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
+<tr class="memdesc:a00a005a9513a3f509187ba881fabd163"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Read function for MB85RC256V.  <a href="#a00a005a9513a3f509187ba881fabd163">More...</a><br /></td></tr>
+<tr class="separator:a00a005a9513a3f509187ba881fabd163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7785f4f302c93f9a7062549a74f745b6"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a7785f4f302c93f9a7062549a74f745b6">MB85RC256V_Read_ID</a> (<a class="el" href="../../dc/dcf/struct_m_b85_r_c256_v__t.html">MB85RC256V_t</a> *pCpnt, uint8_t *data)</td></tr>
+<tr class="memdesc:a7785f4f302c93f9a7062549a74f745b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Read ID function for MB85RC256V (reads 3 bytes)  <a href="#a7785f4f302c93f9a7062549a74f745b6">More...</a><br /></td></tr>
+<tr class="separator:a7785f4f302c93f9a7062549a74f745b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a68c2d75d92fa76f5aabd53c0e17f0452"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a68c2d75d92fa76f5aabd53c0e17f0452">MB85RC256V_hal</a> = { { pNull, <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#ad5c7bd690e94d726dda8f5f183d85687">I2C_ADDR</a>(<a class="el" href="../../d7/d3b/_m_b85_r_c256_v_8h.html#a4045189a39206374bb63af6033910d4d">MB85RC256V_BASE_ADDR</a>), <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a0d8243bc88b91218d47566862e9eae2f">I2C_slave_timeout</a>, I2C_MEMADD_SIZE_16BIT, <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a6990aa6170c44e3ec833f18b350abb8facab280b484ea06a499900154515f3005">I2C_FMP</a> }, 0, HAL_OK, true, false }</td></tr>
-<tr class="memdesc:a68c2d75d92fa76f5aabd53c0e17f0452"><td class="mdescLeft">&#160;</td><td class="mdescRight">MB85RC256V Slave structure.  <a href="#a68c2d75d92fa76f5aabd53c0e17f0452">More...</a><br /></td></tr>
-<tr class="separator:a68c2d75d92fa76f5aabd53c0e17f0452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e2f659c6c97e6e19f38f17c28ea6283"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a5e2f659c6c97e6e19f38f17c28ea6283">MB85RC256V_hal</a> [<a class="el" href="../../d7/d3b/_m_b85_r_c256_v_8h.html#ad7b01dd315f6c3ca2abbe03c6e1edf47">I2C_MB85RC256V_NB</a>]</td></tr>
+<tr class="memdesc:a5e2f659c6c97e6e19f38f17c28ea6283"><td class="mdescLeft">&#160;</td><td class="mdescRight">MB85RC256V Slave structure.  <a href="#a5e2f659c6c97e6e19f38f17c28ea6283">More...</a><br /></td></tr>
+<tr class="separator:a5e2f659c6c97e6e19f38f17c28ea6283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae90ed9db00ff0779e42f29b029bff271"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dcf/struct_m_b85_r_c256_v__t.html">MB85RC256V_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#ae90ed9db00ff0779e42f29b029bff271">MB85RC256V</a> [<a class="el" href="../../d7/d3b/_m_b85_r_c256_v_8h.html#ad7b01dd315f6c3ca2abbe03c6e1edf47">I2C_MB85RC256V_NB</a>]</td></tr>
+<tr class="memdesc:ae90ed9db00ff0779e42f29b029bff271"><td class="mdescLeft">&#160;</td><td class="mdescRight">MB85RC256V User structure.  <a href="#ae90ed9db00ff0779e42f29b029bff271">More...</a><br /></td></tr>
+<tr class="separator:ae90ed9db00ff0779e42f29b029bff271"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>MB85RC256V Driver. </p>
@@ -110,14 +117,81 @@ Variables</h2></td></tr>
 <dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2018, SMFSW</dd></dl>
 <p>MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="aca77f608d2594cd89e5c46375766e1f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca77f608d2594cd89e5c46375766e1f5">&#9670;&nbsp;</a></span>MB85RC256V_Init()</h2>
+<a id="ae2724446e33528e0d0e3990a66c52efd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2724446e33528e0d0e3990a66c52efd">&#9670;&nbsp;</a></span>MB85RC256V_Init()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">FctERR MB85RC256V_Init </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const I2C_HandleTypeDef *&#160;</td>
+          <td class="paramname"><em>hi2c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>devAddress</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialization for MB85RC256V peripheral. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">idx</td><td>- MB85RC256V index </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hi2c</td><td>- pointer to MB85RC256V I2C instance </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">devAddress</td><td>- MB85RC256V device address </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/dc0/_m_b85_r_c256_v_8c_ae2724446e33528e0d0e3990a66c52efd_cgraph.png" border="0" usemap="#d1/dc0/_m_b85_r_c256_v_8c_ae2724446e33528e0d0e3990a66c52efd_cgraph" alt=""/></div>
+<map name="d1/dc0/_m_b85_r_c256_v_8c_ae2724446e33528e0d0e3990a66c52efd_cgraph" id="d1/dc0/_m_b85_r_c256_v_8c_ae2724446e33528e0d0e3990a66c52efd_cgraph">
+<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="230,5,335,32"/>
+<area shape="rect" id="node3" href="../../d4/dc8/_m_b85_r_c256_v__proc_8c.html#ae70ad3e715858c576a4f886a601a58f3" title="Initialization Sequence for MB85RC256V peripheral. " alt="" coords="185,56,381,83"/>
+<area shape="rect" id="node8" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="226,107,339,133"/>
+<area shape="rect" id="node4" href="../../d4/dc8/_m_b85_r_c256_v__proc_8c.html#ab5b6df102c19e188b263009bc0c8d986" title="Get ID from MB85RC256V peripheral. " alt="" coords="429,56,584,83"/>
+<area shape="rect" id="node5" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a7785f4f302c93f9a7062549a74f745b6" title="I2C Read ID function for MB85RC256V (reads 3 bytes) " alt="" coords="632,56,797,83"/>
+<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="845,31,957,57"/>
+<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="850,81,953,108"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/dc0/_m_b85_r_c256_v_8c_ae2724446e33528e0d0e3990a66c52efd_icgraph.png" border="0" usemap="#d1/dc0/_m_b85_r_c256_v_8c_ae2724446e33528e0d0e3990a66c52efd_icgraph" alt=""/></div>
+<map name="d1/dc0/_m_b85_r_c256_v_8c_ae2724446e33528e0d0e3990a66c52efd_icgraph" id="d1/dc0/_m_b85_r_c256_v_8c_ae2724446e33528e0d0e3990a66c52efd_icgraph">
+<area shape="rect" id="node2" href="../../d7/d3b/_m_b85_r_c256_v_8h.html#a7d60789413410e0b1183068d4b467543" title="Initialization for MB85RC256V peripheral. " alt="" coords="185,5,359,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7d60789413410e0b1183068d4b467543"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d60789413410e0b1183068d4b467543">&#9670;&nbsp;</a></span>MB85RC256V_Init_Single()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR MB85RC256V_Init_Single </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -127,26 +201,28 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initialization for MB85RC256V peripheral. </p>
-<dl class="weak"><dt><b><a class="el" href="../../d0/d58/weak.html#_weak000013">Weak Functions:</a></b></dt><dd>MB85RC256V Base address may be changed if user implemented </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>In case multiple devices (defined by I2C_MB85RC256V_NB &gt; 1), you shall use MB85RC256V_Init instead </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d1/dc0/_m_b85_r_c256_v_8c_aca77f608d2594cd89e5c46375766e1f5_cgraph.png" border="0" usemap="#d1/dc0/_m_b85_r_c256_v_8c_aca77f608d2594cd89e5c46375766e1f5_cgraph" alt=""/></div>
-<map name="d1/dc0/_m_b85_r_c256_v_8c_aca77f608d2594cd89e5c46375766e1f5_cgraph" id="d1/dc0/_m_b85_r_c256_v_8c_aca77f608d2594cd89e5c46375766e1f5_cgraph">
-<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="230,5,335,32"/>
-<area shape="rect" id="node3" href="../../d4/dc8/_m_b85_r_c256_v__proc_8c.html#a33fa2cbd16066eef360b0f89dc6f9e90" title="Initialization Sequence for MB85RC256V peripheral. " alt="" coords="185,56,381,83"/>
-<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="226,107,339,133"/>
-<area shape="rect" id="node4" href="../../d4/dc8/_m_b85_r_c256_v__proc_8c.html#a9d7d9018da8bc5566448f6abdb81dbd4" title="Get ID from MB85RC256V peripheral. " alt="" coords="429,56,584,83"/>
-<area shape="rect" id="node5" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a61d462174263aaede6e016fbe1058480" title="I2C Read ID function for MB85RC256V (reads 3 bytes) " alt="" coords="632,56,797,83"/>
-<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="846,56,949,83"/>
+<div class="center"><img src="../../d1/dc0/_m_b85_r_c256_v_8c_a7d60789413410e0b1183068d4b467543_cgraph.png" border="0" usemap="#d1/dc0/_m_b85_r_c256_v_8c_a7d60789413410e0b1183068d4b467543_cgraph" alt=""/></div>
+<map name="d1/dc0/_m_b85_r_c256_v_8c_a7d60789413410e0b1183068d4b467543_cgraph" id="d1/dc0/_m_b85_r_c256_v_8c_a7d60789413410e0b1183068d4b467543_cgraph">
+<area shape="rect" id="node2" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#ae2724446e33528e0d0e3990a66c52efd" title="Initialization for MB85RC256V peripheral. " alt="" coords="229,56,360,83"/>
+<area shape="rect" id="node3" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="454,5,559,32"/>
+<area shape="rect" id="node4" href="../../d4/dc8/_m_b85_r_c256_v__proc_8c.html#ae70ad3e715858c576a4f886a601a58f3" title="Initialization Sequence for MB85RC256V peripheral. " alt="" coords="409,56,605,83"/>
+<area shape="rect" id="node9" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="450,107,563,133"/>
+<area shape="rect" id="node5" href="../../d4/dc8/_m_b85_r_c256_v__proc_8c.html#ab5b6df102c19e188b263009bc0c8d986" title="Get ID from MB85RC256V peripheral. " alt="" coords="653,56,808,83"/>
+<area shape="rect" id="node6" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a7785f4f302c93f9a7062549a74f745b6" title="I2C Read ID function for MB85RC256V (reads 3 bytes) " alt="" coords="856,56,1021,83"/>
+<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1069,31,1181,57"/>
+<area shape="rect" id="node8" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1074,81,1177,108"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a6b828947711021fff18e0dbd78febe30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b828947711021fff18e0dbd78febe30">&#9670;&nbsp;</a></span>MB85RC256V_Read()</h2>
+<a id="a00a005a9513a3f509187ba881fabd163"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00a005a9513a3f509187ba881fabd163">&#9670;&nbsp;</a></span>MB85RC256V_Read()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -154,6 +230,12 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">FctERR MB85RC256V_Read </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dcf/struct_m_b85_r_c256_v__t.html">MB85RC256V_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">uint8_t *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
@@ -180,6 +262,7 @@ Here is the call graph for this function:</div>
 <p>I2C Read function for MB85RC256V. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MB85RC256V component </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>- pointer to read to </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>- Address to read from </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">nb</td><td>- Number of bytes to read </td></tr>
@@ -190,8 +273,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d1/dc0/_m_b85_r_c256_v_8c_a6b828947711021fff18e0dbd78febe30_cgraph.png" border="0" usemap="#d1/dc0/_m_b85_r_c256_v_8c_a6b828947711021fff18e0dbd78febe30_cgraph" alt=""/></div>
-<map name="d1/dc0/_m_b85_r_c256_v_8c_a6b828947711021fff18e0dbd78febe30_cgraph" id="d1/dc0/_m_b85_r_c256_v_8c_a6b828947711021fff18e0dbd78febe30_cgraph">
+<div class="center"><img src="../../d1/dc0/_m_b85_r_c256_v_8c_a00a005a9513a3f509187ba881fabd163_cgraph.png" border="0" usemap="#d1/dc0/_m_b85_r_c256_v_8c_a00a005a9513a3f509187ba881fabd163_cgraph" alt=""/></div>
+<map name="d1/dc0/_m_b85_r_c256_v_8c_a00a005a9513a3f509187ba881fabd163_cgraph" id="d1/dc0/_m_b85_r_c256_v_8c_a00a005a9513a3f509187ba881fabd163_cgraph">
 <area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="197,5,309,32"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="202,56,305,83"/>
 </map>
@@ -199,8 +282,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a61d462174263aaede6e016fbe1058480"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61d462174263aaede6e016fbe1058480">&#9670;&nbsp;</a></span>MB85RC256V_Read_ID()</h2>
+<a id="a7785f4f302c93f9a7062549a74f745b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7785f4f302c93f9a7062549a74f745b6">&#9670;&nbsp;</a></span>MB85RC256V_Read_ID()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -208,9 +291,19 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">FctERR MB85RC256V_Read_ID </td>
           <td>(</td>
-          <td class="paramtype">uint8_t *&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../dc/dcf/struct_m_b85_r_c256_v__t.html">MB85RC256V_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -218,6 +311,7 @@ Here is the call graph for this function:</div>
 <p>I2C Read ID function for MB85RC256V (reads 3 bytes) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MB85RC256V component </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>- pointer to read to </td></tr>
   </table>
   </dd>
@@ -226,26 +320,28 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d1/dc0/_m_b85_r_c256_v_8c_a61d462174263aaede6e016fbe1058480_cgraph.png" border="0" usemap="#d1/dc0/_m_b85_r_c256_v_8c_a61d462174263aaede6e016fbe1058480_cgraph" alt=""/></div>
-<map name="d1/dc0/_m_b85_r_c256_v_8c_a61d462174263aaede6e016fbe1058480_cgraph" id="d1/dc0/_m_b85_r_c256_v_8c_a61d462174263aaede6e016fbe1058480_cgraph">
-<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="219,5,322,32"/>
+<div class="center"><img src="../../d1/dc0/_m_b85_r_c256_v_8c_a7785f4f302c93f9a7062549a74f745b6_cgraph.png" border="0" usemap="#d1/dc0/_m_b85_r_c256_v_8c_a7785f4f302c93f9a7062549a74f745b6_cgraph" alt=""/></div>
+<map name="d1/dc0/_m_b85_r_c256_v_8c_a7785f4f302c93f9a7062549a74f745b6_cgraph" id="d1/dc0/_m_b85_r_c256_v_8c_a7785f4f302c93f9a7062549a74f745b6_cgraph">
+<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="219,5,331,32"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="223,56,326,83"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d1/dc0/_m_b85_r_c256_v_8c_a61d462174263aaede6e016fbe1058480_icgraph.png" border="0" usemap="#d1/dc0/_m_b85_r_c256_v_8c_a61d462174263aaede6e016fbe1058480_icgraph" alt=""/></div>
-<map name="d1/dc0/_m_b85_r_c256_v_8c_a61d462174263aaede6e016fbe1058480_icgraph" id="d1/dc0/_m_b85_r_c256_v_8c_a61d462174263aaede6e016fbe1058480_icgraph">
-<area shape="rect" id="node2" href="../../da/dc5/_m_b85_r_c256_v__proc_8h.html#a9d7d9018da8bc5566448f6abdb81dbd4" title="Get ID from MB85RC256V peripheral. " alt="" coords="219,5,373,32"/>
-<area shape="rect" id="node3" href="../../da/dc5/_m_b85_r_c256_v__proc_8h.html#a33fa2cbd16066eef360b0f89dc6f9e90" title="Initialization Sequence for MB85RC256V peripheral. " alt="" coords="422,5,618,32"/>
-<area shape="rect" id="node4" href="../../d7/d3b/_m_b85_r_c256_v_8h.html#aca77f608d2594cd89e5c46375766e1f5" title="Initialization for MB85RC256V peripheral. " alt="" coords="667,5,797,32"/>
+<div class="center"><img src="../../d1/dc0/_m_b85_r_c256_v_8c_a7785f4f302c93f9a7062549a74f745b6_icgraph.png" border="0" usemap="#d1/dc0/_m_b85_r_c256_v_8c_a7785f4f302c93f9a7062549a74f745b6_icgraph" alt=""/></div>
+<map name="d1/dc0/_m_b85_r_c256_v_8c_a7785f4f302c93f9a7062549a74f745b6_icgraph" id="d1/dc0/_m_b85_r_c256_v_8c_a7785f4f302c93f9a7062549a74f745b6_icgraph">
+<area shape="rect" id="node2" href="../../da/dc5/_m_b85_r_c256_v__proc_8h.html#ab5b6df102c19e188b263009bc0c8d986" title="Get ID from MB85RC256V peripheral. " alt="" coords="219,5,373,32"/>
+<area shape="rect" id="node3" href="../../da/dc5/_m_b85_r_c256_v__proc_8h.html#ae70ad3e715858c576a4f886a601a58f3" title="Initialization Sequence for MB85RC256V peripheral. " alt="" coords="422,5,618,32"/>
+<area shape="rect" id="node4" href="../../d7/d3b/_m_b85_r_c256_v_8h.html#ae2724446e33528e0d0e3990a66c52efd" title="Initialization for MB85RC256V peripheral. " alt="" coords="667,5,797,32"/>
+<area shape="rect" id="node5" href="../../d7/d3b/_m_b85_r_c256_v_8h.html#a7d60789413410e0b1183068d4b467543" title="Initialization for MB85RC256V peripheral. " alt="" coords="846,5,1021,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a73e73d2912711167df8a240446e9ffd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73e73d2912711167df8a240446e9ffd4">&#9670;&nbsp;</a></span>MB85RC256V_Write()</h2>
+<a id="a640bd37b33711d5c0b32bde7c603cabe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a640bd37b33711d5c0b32bde7c603cabe">&#9670;&nbsp;</a></span>MB85RC256V_Write()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -253,6 +349,12 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR MB85RC256V_Write </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dcf/struct_m_b85_r_c256_v__t.html">MB85RC256V_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const uint8_t *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
@@ -279,6 +381,7 @@ Here is the caller graph for this function:</div>
 <p>I2C Write function for MB85RC256V. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MB85RC256V component </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>- pointer to write from </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>- Address to write to </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">nb</td><td>- Number of bytes to write </td></tr>
@@ -289,8 +392,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d1/dc0/_m_b85_r_c256_v_8c_a73e73d2912711167df8a240446e9ffd4_cgraph.png" border="0" usemap="#d1/dc0/_m_b85_r_c256_v_8c_a73e73d2912711167df8a240446e9ffd4_cgraph" alt=""/></div>
-<map name="d1/dc0/_m_b85_r_c256_v_8c_a73e73d2912711167df8a240446e9ffd4_cgraph" id="d1/dc0/_m_b85_r_c256_v_8c_a73e73d2912711167df8a240446e9ffd4_cgraph">
+<div class="center"><img src="../../d1/dc0/_m_b85_r_c256_v_8c_a640bd37b33711d5c0b32bde7c603cabe_cgraph.png" border="0" usemap="#d1/dc0/_m_b85_r_c256_v_8c_a640bd37b33711d5c0b32bde7c603cabe_cgraph" alt=""/></div>
+<map name="d1/dc0/_m_b85_r_c256_v_8c_a640bd37b33711d5c0b32bde7c603cabe_cgraph" id="d1/dc0/_m_b85_r_c256_v_8c_a640bd37b33711d5c0b32bde7c603cabe_cgraph">
 <area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="197,5,309,32"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="202,56,305,83"/>
 </map>
@@ -298,23 +401,39 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d1/dc0/_m_b85_r_c256_v_8c_a73e73d2912711167df8a240446e9ffd4_icgraph.png" border="0" usemap="#d1/dc0/_m_b85_r_c256_v_8c_a73e73d2912711167df8a240446e9ffd4_icgraph" alt=""/></div>
-<map name="d1/dc0/_m_b85_r_c256_v_8c_a73e73d2912711167df8a240446e9ffd4_icgraph" id="d1/dc0/_m_b85_r_c256_v_8c_a73e73d2912711167df8a240446e9ffd4_icgraph">
-<area shape="rect" id="node2" href="../../d5/d5f/_m_b85_r_c256_v__ex_8h.html#a850588345fec6720d9596091b913cb75" title="Mass erase of MB85RC256V. " alt="" coords="197,5,384,32"/>
+<div class="center"><img src="../../d1/dc0/_m_b85_r_c256_v_8c_a640bd37b33711d5c0b32bde7c603cabe_icgraph.png" border="0" usemap="#d1/dc0/_m_b85_r_c256_v_8c_a640bd37b33711d5c0b32bde7c603cabe_icgraph" alt=""/></div>
+<map name="d1/dc0/_m_b85_r_c256_v_8c_a640bd37b33711d5c0b32bde7c603cabe_icgraph" id="d1/dc0/_m_b85_r_c256_v_8c_a640bd37b33711d5c0b32bde7c603cabe_icgraph">
+<area shape="rect" id="node2" href="../../d5/d5f/_m_b85_r_c256_v__ex_8h.html#a25ef8779884fcc6d109e178fdfee6415" title="Mass erase of MB85RC256V. " alt="" coords="197,5,384,32"/>
 </map>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a68c2d75d92fa76f5aabd53c0e17f0452"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68c2d75d92fa76f5aabd53c0e17f0452">&#9670;&nbsp;</a></span>MB85RC256V_hal</h2>
+<a id="ae90ed9db00ff0779e42f29b029bff271"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae90ed9db00ff0779e42f29b029bff271">&#9670;&nbsp;</a></span>MB85RC256V</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> MB85RC256V_hal = { { pNull, <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#ad5c7bd690e94d726dda8f5f183d85687">I2C_ADDR</a>(<a class="el" href="../../d7/d3b/_m_b85_r_c256_v_8h.html#a4045189a39206374bb63af6033910d4d">MB85RC256V_BASE_ADDR</a>), <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a0d8243bc88b91218d47566862e9eae2f">I2C_slave_timeout</a>, I2C_MEMADD_SIZE_16BIT, <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a6990aa6170c44e3ec833f18b350abb8facab280b484ea06a499900154515f3005">I2C_FMP</a> }, 0, HAL_OK, true, false }</td>
+          <td class="memname"><a class="el" href="../../dc/dcf/struct_m_b85_r_c256_v__t.html">MB85RC256V_t</a> MB85RC256V[<a class="el" href="../../d7/d3b/_m_b85_r_c256_v_8h.html#ad7b01dd315f6c3ca2abbe03c6e1edf47">I2C_MB85RC256V_NB</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>MB85RC256V User structure. </p>
+
+</div>
+</div>
+<a id="a5e2f659c6c97e6e19f38f17c28ea6283"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e2f659c6c97e6e19f38f17c28ea6283">&#9670;&nbsp;</a></span>MB85RC256V_hal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> MB85RC256V_hal[<a class="el" href="../../d7/d3b/_m_b85_r_c256_v_8h.html#ad7b01dd315f6c3ca2abbe03c6e1edf47">I2C_MB85RC256V_NB</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">

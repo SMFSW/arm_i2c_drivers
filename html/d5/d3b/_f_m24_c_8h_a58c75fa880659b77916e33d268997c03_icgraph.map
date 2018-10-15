@@ -1,5 +1,0 @@
-<map id="FM24C_Read_Banked" name="FM24C_Read_Banked">
-<area shape="rect" id="node2" href="$d5/d3b/_f_m24_c_8h.html#a4c6231a2f010f66ff34f6d4e3f12a936" title="I2C Read/Write function for FM24C. " alt="" coords="209,31,343,57"/>
-<area shape="rect" id="node3" href="$d5/d3b/_f_m24_c_8h.html#a9e065c391bab2abfc3e55385a4e4a093" title="I2C Write function for FM24C. " alt="" coords="393,5,495,32"/>
-<area shape="rect" id="node4" href="$d5/d3b/_f_m24_c_8h.html#a0697ff851fd24fce492d6b3c56b55d1c" title="I2C Read function for FM24C. " alt="" coords="393,56,495,83"/>
-</map>

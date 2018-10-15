@@ -1,9 +1,0 @@
-<map id="TSL2591_Write_En" name="TSL2591_Write_En">
-<area shape="rect" id="node2" href="$dc/d24/_t_s_l2591__ex_8h.html#ae2c53653525cafb839072265649cd4ce" title="Oscillator Enable / Disable. " alt="" coords="191,5,329,32"/>
-<area shape="rect" id="node4" href="$d7/d6e/_t_s_l2591__proc_8h.html#ae70e987b630354203c40e8626b73950b" title="Initialization Sequence for TSL2591 peripheral. " alt="" coords="569,120,733,147"/>
-<area shape="rect" id="node6" href="$dc/d24/_t_s_l2591__ex_8h.html#a1dd2d9682015cdcc486ec70f8e4e864f" title="ALS module Enable / Disable. " alt="" coords="192,56,328,83"/>
-<area shape="rect" id="node7" href="$dc/d24/_t_s_l2591__ex_8h.html#a2b626330e1adaaa690d6e42c689abbf2" title="ALS interrupt module Enable / Disable. " alt="" coords="190,107,330,133"/>
-<area shape="rect" id="node8" href="$dc/d24/_t_s_l2591__ex_8h.html#a9f43b9517c0a85c29ea29f3016ca6266" title="Reset TSL2591 chip. " alt="" coords="202,208,318,235"/>
-<area shape="rect" id="node3" href="$dc/d24/_t_s_l2591__ex_8h.html#ac1113d9534b40f5093e2678134dc060d" title="Write TSL2591 Config. " alt="" coords="379,81,519,108"/>
-<area shape="rect" id="node5" href="$da/d96/_t_s_l2591_8h.html#aa5c43dbf44ce32efc764a68fe49eaa0b" title="Initialization for TSL2591 peripheral. " alt="" coords="781,120,880,147"/>
-</map>

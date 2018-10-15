@@ -76,33 +76,37 @@ Include dependency graph for BMP180.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/ddf/_b_m_p180_8c__incl.png" border="0" usemap="#_b_m_p180_8c" alt=""/></div>
 <map name="_b_m_p180_8c" id="_b_m_p180_8c">
-<area shape="rect" id="node2" href="../../d3/d7d/_b_m_p180_8h.html" title="BMP180 Driver. " alt="" coords="135,80,216,107"/>
-<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="391,155,516,181"/>
-<area shape="rect" id="node7" href="../../d8/dfb/_b_m_p180__ex_8h.html" title="BMP180 Driver extensions. " alt="" coords="124,155,228,181"/>
-<area shape="rect" id="node8" href="../../dc/d50/_b_m_p180__proc_8h.html" title="BMP180 Driver procedures. " alt="" coords="252,155,367,181"/>
+<area shape="rect" id="node2" href="../../d3/d7d/_b_m_p180_8h.html" title="BMP180 Driver. " alt="" coords="176,80,257,107"/>
+<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="293,155,418,181"/>
+<area shape="rect" id="node7" href="../../dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="442,155,558,181"/>
+<area shape="rect" id="node8" href="../../dc/d50/_b_m_p180__proc_8h.html" title="BMP180 Driver procedures. " alt="" coords="26,155,141,181"/>
+<area shape="rect" id="node9" href="../../d8/dfb/_b_m_p180__ex_8h.html" title="BMP180 Driver extensions. " alt="" coords="165,155,269,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a91b803abfdf9648359cd570b8608e074"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d11/_b_m_p180_8c.html#a91b803abfdf9648359cd570b8608e074">BMP180_Init</a> (void)</td></tr>
-<tr class="memdesc:a91b803abfdf9648359cd570b8608e074"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for BMP180 peripheral.  <a href="#a91b803abfdf9648359cd570b8608e074">More...</a><br /></td></tr>
-<tr class="separator:a91b803abfdf9648359cd570b8608e074"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9669585d00932e41ec6acefda31eeccf"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d11/_b_m_p180_8c.html#a9669585d00932e41ec6acefda31eeccf">BMP180_Write</a> (const uint8_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
-<tr class="memdesc:a9669585d00932e41ec6acefda31eeccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Write function for BMP180.  <a href="#a9669585d00932e41ec6acefda31eeccf">More...</a><br /></td></tr>
-<tr class="separator:a9669585d00932e41ec6acefda31eeccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabcacf3ee95fccb35e6289f2ee409af9"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d11/_b_m_p180_8c.html#aabcacf3ee95fccb35e6289f2ee409af9">BMP180_Read</a> (uint8_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
-<tr class="memdesc:aabcacf3ee95fccb35e6289f2ee409af9"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Read function for BMP180.  <a href="#aabcacf3ee95fccb35e6289f2ee409af9">More...</a><br /></td></tr>
-<tr class="separator:aabcacf3ee95fccb35e6289f2ee409af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad076d106074c412933c256a4a9777e85"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d11/_b_m_p180_8c.html#ad076d106074c412933c256a4a9777e85">BMP180_Read_Word</a> (uint16_t *data, const uint16_t addr)</td></tr>
-<tr class="memdesc:ad076d106074c412933c256a4a9777e85"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Word Read function for BMP180.  <a href="#ad076d106074c412933c256a4a9777e85">More...</a><br /></td></tr>
-<tr class="separator:ad076d106074c412933c256a4a9777e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa8cab987dc15d30ccdca4f903d43f4e"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d11/_b_m_p180_8c.html#aaa8cab987dc15d30ccdca4f903d43f4e">BMP180_Init</a> (const uint8_t idx, const I2C_HandleTypeDef *hi2c, const uint16_t devAddress)</td></tr>
+<tr class="memdesc:aaa8cab987dc15d30ccdca4f903d43f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for BMP180 peripheral.  <a href="#aaa8cab987dc15d30ccdca4f903d43f4e">More...</a><br /></td></tr>
+<tr class="separator:aaa8cab987dc15d30ccdca4f903d43f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57f1d83e4dbe3e1f9a3ee9d85c016e94"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d11/_b_m_p180_8c.html#a57f1d83e4dbe3e1f9a3ee9d85c016e94">BMP180_Init_Single</a> (void)</td></tr>
+<tr class="memdesc:a57f1d83e4dbe3e1f9a3ee9d85c016e94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for BMP180 peripheral.  <a href="#a57f1d83e4dbe3e1f9a3ee9d85c016e94">More...</a><br /></td></tr>
+<tr class="separator:a57f1d83e4dbe3e1f9a3ee9d85c016e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2362f4e58663210aac1d966fc7449b29"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d11/_b_m_p180_8c.html#a2362f4e58663210aac1d966fc7449b29">BMP180_Write</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *pSlave, const uint8_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
+<tr class="memdesc:a2362f4e58663210aac1d966fc7449b29"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Write function for BMP180.  <a href="#a2362f4e58663210aac1d966fc7449b29">More...</a><br /></td></tr>
+<tr class="separator:a2362f4e58663210aac1d966fc7449b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf6adaa83fd38bc86405a564251c0288"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d11/_b_m_p180_8c.html#abf6adaa83fd38bc86405a564251c0288">BMP180_Read</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *pSlave, uint8_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
+<tr class="memdesc:abf6adaa83fd38bc86405a564251c0288"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Read function for BMP180.  <a href="#abf6adaa83fd38bc86405a564251c0288">More...</a><br /></td></tr>
+<tr class="separator:abf6adaa83fd38bc86405a564251c0288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c474272e48ec58e211a93f9da2373c2"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d11/_b_m_p180_8c.html#a7c474272e48ec58e211a93f9da2373c2">BMP180_Read_Word</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *pSlave, uint16_t *data, const uint16_t addr)</td></tr>
+<tr class="memdesc:a7c474272e48ec58e211a93f9da2373c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Word Read function for BMP180.  <a href="#a7c474272e48ec58e211a93f9da2373c2">More...</a><br /></td></tr>
+<tr class="separator:a7c474272e48ec58e211a93f9da2373c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a4c626f719f2cbb6f24c22053b8ab91ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d11/_b_m_p180_8c.html#a4c626f719f2cbb6f24c22053b8ab91ce">BMP180_hal</a> = { { pNull, <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#ad5c7bd690e94d726dda8f5f183d85687">I2C_ADDR</a>(<a class="el" href="../../d3/d7d/_b_m_p180_8h.html#ac1b9de358c1a95e4fdf0c2d6f7a1961b">BMP180_BASE_ADDR</a>), <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a0d8243bc88b91218d47566862e9eae2f">I2C_slave_timeout</a>, I2C_MEMADD_SIZE_8BIT, <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a6990aa6170c44e3ec833f18b350abb8fa6595b5891728545ae73b56eecaedeae6">I2C_HS</a> }, 0, HAL_OK, true, false }</td></tr>
-<tr class="memdesc:a4c626f719f2cbb6f24c22053b8ab91ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">BMP180 Slave structure.  <a href="#a4c626f719f2cbb6f24c22053b8ab91ce">More...</a><br /></td></tr>
-<tr class="separator:a4c626f719f2cbb6f24c22053b8ab91ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4decbba59817a0af264790a303f32dcf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d11/_b_m_p180_8c.html#a4decbba59817a0af264790a303f32dcf">BMP180_hal</a> [<a class="el" href="../../d3/d7d/_b_m_p180_8h.html#af28f8433ce67f1c3e2d621a0cffdb7f7">I2C_BMP180_NB</a>]</td></tr>
+<tr class="memdesc:a4decbba59817a0af264790a303f32dcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">BMP180 Slave structure.  <a href="#a4decbba59817a0af264790a303f32dcf">More...</a><br /></td></tr>
+<tr class="separator:a4decbba59817a0af264790a303f32dcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>BMP180 Driver. </p>
@@ -110,14 +114,83 @@ Variables</h2></td></tr>
 <dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2018, SMFSW</dd></dl>
 <p>BMP180: Digital pressure sensor </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a91b803abfdf9648359cd570b8608e074"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91b803abfdf9648359cd570b8608e074">&#9670;&nbsp;</a></span>BMP180_Init()</h2>
+<a id="aaa8cab987dc15d30ccdca4f903d43f4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa8cab987dc15d30ccdca4f903d43f4e">&#9670;&nbsp;</a></span>BMP180_Init()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">FctERR BMP180_Init </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const I2C_HandleTypeDef *&#160;</td>
+          <td class="paramname"><em>hi2c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>devAddress</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialization for BMP180 peripheral. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">idx</td><td>- BMP180 index </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hi2c</td><td>- pointer to BMP180 I2C instance </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">devAddress</td><td>- BMP180 device address </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d11/_b_m_p180_8c_aaa8cab987dc15d30ccdca4f903d43f4e_cgraph.png" border="0" usemap="#d8/d11/_b_m_p180_8c_aaa8cab987dc15d30ccdca4f903d43f4e_cgraph" alt=""/></div>
+<map name="d8/d11/_b_m_p180_8c_aaa8cab987dc15d30ccdca4f903d43f4e_cgraph" id="d8/d11/_b_m_p180_8c_aaa8cab987dc15d30ccdca4f903d43f4e_cgraph">
+<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="181,5,286,32"/>
+<area shape="rect" id="node3" href="../../d0/d35/_b_m_p180__proc_8c.html#aaeda0bfd52c838d1e3a4a94818a57426" title="Initialization Sequence for BMP180 peripheral. " alt="" coords="152,56,315,83"/>
+<area shape="rect" id="node10" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="177,107,290,133"/>
+<area shape="rect" id="node4" href="../../d8/dfb/_b_m_p180__ex_8h.html#ae43f89829b6efc406dd9517ff59e6a86" title="Get BMP180 chip ID. " alt="" coords="582,31,730,57"/>
+<area shape="rect" id="node8" href="../../d0/d35/_b_m_p180__proc_8c.html#ad632e93e1740bb9421d43eeea5f120e7" title="Get calibration parameters from BMP180 peripheral. " alt="" coords="363,81,533,108"/>
+<area shape="rect" id="node5" href="../../d8/d11/_b_m_p180_8c.html#abf6adaa83fd38bc86405a564251c0288" title="I2C Read function for BMP180. " alt="" coords="779,56,890,83"/>
+<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="939,31,1051,57"/>
+<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="943,81,1046,108"/>
+<area shape="rect" id="node9" href="../../d8/d11/_b_m_p180_8c.html#a7c474272e48ec58e211a93f9da2373c2" title="I2C Word Read function for BMP180. " alt="" coords="582,81,730,108"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d11/_b_m_p180_8c_aaa8cab987dc15d30ccdca4f903d43f4e_icgraph.png" border="0" usemap="#d8/d11/_b_m_p180_8c_aaa8cab987dc15d30ccdca4f903d43f4e_icgraph" alt=""/></div>
+<map name="d8/d11/_b_m_p180_8c_aaa8cab987dc15d30ccdca4f903d43f4e_icgraph" id="d8/d11/_b_m_p180_8c_aaa8cab987dc15d30ccdca4f903d43f4e_icgraph">
+<area shape="rect" id="node2" href="../../d3/d7d/_b_m_p180_8h.html#a57f1d83e4dbe3e1f9a3ee9d85c016e94" title="Initialization for BMP180 peripheral. " alt="" coords="153,5,293,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a57f1d83e4dbe3e1f9a3ee9d85c016e94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57f1d83e4dbe3e1f9a3ee9d85c016e94">&#9670;&nbsp;</a></span>BMP180_Init_Single()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR BMP180_Init_Single </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -127,29 +200,30 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initialization for BMP180 peripheral. </p>
-<dl class="weak"><dt><b><a class="el" href="../../d0/d58/weak.html#_weak000004">Weak Functions:</a></b></dt><dd>BMP180 Base address may be changed if user implemented </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>In case multiple devices (defined by I2C_BMP180_NB &gt; 1), you shall use BMP180_Init instead </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d8/d11/_b_m_p180_8c_a91b803abfdf9648359cd570b8608e074_cgraph.png" border="0" usemap="#d8/d11/_b_m_p180_8c_a91b803abfdf9648359cd570b8608e074_cgraph" alt=""/></div>
-<map name="d8/d11/_b_m_p180_8c_a91b803abfdf9648359cd570b8608e074_cgraph" id="d8/d11/_b_m_p180_8c_a91b803abfdf9648359cd570b8608e074_cgraph">
-<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="181,5,286,32"/>
-<area shape="rect" id="node3" href="../../d0/d35/_b_m_p180__proc_8c.html#ae9f9165eb55b2432575e6ba9c1078aca" title="Initialization Sequence for BMP180 peripheral. " alt="" coords="152,56,315,83"/>
-<area shape="rect" id="node10" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="177,107,290,133"/>
-<area shape="rect" id="node4" href="../../d8/dfb/_b_m_p180__ex_8h.html#a8d3a9e26b7ceff9106392c7b740af14b" title="Get BMP180 chip ID. " alt="" coords="582,31,730,57"/>
-<area shape="rect" id="node8" href="../../d0/d35/_b_m_p180__proc_8c.html#ad0e4baf09d4b0af6fce41cf8ea3c83c8" title="Get calibration parameters from BMP180 peripheral. " alt="" coords="363,81,533,108"/>
-<area shape="rect" id="node5" href="../../d8/d11/_b_m_p180_8c.html#aabcacf3ee95fccb35e6289f2ee409af9" title="I2C Read function for BMP180. " alt="" coords="779,56,890,83"/>
-<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="939,31,1051,57"/>
-<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="943,81,1046,108"/>
-<area shape="rect" id="node9" href="../../d8/d11/_b_m_p180_8c.html#ad076d106074c412933c256a4a9777e85" title="I2C Word Read function for BMP180. " alt="" coords="582,81,730,108"/>
+<div class="center"><img src="../../d8/d11/_b_m_p180_8c_a57f1d83e4dbe3e1f9a3ee9d85c016e94_cgraph.png" border="0" usemap="#d8/d11/_b_m_p180_8c_a57f1d83e4dbe3e1f9a3ee9d85c016e94_cgraph" alt=""/></div>
+<map name="d8/d11/_b_m_p180_8c_a57f1d83e4dbe3e1f9a3ee9d85c016e94_cgraph" id="d8/d11/_b_m_p180_8c_a57f1d83e4dbe3e1f9a3ee9d85c016e94_cgraph">
+<area shape="rect" id="node2" href="../../d8/d11/_b_m_p180_8c.html#aaa8cab987dc15d30ccdca4f903d43f4e" title="Initialization for BMP180 peripheral. " alt="" coords="195,56,293,83"/>
+<area shape="rect" id="node3" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="370,5,475,32"/>
+<area shape="rect" id="node4" href="../../d0/d35/_b_m_p180__proc_8c.html#aaeda0bfd52c838d1e3a4a94818a57426" title="Initialization Sequence for BMP180 peripheral. " alt="" coords="341,56,504,83"/>
+<area shape="rect" id="node11" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="366,107,479,133"/>
+<area shape="rect" id="node5" href="../../d8/dfb/_b_m_p180__ex_8h.html#ae43f89829b6efc406dd9517ff59e6a86" title="Get BMP180 chip ID. " alt="" coords="771,31,919,57"/>
+<area shape="rect" id="node9" href="../../d0/d35/_b_m_p180__proc_8c.html#ad632e93e1740bb9421d43eeea5f120e7" title="Get calibration parameters from BMP180 peripheral. " alt="" coords="553,81,722,108"/>
+<area shape="rect" id="node6" href="../../d8/d11/_b_m_p180_8c.html#abf6adaa83fd38bc86405a564251c0288" title="I2C Read function for BMP180. " alt="" coords="969,56,1079,83"/>
+<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1128,31,1240,57"/>
+<area shape="rect" id="node8" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1133,81,1235,108"/>
+<area shape="rect" id="node10" href="../../d8/d11/_b_m_p180_8c.html#a7c474272e48ec58e211a93f9da2373c2" title="I2C Word Read function for BMP180. " alt="" coords="771,81,919,108"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="aabcacf3ee95fccb35e6289f2ee409af9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabcacf3ee95fccb35e6289f2ee409af9">&#9670;&nbsp;</a></span>BMP180_Read()</h2>
+<a id="abf6adaa83fd38bc86405a564251c0288"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf6adaa83fd38bc86405a564251c0288">&#9670;&nbsp;</a></span>BMP180_Read()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -157,6 +231,12 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">FctERR BMP180_Read </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
+          <td class="paramname"><em>pSlave</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">uint8_t *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
@@ -183,6 +263,7 @@ Here is the call graph for this function:</div>
 <p>I2C Read function for BMP180. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pSlave</td><td>- Pointer to I2C slave instance </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>- pointer to read to </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>- Address to read from </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">nb</td><td>- Number of bytes to read </td></tr>
@@ -193,8 +274,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d8/d11/_b_m_p180_8c_aabcacf3ee95fccb35e6289f2ee409af9_cgraph.png" border="0" usemap="#d8/d11/_b_m_p180_8c_aabcacf3ee95fccb35e6289f2ee409af9_cgraph" alt=""/></div>
-<map name="d8/d11/_b_m_p180_8c_aabcacf3ee95fccb35e6289f2ee409af9_cgraph" id="d8/d11/_b_m_p180_8c_aabcacf3ee95fccb35e6289f2ee409af9_cgraph">
+<div class="center"><img src="../../d8/d11/_b_m_p180_8c_abf6adaa83fd38bc86405a564251c0288_cgraph.png" border="0" usemap="#d8/d11/_b_m_p180_8c_abf6adaa83fd38bc86405a564251c0288_cgraph" alt=""/></div>
+<map name="d8/d11/_b_m_p180_8c_abf6adaa83fd38bc86405a564251c0288_cgraph" id="d8/d11/_b_m_p180_8c_abf6adaa83fd38bc86405a564251c0288_cgraph">
 <area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="165,5,277,32"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="170,56,273,83"/>
 </map>
@@ -202,26 +283,28 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d8/d11/_b_m_p180_8c_aabcacf3ee95fccb35e6289f2ee409af9_icgraph.png" border="0" usemap="#d8/d11/_b_m_p180_8c_aabcacf3ee95fccb35e6289f2ee409af9_icgraph" alt=""/></div>
-<map name="d8/d11/_b_m_p180_8c_aabcacf3ee95fccb35e6289f2ee409af9_icgraph" id="d8/d11/_b_m_p180_8c_aabcacf3ee95fccb35e6289f2ee409af9_icgraph">
-<area shape="rect" id="node2" href="../../d3/d7d/_b_m_p180_8h.html#ad076d106074c412933c256a4a9777e85" title="I2C Word Read function for BMP180. " alt="" coords="166,69,314,96"/>
-<area shape="rect" id="node11" href="../../d8/dfb/_b_m_p180__ex_8h.html#abc0a477e180c56c5414576450dcc579a" title="Get Raw Pressure. " alt="" coords="374,5,567,32"/>
-<area shape="rect" id="node12" href="../../d8/dfb/_b_m_p180__ex_8h.html#a8d3a9e26b7ceff9106392c7b740af14b" title="Get BMP180 chip ID. " alt="" coords="166,132,314,159"/>
-<area shape="rect" id="node3" href="../../d8/dfb/_b_m_p180__ex_8h.html#a43cbe749d0faeba783ce5de9255d4fc1" title="Get Raw Temperature. " alt="" coords="363,56,578,83"/>
-<area shape="rect" id="node8" href="../../dc/d50/_b_m_p180__proc_8h.html#ad0e4baf09d4b0af6fce41cf8ea3c83c8" title="Get calibration parameters from BMP180 peripheral. " alt="" coords="386,107,555,133"/>
-<area shape="rect" id="node4" href="../../d8/dfb/_b_m_p180__ex_8h.html#a336f1f014a25e1d0d424a38bf6bf0d1d" title="Reset BMP180 chip. " alt="" coords="660,5,775,32"/>
-<area shape="rect" id="node5" href="../../dc/d50/_b_m_p180__proc_8h.html#a1398654938d6ecca6a7348adeb307f4e" title="Gets the compensated pressure level. " alt="" coords="638,56,797,83"/>
-<area shape="rect" id="node7" href="../../dc/d50/_b_m_p180__proc_8h.html#aca2565dda5adb7d78fa8d9d39e55f48e" title="Get the temperature. " alt="" coords="627,107,807,133"/>
-<area shape="rect" id="node6" href="../../dc/d50/_b_m_p180__proc_8h.html#a6dd8b1e85d8e3e78e597b61bd42fba53" title="Handler for BMP180 peripheral. " alt="" coords="857,56,978,83"/>
-<area shape="rect" id="node9" href="../../dc/d50/_b_m_p180__proc_8h.html#ae9f9165eb55b2432575e6ba9c1078aca" title="Initialization Sequence for BMP180 peripheral. " alt="" coords="636,157,799,184"/>
-<area shape="rect" id="node10" href="../../d3/d7d/_b_m_p180_8h.html#a91b803abfdf9648359cd570b8608e074" title="Initialization for BMP180 peripheral. " alt="" coords="869,157,966,184"/>
+<div class="center"><img src="../../d8/d11/_b_m_p180_8c_abf6adaa83fd38bc86405a564251c0288_icgraph.png" border="0" usemap="#d8/d11/_b_m_p180_8c_abf6adaa83fd38bc86405a564251c0288_icgraph" alt=""/></div>
+<map name="d8/d11/_b_m_p180_8c_abf6adaa83fd38bc86405a564251c0288_icgraph" id="d8/d11/_b_m_p180_8c_abf6adaa83fd38bc86405a564251c0288_icgraph">
+<area shape="rect" id="node2" href="../../d3/d7d/_b_m_p180_8h.html#a7c474272e48ec58e211a93f9da2373c2" title="I2C Word Read function for BMP180. " alt="" coords="166,69,314,96"/>
+<area shape="rect" id="node13" href="../../d8/dfb/_b_m_p180__ex_8h.html#acfbb5f5d3f05b5f1358f72892d4ece48" title="Get Raw Pressure. " alt="" coords="374,5,567,32"/>
+<area shape="rect" id="node14" href="../../d8/dfb/_b_m_p180__ex_8h.html#ae43f89829b6efc406dd9517ff59e6a86" title="Get BMP180 chip ID. " alt="" coords="166,132,314,159"/>
+<area shape="rect" id="node3" href="../../d8/dfb/_b_m_p180__ex_8h.html#a859c9f2ebf5b3a81bc393458418c2c4d" title="Get Raw Temperature. " alt="" coords="363,56,578,83"/>
+<area shape="rect" id="node9" href="../../dc/d50/_b_m_p180__proc_8h.html#ad632e93e1740bb9421d43eeea5f120e7" title="Get calibration parameters from BMP180 peripheral. " alt="" coords="386,107,555,133"/>
+<area shape="rect" id="node4" href="../../d8/dfb/_b_m_p180__ex_8h.html#af117431545dbbd23c1e495f35002e443" title="Reset BMP180 chip. " alt="" coords="660,5,775,32"/>
+<area shape="rect" id="node5" href="../../dc/d50/_b_m_p180__proc_8h.html#a8111dfccecbfb16a41a0069a0755ed0c" title="Gets the compensated pressure level. " alt="" coords="638,56,797,83"/>
+<area shape="rect" id="node8" href="../../dc/d50/_b_m_p180__proc_8h.html#a061b4b5aefbd8a7d0c5309a923e914ef" title="Get the temperature. " alt="" coords="627,107,807,133"/>
+<area shape="rect" id="node6" href="../../dc/d50/_b_m_p180__proc_8h.html#a7446219370560398c8a2e936aad41be9" title="Handler for BMP180 peripheral. " alt="" coords="857,56,978,83"/>
+<area shape="rect" id="node7" href="../../dc/d50/_b_m_p180__proc_8h.html#a6ea364017a9680fe0d48f50dd9f84ffd" title="Handler for all BMP180 peripherals. " alt="" coords="1027,56,1168,83"/>
+<area shape="rect" id="node10" href="../../dc/d50/_b_m_p180__proc_8h.html#aaeda0bfd52c838d1e3a4a94818a57426" title="Initialization Sequence for BMP180 peripheral. " alt="" coords="636,157,799,184"/>
+<area shape="rect" id="node11" href="../../d3/d7d/_b_m_p180_8h.html#aaa8cab987dc15d30ccdca4f903d43f4e" title="Initialization for BMP180 peripheral. " alt="" coords="869,157,966,184"/>
+<area shape="rect" id="node12" href="../../d3/d7d/_b_m_p180_8h.html#a57f1d83e4dbe3e1f9a3ee9d85c016e94" title="Initialization for BMP180 peripheral. " alt="" coords="1027,157,1167,184"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ad076d106074c412933c256a4a9777e85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad076d106074c412933c256a4a9777e85">&#9670;&nbsp;</a></span>BMP180_Read_Word()</h2>
+<a id="a7c474272e48ec58e211a93f9da2373c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c474272e48ec58e211a93f9da2373c2">&#9670;&nbsp;</a></span>BMP180_Read_Word()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -229,6 +312,12 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR BMP180_Read_Word </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
+          <td class="paramname"><em>pSlave</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">uint16_t *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
@@ -249,6 +338,7 @@ Here is the caller graph for this function:</div>
 <p>I2C Word Read function for BMP180. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pSlave</td><td>- Pointer to I2C slave instance </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>- pointer to read to </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>- Address to read from </td></tr>
   </table>
@@ -258,9 +348,9 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d8/d11/_b_m_p180_8c_ad076d106074c412933c256a4a9777e85_cgraph.png" border="0" usemap="#d8/d11/_b_m_p180_8c_ad076d106074c412933c256a4a9777e85_cgraph" alt=""/></div>
-<map name="d8/d11/_b_m_p180_8c_ad076d106074c412933c256a4a9777e85_cgraph" id="d8/d11/_b_m_p180_8c_ad076d106074c412933c256a4a9777e85_cgraph">
-<area shape="rect" id="node2" href="../../d8/d11/_b_m_p180_8c.html#aabcacf3ee95fccb35e6289f2ee409af9" title="I2C Read function for BMP180. " alt="" coords="203,31,314,57"/>
+<div class="center"><img src="../../d8/d11/_b_m_p180_8c_a7c474272e48ec58e211a93f9da2373c2_cgraph.png" border="0" usemap="#d8/d11/_b_m_p180_8c_a7c474272e48ec58e211a93f9da2373c2_cgraph" alt=""/></div>
+<map name="d8/d11/_b_m_p180_8c_a7c474272e48ec58e211a93f9da2373c2_cgraph" id="d8/d11/_b_m_p180_8c_a7c474272e48ec58e211a93f9da2373c2_cgraph">
+<area shape="rect" id="node2" href="../../d8/d11/_b_m_p180_8c.html#abf6adaa83fd38bc86405a564251c0288" title="I2C Read function for BMP180. " alt="" coords="203,31,314,57"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="363,5,475,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="367,56,470,83"/>
 </map>
@@ -268,23 +358,25 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d8/d11/_b_m_p180_8c_ad076d106074c412933c256a4a9777e85_icgraph.png" border="0" usemap="#d8/d11/_b_m_p180_8c_ad076d106074c412933c256a4a9777e85_icgraph" alt=""/></div>
-<map name="d8/d11/_b_m_p180_8c_ad076d106074c412933c256a4a9777e85_icgraph" id="d8/d11/_b_m_p180_8c_ad076d106074c412933c256a4a9777e85_icgraph">
-<area shape="rect" id="node2" href="../../d8/dfb/_b_m_p180__ex_8h.html#a43cbe749d0faeba783ce5de9255d4fc1" title="Get Raw Temperature. " alt="" coords="203,69,418,96"/>
-<area shape="rect" id="node7" href="../../dc/d50/_b_m_p180__proc_8h.html#ad0e4baf09d4b0af6fce41cf8ea3c83c8" title="Get calibration parameters from BMP180 peripheral. " alt="" coords="226,145,395,172"/>
-<area shape="rect" id="node3" href="../../d8/dfb/_b_m_p180__ex_8h.html#a336f1f014a25e1d0d424a38bf6bf0d1d" title="Reset BMP180 chip. " alt="" coords="500,5,615,32"/>
-<area shape="rect" id="node4" href="../../dc/d50/_b_m_p180__proc_8h.html#a1398654938d6ecca6a7348adeb307f4e" title="Gets the compensated pressure level. " alt="" coords="478,56,637,83"/>
-<area shape="rect" id="node6" href="../../dc/d50/_b_m_p180__proc_8h.html#aca2565dda5adb7d78fa8d9d39e55f48e" title="Get the temperature. " alt="" coords="467,107,647,133"/>
-<area shape="rect" id="node5" href="../../dc/d50/_b_m_p180__proc_8h.html#a6dd8b1e85d8e3e78e597b61bd42fba53" title="Handler for BMP180 peripheral. " alt="" coords="697,56,818,83"/>
-<area shape="rect" id="node8" href="../../dc/d50/_b_m_p180__proc_8h.html#ae9f9165eb55b2432575e6ba9c1078aca" title="Initialization Sequence for BMP180 peripheral. " alt="" coords="476,157,639,184"/>
-<area shape="rect" id="node9" href="../../d3/d7d/_b_m_p180_8h.html#a91b803abfdf9648359cd570b8608e074" title="Initialization for BMP180 peripheral. " alt="" coords="709,157,806,184"/>
+<div class="center"><img src="../../d8/d11/_b_m_p180_8c_a7c474272e48ec58e211a93f9da2373c2_icgraph.png" border="0" usemap="#d8/d11/_b_m_p180_8c_a7c474272e48ec58e211a93f9da2373c2_icgraph" alt=""/></div>
+<map name="d8/d11/_b_m_p180_8c_a7c474272e48ec58e211a93f9da2373c2_icgraph" id="d8/d11/_b_m_p180_8c_a7c474272e48ec58e211a93f9da2373c2_icgraph">
+<area shape="rect" id="node2" href="../../d8/dfb/_b_m_p180__ex_8h.html#a859c9f2ebf5b3a81bc393458418c2c4d" title="Get Raw Temperature. " alt="" coords="203,69,418,96"/>
+<area shape="rect" id="node8" href="../../dc/d50/_b_m_p180__proc_8h.html#ad632e93e1740bb9421d43eeea5f120e7" title="Get calibration parameters from BMP180 peripheral. " alt="" coords="226,145,395,172"/>
+<area shape="rect" id="node3" href="../../d8/dfb/_b_m_p180__ex_8h.html#af117431545dbbd23c1e495f35002e443" title="Reset BMP180 chip. " alt="" coords="500,5,615,32"/>
+<area shape="rect" id="node4" href="../../dc/d50/_b_m_p180__proc_8h.html#a8111dfccecbfb16a41a0069a0755ed0c" title="Gets the compensated pressure level. " alt="" coords="478,56,637,83"/>
+<area shape="rect" id="node7" href="../../dc/d50/_b_m_p180__proc_8h.html#a061b4b5aefbd8a7d0c5309a923e914ef" title="Get the temperature. " alt="" coords="467,107,647,133"/>
+<area shape="rect" id="node5" href="../../dc/d50/_b_m_p180__proc_8h.html#a7446219370560398c8a2e936aad41be9" title="Handler for BMP180 peripheral. " alt="" coords="697,56,818,83"/>
+<area shape="rect" id="node6" href="../../dc/d50/_b_m_p180__proc_8h.html#a6ea364017a9680fe0d48f50dd9f84ffd" title="Handler for all BMP180 peripherals. " alt="" coords="867,56,1008,83"/>
+<area shape="rect" id="node9" href="../../dc/d50/_b_m_p180__proc_8h.html#aaeda0bfd52c838d1e3a4a94818a57426" title="Initialization Sequence for BMP180 peripheral. " alt="" coords="476,157,639,184"/>
+<area shape="rect" id="node10" href="../../d3/d7d/_b_m_p180_8h.html#aaa8cab987dc15d30ccdca4f903d43f4e" title="Initialization for BMP180 peripheral. " alt="" coords="709,157,806,184"/>
+<area shape="rect" id="node11" href="../../d3/d7d/_b_m_p180_8h.html#a57f1d83e4dbe3e1f9a3ee9d85c016e94" title="Initialization for BMP180 peripheral. " alt="" coords="867,157,1007,184"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a9669585d00932e41ec6acefda31eeccf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9669585d00932e41ec6acefda31eeccf">&#9670;&nbsp;</a></span>BMP180_Write()</h2>
+<a id="a2362f4e58663210aac1d966fc7449b29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2362f4e58663210aac1d966fc7449b29">&#9670;&nbsp;</a></span>BMP180_Write()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -292,6 +384,12 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR BMP180_Write </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
+          <td class="paramname"><em>pSlave</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const uint8_t *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
@@ -318,6 +416,7 @@ Here is the caller graph for this function:</div>
 <p>I2C Write function for BMP180. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pSlave</td><td>- Pointer to I2C slave instance </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>- pointer to write from </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>- Address to write to </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">nb</td><td>- Number of bytes to write </td></tr>
@@ -328,8 +427,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d8/d11/_b_m_p180_8c_a9669585d00932e41ec6acefda31eeccf_cgraph.png" border="0" usemap="#d8/d11/_b_m_p180_8c_a9669585d00932e41ec6acefda31eeccf_cgraph" alt=""/></div>
-<map name="d8/d11/_b_m_p180_8c_a9669585d00932e41ec6acefda31eeccf_cgraph" id="d8/d11/_b_m_p180_8c_a9669585d00932e41ec6acefda31eeccf_cgraph">
+<div class="center"><img src="../../d8/d11/_b_m_p180_8c_a2362f4e58663210aac1d966fc7449b29_cgraph.png" border="0" usemap="#d8/d11/_b_m_p180_8c_a2362f4e58663210aac1d966fc7449b29_cgraph" alt=""/></div>
+<map name="d8/d11/_b_m_p180_8c_a2362f4e58663210aac1d966fc7449b29_cgraph" id="d8/d11/_b_m_p180_8c_a2362f4e58663210aac1d966fc7449b29_cgraph">
 <area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="165,5,277,32"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="170,56,273,83"/>
 </map>
@@ -337,29 +436,30 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d8/d11/_b_m_p180_8c_a9669585d00932e41ec6acefda31eeccf_icgraph.png" border="0" usemap="#d8/d11/_b_m_p180_8c_a9669585d00932e41ec6acefda31eeccf_icgraph" alt=""/></div>
-<map name="d8/d11/_b_m_p180_8c_a9669585d00932e41ec6acefda31eeccf_icgraph" id="d8/d11/_b_m_p180_8c_a9669585d00932e41ec6acefda31eeccf_icgraph">
-<area shape="rect" id="node2" href="../../d8/dfb/_b_m_p180__ex_8h.html#acfafe99c51fdd4a1d3ad0cf98054ce64" title="Start BMP180 Temperature/Pressure conversion. " alt="" coords="166,31,346,57"/>
-<area shape="rect" id="node4" href="../../d8/dfb/_b_m_p180__ex_8h.html#a336f1f014a25e1d0d424a38bf6bf0d1d" title="Reset BMP180 chip. " alt="" coords="692,5,807,32"/>
-<area shape="rect" id="node3" href="../../d8/dfb/_b_m_p180__ex_8h.html#a43cbe749d0faeba783ce5de9255d4fc1" title="Get Raw Temperature. " alt="" coords="395,81,610,108"/>
-<area shape="rect" id="node8" href="../../d8/dfb/_b_m_p180__ex_8h.html#abc0a477e180c56c5414576450dcc579a" title="Get Raw Pressure. " alt="" coords="406,31,599,57"/>
-<area shape="rect" id="node5" href="../../dc/d50/_b_m_p180__proc_8h.html#a1398654938d6ecca6a7348adeb307f4e" title="Gets the compensated pressure level. " alt="" coords="670,56,829,83"/>
-<area shape="rect" id="node7" href="../../dc/d50/_b_m_p180__proc_8h.html#aca2565dda5adb7d78fa8d9d39e55f48e" title="Get the temperature. " alt="" coords="659,107,839,133"/>
-<area shape="rect" id="node6" href="../../dc/d50/_b_m_p180__proc_8h.html#a6dd8b1e85d8e3e78e597b61bd42fba53" title="Handler for BMP180 peripheral. " alt="" coords="889,56,1010,83"/>
+<div class="center"><img src="../../d8/d11/_b_m_p180_8c_a2362f4e58663210aac1d966fc7449b29_icgraph.png" border="0" usemap="#d8/d11/_b_m_p180_8c_a2362f4e58663210aac1d966fc7449b29_icgraph" alt=""/></div>
+<map name="d8/d11/_b_m_p180_8c_a2362f4e58663210aac1d966fc7449b29_icgraph" id="d8/d11/_b_m_p180_8c_a2362f4e58663210aac1d966fc7449b29_icgraph">
+<area shape="rect" id="node2" href="../../d8/dfb/_b_m_p180__ex_8h.html#afcd0ad1af8a3111c8b61337af2745f94" title="Start BMP180 Temperature/Pressure conversion. " alt="" coords="166,31,346,57"/>
+<area shape="rect" id="node4" href="../../d8/dfb/_b_m_p180__ex_8h.html#af117431545dbbd23c1e495f35002e443" title="Reset BMP180 chip. " alt="" coords="692,5,807,32"/>
+<area shape="rect" id="node3" href="../../d8/dfb/_b_m_p180__ex_8h.html#a859c9f2ebf5b3a81bc393458418c2c4d" title="Get Raw Temperature. " alt="" coords="395,81,610,108"/>
+<area shape="rect" id="node9" href="../../d8/dfb/_b_m_p180__ex_8h.html#acfbb5f5d3f05b5f1358f72892d4ece48" title="Get Raw Pressure. " alt="" coords="406,31,599,57"/>
+<area shape="rect" id="node5" href="../../dc/d50/_b_m_p180__proc_8h.html#a8111dfccecbfb16a41a0069a0755ed0c" title="Gets the compensated pressure level. " alt="" coords="670,56,829,83"/>
+<area shape="rect" id="node8" href="../../dc/d50/_b_m_p180__proc_8h.html#a061b4b5aefbd8a7d0c5309a923e914ef" title="Get the temperature. " alt="" coords="659,107,839,133"/>
+<area shape="rect" id="node6" href="../../dc/d50/_b_m_p180__proc_8h.html#a7446219370560398c8a2e936aad41be9" title="Handler for BMP180 peripheral. " alt="" coords="889,56,1010,83"/>
+<area shape="rect" id="node7" href="../../dc/d50/_b_m_p180__proc_8h.html#a6ea364017a9680fe0d48f50dd9f84ffd" title="Handler for all BMP180 peripherals. " alt="" coords="1059,56,1200,83"/>
 </map>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a4c626f719f2cbb6f24c22053b8ab91ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c626f719f2cbb6f24c22053b8ab91ce">&#9670;&nbsp;</a></span>BMP180_hal</h2>
+<a id="a4decbba59817a0af264790a303f32dcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4decbba59817a0af264790a303f32dcf">&#9670;&nbsp;</a></span>BMP180_hal</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> BMP180_hal = { { pNull, <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#ad5c7bd690e94d726dda8f5f183d85687">I2C_ADDR</a>(<a class="el" href="../../d3/d7d/_b_m_p180_8h.html#ac1b9de358c1a95e4fdf0c2d6f7a1961b">BMP180_BASE_ADDR</a>), <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a0d8243bc88b91218d47566862e9eae2f">I2C_slave_timeout</a>, I2C_MEMADD_SIZE_8BIT, <a class="el" href="../../d6/dd6/_i2_c__component_8h.html#a6990aa6170c44e3ec833f18b350abb8fa6595b5891728545ae73b56eecaedeae6">I2C_HS</a> }, 0, HAL_OK, true, false }</td>
+          <td class="memname"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> BMP180_hal[<a class="el" href="../../d3/d7d/_b_m_p180_8h.html#af28f8433ce67f1c3e2d621a0cffdb7f7">I2C_BMP180_NB</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">

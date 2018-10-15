@@ -1,5 +1,6 @@
 <map id="MB85RC256V_ex.h" name="MB85RC256V_ex.h">
-<area shape="rect" id="node3" href="$d7/d3b/_m_b85_r_c256_v_8h.html" title="MB85RC256V Driver. " alt="" coords="77,80,193,107"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="302,155,428,181"/>
-<area shape="rect" id="node7" href="$da/dc5/_m_b85_r_c256_v__proc_8h.html" title="MB85RC256V Driver procedures. " alt="" coords="129,155,277,181"/>
+<area shape="rect" id="node3" href="$d7/d3b/_m_b85_r_c256_v_8h.html" title="MB85RC256V Driver. " alt="" coords="156,80,272,107"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="313,155,438,181"/>
+<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="462,155,578,181"/>
+<area shape="rect" id="node8" href="$da/dc5/_m_b85_r_c256_v__proc_8h.html" title="MB85RC256V Driver procedures. " alt="" coords="140,155,288,181"/>
 </map>

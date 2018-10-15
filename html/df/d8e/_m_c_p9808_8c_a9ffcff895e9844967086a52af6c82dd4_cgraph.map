@@ -1,0 +1,13 @@
+<map id="MCP9808_Init_Single" name="MCP9808_Init_Single">
+<area shape="rect" id="node2" href="$df/d8e/_m_c_p9808_8c.html#a91d38f36234f03778c3146624f083067" title="Initialization of the MCP9808 peripheral. " alt="" coords="203,56,309,83"/>
+<area shape="rect" id="node3" href="$d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="390,5,495,32"/>
+<area shape="rect" id="node4" href="$de/deb/_m_c_p9808__proc_8c.html#ac1daf1ee55269479527921f21f0685ab" title="Initialization Sequence of the MCP9808 peripheral. " alt="" coords="357,56,528,83"/>
+<area shape="rect" id="node12" href="$d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="386,107,499,133"/>
+<area shape="rect" id="node5" href="$df/d2f/_m_c_p9808__ex_8h.html#a90a11062692b1b9d5049647a8d5c30b6" title="Get MCP9808 Manufacturer ID. " alt="" coords="576,56,781,83"/>
+<area shape="rect" id="node9" href="$df/d2f/_m_c_p9808__ex_8h.html#a432056538649f656d28261c404a28c3f" title="Get MCP9808 chip ID. " alt="" coords="601,5,757,32"/>
+<area shape="rect" id="node10" href="$df/d47/_m_c_p9808__ex_8c.html#ae31b1b2b5f913d440753b2c8cb1c9015" title="Set MCP9808 Resolution. " alt="" coords="591,107,767,133"/>
+<area shape="rect" id="node6" href="$df/d8e/_m_c_p9808_8c.html#aae31a880b2f9d8fce8a00151eb4399cb" title="I2C Read function for MCP9808. " alt="" coords="830,56,949,83"/>
+<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="997,56,1109,83"/>
+<area shape="rect" id="node8" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1002,107,1105,133"/>
+<area shape="rect" id="node11" href="$df/d8e/_m_c_p9808_8c.html#a3f0dba5176e2cb06e61c7e69b5c5feff" title="I2C Write function for MCP9808. " alt="" coords="830,107,949,133"/>
+</map>

@@ -77,16 +77,18 @@ $(function() {
 <div class="textblock"><code>#include &quot;sarmfsw.h&quot;</code><br />
 <code>#include &quot;globals.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d6/dd6/_i2_c__component_8h_source.html">I2C_component.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d9/da9/_s11059__ex_8h_source.html">S11059_ex.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d5d/_i2_c__peripheral_8h_source.html">I2C_peripheral.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../dc/d4b/_s11059__proc_8h_source.html">S11059_proc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d9/da9/_s11059__ex_8h_source.html">S11059_ex.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for S11059.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/d4f/_s11059_8h__incl.png" border="0" usemap="#_s11059_8h" alt=""/></div>
 <map name="_s11059_8h" id="_s11059_8h">
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="380,80,505,107"/>
-<area shape="rect" id="node6" href="../../d9/da9/_s11059__ex_8h.html" title="S11059 Driver extensions. " alt="" coords="124,80,223,107"/>
-<area shape="rect" id="node7" href="../../dc/d4b/_s11059__proc_8h.html" title="S11059 Driver procedures. " alt="" coords="247,80,356,107"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="282,80,407,107"/>
+<area shape="rect" id="node6" href="../../dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="431,80,547,107"/>
+<area shape="rect" id="node7" href="../../dc/d4b/_s11059__proc_8h.html" title="S11059 Driver procedures. " alt="" coords="26,80,135,107"/>
+<area shape="rect" id="node8" href="../../d9/da9/_s11059__ex_8h.html" title="S11059 Driver extensions. " alt="" coords="159,80,258,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -95,8 +97,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="center"><img src="../../de/d90/_s11059_8h__dep__incl.png" border="0" usemap="#_s11059_8hdep" alt=""/></div>
 <map name="_s11059_8hdep" id="_s11059_8hdep">
 <area shape="rect" id="node2" href="../../d2/dfe/_s11059_8c.html" title="S11059 Driver. " alt="" coords="5,80,81,107"/>
-<area shape="rect" id="node3" href="../../d9/da9/_s11059__ex_8h.html" title="S11059 Driver extensions. " alt="" coords="107,80,205,107"/>
-<area shape="rect" id="node4" href="../../dc/d4b/_s11059__proc_8h.html" title="S11059 Driver procedures. " alt="" coords="229,80,339,107"/>
+<area shape="rect" id="node3" href="../../dc/d4b/_s11059__proc_8h.html" title="S11059 Driver procedures. " alt="" coords="107,80,216,107"/>
+<area shape="rect" id="node4" href="../../d9/da9/_s11059__ex_8h.html" title="S11059 Driver extensions. " alt="" coords="240,80,339,107"/>
 <area shape="rect" id="node5" href="../../d3/d3c/_s11059__ex_8c.html" title="S11059 Driver extensions. " alt="" coords="363,80,461,107"/>
 <area shape="rect" id="node6" href="../../dd/dd8/_s11059__proc_8c.html" title="S11059 Driver procedures. " alt="" coords="485,80,595,107"/>
 </map>
@@ -112,6 +114,9 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a6ab589273791d3a6ba908166d581b6eb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d8f/_s11059_8h.html#a6ab589273791d3a6ba908166d581b6eb">I2C_S11059_NB</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:a6ab589273791d3a6ba908166d581b6eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of S11059 peripherals.  <a href="#a6ab589273791d3a6ba908166d581b6eb">More...</a><br /></td></tr>
+<tr class="separator:a6ab589273791d3a6ba908166d581b6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0dd50c8ec7f083f94389381b4505bb3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d8f/_s11059_8h.html#ae0dd50c8ec7f083f94389381b4505bb3">S11059_ADDR</a>&#160;&#160;&#160;0x2A</td></tr>
 <tr class="memdesc:ae0dd50c8ec7f083f94389381b4505bb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">S11059 address.  <a href="#ae0dd50c8ec7f083f94389381b4505bb3">More...</a><br /></td></tr>
 <tr class="separator:ae0dd50c8ec7f083f94389381b4505bb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,12 +165,13 @@ Enumerations</h2></td></tr>
 <a class="el" href="../../d1/d8f/_s11059_8h.html#a6a1d50c258a1af7f864f2ad48d164375aad829d67ed55944602dd46f0a314d161">S11059__INTEG_1_4MS</a>, 
 <a class="el" href="../../d1/d8f/_s11059_8h.html#a6a1d50c258a1af7f864f2ad48d164375a1c76d52f9c3a15224c43bc193f7a6dc3">S11059__INTEG_22_4MS</a>, 
 <a class="el" href="../../d1/d8f/_s11059_8h.html#a6a1d50c258a1af7f864f2ad48d164375a16148d8033d7f0b0be519b62f37cb55a">S11059__INTEG_179_2MS</a>
- }<tr class="memdesc:a6a1d50c258a1af7f864f2ad48d164375"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integration modes of S11059.  <a href="../../d1/d8f/_s11059_8h.html#a6a1d50c258a1af7f864f2ad48d164375">More...</a><br /></td></tr>
+ }<tr class="memdesc:a6a1d50c258a1af7f864f2ad48d164375"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integration times of S11059.  <a href="../../d1/d8f/_s11059_8h.html#a6a1d50c258a1af7f864f2ad48d164375">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:a6a1d50c258a1af7f864f2ad48d164375"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2dba4297a54a95157472957290754e34"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d8f/_s11059_8h.html#a2dba4297a54a95157472957290754e34">S11059_integ_mode</a> { <a class="el" href="../../d1/d8f/_s11059_8h.html#a2dba4297a54a95157472957290754e34a15a44b007b5b56619c64f602b4fe6800">S11059__FIXED_PERIOD_INTEGRATION</a> = 0, 
 <a class="el" href="../../d1/d8f/_s11059_8h.html#a2dba4297a54a95157472957290754e34af84318c93418b1cf00782923164bc732">S11059__MANUAL_INTEGRATION</a>
- }</td></tr>
+ }<tr class="memdesc:a2dba4297a54a95157472957290754e34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integration modes of S11059.  <a href="../../d1/d8f/_s11059_8h.html#a2dba4297a54a95157472957290754e34">More...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:a2dba4297a54a95157472957290754e34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a9f065f6ef87d8d25497656e3b60ba1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d8f/_s11059_8h.html#a5a9f065f6ef87d8d25497656e3b60ba1">S11059_gain</a> { <a class="el" href="../../d1/d8f/_s11059_8h.html#a5a9f065f6ef87d8d25497656e3b60ba1a38c22b5c3d427614d54c8dc9702d084b">S11059__LOW_GAIN</a> = 0, 
 <a class="el" href="../../d1/d8f/_s11059_8h.html#a5a9f065f6ef87d8d25497656e3b60ba1a9098134e59fd7fc363e778352eaf2c78">S11059__HIGH_GAIN</a>
@@ -185,27 +191,30 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa5f6510fdab1d03f007b3fe83befd475"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d8f/_s11059_8h.html#aa5f6510fdab1d03f007b3fe83befd475">S11059_Init</a> (void)</td></tr>
-<tr class="memdesc:aa5f6510fdab1d03f007b3fe83befd475"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for S11059 peripheral.  <a href="#aa5f6510fdab1d03f007b3fe83befd475">More...</a><br /></td></tr>
-<tr class="separator:aa5f6510fdab1d03f007b3fe83befd475"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f2b5c49457f907586695564edef70fe"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d8f/_s11059_8h.html#a2f2b5c49457f907586695564edef70fe">S11059_Write</a> (const uint8_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
-<tr class="memdesc:a2f2b5c49457f907586695564edef70fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Write function for S11059.  <a href="#a2f2b5c49457f907586695564edef70fe">More...</a><br /></td></tr>
-<tr class="separator:a2f2b5c49457f907586695564edef70fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2d693c56dc5ad28c1bcad7971b19838"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d8f/_s11059_8h.html#ad2d693c56dc5ad28c1bcad7971b19838">S11059_Read</a> (uint8_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
-<tr class="memdesc:ad2d693c56dc5ad28c1bcad7971b19838"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Read function for S11059.  <a href="#ad2d693c56dc5ad28c1bcad7971b19838">More...</a><br /></td></tr>
-<tr class="separator:ad2d693c56dc5ad28c1bcad7971b19838"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab572db1939683f34a56efd431cf1e18c"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d8f/_s11059_8h.html#ab572db1939683f34a56efd431cf1e18c">S11059_Write_Word</a> (const uint16_t *data, const uint16_t addr)</td></tr>
-<tr class="memdesc:ab572db1939683f34a56efd431cf1e18c"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Word Write (big endian) function for S11059.  <a href="#ab572db1939683f34a56efd431cf1e18c">More...</a><br /></td></tr>
-<tr class="separator:ab572db1939683f34a56efd431cf1e18c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e67ef9a83f5d55dbd96b44cc4975d2a"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d8f/_s11059_8h.html#a2e67ef9a83f5d55dbd96b44cc4975d2a">S11059_Read_Word</a> (uint16_t *data, const uint16_t addr)</td></tr>
-<tr class="memdesc:a2e67ef9a83f5d55dbd96b44cc4975d2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Word Read (big endian) function for S11059.  <a href="#a2e67ef9a83f5d55dbd96b44cc4975d2a">More...</a><br /></td></tr>
-<tr class="separator:a2e67ef9a83f5d55dbd96b44cc4975d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaa62f952fb19007b1c6592422c88221"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d8f/_s11059_8h.html#aaaa62f952fb19007b1c6592422c88221">S11059_Init</a> (const uint8_t idx, const I2C_HandleTypeDef *hi2c, const uint16_t devAddress)</td></tr>
+<tr class="memdesc:aaaa62f952fb19007b1c6592422c88221"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for S11059 peripheral.  <a href="#aaaa62f952fb19007b1c6592422c88221">More...</a><br /></td></tr>
+<tr class="separator:aaaa62f952fb19007b1c6592422c88221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54b2b645d23ab3654253ec5165873303"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d8f/_s11059_8h.html#a54b2b645d23ab3654253ec5165873303">S11059_Init_Single</a> (void)</td></tr>
+<tr class="memdesc:a54b2b645d23ab3654253ec5165873303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for S11059 peripheral.  <a href="#a54b2b645d23ab3654253ec5165873303">More...</a><br /></td></tr>
+<tr class="separator:a54b2b645d23ab3654253ec5165873303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81750db9397213f701c4aa80056e12d2"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d8f/_s11059_8h.html#a81750db9397213f701c4aa80056e12d2">S11059_Write</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *pSlave, const uint8_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
+<tr class="memdesc:a81750db9397213f701c4aa80056e12d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Write function for S11059.  <a href="#a81750db9397213f701c4aa80056e12d2">More...</a><br /></td></tr>
+<tr class="separator:a81750db9397213f701c4aa80056e12d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab91130bef195a07881a36f08d2cda6ab"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d8f/_s11059_8h.html#ab91130bef195a07881a36f08d2cda6ab">S11059_Read</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *pSlave, uint8_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
+<tr class="memdesc:ab91130bef195a07881a36f08d2cda6ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Read function for S11059.  <a href="#ab91130bef195a07881a36f08d2cda6ab">More...</a><br /></td></tr>
+<tr class="separator:ab91130bef195a07881a36f08d2cda6ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31193e699a4dce66328dc34029b66245"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d8f/_s11059_8h.html#a31193e699a4dce66328dc34029b66245">S11059_Write_Word</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *pSlave, const uint16_t *data, const uint16_t addr)</td></tr>
+<tr class="memdesc:a31193e699a4dce66328dc34029b66245"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Word Write (big endian) function for S11059.  <a href="#a31193e699a4dce66328dc34029b66245">More...</a><br /></td></tr>
+<tr class="separator:a31193e699a4dce66328dc34029b66245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa41079dc0216c9e9b10cd6ae284f48bc"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d8f/_s11059_8h.html#aa41079dc0216c9e9b10cd6ae284f48bc">S11059_Read_Word</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *pSlave, uint16_t *data, const uint16_t addr)</td></tr>
+<tr class="memdesc:aa41079dc0216c9e9b10cd6ae284f48bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Word Read (big endian) function for S11059.  <a href="#aa41079dc0216c9e9b10cd6ae284f48bc">More...</a><br /></td></tr>
+<tr class="separator:aa41079dc0216c9e9b10cd6ae284f48bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:acbf475dd1a3f2c30328b6d668f84129a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d8f/_s11059_8h.html#acbf475dd1a3f2c30328b6d668f84129a">S11059_hal</a></td></tr>
-<tr class="memdesc:acbf475dd1a3f2c30328b6d668f84129a"><td class="mdescLeft">&#160;</td><td class="mdescRight">S11059 Slave structure.  <a href="#acbf475dd1a3f2c30328b6d668f84129a">More...</a><br /></td></tr>
-<tr class="separator:acbf475dd1a3f2c30328b6d668f84129a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a899ea5865581ace7813a2e0cc0d3a99e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d8f/_s11059_8h.html#a899ea5865581ace7813a2e0cc0d3a99e">S11059_hal</a> [<a class="el" href="../../d1/d8f/_s11059_8h.html#a6ab589273791d3a6ba908166d581b6eb">I2C_S11059_NB</a>]</td></tr>
+<tr class="memdesc:a899ea5865581ace7813a2e0cc0d3a99e"><td class="mdescLeft">&#160;</td><td class="mdescRight">S11059 Slave structure.  <a href="#a899ea5865581ace7813a2e0cc0d3a99e">More...</a><br /></td></tr>
+<tr class="separator:a899ea5865581ace7813a2e0cc0d3a99e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>S11059 Driver. </p>
@@ -213,6 +222,23 @@ Variables</h2></td></tr>
 <dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2018, SMFSW</dd></dl>
 <p>S11059: I2C interface-compatible color sensor </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a6ab589273791d3a6ba908166d581b6eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ab589273791d3a6ba908166d581b6eb">&#9670;&nbsp;</a></span>I2C_S11059_NB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_S11059_NB&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Number of S11059 peripherals. </p>
+<dl class="section note"><dt>Note</dt><dd>Define I2C_S11059_NB in globals.h or at project to enable multiple peripherals of this type </dd></dl>
+
+</div>
+</div>
 <a id="ae0dd50c8ec7f083f94389381b4505bb3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae0dd50c8ec7f083f94389381b4505bb3">&#9670;&nbsp;</a></span>S11059_ADDR</h2>
 
@@ -401,7 +427,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Integration modes of S11059. </p>
+<p>Integration times of S11059. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6a1d50c258a1af7f864f2ad48d164375a902953cc8ddab2c5877189917060b8bc"></a>S11059__INTEG_87_5US&#160;</td><td class="fielddoc"><p>87.5us integration time </p>
 </td></tr>
@@ -426,6 +452,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Integration modes of S11059. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2dba4297a54a95157472957290754e34a15a44b007b5b56619c64f602b4fe6800"></a>S11059__FIXED_PERIOD_INTEGRATION&#160;</td><td class="fielddoc"><p>Fixed period mode. </p>
 </td></tr>
@@ -498,14 +526,90 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="aa5f6510fdab1d03f007b3fe83befd475"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5f6510fdab1d03f007b3fe83befd475">&#9670;&nbsp;</a></span>S11059_Init()</h2>
+<a id="aaaa62f952fb19007b1c6592422c88221"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaa62f952fb19007b1c6592422c88221">&#9670;&nbsp;</a></span>S11059_Init()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">FctERR S11059_Init </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const I2C_HandleTypeDef *&#160;</td>
+          <td class="paramname"><em>hi2c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>devAddress</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialization for S11059 peripheral. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">idx</td><td>- S11059 index </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hi2c</td><td>- pointer to S11059 I2C instance </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">devAddress</td><td>- S11059 device address </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d8f/_s11059_8h_aaaa62f952fb19007b1c6592422c88221_cgraph.png" border="0" usemap="#d1/d8f/_s11059_8h_aaaa62f952fb19007b1c6592422c88221_cgraph" alt=""/></div>
+<map name="d1/d8f/_s11059_8h_aaaa62f952fb19007b1c6592422c88221_cgraph" id="d1/d8f/_s11059_8h_aaaa62f952fb19007b1c6592422c88221_cgraph">
+<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="170,190,275,217"/>
+<area shape="rect" id="node3" href="../../dd/dd8/_s11059__proc_8c.html#a63d3bbbec413af54e3edd2dae0243d92" title="Initialization Sequence for S11059 peripheral. " alt="" coords="145,241,301,267"/>
+<area shape="rect" id="node17" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="166,291,279,318"/>
+<area shape="rect" id="node4" href="../../d9/da9/_s11059__ex_8h.html#acccbcc83abce2e5ad100ed0a248fdfe6" title="Write S11059 Control register. " alt="" coords="399,215,527,242"/>
+<area shape="rect" id="node16" href="../../dd/dd8/_s11059__proc_8c.html#a1dabda8e10c2d49282eff6830ed5682c" title="Get S11059 integration time for all channels. " alt="" coords="349,266,576,293"/>
+<area shape="rect" id="node5" href="../../d2/dfe/_s11059_8c.html#a81750db9397213f701c4aa80056e12d2" title="I2C Write function for S11059. " alt="" coords="1027,57,1131,83"/>
+<area shape="rect" id="node8" href="../../d9/da9/_s11059__ex_8h.html#a11e1e0530b91fa5af6308f834ef30995" title="ADC Operation / Reset. " alt="" coords="641,165,770,191"/>
+<area shape="rect" id="node10" href="../../d9/da9/_s11059__ex_8h.html#a401758886add6e8f05e3bb0ebc645395" title="Set Standby / Operating mode. " alt="" coords="631,215,779,242"/>
+<area shape="rect" id="node11" href="../../d9/da9/_s11059__ex_8h.html#a66fb17c0d26d605bc440ff385b09e848" title="Set ADC gain. " alt="" coords="642,266,769,293"/>
+<area shape="rect" id="node12" href="../../d9/da9/_s11059__ex_8h.html#af61cd26ed6f8df9a15f5ea5ffa67c791" title="Set integration mode &amp; prescaler. " alt="" coords="625,317,786,343"/>
+<area shape="rect" id="node13" href="../../d9/da9/_s11059__ex_8h.html#a30bef82a6eb8181de0b0a2e8f55ae2c5" title="Set S11059 integration multiplier (used when integration mode set to Manual) " alt="" coords="625,48,786,89"/>
+<area shape="rect" id="node15" href="../../d9/da9/_s11059__ex_8h.html#a3be5cefb97849cbda1e80cbfb75de09c" title="Get Standby function monitor. " alt="" coords="631,114,780,141"/>
+<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1179,135,1291,162"/>
+<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1183,85,1286,111"/>
+<area shape="rect" id="node9" href="../../d2/dfe/_s11059_8c.html#ab91130bef195a07881a36f08d2cda6ab" title="I2C Read function for S11059. " alt="" coords="855,165,959,191"/>
+<area shape="rect" id="node14" href="../../d2/dfe/_s11059_8c.html#a31193e699a4dce66328dc34029b66245" title="I2C Word Write (big endian) function for S11059. " alt="" coords="835,57,978,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d8f/_s11059_8h_aaaa62f952fb19007b1c6592422c88221_icgraph.png" border="0" usemap="#d1/d8f/_s11059_8h_aaaa62f952fb19007b1c6592422c88221_icgraph" alt=""/></div>
+<map name="d1/d8f/_s11059_8h_aaaa62f952fb19007b1c6592422c88221_icgraph" id="d1/d8f/_s11059_8h_aaaa62f952fb19007b1c6592422c88221_icgraph">
+<area shape="rect" id="node2" href="../../d1/d8f/_s11059_8h.html#a54b2b645d23ab3654253ec5165873303" title="Initialization for S11059 peripheral. " alt="" coords="145,5,279,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a54b2b645d23ab3654253ec5165873303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54b2b645d23ab3654253ec5165873303">&#9670;&nbsp;</a></span>S11059_Init_Single()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR S11059_Init_Single </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -515,36 +619,37 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initialization for S11059 peripheral. </p>
-<dl class="weak"><dt><b><a class="el" href="../../d0/d58/weak.html#_weak000030">Weak Functions:</a></b></dt><dd>S11059 Base address may be changed if user implemented </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>In case multiple devices (defined by I2C_S11059_NB &gt; 1), you shall use S11059_Init instead </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d1/d8f/_s11059_8h_aa5f6510fdab1d03f007b3fe83befd475_cgraph.png" border="0" usemap="#d1/d8f/_s11059_8h_aa5f6510fdab1d03f007b3fe83befd475_cgraph" alt=""/></div>
-<map name="d1/d8f/_s11059_8h_aa5f6510fdab1d03f007b3fe83befd475_cgraph" id="d1/d8f/_s11059_8h_aa5f6510fdab1d03f007b3fe83befd475_cgraph">
-<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="170,193,275,220"/>
-<area shape="rect" id="node3" href="../../dd/dd8/_s11059__proc_8c.html#a5d2f1bce21f170c7ecbaef4acbb03007" title="Initialization Sequence for S11059 peripheral. " alt="" coords="145,244,301,271"/>
-<area shape="rect" id="node17" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="166,295,279,321"/>
-<area shape="rect" id="node4" href="../../d9/da9/_s11059__ex_8h.html#acdac3ca006ab290ce4ae10742130fb4d" title="Write S11059 Control register. " alt="" coords="372,219,500,245"/>
-<area shape="rect" id="node16" href="../../dd/dd8/_s11059__proc_8c.html#ad220338cf86ad2d3f20597dcd77d7398" title="Get S11059 integration time for all channels. " alt="" coords="350,269,522,296"/>
-<area shape="rect" id="node5" href="../../d2/dfe/_s11059_8c.html#a2f2b5c49457f907586695564edef70fe" title="I2C Write function for S11059. " alt="" coords="973,60,1077,87"/>
-<area shape="rect" id="node8" href="../../d9/da9/_s11059__ex_8h.html#a500036248a3c9996b51ebc22450ccd19" title="ADC Operation / Reset. " alt="" coords="587,168,717,195"/>
-<area shape="rect" id="node10" href="../../d9/da9/_s11059__ex_8h.html#aef6de1a8c85c148176bfd07aced2da9b" title="Set Standby / Operating mode. " alt="" coords="578,219,726,245"/>
-<area shape="rect" id="node11" href="../../d9/da9/_s11059__ex_8h.html#a665bc9c07e97850bddec6aa119337bd8" title="Set ADC gain. " alt="" coords="589,269,715,296"/>
-<area shape="rect" id="node12" href="../../d9/da9/_s11059__ex_8h.html#a7aced476191c883371a2875d909285ca" title="Set integration mode &amp; prescaler. " alt="" coords="571,320,733,347"/>
-<area shape="rect" id="node13" href="../../d9/da9/_s11059__ex_8h.html#ab8d56c2570f5b8af8c6abedaef602ffd" title="Set S11059 integration multiplier (used when integration mode set to Manual) " alt="" coords="571,51,733,93"/>
-<area shape="rect" id="node15" href="../../d9/da9/_s11059__ex_8h.html#a1fb9490f9174f2abc4e14dc517c6b7c8" title="Get Standby function monitor. " alt="" coords="577,117,727,144"/>
-<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1125,139,1237,165"/>
-<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1130,88,1233,115"/>
-<area shape="rect" id="node9" href="../../d2/dfe/_s11059_8c.html#ad2d693c56dc5ad28c1bcad7971b19838" title="I2C Read function for S11059. " alt="" coords="801,168,905,195"/>
-<area shape="rect" id="node14" href="../../d2/dfe/_s11059_8c.html#ab572db1939683f34a56efd431cf1e18c" title="I2C Word Write (big endian) function for S11059. " alt="" coords="782,60,925,87"/>
+<div class="center"><img src="../../d1/d8f/_s11059_8h_a54b2b645d23ab3654253ec5165873303_cgraph.png" border="0" usemap="#d1/d8f/_s11059_8h_a54b2b645d23ab3654253ec5165873303_cgraph" alt=""/></div>
+<map name="d1/d8f/_s11059_8h_a54b2b645d23ab3654253ec5165873303_cgraph" id="d1/d8f/_s11059_8h_a54b2b645d23ab3654253ec5165873303_cgraph">
+<area shape="rect" id="node2" href="../../d2/dfe/_s11059_8c.html#aaaa62f952fb19007b1c6592422c88221" title="Initialization for S11059 peripheral. " alt="" coords="189,241,280,267"/>
+<area shape="rect" id="node3" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="354,190,459,217"/>
+<area shape="rect" id="node4" href="../../dd/dd8/_s11059__proc_8c.html#a63d3bbbec413af54e3edd2dae0243d92" title="Initialization Sequence for S11059 peripheral. " alt="" coords="329,241,485,267"/>
+<area shape="rect" id="node18" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="350,291,463,318"/>
+<area shape="rect" id="node5" href="../../d9/da9/_s11059__ex_8h.html#acccbcc83abce2e5ad100ed0a248fdfe6" title="Write S11059 Control register. " alt="" coords="583,215,711,242"/>
+<area shape="rect" id="node17" href="../../dd/dd8/_s11059__proc_8c.html#a1dabda8e10c2d49282eff6830ed5682c" title="Get S11059 integration time for all channels. " alt="" coords="533,266,760,293"/>
+<area shape="rect" id="node6" href="../../d2/dfe/_s11059_8c.html#a81750db9397213f701c4aa80056e12d2" title="I2C Write function for S11059. " alt="" coords="1211,57,1315,83"/>
+<area shape="rect" id="node9" href="../../d9/da9/_s11059__ex_8h.html#a11e1e0530b91fa5af6308f834ef30995" title="ADC Operation / Reset. " alt="" coords="825,165,954,191"/>
+<area shape="rect" id="node11" href="../../d9/da9/_s11059__ex_8h.html#a401758886add6e8f05e3bb0ebc645395" title="Set Standby / Operating mode. " alt="" coords="815,215,963,242"/>
+<area shape="rect" id="node12" href="../../d9/da9/_s11059__ex_8h.html#a66fb17c0d26d605bc440ff385b09e848" title="Set ADC gain. " alt="" coords="826,266,953,293"/>
+<area shape="rect" id="node13" href="../../d9/da9/_s11059__ex_8h.html#af61cd26ed6f8df9a15f5ea5ffa67c791" title="Set integration mode &amp; prescaler. " alt="" coords="809,317,970,343"/>
+<area shape="rect" id="node14" href="../../d9/da9/_s11059__ex_8h.html#a30bef82a6eb8181de0b0a2e8f55ae2c5" title="Set S11059 integration multiplier (used when integration mode set to Manual) " alt="" coords="809,48,970,89"/>
+<area shape="rect" id="node16" href="../../d9/da9/_s11059__ex_8h.html#a3be5cefb97849cbda1e80cbfb75de09c" title="Get Standby function monitor. " alt="" coords="815,114,964,141"/>
+<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1363,135,1475,162"/>
+<area shape="rect" id="node8" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1367,85,1470,111"/>
+<area shape="rect" id="node10" href="../../d2/dfe/_s11059_8c.html#ab91130bef195a07881a36f08d2cda6ab" title="I2C Read function for S11059. " alt="" coords="1039,165,1143,191"/>
+<area shape="rect" id="node15" href="../../d2/dfe/_s11059_8c.html#a31193e699a4dce66328dc34029b66245" title="I2C Word Write (big endian) function for S11059. " alt="" coords="1019,57,1162,83"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ad2d693c56dc5ad28c1bcad7971b19838"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2d693c56dc5ad28c1bcad7971b19838">&#9670;&nbsp;</a></span>S11059_Read()</h2>
+<a id="ab91130bef195a07881a36f08d2cda6ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab91130bef195a07881a36f08d2cda6ab">&#9670;&nbsp;</a></span>S11059_Read()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -552,6 +657,12 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">FctERR S11059_Read </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
+          <td class="paramname"><em>pSlave</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">uint8_t *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
@@ -578,6 +689,7 @@ Here is the call graph for this function:</div>
 <p>I2C Read function for S11059. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pSlave</td><td>- Pointer to I2C slave instance </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>- pointer to read to </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>- Address to read from </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">nb</td><td>- Number of bytes to read </td></tr>
@@ -588,8 +700,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d1/d8f/_s11059_8h_ad2d693c56dc5ad28c1bcad7971b19838_cgraph.png" border="0" usemap="#d1/d8f/_s11059_8h_ad2d693c56dc5ad28c1bcad7971b19838_cgraph" alt=""/></div>
-<map name="d1/d8f/_s11059_8h_ad2d693c56dc5ad28c1bcad7971b19838_cgraph" id="d1/d8f/_s11059_8h_ad2d693c56dc5ad28c1bcad7971b19838_cgraph">
+<div class="center"><img src="../../d1/d8f/_s11059_8h_ab91130bef195a07881a36f08d2cda6ab_cgraph.png" border="0" usemap="#d1/d8f/_s11059_8h_ab91130bef195a07881a36f08d2cda6ab_cgraph" alt=""/></div>
+<map name="d1/d8f/_s11059_8h_ab91130bef195a07881a36f08d2cda6ab_cgraph" id="d1/d8f/_s11059_8h_ab91130bef195a07881a36f08d2cda6ab_cgraph">
 <area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="157,5,269,32"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="162,56,265,83"/>
 </map>
@@ -597,30 +709,32 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d1/d8f/_s11059_8h_ad2d693c56dc5ad28c1bcad7971b19838_icgraph.png" border="0" usemap="#d1/d8f/_s11059_8h_ad2d693c56dc5ad28c1bcad7971b19838_icgraph" alt=""/></div>
-<map name="d1/d8f/_s11059_8h_ad2d693c56dc5ad28c1bcad7971b19838_icgraph" id="d1/d8f/_s11059_8h_ad2d693c56dc5ad28c1bcad7971b19838_icgraph">
-<area shape="rect" id="node2" href="../../d1/d8f/_s11059_8h.html#a2e67ef9a83f5d55dbd96b44cc4975d2a" title="I2C Word Read (big endian) function for S11059. " alt="" coords="161,132,303,159"/>
-<area shape="rect" id="node8" href="../../d9/da9/_s11059__ex_8h.html#a500036248a3c9996b51ebc22450ccd19" title="ADC Operation / Reset. " alt="" coords="167,360,297,387"/>
-<area shape="rect" id="node10" href="../../d9/da9/_s11059__ex_8h.html#aef6de1a8c85c148176bfd07aced2da9b" title="Set Standby / Operating mode. " alt="" coords="559,284,707,311"/>
-<area shape="rect" id="node11" href="../../d9/da9/_s11059__ex_8h.html#a665bc9c07e97850bddec6aa119337bd8" title="Set ADC gain. " alt="" coords="570,385,697,412"/>
-<area shape="rect" id="node12" href="../../d9/da9/_s11059__ex_8h.html#a7aced476191c883371a2875d909285ca" title="Set integration mode &amp; prescaler. " alt="" coords="553,436,714,463"/>
-<area shape="rect" id="node15" href="../../d9/da9/_s11059__ex_8h.html#a1fb9490f9174f2abc4e14dc517c6b7c8" title="Get Standby function monitor. " alt="" coords="157,309,307,336"/>
-<area shape="rect" id="node16" href="../../dc/d4b/_s11059__proc_8h.html#a9758598f0df1605caad5346c1e03faaf" title="Handler for S11059 peripheral. " alt="" coords="175,512,289,539"/>
-<area shape="rect" id="node3" href="../../d9/da9/_s11059__ex_8h.html#a377b4398d34252ec3a8c4df7fe9a2abc" title="Get Specific channel conversion. " alt="" coords="355,107,504,133"/>
-<area shape="rect" id="node4" href="../../d9/da9/_s11059__ex_8h.html#ae9fa0ac38a00fed8fe4c3144aba88c3c" title="Get Red channel conversion. " alt="" coords="367,157,492,184"/>
-<area shape="rect" id="node5" href="../../d9/da9/_s11059__ex_8h.html#a4ddcfdbe9296ea53c74fb65e809f4804" title="Get Green channel conversion. " alt="" coords="361,208,497,235"/>
-<area shape="rect" id="node6" href="../../d9/da9/_s11059__ex_8h.html#a95a6fe5d9c10d095daf0d4e01353317f" title="Get Blue channel conversion. " alt="" coords="366,5,493,32"/>
-<area shape="rect" id="node7" href="../../d9/da9/_s11059__ex_8h.html#ae8e2e6ed40be9a4b7b9a68fd83bd0514" title="Get Infra&#45;red channel conversion. " alt="" coords="363,56,495,83"/>
-<area shape="rect" id="node9" href="../../d9/da9/_s11059__ex_8h.html#acdac3ca006ab290ce4ae10742130fb4d" title="Write S11059 Control register. " alt="" coords="365,360,493,387"/>
-<area shape="rect" id="node13" href="../../dc/d4b/_s11059__proc_8h.html#a5d2f1bce21f170c7ecbaef4acbb03007" title="Initialization Sequence for S11059 peripheral. " alt="" coords="555,335,711,361"/>
-<area shape="rect" id="node14" href="../../d1/d8f/_s11059_8h.html#aa5f6510fdab1d03f007b3fe83befd475" title="Initialization for S11059 peripheral. " alt="" coords="763,335,853,361"/>
+<div class="center"><img src="../../d1/d8f/_s11059_8h_ab91130bef195a07881a36f08d2cda6ab_icgraph.png" border="0" usemap="#d1/d8f/_s11059_8h_ab91130bef195a07881a36f08d2cda6ab_icgraph" alt=""/></div>
+<map name="d1/d8f/_s11059_8h_ab91130bef195a07881a36f08d2cda6ab_icgraph" id="d1/d8f/_s11059_8h_ab91130bef195a07881a36f08d2cda6ab_icgraph">
+<area shape="rect" id="node2" href="../../d1/d8f/_s11059_8h.html#aa41079dc0216c9e9b10cd6ae284f48bc" title="I2C Word Read (big endian) function for S11059. " alt="" coords="161,132,303,159"/>
+<area shape="rect" id="node8" href="../../d9/da9/_s11059__ex_8h.html#a11e1e0530b91fa5af6308f834ef30995" title="ADC Operation / Reset. " alt="" coords="167,360,297,387"/>
+<area shape="rect" id="node10" href="../../d9/da9/_s11059__ex_8h.html#a401758886add6e8f05e3bb0ebc645395" title="Set Standby / Operating mode. " alt="" coords="559,284,707,311"/>
+<area shape="rect" id="node11" href="../../d9/da9/_s11059__ex_8h.html#a66fb17c0d26d605bc440ff385b09e848" title="Set ADC gain. " alt="" coords="570,385,697,412"/>
+<area shape="rect" id="node12" href="../../d9/da9/_s11059__ex_8h.html#af61cd26ed6f8df9a15f5ea5ffa67c791" title="Set integration mode &amp; prescaler. " alt="" coords="553,436,714,463"/>
+<area shape="rect" id="node16" href="../../d9/da9/_s11059__ex_8h.html#a3be5cefb97849cbda1e80cbfb75de09c" title="Get Standby function monitor. " alt="" coords="157,309,307,336"/>
+<area shape="rect" id="node17" href="../../dc/d4b/_s11059__proc_8h.html#a05d21f3e722343cbf495d85bf63bc163" title="Handler for S11059 peripheral. " alt="" coords="175,512,289,539"/>
+<area shape="rect" id="node3" href="../../d9/da9/_s11059__ex_8h.html#a792be929ddf56568aefaef5887202a4c" title="Get Specific channel conversion. " alt="" coords="355,5,504,32"/>
+<area shape="rect" id="node4" href="../../d9/da9/_s11059__ex_8h.html#a0dc7f87c15ad3736f3748cb731ffe671" title="Get Red channel conversion. " alt="" coords="367,56,492,83"/>
+<area shape="rect" id="node5" href="../../d9/da9/_s11059__ex_8h.html#aa6fd0a9b92e0ff650961b8dca3c031ff" title="Get Green channel conversion. " alt="" coords="361,107,497,133"/>
+<area shape="rect" id="node6" href="../../d9/da9/_s11059__ex_8h.html#a1291d461f726d4e4f969c290f01611bb" title="Get Blue channel conversion. " alt="" coords="366,157,493,184"/>
+<area shape="rect" id="node7" href="../../d9/da9/_s11059__ex_8h.html#aaf3bdd96731fc201ff8959dee4604176" title="Get Infra&#45;red channel conversion. " alt="" coords="372,208,487,235"/>
+<area shape="rect" id="node9" href="../../d9/da9/_s11059__ex_8h.html#acccbcc83abce2e5ad100ed0a248fdfe6" title="Write S11059 Control register. " alt="" coords="365,360,493,387"/>
+<area shape="rect" id="node13" href="../../dc/d4b/_s11059__proc_8h.html#a63d3bbbec413af54e3edd2dae0243d92" title="Initialization Sequence for S11059 peripheral. " alt="" coords="555,335,711,361"/>
+<area shape="rect" id="node14" href="../../d1/d8f/_s11059_8h.html#aaaa62f952fb19007b1c6592422c88221" title="Initialization for S11059 peripheral. " alt="" coords="763,335,853,361"/>
+<area shape="rect" id="node15" href="../../d1/d8f/_s11059_8h.html#a54b2b645d23ab3654253ec5165873303" title="Initialization for S11059 peripheral. " alt="" coords="902,335,1037,361"/>
+<area shape="rect" id="node18" href="../../dc/d4b/_s11059__proc_8h.html#af92ed5c8aa914c256a50a874b5536d2d" title="Handler for all S11059 peripherals. " alt="" coords="362,512,497,539"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a2e67ef9a83f5d55dbd96b44cc4975d2a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e67ef9a83f5d55dbd96b44cc4975d2a">&#9670;&nbsp;</a></span>S11059_Read_Word()</h2>
+<a id="aa41079dc0216c9e9b10cd6ae284f48bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa41079dc0216c9e9b10cd6ae284f48bc">&#9670;&nbsp;</a></span>S11059_Read_Word()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -628,6 +742,12 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR S11059_Read_Word </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
+          <td class="paramname"><em>pSlave</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">uint16_t *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
@@ -648,6 +768,7 @@ Here is the caller graph for this function:</div>
 <p>I2C Word Read (big endian) function for S11059. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pSlave</td><td>- Pointer to I2C slave instance </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>- pointer to read to </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>- Address to read from </td></tr>
   </table>
@@ -657,9 +778,9 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d1/d8f/_s11059_8h_a2e67ef9a83f5d55dbd96b44cc4975d2a_cgraph.png" border="0" usemap="#d1/d8f/_s11059_8h_a2e67ef9a83f5d55dbd96b44cc4975d2a_cgraph" alt=""/></div>
-<map name="d1/d8f/_s11059_8h_a2e67ef9a83f5d55dbd96b44cc4975d2a_cgraph" id="d1/d8f/_s11059_8h_a2e67ef9a83f5d55dbd96b44cc4975d2a_cgraph">
-<area shape="rect" id="node2" href="../../d2/dfe/_s11059_8c.html#ad2d693c56dc5ad28c1bcad7971b19838" title="I2C Read function for S11059. " alt="" coords="197,31,301,57"/>
+<div class="center"><img src="../../d1/d8f/_s11059_8h_aa41079dc0216c9e9b10cd6ae284f48bc_cgraph.png" border="0" usemap="#d1/d8f/_s11059_8h_aa41079dc0216c9e9b10cd6ae284f48bc_cgraph" alt=""/></div>
+<map name="d1/d8f/_s11059_8h_aa41079dc0216c9e9b10cd6ae284f48bc_cgraph" id="d1/d8f/_s11059_8h_aa41079dc0216c9e9b10cd6ae284f48bc_cgraph">
+<area shape="rect" id="node2" href="../../d2/dfe/_s11059_8c.html#ab91130bef195a07881a36f08d2cda6ab" title="I2C Read function for S11059. " alt="" coords="197,31,301,57"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="349,5,461,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="354,56,457,83"/>
 </map>
@@ -667,20 +788,20 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d1/d8f/_s11059_8h_a2e67ef9a83f5d55dbd96b44cc4975d2a_icgraph.png" border="0" usemap="#d1/d8f/_s11059_8h_a2e67ef9a83f5d55dbd96b44cc4975d2a_icgraph" alt=""/></div>
-<map name="d1/d8f/_s11059_8h_a2e67ef9a83f5d55dbd96b44cc4975d2a_icgraph" id="d1/d8f/_s11059_8h_a2e67ef9a83f5d55dbd96b44cc4975d2a_icgraph">
-<area shape="rect" id="node2" href="../../d9/da9/_s11059__ex_8h.html#a377b4398d34252ec3a8c4df7fe9a2abc" title="Get Specific channel conversion. " alt="" coords="197,5,347,32"/>
-<area shape="rect" id="node3" href="../../d9/da9/_s11059__ex_8h.html#ae9fa0ac38a00fed8fe4c3144aba88c3c" title="Get Red channel conversion. " alt="" coords="209,56,335,83"/>
-<area shape="rect" id="node4" href="../../d9/da9/_s11059__ex_8h.html#a4ddcfdbe9296ea53c74fb65e809f4804" title="Get Green channel conversion. " alt="" coords="204,107,340,133"/>
-<area shape="rect" id="node5" href="../../d9/da9/_s11059__ex_8h.html#a95a6fe5d9c10d095daf0d4e01353317f" title="Get Blue channel conversion. " alt="" coords="209,157,335,184"/>
-<area shape="rect" id="node6" href="../../d9/da9/_s11059__ex_8h.html#ae8e2e6ed40be9a4b7b9a68fd83bd0514" title="Get Infra&#45;red channel conversion. " alt="" coords="206,208,338,235"/>
+<div class="center"><img src="../../d1/d8f/_s11059_8h_aa41079dc0216c9e9b10cd6ae284f48bc_icgraph.png" border="0" usemap="#d1/d8f/_s11059_8h_aa41079dc0216c9e9b10cd6ae284f48bc_icgraph" alt=""/></div>
+<map name="d1/d8f/_s11059_8h_aa41079dc0216c9e9b10cd6ae284f48bc_icgraph" id="d1/d8f/_s11059_8h_aa41079dc0216c9e9b10cd6ae284f48bc_icgraph">
+<area shape="rect" id="node2" href="../../d9/da9/_s11059__ex_8h.html#a792be929ddf56568aefaef5887202a4c" title="Get Specific channel conversion. " alt="" coords="197,5,347,32"/>
+<area shape="rect" id="node3" href="../../d9/da9/_s11059__ex_8h.html#a0dc7f87c15ad3736f3748cb731ffe671" title="Get Red channel conversion. " alt="" coords="209,56,335,83"/>
+<area shape="rect" id="node4" href="../../d9/da9/_s11059__ex_8h.html#aa6fd0a9b92e0ff650961b8dca3c031ff" title="Get Green channel conversion. " alt="" coords="204,107,340,133"/>
+<area shape="rect" id="node5" href="../../d9/da9/_s11059__ex_8h.html#a1291d461f726d4e4f969c290f01611bb" title="Get Blue channel conversion. " alt="" coords="209,157,335,184"/>
+<area shape="rect" id="node6" href="../../d9/da9/_s11059__ex_8h.html#aaf3bdd96731fc201ff8959dee4604176" title="Get Infra&#45;red channel conversion. " alt="" coords="215,208,329,235"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a2f2b5c49457f907586695564edef70fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f2b5c49457f907586695564edef70fe">&#9670;&nbsp;</a></span>S11059_Write()</h2>
+<a id="a81750db9397213f701c4aa80056e12d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81750db9397213f701c4aa80056e12d2">&#9670;&nbsp;</a></span>S11059_Write()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -688,6 +809,12 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR S11059_Write </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
+          <td class="paramname"><em>pSlave</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const uint8_t *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
@@ -714,6 +841,7 @@ Here is the caller graph for this function:</div>
 <p>I2C Write function for S11059. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pSlave</td><td>- Pointer to I2C slave instance </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>- pointer to write from </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>- Address to write to </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">nb</td><td>- Number of bytes to write </td></tr>
@@ -724,8 +852,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d1/d8f/_s11059_8h_a2f2b5c49457f907586695564edef70fe_cgraph.png" border="0" usemap="#d1/d8f/_s11059_8h_a2f2b5c49457f907586695564edef70fe_cgraph" alt=""/></div>
-<map name="d1/d8f/_s11059_8h_a2f2b5c49457f907586695564edef70fe_cgraph" id="d1/d8f/_s11059_8h_a2f2b5c49457f907586695564edef70fe_cgraph">
+<div class="center"><img src="../../d1/d8f/_s11059_8h_a81750db9397213f701c4aa80056e12d2_cgraph.png" border="0" usemap="#d1/d8f/_s11059_8h_a81750db9397213f701c4aa80056e12d2_cgraph" alt=""/></div>
+<map name="d1/d8f/_s11059_8h_a81750db9397213f701c4aa80056e12d2_cgraph" id="d1/d8f/_s11059_8h_a81750db9397213f701c4aa80056e12d2_cgraph">
 <area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="157,5,269,32"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="162,56,265,83"/>
 </map>
@@ -733,24 +861,25 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d1/d8f/_s11059_8h_a2f2b5c49457f907586695564edef70fe_icgraph.png" border="0" usemap="#d1/d8f/_s11059_8h_a2f2b5c49457f907586695564edef70fe_icgraph" alt=""/></div>
-<map name="d1/d8f/_s11059_8h_a2f2b5c49457f907586695564edef70fe_icgraph" id="d1/d8f/_s11059_8h_a2f2b5c49457f907586695564edef70fe_icgraph">
-<area shape="rect" id="node2" href="../../d1/d8f/_s11059_8h.html#ab572db1939683f34a56efd431cf1e18c" title="I2C Word Write (big endian) function for S11059. " alt="" coords="158,81,301,108"/>
-<area shape="rect" id="node4" href="../../d9/da9/_s11059__ex_8h.html#acdac3ca006ab290ce4ae10742130fb4d" title="Write S11059 Control register. " alt="" coords="560,107,688,133"/>
-<area shape="rect" id="node3" href="../../d9/da9/_s11059__ex_8h.html#ab8d56c2570f5b8af8c6abedaef602ffd" title="Set S11059 integration multiplier (used when integration mode set to Manual) " alt="" coords="350,70,511,111"/>
-<area shape="rect" id="node5" href="../../d9/da9/_s11059__ex_8h.html#a500036248a3c9996b51ebc22450ccd19" title="ADC Operation / Reset. " alt="" coords="753,5,882,32"/>
-<area shape="rect" id="node6" href="../../d9/da9/_s11059__ex_8h.html#aef6de1a8c85c148176bfd07aced2da9b" title="Set Standby / Operating mode. " alt="" coords="743,56,891,83"/>
-<area shape="rect" id="node7" href="../../d9/da9/_s11059__ex_8h.html#a665bc9c07e97850bddec6aa119337bd8" title="Set ADC gain. " alt="" coords="754,107,881,133"/>
-<area shape="rect" id="node8" href="../../d9/da9/_s11059__ex_8h.html#a7aced476191c883371a2875d909285ca" title="Set integration mode &amp; prescaler. " alt="" coords="737,157,898,184"/>
-<area shape="rect" id="node9" href="../../dc/d4b/_s11059__proc_8h.html#a5d2f1bce21f170c7ecbaef4acbb03007" title="Initialization Sequence for S11059 peripheral. " alt="" coords="739,208,895,235"/>
-<area shape="rect" id="node10" href="../../d1/d8f/_s11059_8h.html#aa5f6510fdab1d03f007b3fe83befd475" title="Initialization for S11059 peripheral. " alt="" coords="947,208,1037,235"/>
+<div class="center"><img src="../../d1/d8f/_s11059_8h_a81750db9397213f701c4aa80056e12d2_icgraph.png" border="0" usemap="#d1/d8f/_s11059_8h_a81750db9397213f701c4aa80056e12d2_icgraph" alt=""/></div>
+<map name="d1/d8f/_s11059_8h_a81750db9397213f701c4aa80056e12d2_icgraph" id="d1/d8f/_s11059_8h_a81750db9397213f701c4aa80056e12d2_icgraph">
+<area shape="rect" id="node2" href="../../d1/d8f/_s11059_8h.html#a31193e699a4dce66328dc34029b66245" title="I2C Word Write (big endian) function for S11059. " alt="" coords="158,81,301,108"/>
+<area shape="rect" id="node4" href="../../d9/da9/_s11059__ex_8h.html#acccbcc83abce2e5ad100ed0a248fdfe6" title="Write S11059 Control register. " alt="" coords="560,107,688,133"/>
+<area shape="rect" id="node3" href="../../d9/da9/_s11059__ex_8h.html#a30bef82a6eb8181de0b0a2e8f55ae2c5" title="Set S11059 integration multiplier (used when integration mode set to Manual) " alt="" coords="350,70,511,111"/>
+<area shape="rect" id="node5" href="../../d9/da9/_s11059__ex_8h.html#a11e1e0530b91fa5af6308f834ef30995" title="ADC Operation / Reset. " alt="" coords="753,5,882,32"/>
+<area shape="rect" id="node6" href="../../d9/da9/_s11059__ex_8h.html#a401758886add6e8f05e3bb0ebc645395" title="Set Standby / Operating mode. " alt="" coords="743,56,891,83"/>
+<area shape="rect" id="node7" href="../../d9/da9/_s11059__ex_8h.html#a66fb17c0d26d605bc440ff385b09e848" title="Set ADC gain. " alt="" coords="754,107,881,133"/>
+<area shape="rect" id="node8" href="../../d9/da9/_s11059__ex_8h.html#af61cd26ed6f8df9a15f5ea5ffa67c791" title="Set integration mode &amp; prescaler. " alt="" coords="737,157,898,184"/>
+<area shape="rect" id="node9" href="../../dc/d4b/_s11059__proc_8h.html#a63d3bbbec413af54e3edd2dae0243d92" title="Initialization Sequence for S11059 peripheral. " alt="" coords="739,208,895,235"/>
+<area shape="rect" id="node10" href="../../d1/d8f/_s11059_8h.html#aaaa62f952fb19007b1c6592422c88221" title="Initialization for S11059 peripheral. " alt="" coords="947,208,1037,235"/>
+<area shape="rect" id="node11" href="../../d1/d8f/_s11059_8h.html#a54b2b645d23ab3654253ec5165873303" title="Initialization for S11059 peripheral. " alt="" coords="1086,208,1221,235"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ab572db1939683f34a56efd431cf1e18c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab572db1939683f34a56efd431cf1e18c">&#9670;&nbsp;</a></span>S11059_Write_Word()</h2>
+<a id="a31193e699a4dce66328dc34029b66245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31193e699a4dce66328dc34029b66245">&#9670;&nbsp;</a></span>S11059_Write_Word()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -758,6 +887,12 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR S11059_Write_Word </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
+          <td class="paramname"><em>pSlave</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const uint16_t *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
@@ -778,6 +913,7 @@ Here is the caller graph for this function:</div>
 <p>I2C Word Write (big endian) function for S11059. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pSlave</td><td>- Pointer to I2C slave instance </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>- pointer to write from </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>- Address to write to </td></tr>
   </table>
@@ -787,9 +923,9 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d1/d8f/_s11059_8h_ab572db1939683f34a56efd431cf1e18c_cgraph.png" border="0" usemap="#d1/d8f/_s11059_8h_ab572db1939683f34a56efd431cf1e18c_cgraph" alt=""/></div>
-<map name="d1/d8f/_s11059_8h_ab572db1939683f34a56efd431cf1e18c_cgraph" id="d1/d8f/_s11059_8h_ab572db1939683f34a56efd431cf1e18c_cgraph">
-<area shape="rect" id="node2" href="../../d2/dfe/_s11059_8c.html#a2f2b5c49457f907586695564edef70fe" title="I2C Write function for S11059. " alt="" coords="197,31,301,57"/>
+<div class="center"><img src="../../d1/d8f/_s11059_8h_a31193e699a4dce66328dc34029b66245_cgraph.png" border="0" usemap="#d1/d8f/_s11059_8h_a31193e699a4dce66328dc34029b66245_cgraph" alt=""/></div>
+<map name="d1/d8f/_s11059_8h_a31193e699a4dce66328dc34029b66245_cgraph" id="d1/d8f/_s11059_8h_a31193e699a4dce66328dc34029b66245_cgraph">
+<area shape="rect" id="node2" href="../../d2/dfe/_s11059_8c.html#a81750db9397213f701c4aa80056e12d2" title="I2C Write function for S11059. " alt="" coords="197,31,301,57"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="349,5,461,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="354,56,457,83"/>
 </map>
@@ -797,30 +933,31 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d1/d8f/_s11059_8h_ab572db1939683f34a56efd431cf1e18c_icgraph.png" border="0" usemap="#d1/d8f/_s11059_8h_ab572db1939683f34a56efd431cf1e18c_icgraph" alt=""/></div>
-<map name="d1/d8f/_s11059_8h_ab572db1939683f34a56efd431cf1e18c_icgraph" id="d1/d8f/_s11059_8h_ab572db1939683f34a56efd431cf1e18c_icgraph">
-<area shape="rect" id="node2" href="../../d9/da9/_s11059__ex_8h.html#ab8d56c2570f5b8af8c6abedaef602ffd" title="Set S11059 integration multiplier (used when integration mode set to Manual) " alt="" coords="198,99,359,141"/>
-<area shape="rect" id="node3" href="../../d9/da9/_s11059__ex_8h.html#acdac3ca006ab290ce4ae10742130fb4d" title="Write S11059 Control register. " alt="" coords="408,107,536,133"/>
-<area shape="rect" id="node4" href="../../d9/da9/_s11059__ex_8h.html#a500036248a3c9996b51ebc22450ccd19" title="ADC Operation / Reset. " alt="" coords="601,5,730,32"/>
-<area shape="rect" id="node5" href="../../d9/da9/_s11059__ex_8h.html#aef6de1a8c85c148176bfd07aced2da9b" title="Set Standby / Operating mode. " alt="" coords="591,56,739,83"/>
-<area shape="rect" id="node6" href="../../d9/da9/_s11059__ex_8h.html#a665bc9c07e97850bddec6aa119337bd8" title="Set ADC gain. " alt="" coords="602,107,729,133"/>
-<area shape="rect" id="node7" href="../../d9/da9/_s11059__ex_8h.html#a7aced476191c883371a2875d909285ca" title="Set integration mode &amp; prescaler. " alt="" coords="585,157,746,184"/>
-<area shape="rect" id="node8" href="../../dc/d4b/_s11059__proc_8h.html#a5d2f1bce21f170c7ecbaef4acbb03007" title="Initialization Sequence for S11059 peripheral. " alt="" coords="587,208,743,235"/>
-<area shape="rect" id="node9" href="../../d1/d8f/_s11059_8h.html#aa5f6510fdab1d03f007b3fe83befd475" title="Initialization for S11059 peripheral. " alt="" coords="795,208,885,235"/>
+<div class="center"><img src="../../d1/d8f/_s11059_8h_a31193e699a4dce66328dc34029b66245_icgraph.png" border="0" usemap="#d1/d8f/_s11059_8h_a31193e699a4dce66328dc34029b66245_icgraph" alt=""/></div>
+<map name="d1/d8f/_s11059_8h_a31193e699a4dce66328dc34029b66245_icgraph" id="d1/d8f/_s11059_8h_a31193e699a4dce66328dc34029b66245_icgraph">
+<area shape="rect" id="node2" href="../../d9/da9/_s11059__ex_8h.html#a30bef82a6eb8181de0b0a2e8f55ae2c5" title="Set S11059 integration multiplier (used when integration mode set to Manual) " alt="" coords="198,99,359,141"/>
+<area shape="rect" id="node3" href="../../d9/da9/_s11059__ex_8h.html#acccbcc83abce2e5ad100ed0a248fdfe6" title="Write S11059 Control register. " alt="" coords="408,107,536,133"/>
+<area shape="rect" id="node4" href="../../d9/da9/_s11059__ex_8h.html#a11e1e0530b91fa5af6308f834ef30995" title="ADC Operation / Reset. " alt="" coords="601,5,730,32"/>
+<area shape="rect" id="node5" href="../../d9/da9/_s11059__ex_8h.html#a401758886add6e8f05e3bb0ebc645395" title="Set Standby / Operating mode. " alt="" coords="591,56,739,83"/>
+<area shape="rect" id="node6" href="../../d9/da9/_s11059__ex_8h.html#a66fb17c0d26d605bc440ff385b09e848" title="Set ADC gain. " alt="" coords="602,107,729,133"/>
+<area shape="rect" id="node7" href="../../d9/da9/_s11059__ex_8h.html#af61cd26ed6f8df9a15f5ea5ffa67c791" title="Set integration mode &amp; prescaler. " alt="" coords="585,157,746,184"/>
+<area shape="rect" id="node8" href="../../dc/d4b/_s11059__proc_8h.html#a63d3bbbec413af54e3edd2dae0243d92" title="Initialization Sequence for S11059 peripheral. " alt="" coords="587,208,743,235"/>
+<area shape="rect" id="node9" href="../../d1/d8f/_s11059_8h.html#aaaa62f952fb19007b1c6592422c88221" title="Initialization for S11059 peripheral. " alt="" coords="795,208,885,235"/>
+<area shape="rect" id="node10" href="../../d1/d8f/_s11059_8h.html#a54b2b645d23ab3654253ec5165873303" title="Initialization for S11059 peripheral. " alt="" coords="934,208,1069,235"/>
 </map>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="acbf475dd1a3f2c30328b6d668f84129a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acbf475dd1a3f2c30328b6d668f84129a">&#9670;&nbsp;</a></span>S11059_hal</h2>
+<a id="a899ea5865581ace7813a2e0cc0d3a99e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a899ea5865581ace7813a2e0cc0d3a99e">&#9670;&nbsp;</a></span>S11059_hal</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> S11059_hal</td>
+          <td class="memname"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> S11059_hal[<a class="el" href="../../d1/d8f/_s11059_8h.html#a6ab589273791d3a6ba908166d581b6eb">I2C_S11059_NB</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">

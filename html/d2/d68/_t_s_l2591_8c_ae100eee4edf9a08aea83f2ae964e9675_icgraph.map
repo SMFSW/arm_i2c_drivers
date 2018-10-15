@@ -1,0 +1,9 @@
+<map id="TSL2591_Write_Word" name="TSL2591_Write_Word">
+<area shape="rect" id="node2" href="$dc/d24/_t_s_l2591__ex_8h.html#a970f1c9d1c7392c46c05febb3605e9c7" title="ALS interrupt low threshold configuration. " alt="" coords="217,5,353,32"/>
+<area shape="rect" id="node6" href="$dc/d24/_t_s_l2591__ex_8h.html#a429d9612ce64dd4fa4bb091ae522f404" title="ALS interrupt high threshold configuration. " alt="" coords="216,56,355,83"/>
+<area shape="rect" id="node7" href="$dc/d24/_t_s_l2591__ex_8h.html#a9850cf6332b48ca7a3c7bd6988d788e2" title="ALS interrupt Persist Low threshold filter configuration. " alt="" coords="208,107,363,133"/>
+<area shape="rect" id="node8" href="$dc/d24/_t_s_l2591__ex_8h.html#a4bf964691f21eb4ee645a833f41ee359" title="ALS interrupt Persist High threshold filter configuration. " alt="" coords="206,157,365,184"/>
+<area shape="rect" id="node3" href="$d7/d6e/_t_s_l2591__proc_8h.html#a2041117e46b601378a1df06a4957cd4f" title="Initialization Sequence for TSL2591 peripheral. " alt="" coords="414,31,578,57"/>
+<area shape="rect" id="node4" href="$da/d96/_t_s_l2591_8h.html#a3e5d6c27f6e4ba0ad68acc6b29a18d27" title="Initialization for TSL2591 peripheral. " alt="" coords="627,31,725,57"/>
+<area shape="rect" id="node5" href="$da/d96/_t_s_l2591_8h.html#a340d5559e9623f12628e013d814ac718" title="Initialization for TSL2591 peripheral. " alt="" coords="774,31,917,57"/>
+</map>

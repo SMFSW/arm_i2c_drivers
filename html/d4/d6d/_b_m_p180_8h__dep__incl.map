@@ -1,7 +1,7 @@
 <map id="BMP180.h" name="BMP180.h">
 <area shape="rect" id="node2" href="$d8/d11/_b_m_p180_8c.html" title="BMP180 Driver. " alt="" coords="5,80,87,107"/>
-<area shape="rect" id="node3" href="$d8/dfb/_b_m_p180__ex_8h.html" title="BMP180 Driver extensions. " alt="" coords="112,80,216,107"/>
-<area shape="rect" id="node4" href="$dc/d50/_b_m_p180__proc_8h.html" title="BMP180 Driver procedures. " alt="" coords="240,80,355,107"/>
+<area shape="rect" id="node3" href="$dc/d50/_b_m_p180__proc_8h.html" title="BMP180 Driver procedures. " alt="" coords="112,80,227,107"/>
+<area shape="rect" id="node4" href="$d8/dfb/_b_m_p180__ex_8h.html" title="BMP180 Driver extensions. " alt="" coords="251,80,355,107"/>
 <area shape="rect" id="node5" href="$db/d0e/_b_m_p180__ex_8c.html" title="BMP180 Driver extensions. " alt="" coords="379,80,483,107"/>
 <area shape="rect" id="node6" href="$d0/d35/_b_m_p180__proc_8c.html" title="BMP180 Driver procedures. " alt="" coords="507,80,621,107"/>
 </map>

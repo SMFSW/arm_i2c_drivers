@@ -1,6 +1,7 @@
 <map id="TSL2591_proc.c" name="TSL2591_proc.c">
-<area shape="rect" id="node2" href="$da/d96/_t_s_l2591_8h.html" title="TSL2591 Driver. " alt="" coords="135,80,220,107"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="396,155,521,181"/>
-<area shape="rect" id="node7" href="$dc/d24/_t_s_l2591__ex_8h.html" title="TSL2591 Driver extensions. " alt="" coords="124,155,231,181"/>
-<area shape="rect" id="node8" href="$d7/d6e/_t_s_l2591__proc_8h.html" title="TSL2591 Driver procedures. " alt="" coords="255,155,371,181"/>
+<area shape="rect" id="node2" href="$da/d96/_t_s_l2591_8h.html" title="TSL2591 Driver. " alt="" coords="179,80,264,107"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="299,155,424,181"/>
+<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="448,155,564,181"/>
+<area shape="rect" id="node8" href="$d7/d6e/_t_s_l2591__proc_8h.html" title="TSL2591 Driver procedures. " alt="" coords="27,155,143,181"/>
+<area shape="rect" id="node9" href="$dc/d24/_t_s_l2591__ex_8h.html" title="TSL2591 Driver extensions. " alt="" coords="168,155,275,181"/>
 </map>

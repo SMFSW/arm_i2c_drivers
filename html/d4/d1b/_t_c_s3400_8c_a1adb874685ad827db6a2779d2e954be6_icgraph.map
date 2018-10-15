@@ -1,7 +1,0 @@
-<map id="TCS3400_Read_Word" name="TCS3400_Read_Word">
-<area shape="rect" id="node2" href="$de/d36/_t_c_s3400__ex_8h.html#a575dc699dffd86024174d998fbe3f198" title="Get Specific channel conversion. " alt="" coords="208,5,368,32"/>
-<area shape="rect" id="node3" href="$de/d36/_t_c_s3400__ex_8h.html#a3b60dc5c49f2d5f9c16e7c3574c964af" title="Get Clear channel conversion. " alt="" coords="217,56,359,83"/>
-<area shape="rect" id="node4" href="$de/d36/_t_c_s3400__ex_8h.html#a8708e8e5d47c91bf283917df0fb77d9f" title="Get Red channel conversion. " alt="" coords="220,107,356,133"/>
-<area shape="rect" id="node5" href="$de/d36/_t_c_s3400__ex_8h.html#a390fa9af68c5eb9d57f03c6080ad27d1" title="Get Green channel conversion. " alt="" coords="215,157,361,184"/>
-<area shape="rect" id="node6" href="$de/d36/_t_c_s3400__ex_8h.html#abcee1a3e557a33b1b0c629a9e8685bfb" title="Get Blue channel conversion. " alt="" coords="219,208,357,235"/>
-</map>

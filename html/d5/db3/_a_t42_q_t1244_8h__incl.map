@@ -1,5 +1,6 @@
 <map id="AT42QT1244.h" name="AT42QT1244.h">
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="446,80,571,107"/>
-<area shape="rect" id="node6" href="$df/de4/_a_t42_q_t1244__ex_8h.html" title="AT42QT1244 Driver extensions. " alt="" coords="125,80,254,107"/>
-<area shape="rect" id="node7" href="$d4/d47/_a_t42_q_t1244__proc_8h.html" title="AT42QT1244 Driver procedures. " alt="" coords="279,80,421,107"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="350,80,475,107"/>
+<area shape="rect" id="node6" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="499,80,615,107"/>
+<area shape="rect" id="node7" href="$d4/d47/_a_t42_q_t1244__proc_8h.html" title="AT42QT1244 Driver procedures. " alt="" coords="29,80,171,107"/>
+<area shape="rect" id="node8" href="$df/de4/_a_t42_q_t1244__ex_8h.html" title="AT42QT1244 Driver extensions. " alt="" coords="195,80,324,107"/>
 </map>

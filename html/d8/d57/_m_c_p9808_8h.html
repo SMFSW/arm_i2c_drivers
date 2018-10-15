@@ -77,16 +77,18 @@ $(function() {
 <div class="textblock"><code>#include &quot;sarmfsw.h&quot;</code><br />
 <code>#include &quot;globals.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d6/dd6/_i2_c__component_8h_source.html">I2C_component.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../df/d2f/_m_c_p9808__ex_8h_source.html">MCP9808_ex.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d5d/_i2_c__peripheral_8h_source.html">I2C_peripheral.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d6/d5e/_m_c_p9808__proc_8h_source.html">MCP9808_proc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/d2f/_m_c_p9808__ex_8h_source.html">MCP9808_ex.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for MCP9808.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d09/_m_c_p9808_8h__incl.png" border="0" usemap="#_m_c_p9808_8h" alt=""/></div>
 <map name="_m_c_p9808_8h" id="_m_c_p9808_8h">
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="407,80,532,107"/>
-<area shape="rect" id="node6" href="../../df/d2f/_m_c_p9808__ex_8h.html" title="MCP9808 Driver extensions. " alt="" coords="124,80,235,107"/>
-<area shape="rect" id="node7" href="../../d6/d5e/_m_c_p9808__proc_8h.html" title="MCP9808 Driver procedures. " alt="" coords="260,80,383,107"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="310,80,435,107"/>
+<area shape="rect" id="node6" href="../../dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="459,80,575,107"/>
+<area shape="rect" id="node7" href="../../d6/d5e/_m_c_p9808__proc_8h.html" title="MCP9808 Driver procedures. " alt="" coords="27,80,150,107"/>
+<area shape="rect" id="node8" href="../../df/d2f/_m_c_p9808__ex_8h.html" title="MCP9808 Driver extensions. " alt="" coords="174,80,284,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -95,8 +97,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="center"><img src="../../d9/df6/_m_c_p9808_8h__dep__incl.png" border="0" usemap="#_m_c_p9808_8hdep" alt=""/></div>
 <map name="_m_c_p9808_8hdep" id="_m_c_p9808_8hdep">
 <area shape="rect" id="node2" href="../../df/d8e/_m_c_p9808_8c.html" title="MCP9808 Driver. " alt="" coords="5,80,96,107"/>
-<area shape="rect" id="node3" href="../../df/d2f/_m_c_p9808__ex_8h.html" title="MCP9808 Driver extensions. " alt="" coords="120,80,231,107"/>
-<area shape="rect" id="node4" href="../../d6/d5e/_m_c_p9808__proc_8h.html" title="MCP9808 Driver procedures. " alt="" coords="256,80,379,107"/>
+<area shape="rect" id="node3" href="../../d6/d5e/_m_c_p9808__proc_8h.html" title="MCP9808 Driver procedures. " alt="" coords="120,80,243,107"/>
+<area shape="rect" id="node4" href="../../df/d2f/_m_c_p9808__ex_8h.html" title="MCP9808 Driver extensions. " alt="" coords="267,80,377,107"/>
 <area shape="rect" id="node5" href="../../df/d47/_m_c_p9808__ex_8c.html" title="MCP9808 Driver extensions. " alt="" coords="403,80,513,107"/>
 <area shape="rect" id="node6" href="../../de/deb/_m_c_p9808__proc_8c.html" title="MCP9808 Driver procedures. " alt="" coords="539,80,661,107"/>
 </map>
@@ -118,6 +120,9 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a2801c19658a58f286b2c440421c08689"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d57/_m_c_p9808_8h.html#a2801c19658a58f286b2c440421c08689">I2C_MCP9808_NB</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:a2801c19658a58f286b2c440421c08689"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of MCP9808 peripherals.  <a href="#a2801c19658a58f286b2c440421c08689">More...</a><br /></td></tr>
+<tr class="separator:a2801c19658a58f286b2c440421c08689"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac40c85df2b1c11c6b7b0789bcf90c04e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d57/_m_c_p9808_8h.html#ac40c85df2b1c11c6b7b0789bcf90c04e">MCP9808_ADDR</a>&#160;&#160;&#160;0x18</td></tr>
 <tr class="memdesc:ac40c85df2b1c11c6b7b0789bcf90c04e"><td class="mdescLeft">&#160;</td><td class="mdescRight">MCP9808 address.  <a href="#ac40c85df2b1c11c6b7b0789bcf90c04e">More...</a><br /></td></tr>
 <tr class="separator:ac40c85df2b1c11c6b7b0789bcf90c04e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,21 +180,24 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0e55a19e8651c9fa28e9179dfaf1b94c"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d57/_m_c_p9808_8h.html#a0e55a19e8651c9fa28e9179dfaf1b94c">MCP9808_Init</a> (void)</td></tr>
-<tr class="memdesc:a0e55a19e8651c9fa28e9179dfaf1b94c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization of the MCP9808 peripheral.  <a href="#a0e55a19e8651c9fa28e9179dfaf1b94c">More...</a><br /></td></tr>
-<tr class="separator:a0e55a19e8651c9fa28e9179dfaf1b94c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76f237074a82f686b1b163783abe06bb"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d57/_m_c_p9808_8h.html#a76f237074a82f686b1b163783abe06bb">MCP9808_Write</a> (const uint16_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
-<tr class="memdesc:a76f237074a82f686b1b163783abe06bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Write function for MCP9808.  <a href="#a76f237074a82f686b1b163783abe06bb">More...</a><br /></td></tr>
-<tr class="separator:a76f237074a82f686b1b163783abe06bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f07df92b9fb162854dca25cf1a3da80"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d57/_m_c_p9808_8h.html#a5f07df92b9fb162854dca25cf1a3da80">MCP9808_Read</a> (uint16_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
-<tr class="memdesc:a5f07df92b9fb162854dca25cf1a3da80"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Read function for MCP9808.  <a href="#a5f07df92b9fb162854dca25cf1a3da80">More...</a><br /></td></tr>
-<tr class="separator:a5f07df92b9fb162854dca25cf1a3da80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91d38f36234f03778c3146624f083067"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d57/_m_c_p9808_8h.html#a91d38f36234f03778c3146624f083067">MCP9808_Init</a> (const uint8_t idx, const I2C_HandleTypeDef *hi2c, const uint16_t devAddress)</td></tr>
+<tr class="memdesc:a91d38f36234f03778c3146624f083067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization of the MCP9808 peripheral.  <a href="#a91d38f36234f03778c3146624f083067">More...</a><br /></td></tr>
+<tr class="separator:a91d38f36234f03778c3146624f083067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ffcff895e9844967086a52af6c82dd4"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d57/_m_c_p9808_8h.html#a9ffcff895e9844967086a52af6c82dd4">MCP9808_Init_Single</a> (void)</td></tr>
+<tr class="memdesc:a9ffcff895e9844967086a52af6c82dd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for MCP9808 peripheral.  <a href="#a9ffcff895e9844967086a52af6c82dd4">More...</a><br /></td></tr>
+<tr class="separator:a9ffcff895e9844967086a52af6c82dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f0dba5176e2cb06e61c7e69b5c5feff"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d57/_m_c_p9808_8h.html#a3f0dba5176e2cb06e61c7e69b5c5feff">MCP9808_Write</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *pSlave, const uint16_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
+<tr class="memdesc:a3f0dba5176e2cb06e61c7e69b5c5feff"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Write function for MCP9808.  <a href="#a3f0dba5176e2cb06e61c7e69b5c5feff">More...</a><br /></td></tr>
+<tr class="separator:a3f0dba5176e2cb06e61c7e69b5c5feff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae31a880b2f9d8fce8a00151eb4399cb"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d57/_m_c_p9808_8h.html#aae31a880b2f9d8fce8a00151eb4399cb">MCP9808_Read</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *pSlave, uint16_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
+<tr class="memdesc:aae31a880b2f9d8fce8a00151eb4399cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Read function for MCP9808.  <a href="#aae31a880b2f9d8fce8a00151eb4399cb">More...</a><br /></td></tr>
+<tr class="separator:aae31a880b2f9d8fce8a00151eb4399cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a3f9445cddfe410aaa6254c9ac861a7b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d57/_m_c_p9808_8h.html#a3f9445cddfe410aaa6254c9ac861a7b9">MCP9808_hal</a></td></tr>
-<tr class="memdesc:a3f9445cddfe410aaa6254c9ac861a7b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">MCP9808 Slave structure.  <a href="#a3f9445cddfe410aaa6254c9ac861a7b9">More...</a><br /></td></tr>
-<tr class="separator:a3f9445cddfe410aaa6254c9ac861a7b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af45f0676397926391ab33995fc4b3e40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d57/_m_c_p9808_8h.html#af45f0676397926391ab33995fc4b3e40">MCP9808_hal</a> [<a class="el" href="../../d8/d57/_m_c_p9808_8h.html#a2801c19658a58f286b2c440421c08689">I2C_MCP9808_NB</a>]</td></tr>
+<tr class="memdesc:af45f0676397926391ab33995fc4b3e40"><td class="mdescLeft">&#160;</td><td class="mdescRight">MCP9808 Slave structure.  <a href="#af45f0676397926391ab33995fc4b3e40">More...</a><br /></td></tr>
+<tr class="separator:af45f0676397926391ab33995fc4b3e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>MCP9808 Driver. </p>
@@ -197,6 +205,23 @@ Variables</h2></td></tr>
 <dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2018, SMFSW</dd></dl>
 <p>MCP9808: +/-0.5C Maximum Accuracy Digital Temperature Sensor </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a2801c19658a58f286b2c440421c08689"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2801c19658a58f286b2c440421c08689">&#9670;&nbsp;</a></span>I2C_MCP9808_NB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_MCP9808_NB&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Number of MCP9808 peripherals. </p>
+<dl class="section note"><dt>Note</dt><dd>Define I2C_MCP9808_NB in globals.h or at project to enable multiple peripherals of this type </dd></dl>
+
+</div>
+</div>
 <a id="ac40c85df2b1c11c6b7b0789bcf90c04e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac40c85df2b1c11c6b7b0789bcf90c04e">&#9670;&nbsp;</a></span>MCP9808_ADDR</h2>
 
@@ -404,14 +429,84 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a0e55a19e8651c9fa28e9179dfaf1b94c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e55a19e8651c9fa28e9179dfaf1b94c">&#9670;&nbsp;</a></span>MCP9808_Init()</h2>
+<a id="a91d38f36234f03778c3146624f083067"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91d38f36234f03778c3146624f083067">&#9670;&nbsp;</a></span>MCP9808_Init()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">FctERR MCP9808_Init </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const I2C_HandleTypeDef *&#160;</td>
+          <td class="paramname"><em>hi2c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>devAddress</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialization of the MCP9808 peripheral. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">idx</td><td>- MCP9808 index </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hi2c</td><td>- pointer to MCP9808 I2C instance </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">devAddress</td><td>- MCP9808 device address </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d57/_m_c_p9808_8h_a91d38f36234f03778c3146624f083067_cgraph.png" border="0" usemap="#d8/d57/_m_c_p9808_8h_a91d38f36234f03778c3146624f083067_cgraph" alt=""/></div>
+<map name="d8/d57/_m_c_p9808_8h_a91d38f36234f03778c3146624f083067_cgraph" id="d8/d57/_m_c_p9808_8h_a91d38f36234f03778c3146624f083067_cgraph">
+<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="193,5,298,32"/>
+<area shape="rect" id="node3" href="../../de/deb/_m_c_p9808__proc_8c.html#ac1daf1ee55269479527921f21f0685ab" title="Initialization Sequence of the MCP9808 peripheral. " alt="" coords="160,56,331,83"/>
+<area shape="rect" id="node11" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="189,107,302,133"/>
+<area shape="rect" id="node4" href="../../df/d2f/_m_c_p9808__ex_8h.html#a90a11062692b1b9d5049647a8d5c30b6" title="Get MCP9808 Manufacturer ID. " alt="" coords="379,56,584,83"/>
+<area shape="rect" id="node8" href="../../df/d2f/_m_c_p9808__ex_8h.html#a432056538649f656d28261c404a28c3f" title="Get MCP9808 chip ID. " alt="" coords="403,5,559,32"/>
+<area shape="rect" id="node9" href="../../df/d47/_m_c_p9808__ex_8c.html#ae31b1b2b5f913d440753b2c8cb1c9015" title="Set MCP9808 Resolution. " alt="" coords="393,107,569,133"/>
+<area shape="rect" id="node5" href="../../df/d8e/_m_c_p9808_8c.html#aae31a880b2f9d8fce8a00151eb4399cb" title="I2C Read function for MCP9808. " alt="" coords="633,56,751,83"/>
+<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="800,56,912,83"/>
+<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="805,107,907,133"/>
+<area shape="rect" id="node10" href="../../df/d8e/_m_c_p9808_8c.html#a3f0dba5176e2cb06e61c7e69b5c5feff" title="I2C Write function for MCP9808. " alt="" coords="633,107,751,133"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d57/_m_c_p9808_8h_a91d38f36234f03778c3146624f083067_icgraph.png" border="0" usemap="#d8/d57/_m_c_p9808_8h_a91d38f36234f03778c3146624f083067_icgraph" alt=""/></div>
+<map name="d8/d57/_m_c_p9808_8h_a91d38f36234f03778c3146624f083067_icgraph" id="d8/d57/_m_c_p9808_8h_a91d38f36234f03778c3146624f083067_icgraph">
+<area shape="rect" id="node2" href="../../d8/d57/_m_c_p9808_8h.html#a9ffcff895e9844967086a52af6c82dd4" title="Initialization for MCP9808 peripheral. " alt="" coords="161,5,309,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9ffcff895e9844967086a52af6c82dd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ffcff895e9844967086a52af6c82dd4">&#9670;&nbsp;</a></span>MCP9808_Init_Single()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR MCP9808_Init_Single </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -420,31 +515,32 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Initialization of the MCP9808 peripheral. </p>
-<dl class="weak"><dt><b><a class="el" href="../../d0/d58/weak.html#_weak000017">Weak Functions:</a></b></dt><dd>MCP9808 Base address may be changed if user implemented </dd></dl>
+<p>Initialization for MCP9808 peripheral. </p>
+<dl class="section warning"><dt>Warning</dt><dd>In case multiple devices (defined by I2C_MCP9808_NB &gt; 1), you shall use MCP9808_Init instead </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d8/d57/_m_c_p9808_8h_a0e55a19e8651c9fa28e9179dfaf1b94c_cgraph.png" border="0" usemap="#d8/d57/_m_c_p9808_8h_a0e55a19e8651c9fa28e9179dfaf1b94c_cgraph" alt=""/></div>
-<map name="d8/d57/_m_c_p9808_8h_a0e55a19e8651c9fa28e9179dfaf1b94c_cgraph" id="d8/d57/_m_c_p9808_8h_a0e55a19e8651c9fa28e9179dfaf1b94c_cgraph">
-<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="193,5,298,32"/>
-<area shape="rect" id="node3" href="../../de/deb/_m_c_p9808__proc_8c.html#abf6a96ffa46d6cefe44ab57ccc7f8e65" title="Initialization Sequence of the MCP9808 peripheral. " alt="" coords="160,56,331,83"/>
-<area shape="rect" id="node11" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="189,107,302,133"/>
-<area shape="rect" id="node4" href="../../df/d2f/_m_c_p9808__ex_8h.html#aaf30c7ffda5ab0f9b310e656677823ea" title="Get MCP9808 Manufacturer ID. " alt="" coords="379,56,584,83"/>
-<area shape="rect" id="node8" href="../../df/d2f/_m_c_p9808__ex_8h.html#a680d06b272532690503b1be2e796e878" title="Get MCP9808 chip ID. " alt="" coords="403,5,559,32"/>
-<area shape="rect" id="node9" href="../../df/d47/_m_c_p9808__ex_8c.html#a2a279ef8af7b414055c528b70fe9a8b1" title="Set MCP9808 Resolution. " alt="" coords="393,107,569,133"/>
-<area shape="rect" id="node5" href="../../df/d8e/_m_c_p9808_8c.html#a5f07df92b9fb162854dca25cf1a3da80" title="I2C Read function for MCP9808. " alt="" coords="633,56,751,83"/>
-<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="800,56,912,83"/>
-<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="805,107,907,133"/>
-<area shape="rect" id="node10" href="../../df/d8e/_m_c_p9808_8c.html#a76f237074a82f686b1b163783abe06bb" title="I2C Write function for MCP9808. " alt="" coords="633,107,751,133"/>
+<div class="center"><img src="../../d8/d57/_m_c_p9808_8h_a9ffcff895e9844967086a52af6c82dd4_cgraph.png" border="0" usemap="#d8/d57/_m_c_p9808_8h_a9ffcff895e9844967086a52af6c82dd4_cgraph" alt=""/></div>
+<map name="d8/d57/_m_c_p9808_8h_a9ffcff895e9844967086a52af6c82dd4_cgraph" id="d8/d57/_m_c_p9808_8h_a9ffcff895e9844967086a52af6c82dd4_cgraph">
+<area shape="rect" id="node2" href="../../df/d8e/_m_c_p9808_8c.html#a91d38f36234f03778c3146624f083067" title="Initialization of the MCP9808 peripheral. " alt="" coords="203,56,309,83"/>
+<area shape="rect" id="node3" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="390,5,495,32"/>
+<area shape="rect" id="node4" href="../../de/deb/_m_c_p9808__proc_8c.html#ac1daf1ee55269479527921f21f0685ab" title="Initialization Sequence of the MCP9808 peripheral. " alt="" coords="357,56,528,83"/>
+<area shape="rect" id="node12" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="386,107,499,133"/>
+<area shape="rect" id="node5" href="../../df/d2f/_m_c_p9808__ex_8h.html#a90a11062692b1b9d5049647a8d5c30b6" title="Get MCP9808 Manufacturer ID. " alt="" coords="576,56,781,83"/>
+<area shape="rect" id="node9" href="../../df/d2f/_m_c_p9808__ex_8h.html#a432056538649f656d28261c404a28c3f" title="Get MCP9808 chip ID. " alt="" coords="601,5,757,32"/>
+<area shape="rect" id="node10" href="../../df/d47/_m_c_p9808__ex_8c.html#ae31b1b2b5f913d440753b2c8cb1c9015" title="Set MCP9808 Resolution. " alt="" coords="591,107,767,133"/>
+<area shape="rect" id="node6" href="../../df/d8e/_m_c_p9808_8c.html#aae31a880b2f9d8fce8a00151eb4399cb" title="I2C Read function for MCP9808. " alt="" coords="830,56,949,83"/>
+<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="997,56,1109,83"/>
+<area shape="rect" id="node8" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1002,107,1105,133"/>
+<area shape="rect" id="node11" href="../../df/d8e/_m_c_p9808_8c.html#a3f0dba5176e2cb06e61c7e69b5c5feff" title="I2C Write function for MCP9808. " alt="" coords="830,107,949,133"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a5f07df92b9fb162854dca25cf1a3da80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f07df92b9fb162854dca25cf1a3da80">&#9670;&nbsp;</a></span>MCP9808_Read()</h2>
+<a id="aae31a880b2f9d8fce8a00151eb4399cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae31a880b2f9d8fce8a00151eb4399cb">&#9670;&nbsp;</a></span>MCP9808_Read()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -452,6 +548,12 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">FctERR MCP9808_Read </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
+          <td class="paramname"><em>pSlave</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">uint16_t *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
@@ -478,6 +580,7 @@ Here is the call graph for this function:</div>
 <p>I2C Read function for MCP9808. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pSlave</td><td>- Pointer to I2C slave instance </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>- pointer to read to (16b type pointer) </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>- Address to read from </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">nb</td><td>- Number of bytes to read </td></tr>
@@ -488,8 +591,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d8/d57/_m_c_p9808_8h_a5f07df92b9fb162854dca25cf1a3da80_cgraph.png" border="0" usemap="#d8/d57/_m_c_p9808_8h_a5f07df92b9fb162854dca25cf1a3da80_cgraph" alt=""/></div>
-<map name="d8/d57/_m_c_p9808_8h_a5f07df92b9fb162854dca25cf1a3da80_cgraph" id="d8/d57/_m_c_p9808_8h_a5f07df92b9fb162854dca25cf1a3da80_cgraph">
+<div class="center"><img src="../../d8/d57/_m_c_p9808_8h_aae31a880b2f9d8fce8a00151eb4399cb_cgraph.png" border="0" usemap="#d8/d57/_m_c_p9808_8h_aae31a880b2f9d8fce8a00151eb4399cb_cgraph" alt=""/></div>
+<map name="d8/d57/_m_c_p9808_8h_aae31a880b2f9d8fce8a00151eb4399cb_cgraph" id="d8/d57/_m_c_p9808_8h_aae31a880b2f9d8fce8a00151eb4399cb_cgraph">
 <area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="173,5,285,32"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="178,56,281,83"/>
 </map>
@@ -497,30 +600,31 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d8/d57/_m_c_p9808_8h_a5f07df92b9fb162854dca25cf1a3da80_icgraph.png" border="0" usemap="#d8/d57/_m_c_p9808_8h_a5f07df92b9fb162854dca25cf1a3da80_icgraph" alt=""/></div>
-<map name="d8/d57/_m_c_p9808_8h_a5f07df92b9fb162854dca25cf1a3da80_icgraph" id="d8/d57/_m_c_p9808_8h_a5f07df92b9fb162854dca25cf1a3da80_icgraph">
-<area shape="rect" id="node2" href="../../df/d2f/_m_c_p9808__ex_8h.html#acc3c575f573622a69ee65e37c15b33eb" title="Get MCP9808 Resolution. " alt="" coords="187,19,365,45"/>
-<area shape="rect" id="node3" href="../../df/d2f/_m_c_p9808__ex_8h.html#a64b000a159fc5c548809f7120bfad65d" title="Get MCP9808 Configuration. " alt="" coords="427,5,650,32"/>
-<area shape="rect" id="node5" href="../../df/d2f/_m_c_p9808__ex_8h.html#a3b920340f81c5a3937f1e25e91be16ef" title="Get MCP9808 Configuration. " alt="" coords="195,157,357,184"/>
-<area shape="rect" id="node12" href="../../df/d2f/_m_c_p9808__ex_8h.html#aaf30c7ffda5ab0f9b310e656677823ea" title="Get MCP9808 Manufacturer ID. " alt="" coords="173,208,379,235"/>
-<area shape="rect" id="node15" href="../../df/d2f/_m_c_p9808__ex_8h.html#a680d06b272532690503b1be2e796e878" title="Get MCP9808 chip ID. " alt="" coords="198,259,354,285"/>
-<area shape="rect" id="node16" href="../../d6/d5e/_m_c_p9808__proc_8h.html#ad10483bd9c77122fac8e597931004300" title="Get the high/low/crit Alert temperature. " alt="" coords="189,309,363,336"/>
-<area shape="rect" id="node4" href="../../d6/d5e/_m_c_p9808__proc_8h.html#a642a2f7a3b260f915054487b3c9f86a3" title="Get the temperature. " alt="" coords="699,5,887,32"/>
-<area shape="rect" id="node6" href="../../df/d2f/_m_c_p9808__ex_8h.html#aa08f1388ecd8cdd6f014a4ace9181759" title="Write MCP9808 configuration. " alt="" coords="466,56,611,83"/>
-<area shape="rect" id="node8" href="../../df/d2f/_m_c_p9808__ex_8h.html#a7fd94de2b39ae99cb64d112fa092680e" title="Set MCP9808 alert hysteresis. " alt="" coords="437,107,641,133"/>
-<area shape="rect" id="node9" href="../../df/d2f/_m_c_p9808__ex_8h.html#a4758e2efa9c6e2eeeaeaf0efa528e642" title="Set MCP9808 alert type. " alt="" coords="453,157,624,184"/>
-<area shape="rect" id="node10" href="../../df/d2f/_m_c_p9808__ex_8h.html#a8b1dfbba8e41b0ae7a6b19159330f5a7" title="Set MCP9808 alert enable. " alt="" coords="449,208,629,235"/>
-<area shape="rect" id="node11" href="../../df/d2f/_m_c_p9808__ex_8h.html#a084d9679db6b2cf3dcfa8d631c540f73" title="Set MCP9808 alert lock. " alt="" coords="454,259,623,285"/>
-<area shape="rect" id="node7" href="../../d6/d5e/_m_c_p9808__proc_8h.html#a42403a3de5fb97d9247f5b350579954d" title="Set the high/low/crit Alert temperature. " alt="" coords="706,56,881,83"/>
-<area shape="rect" id="node13" href="../../d6/d5e/_m_c_p9808__proc_8h.html#abf6a96ffa46d6cefe44ab57ccc7f8e65" title="Initialization Sequence of the MCP9808 peripheral. " alt="" coords="453,309,624,336"/>
-<area shape="rect" id="node14" href="../../d8/d57/_m_c_p9808_8h.html#a0e55a19e8651c9fa28e9179dfaf1b94c" title="Initialization of the MCP9808 peripheral. " alt="" coords="741,309,846,336"/>
+<div class="center"><img src="../../d8/d57/_m_c_p9808_8h_aae31a880b2f9d8fce8a00151eb4399cb_icgraph.png" border="0" usemap="#d8/d57/_m_c_p9808_8h_aae31a880b2f9d8fce8a00151eb4399cb_icgraph" alt=""/></div>
+<map name="d8/d57/_m_c_p9808_8h_aae31a880b2f9d8fce8a00151eb4399cb_icgraph" id="d8/d57/_m_c_p9808_8h_aae31a880b2f9d8fce8a00151eb4399cb_icgraph">
+<area shape="rect" id="node2" href="../../df/d2f/_m_c_p9808__ex_8h.html#a7ce62901397431c54e5a0f1630625a9b" title="Get MCP9808 Resolution. " alt="" coords="187,19,365,45"/>
+<area shape="rect" id="node3" href="../../df/d2f/_m_c_p9808__ex_8h.html#a8e41dd911799fda3ec89fe40a7cb258f" title="Get MCP9808 Configuration. " alt="" coords="427,5,650,32"/>
+<area shape="rect" id="node5" href="../../df/d2f/_m_c_p9808__ex_8h.html#afdd934ca0ed7b4899174b427d0458b1d" title="Get MCP9808 Configuration. " alt="" coords="195,157,357,184"/>
+<area shape="rect" id="node12" href="../../df/d2f/_m_c_p9808__ex_8h.html#a90a11062692b1b9d5049647a8d5c30b6" title="Get MCP9808 Manufacturer ID. " alt="" coords="173,208,379,235"/>
+<area shape="rect" id="node16" href="../../df/d2f/_m_c_p9808__ex_8h.html#a432056538649f656d28261c404a28c3f" title="Get MCP9808 chip ID. " alt="" coords="198,259,354,285"/>
+<area shape="rect" id="node17" href="../../d6/d5e/_m_c_p9808__proc_8h.html#a72be23273606c5f163c47f5b7ab280a9" title="Get the high/low/crit Alert temperature. " alt="" coords="189,309,363,336"/>
+<area shape="rect" id="node4" href="../../d6/d5e/_m_c_p9808__proc_8h.html#a30d600689f04253194fbc26c1e70e881" title="Get the temperature. " alt="" coords="699,5,887,32"/>
+<area shape="rect" id="node6" href="../../df/d2f/_m_c_p9808__ex_8h.html#a7741a2cb7ac87999aadfcd1f3470d126" title="Write MCP9808 configuration. " alt="" coords="466,56,611,83"/>
+<area shape="rect" id="node8" href="../../df/d2f/_m_c_p9808__ex_8h.html#a243664417daaaf9820d279bdf21b9de9" title="Set MCP9808 alert hysteresis. " alt="" coords="437,107,641,133"/>
+<area shape="rect" id="node9" href="../../df/d2f/_m_c_p9808__ex_8h.html#a56970bcbb7adf58d71d1551acc11ec74" title="Set MCP9808 alert type. " alt="" coords="453,157,624,184"/>
+<area shape="rect" id="node10" href="../../df/d2f/_m_c_p9808__ex_8h.html#a0e573ffe5d32f0bf8e471204b36533ff" title="Set MCP9808 alert enable. " alt="" coords="449,208,629,235"/>
+<area shape="rect" id="node11" href="../../df/d2f/_m_c_p9808__ex_8h.html#a5a21688b5557dd3fba082864bd6df838" title="Set MCP9808 alert lock. " alt="" coords="454,259,623,285"/>
+<area shape="rect" id="node7" href="../../d6/d5e/_m_c_p9808__proc_8h.html#a31bb52feabdab2f0aee0a60039a771e7" title="Set the high/low/crit Alert temperature. " alt="" coords="706,56,881,83"/>
+<area shape="rect" id="node13" href="../../d6/d5e/_m_c_p9808__proc_8h.html#ac1daf1ee55269479527921f21f0685ab" title="Initialization Sequence of the MCP9808 peripheral. " alt="" coords="453,309,624,336"/>
+<area shape="rect" id="node14" href="../../d8/d57/_m_c_p9808_8h.html#a91d38f36234f03778c3146624f083067" title="Initialization of the MCP9808 peripheral. " alt="" coords="741,309,846,336"/>
+<area shape="rect" id="node15" href="../../d8/d57/_m_c_p9808_8h.html#a9ffcff895e9844967086a52af6c82dd4" title="Initialization for MCP9808 peripheral. " alt="" coords="937,309,1085,336"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a76f237074a82f686b1b163783abe06bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76f237074a82f686b1b163783abe06bb">&#9670;&nbsp;</a></span>MCP9808_Write()</h2>
+<a id="a3f0dba5176e2cb06e61c7e69b5c5feff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f0dba5176e2cb06e61c7e69b5c5feff">&#9670;&nbsp;</a></span>MCP9808_Write()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -528,6 +632,12 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR MCP9808_Write </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
+          <td class="paramname"><em>pSlave</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const uint16_t *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
@@ -554,6 +664,7 @@ Here is the caller graph for this function:</div>
 <p>I2C Write function for MCP9808. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pSlave</td><td>- Pointer to I2C slave instance </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>- pointer to write from (16b type pointer) </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>- Address to write to </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">nb</td><td>- Number of bytes to write </td></tr>
@@ -564,8 +675,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d8/d57/_m_c_p9808_8h_a76f237074a82f686b1b163783abe06bb_cgraph.png" border="0" usemap="#d8/d57/_m_c_p9808_8h_a76f237074a82f686b1b163783abe06bb_cgraph" alt=""/></div>
-<map name="d8/d57/_m_c_p9808_8h_a76f237074a82f686b1b163783abe06bb_cgraph" id="d8/d57/_m_c_p9808_8h_a76f237074a82f686b1b163783abe06bb_cgraph">
+<div class="center"><img src="../../d8/d57/_m_c_p9808_8h_a3f0dba5176e2cb06e61c7e69b5c5feff_cgraph.png" border="0" usemap="#d8/d57/_m_c_p9808_8h_a3f0dba5176e2cb06e61c7e69b5c5feff_cgraph" alt=""/></div>
+<map name="d8/d57/_m_c_p9808_8h_a3f0dba5176e2cb06e61c7e69b5c5feff_cgraph" id="d8/d57/_m_c_p9808_8h_a3f0dba5176e2cb06e61c7e69b5c5feff_cgraph">
 <area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="173,5,285,32"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="178,56,281,83"/>
 </map>
@@ -573,32 +684,33 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d8/d57/_m_c_p9808_8h_a76f237074a82f686b1b163783abe06bb_icgraph.png" border="0" usemap="#d8/d57/_m_c_p9808_8h_a76f237074a82f686b1b163783abe06bb_icgraph" alt=""/></div>
-<map name="d8/d57/_m_c_p9808_8h_a76f237074a82f686b1b163783abe06bb_icgraph" id="d8/d57/_m_c_p9808_8h_a76f237074a82f686b1b163783abe06bb_icgraph">
-<area shape="rect" id="node2" href="../../df/d2f/_m_c_p9808__ex_8h.html#a506269ab4110c8b3817b27e51e1caba1" title="Write MCP9808 configuration. " alt="" coords="180,107,343,133"/>
-<area shape="rect" id="node7" href="../../df/d2f/_m_c_p9808__ex_8h.html#aa08f1388ecd8cdd6f014a4ace9181759" title="Write MCP9808 configuration. " alt="" coords="189,157,334,184"/>
-<area shape="rect" id="node8" href="../../d6/d5e/_m_c_p9808__proc_8h.html#a42403a3de5fb97d9247f5b350579954d" title="Set the high/low/crit Alert temperature. " alt="" coords="413,208,587,235"/>
-<area shape="rect" id="node9" href="../../df/d2f/_m_c_p9808__ex_8h.html#a2a279ef8af7b414055c528b70fe9a8b1" title="Set MCP9808 Resolution. " alt="" coords="173,259,349,285"/>
-<area shape="rect" id="node3" href="../../df/d2f/_m_c_p9808__ex_8h.html#a7fd94de2b39ae99cb64d112fa092680e" title="Set MCP9808 alert hysteresis. " alt="" coords="398,5,602,32"/>
-<area shape="rect" id="node4" href="../../df/d2f/_m_c_p9808__ex_8h.html#a4758e2efa9c6e2eeeaeaf0efa528e642" title="Set MCP9808 alert type. " alt="" coords="415,56,585,83"/>
-<area shape="rect" id="node5" href="../../df/d2f/_m_c_p9808__ex_8h.html#a8b1dfbba8e41b0ae7a6b19159330f5a7" title="Set MCP9808 alert enable. " alt="" coords="410,107,590,133"/>
-<area shape="rect" id="node6" href="../../df/d2f/_m_c_p9808__ex_8h.html#a084d9679db6b2cf3dcfa8d631c540f73" title="Set MCP9808 alert lock. " alt="" coords="415,157,585,184"/>
-<area shape="rect" id="node10" href="../../d6/d5e/_m_c_p9808__proc_8h.html#abf6a96ffa46d6cefe44ab57ccc7f8e65" title="Initialization Sequence of the MCP9808 peripheral. " alt="" coords="415,259,585,285"/>
-<area shape="rect" id="node11" href="../../d8/d57/_m_c_p9808_8h.html#a0e55a19e8651c9fa28e9179dfaf1b94c" title="Initialization of the MCP9808 peripheral. " alt="" coords="651,259,757,285"/>
+<div class="center"><img src="../../d8/d57/_m_c_p9808_8h_a3f0dba5176e2cb06e61c7e69b5c5feff_icgraph.png" border="0" usemap="#d8/d57/_m_c_p9808_8h_a3f0dba5176e2cb06e61c7e69b5c5feff_icgraph" alt=""/></div>
+<map name="d8/d57/_m_c_p9808_8h_a3f0dba5176e2cb06e61c7e69b5c5feff_icgraph" id="d8/d57/_m_c_p9808_8h_a3f0dba5176e2cb06e61c7e69b5c5feff_icgraph">
+<area shape="rect" id="node2" href="../../df/d2f/_m_c_p9808__ex_8h.html#a3b6ece227f61b26462dcb376d1d7e383" title="Write MCP9808 configuration. " alt="" coords="180,107,343,133"/>
+<area shape="rect" id="node7" href="../../df/d2f/_m_c_p9808__ex_8h.html#a7741a2cb7ac87999aadfcd1f3470d126" title="Write MCP9808 configuration. " alt="" coords="189,157,334,184"/>
+<area shape="rect" id="node8" href="../../d6/d5e/_m_c_p9808__proc_8h.html#a31bb52feabdab2f0aee0a60039a771e7" title="Set the high/low/crit Alert temperature. " alt="" coords="413,208,587,235"/>
+<area shape="rect" id="node9" href="../../df/d2f/_m_c_p9808__ex_8h.html#ae31b1b2b5f913d440753b2c8cb1c9015" title="Set MCP9808 Resolution. " alt="" coords="173,259,349,285"/>
+<area shape="rect" id="node3" href="../../df/d2f/_m_c_p9808__ex_8h.html#a243664417daaaf9820d279bdf21b9de9" title="Set MCP9808 alert hysteresis. " alt="" coords="398,5,602,32"/>
+<area shape="rect" id="node4" href="../../df/d2f/_m_c_p9808__ex_8h.html#a56970bcbb7adf58d71d1551acc11ec74" title="Set MCP9808 alert type. " alt="" coords="415,56,585,83"/>
+<area shape="rect" id="node5" href="../../df/d2f/_m_c_p9808__ex_8h.html#a0e573ffe5d32f0bf8e471204b36533ff" title="Set MCP9808 alert enable. " alt="" coords="410,107,590,133"/>
+<area shape="rect" id="node6" href="../../df/d2f/_m_c_p9808__ex_8h.html#a5a21688b5557dd3fba082864bd6df838" title="Set MCP9808 alert lock. " alt="" coords="415,157,585,184"/>
+<area shape="rect" id="node10" href="../../d6/d5e/_m_c_p9808__proc_8h.html#ac1daf1ee55269479527921f21f0685ab" title="Initialization Sequence of the MCP9808 peripheral. " alt="" coords="415,259,585,285"/>
+<area shape="rect" id="node11" href="../../d8/d57/_m_c_p9808_8h.html#a91d38f36234f03778c3146624f083067" title="Initialization of the MCP9808 peripheral. " alt="" coords="651,259,757,285"/>
+<area shape="rect" id="node12" href="../../d8/d57/_m_c_p9808_8h.html#a9ffcff895e9844967086a52af6c82dd4" title="Initialization for MCP9808 peripheral. " alt="" coords="806,259,954,285"/>
 </map>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a3f9445cddfe410aaa6254c9ac861a7b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f9445cddfe410aaa6254c9ac861a7b9">&#9670;&nbsp;</a></span>MCP9808_hal</h2>
+<a id="af45f0676397926391ab33995fc4b3e40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af45f0676397926391ab33995fc4b3e40">&#9670;&nbsp;</a></span>MCP9808_hal</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> MCP9808_hal</td>
+          <td class="memname"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> MCP9808_hal[<a class="el" href="../../d8/d57/_m_c_p9808_8h.html#a2801c19658a58f286b2c440421c08689">I2C_MCP9808_NB</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">

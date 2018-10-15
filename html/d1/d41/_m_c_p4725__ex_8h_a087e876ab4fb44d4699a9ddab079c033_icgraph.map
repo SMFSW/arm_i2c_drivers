@@ -1,7 +1,0 @@
-<map id="MCP4725_Write_Command" name="MCP4725_Write_Command">
-<area shape="rect" id="node2" href="$d4/d96/_m_c_p4725__proc_8h.html#aaab953bf4d949cd82d82ee0b7604f8e8" title="Set Power down mode of the MCP4725 peripheral. " alt="" coords="241,5,426,32"/>
-<area shape="rect" id="node5" href="$d4/d96/_m_c_p4725__proc_8h.html#a802e96e6d3780084f921db6c148bdf60" title="Write Raw DAC value to MCP4725 peripheral. " alt="" coords="267,56,400,83"/>
-<area shape="rect" id="node6" href="$d4/d96/_m_c_p4725__proc_8h.html#a523ba2f9dade359bf94415c26d881611" title="Write DAC value (in Volts) to MCP4725 peripheral. " alt="" coords="261,107,405,133"/>
-<area shape="rect" id="node3" href="$d4/d96/_m_c_p4725__proc_8h.html#afed780d41e74e2cfd663b4ca5f1220b7" title="Initialization Sequence of the MCP4725 peripheral. " alt="" coords="475,5,645,32"/>
-<area shape="rect" id="node4" href="$df/d9f/_m_c_p4725_8h.html#ae89fb0fd3442e68caefea373a8c2f224" title="Initialization of the MCP4725 peripheral. " alt="" coords="694,5,799,32"/>
-</map>

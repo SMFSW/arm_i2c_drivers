@@ -77,16 +77,18 @@ $(function() {
 <div class="textblock"><code>#include &quot;sarmfsw.h&quot;</code><br />
 <code>#include &quot;globals.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d6/dd6/_i2_c__component_8h_source.html">I2C_component.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../dc/d24/_t_s_l2591__ex_8h_source.html">TSL2591_ex.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d5d/_i2_c__peripheral_8h_source.html">I2C_peripheral.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d7/d6e/_t_s_l2591__proc_8h_source.html">TSL2591_proc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d24/_t_s_l2591__ex_8h_source.html">TSL2591_ex.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for TSL2591.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/d52/_t_s_l2591_8h__incl.png" border="0" usemap="#_t_s_l2591_8h" alt=""/></div>
 <map name="_t_s_l2591_8h" id="_t_s_l2591_8h">
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="396,80,521,107"/>
-<area shape="rect" id="node6" href="../../dc/d24/_t_s_l2591__ex_8h.html" title="TSL2591 Driver extensions. " alt="" coords="124,80,231,107"/>
-<area shape="rect" id="node7" href="../../d7/d6e/_t_s_l2591__proc_8h.html" title="TSL2591 Driver procedures. " alt="" coords="255,80,371,107"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="299,80,424,107"/>
+<area shape="rect" id="node6" href="../../dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="448,80,564,107"/>
+<area shape="rect" id="node7" href="../../d7/d6e/_t_s_l2591__proc_8h.html" title="TSL2591 Driver procedures. " alt="" coords="27,80,143,107"/>
+<area shape="rect" id="node8" href="../../dc/d24/_t_s_l2591__ex_8h.html" title="TSL2591 Driver extensions. " alt="" coords="168,80,275,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -95,8 +97,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="center"><img src="../../d2/dc1/_t_s_l2591_8h__dep__incl.png" border="0" usemap="#_t_s_l2591_8hdep" alt=""/></div>
 <map name="_t_s_l2591_8hdep" id="_t_s_l2591_8hdep">
 <area shape="rect" id="node2" href="../../d2/d68/_t_s_l2591_8c.html" title="TSL2591 Driver. " alt="" coords="5,80,91,107"/>
-<area shape="rect" id="node3" href="../../dc/d24/_t_s_l2591__ex_8h.html" title="TSL2591 Driver extensions. " alt="" coords="115,80,221,107"/>
-<area shape="rect" id="node4" href="../../d7/d6e/_t_s_l2591__proc_8h.html" title="TSL2591 Driver procedures. " alt="" coords="245,80,361,107"/>
+<area shape="rect" id="node3" href="../../d7/d6e/_t_s_l2591__proc_8h.html" title="TSL2591 Driver procedures. " alt="" coords="115,80,231,107"/>
+<area shape="rect" id="node4" href="../../dc/d24/_t_s_l2591__ex_8h.html" title="TSL2591 Driver extensions. " alt="" coords="256,80,363,107"/>
 <area shape="rect" id="node5" href="../../d0/d23/_t_s_l2591__ex_8c.html" title="TSL2591 Driver extensions. " alt="" coords="387,80,493,107"/>
 <area shape="rect" id="node6" href="../../db/dba/_t_s_l2591__proc_8c.html" title="TSL2591 Driver procedures. " alt="" coords="517,80,633,107"/>
 </map>
@@ -124,6 +126,9 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a9d12365f5299deb3a6da4d2526384ab5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d96/_t_s_l2591_8h.html#a9d12365f5299deb3a6da4d2526384ab5">I2C_TSL2591_NB</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:a9d12365f5299deb3a6da4d2526384ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of TSL2591 peripherals.  <a href="#a9d12365f5299deb3a6da4d2526384ab5">More...</a><br /></td></tr>
+<tr class="separator:a9d12365f5299deb3a6da4d2526384ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8679f20fc3755c195e9d5b1191e5881f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d96/_t_s_l2591_8h.html#a8679f20fc3755c195e9d5b1191e5881f">TSL2591_BASE_ADDR</a>&#160;&#160;&#160;0x29</td></tr>
 <tr class="memdesc:a8679f20fc3755c195e9d5b1191e5881f"><td class="mdescLeft">&#160;</td><td class="mdescRight">TSL2591 Base address.  <a href="#a8679f20fc3755c195e9d5b1191e5881f">More...</a><br /></td></tr>
 <tr class="separator:a8679f20fc3755c195e9d5b1191e5881f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -240,30 +245,33 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa5c43dbf44ce32efc764a68fe49eaa0b"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d96/_t_s_l2591_8h.html#aa5c43dbf44ce32efc764a68fe49eaa0b">TSL2591_Init</a> (void)</td></tr>
-<tr class="memdesc:aa5c43dbf44ce32efc764a68fe49eaa0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for TSL2591 peripheral.  <a href="#aa5c43dbf44ce32efc764a68fe49eaa0b">More...</a><br /></td></tr>
-<tr class="separator:aa5c43dbf44ce32efc764a68fe49eaa0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d9fd710dcb7c1c55ac8e3e50d2d2d89"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d96/_t_s_l2591_8h.html#a3d9fd710dcb7c1c55ac8e3e50d2d2d89">TSL2591_Write</a> (const uint8_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
-<tr class="memdesc:a3d9fd710dcb7c1c55ac8e3e50d2d2d89"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Write function for TSL2591.  <a href="#a3d9fd710dcb7c1c55ac8e3e50d2d2d89">More...</a><br /></td></tr>
-<tr class="separator:a3d9fd710dcb7c1c55ac8e3e50d2d2d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ca44c4d37228b9136168ee2bab22880"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d96/_t_s_l2591_8h.html#a8ca44c4d37228b9136168ee2bab22880">TSL2591_Read</a> (uint8_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
-<tr class="memdesc:a8ca44c4d37228b9136168ee2bab22880"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Read function for TSL2591.  <a href="#a8ca44c4d37228b9136168ee2bab22880">More...</a><br /></td></tr>
-<tr class="separator:a8ca44c4d37228b9136168ee2bab22880"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57247829a5806d3c15215703e1892f9c"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d96/_t_s_l2591_8h.html#a57247829a5806d3c15215703e1892f9c">TSL2591_Write_Word</a> (const uint16_t *data, const uint16_t addr)</td></tr>
-<tr class="memdesc:a57247829a5806d3c15215703e1892f9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Word Write (low endian) function for TSL2591.  <a href="#a57247829a5806d3c15215703e1892f9c">More...</a><br /></td></tr>
-<tr class="separator:a57247829a5806d3c15215703e1892f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77c10de848bda662b20841c1e832238b"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d96/_t_s_l2591_8h.html#a77c10de848bda662b20841c1e832238b">TSL2591_Read_Word</a> (uint16_t *data, const uint16_t addr)</td></tr>
-<tr class="memdesc:a77c10de848bda662b20841c1e832238b"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Word Read (low endian) function for TSL2591.  <a href="#a77c10de848bda662b20841c1e832238b">More...</a><br /></td></tr>
-<tr class="separator:a77c10de848bda662b20841c1e832238b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afed40846f2a653c92ba250beeea3824e"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d96/_t_s_l2591_8h.html#afed40846f2a653c92ba250beeea3824e">TSL2591_Write_Special</a> (const <a class="el" href="../../da/d96/_t_s_l2591_8h.html#a4ce29917461f7c58158cee6aac381e5c">TSL2591_spec_func</a> func)</td></tr>
-<tr class="memdesc:afed40846f2a653c92ba250beeea3824e"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Special function Write function for TSL2591.  <a href="#afed40846f2a653c92ba250beeea3824e">More...</a><br /></td></tr>
-<tr class="separator:afed40846f2a653c92ba250beeea3824e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e5d6c27f6e4ba0ad68acc6b29a18d27"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d96/_t_s_l2591_8h.html#a3e5d6c27f6e4ba0ad68acc6b29a18d27">TSL2591_Init</a> (const uint8_t idx, const I2C_HandleTypeDef *hi2c, const uint16_t devAddress)</td></tr>
+<tr class="memdesc:a3e5d6c27f6e4ba0ad68acc6b29a18d27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for TSL2591 peripheral.  <a href="#a3e5d6c27f6e4ba0ad68acc6b29a18d27">More...</a><br /></td></tr>
+<tr class="separator:a3e5d6c27f6e4ba0ad68acc6b29a18d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a340d5559e9623f12628e013d814ac718"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d96/_t_s_l2591_8h.html#a340d5559e9623f12628e013d814ac718">TSL2591_Init_Single</a> (void)</td></tr>
+<tr class="memdesc:a340d5559e9623f12628e013d814ac718"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for TSL2591 peripheral.  <a href="#a340d5559e9623f12628e013d814ac718">More...</a><br /></td></tr>
+<tr class="separator:a340d5559e9623f12628e013d814ac718"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14a8ee1af325b7f732bb2f6d362dca78"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d96/_t_s_l2591_8h.html#a14a8ee1af325b7f732bb2f6d362dca78">TSL2591_Write</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *pSlave, const uint8_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
+<tr class="memdesc:a14a8ee1af325b7f732bb2f6d362dca78"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Write function for TSL2591.  <a href="#a14a8ee1af325b7f732bb2f6d362dca78">More...</a><br /></td></tr>
+<tr class="separator:a14a8ee1af325b7f732bb2f6d362dca78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae82321862139e3bf12261885445e5a7"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d96/_t_s_l2591_8h.html#aae82321862139e3bf12261885445e5a7">TSL2591_Read</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *pSlave, uint8_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
+<tr class="memdesc:aae82321862139e3bf12261885445e5a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Read function for TSL2591.  <a href="#aae82321862139e3bf12261885445e5a7">More...</a><br /></td></tr>
+<tr class="separator:aae82321862139e3bf12261885445e5a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae100eee4edf9a08aea83f2ae964e9675"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d96/_t_s_l2591_8h.html#ae100eee4edf9a08aea83f2ae964e9675">TSL2591_Write_Word</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *pSlave, const uint16_t *data, const uint16_t addr)</td></tr>
+<tr class="memdesc:ae100eee4edf9a08aea83f2ae964e9675"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Word Write (low endian) function for TSL2591.  <a href="#ae100eee4edf9a08aea83f2ae964e9675">More...</a><br /></td></tr>
+<tr class="separator:ae100eee4edf9a08aea83f2ae964e9675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a530bd51efc9771ea099fbb7fe83826f4"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d96/_t_s_l2591_8h.html#a530bd51efc9771ea099fbb7fe83826f4">TSL2591_Read_Word</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *pSlave, uint16_t *data, const uint16_t addr)</td></tr>
+<tr class="memdesc:a530bd51efc9771ea099fbb7fe83826f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Word Read (low endian) function for TSL2591.  <a href="#a530bd51efc9771ea099fbb7fe83826f4">More...</a><br /></td></tr>
+<tr class="separator:a530bd51efc9771ea099fbb7fe83826f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36f5040528f01a6380c13937023db31e"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d96/_t_s_l2591_8h.html#a36f5040528f01a6380c13937023db31e">TSL2591_Write_Special</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *pSlave, const <a class="el" href="../../da/d96/_t_s_l2591_8h.html#a4ce29917461f7c58158cee6aac381e5c">TSL2591_spec_func</a> func)</td></tr>
+<tr class="memdesc:a36f5040528f01a6380c13937023db31e"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Special function Write function for TSL2591.  <a href="#a36f5040528f01a6380c13937023db31e">More...</a><br /></td></tr>
+<tr class="separator:a36f5040528f01a6380c13937023db31e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a377f28031d87ad567d1087b74333569d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d96/_t_s_l2591_8h.html#a377f28031d87ad567d1087b74333569d">TSL2591_hal</a></td></tr>
-<tr class="memdesc:a377f28031d87ad567d1087b74333569d"><td class="mdescLeft">&#160;</td><td class="mdescRight">TSL2591 Slave structure.  <a href="#a377f28031d87ad567d1087b74333569d">More...</a><br /></td></tr>
-<tr class="separator:a377f28031d87ad567d1087b74333569d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82d4f4c3ef3e8a4c402fdd80c6728693"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d96/_t_s_l2591_8h.html#a82d4f4c3ef3e8a4c402fdd80c6728693">TSL2591_hal</a> [<a class="el" href="../../da/d96/_t_s_l2591_8h.html#a9d12365f5299deb3a6da4d2526384ab5">I2C_TSL2591_NB</a>]</td></tr>
+<tr class="memdesc:a82d4f4c3ef3e8a4c402fdd80c6728693"><td class="mdescLeft">&#160;</td><td class="mdescRight">TSL2591 Slave structure.  <a href="#a82d4f4c3ef3e8a4c402fdd80c6728693">More...</a><br /></td></tr>
+<tr class="separator:a82d4f4c3ef3e8a4c402fdd80c6728693"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>TSL2591 Driver. </p>
@@ -271,6 +279,23 @@ Variables</h2></td></tr>
 <dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2018, SMFSW</dd></dl>
 <p>TSL2591: Very-high sensitivity light-to-digital converter </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a9d12365f5299deb3a6da4d2526384ab5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d12365f5299deb3a6da4d2526384ab5">&#9670;&nbsp;</a></span>I2C_TSL2591_NB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_TSL2591_NB&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Number of TSL2591 peripherals. </p>
+<dl class="section note"><dt>Note</dt><dd>Define I2C_TSL2591_NB in globals.h or at project to enable multiple peripherals of this type </dd></dl>
+
+</div>
+</div>
 <a id="a8679f20fc3755c195e9d5b1191e5881f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8679f20fc3755c195e9d5b1191e5881f">&#9670;&nbsp;</a></span>TSL2591_BASE_ADDR</h2>
 
@@ -652,14 +677,93 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="aa5c43dbf44ce32efc764a68fe49eaa0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5c43dbf44ce32efc764a68fe49eaa0b">&#9670;&nbsp;</a></span>TSL2591_Init()</h2>
+<a id="a3e5d6c27f6e4ba0ad68acc6b29a18d27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e5d6c27f6e4ba0ad68acc6b29a18d27">&#9670;&nbsp;</a></span>TSL2591_Init()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">FctERR TSL2591_Init </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const I2C_HandleTypeDef *&#160;</td>
+          <td class="paramname"><em>hi2c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>devAddress</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialization for TSL2591 peripheral. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">idx</td><td>- TSL2591 index </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hi2c</td><td>- pointer to TSL2591 I2C instance </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">devAddress</td><td>- TSL2591 device address </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d96/_t_s_l2591_8h_a3e5d6c27f6e4ba0ad68acc6b29a18d27_cgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_a3e5d6c27f6e4ba0ad68acc6b29a18d27_cgraph" alt=""/></div>
+<map name="da/d96/_t_s_l2591_8h_a3e5d6c27f6e4ba0ad68acc6b29a18d27_cgraph" id="da/d96/_t_s_l2591_8h_a3e5d6c27f6e4ba0ad68acc6b29a18d27_cgraph">
+<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="182,107,287,133"/>
+<area shape="rect" id="node3" href="../../db/dba/_t_s_l2591__proc_8c.html#a2041117e46b601378a1df06a4957cd4f" title="Initialization Sequence for TSL2591 peripheral. " alt="" coords="153,157,317,184"/>
+<area shape="rect" id="node20" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="178,208,291,235"/>
+<area shape="rect" id="node4" href="../../dc/d24/_t_s_l2591__ex_8h.html#afe4a4322aeb1729d382e0be25633af20" title="Get TSL2591 chip ID. " alt="" coords="366,309,517,336"/>
+<area shape="rect" id="node8" href="../../dc/d24/_t_s_l2591__ex_8h.html#af8c3d742d306780bdbcbd4874ed03b6c" title="Write TSL2591 Enable register. " alt="" coords="819,309,954,336"/>
+<area shape="rect" id="node10" href="../../dc/d24/_t_s_l2591__ex_8h.html#a88c2ca995143e527a8be0d20a107d935" title="Write TSL2591 Config. " alt="" coords="371,208,511,235"/>
+<area shape="rect" id="node15" href="../../db/dba/_t_s_l2591__proc_8c.html#a5ed538fa494961310f03c7c8aa1157b5" title="Set proper CPL value (Counts per kiloLux) " alt="" coords="819,157,954,184"/>
+<area shape="rect" id="node17" href="../../dc/d24/_t_s_l2591__ex_8h.html#a970f1c9d1c7392c46c05febb3605e9c7" title="ALS interrupt low threshold configuration. " alt="" coords="373,5,509,32"/>
+<area shape="rect" id="node19" href="../../dc/d24/_t_s_l2591__ex_8h.html#a429d9612ce64dd4fa4bb091ae522f404" title="ALS interrupt high threshold configuration. " alt="" coords="372,56,511,83"/>
+<area shape="rect" id="node5" href="../../d2/d68/_t_s_l2591_8c.html#aae82321862139e3bf12261885445e5a7" title="I2C Read function for TSL2591. " alt="" coords="831,259,943,285"/>
+<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1163,183,1275,209"/>
+<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1167,233,1270,260"/>
+<area shape="rect" id="node9" href="../../d2/d68/_t_s_l2591_8c.html#a14a8ee1af325b7f732bb2f6d362dca78" title="I2C Write function for TSL2591. " alt="" coords="1003,157,1115,184"/>
+<area shape="rect" id="node11" href="../../dc/d24/_t_s_l2591__ex_8h.html#a6aed70f599d9539e47dc28f4eadddc6a" title="Oscillator Enable / Disable. " alt="" coords="599,259,737,285"/>
+<area shape="rect" id="node12" href="../../dc/d24/_t_s_l2591__ex_8h.html#aaad0eb30aaf459a698750dfe8caf7f6f" title="ALS module Enable / Disable. " alt="" coords="600,309,736,336"/>
+<area shape="rect" id="node13" href="../../dc/d24/_t_s_l2591__ex_8h.html#a87d2442239502f7712cc4f410f19f87e" title="ALS interrupt module Enable / Disable. " alt="" coords="598,411,738,437"/>
+<area shape="rect" id="node14" href="../../dc/d24/_t_s_l2591__ex_8h.html#a9cd1dbf1c80f48bab80b5b51317b1344" title="Gain configuration. " alt="" coords="601,157,735,184"/>
+<area shape="rect" id="node16" href="../../dc/d24/_t_s_l2591__ex_8h.html#a3c44c1633b29e069474b0bb6da2a063e" title="Integration time configuration. " alt="" coords="565,208,771,235"/>
+<area shape="rect" id="node18" href="../../d2/d68/_t_s_l2591_8c.html#ae100eee4edf9a08aea83f2ae964e9675" title="I2C Word Write (low endian) function for TSL2591. " alt="" coords="593,5,743,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d96/_t_s_l2591_8h_a3e5d6c27f6e4ba0ad68acc6b29a18d27_icgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_a3e5d6c27f6e4ba0ad68acc6b29a18d27_icgraph" alt=""/></div>
+<map name="da/d96/_t_s_l2591_8h_a3e5d6c27f6e4ba0ad68acc6b29a18d27_icgraph" id="da/d96/_t_s_l2591_8h_a3e5d6c27f6e4ba0ad68acc6b29a18d27_icgraph">
+<area shape="rect" id="node2" href="../../da/d96/_t_s_l2591_8h.html#a340d5559e9623f12628e013d814ac718" title="Initialization for TSL2591 peripheral. " alt="" coords="153,5,295,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a340d5559e9623f12628e013d814ac718"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a340d5559e9623f12628e013d814ac718">&#9670;&nbsp;</a></span>TSL2591_Init_Single()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR TSL2591_Init_Single </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -669,39 +773,40 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initialization for TSL2591 peripheral. </p>
-<dl class="weak"><dt><b><a class="el" href="../../d0/d58/weak.html#_weak000039">Weak Functions:</a></b></dt><dd>TSL2591 Base address may be changed if user implemented </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>In case multiple devices (defined by I2C_TSL2591_NB &gt; 1), you shall use TSL2591_Init instead </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../da/d96/_t_s_l2591_8h_aa5c43dbf44ce32efc764a68fe49eaa0b_cgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_aa5c43dbf44ce32efc764a68fe49eaa0b_cgraph" alt=""/></div>
-<map name="da/d96/_t_s_l2591_8h_aa5c43dbf44ce32efc764a68fe49eaa0b_cgraph" id="da/d96/_t_s_l2591_8h_aa5c43dbf44ce32efc764a68fe49eaa0b_cgraph">
-<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="182,107,287,133"/>
-<area shape="rect" id="node3" href="../../db/dba/_t_s_l2591__proc_8c.html#ae70e987b630354203c40e8626b73950b" title="Initialization Sequence for TSL2591 peripheral. " alt="" coords="153,157,317,184"/>
-<area shape="rect" id="node20" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="178,208,291,235"/>
-<area shape="rect" id="node4" href="../../dc/d24/_t_s_l2591__ex_8h.html#a56644b59c7eb6694dd99873d7a101757" title="Get TSL2591 chip ID. " alt="" coords="366,309,517,336"/>
-<area shape="rect" id="node8" href="../../dc/d24/_t_s_l2591__ex_8h.html#a58b86a0ac68b049971bf0834aabd7c91" title="Write TSL2591 Enable register. " alt="" coords="819,309,954,336"/>
-<area shape="rect" id="node10" href="../../dc/d24/_t_s_l2591__ex_8h.html#ac1113d9534b40f5093e2678134dc060d" title="Write TSL2591 Config. " alt="" coords="371,208,511,235"/>
-<area shape="rect" id="node15" href="../../db/dba/_t_s_l2591__proc_8c.html#aa1c267d052d8e883081c54ec41c70f60" title="Set proper CPL value (Counts per kiloLux) " alt="" coords="819,157,954,184"/>
-<area shape="rect" id="node17" href="../../dc/d24/_t_s_l2591__ex_8h.html#ab1b84615a6ab3186650cee27b10cf911" title="ALS interrupt low threshold configuration. " alt="" coords="373,5,509,32"/>
-<area shape="rect" id="node19" href="../../dc/d24/_t_s_l2591__ex_8h.html#a624dd44a05e5e6a3be2087987707c5a1" title="ALS interrupt high threshold configuration. " alt="" coords="372,56,511,83"/>
-<area shape="rect" id="node5" href="../../d2/d68/_t_s_l2591_8c.html#a8ca44c4d37228b9136168ee2bab22880" title="I2C Read function for TSL2591. " alt="" coords="831,259,943,285"/>
-<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1163,183,1275,209"/>
-<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1167,233,1270,260"/>
-<area shape="rect" id="node9" href="../../d2/d68/_t_s_l2591_8c.html#a3d9fd710dcb7c1c55ac8e3e50d2d2d89" title="I2C Write function for TSL2591. " alt="" coords="1003,157,1115,184"/>
-<area shape="rect" id="node11" href="../../dc/d24/_t_s_l2591__ex_8h.html#ae2c53653525cafb839072265649cd4ce" title="Oscillator Enable / Disable. " alt="" coords="599,259,737,285"/>
-<area shape="rect" id="node12" href="../../dc/d24/_t_s_l2591__ex_8h.html#a1dd2d9682015cdcc486ec70f8e4e864f" title="ALS module Enable / Disable. " alt="" coords="600,309,736,336"/>
-<area shape="rect" id="node13" href="../../dc/d24/_t_s_l2591__ex_8h.html#a2b626330e1adaaa690d6e42c689abbf2" title="ALS interrupt module Enable / Disable. " alt="" coords="598,411,738,437"/>
-<area shape="rect" id="node14" href="../../dc/d24/_t_s_l2591__ex_8h.html#ac74ab2e15ea7d6a42590063ee0100081" title="Gain configuration. " alt="" coords="601,157,735,184"/>
-<area shape="rect" id="node16" href="../../dc/d24/_t_s_l2591__ex_8h.html#aafe7708c01dcaebd60ff3af4af3334db" title="Integration time configuration. " alt="" coords="565,208,771,235"/>
-<area shape="rect" id="node18" href="../../d2/d68/_t_s_l2591_8c.html#a57247829a5806d3c15215703e1892f9c" title="I2C Word Write (low endian) function for TSL2591. " alt="" coords="593,5,743,32"/>
+<div class="center"><img src="../../da/d96/_t_s_l2591_8h_a340d5559e9623f12628e013d814ac718_cgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_a340d5559e9623f12628e013d814ac718_cgraph" alt=""/></div>
+<map name="da/d96/_t_s_l2591_8h_a340d5559e9623f12628e013d814ac718_cgraph" id="da/d96/_t_s_l2591_8h_a340d5559e9623f12628e013d814ac718_cgraph">
+<area shape="rect" id="node2" href="../../d2/d68/_t_s_l2591_8c.html#a3e5d6c27f6e4ba0ad68acc6b29a18d27" title="Initialization for TSL2591 peripheral. " alt="" coords="197,157,296,184"/>
+<area shape="rect" id="node3" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="374,107,479,133"/>
+<area shape="rect" id="node4" href="../../db/dba/_t_s_l2591__proc_8c.html#a2041117e46b601378a1df06a4957cd4f" title="Initialization Sequence for TSL2591 peripheral. " alt="" coords="345,157,509,184"/>
+<area shape="rect" id="node21" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="370,208,483,235"/>
+<area shape="rect" id="node5" href="../../dc/d24/_t_s_l2591__ex_8h.html#afe4a4322aeb1729d382e0be25633af20" title="Get TSL2591 chip ID. " alt="" coords="558,309,709,336"/>
+<area shape="rect" id="node9" href="../../dc/d24/_t_s_l2591__ex_8h.html#af8c3d742d306780bdbcbd4874ed03b6c" title="Write TSL2591 Enable register. " alt="" coords="1011,309,1146,336"/>
+<area shape="rect" id="node11" href="../../dc/d24/_t_s_l2591__ex_8h.html#a88c2ca995143e527a8be0d20a107d935" title="Write TSL2591 Config. " alt="" coords="563,208,703,235"/>
+<area shape="rect" id="node16" href="../../db/dba/_t_s_l2591__proc_8c.html#a5ed538fa494961310f03c7c8aa1157b5" title="Set proper CPL value (Counts per kiloLux) " alt="" coords="1011,157,1146,184"/>
+<area shape="rect" id="node18" href="../../dc/d24/_t_s_l2591__ex_8h.html#a970f1c9d1c7392c46c05febb3605e9c7" title="ALS interrupt low threshold configuration. " alt="" coords="565,5,701,32"/>
+<area shape="rect" id="node20" href="../../dc/d24/_t_s_l2591__ex_8h.html#a429d9612ce64dd4fa4bb091ae522f404" title="ALS interrupt high threshold configuration. " alt="" coords="564,56,703,83"/>
+<area shape="rect" id="node6" href="../../d2/d68/_t_s_l2591_8c.html#aae82321862139e3bf12261885445e5a7" title="I2C Read function for TSL2591. " alt="" coords="1023,259,1135,285"/>
+<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1355,183,1467,209"/>
+<area shape="rect" id="node8" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1359,233,1462,260"/>
+<area shape="rect" id="node10" href="../../d2/d68/_t_s_l2591_8c.html#a14a8ee1af325b7f732bb2f6d362dca78" title="I2C Write function for TSL2591. " alt="" coords="1195,157,1307,184"/>
+<area shape="rect" id="node12" href="../../dc/d24/_t_s_l2591__ex_8h.html#a6aed70f599d9539e47dc28f4eadddc6a" title="Oscillator Enable / Disable. " alt="" coords="791,259,929,285"/>
+<area shape="rect" id="node13" href="../../dc/d24/_t_s_l2591__ex_8h.html#aaad0eb30aaf459a698750dfe8caf7f6f" title="ALS module Enable / Disable. " alt="" coords="792,309,928,336"/>
+<area shape="rect" id="node14" href="../../dc/d24/_t_s_l2591__ex_8h.html#a87d2442239502f7712cc4f410f19f87e" title="ALS interrupt module Enable / Disable. " alt="" coords="790,411,930,437"/>
+<area shape="rect" id="node15" href="../../dc/d24/_t_s_l2591__ex_8h.html#a9cd1dbf1c80f48bab80b5b51317b1344" title="Gain configuration. " alt="" coords="793,157,927,184"/>
+<area shape="rect" id="node17" href="../../dc/d24/_t_s_l2591__ex_8h.html#a3c44c1633b29e069474b0bb6da2a063e" title="Integration time configuration. " alt="" coords="757,208,963,235"/>
+<area shape="rect" id="node19" href="../../d2/d68/_t_s_l2591_8c.html#ae100eee4edf9a08aea83f2ae964e9675" title="I2C Word Write (low endian) function for TSL2591. " alt="" coords="785,5,935,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a8ca44c4d37228b9136168ee2bab22880"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ca44c4d37228b9136168ee2bab22880">&#9670;&nbsp;</a></span>TSL2591_Read()</h2>
+<a id="aae82321862139e3bf12261885445e5a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae82321862139e3bf12261885445e5a7">&#9670;&nbsp;</a></span>TSL2591_Read()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -709,6 +814,12 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">FctERR TSL2591_Read </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
+          <td class="paramname"><em>pSlave</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">uint8_t *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
@@ -735,6 +846,7 @@ Here is the call graph for this function:</div>
 <p>I2C Read function for TSL2591. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pSlave</td><td>- Pointer to I2C slave instance </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>- pointer to read to </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>- Address to read from </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">nb</td><td>- Number of bytes to read </td></tr>
@@ -745,8 +857,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../da/d96/_t_s_l2591_8h_a8ca44c4d37228b9136168ee2bab22880_cgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_a8ca44c4d37228b9136168ee2bab22880_cgraph" alt=""/></div>
-<map name="da/d96/_t_s_l2591_8h_a8ca44c4d37228b9136168ee2bab22880_cgraph" id="da/d96/_t_s_l2591_8h_a8ca44c4d37228b9136168ee2bab22880_cgraph">
+<div class="center"><img src="../../da/d96/_t_s_l2591_8h_aae82321862139e3bf12261885445e5a7_cgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_aae82321862139e3bf12261885445e5a7_cgraph" alt=""/></div>
+<map name="da/d96/_t_s_l2591_8h_aae82321862139e3bf12261885445e5a7_cgraph" id="da/d96/_t_s_l2591_8h_aae82321862139e3bf12261885445e5a7_cgraph">
 <area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="165,5,277,32"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="170,56,273,83"/>
 </map>
@@ -754,28 +866,31 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../da/d96/_t_s_l2591_8h_a8ca44c4d37228b9136168ee2bab22880_icgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_a8ca44c4d37228b9136168ee2bab22880_icgraph" alt=""/></div>
-<map name="da/d96/_t_s_l2591_8h_a8ca44c4d37228b9136168ee2bab22880_icgraph" id="da/d96/_t_s_l2591_8h_a8ca44c4d37228b9136168ee2bab22880_icgraph">
-<area shape="rect" id="node2" href="../../da/d96/_t_s_l2591_8h.html#a77c10de848bda662b20841c1e832238b" title="I2C Word Read (low endian) function for TSL2591. " alt="" coords="193,31,343,57"/>
-<area shape="rect" id="node5" href="../../dc/d24/_t_s_l2591__ex_8h.html#ae2c53653525cafb839072265649cd4ce" title="Oscillator Enable / Disable. " alt="" coords="199,81,337,108"/>
-<area shape="rect" id="node9" href="../../dc/d24/_t_s_l2591__ex_8h.html#a1dd2d9682015cdcc486ec70f8e4e864f" title="ALS module Enable / Disable. " alt="" coords="200,132,336,159"/>
-<area shape="rect" id="node10" href="../../dc/d24/_t_s_l2591__ex_8h.html#a2b626330e1adaaa690d6e42c689abbf2" title="ALS interrupt module Enable / Disable. " alt="" coords="198,183,338,209"/>
-<area shape="rect" id="node11" href="../../dc/d24/_t_s_l2591__ex_8h.html#ac74ab2e15ea7d6a42590063ee0100081" title="Gain configuration. " alt="" coords="201,233,335,260"/>
-<area shape="rect" id="node12" href="../../dc/d24/_t_s_l2591__ex_8h.html#aafe7708c01dcaebd60ff3af4af3334db" title="Integration time configuration. " alt="" coords="165,284,371,311"/>
-<area shape="rect" id="node13" href="../../dc/d24/_t_s_l2591__ex_8h.html#a56644b59c7eb6694dd99873d7a101757" title="Get TSL2591 chip ID. " alt="" coords="419,284,570,311"/>
-<area shape="rect" id="node14" href="../../d7/d6e/_t_s_l2591__proc_8h.html#aa72568746bce96761a5f08a4c3e71dce" title="Handler for TSL2591 peripheral. " alt="" coords="207,385,329,412"/>
-<area shape="rect" id="node3" href="../../dc/d24/_t_s_l2591__ex_8h.html#afebd16d4a4be66331ef2537825b6288d" title="Get Full conversion (Channel 0) " alt="" coords="429,5,560,32"/>
-<area shape="rect" id="node4" href="../../dc/d24/_t_s_l2591__ex_8h.html#a7043fc3d0029f9658e35fe13d96a72e2" title="Get IR conversion (Channel 1) " alt="" coords="433,56,556,83"/>
-<area shape="rect" id="node6" href="../../dc/d24/_t_s_l2591__ex_8h.html#ac1113d9534b40f5093e2678134dc060d" title="Write TSL2591 Config. " alt="" coords="425,208,565,235"/>
-<area shape="rect" id="node7" href="../../d7/d6e/_t_s_l2591__proc_8h.html#ae70e987b630354203c40e8626b73950b" title="Initialization Sequence for TSL2591 peripheral. " alt="" coords="619,247,783,273"/>
-<area shape="rect" id="node8" href="../../da/d96/_t_s_l2591_8h.html#aa5c43dbf44ce32efc764a68fe49eaa0b" title="Initialization for TSL2591 peripheral. " alt="" coords="832,247,931,273"/>
+<div class="center"><img src="../../da/d96/_t_s_l2591_8h_aae82321862139e3bf12261885445e5a7_icgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_aae82321862139e3bf12261885445e5a7_icgraph" alt=""/></div>
+<map name="da/d96/_t_s_l2591_8h_aae82321862139e3bf12261885445e5a7_icgraph" id="da/d96/_t_s_l2591_8h_aae82321862139e3bf12261885445e5a7_icgraph">
+<area shape="rect" id="node2" href="../../da/d96/_t_s_l2591_8h.html#a530bd51efc9771ea099fbb7fe83826f4" title="I2C Word Read (low endian) function for TSL2591. " alt="" coords="193,31,343,57"/>
+<area shape="rect" id="node5" href="../../dc/d24/_t_s_l2591__ex_8h.html#a6aed70f599d9539e47dc28f4eadddc6a" title="Oscillator Enable / Disable. " alt="" coords="199,81,337,108"/>
+<area shape="rect" id="node10" href="../../dc/d24/_t_s_l2591__ex_8h.html#aaad0eb30aaf459a698750dfe8caf7f6f" title="ALS module Enable / Disable. " alt="" coords="200,132,336,159"/>
+<area shape="rect" id="node11" href="../../dc/d24/_t_s_l2591__ex_8h.html#a87d2442239502f7712cc4f410f19f87e" title="ALS interrupt module Enable / Disable. " alt="" coords="198,183,338,209"/>
+<area shape="rect" id="node12" href="../../dc/d24/_t_s_l2591__ex_8h.html#a9cd1dbf1c80f48bab80b5b51317b1344" title="Gain configuration. " alt="" coords="201,233,335,260"/>
+<area shape="rect" id="node13" href="../../dc/d24/_t_s_l2591__ex_8h.html#a3c44c1633b29e069474b0bb6da2a063e" title="Integration time configuration. " alt="" coords="165,284,371,311"/>
+<area shape="rect" id="node14" href="../../dc/d24/_t_s_l2591__ex_8h.html#afe4a4322aeb1729d382e0be25633af20" title="Get TSL2591 chip ID. " alt="" coords="419,284,570,311"/>
+<area shape="rect" id="node15" href="../../d7/d6e/_t_s_l2591__proc_8h.html#a603cc00f013d5d6c6696bfec7ed87b44" title="Handler for TSL2591 peripheral. " alt="" coords="207,385,329,412"/>
+<area shape="rect" id="node3" href="../../dc/d24/_t_s_l2591__ex_8h.html#a42f3759123ba2d8972c9e855f5b4e803" title="Get Full conversion (Channel 0) " alt="" coords="429,5,560,32"/>
+<area shape="rect" id="node4" href="../../dc/d24/_t_s_l2591__ex_8h.html#a49006d45d5a738db7515b089e0d0a174" title="Get IR conversion (Channel 1) " alt="" coords="433,56,556,83"/>
+<area shape="rect" id="node6" href="../../dc/d24/_t_s_l2591__ex_8h.html#a88c2ca995143e527a8be0d20a107d935" title="Write TSL2591 Config. " alt="" coords="425,208,565,235"/>
+<area shape="rect" id="node7" href="../../d7/d6e/_t_s_l2591__proc_8h.html#a2041117e46b601378a1df06a4957cd4f" title="Initialization Sequence for TSL2591 peripheral. " alt="" coords="619,247,783,273"/>
+<area shape="rect" id="node8" href="../../da/d96/_t_s_l2591_8h.html#a3e5d6c27f6e4ba0ad68acc6b29a18d27" title="Initialization for TSL2591 peripheral. " alt="" coords="832,247,931,273"/>
+<area shape="rect" id="node9" href="../../da/d96/_t_s_l2591_8h.html#a340d5559e9623f12628e013d814ac718" title="Initialization for TSL2591 peripheral. " alt="" coords="979,247,1122,273"/>
+<area shape="rect" id="node16" href="../../d7/d6e/_t_s_l2591__proc_8h.html#af6199e25f7ef0a85f96729ae21e7c9b9" title="Get current Illuminance (in lux) " alt="" coords="429,360,560,387"/>
+<area shape="rect" id="node17" href="../../d7/d6e/_t_s_l2591__proc_8h.html#a5323f7c3f73bc9cd16ae6fb09368dd47" title="Handler for all TSL2591 peripherals. " alt="" coords="423,411,566,437"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a77c10de848bda662b20841c1e832238b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77c10de848bda662b20841c1e832238b">&#9670;&nbsp;</a></span>TSL2591_Read_Word()</h2>
+<a id="a530bd51efc9771ea099fbb7fe83826f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a530bd51efc9771ea099fbb7fe83826f4">&#9670;&nbsp;</a></span>TSL2591_Read_Word()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -783,6 +898,12 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR TSL2591_Read_Word </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
+          <td class="paramname"><em>pSlave</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">uint16_t *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
@@ -803,6 +924,7 @@ Here is the caller graph for this function:</div>
 <p>I2C Word Read (low endian) function for TSL2591. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pSlave</td><td>- Pointer to I2C slave instance </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>- pointer to read to </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>- Address to read from </td></tr>
   </table>
@@ -812,9 +934,9 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../da/d96/_t_s_l2591_8h_a77c10de848bda662b20841c1e832238b_cgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_a77c10de848bda662b20841c1e832238b_cgraph" alt=""/></div>
-<map name="da/d96/_t_s_l2591_8h_a77c10de848bda662b20841c1e832238b_cgraph" id="da/d96/_t_s_l2591_8h_a77c10de848bda662b20841c1e832238b_cgraph">
-<area shape="rect" id="node2" href="../../d2/d68/_t_s_l2591_8c.html#a8ca44c4d37228b9136168ee2bab22880" title="I2C Read function for TSL2591. " alt="" coords="205,31,317,57"/>
+<div class="center"><img src="../../da/d96/_t_s_l2591_8h_a530bd51efc9771ea099fbb7fe83826f4_cgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_a530bd51efc9771ea099fbb7fe83826f4_cgraph" alt=""/></div>
+<map name="da/d96/_t_s_l2591_8h_a530bd51efc9771ea099fbb7fe83826f4_cgraph" id="da/d96/_t_s_l2591_8h_a530bd51efc9771ea099fbb7fe83826f4_cgraph">
+<area shape="rect" id="node2" href="../../d2/d68/_t_s_l2591_8c.html#aae82321862139e3bf12261885445e5a7" title="I2C Read function for TSL2591. " alt="" coords="205,31,317,57"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="365,5,477,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="370,56,473,83"/>
 </map>
@@ -822,17 +944,17 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../da/d96/_t_s_l2591_8h_a77c10de848bda662b20841c1e832238b_icgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_a77c10de848bda662b20841c1e832238b_icgraph" alt=""/></div>
-<map name="da/d96/_t_s_l2591_8h_a77c10de848bda662b20841c1e832238b_icgraph" id="da/d96/_t_s_l2591_8h_a77c10de848bda662b20841c1e832238b_icgraph">
-<area shape="rect" id="node2" href="../../dc/d24/_t_s_l2591__ex_8h.html#afebd16d4a4be66331ef2537825b6288d" title="Get Full conversion (Channel 0) " alt="" coords="205,5,336,32"/>
-<area shape="rect" id="node3" href="../../dc/d24/_t_s_l2591__ex_8h.html#a7043fc3d0029f9658e35fe13d96a72e2" title="Get IR conversion (Channel 1) " alt="" coords="209,56,332,83"/>
+<div class="center"><img src="../../da/d96/_t_s_l2591_8h_a530bd51efc9771ea099fbb7fe83826f4_icgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_a530bd51efc9771ea099fbb7fe83826f4_icgraph" alt=""/></div>
+<map name="da/d96/_t_s_l2591_8h_a530bd51efc9771ea099fbb7fe83826f4_icgraph" id="da/d96/_t_s_l2591_8h_a530bd51efc9771ea099fbb7fe83826f4_icgraph">
+<area shape="rect" id="node2" href="../../dc/d24/_t_s_l2591__ex_8h.html#a42f3759123ba2d8972c9e855f5b4e803" title="Get Full conversion (Channel 0) " alt="" coords="205,5,336,32"/>
+<area shape="rect" id="node3" href="../../dc/d24/_t_s_l2591__ex_8h.html#a49006d45d5a738db7515b089e0d0a174" title="Get IR conversion (Channel 1) " alt="" coords="209,56,332,83"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a3d9fd710dcb7c1c55ac8e3e50d2d2d89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d9fd710dcb7c1c55ac8e3e50d2d2d89">&#9670;&nbsp;</a></span>TSL2591_Write()</h2>
+<a id="a14a8ee1af325b7f732bb2f6d362dca78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14a8ee1af325b7f732bb2f6d362dca78">&#9670;&nbsp;</a></span>TSL2591_Write()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -840,6 +962,12 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR TSL2591_Write </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
+          <td class="paramname"><em>pSlave</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const uint8_t *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
@@ -866,6 +994,7 @@ Here is the caller graph for this function:</div>
 <p>I2C Write function for TSL2591. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pSlave</td><td>- Pointer to I2C slave instance </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>- pointer to write from </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>- Address to write to </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">nb</td><td>- Number of bytes to write </td></tr>
@@ -876,8 +1005,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../da/d96/_t_s_l2591_8h_a3d9fd710dcb7c1c55ac8e3e50d2d2d89_cgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_a3d9fd710dcb7c1c55ac8e3e50d2d2d89_cgraph" alt=""/></div>
-<map name="da/d96/_t_s_l2591_8h_a3d9fd710dcb7c1c55ac8e3e50d2d2d89_cgraph" id="da/d96/_t_s_l2591_8h_a3d9fd710dcb7c1c55ac8e3e50d2d2d89_cgraph">
+<div class="center"><img src="../../da/d96/_t_s_l2591_8h_a14a8ee1af325b7f732bb2f6d362dca78_cgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_a14a8ee1af325b7f732bb2f6d362dca78_cgraph" alt=""/></div>
+<map name="da/d96/_t_s_l2591_8h_a14a8ee1af325b7f732bb2f6d362dca78_cgraph" id="da/d96/_t_s_l2591_8h_a14a8ee1af325b7f732bb2f6d362dca78_cgraph">
 <area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="165,5,277,32"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="170,56,273,83"/>
 </map>
@@ -885,32 +1014,33 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../da/d96/_t_s_l2591_8h_a3d9fd710dcb7c1c55ac8e3e50d2d2d89_icgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_a3d9fd710dcb7c1c55ac8e3e50d2d2d89_icgraph" alt=""/></div>
-<map name="da/d96/_t_s_l2591_8h_a3d9fd710dcb7c1c55ac8e3e50d2d2d89_icgraph" id="da/d96/_t_s_l2591_8h_a3d9fd710dcb7c1c55ac8e3e50d2d2d89_icgraph">
-<area shape="rect" id="node2" href="../../da/d96/_t_s_l2591_8h.html#a57247829a5806d3c15215703e1892f9c" title="I2C Word Write (low endian) function for TSL2591. " alt="" coords="419,56,570,83"/>
-<area shape="rect" id="node9" href="../../dc/d24/_t_s_l2591__ex_8h.html#ac74ab2e15ea7d6a42590063ee0100081" title="Gain configuration. " alt="" coords="201,107,335,133"/>
-<area shape="rect" id="node10" href="../../dc/d24/_t_s_l2591__ex_8h.html#ac1113d9534b40f5093e2678134dc060d" title="Write TSL2591 Config. " alt="" coords="629,208,769,235"/>
-<area shape="rect" id="node11" href="../../dc/d24/_t_s_l2591__ex_8h.html#aafe7708c01dcaebd60ff3af4af3334db" title="Integration time configuration. " alt="" coords="165,208,371,235"/>
-<area shape="rect" id="node12" href="../../dc/d24/_t_s_l2591__ex_8h.html#a58b86a0ac68b049971bf0834aabd7c91" title="Write TSL2591 Enable register. " alt="" coords="201,284,335,311"/>
-<area shape="rect" id="node17" href="../../dc/d24/_t_s_l2591__ex_8h.html#aea08628b586d29a2bb25910f6bc39b5b" title="ALS interrupt thresholds configuration. " alt="" coords="203,335,333,361"/>
-<area shape="rect" id="node18" href="../../dc/d24/_t_s_l2591__ex_8h.html#ae4135366980e2d45feac5990acdb59fb" title="ALS interrupt Persist threshold filters configuration. " alt="" coords="194,385,342,412"/>
-<area shape="rect" id="node3" href="../../dc/d24/_t_s_l2591__ex_8h.html#ab1b84615a6ab3186650cee27b10cf911" title="ALS interrupt low threshold configuration. " alt="" coords="631,5,767,32"/>
-<area shape="rect" id="node6" href="../../dc/d24/_t_s_l2591__ex_8h.html#a624dd44a05e5e6a3be2087987707c5a1" title="ALS interrupt high threshold configuration. " alt="" coords="629,56,768,83"/>
-<area shape="rect" id="node7" href="../../dc/d24/_t_s_l2591__ex_8h.html#a89cdd40b8693dbec9253d1ed8403a543" title="ALS interrupt Persist Low threshold filter configuration. " alt="" coords="621,107,776,133"/>
-<area shape="rect" id="node8" href="../../dc/d24/_t_s_l2591__ex_8h.html#a1077971b7da7f6eee33cdcd3a51ae4d9" title="ALS interrupt Persist High threshold filter configuration. " alt="" coords="619,157,778,184"/>
-<area shape="rect" id="node4" href="../../d7/d6e/_t_s_l2591__proc_8h.html#ae70e987b630354203c40e8626b73950b" title="Initialization Sequence for TSL2591 peripheral. " alt="" coords="827,132,991,159"/>
-<area shape="rect" id="node5" href="../../da/d96/_t_s_l2591_8h.html#aa5c43dbf44ce32efc764a68fe49eaa0b" title="Initialization for TSL2591 peripheral. " alt="" coords="1040,132,1139,159"/>
-<area shape="rect" id="node13" href="../../dc/d24/_t_s_l2591__ex_8h.html#ae2c53653525cafb839072265649cd4ce" title="Oscillator Enable / Disable. " alt="" coords="426,259,563,285"/>
-<area shape="rect" id="node14" href="../../dc/d24/_t_s_l2591__ex_8h.html#a1dd2d9682015cdcc486ec70f8e4e864f" title="ALS module Enable / Disable. " alt="" coords="427,309,563,336"/>
-<area shape="rect" id="node15" href="../../dc/d24/_t_s_l2591__ex_8h.html#a2b626330e1adaaa690d6e42c689abbf2" title="ALS interrupt module Enable / Disable. " alt="" coords="425,360,565,387"/>
-<area shape="rect" id="node16" href="../../dc/d24/_t_s_l2591__ex_8h.html#a9f43b9517c0a85c29ea29f3016ca6266" title="Reset TSL2591 chip. " alt="" coords="437,461,553,488"/>
+<div class="center"><img src="../../da/d96/_t_s_l2591_8h_a14a8ee1af325b7f732bb2f6d362dca78_icgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_a14a8ee1af325b7f732bb2f6d362dca78_icgraph" alt=""/></div>
+<map name="da/d96/_t_s_l2591_8h_a14a8ee1af325b7f732bb2f6d362dca78_icgraph" id="da/d96/_t_s_l2591_8h_a14a8ee1af325b7f732bb2f6d362dca78_icgraph">
+<area shape="rect" id="node2" href="../../da/d96/_t_s_l2591_8h.html#ae100eee4edf9a08aea83f2ae964e9675" title="I2C Word Write (low endian) function for TSL2591. " alt="" coords="419,56,570,83"/>
+<area shape="rect" id="node10" href="../../dc/d24/_t_s_l2591__ex_8h.html#a9cd1dbf1c80f48bab80b5b51317b1344" title="Gain configuration. " alt="" coords="201,107,335,133"/>
+<area shape="rect" id="node11" href="../../dc/d24/_t_s_l2591__ex_8h.html#a88c2ca995143e527a8be0d20a107d935" title="Write TSL2591 Config. " alt="" coords="629,208,769,235"/>
+<area shape="rect" id="node12" href="../../dc/d24/_t_s_l2591__ex_8h.html#a3c44c1633b29e069474b0bb6da2a063e" title="Integration time configuration. " alt="" coords="165,208,371,235"/>
+<area shape="rect" id="node13" href="../../dc/d24/_t_s_l2591__ex_8h.html#af8c3d742d306780bdbcbd4874ed03b6c" title="Write TSL2591 Enable register. " alt="" coords="201,284,335,311"/>
+<area shape="rect" id="node18" href="../../dc/d24/_t_s_l2591__ex_8h.html#ad422092a1dea772b458b491135b0d476" title="ALS interrupt thresholds configuration. " alt="" coords="203,335,333,361"/>
+<area shape="rect" id="node19" href="../../dc/d24/_t_s_l2591__ex_8h.html#a1cc3d58b57da0e4d016d05a8b60baf01" title="ALS interrupt Persist threshold filters configuration. " alt="" coords="194,385,342,412"/>
+<area shape="rect" id="node3" href="../../dc/d24/_t_s_l2591__ex_8h.html#a970f1c9d1c7392c46c05febb3605e9c7" title="ALS interrupt low threshold configuration. " alt="" coords="631,5,767,32"/>
+<area shape="rect" id="node7" href="../../dc/d24/_t_s_l2591__ex_8h.html#a429d9612ce64dd4fa4bb091ae522f404" title="ALS interrupt high threshold configuration. " alt="" coords="629,56,768,83"/>
+<area shape="rect" id="node8" href="../../dc/d24/_t_s_l2591__ex_8h.html#a9850cf6332b48ca7a3c7bd6988d788e2" title="ALS interrupt Persist Low threshold filter configuration. " alt="" coords="621,107,776,133"/>
+<area shape="rect" id="node9" href="../../dc/d24/_t_s_l2591__ex_8h.html#a4bf964691f21eb4ee645a833f41ee359" title="ALS interrupt Persist High threshold filter configuration. " alt="" coords="619,157,778,184"/>
+<area shape="rect" id="node4" href="../../d7/d6e/_t_s_l2591__proc_8h.html#a2041117e46b601378a1df06a4957cd4f" title="Initialization Sequence for TSL2591 peripheral. " alt="" coords="827,132,991,159"/>
+<area shape="rect" id="node5" href="../../da/d96/_t_s_l2591_8h.html#a3e5d6c27f6e4ba0ad68acc6b29a18d27" title="Initialization for TSL2591 peripheral. " alt="" coords="1040,132,1139,159"/>
+<area shape="rect" id="node6" href="../../da/d96/_t_s_l2591_8h.html#a340d5559e9623f12628e013d814ac718" title="Initialization for TSL2591 peripheral. " alt="" coords="1187,132,1330,159"/>
+<area shape="rect" id="node14" href="../../dc/d24/_t_s_l2591__ex_8h.html#a6aed70f599d9539e47dc28f4eadddc6a" title="Oscillator Enable / Disable. " alt="" coords="426,259,563,285"/>
+<area shape="rect" id="node15" href="../../dc/d24/_t_s_l2591__ex_8h.html#aaad0eb30aaf459a698750dfe8caf7f6f" title="ALS module Enable / Disable. " alt="" coords="427,309,563,336"/>
+<area shape="rect" id="node16" href="../../dc/d24/_t_s_l2591__ex_8h.html#a87d2442239502f7712cc4f410f19f87e" title="ALS interrupt module Enable / Disable. " alt="" coords="425,360,565,387"/>
+<area shape="rect" id="node17" href="../../dc/d24/_t_s_l2591__ex_8h.html#a508a49af1748fc76bbb601f25bc0e51a" title="Reset TSL2591 chip. " alt="" coords="437,461,553,488"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="afed40846f2a653c92ba250beeea3824e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afed40846f2a653c92ba250beeea3824e">&#9670;&nbsp;</a></span>TSL2591_Write_Special()</h2>
+<a id="a36f5040528f01a6380c13937023db31e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36f5040528f01a6380c13937023db31e">&#9670;&nbsp;</a></span>TSL2591_Write_Special()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -918,9 +1048,19 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR TSL2591_Write_Special </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../da/d96/_t_s_l2591_8h.html#a4ce29917461f7c58158cee6aac381e5c">TSL2591_spec_func</a>&#160;</td>
-          <td class="paramname"><em>func</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
+          <td class="paramname"><em>pSlave</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="../../da/d96/_t_s_l2591_8h.html#a4ce29917461f7c58158cee6aac381e5c">TSL2591_spec_func</a>&#160;</td>
+          <td class="paramname"><em>func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -928,6 +1068,7 @@ Here is the caller graph for this function:</div>
 <p>I2C Special function Write function for TSL2591. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pSlave</td><td>- Pointer to I2C slave instance </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>- special function to execute </td></tr>
   </table>
   </dd>
@@ -936,27 +1077,27 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../da/d96/_t_s_l2591_8h_afed40846f2a653c92ba250beeea3824e_cgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_afed40846f2a653c92ba250beeea3824e_cgraph" alt=""/></div>
-<map name="da/d96/_t_s_l2591_8h_afed40846f2a653c92ba250beeea3824e_cgraph" id="da/d96/_t_s_l2591_8h_afed40846f2a653c92ba250beeea3824e_cgraph">
+<div class="center"><img src="../../da/d96/_t_s_l2591_8h_a36f5040528f01a6380c13937023db31e_cgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_a36f5040528f01a6380c13937023db31e_cgraph" alt=""/></div>
+<map name="da/d96/_t_s_l2591_8h_a36f5040528f01a6380c13937023db31e_cgraph" id="da/d96/_t_s_l2591_8h_a36f5040528f01a6380c13937023db31e_cgraph">
 <area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="217,5,319,32"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../da/d96/_t_s_l2591_8h_afed40846f2a653c92ba250beeea3824e_icgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_afed40846f2a653c92ba250beeea3824e_icgraph" alt=""/></div>
-<map name="da/d96/_t_s_l2591_8h_afed40846f2a653c92ba250beeea3824e_icgraph" id="da/d96/_t_s_l2591_8h_afed40846f2a653c92ba250beeea3824e_icgraph">
-<area shape="rect" id="node2" href="../../dc/d24/_t_s_l2591__ex_8h.html#a4dc8d88394d26ff5f325971bdc624639" title="Force ALS interruption. " alt="" coords="237,5,395,32"/>
-<area shape="rect" id="node3" href="../../dc/d24/_t_s_l2591__ex_8h.html#a4ed6ed92c0c2fdf5dea1f1fd91a85e86" title="Clear pending ALS interruption. " alt="" coords="239,56,393,83"/>
-<area shape="rect" id="node4" href="../../dc/d24/_t_s_l2591__ex_8h.html#a56148f75f2a1ecd9388b9fe6beb88ca1" title="Clear pending ALS &amp; Persistence interruptions. " alt="" coords="217,107,415,133"/>
-<area shape="rect" id="node5" href="../../dc/d24/_t_s_l2591__ex_8h.html#a33ca6ca528b23da4b3c96bd99ec1456d" title="Clear pending Persistence interruption. " alt="" coords="226,157,406,184"/>
+<div class="center"><img src="../../da/d96/_t_s_l2591_8h_a36f5040528f01a6380c13937023db31e_icgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_a36f5040528f01a6380c13937023db31e_icgraph" alt=""/></div>
+<map name="da/d96/_t_s_l2591_8h_a36f5040528f01a6380c13937023db31e_icgraph" id="da/d96/_t_s_l2591_8h_a36f5040528f01a6380c13937023db31e_icgraph">
+<area shape="rect" id="node2" href="../../dc/d24/_t_s_l2591__ex_8h.html#a1391528936aa698e2cb78ecfe00d2b50" title="Force ALS interruption. " alt="" coords="237,5,395,32"/>
+<area shape="rect" id="node3" href="../../dc/d24/_t_s_l2591__ex_8h.html#ad803ffd5278a82a03384fa494dd4ba44" title="Clear pending ALS interruption. " alt="" coords="239,56,393,83"/>
+<area shape="rect" id="node4" href="../../dc/d24/_t_s_l2591__ex_8h.html#a2117a2df0c37c66067e0eb1a051fdfb3" title="Clear pending ALS &amp; Persistence interruptions. " alt="" coords="217,107,415,133"/>
+<area shape="rect" id="node5" href="../../dc/d24/_t_s_l2591__ex_8h.html#a54dbc27aca5cfa79e32e4539de3e1760" title="Clear pending Persistence interruption. " alt="" coords="226,157,406,184"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a57247829a5806d3c15215703e1892f9c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57247829a5806d3c15215703e1892f9c">&#9670;&nbsp;</a></span>TSL2591_Write_Word()</h2>
+<a id="ae100eee4edf9a08aea83f2ae964e9675"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae100eee4edf9a08aea83f2ae964e9675">&#9670;&nbsp;</a></span>TSL2591_Write_Word()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -964,6 +1105,12 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR TSL2591_Write_Word </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;</td>
+          <td class="paramname"><em>pSlave</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const uint16_t *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
@@ -984,6 +1131,7 @@ Here is the caller graph for this function:</div>
 <p>I2C Word Write (low endian) function for TSL2591. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pSlave</td><td>- Pointer to I2C slave instance </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>- pointer to write from </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>- Address to write to </td></tr>
   </table>
@@ -993,9 +1141,9 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../da/d96/_t_s_l2591_8h_a57247829a5806d3c15215703e1892f9c_cgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_a57247829a5806d3c15215703e1892f9c_cgraph" alt=""/></div>
-<map name="da/d96/_t_s_l2591_8h_a57247829a5806d3c15215703e1892f9c_cgraph" id="da/d96/_t_s_l2591_8h_a57247829a5806d3c15215703e1892f9c_cgraph">
-<area shape="rect" id="node2" href="../../d2/d68/_t_s_l2591_8c.html#a3d9fd710dcb7c1c55ac8e3e50d2d2d89" title="I2C Write function for TSL2591. " alt="" coords="205,31,317,57"/>
+<div class="center"><img src="../../da/d96/_t_s_l2591_8h_ae100eee4edf9a08aea83f2ae964e9675_cgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_ae100eee4edf9a08aea83f2ae964e9675_cgraph" alt=""/></div>
+<map name="da/d96/_t_s_l2591_8h_ae100eee4edf9a08aea83f2ae964e9675_cgraph" id="da/d96/_t_s_l2591_8h_ae100eee4edf9a08aea83f2ae964e9675_cgraph">
+<area shape="rect" id="node2" href="../../d2/d68/_t_s_l2591_8c.html#a14a8ee1af325b7f732bb2f6d362dca78" title="I2C Write function for TSL2591. " alt="" coords="205,31,317,57"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="365,5,477,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="370,56,473,83"/>
 </map>
@@ -1003,28 +1151,29 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../da/d96/_t_s_l2591_8h_a57247829a5806d3c15215703e1892f9c_icgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_a57247829a5806d3c15215703e1892f9c_icgraph" alt=""/></div>
-<map name="da/d96/_t_s_l2591_8h_a57247829a5806d3c15215703e1892f9c_icgraph" id="da/d96/_t_s_l2591_8h_a57247829a5806d3c15215703e1892f9c_icgraph">
-<area shape="rect" id="node2" href="../../dc/d24/_t_s_l2591__ex_8h.html#ab1b84615a6ab3186650cee27b10cf911" title="ALS interrupt low threshold configuration. " alt="" coords="217,5,353,32"/>
-<area shape="rect" id="node5" href="../../dc/d24/_t_s_l2591__ex_8h.html#a624dd44a05e5e6a3be2087987707c5a1" title="ALS interrupt high threshold configuration. " alt="" coords="216,56,355,83"/>
-<area shape="rect" id="node6" href="../../dc/d24/_t_s_l2591__ex_8h.html#a89cdd40b8693dbec9253d1ed8403a543" title="ALS interrupt Persist Low threshold filter configuration. " alt="" coords="208,107,363,133"/>
-<area shape="rect" id="node7" href="../../dc/d24/_t_s_l2591__ex_8h.html#a1077971b7da7f6eee33cdcd3a51ae4d9" title="ALS interrupt Persist High threshold filter configuration. " alt="" coords="206,157,365,184"/>
-<area shape="rect" id="node3" href="../../d7/d6e/_t_s_l2591__proc_8h.html#ae70e987b630354203c40e8626b73950b" title="Initialization Sequence for TSL2591 peripheral. " alt="" coords="414,31,578,57"/>
-<area shape="rect" id="node4" href="../../da/d96/_t_s_l2591_8h.html#aa5c43dbf44ce32efc764a68fe49eaa0b" title="Initialization for TSL2591 peripheral. " alt="" coords="627,31,725,57"/>
+<div class="center"><img src="../../da/d96/_t_s_l2591_8h_ae100eee4edf9a08aea83f2ae964e9675_icgraph.png" border="0" usemap="#da/d96/_t_s_l2591_8h_ae100eee4edf9a08aea83f2ae964e9675_icgraph" alt=""/></div>
+<map name="da/d96/_t_s_l2591_8h_ae100eee4edf9a08aea83f2ae964e9675_icgraph" id="da/d96/_t_s_l2591_8h_ae100eee4edf9a08aea83f2ae964e9675_icgraph">
+<area shape="rect" id="node2" href="../../dc/d24/_t_s_l2591__ex_8h.html#a970f1c9d1c7392c46c05febb3605e9c7" title="ALS interrupt low threshold configuration. " alt="" coords="217,5,353,32"/>
+<area shape="rect" id="node6" href="../../dc/d24/_t_s_l2591__ex_8h.html#a429d9612ce64dd4fa4bb091ae522f404" title="ALS interrupt high threshold configuration. " alt="" coords="216,56,355,83"/>
+<area shape="rect" id="node7" href="../../dc/d24/_t_s_l2591__ex_8h.html#a9850cf6332b48ca7a3c7bd6988d788e2" title="ALS interrupt Persist Low threshold filter configuration. " alt="" coords="208,107,363,133"/>
+<area shape="rect" id="node8" href="../../dc/d24/_t_s_l2591__ex_8h.html#a4bf964691f21eb4ee645a833f41ee359" title="ALS interrupt Persist High threshold filter configuration. " alt="" coords="206,157,365,184"/>
+<area shape="rect" id="node3" href="../../d7/d6e/_t_s_l2591__proc_8h.html#a2041117e46b601378a1df06a4957cd4f" title="Initialization Sequence for TSL2591 peripheral. " alt="" coords="414,31,578,57"/>
+<area shape="rect" id="node4" href="../../da/d96/_t_s_l2591_8h.html#a3e5d6c27f6e4ba0ad68acc6b29a18d27" title="Initialization for TSL2591 peripheral. " alt="" coords="627,31,725,57"/>
+<area shape="rect" id="node5" href="../../da/d96/_t_s_l2591_8h.html#a340d5559e9623f12628e013d814ac718" title="Initialization for TSL2591 peripheral. " alt="" coords="774,31,917,57"/>
 </map>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a377f28031d87ad567d1087b74333569d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a377f28031d87ad567d1087b74333569d">&#9670;&nbsp;</a></span>TSL2591_hal</h2>
+<a id="a82d4f4c3ef3e8a4c402fdd80c6728693"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82d4f4c3ef3e8a4c402fdd80c6728693">&#9670;&nbsp;</a></span>TSL2591_hal</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> TSL2591_hal</td>
+          <td class="memname"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> TSL2591_hal[<a class="el" href="../../da/d96/_t_s_l2591_8h.html#a9d12365f5299deb3a6da4d2526384ab5">I2C_TSL2591_NB</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">

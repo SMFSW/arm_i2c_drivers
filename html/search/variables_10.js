@@ -15,7 +15,7 @@ var searchData=
   ['res_5f4',['Res_4',['../d1/db6/unionu_a_t42_q_t___r_e_g___m_a_p.html#ac977968b4c6275db6d5d27bd8e99c360',1,'uAT42QT_REG_MAP']]],
   ['reserved',['Reserved',['../d4/d1f/unionu_a_t42_q_t___r_e_g_____d_e_v_i_c_e___s_t_a_t_u_s.html#a3e02b363575690cebab50b1a90cc5e74',1,'uAT42QT_REG__DEVICE_STATUS']]],
   ['resolution',['Resolution',['../d1/d02/unionu_m_c_p9808___r_e_g___m_a_p.html#a224b36540907eeb4c862aa19acdc6c20',1,'uMCP9808_REG_MAP::Resolution()'],['../db/d83/struct_m_c_p9808__t.html#ad5ef68efdb98b37ed875c293a8eb727b',1,'MCP9808_t::Resolution()']]],
-  ['revision_5fid',['Revision_Id',['../d3/d18/struct_t_c_s3400__t.html#a6b6da4f215346000248aeb29d883c513',1,'TCS3400_t']]],
+  ['revision_5fid',['Revision_ID',['../d3/d18/struct_t_c_s3400__t.html#a3d758cfe08a006f7af467cd96f747f1d',1,'TCS3400_t']]],
   ['rfu',['RFU',['../d1/d02/unionu_m_c_p9808___r_e_g___m_a_p.html#a78c1817f4d27e9c2ef4dd8b58321bc72',1,'uMCP9808_REG_MAP']]],
   ['rib',['RIB',['../d5/de7/unionu_a_t42_q_t___r_e_g_____s_e_t_u_p__244.html#a81a81be49a295661073a1941da5208a8',1,'uAT42QT_REG__SETUP_244']]],
   ['rtp_5fformat',['RTP_Format',['../db/dac/struct_d_r_v2605_l__t.html#adf2cef199b6a4138fde4047c9fd0a32f',1,'DRV2605L_t']]],

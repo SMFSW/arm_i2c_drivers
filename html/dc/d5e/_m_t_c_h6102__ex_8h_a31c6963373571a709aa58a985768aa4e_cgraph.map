@@ -1,5 +1,0 @@
-<map id="MTCH6102_Set_Active_Period" name="MTCH6102_Set_Active_Period">
-<area shape="rect" id="node2" href="$da/d78/_m_t_c_h6102_8c.html#a886bf0ab928a8940addac31edde0b1c5" title="I2C Write function for MTCH6102. " alt="" coords="214,31,341,57"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="389,5,501,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="394,56,497,83"/>
-</map>

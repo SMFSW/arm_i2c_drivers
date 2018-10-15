@@ -1,0 +1,10 @@
+<map id="MTCH6102_Get_MFG_Results" name="MTCH6102_Get_MFG_Results">
+<area shape="rect" id="node2" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#ac96fcec7fc5a5afbdbcfc0ae845c247e" title="Get MTCH6102 gesture decoding. " alt="" coords="286,30,442,57"/>
+<area shape="rect" id="node3" href="$da/d78/_m_t_c_h6102_8c.html#a2def4bf75a8f4418b4b79478b849d24d" title="I2C Read function for MTCH6102. " alt="" coords="723,30,850,57"/>
+<area shape="rect" id="node8" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a1f9c45b6c4c069dfc3c3892e7175f65f" title="Set MTCH6102 gesture decoding. " alt="" coords="519,132,673,158"/>
+<area shape="rect" id="node9" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a0d11123e5598dcf612d8f06866b0b12b" title="Execute MTCH6102 manufacturing test. " alt="" coords="259,81,469,108"/>
+<area shape="rect" id="node6" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#acecae7d26b166a6e26a2ed8875e44c95" title="Execute MTCH6102 command. " alt="" coords="518,81,674,108"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="899,30,1011,57"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="903,81,1006,108"/>
+<area shape="rect" id="node7" href="$da/d78/_m_t_c_h6102_8c.html#a7d23a0da90fbc047e384e603c436be75" title="I2C Write function for MTCH6102. " alt="" coords="723,81,850,108"/>
+</map>

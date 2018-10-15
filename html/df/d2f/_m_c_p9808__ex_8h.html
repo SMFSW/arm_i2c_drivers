@@ -63,7 +63,6 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">MCP9808_ex.h File Reference</div>  </div>
@@ -79,9 +78,10 @@ Include dependency graph for MCP9808_ex.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d0/d2d/_m_c_p9808__ex_8h__incl.png" border="0" usemap="#_m_c_p9808__ex_8h" alt=""/></div>
 <map name="_m_c_p9808__ex_8h" id="_m_c_p9808__ex_8h">
-<area shape="rect" id="node3" href="../../d8/d57/_m_c_p9808_8h.html" title="MCP9808 Driver. " alt="" coords="84,80,174,107"/>
-<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="276,155,401,181"/>
-<area shape="rect" id="node7" href="../../d6/d5e/_m_c_p9808__proc_8h.html" title="MCP9808 Driver procedures. " alt="" coords="129,155,252,181"/>
+<area shape="rect" id="node3" href="../../d8/d57/_m_c_p9808_8h.html" title="MCP9808 Driver. " alt="" coords="155,80,246,107"/>
+<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="286,155,411,181"/>
+<area shape="rect" id="node7" href="../../dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="435,155,551,181"/>
+<area shape="rect" id="node8" href="../../d6/d5e/_m_c_p9808__proc_8h.html" title="MCP9808 Driver procedures. " alt="" coords="139,155,262,181"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -107,58 +107,47 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a5b6aabbb59ac9978d8f08dd0ac837452"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#ab5f623656adf0683301ba47a8fcf3d4f">MCP9808_alert</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#a5b6aabbb59ac9978d8f08dd0ac837452">MCP9808_alert</a></td></tr>
-<tr class="separator:a5b6aabbb59ac9978d8f08dd0ac837452"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fb93153c57ab0fa1493486706202b0c"><td class="memItemLeft" align="right" valign="top">typedef union <a class="el" href="../../d1/d02/unionu_m_c_p9808___r_e_g___m_a_p.html">uMCP9808_REG_MAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#a5fb93153c57ab0fa1493486706202b0c">uMCP9808_REG_MAP</a></td></tr>
 <tr class="separator:a5fb93153c57ab0fa1493486706202b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:ab5f623656adf0683301ba47a8fcf3d4f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#ab5f623656adf0683301ba47a8fcf3d4f">MCP9808_alert</a> { <a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#ab5f623656adf0683301ba47a8fcf3d4fafe6f9c69541d047a03ba60aade4f9c6b">MCP9808__ALERT_HIGH</a> = 0, 
-<a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#ab5f623656adf0683301ba47a8fcf3d4faa640e886a8b9078489a9aa98f442a6ed">MCP9808__ALERT_LOW</a>, 
-<a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#ab5f623656adf0683301ba47a8fcf3d4fa5a9e6cff9968dad9a944529fd0ac8b19">MCP9808__ALERT_CRIT</a>
- }<tr class="memdesc:ab5f623656adf0683301ba47a8fcf3d4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alerts enum of MCP9808.  <a href="../../df/d2f/_m_c_p9808__ex_8h.html#ab5f623656adf0683301ba47a8fcf3d4f">More...</a><br /></td></tr>
-</td></tr>
-<tr class="separator:ab5f623656adf0683301ba47a8fcf3d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a506269ab4110c8b3817b27e51e1caba1"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#a506269ab4110c8b3817b27e51e1caba1">MCP9808_Write_Config</a> (const uint16_t <a class="el" href="../../d4/d61/structcfg.html">cfg</a>)</td></tr>
-<tr class="memdesc:a506269ab4110c8b3817b27e51e1caba1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write MCP9808 configuration.  <a href="#a506269ab4110c8b3817b27e51e1caba1">More...</a><br /></td></tr>
-<tr class="separator:a506269ab4110c8b3817b27e51e1caba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa08f1388ecd8cdd6f014a4ace9181759"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#aa08f1388ecd8cdd6f014a4ace9181759">MCP9808_Shutdown</a> (const bool shutdown)</td></tr>
-<tr class="memdesc:aa08f1388ecd8cdd6f014a4ace9181759"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write MCP9808 configuration.  <a href="#aa08f1388ecd8cdd6f014a4ace9181759">More...</a><br /></td></tr>
-<tr class="separator:aa08f1388ecd8cdd6f014a4ace9181759"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fd94de2b39ae99cb64d112fa092680e"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#a7fd94de2b39ae99cb64d112fa092680e">MCP9808_Set_AlertHysteresis</a> (const <a class="el" href="../../d8/d57/_m_c_p9808_8h.html#a28f884cabea67edc507c0e5491d7c61e">MCP9808_hyst</a> hys)</td></tr>
-<tr class="memdesc:a7fd94de2b39ae99cb64d112fa092680e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MCP9808 alert hysteresis.  <a href="#a7fd94de2b39ae99cb64d112fa092680e">More...</a><br /></td></tr>
-<tr class="separator:a7fd94de2b39ae99cb64d112fa092680e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4758e2efa9c6e2eeeaeaf0efa528e642"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#a4758e2efa9c6e2eeeaeaf0efa528e642">MCP9808_Set_AlertType</a> (const bool comparator)</td></tr>
-<tr class="memdesc:a4758e2efa9c6e2eeeaeaf0efa528e642"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MCP9808 alert type.  <a href="#a4758e2efa9c6e2eeeaeaf0efa528e642">More...</a><br /></td></tr>
-<tr class="separator:a4758e2efa9c6e2eeeaeaf0efa528e642"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b1dfbba8e41b0ae7a6b19159330f5a7"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#a8b1dfbba8e41b0ae7a6b19159330f5a7">MCP9808_Set_AlertOutput</a> (const bool en, const bool alt)</td></tr>
-<tr class="memdesc:a8b1dfbba8e41b0ae7a6b19159330f5a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MCP9808 alert enable.  <a href="#a8b1dfbba8e41b0ae7a6b19159330f5a7">More...</a><br /></td></tr>
-<tr class="separator:a8b1dfbba8e41b0ae7a6b19159330f5a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a084d9679db6b2cf3dcfa8d631c540f73"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#a084d9679db6b2cf3dcfa8d631c540f73">MCP9808_Set_AlertLock</a> (const <a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#ab5f623656adf0683301ba47a8fcf3d4f">MCP9808_alert</a> alt, const bool lock)</td></tr>
-<tr class="memdesc:a084d9679db6b2cf3dcfa8d631c540f73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MCP9808 alert lock.  <a href="#a084d9679db6b2cf3dcfa8d631c540f73">More...</a><br /></td></tr>
-<tr class="separator:a084d9679db6b2cf3dcfa8d631c540f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a279ef8af7b414055c528b70fe9a8b1"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#a2a279ef8af7b414055c528b70fe9a8b1">MCP9808_Set_Resolution</a> (const <a class="el" href="../../d8/d57/_m_c_p9808_8h.html#a523ec7d6d20cf01f2bce43570a8e99ca">MCP9808_res</a> res)</td></tr>
-<tr class="memdesc:a2a279ef8af7b414055c528b70fe9a8b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MCP9808 Resolution.  <a href="#a2a279ef8af7b414055c528b70fe9a8b1">More...</a><br /></td></tr>
-<tr class="separator:a2a279ef8af7b414055c528b70fe9a8b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b920340f81c5a3937f1e25e91be16ef"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#a3b920340f81c5a3937f1e25e91be16ef">MCP9808_Read_Config</a> (uint16_t *<a class="el" href="../../d4/d61/structcfg.html">cfg</a>)</td></tr>
-<tr class="memdesc:a3b920340f81c5a3937f1e25e91be16ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get MCP9808 Configuration.  <a href="#a3b920340f81c5a3937f1e25e91be16ef">More...</a><br /></td></tr>
-<tr class="separator:a3b920340f81c5a3937f1e25e91be16ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64b000a159fc5c548809f7120bfad65d"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#a64b000a159fc5c548809f7120bfad65d">MCP9808_Get_Temperature_Raw</a> (uint16_t *temp)</td></tr>
-<tr class="memdesc:a64b000a159fc5c548809f7120bfad65d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get MCP9808 Configuration.  <a href="#a64b000a159fc5c548809f7120bfad65d">More...</a><br /></td></tr>
-<tr class="separator:a64b000a159fc5c548809f7120bfad65d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc3c575f573622a69ee65e37c15b33eb"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#acc3c575f573622a69ee65e37c15b33eb">MCP9808_Get_Resolution</a> (<a class="el" href="../../d8/d57/_m_c_p9808_8h.html#a523ec7d6d20cf01f2bce43570a8e99ca">MCP9808_res</a> *res)</td></tr>
-<tr class="memdesc:acc3c575f573622a69ee65e37c15b33eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get MCP9808 Resolution.  <a href="#acc3c575f573622a69ee65e37c15b33eb">More...</a><br /></td></tr>
-<tr class="separator:acc3c575f573622a69ee65e37c15b33eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf30c7ffda5ab0f9b310e656677823ea"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#aaf30c7ffda5ab0f9b310e656677823ea">MCP9808_Get_ManufacturerID</a> (uint16_t *id)</td></tr>
-<tr class="memdesc:aaf30c7ffda5ab0f9b310e656677823ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get MCP9808 Manufacturer ID.  <a href="#aaf30c7ffda5ab0f9b310e656677823ea">More...</a><br /></td></tr>
-<tr class="separator:aaf30c7ffda5ab0f9b310e656677823ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a680d06b272532690503b1be2e796e878"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#a680d06b272532690503b1be2e796e878">MCP9808_Get_ChipID</a> (uint16_t *id)</td></tr>
-<tr class="memdesc:a680d06b272532690503b1be2e796e878"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get MCP9808 chip ID.  <a href="#a680d06b272532690503b1be2e796e878">More...</a><br /></td></tr>
-<tr class="separator:a680d06b272532690503b1be2e796e878"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b6ece227f61b26462dcb376d1d7e383"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#a3b6ece227f61b26462dcb376d1d7e383">MCP9808_Write_Config</a> (<a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *pCpnt, const uint16_t <a class="el" href="../../d4/d61/structcfg.html">cfg</a>)</td></tr>
+<tr class="memdesc:a3b6ece227f61b26462dcb376d1d7e383"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write MCP9808 configuration.  <a href="#a3b6ece227f61b26462dcb376d1d7e383">More...</a><br /></td></tr>
+<tr class="separator:a3b6ece227f61b26462dcb376d1d7e383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7741a2cb7ac87999aadfcd1f3470d126"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#a7741a2cb7ac87999aadfcd1f3470d126">MCP9808_Shutdown</a> (<a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *pCpnt, const bool shutdown)</td></tr>
+<tr class="memdesc:a7741a2cb7ac87999aadfcd1f3470d126"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write MCP9808 configuration.  <a href="#a7741a2cb7ac87999aadfcd1f3470d126">More...</a><br /></td></tr>
+<tr class="separator:a7741a2cb7ac87999aadfcd1f3470d126"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a243664417daaaf9820d279bdf21b9de9"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#a243664417daaaf9820d279bdf21b9de9">MCP9808_Set_AlertHysteresis</a> (<a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *pCpnt, const <a class="el" href="../../d8/d57/_m_c_p9808_8h.html#a28f884cabea67edc507c0e5491d7c61e">MCP9808_hyst</a> hys)</td></tr>
+<tr class="memdesc:a243664417daaaf9820d279bdf21b9de9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MCP9808 alert hysteresis.  <a href="#a243664417daaaf9820d279bdf21b9de9">More...</a><br /></td></tr>
+<tr class="separator:a243664417daaaf9820d279bdf21b9de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56970bcbb7adf58d71d1551acc11ec74"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#a56970bcbb7adf58d71d1551acc11ec74">MCP9808_Set_AlertType</a> (<a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *pCpnt, const bool comparator)</td></tr>
+<tr class="memdesc:a56970bcbb7adf58d71d1551acc11ec74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MCP9808 alert type.  <a href="#a56970bcbb7adf58d71d1551acc11ec74">More...</a><br /></td></tr>
+<tr class="separator:a56970bcbb7adf58d71d1551acc11ec74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e573ffe5d32f0bf8e471204b36533ff"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#a0e573ffe5d32f0bf8e471204b36533ff">MCP9808_Set_AlertOutput</a> (<a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *pCpnt, const bool en, const bool alt)</td></tr>
+<tr class="memdesc:a0e573ffe5d32f0bf8e471204b36533ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MCP9808 alert enable.  <a href="#a0e573ffe5d32f0bf8e471204b36533ff">More...</a><br /></td></tr>
+<tr class="separator:a0e573ffe5d32f0bf8e471204b36533ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a21688b5557dd3fba082864bd6df838"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#a5a21688b5557dd3fba082864bd6df838">MCP9808_Set_AlertLock</a> (<a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *pCpnt, const <a class="el" href="../../d6/d5e/_m_c_p9808__proc_8h.html#ab5f623656adf0683301ba47a8fcf3d4f">MCP9808_alert</a> alt, const bool lock)</td></tr>
+<tr class="memdesc:a5a21688b5557dd3fba082864bd6df838"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MCP9808 alert lock.  <a href="#a5a21688b5557dd3fba082864bd6df838">More...</a><br /></td></tr>
+<tr class="separator:a5a21688b5557dd3fba082864bd6df838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae31b1b2b5f913d440753b2c8cb1c9015"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#ae31b1b2b5f913d440753b2c8cb1c9015">MCP9808_Set_Resolution</a> (<a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *pCpnt, const <a class="el" href="../../d8/d57/_m_c_p9808_8h.html#a523ec7d6d20cf01f2bce43570a8e99ca">MCP9808_res</a> res)</td></tr>
+<tr class="memdesc:ae31b1b2b5f913d440753b2c8cb1c9015"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MCP9808 Resolution.  <a href="#ae31b1b2b5f913d440753b2c8cb1c9015">More...</a><br /></td></tr>
+<tr class="separator:ae31b1b2b5f913d440753b2c8cb1c9015"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdd934ca0ed7b4899174b427d0458b1d"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#afdd934ca0ed7b4899174b427d0458b1d">MCP9808_Read_Config</a> (<a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *pCpnt, uint16_t *<a class="el" href="../../d4/d61/structcfg.html">cfg</a>)</td></tr>
+<tr class="memdesc:afdd934ca0ed7b4899174b427d0458b1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get MCP9808 Configuration.  <a href="#afdd934ca0ed7b4899174b427d0458b1d">More...</a><br /></td></tr>
+<tr class="separator:afdd934ca0ed7b4899174b427d0458b1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e41dd911799fda3ec89fe40a7cb258f"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#a8e41dd911799fda3ec89fe40a7cb258f">MCP9808_Get_Temperature_Raw</a> (<a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *pCpnt, uint16_t *temp)</td></tr>
+<tr class="memdesc:a8e41dd911799fda3ec89fe40a7cb258f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get MCP9808 Configuration.  <a href="#a8e41dd911799fda3ec89fe40a7cb258f">More...</a><br /></td></tr>
+<tr class="separator:a8e41dd911799fda3ec89fe40a7cb258f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ce62901397431c54e5a0f1630625a9b"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#a7ce62901397431c54e5a0f1630625a9b">MCP9808_Get_Resolution</a> (<a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *pCpnt, <a class="el" href="../../d8/d57/_m_c_p9808_8h.html#a523ec7d6d20cf01f2bce43570a8e99ca">MCP9808_res</a> *res)</td></tr>
+<tr class="memdesc:a7ce62901397431c54e5a0f1630625a9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get MCP9808 Resolution.  <a href="#a7ce62901397431c54e5a0f1630625a9b">More...</a><br /></td></tr>
+<tr class="separator:a7ce62901397431c54e5a0f1630625a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90a11062692b1b9d5049647a8d5c30b6"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#a90a11062692b1b9d5049647a8d5c30b6">MCP9808_Get_ManufacturerID</a> (<a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *pCpnt, uint16_t *id)</td></tr>
+<tr class="memdesc:a90a11062692b1b9d5049647a8d5c30b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get MCP9808 Manufacturer ID.  <a href="#a90a11062692b1b9d5049647a8d5c30b6">More...</a><br /></td></tr>
+<tr class="separator:a90a11062692b1b9d5049647a8d5c30b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a432056538649f656d28261c404a28c3f"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#a432056538649f656d28261c404a28c3f">MCP9808_Get_ChipID</a> (<a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *pCpnt, uint16_t *id)</td></tr>
+<tr class="memdesc:a432056538649f656d28261c404a28c3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get MCP9808 chip ID.  <a href="#a432056538649f656d28261c404a28c3f">More...</a><br /></td></tr>
+<tr class="separator:a432056538649f656d28261c404a28c3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>MCP9808 Driver extensions. </p>
@@ -166,20 +155,6 @@ Functions</h2></td></tr>
 <dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2018, SMFSW</dd></dl>
 <p>MCP9808: +/-0.5C Maximum Accuracy Digital Temperature Sensor </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="a5b6aabbb59ac9978d8f08dd0ac837452"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b6aabbb59ac9978d8f08dd0ac837452">&#9670;&nbsp;</a></span>MCP9808_alert</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef enum <a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#ab5f623656adf0683301ba47a8fcf3d4f">MCP9808_alert</a>  <a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#ab5f623656adf0683301ba47a8fcf3d4f">MCP9808_alert</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a5fb93153c57ab0fa1493486706202b0c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5fb93153c57ab0fa1493486706202b0c">&#9670;&nbsp;</a></span>uMCP9808_REG_MAP</h2>
 
@@ -194,34 +169,9 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="ab5f623656adf0683301ba47a8fcf3d4f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5f623656adf0683301ba47a8fcf3d4f">&#9670;&nbsp;</a></span>MCP9808_alert</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#ab5f623656adf0683301ba47a8fcf3d4f">MCP9808_alert</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Alerts enum of MCP9808. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab5f623656adf0683301ba47a8fcf3d4fafe6f9c69541d047a03ba60aade4f9c6b"></a>MCP9808__ALERT_HIGH&#160;</td><td class="fielddoc"><p>High temperature alert. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ab5f623656adf0683301ba47a8fcf3d4faa640e886a8b9078489a9aa98f442a6ed"></a>MCP9808__ALERT_LOW&#160;</td><td class="fielddoc"><p>Low temperature alert. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ab5f623656adf0683301ba47a8fcf3d4fa5a9e6cff9968dad9a944529fd0ac8b19"></a>MCP9808__ALERT_CRIT&#160;</td><td class="fielddoc"><p>Critical temperature alert. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a680d06b272532690503b1be2e796e878"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a680d06b272532690503b1be2e796e878">&#9670;&nbsp;</a></span>MCP9808_Get_ChipID()</h2>
+<a id="a432056538649f656d28261c404a28c3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a432056538649f656d28261c404a28c3f">&#9670;&nbsp;</a></span>MCP9808_Get_ChipID()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -232,9 +182,19 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">FctERR MCP9808_Get_ChipID </td>
           <td>(</td>
-          <td class="paramtype">uint16_t *&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -247,6 +207,7 @@ Functions</h2></td></tr>
 <p>Get MCP9808 chip ID. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MCP9808 component </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">id</td><td>- pointer to chip ID result </td></tr>
   </table>
   </dd>
@@ -255,9 +216,9 @@ Functions</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a680d06b272532690503b1be2e796e878_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a680d06b272532690503b1be2e796e878_cgraph" alt=""/></div>
-<map name="df/d2f/_m_c_p9808__ex_8h_a680d06b272532690503b1be2e796e878_cgraph" id="df/d2f/_m_c_p9808__ex_8h_a680d06b272532690503b1be2e796e878_cgraph">
-<area shape="rect" id="node2" href="../../df/d8e/_m_c_p9808_8c.html#a5f07df92b9fb162854dca25cf1a3da80" title="I2C Read function for MCP9808. " alt="" coords="211,31,330,57"/>
+<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a432056538649f656d28261c404a28c3f_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a432056538649f656d28261c404a28c3f_cgraph" alt=""/></div>
+<map name="df/d2f/_m_c_p9808__ex_8h_a432056538649f656d28261c404a28c3f_cgraph" id="df/d2f/_m_c_p9808__ex_8h_a432056538649f656d28261c404a28c3f_cgraph">
+<area shape="rect" id="node2" href="../../df/d8e/_m_c_p9808_8c.html#aae31a880b2f9d8fce8a00151eb4399cb" title="I2C Read function for MCP9808. " alt="" coords="211,31,330,57"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="379,5,491,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="383,56,486,83"/>
 </map>
@@ -265,17 +226,18 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a680d06b272532690503b1be2e796e878_icgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a680d06b272532690503b1be2e796e878_icgraph" alt=""/></div>
-<map name="df/d2f/_m_c_p9808__ex_8h_a680d06b272532690503b1be2e796e878_icgraph" id="df/d2f/_m_c_p9808__ex_8h_a680d06b272532690503b1be2e796e878_icgraph">
-<area shape="rect" id="node2" href="../../d6/d5e/_m_c_p9808__proc_8h.html#abf6a96ffa46d6cefe44ab57ccc7f8e65" title="Initialization Sequence of the MCP9808 peripheral. " alt="" coords="211,5,381,32"/>
-<area shape="rect" id="node3" href="../../d8/d57/_m_c_p9808_8h.html#a0e55a19e8651c9fa28e9179dfaf1b94c" title="Initialization of the MCP9808 peripheral. " alt="" coords="430,5,535,32"/>
+<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a432056538649f656d28261c404a28c3f_icgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a432056538649f656d28261c404a28c3f_icgraph" alt=""/></div>
+<map name="df/d2f/_m_c_p9808__ex_8h_a432056538649f656d28261c404a28c3f_icgraph" id="df/d2f/_m_c_p9808__ex_8h_a432056538649f656d28261c404a28c3f_icgraph">
+<area shape="rect" id="node2" href="../../d6/d5e/_m_c_p9808__proc_8h.html#ac1daf1ee55269479527921f21f0685ab" title="Initialization Sequence of the MCP9808 peripheral. " alt="" coords="211,5,381,32"/>
+<area shape="rect" id="node3" href="../../d8/d57/_m_c_p9808_8h.html#a91d38f36234f03778c3146624f083067" title="Initialization of the MCP9808 peripheral. " alt="" coords="430,5,535,32"/>
+<area shape="rect" id="node4" href="../../d8/d57/_m_c_p9808_8h.html#a9ffcff895e9844967086a52af6c82dd4" title="Initialization for MCP9808 peripheral. " alt="" coords="585,5,733,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="aaf30c7ffda5ab0f9b310e656677823ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf30c7ffda5ab0f9b310e656677823ea">&#9670;&nbsp;</a></span>MCP9808_Get_ManufacturerID()</h2>
+<a id="a90a11062692b1b9d5049647a8d5c30b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90a11062692b1b9d5049647a8d5c30b6">&#9670;&nbsp;</a></span>MCP9808_Get_ManufacturerID()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -286,9 +248,19 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR MCP9808_Get_ManufacturerID </td>
           <td>(</td>
-          <td class="paramtype">uint16_t *&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -301,6 +273,7 @@ Here is the caller graph for this function:</div>
 <p>Get MCP9808 Manufacturer ID. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MCP9808 component </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">id</td><td>- pointer to Manufacturer ID result </td></tr>
   </table>
   </dd>
@@ -309,9 +282,9 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_aaf30c7ffda5ab0f9b310e656677823ea_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_aaf30c7ffda5ab0f9b310e656677823ea_cgraph" alt=""/></div>
-<map name="df/d2f/_m_c_p9808__ex_8h_aaf30c7ffda5ab0f9b310e656677823ea_cgraph" id="df/d2f/_m_c_p9808__ex_8h_aaf30c7ffda5ab0f9b310e656677823ea_cgraph">
-<area shape="rect" id="node2" href="../../df/d8e/_m_c_p9808_8c.html#a5f07df92b9fb162854dca25cf1a3da80" title="I2C Read function for MCP9808. " alt="" coords="259,31,378,57"/>
+<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a90a11062692b1b9d5049647a8d5c30b6_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a90a11062692b1b9d5049647a8d5c30b6_cgraph" alt=""/></div>
+<map name="df/d2f/_m_c_p9808__ex_8h_a90a11062692b1b9d5049647a8d5c30b6_cgraph" id="df/d2f/_m_c_p9808__ex_8h_a90a11062692b1b9d5049647a8d5c30b6_cgraph">
+<area shape="rect" id="node2" href="../../df/d8e/_m_c_p9808_8c.html#aae31a880b2f9d8fce8a00151eb4399cb" title="I2C Read function for MCP9808. " alt="" coords="259,31,378,57"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="427,5,539,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="431,56,534,83"/>
 </map>
@@ -319,17 +292,18 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_aaf30c7ffda5ab0f9b310e656677823ea_icgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_aaf30c7ffda5ab0f9b310e656677823ea_icgraph" alt=""/></div>
-<map name="df/d2f/_m_c_p9808__ex_8h_aaf30c7ffda5ab0f9b310e656677823ea_icgraph" id="df/d2f/_m_c_p9808__ex_8h_aaf30c7ffda5ab0f9b310e656677823ea_icgraph">
-<area shape="rect" id="node2" href="../../d6/d5e/_m_c_p9808__proc_8h.html#abf6a96ffa46d6cefe44ab57ccc7f8e65" title="Initialization Sequence of the MCP9808 peripheral. " alt="" coords="259,5,429,32"/>
-<area shape="rect" id="node3" href="../../d8/d57/_m_c_p9808_8h.html#a0e55a19e8651c9fa28e9179dfaf1b94c" title="Initialization of the MCP9808 peripheral. " alt="" coords="478,5,583,32"/>
+<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a90a11062692b1b9d5049647a8d5c30b6_icgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a90a11062692b1b9d5049647a8d5c30b6_icgraph" alt=""/></div>
+<map name="df/d2f/_m_c_p9808__ex_8h_a90a11062692b1b9d5049647a8d5c30b6_icgraph" id="df/d2f/_m_c_p9808__ex_8h_a90a11062692b1b9d5049647a8d5c30b6_icgraph">
+<area shape="rect" id="node2" href="../../d6/d5e/_m_c_p9808__proc_8h.html#ac1daf1ee55269479527921f21f0685ab" title="Initialization Sequence of the MCP9808 peripheral. " alt="" coords="259,5,429,32"/>
+<area shape="rect" id="node3" href="../../d8/d57/_m_c_p9808_8h.html#a91d38f36234f03778c3146624f083067" title="Initialization of the MCP9808 peripheral. " alt="" coords="478,5,583,32"/>
+<area shape="rect" id="node4" href="../../d8/d57/_m_c_p9808_8h.html#a9ffcff895e9844967086a52af6c82dd4" title="Initialization for MCP9808 peripheral. " alt="" coords="633,5,781,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="acc3c575f573622a69ee65e37c15b33eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc3c575f573622a69ee65e37c15b33eb">&#9670;&nbsp;</a></span>MCP9808_Get_Resolution()</h2>
+<a id="a7ce62901397431c54e5a0f1630625a9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ce62901397431c54e5a0f1630625a9b">&#9670;&nbsp;</a></span>MCP9808_Get_Resolution()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -337,9 +311,19 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR MCP9808_Get_Resolution </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d8/d57/_m_c_p9808_8h.html#a523ec7d6d20cf01f2bce43570a8e99ca">MCP9808_res</a> *&#160;</td>
-          <td class="paramname"><em>res</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="../../d8/d57/_m_c_p9808_8h.html#a523ec7d6d20cf01f2bce43570a8e99ca">MCP9808_res</a> *&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -347,6 +331,7 @@ Here is the caller graph for this function:</div>
 <p>Get MCP9808 Resolution. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MCP9808 component </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">res</td><td>- pointer to Resolution to read to </td></tr>
   </table>
   </dd>
@@ -355,9 +340,9 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_acc3c575f573622a69ee65e37c15b33eb_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_acc3c575f573622a69ee65e37c15b33eb_cgraph" alt=""/></div>
-<map name="df/d2f/_m_c_p9808__ex_8h_acc3c575f573622a69ee65e37c15b33eb_cgraph" id="df/d2f/_m_c_p9808__ex_8h_acc3c575f573622a69ee65e37c15b33eb_cgraph">
-<area shape="rect" id="node2" href="../../df/d8e/_m_c_p9808_8c.html#a5f07df92b9fb162854dca25cf1a3da80" title="I2C Read function for MCP9808. " alt="" coords="233,31,351,57"/>
+<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a7ce62901397431c54e5a0f1630625a9b_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a7ce62901397431c54e5a0f1630625a9b_cgraph" alt=""/></div>
+<map name="df/d2f/_m_c_p9808__ex_8h_a7ce62901397431c54e5a0f1630625a9b_cgraph" id="df/d2f/_m_c_p9808__ex_8h_a7ce62901397431c54e5a0f1630625a9b_cgraph">
+<area shape="rect" id="node2" href="../../df/d8e/_m_c_p9808_8c.html#aae31a880b2f9d8fce8a00151eb4399cb" title="I2C Read function for MCP9808. " alt="" coords="233,31,351,57"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="400,5,512,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="405,56,507,83"/>
 </map>
@@ -365,17 +350,17 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_acc3c575f573622a69ee65e37c15b33eb_icgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_acc3c575f573622a69ee65e37c15b33eb_icgraph" alt=""/></div>
-<map name="df/d2f/_m_c_p9808__ex_8h_acc3c575f573622a69ee65e37c15b33eb_icgraph" id="df/d2f/_m_c_p9808__ex_8h_acc3c575f573622a69ee65e37c15b33eb_icgraph">
-<area shape="rect" id="node2" href="../../df/d2f/_m_c_p9808__ex_8h.html#a64b000a159fc5c548809f7120bfad65d" title="Get MCP9808 Configuration. " alt="" coords="233,5,455,32"/>
-<area shape="rect" id="node3" href="../../d6/d5e/_m_c_p9808__proc_8h.html#a642a2f7a3b260f915054487b3c9f86a3" title="Get the temperature. " alt="" coords="505,5,693,32"/>
+<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a7ce62901397431c54e5a0f1630625a9b_icgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a7ce62901397431c54e5a0f1630625a9b_icgraph" alt=""/></div>
+<map name="df/d2f/_m_c_p9808__ex_8h_a7ce62901397431c54e5a0f1630625a9b_icgraph" id="df/d2f/_m_c_p9808__ex_8h_a7ce62901397431c54e5a0f1630625a9b_icgraph">
+<area shape="rect" id="node2" href="../../df/d2f/_m_c_p9808__ex_8h.html#a8e41dd911799fda3ec89fe40a7cb258f" title="Get MCP9808 Configuration. " alt="" coords="233,5,455,32"/>
+<area shape="rect" id="node3" href="../../d6/d5e/_m_c_p9808__proc_8h.html#a30d600689f04253194fbc26c1e70e881" title="Get the temperature. " alt="" coords="505,5,693,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a64b000a159fc5c548809f7120bfad65d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64b000a159fc5c548809f7120bfad65d">&#9670;&nbsp;</a></span>MCP9808_Get_Temperature_Raw()</h2>
+<a id="a8e41dd911799fda3ec89fe40a7cb258f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e41dd911799fda3ec89fe40a7cb258f">&#9670;&nbsp;</a></span>MCP9808_Get_Temperature_Raw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -386,9 +371,19 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR MCP9808_Get_Temperature_Raw </td>
           <td>(</td>
-          <td class="paramtype">uint16_t *&#160;</td>
-          <td class="paramname"><em>temp</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>temp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -401,6 +396,7 @@ Here is the caller graph for this function:</div>
 <p>Get MCP9808 Configuration. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MCP9808 component </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">temp</td><td>- pointer to Temperature value to read to </td></tr>
   </table>
   </dd>
@@ -409,10 +405,10 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a64b000a159fc5c548809f7120bfad65d_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a64b000a159fc5c548809f7120bfad65d_cgraph" alt=""/></div>
-<map name="df/d2f/_m_c_p9808__ex_8h_a64b000a159fc5c548809f7120bfad65d_cgraph" id="df/d2f/_m_c_p9808__ex_8h_a64b000a159fc5c548809f7120bfad65d_cgraph">
-<area shape="rect" id="node2" href="../../df/d8e/_m_c_p9808_8c.html#a5f07df92b9fb162854dca25cf1a3da80" title="I2C Read function for MCP9808. " alt="" coords="505,31,623,57"/>
-<area shape="rect" id="node5" href="../../df/d2f/_m_c_p9808__ex_8h.html#acc3c575f573622a69ee65e37c15b33eb" title="Get MCP9808 Resolution. " alt="" coords="278,56,455,83"/>
+<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a8e41dd911799fda3ec89fe40a7cb258f_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a8e41dd911799fda3ec89fe40a7cb258f_cgraph" alt=""/></div>
+<map name="df/d2f/_m_c_p9808__ex_8h_a8e41dd911799fda3ec89fe40a7cb258f_cgraph" id="df/d2f/_m_c_p9808__ex_8h_a8e41dd911799fda3ec89fe40a7cb258f_cgraph">
+<area shape="rect" id="node2" href="../../df/d8e/_m_c_p9808_8c.html#aae31a880b2f9d8fce8a00151eb4399cb" title="I2C Read function for MCP9808. " alt="" coords="505,31,623,57"/>
+<area shape="rect" id="node5" href="../../df/d2f/_m_c_p9808__ex_8h.html#a7ce62901397431c54e5a0f1630625a9b" title="Get MCP9808 Resolution. " alt="" coords="278,56,455,83"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="672,5,784,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="677,56,779,83"/>
 </map>
@@ -420,16 +416,16 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a64b000a159fc5c548809f7120bfad65d_icgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a64b000a159fc5c548809f7120bfad65d_icgraph" alt=""/></div>
-<map name="df/d2f/_m_c_p9808__ex_8h_a64b000a159fc5c548809f7120bfad65d_icgraph" id="df/d2f/_m_c_p9808__ex_8h_a64b000a159fc5c548809f7120bfad65d_icgraph">
-<area shape="rect" id="node2" href="../../d6/d5e/_m_c_p9808__proc_8h.html#a642a2f7a3b260f915054487b3c9f86a3" title="Get the temperature. " alt="" coords="278,5,466,32"/>
+<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a8e41dd911799fda3ec89fe40a7cb258f_icgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a8e41dd911799fda3ec89fe40a7cb258f_icgraph" alt=""/></div>
+<map name="df/d2f/_m_c_p9808__ex_8h_a8e41dd911799fda3ec89fe40a7cb258f_icgraph" id="df/d2f/_m_c_p9808__ex_8h_a8e41dd911799fda3ec89fe40a7cb258f_icgraph">
+<area shape="rect" id="node2" href="../../d6/d5e/_m_c_p9808__proc_8h.html#a30d600689f04253194fbc26c1e70e881" title="Get the temperature. " alt="" coords="278,5,466,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a3b920340f81c5a3937f1e25e91be16ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b920340f81c5a3937f1e25e91be16ef">&#9670;&nbsp;</a></span>MCP9808_Read_Config()</h2>
+<a id="afdd934ca0ed7b4899174b427d0458b1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdd934ca0ed7b4899174b427d0458b1d">&#9670;&nbsp;</a></span>MCP9808_Read_Config()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -440,9 +436,19 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR MCP9808_Read_Config </td>
           <td>(</td>
-          <td class="paramtype">uint16_t *&#160;</td>
-          <td class="paramname"><em>cfg</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -455,6 +461,7 @@ Here is the caller graph for this function:</div>
 <p>Get MCP9808 Configuration. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MCP9808 component </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">cfg</td><td>- pointer to Configuration value to read to </td></tr>
   </table>
   </dd>
@@ -463,9 +470,9 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a3b920340f81c5a3937f1e25e91be16ef_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a3b920340f81c5a3937f1e25e91be16ef_cgraph" alt=""/></div>
-<map name="df/d2f/_m_c_p9808__ex_8h_a3b920340f81c5a3937f1e25e91be16ef_cgraph" id="df/d2f/_m_c_p9808__ex_8h_a3b920340f81c5a3937f1e25e91be16ef_cgraph">
-<area shape="rect" id="node2" href="../../df/d8e/_m_c_p9808_8c.html#a5f07df92b9fb162854dca25cf1a3da80" title="I2C Read function for MCP9808. " alt="" coords="217,31,335,57"/>
+<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_afdd934ca0ed7b4899174b427d0458b1d_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_afdd934ca0ed7b4899174b427d0458b1d_cgraph" alt=""/></div>
+<map name="df/d2f/_m_c_p9808__ex_8h_afdd934ca0ed7b4899174b427d0458b1d_cgraph" id="df/d2f/_m_c_p9808__ex_8h_afdd934ca0ed7b4899174b427d0458b1d_cgraph">
+<area shape="rect" id="node2" href="../../df/d8e/_m_c_p9808_8c.html#aae31a880b2f9d8fce8a00151eb4399cb" title="I2C Read function for MCP9808. " alt="" coords="217,31,335,57"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="384,5,496,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="389,56,491,83"/>
 </map>
@@ -473,21 +480,21 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a3b920340f81c5a3937f1e25e91be16ef_icgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a3b920340f81c5a3937f1e25e91be16ef_icgraph" alt=""/></div>
-<map name="df/d2f/_m_c_p9808__ex_8h_a3b920340f81c5a3937f1e25e91be16ef_icgraph" id="df/d2f/_m_c_p9808__ex_8h_a3b920340f81c5a3937f1e25e91be16ef_icgraph">
-<area shape="rect" id="node2" href="../../df/d2f/_m_c_p9808__ex_8h.html#aa08f1388ecd8cdd6f014a4ace9181759" title="Write MCP9808 configuration. " alt="" coords="246,5,391,32"/>
-<area shape="rect" id="node4" href="../../df/d2f/_m_c_p9808__ex_8h.html#a7fd94de2b39ae99cb64d112fa092680e" title="Set MCP9808 alert hysteresis. " alt="" coords="217,56,421,83"/>
-<area shape="rect" id="node5" href="../../df/d2f/_m_c_p9808__ex_8h.html#a4758e2efa9c6e2eeeaeaf0efa528e642" title="Set MCP9808 alert type. " alt="" coords="233,107,404,133"/>
-<area shape="rect" id="node6" href="../../df/d2f/_m_c_p9808__ex_8h.html#a8b1dfbba8e41b0ae7a6b19159330f5a7" title="Set MCP9808 alert enable. " alt="" coords="229,157,409,184"/>
-<area shape="rect" id="node7" href="../../df/d2f/_m_c_p9808__ex_8h.html#a084d9679db6b2cf3dcfa8d631c540f73" title="Set MCP9808 alert lock. " alt="" coords="234,208,403,235"/>
-<area shape="rect" id="node3" href="../../d6/d5e/_m_c_p9808__proc_8h.html#a42403a3de5fb97d9247f5b350579954d" title="Set the high/low/crit Alert temperature. " alt="" coords="470,5,645,32"/>
+<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_afdd934ca0ed7b4899174b427d0458b1d_icgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_afdd934ca0ed7b4899174b427d0458b1d_icgraph" alt=""/></div>
+<map name="df/d2f/_m_c_p9808__ex_8h_afdd934ca0ed7b4899174b427d0458b1d_icgraph" id="df/d2f/_m_c_p9808__ex_8h_afdd934ca0ed7b4899174b427d0458b1d_icgraph">
+<area shape="rect" id="node2" href="../../df/d2f/_m_c_p9808__ex_8h.html#a7741a2cb7ac87999aadfcd1f3470d126" title="Write MCP9808 configuration. " alt="" coords="246,5,391,32"/>
+<area shape="rect" id="node4" href="../../df/d2f/_m_c_p9808__ex_8h.html#a243664417daaaf9820d279bdf21b9de9" title="Set MCP9808 alert hysteresis. " alt="" coords="217,56,421,83"/>
+<area shape="rect" id="node5" href="../../df/d2f/_m_c_p9808__ex_8h.html#a56970bcbb7adf58d71d1551acc11ec74" title="Set MCP9808 alert type. " alt="" coords="233,107,404,133"/>
+<area shape="rect" id="node6" href="../../df/d2f/_m_c_p9808__ex_8h.html#a0e573ffe5d32f0bf8e471204b36533ff" title="Set MCP9808 alert enable. " alt="" coords="229,157,409,184"/>
+<area shape="rect" id="node7" href="../../df/d2f/_m_c_p9808__ex_8h.html#a5a21688b5557dd3fba082864bd6df838" title="Set MCP9808 alert lock. " alt="" coords="234,208,403,235"/>
+<area shape="rect" id="node3" href="../../d6/d5e/_m_c_p9808__proc_8h.html#a31bb52feabdab2f0aee0a60039a771e7" title="Set the high/low/crit Alert temperature. " alt="" coords="470,5,645,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a7fd94de2b39ae99cb64d112fa092680e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fd94de2b39ae99cb64d112fa092680e">&#9670;&nbsp;</a></span>MCP9808_Set_AlertHysteresis()</h2>
+<a id="a243664417daaaf9820d279bdf21b9de9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a243664417daaaf9820d279bdf21b9de9">&#9670;&nbsp;</a></span>MCP9808_Set_AlertHysteresis()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -495,9 +502,19 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR MCP9808_Set_AlertHysteresis </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d8/d57/_m_c_p9808_8h.html#a28f884cabea67edc507c0e5491d7c61e">MCP9808_hyst</a>&#160;</td>
-          <td class="paramname"><em>hys</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="../../d8/d57/_m_c_p9808_8h.html#a28f884cabea67edc507c0e5491d7c61e">MCP9808_hyst</a>&#160;</td>
+          <td class="paramname"><em>hys</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -505,6 +522,7 @@ Here is the caller graph for this function:</div>
 <p>Set MCP9808 alert hysteresis. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MCP9808 component </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">hys</td><td>- Alert hysteresis </td></tr>
   </table>
   </dd>
@@ -513,21 +531,21 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a7fd94de2b39ae99cb64d112fa092680e_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a7fd94de2b39ae99cb64d112fa092680e_cgraph" alt=""/></div>
-<map name="df/d2f/_m_c_p9808__ex_8h_a7fd94de2b39ae99cb64d112fa092680e_cgraph" id="df/d2f/_m_c_p9808__ex_8h_a7fd94de2b39ae99cb64d112fa092680e_cgraph">
-<area shape="rect" id="node2" href="../../df/d2f/_m_c_p9808__ex_8h.html#a3b920340f81c5a3937f1e25e91be16ef" title="Get MCP9808 Configuration. " alt="" coords="259,5,421,32"/>
-<area shape="rect" id="node6" href="../../df/d47/_m_c_p9808__ex_8c.html#a506269ab4110c8b3817b27e51e1caba1" title="Write MCP9808 configuration. " alt="" coords="259,56,421,83"/>
-<area shape="rect" id="node3" href="../../df/d8e/_m_c_p9808_8c.html#a5f07df92b9fb162854dca25cf1a3da80" title="I2C Read function for MCP9808. " alt="" coords="470,5,589,32"/>
+<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a243664417daaaf9820d279bdf21b9de9_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a243664417daaaf9820d279bdf21b9de9_cgraph" alt=""/></div>
+<map name="df/d2f/_m_c_p9808__ex_8h_a243664417daaaf9820d279bdf21b9de9_cgraph" id="df/d2f/_m_c_p9808__ex_8h_a243664417daaaf9820d279bdf21b9de9_cgraph">
+<area shape="rect" id="node2" href="../../df/d2f/_m_c_p9808__ex_8h.html#afdd934ca0ed7b4899174b427d0458b1d" title="Get MCP9808 Configuration. " alt="" coords="259,5,421,32"/>
+<area shape="rect" id="node6" href="../../df/d47/_m_c_p9808__ex_8c.html#a3b6ece227f61b26462dcb376d1d7e383" title="Write MCP9808 configuration. " alt="" coords="259,56,421,83"/>
+<area shape="rect" id="node3" href="../../df/d8e/_m_c_p9808_8c.html#aae31a880b2f9d8fce8a00151eb4399cb" title="I2C Read function for MCP9808. " alt="" coords="470,5,589,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="637,5,749,32"/>
 <area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="642,56,745,83"/>
-<area shape="rect" id="node7" href="../../df/d8e/_m_c_p9808_8c.html#a76f237074a82f686b1b163783abe06bb" title="I2C Write function for MCP9808. " alt="" coords="470,56,589,83"/>
+<area shape="rect" id="node7" href="../../df/d8e/_m_c_p9808_8c.html#a3f0dba5176e2cb06e61c7e69b5c5feff" title="I2C Write function for MCP9808. " alt="" coords="470,56,589,83"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a084d9679db6b2cf3dcfa8d631c540f73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a084d9679db6b2cf3dcfa8d631c540f73">&#9670;&nbsp;</a></span>MCP9808_Set_AlertLock()</h2>
+<a id="a5a21688b5557dd3fba082864bd6df838"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a21688b5557dd3fba082864bd6df838">&#9670;&nbsp;</a></span>MCP9808_Set_AlertLock()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -535,7 +553,13 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">FctERR MCP9808_Set_AlertLock </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#ab5f623656adf0683301ba47a8fcf3d4f">MCP9808_alert</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d6/d5e/_m_c_p9808__proc_8h.html#ab5f623656adf0683301ba47a8fcf3d4f">MCP9808_alert</a>&#160;</td>
           <td class="paramname"><em>alt</em>, </td>
         </tr>
         <tr>
@@ -555,6 +579,7 @@ Here is the call graph for this function:</div>
 <p>Set MCP9808 alert lock. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MCP9808 component </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">alt</td><td>- Alert type </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">lock</td><td>- 0 Unlocked, 1 Locked </td></tr>
   </table>
@@ -564,21 +589,21 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a084d9679db6b2cf3dcfa8d631c540f73_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a084d9679db6b2cf3dcfa8d631c540f73_cgraph" alt=""/></div>
-<map name="df/d2f/_m_c_p9808__ex_8h_a084d9679db6b2cf3dcfa8d631c540f73_cgraph" id="df/d2f/_m_c_p9808__ex_8h_a084d9679db6b2cf3dcfa8d631c540f73_cgraph">
-<area shape="rect" id="node2" href="../../df/d2f/_m_c_p9808__ex_8h.html#a3b920340f81c5a3937f1e25e91be16ef" title="Get MCP9808 Configuration. " alt="" coords="224,5,387,32"/>
-<area shape="rect" id="node6" href="../../df/d47/_m_c_p9808__ex_8c.html#a506269ab4110c8b3817b27e51e1caba1" title="Write MCP9808 configuration. " alt="" coords="224,56,387,83"/>
-<area shape="rect" id="node3" href="../../df/d8e/_m_c_p9808_8c.html#a5f07df92b9fb162854dca25cf1a3da80" title="I2C Read function for MCP9808. " alt="" coords="435,5,554,32"/>
+<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a5a21688b5557dd3fba082864bd6df838_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a5a21688b5557dd3fba082864bd6df838_cgraph" alt=""/></div>
+<map name="df/d2f/_m_c_p9808__ex_8h_a5a21688b5557dd3fba082864bd6df838_cgraph" id="df/d2f/_m_c_p9808__ex_8h_a5a21688b5557dd3fba082864bd6df838_cgraph">
+<area shape="rect" id="node2" href="../../df/d2f/_m_c_p9808__ex_8h.html#afdd934ca0ed7b4899174b427d0458b1d" title="Get MCP9808 Configuration. " alt="" coords="224,5,387,32"/>
+<area shape="rect" id="node6" href="../../df/d47/_m_c_p9808__ex_8c.html#a3b6ece227f61b26462dcb376d1d7e383" title="Write MCP9808 configuration. " alt="" coords="224,56,387,83"/>
+<area shape="rect" id="node3" href="../../df/d8e/_m_c_p9808_8c.html#aae31a880b2f9d8fce8a00151eb4399cb" title="I2C Read function for MCP9808. " alt="" coords="435,5,554,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="603,5,715,32"/>
 <area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="607,56,710,83"/>
-<area shape="rect" id="node7" href="../../df/d8e/_m_c_p9808_8c.html#a76f237074a82f686b1b163783abe06bb" title="I2C Write function for MCP9808. " alt="" coords="435,56,554,83"/>
+<area shape="rect" id="node7" href="../../df/d8e/_m_c_p9808_8c.html#a3f0dba5176e2cb06e61c7e69b5c5feff" title="I2C Write function for MCP9808. " alt="" coords="435,56,554,83"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a8b1dfbba8e41b0ae7a6b19159330f5a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b1dfbba8e41b0ae7a6b19159330f5a7">&#9670;&nbsp;</a></span>MCP9808_Set_AlertOutput()</h2>
+<a id="a0e573ffe5d32f0bf8e471204b36533ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e573ffe5d32f0bf8e471204b36533ff">&#9670;&nbsp;</a></span>MCP9808_Set_AlertOutput()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -586,6 +611,12 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">FctERR MCP9808_Set_AlertOutput </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const bool&#160;</td>
           <td class="paramname"><em>en</em>, </td>
         </tr>
@@ -606,6 +637,7 @@ Here is the call graph for this function:</div>
 <p>Set MCP9808 alert enable. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MCP9808 component </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">en</td><td>- 0 Disabled, 1 Enabled </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">alt</td><td>- 0 Low, 1 High </td></tr>
   </table>
@@ -615,21 +647,21 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a8b1dfbba8e41b0ae7a6b19159330f5a7_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a8b1dfbba8e41b0ae7a6b19159330f5a7_cgraph" alt=""/></div>
-<map name="df/d2f/_m_c_p9808__ex_8h_a8b1dfbba8e41b0ae7a6b19159330f5a7_cgraph" id="df/d2f/_m_c_p9808__ex_8h_a8b1dfbba8e41b0ae7a6b19159330f5a7_cgraph">
-<area shape="rect" id="node2" href="../../df/d2f/_m_c_p9808__ex_8h.html#a3b920340f81c5a3937f1e25e91be16ef" title="Get MCP9808 Configuration. " alt="" coords="235,5,397,32"/>
-<area shape="rect" id="node6" href="../../df/d47/_m_c_p9808__ex_8c.html#a506269ab4110c8b3817b27e51e1caba1" title="Write MCP9808 configuration. " alt="" coords="235,56,397,83"/>
-<area shape="rect" id="node3" href="../../df/d8e/_m_c_p9808_8c.html#a5f07df92b9fb162854dca25cf1a3da80" title="I2C Read function for MCP9808. " alt="" coords="446,5,565,32"/>
+<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a0e573ffe5d32f0bf8e471204b36533ff_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a0e573ffe5d32f0bf8e471204b36533ff_cgraph" alt=""/></div>
+<map name="df/d2f/_m_c_p9808__ex_8h_a0e573ffe5d32f0bf8e471204b36533ff_cgraph" id="df/d2f/_m_c_p9808__ex_8h_a0e573ffe5d32f0bf8e471204b36533ff_cgraph">
+<area shape="rect" id="node2" href="../../df/d2f/_m_c_p9808__ex_8h.html#afdd934ca0ed7b4899174b427d0458b1d" title="Get MCP9808 Configuration. " alt="" coords="235,5,397,32"/>
+<area shape="rect" id="node6" href="../../df/d47/_m_c_p9808__ex_8c.html#a3b6ece227f61b26462dcb376d1d7e383" title="Write MCP9808 configuration. " alt="" coords="235,56,397,83"/>
+<area shape="rect" id="node3" href="../../df/d8e/_m_c_p9808_8c.html#aae31a880b2f9d8fce8a00151eb4399cb" title="I2C Read function for MCP9808. " alt="" coords="446,5,565,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="613,5,725,32"/>
 <area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="618,56,721,83"/>
-<area shape="rect" id="node7" href="../../df/d8e/_m_c_p9808_8c.html#a76f237074a82f686b1b163783abe06bb" title="I2C Write function for MCP9808. " alt="" coords="446,56,565,83"/>
+<area shape="rect" id="node7" href="../../df/d8e/_m_c_p9808_8c.html#a3f0dba5176e2cb06e61c7e69b5c5feff" title="I2C Write function for MCP9808. " alt="" coords="446,56,565,83"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a4758e2efa9c6e2eeeaeaf0efa528e642"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4758e2efa9c6e2eeeaeaf0efa528e642">&#9670;&nbsp;</a></span>MCP9808_Set_AlertType()</h2>
+<a id="a56970bcbb7adf58d71d1551acc11ec74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56970bcbb7adf58d71d1551acc11ec74">&#9670;&nbsp;</a></span>MCP9808_Set_AlertType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -637,9 +669,19 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">FctERR MCP9808_Set_AlertType </td>
           <td>(</td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>comparator</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>comparator</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -647,6 +689,7 @@ Here is the call graph for this function:</div>
 <p>Set MCP9808 alert type. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MCP9808 component </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">comparator</td><td>- 0 ???, 1 Comparator </td></tr>
   </table>
   </dd>
@@ -655,21 +698,21 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a4758e2efa9c6e2eeeaeaf0efa528e642_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a4758e2efa9c6e2eeeaeaf0efa528e642_cgraph" alt=""/></div>
-<map name="df/d2f/_m_c_p9808__ex_8h_a4758e2efa9c6e2eeeaeaf0efa528e642_cgraph" id="df/d2f/_m_c_p9808__ex_8h_a4758e2efa9c6e2eeeaeaf0efa528e642_cgraph">
-<area shape="rect" id="node2" href="../../df/d2f/_m_c_p9808__ex_8h.html#a3b920340f81c5a3937f1e25e91be16ef" title="Get MCP9808 Configuration. " alt="" coords="224,5,387,32"/>
-<area shape="rect" id="node6" href="../../df/d47/_m_c_p9808__ex_8c.html#a506269ab4110c8b3817b27e51e1caba1" title="Write MCP9808 configuration. " alt="" coords="224,56,387,83"/>
-<area shape="rect" id="node3" href="../../df/d8e/_m_c_p9808_8c.html#a5f07df92b9fb162854dca25cf1a3da80" title="I2C Read function for MCP9808. " alt="" coords="435,5,554,32"/>
+<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a56970bcbb7adf58d71d1551acc11ec74_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a56970bcbb7adf58d71d1551acc11ec74_cgraph" alt=""/></div>
+<map name="df/d2f/_m_c_p9808__ex_8h_a56970bcbb7adf58d71d1551acc11ec74_cgraph" id="df/d2f/_m_c_p9808__ex_8h_a56970bcbb7adf58d71d1551acc11ec74_cgraph">
+<area shape="rect" id="node2" href="../../df/d2f/_m_c_p9808__ex_8h.html#afdd934ca0ed7b4899174b427d0458b1d" title="Get MCP9808 Configuration. " alt="" coords="224,5,387,32"/>
+<area shape="rect" id="node6" href="../../df/d47/_m_c_p9808__ex_8c.html#a3b6ece227f61b26462dcb376d1d7e383" title="Write MCP9808 configuration. " alt="" coords="224,56,387,83"/>
+<area shape="rect" id="node3" href="../../df/d8e/_m_c_p9808_8c.html#aae31a880b2f9d8fce8a00151eb4399cb" title="I2C Read function for MCP9808. " alt="" coords="435,5,554,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="603,5,715,32"/>
 <area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="607,56,710,83"/>
-<area shape="rect" id="node7" href="../../df/d8e/_m_c_p9808_8c.html#a76f237074a82f686b1b163783abe06bb" title="I2C Write function for MCP9808. " alt="" coords="435,56,554,83"/>
+<area shape="rect" id="node7" href="../../df/d8e/_m_c_p9808_8c.html#a3f0dba5176e2cb06e61c7e69b5c5feff" title="I2C Write function for MCP9808. " alt="" coords="435,56,554,83"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a2a279ef8af7b414055c528b70fe9a8b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a279ef8af7b414055c528b70fe9a8b1">&#9670;&nbsp;</a></span>MCP9808_Set_Resolution()</h2>
+<a id="ae31b1b2b5f913d440753b2c8cb1c9015"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae31b1b2b5f913d440753b2c8cb1c9015">&#9670;&nbsp;</a></span>MCP9808_Set_Resolution()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -677,9 +720,19 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">FctERR MCP9808_Set_Resolution </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d8/d57/_m_c_p9808_8h.html#a523ec7d6d20cf01f2bce43570a8e99ca">MCP9808_res</a>&#160;</td>
-          <td class="paramname"><em>res</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="../../d8/d57/_m_c_p9808_8h.html#a523ec7d6d20cf01f2bce43570a8e99ca">MCP9808_res</a>&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -687,6 +740,7 @@ Here is the call graph for this function:</div>
 <p>Set MCP9808 Resolution. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MCP9808 component </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>- Resolution for MCP9808 </td></tr>
   </table>
   </dd>
@@ -695,9 +749,9 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a2a279ef8af7b414055c528b70fe9a8b1_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a2a279ef8af7b414055c528b70fe9a8b1_cgraph" alt=""/></div>
-<map name="df/d2f/_m_c_p9808__ex_8h_a2a279ef8af7b414055c528b70fe9a8b1_cgraph" id="df/d2f/_m_c_p9808__ex_8h_a2a279ef8af7b414055c528b70fe9a8b1_cgraph">
-<area shape="rect" id="node2" href="../../df/d8e/_m_c_p9808_8c.html#a76f237074a82f686b1b163783abe06bb" title="I2C Write function for MCP9808. " alt="" coords="230,31,349,57"/>
+<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_ae31b1b2b5f913d440753b2c8cb1c9015_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_ae31b1b2b5f913d440753b2c8cb1c9015_cgraph" alt=""/></div>
+<map name="df/d2f/_m_c_p9808__ex_8h_ae31b1b2b5f913d440753b2c8cb1c9015_cgraph" id="df/d2f/_m_c_p9808__ex_8h_ae31b1b2b5f913d440753b2c8cb1c9015_cgraph">
+<area shape="rect" id="node2" href="../../df/d8e/_m_c_p9808_8c.html#a3f0dba5176e2cb06e61c7e69b5c5feff" title="I2C Write function for MCP9808. " alt="" coords="230,31,349,57"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="397,5,509,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="402,56,505,83"/>
 </map>
@@ -705,17 +759,18 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a2a279ef8af7b414055c528b70fe9a8b1_icgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a2a279ef8af7b414055c528b70fe9a8b1_icgraph" alt=""/></div>
-<map name="df/d2f/_m_c_p9808__ex_8h_a2a279ef8af7b414055c528b70fe9a8b1_icgraph" id="df/d2f/_m_c_p9808__ex_8h_a2a279ef8af7b414055c528b70fe9a8b1_icgraph">
-<area shape="rect" id="node2" href="../../d6/d5e/_m_c_p9808__proc_8h.html#abf6a96ffa46d6cefe44ab57ccc7f8e65" title="Initialization Sequence of the MCP9808 peripheral. " alt="" coords="229,5,400,32"/>
-<area shape="rect" id="node3" href="../../d8/d57/_m_c_p9808_8h.html#a0e55a19e8651c9fa28e9179dfaf1b94c" title="Initialization of the MCP9808 peripheral. " alt="" coords="449,5,554,32"/>
+<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_ae31b1b2b5f913d440753b2c8cb1c9015_icgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_ae31b1b2b5f913d440753b2c8cb1c9015_icgraph" alt=""/></div>
+<map name="df/d2f/_m_c_p9808__ex_8h_ae31b1b2b5f913d440753b2c8cb1c9015_icgraph" id="df/d2f/_m_c_p9808__ex_8h_ae31b1b2b5f913d440753b2c8cb1c9015_icgraph">
+<area shape="rect" id="node2" href="../../d6/d5e/_m_c_p9808__proc_8h.html#ac1daf1ee55269479527921f21f0685ab" title="Initialization Sequence of the MCP9808 peripheral. " alt="" coords="229,5,400,32"/>
+<area shape="rect" id="node3" href="../../d8/d57/_m_c_p9808_8h.html#a91d38f36234f03778c3146624f083067" title="Initialization of the MCP9808 peripheral. " alt="" coords="449,5,554,32"/>
+<area shape="rect" id="node4" href="../../d8/d57/_m_c_p9808_8h.html#a9ffcff895e9844967086a52af6c82dd4" title="Initialization for MCP9808 peripheral. " alt="" coords="603,5,751,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="aa08f1388ecd8cdd6f014a4ace9181759"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa08f1388ecd8cdd6f014a4ace9181759">&#9670;&nbsp;</a></span>MCP9808_Shutdown()</h2>
+<a id="a7741a2cb7ac87999aadfcd1f3470d126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7741a2cb7ac87999aadfcd1f3470d126">&#9670;&nbsp;</a></span>MCP9808_Shutdown()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -723,9 +778,19 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR MCP9808_Shutdown </td>
           <td>(</td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>shutdown</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>shutdown</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -733,6 +798,7 @@ Here is the caller graph for this function:</div>
 <p>Write MCP9808 configuration. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MCP9808 component </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">shutdown</td><td>- 0 Normal operation, 1 Shutdown </td></tr>
   </table>
   </dd>
@@ -741,11 +807,11 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_aa08f1388ecd8cdd6f014a4ace9181759_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_aa08f1388ecd8cdd6f014a4ace9181759_cgraph" alt=""/></div>
-<map name="df/d2f/_m_c_p9808__ex_8h_aa08f1388ecd8cdd6f014a4ace9181759_cgraph" id="df/d2f/_m_c_p9808__ex_8h_aa08f1388ecd8cdd6f014a4ace9181759_cgraph">
-<area shape="rect" id="node2" href="../../df/d2f/_m_c_p9808__ex_8h.html#a3b920340f81c5a3937f1e25e91be16ef" title="Get MCP9808 Configuration. " alt="" coords="200,5,363,32"/>
-<area shape="rect" id="node6" href="../../df/d8e/_m_c_p9808_8c.html#a76f237074a82f686b1b163783abe06bb" title="I2C Write function for MCP9808. " alt="" coords="411,56,530,83"/>
-<area shape="rect" id="node3" href="../../df/d8e/_m_c_p9808_8c.html#a5f07df92b9fb162854dca25cf1a3da80" title="I2C Read function for MCP9808. " alt="" coords="411,5,530,32"/>
+<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a7741a2cb7ac87999aadfcd1f3470d126_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a7741a2cb7ac87999aadfcd1f3470d126_cgraph" alt=""/></div>
+<map name="df/d2f/_m_c_p9808__ex_8h_a7741a2cb7ac87999aadfcd1f3470d126_cgraph" id="df/d2f/_m_c_p9808__ex_8h_a7741a2cb7ac87999aadfcd1f3470d126_cgraph">
+<area shape="rect" id="node2" href="../../df/d2f/_m_c_p9808__ex_8h.html#afdd934ca0ed7b4899174b427d0458b1d" title="Get MCP9808 Configuration. " alt="" coords="200,5,363,32"/>
+<area shape="rect" id="node6" href="../../df/d8e/_m_c_p9808_8c.html#a3f0dba5176e2cb06e61c7e69b5c5feff" title="I2C Write function for MCP9808. " alt="" coords="411,56,530,83"/>
+<area shape="rect" id="node3" href="../../df/d8e/_m_c_p9808_8c.html#aae31a880b2f9d8fce8a00151eb4399cb" title="I2C Read function for MCP9808. " alt="" coords="411,5,530,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="579,5,691,32"/>
 <area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="583,56,686,83"/>
 </map>
@@ -753,16 +819,16 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_aa08f1388ecd8cdd6f014a4ace9181759_icgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_aa08f1388ecd8cdd6f014a4ace9181759_icgraph" alt=""/></div>
-<map name="df/d2f/_m_c_p9808__ex_8h_aa08f1388ecd8cdd6f014a4ace9181759_icgraph" id="df/d2f/_m_c_p9808__ex_8h_aa08f1388ecd8cdd6f014a4ace9181759_icgraph">
-<area shape="rect" id="node2" href="../../d6/d5e/_m_c_p9808__proc_8h.html#a42403a3de5fb97d9247f5b350579954d" title="Set the high/low/crit Alert temperature. " alt="" coords="201,5,375,32"/>
+<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a7741a2cb7ac87999aadfcd1f3470d126_icgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a7741a2cb7ac87999aadfcd1f3470d126_icgraph" alt=""/></div>
+<map name="df/d2f/_m_c_p9808__ex_8h_a7741a2cb7ac87999aadfcd1f3470d126_icgraph" id="df/d2f/_m_c_p9808__ex_8h_a7741a2cb7ac87999aadfcd1f3470d126_icgraph">
+<area shape="rect" id="node2" href="../../d6/d5e/_m_c_p9808__proc_8h.html#a31bb52feabdab2f0aee0a60039a771e7" title="Set the high/low/crit Alert temperature. " alt="" coords="201,5,375,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a506269ab4110c8b3817b27e51e1caba1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a506269ab4110c8b3817b27e51e1caba1">&#9670;&nbsp;</a></span>MCP9808_Write_Config()</h2>
+<a id="a3b6ece227f61b26462dcb376d1d7e383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b6ece227f61b26462dcb376d1d7e383">&#9670;&nbsp;</a></span>MCP9808_Write_Config()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -770,9 +836,19 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR MCP9808_Write_Config </td>
           <td>(</td>
-          <td class="paramtype">const uint16_t&#160;</td>
-          <td class="paramname"><em>cfg</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../db/d83/struct_m_c_p9808__t.html">MCP9808_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -780,6 +856,7 @@ Here is the caller graph for this function:</div>
 <p>Write MCP9808 configuration. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MCP9808 component </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">cfg</td><td>- Configuration value </td></tr>
   </table>
   </dd>
@@ -788,9 +865,9 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a506269ab4110c8b3817b27e51e1caba1_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a506269ab4110c8b3817b27e51e1caba1_cgraph" alt=""/></div>
-<map name="df/d2f/_m_c_p9808__ex_8h_a506269ab4110c8b3817b27e51e1caba1_cgraph" id="df/d2f/_m_c_p9808__ex_8h_a506269ab4110c8b3817b27e51e1caba1_cgraph">
-<area shape="rect" id="node2" href="../../df/d8e/_m_c_p9808_8c.html#a76f237074a82f686b1b163783abe06bb" title="I2C Write function for MCP9808. " alt="" coords="217,31,335,57"/>
+<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a3b6ece227f61b26462dcb376d1d7e383_cgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a3b6ece227f61b26462dcb376d1d7e383_cgraph" alt=""/></div>
+<map name="df/d2f/_m_c_p9808__ex_8h_a3b6ece227f61b26462dcb376d1d7e383_cgraph" id="df/d2f/_m_c_p9808__ex_8h_a3b6ece227f61b26462dcb376d1d7e383_cgraph">
+<area shape="rect" id="node2" href="../../df/d8e/_m_c_p9808_8c.html#a3f0dba5176e2cb06e61c7e69b5c5feff" title="I2C Write function for MCP9808. " alt="" coords="217,31,335,57"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="384,5,496,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="389,56,491,83"/>
 </map>
@@ -798,12 +875,12 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a506269ab4110c8b3817b27e51e1caba1_icgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a506269ab4110c8b3817b27e51e1caba1_icgraph" alt=""/></div>
-<map name="df/d2f/_m_c_p9808__ex_8h_a506269ab4110c8b3817b27e51e1caba1_icgraph" id="df/d2f/_m_c_p9808__ex_8h_a506269ab4110c8b3817b27e51e1caba1_icgraph">
-<area shape="rect" id="node2" href="../../df/d2f/_m_c_p9808__ex_8h.html#a7fd94de2b39ae99cb64d112fa092680e" title="Set MCP9808 alert hysteresis. " alt="" coords="217,5,421,32"/>
-<area shape="rect" id="node3" href="../../df/d2f/_m_c_p9808__ex_8h.html#a4758e2efa9c6e2eeeaeaf0efa528e642" title="Set MCP9808 alert type. " alt="" coords="233,56,404,83"/>
-<area shape="rect" id="node4" href="../../df/d2f/_m_c_p9808__ex_8h.html#a8b1dfbba8e41b0ae7a6b19159330f5a7" title="Set MCP9808 alert enable. " alt="" coords="229,107,409,133"/>
-<area shape="rect" id="node5" href="../../df/d2f/_m_c_p9808__ex_8h.html#a084d9679db6b2cf3dcfa8d631c540f73" title="Set MCP9808 alert lock. " alt="" coords="234,157,403,184"/>
+<div class="center"><img src="../../df/d2f/_m_c_p9808__ex_8h_a3b6ece227f61b26462dcb376d1d7e383_icgraph.png" border="0" usemap="#df/d2f/_m_c_p9808__ex_8h_a3b6ece227f61b26462dcb376d1d7e383_icgraph" alt=""/></div>
+<map name="df/d2f/_m_c_p9808__ex_8h_a3b6ece227f61b26462dcb376d1d7e383_icgraph" id="df/d2f/_m_c_p9808__ex_8h_a3b6ece227f61b26462dcb376d1d7e383_icgraph">
+<area shape="rect" id="node2" href="../../df/d2f/_m_c_p9808__ex_8h.html#a243664417daaaf9820d279bdf21b9de9" title="Set MCP9808 alert hysteresis. " alt="" coords="217,5,421,32"/>
+<area shape="rect" id="node3" href="../../df/d2f/_m_c_p9808__ex_8h.html#a56970bcbb7adf58d71d1551acc11ec74" title="Set MCP9808 alert type. " alt="" coords="233,56,404,83"/>
+<area shape="rect" id="node4" href="../../df/d2f/_m_c_p9808__ex_8h.html#a0e573ffe5d32f0bf8e471204b36533ff" title="Set MCP9808 alert enable. " alt="" coords="229,107,409,133"/>
+<area shape="rect" id="node5" href="../../df/d2f/_m_c_p9808__ex_8h.html#a5a21688b5557dd3fba082864bd6df838" title="Set MCP9808 alert lock. " alt="" coords="234,157,403,184"/>
 </map>
 </div>
 

@@ -1,0 +1,5 @@
+<map id="MCP4725_Read" name="MCP4725_Read">
+<area shape="rect" id="node2" href="$d1/d41/_m_c_p4725__ex_8h.html#aec93d631a4a6253119ec484e1f110d0f" title="Read DAC value. " alt="" coords="175,5,329,32"/>
+<area shape="rect" id="node4" href="$d1/d41/_m_c_p4725__ex_8h.html#ab8362bb0511780f108c145f0f9c0fef2" title="Read DAC state. " alt="" coords="174,56,330,83"/>
+<area shape="rect" id="node3" href="$d1/d41/_m_c_p4725__ex_8h.html#aa435e2d08b5e8eae6205ddab89294e86" title="General call wake up function for MCP4725. " alt="" coords="379,31,517,57"/>
+</map>

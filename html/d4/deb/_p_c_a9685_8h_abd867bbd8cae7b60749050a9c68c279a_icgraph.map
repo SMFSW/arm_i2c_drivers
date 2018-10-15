@@ -1,0 +1,5 @@
+<map id="PCA9685_Read" name="PCA9685_Read">
+<area shape="rect" id="node2" href="$d3/d57/_p_c_a9685__ex_8h.html#a1379f6ccb909098b09e1170f56b3a632" title="Reads I2C register from PCA9685. " alt="" coords="171,5,336,32"/>
+<area shape="rect" id="node3" href="$d3/d57/_p_c_a9685__ex_8h.html#a12f0edddb7fd1be38b9548d6e5f1d754" title="Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8..." alt="" coords="175,56,331,83"/>
+<area shape="rect" id="node4" href="$d3/d57/_p_c_a9685__ex_8h.html#a382f62a1b2068e51b0d3cf17b07b18cc" title="Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint1..." alt="" coords="172,107,335,133"/>
+</map>

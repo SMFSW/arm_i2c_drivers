@@ -1,0 +1,5 @@
+<map id="BMP180_Get_ChipID" name="BMP180_Get_ChipID">
+<area shape="rect" id="node2" href="$dc/d50/_b_m_p180__proc_8h.html#aaeda0bfd52c838d1e3a4a94818a57426" title="Initialization Sequence for BMP180 peripheral. " alt="" coords="203,5,365,32"/>
+<area shape="rect" id="node3" href="$d3/d7d/_b_m_p180_8h.html#aaa8cab987dc15d30ccdca4f903d43f4e" title="Initialization for BMP180 peripheral. " alt="" coords="414,5,511,32"/>
+<area shape="rect" id="node4" href="$d3/d7d/_b_m_p180_8h.html#a57f1d83e4dbe3e1f9a3ee9d85c016e94" title="Initialization for BMP180 peripheral. " alt="" coords="561,5,701,32"/>
+</map>
