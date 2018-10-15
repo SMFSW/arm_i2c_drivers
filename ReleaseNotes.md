@@ -22,9 +22,16 @@ SOFTWARE.
 
 ## v1.0
 
+* implementation of multiple peripheral of the same type (for devices that may most likely not being alone in a project)
+	- needed a few refactoring (inlines becoming functions / some typedefs moved)
+	- except: DS_GPMS, PCF8523 & DRV2605L
+* template update (splitted into singleton/multiple device(s))
 * more NONNULL__ checks
-* FM24C: added possibility to customize FM24C_SIZE define if needed
+* BMP180: fixed temperature and pressure calculation (no use of unsigned LSHIFT or RSHIFT for signed calculations)
+* FM24C: added possibility to customize FM24C_SIZE macro if needed
 * MCP4725: Fixed general call function (transmit command, not receive), and taking I2C_HandleTypeDef pointer as parameter
+* MTCH6102: 1ms delay after the end of a special command is validated (otherwise, communication can be blocked)
+* PCA96xx: splitted reset function (one for single device, other as general call) 
 
 ## v0.7
 

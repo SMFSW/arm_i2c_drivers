@@ -26,22 +26,6 @@
 #define MB85RC256V_PRODUCT_ID		0x10		//!< MB85RC256V Product ID to check against
 
 
-
-// *****************************************************************************
-// Section: Types
-// *****************************************************************************
-typedef struct MB85RC256V_t {
-	struct {
-	I2C_slave_t *	slave_inst;			//!< Slave structure
-	uint16_t		Manufacture_ID;
-	uint8_t			Density;
-	uint8_t			Product_ID;
-	} cfg;
-} MB85RC256V_t;
-
-extern MB85RC256V_t	MB85RC256V;			//!< MB85RC256V User structure
-
-
 // *****************************************************************************
 // Section: Interface Routines
 // *****************************************************************************
@@ -51,15 +35,17 @@ extern MB85RC256V_t	MB85RC256V;			//!< MB85RC256V User structure
 
 /*!\brief Initialization Sequence for MB85RC256V peripheral
 ** \weak MB85RC256V Init sequence may be user implemented if custom initialization sequence needed
+** \param[in] pCpnt - Pointer to MB85RC256V component
 ** \return FctERR - error code
 **/
-FctERR MB85RC256V_Init_Sequence(void);
+FctERR NONNULL__ MB85RC256V_Init_Sequence(MB85RC256V_t * pCpnt);
 
 
 /*!\brief Get ID from MB85RC256V peripheral
+** \param[in] pCpnt - Pointer to MB85RC256V component
 ** \return FctERR - error code
 **/
-FctERR MB85RC256V_Get_ID(void);
+FctERR NONNULL__ MB85RC256V_Get_ID(MB85RC256V_t * pCpnt);
 
 
 /****************************************************************/

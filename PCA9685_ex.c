@@ -16,25 +16,33 @@
 // TODO: more extensions like PCA9624
 
 
-FctERR PCA9685_Reset(const bool all)
+FctERR NONNULL__ PCA9685_Reset(PCA9685_t * pCpnt)
 {
 	uint8_t Data = 0x06;
-	PCA9685_hal.status = HAL_I2C_Master_Transmit(PCA9685_hal.cfg.bus_inst, all ? PCA96xx_GENERAL_CALL_ADDR : PCA9685_hal.cfg.addr, &Data, 1, PCA9685_hal.cfg.timeout);
-	return HALERRtoFCTERR(PCA9685_hal.status);
+	I2C_slave_t * pSlave = pCpnt->cfg.slave_inst;
+	pSlave->status = HAL_I2C_Master_Transmit(pSlave->cfg.bus_inst, pSlave->cfg.addr, &Data, 1, pSlave->cfg.timeout);
+	return HALERRtoFCTERR(pSlave->status);
 }
 
 
-FctERR NONNULL__ PCA9685_ReadRegister(const PCA9685_reg reg, uint8_t * val)
+FctERR NONNULL__ PCA9685_Reset_All(const I2C_HandleTypeDef * hi2c)
+{
+	uint8_t Data = 0x06;
+	return HALERRtoFCTERR(HAL_I2C_Master_Transmit((I2C_HandleTypeDef *) hi2c, PCA96xx_GENERAL_CALL_ADDR, &Data, 1, I2C_slave_timeout));
+}
+
+
+FctERR NONNULL__ PCA9685_ReadRegister(PCA9685_t * pCpnt, const PCA9685_reg reg, uint8_t * val)
 {
 	*val = 0;
 
 	if ((reg >= PCA9685__LED15_OFF_H) && (reg <= PCA9685__ALL_LED_ON_L))	{ return ERROR_RANGE; } // Unknown channel
 
-	return PCA9685_Read(val, reg, 1);
+	return PCA9685_Read(pCpnt->cfg.slave_inst, val, reg, 1);
 }
 
 
-FctERR NONNULL__ PCA9685_ReadVal256(const PCA96xx_chan chan, uint8_t * duty)
+FctERR NONNULL__ PCA9685_ReadVal256(PCA9685_t * pCpnt, const PCA96xx_chan chan, uint8_t * duty)
 {
 	FctERR		err = ERROR_OK;
 	uint16_t	ONCount = 0, OFFCount = 0;
@@ -44,7 +52,7 @@ FctERR NONNULL__ PCA9685_ReadVal256(const PCA96xx_chan chan, uint8_t * duty)
 
 	if (!((chan >= PCA96xx__PWM1) && (chan <= PCA96xx__PWM16)))	{ return ERROR_RANGE; } // Unknown channel
 
-	err = PCA9685_Read(Data, LED_OFFSET_L(chan), 4);
+	err = PCA9685_Read(pCpnt->cfg.slave_inst, Data, LED_OFFSET_L(chan), 4);
 
 	if (Data[1] & DefBitFullOnOff)
 	{
@@ -61,7 +69,7 @@ FctERR NONNULL__ PCA9685_ReadVal256(const PCA96xx_chan chan, uint8_t * duty)
 }
 
 
-FctERR NONNULL__ PCA9685_ReadVal1024(const PCA96xx_chan chan, uint16_t * duty)
+FctERR NONNULL__ PCA9685_ReadVal1024(PCA9685_t * pCpnt, const PCA96xx_chan chan, uint16_t * duty)
 {
 	FctERR		err;
 	uint16_t	ONCount = 0, OFFCount = 0;
@@ -71,7 +79,7 @@ FctERR NONNULL__ PCA9685_ReadVal1024(const PCA96xx_chan chan, uint16_t * duty)
 
 	if (!((chan >= PCA96xx__PWM1) && (chan <= PCA96xx__PWM16)))	{ return ERROR_RANGE; } // Unknown channel
 
-	err = PCA9685_Read(Data, LED_OFFSET_L(chan), 4);
+	err = PCA9685_Read(pCpnt->cfg.slave_inst, Data, LED_OFFSET_L(chan), 4);
 
 	if (Data[1] & DefBitFullOnOff)
 	{
@@ -88,7 +96,7 @@ FctERR NONNULL__ PCA9685_ReadVal1024(const PCA96xx_chan chan, uint16_t * duty)
 }
 
 
-FctERR PCA9685_PutVal256(const PCA96xx_chan chan, const uint8_t duty)
+FctERR NONNULL__ PCA9685_PutVal256(PCA9685_t * pCpnt, const PCA96xx_chan chan, const uint8_t duty)
 {
 	uint16_t	RegAddr, OFFCount = 0;
 	uint8_t		Data[4];
@@ -116,11 +124,11 @@ FctERR PCA9685_PutVal256(const PCA96xx_chan chan, const uint8_t duty)
 	Data[1] = LOBYTE(OFFCount);		// xxx_LED_OFF_L
 	Data[2] = HIBYTE(OFFCount);		// xxx_LED_OFF_H
 
-	return PCA9685_Write(Data, RegAddr, 3);
+	return PCA9685_Write(pCpnt->cfg.slave_inst, Data, RegAddr, 3);
 }
 
 
-FctERR PCA9685_PutVal1024(const PCA96xx_chan chan, const uint16_t duty)
+FctERR NONNULL__ PCA9685_PutVal1024(PCA9685_t * pCpnt, const PCA96xx_chan chan, const uint16_t duty)
 {
 	uint16_t	RegAddr, OFFCount = 0;
 	uint8_t		Data[4];
@@ -150,11 +158,11 @@ FctERR PCA9685_PutVal1024(const PCA96xx_chan chan, const uint16_t duty)
 	Data[1] = LOBYTE(OFFCount);		// xxx_LED_OFF_L
 	Data[2] = HIBYTE(OFFCount);		// xxx_LED_OFF_H
 
-	return PCA9685_Write(Data, RegAddr, 3);
+	return PCA9685_Write(pCpnt->cfg.slave_inst, Data, RegAddr, 3);
 }
 
 
-FctERR PCA9685_SetVal(const PCA96xx_chan chan)
+FctERR NONNULL__ PCA9685_SetVal(PCA9685_t * pCpnt, const PCA96xx_chan chan)
 {
 	uint16_t	RegAddr;
 	uint8_t		Data[4];
@@ -167,11 +175,11 @@ FctERR PCA9685_SetVal(const PCA96xx_chan chan)
 	Data[1] = 0x00U;			// xxx_LED_OFF_L
 	Data[2] = 0x00U;			// xxx_LED_OFF_H
 
-	return PCA9685_Write(Data, RegAddr, 3);
+	return PCA9685_Write(pCpnt->cfg.slave_inst, Data, RegAddr, 3);
 }
 
 
-FctERR PCA9685_ClrVal(const PCA96xx_chan chan)
+FctERR NONNULL__ PCA9685_ClrVal(PCA9685_t * pCpnt, const PCA96xx_chan chan)
 {
 	uint16_t	RegAddr;
 	uint8_t		Data[4];
@@ -184,7 +192,7 @@ FctERR PCA9685_ClrVal(const PCA96xx_chan chan)
 	Data[1] = 0x00U;			// xxx_LED_OFF_L
 	Data[2] = DefBitFullOnOff;	// xxx_LED_OFF_H (b4 pour LED full OFF)
 
-	return PCA9685_Write(Data, RegAddr, 3);
+	return PCA9685_Write(pCpnt->cfg.slave_inst, Data, RegAddr, 3);
 }
 
 

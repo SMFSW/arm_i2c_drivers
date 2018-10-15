@@ -16,11 +16,17 @@
 #include "globals.h"
 
 #include "I2C_component.h"
+#include "I2C_peripheral.h"
+
 #include "PCA96xx.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
 
+#ifndef I2C_PCA9685_NB
+//! \note Define I2C_PCA9685_NB in globals.h or at project to enable multiple peripherals of this type
+#define I2C_PCA9685_NB	1	//!< Number of PCA9685 peripherals
+#endif
 
 // *****************************************************************************
 // Section: Constants
@@ -31,7 +37,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave_t PCA9685_hal;	//!< PCA9685 Slave structure
+extern I2C_slave_t PCA9685_hal[I2C_PCA9685_NB];	//!< PCA9685 Slave structure
 
 
 // *****************************************************************************
@@ -128,10 +134,18 @@ typedef enum PACK__ PCA9685_reg_map {
 /******************/
 
 /*!\brief Initialization for PCA9685 peripheral
-** \weak PCA9685 Base address may be changed if user implemented
+** \param[in] idx - PCA9685 index
+** \param[in] hi2c - pointer to PCA9685 I2C instance
+** \param[in] devAddress - PCA9685 device address
 ** \return FctERR - error code
 **/
-FctERR PCA9685_Init(void);
+FctERR NONNULL__ PCA9685_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+
+/*!\brief Initialization for PCA9685 peripheral
+** \warning In case multiple devices (defined by I2C_PCA9685_NB > 1), you shall use PCA9685_Init instead
+** \return FctERR - error code
+**/
+FctERR PCA9685_Init_Single(void);
 
 
 /************************/
@@ -139,28 +153,28 @@ FctERR PCA9685_Init(void);
 /************************/
 
 /*!\brief I2C Write function for PCA9685
-**
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in] data - pointer to write from
 ** \param[in] addr - Address to write to
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ PCA9685_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ PCA9685_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for PCA9685
-**
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in,out] data - pointer to read to
 ** \param[in] addr - Address to read from
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ PCA9685_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ PCA9685_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /****************************************************************/
-#include "PCA9685_ex.h"		// Include extensions
 #include "PCA9685_proc.h"	// Include procedures
+#include "PCA9685_ex.h"		// Include extensions
 
 #ifdef __cplusplus
 	}

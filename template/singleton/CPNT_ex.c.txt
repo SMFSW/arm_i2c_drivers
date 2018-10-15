@@ -1,0 +1,33 @@
+/*!\file $CPNT$_ex.c
+** \author SMFSW
+** \copyright MIT (c) 2017-2018, SMFSW
+** \brief $CPNT$ Driver extensions
+** \details $CPNT$:
+**/
+/****************************************************************/
+#include "$CPNT$.h"
+
+#if defined(HAL_I2C_MODULE_ENABLED)
+#if defined(I2C_$CPNT$)
+/****************************************************************/
+// std libs
+//#include <math.h>
+//#include <stdlib.h>
+/****************************************************************/
+
+
+FctERR $CPNT$_fct(void)
+{
+	FctERR err;
+	
+	err = $CPNT$_Read($CPNT$.$CPNT$_val_1, $CPNT$__REG1, 1);
+	if (err)	{ return err; }
+	
+	return err;
+}
+
+
+/****************************************************************/
+#endif
+#endif
+/****************************************************************/

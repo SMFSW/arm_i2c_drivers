@@ -16,7 +16,7 @@
 #define VAL_CLR	0xFF	//!< Mass erase value for FM24C
 
 
-FctERR FM24C_Mass_Erase(void)
+FctERR NONNULL__ FM24C_Mass_Erase(FM24C_t * pCpnt)
 {
 	FctERR	err;
 	uint8_t	bankData[FM24C_BANK_SIZE];
@@ -27,7 +27,7 @@ FctERR FM24C_Mass_Erase(void)
 		#if defined(HAL_IWDG_MODULE_ENABLED)
 			HAL_IWDG_Refresh(&hiwdg);
 		#endif
-		err = FM24C_Write_Banked(bankData, 0, i, FM24C_BANK_SIZE);
+		err = FM24C_Write_Banked(pCpnt, bankData, 0, i, FM24C_BANK_SIZE);
 		if (err) { break; }
 	}
 

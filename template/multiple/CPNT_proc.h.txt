@@ -1,0 +1,88 @@
+/*!\file $CPNT$_proc.h
+** \author SMFSW
+** \copyright MIT (c) 2017-2018, SMFSW
+** \brief $CPNT$ Driver procedures
+** \details $CPNT$:
+**/
+/****************************************************************/
+#ifndef __$CPNT$_PROC_H__
+	#define __$CPNT$_PROC_H__
+
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
+#include "sarmfsw.h"
+#include "$CPNT$.h"
+
+#if defined(HAL_I2C_MODULE_ENABLED)
+/****************************************************************/
+
+
+// *****************************************************************************
+// Section: Constants
+// *****************************************************************************
+#define $CPNT$_CHIP_ID		0x00		//!< $CPNT$ Chip ID to check against
+
+
+
+// *****************************************************************************
+// Section: Types
+// *****************************************************************************
+/*!\struct $CPNT$_t
+** \brief $CPNT$ user interface struct
+**/
+typedef struct $CPNT$_t {
+	uint16_t		$CPNT$_val_1;		//!< Current val_1
+	struct {
+	I2C_slave_t *	slave_inst;			//!< Slave structure
+	uint16_t		$CPNT$_param_1;		//!< param_1 config
+	uint8_t			Id;					//!< $CPNT$ chip ID
+	} cfg;
+} $CPNT$_t;
+
+extern $CPNT$_t $CPNT$[I2C_$CPNT$_NB];		//!< $CPNT$ User structure
+
+
+// *****************************************************************************
+// Section: Interface Routines
+// *****************************************************************************
+/******************/
+/*** Procedures ***/
+/******************/
+
+/*!\brief Initialization Sequence for $CPNT$ peripheral
+** \weak $CPNT$ Init sequence may be user implemented if custom initialization sequence needed
+** \param[in] pCpnt - Pointer to $CPNT$ component
+** \return FctERR - error code
+**/
+FctERR NONNULL__ $CPNT$_Init_Sequence($CPNT$_t * pCpnt);
+
+
+/*!\brief Handler for $CPNT$ peripheral
+** \weak $CPNT$ handler may be user implemented to suit custom needs
+** \note May be called periodically to handle $CPNT$ tasks
+** \note Alternately may be called when event occurs on $CPNT$ pin
+** \param[in] pCpnt - Pointer to $CPNT$ component
+** \return FctERR - error code
+**/
+FctERR NONNULL__ $CPNT$_handler($CPNT$_t * pCpnt);
+
+
+/*!\brief Handler for all $CPNT$ peripherals
+** \note May be called periodically to handle all $CPNT$ tasks
+**/
+__INLINE void INLINE__ $CPNT$_handler_all(void) {
+	for ($CPNT$_t * pCpnt = $CPNT$ ; pCpnt < &$CPNT$[I2C_$CPNT$_NB] ; pCpnt++) {
+		$CPNT$_handler(pCpnt); }
+}
+
+
+/****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
+#endif
+#endif /* __$CPNT$_PROC_H__ */
+/****************************************************************/

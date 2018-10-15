@@ -16,11 +16,16 @@
 #include "globals.h"
 
 #include "I2C_component.h"
+#include "I2C_peripheral.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
 // TODO: doxygen
 
+#ifndef I2C_MTCH6102_NB
+//! \note Define I2C_MTCH6102_NB in globals.h or at project to enable multiple peripherals of this type
+#define I2C_MTCH6102_NB	1	//!< Number of MTCH6102 peripherals
+#endif
 
 // *****************************************************************************
 // Section: Constants
@@ -31,7 +36,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave_t MTCH6102_hal;	//!< MTCH6102 Slave structure
+extern I2C_slave_t MTCH6102_hal[I2C_MTCH6102_NB];	//!< MTCH6102 Slave structure
 
 
 // *****************************************************************************
@@ -380,12 +385,20 @@ typedef union {
 /******************/
 
 /*!\brief Initialization for MTCH6102 peripheral
-** \weak MTCH6102 Base address may be changed if user implemented
-** \warning write rx/tx number if needed other than default (9,6), (prior to calling init function, or by implementing your own init sequence)
-** \note set MTCH6102_Set_Centered_Coord(true) if 0,0 point needs to be centered on the pad (prior to calling init function, or by implementing your own init sequence)
+** \warning write rx/tx number if needed other than default (9,6), (by implementing your own init sequence)
+** \note set MTCH6102_Set_Centered_Coord(true) if 0,0 point needs to be centered on the pad (by implementing your own init sequence)
+** \param[in] idx - MTCH6102 index
+** \param[in] hi2c - pointer to MTCH6102 I2C instance
+** \param[in] devAddress - MTCH6102 device address
 ** \return FctERR - error code
 **/
-FctERR MTCH6102_Init(void);
+FctERR NONNULL__ MTCH6102_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+
+/*!\brief Initialization for MTCH6102 peripheral
+** \warning In case multiple devices (defined by I2C_MTCH6102_NB > 1), you shall use MTCH6102_Init instead
+** \return FctERR - error code
+**/
+FctERR MTCH6102_Init_Single(void);
 
 
 /************************/
@@ -393,27 +406,28 @@ FctERR MTCH6102_Init(void);
 /************************/
 
 /*!\brief I2C Write function for MTCH6102
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in] data - pointer to write from
 ** \param[in] addr - Address to write to
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MTCH6102_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ MTCH6102_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for MTCH6102
-**
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in,out] data - pointer to read to
 ** \param[in] addr - Address to read from
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MTCH6102_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ MTCH6102_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /****************************************************************/
-#include "MTCH6102_ex.h"	// Include extensions
 #include "MTCH6102_proc.h"	// Include procedures
+#include "MTCH6102_ex.h"	// Include extensions
 
 #ifdef __cplusplus
 	}

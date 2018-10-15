@@ -12,7 +12,7 @@
 /****************************************************************/
 
 
-S11059_t S11059 = { 0, 0, 0, 0, 0, { &S11059_hal, 0, S11059__INTEG_22_4MS, 0, S11059__FIXED_PERIOD_INTEGRATION, S11059__LOW_GAIN, S11059__OPERATING_MODE, S11059__ADC_OPERATION } };
+S11059_t S11059[I2C_S11059_NB];
 
 static float S11059_Integ_tab[4] = { 87.5f, 1400.0f, 22400.0f, 179200.0f };		//!< S11059 integration time table (in us)
 
@@ -20,28 +20,34 @@ static float S11059_Integ_tab[4] = { 87.5f, 1400.0f, 22400.0f, 179200.0f };		//!
 /****************************************************************/
 
 
-__WEAK FctERR S11059_Init_Sequence(void)
+__WEAK FctERR NONNULL__ S11059_Init_Sequence(S11059_t * pCpnt)
 {
 	uS11059_REG__CONTROL	CTL;
 	FctERR					err;
 
+	pCpnt->cfg.IntegrationPrescaler = S11059__INTEG_22_4MS;
+	pCpnt->cfg.IntegrationMode = S11059__FIXED_PERIOD_INTEGRATION;
+	pCpnt->cfg.GainSelection = S11059__LOW_GAIN;
+	pCpnt->cfg.Standby = S11059__OPERATING_MODE;
+	pCpnt->cfg.ADCMode = S11059__ADC_OPERATION;
+
 	CTL.Byte = 0;
 	CTL.Bits.ADC_RESET = S11059__ADC_RESET;
-	CTL.Bits.STANDBY_FUNCTION = S11059.cfg.Standby;
-	CTL.Bits.GAIN_SELECTION = S11059.cfg.GainSelection;
-	CTL.Bits.INTEG_MODE = S11059.cfg.IntegrationMode;
-	CTL.Bits.INTEG_PRESCL = S11059.cfg.IntegrationPrescaler;
+	CTL.Bits.STANDBY_FUNCTION = pCpnt->cfg.Standby;
+	CTL.Bits.GAIN_SELECTION = pCpnt->cfg.GainSelection;
+	CTL.Bits.INTEG_MODE = pCpnt->cfg.IntegrationMode;
+	CTL.Bits.INTEG_PRESCL = pCpnt->cfg.IntegrationPrescaler;
 
-	err = S11059_Write_Ctl(CTL.Byte);
+	err = S11059_Write_Ctl(pCpnt->cfg.slave_inst, CTL.Byte);
 	if (err)	{ return err; }
 
-	S11059.cfg.FullIntegrationTime = get_Full_Integration_Time(S11059.cfg.IntegrationMode, S11059.cfg.IntegrationPrescaler, S11059.cfg.IntegrationTimeMult);
+	pCpnt->cfg.FullIntegrationTime = S11059_Get_Full_Integration_Time(pCpnt->cfg.IntegrationMode, pCpnt->cfg.IntegrationPrescaler, pCpnt->cfg.IntegrationTimeMult);
 
-	CTL.Bits.ADC_RESET = S11059.cfg.ADCMode;
-	err = S11059_Write_Ctl(CTL.Byte);
+	CTL.Bits.ADC_RESET = pCpnt->cfg.ADCMode;
+	err = S11059_Write_Ctl(pCpnt->cfg.slave_inst, CTL.Byte);
 	if (err)	{ return err; }
 
-	S11059.hStartConversion = HAL_GetTick();
+	pCpnt->hStartConversion = HAL_GetTick();
 
 	return err;
 }
@@ -50,7 +56,7 @@ __WEAK FctERR S11059_Init_Sequence(void)
 /****************************************************************/
 
 
-uint32_t get_Full_Integration_Time(const S11059_integ mode, const S11059_prescaler prescaler, const uint16_t mult)
+uint32_t S11059_Get_Full_Integration_Time(const S11059_integ mode, const S11059_prescaler prescaler, const uint16_t mult)
 {
 	if (mode > S11059__FIXED_PERIOD_INTEGRATION)	{ return ERROR_VALUE; }
 	if (prescaler > S11059__INTEG_179_2MS)			{ return ERROR_VALUE; }
@@ -64,25 +70,25 @@ uint32_t get_Full_Integration_Time(const S11059_integ mode, const S11059_prescal
 }
 
 
-__WEAK FctERR S11059_handler(void)
+__WEAK FctERR NONNULL__ S11059_handler(S11059_t * pCpnt)
 {
 	uint8_t	DATA[8];
 	FctERR	err;
 
-	if (TPSSUP_MS(S11059.hStartConversion, (uint32_t) ((S11059.cfg.FullIntegrationTime / 1000) + 1)))	// true at least after 1ms in the worst case (fixed period set to 87.5us)
+	if (TPSSUP_MS(pCpnt->hStartConversion, (uint32_t) ((pCpnt->cfg.FullIntegrationTime / 1000) + 1)))	// true at least after 1ms in the worst case (fixed period set to 87.5us)
 	{
-		S11059.hStartConversion = HAL_GetTick();
+		pCpnt->hStartConversion = HAL_GetTick();
 
-		err = S11059_Read(DATA, S11059__RED_DATA_MSB, sizeof(DATA));
+		err = S11059_Read(pCpnt->cfg.slave_inst, DATA, S11059__RED_DATA_MSB, sizeof(DATA));
 		if (err)	{ return err; }
 
-		S11059.Red = MAKEWORD(DATA[1], DATA[0]);
-		S11059.Green = MAKEWORD(DATA[3], DATA[2]);
-		S11059.Blue = MAKEWORD(DATA[5], DATA[4]);
-		S11059.IR = MAKEWORD(DATA[7], DATA[6]);
+		pCpnt->Red = MAKEWORD(DATA[1], DATA[0]);
+		pCpnt->Green = MAKEWORD(DATA[3], DATA[2]);
+		pCpnt->Blue = MAKEWORD(DATA[5], DATA[4]);
+		pCpnt->IR = MAKEWORD(DATA[7], DATA[6]);
 
 		#if defined(VERBOSE)
-			printf("S11059: R%d G%d B%d IR%d\r\n", S11059.Red, S11059.Green, S11059.Blue, S11059.IR);
+			printf("S11059: R%d G%d B%d IR%d\r\n", pCpnt->Red, pCpnt->Green, pCpnt->Blue, pCpnt->IR);
 		#endif
 	}
 

@@ -41,7 +41,7 @@ typedef struct PCA9685_t {
 	} cfg;
 } PCA9685_t;
 
-extern PCA9685_t	PCA9685;		//!< PCA9685 User structure
+extern PCA9685_t	PCA9685[I2C_PCA9685_NB];	//!< PCA9685 User structure
 
 
 // *****************************************************************************
@@ -53,9 +53,10 @@ extern PCA9685_t	PCA9685;		//!< PCA9685 User structure
 
 /*!\brief Initialization Sequence for PCA9685 peripheral
 ** \weak PCA9685 Init sequence may be user implemented if custom initialization sequence needed
+** \param[in] pCpnt - Pointer to PCA9685 component
 ** \return FctERR - ErrorCode
 **/
-FctERR PCA9685_Init_Sequence(void);
+FctERR NONNULL__ PCA9685_Init_Sequence(PCA9685_t * pCpnt);
 
 
 /*!\brief Sets register value for PCA9685 according to desired output frequency
@@ -65,7 +66,7 @@ FctERR PCA9685_Init_Sequence(void);
 ** \param [in] freq - Outputs frequency in Hz (from 26 to 1700Hz)
 ** \return prescaler register value for PCA9685
 **/
-uint8_t PCA9685_Get_PWM_Prescaler(uint16_t freq);
+uint8_t PCA9685_Get_PWM_Prescaler(const uint16_t freq);
 
 
 /****************************************************************/

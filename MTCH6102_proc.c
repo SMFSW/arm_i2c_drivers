@@ -14,18 +14,8 @@
 #include <math.h>
 /****************************************************************/
 
-MTCH6102_t MTCH6102 = { 0, 0, 0, 0, { &MTCH6102_hal, 9, 6, 0, 0, 0, false } };
+MTCH6102_t MTCH6102[I2C_MTCH6102_NB];
 
-
-uint8_t MTCH6102_default_core[MTCH__MODE_CON - MTCH__FW_MAJOR + 1] = {
-	0x02,	// FW_MAJOR @ 0x00
-	0x00,	// FW_MINOR
-	0x00,	// APP_ID_H
-	0x12,	// APP_ID_L
-	0x00,	// CMD
-	0x03,	// MODE
-	0x00,	// MODE_CON
-};
 
 uint8_t MTCH6102_default_cfg[MTCH__I2CADDR - MTCH__NUMBER_OF_X_CHANNELS + 1] = {
 	0x09,	// NUMBER_OF_X_CHANNELS @ 0x20
@@ -70,62 +60,66 @@ uint8_t MTCH6102_default_cfg[MTCH__I2CADDR - MTCH__NUMBER_OF_X_CHANNELS + 1] = {
 /****************************************************************/
 
 
-__WEAK FctERR MTCH6102_Init_Sequence(void)
+__WEAK FctERR NONNULL__ MTCH6102_Init_Sequence(MTCH6102_t * pCpnt)
 {
+	pCpnt->cfg.nb_x = 9;
+	pCpnt->cfg.nb_y = 6;
+	pCpnt->cfg.Centered = false;
+
 	uint8_t	MTCH_CORE[4];
-	uint8_t	MTCH_CFG[2] = { MTCH6102.cfg.nb_x, MTCH6102.cfg.nb_y };
+	uint8_t	MTCH_CFG[2] = { pCpnt->cfg.nb_x, pCpnt->cfg.nb_y };
 	FctERR	err;
 
 	// Put in standby mode for configuration
-	err = MTCH6102_Set_Mode(Standby);
+	err = MTCH6102_Set_Mode(pCpnt, Standby);
 	if (err)	{ return err; }
 
 	// Read Version & ID
-	err = MTCH6102_Read(MTCH_CORE, MTCH__FW_MAJOR, sizeof(MTCH_CORE));
+	err = MTCH6102_Read(pCpnt->cfg.slave_inst, MTCH_CORE, MTCH__FW_MAJOR, sizeof(MTCH_CORE));
 	if (err)	{ return err; }
 
-	MTCH6102.cfg.FW_Major = MTCH_CORE[0];
-	MTCH6102.cfg.FW_Minor = MTCH_CORE[1];
-	MTCH6102.cfg.APP_ID = MAKEWORD(MTCH_CORE[3], MTCH_CORE[2]);
+	pCpnt->cfg.FW_Major = MTCH_CORE[0];
+	pCpnt->cfg.FW_Minor = MTCH_CORE[1];
+	pCpnt->cfg.APP_ID = MAKEWORD(MTCH_CORE[3], MTCH_CORE[2]);
 
 	// Send configuration parameters
-	err = MTCH6102_Write(MTCH_CFG, MTCH__NUMBER_OF_X_CHANNELS, sizeof(MTCH_CFG));
+	err = MTCH6102_Write(pCpnt->cfg.slave_inst, MTCH_CFG, MTCH__NUMBER_OF_X_CHANNELS, sizeof(MTCH_CFG));
 	if (err)	{ return err; }
 
 	// Send configuration request
-	err = MTCH6102_Configuration_Request();
+	err = MTCH6102_Configuration_Request(pCpnt);
 	if (err)	{ return err; }
 
 	// Put in Gesture & Touch mode
-	err = MTCH6102_Set_Mode(Full);
+	err = MTCH6102_Set_Mode(pCpnt, Full);
 	if (err)	{ return err; }
 
 	// Set min & max possible values
-	if (MTCH6102.cfg.Centered)
+	if (pCpnt->cfg.Centered)
 	{
-		MTCH6102.max_x = (MTCH6102.cfg.nb_x * MTCH_RES_STEP) / 2;
-		MTCH6102.min_x = -MTCH6102.max_x;
-		MTCH6102.max_y = (MTCH6102.cfg.nb_y * MTCH_RES_STEP) / 2;
-		MTCH6102.min_y = -MTCH6102.max_y;
+		pCpnt->max_x = (pCpnt->cfg.nb_x * MTCH_RES_STEP) / 2;
+		pCpnt->min_x = -pCpnt->max_x;
+		pCpnt->max_y = (pCpnt->cfg.nb_y * MTCH_RES_STEP) / 2;
+		pCpnt->min_y = -pCpnt->max_y;
 	}
 	else
 	{
-		MTCH6102.max_x = MTCH6102.cfg.nb_x * MTCH_RES_STEP;
-		MTCH6102.max_y = MTCH6102.cfg.nb_y * MTCH_RES_STEP;
-		MTCH6102.min_x = MTCH6102.min_y = 0;
+		pCpnt->max_x = pCpnt->cfg.nb_x * MTCH_RES_STEP;
+		pCpnt->max_y = pCpnt->cfg.nb_y * MTCH_RES_STEP;
+		pCpnt->min_x = pCpnt->min_y = 0;
 	}
 
 	return err;
 }
 
 
-FctERR MTCH6102_Set_Compensation(void)
+FctERR NONNULL__ MTCH6102_Set_Compensation(MTCH6102_t * pCpnt)
 {
 	uint8_t		SENS_VAL[15];
 	uint16_t	average = 0;
 	FctERR		err = ERROR_OK;
 
-	err = MTCH6102_Read(SENS_VAL, MTCH__SENSOR_VALUE_RX0, sizeof(SENS_VAL));
+	err = MTCH6102_Read(pCpnt->cfg.slave_inst, SENS_VAL, MTCH__SENSOR_VALUE_RX0, sizeof(SENS_VAL));
 	if (err)	{ return err; }
 
 	for (unsigned int i = 0 ; i < sizeof(SENS_VAL) ; i++)	{ average += SENS_VAL[i]; }
@@ -139,11 +133,11 @@ FctERR MTCH6102_Set_Compensation(void)
 		else				{ SENS_VAL[i] = (uint8_t) (temp * 64); }
 	}
 
-	return MTCH6102_Write(SENS_VAL, MTCH__SENSOR_COMP_RX0, sizeof(SENS_VAL));
+	return MTCH6102_Write(pCpnt->cfg.slave_inst, SENS_VAL, MTCH__SENSOR_COMP_RX0, sizeof(SENS_VAL));
 }
 
 
-FctERR NONNULL__ MTCH6102_Get_MFG_Results(uint32_t * res)
+FctERR NONNULL__ MTCH6102_Get_MFG_Results(MTCH6102_t * pCpnt, uint32_t * res)
 {
 	uint8_t			RES[6];
 	uint32_t		result = 0;
@@ -151,19 +145,19 @@ FctERR NONNULL__ MTCH6102_Get_MFG_Results(uint32_t * res)
 	FctERR			err = ERROR_OK;
 
 	// Get MTCH6102 decoding mode
-	err = MTCH6102_Get_Mode(&mode);
+	err = MTCH6102_Get_Mode(pCpnt, &mode);
 	if (err)	{ return err; }
 
 	// Put in standby mode for test
-	err = MTCH6102_Set_Mode(Standby);
+	err = MTCH6102_Set_Mode(pCpnt, Standby);
 	if (err)	{ return err; }
 
 	// Execute manufacturing test
-	err = MTCH6102_Manufacturing_Test();
+	err = MTCH6102_Manufacturing_Test(pCpnt);
 	if (err)	{ return err; }
 
 	// Read Results
-	err = MTCH6102_Read(RES, MTCH__RAW_ADC_00, sizeof(RES));
+	err = MTCH6102_Read(pCpnt->cfg.slave_inst, RES, MTCH__RAW_ADC_00, sizeof(RES));
 	if (err)	{ return err; }
 
 	for (unsigned int i = 0 ; i < 15 ; i++)
@@ -217,14 +211,14 @@ FctERR NONNULL__ MTCH6102_Get_MFG_Results(uint32_t * res)
 	*res = result;	// Store MFG result
 
 	// Set MTCH6102 decoding mode back
-	return MTCH6102_Set_Mode(mode);
+	return MTCH6102_Set_Mode(pCpnt, mode);
 }
 
 
 /****************************************************************/
 
 
-FctERR NONNULL__ MTCH6102_decode_touch_datas(MTCH6102_gesture * touch, const MTCH6102_raw_gest * dat)
+FctERR NONNULL__ MTCH6102_decode_touch_datas(MTCH6102_t * pCpnt, MTCH6102_gesture * touch, const MTCH6102_raw_gest * dat)
 {
 	touch->Large = dat->Touch_state.Bits.LRG;
 	touch->Gesture = dat->Touch_state.Bits.GES;
@@ -237,11 +231,11 @@ FctERR NONNULL__ MTCH6102_decode_touch_datas(MTCH6102_gesture * touch, const MTC
 	touch->Coords.y = LSHIFT(dat->Touch_y.Byte, 4) & 0x0FF0;
 	touch->Coords.y |= dat->Touch_lsb.Bits.TOUCHY3_0 & 0x000F;
 
-	if (MTCH6102.cfg.Centered)
+	if (pCpnt->cfg.Centered)
 	{
 		// Translating 0,0 point at the center of the ring (thus allowing centered rotation of the point afterwards)
-		touch->Coords.x -= ((MTCH6102.cfg.nb_x * MTCH_RES_STEP) / 2);
-		touch->Coords.y -= ((MTCH6102.cfg.nb_y * MTCH_RES_STEP) / 2);
+		touch->Coords.x -= ((pCpnt->cfg.nb_x * MTCH_RES_STEP) / 2);
+		touch->Coords.y -= ((pCpnt->cfg.nb_y * MTCH_RES_STEP) / 2);
 	}
 
 	touch->State = dat->Gest_state;
@@ -334,7 +328,7 @@ FctERR NONNULL__ MTCH6102_diag_to_str(char * str, const MTCH6102_GESTURE_DIAGNOS
 }
 
 
-__WEAK FctERR MTCH6102_handler(void)
+__WEAK FctERR NONNULL__ MTCH6102_handler(MTCH6102_t * pCpnt)
 {
 	FctERR				err;
 	MTCH6102_raw_gest	Gesture;
@@ -347,12 +341,12 @@ __WEAK FctERR MTCH6102_handler(void)
 	memset(&SensValues, 0, sizeof(SensValues));
 	memset(&touch, 0, sizeof(touch));
 
-	err = MTCH6102_Read((uint8_t *) &SensValues, MTCH__SENSOR_VALUE_RX0, sizeof(SensValues));
+	err = MTCH6102_Read(pCpnt->cfg.slave_inst, (uint8_t *) &SensValues, MTCH__SENSOR_VALUE_RX0, sizeof(SensValues));
 	if (err)	{ return err; }
-	err = MTCH6102_Read((uint8_t *) &Gesture, MTCH__TOUCH_STATE, sizeof(Gesture));
+	err = MTCH6102_Read(pCpnt->cfg.slave_inst, (uint8_t *) &Gesture, MTCH__TOUCH_STATE, sizeof(Gesture));
 	if (err)	{ return err; }
 
-	err = MTCH6102_decode_touch_datas(&touch, &Gesture);
+	err = MTCH6102_decode_touch_datas(pCpnt, &touch, &Gesture);
 	if (err)	{ return err; }
 	(void) MTCH6102_gesture_to_str(str_gest, touch.State);
 	(void) MTCH6102_diag_to_str(str_diag, touch.Diag);

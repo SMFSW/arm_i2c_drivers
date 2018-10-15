@@ -1,0 +1,83 @@
+/*!\file $CPNT$.c
+** \author SMFSW
+** \copyright MIT (c) 2017-2018, SMFSW
+** \brief $CPNT$ Driver
+** \details $CPNT$:
+**/
+/****************************************************************/
+#include "$CPNT$.h"
+
+#if defined(HAL_I2C_MODULE_ENABLED)
+#if defined(I2C_$CPNT$)
+/****************************************************************/
+// std libs
+//#include <math.h>
+//#include <stdlib.h>
+/****************************************************************/
+
+static const I2C_slave_t $CPNT$_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
+
+I2C_slave_t $CPNT$_hal[I2C_$CPNT$_NB];
+
+
+/****************************************************************/
+
+
+FctERR NONNULL__ $CPNT$_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress)
+{
+	FctERR	err;
+
+	assert_param(IS_I2C_PERIPHERAL($CPNT$, idx));
+
+	I2C_PERIPHERAL_SET_DEFAULTS($CPNT$, idx, devAddress);
+
+	err = I2C_slave_init(&$CPNT$_hal[idx], hi2c, devAddress, I2C_slave_timeout);
+	if (!err)	{ err = $CPNT$_Init_Sequence(&$CPNT$[idx]); }
+
+	if (err)	{ I2C_set_enable(&$CPNT$_hal[idx], false); }
+
+	return ERROR_OK;
+}
+
+FctERR $CPNT$_Init_Single(void) {
+	return $CPNT$_Init(0, I2C_$CPNT$, $CPNT$_BASE_ADDR); }
+
+/****************************************************************/
+
+
+FctERR NONNULL__ $CPNT$_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
+{
+	if (!I2C_is_enabled(pSlave))		{ return ERROR_DISABLED; }	// Peripheral disabled
+	//if (addr > )						{ return ERROR_RANGE; }		// Unknown register
+	//if ((addr + nb) > last_reg + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+
+	I2C_set_busy(pSlave, true);
+	
+	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
+	
+	I2C_set_busy(pSlave, false);
+	return HALERRtoFCTERR(pSlave->status);
+}
+
+
+FctERR NONNULL__ $CPNT$_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
+{
+	if (!I2C_is_enabled(pSlave))		{ return ERROR_DISABLED; }	// Peripheral disabled
+	//if (addr > )						{ return ERROR_RANGE; }		// Unknown register
+	//if ((addr + nb) > last_reg + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+
+	I2C_set_busy(pSlave, true);
+	
+	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
+	
+	I2C_set_busy(pSlave, false);
+	return HALERRtoFCTERR(pSlave->status);
+}
+
+
+/****************************************************************/
+#elif !defined(NO_WARN_I2C_DRIVERS)
+#warning "You have to define I2C_$CPNT$ in globals.h with an I2C instance for this to work!"
+#endif
+#endif
+/****************************************************************/

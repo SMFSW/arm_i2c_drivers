@@ -51,33 +51,6 @@ typedef struct MTCH6102_raw {
 } MTCH6102_raw_sense;
 
 
-typedef struct MTCH6102_Coordinate {
-	int16_t	x;	//!< x coordinate (0 at the center of the capacitive pad)
-	int16_t	y;	//!< y coordinate (0 at the center of the capacitive pad)
-} MTCH6102_Coord;
-
-
-typedef struct MTCH6102_gest {
-	uMTCH_REG__TOUCHSTATE		Touch_state;
-	uMTCH_REG__TOUCHX			Touch_x;
-	uMTCH_REG__TOUCHY			Touch_y;
-	uMTCH_REG__TOUCHLSB			Touch_lsb;
-	MTCH6102_GESTURE_STATE		Gest_state;
-	MTCH6102_GESTURE_DIAGNOSTIC	Gest_diag;
-} MTCH6102_raw_gest;
-
-
-typedef struct MTCH6102_gesture {
-	MTCH6102_Coord					Coords;		//!< Coordinates
-	MTCH6102_GESTURE_STATE			State;		//!< State
-	MTCH6102_GESTURE_DIAGNOSTIC		Diag;		//!< Diagnostic
-	uint8_t							Frame;		//!< Frame count
-	bool							Touch;		//!< Is Touch
-	bool							Gesture;	//!< Is Gesture
-	bool							Large;		//!< Is Large
-} MTCH6102_gesture;
-
-
 // *****************************************************************************
 // Section: Interface Routines
 // *****************************************************************************
@@ -85,120 +58,129 @@ typedef struct MTCH6102_gesture {
 /*** High level methods and functions ***/
 /****************************************/
 /*!\brief Set MTCH6102 gesture decoding
+** \param[in] pCpnt - Pointer to MTCH6102 component
 ** \param[in] mode - Gesture decoding mode
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ MTCH6102_Set_Mode(const MTCH6102_MODE mode) {
+__INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Mode(MTCH6102_t * pCpnt, const MTCH6102_MODE mode) {
 	if (mode > RawADC)	{ return ERROR_VALUE; }
-	return MTCH6102_Write(&mode, MTCH__MODE, 1); }
+	return MTCH6102_Write(pCpnt->cfg.slave_inst, &mode, MTCH__MODE, 1); }
 
 /*!\brief Get MTCH6102 gesture decoding
+** \param[in] pCpnt - Pointer to MTCH6102 component
 ** \param[in,out] mode - Gesture decoding mode
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ MTCH6102_Get_Mode(MTCH6102_MODE * mode) {
-	return MTCH6102_Read(mode, MTCH__MODE, 1); }
+__INLINE FctERR NONNULL_INLINE__ MTCH6102_Get_Mode(MTCH6102_t * pCpnt, MTCH6102_MODE * mode) {
+	return MTCH6102_Read(pCpnt->cfg.slave_inst, mode, MTCH__MODE, 1); }
 
 /*!\brief Execute MTCH6102 command
+** \param[in] pCpnt - Pointer to MTCH6102 component
 ** \param[in] cmd - Command to execute
 ** \return FctERR - error code
 **/
-FctERR MTCH6102_Command(const MTCH6102_COMMAND cmd);
+FctERR NONNULL__ MTCH6102_Command(MTCH6102_t * pCpnt, const MTCH6102_COMMAND cmd);
 
 /*!\brief Restore MTCH6102 controller to default configuration values
+** \param[in] pCpnt - Pointer to MTCH6102 component
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ MTCH6102_Restore_Defaults(void) {
-	return MTCH6102_Command(MTCH_RestoreDefaults); }
+__INLINE FctERR NONNULL_INLINE__ MTCH6102_Restore_Defaults(MTCH6102_t * pCpnt) {
+	return MTCH6102_Command(pCpnt, MTCH_RestoreDefaults); }
 
 /*!\brief Write MTCH6102 parameters to non volatile storage
+** \param[in] pCpnt - Pointer to MTCH6102 component
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ MTCH6102_Store_To_Non_Volatile(void) {
-	return MTCH6102_Command(MTCH_StoreToNV); }
+__INLINE FctERR NONNULL_INLINE__ MTCH6102_Store_To_Non_Volatile(MTCH6102_t * pCpnt) {
+	return MTCH6102_Command(pCpnt, MTCH_StoreToNV); }
 
 /*!\brief Configure MTCH6102controller (after parameters have been changed)
+** \param[in] pCpnt - Pointer to MTCH6102 component
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ MTCH6102_Configuration_Request(void) {
-	return MTCH6102_Command(MTCH_Configure); }
+__INLINE FctERR NONNULL_INLINE__ MTCH6102_Configuration_Request(MTCH6102_t * pCpnt) {
+	return MTCH6102_Command(pCpnt, MTCH_Configure); }
 
 /*!\brief Execute MTCH6102 manufacturing test
+** \param[in] pCpnt - Pointer to MTCH6102 component
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ MTCH6102_Manufacturing_Test(void) {
-	return MTCH6102_Command(MTCH_ManufacturingTest); }
+__INLINE FctERR NONNULL_INLINE__ MTCH6102_Manufacturing_Test(MTCH6102_t * pCpnt) {
+	return MTCH6102_Command(pCpnt, MTCH_ManufacturingTest); }
 
 /*!\brief Force MTCH6102 baseline (re-calibration) to occur
+** \param[in] pCpnt - Pointer to MTCH6102 component
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ MTCH6102_Force_Baseline(void) {
-	return MTCH6102_Command(MTCH_ForceBaseline); }
+__INLINE FctERR NONNULL_INLINE__ MTCH6102_Force_Baseline(MTCH6102_t * pCpnt) {
+	return MTCH6102_Command(pCpnt, MTCH_ForceBaseline); }
 
 
 /*** Touch Frame Control ***/
-__INLINE FctERR INLINE__ MTCH6102_Set_Active_Period(const uint16_t period) {
+__INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Active_Period(MTCH6102_t * pCpnt, const uint16_t period) {
 	uint16_t per = perVal2perReg(period);
 	uint8_t DAT[2] = { LOBYTE(per), HIBYTE(per) };
-	return MTCH6102_Write(DAT, MTCH__ACTIVE_PERIOD_L, sizeof(DAT)); }
+	return MTCH6102_Write(pCpnt->cfg.slave_inst, DAT, MTCH__ACTIVE_PERIOD_L, sizeof(DAT)); }
 
-__INLINE FctERR INLINE__ MTCH6102_Set_Idle_Period(const uint16_t period) {
+__INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Idle_Period(MTCH6102_t * pCpnt, const uint16_t period) {
 	uint16_t per = perVal2perReg(period);
 	uint8_t DAT[2] = { LOBYTE(per), HIBYTE(per) };
-	return MTCH6102_Write(DAT, MTCH__IDLE_PERIOD_L, sizeof(DAT)); }
+	return MTCH6102_Write(pCpnt->cfg.slave_inst, DAT, MTCH__IDLE_PERIOD_L, sizeof(DAT)); }
 
-__INLINE FctERR INLINE__ MTCH6102_Set_Idle_Timeout(const uint8_t time) {
-	return MTCH6102_Write(&time, MTCH__IDLE_TIMEOUT, 1); }
+__INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Idle_Timeout(MTCH6102_t * pCpnt, const uint8_t time) {
+	return MTCH6102_Write(pCpnt->cfg.slave_inst, &time, MTCH__IDLE_TIMEOUT, 1); }
 
-__INLINE FctERR INLINE__ MTCH6102_Set_Debounce(const uint8_t touch, const uint8_t release) {
+__INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Debounce(MTCH6102_t * pCpnt, const uint8_t touch, const uint8_t release) {
 	uint8_t DAT[2] = { release, touch };
-	return MTCH6102_Write(DAT, MTCH__DEBOUNCE_UP, sizeof(DAT)); }
+	return MTCH6102_Write(pCpnt->cfg.slave_inst, DAT, MTCH__DEBOUNCE_UP, sizeof(DAT)); }
 
-FctERR NONNULL__ MTCH6102_Get_Active_Period(uint16_t * period);
+FctERR NONNULL__ MTCH6102_Get_Active_Period(MTCH6102_t * pCpnt, uint16_t * period);
 
-FctERR NONNULL__ MTCH6102_Get_Idle_Period(uint16_t * period);
+FctERR NONNULL__ MTCH6102_Get_Idle_Period(MTCH6102_t * pCpnt, uint16_t * period);
 
 
 /*** Acquisition and Touch Parameters ***/
 /*!\brief Set MTCH6102 raw acquisition filter
+** \param[in] pCpnt - Pointer to MTCH6102 component
 ** \param[in] type - Filter type
 ** \param[in] strength - Filter strength
-** \param[in] base_filter - 0: Acquisition filter, 1: Baseline filter
+** \param[in] baseline_filter - 0: Acquisition filter, 1: Baseline filter
 ** \return FctERR - error code
 **/
-FctERR MTCH6102_Set_Filter(const MTCH6102_FILTER_TYPE type, const uint8_t strength, const bool baseline_filter);
+FctERR NONNULL__ MTCH6102_Set_Filter(MTCH6102_t * pCpnt, const MTCH6102_FILTER_TYPE type, const uint8_t strength, const bool baseline_filter);
 
-__INLINE FctERR INLINE__ MTCH6102_Set_Scan_Count(const uint8_t count) {
-	return MTCH6102_Write(&count, MTCH__SCAN_COUNT, 1); }
+__INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Scan_Count(MTCH6102_t * pCpnt, const uint8_t count) {
+	return MTCH6102_Write(pCpnt->cfg.slave_inst, &count, MTCH__SCAN_COUNT, 1); }
 
-__INLINE FctERR INLINE__ MTCH6102_Set_Touch_Threshold(const uint8_t xthr, const uint8_t ythr) {
+__INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Touch_Threshold(MTCH6102_t * pCpnt, const uint8_t xthr, const uint8_t ythr) {
 	uint8_t DAT[2] = { xthr, ythr };
-	return MTCH6102_Write(DAT, MTCH__TOUCH_THRESH_X, sizeof(DAT)); }
+	return MTCH6102_Write(pCpnt->cfg.slave_inst, DAT, MTCH__TOUCH_THRESH_X, sizeof(DAT)); }
 
-__INLINE FctERR INLINE__ MTCH6102_Set_Hysteresis(const uint8_t hyst) {
-	return MTCH6102_Write(&hyst, MTCH__HYSTERESIS, 1); }
+__INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Hysteresis(MTCH6102_t * pCpnt, const uint8_t hyst) {
+	return MTCH6102_Write(pCpnt->cfg.slave_inst, &hyst, MTCH__HYSTERESIS, 1); }
 
-__INLINE FctERR INLINE__ MTCH6102_Set_Large_Activation_Threshold(const uint16_t thr) {
+__INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Large_Activation_Threshold(MTCH6102_t * pCpnt, const uint16_t thr) {
 	uint8_t DAT[2] = { LOBYTE(thr), HIBYTE(thr) };
-	return MTCH6102_Write(DAT, MTCH__LARGE_ACTIVATION_THRESH_L, sizeof(DAT)); }
+	return MTCH6102_Write(pCpnt->cfg.slave_inst, DAT, MTCH__LARGE_ACTIVATION_THRESH_L, sizeof(DAT)); }
 
 
 /*** Baseline ***/
-__INLINE FctERR INLINE__ MTCH6102_Set_Base_Interval(const uint16_t interval) {
+__INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Base_Interval(MTCH6102_t * pCpnt, const uint16_t interval) {
 	uint8_t DAT[2] = { LOBYTE(interval), HIBYTE(interval) };
-	return MTCH6102_Write(DAT, MTCH__BASE_INTERVAL_L, sizeof(DAT)); }
+	return MTCH6102_Write(pCpnt->cfg.slave_inst, DAT, MTCH__BASE_INTERVAL_L, sizeof(DAT)); }
 
-__INLINE FctERR INLINE__ MTCH6102_Set_Base_Filter(const uint8_t pos, const uint8_t neg) {
+__INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Base_Filter(MTCH6102_t * pCpnt, const uint8_t pos, const uint8_t neg) {
 	uint8_t DAT[2] = { pos, neg };
-	return MTCH6102_Write(DAT, MTCH__BASE_POS_FILTER, sizeof(DAT)); }
+	return MTCH6102_Write(pCpnt->cfg.slave_inst, DAT, MTCH__BASE_POS_FILTER, sizeof(DAT)); }
 
 
 /*** Acquisition ***/
-__INLINE FctERR NONNULL_INLINE__ MTCH6102_Get_Raw(MTCH6102_raw_sense * raw) {
-	return MTCH6102_Read((uint8_t *) raw, MTCH__SENSOR_VALUE_RX0, sizeof(MTCH6102_raw_sense)); }
+__INLINE FctERR NONNULL_INLINE__ MTCH6102_Get_Raw(MTCH6102_t * pCpnt, MTCH6102_raw_sense * raw) {
+	return MTCH6102_Read(pCpnt->cfg.slave_inst, (uint8_t *) raw, MTCH__SENSOR_VALUE_RX0, sizeof(MTCH6102_raw_sense)); }
 
-__INLINE FctERR NONNULL_INLINE__ MTCH6102_Get_Gest(MTCH6102_raw_gest * gest) {
-	return MTCH6102_Read((uint8_t *) gest, MTCH__TOUCH_STATE, sizeof(MTCH6102_raw_gest)); }
+__INLINE FctERR NONNULL_INLINE__ MTCH6102_Get_Gest(MTCH6102_t * pCpnt, MTCH6102_raw_gest * gest) {
+	return MTCH6102_Read(pCpnt->cfg.slave_inst, (uint8_t *) gest, MTCH__TOUCH_STATE, sizeof(MTCH6102_raw_gest)); }
 
 
 /****************************************************************/

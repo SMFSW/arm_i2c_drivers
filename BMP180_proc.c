@@ -16,11 +16,7 @@
 
 //#define BMP180_TST	//!< Defined to check calculations with datasheet
 
-#if !defined(BMP180_TST)
-BMP180_t BMP180 = { 0.0f, 0.0f, 0.0f, 0.0f, 0, { &BMP180_hal, BMP180__OSS_8_TIME, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 0 } };
-#else
-BMP180_t BMP180 = { 0.0f, 0.0f, 0.0f, 0.0f, 0, { &BMP180_hal, BMP180__OSS_1_TIME, { 408, -72, -14383, 32741, 32757, 23153, 6190, 4, -32768, -8711, 2868 }, 0 } };
-#endif
+BMP180_t BMP180[I2C_BMP180_NB];
 
 extern uint8_t BMP180_OSS_time[4];
 
@@ -28,17 +24,31 @@ extern uint8_t BMP180_OSS_time[4];
 /****************************************************************/
 
 
-__WEAK FctERR BMP180_Init_Sequence(void)
+__WEAK FctERR NONNULL__ BMP180_Init_Sequence(BMP180_t * pCpnt)
 {
 	FctERR	err;
 
-	err = BMP180_Get_ChipID(&BMP180.cfg.Id);
+	pCpnt->cfg.OSS = BMP180__OSS_8_TIME;
+
+	err = BMP180_Get_ChipID(pCpnt, &pCpnt->cfg.ID);
 	if (err)								{ return err; }
-	if (BMP180.cfg.Id != BMP180_CHIP_ID)	{ return ERROR_COMMON; }	// Unknown device
+	if (pCpnt->cfg.ID != BMP180_CHIP_ID)	{ return ERROR_COMMON; }	// Unknown device
 
 	#if !defined(BMP180_TST)
-		err = BMP180_Get_Calibration(&BMP180.cfg.Calib);
-		if (err)							{ return err; }
+		err = BMP180_Get_Calibration(pCpnt, &pCpnt->cfg.Calib);
+	#else
+		pCpnt->cfg.OSS = BMP180__OSS_1_TIME;
+		pCpnt->cfg.Calib.AC1 = 408;
+		pCpnt->cfg.Calib.AC2 = -72;
+		pCpnt->cfg.Calib.AC3 = -14383;
+		pCpnt->cfg.Calib.AC4 = 32741;
+		pCpnt->cfg.Calib.AC5 = 32757;
+		pCpnt->cfg.Calib.AC6 = 23153;
+		pCpnt->cfg.Calib.B1 = 6190;
+		pCpnt->cfg.Calib.B2 = 4;
+		pCpnt->cfg.Calib.MB = -32768;
+		pCpnt->cfg.Calib.MC = -8711;
+		pCpnt->cfg.Calib.MD = 2868;
 	#endif
 
 	return err;
@@ -55,7 +65,7 @@ __WEAK FctERR BMP180_Init_Sequence(void)
 __STATIC_INLINE float INLINE__ BMP180_Pressure_To_Altitude(const float pressure)
 {
 	// Equation from BMP180 datasheet from page 16
-	return (44330.0 * (1.0 - pow(pressure / SEA_LEVEL_PRESSURE, (1 / 5.255))));
+	return (44330.0f * (1.0f - pow(pressure / SEA_LEVEL_PRESSURE, (1.0f / 5.255f))));
 }
 
 
@@ -67,32 +77,31 @@ __STATIC_INLINE float INLINE__ BMP180_Pressure_To_Altitude(const float pressure)
 __STATIC_INLINE float INLINE__ BMP180_seaLevel_Pressure_For_Altitude(const float altitude, const float pressure)
 {
 	// Equation from BMP180 datasheet from page 17
-	return (pressure / pow(1.0 - (altitude / 44330.0), 5.255));
+	return (pressure / pow(1.0f - (altitude / 44330.0f), 5.255f));
 }
 
 
 /****************************************************************/
 
 
-FctERR BMP180_Set_Oversampling(const BMP180_oversampling oss)
+FctERR NONNULL__ BMP180_Set_Oversampling(BMP180_t * pCpnt, const BMP180_oversampling oss)
 {
 	if (oss > BMP180__OSS_8_TIME)	{ return ERROR_VALUE; }	// Unknown Oversampling
 
-	BMP180.cfg.OSS = oss;
+	pCpnt->cfg.OSS = oss;
 	return ERROR_OK;
 }
 
 
-FctERR NONNULL__ BMP180_Get_Calibration(BMP180_calib * calib)
+FctERR NONNULL__ BMP180_Get_Calibration(BMP180_t * pCpnt, BMP180_calib * calib)
 {
-	int16_t *	adr = (int16_t *) calib;
-	FctERR		err;
+	int16_t *	addr = (int16_t *) calib;
+	FctERR		err = ERROR_OK;
 
-	for (int i = 0 ; i < 11 ; i++)
+	for (int i = 0 ; i < SZ_OBJ(BMP180_calib, int16_t) ; i++)
 	{
-		err = BMP180_Read_Word((uint16_t *) adr, BMP180__CALIB_AC1_MSB + (i * 2));
+		err = BMP180_Read_Word(pCpnt->cfg.slave_inst, (uint16_t *) addr++, BMP180__CALIB_AC1_MSB + (i * 2));
 		if (err)	{ return err; }
-		adr++;
 	}
 
 	return err;
@@ -100,17 +109,18 @@ FctERR NONNULL__ BMP180_Get_Calibration(BMP180_calib * calib)
 
 
 /**!\brief  Compute B5 coefficient used in temperature & pressure calculations.
+** \param[in] pCpnt - Pointer to BMP180 component
+** \param[in] UT - UT value (temperature data)
 **/
-static int32_t computeB5(const int32_t UT)
+static int32_t NONNULL__ computeB5(const BMP180_t * pCpnt, const int32_t UT)
 {
-	// TODO: find what's wrong here
-	int32_t X1 = (UT - BMP180.cfg.Calib.AC6) * BMP180.cfg.Calib.AC5 / LSHIFT(1, 15);
-	int32_t X2 = BMP180.cfg.Calib.MC * LSHIFT(1, 11) / (X1 + BMP180.cfg.Calib.MD);
+	int32_t X1 = (UT - pCpnt->cfg.Calib.AC6) * pCpnt->cfg.Calib.AC5 / 32768;
+	int32_t X2 = pCpnt->cfg.Calib.MC * 2048 / (X1 + pCpnt->cfg.Calib.MD);
 	return X1 + X2;
 }
 
 
-FctERR BMP180_Get_Pressure(float * pres)
+FctERR NONNULLX__(1) BMP180_Get_Pressure(BMP180_t * pCpnt, float * pres)
 {
 	int32_t		UT = 0, UP = 0, compp = 0;
 	int32_t		x1, x2, b5, b6, x3, b3, p;
@@ -120,9 +130,9 @@ FctERR BMP180_Get_Pressure(float * pres)
 
 	/* Get the raw pressure and temperature values */
 	#if !defined(BMP180_TST)
-		err = BMP180_Get_Temperature_Raw(&UT);
+		err = BMP180_Get_Temperature_Raw(pCpnt, &UT);
 		if (err)	{ return err; }
-		err = BMP180_Get_Pressure_Raw(&UP);
+		err = BMP180_Get_Pressure_Raw(pCpnt, &UP);
 		if (err)	{ return err; }
 	#else
 		UT = 27898;		//!< For test purposes
@@ -130,81 +140,81 @@ FctERR BMP180_Get_Pressure(float * pres)
 	#endif
 
 	/* Temperature compensation */
-	b5 = computeB5(UT);
+	b5 = computeB5(pCpnt, UT);
 
 	/* Pressure compensation */
 	b6 = b5 - 4000;
-	x1 = RSHIFT(BMP180.cfg.Calib.B2 * RSHIFT(b6 * b6, 12), 11);
-	x2 = RSHIFT(BMP180.cfg.Calib.AC2 * b6, 11);
+	x1 = (pCpnt->cfg.Calib.B2 * ((b6 * b6) / 4096)) / 2048;
+	x2 = pCpnt->cfg.Calib.AC2 * b6 / 2048;
 	x3 = x1 + x2;
-	b3 = ((((BMP180.cfg.Calib.AC1 * 4) + x3) << BMP180.cfg.OSS) + 2) / 4;
-	x1 = RSHIFT(BMP180.cfg.Calib.AC3 * b6, 13);
-	x2 = RSHIFT(BMP180.cfg.Calib.B1 * RSHIFT(b6 * b6, 12), 16);
-	x3 = RSHIFT(((x1 + x2) + 2), 2);
-	b4 = BMP180.cfg.Calib.AC4 * (x3 + 32768) / LSHIFT(1, 15);
-	b7 = (UP - b3) * (50000 >> BMP180.cfg.OSS);
+	b3 = ((((pCpnt->cfg.Calib.AC1 * 4) + x3) << pCpnt->cfg.OSS) + 2) / 4;
+	x1 = (pCpnt->cfg.Calib.AC3 * b6) / 8192;
+	x2 = (pCpnt->cfg.Calib.B1 * ((b6 * b6) / 4096)) / 65536;
+	x3 = ((x1 + x2) + 2) / 4;
+	b4 = pCpnt->cfg.Calib.AC4 * (x3 + 32768) / 32768;
+	b7 = (UP - b3) * (50000 >> pCpnt->cfg.OSS);
 
 	if (b7 < 0x80000000)	{ p = (b7 * 2) / b4; }
 	else					{ p = (b7 / b4) * 2; }
 
-	x1 = RSHIFT(p, 8);
+	x1 = p / 256;
 	x1 *= x1;
-	x1 = RSHIFT((x1 * 3038), 16);
-	x2 = RSHIFT((-7357 * p), 16);
-	compp = p + RSHIFT((x1 + x2 + 3791), 4);
+	x1 = (x1 * 3038) / 65536;
+	x2 = (-7357 * p) / 65536;
+	compp = p + ((x1 + x2 + 3791) / 16);
 
 	/* Assign compensated pressure value */
-	BMP180.Pressure = compp / 100;	// From kPa to hPa
+	pCpnt->Pressure = compp / 100;	// From kPa to hPa
 
 	t = ((float) b5 + 8) / 16;
-	BMP180.Temperature = t / 10;	// temperature given in 0.1°C (thus divide by 10 to get °C)
+	pCpnt->Temperature = t / 10;	// temperature given in 0.1°C (thus divide by 10 to get °C)
 
-	BMP180.Altitude = BMP180_Pressure_To_Altitude(BMP180.Pressure);
-	BMP180.SeaLevelPressure = BMP180_seaLevel_Pressure_For_Altitude(BMP180.Altitude, BMP180.Pressure);
+	pCpnt->Altitude = BMP180_Pressure_To_Altitude(pCpnt->Pressure);
+	pCpnt->SeaLevelPressure = BMP180_seaLevel_Pressure_For_Altitude(pCpnt->Altitude, pCpnt->Pressure);
 
-	if (pres)	{ *pres = BMP180.Pressure; }
+	if (pres)	{ *pres = pCpnt->Pressure; }
 
 	return err;
 }
 
 
-FctERR BMP180_Get_Temperature(float * temp)
+FctERR NONNULLX__(1) BMP180_Get_Temperature(BMP180_t * pCpnt, float * temp)
 {
 	int32_t	UT = 0, b5;
 	float	t;
 	FctERR	err = ERROR_OK;
 
 	#if !defined(BMP180_TST)
-		err = BMP180_Get_Temperature_Raw(&UT);
+		err = BMP180_Get_Temperature_Raw(pCpnt, &UT);
 		if (err)	{ return err; }
 	#else
 		UT = 27898;		//!< For test purposes
 	#endif
 
-	b5 = computeB5(UT);
+	b5 = computeB5(pCpnt, UT);
 	t = ((float) b5 + 8) / 16;
 
-	BMP180.Temperature = t / 10;	// temperature given in 0.1°C (thus divide by 10 to get °C)
+	pCpnt->Temperature = t / 10;	// temperature given in 0.1°C (thus divide by 10 to get °C)
 
-	if (temp)	{ *temp = BMP180.Temperature; }
+	if (temp)	{ *temp = pCpnt->Temperature; }
 
 	return err;
 }
 
 
-__WEAK FctERR BMP180_handler(void)
+__WEAK FctERR NONNULL__ BMP180_handler(BMP180_t * pCpnt)
 {
 	FctERR	err;
 
-	//err = BMP180_Get_Temperature(0);
+	//err = BMP180_Get_Temperature(pCpnt, NULL);
 	//if (err)	{ return err; }
 
-	err = BMP180_Get_Pressure(0);
+	err = BMP180_Get_Pressure(pCpnt, NULL);
 	if (err)	{ return err; }
 
 	#if defined(VERBOSE)
 		printf("BMP180: Pressure %ldhPa, Temperature %d.%02d°C, Alt %ldm, Pressure at sea level %ldhPa\r\n",
-				(int32_t) BMP180.Pressure, (int16_t) BMP180.Temperature, get_fp_dec(BMP180.Temperature, 2), (int32_t) BMP180.Altitude, (int32_t) BMP180.SeaLevelPressure);
+				(int32_t) pCpnt->Pressure, (int16_t) pCpnt->Temperature, get_fp_dec(pCpnt->Temperature, 2), (int32_t) pCpnt->Altitude, (int32_t) pCpnt->SeaLevelPressure);
 	#endif
 
 	return err;

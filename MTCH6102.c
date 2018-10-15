@@ -12,55 +12,64 @@
 /****************************************************************/
 
 
-I2C_slave_t MTCH6102_hal = { { pNull, I2C_ADDR(MTCH6102_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
+static const I2C_slave_t MTCH6102_defaults  = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
+
+I2C_slave_t MTCH6102_hal[I2C_MTCH6102_NB];
 
 
 /****************************************************************/
 
 
-__WEAK FctERR MTCH6102_Init(void)
+FctERR NONNULL__ MTCH6102_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress)
 {
 	FctERR err;
 
-	err = I2C_slave_init(&MTCH6102_hal, I2C_MTCH6102, MTCH6102_BASE_ADDR, I2C_slave_timeout);
-	if (!err)	{ err = MTCH6102_Init_Sequence(); }
+	assert_param(IS_I2C_PERIPHERAL(MTCH6102, idx));
 
-	if (err)	{ I2C_set_enable(&MTCH6102_hal, false); }
+	I2C_PERIPHERAL_SET_DEFAULTS(MTCH6102, idx, devAddress);
+
+	err = I2C_slave_init(&MTCH6102_hal[idx], hi2c, devAddress, I2C_slave_timeout);
+	if (!err)	{ err = MTCH6102_Init_Sequence(&MTCH6102[idx]); }
+
+	if (err)	{ I2C_set_enable(&MTCH6102_hal[idx], false); }
 
 	return err;
 }
 
+FctERR MTCH6102_Init_Single(void) {
+	return MTCH6102_Init(0, I2C_MTCH6102, MTCH6102_BASE_ADDR); }
+
 
 /****************************************************************/
 
 
-FctERR NONNULL__ MTCH6102_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ MTCH6102_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(&MTCH6102_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
+	if (!I2C_is_enabled(pSlave))			{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (addr > MTCH__RAW_ADC_31)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > MTCH__RAW_ADC_31 + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
-	I2C_set_busy(&MTCH6102_hal, true);
+	I2C_set_busy(pSlave, true);
 
-	MTCH6102_hal.status = HAL_I2C_Mem_Write(MTCH6102_hal.cfg.bus_inst, MTCH6102_hal.cfg.addr, addr, MTCH6102_hal.cfg.mem_size, (uint8_t *) data, nb, MTCH6102_hal.cfg.timeout);
+	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
 
-	I2C_set_busy(&MTCH6102_hal, false);
-	return HALERRtoFCTERR(MTCH6102_hal.status);
+	I2C_set_busy(pSlave, false);
+	return HALERRtoFCTERR(pSlave->status);
 }
 
 
-FctERR NONNULL__ MTCH6102_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ MTCH6102_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(&MTCH6102_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
+	if (!I2C_is_enabled(pSlave))			{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (addr > MTCH__RAW_ADC_31)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > MTCH__RAW_ADC_31 + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
-	I2C_set_busy(&MTCH6102_hal, true);
+	I2C_set_busy(pSlave, true);
 
-	MTCH6102_hal.status = HAL_I2C_Mem_Read(MTCH6102_hal.cfg.bus_inst, MTCH6102_hal.cfg.addr, addr, MTCH6102_hal.cfg.mem_size, data, nb, MTCH6102_hal.cfg.timeout);
+	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
 
-	I2C_set_busy(&MTCH6102_hal, false);
-	return HALERRtoFCTERR(MTCH6102_hal.status);
+	I2C_set_busy(pSlave, false);
+	return HALERRtoFCTERR(pSlave->status);
 }
 
 

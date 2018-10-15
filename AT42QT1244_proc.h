@@ -32,7 +32,7 @@ typedef struct AT42QT1244_t {
 	} cfg;
 } AT42QT1244_t;
 
-extern AT42QT1244_t AT42QT1244;			//!< AT42QT1244 User structure
+extern AT42QT1244_t AT42QT1244[I2C_AT42QT1244_NB];	//!< AT42QT1244 User structure
 
 
 // *****************************************************************************
@@ -44,36 +44,40 @@ extern AT42QT1244_t AT42QT1244;			//!< AT42QT1244 User structure
 
 /*!\brief Initialization Sequence for AT42QT1244 peripheral
 ** \weak AT42QT1244 Init sequence may be user implemented if custom initialization sequence needed
+** \param[in] pCpnt - Pointer to AT42QT1244 component
 ** \return FctERR - error code
 **/
-FctERR AT42QT1244_Init_Sequence(void);
+FctERR NONNULL__ AT42QT1244_Init_Sequence(AT42QT1244_t * pCpnt);
 
-FctERR AT42QT1244_Calibrate_Freq_Offset(void);
-
-
-__INLINE FctERR INLINE__ AT42QT1244_Calibrate_Low_Level(void) {
-	if (AT42QT1244_is_Calib_Pending())	{ return ERROR_BUSY; }
-	return AT42QT1244_Send_Command(AT42QT__LOW_LEVEL_CALIBRATION); }
+FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Offset(AT42QT1244_t * pCpnt);
 
 
-__INLINE FctERR INLINE__ AT42QT1244_Calibrate_All_Keys(void) {
-	if (AT42QT1244_is_Calib_Pending())	{ return ERROR_BUSY; }
-	return AT42QT1244_Send_Command(AT42QT__CALIBRATE_ALL_KEYS); }
+FctERR NONNULL__ AT42QT1244_Calibrate_Low_Level(AT42QT1244_t * pCpnt);
 
 
-__INLINE FctERR INLINE__ AT42QT1244_Calibrate_Key(uint8_t Key) {
-	if (Key > AT42QT__CALIBRATE_KEY_23)	{ return ERROR_VALUE; }
-	if (AT42QT1244_is_Calib_Pending())	{ return ERROR_BUSY; }
-	return AT42QT1244_Send_Command(Key); }
+FctERR NONNULL__ AT42QT1244_Calibrate_All_Keys(AT42QT1244_t * pCpnt);
+
+
+FctERR NONNULL__ AT42QT1244_Calibrate_Key(AT42QT1244_t * pCpnt, uint8_t Key);
 
 
 /*!\brief Handler for AT42QT1244 peripheral
 ** \weak AT42QT1244 handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle AT42QT1244 tasks
 ** \note Alternately may be called when event occurs on AT42QT1244 pin
+** \param[in] pCpnt - Pointer to AT42QT1244 component
 ** \return FctERR - error code
 **/
-FctERR AT42QT1244_handler(void);
+FctERR NONNULL__ AT42QT1244_handler(AT42QT1244_t * pCpnt);
+
+
+/*!\brief Handler for all AT42QT1244 peripherals
+** \note May be called periodically to handle all AT42QT1244 tasks
+**/
+__INLINE void INLINE__ AT42QT1244_handler_all(void) {
+	for (AT42QT1244_t * pCpnt = AT42QT1244 ; pCpnt < &AT42QT1244[I2C_AT42QT1244_NB] ; pCpnt++) {
+		AT42QT1244_handler(pCpnt); }
+}
 
 
 /****************************************************************/

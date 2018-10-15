@@ -23,12 +23,38 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern uint8_t MTCH6102_default_core[MTCH__MODE_CON - MTCH__FW_MAJOR + 1];
 extern uint8_t MTCH6102_default_cfg[MTCH__I2CADDR - MTCH__NUMBER_OF_X_CHANNELS + 1];
 
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
+typedef struct MTCH6102_Coordinate {
+	int16_t	x;	//!< x coordinate (0 at the center of the capacitive pad)
+	int16_t	y;	//!< y coordinate (0 at the center of the capacitive pad)
+} MTCH6102_Coord;
+
+
+typedef struct MTCH6102_gest {
+	uMTCH_REG__TOUCHSTATE		Touch_state;
+	uMTCH_REG__TOUCHX			Touch_x;
+	uMTCH_REG__TOUCHY			Touch_y;
+	uMTCH_REG__TOUCHLSB			Touch_lsb;
+	MTCH6102_GESTURE_STATE		Gest_state;
+	MTCH6102_GESTURE_DIAGNOSTIC	Gest_diag;
+} MTCH6102_raw_gest;
+
+
+typedef struct MTCH6102_gesture {
+	MTCH6102_Coord					Coords;		//!< Coordinates
+	MTCH6102_GESTURE_STATE			State;		//!< State
+	MTCH6102_GESTURE_DIAGNOSTIC		Diag;		//!< Diagnostic
+	uint8_t							Frame;		//!< Frame count
+	bool							Touch;		//!< Is Touch
+	bool							Gesture;	//!< Is Gesture
+	bool							Large;		//!< Is Large
+} MTCH6102_gesture;
+
+
 typedef struct MTCH6102_t {
 	int16_t			min_x;
 	int16_t			max_x;
@@ -45,7 +71,7 @@ typedef struct MTCH6102_t {
 	} cfg;
 } MTCH6102_t;
 
-extern MTCH6102_t MTCH6102;			//!< MTCH6102 User structure
+extern MTCH6102_t MTCH6102[I2C_MTCH6102_NB];	//!< MTCH6102 User structure
 
 // *****************************************************************************
 // Section: Interface Routines
@@ -56,40 +82,54 @@ extern MTCH6102_t MTCH6102;			//!< MTCH6102 User structure
 
 /*!\brief Initialization Sequence for MTCH6102 peripheral
 ** \weak MTCH6102 Init sequence may be user implemented if custom initialization sequence needed
+** \param[in] pCpnt - Pointer to MTCH6102 component
 ** \return FctERR - error code
 **/
-FctERR MTCH6102_Init_Sequence(void);
+FctERR NONNULL__ MTCH6102_Init_Sequence(MTCH6102_t * pCpnt);
 
 /*!\brief Calculates compensation values regarding read values and writes them to MTCH6102
 ** \note Beware, averaging is done through all read values, not picking a repeated value
 ** 			(this may not suit your needs, but it appeared that the average result was close to repeated values on custom capacitive board)
+** \param[in] pCpnt - Pointer to MTCH6102 component
 ** \return FctERR - error code
 **/
-FctERR MTCH6102_Set_Compensation(void);
+FctERR NONNULL__ MTCH6102_Set_Compensation(MTCH6102_t * pCpnt);
 
 /*!\brief Get manufacturing test results
+** \param[in] pCpnt - Pointer to MTCH6102 component
 ** \param[in,out] res - Channels shorted to GND in least significant 16b ; Channels shorted to Vdd in most significant 16b
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MTCH6102_Get_MFG_Results(uint32_t * res);
+FctERR NONNULL__ MTCH6102_Get_MFG_Results(MTCH6102_t * pCpnt, uint32_t * res);
 
-FctERR NONNULL__ MTCH6102_decode_touch_datas(MTCH6102_gesture * touch, const MTCH6102_raw_gest * dat);
+FctERR NONNULL__ MTCH6102_decode_touch_datas(MTCH6102_t * pCpnt, MTCH6102_gesture * touch, const MTCH6102_raw_gest * dat);
 
 MTCH6102_Coord MTCH6102_rotate(const MTCH6102_Coord c, int16_t deg);
 
 FctERR NONNULL__ MTCH6102_gesture_to_str(char * str, const MTCH6102_GESTURE_STATE state);
 FctERR NONNULL__ MTCH6102_diag_to_str(char * str, const MTCH6102_GESTURE_DIAGNOSTIC diag);
 
-__INLINE void INLINE__ MTCH6102_Set_Centered_Coord(const bool centered) {
-	MTCH6102.cfg.Centered = centered; }
+__INLINE void NONNULL_INLINE__ MTCH6102_Set_Centered_Coord(MTCH6102_t * pCpnt, const bool centered) {
+	pCpnt->cfg.Centered = centered; }
 
 /*!\brief Handler for MTCH6102 peripheral
 ** \weak MTCH6102 handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle MTCH6102 tasks
 ** \note Alternately may be called when event occurs on MTCH6102 pin
+** \param[in] pCpnt - Pointer to MTCH6102 component
 ** \return FctERR - error code
 **/
-FctERR MTCH6102_handler(void);
+FctERR NONNULL__ MTCH6102_handler(MTCH6102_t * pCpnt);
+
+
+/*!\brief Handler for all MTCH6102 peripherals
+** \note May be called periodically to handle all MTCH6102 tasks
+**/
+__INLINE void INLINE__ MTCH6102_handler_all(void) {
+	for (MTCH6102_t * pCpnt = MTCH6102 ; pCpnt < &MTCH6102[I2C_MTCH6102_NB] ; pCpnt++) {
+		MTCH6102_handler(pCpnt); }
+}
+
 
 /****************************************************************/
 #ifdef __cplusplus

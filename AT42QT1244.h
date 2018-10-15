@@ -16,11 +16,16 @@
 #include "globals.h"
 
 #include "I2C_component.h"
+#include "I2C_peripheral.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
 // TODO: doxygen
 
+#ifndef I2C_AT42QT1244_NB
+//! \note Define I2C_AT42QT1244_NB in globals.h or at project to enable multiple peripherals of this type
+#define I2C_AT42QT1244_NB	1	//!< Number of AT42QT1244 peripherals
+#endif
 
 // *****************************************************************************
 // Section: Constants
@@ -36,7 +41,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave_t AT42QT1244_hal;	//!< AT42QT1244 Slave structure
+extern I2C_slave_t AT42QT1244_hal[I2C_AT42QT1244_NB];	//!< AT42QT1244 Slave structure
 
 
 // *****************************************************************************
@@ -266,10 +271,18 @@ typedef union uAT42QT_REG__SETUP_248 {
 /******************/
 
 /*!\brief Initialization for AT42QT1244 peripheral
-** \weak AT42QT1244 Base address may be changed if user implemented
+** \param[in] idx - AT42QT1244 index
+** \param[in] hi2c - pointer to AT42QT1244 I2C instance
+** \param[in] devAddress - AT42QT1244 device address
 ** \return FctERR - error code
 **/
-FctERR AT42QT1244_Init(void);
+FctERR NONNULL__ AT42QT1244_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+
+/*!\brief Initialization for AT42QT1244 peripheral
+** \warning In case multiple devices (defined by I2C_AT42QT1244_NB > 1), you shall use AT42QT1244_Init instead
+** \return FctERR - error code
+**/
+FctERR AT42QT1244_Init_Single(void);
 
 
 /************************/
@@ -277,26 +290,28 @@ FctERR AT42QT1244_Init(void);
 /************************/
 
 /*!\brief I2C Write function for AT42QT1244
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in] data - pointer to write from
 ** \param[in] addr - Address to write to
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AT42QT1244_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ AT42QT1244_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for AT42QT1244
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in,out] data - pointer to read to
 ** \param[in] addr - Address to read from
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AT42QT1244_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ AT42QT1244_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /****************************************************************/
-#include "AT42QT1244_ex.h"		// Include extensions
 #include "AT42QT1244_proc.h"	// Include procedures
+#include "AT42QT1244_ex.h"		// Include extensions
 
 #ifdef __cplusplus
 	}

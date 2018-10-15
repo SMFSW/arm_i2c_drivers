@@ -16,10 +16,15 @@
 #include "globals.h"
 
 #include "I2C_component.h"
+#include "I2C_peripheral.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
 
+#ifndef I2C_MCP9808_NB
+//! \note Define I2C_MCP9808_NB in globals.h or at project to enable multiple peripherals of this type
+#define I2C_MCP9808_NB	1	//!< Number of MCP9808 peripherals
+#endif
 
 // *****************************************************************************
 // Section: Constants
@@ -32,7 +37,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave_t MCP9808_hal;	//!< MCP9808 Slave structure
+extern I2C_slave_t MCP9808_hal[I2C_MCP9808_NB];	//!< MCP9808 Slave structure
 
 
 // *****************************************************************************
@@ -136,10 +141,18 @@ typedef union uMCP9808_REG__TEMP_AMB {
 /******************/
 
 /*!\brief Initialization of the MCP9808 peripheral
-** \weak MCP9808 Base address may be changed if user implemented
+** \param[in] idx - MCP9808 index
+** \param[in] hi2c - pointer to MCP9808 I2C instance
+** \param[in] devAddress - MCP9808 device address
 ** \return FctERR - error code
 **/
-FctERR MCP9808_Init(void);
+FctERR NONNULL__ MCP9808_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+
+/*!\brief Initialization for MCP9808 peripheral
+** \warning In case multiple devices (defined by I2C_MCP9808_NB > 1), you shall use MCP9808_Init instead
+** \return FctERR - error code
+**/
+FctERR MCP9808_Init_Single(void);
 
 
 /************************/
@@ -147,26 +160,28 @@ FctERR MCP9808_Init(void);
 /************************/
 
 /*!\brief I2C Write function for MCP9808
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in] data - pointer to write from (16b type pointer)
 ** \param[in] addr - Address to write to
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP9808_Write(const uint16_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ MCP9808_Write(I2C_slave_t * pSlave, const uint16_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for MCP9808
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in,out] data - pointer to read to (16b type pointer)
 ** \param[in] addr - Address to read from
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP9808_Read(uint16_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ MCP9808_Read(I2C_slave_t * pSlave, uint16_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /****************************************************************/
-#include "MCP9808_ex.h"		// Include extensions
 #include "MCP9808_proc.h"	// Include procedures
+#include "MCP9808_ex.h"		// Include extensions
 
 #ifdef __cplusplus
 	}

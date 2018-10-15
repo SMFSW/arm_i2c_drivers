@@ -16,10 +16,15 @@
 #include "globals.h"
 
 #include "I2C_component.h"
+#include "I2C_peripheral.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
 
+#ifndef I2C_BMP180_NB
+//! \note Define I2C_BMP180_NB in globals.h or at project to enable multiple peripherals of this type
+#define I2C_BMP180_NB	1	//!< Number of BMP180 peripherals
+#endif
 
 // *****************************************************************************
 // Section: Constants
@@ -29,7 +34,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave_t BMP180_hal;	//!< BMP180 Slave structure
+extern I2C_slave_t BMP180_hal[I2C_BMP180_NB];	//!< BMP180 Slave structure
 
 
 // *****************************************************************************
@@ -142,10 +147,18 @@ typedef union uBMP180_REG__MEAS_CTRL {
 /******************/
 
 /*!\brief Initialization for BMP180 peripheral
-** \weak BMP180 Base address may be changed if user implemented
+** \param[in] idx - BMP180 index
+** \param[in] hi2c - pointer to BMP180 I2C instance
+** \param[in] devAddress - BMP180 device address
 ** \return FctERR - error code
 **/
-FctERR BMP180_Init(void);
+FctERR NONNULL__ BMP180_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+
+/*!\brief Initialization for BMP180 peripheral
+** \warning In case multiple devices (defined by I2C_BMP180_NB > 1), you shall use BMP180_Init instead
+** \return FctERR - error code
+**/
+FctERR BMP180_Init_Single(void);
 
 
 /************************/
@@ -153,34 +166,37 @@ FctERR BMP180_Init(void);
 /************************/
 
 /*!\brief I2C Write function for BMP180
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in] data - pointer to write from
 ** \param[in] addr - Address to write to
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ BMP180_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ BMP180_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for BMP180
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in,out] data - pointer to read to
 ** \param[in] addr - Address to read from
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ BMP180_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ BMP180_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Word Read function for BMP180
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in,out] data - pointer to read to
 ** \param[in] addr - Address to read from
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ BMP180_Read_Word(uint16_t * data, const uint16_t addr);
+FctERR NONNULL__ BMP180_Read_Word(I2C_slave_t * pSlave, uint16_t * data, const uint16_t addr);
 
 
 /****************************************************************/
-#include "BMP180_ex.h"		// Include extensions
 #include "BMP180_proc.h"	// Include procedures
+#include "BMP180_ex.h"		// Include extensions
 
 #ifdef __cplusplus
 	}

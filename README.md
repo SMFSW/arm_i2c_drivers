@@ -14,8 +14,8 @@ ARM I2C Drivers for various components
 
 - define `I2C_$CPNT$` in a file called globals.h with the I2C instance you want it to be tied to (no neeed to declare instance in case of multiple devices)
 - define `I2C_$CPNT$_NB` with number of devices to enable multiple devices
-- use `$CPNT$_Init()` once in case of single device
-- use `$CPNT$_Init_Multiple()` for every device with proper instance and I2C address
+- use `$CPNT$_Init(idx, hi2c, devAddress)` for every device with its index, proper instance and I2C address
+- use `$CPNT$_Init_Single()` once in case of single device using defaults
 - start using `$CPNT$_funcs()`
 
 - if you find warning messages annoying, you could define `NO_WARN_I2C_DRIVERS` (underscores between words) in compiler options to hide warning messages

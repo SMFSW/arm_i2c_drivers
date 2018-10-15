@@ -16,10 +16,15 @@
 #include "globals.h"
 
 #include "I2C_component.h"
+#include "I2C_peripheral.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
 
+#ifndef I2C_MCP4725_NB
+//! \note Define I2C_MCP4725_NB in globals.h or at project to enable multiple peripherals of this type
+#define I2C_MCP4725_NB	1	//!< Number of MCP4725 peripherals
+#endif
 
 // *****************************************************************************
 // Section: Constants
@@ -37,7 +42,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave_t MCP4725_hal;	//!< MCP4725 Slave structure
+extern I2C_slave_t MCP4725_hal[I2C_MCP4725_NB];	//!< MCP4725 Slave structure
 
 
 // *****************************************************************************
@@ -90,38 +95,53 @@ typedef union uMCP4725_REG__CMD {
 /******************/
 
 /*!\brief Initialization of the MCP4725 peripheral
-** \weak MCP4725 Base address may be changed if user implemented
+** \param[in] idx - MCP4725 index
+** \param[in] hi2c - pointer to MCP4725 I2C instance
+** \param[in] devAddress - MCP4725 device address
 ** \return FctERR - error code
 **/
-FctERR MCP4725_Init(void);
+FctERR NONNULL__ MCP4725_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+
+/*!\brief Initialization for MCP4725 peripheral
+** \warning In case multiple devices (defined by I2C_MCP4725_NB > 1), you shall use MCP4725_Init instead
+** \return FctERR - error code
+**/
+FctERR MCP4725_Init_Single(void);
 
 
 /************************/
 /*** Low level access ***/
 /************************/
 
+/*!\brief I2C general call for MCP4725
+** \param[in] hi2c - pointer to general call I2C instance
+** \param[in] cmd - Command to send
+** \return FctERR - error code
+**/
+FctERR NONNULL__ MCP4725_General_Call(const I2C_HandleTypeDef * hi2c, const uint8_t cmd);
+
+
 /*!\brief I2C Write function for MCP4725
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in] data - pointer to write from
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP4725_Write(const uint8_t * data, const uint16_t nb);
+FctERR NONNULL__ MCP4725_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t nb);
 
 
 /*!\brief I2C Read function for MCP4725
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in,out] data - pointer to read to
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP4725_Read(uint8_t * data, const uint16_t nb);
-
-
-FctERR MCP4725_General_Call(const uint8_t cmd);
+FctERR NONNULL__ MCP4725_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t nb);
 
 
 /****************************************************************/
-#include "MCP4725_ex.h"		// Include extensions
 #include "MCP4725_proc.h"	// Include procedures
+#include "MCP4725_ex.h"		// Include extensions
 
 #ifdef __cplusplus
 	}

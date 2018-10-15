@@ -16,10 +16,15 @@
 #include "globals.h"
 
 #include "I2C_component.h"
+#include "I2C_peripheral.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
 
+#ifndef I2C_TCS3400_NB
+//! \note Define I2C_TCS3400_NB in globals.h or at project to enable multiple peripherals of this type
+#define I2C_TCS3400_NB	1	//!< Number of TCS3400 peripherals
+#endif
 
 // *****************************************************************************
 // Section: Constants
@@ -35,7 +40,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave_t TCS3400_hal;	//!< TCS3400 Slave structure
+extern I2C_slave_t TCS3400_hal[I2C_TCS3400_NB];	//!< TCS3400 Slave structure
 
 
 // *****************************************************************************
@@ -211,10 +216,18 @@ typedef union uTCS3400_REG__IR {
 /******************/
 
 /*!\brief Initialization for TCS3400 peripheral
-** \weak TCS3400 Base address may be changed if user implemented
+** \param[in] idx - TCS3400 index
+** \param[in] hi2c - pointer to TCS3400 I2C instance
+** \param[in] devAddress - TCS3400 device address
 ** \return FctERR - error code
 **/
-FctERR TCS3400_Init(void);
+FctERR NONNULL__ TCS3400_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+
+/*!\brief Initialization for TCS3400 peripheral
+** \warning In case multiple devices (defined by I2C_TCS3400_NB > 1), you shall use TCS3400_Init instead
+** \return FctERR - error code
+**/
+FctERR TCS3400_Init_Single(void);
 
 
 /************************/
@@ -222,42 +235,46 @@ FctERR TCS3400_Init(void);
 /************************/
 
 /*!\brief I2C Write function for TCS3400
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in] data - pointer to write from
 ** \param[in] addr - Address to write to
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3400_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ TCS3400_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for TCS3400
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in,out] data - pointer to read to
 ** \param[in] addr - Address to read from
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3400_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ TCS3400_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Word Write (low endian) function for TCS3400
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in] data - pointer to write from
 ** \param[in] addr - Address to write to
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3400_Write_Word(const uint16_t * data, const uint16_t addr);
+FctERR NONNULL__ TCS3400_Write_Word(I2C_slave_t * pSlave, const uint16_t * data, const uint16_t addr);
 
 
 /*!\brief I2C Word Read (low endian) function for TCS3400
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in,out] data - pointer to read to
 ** \param[in] addr - Address to read from
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3400_Read_Word(uint16_t * data, const uint16_t addr);
+FctERR NONNULL__ TCS3400_Read_Word(I2C_slave_t * pSlave, uint16_t * data, const uint16_t addr);
 
 
 /****************************************************************/
-#include "TCS3400_ex.h"		// Include extensions
 #include "TCS3400_proc.h"	// Include procedures
+#include "TCS3400_ex.h"		// Include extensions
 
 #ifdef __cplusplus
 	}

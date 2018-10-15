@@ -16,10 +16,15 @@
 #include "globals.h"
 
 #include "I2C_component.h"
+#include "I2C_peripheral.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
 
+#ifndef I2C_TSL2591_NB
+//! \note Define I2C_TSL2591_NB in globals.h or at project to enable multiple peripherals of this type
+#define I2C_TSL2591_NB	1	//!< Number of TSL2591 peripherals
+#endif
 
 // *****************************************************************************
 // Section: Constants
@@ -30,7 +35,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave_t TSL2591_hal;	//!< TSL2591 Slave structure
+extern I2C_slave_t TSL2591_hal[I2C_TSL2591_NB];	//!< TSL2591 Slave structure
 
 
 // *****************************************************************************
@@ -203,10 +208,18 @@ typedef union uTSL2591_REG__STATUS {
 /******************/
 
 /*!\brief Initialization for TSL2591 peripheral
-** \weak TSL2591 Base address may be changed if user implemented
+** \param[in] idx - TSL2591 index
+** \param[in] hi2c - pointer to TSL2591 I2C instance
+** \param[in] devAddress - TSL2591 device address
 ** \return FctERR - error code
 **/
-FctERR TSL2591_Init(void);
+FctERR NONNULL__ TSL2591_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+
+/*!\brief Initialization for TSL2591 peripheral
+** \warning In case multiple devices (defined by I2C_TSL2591_NB > 1), you shall use TSL2591_Init instead
+** \return FctERR - error code
+**/
+FctERR TSL2591_Init_Single(void);
 
 
 /************************/
@@ -214,49 +227,54 @@ FctERR TSL2591_Init(void);
 /************************/
 
 /*!\brief I2C Write function for TSL2591
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in] data - pointer to write from
 ** \param[in] addr - Address to write to
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TSL2591_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ TSL2591_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for TSL2591
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in,out] data - pointer to read to
 ** \param[in] addr - Address to read from
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TSL2591_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ TSL2591_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Word Write (low endian) function for TSL2591
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in] data - pointer to write from
 ** \param[in] addr - Address to write to
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TSL2591_Write_Word(const uint16_t * data, const uint16_t addr);
+FctERR NONNULL__ TSL2591_Write_Word(I2C_slave_t * pSlave, const uint16_t * data, const uint16_t addr);
 
 
 /*!\brief I2C Word Read (low endian) function for TSL2591
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in,out] data - pointer to read to
 ** \param[in] addr - Address to read from
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TSL2591_Read_Word(uint16_t * data, const uint16_t addr);
+FctERR NONNULL__ TSL2591_Read_Word(I2C_slave_t * pSlave, uint16_t * data, const uint16_t addr);
 
 
 /*!\brief I2C Special function Write function for TSL2591
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in] func - special function to execute
 ** \return FctERR - error code
 **/
-FctERR TSL2591_Write_Special(const TSL2591_spec_func func);
+FctERR NONNULL__ TSL2591_Write_Special(I2C_slave_t * pSlave, const TSL2591_spec_func func);
 
 
 /****************************************************************/
-#include "TSL2591_ex.h"		// Include extensions
 #include "TSL2591_proc.h"	// Include procedures
+#include "TSL2591_ex.h"		// Include extensions
 
 #ifdef __cplusplus
 	}

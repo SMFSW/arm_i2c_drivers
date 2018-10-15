@@ -12,14 +12,14 @@
 /****************************************************************/
 
 
-AT42QT1244_t AT42QT1244 = {  { &AT42QT1244_hal } };
+AT42QT1244_t AT42QT1244[I2C_AT42QT1244_NB];
 
 
 
 /****************************************************************/
 
 
-__WEAK FctERR AT42QT1244_Init_Sequence(void)
+__WEAK FctERR NONNULL__ AT42QT1244_Init_Sequence(AT42QT1244_t * pCpnt)
 {
 	return ERROR_OK;
 }
@@ -28,7 +28,7 @@ __WEAK FctERR AT42QT1244_Init_Sequence(void)
 /****************************************************************/
 
 
-FctERR AT42QT1244_Calibrate_Freq_Offset(void)
+FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Offset(AT42QT1244_t * pCpnt)
 {
 	FctERR		err;
 	int			calib = 1, i, j;
@@ -36,7 +36,7 @@ FctERR AT42QT1244_Calibrate_Freq_Offset(void)
 	uint16_t	Refs[3][24];
 
 	// Low Level calibration to set automatically FREQ0 to FREQ2
-	err = AT42QT1244_Calibrate_Low_Level();
+	err = AT42QT1244_Calibrate_Low_Level(pCpnt);
 	if (err)	{ return err; }
 
 	// Wait for end of low level calibration
@@ -44,16 +44,16 @@ FctERR AT42QT1244_Calibrate_Freq_Offset(void)
 		#if defined(HAL_IWDG_MODULE_ENABLED)
 			HAL_IWDG_Refresh(&hiwdg);
 		#endif
-		calib = AT42QT1244_is_Calib_Pending();
+		calib = AT42QT1244_is_Calib_Pending(pCpnt);
 		if (calib == -1)	{ return ERROR_NOTAVAIL; }
 	}
 
 	// Get all FREQ
-	err = AT42QT1244_Read(Freqs, AT42QT__SETUP_FREQ0, sizeof(Freqs));	// Get FREQ0, FREQ1, FREQ2
+	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, Freqs, AT42QT__SETUP_FREQ0, sizeof(Freqs));	// Get FREQ0, FREQ1, FREQ2
 	if (err)	{ return err; }
 
 	// Disable frequency hoping mode
-	err = AT42QT1244_Setup_FHM(AT42QT__FHM_OFF);
+	err = AT42QT1244_Setup_FHM(pCpnt, AT42QT__FHM_OFF);
 	if (err)	{ return err; }
 
 	for (i = 0 ; i < 2 ; i++)
@@ -61,11 +61,11 @@ FctERR AT42QT1244_Calibrate_Freq_Offset(void)
 		calib = 1;	// Reset calib for while loop
 
 		// Send FREQ0, FREQ1, then FREQ2 to FREQ0 reg
-		err = AT42QT1244_Send_Setup(&Freqs[i], AT42QT__SETUP_FREQ0, 1);
+		err = AT42QT1244_Send_Setup(pCpnt, &Freqs[i], AT42QT__SETUP_FREQ0, 1);
 		if (err)	{ return err; }
 
 		// Launch calibration for all keys
-		err = AT42QT1244_Calibrate_All_Keys();
+		err = AT42QT1244_Calibrate_All_Keys(pCpnt);
 		if (err)	{ return err; }
 
 		// Wait for end of keys calibration
@@ -73,14 +73,14 @@ FctERR AT42QT1244_Calibrate_Freq_Offset(void)
 			#if defined(HAL_IWDG_MODULE_ENABLED)
 				HAL_IWDG_Refresh(&hiwdg);
 			#endif
-			calib = AT42QT1244_is_Calib_Pending();
+			calib = AT42QT1244_is_Calib_Pending(pCpnt);
 			if (calib == -1)	{ return ERROR_NOTAVAIL; }
 		}
 
 		// Get reference for keys
 		for (j = 0 ; j <= AT42QT__CALIBRATE_KEY_23 ; j++) {
 			uAT42QT_REG__KEY_DATA dat;
-			err = AT42QT1244_Get_Key_Data(&dat, j);
+			err = AT42QT1244_Get_Key_Data(pCpnt, &dat, j);
 			if (err)	{ return err; }
 
 			Refs[i][j] = dat.Data.Reference;
@@ -88,7 +88,7 @@ FctERR AT42QT1244_Calibrate_Freq_Offset(void)
 	}
 
 	// Write FREQ0 back
-	err = AT42QT1244_Send_Setup(&Freqs[0], AT42QT__SETUP_FREQ0, 1);
+	err = AT42QT1244_Send_Setup(pCpnt, &Freqs[0], AT42QT__SETUP_FREQ0, 1);
 	if (err)	{ return err; }
 
 	// Compute CFO values
@@ -99,18 +99,43 @@ FctERR AT42QT1244_Calibrate_Freq_Offset(void)
 	}
 
 	// Write CFO values
-	err = AT42QT1244_Send_Setup(&CFO[0][0], AT42QT__SETUP_CFO_1_0, sizeof(CFO));
+	err = AT42QT1244_Send_Setup(pCpnt, &CFO[0][0], AT42QT__SETUP_CFO_1_0, sizeof(CFO));
 	if (err)	{ return err; }
 
 	// Enable frequency hoping mode
-	return AT42QT1244_Setup_FHM(AT42QT__FHM_ADJ_KEYS_REF_DURING_HOP);
+	return AT42QT1244_Setup_FHM(pCpnt, AT42QT__FHM_ADJ_KEYS_REF_DURING_HOP);
+}
+
+
+FctERR NONNULL__ AT42QT1244_Calibrate_Low_Level(AT42QT1244_t * pCpnt)
+{
+	if (AT42QT1244_is_Calib_Pending(pCpnt))	{ return ERROR_BUSY; }
+
+	return AT42QT1244_Send_Command(pCpnt, AT42QT__LOW_LEVEL_CALIBRATION);
+}
+
+
+FctERR NONNULL__ AT42QT1244_Calibrate_All_Keys(AT42QT1244_t * pCpnt)
+{
+	if (AT42QT1244_is_Calib_Pending(pCpnt))	{ return ERROR_BUSY; }
+
+	return AT42QT1244_Send_Command(pCpnt, AT42QT__CALIBRATE_ALL_KEYS);
+}
+
+
+FctERR NONNULL__ AT42QT1244_Calibrate_Key(AT42QT1244_t * pCpnt, uint8_t Key)
+{
+	if (Key > AT42QT__CALIBRATE_KEY_23)		{ return ERROR_VALUE; }
+	if (AT42QT1244_is_Calib_Pending(pCpnt))	{ return ERROR_BUSY; }
+
+	return AT42QT1244_Send_Command(pCpnt, Key);
 }
 
 
 /****************************************************************/
 
 
-__WEAK FctERR AT42QT1244_handler(void)
+__WEAK FctERR NONNULL__ AT42QT1244_handler(AT42QT1244_t * pCpnt)
 {
 	return ERROR_OK;
 }

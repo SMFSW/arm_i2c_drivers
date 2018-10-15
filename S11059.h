@@ -16,10 +16,15 @@
 #include "globals.h"
 
 #include "I2C_component.h"
+#include "I2C_peripheral.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
 
+#ifndef I2C_S11059_NB
+//! \note Define I2C_S11059_NB in globals.h or at project to enable multiple peripherals of this type
+#define I2C_S11059_NB	1	//!< Number of S11059 peripherals
+#endif
 
 // *****************************************************************************
 // Section: Constants
@@ -32,7 +37,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave_t S11059_hal;	//!< S11059 Slave structure
+extern I2C_slave_t S11059_hal[I2C_S11059_NB];	//!< S11059 Slave structure
 
 
 // *****************************************************************************
@@ -56,7 +61,7 @@ typedef enum PACK__ S11059_reg_map {
 } S11059_reg;
 
 
-/*!\enum S11059_prescaler
+/*!\enum S11059_integ
 ** \brief Integration times of S11059
 **/
 typedef enum PACK__ S11059_integ {
@@ -66,7 +71,7 @@ typedef enum PACK__ S11059_integ {
 	S11059__INTEG_179_2MS,		//!< 179.2ms integration time
 } S11059_prescaler;
 
-/*!\enum S11059_integ
+/*!\enum S11059_integ_mode
 ** \brief Integration modes of S11059
 **/
 typedef enum PACK__ S11059_integ_mode {
@@ -124,10 +129,18 @@ typedef union uS11059_REG__CONTROL {
 /******************/
 
 /*!\brief Initialization for S11059 peripheral
-** \weak S11059 Base address may be changed if user implemented
+** \param[in] idx - S11059 index
+** \param[in] hi2c - pointer to S11059 I2C instance
+** \param[in] devAddress - S11059 device address
 ** \return FctERR - error code
 **/
-FctERR S11059_Init(void);
+FctERR NONNULL__ S11059_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+
+/*!\brief Initialization for S11059 peripheral
+** \warning In case multiple devices (defined by I2C_S11059_NB > 1), you shall use S11059_Init instead
+** \return FctERR - error code
+**/
+FctERR S11059_Init_Single(void);
 
 
 /************************/
@@ -135,42 +148,46 @@ FctERR S11059_Init(void);
 /************************/
 
 /*!\brief I2C Write function for S11059
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in] data - pointer to write from
 ** \param[in] addr - Address to write to
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ S11059_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ S11059_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for S11059
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in,out] data - pointer to read to
 ** \param[in] addr - Address to read from
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ S11059_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ S11059_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Word Write (big endian) function for S11059
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in] data - pointer to write from
 ** \param[in] addr - Address to write to
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ S11059_Write_Word(const uint16_t * data, const uint16_t addr);
+FctERR NONNULL__ S11059_Write_Word(I2C_slave_t * pSlave, const uint16_t * data, const uint16_t addr);
 
 
 /*!\brief I2C Word Read (big endian) function for S11059
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in,out] data - pointer to read to
 ** \param[in] addr - Address to read from
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ S11059_Read_Word(uint16_t * data, const uint16_t addr);
+FctERR NONNULL__ S11059_Read_Word(I2C_slave_t * pSlave, uint16_t * data, const uint16_t addr);
 
 
 /****************************************************************/
-#include "S11059_ex.h"		// Include extensions
 #include "S11059_proc.h"	// Include procedures
+#include "S11059_ex.h"		// Include extensions
 
 #ifdef __cplusplus
 	}

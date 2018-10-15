@@ -16,13 +16,13 @@
 // TODO: more extensions like PCA9624
 
 
-PCA9685_t PCA9685 = { { &PCA9685_hal } };
+PCA9685_t PCA9685[I2C_PCA9685_NB];
 
 
 /****************************************************************/
 
 
-__WEAK FctERR PCA9685_Init_Sequence(void)
+__WEAK FctERR NONNULL__ PCA9685_Init_Sequence(PCA9685_t * pCpnt)
 {
 	FctERR	err;
 	uint8_t Data[5];
@@ -32,23 +32,23 @@ __WEAK FctERR PCA9685_Init_Sequence(void)
 	Data[1] = 0x00U;			// ALL_LED_ON_H
 	Data[2] = 0x00U;			// ALL_LED_OFF_L
 	Data[3] = DefBitFullOnOff;	// ALL_LED_OFF_H (b4 pour LED full OFF)
-	err = PCA9685_Write(Data, PCA9685__ALL_LED_ON_L, 4);
+	err = PCA9685_Write(pCpnt->cfg.slave_inst, Data, PCA9685__ALL_LED_ON_L, 4);
 	if (err)	{ return err; }
 
 	// MODE1: SLEEP + Respond to ALLCALL
 	Data[0] = 0x11U;
-	err = PCA9685_Write(Data, PCA9685__MODE1, 1);
+	err = PCA9685_Write(pCpnt->cfg.slave_inst, Data, PCA9685__MODE1, 1);
 	if (err)	{ return err; }
 
 	// Send prescaler to obtain desired frequency (only in SLEEP)
 	Data[0] = PCA9685_Get_PWM_Prescaler(PCA9685_FREQ);
-	err = PCA9685_Write(Data, PCA9685__PRE_SCALE, 1);
+	err = PCA9685_Write(pCpnt->cfg.slave_inst, Data, PCA9685__PRE_SCALE, 1);
 	if (err)	{ return err; }
 	// TODO: write frequency value in PCA9685.cfg.Freq
 
 	// MODE1: Restart Enabled + Auto Increment + Respond to ALLCALL
 	Data[0] = 0xA1U;
-	err = PCA9685_Write(Data, PCA9685__MODE1, 1);
+	err = PCA9685_Write(pCpnt->cfg.slave_inst, Data, PCA9685__MODE1, 1);
 	return err;
 }
 
@@ -74,7 +74,7 @@ static float RoundFloat(float Val)
 }
 
 
-uint8_t PCA9685_Get_PWM_Prescaler(uint16_t freq)
+uint8_t PCA9685_Get_PWM_Prescaler(const uint16_t freq)
 {
 	float pr;
 

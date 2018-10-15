@@ -63,92 +63,104 @@ typedef union uS11059_REG_MAP {
 
 /*** Configuration ***/
 /*!\brief Write S11059 Control register
+** \param[in] pSlave - Pointer to I2C slave instance
 ** \param[in] ctl - Control value
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ S11059_Write_Ctl(const uint8_t ctl) {
-	return S11059_Write((uint8_t *) &ctl, S11059__CONTROL, 1); }
+__INLINE FctERR NONNULL_INLINE__ S11059_Write_Ctl(I2C_slave_t * pSlave, const uint8_t ctl) {
+	return S11059_Write(pSlave, (uint8_t *) &ctl, S11059__CONTROL, 1); }
 
 
 /*!\brief ADC Operation / Reset
+** \param[in] pCpnt - Pointer to S11059 component
 ** \param[in] adc - ADC mode
 ** \return FctERR - error code
 **/
-FctERR S11059_Set_ADC(const S11059_adc_reset adc);
+FctERR NONNULL__ S11059_Set_ADC(S11059_t * pCpnt, const S11059_adc_reset adc);
 
 
 /*!\brief Set Standby / Operating mode
+** \param[in] pCpnt - Pointer to S11059 component
 ** \param[in] standby - standby mode
 ** \return FctERR - error code
 **/
-FctERR S11059_Set_Standby(const S11059_standby_fct standby);
+FctERR NONNULL__ S11059_Set_Standby(S11059_t * pCpnt, const S11059_standby_fct standby);
 
 
 /*!\brief Set ADC gain
+** \param[in] pCpnt - Pointer to S11059 component
 ** \param[in] gain - Gain selection
 ** \return FctERR - error code
 **/
-FctERR S11059_Set_Gain(const S11059_gain gain);
+FctERR NONNULL__ S11059_Set_Gain(S11059_t * pCpnt, const S11059_gain gain);
 
 
 /*!\brief Set integration mode & prescaler
+** \param[in] pCpnt - Pointer to S11059 component
 ** \param[in] mode - Fixed period / Manual integration
 ** \param[in] prescaler - Integration time base (prescaler)
 ** \return FctERR - error code
 **/
-FctERR S11059_Set_Integration(const S11059_integ mode, const S11059_prescaler prescaler);
+FctERR NONNULL__ S11059_Set_Integration(S11059_t * pCpnt, const S11059_integ mode, const S11059_prescaler prescaler);
 
 
 /*!\brief Set S11059 integration multiplier (used when integration mode set to Manual)
+** \param[in] pCpnt - Pointer to S11059 component
 ** \param[in] mult - Integration time multiplier value
 ** \return FctERR - error code
 **/
-FctERR S11059_Set_Integration_Multiplier(const uint16_t mult);
+FctERR NONNULL__ S11059_Set_Integration_Multiplier(S11059_t * pCpnt, const uint16_t mult);
 
 
 /*** Operation ***/
 /*!\brief Get Standby function monitor
+** \param[in] pCpnt - Pointer to S11059 component
 ** \param[in,out] standby - pointer to standby function result
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ S11059_Get_Standby(S11059_standby_fct * standby);
+FctERR NONNULL__ S11059_Get_Standby(S11059_t * pCpnt, S11059_standby_fct * standby);
 
 /*!\brief Get Specific channel conversion
+** \param[in] pCpnt - Pointer to S11059 component
 ** \param[in,out] buf - pointer to conversions result
 ** \param[in] chan - Channel to get
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ S11059_Get_Channel(uint16_t * buf, const S11059_chan chan) {
+__INLINE FctERR NONNULL_INLINE__ S11059_Get_Channel(S11059_t * pCpnt, uint16_t * buf, const S11059_chan chan) {
 	if (chan > S11059__CHAN_IR)	{ return ERROR_VALUE; }	// Unknown channel
-	return S11059_Read_Word(buf, S11059__RED_DATA_MSB + (2 * chan)); }
+	return S11059_Read_Word(pCpnt->cfg.slave_inst, buf, S11059__RED_DATA_MSB + (2 * chan)); }
 
 /*!\brief Get Red channel conversion
+** \param[in] pCpnt - Pointer to S11059 component
 ** \param[in,out] r - pointer to Red conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ S11059_Get_Red(uint16_t * r) {
-	return S11059_Read_Word(r, S11059__RED_DATA_MSB); }
+__INLINE FctERR NONNULL_INLINE__ S11059_Get_Red(S11059_t * pCpnt, uint16_t * r) {
+	return S11059_Read_Word(pCpnt->cfg.slave_inst, r, S11059__RED_DATA_MSB); }
 
 /*!\brief Get Green channel conversion
+** \param[in] pCpnt - Pointer to S11059 component
 ** \param[in,out] g - pointer to Green conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ S11059_Get_Green(uint16_t * g) {
-	return S11059_Read_Word(g, S11059__GREEN_DATA_MSB); }
+__INLINE FctERR NONNULL_INLINE__ S11059_Get_Green(S11059_t * pCpnt, uint16_t * g) {
+	return S11059_Read_Word(pCpnt->cfg.slave_inst, g, S11059__GREEN_DATA_MSB); }
 
 /*!\brief Get Blue channel conversion
+** \param[in] pCpnt - Pointer to S11059 component
 ** \param[in,out] b - pointer to Blue conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ S11059_Get_Blue(uint16_t * b) {
-	return S11059_Read_Word(b, S11059__BLUE_DATA_MSB); }
+__INLINE FctERR NONNULL_INLINE__ S11059_Get_Blue(S11059_t * pCpnt, uint16_t * b) {
+	return S11059_Read_Word(pCpnt->cfg.slave_inst, b, S11059__BLUE_DATA_MSB); }
 
 /*!\brief Get Infra-red channel conversion
-** \param[in,out] clr - pointer to Clear conversion result
+** \param[in] pCpnt - Pointer to S11059 component
+** \param[in,out] ir - pointer to Infra-red conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ S11059_Get_Clear(uint16_t * ir) {
-	return S11059_Read_Word(ir, S11059__IR_DATA_MSB); }
+__INLINE FctERR NONNULL_INLINE__ S11059_Get_IR(S11059_t * pCpnt, uint16_t * ir) {
+	return S11059_Read_Word(pCpnt->cfg.slave_inst, ir, S11059__IR_DATA_MSB); }
 
 
 /****************************************************************/

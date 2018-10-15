@@ -59,11 +59,11 @@ typedef struct TCS3472_t {
 	uint16_t		HighThreshold;		//!< High Threshold config
 	bool			AIEN;				//!< Sensor ALS (Ambient Light Sensing) interrupts enabled config
 	bool			WEN;				//!< Wait between ALS conversions enabled config
-	uint8_t			Id;					//!< Chip ID
+	uint8_t			ID;					//!< Chip ID
 	} cfg;
 } TCS3472_t;
 
-extern TCS3472_t TCS3472;				//!< TCSL3472 User structure
+extern TCS3472_t TCS3472[I2C_TCS3472_NB];	//!< TCSL3472 User structure
 
 
 // *****************************************************************************
@@ -75,27 +75,41 @@ extern TCS3472_t TCS3472;				//!< TCSL3472 User structure
 
 /*!\brief Initialization Sequence for TCS3472 peripheral
 ** \weak TCS3472 Init sequence may be user implemented if custom initialization sequence needed
+** \param[in] pCpnt - Pointer to TCS3472 component
 ** \return FctERR - error code
 **/
-FctERR TCS3472_Init_Sequence(void);
+FctERR NONNULL__ TCS3472_Init_Sequence(TCS3472_t * pCpnt);
 
 /*!\brief Get current Color temperature (in Kelvin)
+** \param[in] pCpnt - Pointer to TCS3472 component
 ** \return FctERR - error code
 **/
-uint32_t TCS3472_Get_Temp(void);
+__INLINE uint32_t NONNULL_INLINE__ TCS3472_Get_Temp(TCS3472_t * pCpnt) {
+	return pCpnt->Temp; }
 
 /*!\brief Get current Illuminance (in lux)
+** \param[in] pCpnt - Pointer to TCS3472 component
 ** \return FctERR - error code
 **/
-uint32_t TCS3472_Get_Lux(void);
+__INLINE uint32_t NONNULL_INLINE__ TCS3472_Get_Lux(TCS3472_t * pCpnt) {
+	return pCpnt->Lux; }
 
 /*!\brief Handler for TCS3472 peripheral
 ** \weak TCS3472 handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle TCS3472 tasks
 ** \note Alternately may be called when event occurs on TCS3472 pin
+** \param[in] pCpnt - Pointer to TCS3472 component
 ** \return FctERR - error code
 **/
-FctERR TCS3472_handler(void);
+FctERR NONNULL__ TCS3472_handler(TCS3472_t * pCpnt);
+
+/*!\brief Handler for all TCS3472 peripherals
+** \note May be called periodically to handle all TCS3472 tasks
+**/
+__INLINE void INLINE__ TCS3472_handler_all(void) {
+	for (TCS3472_t * pCpnt = TCS3472 ; pCpnt < &TCS3472[I2C_TCS3472_NB] ; pCpnt++) {
+		TCS3472_handler(pCpnt); }
+}
 
 
 /****************************************************************/

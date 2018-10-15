@@ -55,11 +55,11 @@ typedef struct TSL2591_t {
 	TSL2591_gain	Gain;				//!< Sensor gain config
 	TSL2591_integ	Integ;				//!< Sensor integration time config
 	bool			AIEN;				//!< Sensor ALS (Ambient Light Sensing) interrupts enabled config
-	uint8_t			Id;					//!< Chip ID
+	uint8_t			ID;					//!< Chip ID
 	} cfg;
 } TSL2591_t;
 
-extern TSL2591_t	TSL2591;			//!< TSL2591 User structure
+extern TSL2591_t	TSL2591[I2C_TSL2591_NB];	//!< TSL2591 User structure
 
 
 // *****************************************************************************
@@ -71,29 +71,42 @@ extern TSL2591_t	TSL2591;			//!< TSL2591 User structure
 
 /*!\brief Initialization Sequence for TSL2591 peripheral
 ** \weak TSL2591 Init sequence may be user implemented if custom initialization sequence needed
+** \param[in] pCpnt - Pointer to TSL2591 component
 ** \return FctERR - error code
 **/
-FctERR TSL2591_Init_Sequence(void);
+FctERR NONNULL__ TSL2591_Init_Sequence(TSL2591_t * pCpnt);
 
 
 /*!\brief Set proper CPL value (Counts per kiloLux)
  * \note Should be called after Configuration change of Integration time or Gain
+** \param[in] pCpnt - Pointer to TSL2591 component
 ** \return FctERR - error code
 **/
-void TSL2591_Set_CPL(void);
+void NONNULL__ TSL2591_Set_CPL(TSL2591_t * pCpnt);
 
 /*!\brief Get current Illuminance (in lux)
+** \param[in] pCpnt - Pointer to TSL2591 component
 ** \return FctERR - error code
 **/
-uint32_t TSL2591_Get_Lux(void);
+__INLINE uint32_t NONNULL_INLINE__ TSL2591_Get_Lux(TSL2591_t * pCpnt) {
+	return pCpnt->Lux; }
 
 /*!\brief Handler for TSL2591 peripheral
 ** \weak TSL2591 handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle TSL2591 tasks
 ** \note Alternately may be called when event occurs on TSL2591 pin
+** \param[in] pCpnt - Pointer to TSL2591 component
 ** \return FctERR - error code
 **/
-FctERR TSL2591_handler(void);
+FctERR NONNULL__ TSL2591_handler(TSL2591_t * pCpnt);
+
+/*!\brief Handler for all TSL2591 peripherals
+** \note May be called periodically to handle all TSL2591 tasks
+**/
+__INLINE void INLINE__ TSL2591_handler_all(void) {
+	for (TSL2591_t * pCpnt = TSL2591 ; pCpnt < &TSL2591[I2C_TSL2591_NB] ; pCpnt++) {
+		TSL2591_handler(pCpnt); }
+}
 
 
 /****************************************************************/

@@ -15,7 +15,7 @@
 /****************************************************************/
 
 
-TCS3400_t TCS3400 = { 0, 0, 0, 0, 0, 0, 0.0f, 0.0f, false, false, { &TCS3400_hal, TCS3400__LOW_GAIN, 200, 1000, 0x8FF, 0x8FF,  true, true, 0, 0 } };
+TCS3400_t TCS3400[I2C_TCS3400_NB];
 
 const uint16_t TCS3400_gain_tab[4] = { 1, 4, 16, 64 };
 
@@ -23,54 +23,55 @@ const uint16_t TCS3400_gain_tab[4] = { 1, 4, 16, 64 };
 /****************************************************************/
 
 
-__WEAK FctERR TCS3400_Init_Sequence(void)
+__WEAK FctERR NONNULL__ TCS3400_Init_Sequence(TCS3400_t * pCpnt)
 {
 	uTCS3400_REG__ENABLE	EN;
 	FctERR					err = ERROR_OK;
 
-	err = TCS3400_Get_RevID(&TCS3400.cfg.Revision_Id);
+	pCpnt->cfg.Gain = TCS3400__LOW_GAIN;
+	pCpnt->cfg.Integ = 200;
+	pCpnt->cfg.Wait = 1000;
+	pCpnt->cfg.LowThreshold = 0x8FF;
+	pCpnt->cfg.HighThreshold = 0x8FF;
+	pCpnt->cfg.AIEN = true;
+	pCpnt->cfg.WEN = true;
+
+	err = TCS3400_Get_RevID(pCpnt, &pCpnt->cfg.Revision_ID);
 	if (err)			{ return err; }
 
 	// get ID & check against values for TCS3400
-	err = TCS3400_Get_DeviceID(&TCS3400.cfg.Device_Id);
+	err = TCS3400_Get_DeviceID(pCpnt, &pCpnt->cfg.Device_ID);
 	if (err)			{ return err; }
 
-	if (	(TCS3400.cfg.Device_Id != TCS34005_CHIP_ID)
-		&&	(TCS3400.cfg.Device_Id != TCS34007_CHIP_ID))
+	if (	(pCpnt->cfg.Device_ID != TCS34005_CHIP_ID)
+		&&	(pCpnt->cfg.Device_ID != TCS34007_CHIP_ID))
 	{ return ERROR_COMMON; }	// Unknown device
 
 	EN.Byte = 0;
 	EN.Bits.PON = true;		// Turn ON Osc
-	err = TCS3400_Write_En(EN.Byte);
+	err = TCS3400_Write_En(pCpnt, EN.Byte);
 	if (err)			{ return err; }
 
-	err = TCS3400_Set_Gain(TCS3400.cfg.Gain);
+	err = TCS3400_Set_Gain(pCpnt, pCpnt->cfg.Gain);
 	if (err)			{ return err; }
-	err = TCS3400_Set_Integration_Time(TCS3400.cfg.Integ);
+	err = TCS3400_Set_Integration_Time(pCpnt, pCpnt->cfg.Integ);
 	if (err)			{ return err; }
-	err = TCS3400_Set_Wait_Time(TCS3400.cfg.Wait);
+	err = TCS3400_Set_Wait_Time(pCpnt, pCpnt->cfg.Wait);
 	if (err)			{ return err; }
 
-	err = TCS3400_Set_AILT(TCS3400.cfg.LowThreshold);
+	err = TCS3400_Set_AILT(pCpnt, pCpnt->cfg.LowThreshold);
 	if (err)			{ return err; }
-	err = TCS3400_Set_AIHT(TCS3400.cfg.HighThreshold);
+	err = TCS3400_Set_AIHT(pCpnt, pCpnt->cfg.HighThreshold);
 	if (err)			{ return err; }
 
 	EN.Bits.AEN = true;					// Turn ON ALS
-	EN.Bits.AIEN = TCS3400.cfg.AIEN;	// Turn ON ALS interrupts
-	EN.Bits.WEN = TCS3400.cfg.WEN;		// Turn WAIT on depending cfg
-	return TCS3400_Write_En(EN.Byte);
+	EN.Bits.AIEN = pCpnt->cfg.AIEN;	// Turn ON ALS interrupts
+	EN.Bits.WEN = pCpnt->cfg.WEN;		// Turn WAIT on depending cfg
+	return TCS3400_Write_En(pCpnt, EN.Byte);
 }
 
 
 /****************************************************************/
-
-
-uint32_t TCS3400_Get_Temp(void) {
-	return TCS3400.Temp; }
-
-uint32_t TCS3400_Get_Lux(void) {
-	return TCS3400.Lux; }
 
 
 /*!\brief Converts the RGB values to color temperature in degrees Kelvin
@@ -79,26 +80,26 @@ uint32_t TCS3400_Get_Lux(void) {
 ** \param[in] b - Blue value
 ** \return FctERR - error code
 **/
-static FctERR TCS3400_calc(uint16_t r, uint16_t g, uint16_t b)
+static FctERR NONNULL__ TCS3400_calc(TCS3400_t * pCpnt, uint16_t r, uint16_t g, uint16_t b)
 {
 	float		X, Y, Z;	// RGB to XYZ correlation
 	float		xc, yc;		// Chromaticity coordinates
 	float		n;			// McCamy's formula
 	// SATURATION = 1024 * (256 - ATIME_ms) if ATIME_ms > 192ms
-	uint16_t	sat = (TCS3400.cfg.Integ > 192) ? 65535 : 1024 * (256 - TCS3400.cfg.Integ);
+	uint16_t	sat = (pCpnt->cfg.Integ > 192) ? 65535 : 1024 * (256 - pCpnt->cfg.Integ);
 
 	// Check for saturation
 	if ((r >= sat) || (g >= sat) || (b >= sat))
 	{
-		TCS3400.Saturation = true;
+		pCpnt->Saturation = true;
 		return ERROR_OVERFLOW;	// Saturation reached
 	}
-	else { TCS3400.Saturation = false; }
+	else { pCpnt->Saturation = false; }
 
 	// Check for ripple saturation
 	sat = (uint16_t) (sat * 0.75f);
-	if ((r >= sat) || (g >= sat) || (b >= sat))	{ TCS3400.SaturationRipple = true; }
-	else										{ TCS3400.SaturationRipple = false; }
+	if ((r >= sat) || (g >= sat) || (b >= sat))	{ pCpnt->SaturationRipple = true; }
+	else										{ pCpnt->SaturationRipple = false; }
 
 	// Convert RGB to XYZ (based on TAOS DN25 application note)
 	// These equations are the result of a transformation matrix composed of correlations at different light sources
@@ -112,36 +113,36 @@ static FctERR TCS3400_calc(uint16_t r, uint16_t g, uint16_t b)
 
 	// Use McCamy's formula to determine the CCT (original formula, not taken from TAOS DN25 application note)
 	n = (xc - 0.3320f) / (yc - 0.1858f);
-	TCS3400.Temp = (uint32_t) ((449.0 * powf(n, 3)) + (3525.0 * powf(n, 2)) + (6823.3 * n) + 5520.33);
-	//TCS3400.Temp = (uint32_t) ((6253.80338 * exp(-n / 0.92159)) + (28.70599 * exp(-n / 0.20039)) + (0.00004 * exp(-n / 0.07125)) - 949.86315);
-	TCS3400.Lux = (uint32_t) Y;
+	pCpnt->Temp = (uint32_t) ((449.0 * powf(n, 3)) + (3525.0 * powf(n, 2)) + (6823.3 * n) + 5520.33);
+	//pCpnt->Temp = (uint32_t) ((6253.80338 * exp(-n / 0.92159)) + (28.70599 * exp(-n / 0.20039)) + (0.00004 * exp(-n / 0.07125)) - 949.86315);
+	pCpnt->Lux = (uint32_t) Y;
 
 	return ERROR_OK;
 }
 
 
-__WEAK FctERR TCS3400_handler(void)
+__WEAK FctERR NONNULL__ TCS3400_handler(TCS3400_t * pCpnt)
 {
 	uint8_t	DATA[8];
 	FctERR	err;
 
-	err = TCS3400_Read(DATA, TCS3400__CDATAL, 8);
+	err = TCS3400_Read(pCpnt->cfg.slave_inst, DATA, TCS3400__CDATAL, 8);
 	if (err)	{ return err; }
 
-	TCS3400.Clear = MAKEWORD(DATA[0], DATA[1]);
-	TCS3400.Red = MAKEWORD(DATA[2], DATA[3]);
-	TCS3400.Green = MAKEWORD(DATA[4], DATA[5]);
-	TCS3400.Blue = MAKEWORD(DATA[6], DATA[7]);
-	err = TCS3400_calc(TCS3400.Red, TCS3400.Green, TCS3400.Blue);
+	pCpnt->Clear = MAKEWORD(DATA[0], DATA[1]);
+	pCpnt->Red = MAKEWORD(DATA[2], DATA[3]);
+	pCpnt->Green = MAKEWORD(DATA[4], DATA[5]);
+	pCpnt->Blue = MAKEWORD(DATA[6], DATA[7]);
+	err = TCS3400_calc(pCpnt, pCpnt->Red, pCpnt->Green, pCpnt->Blue);
 
 	#if defined(VERBOSE)
 		if (err == ERROR_OVERFLOW)	{ printf("TCS3400: Sensor saturation reached!\r\n"); }
-		else						{ printf("TCS3400: C%d R%d G%d B%d Lux: %lul Temp: %luK\r\n", TCS3400.Clear, TCS3400.Red, TCS3400.Green, TCS3400.Blue, TCS3400.Lux, TCS3400.Temp); }
+		else						{ printf("TCS3400: C%d R%d G%d B%d Lux: %lul Temp: %luK\r\n", pCpnt->Clear, pCpnt->Red, pCpnt->Green, pCpnt->Blue, pCpnt->Lux, pCpnt->Temp); }
 	#endif
 
-	if (TCS3400.cfg.AIEN)
+	if (pCpnt->cfg.AIEN)
 	{
-		err = TCS3400_Clear_All_IT();
+		err = TCS3400_Clear_All_IT(pCpnt);
 		if (err)	{ return err; }
 	}
 

@@ -12,103 +12,103 @@
 /****************************************************************/
 
 
-FctERR S11059_Set_ADC(const S11059_adc_reset adc)
+FctERR NONNULL__ S11059_Set_ADC(S11059_t * pCpnt, const S11059_adc_reset adc)
 {
 	uS11059_REG__CONTROL	CTL;
 	FctERR					err;
 
-	err = S11059_Read(&CTL.Byte, S11059__CONTROL, 1);
+	err = S11059_Read(pCpnt->cfg.slave_inst, &CTL.Byte, S11059__CONTROL, 1);
 	if (err)	{ return err; }
 
 	CTL.Bits.ADC_RESET = adc;
-	err = S11059_Write_Ctl(CTL.Byte);
+	err = S11059_Write_Ctl(pCpnt->cfg.slave_inst, CTL.Byte);
 	if (err)	{ return err; }
 
-	S11059.cfg.ADCMode = adc;
+	pCpnt->cfg.ADCMode = adc;
 
 	return err;
 }
 
 
-FctERR S11059_Set_Standby(const S11059_standby_fct standby)
+FctERR NONNULL__ S11059_Set_Standby(S11059_t * pCpnt, const S11059_standby_fct standby)
 {
 	uS11059_REG__CONTROL	CTL;
 	FctERR					err;
 
-	err = S11059_Read(&CTL.Byte, S11059__CONTROL, 1);
+	err = S11059_Read(pCpnt->cfg.slave_inst, &CTL.Byte, S11059__CONTROL, 1);
 	if (err)	{ return err; }
 
 	CTL.Bits.STANDBY_FUNCTION = standby;
-	err = S11059_Write_Ctl(CTL.Byte);
+	err = S11059_Write_Ctl(pCpnt->cfg.slave_inst, CTL.Byte);
 	if (err)	{ return err; }
 
-	S11059.cfg.Standby = standby;
+	pCpnt->cfg.Standby = standby;
 
 	return err;
 }
 
 
-FctERR S11059_Set_Gain(const S11059_gain gain)
+FctERR NONNULL__ S11059_Set_Gain(S11059_t * pCpnt, const S11059_gain gain)
 {
 	uS11059_REG__CONTROL	CTL;
 	FctERR					err;
 
-	err = S11059_Read(&CTL.Byte, S11059__CONTROL, 1);
+	err = S11059_Read(pCpnt->cfg.slave_inst, &CTL.Byte, S11059__CONTROL, 1);
 	if (err)	{ return err; }
 
 	CTL.Bits.GAIN_SELECTION = gain;
-	err =  S11059_Write_Ctl(CTL.Byte);
+	err = S11059_Write_Ctl(pCpnt->cfg.slave_inst, CTL.Byte);
 	if (err)	{ return err; }
 
-	S11059.cfg.GainSelection = gain;
+	pCpnt->cfg.GainSelection = gain;
 
 	return err;
 }
 
 
-FctERR S11059_Set_Integration(const S11059_integ mode, const S11059_prescaler prescaler)
+FctERR NONNULL__ S11059_Set_Integration(S11059_t * pCpnt, const S11059_integ mode, const S11059_prescaler prescaler)
 {
 	uS11059_REG__CONTROL	CTL;
 	FctERR					err;
 
-	err = S11059_Read(&CTL.Byte, S11059__CONTROL, 1);
+	err = S11059_Read(pCpnt->cfg.slave_inst, &CTL.Byte, S11059__CONTROL, 1);
 	if (err)	{ return err; }
 
 	CTL.Bits.INTEG_MODE = mode;
 	CTL.Bits.INTEG_PRESCL = prescaler;
-	err = S11059_Write_Ctl(CTL.Byte);
+	err = S11059_Write_Ctl(pCpnt->cfg.slave_inst, CTL.Byte);
 	if (err)	{ return err; }
 
-	S11059.cfg.IntegrationMode = mode;
-	S11059.cfg.IntegrationPrescaler = prescaler;
+	pCpnt->cfg.IntegrationMode = mode;
+	pCpnt->cfg.IntegrationPrescaler = prescaler;
 
 	return err;
 }
 
 
-FctERR S11059_Set_Integration_Multiplier(const uint16_t mult)
+FctERR NONNULL__ S11059_Set_Integration_Multiplier(S11059_t * pCpnt, const uint16_t mult)
 {
 	FctERR	err;
 
-	err = S11059_Write_Word(&mult, S11059__MANUAL_TIMING_MSB);
+	err = S11059_Write_Word(pCpnt->cfg.slave_inst, &mult, S11059__MANUAL_TIMING_MSB);
 	if (err)	{ return err; }
 
-	S11059.cfg.IntegrationTimeMult = mult;
+	pCpnt->cfg.IntegrationTimeMult = mult;
 
 	return err;
 }
 
 
-FctERR NONNULL__ S11059_Get_Standby(S11059_standby_fct * standby)
+FctERR NONNULL__ S11059_Get_Standby(S11059_t * pCpnt, S11059_standby_fct * standby)
 {
 	uS11059_REG__CONTROL	CTL;
 	FctERR					err;
 
-	err = S11059_Read((uint8_t *) &CTL, S11059__CONTROL, 1);
+	err = S11059_Read(pCpnt->cfg.slave_inst, (uint8_t *) &CTL, S11059__CONTROL, 1);
 	if (err)	{ return err; }
 
 	*standby = CTL.Bits.STANDBY_MONITOR;
-	S11059.cfg.Standby = CTL.Bits.STANDBY_MONITOR;
+	pCpnt->cfg.Standby = CTL.Bits.STANDBY_MONITOR;
 
 	return err;
 }

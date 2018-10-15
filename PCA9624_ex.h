@@ -54,54 +54,64 @@ typedef union uPCA9624_REG_MAP {
 /*** High level methods and functions ***/
 /****************************************/
 
-FctERR PCA9624_Set_Latch(const PCA96xx_latch latch);
+FctERR NONNULL__ PCA9624_Set_Latch(PCA9624_t * pCpnt, const PCA96xx_latch latch);
 
-FctERR PCA9624_Set_Mode_LED(const PCA96xx_chan chan, const PCA9624_ledout mode);
-FctERR PCA9624_Set_Mode_LEDs(const uint8_t chans, const PCA9624_ledout mode);
+FctERR NONNULL__ PCA9624_Set_Mode_LED(PCA9624_t * pCpnt, const PCA96xx_chan chan, const PCA9624_ledout mode);
+FctERR NONNULL__ PCA9624_Set_Mode_LEDs(PCA9624_t * pCpnt, const uint8_t chans, const PCA9624_ledout mode);
 
 
 /*!\brief Reset for PCA9624 peripheral
-** \param [in] all - Reset all devices
+** \param[in] pCpnt - Pointer to PCA9624 component
 **/
-FctERR PCA9624_Reset(const bool all);
+FctERR NONNULL__ PCA9624_Reset(PCA9624_t * pCpnt);
 
+/*!\brief General call reset function for PCA9624
+** \param[in] hi2c - pointer to general call I2C instance
+** \return FctERR - error code
+**/
+FctERR NONNULL__ PCA9624_Reset_All(const I2C_HandleTypeDef * hi2c);
 
 /*!\brief Reads I2C register from PCA9624
-** \param [in] reg - Register address to read from
-** \param [in,out] val - Pointer to the data for receive
+** \param[in] pCpnt - Pointer to PCA9624 component
+** \param[in] reg - Register address to read from
+** \param[in,out] val - Pointer to the data for receive
 ** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCA9624_ReadRegister(const PCA9624_reg reg, uint8_t * val);
+FctERR NONNULL__ PCA9624_ReadRegister(PCA9624_t * pCpnt, const PCA9624_reg reg, uint8_t * val);
 
 
 /*!\brief Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8_t)
-** \param [in] chan - channel number
-** \param [in,out] duty - Pointer to the DutyCycle data for receive coded on a uint8_t
+** \param[in] pCpnt - Pointer to PCA9624 component
+** \param[in] chan - channel number
+** \param[in,out] duty - Pointer to the DutyCycle data for receive coded on a uint8_t
 ** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCA9624_ReadVal(const PCA96xx_chan chan, uint8_t * duty);
+FctERR NONNULL__ PCA9624_ReadVal(PCA9624_t * pCpnt, const PCA96xx_chan chan, uint8_t * duty);
 
 
 /*!\brief Computes and send I2C lighting values to apply to a particular channel for PCA9624
-** \param [in] chan - channel number
-** \param [in] duty - Duty cycle coded on a uint8_t
+** \param[in] pCpnt - Pointer to PCA9624 component
+** \param[in] chan - channel number
+** \param[in] duty - Duty cycle coded on a uint8_t
 ** \return FctERR - ErrorCode
 **/
-FctERR PCA9624_PutVal(const PCA96xx_chan chan, uint8_t duty);
+FctERR NONNULL__ PCA9624_PutVal(PCA9624_t * pCpnt, const PCA96xx_chan chan, const uint8_t duty);
 
 
 /*!\brief Sends I2C PWM ON values to apply to a particular channel for PCA9624
-** \param [in] chan - channel number
+** \param[in] pCpnt - Pointer to PCA9624 component
+** \param[in] chan - channel number
 ** \return FctERR - ErrorCode
 **/
-FctERR PCA9624_SetVal(const PCA96xx_chan chan);
+FctERR NONNULL__ PCA9624_SetVal(PCA9624_t * pCpnt, const PCA96xx_chan chan);
 
 
 /*!\brief Sends I2C PWM OFF values to apply to a particular channel for PCA9624
-** \param [in] chan - channel number
+** \param[in] pCpnt - Pointer to PCA9624 component
+** \param[in] chan - channel number
 ** \return FctERR - ErrorCode
 **/
-FctERR PCA9624_ClrVal(const PCA96xx_chan chan);
+FctERR NONNULL__ PCA9624_ClrVal(PCA9624_t * pCpnt, const PCA96xx_chan chan);
 
 
 /****************************************************************/

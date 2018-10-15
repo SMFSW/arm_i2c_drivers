@@ -1,0 +1,82 @@
+/*!\file $CPNT$_ex.h
+** \author SMFSW
+** \copyright MIT (c) 2017-2018, SMFSW
+** \brief $CPNT$ Driver extensions
+** \details $CPNT$:
+**/
+/****************************************************************/
+#ifndef __$CPNT$_EX_H__
+	#define __$CPNT$_EX_H__
+
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
+#include "sarmfsw.h"
+#include "$CPNT$.h"
+
+#if defined(HAL_I2C_MODULE_ENABLED)
+/****************************************************************/
+
+
+// *****************************************************************************
+// Section: Constants
+// *****************************************************************************
+
+
+// *****************************************************************************
+// Section: Types
+// *****************************************************************************
+/*!\enum $CPNT$_ext_map
+** \brief Extension map enum for $CPNT$
+**/
+typedef enum PACK__ $CPNT$_ext_map {
+	$CPNT$__EXT1 = 0,	//!< default value for reference
+	$CPNT$__EXT2,		//!< default value for reference
+} $CPNT$_ext;
+
+
+typedef union u$CPNT$_EXT__EXT1 {
+	uint8_t Byte;
+	struct {
+		uint8_t BIT1			:1;		//!< BIT1 description
+		uint8_t 				:6;
+		uint8_t BIT2			:1;		//!< BIT2 description
+	} Bits;
+} u$CPNT$_EXT__EXT1;
+
+
+/*!\union u$CPNT$_REG_MAP
+** \brief Union of $CPNT$ registry map
+**/
+typedef union u$CPNT$_REG_MAP {
+	uint8_t Bytes[2];
+	struct {
+		u$CPNT$_REG__REG1	Reg_1;
+		u$CPNT$_REG__REG1	Reg_2;
+	} Reg;
+} u$CPNT$_REG_MAP;
+
+
+// *****************************************************************************
+// Section: Interface Routines
+// *****************************************************************************
+/****************************************/
+/*** High level methods and functions ***/
+/****************************************/
+
+/*!\brief fct for $CPNT$ peripheral
+** \param[in] pCpnt - Pointer to $CPNT$ component
+** \return Error code
+**/
+FctERR NONNULL__ $CPNT$_fct($CPNT$_t * pCpnt);
+
+
+/****************************************************************/
+#ifdef __cplusplus
+	}
+#endif
+
+#endif
+#endif /* __$CPNT$_EX_H__ */
+/****************************************************************/

@@ -59,12 +59,12 @@ typedef struct TCS3400_t {
 	uint16_t		HighThreshold;		//!< High Threshold config
 	bool			AIEN;				//!< Sensor ALS (Ambient Light Sensing) interrupts enabled config
 	bool			WEN;				//!< Wait between ALS conversions enabled config
-	uint8_t			Revision_Id;		//!< Revision ID
-	uint8_t			Device_Id;			//!< Chip ID
+	uint8_t			Revision_ID;		//!< Revision ID
+	uint8_t			Device_ID;			//!< Chip ID
 	} cfg;
 } TCS3400_t;
 
-extern TCS3400_t	TCS3400;			//!< TCS34000 User structure
+extern TCS3400_t	TCS3400[I2C_TCS3400_NB];	//!< TCS34000 User structure
 
 
 // *****************************************************************************
@@ -76,27 +76,41 @@ extern TCS3400_t	TCS3400;			//!< TCS34000 User structure
 
 /*!\brief Initialization Sequence for TCS3400 peripheral
 ** \weak TCS3400 Init sequence may be user implemented if custom initialization sequence needed
+** \param[in] pCpnt - Pointer to TCS3400 component
 ** \return FctERR - error code
 **/
-FctERR TCS3400_Init_Sequence(void);
+FctERR NONNULL__ TCS3400_Init_Sequence(TCS3400_t * pCpnt);
 
 /*!\brief Get current Color temperature (in Kelvin)
+** \param[in] pCpnt - Pointer to TCS3400 component
 ** \return FctERR - error code
 **/
-uint32_t TCS3400_Get_Temp(void);
+__INLINE uint32_t NONNULL_INLINE__ TCS3400_Get_Temp(TCS3400_t * pCpnt) {
+	return pCpnt->Temp; }
 
 /*!\brief Get current Illuminance (in lux)
+** \param[in] pCpnt - Pointer to TCS3400 component
 ** \return FctERR - error code
 **/
-uint32_t TCS3400_Get_Lux(void);
+__INLINE uint32_t NONNULL_INLINE__ TCS3400_Get_Lux(TCS3400_t * pCpnt) {
+	return pCpnt->Lux; }
 
 /*!\brief Handler for TCS3400 peripheral
 ** \weak TCS3400 handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle TCS3400 tasks
 ** \note Alternately may be called when event occurs on TCS3400 pin
+** \param[in] pCpnt - Pointer to TCS3400 component
 ** \return FctERR - error code
 **/
-FctERR TCS3400_handler(void);
+FctERR NONNULL__ TCS3400_handler(TCS3400_t * pCpnt);
+
+/*!\brief Handler for all TCS3400 peripherals
+** \note May be called periodically to handle all TCS3400 tasks
+**/
+__INLINE void INLINE__ TCS3400_handler_all(void) {
+	for (TCS3400_t * pCpnt = TCS3400 ; pCpnt < &TCS3400[I2C_TCS3400_NB] ; pCpnt++) {
+		TCS3400_handler(pCpnt); }
+}
 
 
 /****************************************************************/

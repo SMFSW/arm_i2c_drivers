@@ -15,10 +15,7 @@
 #define VAL_CLR	0xFF	//!< Mass erase value for MB85RC256V
 
 
-/*!\brief Mass erase of MB85RC256V
-** \return FctERR - error code
-**/
-FctERR MB85RC256V_Mass_Erase(void)
+FctERR NONNULL__ MB85RC256V_Mass_Erase(MB85RC256V_t * pCpnt)
 {
 	FctERR	err = ERROR_OK;
 	uint8_t	bankData[32];
@@ -29,7 +26,7 @@ FctERR MB85RC256V_Mass_Erase(void)
 		#if defined(HAL_IWDG_MODULE_ENABLED)
 			HAL_IWDG_Refresh(&hiwdg);
 		#endif
-		err = MB85RC256V_Write(bankData, i * sizeof(bankData), sizeof(bankData));
+		err = MB85RC256V_Write(pCpnt, bankData, i * sizeof(bankData), sizeof(bankData));
 		if (err) { break; }
 	}
 

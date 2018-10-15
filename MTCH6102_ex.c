@@ -11,7 +11,8 @@
 #if defined(I2C_MTCH6102)
 /****************************************************************/
 
-FctERR MTCH6102_Command(MTCH6102_COMMAND cmd)
+
+FctERR NONNULL__ MTCH6102_Command(MTCH6102_t * pCpnt, MTCH6102_COMMAND cmd)
 {
 	uMTCH_REG__CMD	MTCH_CMD = { 0 }, MEM_MTCH_CMD;
 	FctERR			err = ERROR_OK;
@@ -45,27 +46,27 @@ FctERR MTCH6102_Command(MTCH6102_COMMAND cmd)
 	MEM_MTCH_CMD = MTCH_CMD;
 
 	// Send command
-	err = MTCH6102_Write(&MTCH_CMD.Byte, MTCH__CMD, 1);
+	err = MTCH6102_Write(pCpnt->cfg.slave_inst, &MTCH_CMD.Byte, MTCH__CMD, 1);
 	if (err)	{ return err; }
 
 	// Wait for command to complete
 	while ((MTCH_CMD.Byte & MEM_MTCH_CMD.Byte) != 0)
 	{
-		HAL_Delay(1);
-		err = MTCH6102_Read(&MTCH_CMD.Byte, MTCH__CMD, 1);
+		err = MTCH6102_Read(pCpnt->cfg.slave_inst, &MTCH_CMD.Byte, MTCH__CMD, 1);
 		if (err)	{ return err; }
+		HAL_Delay(1);
 	}
 
 	return err;
 }
 
 
-FctERR NONNULL__ MTCH6102_Get_Active_Period(uint16_t * period)
+FctERR NONNULL__ MTCH6102_Get_Active_Period(MTCH6102_t * pCpnt, uint16_t * period)
 {
 	uint8_t DAT[2];
 	FctERR	err = ERROR_OK;
 
-	err = MTCH6102_Read(DAT, MTCH__ACTIVE_PERIOD_L, sizeof(DAT));
+	err = MTCH6102_Read(pCpnt->cfg.slave_inst, DAT, MTCH__ACTIVE_PERIOD_L, sizeof(DAT));
 	if (err)	{ return err; }
 
 	*period = perReg2perVal(LSHIFT(DAT[1], 8) + DAT[0]);
@@ -73,12 +74,12 @@ FctERR NONNULL__ MTCH6102_Get_Active_Period(uint16_t * period)
 }
 
 
-FctERR NONNULL__ MTCH6102_Get_Idle_Period(uint16_t * period)
+FctERR NONNULL__ MTCH6102_Get_Idle_Period(MTCH6102_t * pCpnt, uint16_t * period)
 {
 	uint8_t DAT[2];
 	FctERR	err = ERROR_OK;
 
-	err = MTCH6102_Read(DAT, MTCH__IDLE_PERIOD_L, sizeof(DAT));
+	err = MTCH6102_Read(pCpnt->cfg.slave_inst, DAT, MTCH__IDLE_PERIOD_L, sizeof(DAT));
 	if (err)	{ return err; }
 
 	*period = perReg2perVal(LSHIFT(DAT[1], 8) + DAT[0]);
@@ -86,7 +87,7 @@ FctERR NONNULL__ MTCH6102_Get_Idle_Period(uint16_t * period)
 }
 
 
-FctERR MTCH6102_Set_Filter(const MTCH6102_FILTER_TYPE type, const uint8_t strength, const bool baseline_filter)
+FctERR NONNULL__ MTCH6102_Set_Filter(MTCH6102_t * pCpnt, const MTCH6102_FILTER_TYPE type, const uint8_t strength, const bool baseline_filter)
 {
 	uint8_t		MTCH_FILTER[2];
 	FctERR		err = ERROR_OK;
@@ -121,11 +122,11 @@ FctERR MTCH6102_Set_Filter(const MTCH6102_FILTER_TYPE type, const uint8_t streng
 	}
 
 	// Send configuration parameters
-	err = MTCH6102_Write(&MTCH_FILTER[0], baseline_filter ? MTCH__BASE_FILTER_TYPE : MTCH__FILTER_TYPE, 2);
+	err = MTCH6102_Write(pCpnt->cfg.slave_inst, &MTCH_FILTER[0], baseline_filter ? MTCH__BASE_FILTER_TYPE : MTCH__FILTER_TYPE, 2);
 	if (err)	{ return err; }
 
 	// Send configuration request
-	err = MTCH6102_Configuration_Request();
+	err = MTCH6102_Configuration_Request(pCpnt);
 
 	return err;
 }

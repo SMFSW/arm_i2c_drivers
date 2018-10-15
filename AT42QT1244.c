@@ -15,8 +15,12 @@
 /****************************************************************/
 
 
-I2C_slave_t AT42QT1244_hal = { { pNull, I2C_ADDR(AT42QT1244_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
+static const I2C_slave_t AT42QT1244_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
+I2C_slave_t AT42QT1244_hal[I2C_AT42QT1244_NB];
+
+
+/****************************************************************/
 
 
 /*!\brief 16bits CRC calculation for AT42QT1244
@@ -43,64 +47,70 @@ static uint16_t crc16(uint16_t crc, const uint8_t data)
 /****************************************************************/
 
 
-__WEAK FctERR AT42QT1244_Init(void)
+FctERR NONNULL__ AT42QT1244_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress)
 {
 	FctERR err;
 
-	err = I2C_slave_init(&AT42QT1244_hal, I2C_AT42QT1244, AT42QT1244_BASE_ADDR, I2C_slave_timeout);
-	if (!err)	{ err = AT42QT1244_Init_Sequence(); }
+	assert_param(IS_I2C_PERIPHERAL(AT42QT1244, idx));
 
-	if (err)	{ I2C_set_enable(&AT42QT1244_hal, false); }
+	I2C_PERIPHERAL_SET_DEFAULTS(AT42QT1244, idx, devAddress);
+
+	err = I2C_slave_init(&AT42QT1244_hal[idx], hi2c, devAddress, I2C_slave_timeout);
+	if (!err)	{ err = AT42QT1244_Init_Sequence(&AT42QT1244[idx]); }
+
+	if (err)	{ I2C_set_enable(&AT42QT1244_hal[idx], false); }
 
 	return err;
 }
+
+FctERR AT42QT1244_Init_Single(void) {
+	return AT42QT1244_Init(0, I2C_AT42QT1244, AT42QT1244_BASE_ADDR); }
 
 
 /****************************************************************/
 
 
-FctERR NONNULL__ AT42QT1244_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ AT42QT1244_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(&AT42QT1244_hal))				{ return ERROR_DISABLED; }	// Peripheral disabled
+	if (!I2C_is_enabled(pSlave))						{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (addr > AT42QT__SETUP_HOST_CRC_MSB)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > AT42QT__SETUP_HOST_CRC_MSB + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
-	I2C_set_busy(&AT42QT1244_hal, true);
+	I2C_set_busy(pSlave, true);
 
 	// TODO: check if trick works
 	// MemAddress then 0x00 has to be sent, trick is to tell MEMADD size is 16 bit and send addr as the MSB
-	AT42QT1244_hal.status = HAL_I2C_Mem_Write(AT42QT1244_hal.cfg.bus_inst, AT42QT1244_hal.cfg.addr, LSHIFT(addr, 8), I2C_MEMADD_SIZE_16BIT, (uint8_t *) data, nb, AT42QT1244_hal.cfg.timeout);
+	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, LSHIFT(addr, 8), I2C_MEMADD_SIZE_16BIT, (uint8_t *) data, nb, pSlave->cfg.timeout);
 
-	I2C_set_busy(&AT42QT1244_hal, false);
-	return HALERRtoFCTERR(AT42QT1244_hal.status);
+	I2C_set_busy(pSlave, false);
+	return HALERRtoFCTERR(pSlave->status);
 }
 
 
-FctERR NONNULL__ AT42QT1244_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ AT42QT1244_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	FctERR		err = ERROR_OK;
-
-	if (!I2C_is_enabled(&AT42QT1244_hal))				{ return ERROR_DISABLED; }	// Peripheral disabled
+	if (!I2C_is_enabled(pSlave))						{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (addr > AT42QT__SETUP_HOST_CRC_MSB)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > AT42QT__SETUP_HOST_CRC_MSB + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
+	FctERR		err;
 	uint16_t	crc = 0;
 	uint8_t		preamble[2] = { (uint8_t) addr, (uint8_t) nb };
 	uint8_t *	tmp_read = malloc(nb + 2);
 
-	I2C_set_busy(&AT42QT1244_hal, true);
+	I2C_set_busy(pSlave, true);
 
-	AT42QT1244_hal.status = HAL_I2C_Master_Transmit(AT42QT1244_hal.cfg.bus_inst, AT42QT1244_hal.cfg.addr, preamble, nb, AT42QT1244_hal.cfg.timeout);
-	err = HALERRtoFCTERR(AT42QT1244_hal.status);
+	pSlave->status = HAL_I2C_Master_Transmit(pSlave->cfg.bus_inst, pSlave->cfg.addr, preamble, nb, pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 
 	// TODO: WAIT 150us to add??
 
-	if (AT42QT1244_hal.status == HAL_OK) {
-		AT42QT1244_hal.status = HAL_I2C_Master_Receive(AT42QT1244_hal.cfg.bus_inst, AT42QT1244_hal.cfg.addr, tmp_read, nb + 2, AT42QT1244_hal.cfg.timeout);
-		err = HALERRtoFCTERR(AT42QT1244_hal.status);
+	if (pSlave->status == HAL_OK) {
+		pSlave->status = HAL_I2C_Master_Receive(pSlave->cfg.bus_inst, pSlave->cfg.addr, tmp_read, nb + 2, pSlave->cfg.timeout);
+		err = HALERRtoFCTERR(pSlave->status);
 	}
 
-	if (AT42QT1244_hal.status == HAL_OK) {
+	if (pSlave->status == HAL_OK) {
 		// Checksum calculation
 		for (int i = 0 ; i < nb ; i++)	{ crc = crc16(crc, tmp_read[i]); }
 		// Copy to destination if crc is ok
@@ -109,7 +119,7 @@ FctERR NONNULL__ AT42QT1244_Read(uint8_t * data, const uint16_t addr, const uint
 	}
 
 	free(tmp_read);
-	I2C_set_busy(&AT42QT1244_hal, false);
+	I2C_set_busy(pSlave, false);
 	return err;
 }
 

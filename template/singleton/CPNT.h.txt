@@ -1,0 +1,118 @@
+/*!\file $CPNT$.h
+** \author SMFSW
+** \copyright MIT (c) 2017-2018, SMFSW
+** \brief $CPNT$ Driver
+** \details $CPNT$:
+**/
+/****************************************************************/
+#ifndef __$CPNT$_H__
+	#define __$CPNT$_H__
+
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
+#include "sarmfsw.h"
+#include "globals.h"
+
+#include "I2C_component.h"
+
+#if defined(HAL_I2C_MODULE_ENABLED)
+/****************************************************************/
+
+
+// *****************************************************************************
+// Section: Constants
+// *****************************************************************************
+#define $CPNT$_ADDR			0x00			//!< $CPNT$ address
+
+#define $CPNT$_BASE_ADDR	$CPNT$_ADDR		//!< $CPNT$ Base address
+
+
+// *****************************************************************************
+// Section: Datas
+// *****************************************************************************
+extern I2C_slave_t $CPNT$_hal;	//!< $CPNT$ Slave structure
+
+
+// *****************************************************************************
+// Section: Types
+// *****************************************************************************
+/*!\enum $CPNT$_reg_map
+** \brief Register map enum of $CPNT$
+**/
+typedef enum PACK__ $CPNT$_reg_map {
+	$CPNT$__REG1 = 0,	//!< default value for reference
+	$CPNT$__REG2,		//!< default value for reference
+} $CPNT$_reg;
+
+
+/*!\enum $CPNT$_enum
+** \brief Values enum for $CPNT$
+**/
+typedef enum PACK__ $CPNT$_enum {
+	$CPNT$__VAL1 = 0,	//!< default value for reference
+	$CPNT$__VAL2,		//!< default value for reference
+} $CPNT$_enum;
+
+
+/*!\union u$CPNT$_REG__REG1
+** \brief Union for REG1 register of $CPNT$
+**/
+typedef union u$CPNT$_REG__REG1 {
+	uint8_t Byte;
+	struct {
+		uint8_t BIT0			:1;		//!< BIT0 description (LSB first)
+		uint8_t 				:6;
+		uint8_t BIT1			:1;		//!< BIT1 description (MSB last)
+	} Bits;
+} u$CPNT$_REG__REG1;
+
+
+// *****************************************************************************
+// Section: Interface Routines
+// *****************************************************************************
+/******************/
+/*** Slave init ***/
+/******************/
+
+/*!\brief Initialization for $CPNT$ peripheral
+** \weak $CPNT$ Base address may be changed if user implemented
+** \return FctERR - error code
+**/
+FctERR $CPNT$_Init(void);
+
+
+/************************/
+/*** Low level access ***/
+/************************/
+
+/*!\brief I2C Write function for $CPNT$
+** \param[in] data - pointer to write from
+** \param[in] addr - Address to write to
+** \param[in] nb - Number of bytes to write
+** \return FctERR - error code
+**/
+FctERR NONNULL__ $CPNT$_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb);
+
+
+/*!\brief I2C Read function for $CPNT$
+** \param[in,out] data - pointer to read to
+** \param[in] addr - Address to read from
+** \param[in] nb - Number of bytes to read
+** \return FctERR - error code
+**/
+FctERR NONNULL__ $CPNT$_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
+
+
+/****************************************************************/
+#include "$CPNT$_proc.h"	// Include procedures
+#include "$CPNT$_ex.h"		// Include extensions
+
+#ifdef __cplusplus
+	}
+#endif
+
+#endif
+#endif /* __$CPNT$_H__ */
+/****************************************************************/

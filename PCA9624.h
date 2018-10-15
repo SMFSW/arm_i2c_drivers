@@ -16,12 +16,18 @@
 #include "globals.h"
 
 #include "I2C_component.h"
+#include "I2C_peripheral.h"
+
 #include "PCA96xx.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
 // TODO: doxygen
 
+#ifndef I2C_PCA9624_NB
+//! \note Define I2C_PCA9624_NB in globals.h or at project to enable multiple peripherals of this type
+#define I2C_PCA9624_NB	1	//!< Number of PCA9624 peripherals
+#endif
 
 // *****************************************************************************
 // Section: Constants
@@ -33,7 +39,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave_t PCA9624_hal;	//!< PCA9624 Slave structure
+extern I2C_slave_t PCA9624_hal[I2C_PCA9624_NB];	//!< PCA9624 Slave structure
 
 
 // *****************************************************************************
@@ -129,10 +135,18 @@ typedef union uPCA9624_REG__LEDOUT1 {
 /******************/
 
 /*!\brief Initialization for PCA9624 peripheral
-** \weak PCA9624 Base address may be changed if user implemented
+** \param[in] idx - PCA9624 index
+** \param[in] hi2c - pointer to PCA9624 I2C instance
+** \param[in] devAddress - PCA9624 device address
 ** \return FctERR - error code
 **/
-FctERR PCA9624_Init(void);
+FctERR NONNULL__ PCA9624_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+
+/*!\brief Initialization for PCA9624 peripheral
+** \warning In case multiple devices (defined by I2C_PCA9624_NB > 1), you shall use PCA9624_Init instead
+** \return FctERR - error code
+**/
+FctERR PCA9624_Init_Single(void);
 
 
 /************************/
@@ -140,28 +154,28 @@ FctERR PCA9624_Init(void);
 /************************/
 
 /*!\brief I2C Write function for PCA9624
-**
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in] data - pointer to write from
 ** \param[in] addr - Address to write to
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ PCA9624_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ PCA9624_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for PCA9624
-**
+** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in,out] data - pointer to read to
 ** \param[in] addr - Address to read from
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ PCA9624_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ PCA9624_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /****************************************************************/
-#include "PCA9624_ex.h"		// Include extensions
 #include "PCA9624_proc.h"	// Include procedures
+#include "PCA9624_ex.h"		// Include extensions
 
 #ifdef __cplusplus
 	}

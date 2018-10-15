@@ -16,55 +16,64 @@
 /****************************************************************/
 
 
-I2C_slave_t PCA9624_hal = { { pNull, I2C_ADDR(PCA9624_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FMP }, 0, HAL_OK, true, false };
+static const I2C_slave_t PCA9624_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FMP }, 0, HAL_OK, true, false };
+
+I2C_slave_t PCA9624_hal[I2C_PCA9624_NB];
 
 
 /****************************************************************/
 
 
-__WEAK FctERR PCA9624_Init(void)
+FctERR NONNULL__ PCA9624_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress)
 {
 	FctERR err;
 
-	err = I2C_slave_init(&PCA9624_hal, I2C_PCA9624, PCA9624_BASE_ADDR, I2C_slave_timeout);
-	if (!err)	{ err = PCA9624_Init_Sequence(); }
+	assert_param(IS_I2C_PERIPHERAL(PCA9624, idx));
 
-	if (err)	{ I2C_set_enable(&PCA9624_hal, false); }
+	I2C_PERIPHERAL_SET_DEFAULTS(PCA9624, idx, devAddress);
+
+	err = I2C_slave_init(&PCA9624_hal[idx], hi2c, devAddress, I2C_slave_timeout);
+	if (!err)	{ err = PCA9624_Init_Sequence(&PCA9624[idx]); }
+
+	if (err)	{ I2C_set_enable(&PCA9624_hal[idx], false); }
 
 	return err;
 }
 
+FctERR PCA9624_Init_Single(void) {
+	return PCA9624_Init(0, I2C_PCA9624, PCA9624_BASE_ADDR); }
+
 
 /****************************************************************/
 
 
-FctERR NONNULL__ PCA9624_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ PCA9624_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(&PCA9624_hal))			{ return ERROR_DISABLED; }	// Peripheral disabled
+	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (addr > PCA9624__ALLCALLADR)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > PCA9624__ALLCALLADR + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
-	I2C_set_busy(&PCA9624_hal, true);
+	I2C_set_busy(pSlave, true);
 
-	PCA9624_hal.status = HAL_I2C_Mem_Write(PCA9624_hal.cfg.bus_inst, PCA9624_hal.cfg.addr, addr, PCA9624_hal.cfg.mem_size, (uint8_t *) data, nb, PCA9624_hal.cfg.timeout);
+	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
 
-	I2C_set_busy(&PCA9624_hal, false);
-	return HALERRtoFCTERR(PCA9624_hal.status);
+	I2C_set_busy(pSlave, false);
+	return HALERRtoFCTERR(pSlave->status);
 }
 
 
-FctERR NONNULL__ PCA9624_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ PCA9624_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(&PCA9624_hal))			{ return ERROR_DISABLED; }	// Peripheral disabled
+	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (addr > PCA9624__ALLCALLADR)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > PCA9624__ALLCALLADR + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
-	I2C_set_busy(&PCA9624_hal, true);
+	I2C_set_busy(pSlave, true);
 
-	PCA9624_hal.status = HAL_I2C_Mem_Read(PCA9624_hal.cfg.bus_inst, PCA9624_hal.cfg.addr, addr, PCA9624_hal.cfg.mem_size, data, nb, PCA9624_hal.cfg.timeout);
+	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
 
-	I2C_set_busy(&PCA9624_hal, false);
-	return HALERRtoFCTERR(PCA9624_hal.status);
+	I2C_set_busy(pSlave, false);
+	return HALERRtoFCTERR(pSlave->status);
 }
 
 

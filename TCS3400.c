@@ -16,59 +16,68 @@
 /****************************************************************/
 
 
-I2C_slave_t TCS3400_hal = { { pNull, I2C_ADDR(TCS3400_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
+static const I2C_slave_t TCS3400_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
+
+I2C_slave_t TCS3400_hal[I2C_TCS3400_NB];
 
 
 /****************************************************************/
 
 
-__WEAK FctERR TCS3400_Init(void)
+FctERR NONNULL__ TCS3400_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress)
 {
 	FctERR err;
 
-	err = I2C_slave_init(&TCS3400_hal, I2C_TCS3400, TCS3400_BASE_ADDR, I2C_slave_timeout);
-	if (!err)	{ err = TCS3400_Init_Sequence(); }
+	assert_param(IS_I2C_PERIPHERAL(TCS3400, idx));
 
-	if (err)	{ I2C_set_enable(&TCS3400_hal, false); }
+	I2C_PERIPHERAL_SET_DEFAULTS(TCS3400, idx, devAddress);
+
+	err = I2C_slave_init(&TCS3400_hal[idx], hi2c, devAddress, I2C_slave_timeout);
+	if (!err)	{ err = TCS3400_Init_Sequence(&TCS3400[idx]); }
+
+	if (err)	{ I2C_set_enable(&TCS3400_hal[idx], false); }
 
 	return err;
 }
 
+FctERR TCS3400_Init_Single(void) {
+	return TCS3400_Init(0, I2C_TCS3400, TCS3400_BASE_ADDR); }
+
 
 /****************************************************************/
 
 
-FctERR NONNULL__ TCS3400_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ TCS3400_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(&TCS3400_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
+	if (!I2C_is_enabled(pSlave))			{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (addr > TCS3400__AICLEAR)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > TCS3400__AICLEAR + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
-	I2C_set_busy(&TCS3400_hal, true);
+	I2C_set_busy(pSlave, true);
 
-	TCS3400_hal.status = HAL_I2C_Mem_Write(TCS3400_hal.cfg.bus_inst, TCS3400_hal.cfg.addr, addr, TCS3400_hal.cfg.mem_size, (uint8_t *) data, nb, TCS3400_hal.cfg.timeout);
+	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
 
-	I2C_set_busy(&TCS3400_hal, false);
-	return HALERRtoFCTERR(TCS3400_hal.status);
+	I2C_set_busy(pSlave, false);
+	return HALERRtoFCTERR(pSlave->status);
 }
 
 
-FctERR NONNULL__ TCS3400_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ TCS3400_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(&TCS3400_hal))		{ return ERROR_DISABLED; }	// Peripheral disabled
+	if (!I2C_is_enabled(pSlave))			{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (addr > TCS3400__IR)					{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > TCS3400__IR + 1)		{ return ERROR_OVERFLOW; }	// More bytes than registers
 
-	I2C_set_busy(&TCS3400_hal, true);
+	I2C_set_busy(pSlave, true);
 
-	TCS3400_hal.status = HAL_I2C_Mem_Read(TCS3400_hal.cfg.bus_inst, TCS3400_hal.cfg.addr, addr, TCS3400_hal.cfg.mem_size, data, nb, TCS3400_hal.cfg.timeout);
+	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
 
-	I2C_set_busy(&TCS3400_hal, false);
-	return HALERRtoFCTERR(TCS3400_hal.status);
+	I2C_set_busy(pSlave, false);
+	return HALERRtoFCTERR(pSlave->status);
 }
 
 
-FctERR NONNULL__ TCS3400_Write_Word(const uint16_t * data, const uint16_t addr)
+FctERR NONNULL__ TCS3400_Write_Word(I2C_slave_t * pSlave, const uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 
@@ -76,18 +85,18 @@ FctERR NONNULL__ TCS3400_Write_Word(const uint16_t * data, const uint16_t addr)
 
 	WREG[0] = LOBYTE(*data);
 	WREG[1] = HIBYTE(*data);
-	return TCS3400_Write(WREG, addr, 2);
+	return TCS3400_Write(pSlave, WREG, addr, 2);
 }
 
 
-FctERR NONNULL__ TCS3400_Read_Word(uint16_t * data, const uint16_t addr)
+FctERR NONNULL__ TCS3400_Read_Word(I2C_slave_t * pSlave, uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 	FctERR	err;
 
 	if (addr > TCS3400__BDATAH)		{ return ERROR_RANGE; }		// Unknown register
 
-	err = TCS3400_Read(WREG, addr, 2);
+	err = TCS3400_Read(pSlave, WREG, addr, 2);
 	if (err)	{ return err; }
 
 	*data = MAKEWORD(WREG[0], WREG[1]);

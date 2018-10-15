@@ -26,10 +26,19 @@
 #define MCP9808_CHIP_ID				0x0400		//!< MCP9808 Chip ID to check against
 
 
-
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
+/*!\enum MCP9808_alert
+** \brief Alerts enum of MCP9808
+**/
+typedef enum PACK__ MCP9808_alert {
+	MCP9808__ALERT_HIGH = 0,	//!< High temperature alert
+	MCP9808__ALERT_LOW,			//!< Low temperature alert
+	MCP9808__ALERT_CRIT			//!< Critical temperature alert
+} MCP9808_alert;
+
+
 /*!\struct MCP9808_t
 ** \brief MCP9808 user interface struct
 **/
@@ -51,7 +60,7 @@ typedef struct MCP9808_t {
 	} cfg;
 } MCP9808_t;
 
-extern MCP9808_t	MCP9808;			//!< MCP9808 User structure
+extern MCP9808_t	MCP9808[I2C_MCP9808_NB];	//!< MCP9808 User structure
 
 
 // *****************************************************************************
@@ -63,38 +72,52 @@ extern MCP9808_t	MCP9808;			//!< MCP9808 User structure
 
 /*!\brief Initialization Sequence of the MCP9808 peripheral
 ** \weak MCP9808 handler may be user implemented to suit custom needs
+** \param[in] pCpnt - Pointer to MCP9808 component
 ** \return FctERR - error code
 **/
-FctERR MCP9808_Init_Sequence(void);
+FctERR NONNULL__ MCP9808_Init_Sequence(MCP9808_t * pCpnt);
 
 /*!\brief Set the high/low/crit Alert temperature
+** \param[in] pCpnt - Pointer to MCP9808 component
 ** \param[in,out] temp - temperature (in Celsius degrees)
 ** \param[in] alt - Alert type
 ** \return FctERR - error code
 **/
-FctERR MCP9808_Set_AlertTemp(const float temp, const MCP9808_alert alt);
+FctERR NONNULL__ MCP9808_Set_AlertTemp(MCP9808_t * pCpnt, const float temp, const MCP9808_alert alt);
 
 
 /*!\brief Get the high/low/crit Alert temperature
+** \param[in] pCpnt - Pointer to MCP9808 component
 ** \param[in,out] temp - pointer to temperature to read to (in Celsius degrees)
 ** \param[in] alt - Alert type
 ** \return FctERR - error code
 **/
-FctERR MCP9808_Get_AlertTemp(float * temp, MCP9808_alert alt);
+FctERR NONNULLX__(1) MCP9808_Get_AlertTemp(MCP9808_t * pCpnt, float * temp, MCP9808_alert alt);
 
 /*!\brief Get the temperature
+** \param[in] pCpnt - Pointer to MCP9808 component
 ** \param[in,out] temp - pointer to temperature to read to (in Celsius degrees)
 ** \return FctERR - error code
 **/
-FctERR MCP9808_Get_Temperature(float * temp);
+FctERR NONNULLX__(1) MCP9808_Get_Temperature(MCP9808_t * pCpnt, float * temp);
 
 
 /*!\brief Handler for MCP9808 peripheral
 ** \weak MCP9808 handler may be user implemented to suit custom needs
-** \note Should be called periodically to handle BMP180 tasks
+** \note Should be called periodically to handle MCP9808 tasks
+** \param[in] pCpnt - Pointer to MCP9808 component
 ** \return FctERR - error code
 **/
-FctERR MCP9808_handler(void);
+FctERR NONNULL__ MCP9808_handler(MCP9808_t * pCpnt);
+
+
+/*!\brief Handler for all MCP9808 peripherals
+** \note May be called periodically to handle all MCP9808 tasks
+**/
+__INLINE void INLINE__ MCP9808_handler_all(void) {
+	for (MCP9808_t * pCpnt = MCP9808 ; pCpnt < &MCP9808[I2C_MCP9808_NB] ; pCpnt++) {
+		MCP9808_handler(pCpnt); }
+}
 
 
 /****************************************************************/

@@ -12,93 +12,93 @@
 /****************************************************************/
 
 
-FctERR TCS3400_Set_PON(const bool en)
+FctERR NONNULL__ TCS3400_Set_PON(TCS3400_t * pCpnt, const bool en)
 {
 	uTCS3400_REG__ENABLE EN;
 	FctERR				err;
 
-	err = TCS3400_Read(&EN.Byte, TCS3400__ENABLE, 1);
+	err = TCS3400_Read(pCpnt->cfg.slave_inst, &EN.Byte, TCS3400__ENABLE, 1);
 	if (err)	{ return err; }
 
 	EN.Bits.PON = en;
-	return TCS3400_Write_En(EN.Byte);
+	return TCS3400_Write_En(pCpnt, EN.Byte);
 }
 
 
-FctERR TCS3400_Set_AEN(const bool en)
+FctERR NONNULL__ TCS3400_Set_AEN(TCS3400_t * pCpnt, const bool en)
 {
 	uTCS3400_REG__ENABLE	EN;
 	FctERR					err;
 
-	err = TCS3400_Read(&EN.Byte, TCS3400__ENABLE, 1);
+	err = TCS3400_Read(pCpnt->cfg.slave_inst, &EN.Byte, TCS3400__ENABLE, 1);
 	if (err)	{ return err; }
 
 	EN.Bits.AEN = en;
-	return TCS3400_Write_En(EN.Byte);
+	return TCS3400_Write_En(pCpnt, EN.Byte);
 }
 
 
-FctERR TCS3400_Set_AIEN(const bool en)
+FctERR NONNULL__ TCS3400_Set_AIEN(TCS3400_t * pCpnt, const bool en)
 {
 	uTCS3400_REG__ENABLE	EN;
 	FctERR					err;
 
-	err = TCS3400_Read(&EN.Byte, TCS3400__ENABLE, 1);
+	err = TCS3400_Read(pCpnt->cfg.slave_inst, &EN.Byte, TCS3400__ENABLE, 1);
 	if (err)	{ return err; }
 
 	EN.Bits.AIEN = en;
-	return TCS3400_Write_En(EN.Byte);
+	return TCS3400_Write_En(pCpnt, EN.Byte);
 }
 
 
-FctERR TCS3400_Set_WEN(const bool en)
+FctERR NONNULL__ TCS3400_Set_WEN(TCS3400_t * pCpnt, const bool en)
 {
 	uTCS3400_REG__ENABLE	EN;
 	FctERR					err;
 
-	err = TCS3400_Read(&EN.Byte, TCS3400__ENABLE, 1);
+	err = TCS3400_Read(pCpnt->cfg.slave_inst, &EN.Byte, TCS3400__ENABLE, 1);
 	if (err)	{ return err; }
 
 	EN.Bits.WEN = en;
-	return TCS3400_Write_En(EN.Byte);
+	return TCS3400_Write_En(pCpnt, EN.Byte);
 }
 
 
-FctERR TCS3400_Set_SAI(const bool en)
+FctERR NONNULL__ TCS3400_Set_SAI(TCS3400_t * pCpnt, const bool en)
 {
 	uTCS3400_REG__ENABLE	EN;
 	FctERR					err;
 
-	err = TCS3400_Read(&EN.Byte, TCS3400__ENABLE, 1);
+	err = TCS3400_Read(pCpnt->cfg.slave_inst, &EN.Byte, TCS3400__ENABLE, 1);
 	if (err)	{ return err; }
 
 	EN.Bits.SAI = en;
-	return TCS3400_Write_En(EN.Byte);
+	return TCS3400_Write_En(pCpnt, EN.Byte);
 }
 
 
-FctERR TCS3400_Set_Gain(const TCS3400_gain gain)
+FctERR NONNULL__ TCS3400_Set_Gain(TCS3400_t * pCpnt, const TCS3400_gain gain)
 {
 	uTCS3400_REG__CONTROL	CTL;
 	FctERR					err;
 
 	if (gain > TCS3400__MAXIMUM_GAIN)	{ return ERROR_VALUE; }	// Unknown gain
 
-	err = TCS3400_Read(&CTL.Byte, TCS3400__CONTROL, 1);
+	err = TCS3400_Read(pCpnt->cfg.slave_inst, &CTL.Byte, TCS3400__CONTROL, 1);
 	if (err)	{ return err; }
 
 	CTL.Byte = 0;
 	CTL.Bits.AGAIN = gain;
-	err = TCS3400_Write(&CTL.Byte, TCS3400__CONTROL, 1);
+	err = TCS3400_Write(pCpnt->cfg.slave_inst, &CTL.Byte, TCS3400__CONTROL, 1);
 	if (err)	{ return err; }
 
-	TCS3400.cfg.Gain = gain;
+	pCpnt->cfg.Gain = gain;
 
 	return err;
 }
 
 
-FctERR TCS3400_Set_Integration_Time(const uint16_t integ)
+FctERR NONNULL__ TCS3400_Set_Integration_Time(TCS3400_t * pCpnt, const uint16_t integ)
 {
 	uint8_t	ATIME;
 	FctERR	err;
@@ -108,16 +108,16 @@ FctERR TCS3400_Set_Integration_Time(const uint16_t integ)
 	// 2.78ms (0xFF) to 712ms (0x00)
 	//ATIME = (uint8_t) ((integ - 2.78f) * (0x00 - 0xFF) / (712.0f - 2.78f) + 0xFF);
 	ATIME = 256 - (uint8_t) ((float) integ / 2.78f);
-	err = TCS3400_Write(&ATIME, TCS3400__ATIME, 1);
+	err = TCS3400_Write(pCpnt->cfg.slave_inst, &ATIME, TCS3400__ATIME, 1);
 	if (err)	{ return err; }
 
-	TCS3400.cfg.Integ = integ;
+	pCpnt->cfg.Integ = integ;
 
 	return err;
 }
 
 
-FctERR TCS3400_Set_Wait_Time(const uint16_t wait)
+FctERR NONNULL__ TCS3400_Set_Wait_Time(TCS3400_t * pCpnt, const uint16_t wait)
 {
 	uTCS3400_REG__CONFIG	CFG;
 	uint8_t					WAIT;
@@ -142,25 +142,25 @@ FctERR TCS3400_Set_Wait_Time(const uint16_t wait)
 		CFG.Bits.WLONG = 1;
 	}
 
-	err = TCS3400_Write_Cfg(CFG.Byte);
+	err = TCS3400_Write_Cfg(pCpnt, CFG.Byte);
 	if (err)	{ return err; }
-	err = TCS3400_Write(&WAIT, TCS3400__WTIME, 1);
+	err = TCS3400_Write(pCpnt->cfg.slave_inst, &WAIT, TCS3400__WTIME, 1);
 	if (err)	{ return err; }
 
-	TCS3400.cfg.Wait = wait;
+	pCpnt->cfg.Wait = wait;
 
 	return err;
 }
 
 
-FctERR NONNULL__ TCS3400_Get_Channels(uint16_t buf[])
+FctERR NONNULL__ TCS3400_Get_Channels(TCS3400_t * pCpnt, uint16_t buf[])
 {
 	uint8_t	TMP[2];
 	FctERR	err;
 
 	for (int i = 0 ; i < 4 ; i++)
 	{
-		err = TCS3400_Read(TMP, TCS3400__CDATAL + (2 * i), 2);
+		err = TCS3400_Read(pCpnt->cfg.slave_inst, TMP, TCS3400__CDATAL + (2 * i), 2);
 		if (err)	{ return err; }
 		buf[i] = LSHIFT(TMP[1], 8) + TMP[0];
 	}

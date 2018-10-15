@@ -42,8 +42,9 @@ __WEAK FctERR $CPNT$_Init_Sequence(void)
 
 __WEAK FctERR $CPNT$_handler(void)
 {
-	FctERR err = ERROR_OK;
+	FctERR err;
 	
+	err = $CPNT$_Read($CPNT$.$CPNT$_val_1, $CPNT$__REG1, 1);
 	if (err)	{ return err; }
 	
 	#if defined(VERBOSE)

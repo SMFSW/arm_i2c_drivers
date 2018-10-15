@@ -31,7 +31,7 @@ typedef struct PCA9624_t {
 	} cfg;
 } PCA9624_t;
 
-extern PCA9624_t	PCA9624;		//!< PCA9624 User structure
+extern PCA9624_t	PCA9624[I2C_PCA9624_NB];	//!< PCA9624 User structure
 
 
 // *****************************************************************************
@@ -43,9 +43,10 @@ extern PCA9624_t	PCA9624;		//!< PCA9624 User structure
 
 /*!\brief Initialization Sequence for PCA9624 peripheral
 ** \weak PCA9624 Init sequence may be user implemented if custom initialization sequence needed
+** \param[in] pCpnt - Pointer to PCA9624 component
 ** \return FctERR - error code
 **/
-FctERR PCA9624_Init_Sequence(void);
+FctERR NONNULL__ PCA9624_Init_Sequence(PCA9624_t * pCpnt);
 
 /****************************************************************/
 #ifdef __cplusplus

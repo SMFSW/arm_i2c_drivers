@@ -16,10 +16,16 @@
 #include "globals.h"
 
 #include "I2C_component.h"
+#include "I2C_peripheral.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
 
+
+#ifndef I2C_$CPNT$_NB
+//! \note Define I2C_$CPNT$_NB in globals.h or at project to enable multiple peripherals of this type
+#define I2C_$CPNT$_NB	1	//!< Number of $CPNT$ peripherals
+#endif
 
 // *****************************************************************************
 // Section: Constants
@@ -32,7 +38,7 @@
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave_t $CPNT$_hal;	//!< $CPNT$ Slave structure
+extern I2C_slave_t $CPNT$_hal[I2C_$CPNT$_NB];	//!< $CPNT$ Slave structure
 
 
 // *****************************************************************************
@@ -77,10 +83,18 @@ typedef union u$CPNT$_REG__REG1 {
 /******************/
 
 /*!\brief Initialization for $CPNT$ peripheral
-** \weak $CPNT$ Base address may be changed if user implemented
+** \param[in] idx - $CPNT$ index
+** \param[in] hi2c - pointer to $CPNT$ I2C instance
+** \param[in] devAddress - $CPNT$ device address
 ** \return FctERR - error code
 **/
-__WEAK FctERR $CPNT$_Init(void);
+FctERR NONNULL__ $CPNT$_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+
+/*!\brief Initialization for $CPNT$ peripheral
+** \warning In case multiple devices (defined by I2C_$CPNT$_NB > 1), you shall use $CPNT$_Init instead
+** \return FctERR - error code
+**/
+FctERR $CPNT$_Init_Single(void);
 
 
 /************************/
@@ -88,26 +102,28 @@ __WEAK FctERR $CPNT$_Init(void);
 /************************/
 
 /*!\brief I2C Write function for $CPNT$
+** \param[in] pSlave - Pointer to I2C slave instance
 ** \param[in] data - pointer to write from
 ** \param[in] addr - Address to write to
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ $CPNT$_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ $CPNT$_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for $CPNT$
+** \param[in] pSlave - Pointer to I2C slave instance
 ** \param[in,out] data - pointer to read to
 ** \param[in] addr - Address to read from
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ $CPNT$_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ $CPNT$_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /****************************************************************/
-#include "$CPNT$_ex.h"		// Include extensions
 #include "$CPNT$_proc.h"	// Include procedures
+#include "$CPNT$_ex.h"		// Include extensions
 
 #ifdef __cplusplus
 	}

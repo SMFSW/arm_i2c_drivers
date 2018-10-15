@@ -12,13 +12,13 @@
 /****************************************************************/
 
 
-PCA9624_t PCA9624 = { { &PCA9624_hal } };
+PCA9624_t PCA9624[I2C_PCA9624_NB];
 
 
 /****************************************************************/
 
 
-__WEAK FctERR PCA9624_Init_Sequence(void)
+__WEAK FctERR NONNULL__ PCA9624_Init_Sequence(PCA9624_t * pCpnt)
 {
 	uint8_t Data[2];
 
@@ -26,7 +26,7 @@ __WEAK FctERR PCA9624_Init_Sequence(void)
 	// MODE2: Dimming group control, Latch on STOP
 	Data[0] = 0x81U;
 	Data[1] = 0x20U;
-	return PCA9624_Write(Data, PCA9624__MODE1, sizeof(Data));
+	return PCA9624_Write(pCpnt->cfg.slave_inst, Data, PCA9624__MODE1, sizeof(Data));
 }
 
 

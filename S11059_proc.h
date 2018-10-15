@@ -20,12 +20,6 @@
 
 
 // *****************************************************************************
-// Section: Constants
-// *****************************************************************************
-
-
-
-// *****************************************************************************
 // Section: Types
 // *****************************************************************************
 /*!\struct S11059_t
@@ -49,7 +43,7 @@ typedef struct S11059_t {
 	} cfg;
 } S11059_t;
 
-extern S11059_t S11059;			//!< S11059 User structure
+extern S11059_t S11059[I2C_S11059_NB];			//!< S11059 User structure
 
 
 // *****************************************************************************
@@ -61,9 +55,10 @@ extern S11059_t S11059;			//!< S11059 User structure
 
 /*!\brief Initialization Sequence for S11059 peripheral
 ** \weak S11059 Init sequence may be user implemented if custom initialization sequence needed
+** \param[in] pCpnt - Pointer to S11059 component
 ** \return FctERR - error code
 **/
-FctERR S11059_Init_Sequence(void);
+FctERR NONNULL__ S11059_Init_Sequence(S11059_t * pCpnt);
 
 
 /*!\brief Get S11059 integration time for all channels
@@ -72,16 +67,26 @@ FctERR S11059_Init_Sequence(void);
 ** \param[in] mult - Integration time multiplier value
 ** \return Full integration time in us
 **/
-uint32_t get_Full_Integration_Time(const S11059_integ mode, const S11059_prescaler prescaler, const uint16_t mult);
+uint32_t S11059_Get_Full_Integration_Time(const S11059_integ mode, const S11059_prescaler prescaler, const uint16_t mult);
 
 
 /*!\brief Handler for S11059 peripheral
 ** \weak S11059 handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle S11059 tasks
 ** \note Alternately may be called when event occurs on S11059 pin
+** \param[in] pCpnt - Pointer to S11059 component
 ** \return FctERR - error code
 **/
-FctERR S11059_handler(void);
+FctERR NONNULL__ S11059_handler(S11059_t * pCpnt);
+
+
+/*!\brief Handler for all S11059 peripherals
+** \note May be called periodically to handle all S11059 tasks
+**/
+__INLINE void INLINE__ S11059_handler_all(void) {
+	for (S11059_t * pCpnt = S11059 ; pCpnt < &S11059[I2C_S11059_NB] ; pCpnt++) {
+		S11059_handler(pCpnt); }
+}
 
 
 /****************************************************************/
