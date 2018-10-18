@@ -191,7 +191,7 @@ typedef union uTSL2591_REG__PERSIST {
 typedef union uTSL2591_REG__STATUS {
 	uint8_t Byte;
 	struct {
-		uint8_t AVALID	:2;		//!< ALS Valid. Indicates that the ADC channels have completed an integration cycle since the AEN bit was asserted
+		uint8_t AVALID	:1;		//!< ALS Valid. Indicates that the ADC channels have completed an integration cycle since the AEN bit was asserted
 		uint8_t			:3;
 		uint8_t AINT	:1;		//!< ALS Interrupt. Indicates that the device is asserting an ALS interrupt
 		uint8_t NPINTR	:1;		//!< No-persist Interrupt. Indicates that the device has encountered a no-persist interrupt condition

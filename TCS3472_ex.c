@@ -47,7 +47,11 @@ FctERR NONNULL__ TCS3472_Set_AIEN(TCS3472_t * pCpnt, const bool en)
 	if (err)	{ return err; }
 
 	EN.Bits.AIEN = en;
-	return TCS3472_Write_En(pCpnt, EN.Byte);
+	err = TCS3472_Write_En(pCpnt, EN.Byte);
+	if (err)	{ return err; }
+
+	pCpnt->cfg.AIEN = en;
+	return err;
 }
 
 
@@ -60,7 +64,11 @@ FctERR NONNULL__ TCS3472_Set_WEN(TCS3472_t * pCpnt, const bool en)
 	if (err)	{ return err; }
 
 	EN.Bits.WEN = en;
-	return TCS3472_Write_En(pCpnt, EN.Byte);
+	err = TCS3472_Write_En(pCpnt, EN.Byte);
+	if (err)	{ return err; }
+
+	pCpnt->cfg.WEN = en;
+	return err;
 }
 
 
@@ -74,7 +82,6 @@ FctERR NONNULL__ TCS3472_Set_Gain(TCS3472_t * pCpnt, const TCS3472_gain gain)
 	err = TCS3472_Read(pCpnt->cfg.slave_inst, &CTL.Byte, TCS3472__CONTROL, 1);
 	if (err)	{ return err; }
 
-	CTL.Byte = 0;
 	CTL.Bits.AGAIN = gain;
 	err = TCS3472_Write(pCpnt->cfg.slave_inst, &CTL.Byte, TCS3472__CONTROL, 1);
 	if (err)	{ return err; }

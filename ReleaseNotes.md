@@ -30,8 +30,12 @@ SOFTWARE.
 * BMP180: fixed temperature and pressure calculation (no use of unsigned LSHIFT or RSHIFT for signed calculations)
 * FM24C: added possibility to customize FM24C_SIZE macro if needed
 * MCP4725: Fixed general call function (transmit command, not receive), and taking I2C_HandleTypeDef pointer as parameter
-* MTCH6102: 1ms delay after the end of a special command is validated (otherwise, communication can be blocked)
-* PCA96xx: splitted reset function (one for single device, other as general call) 
+* MTCH6102: 1ms delay after the end of a special command is validated (otherwise, communication can be blocked) & constant in handler to get and display rx raw values
+* PCA96xx: splitted reset function (one for single device, other as general call)
+* shared_CLS: added files for common code regarding color light sensing (RGB to chromacity CIE1931 xy conversion and CCT calculation)
+* TCS3400, TCS3472: added matrix in peripheral configuration struct (to be able to use custom matrix for RGB to XYZ conversion)
+* TCS34xx, TSL2591: removed variable set to 0 after reading from register (to keep other register params intact)
+* TSL2591: fixed uTSL2591_REG__STATUS AVALID bit
 
 ## v0.7
 

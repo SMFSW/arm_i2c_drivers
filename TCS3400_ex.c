@@ -47,7 +47,11 @@ FctERR NONNULL__ TCS3400_Set_AIEN(TCS3400_t * pCpnt, const bool en)
 	if (err)	{ return err; }
 
 	EN.Bits.AIEN = en;
-	return TCS3400_Write_En(pCpnt, EN.Byte);
+	err = TCS3400_Write_En(pCpnt, EN.Byte);
+	if (err)	{ return err; }
+
+	pCpnt->cfg.AIEN = en;
+	return err;
 }
 
 
@@ -60,7 +64,11 @@ FctERR NONNULL__ TCS3400_Set_WEN(TCS3400_t * pCpnt, const bool en)
 	if (err)	{ return err; }
 
 	EN.Bits.WEN = en;
-	return TCS3400_Write_En(pCpnt, EN.Byte);
+	err = TCS3400_Write_En(pCpnt, EN.Byte);
+	if (err)	{ return err; }
+
+	pCpnt->cfg.WEN = en;
+	return err;
 }
 
 
@@ -87,7 +95,6 @@ FctERR NONNULL__ TCS3400_Set_Gain(TCS3400_t * pCpnt, const TCS3400_gain gain)
 	err = TCS3400_Read(pCpnt->cfg.slave_inst, &CTL.Byte, TCS3400__CONTROL, 1);
 	if (err)	{ return err; }
 
-	CTL.Byte = 0;
 	CTL.Bits.AGAIN = gain;
 	err = TCS3400_Write(pCpnt->cfg.slave_inst, &CTL.Byte, TCS3400__CONTROL, 1);
 	if (err)	{ return err; }
@@ -138,7 +145,7 @@ FctERR NONNULL__ TCS3400_Set_Wait_Time(TCS3400_t * pCpnt, const uint16_t wait)
 	{
 		// 30ms (0xFF) to 8.54s (0x00)
 		//WAIT = (uint8_t) ((wait - 30.0f) * (0x00 - 0xFF) / (8540.0f - 30.0f) + 0xFF);
-		WAIT = 256 - (uint8_t) (wait / 33.3f);
+		WAIT = 256 - (uint8_t) (wait / 30.0f);
 		CFG.Bits.WLONG = 1;
 	}
 

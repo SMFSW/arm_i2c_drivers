@@ -50,7 +50,7 @@ typedef union uS11059_REG_MAP {
 		uint8_t					Blue_LSB;			//!< Output data blue LSB
 		uint8_t					IR_MSB;				//!< Output data infra-red MSB
 		uint8_t					IR_LSB;				//!< Output data infra-red LSB
-		} Reg;
+	} Reg;
 } uS11059_REG_MAP;
 
 

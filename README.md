@@ -28,6 +28,18 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 
 ## Supported devices
 
+- **APDS9930**: Digital Proximity and Ambient Light Sensor
+
+  -> _CODING IN PROGRESS_
+
+- **APDS9960**: Digital Proximity, Ambient Light, RGB and Gesture Sensor
+
+  -> _CODING IN PROGRESS_
+
+- **AMG88**: Infrared Array Sensor (Grid-EYE)
+
+  -> _CODING IN PROGRESS_
+
 - **AT42QT1244**: 24-key QMatrix FMEA IEC/EN/UL60730 Touch Sensor
 
   -> _NOT TESTED YET_

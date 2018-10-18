@@ -10,9 +10,6 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_TCS3472)
 /****************************************************************/
-// std libs
-#include <math.h>
-/****************************************************************/
 
 
 TCS3472_t TCS3472[I2C_TCS3472_NB];
@@ -35,6 +32,8 @@ __WEAK FctERR NONNULL__ TCS3472_Init_Sequence(TCS3472_t * pCpnt)
 	pCpnt->cfg.HighThreshold = 0x8FF;
 	pCpnt->cfg.AIEN = true;
 	pCpnt->cfg.WEN = true;
+
+	memcpy(&pCpnt->cfg.mat, &CLS_RGB2XYZ_Default, sizeof(pCpnt->cfg.mat));
 
 	// get ID & check against values for TCS3472
 	err = TCS3472_Get_ChipID(pCpnt, &pCpnt->cfg.ID);
@@ -77,11 +76,8 @@ __WEAK FctERR NONNULL__ TCS3472_Init_Sequence(TCS3472_t * pCpnt)
 ** \param[in] b - Blue value
 ** \return FctERR - error code
 **/
-static FctERR NONNULL__ TCS3472_calc(TCS3472_t * pCpnt, uint16_t r, uint16_t g, uint16_t b)
+static FctERR NONNULL__ TCS3472_calc(TCS3472_t * pCpnt, const uint16_t r, const uint16_t g, const uint16_t b)
 {
-	float		X, Y, Z;	// RGB to XYZ correlation
-	float		xc, yc;		// Chromaticity coordinates
-	float		n;			// McCamy's formula
 	// SATURATION = 1024 * (256 - ATIME_ms) if ATIME_ms > 153ms
 	uint16_t	sat = (pCpnt->cfg.Integ > 153) ? 65535 : 1024 * (256 - pCpnt->cfg.Integ);
 
@@ -98,21 +94,8 @@ static FctERR NONNULL__ TCS3472_calc(TCS3472_t * pCpnt, uint16_t r, uint16_t g, 
 	if ((r >= sat) || (g >= sat) || (b >= sat))	{ pCpnt->SaturationRipple = true; }
 	else										{ pCpnt->SaturationRipple = false; }
 
-	// Convert RGB to XYZ (based on TAOS DN25 application note)
-	// These equations are the result of a transformation matrix composed of correlations at different light sources
-	X = (-0.14282f * r) + (1.54924f * g) + (-0.95641f * b);
-	Y = (-0.32466f * r) + (1.57837f * g) + (-0.73191f * b);		// Note: Y = Illuminance (lux)
-	Z = (-0.68202f * r) + (0.77073f * g) + ( 0.56332f * b);
-
-	// Calculate the chromaticity coordinates
-	xc = X / (X + Y + Z);
-	yc = Y / (X + Y + Z);
-
-	// Use McCamy's formula to determine the CCT (original formula, not taken from TAOS DN25 application note)
-	n = (xc - 0.3320f) / (yc - 0.1858f);
-	pCpnt->Temp = (uint32_t) ((449.0 * powf(n, 3)) + (3525.0 * powf(n, 2)) + (6823.3 * n) + 5520.33);
-	//pCpnt->Temp = (uint32_t) ((6253.80338 * exp(-n / 0.92159)) + (28.70599 * exp(-n / 0.20039)) + (0.00004 * exp(-n / 0.07125)) - 949.86315);
-	pCpnt->Lux = (uint32_t) Y;
+	CLS_get_chromacity(pCpnt->xy, &pCpnt->Lux, pCpnt->cfg.mat, r, g, b);
+	CLS_get_CCT(&pCpnt->Temp, pCpnt->xy);
 
 	return ERROR_OK;
 }
@@ -134,7 +117,11 @@ __WEAK FctERR NONNULL__ TCS3472_handler(TCS3472_t * pCpnt)
 
 	#if defined(VERBOSE)
 		if (err == ERROR_OVERFLOW)	{ printf("TCS3472: Sensor saturation reached!\r\n"); }
-		else						{ printf("TCS3472: C%d R%d G%d B%d Lux: %lul Temp: %luK\r\n", pCpnt->Clear, pCpnt->Red, pCpnt->Green, pCpnt->Blue, pCpnt->Lux, pCpnt->Temp); }
+		else						{ printf("TCS3472: C%d R%d G%d B%d x%d.%04d y%d.%04d Lux: %lul Temp: %luK\r\n",
+											pCpnt->Clear, pCpnt->Red, pCpnt->Green, pCpnt->Blue,
+											(uint16_t) pCpnt->xy[0], get_fp_dec(pCpnt->xy[0], 4),
+											(uint16_t) pCpnt->xy[1], get_fp_dec(pCpnt->xy[1], 4),
+											pCpnt->Lux, pCpnt->Temp); }
 	#endif
 
 	if (pCpnt->cfg.AIEN)

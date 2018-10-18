@@ -46,12 +46,14 @@ typedef struct TCS3400_t {
 	uint16_t		Clear;				//!< Current Clear conversion
 	uint32_t		Lux;				//!< Current Illuminance (lux)
 	uint32_t		Temp;				//!< Current Color temperature (in Kelvin)
+	float			xy[2];				//!< Current CIE1931 chromacity coordinates
 	float			IR_Ratio;			//!< Current IR ratio (in percent)
 	float			Saturation_Ratio;	//!< Current Saturation ratio (in percent)
 	bool			SaturationRipple;	//!< Current Ripple saturation status (75% of saturation value)
 	bool			Saturation;			//!< Current Sensor saturation status
 	struct {
 	I2C_slave_t *	slave_inst;			//!< Slave structure
+	double			mat[3][3];			//!< RGB to XYZ matrix
 	TCS3400_gain	Gain;				//!< Sensor gain config
 	uint16_t		Integ;				//!< Sensor integration time config
 	uint16_t		Wait;				//!< Sensor wait time config

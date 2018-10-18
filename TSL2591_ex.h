@@ -46,7 +46,7 @@ typedef union uTSL2591_REG_MAP {
 		uint8_t					AILTH;		//!< ALS interrupt low threshold high byte
 		uint8_t					AIHTL;		//!< ALS interrupt high threshold low byte
 		uint8_t					AIHTH;		//!< ALS interrupt high threshold high byte
-		uint8_t					NPAILTl;	//!< Persist ALS interrupt low threshold low byte
+		uint8_t					NPAILTL;	//!< Persist ALS interrupt low threshold low byte
 		uint8_t					NPAILTH;	//!< Persist ALS interrupt low threshold high byte
 		uint8_t					NPAIHTL;	//!< Persist ALS interrupt high threshold low byte
 		uint8_t					NPAIHTH;	//!< Persist ALS interrupt high threshold high byte
@@ -58,7 +58,7 @@ typedef union uTSL2591_REG_MAP {
 		uint8_t					C0DATAH;	//!< CH0 ADC high data byte (Full)
 		uint8_t					C1DATAL;	//!< CH1 ADC low data byte (IR)
 		uint8_t					C1DATAH;	//!< CH1 ADC high data byte (IR)
-		} Reg;
+	} Reg;
 } uTSL2591_REG_MAP;
 
 
@@ -72,7 +72,7 @@ typedef union uTSL2591_REG_MAP {
 /*** Configuration ***/
 /*!\brief Write TSL2591 Enable register
 ** \param[in] pCpnt - Pointer to TSL2591 component
-** \param[in] en - 0 Disable, 1 Enable
+** \param[in] en - Enable register value
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TSL2591_Write_En(TSL2591_t * pCpnt, const uint8_t en) {

@@ -67,7 +67,7 @@ typedef union uTCS3472_REG_MAP {
 		uint8_t					GDATAH;		//!< Green data high byte
 		uint8_t					BDATAL;		//!< Blue data low byte
 		uint8_t					BDATAH;		//!< Blue data high byte
-		} Reg;
+	} Reg;
 } uTCS3472_REG_MAP;
 
 

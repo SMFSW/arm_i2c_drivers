@@ -47,7 +47,11 @@ FctERR NONNULL__ TSL2591_Set_AIEN(TSL2591_t * pCpnt, const bool en)
 	if (err)	{ return err; }
 
 	EN.Bits.AIEN = en;
-	return TSL2591_Write_En(pCpnt, EN.Byte);
+	err = TSL2591_Write_En(pCpnt, EN.Byte);
+	if (err)	{ return err; }
+
+	pCpnt->cfg.AIEN = en;
+	return err;
 }
 
 
@@ -61,7 +65,6 @@ FctERR NONNULL__ TSL2591_Set_Gain(TSL2591_t * pCpnt, const TSL2591_gain gain)
 	err = TSL2591_Read(pCpnt->cfg.slave_inst, &CFG.Byte, TSL2591__CONFIG, 1);
 	if (err)	{ return err; }
 
-	CFG.Byte = 0;
 	CFG.Bits.AGAIN = gain;
 	err = TSL2591_Write(pCpnt->cfg.slave_inst, &CFG.Byte, TSL2591__CONFIG, 1);
 	if (err)	{ return err; }
@@ -83,7 +86,6 @@ FctERR NONNULL__ TSL2591_Set_Integration_Time(TSL2591_t * pCpnt, const TSL2591_i
 	err = TSL2591_Read(pCpnt->cfg.slave_inst, &CFG.Byte, TSL2591__CONFIG, 1);
 	if (err)	{ return err; }
 
-	CFG.Byte = 0;
 	CFG.Bits.ATIME = integ;
 	err = TSL2591_Write(pCpnt->cfg.slave_inst, &CFG.Byte, TSL2591__CONFIG, 1);
 	if (err)	{ return err; }
