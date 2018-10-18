@@ -100,6 +100,9 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a3cb7232dcb55a986503a088a8c78cea1"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d18/struct_t_c_s3400__t.html#a3cb7232dcb55a986503a088a8c78cea1">Temp</a></td></tr>
 <tr class="memdesc:a3cb7232dcb55a986503a088a8c78cea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current Color temperature (in Kelvin)  <a href="#a3cb7232dcb55a986503a088a8c78cea1">More...</a><br /></td></tr>
 <tr class="separator:a3cb7232dcb55a986503a088a8c78cea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f60d2ad62ffb8632151a0d187e1e99d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d18/struct_t_c_s3400__t.html#a4f60d2ad62ffb8632151a0d187e1e99d">xy</a> [2]</td></tr>
+<tr class="memdesc:a4f60d2ad62ffb8632151a0d187e1e99d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current CIE1931 chromacity coordinates.  <a href="#a4f60d2ad62ffb8632151a0d187e1e99d">More...</a><br /></td></tr>
+<tr class="separator:a4f60d2ad62ffb8632151a0d187e1e99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a5823e92b6971334ce3d28cf0c78ad0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d18/struct_t_c_s3400__t.html#a7a5823e92b6971334ce3d28cf0c78ad0">IR_Ratio</a></td></tr>
 <tr class="memdesc:a7a5823e92b6971334ce3d28cf0c78ad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current IR ratio (in percent)  <a href="#a7a5823e92b6971334ce3d28cf0c78ad0">More...</a><br /></td></tr>
 <tr class="separator:a7a5823e92b6971334ce3d28cf0c78ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,6 +119,9 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a900c5dff29e9b4df41cf7342dfff8730"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;&#160;&#160;<a class="el" href="../../d3/d18/struct_t_c_s3400__t.html#a62b519be97596a57d226fb1c0d7b9ee9">slave_inst</a></td></tr>
 <tr class="memdesc:a900c5dff29e9b4df41cf7342dfff8730"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slave structure.  <a href="#a900c5dff29e9b4df41cf7342dfff8730">More...</a><br /></td></tr>
 <tr class="separator:a900c5dff29e9b4df41cf7342dfff8730"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd6c3c61ca942ae47b3df9afdfa45346"><td class="memItemLeft" >&#160;&#160;&#160;double&#160;&#160;&#160;<a class="el" href="../../d3/d18/struct_t_c_s3400__t.html#a5d0ef1e89c221fc776fe185e62450738">mat</a> [3][3]</td></tr>
+<tr class="memdesc:abd6c3c61ca942ae47b3df9afdfa45346"><td class="mdescLeft">&#160;</td><td class="mdescRight">RGB to XYZ matrix.  <a href="#abd6c3c61ca942ae47b3df9afdfa45346">More...</a><br /></td></tr>
+<tr class="separator:abd6c3c61ca942ae47b3df9afdfa45346"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82c8fbd91eba1d9526c683762b797be8"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="../../d9/d51/_t_c_s3400_8h.html#ad358419ebed9c562ffa7cfa0bca50f3e">TCS3400_gain</a>&#160;&#160;&#160;<a class="el" href="../../d3/d18/struct_t_c_s3400__t.html#a508381e0613c02c902b05676f5ed4fe2">Gain</a></td></tr>
 <tr class="memdesc:a82c8fbd91eba1d9526c683762b797be8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sensor gain config.  <a href="#a82c8fbd91eba1d9526c683762b797be8">More...</a><br /></td></tr>
 <tr class="separator:a82c8fbd91eba1d9526c683762b797be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -339,6 +345,22 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
+<a id="a5d0ef1e89c221fc776fe185e62450738"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d0ef1e89c221fc776fe185e62450738">&#9670;&nbsp;</a></span>mat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TCS3400_t::mat[3][3]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RGB to XYZ matrix. </p>
+
+</div>
+</div>
 <a id="aed411d635d53190d0e7ff07bcbf0a08e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aed411d635d53190d0e7ff07bcbf0a08e">&#9670;&nbsp;</a></span>Red</h2>
 
@@ -480,6 +502,22 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Wait between ALS conversions enabled config. </p>
+
+</div>
+</div>
+<a id="a4f60d2ad62ffb8632151a0d187e1e99d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f60d2ad62ffb8632151a0d187e1e99d">&#9670;&nbsp;</a></span>xy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float TCS3400_t::xy[2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Current CIE1931 chromacity coordinates. </p>
 
 </div>
 </div>
