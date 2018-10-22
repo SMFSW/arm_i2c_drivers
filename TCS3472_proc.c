@@ -22,7 +22,7 @@ const uint16_t TCS3472_gain_tab[4] = { 1, 4, 16, 60 };
 
 __WEAK FctERR NONNULL__ TCS3472_Init_Sequence(TCS3472_t * pCpnt)
 {
-	uTCS3472_REG__ENABLE	EN;
+	uTCS3472_REG__ENABLE	EN = { 0 };
 	FctERR					err = ERROR_OK;
 
 	pCpnt->cfg.Gain = TCS3472__LOW_GAIN;
@@ -43,7 +43,6 @@ __WEAK FctERR NONNULL__ TCS3472_Init_Sequence(TCS3472_t * pCpnt)
 		&&	(pCpnt->cfg.ID != TCS34727_CHIP_ID))
 	{ return ERROR_COMMON; }	// Unknown device
 
-	EN.Byte = 0;
 	EN.Bits.PON = true;		// Turn ON Osc
 	err = TCS3472_Write_En(pCpnt, EN.Byte);
 	if (err)			{ return err; }
@@ -55,9 +54,7 @@ __WEAK FctERR NONNULL__ TCS3472_Init_Sequence(TCS3472_t * pCpnt)
 	err = TCS3472_Set_Wait_Time(pCpnt, pCpnt->cfg.Wait);
 	if (err)			{ return err; }
 
-	err = TCS3472_Set_AILT(pCpnt, pCpnt->cfg.LowThreshold);
-	if (err)			{ return err; }
-	err = TCS3472_Set_AIHT(pCpnt, pCpnt->cfg.HighThreshold);
+	err = TCS3472_Set_AIT(pCpnt, pCpnt->cfg.LowThreshold, pCpnt->cfg.HighThreshold);
 	if (err)			{ return err; }
 
 	EN.Bits.AEN = true;					// Turn ON ALS

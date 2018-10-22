@@ -23,12 +23,14 @@ const uint16_t TSL2591_integ_tab[6] = { 100, 200, 300, 400, 500, 600 };
 
 __WEAK FctERR NONNULL__ TSL2591_Init_Sequence(TSL2591_t * pCpnt)
 {
-	uTSL2591_REG__ENABLE	EN;
-	uTSL2591_REG__CONFIG	CFG;
+	uTSL2591_REG__ENABLE	EN = { 0 };
+	uTSL2591_REG__CONFIG	CFG = { 0 };
 	FctERR					err = ERROR_OK;
 
 	pCpnt->cfg.Gain = TSL2591__MEDIUM_GAIN;
 	pCpnt->cfg.Integ = TSL2591__INTEG_100MS;
+	pCpnt->cfg.LowThreshold = 0x8FF;
+	pCpnt->cfg.HighThreshold = 0x8FF;
 	pCpnt->cfg.AIEN = true;
 
 	// get ID & check against values for TSL2591
@@ -36,12 +38,10 @@ __WEAK FctERR NONNULL__ TSL2591_Init_Sequence(TSL2591_t * pCpnt)
 	if (err)								{ return err; }
 	if (pCpnt->cfg.ID != TSL2591_CHIP_ID)	{ return ERROR_COMMON; }	// Unknown device
 
-	EN.Byte = 0;
 	EN.Bits.PON = true;		// Turn ON Osc
 	err = TSL2591_Write_En(pCpnt, EN.Byte);
 	if (err)			{ return err; }
 
-	CFG.Byte = 0;
 	CFG.Bits.AGAIN = pCpnt->cfg.Gain;
 	CFG.Bits.ATIME = pCpnt->cfg.Integ;
 	err = TSL2591_Write_Cfg(pCpnt, CFG.Byte);
@@ -49,9 +49,7 @@ __WEAK FctERR NONNULL__ TSL2591_Init_Sequence(TSL2591_t * pCpnt)
 
 	TSL2591_Set_CPL(pCpnt);
 
-	err = TSL2591_Set_AILT(pCpnt, 0x8FF);
-	if (err)			{ return err; }
-	err = TSL2591_Set_AIHT(pCpnt, 0x8FF);
+	err = TSL2591_Set_AIT(pCpnt, pCpnt->cfg.LowThreshold, pCpnt->cfg.HighThreshold);
 	if (err)			{ return err; }
 
 	EN.Bits.AEN = true;				// Turn ON ALS

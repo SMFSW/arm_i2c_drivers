@@ -22,7 +22,7 @@ static float S11059_Integ_tab[4] = { 87.5f, 1400.0f, 22400.0f, 179200.0f };		//!
 
 __WEAK FctERR NONNULL__ S11059_Init_Sequence(S11059_t * pCpnt)
 {
-	uS11059_REG__CONTROL	CTL;
+	uS11059_REG__CONTROL	CTL = { 0 };
 	FctERR					err;
 
 	pCpnt->cfg.IntegrationPrescaler = S11059__INTEG_22_4MS;
@@ -31,7 +31,6 @@ __WEAK FctERR NONNULL__ S11059_Init_Sequence(S11059_t * pCpnt)
 	pCpnt->cfg.Standby = S11059__OPERATING_MODE;
 	pCpnt->cfg.ADCMode = S11059__ADC_OPERATION;
 
-	CTL.Byte = 0;
 	CTL.Bits.ADC_RESET = S11059__ADC_RESET;
 	CTL.Bits.STANDBY_FUNCTION = pCpnt->cfg.Standby;
 	CTL.Bits.GAIN_SELECTION = pCpnt->cfg.GainSelection;

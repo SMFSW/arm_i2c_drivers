@@ -140,6 +140,17 @@ FctERR NONNULL__ TCS3472_Set_WEN(TCS3472_t * pCpnt, const bool en);
 **/
 FctERR NONNULL__ TCS3472_Set_Gain(TCS3472_t * pCpnt, const TCS3472_gain gain);
 
+
+/*!\brief ALS Persistence configuration
+** \param[in] pCpnt - Pointer to TCS3472 component
+** \param[in] persist - Persistence value
+** \return FctERR - error code
+**/
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Set_Pesistence(TCS3472_t * pCpnt, const TCS3472_it_persist persist) {
+	uTCS3472_REG__PERSIST PERS = { .Bits.PERSIST = persist };
+	return TCS3472_Write(pCpnt->cfg.slave_inst, &PERS.Byte, TCS3472__PERSIST, 1); }
+
+
 /*!\brief Integration time configuration
 ** \param[in] pCpnt - Pointer to TCS3472 component
 ** \param[in] integ - Integration time value

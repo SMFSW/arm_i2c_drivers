@@ -28,15 +28,15 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 
 ## Supported devices
 
+- **AMG88**: Infrared Array Sensor (Grid-EYE)
+
+  -> _WORKING, TESTS PENDING_
+
 - **APDS9930**: Digital Proximity and Ambient Light Sensor
 
-  -> _CODING IN PROGRESS_
+  -> _NOT TESTED YET_
 
 - **APDS9960**: Digital Proximity, Ambient Light, RGB and Gesture Sensor
-
-  -> _CODING IN PROGRESS_
-
-- **AMG88**: Infrared Array Sensor (Grid-EYE)
 
   -> _CODING IN PROGRESS_
 

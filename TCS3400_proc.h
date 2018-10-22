@@ -15,6 +15,8 @@
 #include "sarmfsw.h"
 #include "TCS3400.h"
 
+#include "shared_CLS.h"
+
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
 

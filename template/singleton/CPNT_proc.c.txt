@@ -25,14 +25,14 @@ $CPNT$_t $CPNT$ = { 0, { &$CPNT$_hal, 0, 0 } };
 __WEAK FctERR $CPNT$_Init_Sequence(void)
 {
 	FctERR err;
-	
+
 	// get ID & check against values for $CPNT$
 	err = $CPNT$_Get_ChipID(&$CPNT$.cfg.Id);
 	if (err)								{ return err; }
 	if ($CPNT$.cfg.Id != $CPNT$_CHIP_ID)	{ return ERROR_COMMON; }	// Unknown device
-	
+
 	$CPNT$.cfg.$CPNT$_param_1 = 1;
-	
+
 	return ERROR_OK;
 }
 
@@ -43,14 +43,14 @@ __WEAK FctERR $CPNT$_Init_Sequence(void)
 __WEAK FctERR $CPNT$_handler(void)
 {
 	FctERR err;
-	
+
 	err = $CPNT$_Read($CPNT$.$CPNT$_val_1, $CPNT$__REG1, 1);
 	if (err)	{ return err; }
-	
+
 	#if defined(VERBOSE)
 		printf("$CPNT$: FUBARED %d", $CPNT$.$CPNT$_val_1);
 	#endif
-	
+
 	return ERROR_OK;
 }
 

@@ -109,6 +109,17 @@ FctERR NONNULL__ TCS3400_Set_SAI(TCS3400_t * pCpnt, const bool en);
 **/
 FctERR NONNULL__ TCS3400_Set_Gain(TCS3400_t * pCpnt, const TCS3400_gain gain);
 
+
+/*!\brief ALS Persistence configuration
+** \param[in] pCpnt - Pointer to TCS3472 component
+** \param[in] persist - Persistence value
+** \return FctERR - error code
+**/
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Set_Pesistence(TCS3400_t * pCpnt, const TCS3400_it_persist persist) {
+	uTCS3400_REG__PERSIST PERS = { .Bits.PERSIST = persist };
+	return TCS3400_Write(pCpnt->cfg.slave_inst, &PERS.Byte, TCS3400__PERSIST, 1); }
+
+
 /*!\brief Integration time configuration
 ** \param[in] pCpnt - Pointer to TCS3400 component
 ** \param[in] integ - Integration time value

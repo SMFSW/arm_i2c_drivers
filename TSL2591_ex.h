@@ -123,6 +123,16 @@ FctERR NONNULL__ TSL2591_Set_Gain(TSL2591_t * pCpnt, const TSL2591_gain gain);
 FctERR NONNULL__ TSL2591_Set_Integration_Time(TSL2591_t * pCpnt, const TSL2591_integ integ);
 
 
+/*!\brief ALS Persistence configuration
+** \param[in] pCpnt - Pointer to TSL2591 component
+** \param[in] persist - Persistence value
+** \return FctERR - error code
+**/
+__INLINE FctERR NONNULL_INLINE__ TSL2591_Set_ALS_Pesistence(TSL2591_t * pCpnt, const TSL2591_it_persist persist) {
+	uTSL2591_REG__PERSIST PERS = { .Bits.PERSIST = persist };
+	return TSL2591_Write(pCpnt->cfg.slave_inst, &PERS.Byte, TSL2591__PERSIST, 1); }
+
+
 /*!\brief ALS interrupt low threshold configuration
 ** \param[in] pCpnt - Pointer to TSL2591 component
 ** \param[in] thr - Low threshold value

@@ -72,8 +72,8 @@ typedef union uDRV_REG_MAP {
 ** \return FctERR - error code
 **/
 __INLINE FctERR INLINE__ DRV2605L_Vibe(const DRV2605L_go go) {
-	uDRV_REG__GO GO;
-	GO.Byte = 0;
+	uDRV_REG__GO GO = { 0 };
+
 	GO.Bits.GO = go;
 	return DRV2605L_Write(&GO.Byte, DRV__GO, 1); }
 
@@ -82,8 +82,8 @@ __INLINE FctERR INLINE__ DRV2605L_Vibe(const DRV2605L_go go) {
 ** \return FctERR - error code
 **/
 __INLINE FctERR INLINE__ DRV2605L_Reset(void) {
-	uDRV_REG__MODE MODE;
-	MODE.Byte = 0;
+	uDRV_REG__MODE MODE = { 0 };
+
 	MODE.Bits.DEV_RESET = 1;
 	return DRV2605L_Write(&MODE.Byte, DRV__MODE, 1); }
 

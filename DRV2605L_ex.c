@@ -143,11 +143,10 @@ FctERR DRV2605L_Set_LoopMode(const DRV2605L_loop loop)
 
 FctERR DRV2605L_Set_Library(const DRV2605L_lib lib)
 {
-	uDRV_REG__LIBRARY_SELECTION LIB;
+	uDRV_REG__LIBRARY_SELECTION LIB = { 0 };
 
 	if (lib > DRV__LIB_TS2200_LIBRARY_F)	{ return ERROR_VALUE; }	// Unknown library
 
-	LIB.Byte = 0;
 	LIB.Bits.LIBRARY_SEL = lib;
 	return DRV2605L_Write(&LIB.Byte, DRV__LIBRARY_SELECTION, 1);
 }

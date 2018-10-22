@@ -15,6 +15,7 @@
 //#include <stdlib.h>
 /****************************************************************/
 
+
 static const I2C_slave_t $CPNT$_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
 I2C_slave_t $CPNT$_hal[I2C_$CPNT$_NB];
@@ -52,9 +53,9 @@ FctERR NONNULL__ $CPNT$_Write(I2C_slave_t * pSlave, const uint8_t * data, const 
 	//if ((addr + nb) > last_reg + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
-	
-	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
-	
+
+	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
+
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }
@@ -67,9 +68,9 @@ FctERR NONNULL__ $CPNT$_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_
 	//if ((addr + nb) > last_reg + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
-	
-	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
-	
+
+	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
+
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }

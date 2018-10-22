@@ -22,7 +22,7 @@ const double CLS_RGB2XYZ_Default[3][3] = {
 
 FctERR NONNULL__ CLS_get_chromacity(float xy[2], uint32_t * illum, const double mat[3][3], const uint16_t r, const uint16_t g, const uint16_t b)
 {
-	float		X, Y, Z;	// RGB to XYZ correlation
+	float X, Y, Z;	// RGB to XYZ correlation
 
 	// Convert RGB to XYZ
 	X = (mat[0][0] * r) + (mat[0][1] * g) + (mat[0][2] * b);
@@ -32,6 +32,7 @@ FctERR NONNULL__ CLS_get_chromacity(float xy[2], uint32_t * illum, const double 
 	// Calculate the chromaticity coordinates
 	xy[0] = X / (X + Y + Z);
 	xy[1] = Y / (X + Y + Z);
+
 	*illum = (uint32_t) Y;
 
 	return ERROR_OK;
@@ -42,7 +43,7 @@ FctERR NONNULL__ CLS_get_CCT(uint32_t * cct, const float xy[2])
 {
 	float n;
 
-	// Use McCamy's formula to determine the CCT (original formula, not taken from TAOS DN25 application note)
+	// Use McCamy's formula to determine the CCT (original formula, not taken from TAOS DN25 application note (TCS34xx))
 	n = (xy[0] - 0.3320f) / (xy[1] - 0.1858f);
 	*cct = (uint32_t) ((449.0 * powf(n, 3)) + (3525.0 * powf(n, 2)) + (6823.3 * n) + 5520.33);
 	//*cct = (uint32_t) ((6253.80338 * exp(-n / 0.92159)) + (28.70599 * exp(-n / 0.20039)) + (0.00004 * exp(-n / 0.07125)) - 949.86315);

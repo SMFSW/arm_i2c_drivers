@@ -340,14 +340,15 @@ __WEAK FctERR NONNULL__ MTCH6102_handler(MTCH6102_t * pCpnt)
 	char				str_diag[64];
 
 	memset(&Gesture, 0, sizeof(Gesture));
-	memset(&SensValues, 0, sizeof(SensValues));
 	memset(&touch, 0, sizeof(touch));
 
 	if (get_values)
 	{
+		memset(&SensValues, 0, sizeof(SensValues));
 		err = MTCH6102_Read(pCpnt->cfg.slave_inst, (uint8_t *) &SensValues, MTCH__SENSOR_VALUE_RX0, sizeof(SensValues));
 		if (err)	{ return err; }
 	}
+
 	err = MTCH6102_Read(pCpnt->cfg.slave_inst, (uint8_t *) &Gesture, MTCH__TOUCH_STATE, sizeof(Gesture));
 	if (err)	{ return err; }
 

@@ -30,7 +30,7 @@ __WEAK FctERR $CPNT$_Init(void)
 	if (!err)	{ err = $CPNT$_Init_Sequence(); }
 
 	if (err)	{ I2C_set_enable(&$CPNT$_hal, false); }
-	
+
 	return err;
 }
 
@@ -45,9 +45,9 @@ FctERR NONNULL__ $CPNT$_Write(const uint8_t * data, const uint16_t addr, const u
 	//if ((addr + nb) > last_reg + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&$CPNT$_hal, true);
-	
-	$CPNT$_hal.status = HAL_I2C_Mem_Write($CPNT$_hal.cfg.inst, $CPNT$_hal.cfg.addr, addr, $CPNT$_hal.cfg.mem_size, (uint8_t *) data, nb, $CPNT$_hal.cfg.timeout);
-	
+
+	$CPNT$_hal.status = HAL_I2C_Mem_Write($CPNT$_hal.cfg.bus_inst, $CPNT$_hal.cfg.addr, addr, $CPNT$_hal.cfg.mem_size, (uint8_t *) data, nb, $CPNT$_hal.cfg.timeout);
+
 	I2C_set_busy(&$CPNT$_hal, false);
 	return HALERRtoFCTERR($CPNT$_hal.status);
 }
@@ -60,9 +60,9 @@ FctERR NONNULL__ $CPNT$_Read(uint8_t * data, const uint16_t addr, const uint16_t
 	//if ((addr + nb) > last_reg + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&$CPNT$_hal, true);
-	
-	$CPNT$_hal.status = HAL_I2C_Mem_Read($CPNT$_hal.cfg.inst, $CPNT$_hal.cfg.addr, addr, $CPNT$_hal.cfg.mem_size, data, nb, $CPNT$_hal.cfg.timeout);
-	
+
+	$CPNT$_hal.status = HAL_I2C_Mem_Read($CPNT$_hal.cfg.bus_inst, $CPNT$_hal.cfg.addr, addr, $CPNT$_hal.cfg.mem_size, data, nb, $CPNT$_hal.cfg.timeout);
+
 	I2C_set_busy(&$CPNT$_hal, false);
 	return HALERRtoFCTERR($CPNT$_hal.status);
 }

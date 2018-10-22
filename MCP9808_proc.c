@@ -63,14 +63,13 @@ __WEAK FctERR NONNULL__ MCP9808_Init_Sequence(MCP9808_t * pCpnt)
 
 FctERR NONNULL__ MCP9808_Set_AlertTemp(MCP9808_t * pCpnt, const float temp, const MCP9808_alert alt)
 {
-	uMCP9808_REG__TEMP_LIM	ALT;
+	uMCP9808_REG__TEMP_LIM	ALT = { 0 };
 	float *					alert = &pCpnt->cfg.HighAlert + alt;
 	FctERR					err;
 
 	if (alt > MCP9808__ALERT_CRIT)	{ return ERROR_VALUE; }	// Unknown alert
 	if (fabs(temp) >= 256.0f)		{ return ERROR_RANGE; }	// Temperature too low/high
 
-	ALT.Word = 0;
 	if (temp < 0.0f)	{ ALT.Bits.Sign = true; }
 	ALT.Bits.Integer = (uint8_t) temp;
 	ALT.Bits.Decimal = (uint8_t) ((temp - (uint8_t) temp) / 0.25f);

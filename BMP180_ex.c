@@ -17,13 +17,12 @@ static uint8_t BMP180_OSS_time[4] = { 5, 8, 14, 26 };	//!< BMP180 Oversampling v
 
 FctERR NONNULL__ BMP180_Start_Conversion(BMP180_t * pCpnt, const BMP180_meas meas)
 {
-	uBMP180_REG__MEAS_CTRL	CTRL;
+	uBMP180_REG__MEAS_CTRL	CTRL = { 0 };
 	FctERR					err;
 
 	if (	(meas != BMP180__MEAS_PRESSURE)
 		&&	(meas != BMP180__MEAS_TEMPERATURE))	{ return ERROR_VALUE; }	// Unknown conversion
 
-	CTRL.Byte = 0;
 	CTRL.Bits.SCO = 1;
 	CTRL.Bits.MEAS_CTRL = meas;
 

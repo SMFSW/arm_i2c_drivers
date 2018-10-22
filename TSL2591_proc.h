@@ -54,6 +54,8 @@ typedef struct TSL2591_t {
 	float			DER;				//!< Accuracy (+/- DER lux) config
 	TSL2591_gain	Gain;				//!< Sensor gain config
 	TSL2591_integ	Integ;				//!< Sensor integration time config
+	uint16_t		LowThreshold;		//!< Low Threshold config
+	uint16_t		HighThreshold;		//!< High Threshold config
 	bool			AIEN;				//!< Sensor ALS (Ambient Light Sensing) interrupts enabled config
 	uint8_t			ID;					//!< Chip ID
 	} cfg;

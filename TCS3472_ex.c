@@ -113,13 +113,11 @@ FctERR NONNULL__ TCS3472_Set_Integration_Time(TCS3472_t * pCpnt, const uint16_t 
 
 FctERR NONNULL__ TCS3472_Set_Wait_Time(TCS3472_t * pCpnt, const uint16_t wait)
 {
-	uTCS3472_REG__CONFIG	CFG;
+	uTCS3472_REG__CONFIG	CFG = { 0 };
 	uint8_t					WAIT;
 	FctERR					err;
 
 	if ((wait < 3) || (wait > 7370))	{ return ERROR_RANGE; }	// Wait time out of range
-
-	CFG.Byte = 0;
 
 	if (wait <= 614)
 	{
