@@ -1,0 +1,10 @@
+<map id="AMG88_Set_MA" name="AMG88_Set_MA">
+<area shape="rect" id="node2" href="$df/d52/_a_m_g88_8c.html#a5cedae4c89add5fa6aafd5fae421a91f" title="I2C Write function for AMG88. " alt="" coords="439,95,543,122"/>
+<area shape="rect" id="node5" href="$dc/db3/_a_m_g88__ex_8h.html#a6ae84d7927a3478dfe7b7b90a2047cf1" title="Set AMG88 Interrupt Level upper limit. " alt="" coords="174,103,362,130"/>
+<area shape="rect" id="node7" href="$dc/db3/_a_m_g88__ex_8h.html#aed7225db66730c74f2d5ac554c1cf64d" title="Set AMG88 Interrupt Level lower limit. " alt="" coords="175,154,361,180"/>
+<area shape="rect" id="node8" href="$dc/db3/_a_m_g88__ex_8h.html#a9dbd27f0ef6e29d61db1733ad27fd8e0" title="Set AMG88 Interrupt Hysteresis level. " alt="" coords="177,204,359,231"/>
+<area shape="rect" id="node9" href="$dc/db3/_a_m_g88__ex_8h.html#ae4f92c08ae841954a8f490567235ceb2" title="Set AMG88 Interrupt levels. " alt="" coords="194,37,342,78"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="619,70,731,96"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="623,120,726,147"/>
+<area shape="rect" id="node6" href="$de/d9d/_a_m_g88__ex_8c.html#adf51c67f115c69033cf280426b338c7c" title="Convert temperature to AMG88 temperature coded integer. " alt="" coords="411,146,570,188"/>
+</map>

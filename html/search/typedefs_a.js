@@ -1,5 +1,13 @@
 var searchData=
 [
+  ['uamg88_5freg_5f_5faverage',['uAMG88_REG__AVERAGE',['../d8/d4e/_a_m_g88_8h.html#aa21d0bf235518bc1e15d56e4232b0fd6',1,'AMG88.h']]],
+  ['uamg88_5freg_5f_5fframe_5frate',['uAMG88_REG__FRAME_RATE',['../d8/d4e/_a_m_g88_8h.html#ae70b65c73714680d5dbdfdec40dba7f7',1,'AMG88.h']]],
+  ['uamg88_5freg_5f_5fint',['uAMG88_REG__INT',['../d8/d4e/_a_m_g88_8h.html#a1a4f52fa6479ec4f623ecde76fa36acf',1,'AMG88.h']]],
+  ['uamg88_5freg_5f_5fint_5fcontrol',['uAMG88_REG__INT_CONTROL',['../d8/d4e/_a_m_g88_8h.html#a9cbb51e77eb80f3265c32ee2697e8f91',1,'AMG88.h']]],
+  ['uamg88_5freg_5f_5fstatus',['uAMG88_REG__STATUS',['../d8/d4e/_a_m_g88_8h.html#a7fba87beec8cb5e8b6bda926a263f4e2',1,'AMG88.h']]],
+  ['uamg88_5freg_5f_5fstatus_5fclear',['uAMG88_REG__STATUS_CLEAR',['../d8/d4e/_a_m_g88_8h.html#ac8d3111c14a5edd9a2b8eebbac86bb5c',1,'AMG88.h']]],
+  ['uamg88_5freg_5f_5ftemp',['uAMG88_REG__TEMP',['../d8/d4e/_a_m_g88_8h.html#a7bcd649bb80b3897185cb3226d99691b',1,'AMG88.h']]],
+  ['uamg88_5freg_5fmap',['uAMG88_REG_MAP',['../dc/db3/_a_m_g88__ex_8h.html#ab736e0a85a76c9df324dd4399c3e53eb',1,'AMG88_ex.h']]],
   ['uat42qt_5freg_5f_5fdevice_5fstatus',['uAT42QT_REG__DEVICE_STATUS',['../dd/d4f/_a_t42_q_t1244_8h.html#a4bdc1404b5a8223376bd6fe2f5560aa6',1,'AT42QT1244.h']]],
   ['uat42qt_5freg_5f_5fkey_5fdata',['uAT42QT_REG__KEY_DATA',['../dd/d4f/_a_t42_q_t1244_8h.html#a2c96a7718f2f10c618419a2eec901553',1,'AT42QT1244.h']]],
   ['uat42qt_5freg_5f_5fsetup_5f141_5f164',['uAT42QT_REG__SETUP_141_164',['../dd/d4f/_a_t42_q_t1244_8h.html#a28194a348e6da62964fd77cf5f9c2fa6',1,'AT42QT1244.h']]],

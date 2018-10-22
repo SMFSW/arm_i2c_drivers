@@ -1,0 +1,7 @@
+<map id="AMG88_Convert_Temp_To_Int" name="AMG88_Convert_Temp_To_Int">
+<area shape="rect" id="node2" href="$dc/db3/_a_m_g88__ex_8h.html#a6ae84d7927a3478dfe7b7b90a2047cf1" title="Set AMG88 Interrupt Level upper limit. " alt="" coords="214,5,402,32"/>
+<area shape="rect" id="node4" href="$dc/db3/_a_m_g88__ex_8h.html#aed7225db66730c74f2d5ac554c1cf64d" title="Set AMG88 Interrupt Level lower limit. " alt="" coords="215,56,401,83"/>
+<area shape="rect" id="node5" href="$dc/db3/_a_m_g88__ex_8h.html#a9dbd27f0ef6e29d61db1733ad27fd8e0" title="Set AMG88 Interrupt Hysteresis level. " alt="" coords="217,107,399,133"/>
+<area shape="rect" id="node6" href="$dc/db3/_a_m_g88__ex_8h.html#ae4f92c08ae841954a8f490567235ceb2" title="Set AMG88 Interrupt levels. " alt="" coords="234,158,382,199"/>
+<area shape="rect" id="node3" href="$dc/db3/_a_m_g88__ex_8h.html#a5a687c7752f174e8b80eaed3974785aa" title="Set AMG88 Moving Average. " alt="" coords="451,81,571,108"/>
+</map>

@@ -1,20 +1,18 @@
 <map id="TCS3400_Init" name="TCS3400_Init">
-<area shape="rect" id="node2" href="$d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="189,183,294,209"/>
-<area shape="rect" id="node3" href="$dc/dd9/_t_c_s3400__proc_8c.html#a8fb5d620337b38aafea461ffa303894d" title="Initialization Sequence for TCS3400 peripheral. " alt="" coords="158,233,325,260"/>
-<area shape="rect" id="node19" href="$d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="185,284,298,311"/>
+<area shape="rect" id="node2" href="$d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="189,157,294,184"/>
+<area shape="rect" id="node3" href="$dc/dd9/_t_c_s3400__proc_8c.html#a8fb5d620337b38aafea461ffa303894d" title="Initialization Sequence for TCS3400 peripheral. " alt="" coords="158,208,325,235"/>
+<area shape="rect" id="node17" href="$d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="185,259,298,285"/>
 <area shape="rect" id="node4" href="$de/d36/_t_c_s3400__ex_8h.html#a9682376aadf6d4bc9aebceccd3c23c2e" title="Get TCS3400 Revision ID. " alt="" coords="638,5,789,32"/>
 <area shape="rect" id="node8" href="$de/d36/_t_c_s3400__ex_8h.html#a6ae9f76fbc7f72e4d79f29a404a3c3e4" title="Get TCS3400 Device ID. " alt="" coords="394,107,561,133"/>
 <area shape="rect" id="node10" href="$de/d36/_t_c_s3400__ex_8h.html#a3273d153f1c291483e63847c10fcd529" title="Write TCS3400 Enable register. " alt="" coords="644,360,783,387"/>
 <area shape="rect" id="node12" href="$db/d52/_t_c_s3400__ex_8c.html#a03d8d64c10dd9feabb506a32c9284d81" title="Gain configuration. " alt="" coords="644,157,783,184"/>
 <area shape="rect" id="node13" href="$db/d52/_t_c_s3400__ex_8c.html#a19e0fd3ebafed0eb401fb974ad9e246d" title="Integration time configuration. " alt="" coords="373,411,581,437"/>
-<area shape="rect" id="node14" href="$db/d52/_t_c_s3400__ex_8c.html#adf6456429e5ed5e5bd9dbf957e8b83f7" title="Wait time configuration. " alt="" coords="390,309,565,336"/>
-<area shape="rect" id="node16" href="$de/d36/_t_c_s3400__ex_8h.html#a671ee64893a5085f08265539c5fe898f" title="ALS interrupt low threshold configuration. " alt="" coords="408,208,547,235"/>
-<area shape="rect" id="node18" href="$de/d36/_t_c_s3400__ex_8h.html#a62158bbdd765518e1bbcade9548fe6a7" title="ALS interrupt high threshold configuration. " alt="" coords="406,259,549,285"/>
+<area shape="rect" id="node14" href="$db/d52/_t_c_s3400__ex_8c.html#adf6456429e5ed5e5bd9dbf957e8b83f7" title="Wait time configuration. " alt="" coords="390,259,565,285"/>
+<area shape="rect" id="node16" href="$de/d36/_t_c_s3400__ex_8h.html#adb2d8a0c13494e4b85eeefd521469a6d" title="ALS interrupt thresholds configuration. " alt="" coords="411,208,543,235"/>
 <area shape="rect" id="node5" href="$d4/d1b/_t_c_s3400_8c.html#a96d0e0fe07d709afbf73ff1353e07ac5" title="I2C Read function for TCS3400. " alt="" coords="845,132,960,159"/>
 <area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1008,164,1120,191"/>
 <area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1013,227,1115,253"/>
 <area shape="rect" id="node9" href="$de/d36/_t_c_s3400__ex_8h.html#aca94cb5394f2f5dbed19587af2e8b5f5" title="Get All channels conversions. " alt="" coords="630,56,797,83"/>
 <area shape="rect" id="node11" href="$d4/d1b/_t_c_s3400_8c.html#affda34e85162c60b3ec3ade289c9a417" title="I2C Write function for TCS3400. " alt="" coords="845,252,960,279"/>
 <area shape="rect" id="node15" href="$de/d36/_t_c_s3400__ex_8h.html#aae793812b1704f515cc24d5c7ab076c4" title="Write TCS3400 Config register. " alt="" coords="642,309,785,336"/>
-<area shape="rect" id="node17" href="$d4/d1b/_t_c_s3400_8c.html#a24dd3a05516f9bfb9bd449c71e77e56e" title="I2C Word Write (low endian) function for TCS3400. " alt="" coords="637,208,790,235"/>
 </map>
