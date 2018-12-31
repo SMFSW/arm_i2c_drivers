@@ -1,0 +1,5 @@
+<map id="APDS9930_Set_PIT" name="APDS9930_Set_PIT">
+<area shape="rect" id="node2" href="$de/d85/_a_p_d_s9930_8c.html#a1ae7594cb2bd6a3a0bace217664a3205" title="I2C Write function for APDS9930. " alt="" coords="197,31,323,57"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="371,5,483,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="375,56,478,83"/>
+</map>

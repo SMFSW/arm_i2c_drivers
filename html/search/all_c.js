@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['magnitude',['MAGNITUDE',['../d8/d8d/unionu_a_p_d_s9930___r_e_g_____p_o_f_f_s_e_t.html#afb7a900f3025d1daab80a882e9c41420',1,'uAPDS9930_REG__POFFSET']]],
   ['mains_5fsync_5ferror',['Mains_Sync_Error',['../d4/d1f/unionu_a_t42_q_t___r_e_g_____d_e_v_i_c_e___s_t_a_t_u_s.html#a2659e5d9be2b915d8e410d4ac3cb8c32',1,'uAT42QT_REG__DEVICE_STATUS']]],
   ['mamod',['MAMOD',['../de/d7c/unionu_a_m_g88___r_e_g_____a_v_e_r_a_g_e.html#a237d362eecfec8124c95f433992f2e40',1,'uAMG88_REG__AVERAGE']]],
   ['manual_5ftiming_5flsb',['Manual_Timing_LSB',['../d3/d2f/unionu_s11059___r_e_g___m_a_p.html#a13890e18031689075bdd1b558d50be71',1,'uS11059_REG_MAP']]],
@@ -11,7 +12,6 @@ var searchData=
   ['max_5fspeed',['max_speed',['../df/df6/struct_i2_c__slave__t.html#a9ab30e72c7008e324fb7f31730101ff7',1,'I2C_slave_t']]],
   ['max_5fx',['max_x',['../d5/d63/struct_m_t_c_h6102__t.html#acb4d9e53c6b0e49fddb1dbe31ff7b600',1,'MTCH6102_t']]],
   ['max_5fy',['max_y',['../d5/d63/struct_m_t_c_h6102__t.html#aaefe6476e2d571536e6cb241c00cd999',1,'MTCH6102_t']]],
-  ['maxlux',['MaxLux',['../d7/d5e/struct_t_s_l2591__t.html#a79223a4e1aca71bad77832994d60216b',1,'TSL2591_t']]],
   ['mb',['MB',['../d4/d3c/struct_b_m_p180__calibration.html#a09f04c65ca4dd2653f9c85483aee92a0',1,'BMP180_calibration']]],
   ['mb85rc256v',['MB85RC256V',['../d1/dc0/_m_b85_r_c256_v_8c.html#ae90ed9db00ff0779e42f29b029bff271',1,'MB85RC256V():&#160;MB85RC256V.c'],['../d7/d3b/_m_b85_r_c256_v_8h.html#ae90ed9db00ff0779e42f29b029bff271',1,'MB85RC256V():&#160;MB85RC256V.c']]],
   ['mb85rc256v_2ec',['MB85RC256V.c',['../d1/dc0/_m_b85_r_c256_v_8c.html',1,'']]],
@@ -148,7 +148,7 @@ var searchData=
   ['min_5fx',['min_x',['../d5/d63/struct_m_t_c_h6102__t.html#afadddf0840f960427e662398f0f9fe44',1,'MTCH6102_t']]],
   ['min_5fy',['min_y',['../d5/d63/struct_m_t_c_h6102__t.html#ad245a831646a6a1c81091de973f8a597',1,'MTCH6102_t']]],
   ['minute_5falarm',['Minute_alarm',['../dd/d7c/unionu_p_c_f8523___r_e_g___m_a_p.html#ae8bd2d0c1d70ce8edd3ed44d055ca148',1,'uPCF8523_REG_MAP']]],
-  ['minutes',['Minutes',['../dd/d02/struct_g_p_m_s__hour.html#a81cb6dbffaf553c771b468453b1fb631',1,'GPMS_hour::Minutes()'],['../d7/dca/struct_g_p_m_s__coord.html#a0e23b887f1e333626b2ea6166baf77a9',1,'GPMS_coord::Minutes()'],['../dd/d7c/unionu_p_c_f8523___r_e_g___m_a_p.html#a89d81bc0f064e4ec0ae0528c3eca1cb3',1,'uPCF8523_REG_MAP::Minutes()'],['../d2/de7/struct_p_c_f8523__time.html#a2c63e963a3efacba99855f353dacb169',1,'PCF8523_time::Minutes()'],['../d0/dae/unionu_p_c_f8523___r_e_g_____m_i_n_u_t_e_s.html#a927fca7e6b536d04edf5ac976a60eef2',1,'uPCF8523_REG__MINUTES::MINUTES()']]],
+  ['minutes',['MINUTES',['../d0/dae/unionu_p_c_f8523___r_e_g_____m_i_n_u_t_e_s.html#a927fca7e6b536d04edf5ac976a60eef2',1,'uPCF8523_REG__MINUTES::MINUTES()'],['../dd/d02/struct_g_p_m_s__hour.html#a81cb6dbffaf553c771b468453b1fb631',1,'GPMS_hour::Minutes()'],['../d7/dca/struct_g_p_m_s__coord.html#a0e23b887f1e333626b2ea6166baf77a9',1,'GPMS_coord::Minutes()'],['../dd/d7c/unionu_p_c_f8523___r_e_g___m_a_p.html#a89d81bc0f064e4ec0ae0528c3eca1cb3',1,'uPCF8523_REG_MAP::Minutes()'],['../d2/de7/struct_p_c_f8523__time.html#a2c63e963a3efacba99855f353dacb169',1,'PCF8523_time::Minutes()']]],
   ['minutes_5ftens',['Minutes_Tens',['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#af2e8a8f8e74178f5916f967cb56f9c8a',1,'uGPMS_RD_REG_MAP']]],
   ['minutes_5funits',['Minutes_Units',['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#ab9eb897b9ed17a0d58ba59d88cef394f',1,'uGPMS_RD_REG_MAP']]],
   ['mode',['MODE',['../df/d67/unionu_d_r_v___r_e_g_____m_o_d_e.html#aadbf595cdd523cc77a6bce2deea7c563',1,'uDRV_REG__MODE::MODE()'],['../d8/d20/unionu_m_t_c_h___r_e_g_____m_o_d_e.html#a7e3aab62db84b4a50758cddec4d94602',1,'uMTCH_REG__MODE::MODE()'],['../d5/d04/unionu_p_c_f8523___r_e_g_____o_f_f_s_e_t.html#ab719796b20bb5b3f1bea5af9c9260744',1,'uPCF8523_REG__OFFSET::MODE()'],['../dc/da9/unionu_d_r_v___r_e_g___m_a_p.html#a3415af2c9fb9232345e5957e2af754a2',1,'uDRV_REG_MAP::Mode()'],['../db/dac/struct_d_r_v2605_l__t.html#a2ef68f222eda5c0206c5484dbe94997e',1,'DRV2605L_t::Mode()'],['../d6/dd1/struct_g_p_m_s__t.html#acb15fedd9ec0542408801d2f23269b09',1,'GPMS_t::Mode()'],['../dc/d55/struct_m_c_p4725__t.html#a6a1d781d226231462cc6b08b844bcf21',1,'MCP4725_t::Mode()']]],

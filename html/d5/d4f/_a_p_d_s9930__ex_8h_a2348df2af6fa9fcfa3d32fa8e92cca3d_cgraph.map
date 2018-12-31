@@ -1,0 +1,24 @@
+<map id="APDS9930_Set_Prox_Drive_Strength" name="APDS9930_Set_Prox_Drive_Strength">
+<area shape="rect" id="node2" href="$de/d85/_a_p_d_s9930_8c.html#a59da97413fd39d052529af47ad3565a2" title="I2C Read function for APDS9930. " alt="" coords="805,365,931,392"/>
+<area shape="rect" id="node5" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#aa4882a1c7a34982bb4dd2423193c7839" title="Write APDS9930 Config. " alt="" coords="791,619,945,645"/>
+<area shape="rect" id="node7" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a9b066ac2ef1ab6b081dd04361bd1ca09" title="Write APDS9930 Control. " alt="" coords="241,416,394,443"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1216,417,1328,444"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1221,499,1323,525"/>
+<area shape="rect" id="node6" href="$de/d85/_a_p_d_s9930_8c.html#a1ae7594cb2bd6a3a0bace217664a3205" title="I2C Write function for APDS9930. " alt="" coords="1043,543,1168,569"/>
+<area shape="rect" id="node8" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#aa55b4418fec7e9abb920f625d6ee04b3" title="Oscillator Enable / Disable. " alt="" coords="493,61,643,88"/>
+<area shape="rect" id="node10" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a8ad058c1d064c49b4462d5fd556dcf2a" title="ALS module Enable / Disable. " alt="" coords="493,112,643,139"/>
+<area shape="rect" id="node11" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#ab695ca3f5a418877e24c1565318365f5" title="Proximity module Enable / Disable. " alt="" coords="493,163,643,189"/>
+<area shape="rect" id="node12" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#afdb86349eff7c2f3123558420985c2cb" title="ALS interrupt module Enable / Disable. " alt="" coords="491,213,645,240"/>
+<area shape="rect" id="node13" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#aeda613350dc928459bbd6acb953e3724" title="Proximity interrupt module Enable / Disable. " alt="" coords="491,264,645,291"/>
+<area shape="rect" id="node14" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a2c05bc9883ef1f81ff404fc39263f74f" title="WAIT module Enable / Disable. " alt="" coords="491,315,645,341"/>
+<area shape="rect" id="node15" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#aecca87d65b0d2e6e49d689c1e0d1bb3e" title="Sleep After Interrupt Enable / Disable. " alt="" coords="497,365,639,392"/>
+<area shape="rect" id="node16" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#ae0756153aa21abd805a5dbf53f8371d2" title="ALS Gain configuration. " alt="" coords="478,619,658,645"/>
+<area shape="rect" id="node18" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#af3f87ba53ee26edc10d62a3aeaebd29f" title="Proximity Gain configuration. " alt="" coords="477,416,659,443"/>
+<area shape="rect" id="node19" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a1510ac50b06602ae3d2910c3003c380a" title="ALS Persistence configuration. " alt="" coords="459,467,677,493"/>
+<area shape="rect" id="node20" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#ac2ae450dda2a6129323b765a67c3a114" title="Proximity Persistence configuration. " alt="" coords="458,517,678,544"/>
+<area shape="rect" id="node21" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a2115f8e6fcfd52d4faffff11a13fbb8c" title="ALS Integration time configuration. " alt="" coords="443,771,693,797"/>
+<area shape="rect" id="node22" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#af88ecdc0f8bfa716af0f809b3ce819b8" title="Proximity Integration time configuration. " alt="" coords="742,821,994,848"/>
+<area shape="rect" id="node23" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a5016ed2872a19e843257481a365e3da1" title="Wait time configuration. " alt="" coords="476,568,660,595"/>
+<area shape="rect" id="node9" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a929ba47080bfbac9ae480db7a48b553e" title="Write APDS9930 Enable register. " alt="" coords="794,239,942,265"/>
+<area shape="rect" id="node17" href="$d9/d54/_a_p_d_s9930__proc_8c.html#a0b7be2870227e3f8e9b2b58c248c7478" title="Set proper LPC value (Lux per Count) " alt="" coords="795,720,941,747"/>
+</map>

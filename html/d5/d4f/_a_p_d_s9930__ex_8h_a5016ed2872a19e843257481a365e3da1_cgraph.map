@@ -1,0 +1,7 @@
+<map id="APDS9930_Set_Wait_Time" name="APDS9930_Set_Wait_Time">
+<area shape="rect" id="node2" href="$de/d85/_a_p_d_s9930_8c.html#a59da97413fd39d052529af47ad3565a2" title="I2C Read function for APDS9930. " alt="" coords="440,5,565,32"/>
+<area shape="rect" id="node5" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#aa4882a1c7a34982bb4dd2423193c7839" title="Write APDS9930 Config. " alt="" coords="238,56,391,83"/>
+<area shape="rect" id="node6" href="$de/d85/_a_p_d_s9930_8c.html#a1ae7594cb2bd6a3a0bace217664a3205" title="I2C Write function for APDS9930. " alt="" coords="440,56,565,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="613,5,725,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="618,56,721,83"/>
+</map>

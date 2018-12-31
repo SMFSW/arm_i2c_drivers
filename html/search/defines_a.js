@@ -27,5 +27,6 @@ var searchData=
   ['tsl2591_5fbase_5faddr',['TSL2591_BASE_ADDR',['../da/d96/_t_s_l2591_8h.html#a8679f20fc3755c195e9d5b1191e5881f',1,'TSL2591.h']]],
   ['tsl2591_5fch0_5fcounts',['TSL2591_CH0_COUNTS',['../d7/d6e/_t_s_l2591__proc_8h.html#a0b5966e4644214bb7c7ed3a8852ef0ff',1,'TSL2591_proc.h']]],
   ['tsl2591_5fch1_5fcounts',['TSL2591_CH1_COUNTS',['../d7/d6e/_t_s_l2591__proc_8h.html#aba32b7706995d03b94746fa6d5412ad7',1,'TSL2591_proc.h']]],
-  ['tsl2591_5fchip_5fid',['TSL2591_CHIP_ID',['../d7/d6e/_t_s_l2591__proc_8h.html#ace6333b3ba8fdcab2ac9ff354fca0b85',1,'TSL2591_proc.h']]]
+  ['tsl2591_5fchip_5fid',['TSL2591_CHIP_ID',['../d7/d6e/_t_s_l2591__proc_8h.html#ace6333b3ba8fdcab2ac9ff354fca0b85',1,'TSL2591_proc.h']]],
+  ['tsl2591_5fdevice_5ffactor',['TSL2591_DEVICE_FACTOR',['../d7/d6e/_t_s_l2591__proc_8h.html#a252208050ace8f18164cba2d674b56d7',1,'TSL2591_proc.h']]]
 ];

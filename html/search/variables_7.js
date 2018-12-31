@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['ga',['GA',['../d6/def/struct_a_p_d_s9930__t.html#a32870b015b1367f70c40f3ac2e2fe770',1,'APDS9930_t']]],
   ['gain',['Gain',['../d3/d18/struct_t_c_s3400__t.html#a508381e0613c02c902b05676f5ed4fe2',1,'TCS3400_t::Gain()'],['../d8/d5b/struct_t_c_s3472__t.html#a6e530434394f3ec6295d230e01321766',1,'TCS3472_t::Gain()'],['../d7/d5e/struct_t_s_l2591__t.html#a268cb17b44350b9f0b1818dd497c1474',1,'TSL2591_t::Gain()']]],
   ['gain_5fselection',['GAIN_SELECTION',['../de/d02/unionu_s11059___r_e_g_____c_o_n_t_r_o_l.html#a94c15b3c9c7ee787c18edf183d72aacd',1,'uS11059_REG__CONTROL']]],
   ['gainselection',['GainSelection',['../d8/df6/struct_s11059__t.html#afd2dee475dd5fbbcca6cf913f3bae306',1,'S11059_t']]],

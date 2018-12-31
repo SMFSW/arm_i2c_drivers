@@ -1,0 +1,7 @@
+<map id="APDS9930.h" name="APDS9930.h">
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="330,80,455,107"/>
+<area shape="rect" id="node6" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="479,80,595,107"/>
+<area shape="rect" id="node7" href="$d1/d45/_a_p_d_s9930__proc_8h.html" title="APDS9930 Driver procedures. " alt="" coords="33,80,162,107"/>
+<area shape="rect" id="node9" href="$d5/d4f/_a_p_d_s9930__ex_8h.html" title="APDS9930 Driver extensions. " alt="" coords="187,80,305,107"/>
+<area shape="rect" id="node8" href="$db/d70/shared___a_l_s_8h.html" title="Ambient Light Sensing shared. " alt="" coords="46,155,150,181"/>
+</map>
