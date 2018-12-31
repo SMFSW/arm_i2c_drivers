@@ -106,6 +106,7 @@ FctERR NONNULL__ TCS3472_Set_Integration_Time(TCS3472_t * pCpnt, const uint16_t 
 	if (err)	{ return err; }
 
 	pCpnt->cfg.Integ = integ;
+	pCpnt->cfg.Integ_reg = ATIME;
 
 	return err;
 }

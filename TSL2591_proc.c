@@ -40,20 +40,20 @@ __WEAK FctERR NONNULL__ TSL2591_Init_Sequence(TSL2591_t * pCpnt)
 
 	EN.Bits.PON = true;		// Turn ON Osc
 	err = TSL2591_Write_En(pCpnt, EN.Byte);
-	if (err)			{ return err; }
+	if (err)	{ return err; }
 
 	CFG.Bits.AGAIN = pCpnt->cfg.Gain;
 	CFG.Bits.ATIME = pCpnt->cfg.Integ;
 	err = TSL2591_Write_Cfg(pCpnt, CFG.Byte);
-	if (err)			{ return err; }
+	if (err)	{ return err; }
 
 	TSL2591_Set_CPL(pCpnt);
 
 	err = TSL2591_Set_AIT(pCpnt, pCpnt->cfg.LowThreshold, pCpnt->cfg.HighThreshold);
-	if (err)			{ return err; }
+	if (err)	{ return err; }
 
-	EN.Bits.AEN = true;				// Turn ON ALS
-	EN.Bits.AIEN = pCpnt->cfg.AIEN;	// Turn ON ALS interrupts
+	EN.Bits.AEN = pCpnt->cfg.AIEN;	// Turn ON ALS following cfg
+	EN.Bits.AIEN = pCpnt->cfg.AIEN;	// Turn ON ALS interrupts following cfg
 	return TSL2591_Write_En(pCpnt, EN.Byte);
 }
 
@@ -64,27 +64,24 @@ __WEAK FctERR NONNULL__ TSL2591_Init_Sequence(TSL2591_t * pCpnt)
 void NONNULL__ TSL2591_Set_CPL(TSL2591_t * pCpnt)
 {
 	// GA = 1 / Transmitivity -> e.g., for 5% transmissive glass, GA = 1 / 0.05
-	const float	GA = 100.0f / TSL2591_GLASS_TRANSMITIVITY;
+	const float	GA = 100.0f / TSL2591_GLASS_TRANSMISSIVITY;
 
-	// CPL = (ATIME_ms * AGAINx) / (GA * 53)	(Counts per Lux)
-	// 6.82f is coef to convert from uW/cm2 to Lux -> https://forums.adafruit.com/viewtopic.php?f=19&t=85343&start=15
-	float CPL = (TSL2591_integ_tab[pCpnt->cfg.Integ] * TSL2591_gain_tab[pCpnt->cfg.Gain] /* * 6.82f*/) / /*264.1f*/(GA * 53);
+	// CPL = (ATIME_ms * AGAINx) / (GA * DF)	(Counts per Lux)
+	float CPL = (TSL2591_integ_tab[pCpnt->cfg.Integ] * TSL2591_gain_tab[pCpnt->cfg.Gain]) / (GA * TSL2591_DEVICE_FACTOR);
 
 	pCpnt->cfg.DER = 2.0f / CPL;
 	pCpnt->cfg.CPkL = (uint32_t) (CPL * 1000);	// convert Counts Per Lux into kCounts
 }
 
 
-#define ADAFRUIT_LUX_TSL2591
-
 /*!\brief Computes an approximation of Illuminance (in lux) from Full and IR values
 ** \param[in] full - Red value
 ** \param[in] ir - Green value
 ** \return FctERR - error code
 **/
-static NONNULL__ FctERR calculateLux(TSL2591_t * pCpnt, uint16_t full, uint16_t ir)
+static NONNULL__ FctERR calculateLux(TSL2591_t * pCpnt, const uint16_t full, const uint16_t ir)
 {
-	uint32_t	LUX1, LUX2;
+	const float	B = 1.64f, C = 0.59f, D = 0.86f, DF = 408.0f;
 	// SATURATION = 1024 * (256 - ATIME_ms) if ATIME_ms > 172ms
 	uint16_t	sat = (TSL2591_integ_tab[pCpnt->cfg.Integ] > 172) ? 65535 : 36863;
 
@@ -97,42 +94,18 @@ static NONNULL__ FctERR calculateLux(TSL2591_t * pCpnt, uint16_t full, uint16_t 
 	else { pCpnt->Saturation = false; }
 
 	// Check for ripple saturation
-	sat = (uint16_t) (sat * 0.75f);
+	sat *= 0.75f;
 	if ((full >= sat) || (ir >= sat))	{ pCpnt->SaturationRipple = true; }
 	else								{ pCpnt->SaturationRipple = false; }
 
-	// LUX = Raw / (gain * (integ / 100)) ????
+	float CPL = (TSL2591_integ_tab[pCpnt->cfg.Integ] * TSL2591_gain_tab[pCpnt->cfg.Gain]) / DF;
 
-	// 1.67f factor is obtained as the ratio of Irradiance Responsivity (257.5 / 154.1) or invert ADC count ratio val (1 / 0.598)
-	// Lux1 = (C0DATA - 2 * C1DATA) / CPL
-	LUX1 = (float) ((1000 * full) - (1670 * ir)) / pCpnt->cfg.CPkL;
+	float IAC1 = full - (B * ir);			// IAC1 = (C0DATA - (B * C1DATA))
+	float IAC2 = (C * full) - (D * ir);		// IAC2 = (C * C0DATA) - (D * C1DATA)
+	float IAC = max(0, max(IAC1, IAC2));	// IAC = MAX(IAC1, IAC2, 0)
 
-	// TODO: find about 2nd segment equation for TSL2591
-	// Lux2 = (0.6 * C0DATA - C1DATA) / CPL
-	LUX2 = (float) ((600 * full) - (1000 * ir)) / pCpnt->cfg.CPkL;
-
-	// Lux = MAX(Lux1, Lux2, 0)
-	pCpnt->Lux = LUX1;// max(LUX1, LUX2);
-
-	// IRF = Lux * CPL / C0DATA;	(Infra Red Factor)
-	pCpnt->IRF = (float) pCpnt->Lux * ((float) pCpnt->cfg.CPkL / 1000.0f) / full;
-
-	// MaxLux = IRF * SATURATION / CPL;
-	pCpnt->MaxLux = pCpnt->IRF * sat / ((float) pCpnt->cfg.CPkL / 1000.0f);
-
-	#if defined(ADAFRUIT_LUX_TSL2591)
-		float		cpl, lux1, lux2;
-		uint32_t	lux;
-
-		// Equation from Adafruit libraries
-		cpl = (TSL2591_integ_tab[pCpnt->cfg.Integ] * TSL2591_gain_tab[pCpnt->cfg.Gain]) / 408.0f;
-
-		lux1 = ((float) full - (1.6f * (float) ir)) / cpl;
-		lux2 = ((0.59f * (float) full) - (0.86f * (float) ir)) / cpl;
-		lux = max((uint32_t) lux1, (uint32_t) lux2);
-
-		printf("TSL2591: adafruit lux: %lul\r\n", lux);
-	#endif
+	pCpnt->Lux = IAC / CPL;					// Lux = IAC / CPL
+	pCpnt->IRF = IAC / full;				// IRF = IAC / C0DATA (Infra Red Factor)
 
 	return ERROR_OK;
 }
@@ -140,26 +113,26 @@ static NONNULL__ FctERR calculateLux(TSL2591_t * pCpnt, uint16_t full, uint16_t 
 
 __WEAK FctERR NONNULL__ TSL2591_handler(TSL2591_t * pCpnt)
 {
-	uint8_t	DATA[4];
-	FctERR	err;
+	uint8_t					DATA[5];
+	uTSL2591_REG__STATUS *	ST = (uTSL2591_REG__STATUS *) DATA;
+	FctERR					err;
 
-	err = TSL2591_Read(pCpnt->cfg.slave_inst, DATA, TSL2591__C0DATAL, 4);
+	err = TSL2591_Read(pCpnt->cfg.slave_inst, DATA, TSL2591__STATUS, sizeof(DATA));
 	if (err)	{ return err; }
 
-	pCpnt->Full = MAKEWORD(DATA[0], DATA[1]);
-	pCpnt->IR = MAKEWORD(DATA[2], DATA[3]);
-	err = calculateLux(pCpnt, pCpnt->Full, pCpnt->IR);
-
-	#if defined(VERBOSE)
-		if (err == ERROR_OVERFLOW)	{ printf("TSL2591; Sensor saturation reached!\r\n"); }
-		else						{ printf("TSL2591: Full %d IR %d Lux: %lul\r\n", pCpnt->Full, pCpnt->IR, pCpnt->Lux); }
-	#endif
-
-	if (pCpnt->cfg.AIEN)
+	if ((ST->Bits.AINT) && (ST->Bits.AVALID))
 	{
-		err = TSL2591_SF_Clear_IT(pCpnt);
-		if (err)	{ return err; }
+		pCpnt->Full = MAKEWORD(DATA[1], DATA[2]);
+		pCpnt->IR = MAKEWORD(DATA[3], DATA[4]);
+		err = calculateLux(pCpnt, pCpnt->Full, pCpnt->IR);
+
+		#if defined(VERBOSE)
+			if (err == ERROR_OVERFLOW)	{ printf("TSL2591; Sensor saturation reached!\r\n"); }
+			else						{ printf("TSL2591: Full %d IR %d Lux: %lul\r\n", pCpnt->Full, pCpnt->IR, pCpnt->Lux); }
+		#endif
 	}
+
+	if (ST->Bits.AINT)	{ return TSL2591_SF_Clear_IT(pCpnt); }
 
 	return ERROR_OK;
 }

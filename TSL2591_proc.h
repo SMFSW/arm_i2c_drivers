@@ -25,10 +25,12 @@
 #define TSL2591_CHIP_ID				0x50	//!< TSL2591 Chip ID to check against
 
 
-#if !defined(TSL2591_GLASS_TRANSMITIVITY)
-#define TSL2591_GLASS_TRANSMITIVITY	100		//!< Glass transmitivity (in percent)
+#if !defined(TSL2591_GLASS_TRANSMISSIVITY)
+#define TSL2591_GLASS_TRANSMISSIVITY	100		//!< Glass transmissivity (in percent)
 #endif
 
+
+#define TSL2591_DEVICE_FACTOR		53		//!< TSL2591 Device factor
 
 #define TSL2591_CH0_COUNTS			264.1f	//!< Counts per uW/cm2 for CH0 (Full spectrum)
 #define TSL2591_CH1_COUNTS			34.9f	//!< Counts per uW/cm2 for CH1 (IR)
@@ -44,7 +46,6 @@ typedef struct TSL2591_t {
 	uint16_t		Full;				//!< Current Full spectrum raw value
 	uint16_t		IR;					//!< Current IR raw value
 	uint32_t		Lux;				//!< Current Illuminance (lux)
-	uint32_t		MaxLux;				//!< Current Max illuminance in current conditions (lux)
 	float			IRF;				//!< Current Current IR ratio
 	bool			SaturationRipple;	//!< Current Ripple saturation status (75% of saturation value)
 	bool			Saturation;			//!< Current Sensor saturation status

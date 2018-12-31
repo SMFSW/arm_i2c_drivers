@@ -57,6 +57,7 @@ typedef struct TCS3472_t {
 	I2C_slave_t *	slave_inst;			//!< Slave structure
 	double			mat[3][3];			//!< RGB to XYZ matrix
 	TCS3472_gain	Gain;				//!< Sensor gain config
+	uint8_t			Integ_reg;			//!< Sensor integration time config (value written to register)
 	uint16_t		Integ;				//!< Sensor integration time config
 	uint16_t		Wait;				//!< Sensor wait time config
 	uint16_t		LowThreshold;		//!< Low Threshold config

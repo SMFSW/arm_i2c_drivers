@@ -28,6 +28,7 @@ SOFTWARE.
 * template update (splitted into singleton/multiple device(s))
 * more NONNULL__ checks
 * AMG88: added
+* APDS9930: added
 * BMP180: fixed temperature and pressure calculation (no use of unsigned LSHIFT or RSHIFT for signed calculations)
 * FM24C: added possibility to customize FM24C_SIZE macro if needed
 * MCP4725: Fixed general call function (transmit command, not receive), and taking I2C_HandleTypeDef pointer as parameter
@@ -37,9 +38,13 @@ SOFTWARE.
 * shared_CLS: added files for common code regarding color light sensing (RGB to chromacity CIE1931 xy conversion and CCT calculation)
 * shared_Temperature: added files for common code regarding temperature conversion (Ceelsius & Farenheit)
 * TCS3400, TCS3472: added matrix in peripheral configuration struct (to be able to use custom matrix for RGB to XYZ conversion)
+* TCS34xx, TSL2591: set x(I)EN flags with same value in weak init sequence
+* TCS34xx, TSL2591: fix calculation of maximum count (using stored ALS Integration register value)
+* TCS34xx, TSL2591: get Status register in handler for results validity
 * TCS34xx, TSL2591: removed variable set to 0 after reading from register (to keep other register params intact)
 * TCS34xx, TSL2591: setting both thresholds at once; added persistence configuration function in ex file
-* TSL2591: fixed uTSL2591_REG__STATUS AVALID bit
+* TSL2591: fix uTSL2591_REG__STATUS AVALID bit
+* TSL2591: changed lux calculations to fit with the ones used for APDS930
 
 ## v0.7
 
