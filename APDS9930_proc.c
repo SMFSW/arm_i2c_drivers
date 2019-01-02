@@ -44,9 +44,9 @@ __WEAK FctERR NONNULL__ APDS9930_Init_Sequence(APDS9930_t * pCpnt)
 	pCpnt->cfg.WEN = true;
 
 	// get ID & check against values for APDS9930
-	err = APDS9930_Get_ChipID(pCpnt, &pCpnt->cfg.ID);
+	err = APDS9930_Get_ChipID(pCpnt, &pCpnt->cfg.Id);
 	if (err)								{ return err; }
-	if (pCpnt->cfg.ID != APDS9930_CHIP_ID)	{ return ERROR_COMMON; }	// Unknown device
+	if (pCpnt->cfg.Id != APDS9930_CHIP_ID)	{ return ERROR_COMMON; }	// Unknown device
 
 	EN.Bits.PON = true;		// Turn ON Osc
 	err = APDS9930_Write_En(pCpnt, EN.Byte);

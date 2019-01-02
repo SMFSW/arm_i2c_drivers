@@ -57,9 +57,7 @@ FctERR NONNULL__ MCP4725_Write(I2C_slave_t * pSlave, const uint8_t * data, const
 	if (nb > 3)						{ return ERROR_RANGE; }		// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
-
 	pSlave->status = HAL_I2C_Master_Transmit(pSlave->cfg.bus_inst, pSlave->cfg.addr, (uint8_t *) data, nb, pSlave->cfg.timeout);
-
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }
@@ -71,9 +69,7 @@ FctERR NONNULL__ MCP4725_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16
 	if (nb > 3)						{ return ERROR_RANGE; }		// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
-
 	pSlave->status = HAL_I2C_Master_Receive(pSlave->cfg.bus_inst, pSlave->cfg.addr, data, nb, pSlave->cfg.timeout);
-
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }

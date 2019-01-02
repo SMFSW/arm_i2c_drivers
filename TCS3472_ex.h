@@ -43,10 +43,10 @@ typedef union uTCS3472_REG_MAP {
 		uint8_t					ATIME;		//!< RGBC time
 		uint8_t					:8;
 		uint8_t					WTIME;		//!< Wait time
-		uint8_t					AILTL;		//!< Clear interrupt low threshold low byte
-		uint8_t					AILTH;		//!< Clear interrupt low threshold high byte
-		uint8_t					AIHTL;		//!< Clear interrupt high threshold low byte
-		uint8_t					AIHTH;		//!< Clear interrupt high threshold high byte
+		uint8_t					AILTL;		//!< Interrupt low threshold low byte
+		uint8_t					AILTH;		//!< Interrupt low threshold high byte
+		uint8_t					AIHTL;		//!< Interrupt high threshold low byte
+		uint8_t					AIHTH;		//!< Interrupt high threshold high byte
 		uint8_t					:8;
 		uint8_t					:8;
 		uint8_t					:8;
@@ -153,14 +153,14 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_Set_Pesistence(TCS3472_t * pCpnt, const
 
 /*!\brief Integration time configuration
 ** \param[in] pCpnt - Pointer to TCS3472 component
-** \param[in] integ - Integration time value
+** \param[in] integ - Integration time value (from 3ms to 614ms)
 ** \return FctERR - error code
 **/
 FctERR NONNULL__ TCS3472_Set_Integration_Time(TCS3472_t * pCpnt, const uint16_t integ);
 
 /*!\brief Wait time configuration
 ** \param[in] pCpnt - Pointer to TCS3472 component
-** \param[in] wait - Wait time value
+** \param[in] wait - Wait time value (from 3m to 7400ms)
 ** \return FctERR - error code
 **/
 FctERR NONNULL__ TCS3472_Set_Wait_Time(TCS3472_t * pCpnt, const uint16_t wait);
@@ -189,7 +189,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_Set_AIHT(TCS3472_t * pCpnt, const uint1
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3472_Set_AIT(TCS3472_t * pCpnt, const uint16_t lthr, const uint16_t hthr) {
-	uint8_t DAT[4] = { LOBYTE(hthr), HIBYTE(hthr), LOBYTE(lthr), HIBYTE(lthr) };
+	uint8_t DAT[4] = { LOBYTE(lthr), HIBYTE(lthr), LOBYTE(hthr), HIBYTE(hthr) };
 	return TCS3472_Write(pCpnt->cfg.slave_inst, DAT, TCS3472__AILTL, sizeof(DAT)); }
 
 

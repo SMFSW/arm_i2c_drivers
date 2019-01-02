@@ -28,7 +28,7 @@ SOFTWARE.
 * template update (splitted into singleton/multiple device(s))
 * more NONNULL__ checks
 * AMG88: added
-* APDS9930: added
+* APDS9930: added (+ warning if APDS9960 also compiled, OFFSET union removed as coded as signed 8bits integer)
 * BMP180: fixed temperature and pressure calculation (no use of unsigned LSHIFT or RSHIFT for signed calculations)
 * FM24C: added possibility to customize FM24C_SIZE macro if needed
 * MCP4725: Fixed general call function (transmit command, not receive), and taking I2C_HandleTypeDef pointer as parameter
@@ -42,7 +42,7 @@ SOFTWARE.
 * TCS34xx, TSL2591: fix calculation of maximum count (using stored ALS Integration register value)
 * TCS34xx, TSL2591: get Status register in handler for results validity
 * TCS34xx, TSL2591: removed variable set to 0 after reading from register (to keep other register params intact)
-* TCS34xx, TSL2591: setting both thresholds at once; added persistence configuration function in ex file
+* TCS34xx, TSL2591: setting both thresholds at once (now fixed, thresholds were inverted); added persistence configuration function in ex file
 * TSL2591: fix uTSL2591_REG__STATUS AVALID bit
 * TSL2591: changed lux calculations to fit with the ones used for APDS930
 

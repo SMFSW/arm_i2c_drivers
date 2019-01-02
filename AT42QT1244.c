@@ -77,11 +77,9 @@ FctERR NONNULL__ AT42QT1244_Write(I2C_slave_t * pSlave, const uint8_t * data, co
 	if ((addr + nb) > AT42QT__SETUP_HOST_CRC_MSB + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
-
 	// TODO: check if trick works
 	// MemAddress then 0x00 has to be sent, trick is to tell MEMADD size is 16 bit and send addr as the MSB
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, LSHIFT(addr, 8), I2C_MEMADD_SIZE_16BIT, (uint8_t *) data, nb, pSlave->cfg.timeout);
-
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }
@@ -99,18 +97,20 @@ FctERR NONNULL__ AT42QT1244_Read(I2C_slave_t * pSlave, uint8_t * data, const uin
 	uint8_t *	tmp_read = malloc(nb + 2);
 
 	I2C_set_busy(pSlave, true);
-
 	pSlave->status = HAL_I2C_Master_Transmit(pSlave->cfg.bus_inst, pSlave->cfg.addr, preamble, nb, pSlave->cfg.timeout);
+	I2C_set_busy(pSlave, false);
 	err = HALERRtoFCTERR(pSlave->status);
 
 	// TODO: WAIT 150us to add??
 
-	if (pSlave->status == HAL_OK) {
+	if (pSlave->status == HAL_OK)
+	{
 		pSlave->status = HAL_I2C_Master_Receive(pSlave->cfg.bus_inst, pSlave->cfg.addr, tmp_read, nb + 2, pSlave->cfg.timeout);
 		err = HALERRtoFCTERR(pSlave->status);
 	}
 
-	if (pSlave->status == HAL_OK) {
+	if (pSlave->status == HAL_OK)
+	{
 		// Checksum calculation
 		for (int i = 0 ; i < nb ; i++)	{ crc = crc16(crc, tmp_read[i]); }
 		// Copy to destination if crc is ok
@@ -119,7 +119,6 @@ FctERR NONNULL__ AT42QT1244_Read(I2C_slave_t * pSlave, uint8_t * data, const uin
 	}
 
 	free(tmp_read);
-	I2C_set_busy(pSlave, false);
 	return err;
 }
 

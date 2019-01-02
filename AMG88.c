@@ -49,9 +49,7 @@ FctERR NONNULL__ AMG88_Write(I2C_slave_t * pSlave, const uint8_t * data, const u
 	if ((addr + nb) > AMG88__IHYSH + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
-
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
-
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }
@@ -64,9 +62,7 @@ FctERR NONNULL__ AMG88_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t
 	if ((addr + nb) > AMG88__T64H + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
-
 	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
-
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }

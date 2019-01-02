@@ -41,9 +41,7 @@ FctERR NONNULL__ GPMS_Write(const uint8_t * data, const uint16_t addr, const uin
 	if ((addr + nb) > GPMS__IO_PORT_OUTPUT + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&GPMS_hal, true);
-
 	GPMS_hal.status = HAL_I2C_Mem_Write(GPMS_hal.cfg.bus_inst, GPMS_hal.cfg.addr, addr, GPMS_hal.cfg.mem_size, (uint8_t *) data, nb, GPMS_hal.cfg.timeout);
-
 	I2C_set_busy(&GPMS_hal, false);
 	return HALERRtoFCTERR(GPMS_hal.status);
 }
@@ -56,9 +54,7 @@ FctERR NONNULL__ GPMS_Read(uint8_t * data, const uint16_t addr, const uint16_t n
 	if ((addr + nb) > GPMS__STATUS + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&GPMS_hal, true);
-
 	GPMS_hal.status = HAL_I2C_Mem_Read(GPMS_hal.cfg.bus_inst, GPMS_hal.cfg.addr, addr, GPMS_hal.cfg.mem_size, data, nb, GPMS_hal.cfg.timeout);
-
 	I2C_set_busy(&GPMS_hal, false);
 	return HALERRtoFCTERR(GPMS_hal.status);
 }

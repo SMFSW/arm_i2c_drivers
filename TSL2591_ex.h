@@ -156,7 +156,7 @@ __INLINE FctERR NONNULL_INLINE__ TSL2591_Set_AIHT(TSL2591_t * pCpnt, const uint1
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TSL2591_Set_AIT(TSL2591_t * pCpnt, const uint16_t lthr, const uint16_t hthr) {
-	uint8_t DAT[4] = { LOBYTE(hthr), HIBYTE(hthr), LOBYTE(lthr), HIBYTE(lthr) };
+	uint8_t DAT[4] = { LOBYTE(lthr), HIBYTE(lthr), LOBYTE(hthr), HIBYTE(hthr) };
 	return TSL2591_Write(pCpnt->cfg.slave_inst, DAT, TSL2591__AILTL, sizeof(DAT)); }
 
 
@@ -183,7 +183,7 @@ __INLINE FctERR NONNULL_INLINE__ TSL2591_Set_NPAIHT(TSL2591_t * pCpnt, const uin
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TSL2591_Set_NPAIT(TSL2591_t * pCpnt, const uint16_t lthr, const uint16_t hthr) {
-	uint8_t DAT[4] = { LOBYTE(hthr), HIBYTE(hthr), LOBYTE(lthr), HIBYTE(lthr) };
+	uint8_t DAT[4] = { LOBYTE(lthr), HIBYTE(lthr), LOBYTE(hthr), HIBYTE(hthr) };
 	return TSL2591_Write(pCpnt->cfg.slave_inst, DAT, TSL2591__NPAILTL, sizeof(DAT)); }
 
 /*** Special Functions ***/

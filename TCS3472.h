@@ -53,10 +53,10 @@ typedef enum PACK__ TCS3472_reg_map {
 	TCS3472__ENABLE = 0,		//!< Enables states and interrupts
 	TCS3472__ATIME,				//!< RGBC time
 	TCS3472__WTIME = 0x03,		//!< Wait time
-	TCS3472__AILTL,				//!< Clear interrupt low threshold low byte
-	TCS3472__AILTH,				//!< Clear interrupt low threshold high byte
-	TCS3472__AIHTL,				//!< Clear interrupt high threshold low byte
-	TCS3472__AIHTH,				//!< Clear ALS interrupt high threshold high byte
+	TCS3472__AILTL,				//!< Interrupt low threshold low byte
+	TCS3472__AILTH,				//!< Interrupt low threshold high byte
+	TCS3472__AIHTL,				//!< Interrupt high threshold low byte
+	TCS3472__AIHTH,				//!< Interrupt high threshold high byte
 	TCS3472__PERSIST = 0x0C,	//!< Interrupt persistence filter
 	TCS3472__CONFIG,			//!< Configuration
 	TCS3472__CONTROL = 0x0F,	//!< Control

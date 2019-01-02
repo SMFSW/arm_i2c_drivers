@@ -63,9 +63,7 @@ FctERR NONNULL__ FM24C_Write_Banked(FM24C_t * pCpnt, const uint8_t * data, const
 	uint16_t i2c_addr = pSlave->cfg.addr + (bank << 1);
 
 	I2C_set_busy(pSlave, true);
-
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, i2c_addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
-
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }
@@ -83,9 +81,7 @@ FctERR NONNULL__ FM24C_Read_Banked(FM24C_t * pCpnt, uint8_t * data, const uint16
 	uint16_t i2c_addr = pSlave->cfg.addr + (bank << 1);
 
 	I2C_set_busy(pSlave, true);
-
 	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, i2c_addr, addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
-
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }

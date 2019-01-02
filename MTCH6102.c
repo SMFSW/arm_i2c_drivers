@@ -50,9 +50,7 @@ FctERR NONNULL__ MTCH6102_Write(I2C_slave_t * pSlave, const uint8_t * data, cons
 	if ((addr + nb) > MTCH__RAW_ADC_31 + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
-
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
-
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }
@@ -65,9 +63,7 @@ FctERR NONNULL__ MTCH6102_Read(I2C_slave_t * pSlave, uint8_t * data, const uint1
 	if ((addr + nb) > MTCH__RAW_ADC_31 + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
-
 	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
-
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }

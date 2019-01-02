@@ -56,7 +56,7 @@ typedef enum PACK__ TCS3400_reg_map {
 	TCS3400__AILTL,				//!< Clear interrupt low threshold low byte
 	TCS3400__AILTH,				//!< Clear interrupt low threshold high byte
 	TCS3400__AIHTL,				//!< Clear interrupt high threshold low byte
-	TCS3400__AIHTH,				//!< Clear ALS interrupt high threshold high byte
+	TCS3400__AIHTH,				//!< Clear interrupt high threshold high byte
 	TCS3400__PERSIST = 0x8C,	//!< Interrupt persistence filter
 	TCS3400__CONFIG,			//!< Configuration
 	TCS3400__CONTROL = 0x8F,	//!< Control

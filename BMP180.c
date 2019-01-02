@@ -50,9 +50,7 @@ FctERR NONNULL__ BMP180_Write(I2C_slave_t * pSlave, const uint8_t * data, const 
 	if ((addr + nb) > BMP180__OUT_XLSB + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
-
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
-
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }
@@ -65,9 +63,7 @@ FctERR NONNULL__ BMP180_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_
 	if ((addr + nb) > BMP180__OUT_XLSB + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
-
 	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
-
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }

@@ -41,9 +41,7 @@ FctERR NONNULL__ PCF8523_Write(const uint8_t * data, const uint16_t addr, const 
 	if ((addr + nb) > PCF8523__TMR_B_REG + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&PCF8523_hal, true);
-
 	PCF8523_hal.status = HAL_I2C_Mem_Write(PCF8523_hal.cfg.bus_inst, PCF8523_hal.cfg.addr, addr, PCF8523_hal.cfg.mem_size, (uint8_t *) data, nb, PCF8523_hal.cfg.timeout);
-
 	I2C_set_busy(&PCF8523_hal, false);
 	return HALERRtoFCTERR(PCF8523_hal.status);
 }
@@ -56,9 +54,7 @@ FctERR NONNULL__ PCF8523_Read(uint8_t * data, const uint16_t addr, const uint16_
 	if ((addr + nb) > PCF8523__TMR_B_REG + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&PCF8523_hal, true);
-
 	PCF8523_hal.status = HAL_I2C_Mem_Read(PCF8523_hal.cfg.bus_inst, PCF8523_hal.cfg.addr, addr, PCF8523_hal.cfg.mem_size, data, nb, PCF8523_hal.cfg.timeout);
-
 	I2C_set_busy(&PCF8523_hal, false);
 	return HALERRtoFCTERR(PCF8523_hal.status);
 }

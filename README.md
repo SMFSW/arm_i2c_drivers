@@ -30,11 +30,11 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 
 - **AMG88**: Infrared Array Sensor (Grid-EYE)
 
-  -> _WORKING, TESTS PENDING_
+  -> _WORKING (TODO: recognition)_
 
 - **APDS9930**: Digital Proximity and Ambient Light Sensor
 
-  -> _NOT TESTED YET_
+  -> _WORKING, TESTS PENDING_
 
 - **APDS9960**: Digital Proximity, Ambient Light, RGB and Gesture Sensor
 
@@ -98,19 +98,19 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 
 - **S11059**: I2C interface-compatible color sensor
 
-  -> _TESTS PENDING_
+  -> _WORKING_
 
 - **TCS3400**: Color light-to-digital converter
 
-  -> _TESTS PENDING (communication OK, auto-integration, persistence & conversions in the works)_
+  -> _WORKING (TODO: auto-integration & persistence in the works)_
 
 - **TCS3472**: Color light-to-digital converter with IR filter
 
-  -> _TESTS PENDING (communication OK, auto-integration, persistence & conversions in the works)_
+  -> _WORKING (TODO: auto-integration & persistence in the works)_
 
 - **TSL2591**: Very-high sensitivity light-to-digital converter
 
-  -> _TESTS PENDING (communication OK, auto-integration, persistence & conversions in the works)_
+  -> _WORKING (TODO: auto-integration & persistence in the works)_
 
 
 ## FRAM / EEPROM

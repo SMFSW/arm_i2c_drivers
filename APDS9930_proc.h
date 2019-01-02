@@ -99,12 +99,12 @@ typedef struct APDS9930_t {
 	uint16_t					Wait;				//!< Sensor wait time config
 	uint16_t					ALS_LowThreshold;	//!< ALS Low Threshold config
 	uint16_t					ALS_HighThreshold;	//!< ALS High Threshold config
-	uint16_t					Prox_LowThreshold;	//!< ALS Low Threshold config
-	uint16_t					Prox_HighThreshold;	//!< ALS High Threshold config
+	uint16_t					Prox_LowThreshold;	//!< Proximity Low Threshold config
+	uint16_t					Prox_HighThreshold;	//!< Proximity High Threshold config
 	bool						AIEN;				//!< Sensor ALS (Ambient Light Sensing) interrupts enabled config
 	bool						PIEN;				//!< Sensor Proximity interrupts enabled config
 	bool						WEN;				//!< Wait between conversions enabled config
-	uint8_t						ID;					//!< Chip ID
+	uint8_t						Id;					//!< APDS9930 Chip ID
 	} cfg;
 } APDS9930_t;
 

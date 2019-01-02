@@ -55,14 +55,12 @@ FctERR NONNULL__ TCS3472_Write(I2C_slave_t * pSlave, const uint8_t * data, const
 	if (addr > TCS3472__CONTROL)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > TCS3472__CONTROL + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
-	I2C_set_busy(pSlave, true);
-
 	CMD.Bits.CMD = 1;
 	CMD.Bits.TRANSACTION = TCS3472__TRANS_NORMAL_OP;
 	CMD.Bits.ADDR = addr;
 
+	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, CMD.Byte, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
-
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }
@@ -76,14 +74,12 @@ FctERR NONNULL__ TCS3472_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16
 	if (addr > TCS3472__BDATAH)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > TCS3472__BDATAH + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
-	I2C_set_busy(pSlave, true);
-
 	CMD.Bits.CMD = 1;
 	CMD.Bits.TRANSACTION = TCS3472__TRANS_NORMAL_OP;
 	CMD.Bits.ADDR = addr;
 
+	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, CMD.Byte, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
-
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }
@@ -122,14 +118,12 @@ FctERR NONNULL__ TCS3472_Write_Special(I2C_slave_t * pSlave, const TCS3472_spec_
 
 	if (func != TCS3472__SF_CLR_IT)	{ return ERROR_VALUE; }		// Unknown special function
 
-	I2C_set_busy(pSlave, true);
-
 	CMD.Bits.CMD = 1;
 	CMD.Bits.TRANSACTION = TCS3472__TRANS_SPECIAL_FUNC;
 	CMD.Bits.ADDR = func;
 
+	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Master_Transmit(pSlave->cfg.bus_inst, pSlave->cfg.addr, &CMD.Byte, 1, pSlave->cfg.timeout);
-
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }

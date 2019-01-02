@@ -97,10 +97,10 @@ FctERR NONNULL__ TCS3472_Set_Integration_Time(TCS3472_t * pCpnt, const uint16_t 
 	uint8_t	ATIME;
 	FctERR	err;
 
-	if ((integ < 3) || (integ > 615))	{ return ERROR_RANGE; }	// Integration time out of range
+	if ((integ < 3) || (integ > 614))	{ return ERROR_RANGE; }	// Integration time out of range
 
 	// 2.4ms (0xFF) to 700ms (0x00)
-	//ATIME = (uint8_t) ((integ - 2.4f) * (0x00 - 0xFF) / (700.0f - 2.4f) + 0xFF);
+	//ATIME = (uint8_t) ((integ - 2.4f) * (0x00 - 0xFF) / (614.0f - 2.4f) + 0xFF);
 	ATIME = 256 - (uint8_t) ((float) integ / 2.4f);
 	err = TCS3472_Write(pCpnt->cfg.slave_inst, &ATIME, TCS3472__ATIME, 1);
 	if (err)	{ return err; }
@@ -118,7 +118,7 @@ FctERR NONNULL__ TCS3472_Set_Wait_Time(TCS3472_t * pCpnt, const uint16_t wait)
 	uint8_t					WAIT;
 	FctERR					err;
 
-	if ((wait < 3) || (wait > 7370))	{ return ERROR_RANGE; }	// Wait time out of range
+	if ((wait < 3) || (wait > 7400))	{ return ERROR_RANGE; }	// Wait time out of range
 
 	if (wait <= 614)
 	{
@@ -131,7 +131,7 @@ FctERR NONNULL__ TCS3472_Set_Wait_Time(TCS3472_t * pCpnt, const uint16_t wait)
 	{
 		// 29ms (0xFF) to 7.4s (0x00)
 		//WAIT = (uint8_t) ((wait - 29.0f) * (0x00 - 0xFF) / (7400.0f - 29.0f) + 0xFF);
-		WAIT = 256 - (uint8_t) (wait / 28.7f);
+		WAIT = 256 - (uint8_t) (wait / 29.0f);
 		CFG.Bits.WLONG = 1;
 	}
 

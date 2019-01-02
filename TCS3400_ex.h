@@ -122,14 +122,14 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Set_Pesistence(TCS3400_t * pCpnt, const
 
 /*!\brief Integration time configuration
 ** \param[in] pCpnt - Pointer to TCS3400 component
-** \param[in] integ - Integration time value
+** \param[in] integ - Integration time value (from 3ms to 712ms)
 ** \return FctERR - error code
 **/
 FctERR NONNULL__ TCS3400_Set_Integration_Time(TCS3400_t * pCpnt, const uint16_t integ);
 
 /*!\brief Wait time configuration
 ** \param[in] pCpnt - Pointer to TCS3400 component
-** \param[in] wait - Wait time value
+** \param[in] wait - Wait time value (from 3ms to 8540ms)
 ** \return FctERR - error code
 **/
 FctERR NONNULL__ TCS3400_Set_Wait_Time(TCS3400_t * pCpnt, const uint16_t wait);
@@ -158,7 +158,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Set_AIHT(TCS3400_t * pCpnt, const uint1
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3400_Set_AIT(TCS3400_t * pCpnt, const uint16_t lthr, const uint16_t hthr) {
-	uint8_t DAT[4] = { LOBYTE(hthr), HIBYTE(hthr), LOBYTE(lthr), HIBYTE(lthr) };
+	uint8_t DAT[4] = { LOBYTE(lthr), HIBYTE(lthr), LOBYTE(hthr), HIBYTE(hthr) };
 	return TCS3400_Write(pCpnt->cfg.slave_inst, DAT, TCS3400__AILTL, sizeof(DAT)); }
 
 

@@ -29,7 +29,9 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define APDS9930_BASE_ADDR		0x39		//!< APDS9930 Base address
+#define APDS9930_ADDR		0x39				//!< APDS9930 address
+
+#define APDS9930_BASE_ADDR	APDS9930_ADDR		//!< APDS9930 Base address
 
 
 // *****************************************************************************
@@ -261,18 +263,6 @@ typedef union uAPDS9930_REG__STATUS {
 		uint8_t 		:1;
 	} Bits;
 } uAPDS9930_REG__STATUS;
-
-
-/*!\union uAPDS9930_REG__POFFSET
-** \brief Union for POFFSET register of APDS9930
-**/
-typedef union uAPDS9930_REG__POFFSET {
-	uint8_t Byte;
-	struct {
-		uint8_t	MAGNITUDE	:7;	//!< Proximity Offset Sign. The offset sign shifts the proximity data negative when equal to 0 and positive when equal to 1.
-		uint8_t	SIGN		:1;	//!< Proximity Offset Magnitude. The offset magnitude shifts the proximity data positive or negative, depending on the proximity offset sign. The actual amount of the shift depends on the proximity gain (PGAIN), proximity LED drive strength (PDRIVE), and the number of proximity pulses (PPULSE).
-	} Bits;
-} uAPDS9930_REG__POFFSET;
 
 
 // *****************************************************************************
