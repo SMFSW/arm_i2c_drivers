@@ -30,7 +30,7 @@ var searchData=
   ['apds9930_5fget_5ffull',['APDS9930_Get_Full',['../d5/d4f/_a_p_d_s9930__ex_8h.html#aeb619c6321ab6d5273213a8893479995',1,'APDS9930_ex.h']]],
   ['apds9930_5fget_5fir',['APDS9930_Get_IR',['../d5/d4f/_a_p_d_s9930__ex_8h.html#a26ce0abbe02b16695b6937ec5579bf1f',1,'APDS9930_ex.h']]],
   ['apds9930_5fget_5flux',['APDS9930_Get_Lux',['../d1/d45/_a_p_d_s9930__proc_8h.html#a08c603f666e1dcd7ea5ccc4637c47b11',1,'APDS9930_proc.h']]],
-  ['apds9930_5fget_5fprox',['APDS9930_Get_PROX',['../d5/d4f/_a_p_d_s9930__ex_8h.html#aec78f7b7e9788080890f7ca7572c7c37',1,'APDS9930_ex.h']]],
+  ['apds9930_5fget_5fprox',['APDS9930_Get_Prox',['../d5/d4f/_a_p_d_s9930__ex_8h.html#a6d30fba7f11116608105da2cfa55c30b',1,'APDS9930_ex.h']]],
   ['apds9930_5fhandler',['APDS9930_handler',['../d9/d54/_a_p_d_s9930__proc_8c.html#a5fb700da5d891a42c098b079ed7cd603',1,'APDS9930_handler(APDS9930_t *pCpnt):&#160;APDS9930_proc.c'],['../d1/d45/_a_p_d_s9930__proc_8h.html#a5fb700da5d891a42c098b079ed7cd603',1,'APDS9930_handler(APDS9930_t *pCpnt):&#160;APDS9930_proc.c']]],
   ['apds9930_5fhandler_5fall',['APDS9930_handler_all',['../d1/d45/_a_p_d_s9930__proc_8h.html#a24390044b234a6f13916504006718885',1,'APDS9930_proc.h']]],
   ['apds9930_5finit',['APDS9930_Init',['../de/d85/_a_p_d_s9930_8c.html#a246b1c859ff7852af870f7f605627633',1,'APDS9930_Init(const uint8_t idx, const I2C_HandleTypeDef *hi2c, const uint16_t devAddress):&#160;APDS9930.c'],['../d6/dd1/_a_p_d_s9930_8h.html#a246b1c859ff7852af870f7f605627633',1,'APDS9930_Init(const uint8_t idx, const I2C_HandleTypeDef *hi2c, const uint16_t devAddress):&#160;APDS9930.c']]],

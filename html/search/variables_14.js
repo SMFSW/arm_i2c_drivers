@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['wait',['WAIT',['../d6/d20/unionu_d_r_v___r_e_g_____w_a_v_e_f_o_r_m___s_e_q_u_e_n_c_e_r.html#ac564defdacd2225b36b42dc1f9d59fdc',1,'uDRV_REG__WAVEFORM_SEQUENCER::WAIT()'],['../d6/def/struct_a_p_d_s9930__t.html#a2a59da930c209efef98a4822f77ee4f4',1,'APDS9930_t::Wait()'],['../d3/d18/struct_t_c_s3400__t.html#a2563a55e0658d2cfe3baa7ef158a7ce9',1,'TCS3400_t::Wait()'],['../d8/d5b/struct_t_c_s3472__t.html#aa9435273d6ebcfc8d3549b1935d44313',1,'TCS3472_t::Wait()']]],
+  ['wait',['Wait',['../d6/def/struct_a_p_d_s9930__t.html#a2a59da930c209efef98a4822f77ee4f4',1,'APDS9930_t::Wait()'],['../d3/d18/struct_t_c_s3400__t.html#a2563a55e0658d2cfe3baa7ef158a7ce9',1,'TCS3400_t::Wait()'],['../d8/d5b/struct_t_c_s3472__t.html#aa9435273d6ebcfc8d3549b1935d44313',1,'TCS3472_t::Wait()'],['../d6/d20/unionu_d_r_v___r_e_g_____w_a_v_e_f_o_r_m___s_e_q_u_e_n_c_e_r.html#ac564defdacd2225b36b42dc1f9d59fdc',1,'uDRV_REG__WAVEFORM_SEQUENCER::WAIT()']]],
   ['wake',['WAKE',['../d3/d05/unionu_a_t42_q_t___r_e_g_____s_e_t_u_p__165__188.html#a779e10708277ace1f8a735098a31d9be',1,'uAT42QT_REG__SETUP_165_188']]],
   ['wav_5ffrm_5fseq',['WAV_FRM_SEQ',['../d6/d20/unionu_d_r_v___r_e_g_____w_a_v_e_f_o_r_m___s_e_q_u_e_n_c_e_r.html#af4dc261eee7824e775095821d03a0e23',1,'uDRV_REG__WAVEFORM_SEQUENCER']]],
   ['waveform_5fsequencer',['Waveform_Sequencer',['../dc/da9/unionu_d_r_v___r_e_g___m_a_p.html#afba09da6d2ae4a8a2f14c6a693f4e2f3',1,'uDRV_REG_MAP']]],

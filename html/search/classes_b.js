@@ -13,7 +13,6 @@ var searchData=
   ['uapds9930_5freg_5f_5fcontrol',['uAPDS9930_REG__CONTROL',['../d6/d70/unionu_a_p_d_s9930___r_e_g_____c_o_n_t_r_o_l.html',1,'']]],
   ['uapds9930_5freg_5f_5fenable',['uAPDS9930_REG__ENABLE',['../d0/d82/unionu_a_p_d_s9930___r_e_g_____e_n_a_b_l_e.html',1,'']]],
   ['uapds9930_5freg_5f_5fpersist',['uAPDS9930_REG__PERSIST',['../d4/d1f/unionu_a_p_d_s9930___r_e_g_____p_e_r_s_i_s_t.html',1,'']]],
-  ['uapds9930_5freg_5f_5fpoffset',['uAPDS9930_REG__POFFSET',['../d8/d8d/unionu_a_p_d_s9930___r_e_g_____p_o_f_f_s_e_t.html',1,'']]],
   ['uapds9930_5freg_5f_5fstatus',['uAPDS9930_REG__STATUS',['../d5/db4/unionu_a_p_d_s9930___r_e_g_____s_t_a_t_u_s.html',1,'']]],
   ['uapds9930_5freg_5fmap',['uAPDS9930_REG_MAP',['../d5/de8/unionu_a_p_d_s9930___r_e_g___m_a_p.html',1,'']]],
   ['uat42qt_5freg_5f_5fdevice_5fstatus',['uAT42QT_REG__DEVICE_STATUS',['../d4/d1f/unionu_a_t42_q_t___r_e_g_____d_e_v_i_c_e___s_t_a_t_u_s.html',1,'']]],

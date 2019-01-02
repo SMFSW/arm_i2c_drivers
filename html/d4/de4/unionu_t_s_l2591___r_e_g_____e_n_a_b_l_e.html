@@ -76,28 +76,28 @@ $(function() {
 Data Fields</h2></td></tr>
 <tr class="memitem:a6fc0788b2826ae5378d1029d0648f0b7"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/de4/unionu_t_s_l2591___r_e_g_____e_n_a_b_l_e.html#a6fc0788b2826ae5378d1029d0648f0b7">Byte</a></td></tr>
 <tr class="separator:a6fc0788b2826ae5378d1029d0648f0b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af833ed81530696a28d83942376bf1a2e"><td class="memItemLeft" >struct {</td></tr>
-<tr class="memitem:aa7a470e98938b50c9bacb37bdae885da"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d4/de4/unionu_t_s_l2591___r_e_g_____e_n_a_b_l_e.html#a65bd6fc85a61cd4f1b06dcf168eff691">PON</a>:1</td></tr>
-<tr class="memdesc:aa7a470e98938b50c9bacb37bdae885da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Power ON. This field activates the internal oscillator to permit the timers and ADC channels to operate.  <a href="#aa7a470e98938b50c9bacb37bdae885da">More...</a><br /></td></tr>
-<tr class="separator:aa7a470e98938b50c9bacb37bdae885da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79af8f176bedfd2583e3fa1b59724360"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d4/de4/unionu_t_s_l2591___r_e_g_____e_n_a_b_l_e.html#a7a1d43ddb47371faf2a48661e0bd8cf6">AEN</a>:1</td></tr>
-<tr class="memdesc:a79af8f176bedfd2583e3fa1b59724360"><td class="mdescLeft">&#160;</td><td class="mdescRight">ALS Enable. This field activates ALS function. Writing a one activates the ALS. Writing a zero disables the ALS.  <a href="#a79af8f176bedfd2583e3fa1b59724360">More...</a><br /></td></tr>
-<tr class="separator:a79af8f176bedfd2583e3fa1b59724360"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab058be2e3654718e987a0e92b83cee83"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d4/de4/unionu_t_s_l2591___r_e_g_____e_n_a_b_l_e.html#a5fb146ecaf8b1820e67dd1e6b03f30af">__pad0__</a>:1</td></tr>
-<tr class="separator:ab058be2e3654718e987a0e92b83cee83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24fccd118e7f80f7b6c561b0da7df11f"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d4/de4/unionu_t_s_l2591___r_e_g_____e_n_a_b_l_e.html#a2a3907ffa480c02ae8a629ab01969d80">AIEN</a>:1</td></tr>
-<tr class="memdesc:a24fccd118e7f80f7b6c561b0da7df11f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ALS Interrupt Enable. When asserted permits ALS interrupts to be generated, subject to the persist filter.  <a href="#a24fccd118e7f80f7b6c561b0da7df11f">More...</a><br /></td></tr>
-<tr class="separator:a24fccd118e7f80f7b6c561b0da7df11f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c94c7bcd2965aca014342506351060d"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d4/de4/unionu_t_s_l2591___r_e_g_____e_n_a_b_l_e.html#a250ed69f3fa8b8224122521fef212598">__pad1__</a>:1</td></tr>
-<tr class="separator:a6c94c7bcd2965aca014342506351060d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad70cc6ed3b66be2651bd751ef643de4"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d4/de4/unionu_t_s_l2591___r_e_g_____e_n_a_b_l_e.html#ad882747f7a3a9c136553d14383cf444a">SAI</a>:1</td></tr>
-<tr class="memdesc:aad70cc6ed3b66be2651bd751ef643de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep after interrupt. When asserted, the device will power down at the end of an ALS cycle if an interrupt has been generated.  <a href="#aad70cc6ed3b66be2651bd751ef643de4">More...</a><br /></td></tr>
-<tr class="separator:aad70cc6ed3b66be2651bd751ef643de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af57720c699b165044c441909a33454a4"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d4/de4/unionu_t_s_l2591___r_e_g_____e_n_a_b_l_e.html#a08970e01615b0913c2f83d47d35bd08a">NPIEN</a>:1</td></tr>
-<tr class="memdesc:af57720c699b165044c441909a33454a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">No Persist Interrupt Enable. When asserted NP Threshold conditions will generate an interrupt, bypassing the persist filter.  <a href="#af57720c699b165044c441909a33454a4">More...</a><br /></td></tr>
-<tr class="separator:af57720c699b165044c441909a33454a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af833ed81530696a28d83942376bf1a2e"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/de4/unionu_t_s_l2591___r_e_g_____e_n_a_b_l_e.html#af833ed81530696a28d83942376bf1a2e">Bits</a></td></tr>
-<tr class="separator:af833ed81530696a28d83942376bf1a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad220f1abc8933408f07a26c5be936091"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:a0e0dcc4d06625435b4b5727e8a8e702f"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d4/de4/unionu_t_s_l2591___r_e_g_____e_n_a_b_l_e.html#a65bd6fc85a61cd4f1b06dcf168eff691">PON</a>:1</td></tr>
+<tr class="memdesc:a0e0dcc4d06625435b4b5727e8a8e702f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Power ON. This field activates the internal oscillator to permit the timers and ADC channels to operate.  <a href="#a0e0dcc4d06625435b4b5727e8a8e702f">More...</a><br /></td></tr>
+<tr class="separator:a0e0dcc4d06625435b4b5727e8a8e702f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b3a9b5e0add3c4df7f9fb885843974e"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d4/de4/unionu_t_s_l2591___r_e_g_____e_n_a_b_l_e.html#a7a1d43ddb47371faf2a48661e0bd8cf6">AEN</a>:1</td></tr>
+<tr class="memdesc:a4b3a9b5e0add3c4df7f9fb885843974e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ALS Enable. This field activates ALS function. Writing a one activates the ALS. Writing a zero disables the ALS.  <a href="#a4b3a9b5e0add3c4df7f9fb885843974e">More...</a><br /></td></tr>
+<tr class="separator:a4b3a9b5e0add3c4df7f9fb885843974e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57d33c59255bd08e6b734c3570d393c1"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d4/de4/unionu_t_s_l2591___r_e_g_____e_n_a_b_l_e.html#a5fb146ecaf8b1820e67dd1e6b03f30af">__pad0__</a>:1</td></tr>
+<tr class="separator:a57d33c59255bd08e6b734c3570d393c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7302a088f27244cf2c720ca32a5d3547"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d4/de4/unionu_t_s_l2591___r_e_g_____e_n_a_b_l_e.html#a2a3907ffa480c02ae8a629ab01969d80">AIEN</a>:1</td></tr>
+<tr class="memdesc:a7302a088f27244cf2c720ca32a5d3547"><td class="mdescLeft">&#160;</td><td class="mdescRight">ALS Interrupt Enable. When asserted permits ALS interrupts to be generated, subject to the persist filter.  <a href="#a7302a088f27244cf2c720ca32a5d3547">More...</a><br /></td></tr>
+<tr class="separator:a7302a088f27244cf2c720ca32a5d3547"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2704c14a53f604e2ed87e6e695cfe7af"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d4/de4/unionu_t_s_l2591___r_e_g_____e_n_a_b_l_e.html#a250ed69f3fa8b8224122521fef212598">__pad1__</a>:1</td></tr>
+<tr class="separator:a2704c14a53f604e2ed87e6e695cfe7af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b76403316a0d096e8628d9e232620fa"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d4/de4/unionu_t_s_l2591___r_e_g_____e_n_a_b_l_e.html#ad882747f7a3a9c136553d14383cf444a">SAI</a>:1</td></tr>
+<tr class="memdesc:a8b76403316a0d096e8628d9e232620fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep after interrupt. When asserted, the device will power down at the end of an ALS cycle if an interrupt has been generated.  <a href="#a8b76403316a0d096e8628d9e232620fa">More...</a><br /></td></tr>
+<tr class="separator:a8b76403316a0d096e8628d9e232620fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a241124ebc2b66d6247cdf9092e3b4a99"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d4/de4/unionu_t_s_l2591___r_e_g_____e_n_a_b_l_e.html#a08970e01615b0913c2f83d47d35bd08a">NPIEN</a>:1</td></tr>
+<tr class="memdesc:a241124ebc2b66d6247cdf9092e3b4a99"><td class="mdescLeft">&#160;</td><td class="mdescRight">No Persist Interrupt Enable. When asserted NP Threshold conditions will generate an interrupt, bypassing the persist filter.  <a href="#a241124ebc2b66d6247cdf9092e3b4a99">More...</a><br /></td></tr>
+<tr class="separator:a241124ebc2b66d6247cdf9092e3b4a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad220f1abc8933408f07a26c5be936091"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/de4/unionu_t_s_l2591___r_e_g_____e_n_a_b_l_e.html#ad220f1abc8933408f07a26c5be936091">Bits</a></td></tr>
+<tr class="separator:ad220f1abc8933408f07a26c5be936091"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Union for ENABLE register of TSL2591. </p>
@@ -162,8 +162,8 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="af833ed81530696a28d83942376bf1a2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af833ed81530696a28d83942376bf1a2e">&#9670;&nbsp;</a></span>Bits</h2>
+<a id="ad220f1abc8933408f07a26c5be936091"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad220f1abc8933408f07a26c5be936091">&#9670;&nbsp;</a></span>Bits</h2>
 
 <div class="memitem">
 <div class="memproto">

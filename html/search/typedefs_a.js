@@ -13,7 +13,6 @@ var searchData=
   ['uapds9930_5freg_5f_5fcontrol',['uAPDS9930_REG__CONTROL',['../d6/dd1/_a_p_d_s9930_8h.html#a10b8ff0ea69c7e4c75eabd9cbde48d47',1,'APDS9930.h']]],
   ['uapds9930_5freg_5f_5fenable',['uAPDS9930_REG__ENABLE',['../d6/dd1/_a_p_d_s9930_8h.html#a4d799ff4ddd864f6086a3aa1739627c9',1,'APDS9930.h']]],
   ['uapds9930_5freg_5f_5fpersist',['uAPDS9930_REG__PERSIST',['../d6/dd1/_a_p_d_s9930_8h.html#a7a98d095f99b686ecf0eb892f00c570a',1,'APDS9930.h']]],
-  ['uapds9930_5freg_5f_5fpoffset',['uAPDS9930_REG__POFFSET',['../d6/dd1/_a_p_d_s9930_8h.html#a3e7d6421ee0e2db766dc3a2527ab9612',1,'APDS9930.h']]],
   ['uapds9930_5freg_5f_5fstatus',['uAPDS9930_REG__STATUS',['../d6/dd1/_a_p_d_s9930_8h.html#a666066dc0646cd1d13390523346c882d',1,'APDS9930.h']]],
   ['uapds9930_5freg_5fmap',['uAPDS9930_REG_MAP',['../d5/d4f/_a_p_d_s9930__ex_8h.html#aa8b94d698a62bbbcb8df22edafa21d10',1,'APDS9930_ex.h']]],
   ['uat42qt_5freg_5f_5fdevice_5fstatus',['uAT42QT_REG__DEVICE_STATUS',['../dd/d4f/_a_t42_q_t1244_8h.html#a4bdc1404b5a8223376bd6fe2f5560aa6',1,'AT42QT1244.h']]],
