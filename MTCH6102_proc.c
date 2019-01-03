@@ -62,13 +62,13 @@ uint8_t MTCH6102_default_cfg[MTCH__I2CADDR - MTCH__NUMBER_OF_X_CHANNELS + 1] = {
 
 __WEAK FctERR NONNULL__ MTCH6102_Init_Sequence(MTCH6102_t * pCpnt)
 {
+	uint8_t	MTCH_CORE[4];
+	uint8_t	MTCH_CFG[2] = { 0, 0 };
+	FctERR	err;
+
 	pCpnt->cfg.nb_x = 9;
 	pCpnt->cfg.nb_y = 6;
 	pCpnt->cfg.Centered = false;
-
-	uint8_t	MTCH_CORE[4];
-	uint8_t	MTCH_CFG[2] = { pCpnt->cfg.nb_x, pCpnt->cfg.nb_y };
-	FctERR	err;
 
 	// Put in standby mode for configuration
 	err = MTCH6102_Set_Mode(pCpnt, Standby);
@@ -83,12 +83,23 @@ __WEAK FctERR NONNULL__ MTCH6102_Init_Sequence(MTCH6102_t * pCpnt)
 	pCpnt->cfg.APP_ID = MAKEWORD(MTCH_CORE[3], MTCH_CORE[2]);
 
 	// Send configuration parameters
-	err = MTCH6102_Write(pCpnt->cfg.slave_inst, MTCH_CFG, MTCH__NUMBER_OF_X_CHANNELS, sizeof(MTCH_CFG));
-	if (err)	{ return err; }
+	while ((MTCH_CFG[0] != pCpnt->cfg.nb_x) || (MTCH_CFG[1] != pCpnt->cfg.nb_y))
+	{
+		MTCH_CFG[0] = pCpnt->cfg.nb_x;
+		MTCH_CFG[1] = pCpnt->cfg.nb_y;
 
-	// Send configuration request
-	err = MTCH6102_Configuration_Request(pCpnt);
-	if (err)	{ return err; }
+		err = MTCH6102_Write(pCpnt->cfg.slave_inst, MTCH_CFG, MTCH__NUMBER_OF_X_CHANNELS, sizeof(MTCH_CFG));
+		if (err)	{ return err; }
+
+		// Send configuration request
+		err = MTCH6102_Configuration_Request(pCpnt);
+		if (err)	{ return err; }
+
+		MTCH_CFG[0] = 0;
+		MTCH_CFG[1] = 0;
+		err = MTCH6102_Read(pCpnt->cfg.slave_inst, MTCH_CFG, MTCH__NUMBER_OF_X_CHANNELS, sizeof(MTCH_CFG));
+		if (err)	{ return err; }
+	}
 
 	// Put in Gesture & Touch mode
 	err = MTCH6102_Set_Mode(pCpnt, Full);

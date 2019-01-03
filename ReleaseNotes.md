@@ -33,6 +33,10 @@ SOFTWARE.
 * FM24C: added possibility to customize FM24C_SIZE macro if needed
 * MCP4725: Fixed general call function (transmit command, not receive), and taking I2C_HandleTypeDef pointer as parameter
 * MTCH6102: 1ms delay after the end of a special command is validated (otherwise, communication can be blocked) & constant in handler to get and display rx raw values
+* MTCH6102: As MTCH6102 seems somewhat erratic on first try when it comes to configure it, I often get default RX/TX number values after config performed with custom projects:
+	- added a while loop to test if parameters are taken into account (it works well the second time if not on the first time)...
+	- I already encountered a lot of issues with this chip, guess related to timing between transactions, power on, etc... mostly when it comes to configure chip or store to NV storage
+	- As the Datasheet is very light about these subjects (and I got no answers from Microchip), here are some workarounds that seems to be working all the time (so far)
 * PCA96xx: splitted reset function (one for single device, other as general call)
 * shared_ALS: added files for common code regarding ambient light sensing
 * shared_CLS: added files for common code regarding color light sensing (RGB to chromacity CIE1931 xy conversion and CCT calculation)
