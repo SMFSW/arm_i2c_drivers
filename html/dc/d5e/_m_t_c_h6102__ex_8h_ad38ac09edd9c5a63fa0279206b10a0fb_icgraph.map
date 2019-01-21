@@ -1,7 +1,8 @@
 <map id="MTCH6102_Configuration_Request" name="MTCH6102_Configuration_Request">
-<area shape="rect" id="node2" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a80ade27cdc13f30a8bd1ddc1e8ef7b0d" title="Set MTCH6102 raw acquisition filter. " alt="" coords="240,5,392,32"/>
-<area shape="rect" id="node4" href="$db/de8/_m_t_c_h6102__proc_8h.html#a6f9399ab11025bbee999b3f467a8c031" title="Initialization Sequence for MTCH6102 peripheral. " alt="" coords="227,56,405,83"/>
-<area shape="rect" id="node3" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#aea22a4fe1045dab4c9a092cb262ad5ee" title="MTCH6102_Set_Debounce" alt="" coords="454,5,637,32"/>
-<area shape="rect" id="node5" href="$da/da9/_m_t_c_h6102_8h.html#acd285a66b609ba6c8401c2ee9227749f" title="Initialization for MTCH6102 peripheral. " alt="" coords="488,56,603,83"/>
-<area shape="rect" id="node6" href="$da/da9/_m_t_c_h6102_8h.html#a390a418649fc2fd61e2f6d9fde260d56" title="Initialization for MTCH6102 peripheral. " alt="" coords="685,56,843,83"/>
+<area shape="rect" id="node2" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a80ade27cdc13f30a8bd1ddc1e8ef7b0d" title="Set MTCH6102 raw acquisition filter. " alt="" coords="227,5,379,32"/>
+<area shape="rect" id="node4" href="$db/de8/_m_t_c_h6102__proc_8h.html#aa85ec3a26634279b77e6961786c76b7b" title="Configure MTCH6102 parameters needing configure step. " alt="" coords="227,56,379,83"/>
+<area shape="rect" id="node3" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#aea22a4fe1045dab4c9a092cb262ad5ee" title="MTCH6102_Set_Debounce" alt="" coords="427,5,610,32"/>
+<area shape="rect" id="node5" href="$db/de8/_m_t_c_h6102__proc_8h.html#a6f9399ab11025bbee999b3f467a8c031" title="Initialization Sequence for MTCH6102 peripheral. " alt="" coords="429,56,608,83"/>
+<area shape="rect" id="node6" href="$da/da9/_m_t_c_h6102_8h.html#acd285a66b609ba6c8401c2ee9227749f" title="Initialization for MTCH6102 peripheral. " alt="" coords="659,56,773,83"/>
+<area shape="rect" id="node7" href="$da/da9/_m_t_c_h6102_8h.html#a390a418649fc2fd61e2f6d9fde260d56" title="Initialization for MTCH6102 peripheral. " alt="" coords="821,56,979,83"/>
 </map>

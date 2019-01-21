@@ -26,7 +26,7 @@ var searchData=
   ['diag',['Diag',['../df/d8e/struct_m_t_c_h6102__gesture.html#a439e364b6e784162954e5694eb1f4704',1,'MTCH6102_gesture']]],
   ['diag_5fresult',['DIAG_RESULT',['../db/dbf/unionu_d_r_v___r_e_g_____s_t_a_t_u_s.html#a512859650a25b1fa68f908f9fe91fe56',1,'uDRV_REG__STATUS']]],
   ['direction',['Direction',['../d7/dca/struct_g_p_m_s__coord.html#a78f1d37a1a14f0df9966d0e9c0a2f2c0',1,'GPMS_coord']]],
-  ['dmblnk',['DMBLNK',['../da/d7f/unionu_p_c_a9624___r_e_g_____m_o_d_e2.html#a6ba10467021b7af9d013b6596f14fae1',1,'uPCA9624_REG__MODE2']]],
+  ['dmblnk',['DMBLNK',['../da/d7f/unionu_p_c_a9624___r_e_g_____m_o_d_e2.html#a9b185dde746532e8f7efe5215f1d6d4e',1,'uPCA9624_REG__MODE2']]],
   ['dom_5ftens',['DOM_Tens',['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#a88ebf67d2bc2b4fc04c97f07ae1665ff',1,'uGPMS_RD_REG_MAP']]],
   ['dom_5funits',['DOM_Units',['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#ab8a31099e7e05bc4992c1de0123af424',1,'uGPMS_RD_REG_MAP']]],
   ['doubleclick',['DoubleClick',['../da/da9/_m_t_c_h6102_8h.html#a408d180aebb2549834272e44f2730308ac3b3b99313458a637e9de0e6c47bd82d',1,'MTCH6102.h']]],

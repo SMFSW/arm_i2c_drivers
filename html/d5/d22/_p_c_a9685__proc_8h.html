@@ -111,14 +111,16 @@ Data Structures</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:abaec3fa17fa9d7ffb153c7efb26bc221"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d22/_p_c_a9685__proc_8h.html#abaec3fa17fa9d7ffb153c7efb26bc221">PCA9685_FREQ</a>&#160;&#160;&#160;500</td></tr>
-<tr class="memdesc:abaec3fa17fa9d7ffb153c7efb26bc221"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frequency to affect to PCA9685 register (in Hz, range from 26 to 1700Hz)  <a href="#abaec3fa17fa9d7ffb153c7efb26bc221">More...</a><br /></td></tr>
 <tr class="separator:abaec3fa17fa9d7ffb153c7efb26bc221"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8cd4bb7ac8b265aad452719368dbacc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d22/_p_c_a9685__proc_8h.html#ab8cd4bb7ac8b265aad452719368dbacc">PCA9685_FREQ_HZ_MIN</a>&#160;&#160;&#160;0x1AU</td></tr>
-<tr class="memdesc:ab8cd4bb7ac8b265aad452719368dbacc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lower bound of interval for method PCA9685_Get_PWM_Prescaler.  <a href="#ab8cd4bb7ac8b265aad452719368dbacc">More...</a><br /></td></tr>
+<tr class="memitem:ab8cd4bb7ac8b265aad452719368dbacc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d22/_p_c_a9685__proc_8h.html#ab8cd4bb7ac8b265aad452719368dbacc">PCA9685_FREQ_HZ_MIN</a>&#160;&#160;&#160;24</td></tr>
+<tr class="memdesc:ab8cd4bb7ac8b265aad452719368dbacc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lower admissible frequency (when internal clock used)  <a href="#ab8cd4bb7ac8b265aad452719368dbacc">More...</a><br /></td></tr>
 <tr class="separator:ab8cd4bb7ac8b265aad452719368dbacc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaac5b2826d2db3df7189073c7b188f13"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d22/_p_c_a9685__proc_8h.html#aaac5b2826d2db3df7189073c7b188f13">PCA9685_FREQ_HZ_MAX</a>&#160;&#160;&#160;0x06A4U</td></tr>
-<tr class="memdesc:aaac5b2826d2db3df7189073c7b188f13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upper bound of interval for method PCA9685_Get_PWM_Prescaler.  <a href="#aaac5b2826d2db3df7189073c7b188f13">More...</a><br /></td></tr>
+<tr class="memitem:aaac5b2826d2db3df7189073c7b188f13"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d22/_p_c_a9685__proc_8h.html#aaac5b2826d2db3df7189073c7b188f13">PCA9685_FREQ_HZ_MAX</a>&#160;&#160;&#160;1526</td></tr>
+<tr class="memdesc:aaac5b2826d2db3df7189073c7b188f13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upper admissible frequency (when internal clock used)  <a href="#aaac5b2826d2db3df7189073c7b188f13">More...</a><br /></td></tr>
 <tr class="separator:aaac5b2826d2db3df7189073c7b188f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa04acf885b6c89cec5ec8f8bfe677ffa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d22/_p_c_a9685__proc_8h.html#aa04acf885b6c89cec5ec8f8bfe677ffa">PCA9685_NB_CHANNELS</a>&#160;&#160;&#160;16</td></tr>
+<tr class="memdesc:aa04acf885b6c89cec5ec8f8bfe677ffa"><td class="mdescLeft">&#160;</td><td class="mdescRight">PCA9685 Number of channels.  <a href="#aa04acf885b6c89cec5ec8f8bfe677ffa">More...</a><br /></td></tr>
+<tr class="separator:aa04acf885b6c89cec5ec8f8bfe677ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -143,7 +145,7 @@ Variables</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>PCA9685 Driver procedures. </p>
 <dl class="section author"><dt>Author</dt><dd>SMFSW </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2018, SMFSW</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2019, SMFSW</dd></dl>
 <p>PCA9685: 16-channel, 12-bit PWM Fm+ I2C-bus LED controller </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="abaec3fa17fa9d7ffb153c7efb26bc221"></a>
@@ -157,8 +159,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Frequency to affect to PCA9685 register (in Hz, range from 26 to 1700Hz) </p>
+<p>Frequency to affect to PCA9685 register (range from 24Hz to 1526Hz) </p>
 
 </div>
 </div>
@@ -169,12 +170,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define PCA9685_FREQ_HZ_MAX&#160;&#160;&#160;0x06A4U</td>
+          <td class="memname">#define PCA9685_FREQ_HZ_MAX&#160;&#160;&#160;1526</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Upper bound of interval for method PCA9685_Get_PWM_Prescaler. </p>
+<p>Upper admissible frequency (when internal clock used) </p>
 
 </div>
 </div>
@@ -185,12 +186,29 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define PCA9685_FREQ_HZ_MIN&#160;&#160;&#160;0x1AU</td>
+          <td class="memname">#define PCA9685_FREQ_HZ_MIN&#160;&#160;&#160;24</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Lower bound of interval for method PCA9685_Get_PWM_Prescaler. </p>
+<p>Lower admissible frequency (when internal clock used) </p>
+<dl class="section warning"><dt>Warning</dt><dd>Outputs frequency may be in range 24Hz-1526Hz </dd></dl>
+
+</div>
+</div>
+<a id="aa04acf885b6c89cec5ec8f8bfe677ffa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa04acf885b6c89cec5ec8f8bfe677ffa">&#9670;&nbsp;</a></span>PCA9685_NB_CHANNELS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PCA9685_NB_CHANNELS&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PCA9685 Number of channels. </p>
 
 </div>
 </div>
@@ -241,9 +259,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/d22/_p_c_a9685__proc_8h_ac8e4b4197d25eefe877657db5179c37d_icgraph.png" border="0" usemap="#d5/d22/_p_c_a9685__proc_8h_ac8e4b4197d25eefe877657db5179c37d_icgraph" alt=""/></div>
 <map name="d5/d22/_p_c_a9685__proc_8h_ac8e4b4197d25eefe877657db5179c37d_icgraph" id="d5/d22/_p_c_a9685__proc_8h_ac8e4b4197d25eefe877657db5179c37d_icgraph">
-<area shape="rect" id="node2" href="../../d5/d22/_p_c_a9685__proc_8h.html#a6e9b5100a9232482cb86ed5b115ac8ad" title="Initialization Sequence for PCA9685 peripheral. " alt="" coords="261,5,429,32"/>
-<area shape="rect" id="node3" href="../../d4/deb/_p_c_a9685_8h.html#a7fa0e558a2f028f6261ca45db11d623a" title="Initialization for PCA9685 peripheral. " alt="" coords="478,5,581,32"/>
-<area shape="rect" id="node4" href="../../d4/deb/_p_c_a9685_8h.html#a5446c995c445067011d256bc587b164e" title="Initialization for PCA9685 peripheral. " alt="" coords="629,5,776,32"/>
+<area shape="rect" id="node2" href="../../d3/d57/_p_c_a9685__ex_8h.html#a4148be6f53393ba4a04d01b233cee2f2" title="Set frequency for PCA9685 peripheral. " alt="" coords="261,5,435,32"/>
+<area shape="rect" id="node3" href="../../d5/d22/_p_c_a9685__proc_8h.html#a6e9b5100a9232482cb86ed5b115ac8ad" title="Initialization Sequence for PCA9685 peripheral. " alt="" coords="264,56,432,83"/>
+<area shape="rect" id="node4" href="../../d4/deb/_p_c_a9685_8h.html#a7fa0e558a2f028f6261ca45db11d623a" title="Initialization for PCA9685 peripheral. " alt="" coords="483,56,586,83"/>
+<area shape="rect" id="node5" href="../../d4/deb/_p_c_a9685_8h.html#a5446c995c445067011d256bc587b164e" title="Initialization for PCA9685 peripheral. " alt="" coords="635,56,781,83"/>
 </map>
 </div>
 

@@ -1,13 +1,13 @@
 var searchData=
 [
-  ['pca9624_5fdim',['PCA9624_dim',['../d4/dc2/_p_c_a9624_8h.html#a6cdb4698ae070e41dc65bd0973871f20',1,'PCA9624.h']]],
-  ['pca9624_5fledout',['PCA9624_ledout',['../d4/dc2/_p_c_a9624_8h.html#a0a6b1b31fa7b3c4b7c653b99fdb41c83',1,'PCA9624.h']]],
   ['pca9624_5freg',['PCA9624_reg',['../d4/dc2/_p_c_a9624_8h.html#ad86bc15ea689ab7dbe417028fa365cfa',1,'PCA9624.h']]],
   ['pca9624_5ft',['PCA9624_t',['../d0/de0/_p_c_a9624__proc_8h.html#a2a1e3fd88dc4818f73551003dd3a50c4',1,'PCA9624_proc.h']]],
+  ['pca962x_5fdim',['PCA962x_dim',['../da/d3d/_p_c_a96xx_8h.html#a062fbb2e99ebb5e340b1af19798bfadd',1,'PCA96xx.h']]],
+  ['pca962x_5fledout',['PCA962x_ledout',['../da/d3d/_p_c_a96xx_8h.html#ad797e5fac0be614ba0ba797d94a858a7',1,'PCA96xx.h']]],
   ['pca9685_5freg',['PCA9685_reg',['../d4/deb/_p_c_a9685_8h.html#a1f81a141ae1b490af92844063a7da8fa',1,'PCA9685.h']]],
   ['pca9685_5ft',['PCA9685_t',['../d5/d22/_p_c_a9685__proc_8h.html#a2dc34577494ba77776d9596cc5201f7d',1,'PCA9685_proc.h']]],
-  ['pca96xx_5fchan',['PCA96xx_chan',['../da/d3d/_p_c_a96xx_8h.html#abfdbc659d0b4d396a525c882b533c8e3',1,'PCA96xx.h']]],
-  ['pca96xx_5flatch',['PCA96xx_latch',['../da/d3d/_p_c_a96xx_8h.html#a2dbc1f4f9ea9b380338789d7464e075f',1,'PCA96xx.h']]],
+  ['pca96xx_5fchan',['PCA96xx_chan',['../da/d3d/_p_c_a96xx_8h.html#a24771bf4ff3b8bb118e4e08a3af08cba',1,'PCA96xx.h']]],
+  ['pca96xx_5flatch',['PCA96xx_latch',['../da/d3d/_p_c_a96xx_8h.html#a8833b8b5d19d89ac51f8d6b41547b650',1,'PCA96xx.h']]],
   ['pcf8523_5fdate',['PCF8523_date',['../d4/d61/_p_c_f8523__proc_8h.html#ada65cc0bf380ca16a2e5a7bb457de62f',1,'PCF8523_proc.h']]],
   ['pcf8523_5fmonths',['PCF8523_months',['../dd/d42/_p_c_f8523_8h.html#aae1e6878c64e8582abab43ee4aafabd9',1,'PCF8523.h']]],
   ['pcf8523_5fpower',['PCF8523_power',['../dd/d42/_p_c_f8523_8h.html#a7b150193a5f8639bcfaa86cad6cf0ff2',1,'PCF8523.h']]],

@@ -37,6 +37,7 @@ var searchData=
   ['month_5funits',['Month_Units',['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#a3d2c1d389ff58c63bf0f8e19fe60fefd',1,'uGPMS_RD_REG_MAP']]],
   ['months',['Months',['../dd/d7c/unionu_p_c_f8523___r_e_g___m_a_p.html#aaf9af0ddf2204f9446fd92b36ffc7d2a',1,'uPCF8523_REG_MAP']]],
   ['motion',['MOTION',['../de/d7b/unionu_g_p_m_s___r_e_g_____s_t_a_t_u_s.html#a2595b76691aa204c088716fdb56d5fed',1,'uGPMS_REG__STATUS']]],
+  ['msb',['MSB',['../d9/d72/unionu_p_c_a9685___r_e_g_____d_u_t_y.html#a93365f5d305056cb3adae770627d8ee5',1,'uPCA9685_REG__DUTY']]],
   ['msync',['MSYNC',['../d6/df5/unionu_a_t42_q_t___r_e_g_____s_e_t_u_p__238.html#a41051dde6c957b310c25f90e863798f5',1,'uAT42QT_REG__SETUP_238']]],
   ['mtch6102',['MTCH6102',['../d2/d60/_m_t_c_h6102__proc_8c.html#ac5f0f3993c4288c5482ccd3eda792e53',1,'MTCH6102():&#160;MTCH6102_proc.c'],['../db/de8/_m_t_c_h6102__proc_8h.html#ac5f0f3993c4288c5482ccd3eda792e53',1,'MTCH6102():&#160;MTCH6102_proc.c']]],
   ['mtch6102_5fdefault_5fcfg',['MTCH6102_default_cfg',['../da/da9/_m_t_c_h6102_8h.html#a4e885aedbc2ea8e26b48bd786ffaa027',1,'MTCH6102_default_cfg():&#160;MTCH6102_proc.c'],['../d2/d60/_m_t_c_h6102__proc_8c.html#a4e885aedbc2ea8e26b48bd786ffaa027',1,'MTCH6102_default_cfg():&#160;MTCH6102_proc.c'],['../db/de8/_m_t_c_h6102__proc_8h.html#a4e885aedbc2ea8e26b48bd786ffaa027',1,'MTCH6102_default_cfg():&#160;MTCH6102_proc.c']]],
