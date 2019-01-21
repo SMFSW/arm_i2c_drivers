@@ -1,6 +1,6 @@
 /*!\file PCA96xx.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2018, SMFSW
+** \copyright MIT (c) 2017-2019, SMFSW
 ** \brief PCA96xx shared declarations
 **/
 /****************************************************************/
@@ -31,37 +31,64 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum PCA96xx_channels
+/*!\enum PCA96xx_chan
 ** \brief Channels for PCA96xx
 **/
-typedef enum PCA96xx_channels {
-	PCA96xx__PWM1	= 1U,	//!< PCA96xx Channel 1 PWM
-	PCA96xx__PWM2	= 2U,	//!< PCA96xx Channel 2 PWM
-	PCA96xx__PWM3	= 3U,	//!< PCA96xx Channel 3 PWM
-	PCA96xx__PWM4	= 4U,	//!< PCA96xx Channel 4 PWM
-	PCA96xx__PWM5	= 5U,	//!< PCA96xx Channel 5 PWM
-	PCA96xx__PWM6	= 6U,	//!< PCA96xx Channel 6 PWM
-	PCA96xx__PWM7	= 7U,	//!< PCA96xx Channel 7 PWM
-	PCA96xx__PWM8	= 8U,	//!< PCA96xx Channel 8 PWM
-	PCA96xx__PWM9	= 9U,	//!< PCA96xx Channel 9 PWM
-	PCA96xx__PWM10	= 10U,	//!< PCA96xx Channel 10 PWM
-	PCA96xx__PWM11	= 11U,	//!< PCA96xx Channel 11 PWM
-	PCA96xx__PWM12	= 12U,	//!< PCA96xx Channel 12 PWM
-	PCA96xx__PWM13	= 13U,	//!< PCA96xx Channel 13 PWM
-	PCA96xx__PWM14	= 14U,	//!< PCA96xx Channel 14 PWM
-	PCA96xx__PWM15	= 15U,	//!< PCA96xx Channel 15 PWM
-	PCA96xx__PWM16	= 16U,	//!< PCA96xx Channel 16 PWM
-	PCA96xx__ALL	= 0xFF	//!< PCA96xx All PWM Channels
+typedef enum PACK__ PCA96xx_chan {
+	PCA96xx__PWM1 = 0,		//!< PCA96xx Channel 1 PWM
+	PCA96xx__PWM2,			//!< PCA96xx Channel 2 PWM
+	PCA96xx__PWM3,			//!< PCA96xx Channel 3 PWM
+	PCA96xx__PWM4,			//!< PCA96xx Channel 4 PWM
+	PCA96xx__PWM5,			//!< PCA96xx Channel 5 PWM
+	PCA96xx__PWM6,			//!< PCA96xx Channel 6 PWM
+	PCA96xx__PWM7,			//!< PCA96xx Channel 7 PWM
+	PCA96xx__PWM8,			//!< PCA96xx Channel 8 PWM
+	PCA96xx__PWM9,			//!< PCA96xx Channel 9 PWM
+	PCA96xx__PWM10,			//!< PCA96xx Channel 10 PWM
+	PCA96xx__PWM11,			//!< PCA96xx Channel 11 PWM
+	PCA96xx__PWM12,			//!< PCA96xx Channel 12 PWM
+	PCA96xx__PWM13,			//!< PCA96xx Channel 13 PWM
+	PCA96xx__PWM14,			//!< PCA96xx Channel 14 PWM
+	PCA96xx__PWM15,			//!< PCA96xx Channel 15 PWM
+	PCA96xx__PWM16,			//!< PCA96xx Channel 16 PWM
+	PCA96xx__PWM17,			//!< PCA96xx Channel 17 PWM
+	PCA96xx__PWM18,			//!< PCA96xx Channel 18 PWM
+	PCA96xx__PWM19,			//!< PCA96xx Channel 19 PWM
+	PCA96xx__PWM20,			//!< PCA96xx Channel 20 PWM
+	PCA96xx__PWM21,			//!< PCA96xx Channel 21 PWM
+	PCA96xx__PWM22,			//!< PCA96xx Channel 22 PWM
+	PCA96xx__PWM23,			//!< PCA96xx Channel 23 PWM
+	PCA96xx__PWM24,			//!< PCA96xx Channel 24 PWM
+	PCA96xx__ALL = 0xFF		//!< PCA96xx All PWM Channels
 } PCA96xx_chan;
 
 
-/*!\enum PCA96xx_latchs
+/*!\enum PCA96xx_latch
 ** \brief Latch type enum for PCA96xx
 **/
-typedef enum PACK__ PCA96xx_latchs {
+typedef enum PACK__ PCA96xx_latch {
 	PCA96xx__LATCH_ON_STOP = 0,	//!< Duty cycle update on I2C stop
 	PCA96xx__LATCH_ON_ACK		//!< Duty cycle update on I2C acknowledge
 } PCA96xx_latch;
+
+
+/*!\enum PCA962x_ledout
+** \brief enum for PCA962x output drive
+**/
+typedef enum PACK__ PCA962x_ledout {
+	PCA962x__LED_DRV_OFF = 0,	//!< Off
+	PCA962x__LED_DRV_FULL_ON,	//!< On
+	PCA962x__INDIV_BRIGHT,		//!< Individual Dimming
+	PCA962x__GROUP_BRIGHT		//!< Group Dimming
+} PCA962x_ledout;
+
+/*!\enum PCA962x_dim
+** \brief enum for PCA962x dimming type
+**/
+typedef enum PACK__ PCA962x_dim {
+	PCA962x__DIMMING = 0,	//!< Dimming
+	PCA962x__BLINKING		//!< Blinking
+} PCA962x_dim;
 
 
 /****************************************************************/

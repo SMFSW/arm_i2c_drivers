@@ -1,6 +1,6 @@
 /*!\file MTCH6102_ex.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2018, SMFSW
+** \copyright MIT (c) 2017-2019, SMFSW
 ** \brief MTCH6102 Driver extensions
 ** \details MTCH6102: Low-Power Projected Capacitive Touch Controller
 **/
@@ -15,7 +15,7 @@
 FctERR NONNULL__ MTCH6102_Command(MTCH6102_t * pCpnt, MTCH6102_COMMAND cmd)
 {
 	uMTCH_REG__CMD	MTCH_CMD = { 0 }, MEM_MTCH_CMD;
-	FctERR			err = ERROR_OK;
+	FctERR			err;
 
 	switch (cmd)
 	{
@@ -64,7 +64,7 @@ FctERR NONNULL__ MTCH6102_Command(MTCH6102_t * pCpnt, MTCH6102_COMMAND cmd)
 FctERR NONNULL__ MTCH6102_Get_Active_Period(MTCH6102_t * pCpnt, uint16_t * period)
 {
 	uint8_t DAT[2];
-	FctERR	err = ERROR_OK;
+	FctERR	err;
 
 	err = MTCH6102_Read(pCpnt->cfg.slave_inst, DAT, MTCH__ACTIVE_PERIOD_L, sizeof(DAT));
 	if (err)	{ return err; }
@@ -77,7 +77,7 @@ FctERR NONNULL__ MTCH6102_Get_Active_Period(MTCH6102_t * pCpnt, uint16_t * perio
 FctERR NONNULL__ MTCH6102_Get_Idle_Period(MTCH6102_t * pCpnt, uint16_t * period)
 {
 	uint8_t DAT[2];
-	FctERR	err = ERROR_OK;
+	FctERR	err;
 
 	err = MTCH6102_Read(pCpnt->cfg.slave_inst, DAT, MTCH__IDLE_PERIOD_L, sizeof(DAT));
 	if (err)	{ return err; }
@@ -90,7 +90,7 @@ FctERR NONNULL__ MTCH6102_Get_Idle_Period(MTCH6102_t * pCpnt, uint16_t * period)
 FctERR NONNULL__ MTCH6102_Set_Filter(MTCH6102_t * pCpnt, const MTCH6102_FILTER_TYPE type, const uint8_t strength, const bool baseline_filter)
 {
 	uint8_t		MTCH_FILTER[2];
-	FctERR		err = ERROR_OK;
+	FctERR		err;
 
 	switch (type)
 	{

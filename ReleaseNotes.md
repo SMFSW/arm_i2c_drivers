@@ -2,7 +2,7 @@
 
 The MIT License (MIT)
 
-Copyright (c) 2017-2018 SMFSW (Sebastien Bizien)
+Copyright (c) 2017-2019 SMFSW (Sebastien Bizien)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -37,7 +37,13 @@ SOFTWARE.
 	- added a while loop to test if parameters are taken into account (it works well the second time if not on the first time)...
 	- I already encountered a lot of issues with this chip, guess related to timing between transactions, power on, etc... mostly when it comes to configure chip or store to NV storage
 	- As the Datasheet is very light about these subjects (and I got no answers from Microchip), here are some workarounds that seems to be working all the time (so far)
+* MTCH6102: splitted init function into several functions (to also be able to store settings to Non-volatile storage)
+* MTCH6102: period calculation doesn't use floats anymore to save some flash space
+* MTCH6102: simplified MTCH6102_Get_MFG_Results
 * PCA96xx: splitted reset function (one for single device, other as general call)
+* PCA96xx: channels enum with more channels (starting at 0)
+* PCA96xx: optimized code with channel enum values, other refactoring and more functions
+* PCA9685: fix all channels commands (writing values from ON_H, not ON_L)
 * shared_ALS: added files for common code regarding ambient light sensing
 * shared_CLS: added files for common code regarding color light sensing (RGB to chromacity CIE1931 xy conversion and CCT calculation)
 * shared_Temperature: added files for common code regarding temperature conversion (Ceelsius & Farenheit)

@@ -1,6 +1,6 @@
 /*!\file AMG88_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2018, SMFSW
+** \copyright MIT (c) 2017-2019, SMFSW
 ** \brief AMG88 Driver extensions
 ** \details AMG88: Infrared Array Sensor (Grid-EYE)
 **/

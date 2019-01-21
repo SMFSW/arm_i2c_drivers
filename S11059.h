@@ -1,6 +1,6 @@
 /*!\file S11059.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2018, SMFSW
+** \copyright MIT (c) 2017-2019, SMFSW
 ** \brief S11059 Driver
 ** \details S11059: I2C interface-compatible color sensor
 **/

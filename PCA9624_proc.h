@@ -1,6 +1,6 @@
 /*!\file PCA9624_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2018, SMFSW
+** \copyright MIT (c) 2017-2019, SMFSW
 ** \brief PCA9624 Driver procedures
 ** \details PCA9624: 8-bit Fm+ I2C-bus 100mA 40V LED driver
 **/
@@ -17,6 +17,12 @@
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
+
+
+// *****************************************************************************
+// Section: Constants
+// *****************************************************************************
+#define	PCA9624_NB_CHANNELS		8			//!< PCA9624 Number of channels
 
 
 // *****************************************************************************

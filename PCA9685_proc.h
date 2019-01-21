@@ -1,6 +1,6 @@
 /*!\file PCA9685_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2018, SMFSW
+** \copyright MIT (c) 2017-2019, SMFSW
 ** \brief PCA9685 Driver procedures
 ** \details PCA9685: 16-channel, 12-bit PWM Fm+ I2C-bus LED controller
 **/
@@ -22,11 +22,13 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define PCA9685_FREQ			500			//!< Frequency to affect to PCA9685 register (in Hz, range from 26 to 1700Hz)
-//\warning Outputs frequency in Hz may range from 26 to 1700Hz
+#define PCA9685_FREQ			500			//!< Frequency to affect to PCA9685 register (range from 24Hz to 1526Hz)
+//!\warning Outputs frequency may be in range 24Hz-1526Hz
 
-#define	PCA9685_FREQ_HZ_MIN		0x1AU		//!< Lower bound of interval for method PCA9685_Get_PWM_Prescaler
-#define	PCA9685_FREQ_HZ_MAX		0x06A4U		//!< Upper bound of interval for method PCA9685_Get_PWM_Prescaler
+#define	PCA9685_FREQ_HZ_MIN		24			//!< Lower admissible frequency (when internal clock used)
+#define	PCA9685_FREQ_HZ_MAX		1526		//!< Upper admissible frequency (when internal clock used)
+
+#define	PCA9685_NB_CHANNELS		16			//!< PCA9685 Number of channels
 
 
 // *****************************************************************************
@@ -38,6 +40,7 @@
 typedef struct PCA9685_t {
 	struct {
 	I2C_slave_t *	slave_inst;		//!< Slave structure
+	uint16_t		Frequency;		//!< Outputs frequency
 	} cfg;
 } PCA9685_t;
 

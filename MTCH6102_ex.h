@@ -1,6 +1,6 @@
 /*!\file MTCH6102_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2018, SMFSW
+** \copyright MIT (c) 2017-2019, SMFSW
 ** \brief MTCH6102 Driver extensions
 ** \details MTCH6102: Low-Power Projected Capacitive Touch Controller
 **/
@@ -25,8 +25,8 @@
 // *****************************************************************************
 #define		MTCH_RES_STEP		64		//!< MTCH6102 Resolution of a single RX/TX
 
-#define		perVal2perReg(ms)	(uint16_t) ((((float) ms * 1000.0f) / 31.0f) + 1.0f)	//!< Compute reg value for period \b ms
-#define		perReg2perVal(rv)	(uint16_t) (((rv - 1.0f) * 31.0f) / 1000.0f)			//!< Get period in ms from register \b rv
+#define		perVal2perReg(ms)	(uint16_t) (((ms * 1000) / 31) + 1)		//!< Compute reg value for period \b ms
+#define		perReg2perVal(rv)	(uint16_t) (((rv - 1) * 31) / 1000)		//!< Get period in ms from register \b rv
 
 #define		per10ms		0x0142		//!< example period register value for 10ms
 #define		per20ms		0x0284		//!< example period register value for 20ms

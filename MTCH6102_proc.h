@@ -1,6 +1,6 @@
 /*!\file MTCH6102_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2018, SMFSW
+** \copyright MIT (c) 2017-2019, SMFSW
 ** \brief MTCH6102 Driver procedures
 ** \details MTCH6102: Low-Power Projected Capacitive Touch Controller
 **/
@@ -82,10 +82,27 @@ extern MTCH6102_t MTCH6102[I2C_MTCH6102_NB];	//!< MTCH6102 User structure
 
 /*!\brief Initialization Sequence for MTCH6102 peripheral
 ** \weak MTCH6102 Init sequence may be user implemented if custom initialization sequence needed
-** \param[in] pCpnt - Pointer to MTCH6102 component
+** \param[in,out] pCpnt - Pointer to MTCH6102 component
 ** \return FctERR - error code
 **/
 FctERR NONNULL__ MTCH6102_Init_Sequence(MTCH6102_t * pCpnt);
+
+/*!\brief Configure MTCH6102 parameters needing configure step
+** \param[in,out] pCpnt - Pointer to MTCH6102 component
+** \param[in] store_to_nv - Store to non-volatile memory after configuration
+** \param[in] filter - Filter type
+** \param[in] filter_str - Filter strength
+** \param[in] base_filter - Base filter type
+** \param[in] base_filter_str - Base filter strength
+** \param[in] rx - Number of RX lines
+** \param[in] tx - Number of TX lines
+** \return FctERR - error code
+**/
+FctERR NONNULL__ MTCH6102_Configure(MTCH6102_t * pCpnt, const bool store_to_nv,
+									const uint16_t active_per, const uint16_t idle_per,
+									const MTCH6102_FILTER_TYPE filter, const uint8_t filter_str,
+									const MTCH6102_FILTER_TYPE base_filter, const uint8_t base_filter_str,
+									const uint8_t rx, const uint8_t tx);
 
 /*!\brief Calculates compensation values regarding read values and writes them to MTCH6102
 ** \note Beware, averaging is done through all read values, not picking a repeated value

@@ -1,6 +1,6 @@
 /*!\file PCA9685_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2018, SMFSW
+** \copyright MIT (c) 2017-2019, SMFSW
 ** \brief PCA9685 Driver extensions
 ** \details PCA9685: 16-channel, 12-bit PWM Fm+ I2C-bus LED controller
 **/
@@ -22,23 +22,33 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define DefValDelayON			2U			//!< Delay before output rising edge
+#define DefValDelayON			2			//!< Delay before output rising edge
 //! \remark Must be less than 4 to be able to use a 1024 range
 
-#define	DefBitFullOnOff			0x10U		//!< Full ON / OFF bit on xxx_LED_xxx_H
+#define	DefBitFullOnOff			0x10		//!< Full ON / OFF bit on xxx_LED_xxx_H
 
 
 /** 4 registers per channel -> 2 shifts left for next address **/
-#define	LED_OFFSET_H(chan)		(uint8_t) (PCA9685__LED0_ON_H + ((chan - 1) << 2))	//!< Macro for address offset computation ON_H for PWM channels
-#define	LED_OFFSET_L(chan)		(uint8_t) (PCA9685__LED0_ON_L + ((chan - 1) << 2))	//!< Macro for address offset computation ON_L for PWM channels
+#define	LED_OFFSET_H(chan)		(uint8_t) (PCA9685__LED0_ON_H + LSHIFT(chan, 2))	//!< Macro for address offset computation ON_H for PWM channels
+#define	LED_OFFSET_L(chan)		(uint8_t) (PCA9685__LED0_ON_L + LSHIFT(chan, 2))	//!< Macro for address offset computation ON_L for PWM channels
 
 
 // *****************************************************************************
 // Section: Interface Routines
 // *****************************************************************************
-/****************************************/
-/*** High level methods and functions ***/
-/****************************************/
+/*!\brief Set latch type for PCA9685 peripheral
+** \param[in,out] pCpnt - Pointer to PCA9685 component
+** \param[in] latch - Latch type
+**/
+FctERR NONNULL__ PCA9685_Set_Latch(PCA9685_t * pCpnt, const PCA96xx_latch latch);
+
+/*!\brief Set frequency for PCA9685 peripheral
+** \note Prescaler is calculated according to the use of PCA9685 internal oscillator
+** \param[in] pCpnt - Pointer to PCA9685 component
+** \param[in] freq - Frequency to apply (in Hz)
+**/
+FctERR NONNULL__ PCA9685_Set_Frequency(PCA9685_t * pCpnt, const uint16_t freq);
+
 
 /*!\brief Reset for PCA9685 peripheral
 ** \param[in] pCpnt - Pointer to PCA9685 component

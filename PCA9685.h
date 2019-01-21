@@ -1,6 +1,6 @@
 /*!\file PCA9685.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2018, SMFSW
+** \copyright MIT (c) 2017-2019, SMFSW
 ** \brief PCA9685 Driver
 ** \details PCA9685: 16-channel, 12-bit PWM Fm+ I2C-bus LED controller
 **/
@@ -47,83 +47,134 @@ extern I2C_slave_t PCA9685_hal[I2C_PCA9685_NB];	//!< PCA9685 Slave structure
 ** \brief Register map enum of PCA9685
 **/
 typedef enum PACK__ PCA9685_reg_map {
-	PCA9685__MODE1			= 0x00U,	//!< register MODE1
-	PCA9685__MODE2			= 0x01U,	//!< register MODE2
-	PCA9685__SUBADR1		= 0x02U,	//!< register SUBADR1
-	PCA9685__SUBADR2		= 0x03U,	//!< register SUBADR2
-	PCA9685__SUBADR3		= 0x04U,	//!< register SUBADR3
-	PCA9685__ALLCALLADR		= 0x05U,	//!< register ALLCALLADR
-	PCA9685__LED0_ON_L		= 0x06U,	//!< register LED 0 ON Low
-	PCA9685__LED0_ON_H		= 0x07U,	//!< register LED 0 ON High
-	PCA9685__LED0_OFF_L		= 0x08U,	//!< register LED 0 OFF Low
-	PCA9685__LED0_OFF_H		= 0x09U,	//!< register LED 0 OFF High
-	PCA9685__LED1_ON_L		= 0x0AU,	//!< register LED 1 ON Low
-	PCA9685__LED1_ON_H		= 0x0BU,	//!< register LED 1 ON High
-	PCA9685__LED1_OFF_L		= 0x0CU,	//!< register LED 1 OFF Low
-	PCA9685__LED1_OFF_H		= 0x0DU,	//!< register LED 1 OFF High
-	PCA9685__LED2_ON_L		= 0x0EU,	//!< register LED 2 ON Low
-	PCA9685__LED2_ON_H		= 0x0FU,	//!< register LED 2 ON High
-	PCA9685__LED2_OFF_L		= 0x10U,	//!< register LED 2 OFF Low
-	PCA9685__LED2_OFF_H		= 0x11U,	//!< register LED 2 OFF High
-	PCA9685__LED3_ON_L		= 0x12U,	//!< register LED 3 ON Low
-	PCA9685__LED3_ON_H		= 0x13U,	//!< register LED 3 ON High
-	PCA9685__LED3_OFF_L		= 0x14U,	//!< register LED 3 OFF Low
-	PCA9685__LED3_OFF_H		= 0x15U,	//!< register LED 3 OFF High
-	PCA9685__LED4_ON_L		= 0x16U,	//!< register LED 4 ON Low
-	PCA9685__LED4_ON_H		= 0x17U,	//!< register LED 4 ON High
-	PCA9685__LED4_OFF_L		= 0x18U,	//!< register LED 4 OFF Low
-	PCA9685__LED4_OFF_H		= 0x19U,	//!< register LED 4 OFF High
-	PCA9685__LED5_ON_L		= 0x1AU,	//!< register LED 5 ON Low
-	PCA9685__LED5_ON_H		= 0x1BU,	//!< register LED 5 ON High
-	PCA9685__LED5_OFF_L		= 0x1CU,	//!< register LED 5 OFF Low
-	PCA9685__LED5_OFF_H		= 0x1DU,	//!< register LED 5 OFF High
-	PCA9685__LED6_ON_L		= 0x1EU,	//!< register LED 6 ON Low
-	PCA9685__LED6_ON_H		= 0x1FU,	//!< register LED 6 ON High
-	PCA9685__LED6_OFF_L		= 0x20U,	//!< register LED 6 OFF Low
-	PCA9685__LED6_OFF_H		= 0x21U,	//!< register LED 6 OFF High
-	PCA9685__LED7_ON_L		= 0x22U,	//!< register LED 7 ON Low
-	PCA9685__LED7_ON_H		= 0x23U,	//!< register LED 7 ON High
-	PCA9685__LED7_OFF_L		= 0x24U,	//!< register LED 7 OFF Low
-	PCA9685__LED7_OFF_H		= 0x25U,	//!< register LED 7 OFF High
-	PCA9685__LED8_ON_L		= 0x26U,	//!< register LED 8 ON Low
-	PCA9685__LED8_ON_H		= 0x27U,	//!< register LED 8 ON High
-	PCA9685__LED8_OFF_L		= 0x28U,	//!< register LED 8 OFF Low
-	PCA9685__LED8_OFF_H		= 0x29U,	//!< register LED 8 OFF High
-	PCA9685__LED9_ON_L		= 0x2AU,	//!< register LED 9 ON Low
-	PCA9685__LED9_ON_H		= 0x2BU,	//!< register LED 9 ON High
-	PCA9685__LED9_OFF_L		= 0x2CU,	//!< register LED 9 OFF Low
-	PCA9685__LED9_OFF_H		= 0x2DU,	//!< register LED 9 OFF High
-	PCA9685__LED10_ON_L		= 0x2EU,	//!< register LED 10 ON Low
-	PCA9685__LED10_ON_H		= 0x2FU,	//!< register LED 10 ON High
-	PCA9685__LED10_OFF_L	= 0x30U,	//!< register LED 10 OFF Low
-	PCA9685__LED10_OFF_H	= 0x31U,	//!< register LED 10 OFF High
-	PCA9685__LED11_ON_L		= 0x32U,	//!< register LED 11 ON Low
-	PCA9685__LED11_ON_H		= 0x33U,	//!< register LED 11 ON High
-	PCA9685__LED11_OFF_L	= 0x34U,	//!< register LED 11 OFF Low
-	PCA9685__LED11_OFF_H	= 0x35U,	//!< register LED 11 OFF High
-	PCA9685__LED12_ON_L		= 0x36U,	//!< register LED 12 ON Low
-	PCA9685__LED12_ON_H		= 0x37U,	//!< register LED 12 ON High
-	PCA9685__LED12_OFF_L	= 0x38U,	//!< register LED 12 OFF Low
-	PCA9685__LED12_OFF_H	= 0x39U,	//!< register LED 12 OFF High
-	PCA9685__LED13_ON_L		= 0x3AU,	//!< register LED 13 ON Low
-	PCA9685__LED13_ON_H		= 0x3BU,	//!< register LED 13 ON High
-	PCA9685__LED13_OFF_L	= 0x3CU,	//!< register LED 13 OFF Low
-	PCA9685__LED13_OFF_H	= 0x3DU,	//!< register LED 13 OFF High
-	PCA9685__LED14_ON_L		= 0x3EU,	//!< register LED 14 ON Low
-	PCA9685__LED14_ON_H		= 0x3FU,	//!< register LED 14 ON High
-	PCA9685__LED14_OFF_L	= 0x40U,	//!< register LED 14 OFF Low
-	PCA9685__LED14_OFF_H	= 0x41U,	//!< register LED 14 OFF High
-	PCA9685__LED15_ON_L		= 0x42U,	//!< register LED 15 ON Low
-	PCA9685__LED15_ON_H		= 0x43U,	//!< register LED 15 ON High
-	PCA9685__LED15_OFF_L	= 0x44U,	//!< register LED 15 OFF Low
-	PCA9685__LED15_OFF_H	= 0x45U,	//!< register LED 15 OFF High
-	PCA9685__ALL_LED_ON_L	= 0xFAU,	//!< register ALL LED ON Low
-	PCA9685__ALL_LED_ON_H	= 0xFBU,	//!< register ALL LED ON High
-	PCA9685__ALL_LED_OFF_L	= 0xFCU,	//!< register ALL LED OFF Low
-	PCA9685__ALL_LED_OFF_H	= 0xFDU,	//!< register ALL LED OFF High
-	PCA9685__PRE_SCALE		= 0xFEU,	//!< register PRE_SCALE
-	PCA9685__TestMode		= 0xFFU		//!< register TestMode
+	PCA9685__MODE1 = 0,				//!< register MODE1
+	PCA9685__MODE2,					//!< register MODE2
+	PCA9685__SUBADR1,				//!< register SUBADR1
+	PCA9685__SUBADR2,				//!< register SUBADR2
+	PCA9685__SUBADR3,				//!< register SUBADR3
+	PCA9685__ALLCALLADR,			//!< register ALLCALLADR
+	PCA9685__LED0_ON_L,				//!< register LED 0 ON Low
+	PCA9685__LED0_ON_H,				//!< register LED 0 ON High
+	PCA9685__LED0_OFF_L,			//!< register LED 0 OFF Low
+	PCA9685__LED0_OFF_H,			//!< register LED 0 OFF High
+	PCA9685__LED1_ON_L,				//!< register LED 1 ON Low
+	PCA9685__LED1_ON_H,				//!< register LED 1 ON High
+	PCA9685__LED1_OFF_L,			//!< register LED 1 OFF Low
+	PCA9685__LED1_OFF_H,			//!< register LED 1 OFF High
+	PCA9685__LED2_ON_L,				//!< register LED 2 ON Low
+	PCA9685__LED2_ON_H,				//!< register LED 2 ON High
+	PCA9685__LED2_OFF_L,			//!< register LED 2 OFF Low
+	PCA9685__LED2_OFF_H,			//!< register LED 2 OFF High
+	PCA9685__LED3_ON_L,				//!< register LED 3 ON Low
+	PCA9685__LED3_ON_H,				//!< register LED 3 ON High
+	PCA9685__LED3_OFF_L,			//!< register LED 3 OFF Low
+	PCA9685__LED3_OFF_H,			//!< register LED 3 OFF High
+	PCA9685__LED4_ON_L,				//!< register LED 4 ON Low
+	PCA9685__LED4_ON_H,				//!< register LED 4 ON High
+	PCA9685__LED4_OFF_L,			//!< register LED 4 OFF Low
+	PCA9685__LED4_OFF_H,			//!< register LED 4 OFF High
+	PCA9685__LED5_ON_L,				//!< register LED 5 ON Low
+	PCA9685__LED5_ON_H,				//!< register LED 5 ON High
+	PCA9685__LED5_OFF_L,			//!< register LED 5 OFF Low
+	PCA9685__LED5_OFF_H,			//!< register LED 5 OFF High
+	PCA9685__LED6_ON_L,				//!< register LED 6 ON Low
+	PCA9685__LED6_ON_H,				//!< register LED 6 ON High
+	PCA9685__LED6_OFF_L,			//!< register LED 6 OFF Low
+	PCA9685__LED6_OFF_H,			//!< register LED 6 OFF High
+	PCA9685__LED7_ON_L,				//!< register LED 7 ON Low
+	PCA9685__LED7_ON_H,				//!< register LED 7 ON High
+	PCA9685__LED7_OFF_L,			//!< register LED 7 OFF Low
+	PCA9685__LED7_OFF_H,			//!< register LED 7 OFF High
+	PCA9685__LED8_ON_L,				//!< register LED 8 ON Low
+	PCA9685__LED8_ON_H,				//!< register LED 8 ON High
+	PCA9685__LED8_OFF_L,			//!< register LED 8 OFF Low
+	PCA9685__LED8_OFF_H,			//!< register LED 8 OFF High
+	PCA9685__LED9_ON_L,				//!< register LED 9 ON Low
+	PCA9685__LED9_ON_H,				//!< register LED 9 ON High
+	PCA9685__LED9_OFF_L,			//!< register LED 9 OFF Low
+	PCA9685__LED9_OFF_H,			//!< register LED 9 OFF High
+	PCA9685__LED10_ON_L,			//!< register LED 10 ON Low
+	PCA9685__LED10_ON_H,			//!< register LED 10 ON High
+	PCA9685__LED10_OFF_L,			//!< register LED 10 OFF Low
+	PCA9685__LED10_OFF_H,			//!< register LED 10 OFF High
+	PCA9685__LED11_ON_L,			//!< register LED 11 ON Low
+	PCA9685__LED11_ON_H,			//!< register LED 11 ON High
+	PCA9685__LED11_OFF_L,			//!< register LED 11 OFF Low
+	PCA9685__LED11_OFF_H,			//!< register LED 11 OFF High
+	PCA9685__LED12_ON_L,			//!< register LED 12 ON Low
+	PCA9685__LED12_ON_H,			//!< register LED 12 ON High
+	PCA9685__LED12_OFF_L,			//!< register LED 12 OFF Low
+	PCA9685__LED12_OFF_H,			//!< register LED 12 OFF High
+	PCA9685__LED13_ON_L,			//!< register LED 13 ON Low
+	PCA9685__LED13_ON_H,			//!< register LED 13 ON High
+	PCA9685__LED13_OFF_L,			//!< register LED 13 OFF Low
+	PCA9685__LED13_OFF_H,			//!< register LED 13 OFF High
+	PCA9685__LED14_ON_L,			//!< register LED 14 ON Low
+	PCA9685__LED14_ON_H,			//!< register LED 14 ON High
+	PCA9685__LED14_OFF_L,			//!< register LED 14 OFF Low
+	PCA9685__LED14_OFF_H,			//!< register LED 14 OFF High
+	PCA9685__LED15_ON_L,			//!< register LED 15 ON Low
+	PCA9685__LED15_ON_H,			//!< register LED 15 ON High
+	PCA9685__LED15_OFF_L,			//!< register LED 15 OFF Low
+	PCA9685__LED15_OFF_H,			//!< register LED 15 OFF High
+	PCA9685__ALL_LED_ON_L = 0xFA,	//!< register ALL LED ON Low
+	PCA9685__ALL_LED_ON_H,			//!< register ALL LED ON High
+	PCA9685__ALL_LED_OFF_L,			//!< register ALL LED OFF Low
+	PCA9685__ALL_LED_OFF_H,			//!< register ALL LED OFF High
+	PCA9685__PRE_SCALE,				//!< register PRE_SCALE
+	PCA9685__TestMode				//!< register TestMode
 } PCA9685_reg;
+
+
+/*!\union uPCA9685_REG__MODE1
+** \brief Union for MODE1 register of PCA9685
+**/
+typedef union PACK__ uPCA9685_REG__MODE1 {
+	uint8_t Byte;
+	struct {
+		uint8_t ALLCALL	:1;		//!< All CALL address acknowledgment
+		uint8_t SUB3	:1;		//!< Sub-address 3 acknowledgment
+		uint8_t SUB2	:1;		//!< Sub-address 2 acknowledgment
+		uint8_t SUB1	:1;		//!< Sub-address 1 acknowledgment
+		uint8_t SLEEP	:1;		//!< 0: Normal, 1: Low Power
+		uint8_t AI		:1;		//!< Auto-increment bit (0: Disabled, 1: Enabled)
+		uint8_t EXTCLK	:1;		//!< External Clock (0: Internal clock, 1: External clock)
+		//!\warning This bit is a 'sticky bit', that is, it cannot be cleared by writing a logic 0 to it. The EXTCLK bit can only be cleared by a power cycle or software reset.
+		uint8_t RESTART	:1;		//!< 0: Restart disabled, 1: Restart enabled
+		//!\warning User writes logic 1 to this bit to clear it to logic 0. A user write of logic 0 will have no effect.
+	} Bits;
+} uPCA9685_REG__MODE1;
+
+/*!\union uPCA9685_REG__MODE2
+** \brief Union for MODE2 register of PCA9685
+**/
+typedef union PACK__ uPCA9685_REG__MODE2 {
+	uint8_t Byte;
+	struct {
+		uint8_t 		OUTNE	:2;
+		uint8_t			OUTDRV	:1;		//!< 0: Open drain, 1: Totem Pole
+		PCA96xx_latch	OCH		:1;		//!< 0: update on STOP, 1: update on ACK
+		uint8_t			INVRT	:1;		//!< 0: Output logic not inverted, 1: Output logic inverted
+		uint8_t 				:3;
+	} Bits;
+} uPCA9685_REG__MODE2;
+
+
+/*!\union uPCA9685_REG__DUTY
+** \brief Union for Duty Cycle registers of PCA9624
+**/
+typedef union PACK__ uPCA9685_REG__DUTY {
+	uint16_t Word;
+	struct {
+		uint8_t LSB;				//!< Less significant byte
+		uint8_t MSB;				//!< Most significant byte
+	} Bytes;
+	struct {
+		uint16_t 	VAL		:12;	//!< Value
+		uint16_t	FULL	:1;		//!< Full bit
+		uint16_t 			:3;
+	} Bits;
+} uPCA9685_REG__DUTY;
 
 
 // *****************************************************************************

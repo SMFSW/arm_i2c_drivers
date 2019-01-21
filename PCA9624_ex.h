@@ -1,6 +1,6 @@
 /*!\file PCA9624_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2018, SMFSW
+** \copyright MIT (c) 2017-2019, SMFSW
 ** \brief PCA9624 Driver extensions
 ** \details PCA9624: 8-bit Fm+ I2C-bus 100mA 40V LED driver
 **/
@@ -50,14 +50,14 @@ typedef union uPCA9624_REG_MAP {
 // *****************************************************************************
 // Section: Interface Routines
 // *****************************************************************************
-/****************************************/
-/*** High level methods and functions ***/
-/****************************************/
-
+/*!\brief Set latch type for PCA9624 peripheral
+** \param[in,out] pCpnt - Pointer to PCA9624 component
+** \param[in] latch - Latch type
+**/
 FctERR NONNULL__ PCA9624_Set_Latch(PCA9624_t * pCpnt, const PCA96xx_latch latch);
 
-FctERR NONNULL__ PCA9624_Set_Mode_LED(PCA9624_t * pCpnt, const PCA96xx_chan chan, const PCA9624_ledout mode);
-FctERR NONNULL__ PCA9624_Set_Mode_LEDs(PCA9624_t * pCpnt, const uint8_t chans, const PCA9624_ledout mode);
+FctERR NONNULL__ PCA9624_Set_Mode_LED(PCA9624_t * pCpnt, const PCA96xx_chan chan, const PCA962x_ledout mode);
+FctERR NONNULL__ PCA9624_Set_Mode_LEDs(PCA9624_t * pCpnt, const uint8_t chans, const PCA962x_ledout mode);
 
 
 /*!\brief Reset for PCA9624 peripheral

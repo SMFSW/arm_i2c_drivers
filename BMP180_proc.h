@@ -1,6 +1,6 @@
 /*!\file BMP180_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2018, SMFSW
+** \copyright MIT (c) 2017-2019, SMFSW
 ** \brief BMP180 Driver procedures
 ** \details BMP180: Digital pressure sensor
 **/
