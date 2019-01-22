@@ -229,6 +229,7 @@ var searchData=
   ['mtch6102_5fset_5ftouch_5fthreshold',['MTCH6102_Set_Touch_Threshold',['../dc/d5e/_m_t_c_h6102__ex_8h.html#aeb67af448b0e9fc8894b07d964736cb7',1,'MTCH6102_ex.h']]],
   ['mtch6102_5fstore_5fto_5fnon_5fvolatile',['MTCH6102_Store_To_Non_Volatile',['../dc/d5e/_m_t_c_h6102__ex_8h.html#a6663ece1877acf0b981bb1354058e7ba',1,'MTCH6102_ex.h']]],
   ['mtch6102_5ft',['MTCH6102_t',['../d5/d63/struct_m_t_c_h6102__t.html',1,'MTCH6102_t'],['../db/de8/_m_t_c_h6102__proc_8h.html#ae28f3a908d27ffc3a8d3217e8e5b924b',1,'MTCH6102_t():&#160;MTCH6102_proc.h']]],
+  ['mtch6102_5ftime_5fbetween_5ftransactions',['MTCH6102_TIME_BETWEEN_TRANSACTIONS',['../da/d78/_m_t_c_h6102_8c.html#a5993cdeec4c65e6d125fa2a96e25b39e',1,'MTCH6102.c']]],
   ['mtch6102_5ftouch',['MTCH6102_touch',['../da/da9/_m_t_c_h6102_8h.html#a089a482b58c525c71a340fa56af1ffaf',1,'MTCH6102.h']]],
   ['mtch6102_5ftouch_5faddr_5fmap',['MTCH6102_touch_addr_map',['../da/da9/_m_t_c_h6102_8h.html#a9155033bd841c8354e34805f457d657e',1,'MTCH6102.h']]],
   ['mtch6102_5ftype',['MTCH6102_TYPE',['../da/da9/_m_t_c_h6102_8h.html#a986dfd1d09e1ee3057d7892c8d6b1a62',1,'MTCH6102_TYPE():&#160;MTCH6102.h'],['../da/da9/_m_t_c_h6102_8h.html#a8aeab6e635bda9889096bc68f777b091',1,'MTCH6102_TYPE():&#160;MTCH6102.h']]],
