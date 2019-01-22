@@ -385,6 +385,7 @@ typedef union {
 /******************/
 
 /*!\brief Initialization for MTCH6102 peripheral
+** \warning When MTCH6102 is powering up, you should wait around 100ms before you address the first transaction to it
 ** \warning write rx/tx number if needed other than default (9,6), (by implementing your own init sequence)
 ** \note set MTCH6102_Set_Centered_Coord(true) if 0,0 point needs to be centered on the pad (by implementing your own init sequence)
 ** \param[in] idx - MTCH6102 index
@@ -395,6 +396,7 @@ typedef union {
 FctERR NONNULL__ MTCH6102_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
 
 /*!\brief Initialization for MTCH6102 peripheral
+** \warning When MTCH6102 is powering up, you should wait around 100ms before you address the first transaction to it
 ** \warning In case multiple devices (defined by I2C_MTCH6102_NB > 1), you shall use MTCH6102_Init instead
 ** \return FctERR - error code
 **/

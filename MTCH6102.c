@@ -16,6 +16,9 @@ static const I2C_slave_t MTCH6102_defaults  = { { pNull, 0, I2C_slave_timeout, I
 
 I2C_slave_t MTCH6102_hal[I2C_MTCH6102_NB];
 
+static uint32_t MTCH6102_last_access[I2C_MTCH6102_NB];
+
+#define MTCH6102_TIME_BETWEEN_TRANSACTIONS	1	//!< 1ms delay between every MTCH6102 transactions
 
 /****************************************************************/
 
@@ -27,6 +30,8 @@ FctERR NONNULL__ MTCH6102_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c
 	assert_param(IS_I2C_PERIPHERAL(MTCH6102, idx));
 
 	I2C_PERIPHERAL_SET_DEFAULTS(MTCH6102, idx, devAddress);
+
+	MTCH6102_last_access[idx] = 0;
 
 	err = I2C_slave_init(&MTCH6102_hal[idx], hi2c, devAddress, I2C_slave_timeout);
 	if (!err)	{ err = MTCH6102_Init_Sequence(&MTCH6102[idx]); }
@@ -49,6 +54,9 @@ FctERR NONNULL__ MTCH6102_Write(I2C_slave_t * pSlave, const uint8_t * data, cons
 	if (addr > MTCH__RAW_ADC_31)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > MTCH__RAW_ADC_31 + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
+	while (TPSINF_MS(MTCH6102_last_access[pSlave - MTCH6102_hal], MTCH6102_TIME_BETWEEN_TRANSACTIONS));
+	MTCH6102_last_access[pSlave - MTCH6102_hal] = HAL_GetTick();
+
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
 	I2C_set_busy(pSlave, false);
@@ -61,6 +69,9 @@ FctERR NONNULL__ MTCH6102_Read(I2C_slave_t * pSlave, uint8_t * data, const uint1
 	if (!I2C_is_enabled(pSlave))			{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (addr > MTCH__RAW_ADC_31)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > MTCH__RAW_ADC_31 + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+
+	while (TPSINF_MS(MTCH6102_last_access[pSlave - MTCH6102_hal], MTCH6102_TIME_BETWEEN_TRANSACTIONS));
+	MTCH6102_last_access[pSlave - MTCH6102_hal] = HAL_GetTick();
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);

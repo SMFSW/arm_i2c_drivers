@@ -54,7 +54,7 @@ FctERR NONNULL__ MTCH6102_Command(MTCH6102_t * pCpnt, MTCH6102_COMMAND cmd)
 	{
 		err = MTCH6102_Read(pCpnt->cfg.slave_inst, &MTCH_CMD.Byte, MTCH__CMD, 1);
 		if (err)	{ return err; }
-		HAL_Delay(1);
+		//HAL_Delay(1);
 	}
 
 	return err;
