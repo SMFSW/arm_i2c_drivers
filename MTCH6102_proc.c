@@ -399,7 +399,7 @@ __WEAK FctERR NONNULL__ MTCH6102_handler(MTCH6102_t * pCpnt)
 	#if defined(VERBOSE)
 		printf("%d %d %d STATE: 0x%X\t DIAG:0x%X", touch.Touch, touch.Gesture, touch.Large, touch.State, touch.Diag);
 		printf("\tX: %d\tY: %d\tFrm: %d", touch.Coords.x, touch.Coords.y, touch.Frame);
-		printf("\tST: %s\tDG: %s\r\n", str_gest, str_diag);
+		printf("\tST: %-18s\tDG: %s\r\n", str_gest, str_diag);	// Gesture string padded to 18 chars
 
 		if (get_values)
 		{

@@ -33,7 +33,7 @@ SOFTWARE.
 * BMP180: fixed temperature and pressure calculation (no use of unsigned LSHIFT or RSHIFT for signed calculations)
 * FM24C: added possibility to customize FM24C_SIZE macro if needed
 * MCP4725: Fixed general call function (transmit command, not receive), and taking I2C_HandleTypeDef pointer as parameter
-* MTCH6102: 1ms delay between each transaction has been added to support proper communication flow
+* MTCH6102: 1ms delay between each transaction end has been added to ensure proper communication flow
 * MTCH6102: As MTCH6102 seems somewhat erratic on first try when it comes to configure it, I often get default RX/TX number values after config performed with custom projects:
 	- added a while loop to test if parameters are taken into account (it works well the second time if not on the first time)...
 	- I already encountered a lot of issues with this chip, related to timing between transactions, power on, etc... mostly when it comes to configure chip or store to NV storage
