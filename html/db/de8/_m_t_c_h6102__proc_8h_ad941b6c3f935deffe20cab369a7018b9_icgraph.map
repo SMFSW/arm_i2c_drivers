@@ -1,8 +1,0 @@
-<map id="MTCH6102_rotate" name="MTCH6102_rotate">
-<area shape="rect" id="node2" href="$db/de8/_m_t_c_h6102__proc_8h.html#a7f53b1d98abd01891cf8220e92caaf2a" title="Set MTCH6102 grid min &amp; max values. " alt="" coords="411,5,557,32"/>
-<area shape="rect" id="node4" href="$db/de8/_m_t_c_h6102__proc_8h.html#a6c8c05288ed1e532bb558523a8a6cbf1" title="Decode raw MTCH6102 datas to touch datas. " alt="" coords="185,74,362,115"/>
-<area shape="rect" id="node6" href="$db/de8/_m_t_c_h6102__proc_8h.html#ab50e4af94c662a975f33cc565f78bffa" title="Set MTCH6102 coordinates rotation. " alt="" coords="606,107,778,133"/>
-<area shape="rect" id="node3" href="$db/de8/_m_t_c_h6102__proc_8h.html#a6cb756e62481a522d8fba783461ac9d4" title="Initialization Sequence for MTCH6102 peripheral. " alt="" coords="827,56,1005,83"/>
-<area shape="rect" id="node5" href="$db/de8/_m_t_c_h6102__proc_8h.html#a342679a8eaa19001a2d661ca14c50139" title="Handler for MTCH6102 peripheral. " alt="" coords="415,56,553,83"/>
-<area shape="rect" id="node7" href="$db/de8/_m_t_c_h6102__proc_8h.html#a312bb1870758990998465cec43da89e5" title="Handler for all MTCH6102 peripherals. " alt="" coords="613,56,771,83"/>
-</map>

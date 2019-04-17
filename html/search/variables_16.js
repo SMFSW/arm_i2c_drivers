@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['y',['y',['../d9/d70/struct_m_t_c_h6102___coordinate.html#a40eb73c8f567d6dbe10b7947197b64c2',1,'MTCH6102_Coordinate']]],
   ['year',['Year',['../d0/d70/struct_g_p_m_s__date.html#a362e37a13b8fccc03b793bddf7cabf82',1,'GPMS_date::Year()'],['../d3/da8/struct_p_c_f8523__date.html#a080d32d87e9a4feec097c8dc1fd71d91',1,'PCF8523_date::Year()']]],
   ['years',['Years',['../dd/d7c/unionu_p_c_f8523___r_e_g___m_a_p.html#a4651497b1182ccf04c88e7c5fbaff7dd',1,'uPCF8523_REG_MAP']]],
   ['years_5fhundreds',['Years_Hundreds',['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#ac0bb3163cfc2ed0783cce59e97bc9ca5',1,'uGPMS_RD_REG_MAP']]],

@@ -13,7 +13,6 @@ var searchData=
   ['mtch6102_5fch',['MTCH6102_CH',['../da/da9/_m_t_c_h6102_8h.html#ae8b4e41c8937d59db7b68ccf5a5d89aa',1,'MTCH6102.h']]],
   ['mtch6102_5fcommand',['MTCH6102_COMMAND',['../dc/d5e/_m_t_c_h6102__ex_8h.html#af89b0c3bbd183612ae8eaeaad7bd0eed',1,'MTCH6102_ex.h']]],
   ['mtch6102_5fcompensation',['MTCH6102_compensation',['../da/da9/_m_t_c_h6102_8h.html#aa50c423cf20956a8e880606a0d7fa009',1,'MTCH6102.h']]],
-  ['mtch6102_5fcoord',['MTCH6102_Coord',['../db/de8/_m_t_c_h6102__proc_8h.html#ae6e05351e9a3187d70bfaf59092ca303',1,'MTCH6102_proc.h']]],
   ['mtch6102_5fcore',['MTCH6102_core',['../da/da9/_m_t_c_h6102_8h.html#aa6f41c89b60457734c49231a2a7d9d42',1,'MTCH6102.h']]],
   ['mtch6102_5ffilter_5ftype',['MTCH6102_FILTER_TYPE',['../da/da9/_m_t_c_h6102_8h.html#a0ac4bf156dbfd51c17382d364a8eb68a',1,'MTCH6102.h']]],
   ['mtch6102_5fgest',['MTCH6102_gest',['../db/de8/_m_t_c_h6102__proc_8h.html#a5c640a43b057ce5bab65bff906395224',1,'MTCH6102_proc.h']]],

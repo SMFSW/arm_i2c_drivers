@@ -35,7 +35,7 @@ var searchData=
   ['control_5f4',['Control_4',['../dc/da9/unionu_d_r_v___r_e_g___m_a_p.html#abf107d9a8aed43774e544508b5169a96',1,'uDRV_REG_MAP']]],
   ['control_5f5',['Control_5',['../dc/da9/unionu_d_r_v___r_e_g___m_a_p.html#af74b003814bbf565cfce3fb4906ab913',1,'uDRV_REG_MAP']]],
   ['control_5fcommand',['Control_Command',['../d1/db6/unionu_a_t42_q_t___r_e_g___m_a_p.html#a1c0bdb275c1531b4c6d7656d2df191a1',1,'uAT42QT_REG_MAP']]],
-  ['coords',['Coords',['../df/d8e/struct_m_t_c_h6102__gesture.html#ade0fb3c64ae030b2511b1023264b1836',1,'MTCH6102_gesture']]],
+  ['coords',['Coords',['../df/d8e/struct_m_t_c_h6102__gesture.html#a43d08f1c3dd6d2a7c1dcc4dc43c62fe8',1,'MTCH6102_gesture']]],
   ['counter_5f100ms',['Counter_100ms',['../d1/db6/unionu_a_t42_q_t___r_e_g___m_a_p.html#aca113d155c9189dbee2942893cbe94ec',1,'uAT42QT_REG_MAP']]],
   ['counter_5fmatrix_5fscan',['Counter_Matrix_Scan',['../d1/db6/unionu_a_t42_q_t___r_e_g___m_a_p.html#aed735a0c31267c8e8f0eac833c65b439',1,'uAT42QT_REG_MAP']]],
   ['counter_5fsignal_5ffail',['Counter_Signal_Fail',['../d1/db6/unionu_a_t42_q_t___r_e_g___m_a_p.html#ad599e51b297441824975285801d3083d',1,'uAT42QT_REG_MAP']]],
