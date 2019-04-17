@@ -33,12 +33,6 @@ extern uint8_t MTCH6102_default_cfg[MTCH__I2CADDR - MTCH__NUMBER_OF_X_CHANNELS +
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-typedef struct MTCH6102_Coordinate {
-	int16_t	x;	//!< x coordinate
-	int16_t	y;	//!< y coordinate
-} MTCH6102_Coord;
-
-
 typedef struct MTCH6102_raw_gesture {
 	uMTCH_REG__TOUCHSTATE		Touch_state;	//!< Raw touch state
 	uMTCH_REG__TOUCHX			Touch_x;		//!< Raw x coordinate (MSB)
@@ -50,7 +44,7 @@ typedef struct MTCH6102_raw_gesture {
 
 
 typedef struct MTCH6102_gesture {
-	MTCH6102_Coord					Coords;		//!< Coordinates
+	sCoord2D						Coords;		//!< Coordinates
 	MTCH6102_GESTURE_STATE			State;		//!< State
 	MTCH6102_GESTURE_DIAGNOSTIC		Diag;		//!< Diagnostic
 	uint8_t							Frame;		//!< Frame count
@@ -167,15 +161,6 @@ FctERR NONNULL__ MTCH6102_Get_MFG_Results(MTCH6102_t * const pCpnt, uint32_t * c
 ** \return Decoded touch datas
 **/
 FctERR NONNULL__ MTCH6102_decode_touch_datas(MTCH6102_t * const pCpnt, const MTCH6102_raw_gest * const dat);
-
-
-/*!\brief 2D Coordinates rotation
-** \note Counter clockwise rotation
-** \param[in] c - Coordinates to rotate
-** \param[in] angle - Rotation angle (in degrees, counter clockwise)
-** \return Rotated coordinates
-**/
-MTCH6102_Coord MTCH6102_rotate(const MTCH6102_Coord c, const int16_t angle);
 
 
 /*!\brief Get gesture string from gesture data

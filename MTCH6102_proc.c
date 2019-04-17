@@ -181,8 +181,8 @@ void NONNULL__ MTCH6102_Set_Grid(MTCH6102_t * const pCpnt)
 
 	if (pCpnt->cfg.Rotation)
 	{
-		const MTCH6102_Coord original = { pCpnt->max_x, pCpnt->max_y };
-		const MTCH6102_Coord coords = MTCH6102_rotate(original, pCpnt->cfg.Rotation);
+		const sCoord2D original = { pCpnt->max_x, pCpnt->max_y };
+		const sCoord2D coords = rotate_2D(original, pCpnt->cfg.Rotation);
 
 		pCpnt->max_x = coords.x;
 		pCpnt->max_y = coords.y;
@@ -308,55 +308,9 @@ FctERR NONNULL__ MTCH6102_decode_touch_datas(MTCH6102_t * const pCpnt, const MTC
 		pCpnt->touch.Coords.y -= pCpnt->cfg.max_tx / 2;
 	}
 
-	pCpnt->touch.Coords = MTCH6102_rotate(pCpnt->touch.Coords, pCpnt->cfg.Rotation);	// Rotation
+	pCpnt->touch.Coords = rotate_2D(pCpnt->touch.Coords, pCpnt->cfg.Rotation);	// Rotation
 
 	return ERROR_OK;
-}
-
-
-MTCH6102_Coord MTCH6102_rotate(const MTCH6102_Coord c, const int16_t angle)
-{
-	MTCH6102_Coord	r = { c.x, c.y };
-	int16_t			deg = angle % 360;
-
-	if (deg < 0)	{ deg += 360; }
-
-	switch (deg)
-	{
-		default:
-		{
-			const float rad = (M_PI * deg) / 180.0f;
-			r.x = (int16_t) ((c.x * cos(rad)) - (c.y * sin(rad)));
-			r.y = (int16_t) ((c.x * sin(rad)) + (c.y * cos(rad)));
-		}
-		break;
-
-		case 0:
-			return c;
-
-		case 45:
-		case 90 + 45:
-		case 180 + 45:
-		case 270 + 45:
-			r.x = (int16_t) ((c.x - c.y) / M_SQRT2);
-			r.y = (int16_t) ((c.x + c.y) / M_SQRT2);
-			deg -= 45;
-			//break;	// No break, may still need to rotate by a multiple of 90°
-
-		case 90:
-			// Return only if 90°, otherwise, continue
-			if (deg == 90)	{ return (MTCH6102_Coord) { -r.y, r.x }; }
-
-		case 180:
-			// Return only if 180°, otherwise, continue
-			if (deg == 180)	{ return (MTCH6102_Coord) { -r.x, -r.y }; }
-
-		case 270:
-			// Return only if 270°, otherwise, continue
-			if (deg == 270)	{ return (MTCH6102_Coord) { r.y, -r.x }; }
-	}
-
-	return r;
 }
 
 
