@@ -12,11 +12,13 @@
 /****************************************************************/
 // std libs
 #include <math.h>
+#include <stdlib.h>
 /****************************************************************/
 
 MTCH6102_t MTCH6102[I2C_MTCH6102_NB];
 
 
+#if defined(MTCH6102_DEFAULT_CONFIG_DEF)
 uint8_t MTCH6102_default_cfg[MTCH__I2CADDR - MTCH__NUMBER_OF_X_CHANNELS + 1] = {
 	0x09,	// NUMBER_OF_X_CHANNELS @ 0x20
 	0x06,	// NUMBER_OF_Y_CHANNELS
@@ -55,39 +57,25 @@ uint8_t MTCH6102_default_cfg[MTCH__I2CADDR - MTCH__NUMBER_OF_X_CHANNELS + 1] = {
 	0x2D,	// VERTICAL_GESTURE_ANGLE
 	0x25,	// I2CADDR
 };
+#endif
 
 
 /****************************************************************/
 
 
-/*!\brief Set MTCH6102 grid min & max values
-** \param[in,out] pCpnt - Pointer to MTCH6102 component
-**/
-static void NONNULL__ MTCH6102_Set_Grid(MTCH6102_t * pCpnt)
-{
-	// Set min & max possible values
-	if (pCpnt->cfg.Centered)
-	{
-		pCpnt->max_x = (pCpnt->cfg.nb_x * MTCH_RES_STEP) / 2;
-		pCpnt->min_x = -pCpnt->max_x;
-		pCpnt->max_y = (pCpnt->cfg.nb_y * MTCH_RES_STEP) / 2;
-		pCpnt->min_y = -pCpnt->max_y;
-	}
-	else
-	{
-		pCpnt->max_x = pCpnt->cfg.nb_x * MTCH_RES_STEP;
-		pCpnt->max_y = pCpnt->cfg.nb_y * MTCH_RES_STEP;
-		pCpnt->min_x = pCpnt->min_y = 0;
-	}
-}
-
-
-__WEAK FctERR NONNULL__ MTCH6102_Init_Sequence(MTCH6102_t * pCpnt)
+__WEAK FctERR NONNULL__ MTCH6102_Init_Sequence(MTCH6102_t * const pCpnt)
 {
 	uint8_t	MTCH_CORE[4];
 	FctERR	err;
 
-	pCpnt->cfg.Centered = false;
+#if defined(MTCH6102_CARTESIAN_CENTERED)
+	MTCH6102_Set_Centered_Coord(pCpnt, true);
+	MTCH6102_Set_RxTx_Direction(pCpnt, false, true);
+#else
+	MTCH6102_Set_Centered_Coord(pCpnt, false);
+	MTCH6102_Set_RxTx_Direction(pCpnt, false, false);	// To keep default demo board directions behavior (Tx not complemented)
+#endif
+	MTCH6102_Set_Rotation(pCpnt, 0);
 
 	// Read Version & ID
 	err = MTCH6102_Read(pCpnt->cfg.slave_inst, MTCH_CORE, MTCH__FW_MAJOR, sizeof(MTCH_CORE));
@@ -98,30 +86,35 @@ __WEAK FctERR NONNULL__ MTCH6102_Init_Sequence(MTCH6102_t * pCpnt)
 	pCpnt->cfg.APP_ID = MAKEWORD(MTCH_CORE[3], MTCH_CORE[2]);
 
 	// Configure with default values
-	return MTCH6102_Configure(pCpnt, false, 20, 50, Filter_IIR, 1, Filter_Median, 5, 9, 6);
+	err = MTCH6102_Configure(pCpnt, false, 20, 50, Filter_IIR, 1, Filter_Median, 5, 9, 6);
+	if (err)	{ return err; }
+
+	MTCH6102_Set_Grid(pCpnt);
+
+	return ERROR_OK;
 }
 
 
-FctERR NONNULL__ MTCH6102_Configure(MTCH6102_t * pCpnt, const bool store_to_nv,
+FctERR NONNULL__ MTCH6102_Configure(MTCH6102_t * const pCpnt, const bool store_to_nv,
 									const uint16_t active_per, const uint16_t idle_per,
 									const MTCH6102_FILTER_TYPE filter, const uint8_t filter_str,
 									const MTCH6102_FILTER_TYPE base_filter, const uint8_t base_filter_str,
 									const uint8_t rx, const uint8_t tx)
 {
-	uint8_t		MTCH_ARRAY[4] = { 0, 0, 0, 0 };
-	uint16_t	ACTIVE_PER = perVal2perReg(active_per);
-	uint16_t	IDLE_PER = perVal2perReg(idle_per);
-	FctERR		err;
+	const uint16_t	ACTIVE_PER = perVal2perReg(active_per);
+	const uint16_t	IDLE_PER = perVal2perReg(idle_per);
+	uint8_t			MTCH_ARRAY[4] = { 0 };
+	FctERR			err;
 
-	pCpnt->cfg.nb_x = rx;
-	pCpnt->cfg.nb_y = tx;
+	pCpnt->cfg.nb_rx = rx;
+	pCpnt->cfg.nb_tx = tx;
 
 	// Put in standby mode for configuration
 	err = MTCH6102_Set_Mode(pCpnt, Standby);
 	if (err)	{ return err; }
 
 	// Send configuration parameters (and retry if not configured correctly after first try)
-	while ((MTCH_ARRAY[0] != pCpnt->cfg.nb_x) || (MTCH_ARRAY[1] != pCpnt->cfg.nb_y))
+	while ((MTCH_ARRAY[0] != pCpnt->cfg.nb_rx) || (MTCH_ARRAY[1] != pCpnt->cfg.nb_tx))
 	{
 		// Set ACTIVEPERIOD / IDLEPERIOD
 		MTCH_ARRAY[0] = LOBYTE(ACTIVE_PER);
@@ -140,8 +133,8 @@ FctERR NONNULL__ MTCH6102_Configure(MTCH6102_t * pCpnt, const bool store_to_nv,
 		if (err)	{ return err; }
 
 		// Set NUMBEROFXCHANNELS / NUMBEROFYCHANNELS
-		MTCH_ARRAY[0] = pCpnt->cfg.nb_x;
-		MTCH_ARRAY[1] = pCpnt->cfg.nb_y;
+		MTCH_ARRAY[0] = pCpnt->cfg.nb_rx;
+		MTCH_ARRAY[1] = pCpnt->cfg.nb_tx;
 		err = MTCH6102_Write(pCpnt->cfg.slave_inst, MTCH_ARRAY, MTCH__NUMBER_OF_X_CHANNELS, 2);
 		if (err)	{ return err; }
 
@@ -161,38 +154,75 @@ FctERR NONNULL__ MTCH6102_Configure(MTCH6102_t * pCpnt, const bool store_to_nv,
 		if (err)	{ return err; }
 	}
 
-	MTCH6102_Set_Grid(pCpnt);
-
 	// Put in Gesture & Touch mode
 	return MTCH6102_Set_Mode(pCpnt, Full);
 }
 
 
-FctERR NONNULL__ MTCH6102_Set_Compensation(MTCH6102_t * pCpnt)
+void NONNULL__ MTCH6102_Set_Grid(MTCH6102_t * const pCpnt)
 {
-	uint8_t		SENS_VAL[15];
-	uint16_t	average = 0;
-	FctERR		err;
+	pCpnt->cfg.max_rx = pCpnt->cfg.nb_rx * MTCH_RES_STEP;
+	pCpnt->cfg.max_tx = pCpnt->cfg.nb_tx * MTCH_RES_STEP;
 
-	err = MTCH6102_Read(pCpnt->cfg.slave_inst, SENS_VAL, MTCH__SENSOR_VALUE_RX0, sizeof(SENS_VAL));
-	if (err)	{ return err; }
-
-	for (unsigned int i = 0 ; i < sizeof(SENS_VAL) ; i++)	{ average += SENS_VAL[i]; }
-	average /= sizeof(SENS_VAL);
-
-	for (unsigned int i = 0 ; i < sizeof(SENS_VAL) ; i++)
+	// Set min & max possible values
+	if (pCpnt->cfg.Centered)
 	{
-		float temp = (float) SENS_VAL[i] / average;
-
-		if (temp == 1.0)	{ SENS_VAL[i] = 0; }	// Compensation set to 0 if median is equal to sensor value for faster computing on the channel
-		else				{ SENS_VAL[i] = (uint8_t) (temp * 64); }
+		pCpnt->max_x = pCpnt->cfg.max_rx / 2;
+		pCpnt->max_y = pCpnt->cfg.max_tx / 2;
+		pCpnt->min_x = -pCpnt->max_x;
+		pCpnt->min_y = -pCpnt->max_y;
+	}
+	else
+	{
+		pCpnt->max_x = pCpnt->cfg.max_rx;
+		pCpnt->max_y = pCpnt->cfg.max_tx;
+		pCpnt->min_x = pCpnt->min_y = 0;
 	}
 
-	return MTCH6102_Write(pCpnt->cfg.slave_inst, SENS_VAL, MTCH__SENSOR_COMP_RX0, sizeof(SENS_VAL));
+	if (pCpnt->cfg.Rotation)
+	{
+		const MTCH6102_Coord original = { pCpnt->max_x, pCpnt->max_y };
+		const MTCH6102_Coord coords = MTCH6102_rotate(original, pCpnt->cfg.Rotation);
+
+		pCpnt->max_x = coords.x;
+		pCpnt->max_y = coords.y;
+
+		if (pCpnt->cfg.Centered)
+		{
+			pCpnt->min_x = -coords.x;
+			pCpnt->min_y = -coords.y;
+		}
+
+		if (pCpnt->max_x < pCpnt->min_x)	{ SWAP_WORD(pCpnt->max_x, pCpnt->min_x); }
+		if (pCpnt->max_y < pCpnt->min_y)	{ SWAP_WORD(pCpnt->max_y, pCpnt->min_y); }
+	}
 }
 
 
-FctERR NONNULL__ MTCH6102_Get_MFG_Results(MTCH6102_t * pCpnt, uint32_t * res)
+FctERR NONNULL__ MTCH6102_Set_Compensation(MTCH6102_t * const pCpnt)
+{
+	const uint8_t	nb = pCpnt->cfg.nb_rx + pCpnt->cfg.nb_tx;
+	uint8_t			SENS_VAL[15];
+	uint16_t		average = 0;
+	FctERR			err;
+
+	err = MTCH6102_Read(pCpnt->cfg.slave_inst, SENS_VAL, MTCH__SENSOR_VALUE_RX0, nb);
+	if (err)	{ return err; }
+
+	for (unsigned int i = 0 ; i < nb ; i++)	{ average += SENS_VAL[i]; }
+	average /= nb;
+
+	for (unsigned int i = 0 ; i < nb ; i++)
+	{
+		const float temp = (float) SENS_VAL[i] / average;
+		SENS_VAL[i] = (uint8_t) ((temp == 1.0) ? 0 : (temp * 64));	// Compensation set to 0 if median is equal to sensor value for faster computing on the channel
+	}
+
+	return MTCH6102_Write(pCpnt->cfg.slave_inst, SENS_VAL, MTCH__SENSOR_COMP_RX0, nb);
+}
+
+
+FctERR NONNULL__ MTCH6102_Get_MFG_Results(MTCH6102_t * const pCpnt, uint32_t * const res)
 {
 	MTCH6102_MODE	mode;
 	uint8_t			RES[6];
@@ -256,74 +286,81 @@ FctERR NONNULL__ MTCH6102_Get_MFG_Results(MTCH6102_t * pCpnt, uint32_t * res)
 /****************************************************************/
 
 
-FctERR NONNULL__ MTCH6102_decode_touch_datas(MTCH6102_t * pCpnt, MTCH6102_gesture * touch, const MTCH6102_raw_gest * dat)
+FctERR NONNULL__ MTCH6102_decode_touch_datas(MTCH6102_t * const pCpnt, const MTCH6102_raw_gest * const dat)
 {
-	touch->Large = dat->Touch_state.Bits.LRG;
-	touch->Gesture = dat->Touch_state.Bits.GES;
-	touch->Touch = dat->Touch_state.Bits.TCH;
-	touch->Frame = dat->Touch_state.Bits.FRAME;
+	pCpnt->touch.State = dat->Gest_state;
+	pCpnt->touch.Diag = dat->Gest_diag;
 
-	touch->Coords.x = LSHIFT(dat->Touch_x.Byte, 4) & 0x0FF0;
-	touch->Coords.x |= dat->Touch_lsb.Bits.TOUCHX3_0 & 0x000F;
+	pCpnt->touch.Large = dat->Touch_state.Bits.LRG;
+	pCpnt->touch.Gesture = dat->Touch_state.Bits.GES;
+	pCpnt->touch.Touch = dat->Touch_state.Bits.TCH;
+	pCpnt->touch.Frame = dat->Touch_state.Bits.FRAME;
 
-	touch->Coords.y = LSHIFT(dat->Touch_y.Byte, 4) & 0x0FF0;
-	touch->Coords.y |= dat->Touch_lsb.Bits.TOUCHY3_0 & 0x000F;
+	pCpnt->touch.Coords.x = (LSHIFT(dat->Touch_x.Byte, 4) & 0x0FF0) | (dat->Touch_lsb.Bits.TOUCHX3_0 & 0x000F);
+	pCpnt->touch.Coords.y = (LSHIFT(dat->Touch_y.Byte, 4) & 0x0FF0) | (dat->Touch_lsb.Bits.TOUCHY3_0 & 0x000F);
+
+	if (pCpnt->cfg.RxDownwards)	{ pCpnt->touch.Coords.x = pCpnt->cfg.max_rx - pCpnt->touch.Coords.x; }
+	if (pCpnt->cfg.TxDownwards)	{ pCpnt->touch.Coords.y = pCpnt->cfg.max_tx - pCpnt->touch.Coords.y; }
 
 	if (pCpnt->cfg.Centered)
 	{
-		// Translating 0,0 point at the center of the ring (thus allowing centered rotation of the point afterwards)
-		touch->Coords.x -= ((pCpnt->cfg.nb_x * MTCH_RES_STEP) / 2);
-		touch->Coords.y -= ((pCpnt->cfg.nb_y * MTCH_RES_STEP) / 2);
+		pCpnt->touch.Coords.x -= pCpnt->cfg.max_rx / 2;
+		pCpnt->touch.Coords.y -= pCpnt->cfg.max_tx / 2;
 	}
 
-	touch->State = dat->Gest_state;
-	touch->Diag = dat->Gest_diag;
+	pCpnt->touch.Coords = MTCH6102_rotate(pCpnt->touch.Coords, pCpnt->cfg.Rotation);	// Rotation
 
 	return ERROR_OK;
 }
 
 
-MTCH6102_Coord MTCH6102_rotate(const MTCH6102_Coord c, int16_t deg)
+MTCH6102_Coord MTCH6102_rotate(const MTCH6102_Coord c, const int16_t angle)
 {
-	float			rad;
-	MTCH6102_Coord	r;
+	MTCH6102_Coord	r = { c.x, c.y };
+	int16_t			deg = angle % 360;
 
-	deg %= 360;
+	if (deg < 0)	{ deg += 360; }
 
 	switch (deg)
 	{
+		default:
+		{
+			const float rad = (M_PI * deg) / 180.0f;
+			r.x = (int16_t) ((c.x * cos(rad)) - (c.y * sin(rad)));
+			r.y = (int16_t) ((c.x * sin(rad)) + (c.y * cos(rad)));
+		}
+		break;
+
 		case 0:
 			return c;
 
+		case 45:
+		case 90 + 45:
+		case 180 + 45:
+		case 270 + 45:
+			r.x = (int16_t) ((c.x - c.y) / M_SQRT2);
+			r.y = (int16_t) ((c.x + c.y) / M_SQRT2);
+			deg -= 45;
+			//break;	// No break, may still need to rotate by a multiple of 90°
+
 		case 90:
-		case -270:
-			r.x = -c.y;
-			r.y = c.x;
-			break;
+			// Return only if 90°, otherwise, continue
+			if (deg == 90)	{ return (MTCH6102_Coord) { -r.y, r.x }; }
 
 		case 180:
-		case -180:
-			r.x = -c.x;
-			r.y = -c.y;
-			break;
+			// Return only if 180°, otherwise, continue
+			if (deg == 180)	{ return (MTCH6102_Coord) { -r.x, -r.y }; }
 
 		case 270:
-		case -90:
-			r.x = c.y;
-			r.y = -c.x;
-			break;
-
-		default:
-			rad = (M_PI * deg) / 180.0f;
-			r.x = (int16_t) ((c.x * cos(rad)) - (c.y * sin(rad)));
-			r.y = (int16_t) ((c.x * sin(rad)) + (c.y * cos(rad)));
+			// Return only if 270°, otherwise, continue
+			if (deg == 270)	{ return (MTCH6102_Coord) { r.y, -r.x }; }
 	}
 
 	return r;
 }
 
 
-FctERR NONNULL__ MTCH6102_gesture_to_str(char * str, const MTCH6102_GESTURE_STATE state)
+FctERR NONNULL__ MTCH6102_gesture_to_str(char * const str, const MTCH6102_GESTURE_STATE state)
 {
 	switch (state)
 	{
@@ -345,7 +382,7 @@ FctERR NONNULL__ MTCH6102_gesture_to_str(char * str, const MTCH6102_GESTURE_STAT
 	return ERROR_OK;
 }
 
-FctERR NONNULL__ MTCH6102_diag_to_str(char * str, const MTCH6102_GESTURE_DIAGNOSTIC diag)
+FctERR NONNULL__ MTCH6102_diag_to_str(char * const str, const MTCH6102_GESTURE_DIAGNOSTIC diag)
 {
 	switch (diag)
 	{
@@ -366,39 +403,34 @@ FctERR NONNULL__ MTCH6102_diag_to_str(char * str, const MTCH6102_GESTURE_DIAGNOS
 }
 
 
-__WEAK FctERR NONNULL__ MTCH6102_handler(MTCH6102_t * pCpnt)
+__WEAK FctERR NONNULL__ MTCH6102_handler(MTCH6102_t * const pCpnt)
 {
 	const bool			get_values = false;
 
 	FctERR				err;
 	MTCH6102_raw_gest	Gesture;
 	MTCH6102_raw_sense	SensValues;
-	MTCH6102_gesture	touch;
-	char				str_gest[18];
-	char				str_diag[64];
-
-	memset(&Gesture, 0, sizeof(Gesture));
-	memset(&touch, 0, sizeof(touch));
 
 	if (get_values)
 	{
-		memset(&SensValues, 0, sizeof(SensValues));
-		err = MTCH6102_Read(pCpnt->cfg.slave_inst, (uint8_t *) &SensValues, MTCH__SENSOR_VALUE_RX0, sizeof(SensValues));
+		err = MTCH6102_Get_Raw(pCpnt, &SensValues);
 		if (err)	{ return err; }
 	}
 
-	err = MTCH6102_Read(pCpnt->cfg.slave_inst, (uint8_t *) &Gesture, MTCH__TOUCH_STATE, sizeof(Gesture));
+	err = MTCH6102_Get_Gest(pCpnt, &Gesture);
 	if (err)	{ return err; }
 
-	err = MTCH6102_decode_touch_datas(pCpnt, &touch, &Gesture);
+	err = MTCH6102_decode_touch_datas(pCpnt, &Gesture);
 	if (err)	{ return err; }
-
-	MTCH6102_gesture_to_str(str_gest, touch.State);
-	MTCH6102_diag_to_str(str_diag, touch.Diag);
 
 	#if defined(VERBOSE)
-		printf("%d %d %d STATE: 0x%X\t DIAG:0x%X", touch.Touch, touch.Gesture, touch.Large, touch.State, touch.Diag);
-		printf("\tX: %d\tY: %d\tFrm: %d", touch.Coords.x, touch.Coords.y, touch.Frame);
+		char str_gest[18], str_diag[64];
+
+		MTCH6102_gesture_to_str(str_gest, pCpnt->touch.State);
+		MTCH6102_diag_to_str(str_diag, pCpnt->touch.Diag);
+
+		printf("%d %d %d STATE: 0x%X\t DIAG:0x%X", pCpnt->touch.Touch, pCpnt->touch.Gesture, pCpnt->touch.Large, pCpnt->touch.State, pCpnt->touch.Diag);
+		printf("\tX: %d\tY: %d\tFrm: %d", pCpnt->touch.Coords.x, pCpnt->touch.Coords.y, pCpnt->touch.Frame);
 		printf("\tST: %-18s\tDG: %s\r\n", str_gest, str_diag);	// Gesture string padded to 18 chars
 
 		if (get_values)

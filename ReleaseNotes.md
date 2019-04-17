@@ -41,6 +41,8 @@ SOFTWARE.
 * MTCH6102: splitted init function into several functions (to also be able to store settings to Non-volatile storage)
 * MTCH6102: period calculation doesn't use floats anymore to save some flash space
 * MTCH6102: simplified MTCH6102_Get_MFG_Results
+* MTCH6102: added automatic handling of referential rotation (and referential initialisation)
+* MTCH6102: modified rotation function to handle 45° multiples without using sin/cos calculations
 * PCA96xx: splitted reset function (one for single device, other as general call)
 * PCA96xx: channels enum with more channels (starting at 0)
 * PCA96xx: optimized code with channel enum values, other refactoring and more functions

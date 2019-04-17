@@ -12,7 +12,7 @@
 /****************************************************************/
 
 
-FctERR NONNULL__ MTCH6102_Command(MTCH6102_t * pCpnt, MTCH6102_COMMAND cmd)
+FctERR NONNULL__ MTCH6102_Command(const MTCH6102_t * const pCpnt, const MTCH6102_COMMAND cmd)
 {
 	uMTCH_REG__CMD	MTCH_CMD = { 0 }, MEM_MTCH_CMD;
 	FctERR			err;
@@ -61,7 +61,7 @@ FctERR NONNULL__ MTCH6102_Command(MTCH6102_t * pCpnt, MTCH6102_COMMAND cmd)
 }
 
 
-FctERR NONNULL__ MTCH6102_Get_Active_Period(MTCH6102_t * pCpnt, uint16_t * period)
+FctERR NONNULL__ MTCH6102_Get_Active_Period(const MTCH6102_t * const pCpnt, uint16_t * const period)
 {
 	uint8_t DAT[2];
 	FctERR	err;
@@ -74,7 +74,7 @@ FctERR NONNULL__ MTCH6102_Get_Active_Period(MTCH6102_t * pCpnt, uint16_t * perio
 }
 
 
-FctERR NONNULL__ MTCH6102_Get_Idle_Period(MTCH6102_t * pCpnt, uint16_t * period)
+FctERR NONNULL__ MTCH6102_Get_Idle_Period(const MTCH6102_t * const pCpnt, uint16_t * const period)
 {
 	uint8_t DAT[2];
 	FctERR	err;
@@ -87,7 +87,7 @@ FctERR NONNULL__ MTCH6102_Get_Idle_Period(MTCH6102_t * pCpnt, uint16_t * period)
 }
 
 
-FctERR NONNULL__ MTCH6102_Set_Filter(MTCH6102_t * pCpnt, const MTCH6102_FILTER_TYPE type, const uint8_t strength, const bool baseline_filter)
+FctERR NONNULL__ MTCH6102_Set_Filter(const MTCH6102_t * const pCpnt, const MTCH6102_FILTER_TYPE type, const uint8_t strength, const bool baseline_filter)
 {
 	uint8_t		MTCH_FILTER[2];
 	FctERR		err;
