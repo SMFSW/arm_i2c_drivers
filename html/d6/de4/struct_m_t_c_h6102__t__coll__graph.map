@@ -1,3 +1,5 @@
 <map id="MTCH6102_t" name="MTCH6102_t">
-<area shape="rect" id="node2" href="$df/df6/struct_i2_c__slave__t.html" title="ci2c slave config and control parameters " alt="" coords="9,5,100,32"/>
+<area shape="rect" id="node2" href="$df/df6/struct_i2_c__slave__t.html" title="ci2c slave config and control parameters " alt="" coords="5,96,96,123"/>
+<area shape="rect" id="node3" href="$df/d8e/struct_m_t_c_h6102__gesture.html" title="MTCH6102_gesture" alt="" coords="121,96,260,123"/>
+<area shape="rect" id="node4" href="$d9/d70/struct_m_t_c_h6102___coordinate.html" title="MTCH6102_Coordinate" alt="" coords="111,5,269,32"/>
 </map>

@@ -2,8 +2,8 @@ var searchData=
 [
   ['n_5ferm_5flra',['N_ERM_LRA',['../d5/db8/unionu_d_r_v___r_e_g_____f_e_e_d_b_a_c_k___c_o_n_t_r_o_l.html#a083609cf851d89d4708e15af4dc63c42',1,'uDRV_REG__FEEDBACK_CONTROL']]],
   ['n_5fpwm_5fanalog',['N_PWM_ANALOG',['../d3/d19/unionu_d_r_v___r_e_g_____c_o_n_t_r_o_l__3.html#a3af4a45d14df2efcb11b01264225058f',1,'uDRV_REG__CONTROL_3']]],
-  ['nb_5fx',['nb_x',['../d5/d63/struct_m_t_c_h6102__t.html#a61b82d6835c5758ec352869042c1dd12',1,'MTCH6102_t']]],
-  ['nb_5fy',['nb_y',['../d5/d63/struct_m_t_c_h6102__t.html#a6c6a7e23080c7569ae833670f79a3363',1,'MTCH6102_t']]],
+  ['nb_5frx',['nb_rx',['../d5/d63/struct_m_t_c_h6102__t.html#aec9a8b96cbd7c98d8d037b2f4095a76d',1,'MTCH6102_t']]],
+  ['nb_5ftx',['nb_tx',['../d5/d63/struct_m_t_c_h6102__t.html#adc15a3c6b14fb093bd30f7d1533ab51c',1,'MTCH6102_t']]],
   ['ndil',['NDIL',['../d3/d05/unionu_a_t42_q_t___r_e_g_____s_e_t_u_p__165__188.html#ac77a91a0a8cd817c86800e7cf2683120',1,'uAT42QT_REG__SETUP_165_188']]],
   ['ndrift',['NDRIFT',['../d8/dbc/unionu_a_t42_q_t___r_e_g_____s_e_t_u_p__141__164.html#aa05f25b91c8a45191078555f85ac8395',1,'uAT42QT_REG__SETUP_141_164']]],
   ['newdata',['NewData',['../db/d83/struct_m_c_p9808__t.html#a90aa615c98e5b7425c7ee29bb991c73e',1,'MCP9808_t']]],

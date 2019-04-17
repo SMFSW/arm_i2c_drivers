@@ -1,0 +1,6 @@
+<map id="MTCH6102_Configuration_Request" name="MTCH6102_Configuration_Request">
+<area shape="rect" id="node2" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a411fa06e29c5cafb719e8735446df85d" title="Set MTCH6102 raw acquisition filter. " alt="" coords="227,5,379,32"/>
+<area shape="rect" id="node4" href="$db/de8/_m_t_c_h6102__proc_8h.html#a15eac00544e71163632f5a2625a3b888" title="Configure MTCH6102 parameters needing configure step. " alt="" coords="227,56,379,83"/>
+<area shape="rect" id="node3" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a67250a81c6d4c2a0d099d4dc5649371c" title="Set MTCH6102 debounce period. " alt="" coords="427,5,610,32"/>
+<area shape="rect" id="node5" href="$db/de8/_m_t_c_h6102__proc_8h.html#a6cb756e62481a522d8fba783461ac9d4" title="Initialization Sequence for MTCH6102 peripheral. " alt="" coords="429,56,608,83"/>
+</map>

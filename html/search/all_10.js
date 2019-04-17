@@ -26,6 +26,7 @@ var searchData=
   ['rib',['RIB',['../d5/de7/unionu_a_t42_q_t___r_e_g_____s_e_t_u_p__244.html#a81a81be49a295661073a1941da5208a8',1,'uAT42QT_REG__SETUP_244']]],
   ['rightswipe',['RightSwipe',['../da/da9/_m_t_c_h6102_8h.html#a408d180aebb2549834272e44f2730308afe213a4a067e6230f38773e7476eb1a0',1,'MTCH6102.h']]],
   ['rightswipenhold',['RightSwipeNHold',['../da/da9/_m_t_c_h6102_8h.html#a408d180aebb2549834272e44f2730308ae3c4103312d4fee389b6b71682c84aa6',1,'MTCH6102.h']]],
+  ['rotation',['Rotation',['../d5/d63/struct_m_t_c_h6102__t.html#a3990f54810c0048016ab11d73d23bb17',1,'MTCH6102_t']]],
   ['rtp_5fformat',['RTP_Format',['../db/dac/struct_d_r_v2605_l__t.html#adf2cef199b6a4138fde4047c9fd0a32f',1,'DRV2605L_t']]],
   ['rtp_5finput',['RTP_Input',['../dc/da9/unionu_d_r_v___r_e_g___m_a_p.html#a161cd0cdf1559c8f0fad5fb4331d9850',1,'uDRV_REG_MAP']]],
   ['rx0',['RX0',['../da/da9/_m_t_c_h6102_8h.html#a17e53deb39fad5ba3ace8293ce674b63a08172947b53ee275c378437503d24b06',1,'MTCH6102.h']]],
@@ -42,5 +43,6 @@ var searchData=
   ['rx6',['RX6',['../da/da9/_m_t_c_h6102_8h.html#a17e53deb39fad5ba3ace8293ce674b63a9e6a7015bca3e9220fe1985815add2df',1,'MTCH6102.h']]],
   ['rx7',['RX7',['../da/da9/_m_t_c_h6102_8h.html#a17e53deb39fad5ba3ace8293ce674b63aa4f9ec2ac3db9d54edfd0b311ed713c6',1,'MTCH6102.h']]],
   ['rx8',['RX8',['../da/da9/_m_t_c_h6102_8h.html#a17e53deb39fad5ba3ace8293ce674b63a00a5f99ca46aafe4c3439c76b0c6aff7',1,'MTCH6102.h']]],
-  ['rx9',['RX9',['../da/da9/_m_t_c_h6102_8h.html#a17e53deb39fad5ba3ace8293ce674b63ac41d8484ac7eb7411fad176fd3456aea',1,'MTCH6102.h']]]
+  ['rx9',['RX9',['../da/da9/_m_t_c_h6102_8h.html#a17e53deb39fad5ba3ace8293ce674b63ac41d8484ac7eb7411fad176fd3456aea',1,'MTCH6102.h']]],
+  ['rxdownwards',['RxDownwards',['../d5/d63/struct_m_t_c_h6102__t.html#ad6ea8c39d452f0830a22e6f26ffb8aa6',1,'MTCH6102_t']]]
 ];

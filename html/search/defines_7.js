@@ -17,6 +17,7 @@ var searchData=
   ['mcp9808_5fchip_5fid',['MCP9808_CHIP_ID',['../d6/d5e/_m_c_p9808__proc_8h.html#a23f574ac9acda71c453d79e4bc08e045',1,'MCP9808_proc.h']]],
   ['mcp9808_5fmanufacturer_5fid',['MCP9808_MANUFACTURER_ID',['../d6/d5e/_m_c_p9808__proc_8h.html#af16f3094f9b2da02511e4b3c471536e4',1,'MCP9808_proc.h']]],
   ['mtch6102_5fbase_5faddr',['MTCH6102_BASE_ADDR',['../da/da9/_m_t_c_h6102_8h.html#a5f8bcdb203ef8791254b339f0b5ce320',1,'MTCH6102.h']]],
+  ['mtch6102_5fcartesian_5fcentered',['MTCH6102_CARTESIAN_CENTERED',['../db/de8/_m_t_c_h6102__proc_8h.html#a441b455115500740f986eba704f5bde1',1,'MTCH6102_proc.h']]],
   ['mtch6102_5ftime_5fbetween_5ftransactions',['MTCH6102_TIME_BETWEEN_TRANSACTIONS',['../da/d78/_m_t_c_h6102_8c.html#a5993cdeec4c65e6d125fa2a96e25b39e',1,'MTCH6102.c']]],
   ['mtch_5fres_5fstep',['MTCH_RES_STEP',['../dc/d5e/_m_t_c_h6102__ex_8h.html#a83a7533d07ed03cf33ad619187072fae',1,'MTCH6102_ex.h']]]
 ];

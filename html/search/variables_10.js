@@ -21,6 +21,8 @@ var searchData=
   ['revision_5fid',['Revision_ID',['../d3/d18/struct_t_c_s3400__t.html#a3d758cfe08a006f7af467cd96f747f1d',1,'TCS3400_t']]],
   ['rfu',['RFU',['../d1/d02/unionu_m_c_p9808___r_e_g___m_a_p.html#a78c1817f4d27e9c2ef4dd8b58321bc72',1,'uMCP9808_REG_MAP']]],
   ['rib',['RIB',['../d5/de7/unionu_a_t42_q_t___r_e_g_____s_e_t_u_p__244.html#a81a81be49a295661073a1941da5208a8',1,'uAT42QT_REG__SETUP_244']]],
+  ['rotation',['Rotation',['../d5/d63/struct_m_t_c_h6102__t.html#a3990f54810c0048016ab11d73d23bb17',1,'MTCH6102_t']]],
   ['rtp_5fformat',['RTP_Format',['../db/dac/struct_d_r_v2605_l__t.html#adf2cef199b6a4138fde4047c9fd0a32f',1,'DRV2605L_t']]],
-  ['rtp_5finput',['RTP_Input',['../dc/da9/unionu_d_r_v___r_e_g___m_a_p.html#a161cd0cdf1559c8f0fad5fb4331d9850',1,'uDRV_REG_MAP']]]
+  ['rtp_5finput',['RTP_Input',['../dc/da9/unionu_d_r_v___r_e_g___m_a_p.html#a161cd0cdf1559c8f0fad5fb4331d9850',1,'uDRV_REG_MAP']]],
+  ['rxdownwards',['RxDownwards',['../d5/d63/struct_m_t_c_h6102__t.html#ad6ea8c39d452f0830a22e6f26ffb8aa6',1,'MTCH6102_t']]]
 ];
