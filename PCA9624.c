@@ -33,6 +33,7 @@ FctERR NONNULL__ PCA9624_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c,
 	I2C_PERIPHERAL_SET_DEFAULTS(PCA9624, idx, devAddress);
 
 	err = I2C_slave_init(&PCA9624_hal[idx], hi2c, devAddress, I2C_slave_timeout);
+	PCA9624_Set_Auto_Increment(&PCA9624[idx], PCA962x__AUTO_INC_ALL);
 	if (!err)	{ err = PCA9624_Init_Sequence(&PCA9624[idx]); }
 
 	if (err)	{ I2C_set_enable(&PCA9624_hal[idx], false); }
@@ -49,12 +50,15 @@ FctERR PCA9624_Init_Single(void) {
 
 FctERR NONNULL__ PCA9624_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (addr > PCA9624__ALLCALLADR)				{ return ERROR_RANGE; }		// Unknown register
-	if ((addr + nb) > PCA9624__ALLCALLADR + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	const PCA962x_reg_inc inc_mode = PCA9624[pSlave - PCA9624_hal].cfg.auto_inc;
+
+	if (!I2C_is_enabled(pSlave))							{ return ERROR_DISABLED; }	// Peripheral disabled
+	if (addr > PCA9624__ALLCALLADR)							{ return ERROR_RANGE; }		// Unknown register
+	if ((addr + nb) > PCA9624__ALLCALLADR + 1)				{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if ((nb > 1) && (inc_mode == PCA962x__AUTO_INC_NONE))	{ return ERROR_NOTAVAIL; }	// Writing more than 1 byte not available in no auto-increment mode
 
 	I2C_set_busy(pSlave, true);
-	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
+	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr | inc_mode, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }
@@ -62,12 +66,15 @@ FctERR NONNULL__ PCA9624_Write(I2C_slave_t * pSlave, const uint8_t * data, const
 
 FctERR NONNULL__ PCA9624_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (addr > PCA9624__ALLCALLADR)				{ return ERROR_RANGE; }		// Unknown register
-	if ((addr + nb) > PCA9624__ALLCALLADR + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	const PCA962x_reg_inc inc_mode = PCA9624[pSlave - PCA9624_hal].cfg.auto_inc;
+
+	if (!I2C_is_enabled(pSlave))							{ return ERROR_DISABLED; }	// Peripheral disabled
+	if (addr > PCA9624__ALLCALLADR)							{ return ERROR_RANGE; }		// Unknown register
+	if ((addr + nb) > PCA9624__ALLCALLADR + 1)				{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if ((nb > 1) && (inc_mode == PCA962x__AUTO_INC_NONE))	{ return ERROR_NOTAVAIL; }	// Writing more than 1 byte not available in no auto-increment mode
 
 	I2C_set_busy(pSlave, true);
-	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
+	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr | inc_mode, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }

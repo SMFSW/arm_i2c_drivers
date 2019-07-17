@@ -46,6 +46,9 @@ SOFTWARE.
 * PCA96xx: splitted reset function (one for single device, other as general call)
 * PCA96xx: channels enum with more channels (starting at 0)
 * PCA96xx: optimized code with channel enum values, other refactoring and more functions
+* PCA9624: setter added for register auto incrementation options (set to auto-increment over all registers as default for consistency with most of components included in the library / common handling behavior)
+* PCA9624: set all channels to dimmable mode in default init sequence
+* PCA9624: added setters for MODE1 & MODE2 registers as inlines (consistancy especially for MODE2 which have some reserved bits values for proper operation)
 * PCA9685: fix all channels commands (writing values from ON_H, not ON_L)
 * shared_ALS: added files for common code regarding ambient light sensing
 * shared_CLS: added files for common code regarding color light sensing (RGB to chromacity CIE1931 xy conversion and CCT calculation)

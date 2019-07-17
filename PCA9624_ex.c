@@ -12,7 +12,7 @@
 /****************************************************************/
 
 
-FctERR NONNULL__ PCA9624_Set_Latch(PCA9624_t * pCpnt, const PCA96xx_latch latch)
+FctERR NONNULL__ PCA9624_Set_Latch(PCA9624_t * const pCpnt, const PCA96xx_latch latch)
 {
 	uPCA9624_REG__MODE2	MODE2;
 	FctERR				err;
@@ -27,7 +27,7 @@ FctERR NONNULL__ PCA9624_Set_Latch(PCA9624_t * pCpnt, const PCA96xx_latch latch)
 }
 
 
-FctERR NONNULL__ PCA9624_Set_Mode_LED(PCA9624_t * pCpnt, const PCA96xx_chan chan, const PCA962x_ledout mode)
+FctERR NONNULL__ PCA9624_Set_Mode_LED(PCA9624_t * const pCpnt, const PCA96xx_chan chan, const PCA962x_ledout mode)
 {
 	uPCA9624_REG__LEDOUT	LED;
 	FctERR					err;
@@ -38,20 +38,20 @@ FctERR NONNULL__ PCA9624_Set_Mode_LED(PCA9624_t * pCpnt, const PCA96xx_chan chan
 	err = PCA9624_Read(pCpnt->cfg.slave_inst, (uint8_t *) &LED, PCA9624__LEDOUT0, sizeof(LED));
 	if (err)	{ return err; }
 
-	if (chan == 0)		{ LED.Bits.LDR0 = mode; }
-	else if (chan == 1)	{ LED.Bits.LDR1 = mode; }
-	else if (chan == 2)	{ LED.Bits.LDR2 = mode; }
-	else if (chan == 3)	{ LED.Bits.LDR3 = mode; }
-	else if (chan == 4)	{ LED.Bits.LDR4 = mode; }
-	else if (chan == 5)	{ LED.Bits.LDR5 = mode; }
-	else if (chan == 6)	{ LED.Bits.LDR6 = mode; }
-	else if (chan == 7)	{ LED.Bits.LDR7 = mode; }
+	if (chan == PCA96xx__PWM1)		{ LED.Bits.LDR0 = mode; }
+	else if (chan == PCA96xx__PWM2)	{ LED.Bits.LDR1 = mode; }
+	else if (chan == PCA96xx__PWM3)	{ LED.Bits.LDR2 = mode; }
+	else if (chan == PCA96xx__PWM4)	{ LED.Bits.LDR3 = mode; }
+	else if (chan == PCA96xx__PWM5)	{ LED.Bits.LDR4 = mode; }
+	else if (chan == PCA96xx__PWM6)	{ LED.Bits.LDR5 = mode; }
+	else if (chan == PCA96xx__PWM7)	{ LED.Bits.LDR6 = mode; }
+	else if (chan == PCA96xx__PWM8)	{ LED.Bits.LDR7 = mode; }
 
 	return PCA9624_Write(pCpnt->cfg.slave_inst, (uint8_t *) &LED, PCA9624__LEDOUT0, sizeof(LED));
 }
 
 
-FctERR NONNULL__ PCA9624_Set_Mode_LEDs(PCA9624_t * pCpnt, const uint8_t chans, const PCA962x_ledout mode)
+FctERR NONNULL__ PCA9624_Set_Mode_LEDs(PCA9624_t * const pCpnt, const uint8_t chans, const PCA962x_ledout mode)
 {
 	uPCA9624_REG__LEDOUT	LED;
 	FctERR					err;
@@ -62,28 +62,20 @@ FctERR NONNULL__ PCA9624_Set_Mode_LEDs(PCA9624_t * pCpnt, const uint8_t chans, c
 	err = PCA9624_Read(pCpnt->cfg.slave_inst, (uint8_t *) &LED, PCA9624__LEDOUT0, sizeof(LED));
 	if (err)	{ return err; }
 
-	for (unsigned int i = PCA96xx__PWM1, j = 1 ; i <= PCA96xx__PWM8 ; i++, j <<= 1)
-	{
-		if (chans & j)
-		{
-			uint8_t rem = i % 8;
-
-			if (rem == 0)		{ LED.Bits.LDR0 = mode; }
-			else if (rem == 1)	{ LED.Bits.LDR1 = mode; }
-			else if (rem == 2)	{ LED.Bits.LDR2 = mode; }
-			else if (rem == 3)	{ LED.Bits.LDR3 = mode; }
-			else if (rem == 4)	{ LED.Bits.LDR4 = mode; }
-			else if (rem == 5)	{ LED.Bits.LDR5 = mode; }
-			else if (rem == 6)	{ LED.Bits.LDR6 = mode; }
-			else if (rem == 7)	{ LED.Bits.LDR7 = mode; }
-		}
-	}
+	if (chans & LSHIFT(1, PCA96xx__PWM1))	{ LED.Bits.LDR0 = mode; }
+	if (chans & LSHIFT(1, PCA96xx__PWM2))	{ LED.Bits.LDR1 = mode; }
+	if (chans & LSHIFT(1, PCA96xx__PWM3))	{ LED.Bits.LDR2 = mode; }
+	if (chans & LSHIFT(1, PCA96xx__PWM4))	{ LED.Bits.LDR3 = mode; }
+	if (chans & LSHIFT(1, PCA96xx__PWM5))	{ LED.Bits.LDR4 = mode; }
+	if (chans & LSHIFT(1, PCA96xx__PWM6))	{ LED.Bits.LDR5 = mode; }
+	if (chans & LSHIFT(1, PCA96xx__PWM7))	{ LED.Bits.LDR6 = mode; }
+	if (chans & LSHIFT(1, PCA96xx__PWM8))	{ LED.Bits.LDR7 = mode; }
 
 	return PCA9624_Write(pCpnt->cfg.slave_inst, (uint8_t *) &LED, PCA9624__LEDOUT0, sizeof(LED));
 }
 
 
-FctERR NONNULL__ PCA9624_Reset(PCA9624_t * pCpnt)
+FctERR NONNULL__ PCA9624_Reset(PCA9624_t * const pCpnt)
 {
 	uint8_t			DATA = 0x06;
 	I2C_slave_t *	pSlave = pCpnt->cfg.slave_inst;
@@ -93,7 +85,7 @@ FctERR NONNULL__ PCA9624_Reset(PCA9624_t * pCpnt)
 }
 
 
-FctERR NONNULL__ PCA9624_Reset_All(const I2C_HandleTypeDef * hi2c)
+FctERR NONNULL__ PCA9624_Reset_All(const I2C_HandleTypeDef * const hi2c)
 {
 	uint8_t DATA = 0x06;
 
@@ -101,7 +93,7 @@ FctERR NONNULL__ PCA9624_Reset_All(const I2C_HandleTypeDef * hi2c)
 }
 
 
-FctERR NONNULL__ PCA9624_ReadRegister(PCA9624_t * pCpnt, const PCA9624_reg reg, uint8_t * val)
+FctERR NONNULL__ PCA9624_ReadRegister(PCA9624_t * const pCpnt, const PCA9624_reg reg, uint8_t * const val)
 {
 	*val = 0;
 
@@ -111,7 +103,7 @@ FctERR NONNULL__ PCA9624_ReadRegister(PCA9624_t * pCpnt, const PCA9624_reg reg, 
 }
 
 
-FctERR NONNULL__ PCA9624_ReadVal(PCA9624_t * pCpnt, const PCA96xx_chan chan, uint8_t * duty)
+FctERR NONNULL__ PCA9624_ReadVal(PCA9624_t * const pCpnt, const PCA96xx_chan chan, uint8_t * const duty)
 {
 	*duty = 0;
 
@@ -121,7 +113,7 @@ FctERR NONNULL__ PCA9624_ReadVal(PCA9624_t * pCpnt, const PCA96xx_chan chan, uin
 }
 
 
-FctERR NONNULL__ PCA9624_PutVal(PCA9624_t * pCpnt, const PCA96xx_chan chan, const uint8_t duty)
+FctERR NONNULL__ PCA9624_PutVal(PCA9624_t * const pCpnt, const PCA96xx_chan chan, const uint8_t duty)
 {
 	if (chan > PCA96xx__PWM8)	{ return ERROR_RANGE; }	// Unknown channel
 
@@ -129,7 +121,7 @@ FctERR NONNULL__ PCA9624_PutVal(PCA9624_t * pCpnt, const PCA96xx_chan chan, cons
 }
 
 
-FctERR NONNULL__ PCA9624_SetVal(PCA9624_t * pCpnt, const PCA96xx_chan chan)
+FctERR NONNULL__ PCA9624_SetVal(PCA9624_t * const pCpnt, const PCA96xx_chan chan)
 {
 	const uint8_t VAL = (uint8_t) -1;
 
@@ -139,7 +131,7 @@ FctERR NONNULL__ PCA9624_SetVal(PCA9624_t * pCpnt, const PCA96xx_chan chan)
 }
 
 
-FctERR NONNULL__ PCA9624_ClrVal(PCA9624_t * pCpnt, const PCA96xx_chan chan)
+FctERR NONNULL__ PCA9624_ClrVal(PCA9624_t * const pCpnt, const PCA96xx_chan chan)
 {
 	const uint8_t VAL = 0;
 

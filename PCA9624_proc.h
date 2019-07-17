@@ -33,7 +33,8 @@
 **/
 typedef struct PCA9624_t {
 	struct {
-	I2C_slave_t *	slave_inst;		//!< Slave structure
+	I2C_slave_t *		slave_inst;		//!< Slave structure
+	PCA962x_reg_inc		auto_inc;		//!< Auto increment configuration
 	} cfg;
 } PCA9624_t;
 

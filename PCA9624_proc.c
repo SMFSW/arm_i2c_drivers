@@ -20,13 +20,16 @@ PCA9624_t PCA9624[I2C_PCA9624_NB];
 
 __WEAK FctERR NONNULL__ PCA9624_Init_Sequence(PCA9624_t * pCpnt)
 {
-	uint8_t DATA[2];
+	FctERR					err;
+	uint8_t 				DATA = 0x81U;
 
-	// MODE1: Auto Increment + Respond to ALLCALL
-	// MODE2: Dimming group control, Latch on STOP
-	DATA[0] = 0x81U;
-	DATA[1] = 0x20U;
-	return PCA9624_Write(pCpnt->cfg.slave_inst, DATA, PCA9624__MODE1, sizeof(DATA));
+	// MODE1: Auto Increment + Respond to ALLCALL + Normal mode
+	err = PCA9624_Write(pCpnt->cfg.slave_inst, &DATA, PCA9624__MODE1, sizeof(DATA));
+
+	// LEDOUTx: allow individual brightness control for all channels
+	err |= PCA9624_Set_Mode_LEDs(pCpnt, 0xFF, PCA962x__INDIV_BRIGHT);
+
+	return err;
 }
 
 

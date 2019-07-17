@@ -31,6 +31,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
+/*********************/
+/*** PCA96xx enums ***/
+/*********************/
+
 /*!\enum PCA96xx_chan
 ** \brief Channels for PCA96xx
 **/
@@ -70,6 +74,22 @@ typedef enum PACK__ PCA96xx_latch {
 	PCA96xx__LATCH_ON_STOP = 0,	//!< Duty cycle update on I2C stop
 	PCA96xx__LATCH_ON_ACK		//!< Duty cycle update on I2C acknowledge
 } PCA96xx_latch;
+
+
+/*********************/
+/*** PCA962x enums ***/
+/*********************/
+
+/*!\enum PCA962x_reg_inc
+** \brief Registers increment options enum of PCA962x
+**/
+typedef enum PACK__ PCA962x_reg_inc {
+	PCA962x__AUTO_INC_NONE = 0x00,				//!< no Auto-Increment
+	PCA962x__AUTO_INC_ALL = 0x80,				//!< Auto-Increment for all registers
+	PCA962x__AUTO_INC_BRIGHT = 0xA0,			//!< Auto-Increment for individual brightness registers only
+	PCA962x__AUTO_INC_GLOBAL = 0xC0,			//!< Auto-Increment for global control registers only
+	PCA962x__AUTO_INC_BRIGHT_GLOBAL = 0xE0,		//!< Auto-Increment for individual and global control registers only
+} PCA962x_reg_inc;
 
 
 /*!\enum PCA962x_ledout
