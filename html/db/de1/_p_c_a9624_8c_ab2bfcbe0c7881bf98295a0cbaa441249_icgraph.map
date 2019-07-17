@@ -1,7 +1,11 @@
 <map id="PCA9624_Read" name="PCA9624_Read">
-<area shape="rect" id="node2" href="$d6/dfc/_p_c_a9624__ex_8h.html#a0d71cdeac6e79c2af950ec956e248d52" title="Set latch type for PCA9624 peripheral. " alt="" coords="191,5,335,32"/>
-<area shape="rect" id="node3" href="$d6/dfc/_p_c_a9624__ex_8h.html#af4e0f618c629127557ef27b65e58847b" title="PCA9624_Set_Mode_LED" alt="" coords="174,56,351,83"/>
-<area shape="rect" id="node4" href="$d6/dfc/_p_c_a9624__ex_8h.html#a6d58b74303ad1927c1cb3ba94dbb1983" title="PCA9624_Set_Mode_LEDs" alt="" coords="171,107,355,133"/>
-<area shape="rect" id="node5" href="$d6/dfc/_p_c_a9624__ex_8h.html#a641c5fa2997e9c75fb6ea12509a16687" title="Reads I2C register from PCA9624. " alt="" coords="180,157,345,184"/>
-<area shape="rect" id="node6" href="$d6/dfc/_p_c_a9624__ex_8h.html#afa699f7875f092b05b76b9dd48d1b6f4" title="Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8..." alt="" coords="195,208,330,235"/>
+<area shape="rect" id="node2" href="$d6/dfc/_p_c_a9624__ex_8h.html#a4e93459e13da452b9181cdef1f710b15" title="Set latch type for PCA9624 peripheral. " alt="" coords="191,5,335,32"/>
+<area shape="rect" id="node4" href="$d6/dfc/_p_c_a9624__ex_8h.html#aceaea924f30995976a8a95f17571fea0" title="Set PCA9624 peripheral LED mode. " alt="" coords="174,56,351,83"/>
+<area shape="rect" id="node5" href="$d6/dfc/_p_c_a9624__ex_8h.html#addff2c3e81e7a4ba7e30fd32bd89967f" title="Set PCA9624 peripheral multiple LEDs mode. " alt="" coords="171,208,355,235"/>
+<area shape="rect" id="node9" href="$d6/dfc/_p_c_a9624__ex_8h.html#aae7261dad2ba4c04c8fd49632795c9da" title="Reads I2C register from PCA9624. " alt="" coords="180,107,345,133"/>
+<area shape="rect" id="node10" href="$d6/dfc/_p_c_a9624__ex_8h.html#a427db19834a4ac1936811d6fadaa5e28" title="Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8..." alt="" coords="195,157,330,184"/>
+<area shape="rect" id="node3" href="$d6/dfc/_p_c_a9624__ex_8h.html#a4873de01aedd5ccef0320315cf6195be" title="Set MODE2 register. " alt="" coords="407,107,566,133"/>
+<area shape="rect" id="node6" href="$d0/de0/_p_c_a9624__proc_8h.html#a470de2e6ee5e496c5226c5422c2b8886" title="Initialization Sequence for PCA9624 peripheral. " alt="" coords="403,208,571,235"/>
+<area shape="rect" id="node7" href="$d4/dc2/_p_c_a9624_8h.html#a533ea8e2a7967b9ae7588d9f028bc839" title="Initialization for PCA9624 peripheral. " alt="" coords="619,208,722,235"/>
+<area shape="rect" id="node8" href="$d4/dc2/_p_c_a9624_8h.html#a9d2bfb0bec12fff1be494de387f015a2" title="Initialization for PCA9624 peripheral. " alt="" coords="771,208,917,235"/>
 </map>

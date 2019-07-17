@@ -4,6 +4,7 @@ var searchData=
   ['pca9624_5ft',['PCA9624_t',['../d0/de0/_p_c_a9624__proc_8h.html#a2a1e3fd88dc4818f73551003dd3a50c4',1,'PCA9624_proc.h']]],
   ['pca962x_5fdim',['PCA962x_dim',['../da/d3d/_p_c_a96xx_8h.html#a062fbb2e99ebb5e340b1af19798bfadd',1,'PCA96xx.h']]],
   ['pca962x_5fledout',['PCA962x_ledout',['../da/d3d/_p_c_a96xx_8h.html#ad797e5fac0be614ba0ba797d94a858a7',1,'PCA96xx.h']]],
+  ['pca962x_5freg_5finc',['PCA962x_reg_inc',['../da/d3d/_p_c_a96xx_8h.html#ad160afab53a899399694f3d514123f86',1,'PCA96xx.h']]],
   ['pca9685_5freg',['PCA9685_reg',['../d4/deb/_p_c_a9685_8h.html#a1f81a141ae1b490af92844063a7da8fa',1,'PCA9685.h']]],
   ['pca9685_5ft',['PCA9685_t',['../d5/d22/_p_c_a9685__proc_8h.html#a2dc34577494ba77776d9596cc5201f7d',1,'PCA9685_proc.h']]],
   ['pca96xx_5fchan',['PCA96xx_chan',['../da/d3d/_p_c_a96xx_8h.html#a24771bf4ff3b8bb118e4e08a3af08cba',1,'PCA96xx.h']]],
