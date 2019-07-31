@@ -7,7 +7,7 @@ var searchData=
   ['manufacture_5fid',['Manufacture_ID',['../dc/dcf/struct_m_b85_r_c256_v__t.html#a9dbe5f02607434f01233ea067af15466',1,'MB85RC256V_t']]],
   ['manufacturer_5fid',['Manufacturer_Id',['../db/d83/struct_m_c_p9808__t.html#aef516a46849903efb6b3ab2c3d5818eb',1,'MCP9808_t']]],
   ['manufacturerid',['ManufacturerID',['../d1/d02/unionu_m_c_p9808___r_e_g___m_a_p.html#a4451e059c30652213bd45144e1eea6f6',1,'uMCP9808_REG_MAP']]],
-  ['mat',['mat',['../d3/d18/struct_t_c_s3400__t.html#a5d0ef1e89c221fc776fe185e62450738',1,'TCS3400_t::mat()'],['../d8/d5b/struct_t_c_s3472__t.html#ae140c8cc64e654f9be9852a30e2c10df',1,'TCS3472_t::mat()']]],
+  ['mat',['mat',['../dc/ded/struct_a_p_d_s9960__t.html#a728d92db499ddc06af1c3b38b63b48f6',1,'APDS9960_t::mat()'],['../d3/d18/struct_t_c_s3400__t.html#a5d0ef1e89c221fc776fe185e62450738',1,'TCS3400_t::mat()'],['../d8/d5b/struct_t_c_s3472__t.html#ae140c8cc64e654f9be9852a30e2c10df',1,'TCS3472_t::mat()']]],
   ['max_5frx',['max_rx',['../d5/d63/struct_m_t_c_h6102__t.html#a6416515e8c2d2f9545ddabb4df151cb0',1,'MTCH6102_t']]],
   ['max_5fspeed',['max_speed',['../df/df6/struct_i2_c__slave__t.html#a9ab30e72c7008e324fb7f31730101ff7',1,'I2C_slave_t']]],
   ['max_5ftx',['max_tx',['../d5/d63/struct_m_t_c_h6102__t.html#ab13cde0f3d9a05f0f1a5ec6f1c333092',1,'MTCH6102_t']]],

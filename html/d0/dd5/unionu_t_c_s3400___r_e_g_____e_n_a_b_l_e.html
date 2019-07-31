@@ -76,30 +76,30 @@ $(function() {
 Data Fields</h2></td></tr>
 <tr class="memitem:ac353291255573c396e26069ba507e8bc"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd5/unionu_t_c_s3400___r_e_g_____e_n_a_b_l_e.html#ac353291255573c396e26069ba507e8bc">Byte</a></td></tr>
 <tr class="separator:ac353291255573c396e26069ba507e8bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb408582abf795aefea379685555b239"><td class="memItemLeft" >struct {</td></tr>
-<tr class="memitem:a194ac4656ac1e0d75194ce3c0ae276c3"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d0/dd5/unionu_t_c_s3400___r_e_g_____e_n_a_b_l_e.html#afd8c2966baad2de80e656e6ce0d6094a">PON</a>:1</td></tr>
-<tr class="memdesc:a194ac4656ac1e0d75194ce3c0ae276c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Power ON. This field activates the internal oscillator to permit the timers and ADC channels to operate.  <a href="#a194ac4656ac1e0d75194ce3c0ae276c3">More...</a><br /></td></tr>
-<tr class="separator:a194ac4656ac1e0d75194ce3c0ae276c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff41945323586e826091621df26bb911"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d0/dd5/unionu_t_c_s3400___r_e_g_____e_n_a_b_l_e.html#a2fce5efb89c0ced4c5381ffff531ca66">AEN</a>:1</td></tr>
-<tr class="memdesc:aff41945323586e826091621df26bb911"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC enable. This bit activates the four-channel (RGBC) ADC. Writing a 1 enables the ADC.  <a href="#aff41945323586e826091621df26bb911">More...</a><br /></td></tr>
-<tr class="separator:aff41945323586e826091621df26bb911"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a591b30472f1c95f585d38c05825f772b"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d0/dd5/unionu_t_c_s3400___r_e_g_____e_n_a_b_l_e.html#ac0f3261c5d279ea58895ad03aa620bc9">__pad0__</a>:1</td></tr>
-<tr class="separator:a591b30472f1c95f585d38c05825f772b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52138de3eba4e3c9ca38b1962c24da21"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d0/dd5/unionu_t_c_s3400___r_e_g_____e_n_a_b_l_e.html#ab1061222cf47df3fd98e3f44b35a48aa">WEN</a>:1</td></tr>
-<tr class="memdesc:a52138de3eba4e3c9ca38b1962c24da21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait enable. This bit activates the wait feature. Writing a 1 activates the wait timer.  <a href="#a52138de3eba4e3c9ca38b1962c24da21">More...</a><br /></td></tr>
-<tr class="separator:a52138de3eba4e3c9ca38b1962c24da21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4e17c8e2256d6bd89d56d7ca6ec8e1e"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d0/dd5/unionu_t_c_s3400___r_e_g_____e_n_a_b_l_e.html#ae84e79c5c7f517be6ab2c6c59eff454b">AIEN</a>:1</td></tr>
-<tr class="memdesc:ad4e17c8e2256d6bd89d56d7ca6ec8e1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ALS interrupt enable. When asserted, permits ALS interrupts to be generated.  <a href="#ad4e17c8e2256d6bd89d56d7ca6ec8e1e">More...</a><br /></td></tr>
-<tr class="separator:ad4e17c8e2256d6bd89d56d7ca6ec8e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2062598c7890ddfa036042a14f3b1b9"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d0/dd5/unionu_t_c_s3400___r_e_g_____e_n_a_b_l_e.html#afc635ab78e39aab846bbf734bcd9a74c">__pad1__</a>:1</td></tr>
-<tr class="separator:af2062598c7890ddfa036042a14f3b1b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa3219c31830f3dd4dea2410befc6d29"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d0/dd5/unionu_t_c_s3400___r_e_g_____e_n_a_b_l_e.html#a1be08e8a8ec43120a4d7311958d80813">SAI</a>:1</td></tr>
-<tr class="memdesc:afa3219c31830f3dd4dea2410befc6d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep After Interrupt. When asserted, the device will power down at the end of a RGBC cycle if an interrupt is generated.  <a href="#afa3219c31830f3dd4dea2410befc6d29">More...</a><br /></td></tr>
-<tr class="separator:afa3219c31830f3dd4dea2410befc6d29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05577573432eb108dbdff540e647b25e"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d0/dd5/unionu_t_c_s3400___r_e_g_____e_n_a_b_l_e.html#a9a19bddebd8803ac853efacdce034c4c">__pad2__</a>:1</td></tr>
-<tr class="separator:a05577573432eb108dbdff540e647b25e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb408582abf795aefea379685555b239"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd5/unionu_t_c_s3400___r_e_g_____e_n_a_b_l_e.html#adb408582abf795aefea379685555b239">Bits</a></td></tr>
-<tr class="separator:adb408582abf795aefea379685555b239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ae73a3b34462dbc18e82709077c1b29"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:af68187f32a8548a2534fe1042a5ceb24"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d0/dd5/unionu_t_c_s3400___r_e_g_____e_n_a_b_l_e.html#afd8c2966baad2de80e656e6ce0d6094a">PON</a>:1</td></tr>
+<tr class="memdesc:af68187f32a8548a2534fe1042a5ceb24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Power ON. This field activates the internal oscillator to permit the timers and ADC channels to operate.  <a href="#af68187f32a8548a2534fe1042a5ceb24">More...</a><br /></td></tr>
+<tr class="separator:af68187f32a8548a2534fe1042a5ceb24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2688109384e78b47cdb5b94812a7493b"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d0/dd5/unionu_t_c_s3400___r_e_g_____e_n_a_b_l_e.html#a2fce5efb89c0ced4c5381ffff531ca66">AEN</a>:1</td></tr>
+<tr class="memdesc:a2688109384e78b47cdb5b94812a7493b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC enable. This bit activates the four-channel (RGBC) ADC. Writing a 1 enables the ADC.  <a href="#a2688109384e78b47cdb5b94812a7493b">More...</a><br /></td></tr>
+<tr class="separator:a2688109384e78b47cdb5b94812a7493b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84dfa289875ba806fcd14080f58849bb"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d0/dd5/unionu_t_c_s3400___r_e_g_____e_n_a_b_l_e.html#ac0f3261c5d279ea58895ad03aa620bc9">__pad0__</a>:1</td></tr>
+<tr class="separator:a84dfa289875ba806fcd14080f58849bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6939d792137a9751f6e5074d08b90734"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d0/dd5/unionu_t_c_s3400___r_e_g_____e_n_a_b_l_e.html#ab1061222cf47df3fd98e3f44b35a48aa">WEN</a>:1</td></tr>
+<tr class="memdesc:a6939d792137a9751f6e5074d08b90734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait enable. This bit activates the wait feature. Writing a 1 activates the wait timer.  <a href="#a6939d792137a9751f6e5074d08b90734">More...</a><br /></td></tr>
+<tr class="separator:a6939d792137a9751f6e5074d08b90734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50861a736a3759d80707e94bfd5dabe6"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d0/dd5/unionu_t_c_s3400___r_e_g_____e_n_a_b_l_e.html#ae84e79c5c7f517be6ab2c6c59eff454b">AIEN</a>:1</td></tr>
+<tr class="memdesc:a50861a736a3759d80707e94bfd5dabe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">ALS interrupt enable. When asserted, permits ALS interrupts to be generated.  <a href="#a50861a736a3759d80707e94bfd5dabe6">More...</a><br /></td></tr>
+<tr class="separator:a50861a736a3759d80707e94bfd5dabe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03500dd8bb8e88d4296751ff260a2f49"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d0/dd5/unionu_t_c_s3400___r_e_g_____e_n_a_b_l_e.html#afc635ab78e39aab846bbf734bcd9a74c">__pad1__</a>:1</td></tr>
+<tr class="separator:a03500dd8bb8e88d4296751ff260a2f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4b878a18dc09dee8b65d5d5889ac2db"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d0/dd5/unionu_t_c_s3400___r_e_g_____e_n_a_b_l_e.html#a1be08e8a8ec43120a4d7311958d80813">SAI</a>:1</td></tr>
+<tr class="memdesc:ab4b878a18dc09dee8b65d5d5889ac2db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep After Interrupt. When asserted, the device will power down at the end of a RGBC cycle if an interrupt is generated.  <a href="#ab4b878a18dc09dee8b65d5d5889ac2db">More...</a><br /></td></tr>
+<tr class="separator:ab4b878a18dc09dee8b65d5d5889ac2db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa776994b0a7f30980a6de4dddaeec90d"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d0/dd5/unionu_t_c_s3400___r_e_g_____e_n_a_b_l_e.html#a9a19bddebd8803ac853efacdce034c4c">__pad2__</a>:1</td></tr>
+<tr class="separator:aa776994b0a7f30980a6de4dddaeec90d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ae73a3b34462dbc18e82709077c1b29"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd5/unionu_t_c_s3400___r_e_g_____e_n_a_b_l_e.html#a0ae73a3b34462dbc18e82709077c1b29">Bits</a></td></tr>
+<tr class="separator:a0ae73a3b34462dbc18e82709077c1b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Union for ENABLE register of TCS3400. </p>
@@ -178,8 +178,8 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="adb408582abf795aefea379685555b239"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb408582abf795aefea379685555b239">&#9670;&nbsp;</a></span>Bits</h2>
+<a id="a0ae73a3b34462dbc18e82709077c1b29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ae73a3b34462dbc18e82709077c1b29">&#9670;&nbsp;</a></span>Bits</h2>
 
 <div class="memitem">
 <div class="memproto">

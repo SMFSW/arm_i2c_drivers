@@ -1,0 +1,6 @@
+<map id="APDS9960_Set_AIHT" name="APDS9960_Set_AIHT">
+<area shape="rect" id="node2" href="$db/db1/_a_p_d_s9960_8c.html#a3e5a7deaf82512f33c88a93ba8296593" title="I2C Word Write (low endian) function for APDS9960. " alt="" coords="205,31,368,57"/>
+<area shape="rect" id="node3" href="$db/db1/_a_p_d_s9960_8c.html#a8911a5ffe0bf7d22a175f17895474804" title="I2C Write function for APDS9960. " alt="" coords="416,31,541,57"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="589,5,701,32"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="594,56,697,83"/>
+</map>

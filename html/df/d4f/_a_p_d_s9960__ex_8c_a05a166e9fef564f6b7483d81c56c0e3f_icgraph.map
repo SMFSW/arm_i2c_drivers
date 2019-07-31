@@ -1,0 +1,6 @@
+<map id="APDS9960_Set_ADC_Integration_Time" name="APDS9960_Set_ADC_Integration_Time">
+<area shape="rect" id="node2" href="$da/db5/_a_p_d_s9960__ex_8h.html#ad1ec171d20f5d9e3ce304f800f07e866" title="Proximity interrupt thresholds configuration. " alt="" coords="310,5,453,32"/>
+<area shape="rect" id="node3" href="$df/d17/_a_p_d_s9960__proc_8h.html#a8b3e98f19115655eea22dfa81f4273e7" title="Initialization Sequence for APDS9960 peripheral. " alt="" coords="502,31,679,57"/>
+<area shape="rect" id="node4" href="$d2/dbf/_a_p_d_s9960_8h.html#a7f169a78f245b023b72f92539c7a59c5" title="Initialization for APDS9960 peripheral. " alt="" coords="728,31,840,57"/>
+<area shape="rect" id="node5" href="$d2/dbf/_a_p_d_s9960_8h.html#a2234fed110d5973db4b9d30d2e5098fd" title="Initialization for APDS9960 peripheral. " alt="" coords="888,31,1043,57"/>
+</map>
