@@ -57,7 +57,7 @@ typedef union uPCA9624_REG_MAP {
 **/
 __INLINE FctERR NONNULL_INLINE__ PCA9624_Set_Auto_Increment(PCA9624_t * const pCpnt, const PCA962x_reg_inc inc) {
 	if (RSHIFT(inc, 5) > RSHIFT(PCA962x__AUTO_INC_BRIGHT_GLOBAL, 5))	{ return ERROR_VALUE; }
-	pCpnt->cfg.auto_inc = inc;
+	pCpnt->cfg.auto_inc = inc & PCA962x__AUTO_INC_BRIGHT_GLOBAL;		// Mask inc just in case
 	return ERROR_OK; }
 
 /*!\brief Set MODE1 register
@@ -66,7 +66,7 @@ __INLINE FctERR NONNULL_INLINE__ PCA9624_Set_Auto_Increment(PCA9624_t * const pC
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ PCA9624_Set_MODE1(PCA9624_t * const pCpnt, const uPCA9624_REG__MODE1 MODE1) {
-	return PCA9624_Write(pCpnt->cfg.slave_inst, (uint8_t *) &MODE1, PCA9624__MODE1, sizeof(MODE1));  }
+	return PCA9624_Write(pCpnt->cfg.slave_inst, (uint8_t *) &MODE1, PCA9624__MODE1, sizeof(MODE1)); }
 
 /*!\brief Set MODE2 register
 ** \param[in,out] pCpnt - Pointer to PCA9624 component
@@ -75,7 +75,7 @@ __INLINE FctERR NONNULL_INLINE__ PCA9624_Set_MODE1(PCA9624_t * const pCpnt, cons
 **/
 __INLINE FctERR NONNULL_INLINE__ PCA9624_Set_MODE2(PCA9624_t * const pCpnt, uPCA9624_REG__MODE2 MODE2) {
 	MODE2.Byte = (MODE2.Byte | 0x05) & ~0x12;	// Setting reserved bits to appropriate values
-	return PCA9624_Write(pCpnt->cfg.slave_inst, (uint8_t *) &MODE2, PCA9624__MODE2, sizeof(MODE2));  }
+	return PCA9624_Write(pCpnt->cfg.slave_inst, (uint8_t *) &MODE2, PCA9624__MODE2, sizeof(MODE2)); }
 
 /*!\brief Set latch type for PCA9624 peripheral
 ** \param[in,out] pCpnt - Pointer to PCA9624 component

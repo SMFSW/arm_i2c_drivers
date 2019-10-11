@@ -20,8 +20,8 @@ PCA9624_t PCA9624[I2C_PCA9624_NB];
 
 __WEAK FctERR NONNULL__ PCA9624_Init_Sequence(PCA9624_t * pCpnt)
 {
-	FctERR					err;
-	uint8_t 				DATA = 0x81U;
+	FctERR		err;
+	uint8_t		DATA = 0x81U;
 
 	// MODE1: Auto Increment + Respond to ALLCALL + Normal mode
 	err = PCA9624_Write(pCpnt->cfg.slave_inst, &DATA, PCA9624__MODE1, sizeof(DATA));

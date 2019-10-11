@@ -84,9 +84,13 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 
   -> _WORKING_
 
+- **PCA9532**: 16-bit I2C-bus LED dimmer
+
+  -> _WORKING_
+
 - **PCA9624**: 8-bit Fm+ I2C-bus 100mA 40V LED driver
 
-  -> _NOT TESTED YET_
+  -> _WORKING_
 
 - **PCA9685**: 16-channel, 12-bit PWM Fm+ I2C-bus LED controller
 
