@@ -1,0 +1,8 @@
+<map id="uPCA9532_REG_MAP" name="uPCA9532_REG_MAP">
+<area shape="rect" id="node2" href="$da/dd4/unionu_p_c_a9532___r_e_g_____l_s0.html" title="Union for LS0 register of PCA9532. " alt="" coords="17,5,175,32"/>
+<area shape="rect" id="node3" href="$df/dbb/unionu_p_c_a9532___r_e_g_____l_s1.html" title="Union for LS1 register of PCA9532. " alt="" coords="17,56,175,83"/>
+<area shape="rect" id="node4" href="$d7/d08/unionu_p_c_a9532___r_e_g_____l_s2.html" title="Union for LS2 register of PCA9532. " alt="" coords="17,107,175,133"/>
+<area shape="rect" id="node5" href="$df/dd8/unionu_p_c_a9532___r_e_g_____l_s3.html" title="Union for LS3 register of PCA9532. " alt="" coords="17,157,175,184"/>
+<area shape="rect" id="node6" href="$d8/df2/unionu_p_c_a9532___r_e_g_____i_n_p_u_t0.html" title="Union for INPUT0 register of PCA9532. " alt="" coords="5,208,187,235"/>
+<area shape="rect" id="node7" href="$dd/d8a/unionu_p_c_a9532___r_e_g_____i_n_p_u_t1.html" title="Union for INPUT1 register of PCA9532. " alt="" coords="5,259,187,285"/>
+</map>

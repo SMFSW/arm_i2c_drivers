@@ -1,6 +1,6 @@
 <map id="MCP9808.h" name="MCP9808.h">
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="310,80,435,107"/>
-<area shape="rect" id="node6" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="459,80,575,107"/>
-<area shape="rect" id="node7" href="$d6/d5e/_m_c_p9808__proc_8h.html" title="MCP9808 Driver procedures. " alt="" coords="27,80,150,107"/>
-<area shape="rect" id="node8" href="$df/d2f/_m_c_p9808__ex_8h.html" title="MCP9808 Driver extensions. " alt="" coords="174,80,284,107"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="321,80,456,107"/>
+<area shape="rect" id="node6" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="481,80,606,107"/>
+<area shape="rect" id="node7" href="$d6/d5e/_m_c_p9808__proc_8h.html" title="MCP9808 Driver procedures. " alt="" coords="28,80,157,107"/>
+<area shape="rect" id="node8" href="$df/d2f/_m_c_p9808__ex_8h.html" title="MCP9808 Driver extensions. " alt="" coords="181,80,297,107"/>
 </map>

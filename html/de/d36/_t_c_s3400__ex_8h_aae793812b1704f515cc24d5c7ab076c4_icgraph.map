@@ -1,7 +1,7 @@
 <map id="TCS3400_Write_Cfg" name="TCS3400_Write_Cfg">
-<area shape="rect" id="node2" href="$de/d36/_t_c_s3400__ex_8h.html#adf6456429e5ed5e5bd9dbf957e8b83f7" title="Wait time configuration. " alt="" coords="198,31,373,57"/>
-<area shape="rect" id="node3" href="$de/d36/_t_c_s3400__ex_8h.html#af7de3827f888542029fba8bdde9afcf1" title="ALS Persistence configuration. " alt="" coords="421,5,597,32"/>
-<area shape="rect" id="node4" href="$d9/d14/_t_c_s3400__proc_8h.html#a8fb5d620337b38aafea461ffa303894d" title="Initialization Sequence for TCS3400 peripheral. " alt="" coords="426,56,593,83"/>
-<area shape="rect" id="node5" href="$d9/d51/_t_c_s3400_8h.html#ab9ee131767fd0818271fd8d639c57b85" title="Initialization for TCS3400 peripheral. " alt="" coords="646,56,749,83"/>
-<area shape="rect" id="node6" href="$d9/d51/_t_c_s3400_8h.html#ae1122436ee0aa2cf81cec91006589ad6" title="Initialization for TCS3400 peripheral. " alt="" coords="798,56,943,83"/>
+<area shape="rect" id="node2" href="$de/d36/_t_c_s3400__ex_8h.html#adf6456429e5ed5e5bd9dbf957e8b83f7" title="Wait time configuration. " alt="" coords="197,31,376,57"/>
+<area shape="rect" id="node3" href="$de/d36/_t_c_s3400__ex_8h.html#af7de3827f888542029fba8bdde9afcf1" title="ALS Persistence configuration. " alt="" coords="424,5,607,32"/>
+<area shape="rect" id="node4" href="$d9/d14/_t_c_s3400__proc_8h.html#a8fb5d620337b38aafea461ffa303894d" title="Initialization Sequence for TCS3400 peripheral. " alt="" coords="428,56,603,83"/>
+<area shape="rect" id="node5" href="$d9/d51/_t_c_s3400_8h.html#ab9ee131767fd0818271fd8d639c57b85" title="Initialization for TCS3400 peripheral. " alt="" coords="655,56,759,83"/>
+<area shape="rect" id="node6" href="$d9/d51/_t_c_s3400_8h.html#ae1122436ee0aa2cf81cec91006589ad6" title="Initialization for TCS3400 peripheral. " alt="" coords="807,56,957,83"/>
 </map>

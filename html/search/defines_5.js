@@ -12,6 +12,7 @@ var searchData=
   ['i2c_5fmcp4725_5fnb',['I2C_MCP4725_NB',['../df/d9f/_m_c_p4725_8h.html#a301dafe38a7df27099e90a45053d0b87',1,'MCP4725.h']]],
   ['i2c_5fmcp9808_5fnb',['I2C_MCP9808_NB',['../d8/d57/_m_c_p9808_8h.html#a2801c19658a58f286b2c440421c08689',1,'MCP9808.h']]],
   ['i2c_5fmtch6102_5fnb',['I2C_MTCH6102_NB',['../da/da9/_m_t_c_h6102_8h.html#a72df65f1bbb121cb5fc695642c37cfef',1,'MTCH6102.h']]],
+  ['i2c_5fpca9532_5fnb',['I2C_PCA9532_NB',['../d3/df9/_p_c_a9532_8h.html#a131244581cd8c77d741f7563ddf67293',1,'PCA9532.h']]],
   ['i2c_5fpca9624_5fnb',['I2C_PCA9624_NB',['../d4/dc2/_p_c_a9624_8h.html#acc832ee3a5fcfbe4f1dc95cceb705e77',1,'PCA9624.h']]],
   ['i2c_5fpca9685_5fnb',['I2C_PCA9685_NB',['../d4/deb/_p_c_a9685_8h.html#adf7c86c96aface914b6685b6b6e413c7',1,'PCA9685.h']]],
   ['i2c_5fperipheral_5fset_5fdefaults',['I2C_PERIPHERAL_SET_DEFAULTS',['../dc/d5d/_i2_c__peripheral_8h.html#a453a66c20785a971d76ef22d16470962',1,'I2C_peripheral.h']]],

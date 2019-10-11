@@ -1,4 +1,4 @@
 <map id="MCP9808_Read" name="MCP9808_Read">
-<area shape="rect" id="node2" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="173,5,285,32"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="178,56,281,83"/>
+<area shape="rect" id="node2" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="173,5,291,32"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="179,56,285,83"/>
 </map>

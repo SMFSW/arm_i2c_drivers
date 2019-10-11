@@ -1,6 +1,6 @@
 <map id="TSL2591_Write_Word" name="TSL2591_Write_Word">
-<area shape="rect" id="node2" href="$dc/d24/_t_s_l2591__ex_8h.html#a970f1c9d1c7392c46c05febb3605e9c7" title="ALS interrupt low threshold configuration. " alt="" coords="217,5,353,32"/>
-<area shape="rect" id="node3" href="$dc/d24/_t_s_l2591__ex_8h.html#a429d9612ce64dd4fa4bb091ae522f404" title="ALS interrupt high threshold configuration. " alt="" coords="216,56,355,83"/>
-<area shape="rect" id="node4" href="$dc/d24/_t_s_l2591__ex_8h.html#a9850cf6332b48ca7a3c7bd6988d788e2" title="ALS interrupt Persist Low threshold filter configuration. " alt="" coords="208,107,363,133"/>
-<area shape="rect" id="node5" href="$dc/d24/_t_s_l2591__ex_8h.html#a4bf964691f21eb4ee645a833f41ee359" title="ALS interrupt Persist High threshold filter configuration. " alt="" coords="206,157,365,184"/>
+<area shape="rect" id="node2" href="$dc/d24/_t_s_l2591__ex_8h.html#a970f1c9d1c7392c46c05febb3605e9c7" title="ALS interrupt low threshold configuration. " alt="" coords="217,5,355,32"/>
+<area shape="rect" id="node3" href="$dc/d24/_t_s_l2591__ex_8h.html#a429d9612ce64dd4fa4bb091ae522f404" title="ALS interrupt high threshold configuration. " alt="" coords="215,56,357,83"/>
+<area shape="rect" id="node4" href="$dc/d24/_t_s_l2591__ex_8h.html#a9850cf6332b48ca7a3c7bd6988d788e2" title="ALS interrupt Persist Low threshold filter configuration. " alt="" coords="209,107,363,133"/>
+<area shape="rect" id="node5" href="$dc/d24/_t_s_l2591__ex_8h.html#a4bf964691f21eb4ee645a833f41ee359" title="ALS interrupt Persist High threshold filter configuration. " alt="" coords="207,157,365,184"/>
 </map>

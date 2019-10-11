@@ -1,8 +1,8 @@
 <map id="AMG88_Init_Sequence" name="AMG88_Init_Sequence">
-<area shape="rect" id="node2" href="$dc/db3/_a_m_g88__ex_8h.html#a07ad7bd903342479937e6ab205eb9235" title="AMG88 Set mode. " alt="" coords="211,5,343,32"/>
-<area shape="rect" id="node3" href="$df/d52/_a_m_g88_8c.html#a5cedae4c89add5fa6aafd5fae421a91f" title="I2C Write function for AMG88. " alt="" coords="392,81,496,108"/>
-<area shape="rect" id="node6" href="$dc/db3/_a_m_g88__ex_8h.html#a3f17f3309f328196ca707c06675fddcb" title="AMG88 reset. " alt="" coords="223,107,331,133"/>
-<area shape="rect" id="node7" href="$dc/db3/_a_m_g88__ex_8h.html#a4262e7e4124e1934798dff5c2fa3a326" title="Set AMG88 Frame Per Seconds multiplier. " alt="" coords="214,157,341,184"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="544,56,656,83"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="549,107,651,133"/>
+<area shape="rect" id="node2" href="$dc/db3/_a_m_g88__ex_8h.html#a07ad7bd903342479937e6ab205eb9235" title="AMG88 Set mode. " alt="" coords="219,5,357,32"/>
+<area shape="rect" id="node3" href="$df/d52/_a_m_g88_8c.html#a5cedae4c89add5fa6aafd5fae421a91f" title="I2C Write function for AMG88. " alt="" coords="405,81,512,108"/>
+<area shape="rect" id="node6" href="$dc/db3/_a_m_g88__ex_8h.html#a3f17f3309f328196ca707c06675fddcb" title="AMG88 reset. " alt="" coords="233,107,343,133"/>
+<area shape="rect" id="node7" href="$dc/db3/_a_m_g88__ex_8h.html#a4262e7e4124e1934798dff5c2fa3a326" title="Set AMG88 Frame Per Seconds multiplier. " alt="" coords="224,157,352,184"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="560,56,677,83"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="565,107,672,133"/>
 </map>

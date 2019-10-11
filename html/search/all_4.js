@@ -302,5 +302,8 @@ var searchData=
   ['ds_5fgpms_5fex_2eh',['DS_GPMS_ex.h',['../da/d4d/_d_s___g_p_m_s__ex_8h.html',1,'']]],
   ['ds_5fgpms_5fproc_2ec',['DS_GPMS_proc.c',['../dd/d17/_d_s___g_p_m_s__proc_8c.html',1,'']]],
   ['ds_5fgpms_5fproc_2eh',['DS_GPMS_proc.h',['../de/d15/_d_s___g_p_m_s__proc_8h.html',1,'']]],
-  ['dwell',['DWELL',['../d5/de7/unionu_a_t42_q_t___r_e_g_____s_e_t_u_p__244.html#a865c278c28242cb3137dec22791246a0',1,'uAT42QT_REG__SETUP_244']]]
+  ['duty0',['Duty0',['../dd/d3d/struct_p_c_a9532__t.html#ab9ef2276e2d73fe3c9d4ba13b59d80e6',1,'PCA9532_t']]],
+  ['duty1',['Duty1',['../dd/d3d/struct_p_c_a9532__t.html#a6a254bd8b420b3b5971f60428be41b3f',1,'PCA9532_t']]],
+  ['dwell',['DWELL',['../d5/de7/unionu_a_t42_q_t___r_e_g_____s_e_t_u_p__244.html#a865c278c28242cb3137dec22791246a0',1,'uAT42QT_REG__SETUP_244']]],
+  ['dword',['DWord',['../d0/d44/unionu_p_c_a9532___r_e_g_____l_s.html#ab0198ea0c6b7a235d5fef31f6aa337f1',1,'uPCA9532_REG__LS']]]
 ];

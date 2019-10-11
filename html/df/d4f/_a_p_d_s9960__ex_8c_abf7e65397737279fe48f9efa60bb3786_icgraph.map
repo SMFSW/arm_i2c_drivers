@@ -1,6 +1,6 @@
 <map id="APDS9960_Set_Prox_Pulse_Length" name="APDS9960_Set_Prox_Pulse_Length">
-<area shape="rect" id="node2" href="$da/db5/_a_p_d_s9960__ex_8h.html#ad1ec171d20f5d9e3ce304f800f07e866" title="Proximity interrupt thresholds configuration. " alt="" coords="243,12,386,39"/>
-<area shape="rect" id="node3" href="$df/d17/_a_p_d_s9960__proc_8h.html#a8b3e98f19115655eea22dfa81f4273e7" title="Initialization Sequence for APDS9960 peripheral. " alt="" coords="435,12,613,39"/>
-<area shape="rect" id="node4" href="$d2/dbf/_a_p_d_s9960_8h.html#a7f169a78f245b023b72f92539c7a59c5" title="Initialization for APDS9960 peripheral. " alt="" coords="661,12,773,39"/>
-<area shape="rect" id="node5" href="$d2/dbf/_a_p_d_s9960_8h.html#a2234fed110d5973db4b9d30d2e5098fd" title="Initialization for APDS9960 peripheral. " alt="" coords="821,12,976,39"/>
+<area shape="rect" id="node2" href="$da/db5/_a_p_d_s9960__ex_8h.html#ad1ec171d20f5d9e3ce304f800f07e866" title="Proximity interrupt thresholds configuration. " alt="" coords="248,13,392,39"/>
+<area shape="rect" id="node3" href="$df/d17/_a_p_d_s9960__proc_8h.html#a8b3e98f19115655eea22dfa81f4273e7" title="Initialization Sequence for APDS9960 peripheral. " alt="" coords="440,13,627,39"/>
+<area shape="rect" id="node4" href="$d2/dbf/_a_p_d_s9960_8h.html#a7f169a78f245b023b72f92539c7a59c5" title="Initialization for APDS9960 peripheral. " alt="" coords="675,13,791,39"/>
+<area shape="rect" id="node5" href="$d2/dbf/_a_p_d_s9960_8h.html#a2234fed110d5973db4b9d30d2e5098fd" title="Initialization for APDS9960 peripheral. " alt="" coords="839,13,1001,39"/>
 </map>

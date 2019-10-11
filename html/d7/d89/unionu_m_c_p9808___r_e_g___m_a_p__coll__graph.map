@@ -1,5 +1,5 @@
 <map id="uMCP9808_REG_MAP" name="uMCP9808_REG_MAP">
-<area shape="rect" id="node2" href="$d3/d88/unionu_m_c_p9808___r_e_g_____c_f_g.html" title="Union for CFG of MCP9808. " alt="" coords="5,5,169,32"/>
-<area shape="rect" id="node3" href="$d9/d48/unionu_m_c_p9808___r_e_g_____t_e_m_p___a_m_b.html" title="Union for Ambient temperature register of MCP9808. " alt="" coords="195,5,404,32"/>
-<area shape="rect" id="node4" href="$db/d36/unionu_m_c_p9808___r_e_g_____t_e_m_p___l_i_m.html" title="Union for Temperature Limit registers of MCP9808. " alt="" coords="429,5,632,32"/>
+<area shape="rect" id="node2" href="$d3/d88/unionu_m_c_p9808___r_e_g_____c_f_g.html" title="Union for CFG of MCP9808. " alt="" coords="5,5,168,32"/>
+<area shape="rect" id="node3" href="$d9/d48/unionu_m_c_p9808___r_e_g_____t_e_m_p___a_m_b.html" title="Union for Ambient temperature register of MCP9808. " alt="" coords="193,5,399,32"/>
+<area shape="rect" id="node4" href="$db/d36/unionu_m_c_p9808___r_e_g_____t_e_m_p___l_i_m.html" title="Union for Temperature Limit registers of MCP9808. " alt="" coords="423,5,622,32"/>
 </map>

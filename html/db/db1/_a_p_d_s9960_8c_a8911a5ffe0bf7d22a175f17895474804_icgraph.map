@@ -1,32 +1,32 @@
 <map id="APDS9960_Write" name="APDS9960_Write">
-<area shape="rect" id="node2" href="$d2/dbf/_a_p_d_s9960_8h.html#a3e5a7deaf82512f33c88a93ba8296593" title="I2C Word Write (low endian) function for APDS9960. " alt="" coords="179,56,341,83"/>
-<area shape="rect" id="node5" href="$da/db5/_a_p_d_s9960__ex_8h.html#ac600f47b6f34764405a01e077d6385c0" title="ALS Persistence configuration. " alt="" coords="599,411,817,437"/>
-<area shape="rect" id="node7" href="$df/d17/_a_p_d_s9960__proc_8h.html#a8b3e98f19115655eea22dfa81f4273e7" title="Initialization Sequence for APDS9960 peripheral. " alt="" coords="1363,629,1541,656"/>
-<area shape="rect" id="node10" href="$da/db5/_a_p_d_s9960__ex_8h.html#a6a50ca12eecef4286666e47a857d4371" title="Proximity Persistence configuration. " alt="" coords="598,208,818,235"/>
-<area shape="rect" id="node11" href="$da/db5/_a_p_d_s9960__ex_8h.html#abf7e65397737279fe48f9efa60bb3786" title="Proximity Pulse Length configuration. " alt="" coords="614,462,802,503"/>
-<area shape="rect" id="node12" href="$da/db5/_a_p_d_s9960__ex_8h.html#a66949906e82a1cece11c3c28550ba306" title="Proximity Pulse Count configuration. " alt="" coords="901,513,1089,554"/>
-<area shape="rect" id="node13" href="$da/db5/_a_p_d_s9960__ex_8h.html#a05a166e9fef564f6b7483d81c56c0e3f" title="ADC Integration time configuration. " alt="" coords="867,157,1122,184"/>
-<area shape="rect" id="node14" href="$da/db5/_a_p_d_s9960__ex_8h.html#abec9974c25fa7ad33c62e8104ab6ff82" title="Wait time configuration. " alt="" coords="616,284,800,311"/>
-<area shape="rect" id="node15" href="$da/db5/_a_p_d_s9960__ex_8h.html#ac64e0a5a8057190869060549c2041637" title="Write APDS9960 Enable register. " alt="" coords="186,765,334,792"/>
-<area shape="rect" id="node17" href="$da/db5/_a_p_d_s9960__ex_8h.html#a0e1d2f5ea28281b97eff665ec2451e7e" title="Write APDS9960 Control. " alt="" coords="631,747,785,773"/>
-<area shape="rect" id="node27" href="$da/db5/_a_p_d_s9960__ex_8h.html#a106171a846537cb9a246b3b6a9ac5bef" title="Write APDS9960 Config1. " alt="" coords="389,309,549,336"/>
-<area shape="rect" id="node28" href="$da/db5/_a_p_d_s9960__ex_8h.html#a06498358f3c63f4589b5e9e186b37b68" title="Write APDS9960 Config2. " alt="" coords="180,1120,340,1147"/>
-<area shape="rect" id="node29" href="$da/db5/_a_p_d_s9960__ex_8h.html#aedb5ff8fee994b58b93e75e571942c34" title="ALS interrupt thresholds configuration. " alt="" coords="1171,1044,1314,1071"/>
-<area shape="rect" id="node30" href="$da/db5/_a_p_d_s9960__ex_8h.html#a62be292c6bde4cfeebfcdd81c206db0c" title="Proximity interrupt low threshold configuration. " alt="" coords="185,563,335,589"/>
-<area shape="rect" id="node31" href="$da/db5/_a_p_d_s9960__ex_8h.html#ab2ff7b4cafeb3c3c3eb4bafb695c35cd" title="Proximity interrupt high threshold configuration. " alt="" coords="184,360,336,387"/>
-<area shape="rect" id="node3" href="$da/db5/_a_p_d_s9960__ex_8h.html#a076c8924d9f49de5796a8dab6fe5cebe" title="ALS interrupt low threshold configuration. " alt="" coords="395,5,544,32"/>
-<area shape="rect" id="node4" href="$da/db5/_a_p_d_s9960__ex_8h.html#a105bf337e397a46dcb9ad2ee043d3ef6" title="ALS interrupt high threshold configuration. " alt="" coords="393,56,545,83"/>
-<area shape="rect" id="node6" href="$da/db5/_a_p_d_s9960__ex_8h.html#ad1ec171d20f5d9e3ce304f800f07e866" title="Proximity interrupt thresholds configuration. " alt="" coords="1171,491,1314,517"/>
-<area shape="rect" id="node8" href="$d2/dbf/_a_p_d_s9960_8h.html#a7f169a78f245b023b72f92539c7a59c5" title="Initialization for APDS9960 peripheral. " alt="" coords="1589,629,1701,656"/>
-<area shape="rect" id="node9" href="$d2/dbf/_a_p_d_s9960_8h.html#a2234fed110d5973db4b9d30d2e5098fd" title="Initialization for APDS9960 peripheral. " alt="" coords="1749,629,1904,656"/>
-<area shape="rect" id="node16" href="$da/db5/_a_p_d_s9960__ex_8h.html#a50b0ad2b6dd5262770d707a243780150" title="Oscillator Enable / Disable. " alt="" coords="394,664,545,691"/>
-<area shape="rect" id="node21" href="$da/db5/_a_p_d_s9960__ex_8h.html#a3dec6bfd618dc3fb7edd901112ce76fe" title="ALS module Enable / Disable. " alt="" coords="395,715,544,741"/>
-<area shape="rect" id="node22" href="$da/db5/_a_p_d_s9960__ex_8h.html#a0d059fce893a03d50e79d0fb681a0f26" title="Proximity module Enable / Disable. " alt="" coords="395,765,544,792"/>
-<area shape="rect" id="node23" href="$da/db5/_a_p_d_s9960__ex_8h.html#ac419dc7a0c96b99d8cb006d5b8202208" title="ALS interrupt module Enable / Disable. " alt="" coords="393,816,546,843"/>
-<area shape="rect" id="node24" href="$da/db5/_a_p_d_s9960__ex_8h.html#aba85b63f37d280dba8e9125e74ef6dee" title="Proximity interrupt module Enable / Disable. " alt="" coords="393,867,546,893"/>
-<area shape="rect" id="node25" href="$da/db5/_a_p_d_s9960__ex_8h.html#ad653fd05e184b5107b221f65a7f4e7f9" title="WAIT module Enable / Disable. " alt="" coords="393,917,546,944"/>
-<area shape="rect" id="node26" href="$da/db5/_a_p_d_s9960__ex_8h.html#a42af6f137b2be13abb4fdcefd1d4c95d" title="Gesture module Enable / Disable. " alt="" coords="394,613,545,640"/>
-<area shape="rect" id="node18" href="$da/db5/_a_p_d_s9960__ex_8h.html#ae902fbc98203935fc25677565265069b" title="ALS Gain configuration. " alt="" coords="905,747,1085,773"/>
-<area shape="rect" id="node19" href="$da/db5/_a_p_d_s9960__ex_8h.html#a96a52a9e6309abab2ab8d56470a1f235" title="Proximity Gain configuration. " alt="" coords="903,629,1086,656"/>
-<area shape="rect" id="node20" href="$da/db5/_a_p_d_s9960__ex_8h.html#ab131bb707d1b2b71179d9187b6f6dc3c" title="Proximity Drive configuration. " alt="" coords="901,681,1088,722"/>
+<area shape="rect" id="node2" href="$d2/dbf/_a_p_d_s9960_8h.html#a3e5a7deaf82512f33c88a93ba8296593" title="I2C Word Write (low endian) function for APDS9960. " alt="" coords="181,56,348,83"/>
+<area shape="rect" id="node5" href="$da/db5/_a_p_d_s9960__ex_8h.html#ac600f47b6f34764405a01e077d6385c0" title="ALS Persistence configuration. " alt="" coords="610,411,837,437"/>
+<area shape="rect" id="node7" href="$df/d17/_a_p_d_s9960__proc_8h.html#a8b3e98f19115655eea22dfa81f4273e7" title="Initialization Sequence for APDS9960 peripheral. " alt="" coords="1396,629,1583,656"/>
+<area shape="rect" id="node10" href="$da/db5/_a_p_d_s9960__ex_8h.html#a6a50ca12eecef4286666e47a857d4371" title="Proximity Persistence configuration. " alt="" coords="608,208,839,235"/>
+<area shape="rect" id="node11" href="$da/db5/_a_p_d_s9960__ex_8h.html#abf7e65397737279fe48f9efa60bb3786" title="Proximity Pulse Length configuration. " alt="" coords="626,462,821,503"/>
+<area shape="rect" id="node12" href="$da/db5/_a_p_d_s9960__ex_8h.html#a66949906e82a1cece11c3c28550ba306" title="Proximity Pulse Count configuration. " alt="" coords="923,513,1118,554"/>
+<area shape="rect" id="node13" href="$da/db5/_a_p_d_s9960__ex_8h.html#a05a166e9fef564f6b7483d81c56c0e3f" title="ADC Integration time configuration. " alt="" coords="887,157,1155,184"/>
+<area shape="rect" id="node14" href="$da/db5/_a_p_d_s9960__ex_8h.html#abec9974c25fa7ad33c62e8104ab6ff82" title="Wait time configuration. " alt="" coords="628,284,819,311"/>
+<area shape="rect" id="node15" href="$da/db5/_a_p_d_s9960__ex_8h.html#ac64e0a5a8057190869060549c2041637" title="Write APDS9960 Enable register. " alt="" coords="189,765,340,792"/>
+<area shape="rect" id="node17" href="$da/db5/_a_p_d_s9960__ex_8h.html#a0e1d2f5ea28281b97eff665ec2451e7e" title="Write APDS9960 Control. " alt="" coords="645,747,802,773"/>
+<area shape="rect" id="node27" href="$da/db5/_a_p_d_s9960__ex_8h.html#a106171a846537cb9a246b3b6a9ac5bef" title="Write APDS9960 Config1. " alt="" coords="396,309,560,336"/>
+<area shape="rect" id="node28" href="$da/db5/_a_p_d_s9960__ex_8h.html#a06498358f3c63f4589b5e9e186b37b68" title="Write APDS9960 Config2. " alt="" coords="183,1120,347,1147"/>
+<area shape="rect" id="node29" href="$da/db5/_a_p_d_s9960__ex_8h.html#aedb5ff8fee994b58b93e75e571942c34" title="ALS interrupt thresholds configuration. " alt="" coords="1203,1044,1348,1071"/>
+<area shape="rect" id="node30" href="$da/db5/_a_p_d_s9960__ex_8h.html#a62be292c6bde4cfeebfcdd81c206db0c" title="Proximity interrupt low threshold configuration. " alt="" coords="190,563,339,589"/>
+<area shape="rect" id="node31" href="$da/db5/_a_p_d_s9960__ex_8h.html#ab2ff7b4cafeb3c3c3eb4bafb695c35cd" title="Proximity interrupt high threshold configuration. " alt="" coords="187,360,342,387"/>
+<area shape="rect" id="node3" href="$da/db5/_a_p_d_s9960__ex_8h.html#a076c8924d9f49de5796a8dab6fe5cebe" title="ALS interrupt low threshold configuration. " alt="" coords="403,5,553,32"/>
+<area shape="rect" id="node4" href="$da/db5/_a_p_d_s9960__ex_8h.html#a105bf337e397a46dcb9ad2ee043d3ef6" title="ALS interrupt high threshold configuration. " alt="" coords="401,56,555,83"/>
+<area shape="rect" id="node6" href="$da/db5/_a_p_d_s9960__ex_8h.html#ad1ec171d20f5d9e3ce304f800f07e866" title="Proximity interrupt thresholds configuration. " alt="" coords="1203,491,1347,517"/>
+<area shape="rect" id="node8" href="$d2/dbf/_a_p_d_s9960_8h.html#a7f169a78f245b023b72f92539c7a59c5" title="Initialization for APDS9960 peripheral. " alt="" coords="1631,629,1747,656"/>
+<area shape="rect" id="node9" href="$d2/dbf/_a_p_d_s9960_8h.html#a2234fed110d5973db4b9d30d2e5098fd" title="Initialization for APDS9960 peripheral. " alt="" coords="1795,629,1957,656"/>
+<area shape="rect" id="node16" href="$da/db5/_a_p_d_s9960__ex_8h.html#a50b0ad2b6dd5262770d707a243780150" title="Oscillator Enable / Disable. " alt="" coords="401,664,555,691"/>
+<area shape="rect" id="node21" href="$da/db5/_a_p_d_s9960__ex_8h.html#a3dec6bfd618dc3fb7edd901112ce76fe" title="ALS module Enable / Disable. " alt="" coords="401,715,555,741"/>
+<area shape="rect" id="node22" href="$da/db5/_a_p_d_s9960__ex_8h.html#a0d059fce893a03d50e79d0fb681a0f26" title="Proximity module Enable / Disable. " alt="" coords="402,765,554,792"/>
+<area shape="rect" id="node23" href="$da/db5/_a_p_d_s9960__ex_8h.html#ac419dc7a0c96b99d8cb006d5b8202208" title="ALS interrupt module Enable / Disable. " alt="" coords="400,816,556,843"/>
+<area shape="rect" id="node24" href="$da/db5/_a_p_d_s9960__ex_8h.html#aba85b63f37d280dba8e9125e74ef6dee" title="Proximity interrupt module Enable / Disable. " alt="" coords="401,867,555,893"/>
+<area shape="rect" id="node25" href="$da/db5/_a_p_d_s9960__ex_8h.html#ad653fd05e184b5107b221f65a7f4e7f9" title="WAIT module Enable / Disable. " alt="" coords="401,917,555,944"/>
+<area shape="rect" id="node26" href="$da/db5/_a_p_d_s9960__ex_8h.html#a42af6f137b2be13abb4fdcefd1d4c95d" title="Gesture module Enable / Disable. " alt="" coords="401,613,555,640"/>
+<area shape="rect" id="node18" href="$da/db5/_a_p_d_s9960__ex_8h.html#ae902fbc98203935fc25677565265069b" title="ALS Gain configuration. " alt="" coords="927,747,1114,773"/>
+<area shape="rect" id="node19" href="$da/db5/_a_p_d_s9960__ex_8h.html#a96a52a9e6309abab2ab8d56470a1f235" title="Proximity Gain configuration. " alt="" coords="925,629,1116,656"/>
+<area shape="rect" id="node20" href="$da/db5/_a_p_d_s9960__ex_8h.html#ab131bb707d1b2b71179d9187b6f6dc3c" title="Proximity Drive configuration. " alt="" coords="923,681,1118,722"/>
 </map>

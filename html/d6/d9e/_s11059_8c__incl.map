@@ -1,7 +1,7 @@
 <map id="S11059.c" name="S11059.c">
-<area shape="rect" id="node2" href="$d1/d8f/_s11059_8h.html" title="S11059 Driver. " alt="" coords="170,80,246,107"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="282,155,407,181"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="431,155,547,181"/>
-<area shape="rect" id="node8" href="$dc/d4b/_s11059__proc_8h.html" title="S11059 Driver procedures. " alt="" coords="26,155,135,181"/>
-<area shape="rect" id="node9" href="$d9/da9/_s11059__ex_8h.html" title="S11059 Driver extensions. " alt="" coords="159,155,258,181"/>
+<area shape="rect" id="node2" href="$d1/d8f/_s11059_8h.html" title="S11059 Driver. " alt="" coords="181,80,264,107"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="299,155,434,181"/>
+<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="459,155,584,181"/>
+<area shape="rect" id="node8" href="$dc/d4b/_s11059__proc_8h.html" title="S11059 Driver procedures. " alt="" coords="27,155,146,181"/>
+<area shape="rect" id="node9" href="$d9/da9/_s11059__ex_8h.html" title="S11059 Driver extensions. " alt="" coords="170,155,275,181"/>
 </map>

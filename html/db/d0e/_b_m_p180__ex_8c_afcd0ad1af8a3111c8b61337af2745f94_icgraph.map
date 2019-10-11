@@ -1,9 +1,9 @@
 <map id="BMP180_Start_Conversion" name="BMP180_Start_Conversion">
-<area shape="rect" id="node2" href="$d8/dfb/_b_m_p180__ex_8h.html#a859c9f2ebf5b3a81bc393458418c2c4d" title="Get Raw Temperature. " alt="" coords="235,56,450,83"/>
-<area shape="rect" id="node8" href="$d8/dfb/_b_m_p180__ex_8h.html#acfbb5f5d3f05b5f1358f72892d4ece48" title="Get Raw Pressure. " alt="" coords="246,5,439,32"/>
-<area shape="rect" id="node3" href="$d8/dfb/_b_m_p180__ex_8h.html#af117431545dbbd23c1e495f35002e443" title="Reset BMP180 chip. " alt="" coords="532,56,647,83"/>
-<area shape="rect" id="node4" href="$dc/d50/_b_m_p180__proc_8h.html#a8111dfccecbfb16a41a0069a0755ed0c" title="Gets the compensated pressure level. " alt="" coords="510,5,669,32"/>
-<area shape="rect" id="node7" href="$dc/d50/_b_m_p180__proc_8h.html#a061b4b5aefbd8a7d0c5309a923e914ef" title="Get the temperature. " alt="" coords="499,107,679,133"/>
-<area shape="rect" id="node5" href="$dc/d50/_b_m_p180__proc_8h.html#a7446219370560398c8a2e936aad41be9" title="Handler for BMP180 peripheral. " alt="" coords="729,5,850,32"/>
-<area shape="rect" id="node6" href="$dc/d50/_b_m_p180__proc_8h.html#a6ea364017a9680fe0d48f50dd9f84ffd" title="Handler for all BMP180 peripherals. " alt="" coords="899,5,1040,32"/>
+<area shape="rect" id="node2" href="$d8/dfb/_b_m_p180__ex_8h.html#a859c9f2ebf5b3a81bc393458418c2c4d" title="Get Raw Temperature. " alt="" coords="244,56,468,83"/>
+<area shape="rect" id="node8" href="$d8/dfb/_b_m_p180__ex_8h.html#acfbb5f5d3f05b5f1358f72892d4ece48" title="Get Raw Pressure. " alt="" coords="257,5,455,32"/>
+<area shape="rect" id="node3" href="$d8/dfb/_b_m_p180__ex_8h.html#af117431545dbbd23c1e495f35002e443" title="Reset BMP180 chip. " alt="" coords="554,56,670,83"/>
+<area shape="rect" id="node4" href="$dc/d50/_b_m_p180__proc_8h.html#a8111dfccecbfb16a41a0069a0755ed0c" title="Gets the compensated pressure level. " alt="" coords="529,5,695,32"/>
+<area shape="rect" id="node7" href="$dc/d50/_b_m_p180__proc_8h.html#a061b4b5aefbd8a7d0c5309a923e914ef" title="Get the temperature. " alt="" coords="516,107,708,133"/>
+<area shape="rect" id="node5" href="$dc/d50/_b_m_p180__proc_8h.html#a7446219370560398c8a2e936aad41be9" title="Handler for BMP180 peripheral. " alt="" coords="756,5,885,32"/>
+<area shape="rect" id="node6" href="$dc/d50/_b_m_p180__proc_8h.html#a6ea364017a9680fe0d48f50dd9f84ffd" title="Handler for all BMP180 peripherals. " alt="" coords="933,5,1084,32"/>
 </map>

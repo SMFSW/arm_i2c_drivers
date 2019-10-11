@@ -1,24 +1,24 @@
 <map id="TCS3400_Write" name="TCS3400_Write">
-<area shape="rect" id="node2" href="$d9/d51/_t_c_s3400_8h.html#a24dd3a05516f9bfb9bd449c71e77e56e" title="I2C Word Write (low endian) function for TCS3400. " alt="" coords="170,56,323,83"/>
-<area shape="rect" id="node5" href="$de/d36/_t_c_s3400__ex_8h.html#a03d8d64c10dd9feabb506a32c9284d81" title="Gain configuration. " alt="" coords="408,461,547,488"/>
-<area shape="rect" id="node6" href="$de/d36/_t_c_s3400__ex_8h.html#ac48f9fca1a798b344a94913a54768d6c" title="Write TCS3400 Control register. " alt="" coords="648,259,787,285"/>
-<area shape="rect" id="node10" href="$de/d36/_t_c_s3400__ex_8h.html#a19e0fd3ebafed0eb401fb974ad9e246d" title="Integration time configuration. " alt="" coords="373,613,581,640"/>
-<area shape="rect" id="node11" href="$de/d36/_t_c_s3400__ex_8h.html#af7de3827f888542029fba8bdde9afcf1" title="ALS Persistence configuration. " alt="" coords="629,613,805,640"/>
-<area shape="rect" id="node12" href="$de/d36/_t_c_s3400__ex_8h.html#adf6456429e5ed5e5bd9dbf957e8b83f7" title="Wait time configuration. " alt="" coords="390,563,565,589"/>
-<area shape="rect" id="node13" href="$de/d36/_t_c_s3400__ex_8h.html#a3273d153f1c291483e63847c10fcd529" title="Write TCS3400 Enable register. " alt="" coords="177,309,316,336"/>
-<area shape="rect" id="node19" href="$de/d36/_t_c_s3400__ex_8h.html#aae793812b1704f515cc24d5c7ab076c4" title="Write TCS3400 Config register. " alt="" coords="175,512,318,539"/>
-<area shape="rect" id="node20" href="$de/d36/_t_c_s3400__ex_8h.html#adb2d8a0c13494e4b85eeefd521469a6d" title="ALS interrupt thresholds configuration. " alt="" coords="181,461,313,488"/>
-<area shape="rect" id="node21" href="$de/d36/_t_c_s3400__ex_8h.html#a3a52107ccb09a7cbd9ae9d72f5f296c8" title="Force interruption. " alt="" coords="179,715,315,741"/>
-<area shape="rect" id="node22" href="$de/d36/_t_c_s3400__ex_8h.html#a8e4278cf9c63fa0b3a66d892cd84b310" title="Clear pending IR interruption. " alt="" coords="169,765,324,792"/>
-<area shape="rect" id="node23" href="$de/d36/_t_c_s3400__ex_8h.html#a2517bc5136bc1f91ef2a341b7eaf2d62" title="Clear All pending interruptions. " alt="" coords="169,816,325,843"/>
-<area shape="rect" id="node3" href="$de/d36/_t_c_s3400__ex_8h.html#a671ee64893a5085f08265539c5fe898f" title="ALS interrupt low threshold configuration. " alt="" coords="408,5,547,32"/>
-<area shape="rect" id="node4" href="$de/d36/_t_c_s3400__ex_8h.html#a62158bbdd765518e1bbcade9548fe6a7" title="ALS interrupt high threshold configuration. " alt="" coords="406,56,549,83"/>
-<area shape="rect" id="node7" href="$d9/d14/_t_c_s3400__proc_8h.html#a8fb5d620337b38aafea461ffa303894d" title="Initialization Sequence for TCS3400 peripheral. " alt="" coords="634,512,801,539"/>
-<area shape="rect" id="node8" href="$d9/d51/_t_c_s3400_8h.html#ab9ee131767fd0818271fd8d639c57b85" title="Initialization for TCS3400 peripheral. " alt="" coords="854,512,957,539"/>
-<area shape="rect" id="node9" href="$d9/d51/_t_c_s3400_8h.html#ae1122436ee0aa2cf81cec91006589ad6" title="Initialization for TCS3400 peripheral. " alt="" coords="1006,512,1151,539"/>
-<area shape="rect" id="node14" href="$de/d36/_t_c_s3400__ex_8h.html#aa8b7625ce4aa5afd2d238c31fa522263" title="Oscillator Enable / Disable. " alt="" coords="407,360,547,387"/>
-<area shape="rect" id="node15" href="$de/d36/_t_c_s3400__ex_8h.html#a1ef64ff27927a4f4769d79188c88cc6c" title="Clear module Enable / Disable. " alt="" coords="408,157,547,184"/>
-<area shape="rect" id="node16" href="$de/d36/_t_c_s3400__ex_8h.html#a28de794465053b061bd39559ba87d40f" title="Clear interrupt module Enable / Disable. " alt="" coords="406,208,549,235"/>
-<area shape="rect" id="node17" href="$de/d36/_t_c_s3400__ex_8h.html#a632ba4cc38cfe979680c754c41e1d191" title="WAIT module Enable / Disable. " alt="" coords="406,259,549,285"/>
-<area shape="rect" id="node18" href="$de/d36/_t_c_s3400__ex_8h.html#a2b1f0e6bc264652d36f4b54a311e0f4e" title="Sleep After Interrupt Enable / Disable. " alt="" coords="411,309,544,336"/>
+<area shape="rect" id="node2" href="$d9/d51/_t_c_s3400_8h.html#a24dd3a05516f9bfb9bd449c71e77e56e" title="I2C Word Write (low endian) function for TCS3400. " alt="" coords="171,56,325,83"/>
+<area shape="rect" id="node5" href="$de/d36/_t_c_s3400__ex_8h.html#a03d8d64c10dd9feabb506a32c9284d81" title="Gain configuration. " alt="" coords="414,461,557,488"/>
+<area shape="rect" id="node6" href="$de/d36/_t_c_s3400__ex_8h.html#ac48f9fca1a798b344a94913a54768d6c" title="Write TCS3400 Control register. " alt="" coords="665,259,805,285"/>
+<area shape="rect" id="node10" href="$de/d36/_t_c_s3400__ex_8h.html#a19e0fd3ebafed0eb401fb974ad9e246d" title="Integration time configuration. " alt="" coords="375,613,596,640"/>
+<area shape="rect" id="node11" href="$de/d36/_t_c_s3400__ex_8h.html#af7de3827f888542029fba8bdde9afcf1" title="ALS Persistence configuration. " alt="" coords="644,613,827,640"/>
+<area shape="rect" id="node12" href="$de/d36/_t_c_s3400__ex_8h.html#adf6456429e5ed5e5bd9dbf957e8b83f7" title="Wait time configuration. " alt="" coords="396,563,575,589"/>
+<area shape="rect" id="node13" href="$de/d36/_t_c_s3400__ex_8h.html#a3273d153f1c291483e63847c10fcd529" title="Write TCS3400 Enable register. " alt="" coords="179,309,317,336"/>
+<area shape="rect" id="node19" href="$de/d36/_t_c_s3400__ex_8h.html#aae793812b1704f515cc24d5c7ab076c4" title="Write TCS3400 Config register. " alt="" coords="176,512,320,539"/>
+<area shape="rect" id="node20" href="$de/d36/_t_c_s3400__ex_8h.html#adb2d8a0c13494e4b85eeefd521469a6d" title="ALS interrupt thresholds configuration. " alt="" coords="181,461,315,488"/>
+<area shape="rect" id="node21" href="$de/d36/_t_c_s3400__ex_8h.html#a3a52107ccb09a7cbd9ae9d72f5f296c8" title="Force interruption. " alt="" coords="179,715,317,741"/>
+<area shape="rect" id="node22" href="$de/d36/_t_c_s3400__ex_8h.html#a8e4278cf9c63fa0b3a66d892cd84b310" title="Clear pending IR interruption. " alt="" coords="171,765,325,792"/>
+<area shape="rect" id="node23" href="$de/d36/_t_c_s3400__ex_8h.html#a2517bc5136bc1f91ef2a341b7eaf2d62" title="Clear All pending interruptions. " alt="" coords="169,816,327,843"/>
+<area shape="rect" id="node3" href="$de/d36/_t_c_s3400__ex_8h.html#a671ee64893a5085f08265539c5fe898f" title="ALS interrupt low threshold configuration. " alt="" coords="416,5,555,32"/>
+<area shape="rect" id="node4" href="$de/d36/_t_c_s3400__ex_8h.html#a62158bbdd765518e1bbcade9548fe6a7" title="ALS interrupt high threshold configuration. " alt="" coords="414,56,557,83"/>
+<area shape="rect" id="node7" href="$d9/d14/_t_c_s3400__proc_8h.html#a8fb5d620337b38aafea461ffa303894d" title="Initialization Sequence for TCS3400 peripheral. " alt="" coords="648,512,823,539"/>
+<area shape="rect" id="node8" href="$d9/d51/_t_c_s3400_8h.html#ab9ee131767fd0818271fd8d639c57b85" title="Initialization for TCS3400 peripheral. " alt="" coords="875,512,979,539"/>
+<area shape="rect" id="node9" href="$d9/d51/_t_c_s3400_8h.html#ae1122436ee0aa2cf81cec91006589ad6" title="Initialization for TCS3400 peripheral. " alt="" coords="1027,512,1177,539"/>
+<area shape="rect" id="node14" href="$de/d36/_t_c_s3400__ex_8h.html#aa8b7625ce4aa5afd2d238c31fa522263" title="Oscillator Enable / Disable. " alt="" coords="414,360,557,387"/>
+<area shape="rect" id="node15" href="$de/d36/_t_c_s3400__ex_8h.html#a1ef64ff27927a4f4769d79188c88cc6c" title="Clear module Enable / Disable. " alt="" coords="415,157,556,184"/>
+<area shape="rect" id="node16" href="$de/d36/_t_c_s3400__ex_8h.html#a28de794465053b061bd39559ba87d40f" title="Clear interrupt module Enable / Disable. " alt="" coords="413,208,557,235"/>
+<area shape="rect" id="node17" href="$de/d36/_t_c_s3400__ex_8h.html#a632ba4cc38cfe979680c754c41e1d191" title="WAIT module Enable / Disable. " alt="" coords="414,259,557,285"/>
+<area shape="rect" id="node18" href="$de/d36/_t_c_s3400__ex_8h.html#a2b1f0e6bc264652d36f4b54a311e0f4e" title="Sleep After Interrupt Enable / Disable. " alt="" coords="418,309,553,336"/>
 </map>

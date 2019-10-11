@@ -1,8 +1,8 @@
 <map id="TCS3472_Set_Pesistence" name="TCS3472_Set_Pesistence">
-<area shape="rect" id="node2" href="$df/dfb/_t_c_s3472_8c.html#a466c991d1a8eda55bef3e6efa6f25a75" title="I2C Write function for TCS3472. " alt="" coords="709,63,824,89"/>
-<area shape="rect" id="node5" href="$d2/dbe/_t_c_s3472__ex_8h.html#a64c9f2b7536ad7db4019a1ea7cc36438" title="Integration time configuration. " alt="" coords="453,37,661,64"/>
-<area shape="rect" id="node6" href="$d2/dbe/_t_c_s3472__ex_8h.html#aa7bb5702df46ec9b941427c585c7aad0" title="Wait time configuration. " alt="" coords="230,88,405,115"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="872,37,984,64"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="877,88,979,115"/>
-<area shape="rect" id="node7" href="$d2/dbe/_t_c_s3472__ex_8h.html#a6c29de5f0accadce54295c64cf92ebed" title="Write TCS3472 Config register. " alt="" coords="486,139,629,165"/>
+<area shape="rect" id="node2" href="$df/dfb/_t_c_s3472_8c.html#a466c991d1a8eda55bef3e6efa6f25a75" title="I2C Write function for TCS3472. " alt="" coords="732,64,848,90"/>
+<area shape="rect" id="node5" href="$d2/dbe/_t_c_s3472__ex_8h.html#a64c9f2b7536ad7db4019a1ea7cc36438" title="Integration time configuration. " alt="" coords="463,38,684,65"/>
+<area shape="rect" id="node6" href="$d2/dbe/_t_c_s3472__ex_8h.html#aa7bb5702df46ec9b941427c585c7aad0" title="Wait time configuration. " alt="" coords="236,89,415,116"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="896,38,1013,65"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="901,89,1008,116"/>
+<area shape="rect" id="node7" href="$d2/dbe/_t_c_s3472__ex_8h.html#a6c29de5f0accadce54295c64cf92ebed" title="Write TCS3472 Config register. " alt="" coords="501,140,645,166"/>
 </map>

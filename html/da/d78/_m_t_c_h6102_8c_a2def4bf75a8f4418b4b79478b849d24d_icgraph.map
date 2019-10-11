@@ -1,22 +1,22 @@
 <map id="MTCH6102_Read" name="MTCH6102_Read">
-<area shape="rect" id="node2" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a4c1612bb1afca9818d54ff05c5fa4191" title="Execute MTCH6102 command. " alt="" coords="207,275,363,302"/>
-<area shape="rect" id="node3" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#abb52a0e1c7def9de5736acc3d5a7d60f" title="Get MTCH6102 gesture decoding. " alt="" coords="465,166,621,192"/>
-<area shape="rect" id="node4" href="$db/de8/_m_t_c_h6102__proc_8h.html#a7669cc66b66883d092cea28bcb21d68b" title="Get manufacturing test results. " alt="" coords="696,166,901,192"/>
-<area shape="rect" id="node6" href="$db/de8/_m_t_c_h6102__proc_8h.html#a6cb756e62481a522d8fba783461ac9d4" title="Initialization Sequence for MTCH6102 peripheral. " alt="" coords="1181,115,1360,142"/>
-<area shape="rect" id="node9" href="$db/de8/_m_t_c_h6102__proc_8h.html#a15eac00544e71163632f5a2625a3b888" title="Configure MTCH6102 parameters needing configure step. " alt="" coords="723,282,875,308"/>
-<area shape="rect" id="node15" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a80d1f444381283a7bc2883f0ed086c9a" title="Get MTCH6102 Active period. " alt="" coords="718,536,879,577"/>
-<area shape="rect" id="node16" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a1e8131729e0b592b9f75de9e1eabf978" title="Get MTCH6102 Idle period. " alt="" coords="191,602,380,628"/>
-<area shape="rect" id="node17" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a7c5ed64610073758050d2708ddf217d9" title="Get MTCH6102 Raw sensor values datas. " alt="" coords="210,115,361,142"/>
-<area shape="rect" id="node20" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a6e4dca81f18906253bc5300c3a485b8e" title="Get MTCH6102 Raw gesture datas. " alt="" coords="209,64,361,91"/>
-<area shape="rect" id="node21" href="$db/de8/_m_t_c_h6102__proc_8h.html#a658b0347842e468dba63ccea3473b89d" title="Calculates compensation values regarding read values and writes them to MTCH6102. ..." alt="" coords="182,652,389,679"/>
-<area shape="rect" id="node7" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a80fa6efbe2290906f8f0a5d5fc5304cc" title="Restore MTCH6102 controller to default configuration values. " alt="" coords="443,399,642,426"/>
-<area shape="rect" id="node8" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#afa22740ded5a6bb154614a7ea3ee4d5c" title="Write MTCH6102 parameters to non volatile storage. " alt="" coords="453,268,633,309"/>
-<area shape="rect" id="node10" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a0f9ba08c0ae08f4871e96da7288dc1b5" title="Configure MTCH6102controller (after parameters have been changed) " alt="" coords="456,333,629,374"/>
-<area shape="rect" id="node13" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#aa980af8cabdefa2a588cb6109e696006" title="Execute MTCH6102 manufacturing test. " alt="" coords="437,216,648,243"/>
-<area shape="rect" id="node14" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#aa6abf4edf68828f782d7b5d069aad2a5" title="Force MTCH6102 baseline (re&#45;calibration) to occur. " alt="" coords="449,450,636,476"/>
-<area shape="rect" id="node5" href="$db/de8/_m_t_c_h6102__proc_8h.html#ab50e4af94c662a975f33cc565f78bffa" title="Set MTCH6102 coordinates rotation. " alt="" coords="955,115,1127,142"/>
-<area shape="rect" id="node11" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a411fa06e29c5cafb719e8735446df85d" title="Set MTCH6102 raw acquisition filter. " alt="" coords="723,412,875,439"/>
-<area shape="rect" id="node12" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a67250a81c6d4c2a0d099d4dc5649371c" title="Set MTCH6102 debounce period. " alt="" coords="950,543,1133,570"/>
-<area shape="rect" id="node18" href="$db/de8/_m_t_c_h6102__proc_8h.html#a342679a8eaa19001a2d661ca14c50139" title="Handler for MTCH6102 peripheral. " alt="" coords="473,64,612,91"/>
-<area shape="rect" id="node19" href="$db/de8/_m_t_c_h6102__proc_8h.html#a312bb1870758990998465cec43da89e5" title="Handler for all MTCH6102 peripherals. " alt="" coords="719,115,878,142"/>
+<area shape="rect" id="node2" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a4c1612bb1afca9818d54ff05c5fa4191" title="Execute MTCH6102 command. " alt="" coords="209,277,373,303"/>
+<area shape="rect" id="node3" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#abb52a0e1c7def9de5736acc3d5a7d60f" title="Get MTCH6102 gesture decoding. " alt="" coords="477,167,639,194"/>
+<area shape="rect" id="node4" href="$db/de8/_m_t_c_h6102__proc_8h.html#a7669cc66b66883d092cea28bcb21d68b" title="Get manufacturing test results. " alt="" coords="716,167,923,194"/>
+<area shape="rect" id="node6" href="$db/de8/_m_t_c_h6102__proc_8h.html#a6cb756e62481a522d8fba783461ac9d4" title="Initialization Sequence for MTCH6102 peripheral. " alt="" coords="1209,117,1396,143"/>
+<area shape="rect" id="node9" href="$db/de8/_m_t_c_h6102__proc_8h.html#a15eac00544e71163632f5a2625a3b888" title="Configure MTCH6102 parameters needing configure step. " alt="" coords="740,283,899,310"/>
+<area shape="rect" id="node15" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a80d1f444381283a7bc2883f0ed086c9a" title="Get MTCH6102 Active period. " alt="" coords="736,537,903,579"/>
+<area shape="rect" id="node16" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a1e8131729e0b592b9f75de9e1eabf978" title="Get MTCH6102 Idle period. " alt="" coords="193,603,389,630"/>
+<area shape="rect" id="node17" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a7c5ed64610073758050d2708ddf217d9" title="Get MTCH6102 Raw sensor values datas. " alt="" coords="215,117,367,143"/>
+<area shape="rect" id="node20" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a6e4dca81f18906253bc5300c3a485b8e" title="Get MTCH6102 Raw gesture datas. " alt="" coords="212,66,369,93"/>
+<area shape="rect" id="node21" href="$db/de8/_m_t_c_h6102__proc_8h.html#a658b0347842e468dba63ccea3473b89d" title="Calculates compensation values regarding read values and writes them to MTCH6102. ..." alt="" coords="181,654,400,681"/>
+<area shape="rect" id="node7" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a80fa6efbe2290906f8f0a5d5fc5304cc" title="Restore MTCH6102 controller to default configuration values. " alt="" coords="455,401,661,427"/>
+<area shape="rect" id="node8" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#afa22740ded5a6bb154614a7ea3ee4d5c" title="Write MTCH6102 parameters to non volatile storage. " alt="" coords="465,269,651,311"/>
+<area shape="rect" id="node10" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a0f9ba08c0ae08f4871e96da7288dc1b5" title="Configure MTCH6102controller (after parameters have been changed) " alt="" coords="467,335,649,376"/>
+<area shape="rect" id="node13" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#aa980af8cabdefa2a588cb6109e696006" title="Execute MTCH6102 manufacturing test. " alt="" coords="448,218,668,245"/>
+<area shape="rect" id="node14" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#aa6abf4edf68828f782d7b5d069aad2a5" title="Force MTCH6102 baseline (re&#45;calibration) to occur. " alt="" coords="461,451,655,478"/>
+<area shape="rect" id="node5" href="$db/de8/_m_t_c_h6102__proc_8h.html#ab50e4af94c662a975f33cc565f78bffa" title="Set MTCH6102 coordinates rotation. " alt="" coords="977,117,1155,143"/>
+<area shape="rect" id="node11" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a411fa06e29c5cafb719e8735446df85d" title="Set MTCH6102 raw acquisition filter. " alt="" coords="741,414,897,441"/>
+<area shape="rect" id="node12" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a67250a81c6d4c2a0d099d4dc5649371c" title="Set MTCH6102 debounce period. " alt="" coords="971,545,1161,571"/>
+<area shape="rect" id="node18" href="$db/de8/_m_t_c_h6102__proc_8h.html#a342679a8eaa19001a2d661ca14c50139" title="Handler for MTCH6102 peripheral. " alt="" coords="485,66,631,93"/>
+<area shape="rect" id="node19" href="$db/de8/_m_t_c_h6102__proc_8h.html#a312bb1870758990998465cec43da89e5" title="Handler for all MTCH6102 peripherals. " alt="" coords="736,117,903,143"/>
 </map>

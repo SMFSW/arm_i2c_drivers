@@ -1,12 +1,12 @@
 <map id="AT42QT1244_Send_Command" name="AT42QT1244_Send_Command">
-<area shape="rect" id="node2" href="$df/de4/_a_t42_q_t1244__ex_8h.html#ab52313a7d0dde362d988276cfcea007a" title="AT42QT1244_Send_Setup" alt="" coords="262,85,439,112"/>
-<area shape="rect" id="node8" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a3ebaacb4c3df87fe141ce023144f521b" title="AT42QT1244_Reset" alt="" coords="280,140,421,167"/>
-<area shape="rect" id="node9" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a3ae85fa66862d660adec8cd6eb12b631" title="AT42QT1244_Calibrate\l_Low_Level" alt="" coords="502,183,661,225"/>
-<area shape="rect" id="node10" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#abef8f12632de2909925c87d2385f0bd4" title="AT42QT1244_Calibrate\l_All_Keys" alt="" coords="502,249,661,290"/>
-<area shape="rect" id="node11" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a2f129d5dd0869ca45581c113933a8dfc" title="AT42QT1244_Calibrate_Key" alt="" coords="257,292,445,319"/>
-<area shape="rect" id="node3" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a34f8a56f245d912dcdbef4ec4a41e76b" title="AT42QT1244_Setup_Key" alt="" coords="496,31,667,57"/>
-<area shape="rect" id="node6" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a46a9fc32db3eb219ec0b7373de94a461" title="AT42QT1244_Setup_FHM" alt="" coords="493,81,669,108"/>
-<area shape="rect" id="node7" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a5e338a5f0e2887657c1a3bb36bc9a8db" title="AT42QT1244_Calibrate\l_Freq_Offset" alt="" coords="729,154,887,195"/>
-<area shape="rect" id="node4" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a556a2b48e97e129cc14fe8c10417364a" title="AT42QT1244_Key_Enable" alt="" coords="720,5,896,32"/>
-<area shape="rect" id="node5" href="$df/de4/_a_t42_q_t1244__ex_8h.html#ac1d9c4e4dd2caa03650d8b3cba247916" title="AT42QT1244_Key_Disable" alt="" coords="718,56,898,83"/>
+<area shape="rect" id="node2" href="$df/de4/_a_t42_q_t1244__ex_8h.html#ab52313a7d0dde362d988276cfcea007a" title="AT42QT1244_Send_Setup" alt="" coords="273,85,460,112"/>
+<area shape="rect" id="node8" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a3ebaacb4c3df87fe141ce023144f521b" title="AT42QT1244_Reset" alt="" coords="295,140,439,167"/>
+<area shape="rect" id="node9" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a3ae85fa66862d660adec8cd6eb12b631" title="AT42QT1244_Calibrate\l_Low_Level" alt="" coords="520,183,687,225"/>
+<area shape="rect" id="node10" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#abef8f12632de2909925c87d2385f0bd4" title="AT42QT1244_Calibrate\l_All_Keys" alt="" coords="520,249,687,290"/>
+<area shape="rect" id="node11" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a2f129d5dd0869ca45581c113933a8dfc" title="AT42QT1244_Calibrate_Key" alt="" coords="269,292,464,319"/>
+<area shape="rect" id="node3" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a34f8a56f245d912dcdbef4ec4a41e76b" title="AT42QT1244_Setup_Key" alt="" coords="515,31,691,57"/>
+<area shape="rect" id="node6" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a46a9fc32db3eb219ec0b7373de94a461" title="AT42QT1244_Setup_FHM" alt="" coords="512,81,695,108"/>
+<area shape="rect" id="node7" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a5e338a5f0e2887657c1a3bb36bc9a8db" title="AT42QT1244_Calibrate\l_Freq_Offset" alt="" coords="752,154,919,195"/>
+<area shape="rect" id="node4" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a556a2b48e97e129cc14fe8c10417364a" title="AT42QT1244_Key_Enable" alt="" coords="745,5,926,32"/>
+<area shape="rect" id="node5" href="$df/de4/_a_t42_q_t1244__ex_8h.html#ac1d9c4e4dd2caa03650d8b3cba247916" title="AT42QT1244_Key_Disable" alt="" coords="743,56,928,83"/>
 </map>

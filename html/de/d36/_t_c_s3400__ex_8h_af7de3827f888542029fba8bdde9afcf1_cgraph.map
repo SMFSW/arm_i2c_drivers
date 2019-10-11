@@ -1,8 +1,8 @@
 <map id="TCS3400_Set_Pesistence" name="TCS3400_Set_Pesistence">
-<area shape="rect" id="node2" href="$d4/d1b/_t_c_s3400_8c.html#affda34e85162c60b3ec3ade289c9a417" title="I2C Write function for TCS3400. " alt="" coords="709,63,824,89"/>
-<area shape="rect" id="node5" href="$de/d36/_t_c_s3400__ex_8h.html#a19e0fd3ebafed0eb401fb974ad9e246d" title="Integration time configuration. " alt="" coords="453,37,661,64"/>
-<area shape="rect" id="node6" href="$de/d36/_t_c_s3400__ex_8h.html#adf6456429e5ed5e5bd9dbf957e8b83f7" title="Wait time configuration. " alt="" coords="230,88,405,115"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="872,37,984,64"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="877,88,979,115"/>
-<area shape="rect" id="node7" href="$de/d36/_t_c_s3400__ex_8h.html#aae793812b1704f515cc24d5c7ab076c4" title="Write TCS3400 Config register. " alt="" coords="486,139,629,165"/>
+<area shape="rect" id="node2" href="$d4/d1b/_t_c_s3400_8c.html#affda34e85162c60b3ec3ade289c9a417" title="I2C Write function for TCS3400. " alt="" coords="732,64,848,90"/>
+<area shape="rect" id="node5" href="$de/d36/_t_c_s3400__ex_8h.html#a19e0fd3ebafed0eb401fb974ad9e246d" title="Integration time configuration. " alt="" coords="463,38,684,65"/>
+<area shape="rect" id="node6" href="$de/d36/_t_c_s3400__ex_8h.html#adf6456429e5ed5e5bd9dbf957e8b83f7" title="Wait time configuration. " alt="" coords="236,89,415,116"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="896,38,1013,65"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="901,89,1008,116"/>
+<area shape="rect" id="node7" href="$de/d36/_t_c_s3400__ex_8h.html#aae793812b1704f515cc24d5c7ab076c4" title="Write TCS3400 Config register. " alt="" coords="501,140,645,166"/>
 </map>

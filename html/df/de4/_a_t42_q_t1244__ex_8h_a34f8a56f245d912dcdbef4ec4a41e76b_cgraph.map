@@ -1,8 +1,8 @@
 <map id="AT42QT1244_Setup_Key" name="AT42QT1244_Setup_Key">
-<area shape="rect" id="node2" href="$d3/dc4/_a_t42_q_t1244_8c.html#ab867525e9212e042aec44bc34932ae44" title="I2C Read function for AT42QT1244. " alt="" coords="702,5,839,32"/>
-<area shape="rect" id="node5" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a1ec86c16c14e551e98aaa267be65971c" title="AT42QT1244_Send_Setup" alt="" coords="225,56,402,83"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="888,5,1000,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="893,56,995,83"/>
-<area shape="rect" id="node6" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a89daac54238bdbdc92cba12f647a6910" title="AT42QT1244_Send_Command" alt="" coords="451,107,653,133"/>
-<area shape="rect" id="node7" href="$d3/dc4/_a_t42_q_t1244_8c.html#aefc0247934f27b0e2fc64979aee373b7" title="I2C Write function for AT42QT1244. " alt="" coords="702,56,839,83"/>
+<area shape="rect" id="node2" href="$d3/dc4/_a_t42_q_t1244_8c.html#ab867525e9212e042aec44bc34932ae44" title="I2C Read function for AT42QT1244. " alt="" coords="728,5,868,32"/>
+<area shape="rect" id="node5" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a1ec86c16c14e551e98aaa267be65971c" title="AT42QT1244_Send_Setup" alt="" coords="229,56,416,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="916,5,1033,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="921,56,1028,83"/>
+<area shape="rect" id="node6" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a89daac54238bdbdc92cba12f647a6910" title="AT42QT1244_Send_Command" alt="" coords="464,107,680,133"/>
+<area shape="rect" id="node7" href="$d3/dc4/_a_t42_q_t1244_8c.html#aefc0247934f27b0e2fc64979aee373b7" title="I2C Write function for AT42QT1244. " alt="" coords="728,56,868,83"/>
 </map>

@@ -368,8 +368,8 @@ var searchData=
   ['tsl2591_5fwrite_5fspecial',['TSL2591_Write_Special',['../d2/d68/_t_s_l2591_8c.html#a36f5040528f01a6380c13937023db31e',1,'TSL2591_Write_Special(I2C_slave_t *pSlave, const TSL2591_spec_func func):&#160;TSL2591.c'],['../da/d96/_t_s_l2591_8h.html#a36f5040528f01a6380c13937023db31e',1,'TSL2591_Write_Special(I2C_slave_t *pSlave, const TSL2591_spec_func func):&#160;TSL2591.c']]],
   ['tsl2591_5fwrite_5fword',['TSL2591_Write_Word',['../d2/d68/_t_s_l2591_8c.html#ae100eee4edf9a08aea83f2ae964e9675',1,'TSL2591_Write_Word(I2C_slave_t *pSlave, const uint16_t *data, const uint16_t addr):&#160;TSL2591.c'],['../da/d96/_t_s_l2591_8h.html#ae100eee4edf9a08aea83f2ae964e9675',1,'TSL2591_Write_Word(I2C_slave_t *pSlave, const uint16_t *data, const uint16_t addr):&#160;TSL2591.c']]],
   ['tupper',['TUpper',['../d1/d02/unionu_m_c_p9808___r_e_g___m_a_p.html#aa334ccb2b5ec4dd6137e2e883c676fa3',1,'uMCP9808_REG_MAP::TUpper()'],['../db/d83/struct_m_c_p9808__t.html#a3e27ae6b62744667dcd4a164e343623a',1,'MCP9808_t::TUpper()']]],
-  ['twelve',['TWELVE',['../dc/dee/unionu_p_c_f8523___r_e_g_____h_o_u_r_s.html#af80256081ad37b5e0b01fe84e62c5660',1,'uPCF8523_REG__HOURS']]],
-  ['twentyfour',['TWENTYFOUR',['../dc/dee/unionu_p_c_f8523___r_e_g_____h_o_u_r_s.html#a7fe3a8ee02828b11f4714b78b2535538',1,'uPCF8523_REG__HOURS']]],
+  ['twelve',['TWELVE',['../dc/dee/unionu_p_c_f8523___r_e_g_____h_o_u_r_s.html#ace8756ae19ec511a57edadd120113f1c',1,'uPCF8523_REG__HOURS']]],
+  ['twentyfour',['TWENTYFOUR',['../dc/dee/unionu_p_c_f8523___r_e_g_____h_o_u_r_s.html#a9a9459c7a549abf2e0c17fea0007b047',1,'uPCF8523_REG__HOURS']]],
   ['txdownwards',['TxDownwards',['../d5/d63/struct_m_t_c_h6102__t.html#a852ce2d8442fe3461567943b003c612c',1,'MTCH6102_t']]],
   ['type',['TYPE',['../d5/d03/unionu_m_t_c_h___r_e_g_____m_o_d_e___c_o_n.html#a299ca61e2c464fa2a1942d8fa1cc1fa4',1,'uMTCH_REG__MODE_CON']]]
 ];

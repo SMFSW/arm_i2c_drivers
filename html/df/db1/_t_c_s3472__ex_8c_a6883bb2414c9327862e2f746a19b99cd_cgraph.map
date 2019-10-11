@@ -1,7 +1,7 @@
 <map id="TCS3472_Set_WEN" name="TCS3472_Set_WEN">
-<area shape="rect" id="node2" href="$df/dfb/_t_c_s3472_8c.html#aae3dc538210ea32268f908ec53362728" title="I2C Read function for TCS3472. " alt="" coords="384,5,499,32"/>
-<area shape="rect" id="node5" href="$d2/dbe/_t_c_s3472__ex_8h.html#a786481326f17dae01bcb84f74ed3f42f" title="Write TCS3472 Enable register. " alt="" coords="197,56,336,83"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="547,5,659,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="551,56,654,83"/>
-<area shape="rect" id="node6" href="$df/dfb/_t_c_s3472_8c.html#a466c991d1a8eda55bef3e6efa6f25a75" title="I2C Write function for TCS3472. " alt="" coords="384,56,499,83"/>
+<area shape="rect" id="node2" href="$df/dfb/_t_c_s3472_8c.html#aae3dc538210ea32268f908ec53362728" title="I2C Read function for TCS3472. " alt="" coords="383,5,499,32"/>
+<area shape="rect" id="node5" href="$d2/dbe/_t_c_s3472__ex_8h.html#a786481326f17dae01bcb84f74ed3f42f" title="Write TCS3472 Enable register. " alt="" coords="196,56,335,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="547,5,664,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="552,56,659,83"/>
+<area shape="rect" id="node6" href="$df/dfb/_t_c_s3472_8c.html#a466c991d1a8eda55bef3e6efa6f25a75" title="I2C Write function for TCS3472. " alt="" coords="383,56,499,83"/>
 </map>

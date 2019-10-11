@@ -1,5 +1,5 @@
 <map id="PCF8523_Get_Time" name="PCF8523_Get_Time">
-<area shape="rect" id="node2" href="$d4/d61/_p_c_f8523__proc_8h.html#a04365ddacd950492c16035fb554c3b72" title="Initialization Sequence for PCF8523 peripheral. " alt="" coords="195,5,362,32"/>
-<area shape="rect" id="node4" href="$d4/d61/_p_c_f8523__proc_8h.html#a0c61d7181df53ea43460c13575563e92" title="Handler for PCF8523 peripheral. " alt="" coords="215,56,342,83"/>
-<area shape="rect" id="node3" href="$dd/d42/_p_c_f8523_8h.html#aa61e54475342c7382da01eb61e44da09" title="Initialization for PCF8523 peripheral peripheral. " alt="" coords="411,5,514,32"/>
+<area shape="rect" id="node2" href="$d4/d61/_p_c_f8523__proc_8h.html#a04365ddacd950492c16035fb554c3b72" title="Initialization Sequence for PCF8523 peripheral. " alt="" coords="200,5,375,32"/>
+<area shape="rect" id="node4" href="$d4/d61/_p_c_f8523__proc_8h.html#a0c61d7181df53ea43460c13575563e92" title="Handler for PCF8523 peripheral. " alt="" coords="221,56,354,83"/>
+<area shape="rect" id="node3" href="$dd/d42/_p_c_f8523_8h.html#aa61e54475342c7382da01eb61e44da09" title="Initialization for PCF8523 peripheral peripheral. " alt="" coords="423,5,527,32"/>
 </map>

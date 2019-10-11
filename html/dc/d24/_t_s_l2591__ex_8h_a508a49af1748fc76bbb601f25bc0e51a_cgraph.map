@@ -1,6 +1,6 @@
 <map id="TSL2591_Reset" name="TSL2591_Reset">
-<area shape="rect" id="node2" href="$dc/d24/_t_s_l2591__ex_8h.html#af8c3d742d306780bdbcbd4874ed03b6c" title="Write TSL2591 Enable register. " alt="" coords="171,31,306,57"/>
-<area shape="rect" id="node3" href="$d2/d68/_t_s_l2591_8c.html#a14a8ee1af325b7f732bb2f6d362dca78" title="I2C Write function for TSL2591. " alt="" coords="355,31,467,57"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="515,5,627,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="519,56,622,83"/>
+<area shape="rect" id="node2" href="$dc/d24/_t_s_l2591__ex_8h.html#af8c3d742d306780bdbcbd4874ed03b6c" title="Write TSL2591 Enable register. " alt="" coords="172,31,311,57"/>
+<area shape="rect" id="node3" href="$d2/d68/_t_s_l2591_8c.html#a14a8ee1af325b7f732bb2f6d362dca78" title="I2C Write function for TSL2591. " alt="" coords="359,31,473,57"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="521,5,639,32"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="527,56,633,83"/>
 </map>

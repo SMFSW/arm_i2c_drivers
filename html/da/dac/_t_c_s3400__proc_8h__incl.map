@@ -1,7 +1,7 @@
 <map id="TCS3400_proc.h" name="TCS3400_proc.h">
-<area shape="rect" id="node3" href="$d9/d51/_t_c_s3400_8h.html" title="TCS3400 Driver. " alt="" coords="181,80,269,107"/>
-<area shape="rect" id="node9" href="$df/ded/shared___c_l_s_8h.html" title="Color Light Sensing shared. " alt="" coords="28,80,133,107"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="326,155,452,181"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="476,155,592,181"/>
-<area shape="rect" id="node8" href="$de/d36/_t_c_s3400__ex_8h.html" title="TCS3400 Driver extensions. " alt="" coords="193,155,302,181"/>
+<area shape="rect" id="node3" href="$d9/d51/_t_c_s3400_8h.html" title="TCS3400 Driver. " alt="" coords="187,80,278,107"/>
+<area shape="rect" id="node9" href="$df/ded/shared___c_l_s_8h.html" title="Color Light Sensing shared. " alt="" coords="29,80,140,107"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="336,155,471,181"/>
+<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="495,155,621,181"/>
+<area shape="rect" id="node8" href="$de/d36/_t_c_s3400__ex_8h.html" title="TCS3400 Driver extensions. " alt="" coords="199,155,311,181"/>
 </map>

@@ -1,7 +1,7 @@
 <map id="APDS9960_Set_PEN" name="APDS9960_Set_PEN">
-<area shape="rect" id="node2" href="$db/db1/_a_p_d_s9960_8c.html#accf1647389a8e387e4525d4c37435857" title="I2C Read function for APDS9960. " alt="" coords="400,5,525,32"/>
-<area shape="rect" id="node5" href="$da/db5/_a_p_d_s9960__ex_8h.html#ac64e0a5a8057190869060549c2041637" title="Write APDS9960 Enable register. " alt="" coords="203,56,351,83"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="573,5,685,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="578,56,681,83"/>
-<area shape="rect" id="node6" href="$db/db1/_a_p_d_s9960_8c.html#a8911a5ffe0bf7d22a175f17895474804" title="I2C Write function for APDS9960. " alt="" coords="400,56,525,83"/>
+<area shape="rect" id="node2" href="$db/db1/_a_p_d_s9960_8c.html#accf1647389a8e387e4525d4c37435857" title="I2C Read function for APDS9960. " alt="" coords="404,5,532,32"/>
+<area shape="rect" id="node5" href="$da/db5/_a_p_d_s9960__ex_8h.html#ac64e0a5a8057190869060549c2041637" title="Write APDS9960 Enable register. " alt="" coords="205,56,356,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="580,5,697,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="585,56,692,83"/>
+<area shape="rect" id="node6" href="$db/db1/_a_p_d_s9960_8c.html#a8911a5ffe0bf7d22a175f17895474804" title="I2C Write function for APDS9960. " alt="" coords="404,56,532,83"/>
 </map>

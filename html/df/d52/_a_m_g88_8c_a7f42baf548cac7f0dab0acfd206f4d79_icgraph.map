@@ -1,8 +1,8 @@
 <map id="AMG88_Read_Word" name="AMG88_Read_Word">
-<area shape="rect" id="node2" href="$dc/db3/_a_m_g88__ex_8h.html#ab7321a07a50df0b41ca4a71aa6a9ab1d" title="Get thermistor raw value. " alt="" coords="197,5,395,32"/>
-<area shape="rect" id="node4" href="$dc/db3/_a_m_g88__ex_8h.html#a608ca9a032078bca36370090b9866a95" title="Get pixel raw value. " alt="" coords="214,56,378,83"/>
-<area shape="rect" id="node6" href="$da/de9/_a_m_g88__proc_8h.html#a6e3208d73334ee0b7e9eec32d42b8b7f" title="Handler for AMG88 peripheral. " alt="" coords="239,107,353,133"/>
-<area shape="rect" id="node3" href="$dc/db3/_a_m_g88__ex_8h.html#af33b80d7c21067f13845ca170a262f51" title="Get thermistor temperature. " alt="" coords="443,5,637,32"/>
-<area shape="rect" id="node5" href="$dc/db3/_a_m_g88__ex_8h.html#a3915e7b4e19aa20cf336a04639b25336" title="Get pixel temperature. " alt="" coords="458,56,622,83"/>
-<area shape="rect" id="node7" href="$da/de9/_a_m_g88__proc_8h.html#ac190ef2a388b2d75815dbf33ff082d56" title="Handler for all AMG88 peripherals. " alt="" coords="473,107,607,133"/>
+<area shape="rect" id="node2" href="$dc/db3/_a_m_g88__ex_8h.html#ab7321a07a50df0b41ca4a71aa6a9ab1d" title="Get thermistor raw value. " alt="" coords="197,5,404,32"/>
+<area shape="rect" id="node4" href="$dc/db3/_a_m_g88__ex_8h.html#a608ca9a032078bca36370090b9866a95" title="Get pixel raw value. " alt="" coords="217,56,384,83"/>
+<area shape="rect" id="node6" href="$da/de9/_a_m_g88__proc_8h.html#a6e3208d73334ee0b7e9eec32d42b8b7f" title="Handler for AMG88 peripheral. " alt="" coords="239,107,362,133"/>
+<area shape="rect" id="node3" href="$dc/db3/_a_m_g88__ex_8h.html#af33b80d7c21067f13845ca170a262f51" title="Get thermistor temperature. " alt="" coords="452,5,665,32"/>
+<area shape="rect" id="node5" href="$dc/db3/_a_m_g88__ex_8h.html#a3915e7b4e19aa20cf336a04639b25336" title="Get pixel temperature. " alt="" coords="471,56,646,83"/>
+<area shape="rect" id="node7" href="$da/de9/_a_m_g88__proc_8h.html#ac190ef2a388b2d75815dbf33ff082d56" title="Handler for all AMG88 peripherals. " alt="" coords="487,107,631,133"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="TCS3472_handler" name="TCS3472_handler">
-<area shape="rect" id="node2" href="$d6/d96/_t_c_s3472__proc_8h.html#a70dda40374e28e03e3c213e6314b125e" title="Get current Illuminance (in lux) " alt="" coords="188,5,321,32"/>
-<area shape="rect" id="node3" href="$d6/d96/_t_c_s3472__proc_8h.html#a30d0f7d5618c2ff746f1408dcd55e8f1" title="Handler for all TCS3472 peripherals. " alt="" coords="181,56,328,83"/>
+<area shape="rect" id="node2" href="$d6/d96/_t_c_s3472__proc_8h.html#a70dda40374e28e03e3c213e6314b125e" title="Get current Illuminance (in lux) " alt="" coords="195,5,333,32"/>
+<area shape="rect" id="node3" href="$d6/d96/_t_c_s3472__proc_8h.html#a30d0f7d5618c2ff746f1408dcd55e8f1" title="Handler for all TCS3472 peripherals. " alt="" coords="187,56,341,83"/>
 </map>

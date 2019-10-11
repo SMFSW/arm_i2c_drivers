@@ -1,6 +1,6 @@
 <map id="AT42QT1244_Init_Single" name="AT42QT1244_Init_Single">
-<area shape="rect" id="node2" href="$d3/dc4/_a_t42_q_t1244_8c.html#af1484a8fc6bebb8a9b458b89c0302eb2" title="Initialization for AT42QT1244 peripheral. " alt="" coords="222,56,346,83"/>
-<area shape="rect" id="node3" href="$d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="437,5,542,32"/>
-<area shape="rect" id="node4" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#aa696a20476ab84d81f25fef8bfb66bde" title="Initialization Sequence for AT42QT1244 peripheral. " alt="" coords="395,56,584,83"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="433,107,546,133"/>
+<area shape="rect" id="node2" href="$d3/dc4/_a_t42_q_t1244_8c.html#af1484a8fc6bebb8a9b458b89c0302eb2" title="Initialization for AT42QT1244 peripheral. " alt="" coords="228,56,356,83"/>
+<area shape="rect" id="node3" href="$d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="449,5,557,32"/>
+<area shape="rect" id="node4" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#aa696a20476ab84d81f25fef8bfb66bde" title="Initialization Sequence for AT42QT1244 peripheral. " alt="" coords="404,56,603,83"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="444,107,563,133"/>
 </map>

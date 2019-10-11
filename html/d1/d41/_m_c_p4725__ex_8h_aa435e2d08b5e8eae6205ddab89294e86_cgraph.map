@@ -1,8 +1,8 @@
 <map id="MCP4725_WakeUp" name="MCP4725_WakeUp">
-<area shape="rect" id="node2" href="$d9/d93/_m_c_p4725_8c.html#a3d108eba1e911f8deb5d4c18281afe14" title="I2C general call for MCP4725. " alt="" coords="192,5,355,32"/>
-<area shape="rect" id="node3" href="$d1/d41/_m_c_p4725__ex_8h.html#aec93d631a4a6253119ec484e1f110d0f" title="Read DAC value. " alt="" coords="196,56,351,83"/>
-<area shape="rect" id="node7" href="$d1/d41/_m_c_p4725__ex_8h.html#ab8362bb0511780f108c145f0f9c0fef2" title="Read DAC state. " alt="" coords="195,107,351,133"/>
-<area shape="rect" id="node4" href="$d9/d93/_m_c_p4725_8c.html#aede37f98b9e4b0ac454452cf2fa15da3" title="I2C Read function for MCP4725. " alt="" coords="403,81,522,108"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="571,56,683,83"/>
-<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="575,107,678,133"/>
+<area shape="rect" id="node2" href="$d9/d93/_m_c_p4725_8c.html#a3d108eba1e911f8deb5d4c18281afe14" title="I2C general call for MCP4725. " alt="" coords="193,5,363,32"/>
+<area shape="rect" id="node3" href="$d1/d41/_m_c_p4725__ex_8h.html#aec93d631a4a6253119ec484e1f110d0f" title="Read DAC value. " alt="" coords="201,56,355,83"/>
+<area shape="rect" id="node7" href="$d1/d41/_m_c_p4725__ex_8h.html#ab8362bb0511780f108c145f0f9c0fef2" title="Read DAC state. " alt="" coords="197,107,359,133"/>
+<area shape="rect" id="node4" href="$d9/d93/_m_c_p4725_8c.html#aede37f98b9e4b0ac454452cf2fa15da3" title="I2C Read function for MCP4725. " alt="" coords="411,81,531,108"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="579,56,696,83"/>
+<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="584,107,691,133"/>
 </map>

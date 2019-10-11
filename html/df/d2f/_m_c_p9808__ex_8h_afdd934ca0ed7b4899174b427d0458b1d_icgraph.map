@@ -1,8 +1,8 @@
 <map id="MCP9808_Read_Config" name="MCP9808_Read_Config">
-<area shape="rect" id="node2" href="$df/d2f/_m_c_p9808__ex_8h.html#a7741a2cb7ac87999aadfcd1f3470d126" title="Write MCP9808 configuration. " alt="" coords="246,5,391,32"/>
-<area shape="rect" id="node4" href="$df/d2f/_m_c_p9808__ex_8h.html#a243664417daaaf9820d279bdf21b9de9" title="Set MCP9808 alert hysteresis. " alt="" coords="217,56,421,83"/>
-<area shape="rect" id="node5" href="$df/d2f/_m_c_p9808__ex_8h.html#a56970bcbb7adf58d71d1551acc11ec74" title="Set MCP9808 alert type. " alt="" coords="233,107,404,133"/>
-<area shape="rect" id="node6" href="$df/d2f/_m_c_p9808__ex_8h.html#a0e573ffe5d32f0bf8e471204b36533ff" title="Set MCP9808 alert enable. " alt="" coords="229,157,409,184"/>
-<area shape="rect" id="node7" href="$df/d2f/_m_c_p9808__ex_8h.html#a5a21688b5557dd3fba082864bd6df838" title="Set MCP9808 alert lock. " alt="" coords="234,208,403,235"/>
-<area shape="rect" id="node3" href="$d6/d5e/_m_c_p9808__proc_8h.html#a31bb52feabdab2f0aee0a60039a771e7" title="Set the high/low/crit Alert temperature. " alt="" coords="470,5,645,32"/>
+<area shape="rect" id="node2" href="$df/d2f/_m_c_p9808__ex_8h.html#a7741a2cb7ac87999aadfcd1f3470d126" title="Write MCP9808 configuration. " alt="" coords="251,5,403,32"/>
+<area shape="rect" id="node4" href="$df/d2f/_m_c_p9808__ex_8h.html#a243664417daaaf9820d279bdf21b9de9" title="Set MCP9808 alert hysteresis. " alt="" coords="220,56,435,83"/>
+<area shape="rect" id="node5" href="$df/d2f/_m_c_p9808__ex_8h.html#a56970bcbb7adf58d71d1551acc11ec74" title="Set MCP9808 alert type. " alt="" coords="239,107,415,133"/>
+<area shape="rect" id="node6" href="$df/d2f/_m_c_p9808__ex_8h.html#a0e573ffe5d32f0bf8e471204b36533ff" title="Set MCP9808 alert enable. " alt="" coords="231,157,423,184"/>
+<area shape="rect" id="node7" href="$df/d2f/_m_c_p9808__ex_8h.html#a5a21688b5557dd3fba082864bd6df838" title="Set MCP9808 alert lock. " alt="" coords="239,208,416,235"/>
+<area shape="rect" id="node3" href="$d6/d5e/_m_c_p9808__proc_8h.html#a31bb52feabdab2f0aee0a60039a771e7" title="Set the high/low/crit Alert temperature. " alt="" coords="483,5,665,32"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="PCA9685_Read" name="PCA9685_Read">
-<area shape="rect" id="node2" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="171,5,283,32"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="175,56,278,83"/>
+<area shape="rect" id="node2" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="172,5,289,32"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="177,56,284,83"/>
 </map>

@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['pca9532_5fbase_5faddr',['PCA9532_BASE_ADDR',['../d3/df9/_p_c_a9532_8h.html#a3d3202ec233e334f4516ebe4fbf4e95a',1,'PCA9532.h']]],
+  ['pca9532_5fnb_5fchannels',['PCA9532_NB_CHANNELS',['../de/da7/_p_c_a9532__proc_8h.html#a1d09731bc87a2427374f209f4af68801',1,'PCA9532_proc.h']]],
   ['pca9624_5fbase_5faddr',['PCA9624_BASE_ADDR',['../d4/dc2/_p_c_a9624_8h.html#a94397d3430312757ad1e90031a6e1d80',1,'PCA9624.h']]],
   ['pca9624_5fnb_5fchannels',['PCA9624_NB_CHANNELS',['../d0/de0/_p_c_a9624__proc_8h.html#a79bc94adb470852ebca4520f25236a71',1,'PCA9624_proc.h']]],
   ['pca9685_5fbase_5faddr',['PCA9685_BASE_ADDR',['../d4/deb/_p_c_a9685_8h.html#a30a07e9bd420bcb0cb5cc46e683eb5d2',1,'PCA9685.h']]],

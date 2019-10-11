@@ -1,5 +1,5 @@
 <map id="AMG88_Convert_Thermistor_Raw" name="AMG88_Convert_Thermistor_Raw">
-<area shape="rect" id="node2" href="$dc/db3/_a_m_g88__ex_8h.html#af33b80d7c21067f13845ca170a262f51" title="Get thermistor temperature. " alt="" coords="277,5,472,32"/>
-<area shape="rect" id="node3" href="$da/de9/_a_m_g88__proc_8h.html#a6e3208d73334ee0b7e9eec32d42b8b7f" title="Handler for AMG88 peripheral. " alt="" coords="317,56,432,83"/>
-<area shape="rect" id="node4" href="$da/de9/_a_m_g88__proc_8h.html#ac190ef2a388b2d75815dbf33ff082d56" title="Handler for all AMG88 peripherals. " alt="" coords="521,56,655,83"/>
+<area shape="rect" id="node2" href="$dc/db3/_a_m_g88__ex_8h.html#af33b80d7c21067f13845ca170a262f51" title="Get thermistor temperature. " alt="" coords="287,5,500,32"/>
+<area shape="rect" id="node3" href="$da/de9/_a_m_g88__proc_8h.html#a6e3208d73334ee0b7e9eec32d42b8b7f" title="Handler for AMG88 peripheral. " alt="" coords="332,56,455,83"/>
+<area shape="rect" id="node4" href="$da/de9/_a_m_g88__proc_8h.html#ac190ef2a388b2d75815dbf33ff082d56" title="Handler for all AMG88 peripherals. " alt="" coords="548,56,692,83"/>
 </map>

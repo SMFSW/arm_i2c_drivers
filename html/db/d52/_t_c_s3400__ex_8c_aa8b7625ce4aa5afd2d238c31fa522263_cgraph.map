@@ -1,7 +1,7 @@
 <map id="TCS3400_Set_PON" name="TCS3400_Set_PON">
-<area shape="rect" id="node2" href="$d4/d1b/_t_c_s3400_8c.html#a96d0e0fe07d709afbf73ff1353e07ac5" title="I2C Read function for TCS3400. " alt="" coords="381,5,496,32"/>
-<area shape="rect" id="node5" href="$de/d36/_t_c_s3400__ex_8h.html#a3273d153f1c291483e63847c10fcd529" title="Write TCS3400 Enable register. " alt="" coords="195,56,333,83"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="544,5,656,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="549,56,651,83"/>
-<area shape="rect" id="node6" href="$d4/d1b/_t_c_s3400_8c.html#affda34e85162c60b3ec3ade289c9a417" title="I2C Write function for TCS3400. " alt="" coords="381,56,496,83"/>
+<area shape="rect" id="node2" href="$d4/d1b/_t_c_s3400_8c.html#a96d0e0fe07d709afbf73ff1353e07ac5" title="I2C Read function for TCS3400. " alt="" coords="383,5,499,32"/>
+<area shape="rect" id="node5" href="$de/d36/_t_c_s3400__ex_8h.html#a3273d153f1c291483e63847c10fcd529" title="Write TCS3400 Enable register. " alt="" coords="196,56,335,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="547,5,664,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="552,56,659,83"/>
+<area shape="rect" id="node6" href="$d4/d1b/_t_c_s3400_8c.html#affda34e85162c60b3ec3ade289c9a417" title="I2C Write function for TCS3400. " alt="" coords="383,56,499,83"/>
 </map>

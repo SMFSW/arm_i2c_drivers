@@ -1,7 +1,7 @@
 <map id="PCA9685_Read" name="PCA9685_Read">
-<area shape="rect" id="node2" href="$d3/d57/_p_c_a9685__ex_8h.html#aef35f185a62d73c7d697b5df08ae5b7e" title="Set latch type for PCA9685 peripheral. " alt="" coords="185,5,329,32"/>
-<area shape="rect" id="node3" href="$d3/d57/_p_c_a9685__ex_8h.html#a4148be6f53393ba4a04d01b233cee2f2" title="Set frequency for PCA9685 peripheral. " alt="" coords="171,56,344,83"/>
-<area shape="rect" id="node4" href="$d3/d57/_p_c_a9685__ex_8h.html#a1379f6ccb909098b09e1170f56b3a632" title="Reads I2C register from PCA9685. " alt="" coords="175,107,340,133"/>
-<area shape="rect" id="node5" href="$d3/d57/_p_c_a9685__ex_8h.html#a12f0edddb7fd1be38b9548d6e5f1d754" title="Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8..." alt="" coords="179,157,335,184"/>
-<area shape="rect" id="node6" href="$d3/d57/_p_c_a9685__ex_8h.html#a382f62a1b2068e51b0d3cf17b07b18cc" title="Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint1..." alt="" coords="176,208,339,235"/>
+<area shape="rect" id="node2" href="$d3/d57/_p_c_a9685__ex_8h.html#aef35f185a62d73c7d697b5df08ae5b7e" title="Set latch type for PCA9685 peripheral. " alt="" coords="187,5,338,32"/>
+<area shape="rect" id="node3" href="$d3/d57/_p_c_a9685__ex_8h.html#a4148be6f53393ba4a04d01b233cee2f2" title="Set frequency for PCA9685 peripheral. " alt="" coords="172,56,353,83"/>
+<area shape="rect" id="node4" href="$d3/d57/_p_c_a9685__ex_8h.html#a1379f6ccb909098b09e1170f56b3a632" title="Reads I2C register from PCA9685. " alt="" coords="178,107,347,133"/>
+<area shape="rect" id="node5" href="$d3/d57/_p_c_a9685__ex_8h.html#a12f0edddb7fd1be38b9548d6e5f1d754" title="Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8..." alt="" coords="182,157,343,184"/>
+<area shape="rect" id="node6" href="$d3/d57/_p_c_a9685__ex_8h.html#a382f62a1b2068e51b0d3cf17b07b18cc" title="Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint1..." alt="" coords="178,208,347,235"/>
 </map>

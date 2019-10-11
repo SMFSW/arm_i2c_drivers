@@ -1,5 +1,10 @@
 var searchData=
 [
+  ['pca9532_5freg',['PCA9532_reg',['../d3/df9/_p_c_a9532_8h.html#af01e324fe14a91312a1fc234affed028',1,'PCA9532.h']]],
+  ['pca9532_5ft',['PCA9532_t',['../de/da7/_p_c_a9532__proc_8h.html#a5fd601df2222dd5b67300d1c07b9bd43',1,'PCA9532_proc.h']]],
+  ['pca95xx_5fchan',['PCA95xx_chan',['../d3/df9/_p_c_a9532_8h.html#af4ea822e4791849cb461db3b76ef6213',1,'PCA9532.h']]],
+  ['pca95xx_5fledsel',['PCA95xx_ledsel',['../d3/df9/_p_c_a9532_8h.html#a84cfe960b6a08cc93f768469e32ccb6d',1,'PCA9532.h']]],
+  ['pca95xx_5freg_5finc',['PCA95xx_reg_inc',['../d3/df9/_p_c_a9532_8h.html#a4affe8ebd8e7c89ec06fee6f779e53ef',1,'PCA9532.h']]],
   ['pca9624_5freg',['PCA9624_reg',['../d4/dc2/_p_c_a9624_8h.html#ad86bc15ea689ab7dbe417028fa365cfa',1,'PCA9624.h']]],
   ['pca9624_5ft',['PCA9624_t',['../d0/de0/_p_c_a9624__proc_8h.html#a2a1e3fd88dc4818f73551003dd3a50c4',1,'PCA9624_proc.h']]],
   ['pca962x_5fdim',['PCA962x_dim',['../da/d3d/_p_c_a96xx_8h.html#a062fbb2e99ebb5e340b1af19798bfadd',1,'PCA96xx.h']]],

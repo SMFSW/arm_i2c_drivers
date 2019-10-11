@@ -1,8 +1,8 @@
 <map id="PCA9685.c" name="PCA9685.c">
-<area shape="rect" id="node2" href="$d4/deb/_p_c_a9685_8h.html" title="PCA9685 Driver. " alt="" coords="274,80,363,107"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="591,155,716,181"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="449,155,565,181"/>
-<area shape="rect" id="node8" href="$da/d3d/_p_c_a96xx_8h.html" title="PCA96xx shared declarations. " alt="" coords="5,155,93,181"/>
-<area shape="rect" id="node9" href="$d5/d22/_p_c_a9685__proc_8h.html" title="PCA9685 Driver procedures. " alt="" coords="118,155,239,181"/>
-<area shape="rect" id="node10" href="$d3/d57/_p_c_a9685__ex_8h.html" title="PCA9685 Driver extensions. " alt="" coords="263,155,373,181"/>
+<area shape="rect" id="node2" href="$d4/deb/_p_c_a9685_8h.html" title="PCA9685 Driver. " alt="" coords="283,80,375,107"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="611,155,746,181"/>
+<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="461,155,587,181"/>
+<area shape="rect" id="node8" href="$da/d3d/_p_c_a96xx_8h.html" title="PCA96xx shared declarations. " alt="" coords="5,155,96,181"/>
+<area shape="rect" id="node9" href="$d5/d22/_p_c_a9685__proc_8h.html" title="PCA9685 Driver procedures. " alt="" coords="121,155,247,181"/>
+<area shape="rect" id="node10" href="$d3/d57/_p_c_a9685__ex_8h.html" title="PCA9685 Driver extensions. " alt="" coords="272,155,387,181"/>
 </map>

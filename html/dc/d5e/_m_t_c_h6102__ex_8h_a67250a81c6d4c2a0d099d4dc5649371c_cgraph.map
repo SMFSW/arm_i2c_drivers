@@ -1,10 +1,10 @@
 <map id="MTCH6102_Set_Debounce" name="MTCH6102_Set_Debounce">
-<area shape="rect" id="node2" href="$da/d78/_m_t_c_h6102_8c.html#a7d23a0da90fbc047e384e603c436be75" title="I2C Write function for MTCH6102. " alt="" coords="897,151,1023,177"/>
-<area shape="rect" id="node4" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a80d1f444381283a7bc2883f0ed086c9a" title="Get MTCH6102 Active period. " alt="" coords="443,49,605,90"/>
-<area shape="rect" id="node6" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a1e8131729e0b592b9f75de9e1eabf978" title="Get MTCH6102 Idle period. " alt="" coords="659,5,848,32"/>
-<area shape="rect" id="node7" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a411fa06e29c5cafb719e8735446df85d" title="Set MTCH6102 raw acquisition filter. " alt="" coords="237,121,389,148"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1072,124,1184,151"/>
-<area shape="rect" id="node5" href="$da/d78/_m_t_c_h6102_8c.html#a2def4bf75a8f4418b4b79478b849d24d" title="I2C Read function for MTCH6102. " alt="" coords="897,96,1023,123"/>
-<area shape="rect" id="node8" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a0f9ba08c0ae08f4871e96da7288dc1b5" title="Configure MTCH6102controller (after parameters have been changed) " alt="" coords="437,114,611,155"/>
-<area shape="rect" id="node9" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a4c1612bb1afca9818d54ff05c5fa4191" title="Execute MTCH6102 command. " alt="" coords="675,121,831,148"/>
+<area shape="rect" id="node2" href="$da/d78/_m_t_c_h6102_8c.html#a7d23a0da90fbc047e384e603c436be75" title="I2C Write function for MTCH6102. " alt="" coords="923,151,1051,177"/>
+<area shape="rect" id="node4" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a80d1f444381283a7bc2883f0ed086c9a" title="Get MTCH6102 Active period. " alt="" coords="456,49,623,90"/>
+<area shape="rect" id="node6" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a1e8131729e0b592b9f75de9e1eabf978" title="Get MTCH6102 Idle period. " alt="" coords="679,5,875,32"/>
+<area shape="rect" id="node7" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a411fa06e29c5cafb719e8735446df85d" title="Set MTCH6102 raw acquisition filter. " alt="" coords="244,121,400,148"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1099,124,1216,151"/>
+<area shape="rect" id="node5" href="$da/d78/_m_t_c_h6102_8c.html#a2def4bf75a8f4418b4b79478b849d24d" title="I2C Read function for MTCH6102. " alt="" coords="923,96,1051,123"/>
+<area shape="rect" id="node8" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a0f9ba08c0ae08f4871e96da7288dc1b5" title="Configure MTCH6102controller (after parameters have been changed) " alt="" coords="448,114,631,155"/>
+<area shape="rect" id="node9" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a4c1612bb1afca9818d54ff05c5fa4191" title="Execute MTCH6102 command. " alt="" coords="695,121,859,148"/>
 </map>

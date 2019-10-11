@@ -1,6 +1,6 @@
 <map id="TCS3400_Get_Clear" name="TCS3400_Get_Clear">
-<area shape="rect" id="node2" href="$d4/d1b/_t_c_s3400_8c.html#aaf486cb220f744d65051763074d1d116" title="I2C Word Read (low endian) function for TCS3400. " alt="" coords="198,31,351,57"/>
-<area shape="rect" id="node3" href="$d4/d1b/_t_c_s3400_8c.html#a96d0e0fe07d709afbf73ff1353e07ac5" title="I2C Read function for TCS3400. " alt="" coords="400,31,515,57"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="563,5,675,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="567,56,670,83"/>
+<area shape="rect" id="node2" href="$d4/d1b/_t_c_s3400_8c.html#aaf486cb220f744d65051763074d1d116" title="I2C Word Read (low endian) function for TCS3400. " alt="" coords="201,31,356,57"/>
+<area shape="rect" id="node3" href="$d4/d1b/_t_c_s3400_8c.html#a96d0e0fe07d709afbf73ff1353e07ac5" title="I2C Read function for TCS3400. " alt="" coords="404,31,520,57"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="568,5,685,32"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="573,56,680,83"/>
 </map>

@@ -1,7 +1,7 @@
 <map id="BMP180_proc.c" name="BMP180_proc.c">
-<area shape="rect" id="node2" href="$d3/d7d/_b_m_p180_8h.html" title="BMP180 Driver. " alt="" coords="176,80,257,107"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="293,155,418,181"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="442,155,558,181"/>
-<area shape="rect" id="node8" href="$dc/d50/_b_m_p180__proc_8h.html" title="BMP180 Driver procedures. " alt="" coords="26,155,141,181"/>
-<area shape="rect" id="node9" href="$d8/dfb/_b_m_p180__ex_8h.html" title="BMP180 Driver extensions. " alt="" coords="165,155,269,181"/>
+<area shape="rect" id="node2" href="$d3/d7d/_b_m_p180_8h.html" title="BMP180 Driver. " alt="" coords="183,80,270,107"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="305,155,439,181"/>
+<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="464,155,589,181"/>
+<area shape="rect" id="node8" href="$dc/d50/_b_m_p180__proc_8h.html" title="BMP180 Driver procedures. " alt="" coords="27,155,149,181"/>
+<area shape="rect" id="node9" href="$d8/dfb/_b_m_p180__ex_8h.html" title="BMP180 Driver extensions. " alt="" coords="173,155,281,181"/>
 </map>

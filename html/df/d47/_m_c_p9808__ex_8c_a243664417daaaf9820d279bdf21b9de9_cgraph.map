@@ -1,8 +1,8 @@
 <map id="MCP9808_Set_AlertHysteresis" name="MCP9808_Set_AlertHysteresis">
-<area shape="rect" id="node2" href="$df/d2f/_m_c_p9808__ex_8h.html#afdd934ca0ed7b4899174b427d0458b1d" title="Get MCP9808 Configuration. " alt="" coords="259,5,421,32"/>
-<area shape="rect" id="node6" href="$df/d47/_m_c_p9808__ex_8c.html#a3b6ece227f61b26462dcb376d1d7e383" title="Write MCP9808 configuration. " alt="" coords="259,56,421,83"/>
-<area shape="rect" id="node3" href="$df/d8e/_m_c_p9808_8c.html#aae31a880b2f9d8fce8a00151eb4399cb" title="I2C Read function for MCP9808. " alt="" coords="470,5,589,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="637,5,749,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="642,56,745,83"/>
-<area shape="rect" id="node7" href="$df/d8e/_m_c_p9808_8c.html#a3f0dba5176e2cb06e61c7e69b5c5feff" title="I2C Write function for MCP9808. " alt="" coords="470,56,589,83"/>
+<area shape="rect" id="node2" href="$df/d2f/_m_c_p9808__ex_8h.html#afdd934ca0ed7b4899174b427d0458b1d" title="Get MCP9808 Configuration. " alt="" coords="268,5,435,32"/>
+<area shape="rect" id="node6" href="$df/d47/_m_c_p9808__ex_8c.html#a3b6ece227f61b26462dcb376d1d7e383" title="Write MCP9808 configuration. " alt="" coords="268,56,435,83"/>
+<area shape="rect" id="node3" href="$df/d8e/_m_c_p9808_8c.html#aae31a880b2f9d8fce8a00151eb4399cb" title="I2C Read function for MCP9808. " alt="" coords="483,5,603,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="651,5,768,32"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="656,56,763,83"/>
+<area shape="rect" id="node7" href="$df/d8e/_m_c_p9808_8c.html#a3f0dba5176e2cb06e61c7e69b5c5feff" title="I2C Write function for MCP9808. " alt="" coords="483,56,603,83"/>
 </map>

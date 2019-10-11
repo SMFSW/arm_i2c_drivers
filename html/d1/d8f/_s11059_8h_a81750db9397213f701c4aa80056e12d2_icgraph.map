@@ -1,12 +1,12 @@
 <map id="S11059_Write" name="S11059_Write">
-<area shape="rect" id="node2" href="$d1/d8f/_s11059_8h.html#a31193e699a4dce66328dc34029b66245" title="I2C Word Write (big endian) function for S11059. " alt="" coords="158,81,301,108"/>
-<area shape="rect" id="node4" href="$d9/da9/_s11059__ex_8h.html#acccbcc83abce2e5ad100ed0a248fdfe6" title="Write S11059 Control register. " alt="" coords="560,107,688,133"/>
-<area shape="rect" id="node3" href="$d9/da9/_s11059__ex_8h.html#a30bef82a6eb8181de0b0a2e8f55ae2c5" title="Set S11059 integration multiplier (used when integration mode set to Manual) " alt="" coords="350,70,511,111"/>
-<area shape="rect" id="node5" href="$d9/da9/_s11059__ex_8h.html#a11e1e0530b91fa5af6308f834ef30995" title="ADC Operation / Reset. " alt="" coords="753,5,882,32"/>
-<area shape="rect" id="node6" href="$d9/da9/_s11059__ex_8h.html#a401758886add6e8f05e3bb0ebc645395" title="Set Standby / Operating mode. " alt="" coords="743,56,891,83"/>
-<area shape="rect" id="node7" href="$d9/da9/_s11059__ex_8h.html#a66fb17c0d26d605bc440ff385b09e848" title="Set ADC gain. " alt="" coords="754,107,881,133"/>
-<area shape="rect" id="node8" href="$d9/da9/_s11059__ex_8h.html#af61cd26ed6f8df9a15f5ea5ffa67c791" title="Set integration mode &amp; prescaler. " alt="" coords="737,157,898,184"/>
-<area shape="rect" id="node9" href="$dc/d4b/_s11059__proc_8h.html#a63d3bbbec413af54e3edd2dae0243d92" title="Initialization Sequence for S11059 peripheral. " alt="" coords="739,208,895,235"/>
-<area shape="rect" id="node10" href="$d1/d8f/_s11059_8h.html#aaaa62f952fb19007b1c6592422c88221" title="Initialization for S11059 peripheral. " alt="" coords="947,208,1037,235"/>
-<area shape="rect" id="node11" href="$d1/d8f/_s11059_8h.html#a54b2b645d23ab3654253ec5165873303" title="Initialization for S11059 peripheral. " alt="" coords="1086,208,1221,235"/>
+<area shape="rect" id="node2" href="$d1/d8f/_s11059_8h.html#a31193e699a4dce66328dc34029b66245" title="I2C Word Write (big endian) function for S11059. " alt="" coords="163,81,309,108"/>
+<area shape="rect" id="node4" href="$d9/da9/_s11059__ex_8h.html#acccbcc83abce2e5ad100ed0a248fdfe6" title="Write S11059 Control register. " alt="" coords="581,107,715,133"/>
+<area shape="rect" id="node3" href="$d9/da9/_s11059__ex_8h.html#a30bef82a6eb8181de0b0a2e8f55ae2c5" title="Set S11059 integration multiplier (used when integration mode set to Manual) " alt="" coords="357,70,533,111"/>
+<area shape="rect" id="node5" href="$d9/da9/_s11059__ex_8h.html#a11e1e0530b91fa5af6308f834ef30995" title="ADC Operation / Reset. " alt="" coords="783,5,918,32"/>
+<area shape="rect" id="node6" href="$d9/da9/_s11059__ex_8h.html#a401758886add6e8f05e3bb0ebc645395" title="Set Standby / Operating mode. " alt="" coords="771,56,931,83"/>
+<area shape="rect" id="node7" href="$d9/da9/_s11059__ex_8h.html#a66fb17c0d26d605bc440ff385b09e848" title="Set ADC gain. " alt="" coords="783,107,919,133"/>
+<area shape="rect" id="node8" href="$d9/da9/_s11059__ex_8h.html#af61cd26ed6f8df9a15f5ea5ffa67c791" title="Set integration mode &amp; prescaler. " alt="" coords="763,157,939,184"/>
+<area shape="rect" id="node9" href="$dc/d4b/_s11059__proc_8h.html#a63d3bbbec413af54e3edd2dae0243d92" title="Initialization Sequence for S11059 peripheral. " alt="" coords="767,208,935,235"/>
+<area shape="rect" id="node10" href="$d1/d8f/_s11059_8h.html#aaaa62f952fb19007b1c6592422c88221" title="Initialization for S11059 peripheral. " alt="" coords="987,208,1084,235"/>
+<area shape="rect" id="node11" href="$d1/d8f/_s11059_8h.html#a54b2b645d23ab3654253ec5165873303" title="Initialization for S11059 peripheral. " alt="" coords="1132,208,1275,235"/>
 </map>

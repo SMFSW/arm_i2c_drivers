@@ -1,6 +1,6 @@
 <map id="S11059_Set_Integration_Multiplier" name="S11059_Set_Integration_Multiplier">
-<area shape="rect" id="node2" href="$d2/dfe/_s11059_8c.html#a31193e699a4dce66328dc34029b66245" title="I2C Word Write (big endian) function for S11059. " alt="" coords="217,31,359,57"/>
-<area shape="rect" id="node3" href="$d2/dfe/_s11059_8c.html#a81750db9397213f701c4aa80056e12d2" title="I2C Write function for S11059. " alt="" coords="408,31,512,57"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="560,5,672,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="565,56,667,83"/>
+<area shape="rect" id="node2" href="$d2/dfe/_s11059_8c.html#a31193e699a4dce66328dc34029b66245" title="I2C Word Write (big endian) function for S11059. " alt="" coords="229,31,376,57"/>
+<area shape="rect" id="node3" href="$d2/dfe/_s11059_8c.html#a81750db9397213f701c4aa80056e12d2" title="I2C Write function for S11059. " alt="" coords="424,31,533,57"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="581,5,699,32"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="587,56,693,83"/>
 </map>

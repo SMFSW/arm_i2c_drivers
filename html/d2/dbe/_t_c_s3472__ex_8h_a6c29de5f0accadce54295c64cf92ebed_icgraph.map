@@ -1,7 +1,7 @@
 <map id="TCS3472_Write_Cfg" name="TCS3472_Write_Cfg">
-<area shape="rect" id="node2" href="$d2/dbe/_t_c_s3472__ex_8h.html#aa7bb5702df46ec9b941427c585c7aad0" title="Wait time configuration. " alt="" coords="198,31,373,57"/>
-<area shape="rect" id="node3" href="$d2/dbe/_t_c_s3472__ex_8h.html#afbe882249ffabdb2d574477e9699e33c" title="ALS Persistence configuration. " alt="" coords="421,5,597,32"/>
-<area shape="rect" id="node4" href="$d6/d96/_t_c_s3472__proc_8h.html#aa3932aaece6a7b7d1a711dfa32e3765d" title="Initialization Sequence for TCS3472 peripheral. " alt="" coords="426,56,593,83"/>
-<area shape="rect" id="node5" href="$d8/ddc/_t_c_s3472_8h.html#a84f70b0cac4b182e04ee6a95ab466d3b" title="Initialization for TCS3472 peripheral. " alt="" coords="646,56,749,83"/>
-<area shape="rect" id="node6" href="$d8/ddc/_t_c_s3472_8h.html#a3a35824646bde380a0d9bb1be68e8002" title="Initialization for TCS3472 peripheral. " alt="" coords="798,56,943,83"/>
+<area shape="rect" id="node2" href="$d2/dbe/_t_c_s3472__ex_8h.html#aa7bb5702df46ec9b941427c585c7aad0" title="Wait time configuration. " alt="" coords="197,31,376,57"/>
+<area shape="rect" id="node3" href="$d2/dbe/_t_c_s3472__ex_8h.html#afbe882249ffabdb2d574477e9699e33c" title="ALS Persistence configuration. " alt="" coords="424,5,607,32"/>
+<area shape="rect" id="node4" href="$d6/d96/_t_c_s3472__proc_8h.html#aa3932aaece6a7b7d1a711dfa32e3765d" title="Initialization Sequence for TCS3472 peripheral. " alt="" coords="428,56,603,83"/>
+<area shape="rect" id="node5" href="$d8/ddc/_t_c_s3472_8h.html#a84f70b0cac4b182e04ee6a95ab466d3b" title="Initialization for TCS3472 peripheral. " alt="" coords="655,56,759,83"/>
+<area shape="rect" id="node6" href="$d8/ddc/_t_c_s3472_8h.html#a3a35824646bde380a0d9bb1be68e8002" title="Initialization for TCS3472 peripheral. " alt="" coords="807,56,957,83"/>
 </map>

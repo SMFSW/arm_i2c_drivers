@@ -1,9 +1,9 @@
 <map id="S11059_Set_Integration" name="S11059_Set_Integration">
-<area shape="rect" id="node2" href="$d9/da9/_s11059__ex_8h.html#acccbcc83abce2e5ad100ed0a248fdfe6" title="Write S11059 Control register. " alt="" coords="216,56,344,83"/>
-<area shape="rect" id="node3" href="$d9/da9/_s11059__ex_8h.html#a11e1e0530b91fa5af6308f834ef30995" title="ADC Operation / Reset. " alt="" coords="406,5,535,32"/>
-<area shape="rect" id="node4" href="$d9/da9/_s11059__ex_8h.html#a401758886add6e8f05e3bb0ebc645395" title="Set Standby / Operating mode. " alt="" coords="397,56,545,83"/>
-<area shape="rect" id="node5" href="$d9/da9/_s11059__ex_8h.html#a66fb17c0d26d605bc440ff385b09e848" title="Set ADC gain. " alt="" coords="407,107,534,133"/>
-<area shape="rect" id="node6" href="$dc/d4b/_s11059__proc_8h.html#a63d3bbbec413af54e3edd2dae0243d92" title="Initialization Sequence for S11059 peripheral. " alt="" coords="393,157,549,184"/>
-<area shape="rect" id="node7" href="$d1/d8f/_s11059_8h.html#aaaa62f952fb19007b1c6592422c88221" title="Initialization for S11059 peripheral. " alt="" coords="597,157,688,184"/>
-<area shape="rect" id="node8" href="$d1/d8f/_s11059_8h.html#a54b2b645d23ab3654253ec5165873303" title="Initialization for S11059 peripheral. " alt="" coords="737,157,871,184"/>
+<area shape="rect" id="node2" href="$d9/da9/_s11059__ex_8h.html#acccbcc83abce2e5ad100ed0a248fdfe6" title="Write S11059 Control register. " alt="" coords="229,56,363,83"/>
+<area shape="rect" id="node3" href="$d9/da9/_s11059__ex_8h.html#a11e1e0530b91fa5af6308f834ef30995" title="ADC Operation / Reset. " alt="" coords="427,5,562,32"/>
+<area shape="rect" id="node4" href="$d9/da9/_s11059__ex_8h.html#a401758886add6e8f05e3bb0ebc645395" title="Set Standby / Operating mode. " alt="" coords="415,56,575,83"/>
+<area shape="rect" id="node5" href="$d9/da9/_s11059__ex_8h.html#a66fb17c0d26d605bc440ff385b09e848" title="Set ADC gain. " alt="" coords="427,107,563,133"/>
+<area shape="rect" id="node6" href="$dc/d4b/_s11059__proc_8h.html#a63d3bbbec413af54e3edd2dae0243d92" title="Initialization Sequence for S11059 peripheral. " alt="" coords="411,157,579,184"/>
+<area shape="rect" id="node7" href="$d1/d8f/_s11059_8h.html#aaaa62f952fb19007b1c6592422c88221" title="Initialization for S11059 peripheral. " alt="" coords="627,157,724,184"/>
+<area shape="rect" id="node8" href="$d1/d8f/_s11059_8h.html#a54b2b645d23ab3654253ec5165873303" title="Initialization for S11059 peripheral. " alt="" coords="772,157,915,184"/>
 </map>

@@ -30,5 +30,8 @@ var searchData=
   ['drive_5ftime',['DRIVE_TIME',['../d2/d16/unionu_d_r_v___r_e_g_____c_o_n_t_r_o_l__1.html#afab3349592cc740fbfa4bcb99a8f2686',1,'uDRV_REG__CONTROL_1']]],
   ['drv2605_5fhal',['DRV2605_hal',['../dc/d9a/_d_r_v2605_l_8c.html#a54f89ce970c55493c2920cd6e5dcc597',1,'DRV2605_hal():&#160;DRV2605L.c'],['../d5/d47/_d_r_v2605_l_8h.html#a54f89ce970c55493c2920cd6e5dcc597',1,'DRV2605_hal():&#160;DRV2605L.c']]],
   ['drv2605l',['DRV2605L',['../df/dc7/_d_r_v2605_l__proc_8c.html#a2c56d539949d06479aac63eb96eda672',1,'DRV2605L():&#160;DRV2605L_proc.c'],['../d1/da7/_d_r_v2605_l__proc_8h.html#a2c56d539949d06479aac63eb96eda672',1,'DRV2605L():&#160;DRV2605L_proc.c']]],
-  ['dwell',['DWELL',['../d5/de7/unionu_a_t42_q_t___r_e_g_____s_e_t_u_p__244.html#a865c278c28242cb3137dec22791246a0',1,'uAT42QT_REG__SETUP_244']]]
+  ['duty0',['Duty0',['../dd/d3d/struct_p_c_a9532__t.html#ab9ef2276e2d73fe3c9d4ba13b59d80e6',1,'PCA9532_t']]],
+  ['duty1',['Duty1',['../dd/d3d/struct_p_c_a9532__t.html#a6a254bd8b420b3b5971f60428be41b3f',1,'PCA9532_t']]],
+  ['dwell',['DWELL',['../d5/de7/unionu_a_t42_q_t___r_e_g_____s_e_t_u_p__244.html#a865c278c28242cb3137dec22791246a0',1,'uAT42QT_REG__SETUP_244']]],
+  ['dword',['DWord',['../d0/d44/unionu_p_c_a9532___r_e_g_____l_s.html#ab0198ea0c6b7a235d5fef31f6aa337f1',1,'uPCA9532_REG__LS']]]
 ];

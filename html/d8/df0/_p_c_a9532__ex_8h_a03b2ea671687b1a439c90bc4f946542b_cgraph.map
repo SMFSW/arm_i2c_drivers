@@ -1,0 +1,9 @@
+<map id="PCA9532_Byte_To_Duty" name="PCA9532_Byte_To_Duty">
+<area shape="rect" id="node2" href="$d8/df0/_p_c_a9532__ex_8h.html#a50cdf8379e507736d03eb51e3bed2b01" title="Reads I2C register from PCA9532. " alt="" coords="237,5,407,32"/>
+<area shape="rect" id="node3" href="$d8/df0/_p_c_a9532__ex_8h.html#a88684c24046ec8995a83af7b9e3bb9d6" title="Reads LED0 to LED7 input register. " alt="" coords="237,56,407,83"/>
+<area shape="rect" id="node4" href="$d8/df0/_p_c_a9532__ex_8h.html#a8e553b1df9b3d53172626bf564340823" title="Reads LED8 to LED15 input register. " alt="" coords="237,107,407,133"/>
+<area shape="rect" id="node5" href="$d8/df0/_p_c_a9532__ex_8h.html#a6aa07b97e6250d1f21807c1b7ccbab8d" title="Set PCA9532 peripheral LED mode. " alt="" coords="231,157,413,184"/>
+<area shape="rect" id="node6" href="$d8/df0/_p_c_a9532__ex_8h.html#af98d17c6c32cf92bdc78af54bc665b98" title="Set PCA9532 peripheral multiple LEDs mode. " alt="" coords="227,208,417,235"/>
+<area shape="rect" id="node7" href="$d8/df0/_p_c_a9532__ex_8h.html#a3068b304ee4fdf03975f14e69ea3207c" title="Sets PSCx frequency of PCA9532. " alt="" coords="235,259,409,285"/>
+<area shape="rect" id="node8" href="$d8/df0/_p_c_a9532__ex_8h.html#a125d6303517af2bdef5b0f0e435f639d" title="Sets PWMx duty cycle of PCA9532. " alt="" coords="253,309,391,336"/>
+</map>

@@ -1,6 +1,6 @@
 <map id="TSL2591_handler_all" name="TSL2591_handler_all">
-<area shape="rect" id="node2" href="$d7/d6e/_t_s_l2591__proc_8h.html#a603cc00f013d5d6c6696bfec7ed87b44" title="Handler for TSL2591 peripheral. " alt="" coords="197,31,320,57"/>
-<area shape="rect" id="node3" href="$d2/d68/_t_s_l2591_8c.html#aae82321862139e3bf12261885445e5a7" title="I2C Read function for TSL2591. " alt="" coords="368,31,480,57"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="528,5,640,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="533,56,635,83"/>
+<area shape="rect" id="node2" href="$d7/d6e/_t_s_l2591__proc_8h.html#a603cc00f013d5d6c6696bfec7ed87b44" title="Handler for TSL2591 peripheral. " alt="" coords="207,31,339,57"/>
+<area shape="rect" id="node3" href="$d2/d68/_t_s_l2591_8c.html#aae82321862139e3bf12261885445e5a7" title="I2C Read function for TSL2591. " alt="" coords="387,31,501,57"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="549,5,667,32"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="555,56,661,83"/>
 </map>

@@ -1,7 +1,7 @@
 <map id="TSL2591_Set_PON" name="TSL2591_Set_PON">
-<area shape="rect" id="node2" href="$d2/d68/_t_s_l2591_8c.html#aae82321862139e3bf12261885445e5a7" title="I2C Read function for TSL2591. " alt="" coords="376,5,488,32"/>
-<area shape="rect" id="node5" href="$dc/d24/_t_s_l2591__ex_8h.html#af8c3d742d306780bdbcbd4874ed03b6c" title="Write TSL2591 Enable register. " alt="" coords="193,56,327,83"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="536,5,648,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="541,56,643,83"/>
-<area shape="rect" id="node6" href="$d2/d68/_t_s_l2591_8c.html#a14a8ee1af325b7f732bb2f6d362dca78" title="I2C Write function for TSL2591. " alt="" coords="376,56,488,83"/>
+<area shape="rect" id="node2" href="$d2/d68/_t_s_l2591_8c.html#aae82321862139e3bf12261885445e5a7" title="I2C Read function for TSL2591. " alt="" coords="381,5,496,32"/>
+<area shape="rect" id="node5" href="$dc/d24/_t_s_l2591__ex_8h.html#af8c3d742d306780bdbcbd4874ed03b6c" title="Write TSL2591 Enable register. " alt="" coords="195,56,333,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="544,5,661,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="549,56,656,83"/>
+<area shape="rect" id="node6" href="$d2/d68/_t_s_l2591_8c.html#a14a8ee1af325b7f732bb2f6d362dca78" title="I2C Write function for TSL2591. " alt="" coords="381,56,496,83"/>
 </map>
