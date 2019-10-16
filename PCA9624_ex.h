@@ -91,7 +91,7 @@ FctERR NONNULL__ PCA9624_Set_Latch(PCA9624_t * const pCpnt, const PCA96xx_latch 
 ** \param[in] mode - channel mode (on/off/dimming/blinking)
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ PCA9624_Set_Mode_LED(PCA9624_t * const pCpnt, const PCA96xx_chan chan, const PCA962x_ledout mode);
+FctERR NONNULL__ PCA9624_Set_Mode_LED(PCA9624_t * const pCpnt, const PCA9xxx_chan chan, const PCA962x_ledout mode);
 
 
 /*!\brief Set PCA9624 peripheral multiple LEDs mode
@@ -130,7 +130,7 @@ FctERR NONNULL__ PCA9624_ReadRegister(PCA9624_t * const pCpnt, const PCA9624_reg
 ** \param[in,out] duty - Pointer to the DutyCycle data for receive coded on a uint8_t
 ** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCA9624_ReadVal(PCA9624_t * const pCpnt, const PCA96xx_chan chan, uint8_t * const duty);
+FctERR NONNULL__ PCA9624_ReadVal(PCA9624_t * const pCpnt, const PCA9xxx_chan chan, uint8_t * const duty);
 
 
 /*!\brief Computes and send I2C lighting values to apply to a particular channel for PCA9624
@@ -139,7 +139,7 @@ FctERR NONNULL__ PCA9624_ReadVal(PCA9624_t * const pCpnt, const PCA96xx_chan cha
 ** \param[in] duty - Duty cycle coded on a uint8_t
 ** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCA9624_PutVal(PCA9624_t * const pCpnt, const PCA96xx_chan chan, const uint8_t duty);
+FctERR NONNULL__ PCA9624_PutVal(PCA9624_t * const pCpnt, const PCA9xxx_chan chan, const uint8_t duty);
 
 
 /*!\brief Sends I2C PWM ON values to apply to a particular channel for PCA9624
@@ -147,7 +147,7 @@ FctERR NONNULL__ PCA9624_PutVal(PCA9624_t * const pCpnt, const PCA96xx_chan chan
 ** \param[in] chan - channel number
 ** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCA9624_SetVal(PCA9624_t * const pCpnt, const PCA96xx_chan chan);
+FctERR NONNULL__ PCA9624_SetVal(PCA9624_t * const pCpnt, const PCA9xxx_chan chan);
 
 
 /*!\brief Sends I2C PWM OFF values to apply to a particular channel for PCA9624
@@ -155,7 +155,7 @@ FctERR NONNULL__ PCA9624_SetVal(PCA9624_t * const pCpnt, const PCA96xx_chan chan
 ** \param[in] chan - channel number
 ** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCA9624_ClrVal(PCA9624_t * const pCpnt, const PCA96xx_chan chan);
+FctERR NONNULL__ PCA9624_ClrVal(PCA9624_t * const pCpnt, const PCA9xxx_chan chan);
 
 
 /****************************************************************/

@@ -126,7 +126,7 @@ FctERR NONNULL__ PCA9532_Read_INPUT1(PCA9532_t * const pCpnt, uPCA9532_REG__INPU
 ** \param[in] mode - channel mode (on/off/PWM0/PWM1)
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ PCA9532_Set_Mode_LED(PCA9532_t * const pCpnt, const PCA95xx_chan chan, const PCA95xx_ledsel mode);
+FctERR NONNULL__ PCA9532_Set_Mode_LED(PCA9532_t * const pCpnt, const PCA9xxx_chan chan, const PCA95xx_ledsel mode);
 
 
 /*!\brief Set PCA9532 peripheral multiple LEDs mode

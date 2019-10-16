@@ -36,53 +36,40 @@ FctERR NONNULL__ PCA9532_Read_INPUT1(PCA9532_t * const pCpnt, uPCA9532_REG__INPU
 }
 
 
-FctERR NONNULL__ PCA9532_Set_Mode_LED(PCA9532_t * const pCpnt, const PCA95xx_chan chan, const PCA95xx_ledsel mode)
+FctERR NONNULL__ PCA9532_Set_Mode_LED(PCA9532_t * const pCpnt, const PCA9xxx_chan chan, const PCA95xx_ledsel mode)
 {
-	if (chan > PCA95xx__PWM16)		{ return ERROR_RANGE; }	// Unknown channel
+	if (chan > PCA9xxx__PWM16)		{ return ERROR_RANGE; }	// Unknown channel
 	if (mode > PCA95xx__LED_PWM1)	{ return ERROR_VALUE; }	// Unknown control mode
 
-	if (chan == PCA95xx__PWM1)			{ pCpnt->LS.Bits.LED0 = mode; }
-	else if (chan == PCA95xx__PWM2)		{ pCpnt->LS.Bits.LED1 = mode; }
-	else if (chan == PCA95xx__PWM3)		{ pCpnt->LS.Bits.LED2 = mode; }
-	else if (chan == PCA95xx__PWM4)		{ pCpnt->LS.Bits.LED3 = mode; }
-	else if (chan == PCA95xx__PWM5)		{ pCpnt->LS.Bits.LED4 = mode; }
-	else if (chan == PCA95xx__PWM6)		{ pCpnt->LS.Bits.LED5 = mode; }
-	else if (chan == PCA95xx__PWM7)		{ pCpnt->LS.Bits.LED6 = mode; }
-	else if (chan == PCA95xx__PWM8)		{ pCpnt->LS.Bits.LED7 = mode; }
-	else if (chan == PCA95xx__PWM9)		{ pCpnt->LS.Bits.LED8 = mode; }
-	else if (chan == PCA95xx__PWM10)	{ pCpnt->LS.Bits.LED9 = mode; }
-	else if (chan == PCA95xx__PWM11)	{ pCpnt->LS.Bits.LED10 = mode; }
-	else if (chan == PCA95xx__PWM12)	{ pCpnt->LS.Bits.LED11 = mode; }
-	else if (chan == PCA95xx__PWM13)	{ pCpnt->LS.Bits.LED12 = mode; }
-	else if (chan == PCA95xx__PWM14)	{ pCpnt->LS.Bits.LED13 = mode; }
-	else if (chan == PCA95xx__PWM15)	{ pCpnt->LS.Bits.LED14 = mode; }
-	else if (chan == PCA95xx__PWM16)	{ pCpnt->LS.Bits.LED15 = mode; }
+	const unsigned int offset = chan / 4;
+	const unsigned int shift = chan * 2;
 
-	return PCA9532_Write(pCpnt->cfg.slave_inst, (uint8_t *) &pCpnt->LS, PCA9532__LS0 + (chan / 4), sizeof(pCpnt->LS));
+	const uint32_t mask = LSHIFT(0x3, shift), val = LSHIFT(mode, shift);
+
+	pCpnt->LS.DWord = (pCpnt->LS.DWord & ~mask) | val;
+
+	return PCA9532_Write(pCpnt->cfg.slave_inst, (uint8_t *) &pCpnt->LS + offset, PCA9532__LS0 + offset, 1);
 }
 
 
 FctERR NONNULL__ PCA9532_Set_Mode_LEDs(PCA9532_t * const pCpnt, const uint16_t chans, const PCA95xx_ledsel mode)
 {
-	if (!chans)						{ return ERROR_OK; }	// Nothing to do
+	if (!chans)						{ return ERROR_OK; }	// No channel selected
 	if (mode > PCA95xx__LED_PWM1)	{ return ERROR_VALUE; }	// Unknown control mode
 
-	if (chans & LSHIFT(1, PCA95xx__PWM1))	{ pCpnt->LS.Bits.LED0 = mode; }
-	if (chans & LSHIFT(1, PCA95xx__PWM2))	{ pCpnt->LS.Bits.LED1 = mode; }
-	if (chans & LSHIFT(1, PCA95xx__PWM3))	{ pCpnt->LS.Bits.LED2 = mode; }
-	if (chans & LSHIFT(1, PCA95xx__PWM4))	{ pCpnt->LS.Bits.LED3 = mode; }
-	if (chans & LSHIFT(1, PCA95xx__PWM5))	{ pCpnt->LS.Bits.LED4 = mode; }
-	if (chans & LSHIFT(1, PCA95xx__PWM6))	{ pCpnt->LS.Bits.LED5 = mode; }
-	if (chans & LSHIFT(1, PCA95xx__PWM7))	{ pCpnt->LS.Bits.LED6 = mode; }
-	if (chans & LSHIFT(1, PCA95xx__PWM8))	{ pCpnt->LS.Bits.LED7 = mode; }
-	if (chans & LSHIFT(1, PCA95xx__PWM9))	{ pCpnt->LS.Bits.LED8 = mode; }
-	if (chans & LSHIFT(1, PCA95xx__PWM10))	{ pCpnt->LS.Bits.LED9 = mode; }
-	if (chans & LSHIFT(1, PCA95xx__PWM11))	{ pCpnt->LS.Bits.LED10 = mode; }
-	if (chans & LSHIFT(1, PCA95xx__PWM12))	{ pCpnt->LS.Bits.LED11 = mode; }
-	if (chans & LSHIFT(1, PCA95xx__PWM13))	{ pCpnt->LS.Bits.LED12 = mode; }
-	if (chans & LSHIFT(1, PCA95xx__PWM14))	{ pCpnt->LS.Bits.LED13 = mode; }
-	if (chans & LSHIFT(1, PCA95xx__PWM15))	{ pCpnt->LS.Bits.LED14 = mode; }
-	if (chans & LSHIFT(1, PCA95xx__PWM16))	{ pCpnt->LS.Bits.LED15 = mode; }
+	uint32_t mask = 0, val = 0;
+
+	for (PCA9xxx_chan chan = PCA9xxx__PWM1 ; chan <= PCA9xxx__PWM16 ; chan++)
+	{
+		if (LSHIFT(1, chan) & chans)
+		{
+			const unsigned int shift = chan * 2;
+			mask |= LSHIFT(0x3, shift);
+			val |= LSHIFT(mode, shift);
+		}
+	}
+
+	pCpnt->LS.DWord = (pCpnt->LS.DWord & ~mask) | val;
 
 	return PCA9532_Write(pCpnt->cfg.slave_inst, (uint8_t *) &pCpnt->LS, PCA9532__LS0, sizeof(pCpnt->LS));
 }

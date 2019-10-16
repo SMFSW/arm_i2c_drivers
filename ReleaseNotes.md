@@ -43,6 +43,7 @@ SOFTWARE.
 * MTCH6102: simplified MTCH6102_Get_MFG_Results
 * MTCH6102: added automatic handling of referential rotation (and referential initialisation)
 * MTCH6102: removal of rotation function (now part of sarmfsw in arm_inlines_rotation.h)
+* PCAxxxx: refactoring including renaming of PCA96xx.h to PCA9xxx.h and symbols refactoring inside
 * PCA9532: added
 * PCA96xx: splitted reset function (one for single device, other as general call)
 * PCA96xx: channels enum with more channels (starting at 0)

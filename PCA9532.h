@@ -18,6 +18,8 @@
 #include "I2C_component.h"
 #include "I2C_peripheral.h"
 
+#include "PCA9xxx.h"
+
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
 
@@ -41,39 +43,6 @@ extern I2C_slave_t PCA9532_hal[I2C_PCA9532_NB];	//!< PCA9532 Slave structure
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum PCA95xx_reg_inc
-** \brief Registers increment options enum of PCA95xx
-**/
-typedef enum PACK__ PCA95xx_reg_inc {
-	PCA95xx__AUTO_INC_NONE = 0x00,		//!< no Auto-Increment
-	PCA95xx__AUTO_INC_ALL = 0x10,		//!< Auto-Increment for all registers
-} PCA95xx_reg_inc;
-
-
-/*!\enum PCA95xx_chan
-** \brief Channels for PCA95xx
-**/
-typedef enum PACK__ PCA95xx_chan {
-	PCA95xx__PWM1 = 0,		//!< PCA9532 Channel 1 PWM
-	PCA95xx__PWM2,			//!< PCA9532 Channel 2 PWM
-	PCA95xx__PWM3,			//!< PCA9532 Channel 3 PWM
-	PCA95xx__PWM4,			//!< PCA9532 Channel 4 PWM
-	PCA95xx__PWM5,			//!< PCA9532 Channel 5 PWM
-	PCA95xx__PWM6,			//!< PCA9532 Channel 6 PWM
-	PCA95xx__PWM7,			//!< PCA9532 Channel 7 PWM
-	PCA95xx__PWM8,			//!< PCA9532 Channel 8 PWM
-	PCA95xx__PWM9,			//!< PCA9532 Channel 9 PWM
-	PCA95xx__PWM10,			//!< PCA9532 Channel 10 PWM
-	PCA95xx__PWM11,			//!< PCA9532 Channel 11 PWM
-	PCA95xx__PWM12,			//!< PCA9532 Channel 12 PWM
-	PCA95xx__PWM13,			//!< PCA9532 Channel 13 PWM
-	PCA95xx__PWM14,			//!< PCA9532 Channel 14 PWM
-	PCA95xx__PWM15,			//!< PCA9532 Channel 15 PWM
-	PCA95xx__PWM16,			//!< PCA9532 Channel 16 PWM
-	PCA95xx__ALL = 0xFF		//!< PCA9532 All PWM Channels
-} PCA95xx_chan;
-
-
 /*!\enum PCA9532_reg_map
 ** \brief Register map enum of PCA9532
 **/
@@ -97,14 +66,14 @@ typedef enum PACK__ PCA9532_reg_map {
 typedef union PACK__ uPCA9532_REG__INPUT0 {
 	uint8_t Byte;
 	struct {
-		uint8_t LED0		:1;		//!< LED0 state
-		uint8_t LED1		:1;		//!< LED1 state
-		uint8_t LED2		:1;		//!< LED2 state
-		uint8_t LED3		:1;		//!< LED3 state
-		uint8_t LED4		:1;		//!< LED4 state
-		uint8_t LED5		:1;		//!< LED5 state
-		uint8_t LED6		:1;		//!< LED6 state
-		uint8_t LED7		:1;		//!< LED7 state
+		uint8_t LED0		:1;		//!< LED0 input pin state
+		uint8_t LED1		:1;		//!< LED1 input pin state
+		uint8_t LED2		:1;		//!< LED2 input pin state
+		uint8_t LED3		:1;		//!< LED3 input pin state
+		uint8_t LED4		:1;		//!< LED4 input pin state
+		uint8_t LED5		:1;		//!< LED5 input pin state
+		uint8_t LED6		:1;		//!< LED6 input pin state
+		uint8_t LED7		:1;		//!< LED7 input pin state
 	} Bits;
 } uPCA9532_REG__INPUT0;
 
@@ -114,27 +83,41 @@ typedef union PACK__ uPCA9532_REG__INPUT0 {
 typedef union PACK__ uPCA9532_REG__INPUT1 {
 	uint8_t Byte;
 	struct {
-		uint8_t LED8		:1;		//!< LED8 state
-		uint8_t LED9		:1;		//!< LED9 state
-		uint8_t LED10		:1;		//!< LED10 state
-		uint8_t LED11		:1;		//!< LED11 state
-		uint8_t LED12		:1;		//!< LED12 state
-		uint8_t LED13		:1;		//!< LED13 state
-		uint8_t LED14		:1;		//!< LED14 state
-		uint8_t LED15		:1;		//!< LED15 state
+		uint8_t LED8		:1;		//!< LED8 input pin state
+		uint8_t LED9		:1;		//!< LED9 input pin state
+		uint8_t LED10		:1;		//!< LED10 input pin state
+		uint8_t LED11		:1;		//!< LED11 input pin state
+		uint8_t LED12		:1;		//!< LED12 input pin state
+		uint8_t LED13		:1;		//!< LED13 input pin state
+		uint8_t LED14		:1;		//!< LED14 input pin state
+		uint8_t LED15		:1;		//!< LED15 input pin state
 	} Bits;
 } uPCA9532_REG__INPUT1;
 
-
-/*!\enum PCA95xx_ledsel
-** \brief enum for PCA95xx output drive
+/*!\union uPCA9532_REG__INPUT
+** \brief Union for INPUT registers of PCA9532
 **/
-typedef enum PACK__ PCA95xx_ledsel {
-	PCA95xx__LED_OFF = 0,	//!< Output is set high-impedance (LED off; default)
-	PCA95xx__LED_ON,		//!< Output is set LOW (LED on)
-	PCA95xx__LED_PWM0,		//!< Output blinks at PWM0 rate
-	PCA95xx__LED_PWM1		//!< Output blinks at PWM1 rate
-} PCA95xx_ledsel;
+typedef union PACK__ uPCA9532_REG__INPUT {
+	uint16_t Word;
+	struct {
+		uint16_t LED0		:1;		//!< LED0 input pin state
+		uint16_t LED1		:1;		//!< LED1 input pin state
+		uint16_t LED2		:1;		//!< LED2 input pin state
+		uint16_t LED3		:1;		//!< LED3 input pin state
+		uint16_t LED4		:1;		//!< LED4 input pin state
+		uint16_t LED5		:1;		//!< LED5 input pin state
+		uint16_t LED6		:1;		//!< LED6 input pin state
+		uint16_t LED7		:1;		//!< LED7 input pin state
+		uint16_t LED8		:1;		//!< LED8 input pin state
+		uint16_t LED9		:1;		//!< LED9 input pin state
+		uint16_t LED10		:1;		//!< LED10 input pin state
+		uint16_t LED11		:1;		//!< LED11 input pin state
+		uint16_t LED12		:1;		//!< LED12 input pin state
+		uint16_t LED13		:1;		//!< LED13 input pin state
+		uint16_t LED14		:1;		//!< LED14 input pin state
+		uint16_t LED15		:1;		//!< LED15 input pin state
+	} Bits;
+} uPCA9532_REG__INPUT;
 
 
 /*!\union uPCA9532_REG__LS0

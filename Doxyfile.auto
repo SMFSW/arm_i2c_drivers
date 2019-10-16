@@ -2069,6 +2069,7 @@ PREDEFINED             = DOXY=1 \
                          I2C_MCP4725=&hi2c \
                          I2C_MCP9808=&hi2c \
                          I2C_MTCH6102=&hi2c \
+                         I2C_PCA9532=&hi2c \
                          I2C_PCA9624=&hi2c \
                          I2C_PCA9685=&hi2c \
                          I2C_PCF8523=&hi2c \
