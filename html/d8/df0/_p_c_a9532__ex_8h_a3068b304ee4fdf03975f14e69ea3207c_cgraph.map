@@ -1,0 +1,7 @@
+<map id="PCA9532_SetFrequency" name="PCA9532_SetFrequency">
+<area shape="rect" id="node2" href="$d8/df0/_p_c_a9532__ex_8h.html#a9990f2ec0568dbd5cc91b3690aaea28a" title="Convert Frequency to PSCx byte register. " alt="" coords="228,5,399,32"/>
+<area shape="rect" id="node3" href="$d2/d28/_p_c_a9532_8c.html#a7b79d23423190b88e23582b62d6200e6" title="I2C Write function for PCA9532. " alt="" coords="254,56,373,83"/>
+<area shape="rect" id="node6" href="$d8/df0/_p_c_a9532__ex_8h.html#a4d4279a2e53756ade743737952972edf" title="Convert PSCx byte register to Frequency (in Hz) " alt="" coords="228,107,399,133"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="447,31,564,57"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="452,81,559,108"/>
+</map>

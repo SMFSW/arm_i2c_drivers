@@ -73,6 +73,7 @@ var searchData=
   ['umtch_5freg_5f_5ftouchstate',['uMTCH_REG__TOUCHSTATE',['../de/da6/unionu_m_t_c_h___r_e_g_____t_o_u_c_h_s_t_a_t_e.html',1,'']]],
   ['umtch_5freg_5f_5ftouchx',['uMTCH_REG__TOUCHX',['../de/d9b/unionu_m_t_c_h___r_e_g_____t_o_u_c_h_x.html',1,'']]],
   ['umtch_5freg_5f_5ftouchy',['uMTCH_REG__TOUCHY',['../db/d45/unionu_m_t_c_h___r_e_g_____t_o_u_c_h_y.html',1,'']]],
+  ['upca9532_5freg_5f_5finput',['uPCA9532_REG__INPUT',['../dd/d3e/unionu_p_c_a9532___r_e_g_____i_n_p_u_t.html',1,'']]],
   ['upca9532_5freg_5f_5finput0',['uPCA9532_REG__INPUT0',['../d8/df2/unionu_p_c_a9532___r_e_g_____i_n_p_u_t0.html',1,'']]],
   ['upca9532_5freg_5f_5finput1',['uPCA9532_REG__INPUT1',['../dd/d8a/unionu_p_c_a9532___r_e_g_____i_n_p_u_t1.html',1,'']]],
   ['upca9532_5freg_5f_5fls',['uPCA9532_REG__LS',['../d0/d44/unionu_p_c_a9532___r_e_g_____l_s.html',1,'']]],

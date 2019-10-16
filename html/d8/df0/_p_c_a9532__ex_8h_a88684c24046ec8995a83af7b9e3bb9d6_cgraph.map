@@ -1,0 +1,5 @@
+<map id="PCA9532_Read_INPUT0" name="PCA9532_Read_INPUT0">
+<area shape="rect" id="node2" href="$d2/d28/_p_c_a9532_8c.html#a06d484ee08102207f93b222b8101702b" title="I2C Read function for PCA9532. " alt="" coords="224,31,343,57"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="391,5,508,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="396,56,503,83"/>
+</map>

@@ -1,6 +1,7 @@
 <map id="PCA9532_ex.h" name="PCA9532_ex.h">
-<area shape="rect" id="node3" href="$d3/df9/_p_c_a9532_8h.html" title="PCA9532 Driver. " alt="" coords="161,80,253,107"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="295,155,429,181"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="454,155,579,181"/>
-<area shape="rect" id="node8" href="$de/da7/_p_c_a9532__proc_8h.html" title="PCA9532 Driver procedures. " alt="" coords="144,155,271,181"/>
+<area shape="rect" id="node3" href="$d3/df9/_p_c_a9532_8h.html" title="PCA9532 Driver. " alt="" coords="247,80,339,107"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="595,155,730,181"/>
+<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="445,155,571,181"/>
+<area shape="rect" id="node8" href="$d3/dee/_p_c_a9xxx_8h.html" title="PCA9xxx shared declarations. " alt="" coords="26,155,115,181"/>
+<area shape="rect" id="node9" href="$de/da7/_p_c_a9532__proc_8h.html" title="PCA9532 Driver procedures. " alt="" coords="294,155,421,181"/>
 </map>

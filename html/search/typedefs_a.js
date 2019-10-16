@@ -66,6 +66,7 @@ var searchData=
   ['umcp9808_5freg_5f_5ftemp_5famb',['uMCP9808_REG__TEMP_AMB',['../d8/d57/_m_c_p9808_8h.html#a478f8e6eabdb150dfc3ebd99df969e56',1,'MCP9808.h']]],
   ['umcp9808_5freg_5f_5ftemp_5flim',['uMCP9808_REG__TEMP_LIM',['../d8/d57/_m_c_p9808_8h.html#ae493959580c2b00943db3b623cd56e70',1,'MCP9808.h']]],
   ['umcp9808_5freg_5fmap',['uMCP9808_REG_MAP',['../df/d2f/_m_c_p9808__ex_8h.html#a5fb93153c57ab0fa1493486706202b0c',1,'MCP9808_ex.h']]],
+  ['upca9532_5freg_5f_5finput',['uPCA9532_REG__INPUT',['../d3/df9/_p_c_a9532_8h.html#a38696d38521861ea90b5c9efb69e5102',1,'PCA9532.h']]],
   ['upca9532_5freg_5f_5finput0',['uPCA9532_REG__INPUT0',['../d3/df9/_p_c_a9532_8h.html#a1ad9f12572ac75804e3bd1a9ddc5a7f9',1,'PCA9532.h']]],
   ['upca9532_5freg_5f_5finput1',['uPCA9532_REG__INPUT1',['../d3/df9/_p_c_a9532_8h.html#af06ba8663910c4cca5bfdd17cbeb722f',1,'PCA9532.h']]],
   ['upca9532_5freg_5f_5fls',['uPCA9532_REG__LS',['../d3/df9/_p_c_a9532_8h.html#ab00758bd05f68fa4966ad21ac68cbda8',1,'PCA9532.h']]],

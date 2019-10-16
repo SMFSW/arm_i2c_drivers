@@ -1,0 +1,8 @@
+<map id="PCA9532_Byte_To_Freq" name="PCA9532_Byte_To_Freq">
+<area shape="rect" id="node2" href="$d8/df0/_p_c_a9532__ex_8h.html#a3068b304ee4fdf03975f14e69ea3207c" title="Sets PSCx frequency of PCA9532. " alt="" coords="224,5,399,32"/>
+<area shape="rect" id="node4" href="$de/da7/_p_c_a9532__proc_8h.html#ad95091b0082a87451c5873ea47a2c8bb" title="Initialization Sequence for PCA9532 peripheral. " alt="" coords="668,81,845,108"/>
+<area shape="rect" id="node7" href="$d8/df0/_p_c_a9532__ex_8h.html#a125d6303517af2bdef5b0f0e435f639d" title="Sets PWMx duty cycle of PCA9532. " alt="" coords="242,56,381,83"/>
+<area shape="rect" id="node3" href="$d8/df0/_p_c_a9532__ex_8h.html#a03b2ea671687b1a439c90bc4f946542b" title="Convert PWMx byte register to Duty Cycle (in %) " alt="" coords="447,56,620,83"/>
+<area shape="rect" id="node5" href="$d3/df9/_p_c_a9532_8h.html#a53117549a86481f7203371b537bc7084" title="Initialization for PCA9532 peripheral. " alt="" coords="893,81,1000,108"/>
+<area shape="rect" id="node6" href="$d3/df9/_p_c_a9532_8h.html#ae3bc95cfa1ac91a201ac0543ced4bb03" title="Initialization for PCA9532 peripheral. " alt="" coords="1048,81,1200,108"/>
+</map>
