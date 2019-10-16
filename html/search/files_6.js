@@ -18,7 +18,6 @@ var searchData=
   ['pca9685_5fex_2eh',['PCA9685_ex.h',['../d3/d57/_p_c_a9685__ex_8h.html',1,'']]],
   ['pca9685_5fproc_2ec',['PCA9685_proc.c',['../d4/d97/_p_c_a9685__proc_8c.html',1,'']]],
   ['pca9685_5fproc_2eh',['PCA9685_proc.h',['../d5/d22/_p_c_a9685__proc_8h.html',1,'']]],
-  ['pca96xx_2eh',['PCA96xx.h',['../da/d3d/_p_c_a96xx_8h.html',1,'']]],
   ['pca9xxx_2eh',['PCA9xxx.h',['../d3/dee/_p_c_a9xxx_8h.html',1,'']]],
   ['pcf8523_2ec',['PCF8523.c',['../df/d5b/_p_c_f8523_8c.html',1,'']]],
   ['pcf8523_2eh',['PCF8523.h',['../dd/d42/_p_c_f8523_8h.html',1,'']]],
