@@ -45,8 +45,7 @@ FctERR NONNULL__ PCA9532_Set_Mode_LED(PCA9532_t * const pCpnt, const PCA9xxx_cha
 	const unsigned int shift = chan * 2;
 
 	const uint32_t mask = LSHIFT(0x3, shift), val = LSHIFT(mode, shift);
-
-	pCpnt->LS.DWord = (pCpnt->LS.DWord & ~mask) | val;
+	SET_BITS_VAL(pCpnt->LS.DWord, mask, val);
 
 	return PCA9532_Write(pCpnt->cfg.slave_inst, (uint8_t *) &pCpnt->LS + offset, PCA9532__LS0 + offset, 1);
 }
@@ -69,7 +68,7 @@ FctERR NONNULL__ PCA9532_Set_Mode_LEDs(PCA9532_t * const pCpnt, const uint16_t c
 		}
 	}
 
-	pCpnt->LS.DWord = (pCpnt->LS.DWord & ~mask) | val;
+	SET_BITS_VAL(pCpnt->LS.DWord, mask, val);
 
 	return PCA9532_Write(pCpnt->cfg.slave_inst, (uint8_t *) &pCpnt->LS, PCA9532__LS0, sizeof(pCpnt->LS));
 }

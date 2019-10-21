@@ -36,8 +36,7 @@ FctERR NONNULL__ PCA9624_Set_Mode_LED(PCA9624_t * const pCpnt, const PCA9xxx_cha
 	const unsigned int shift = chan * 2;
 
 	const uint16_t mask = LSHIFT(0x3, shift), val = LSHIFT(mode, shift);
-
-	pCpnt->LDR.Word = (pCpnt->LDR.Word & ~mask) | val;
+	SET_BITS_VAL(pCpnt->LDR.Word, mask, val);
 
 	return PCA9624_Write(pCpnt->cfg.slave_inst, (uint8_t *) &pCpnt->LDR + offset, PCA9624__LEDOUT0 + offset, 1);
 }
@@ -60,7 +59,7 @@ FctERR NONNULL__ PCA9624_Set_Mode_LEDs(PCA9624_t * const pCpnt, const uint8_t ch
 		}
 	}
 
-	pCpnt->LDR.Word = (pCpnt->LDR.Word & ~mask) | val;
+	SET_BITS_VAL(pCpnt->LDR.Word, mask, val);
 
 	return PCA9624_Write(pCpnt->cfg.slave_inst, (uint8_t *) &pCpnt->LDR, PCA9624__LEDOUT0, sizeof(pCpnt->LDR));
 }
