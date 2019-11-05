@@ -67,11 +67,11 @@ FctERR NONNULL__ PCA9685_Reset(PCA9685_t * pCpnt)
 }
 
 
-FctERR NONNULL__ PCA9685_Reset_All(const I2C_HandleTypeDef * hi2c)
+FctERR NONNULL__ PCA9685_Reset_All(I2C_HandleTypeDef * hi2c)
 {
 	uint8_t DATA = 0x06;
 
-	return HALERRtoFCTERR(HAL_I2C_Master_Transmit((I2C_HandleTypeDef *) hi2c, PCA96xx_GENERAL_CALL_ADDR, &DATA, 1, I2C_slave_timeout));
+	return HALERRtoFCTERR(HAL_I2C_Master_Transmit(hi2c, PCA96xx_GENERAL_CALL_ADDR, &DATA, 1, I2C_slave_timeout));
 }
 
 
@@ -85,37 +85,9 @@ FctERR NONNULL__ PCA9685_ReadRegister(PCA9685_t * pCpnt, const PCA9685_reg reg, 
 }
 
 
-FctERR NONNULL__ PCA9685_ReadVal256(PCA9685_t * pCpnt, const PCA9xxx_chan chan, uint8_t * duty)
-{
-	FctERR		err = ERROR_OK;
-	uint16_t	ONCount = 0, OFFCount = 0;
-	uint8_t		DATA[4];
-
-	*duty = 0;
-
-	if (chan > PCA9xxx__PWM16)		{ return ERROR_RANGE; } // Unknown channel
-
-	err = PCA9685_Read(pCpnt->cfg.slave_inst, DATA, LED_OFFSET_L(chan), sizeof(DATA));
-
-	if (DATA[1] & DefBitFullOnOff)
-	{
-		*duty = 255;
-	}
-	else if (!(DATA[3] & DefBitFullOnOff))
-	{
-		ONCount = MAKEWORD(DATA[0], DATA[1]);
-		OFFCount = MAKEWORD(DATA[2], DATA[3]);
-		*duty = (uint8_t) ((OFFCount - ONCount + 1) / 16);
-	}
-
-	return err;
-}
-
-
 FctERR NONNULL__ PCA9685_ReadVal1024(PCA9685_t * pCpnt, const PCA9xxx_chan chan, uint16_t * duty)
 {
 	FctERR		err;
-	uint16_t	ONCount = 0, OFFCount = 0;
 	uint8_t		DATA[4];
 
 	*duty = 0;
@@ -130,8 +102,8 @@ FctERR NONNULL__ PCA9685_ReadVal1024(PCA9685_t * pCpnt, const PCA9xxx_chan chan,
 	}
 	else if (!(DATA[3] & DefBitFullOnOff))
 	{
-		ONCount = MAKEWORD(DATA[0], DATA[1]);
-		OFFCount = MAKEWORD(DATA[2], DATA[3]);
+		const uint16_t ONCount = MAKEWORD(DATA[0], DATA[1]);
+		const uint16_t OFFCount = MAKEWORD(DATA[2], DATA[3]);
 		*duty = (uint16_t) ((OFFCount - ONCount + 1) / 4);
 	}
 
@@ -139,35 +111,29 @@ FctERR NONNULL__ PCA9685_ReadVal1024(PCA9685_t * pCpnt, const PCA9xxx_chan chan,
 }
 
 
-FctERR NONNULL__ PCA9685_PutVal256(PCA9685_t * pCpnt, const PCA9xxx_chan chan, const uint8_t duty)
+FctERR NONNULL__ PCA9685_ReadVal256(PCA9685_t * pCpnt, const PCA9xxx_chan chan, uint8_t * duty)
 {
-	uint16_t	RegAddr, OFFCount = 0;
-	uint8_t		DATA[3];
+	FctERR		err = ERROR_OK;
+	uint8_t		DATA[4];
 
-	if (chan == PCA96xx__ALL)			{ RegAddr = PCA9685__ALL_LED_ON_H; }	// All channels at once
-	else if (chan <= PCA9xxx__PWM16)	{ RegAddr = LED_OFFSET_H(chan); }		// Regular channel
-	else								{ return ERROR_RANGE; }					// Unknown channel
+	*duty = 0;
 
-	if (!duty)				// OFF
+	if (chan > PCA9xxx__PWM16)		{ return ERROR_RANGE; } // Unknown channel
+
+	err = PCA9685_Read(pCpnt->cfg.slave_inst, DATA, LED_OFFSET_L(chan), sizeof(DATA));
+
+	if (DATA[1] & DefBitFullOnOff)
 	{
-		DATA[1] = 0;				// xxx_LED_ON_H (LED not fully ON)
-		OFFCount = 4096;
+		*duty = 255;
 	}
-	else if (duty == 255)	// ON
+	else if (!(DATA[3] & DefBitFullOnOff))
 	{
-		DATA[1] = DefBitFullOnOff;	// xxx_LED_ON_H (LED fully ON)
-	}
-	else					// PWM
-	{
-		DATA[1] = 0;				// xxx_LED_ON_H (LED not fully ON)
-		OFFCount = (uint16_t) ((DefValDelayON - 1) + (duty * 16));		// 4096 = (DelayTime - 1) + ((Duty(255)) * 16)
+		const uint16_t ONCount = MAKEWORD(DATA[0], DATA[1]);
+		const uint16_t OFFCount = MAKEWORD(DATA[2], DATA[3]);
+		*duty = (uint8_t) ((OFFCount - ONCount + 1) / 16);
 	}
 
-	DATA[0] = 0;					// xxx_LED_ON_H
-	DATA[1] = LOBYTE(OFFCount);		// xxx_LED_OFF_L
-	DATA[2] = HIBYTE(OFFCount);		// xxx_LED_OFF_H
-
-	return PCA9685_Write(pCpnt->cfg.slave_inst, DATA, RegAddr, sizeof(DATA));
+	return err;
 }
 
 
@@ -184,20 +150,19 @@ FctERR NONNULL__ PCA9685_PutVal1024(PCA9685_t * pCpnt, const PCA9xxx_chan chan, 
 
 	if (!duty)				// OFF
 	{
-		DATA[1] = 0;				// xxx_LED_ON_H (LED not fully ON)
-		OFFCount = 4096;
+		DATA[0] = 0;				// xxx_LED_ON_H (LED not fully ON)
+		OFFCount = 4096;			// Off count set to 4096 to fill bit FullOnOff
 	}
 	else if (duty == 1023)	// ON
 	{
-		DATA[1] = DefBitFullOnOff;	// xxx_LED_ON_H (LED fully ON)
+		DATA[0] = DefBitFullOnOff;	// xxx_LED_ON_H (LED fully ON)
 	}
 	else					// PWM
 	{
-		DATA[1] = 0;				// xxx_LED_ON_H (LED not fully ON)
-		OFFCount = (uint16_t) ((DefValDelayON - 1) + (duty * 4));		// 4096 = (DelayTime - 1) + ((Duty(1023)) * 4)
+		DATA[0] = 0;				// xxx_LED_ON_H (LED not fully ON)
+		OFFCount = (uint16_t) ((DefValDelayON - 1) + convXtoYBits(duty, 10, 12));	// 4096 = (DelayTime - 1) + convXtoYBits((Duty(1023)) from 10 to 12bits)
 	}
 
-	DATA[0] = 0;					// xxx_LED_ON_H
 	DATA[1] = LOBYTE(OFFCount);		// xxx_LED_OFF_L
 	DATA[2] = HIBYTE(OFFCount);		// xxx_LED_OFF_H
 

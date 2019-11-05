@@ -18,7 +18,7 @@
 
 static const I2C_slave_t PCA9685_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FMP }, 0, HAL_OK, true, false };
 
- I2C_slave_t PCA9685_hal[I2C_PCA9685_NB];
+I2C_slave_t PCA9685_hal[I2C_PCA9685_NB];
 
 
 /****************************************************************/

@@ -25,7 +25,7 @@
 #define DefValDelayON			2			//!< Delay before output rising edge
 //! \remark Must be less than 4 to be able to use a 1024 range
 
-#define	DefBitFullOnOff			0x10		//!< Full ON / OFF bit on xxx_LED_xxx_H
+#define	DefBitFullOnOff			0x10		//!< Full ON / OFF bit on LEDxx_xxx_H
 
 
 /** 4 registers per channel -> 2 shifts left for next address **/
@@ -39,27 +39,34 @@
 /*!\brief Set latch type for PCA9685 peripheral
 ** \param[in,out] pCpnt - Pointer to PCA9685 component
 ** \param[in] latch - Latch type
+** \return FctERR - error code
 **/
 FctERR NONNULL__ PCA9685_Set_Latch(PCA9685_t * pCpnt, const PCA96xx_latch latch);
 
+
 /*!\brief Set frequency for PCA9685 peripheral
 ** \note Prescaler is calculated according to the use of PCA9685 internal oscillator
+** \note Freq(Hz) = 1 / (((PSCx(8b) + 1) * 4096) / 25000000)
+** \warning beware for higher frequencies, 1526Hz max (3 in reg) drops to 1220Hz (4 in reg), 1017Hz (5 in reg)....
 ** \param[in] pCpnt - Pointer to PCA9685 component
 ** \param[in] freq - Frequency to apply (in Hz)
+** \return FctERR - error code
 **/
 FctERR NONNULL__ PCA9685_Set_Frequency(PCA9685_t * pCpnt, const uint16_t freq);
 
 
 /*!\brief Reset for PCA9685 peripheral
 ** \param[in] pCpnt - Pointer to PCA9685 component
+** \return FctERR - error code
 **/
 FctERR NONNULL__ PCA9685_Reset(PCA9685_t * pCpnt);
+
 
 /*!\brief General call reset function for PCA9685
 ** \param[in] hi2c - pointer to general call I2C instance
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ PCA9685_Reset_All(const I2C_HandleTypeDef * hi2c);
+FctERR NONNULL__ PCA9685_Reset_All(I2C_HandleTypeDef * hi2c);
 
 
 /*!\brief Reads I2C register from PCA9685
@@ -71,15 +78,6 @@ FctERR NONNULL__ PCA9685_Reset_All(const I2C_HandleTypeDef * hi2c);
 FctERR NONNULL__ PCA9685_ReadRegister(PCA9685_t * pCpnt, const PCA9685_reg reg, uint8_t * val);
 
 
-/*!\brief Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8_t)
-** \param[in] pCpnt - Pointer to PCA9685 component
-** \param[in] chan - chan number (1 to 16)
-** \param[in,out] duty - Pointer to the DutyCycle data for receive coded on a uint8_t
-** \return FctERR - ErrorCode
-**/
-FctERR NONNULL__ PCA9685_ReadVal256(PCA9685_t * pCpnt, const PCA9xxx_chan chan, uint8_t * duty);
-
-
 /*!\brief Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint16_t)
 ** \param[in] pCpnt - Pointer to PCA9685 component
 ** \param[in] chan - Channel number (1 to 16)
@@ -89,13 +87,13 @@ FctERR NONNULL__ PCA9685_ReadVal256(PCA9685_t * pCpnt, const PCA9xxx_chan chan, 
 FctERR NONNULL__ PCA9685_ReadVal1024(PCA9685_t * pCpnt, const PCA9xxx_chan chan, uint16_t * duty);
 
 
-/*!\brief Computes and send I2C lighting values to apply to a particular or all channels for PCA9685
+/*!\brief Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8_t)
 ** \param[in] pCpnt - Pointer to PCA9685 component
-** \param[in] chan - Channel number (1 to 16 / PCA9685_ALLCALL can be used to address all channels at the same time)
-** \param[in] duty - Duty cycle coded on a uint8_t
+** \param[in] chan - chan number (1 to 16)
+** \param[in,out] duty - Pointer to the DutyCycle data for receive coded on a uint8_t
 ** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCA9685_PutVal256(PCA9685_t * pCpnt, const PCA9xxx_chan chan, const uint8_t duty);
+FctERR NONNULL__ PCA9685_ReadVal256(PCA9685_t * pCpnt, const PCA9xxx_chan chan, uint8_t * duty);
 
 
 /*!\brief Computes and send I2C lighting values to apply to a particular or all channels for PCA9685
@@ -107,6 +105,16 @@ FctERR NONNULL__ PCA9685_PutVal256(PCA9685_t * pCpnt, const PCA9xxx_chan chan, c
 FctERR NONNULL__ PCA9685_PutVal1024(PCA9685_t * pCpnt, const PCA9xxx_chan chan, const uint16_t duty);
 
 
+/*!\brief Computes and send I2C lighting values to apply to a particular or all channels for PCA9685
+** \param[in] pCpnt - Pointer to PCA9685 component
+** \param[in] chan - Channel number (1 to 16 / PCA9685_ALLCALL can be used to address all channels at the same time)
+** \param[in] duty - Duty cycle coded on a uint8_t
+** \return FctERR - ErrorCode
+**/
+__INLINE FctERR NONNULL_INLINE__ PCA9685_PutVal256(PCA9685_t * pCpnt, const PCA9xxx_chan chan, const uint8_t duty) {
+	return PCA9685_PutVal1024(pCpnt, chan, conv8upto16Bits(duty, 2)); }
+
+
 /*!\brief Sends I2C lighting ON values to apply to a particular or all channels for PCA9685
 ** \param[in] pCpnt - Pointer to PCA9685 component
 ** \param[in] chan - Channel number (1 to 16 / PCA9685_ALLCALL can be used to address all channels at the same time)
@@ -114,31 +122,13 @@ FctERR NONNULL__ PCA9685_PutVal1024(PCA9685_t * pCpnt, const PCA9xxx_chan chan, 
 **/
 FctERR NONNULL__ PCA9685_SetVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan);
 
+
 /*!\brief Sends I2C PWm OFF values to apply to a particular or all channels for PCA9685
 ** \param[in] pCpnt - Pointer to PCA9685 component
 ** \param[in] chan - Channel number (1 to 16 / PCA9685_ALLCALL can be used to address all channels at the same time)
 ** \return FctERR - ErrorCode
 **/
 FctERR NONNULL__ PCA9685_ClrVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan);
-
-/*
-FctERR NONNULL__ PCA9685_ReadVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan, uint16_t * duty, const uint8_t downscale);
-FctERR NONNULL__ PCA9685_PutVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan, const uint16_t duty, const uint8_t upscale);
-
-__INLINE FctERR NONNULL_INLINE__ PCA9685_ReadVal256(PCA9685_t * pCpnt, const PCA9xxx_chan chan, uint8_t * duty) {
-	return PCA9685_ReadVal(pCpnt, chan, (uint16_t *) duty, 4); }		// Doute sur la transformation du pointeur de 8b en pointeur de 16b pour écrire le résultat
-
-__INLINE FctERR NONNULL_INLINE__ PCA9685_ReadVal1024(PCA9685_t * pCpnt, const PCA9xxx_chan chan, uint16_t * duty) {
-	return PCA9685_ReadVal(pCpnt, chan, duty, 2); }
-
-__INLINE FctERR NONNULL_INLINE__ PCA9685_ReadVal4096(PCA9685_t * pCpnt, const PCA9xxx_chan chan, uint16_t * duty) {
-	return PCA9685_ReadVal(pCpnt, chan, duty, 0); }
-
-__INLINE FctERR NONNULL_INLINE__ PCA9685_PutVal256(PCA9685_t * pCpnt, const PCA9xxx_chan chan, const uint8_t duty) {
-}
-
-__INLINE FctERR NONNULL_INLINE__ PCA9685_PutVal1024(PCA9685_t * pCpnt, const PCA9xxx_chan chan, const uint16_t duty) {
-}*/
 
 
 /****************************************************************/
