@@ -1,5 +1,8 @@
 <map id="PCA9685_PutVal256" name="PCA9685_PutVal256">
-<area shape="rect" id="node2" href="$de/dca/_p_c_a9685_8c.html#a19e471c9dd64911bd669d77edf64850f" title="I2C Write function for PCA9685. " alt="" coords="204,31,323,57"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="371,5,488,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="376,56,483,83"/>
+<area shape="rect" id="node2" href="$d3/d57/_p_c_a9685__ex_8h.html#a6cf3cd3f1bfa6b058a96839a1c443025" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685..." alt="" coords="204,5,363,32"/>
+<area shape="rect" id="node6" href="$d3/d57/_p_c_a9685__ex_8h.html#aca7ad3402727cf2392c76dcff2628a19" title="Sends I2C lighting ON values to apply to a particular or all channels for PCA9685. " alt="" coords="219,56,347,83"/>
+<area shape="rect" id="node7" href="$d3/d57/_p_c_a9685__ex_8h.html#ac0bbfaccb99bcacdd628826d86a715ae" title="Sends I2C PWm OFF values to apply to a particular or all channels for PCA9685. " alt="" coords="222,107,345,133"/>
+<area shape="rect" id="node3" href="$de/dca/_p_c_a9685_8c.html#a19e471c9dd64911bd669d77edf64850f" title="I2C Write function for PCA9685. " alt="" coords="411,56,529,83"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="577,31,695,57"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="583,81,689,108"/>
 </map>
