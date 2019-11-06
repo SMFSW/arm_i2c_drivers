@@ -27,6 +27,8 @@ __WEAK FctERR NONNULL__ PCA9685_Init_Sequence(PCA9685_t * pCpnt)
 	uint8_t				DATA[4];
 	uPCA9685_REG__MODE1	MODE1 = { 0 };
 
+	pCpnt->cfg.Clock = PCA9685_CLOCK_FREQ;	// Assuming internal clock used
+
 	// Set Delay time & all led OFF
 	DATA[0] = DefValDelayON;	// ALL_LED_ON_L (1% delay to write once)
 	DATA[1] = 0x00U;			// ALL_LED_ON_H
@@ -42,10 +44,10 @@ __WEAK FctERR NONNULL__ PCA9685_Init_Sequence(PCA9685_t * pCpnt)
 	if (err)	{ return err; }
 
 	// Send prescaler to obtain desired frequency (only in SLEEP)
-	DATA[0] = PCA9685_Get_PWM_Prescaler(PCA9685_FREQ);
+	DATA[0] = PCA9685_Get_PWM_Prescaler(pCpnt, PCA9685_DEF_FREQ);
 	err = PCA9685_Write(pCpnt->cfg.slave_inst, DATA, PCA9685__PRE_SCALE, 1);
 	if (err)	{ return err; }
-	pCpnt->cfg.Frequency = PCA9685_FREQ;
+	pCpnt->cfg.Frequency = PCA9685_Get_PWM_Frequency(pCpnt, DATA[0]);
 
 	// MODE1: Restart Enabled + Auto Increment
 	MODE1.Bits.RESTART = true;
@@ -58,29 +60,12 @@ __WEAK FctERR NONNULL__ PCA9685_Init_Sequence(PCA9685_t * pCpnt)
 /****************************************************************/
 
 
-/*!\brief Algorithm to round float
-** \warning Very long for not so much more
-** \note Use with caution
-**
-** \param [in] val - Value to round
-** \return Round value
-**/
-static float RoundFloat(const float val)
+uint8_t PCA9685_Get_PWM_Prescaler(PCA9685_t * pCpnt, uint16_t freq)
 {
-	double pd, calc;
+	if (	(freq > ((float) pCpnt->cfg.Clock / PCA9685_CLOCK_FREQ) * PCA9685_FREQ_HZ_MAX)
+		||	(freq < ((float) pCpnt->cfg.Clock / PCA9685_CLOCK_FREQ) * PCA9685_FREQ_HZ_MIN))	{ freq = 500; }
 
-	calc = modf(val, &pd);
-	if (calc > 0.5f)	{ pd += 1.0f; }
-
-	return (float) pd;
-}
-
-
-uint8_t PCA9685_Get_PWM_Prescaler(const uint16_t freq)
-{
-	if ((freq > PCA9685_FREQ_HZ_MAX) || (freq < PCA9685_FREQ_HZ_MIN))	{ return 0x0CU; }	// case default: 500Hz
-
-	return (uint8_t) (RoundFloat((25000000.0f / 4096.0f) / freq) - 1.0f);
+	return (uint8_t) (round((float) pCpnt->cfg.Clock / (4096.0f * freq)) - 1.0f);
 }
 
 

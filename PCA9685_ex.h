@@ -46,8 +46,8 @@ FctERR NONNULL__ PCA9685_Set_Latch(PCA9685_t * pCpnt, const PCA96xx_latch latch)
 
 /*!\brief Set frequency for PCA9685 peripheral
 ** \note Prescaler is calculated according to the use of PCA9685 internal oscillator
-** \note Freq(Hz) = 1 / (((PSCx(8b) + 1) * 4096) / 25000000)
-** \warning beware for higher frequencies, 1526Hz max (3 in reg) drops to 1220Hz (4 in reg), 1017Hz (5 in reg)....
+** \note Freq(Hz) = Clock / ((PSCx(8b) + 1) * 4096) -> Internal clock is 25000000
+** \warning beware for higher frequencies, using internal clock: 1526Hz max (3 in reg) drops to 1220Hz (4 in reg), 1017Hz (5 in reg)....
 ** \param[in] pCpnt - Pointer to PCA9685 component
 ** \param[in] freq - Frequency to apply (in Hz)
 ** \return FctERR - error code

@@ -32,7 +32,8 @@ FctERR NONNULL__ PCA9685_Set_Latch(PCA9685_t * pCpnt, const PCA96xx_latch latch)
 
 FctERR NONNULL__ PCA9685_Set_Frequency(PCA9685_t * pCpnt, const uint16_t freq)
 {
-	if ((freq > PCA9685_FREQ_HZ_MAX) || (freq < PCA9685_FREQ_HZ_MIN))	{ return ERROR_VALUE; }
+	if (	(freq > ((float) pCpnt->cfg.Clock / PCA9685_CLOCK_FREQ) * PCA9685_FREQ_HZ_MAX)
+		||	(freq < ((float) pCpnt->cfg.Clock / PCA9685_CLOCK_FREQ) * PCA9685_FREQ_HZ_MIN))	{ return ERROR_VALUE; }
 
 	FctERR				err;
 	uPCA9685_REG__MODE1	MODE1;
@@ -46,11 +47,11 @@ FctERR NONNULL__ PCA9685_Set_Frequency(PCA9685_t * pCpnt, const uint16_t freq)
 	if (err)	{ return err; }
 
 	// Send prescaler to obtain desired frequency (only in SLEEP)
-	DATA = PCA9685_Get_PWM_Prescaler(PCA9685_FREQ);
+	DATA = PCA9685_Get_PWM_Prescaler(pCpnt, freq);
 	err = PCA9685_Write(pCpnt->cfg.slave_inst, &DATA, PCA9685__PRE_SCALE, sizeof(DATA));
 	if (err)	{ return err; }
 
-	pCpnt->cfg.Frequency = PCA9685_FREQ;
+	pCpnt->cfg.Frequency = freq;
 
 	MODE1.Bits.SLEEP = false;
 	return PCA9685_Write(pCpnt->cfg.slave_inst, &MODE1.Byte, PCA9685__MODE1, sizeof(MODE1));
