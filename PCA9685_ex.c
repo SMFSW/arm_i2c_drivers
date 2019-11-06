@@ -139,7 +139,8 @@ FctERR NONNULL__ PCA9685_ReadVal256(PCA9685_t * pCpnt, const PCA9xxx_chan chan, 
 
 FctERR NONNULL__ PCA9685_PutVal1024(PCA9685_t * pCpnt, const PCA9xxx_chan chan, const uint16_t duty)
 {
-	uint16_t	RegAddr, OFFCount = 0;
+	PCA9685_reg	RegAddr;
+	uint16_t	OFFCount;
 	uint8_t		DATA[3];
 
 	if (duty > 1023)					{ return ERROR_VALUE; }
@@ -156,6 +157,7 @@ FctERR NONNULL__ PCA9685_PutVal1024(PCA9685_t * pCpnt, const PCA9xxx_chan chan, 
 	else if (duty == 1023)	// ON
 	{
 		DATA[0] = DefBitFullOnOff;	// xxx_LED_ON_H (LED fully ON)
+		OFFCount = 0;
 	}
 	else					// PWM
 	{
@@ -172,7 +174,7 @@ FctERR NONNULL__ PCA9685_PutVal1024(PCA9685_t * pCpnt, const PCA9xxx_chan chan, 
 
 FctERR NONNULL__ PCA9685_SetVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan)
 {
-	uint16_t	RegAddr;
+	PCA9685_reg	RegAddr;
 	uint8_t		DATA[3];
 
 	if (chan == PCA96xx__ALL)			{ RegAddr = PCA9685__ALL_LED_ON_H; }	// All channels at once
@@ -189,7 +191,7 @@ FctERR NONNULL__ PCA9685_SetVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan)
 
 FctERR NONNULL__ PCA9685_ClrVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan)
 {
-	uint16_t	RegAddr;
+	PCA9685_reg	RegAddr;
 	uint8_t		DATA[3];
 
 	if (chan == PCA96xx__ALL)			{ RegAddr = PCA9685__ALL_LED_ON_H; }	// All channels at once
