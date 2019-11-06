@@ -662,8 +662,8 @@ Here is the call graph for this function:</div>
 <p>Set frequency for PCA9685 peripheral. </p>
 <dl class="section note"><dt>Note</dt><dd>Prescaler is calculated according to the use of PCA9685 internal oscillator </dd>
 <dd>
-Freq(Hz) = 1 / (((PSCx(8b) + 1) * 4096) / 25000000) </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>beware for higher frequencies, 1526Hz max (3 in reg) drops to 1220Hz (4 in reg), 1017Hz (5 in reg).... </dd></dl>
+Freq(Hz) = Clock / ((PSCx(8b) + 1) * 4096) -&gt; Internal clock is 25000000 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>beware for higher frequencies, using internal clock: 1526Hz max (3 in reg) drops to 1220Hz (4 in reg), 1017Hz (5 in reg).... </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to PCA9685 component </td></tr>
@@ -679,7 +679,7 @@ Here is the call graph for this function:</div>
 <map name="d3/d57/_p_c_a9685__ex_8h_a4148be6f53393ba4a04d01b233cee2f2_cgraph" id="d3/d57/_p_c_a9685__ex_8h_a4148be6f53393ba4a04d01b233cee2f2_cgraph">
 <area shape="rect" id="node2" href="../../de/dca/_p_c_a9685_8c.html#abd867bbd8cae7b60749050a9c68c279a" title="I2C Read function for PCA9685. " alt="" coords="282,56,401,83"/>
 <area shape="rect" id="node5" href="../../de/dca/_p_c_a9685_8c.html#a19e471c9dd64911bd669d77edf64850f" title="I2C Write function for PCA9685. " alt="" coords="282,5,401,32"/>
-<area shape="rect" id="node6" href="../../d4/d97/_p_c_a9685__proc_8c.html#ac8e4b4197d25eefe877657db5179c37d" title="Sets register value for PCA9685 according to desired output frequency. " alt="" coords="235,107,448,133"/>
+<area shape="rect" id="node6" href="../../d4/d97/_p_c_a9685__proc_8c.html#ab03c8c53ff8686da6e82c9de571e4c27" title="Sets register value for PCA9685 according to desired output frequency. " alt="" coords="235,107,448,133"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="496,5,613,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="501,56,608,83"/>
 </map>
