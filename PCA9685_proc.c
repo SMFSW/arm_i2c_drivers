@@ -27,7 +27,7 @@ __WEAK FctERR NONNULL__ PCA9685_Init_Sequence(PCA9685_t * pCpnt)
 	uPCA9685_REG__MODE1	MODE1 = { 0 };
 
 	// Set Delay time & all led OFF
-	const uint8_t DATA[4] = { DefValDelayON, 0, 0, DefBitFullOnOff };
+	uint8_t DATA[4] = { 0, 0, 0, DefBitFullOnOff };
 	err = PCA9685_Write(pCpnt->cfg.slave_inst, DATA, PCA9685__ALL_LED_ON_L, sizeof(DATA));
 	if (err)	{ return err; }
 

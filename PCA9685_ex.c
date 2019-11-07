@@ -11,6 +11,7 @@
 #if defined(I2C_PCA9685)
 /****************************************************************/
 // std libs
+#include <stdlib.h>
 #include <math.h>
 /****************************************************************/
 
@@ -90,7 +91,7 @@ FctERR NONNULL__ PCA9685_ReadRegister(PCA9685_t * pCpnt, const PCA9685_reg reg, 
 }
 
 
-FctERR NONNULL__ PCA9685_ReadVal1024(PCA9685_t * pCpnt, const PCA9xxx_chan chan, uint16_t * duty)
+FctERR NONNULL__ PCA9685_ReadVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan, uint16_t * duty)
 {
 	FctERR		err;
 	uint8_t		DATA[4];
@@ -103,20 +104,20 @@ FctERR NONNULL__ PCA9685_ReadVal1024(PCA9685_t * pCpnt, const PCA9xxx_chan chan,
 
 	if (DATA[1] & DefBitFullOnOff)
 	{
-		*duty = 1023;
+		*duty = 4095;
 	}
 	else if (!(DATA[3] & DefBitFullOnOff))
 	{
-		const uint16_t ONCount = MAKEWORD(DATA[0], DATA[1]);
-		const uint16_t OFFCount = MAKEWORD(DATA[2], DATA[3]);
-		*duty = (uint16_t) ((OFFCount - ONCount + 1) / 4);
+		const int16_t ONCount = MAKEWORD(DATA[0], DATA[1]);
+		const int16_t OFFCount = MAKEWORD(DATA[2], DATA[3]);
+		*duty = (uint16_t) abs(OFFCount - ONCount + 1);
 	}
 
 	return err;
 }
 
 
-FctERR NONNULL__ PCA9685_ReadVal256(PCA9685_t * pCpnt, const PCA9xxx_chan chan, uint8_t * duty)
+FctERR NONNULL__ PCA9685_ReadValByte(PCA9685_t * pCpnt, const PCA9xxx_chan chan, uint8_t * duty)
 {
 	FctERR		err = ERROR_OK;
 	uint8_t		DATA[4];
@@ -133,47 +134,32 @@ FctERR NONNULL__ PCA9685_ReadVal256(PCA9685_t * pCpnt, const PCA9xxx_chan chan, 
 	}
 	else if (!(DATA[3] & DefBitFullOnOff))
 	{
-		const uint16_t ONCount = MAKEWORD(DATA[0], DATA[1]);
-		const uint16_t OFFCount = MAKEWORD(DATA[2], DATA[3]);
-		*duty = (uint8_t) ((OFFCount - ONCount + 1) / 16);
+		const int16_t ONCount = MAKEWORD(DATA[0], DATA[1]);
+		const int16_t OFFCount = MAKEWORD(DATA[2], DATA[3]);
+		*duty = (uint8_t) (abs(OFFCount - ONCount + 1) / 16);
 	}
 
 	return err;
 }
 
 
-FctERR NONNULL__ PCA9685_PutVal1024(PCA9685_t * pCpnt, const PCA9xxx_chan chan, const uint16_t duty)
+FctERR NONNULL__ PCA9685_PutVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan, const uint16_t duty, const uint16_t delay)
 {
-	PCA9685_reg	RegAddr;
-	uint16_t	OFFCount;
-	uint8_t		DATA[4];
+	PCA9685_reg RegAddr;
 
-	if (duty > 1023)					{ return ERROR_VALUE; }
+	if ((duty > 4095) || (delay >= 4095))		{ return ERROR_RANGE; }
 
-	if (chan == PCA96xx__ALL)			{ RegAddr = PCA9685__ALL_LED_ON_L; }	// All channels at once
-	else if (chan <= PCA9xxx__PWM16)	{ RegAddr = LED_OFFSET_L(chan); }		// Regular channel
-	else								{ return ERROR_RANGE; }					// Unknown channel
+	if (chan == PCA96xx__ALL)					{ RegAddr = PCA9685__ALL_LED_ON_L; }	// All channels at once
+	else if (chan <= PCA9xxx__PWM16)			{ RegAddr = LED_OFFSET_L(chan); }		// Regular channel
+	else										{ return ERROR_RANGE; }					// Unknown channel
 
-	if (!duty)				// OFF
-	{
-		DATA[1] = 0;				// xxx_LED_ON_H (LED not fully ON)
-		OFFCount = 4096;			// Off count set to 4096 to fill bit FullOnOff
-	}
-	else if (duty == 1023)	// ON
-	{
-		DATA[1] = DefBitFullOnOff;	// xxx_LED_ON_H (LED fully ON)
-		OFFCount = 0;
-	}
-	else					// PWM
-	{
-		DATA[1] = 0;				// xxx_LED_ON_H (LED not fully ON)
-		OFFCount = (uint16_t) ((DefValDelayON - 1) + convXtoYBits(duty, 10, 12));	// 4096 = (DelayTime - 1) + convXtoYBits((Duty(1023)) from 10 to 12bits)
-	}
+	uint16_t ONCount = delay;
+	uint16_t OFFCount = (delay + duty) % 4095;
 
-	DATA[0] = DefValDelayON;		// Delay On
-	DATA[2] = LOBYTE(OFFCount);		// xxx_LED_OFF_L
-	DATA[3] = HIBYTE(OFFCount);		// xxx_LED_OFF_H
+	if (duty == 0)			{ OFFCount |= 0x1000; }	// Off count set to 4096 to fill bit FullOnOff
+	else if (duty == 4095)	{ ONCount |= 0x1000; }	// On count set to 4096 to fill bit FullOnOff
 
+	const uint8_t DATA[4] = { LOBYTE(ONCount), HIBYTE(ONCount), LOBYTE(OFFCount), HIBYTE(OFFCount) };
 	return PCA9685_Write(pCpnt->cfg.slave_inst, DATA, RegAddr, sizeof(DATA));
 }
 
@@ -186,7 +172,7 @@ FctERR NONNULL__ PCA9685_SetVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan)
 	else if (chan <= PCA9xxx__PWM16)	{ RegAddr = LED_OFFSET_L(chan); }		// Regular channel
 	else								{ return ERROR_RANGE; }					// Unknown channel
 
-	const uint8_t DATA[4] = { DefValDelayON, DefBitFullOnOff, 0, 0 };
+	const uint8_t DATA[4] = { 0, DefBitFullOnOff, 0, 0 };
 	return PCA9685_Write(pCpnt->cfg.slave_inst, DATA, RegAddr, sizeof(DATA));
 }
 
@@ -199,7 +185,7 @@ FctERR NONNULL__ PCA9685_ClrVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan)
 	else if (chan <= PCA9xxx__PWM16)	{ RegAddr = LED_OFFSET_L(chan); }		// Regular channel
 	else								{ return ERROR_RANGE; }					// Unknown channel
 
-	const uint8_t DATA[4] = { DefValDelayON, 0, 0, DefBitFullOnOff };
+	const uint8_t DATA[4] = { 0, 0, 0, DefBitFullOnOff };
 	return PCA9685_Write(pCpnt->cfg.slave_inst, DATA, RegAddr, sizeof(DATA));
 }
 

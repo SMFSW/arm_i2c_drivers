@@ -51,11 +51,9 @@ SOFTWARE.
 * PCA9624: setter added for register auto incrementation options (set to auto-increment over all registers as default for consistency with most of components included in the library / common handling behavior)
 * PCA9624: set all channels to dimmable mode in default init sequence
 * PCA9624: added setters for MODE1 & MODE2 registers as inlines (consistancy especially for MODE2 which have some reserved bits values for proper operation)
-* PCA9685: fix all channels commands (writing values from ON_H, not ON_L)
-* PCA9685: fix for PutVal commands (writing some wrong Byte), 8b one is now inlined
 * PCA9685: possible handling of external clock and computation of prescaler and frequency modified
 * PCA9685: functions to compute frequency/prescaler for outputs frequency rationalization with PCA9532 functions
-* PCA9685: optimizations and code refactoring
+* PCA9685: Refactoring and changes to handle PCA9685 outputs shifting (delay on)
 * shared_ALS: added files for common code regarding ambient light sensing
 * shared_CLS: added files for common code regarding color light sensing (RGB to chromacity CIE1931 xy conversion and CCT calculation)
 * shared_Temperature: added files for common code regarding temperature conversion (Ceelsius & Farenheit)
