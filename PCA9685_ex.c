@@ -33,28 +33,32 @@ FctERR NONNULL__ PCA9685_Set_Latch(PCA9685_t * pCpnt, const PCA96xx_latch latch)
 FctERR NONNULL__ PCA9685_Set_Frequency(PCA9685_t * pCpnt, const uint16_t freq)
 {
 	if (	(freq > ((float) pCpnt->cfg.Clock / PCA9685_CLOCK_FREQ) * PCA9685_FREQ_HZ_MAX)
-		||	(freq < ((float) pCpnt->cfg.Clock / PCA9685_CLOCK_FREQ) * PCA9685_FREQ_HZ_MIN))	{ return ERROR_VALUE; }
+		||	(freq < ((float) pCpnt->cfg.Clock / PCA9685_CLOCK_FREQ) * PCA9685_FREQ_HZ_MIN))	{ return ERROR_RANGE; }
 
-	FctERR				err;
 	uPCA9685_REG__MODE1	MODE1;
 	uint8_t				DATA;
+	FctERR				err = PCA9685_Freq_To_Byte(pCpnt, &DATA, freq);
 
-	err = PCA9685_Read(pCpnt->cfg.slave_inst, &MODE1.Byte, PCA9685__MODE1, sizeof(MODE1));
-	if (err)	{ return err; }
+	if (!err)
+	{
+		err = PCA9685_Read(pCpnt->cfg.slave_inst, &MODE1.Byte, PCA9685__MODE1, sizeof(MODE1));
+		if (err)	{ return err; }
 
-	MODE1.Bits.SLEEP = true;
-	err = PCA9685_Write(pCpnt->cfg.slave_inst, &MODE1.Byte, PCA9685__MODE1, sizeof(MODE1));
-	if (err)	{ return err; }
+		MODE1.Bits.SLEEP = true;
+		err = PCA9685_Write(pCpnt->cfg.slave_inst, &MODE1.Byte, PCA9685__MODE1, sizeof(MODE1));
+		if (err)	{ return err; }
 
-	// Send prescaler to obtain desired frequency (only in SLEEP)
-	DATA = PCA9685_Get_PWM_Prescaler(pCpnt, freq);
-	err = PCA9685_Write(pCpnt->cfg.slave_inst, &DATA, PCA9685__PRE_SCALE, sizeof(DATA));
-	if (err)	{ return err; }
+		// Send prescaler to obtain desired frequency (only in SLEEP)
+		err = PCA9685_Write(pCpnt->cfg.slave_inst, &DATA, PCA9685__PRE_SCALE, sizeof(DATA));
+		if (err)	{ return err; }
 
-	pCpnt->cfg.Frequency = freq;
+		pCpnt->cfg.Frequency = PCA9685_Byte_To_Freq(pCpnt, DATA);
 
-	MODE1.Bits.SLEEP = false;
-	return PCA9685_Write(pCpnt->cfg.slave_inst, &MODE1.Byte, PCA9685__MODE1, sizeof(MODE1));
+		MODE1.Bits.SLEEP = false;
+		err = PCA9685_Write(pCpnt->cfg.slave_inst, &MODE1.Byte, PCA9685__MODE1, sizeof(MODE1));
+	}
+
+	return err;
 }
 
 
@@ -142,32 +146,33 @@ FctERR NONNULL__ PCA9685_PutVal1024(PCA9685_t * pCpnt, const PCA9xxx_chan chan, 
 {
 	PCA9685_reg	RegAddr;
 	uint16_t	OFFCount;
-	uint8_t		DATA[3];
+	uint8_t		DATA[4];
 
 	if (duty > 1023)					{ return ERROR_VALUE; }
 
-	if (chan == PCA96xx__ALL)			{ RegAddr = PCA9685__ALL_LED_ON_H; }	// All channels at once
-	else if (chan <= PCA9xxx__PWM16)	{ RegAddr = LED_OFFSET_H(chan); }		// Regular channel
+	if (chan == PCA96xx__ALL)			{ RegAddr = PCA9685__ALL_LED_ON_L; }	// All channels at once
+	else if (chan <= PCA9xxx__PWM16)	{ RegAddr = LED_OFFSET_L(chan); }		// Regular channel
 	else								{ return ERROR_RANGE; }					// Unknown channel
 
 	if (!duty)				// OFF
 	{
-		DATA[0] = 0;				// xxx_LED_ON_H (LED not fully ON)
+		DATA[1] = 0;				// xxx_LED_ON_H (LED not fully ON)
 		OFFCount = 4096;			// Off count set to 4096 to fill bit FullOnOff
 	}
 	else if (duty == 1023)	// ON
 	{
-		DATA[0] = DefBitFullOnOff;	// xxx_LED_ON_H (LED fully ON)
+		DATA[1] = DefBitFullOnOff;	// xxx_LED_ON_H (LED fully ON)
 		OFFCount = 0;
 	}
 	else					// PWM
 	{
-		DATA[0] = 0;				// xxx_LED_ON_H (LED not fully ON)
+		DATA[1] = 0;				// xxx_LED_ON_H (LED not fully ON)
 		OFFCount = (uint16_t) ((DefValDelayON - 1) + convXtoYBits(duty, 10, 12));	// 4096 = (DelayTime - 1) + convXtoYBits((Duty(1023)) from 10 to 12bits)
 	}
 
-	DATA[1] = LOBYTE(OFFCount);		// xxx_LED_OFF_L
-	DATA[2] = HIBYTE(OFFCount);		// xxx_LED_OFF_H
+	DATA[0] = DefValDelayON;		// Delay On
+	DATA[2] = LOBYTE(OFFCount);		// xxx_LED_OFF_L
+	DATA[3] = HIBYTE(OFFCount);		// xxx_LED_OFF_H
 
 	return PCA9685_Write(pCpnt->cfg.slave_inst, DATA, RegAddr, sizeof(DATA));
 }
@@ -175,34 +180,26 @@ FctERR NONNULL__ PCA9685_PutVal1024(PCA9685_t * pCpnt, const PCA9xxx_chan chan, 
 
 FctERR NONNULL__ PCA9685_SetVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan)
 {
-	PCA9685_reg	RegAddr;
-	uint8_t		DATA[3];
+	PCA9685_reg RegAddr;
 
-	if (chan == PCA96xx__ALL)			{ RegAddr = PCA9685__ALL_LED_ON_H; }	// All channels at once
-	else if (chan <= PCA9xxx__PWM16)	{ RegAddr = LED_OFFSET_H(chan); }		// Regular channel
+	if (chan == PCA96xx__ALL)			{ RegAddr = PCA9685__ALL_LED_ON_L; }	// All channels at once
+	else if (chan <= PCA9xxx__PWM16)	{ RegAddr = LED_OFFSET_L(chan); }		// Regular channel
 	else								{ return ERROR_RANGE; }					// Unknown channel
 
-	DATA[0] = DefBitFullOnOff;	// xxx_LED_ON_H (b4 pour LED full OFF)
-	DATA[1] = 0x00U;			// xxx_LED_OFF_L
-	DATA[2] = 0x00U;			// xxx_LED_OFF_H
-
+	const uint8_t DATA[4] = { DefValDelayON, DefBitFullOnOff, 0, 0 };
 	return PCA9685_Write(pCpnt->cfg.slave_inst, DATA, RegAddr, sizeof(DATA));
 }
 
 
 FctERR NONNULL__ PCA9685_ClrVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan)
 {
-	PCA9685_reg	RegAddr;
-	uint8_t		DATA[3];
+	PCA9685_reg RegAddr;
 
-	if (chan == PCA96xx__ALL)			{ RegAddr = PCA9685__ALL_LED_ON_H; }	// All channels at once
-	else if (chan <= PCA9xxx__PWM16)	{ RegAddr = LED_OFFSET_H(chan); }		// Regular channel
+	if (chan == PCA96xx__ALL)			{ RegAddr = PCA9685__ALL_LED_ON_L; }	// All channels at once
+	else if (chan <= PCA9xxx__PWM16)	{ RegAddr = LED_OFFSET_L(chan); }		// Regular channel
 	else								{ return ERROR_RANGE; }					// Unknown channel
 
-	DATA[0] = 0x00U;			// xxx_LED_ON_H
-	DATA[1] = 0x00U;			// xxx_LED_OFF_L
-	DATA[2] = DefBitFullOnOff;	// xxx_LED_OFF_H (b4 pour LED full OFF)
-
+	const uint8_t DATA[4] = { DefValDelayON, 0, 0, DefBitFullOnOff };
 	return PCA9685_Write(pCpnt->cfg.slave_inst, DATA, RegAddr, sizeof(DATA));
 }
 

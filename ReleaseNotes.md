@@ -54,6 +54,7 @@ SOFTWARE.
 * PCA9685: fix all channels commands (writing values from ON_H, not ON_L)
 * PCA9685: fix for PutVal commands (writing some wrong Byte), 8b one is now inlined
 * PCA9685: possible handling of external clock and computation of prescaler and frequency modified
+* PCA9685: functions to compute frequency/prescaler for outputs frequency rationalization with PCA9532 functions
 * PCA9685: optimizations and code refactoring
 * shared_ALS: added files for common code regarding ambient light sensing
 * shared_CLS: added files for common code regarding color light sensing (RGB to chromacity CIE1931 xy conversion and CCT calculation)

@@ -36,6 +36,27 @@
 // *****************************************************************************
 // Section: Interface Routines
 // *****************************************************************************
+/*!\brief Convert Frequency to Prescaler byte register
+** \param[in] pCpnt - Pointer to PCA9685 component
+** \param[in,out] byte - Pointer to output value
+** \param[in] freq - Outputs frequency in Hz
+** \return FctERR - error code
+**/
+__INLINE FctERR NONNULL__ PCA9685_Freq_To_Byte(PCA9685_t * pCpnt, uint8_t * const byte, const uint16_t freq) {
+	if (	(freq > ((float) pCpnt->cfg.Clock / PCA9685_CLOCK_FREQ) * PCA9685_FREQ_HZ_MAX)
+		||	(freq < ((float) pCpnt->cfg.Clock / PCA9685_CLOCK_FREQ) * PCA9685_FREQ_HZ_MIN))	{ return ERROR_RANGE; }
+	*byte = (uint8_t) (round((float) pCpnt->cfg.Clock / (4096.0f * freq)) - 1.0f);
+	return ERROR_OK; }
+
+/*!\brief Convert Prescaler byte register to Frequency (in Hz)
+** \param[in] pCpnt - Pointer to PCA9685 component
+** \param[in] reg - Prescaler register value
+** \return Frequency of PCA9685 outputs
+**/
+__INLINE float NONNULL__ PCA9685_Byte_To_Freq(PCA9685_t * pCpnt, const uint8_t reg) {
+	return (pCpnt->cfg.Clock / (4096 * ((float) reg + 1))); }
+
+
 /*!\brief Set latch type for PCA9685 peripheral
 ** \param[in,out] pCpnt - Pointer to PCA9685 component
 ** \param[in] latch - Latch type
