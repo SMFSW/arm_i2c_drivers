@@ -113,16 +113,7 @@ Macros</h2></td></tr>
 <tr class="memitem:a8f0809893071144befe108f4d9119089"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d22/_p_c_a9685__proc_8h.html#a8f0809893071144befe108f4d9119089">PCA9685_DEF_FREQ</a>&#160;&#160;&#160;500</td></tr>
 <tr class="memdesc:a8f0809893071144befe108f4d9119089"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default frequency to affect to PCA9685 register (range from 24Hz to 1526Hz)  <a href="#a8f0809893071144befe108f4d9119089">More...</a><br /></td></tr>
 <tr class="separator:a8f0809893071144befe108f4d9119089"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8cd4bb7ac8b265aad452719368dbacc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d22/_p_c_a9685__proc_8h.html#ab8cd4bb7ac8b265aad452719368dbacc">PCA9685_FREQ_HZ_MIN</a>&#160;&#160;&#160;24</td></tr>
-<tr class="memdesc:ab8cd4bb7ac8b265aad452719368dbacc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lower admissible frequency (when internal clock used)  <a href="#ab8cd4bb7ac8b265aad452719368dbacc">More...</a><br /></td></tr>
-<tr class="separator:ab8cd4bb7ac8b265aad452719368dbacc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaac5b2826d2db3df7189073c7b188f13"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d22/_p_c_a9685__proc_8h.html#aaac5b2826d2db3df7189073c7b188f13">PCA9685_FREQ_HZ_MAX</a>&#160;&#160;&#160;1526</td></tr>
-<tr class="memdesc:aaac5b2826d2db3df7189073c7b188f13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upper admissible frequency (when internal clock used)  <a href="#aaac5b2826d2db3df7189073c7b188f13">More...</a><br /></td></tr>
-<tr class="separator:aaac5b2826d2db3df7189073c7b188f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1138b523ab615cd6d9ca27fe734c765d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d22/_p_c_a9685__proc_8h.html#a1138b523ab615cd6d9ca27fe734c765d">PCA9685_CLOCK_FREQ</a>&#160;&#160;&#160;25000000</td></tr>
-<tr class="memdesc:a1138b523ab615cd6d9ca27fe734c765d"><td class="mdescLeft">&#160;</td><td class="mdescRight">PCA9685 Internal clock frequency.  <a href="#a1138b523ab615cd6d9ca27fe734c765d">More...</a><br /></td></tr>
-<tr class="separator:a1138b523ab615cd6d9ca27fe734c765d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a6d6e51fa78a22e88ead8c950d9e106"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d22/_p_c_a9685__proc_8h.html#a3a6d6e51fa78a22e88ead8c950d9e106">PCA9685_MAX_CLOCK_FREQ</a>&#160;&#160;&#160;50000000</td></tr>
+<tr class="memitem:a3a6d6e51fa78a22e88ead8c950d9e106"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d22/_p_c_a9685__proc_8h.html#a3a6d6e51fa78a22e88ead8c950d9e106">PCA9685_MAX_CLOCK_FREQ</a>&#160;&#160;&#160;50000000UL</td></tr>
 <tr class="memdesc:a3a6d6e51fa78a22e88ead8c950d9e106"><td class="mdescLeft">&#160;</td><td class="mdescRight">PCA9685 Maximum external clock frequency.  <a href="#a3a6d6e51fa78a22e88ead8c950d9e106">More...</a><br /></td></tr>
 <tr class="separator:a3a6d6e51fa78a22e88ead8c950d9e106"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa04acf885b6c89cec5ec8f8bfe677ffa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d22/_p_c_a9685__proc_8h.html#aa04acf885b6c89cec5ec8f8bfe677ffa">PCA9685_NB_CHANNELS</a>&#160;&#160;&#160;16</td></tr>
@@ -158,22 +149,6 @@ Variables</h2></td></tr>
 <dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2019, SMFSW</dd></dl>
 <p>PCA9685: 16-channel, 12-bit PWM Fm+ I2C-bus LED controller </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a1138b523ab615cd6d9ca27fe734c765d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1138b523ab615cd6d9ca27fe734c765d">&#9670;&nbsp;</a></span>PCA9685_CLOCK_FREQ</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PCA9685_CLOCK_FREQ&#160;&#160;&#160;25000000</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>PCA9685 Internal clock frequency. </p>
-
-</div>
-</div>
 <a id="a8f0809893071144befe108f4d9119089"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8f0809893071144befe108f4d9119089">&#9670;&nbsp;</a></span>PCA9685_DEF_FREQ</h2>
 
@@ -190,38 +165,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aaac5b2826d2db3df7189073c7b188f13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaac5b2826d2db3df7189073c7b188f13">&#9670;&nbsp;</a></span>PCA9685_FREQ_HZ_MAX</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PCA9685_FREQ_HZ_MAX&#160;&#160;&#160;1526</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Upper admissible frequency (when internal clock used) </p>
-
-</div>
-</div>
-<a id="ab8cd4bb7ac8b265aad452719368dbacc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8cd4bb7ac8b265aad452719368dbacc">&#9670;&nbsp;</a></span>PCA9685_FREQ_HZ_MIN</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PCA9685_FREQ_HZ_MIN&#160;&#160;&#160;24</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Lower admissible frequency (when internal clock used) </p>
-
-</div>
-</div>
 <a id="a3a6d6e51fa78a22e88ead8c950d9e106"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3a6d6e51fa78a22e88ead8c950d9e106">&#9670;&nbsp;</a></span>PCA9685_MAX_CLOCK_FREQ</h2>
 
@@ -229,7 +172,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define PCA9685_MAX_CLOCK_FREQ&#160;&#160;&#160;50000000</td>
+          <td class="memname">#define PCA9685_MAX_CLOCK_FREQ&#160;&#160;&#160;50000000UL</td>
         </tr>
       </table>
 </div><div class="memdoc">
