@@ -1,11 +1,12 @@
 <map id="PCA9685_Write" name="PCA9685_Write">
-<area shape="rect" id="node2" href="$d3/d57/_p_c_a9685__ex_8h.html#aef35f185a62d73c7d697b5df08ae5b7e" title="Set latch type for PCA9685 peripheral. " alt="" coords="187,5,338,32"/>
-<area shape="rect" id="node3" href="$d3/d57/_p_c_a9685__ex_8h.html#a4148be6f53393ba4a04d01b233cee2f2" title="Set frequency for PCA9685 peripheral. " alt="" coords="172,56,353,83"/>
-<area shape="rect" id="node4" href="$d3/d57/_p_c_a9685__ex_8h.html#a6cf3cd3f1bfa6b058a96839a1c443025" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685..." alt="" coords="183,107,342,133"/>
-<area shape="rect" id="node6" href="$d3/d57/_p_c_a9685__ex_8h.html#aca7ad3402727cf2392c76dcff2628a19" title="Sends I2C lighting ON values to apply to a particular or all channels for PCA9685. " alt="" coords="199,157,327,184"/>
-<area shape="rect" id="node7" href="$d3/d57/_p_c_a9685__ex_8h.html#ac0bbfaccb99bcacdd628826d86a715ae" title="Sends I2C PWm OFF values to apply to a particular or all channels for PCA9685. " alt="" coords="201,208,324,235"/>
-<area shape="rect" id="node8" href="$d5/d22/_p_c_a9685__proc_8h.html#a6e9b5100a9232482cb86ed5b115ac8ad" title="Initialization Sequence for PCA9685 peripheral. " alt="" coords="174,259,351,285"/>
-<area shape="rect" id="node5" href="$d3/d57/_p_c_a9685__ex_8h.html#a9f4cf985a59669ebfa1cc566c9102277" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685..." alt="" coords="401,157,552,184"/>
-<area shape="rect" id="node9" href="$d4/deb/_p_c_a9685_8h.html#a7fa0e558a2f028f6261ca45db11d623a" title="Initialization for PCA9685 peripheral. " alt="" coords="423,259,530,285"/>
-<area shape="rect" id="node10" href="$d4/deb/_p_c_a9685_8h.html#a5446c995c445067011d256bc587b164e" title="Initialization for PCA9685 peripheral. " alt="" coords="600,259,752,285"/>
+<area shape="rect" id="node2" href="$d3/d57/_p_c_a9685__ex_8h.html#aef35f185a62d73c7d697b5df08ae5b7e" title="Set latch type for PCA9685 peripheral. " alt="" coords="176,48,327,74"/>
+<area shape="rect" id="node4" href="$d3/d57/_p_c_a9685__ex_8h.html#a4148be6f53393ba4a04d01b233cee2f2" title="Set frequency for PCA9685 peripheral. " alt="" coords="597,61,779,88"/>
+<area shape="rect" id="node5" href="$d5/d22/_p_c_a9685__proc_8h.html#a6e9b5100a9232482cb86ed5b115ac8ad" title="Initialization Sequence for PCA9685 peripheral. " alt="" coords="599,137,777,164"/>
+<area shape="rect" id="node8" href="$d3/d57/_p_c_a9685__ex_8h.html#a6cf3cd3f1bfa6b058a96839a1c443025" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685..." alt="" coords="172,98,331,125"/>
+<area shape="rect" id="node10" href="$d3/d57/_p_c_a9685__ex_8h.html#aca7ad3402727cf2392c76dcff2628a19" title="Sends I2C lighting ON values to apply to a particular or all channels for PCA9685. " alt="" coords="187,200,315,226"/>
+<area shape="rect" id="node11" href="$d3/d57/_p_c_a9685__ex_8h.html#ac0bbfaccb99bcacdd628826d86a715ae" title="Sends I2C PWm OFF values to apply to a particular or all channels for PCA9685. " alt="" coords="190,250,313,277"/>
+<area shape="rect" id="node3" href="$d3/d57/_p_c_a9685__ex_8h.html#a7bff35ee1bfc32f73492cb237f83f697" title="Convert Prescaler byte register to Frequency (in Hz) " alt="" coords="379,61,549,88"/>
+<area shape="rect" id="node6" href="$d4/deb/_p_c_a9685_8h.html#a7fa0e558a2f028f6261ca45db11d623a" title="Initialization for PCA9685 peripheral. " alt="" coords="827,137,933,164"/>
+<area shape="rect" id="node7" href="$d4/deb/_p_c_a9685_8h.html#a5446c995c445067011d256bc587b164e" title="Initialization for PCA9685 peripheral. " alt="" coords="981,137,1133,164"/>
+<area shape="rect" id="node9" href="$d3/d57/_p_c_a9685__ex_8h.html#a9f4cf985a59669ebfa1cc566c9102277" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685..." alt="" coords="389,200,539,226"/>
 </map>

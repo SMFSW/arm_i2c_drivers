@@ -12,7 +12,7 @@ var searchData=
   ['frame',['FRAME',['../de/da6/unionu_m_t_c_h___r_e_g_____t_o_u_c_h_s_t_a_t_e.html#a610e5baa296f4476fc4e6cb843105f00',1,'uMTCH_REG__TOUCHSTATE::FRAME()'],['../df/d8e/struct_m_t_c_h6102__gesture.html#af786c5813b115ea55f69382b6e3ccb1a',1,'MTCH6102_gesture::Frame()']]],
   ['freq0',['Freq0',['../dd/d3d/struct_p_c_a9532__t.html#a198c7e9a3ca546a6a469a3a7bb3b69d3',1,'PCA9532_t']]],
   ['freq1',['Freq1',['../dd/d3d/struct_p_c_a9532__t.html#a21c8ca850332502d1a74834eeb3c9851',1,'PCA9532_t']]],
-  ['frequency',['Frequency',['../d3/d48/struct_p_c_a9685__t.html#a2cf7ef3b78338d7bebf77712fc2e5617',1,'PCA9685_t']]],
+  ['frequency',['Frequency',['../d3/d48/struct_p_c_a9685__t.html#aac52f2c83f88b9c5147c621a4ff42f92',1,'PCA9685_t']]],
   ['full',['Full',['../d6/def/struct_a_p_d_s9930__t.html#abd35e27278c2529b03d87dac092f3c91',1,'APDS9930_t::Full()'],['../d7/d5e/struct_t_s_l2591__t.html#adc1a5f1c06cba5ced60abb381f536048',1,'TSL2591_t::Full()'],['../d9/d72/unionu_p_c_a9685___r_e_g_____d_u_t_y.html#a5c965315b2a766525a2f6bc33b684e2a',1,'uPCA9685_REG__DUTY::FULL()']]],
   ['fullintegrationtime',['FullIntegrationTime',['../d8/df6/struct_s11059__t.html#a428612be7c15733850ed9d56c6b5f76e',1,'S11059_t']]],
   ['fw_5fmajor',['FW_Major',['../d5/d63/struct_m_t_c_h6102__t.html#ae5297ab33846b2f26e3f6cc7d7e57917',1,'MTCH6102_t']]],
