@@ -24,11 +24,7 @@
 // *****************************************************************************
 #define PCA9685_DEF_FREQ		500			//!< Default frequency to affect to PCA9685 register (range from 24Hz to 1526Hz)
 
-#define	PCA9685_FREQ_HZ_MIN		24			//!< Lower admissible frequency (when internal clock used)
-#define	PCA9685_FREQ_HZ_MAX		1526		//!< Upper admissible frequency (when internal clock used)
-
-#define PCA9685_CLOCK_FREQ		25000000	//!< PCA9685 Internal clock frequency
-#define PCA9685_MAX_CLOCK_FREQ	50000000	//!< PCA9685 Maximum external clock frequency
+#define PCA9685_MAX_CLOCK_FREQ	50000000UL	//!< PCA9685 Maximum external clock frequency
 
 #define	PCA9685_NB_CHANNELS		16			//!< PCA9685 Number of channels
 

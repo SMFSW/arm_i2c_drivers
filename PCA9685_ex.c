@@ -33,9 +33,6 @@ FctERR NONNULL__ PCA9685_Set_Latch(PCA9685_t * pCpnt, const PCA96xx_latch latch)
 
 FctERR NONNULL__ PCA9685_Set_Frequency(PCA9685_t * pCpnt, const uint16_t freq)
 {
-	if (	(freq > ((float) pCpnt->cfg.Clock / PCA9685_CLOCK_FREQ) * PCA9685_FREQ_HZ_MAX)
-		||	(freq < ((float) pCpnt->cfg.Clock / PCA9685_CLOCK_FREQ) * PCA9685_FREQ_HZ_MIN))	{ return ERROR_RANGE; }
-
 	uPCA9685_REG__MODE1	MODE1;
 	uint8_t				DATA;
 	FctERR				err = PCA9685_Freq_To_Byte(pCpnt, &DATA, freq);

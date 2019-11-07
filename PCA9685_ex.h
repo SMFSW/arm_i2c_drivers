@@ -22,6 +22,11 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
+#define	PCA9685_FREQ_HZ_MIN		24			//!< Lower admissible frequency (when internal clock used)
+#define	PCA9685_FREQ_HZ_MAX		1526		//!< Upper admissible frequency (when internal clock used)
+
+#define PCA9685_CLOCK_FREQ		25000000UL	//!< PCA9685 Internal clock frequency
+
 #define	DefBitFullOnOff			0x10		//!< Full ON / OFF bit on LEDxx_xxx_H
 
 /** 4 registers per channel -> 2 shifts left for next address **/
@@ -39,8 +44,8 @@
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL__ PCA9685_Freq_To_Byte(PCA9685_t * pCpnt, uint8_t * const byte, const uint16_t freq) {
-	if (	(freq > ((float) pCpnt->cfg.Clock / PCA9685_CLOCK_FREQ) * PCA9685_FREQ_HZ_MAX)
-		||	(freq < ((float) pCpnt->cfg.Clock / PCA9685_CLOCK_FREQ) * PCA9685_FREQ_HZ_MIN))	{ return ERROR_RANGE; }
+	if (	(freq > (uint16_t) (((float) pCpnt->cfg.Clock / PCA9685_CLOCK_FREQ) * PCA9685_FREQ_HZ_MAX))
+		||	(freq < (uint16_t) (((float) pCpnt->cfg.Clock / PCA9685_CLOCK_FREQ) * PCA9685_FREQ_HZ_MIN)))	{ return ERROR_RANGE; }
 	*byte = (uint8_t) (round((float) pCpnt->cfg.Clock / (4096.0f * freq)) - 1.0f);
 	return ERROR_OK; }
 
