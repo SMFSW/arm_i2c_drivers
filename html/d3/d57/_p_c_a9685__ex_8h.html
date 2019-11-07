@@ -101,8 +101,6 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a17e3013dcc35d486a0e0b4f400838af2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#a17e3013dcc35d486a0e0b4f400838af2">DefValDelayON</a>&#160;&#160;&#160;2</td></tr>
-<tr class="separator:a17e3013dcc35d486a0e0b4f400838af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a142ef3c71fa8edbe0d582332e5136e41"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#a142ef3c71fa8edbe0d582332e5136e41">DefBitFullOnOff</a>&#160;&#160;&#160;0x10</td></tr>
 <tr class="memdesc:a142ef3c71fa8edbe0d582332e5136e41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Full ON / OFF bit on LEDxx_xxx_H.  <a href="#a142ef3c71fa8edbe0d582332e5136e41">More...</a><br /></td></tr>
 <tr class="separator:a142ef3c71fa8edbe0d582332e5136e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,18 +134,21 @@ Functions</h2></td></tr>
 <tr class="memitem:a1379f6ccb909098b09e1170f56b3a632"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#a1379f6ccb909098b09e1170f56b3a632">PCA9685_ReadRegister</a> (<a class="el" href="../../d3/d48/struct_p_c_a9685__t.html">PCA9685_t</a> *pCpnt, const <a class="el" href="../../d4/deb/_p_c_a9685_8h.html#a1f81a141ae1b490af92844063a7da8fa">PCA9685_reg</a> reg, uint8_t *val)</td></tr>
 <tr class="memdesc:a1379f6ccb909098b09e1170f56b3a632"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads I2C register from PCA9685.  <a href="#a1379f6ccb909098b09e1170f56b3a632">More...</a><br /></td></tr>
 <tr class="separator:a1379f6ccb909098b09e1170f56b3a632"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad66ac0fc5d5fd2e9c358facf3b8b816d"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#ad66ac0fc5d5fd2e9c358facf3b8b816d">PCA9685_ReadVal1024</a> (<a class="el" href="../../d3/d48/struct_p_c_a9685__t.html">PCA9685_t</a> *pCpnt, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> chan, uint16_t *duty)</td></tr>
-<tr class="memdesc:ad66ac0fc5d5fd2e9c358facf3b8b816d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint16_t)  <a href="#ad66ac0fc5d5fd2e9c358facf3b8b816d">More...</a><br /></td></tr>
-<tr class="separator:ad66ac0fc5d5fd2e9c358facf3b8b816d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03f7ea7ead586d7f306bc8c7b9c1c9f2"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#a03f7ea7ead586d7f306bc8c7b9c1c9f2">PCA9685_ReadVal256</a> (<a class="el" href="../../d3/d48/struct_p_c_a9685__t.html">PCA9685_t</a> *pCpnt, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> chan, uint8_t *duty)</td></tr>
-<tr class="memdesc:a03f7ea7ead586d7f306bc8c7b9c1c9f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8_t)  <a href="#a03f7ea7ead586d7f306bc8c7b9c1c9f2">More...</a><br /></td></tr>
-<tr class="separator:a03f7ea7ead586d7f306bc8c7b9c1c9f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cf3cd3f1bfa6b058a96839a1c443025"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#a6cf3cd3f1bfa6b058a96839a1c443025">PCA9685_PutVal1024</a> (<a class="el" href="../../d3/d48/struct_p_c_a9685__t.html">PCA9685_t</a> *pCpnt, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> chan, const uint16_t duty)</td></tr>
-<tr class="memdesc:a6cf3cd3f1bfa6b058a96839a1c443025"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes and send I2C lighting values to apply to a particular or all channels for PCA9685.  <a href="#a6cf3cd3f1bfa6b058a96839a1c443025">More...</a><br /></td></tr>
-<tr class="separator:a6cf3cd3f1bfa6b058a96839a1c443025"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f4cf985a59669ebfa1cc566c9102277"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#a9f4cf985a59669ebfa1cc566c9102277">PCA9685_PutVal256</a> (<a class="el" href="../../d3/d48/struct_p_c_a9685__t.html">PCA9685_t</a> *pCpnt, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> chan, const uint8_t duty)</td></tr>
-<tr class="memdesc:a9f4cf985a59669ebfa1cc566c9102277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes and send I2C lighting values to apply to a particular or all channels for PCA9685.  <a href="#a9f4cf985a59669ebfa1cc566c9102277">More...</a><br /></td></tr>
-<tr class="separator:a9f4cf985a59669ebfa1cc566c9102277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a288a67b24c2999f3bdbf38650e9226"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#a7a288a67b24c2999f3bdbf38650e9226">PCA9685_ReadVal</a> (<a class="el" href="../../d3/d48/struct_p_c_a9685__t.html">PCA9685_t</a> *pCpnt, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> chan, uint16_t *duty)</td></tr>
+<tr class="memdesc:a7a288a67b24c2999f3bdbf38650e9226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads I2C lighting values from a LED and Computes the corresponding duty cycle value (12b)  <a href="#a7a288a67b24c2999f3bdbf38650e9226">More...</a><br /></td></tr>
+<tr class="separator:a7a288a67b24c2999f3bdbf38650e9226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a038062a57cd77b9886e6ea2bd7332f9f"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#a038062a57cd77b9886e6ea2bd7332f9f">PCA9685_ReadValByte</a> (<a class="el" href="../../d3/d48/struct_p_c_a9685__t.html">PCA9685_t</a> *pCpnt, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> chan, uint8_t *duty)</td></tr>
+<tr class="memdesc:a038062a57cd77b9886e6ea2bd7332f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads I2C lighting values from a LED and Computes the corresponding duty cycle value (Byte)  <a href="#a038062a57cd77b9886e6ea2bd7332f9f">More...</a><br /></td></tr>
+<tr class="separator:a038062a57cd77b9886e6ea2bd7332f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a659aa74abbc11db17389f3b031d209b0"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#a659aa74abbc11db17389f3b031d209b0">PCA9685_PutVal</a> (<a class="el" href="../../d3/d48/struct_p_c_a9685__t.html">PCA9685_t</a> *pCpnt, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> chan, const uint16_t duty, const uint16_t delay)</td></tr>
+<tr class="memdesc:a659aa74abbc11db17389f3b031d209b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes and send I2C lighting values to apply to a particular or all channels for PCA9685 (12b)  <a href="#a659aa74abbc11db17389f3b031d209b0">More...</a><br /></td></tr>
+<tr class="separator:a659aa74abbc11db17389f3b031d209b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cab66ca9a9a6db0263e1a993f9d7ead"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#a5cab66ca9a9a6db0263e1a993f9d7ead">PCA9685_PutValByte</a> (<a class="el" href="../../d3/d48/struct_p_c_a9685__t.html">PCA9685_t</a> *pCpnt, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> chan, const uint8_t duty, const uint8_t delay)</td></tr>
+<tr class="memdesc:a5cab66ca9a9a6db0263e1a993f9d7ead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes and send I2C lighting values to apply to a particular or all channels for PCA9685 (Byte)  <a href="#a5cab66ca9a9a6db0263e1a993f9d7ead">More...</a><br /></td></tr>
+<tr class="separator:a5cab66ca9a9a6db0263e1a993f9d7ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6582eef238bbf9ede4a84b765abd9b47"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#a6582eef238bbf9ede4a84b765abd9b47">PCA9685_PutValPerc</a> (<a class="el" href="../../d3/d48/struct_p_c_a9685__t.html">PCA9685_t</a> *pCpnt, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> chan, const float duty, const float delay)</td></tr>
+<tr class="memdesc:a6582eef238bbf9ede4a84b765abd9b47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes and send I2C lighting values to apply to a particular or all channels for PCA9685 (Percent)  <a href="#a6582eef238bbf9ede4a84b765abd9b47">More...</a><br /></td></tr>
+<tr class="separator:a6582eef238bbf9ede4a84b765abd9b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca7ad3402727cf2392c76dcff2628a19"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#aca7ad3402727cf2392c76dcff2628a19">PCA9685_SetVal</a> (<a class="el" href="../../d3/d48/struct_p_c_a9685__t.html">PCA9685_t</a> *pCpnt, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> chan)</td></tr>
 <tr class="memdesc:aca7ad3402727cf2392c76dcff2628a19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends I2C lighting ON values to apply to a particular or all channels for PCA9685.  <a href="#aca7ad3402727cf2392c76dcff2628a19">More...</a><br /></td></tr>
 <tr class="separator:aca7ad3402727cf2392c76dcff2628a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,22 +175,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Full ON / OFF bit on LEDxx_xxx_H. </p>
-<dl class="section remark"><dt>Remarks</dt><dd>Must be less than 4 to be able to use a 1024 range </dd></dl>
-
-</div>
-</div>
-<a id="a17e3013dcc35d486a0e0b4f400838af2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17e3013dcc35d486a0e0b4f400838af2">&#9670;&nbsp;</a></span>DefValDelayON</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define DefValDelayON&#160;&#160;&#160;2</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Delay before output rising edge </p>
 
 </div>
 </div>
@@ -288,9 +273,9 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node9" href="../../d3/d57/_p_c_a9685__ex_8h.html#ad9385ccd48e1586097d7f37e1ee29132" title="Reset for PCA9685 peripheral. " alt="" coords="253,309,376,336"/>
 <area shape="rect" id="node10" href="../../d3/d57/_p_c_a9685__ex_8h.html#a43f7f89c8444a93594f6c9d782db731c" title="General call reset function for PCA9685. " alt="" coords="243,360,387,387"/>
 <area shape="rect" id="node11" href="../../d3/d57/_p_c_a9685__ex_8h.html#a1379f6ccb909098b09e1170f56b3a632" title="Reads I2C register from PCA9685. " alt="" coords="230,157,399,184"/>
-<area shape="rect" id="node12" href="../../d3/d57/_p_c_a9685__ex_8h.html#ad66ac0fc5d5fd2e9c358facf3b8b816d" title="Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint1..." alt="" coords="230,208,399,235"/>
-<area shape="rect" id="node13" href="../../d3/d57/_p_c_a9685__ex_8h.html#a03f7ea7ead586d7f306bc8c7b9c1c9f2" title="Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8..." alt="" coords="234,259,395,285"/>
-<area shape="rect" id="node14" href="../../d3/d57/_p_c_a9685__ex_8h.html#a6cf3cd3f1bfa6b058a96839a1c443025" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685..." alt="" coords="235,5,394,32"/>
+<area shape="rect" id="node12" href="../../d3/d57/_p_c_a9685__ex_8h.html#a7a288a67b24c2999f3bdbf38650e9226" title="Reads I2C lighting values from a LED and Computes the corresponding duty cycle value (12b) ..." alt="" coords="246,208,383,235"/>
+<area shape="rect" id="node13" href="../../d3/d57/_p_c_a9685__ex_8h.html#a038062a57cd77b9886e6ea2bd7332f9f" title="Reads I2C lighting values from a LED and Computes the corresponding duty cycle value (Byte) ..." alt="" coords="231,259,398,285"/>
+<area shape="rect" id="node14" href="../../d3/d57/_p_c_a9685__ex_8h.html#a659aa74abbc11db17389f3b031d209b0" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685 (12b) ..." alt="" coords="251,5,378,32"/>
 <area shape="rect" id="node3" href="../../de/dca/_p_c_a9685_8c.html#abd867bbd8cae7b60749050a9c68c279a" title="I2C Read function for PCA9685. " alt="" coords="479,157,598,184"/>
 <area shape="rect" id="node6" href="../../de/dca/_p_c_a9685_8c.html#a19e471c9dd64911bd669d77edf64850f" title="I2C Write function for PCA9685. " alt="" coords="479,107,598,133"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="672,107,789,133"/>
@@ -362,7 +347,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_ac0bbfaccb99bcacdd628826d86a715ae_icgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_ac0bbfaccb99bcacdd628826d86a715ae_icgraph" alt=""/></div>
 <map name="d3/d57/_p_c_a9685__ex_8h_ac0bbfaccb99bcacdd628826d86a715ae_icgraph" id="d3/d57/_p_c_a9685__ex_8h_ac0bbfaccb99bcacdd628826d86a715ae_icgraph">
-<area shape="rect" id="node2" href="../../d3/d57/_p_c_a9685__ex_8h.html#a9f4cf985a59669ebfa1cc566c9102277" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685..." alt="" coords="176,5,327,32"/>
+<area shape="rect" id="node2" href="../../d3/d57/_p_c_a9685__ex_8h.html#a6582eef238bbf9ede4a84b765abd9b47" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685 (Percent) ..." alt="" coords="176,5,331,32"/>
 </map>
 </div>
 
@@ -433,14 +418,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a6cf3cd3f1bfa6b058a96839a1c443025"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6cf3cd3f1bfa6b058a96839a1c443025">&#9670;&nbsp;</a></span>PCA9685_PutVal1024()</h2>
+<a id="a659aa74abbc11db17389f3b031d209b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a659aa74abbc11db17389f3b031d209b0">&#9670;&nbsp;</a></span>PCA9685_PutVal()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">FctERR PCA9685_PutVal1024 </td>
+          <td class="memname">FctERR PCA9685_PutVal </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d3/d48/struct_p_c_a9685__t.html">PCA9685_t</a> *&#160;</td>
           <td class="paramname"><em>pCpnt</em>, </td>
@@ -455,7 +440,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const uint16_t&#160;</td>
-          <td class="paramname"><em>duty</em>&#160;</td>
+          <td class="paramname"><em>duty</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>delay</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -465,12 +456,13 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Computes and send I2C lighting values to apply to a particular or all channels for PCA9685. </p>
+<p>Computes and send I2C lighting values to apply to a particular or all channels for PCA9685 (12b) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to PCA9685 component </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">chan</td><td>- Channel number (1 to 16 / PCA9685_ALLCALL can be used to address all channels at the same time) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">duty</td><td>- Duty cycle coded on a uint16_t </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">duty</td><td>- Duty cycle coded on 12b (0-4095) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delay</td><td>- Delay coded on 12b (0-4095) </td></tr>
   </table>
   </dd>
 </dl>
@@ -478,31 +470,32 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_a6cf3cd3f1bfa6b058a96839a1c443025_cgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_a6cf3cd3f1bfa6b058a96839a1c443025_cgraph" alt=""/></div>
-<map name="d3/d57/_p_c_a9685__ex_8h_a6cf3cd3f1bfa6b058a96839a1c443025_cgraph" id="d3/d57/_p_c_a9685__ex_8h_a6cf3cd3f1bfa6b058a96839a1c443025_cgraph">
-<area shape="rect" id="node2" href="../../de/dca/_p_c_a9685_8c.html#a19e471c9dd64911bd669d77edf64850f" title="I2C Write function for PCA9685. " alt="" coords="212,31,331,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="379,5,496,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="384,56,491,83"/>
+<div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_a659aa74abbc11db17389f3b031d209b0_cgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_a659aa74abbc11db17389f3b031d209b0_cgraph" alt=""/></div>
+<map name="d3/d57/_p_c_a9685__ex_8h_a659aa74abbc11db17389f3b031d209b0_cgraph" id="d3/d57/_p_c_a9685__ex_8h_a659aa74abbc11db17389f3b031d209b0_cgraph">
+<area shape="rect" id="node2" href="../../de/dca/_p_c_a9685_8c.html#a19e471c9dd64911bd669d77edf64850f" title="I2C Write function for PCA9685. " alt="" coords="180,31,299,57"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="347,5,464,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="352,56,459,83"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_a6cf3cd3f1bfa6b058a96839a1c443025_icgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_a6cf3cd3f1bfa6b058a96839a1c443025_icgraph" alt=""/></div>
-<map name="d3/d57/_p_c_a9685__ex_8h_a6cf3cd3f1bfa6b058a96839a1c443025_icgraph" id="d3/d57/_p_c_a9685__ex_8h_a6cf3cd3f1bfa6b058a96839a1c443025_icgraph">
-<area shape="rect" id="node2" href="../../d3/d57/_p_c_a9685__ex_8h.html#a7bff35ee1bfc32f73492cb237f83f697" title="Convert Prescaler byte register to Frequency (in Hz) " alt="" coords="212,5,383,32"/>
-<area shape="rect" id="node7" href="../../d3/d57/_p_c_a9685__ex_8h.html#a9f4cf985a59669ebfa1cc566c9102277" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685..." alt="" coords="222,56,373,83"/>
-<area shape="rect" id="node3" href="../../d3/d57/_p_c_a9685__ex_8h.html#a4148be6f53393ba4a04d01b233cee2f2" title="Set frequency for PCA9685 peripheral. " alt="" coords="431,5,612,32"/>
-<area shape="rect" id="node4" href="../../d5/d22/_p_c_a9685__proc_8h.html#a6e9b5100a9232482cb86ed5b115ac8ad" title="Initialization Sequence for PCA9685 peripheral. " alt="" coords="433,56,610,83"/>
-<area shape="rect" id="node5" href="../../d4/deb/_p_c_a9685_8h.html#a7fa0e558a2f028f6261ca45db11d623a" title="Initialization for PCA9685 peripheral. " alt="" coords="660,56,767,83"/>
-<area shape="rect" id="node6" href="../../d4/deb/_p_c_a9685_8h.html#a5446c995c445067011d256bc587b164e" title="Initialization for PCA9685 peripheral. " alt="" coords="815,56,967,83"/>
+<div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_a659aa74abbc11db17389f3b031d209b0_icgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_a659aa74abbc11db17389f3b031d209b0_icgraph" alt=""/></div>
+<map name="d3/d57/_p_c_a9685__ex_8h_a659aa74abbc11db17389f3b031d209b0_icgraph" id="d3/d57/_p_c_a9685__ex_8h_a659aa74abbc11db17389f3b031d209b0_icgraph">
+<area shape="rect" id="node2" href="../../d3/d57/_p_c_a9685__ex_8h.html#a7bff35ee1bfc32f73492cb237f83f697" title="Convert Prescaler byte register to Frequency (in Hz) " alt="" coords="180,5,351,32"/>
+<area shape="rect" id="node7" href="../../d3/d57/_p_c_a9685__ex_8h.html#a5cab66ca9a9a6db0263e1a993f9d7ead" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685 (Byte) ..." alt="" coords="187,56,343,83"/>
+<area shape="rect" id="node8" href="../../d3/d57/_p_c_a9685__ex_8h.html#a6582eef238bbf9ede4a84b765abd9b47" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685 (Percent) ..." alt="" coords="188,107,343,133"/>
+<area shape="rect" id="node3" href="../../d3/d57/_p_c_a9685__ex_8h.html#a4148be6f53393ba4a04d01b233cee2f2" title="Set frequency for PCA9685 peripheral. " alt="" coords="399,5,580,32"/>
+<area shape="rect" id="node4" href="../../d5/d22/_p_c_a9685__proc_8h.html#a6e9b5100a9232482cb86ed5b115ac8ad" title="Initialization Sequence for PCA9685 peripheral. " alt="" coords="401,56,578,83"/>
+<area shape="rect" id="node5" href="../../d4/deb/_p_c_a9685_8h.html#a7fa0e558a2f028f6261ca45db11d623a" title="Initialization for PCA9685 peripheral. " alt="" coords="628,56,735,83"/>
+<area shape="rect" id="node6" href="../../d4/deb/_p_c_a9685_8h.html#a5446c995c445067011d256bc587b164e" title="Initialization for PCA9685 peripheral. " alt="" coords="783,56,935,83"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a9f4cf985a59669ebfa1cc566c9102277"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f4cf985a59669ebfa1cc566c9102277">&#9670;&nbsp;</a></span>PCA9685_PutVal256()</h2>
+<a id="a5cab66ca9a9a6db0263e1a993f9d7ead"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cab66ca9a9a6db0263e1a993f9d7ead">&#9670;&nbsp;</a></span>PCA9685_PutValByte()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -511,7 +504,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">FctERR PCA9685_PutVal256 </td>
+          <td class="memname">FctERR PCA9685_PutValByte </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d3/d48/struct_p_c_a9685__t.html">PCA9685_t</a> *&#160;</td>
           <td class="paramname"><em>pCpnt</em>, </td>
@@ -526,7 +519,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const uint8_t&#160;</td>
-          <td class="paramname"><em>duty</em>&#160;</td>
+          <td class="paramname"><em>duty</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>delay</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -541,12 +540,13 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Computes and send I2C lighting values to apply to a particular or all channels for PCA9685. </p>
+<p>Computes and send I2C lighting values to apply to a particular or all channels for PCA9685 (Byte) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to PCA9685 component </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">chan</td><td>- Channel number (1 to 16 / PCA9685_ALLCALL can be used to address all channels at the same time) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">duty</td><td>- Duty cycle coded on a uint8_t </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">duty</td><td>- Duty cycle coded on uint8_t (0-255) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delay</td><td>- Delay coded on uint8_t (0-&lt;255) </td></tr>
   </table>
   </dd>
 </dl>
@@ -554,14 +554,85 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_a9f4cf985a59669ebfa1cc566c9102277_cgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_a9f4cf985a59669ebfa1cc566c9102277_cgraph" alt=""/></div>
-<map name="d3/d57/_p_c_a9685__ex_8h_a9f4cf985a59669ebfa1cc566c9102277_cgraph" id="d3/d57/_p_c_a9685__ex_8h_a9f4cf985a59669ebfa1cc566c9102277_cgraph">
-<area shape="rect" id="node2" href="../../d3/d57/_p_c_a9685__ex_8h.html#a6cf3cd3f1bfa6b058a96839a1c443025" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685..." alt="" coords="204,5,363,32"/>
-<area shape="rect" id="node6" href="../../d3/d57/_p_c_a9685__ex_8h.html#aca7ad3402727cf2392c76dcff2628a19" title="Sends I2C lighting ON values to apply to a particular or all channels for PCA9685. " alt="" coords="219,56,347,83"/>
-<area shape="rect" id="node7" href="../../d3/d57/_p_c_a9685__ex_8h.html#ac0bbfaccb99bcacdd628826d86a715ae" title="Sends I2C PWm OFF values to apply to a particular or all channels for PCA9685. " alt="" coords="222,107,345,133"/>
-<area shape="rect" id="node3" href="../../de/dca/_p_c_a9685_8c.html#a19e471c9dd64911bd669d77edf64850f" title="I2C Write function for PCA9685. " alt="" coords="411,56,529,83"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="577,31,695,57"/>
-<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="583,81,689,108"/>
+<div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_a5cab66ca9a9a6db0263e1a993f9d7ead_cgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_a5cab66ca9a9a6db0263e1a993f9d7ead_cgraph" alt=""/></div>
+<map name="d3/d57/_p_c_a9685__ex_8h_a5cab66ca9a9a6db0263e1a993f9d7ead_cgraph" id="d3/d57/_p_c_a9685__ex_8h_a5cab66ca9a9a6db0263e1a993f9d7ead_cgraph">
+<area shape="rect" id="node2" href="../../d3/d57/_p_c_a9685__ex_8h.html#a659aa74abbc11db17389f3b031d209b0" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685 (12b) ..." alt="" coords="209,31,336,57"/>
+<area shape="rect" id="node3" href="../../de/dca/_p_c_a9685_8c.html#a19e471c9dd64911bd669d77edf64850f" title="I2C Write function for PCA9685. " alt="" coords="384,31,503,57"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="551,5,668,32"/>
+<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="556,56,663,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6582eef238bbf9ede4a84b765abd9b47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6582eef238bbf9ede4a84b765abd9b47">&#9670;&nbsp;</a></span>PCA9685_PutValPerc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR PCA9685_PutValPerc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/d48/struct_p_c_a9685__t.html">PCA9685_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a>&#160;</td>
+          <td class="paramname"><em>chan</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>duty</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>delay</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes and send I2C lighting values to apply to a particular or all channels for PCA9685 (Percent) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to PCA9685 component </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">chan</td><td>- Channel number (1 to 16 / PCA9685_ALLCALL can be used to address all channels at the same time) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">duty</td><td>- Duty cycle coded on float (0.0-100.0%) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delay</td><td>- Delay coded on float (0.0-&lt;100.0%) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_a6582eef238bbf9ede4a84b765abd9b47_cgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_a6582eef238bbf9ede4a84b765abd9b47_cgraph" alt=""/></div>
+<map name="d3/d57/_p_c_a9685__ex_8h_a6582eef238bbf9ede4a84b765abd9b47_cgraph" id="d3/d57/_p_c_a9685__ex_8h_a6582eef238bbf9ede4a84b765abd9b47_cgraph">
+<area shape="rect" id="node2" href="../../d3/d57/_p_c_a9685__ex_8h.html#a659aa74abbc11db17389f3b031d209b0" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685 (12b) ..." alt="" coords="209,5,335,32"/>
+<area shape="rect" id="node6" href="../../d3/d57/_p_c_a9685__ex_8h.html#aca7ad3402727cf2392c76dcff2628a19" title="Sends I2C lighting ON values to apply to a particular or all channels for PCA9685. " alt="" coords="208,56,336,83"/>
+<area shape="rect" id="node7" href="../../d3/d57/_p_c_a9685__ex_8h.html#ac0bbfaccb99bcacdd628826d86a715ae" title="Sends I2C PWm OFF values to apply to a particular or all channels for PCA9685. " alt="" coords="211,107,333,133"/>
+<area shape="rect" id="node3" href="../../de/dca/_p_c_a9685_8c.html#a19e471c9dd64911bd669d77edf64850f" title="I2C Write function for PCA9685. " alt="" coords="384,56,503,83"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="551,31,668,57"/>
+<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="556,81,663,108"/>
 </map>
 </div>
 
@@ -634,14 +705,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ad66ac0fc5d5fd2e9c358facf3b8b816d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad66ac0fc5d5fd2e9c358facf3b8b816d">&#9670;&nbsp;</a></span>PCA9685_ReadVal1024()</h2>
+<a id="a7a288a67b24c2999f3bdbf38650e9226"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a288a67b24c2999f3bdbf38650e9226">&#9670;&nbsp;</a></span>PCA9685_ReadVal()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">FctERR PCA9685_ReadVal1024 </td>
+          <td class="memname">FctERR PCA9685_ReadVal </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d3/d48/struct_p_c_a9685__t.html">PCA9685_t</a> *&#160;</td>
           <td class="paramname"><em>pCpnt</em>, </td>
@@ -666,12 +737,12 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint16_t) </p>
+<p>Reads I2C lighting values from a LED and Computes the corresponding duty cycle value (12b) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to PCA9685 component </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">chan</td><td>- Channel number (1 to 16) </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">duty</td><td>- Pointer to the DutyCycle data for receive coded on a uint16_t </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">duty</td><td>- Pointer to the DutyCycle data for receive coded on 12b </td></tr>
   </table>
   </dd>
 </dl>
@@ -679,36 +750,36 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_ad66ac0fc5d5fd2e9c358facf3b8b816d_cgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_ad66ac0fc5d5fd2e9c358facf3b8b816d_cgraph" alt=""/></div>
-<map name="d3/d57/_p_c_a9685__ex_8h_ad66ac0fc5d5fd2e9c358facf3b8b816d_cgraph" id="d3/d57/_p_c_a9685__ex_8h_ad66ac0fc5d5fd2e9c358facf3b8b816d_cgraph">
-<area shape="rect" id="node2" href="../../de/dca/_p_c_a9685_8c.html#abd867bbd8cae7b60749050a9c68c279a" title="I2C Read function for PCA9685. " alt="" coords="223,31,341,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="389,5,507,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="395,56,501,83"/>
+<div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_a7a288a67b24c2999f3bdbf38650e9226_cgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_a7a288a67b24c2999f3bdbf38650e9226_cgraph" alt=""/></div>
+<map name="d3/d57/_p_c_a9685__ex_8h_a7a288a67b24c2999f3bdbf38650e9226_cgraph" id="d3/d57/_p_c_a9685__ex_8h_a7a288a67b24c2999f3bdbf38650e9226_cgraph">
+<area shape="rect" id="node2" href="../../de/dca/_p_c_a9685_8c.html#abd867bbd8cae7b60749050a9c68c279a" title="I2C Read function for PCA9685. " alt="" coords="191,31,309,57"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="357,5,475,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="363,56,469,83"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_ad66ac0fc5d5fd2e9c358facf3b8b816d_icgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_ad66ac0fc5d5fd2e9c358facf3b8b816d_icgraph" alt=""/></div>
-<map name="d3/d57/_p_c_a9685__ex_8h_ad66ac0fc5d5fd2e9c358facf3b8b816d_icgraph" id="d3/d57/_p_c_a9685__ex_8h_ad66ac0fc5d5fd2e9c358facf3b8b816d_icgraph">
-<area shape="rect" id="node2" href="../../d3/d57/_p_c_a9685__ex_8h.html#a7bff35ee1bfc32f73492cb237f83f697" title="Convert Prescaler byte register to Frequency (in Hz) " alt="" coords="223,5,393,32"/>
-<area shape="rect" id="node3" href="../../d3/d57/_p_c_a9685__ex_8h.html#a4148be6f53393ba4a04d01b233cee2f2" title="Set frequency for PCA9685 peripheral. " alt="" coords="441,5,623,32"/>
-<area shape="rect" id="node4" href="../../d5/d22/_p_c_a9685__proc_8h.html#a6e9b5100a9232482cb86ed5b115ac8ad" title="Initialization Sequence for PCA9685 peripheral. " alt="" coords="443,56,621,83"/>
-<area shape="rect" id="node5" href="../../d4/deb/_p_c_a9685_8h.html#a7fa0e558a2f028f6261ca45db11d623a" title="Initialization for PCA9685 peripheral. " alt="" coords="671,56,777,83"/>
-<area shape="rect" id="node6" href="../../d4/deb/_p_c_a9685_8h.html#a5446c995c445067011d256bc587b164e" title="Initialization for PCA9685 peripheral. " alt="" coords="825,56,977,83"/>
+<div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_a7a288a67b24c2999f3bdbf38650e9226_icgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_a7a288a67b24c2999f3bdbf38650e9226_icgraph" alt=""/></div>
+<map name="d3/d57/_p_c_a9685__ex_8h_a7a288a67b24c2999f3bdbf38650e9226_icgraph" id="d3/d57/_p_c_a9685__ex_8h_a7a288a67b24c2999f3bdbf38650e9226_icgraph">
+<area shape="rect" id="node2" href="../../d3/d57/_p_c_a9685__ex_8h.html#a7bff35ee1bfc32f73492cb237f83f697" title="Convert Prescaler byte register to Frequency (in Hz) " alt="" coords="191,5,361,32"/>
+<area shape="rect" id="node3" href="../../d3/d57/_p_c_a9685__ex_8h.html#a4148be6f53393ba4a04d01b233cee2f2" title="Set frequency for PCA9685 peripheral. " alt="" coords="409,5,591,32"/>
+<area shape="rect" id="node4" href="../../d5/d22/_p_c_a9685__proc_8h.html#a6e9b5100a9232482cb86ed5b115ac8ad" title="Initialization Sequence for PCA9685 peripheral. " alt="" coords="411,56,589,83"/>
+<area shape="rect" id="node5" href="../../d4/deb/_p_c_a9685_8h.html#a7fa0e558a2f028f6261ca45db11d623a" title="Initialization for PCA9685 peripheral. " alt="" coords="639,56,745,83"/>
+<area shape="rect" id="node6" href="../../d4/deb/_p_c_a9685_8h.html#a5446c995c445067011d256bc587b164e" title="Initialization for PCA9685 peripheral. " alt="" coords="793,56,945,83"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a03f7ea7ead586d7f306bc8c7b9c1c9f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03f7ea7ead586d7f306bc8c7b9c1c9f2">&#9670;&nbsp;</a></span>PCA9685_ReadVal256()</h2>
+<a id="a038062a57cd77b9886e6ea2bd7332f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a038062a57cd77b9886e6ea2bd7332f9f">&#9670;&nbsp;</a></span>PCA9685_ReadValByte()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">FctERR PCA9685_ReadVal256 </td>
+          <td class="memname">FctERR PCA9685_ReadValByte </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d3/d48/struct_p_c_a9685__t.html">PCA9685_t</a> *&#160;</td>
           <td class="paramname"><em>pCpnt</em>, </td>
@@ -733,12 +804,12 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8_t) </p>
+<p>Reads I2C lighting values from a LED and Computes the corresponding duty cycle value (Byte) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to PCA9685 component </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">chan</td><td>- chan number (1 to 16) </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">duty</td><td>- Pointer to the DutyCycle data for receive coded on a uint8_t </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">duty</td><td>- Pointer to the DutyCycle data for receive coded on a Byte </td></tr>
   </table>
   </dd>
 </dl>
@@ -746,23 +817,23 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_a03f7ea7ead586d7f306bc8c7b9c1c9f2_cgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_a03f7ea7ead586d7f306bc8c7b9c1c9f2_cgraph" alt=""/></div>
-<map name="d3/d57/_p_c_a9685__ex_8h_a03f7ea7ead586d7f306bc8c7b9c1c9f2_cgraph" id="d3/d57/_p_c_a9685__ex_8h_a03f7ea7ead586d7f306bc8c7b9c1c9f2_cgraph">
-<area shape="rect" id="node2" href="../../de/dca/_p_c_a9685_8c.html#abd867bbd8cae7b60749050a9c68c279a" title="I2C Read function for PCA9685. " alt="" coords="215,31,333,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="381,5,499,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="387,56,493,83"/>
+<div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_a038062a57cd77b9886e6ea2bd7332f9f_cgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_a038062a57cd77b9886e6ea2bd7332f9f_cgraph" alt=""/></div>
+<map name="d3/d57/_p_c_a9685__ex_8h_a038062a57cd77b9886e6ea2bd7332f9f_cgraph" id="d3/d57/_p_c_a9685__ex_8h_a038062a57cd77b9886e6ea2bd7332f9f_cgraph">
+<area shape="rect" id="node2" href="../../de/dca/_p_c_a9685_8c.html#abd867bbd8cae7b60749050a9c68c279a" title="I2C Read function for PCA9685. " alt="" coords="220,31,339,57"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="387,5,504,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="392,56,499,83"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_a03f7ea7ead586d7f306bc8c7b9c1c9f2_icgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_a03f7ea7ead586d7f306bc8c7b9c1c9f2_icgraph" alt=""/></div>
-<map name="d3/d57/_p_c_a9685__ex_8h_a03f7ea7ead586d7f306bc8c7b9c1c9f2_icgraph" id="d3/d57/_p_c_a9685__ex_8h_a03f7ea7ead586d7f306bc8c7b9c1c9f2_icgraph">
-<area shape="rect" id="node2" href="../../d3/d57/_p_c_a9685__ex_8h.html#a7bff35ee1bfc32f73492cb237f83f697" title="Convert Prescaler byte register to Frequency (in Hz) " alt="" coords="215,5,385,32"/>
-<area shape="rect" id="node3" href="../../d3/d57/_p_c_a9685__ex_8h.html#a4148be6f53393ba4a04d01b233cee2f2" title="Set frequency for PCA9685 peripheral. " alt="" coords="433,5,615,32"/>
-<area shape="rect" id="node4" href="../../d5/d22/_p_c_a9685__proc_8h.html#a6e9b5100a9232482cb86ed5b115ac8ad" title="Initialization Sequence for PCA9685 peripheral. " alt="" coords="435,56,613,83"/>
-<area shape="rect" id="node5" href="../../d4/deb/_p_c_a9685_8h.html#a7fa0e558a2f028f6261ca45db11d623a" title="Initialization for PCA9685 peripheral. " alt="" coords="663,56,769,83"/>
-<area shape="rect" id="node6" href="../../d4/deb/_p_c_a9685_8h.html#a5446c995c445067011d256bc587b164e" title="Initialization for PCA9685 peripheral. " alt="" coords="817,56,969,83"/>
+<div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_a038062a57cd77b9886e6ea2bd7332f9f_icgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_a038062a57cd77b9886e6ea2bd7332f9f_icgraph" alt=""/></div>
+<map name="d3/d57/_p_c_a9685__ex_8h_a038062a57cd77b9886e6ea2bd7332f9f_icgraph" id="d3/d57/_p_c_a9685__ex_8h_a038062a57cd77b9886e6ea2bd7332f9f_icgraph">
+<area shape="rect" id="node2" href="../../d3/d57/_p_c_a9685__ex_8h.html#a7bff35ee1bfc32f73492cb237f83f697" title="Convert Prescaler byte register to Frequency (in Hz) " alt="" coords="220,5,391,32"/>
+<area shape="rect" id="node3" href="../../d3/d57/_p_c_a9685__ex_8h.html#a4148be6f53393ba4a04d01b233cee2f2" title="Set frequency for PCA9685 peripheral. " alt="" coords="439,5,620,32"/>
+<area shape="rect" id="node4" href="../../d5/d22/_p_c_a9685__proc_8h.html#a6e9b5100a9232482cb86ed5b115ac8ad" title="Initialization Sequence for PCA9685 peripheral. " alt="" coords="441,56,618,83"/>
+<area shape="rect" id="node5" href="../../d4/deb/_p_c_a9685_8h.html#a7fa0e558a2f028f6261ca45db11d623a" title="Initialization for PCA9685 peripheral. " alt="" coords="668,56,775,83"/>
+<area shape="rect" id="node6" href="../../d4/deb/_p_c_a9685_8h.html#a5446c995c445067011d256bc587b164e" title="Initialization for PCA9685 peripheral. " alt="" coords="823,56,975,83"/>
 </map>
 </div>
 
@@ -900,9 +971,9 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node9" href="../../d3/d57/_p_c_a9685__ex_8h.html#ad9385ccd48e1586097d7f37e1ee29132" title="Reset for PCA9685 peripheral. " alt="" coords="477,360,599,387"/>
 <area shape="rect" id="node10" href="../../d3/d57/_p_c_a9685__ex_8h.html#a43f7f89c8444a93594f6c9d782db731c" title="General call reset function for PCA9685. " alt="" coords="466,411,610,437"/>
 <area shape="rect" id="node11" href="../../d3/d57/_p_c_a9685__ex_8h.html#a1379f6ccb909098b09e1170f56b3a632" title="Reads I2C register from PCA9685. " alt="" coords="453,259,623,285"/>
-<area shape="rect" id="node12" href="../../d3/d57/_p_c_a9685__ex_8h.html#ad66ac0fc5d5fd2e9c358facf3b8b816d" title="Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint1..." alt="" coords="453,309,623,336"/>
-<area shape="rect" id="node13" href="../../d3/d57/_p_c_a9685__ex_8h.html#a03f7ea7ead586d7f306bc8c7b9c1c9f2" title="Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8..." alt="" coords="457,208,619,235"/>
-<area shape="rect" id="node14" href="../../d3/d57/_p_c_a9685__ex_8h.html#a6cf3cd3f1bfa6b058a96839a1c443025" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685..." alt="" coords="459,107,617,133"/>
+<area shape="rect" id="node12" href="../../d3/d57/_p_c_a9685__ex_8h.html#a7a288a67b24c2999f3bdbf38650e9226" title="Reads I2C lighting values from a LED and Computes the corresponding duty cycle value (12b) ..." alt="" coords="469,309,607,336"/>
+<area shape="rect" id="node13" href="../../d3/d57/_p_c_a9685__ex_8h.html#a038062a57cd77b9886e6ea2bd7332f9f" title="Reads I2C lighting values from a LED and Computes the corresponding duty cycle value (Byte) ..." alt="" coords="455,208,621,235"/>
+<area shape="rect" id="node14" href="../../d3/d57/_p_c_a9685__ex_8h.html#a659aa74abbc11db17389f3b031d209b0" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685 (12b) ..." alt="" coords="475,107,601,133"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1030,7 +1101,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d3/d57/_p_c_a9685__ex_8h_aca7ad3402727cf2392c76dcff2628a19_icgraph.png" border="0" usemap="#d3/d57/_p_c_a9685__ex_8h_aca7ad3402727cf2392c76dcff2628a19_icgraph" alt=""/></div>
 <map name="d3/d57/_p_c_a9685__ex_8h_aca7ad3402727cf2392c76dcff2628a19_icgraph" id="d3/d57/_p_c_a9685__ex_8h_aca7ad3402727cf2392c76dcff2628a19_icgraph">
-<area shape="rect" id="node2" href="../../d3/d57/_p_c_a9685__ex_8h.html#a9f4cf985a59669ebfa1cc566c9102277" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685..." alt="" coords="181,5,332,32"/>
+<area shape="rect" id="node2" href="../../d3/d57/_p_c_a9685__ex_8h.html#a6582eef238bbf9ede4a84b765abd9b47" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685 (Percent) ..." alt="" coords="181,5,336,32"/>
 </map>
 </div>
 

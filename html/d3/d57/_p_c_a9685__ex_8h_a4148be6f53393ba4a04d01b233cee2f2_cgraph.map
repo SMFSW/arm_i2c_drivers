@@ -9,7 +9,7 @@
 <area shape="rect" id="node9" href="$d3/d57/_p_c_a9685__ex_8h.html#ad9385ccd48e1586097d7f37e1ee29132" title="Reset for PCA9685 peripheral. " alt="" coords="477,360,599,387"/>
 <area shape="rect" id="node10" href="$d3/d57/_p_c_a9685__ex_8h.html#a43f7f89c8444a93594f6c9d782db731c" title="General call reset function for PCA9685. " alt="" coords="466,411,610,437"/>
 <area shape="rect" id="node11" href="$d3/d57/_p_c_a9685__ex_8h.html#a1379f6ccb909098b09e1170f56b3a632" title="Reads I2C register from PCA9685. " alt="" coords="453,259,623,285"/>
-<area shape="rect" id="node12" href="$d3/d57/_p_c_a9685__ex_8h.html#ad66ac0fc5d5fd2e9c358facf3b8b816d" title="Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint1..." alt="" coords="453,309,623,336"/>
-<area shape="rect" id="node13" href="$d3/d57/_p_c_a9685__ex_8h.html#a03f7ea7ead586d7f306bc8c7b9c1c9f2" title="Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8..." alt="" coords="457,208,619,235"/>
-<area shape="rect" id="node14" href="$d3/d57/_p_c_a9685__ex_8h.html#a6cf3cd3f1bfa6b058a96839a1c443025" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685..." alt="" coords="459,107,617,133"/>
+<area shape="rect" id="node12" href="$d3/d57/_p_c_a9685__ex_8h.html#a7a288a67b24c2999f3bdbf38650e9226" title="Reads I2C lighting values from a LED and Computes the corresponding duty cycle value (12b) ..." alt="" coords="469,309,607,336"/>
+<area shape="rect" id="node13" href="$d3/d57/_p_c_a9685__ex_8h.html#a038062a57cd77b9886e6ea2bd7332f9f" title="Reads I2C lighting values from a LED and Computes the corresponding duty cycle value (Byte) ..." alt="" coords="455,208,621,235"/>
+<area shape="rect" id="node14" href="$d3/d57/_p_c_a9685__ex_8h.html#a659aa74abbc11db17389f3b031d209b0" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685 (12b) ..." alt="" coords="475,107,601,133"/>
 </map>

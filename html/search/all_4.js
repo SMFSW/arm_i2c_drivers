@@ -12,7 +12,6 @@ var searchData=
   ['decimal',['Decimal',['../db/d36/unionu_m_c_p9808___r_e_g_____t_e_m_p___l_i_m.html#ac6ac2164b72af618e13ffb7cd65cc27c',1,'uMCP9808_REG__TEMP_LIM::Decimal()'],['../d9/d48/unionu_m_c_p9808___r_e_g_____t_e_m_p___a_m_b.html#a962df6b4d7919350259f3e405c51d40d',1,'uMCP9808_REG__TEMP_AMB::Decimal()']]],
   ['def',['DEF',['../de/d42/unionu_m_t_c_h___r_e_g_____c_m_d.html#af623ddaaf1d776458238cd07961027b1',1,'uMTCH_REG__CMD']]],
   ['defbitfullonoff',['DefBitFullOnOff',['../d3/d57/_p_c_a9685__ex_8h.html#a142ef3c71fa8edbe0d582332e5136e41',1,'PCA9685_ex.h']]],
-  ['defvaldelayon',['DefValDelayON',['../d3/d57/_p_c_a9685__ex_8h.html#a17e3013dcc35d486a0e0b4f400838af2',1,'PCA9685_ex.h']]],
   ['degrees',['Degrees',['../d7/dca/struct_g_p_m_s__coord.html#a6c587ae92b7f1eab79022e067367b836',1,'GPMS_coord']]],
   ['density',['Density',['../dc/dcf/struct_m_b85_r_c256_v__t.html#a25a3016ffdf68a4013366d35b0af0753',1,'MB85RC256V_t']]],
   ['der',['DER',['../d7/d5e/struct_t_s_l2591__t.html#ab16e5b379ee3204c7102706bc554c911',1,'TSL2591_t']]],
