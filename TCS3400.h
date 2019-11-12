@@ -187,7 +187,7 @@ typedef union uTCS3400_REG__AUX {
 typedef union uTCS3400_REG__STATUS {
 	uint8_t Byte;
 	struct {
-		uint8_t AVALID	:2;		//!< RGBC Valid. Indicates that the RGBC channels have completed an integration cycle
+		uint8_t AVALID	:1;		//!< RGBC Valid. Indicates that the RGBC channels have completed an integration cycle
 		uint8_t			:3;
 		uint8_t AINT	:1;		//!< RGBC clear channel Interrupt
 		uint8_t 		:2;

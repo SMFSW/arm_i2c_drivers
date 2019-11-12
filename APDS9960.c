@@ -102,8 +102,10 @@ FctERR NONNULL__ APDS9960_Write_Special(I2C_slave_t * pSlave, const APDS9960_spe
 {
 	if (func > APDS9960__SF_AICLEAR)	{ return ERROR_VALUE; }		// Unknown special function
 
+	const uint8_t DATA = APDS9960__IFORCE + func;
+
 	I2C_set_busy(pSlave, true);
-	pSlave->status = HAL_I2C_Master_Transmit(pSlave->cfg.bus_inst, pSlave->cfg.addr, (uint8_t *) &func, 1, pSlave->cfg.timeout);
+	pSlave->status = HAL_I2C_Master_Transmit(pSlave->cfg.bus_inst, pSlave->cfg.addr, (uint8_t *) &DATA, 1, pSlave->cfg.timeout);
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }

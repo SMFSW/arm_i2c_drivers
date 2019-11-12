@@ -69,7 +69,9 @@ __WEAK FctERR NONNULL__ APDS9960_Init_Sequence(APDS9960_t * pCpnt)
 	if (err)	{ return err; }
 
 	err = APDS9960_Set_AIT(pCpnt, pCpnt->cfg.ADC_LowThreshold, pCpnt->cfg.ADC_HighThreshold);
+	if (err)	{ return err; }
 	err = APDS9960_Set_PIT(pCpnt, pCpnt->cfg.Prox_LowThreshold, pCpnt->cfg.Prox_HighThreshold);
+	if (err)	{ return err; }
 
 	EN.Bits.WEN = pCpnt->cfg.WEN;	// Turn ON Wait following cfg
 	EN.Bits.AEN = pCpnt->cfg.AIEN;	// Turn ON ALS following cfg
@@ -86,6 +88,50 @@ __WEAK FctERR NONNULL__ APDS9960_Init_Sequence(APDS9960_t * pCpnt)
 
 __WEAK FctERR NONNULL__ APDS9960_handler(APDS9960_t * pCpnt)
 {
+	uint8_t						DATA[10];
+	uint8_t						GDATA[2], GDATAS[4];
+	uAPDS9960_REG__STATUS *		ST = (uAPDS9960_REG__STATUS *) DATA;
+	uAPDS9960_REG__GSTATUS *	GST = (uAPDS9960_REG__GSTATUS *) &GDATA[1];
+	FctERR						err;
+
+	err = APDS9960_Read(pCpnt->cfg.slave_inst, DATA, APDS9960__STATUS, sizeof(DATA));
+	if (err)	{ return err; }
+
+	if ((ST->Bits.AINT) && (ST->Bits.AVALID))
+	{
+		pCpnt->Clear = MAKEWORD(DATA[1], DATA[2]);
+		pCpnt->Red = MAKEWORD(DATA[3], DATA[4]);
+		pCpnt->Green = MAKEWORD(DATA[5], DATA[6]);
+		pCpnt->Blue = MAKEWORD(DATA[7], DATA[8]);
+	}
+
+	if ((ST->Bits.PINT) && (ST->Bits.PVALID))
+	{
+		pCpnt->Prox = DATA[9];
+	}
+
+	if (ST->Bits.GINT)
+	{
+		err = APDS9960_Read(pCpnt->cfg.slave_inst, GDATA, APDS9960__GFLVL, sizeof(GDATA));
+		if (err)	{ return err; }
+
+		if (GST->Bits.GVALID)
+		{
+			// Read FIFO datas (GDATA[0] holding number of FIFO items)
+			for (unsigned int i = 0 ; i < GDATA[0] ; i++)
+			{
+				err = APDS9960_Read(pCpnt->cfg.slave_inst, GDATAS, APDS9960__GFIFO_U, sizeof(GDATAS));
+				if (err)	{ return err; }
+
+				// Do something with datas
+			}
+		}
+	}
+
+	if ((ST->Bits.AINT) && (ST->Bits.PINT))	{ return APDS9960_SF_Clear_ALS_PROX_IT(pCpnt); }
+	else if (ST->Bits.AINT)					{ return APDS9960_SF_Clear_ALS_IT(pCpnt); }
+	else if (ST->Bits.PINT)					{ return APDS9960_SF_Clear_PROX_IT(pCpnt); }
+
 	return ERROR_OK;
 }
 

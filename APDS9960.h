@@ -158,10 +158,10 @@ typedef enum PACK__ APDS9960_prox_it_persist {
 ** \brief Proximity LED Pulse Length values
 **/
 typedef enum PACK__ APDS9960_pulse_length {
-	APDS9960__PL_4US = 0,	//!< Pulse Length 4µs
-	APDS9960__PL_8US,		//!< Pulse Length 8µs
-	APDS9960__PL_16US,		//!< Pulse Length 16µs
-	APDS9960__PL_32US,		//!< Pulse Length 32µs
+	APDS9960__PL_4US = 0,	//!< Pulse Length 4ï¿½s
+	APDS9960__PL_8US,		//!< Pulse Length 8ï¿½s
+	APDS9960__PL_16US,		//!< Pulse Length 16ï¿½s
+	APDS9960__PL_32US,		//!< Pulse Length 32ï¿½s
 } APDS9960_pulse_length;
 
 
@@ -255,7 +255,7 @@ typedef union uAPDS9960_REG__CONFIG1 {
 	struct {
 		uint8_t			:1;
 		uint8_t	WLONG	:1;	//!< Wait Long. When asserted, the wait cycles are increased by a factor 12x from that programmed in the WTIME register.
-		uint8_t			:3;	//!< ALS gain level. When asserted, the 1× and 8× ALS gain (AGAIN) modes are scaled by 0.16. Otherwise, AGAIN is scaled by 1. Do not use with AGAIN greater than 8×.
+		uint8_t			:3;	//!< ALS gain level. When asserted, the 1ï¿½ and 8ï¿½ ALS gain (AGAIN) modes are scaled by 0.16. Otherwise, AGAIN is scaled by 1. Do not use with AGAIN greater than 8ï¿½.
 		uint8_t	_WRITE1	:2;	//!< Reserved. Write as 1
 		uint8_t			:1;
 	} Bits;
@@ -297,7 +297,7 @@ typedef union uAPDS9960_REG__CONFIG3 {
 typedef union uAPDS9960_REG__GCONFIG1 {
 	uint8_t Byte;
 	struct {
-		uint8_t	GEXPERS		:2;	//!< Gesture Exit Persistence. When a number of consecutive “gesture end” occurrences become equal or greater to the GEPERS value, the Gesture state machine is exited.
+		uint8_t	GEXPERS		:2;	//!< Gesture Exit Persistence. When a number of consecutive ï¿½gesture endï¿½ occurrences become equal or greater to the GEPERS value, the Gesture state machine is exited.
 		uint8_t	GEXMSK_R	:1;	//!< R detector data will not be included in sum if set to 1.
 		uint8_t	GEXMSK_L	:1;	//!< L detector data will not be included in sum if set to 1.
 		uint8_t	GEXMSK_D	:1;	//!< D detector data will not be included in sum if set to 1.
