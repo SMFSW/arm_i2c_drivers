@@ -101,7 +101,7 @@ void NONNULL__ APDS9930_Set_LPC(APDS9930_t * pCpnt)
 ** \param[in] ir - Green value
 ** \return FctERR - error code
 **/
-static NONNULL__ FctERR calculateLux(APDS9930_t * pCpnt, const uint16_t full, const uint16_t ir)
+static NONNULL__ FctERR APDS9930_calc(APDS9930_t * pCpnt, const uint16_t full, const uint16_t ir)
 {
 	const float	B = 1.862f, C = 0.746f, D = 1.291f;
 	// SATURATION = 1024 * (256 - ATIME) if ATIME > 192 (<175ms)
@@ -140,30 +140,36 @@ __WEAK FctERR NONNULL__ APDS9930_handler(APDS9930_t * pCpnt)
 	err = APDS9930_Read(pCpnt->cfg.slave_inst, DATA, APDS9930__STATUS, sizeof(DATA));
 	if (err)	{ return err; }
 
-	if ((ST->Bits.AINT) && (ST->Bits.AVALID))
+	if (pCpnt->cfg.AIEN)
 	{
-		pCpnt->Full = MAKEWORD(DATA[1], DATA[2]);
-		pCpnt->IR = MAKEWORD(DATA[3], DATA[4]);
-		err = calculateLux(pCpnt, pCpnt->Full, pCpnt->IR);
+		if ((ST->Bits.AINT) && (ST->Bits.AVALID))
+		{
+			pCpnt->Full = MAKEWORD(DATA[1], DATA[2]);
+			pCpnt->IR = MAKEWORD(DATA[3], DATA[4]);
+			err = APDS9930_calc(pCpnt, pCpnt->Full, pCpnt->IR);
 
-		#if defined(VERBOSE)
-			if (err == ERROR_OVERFLOW)	{ printf("APDS9930; ALS Sensor saturation reached!\r\n"); }
-			else						{ printf("APDS9930: Full %d IR %d Lux: %lul\r\n", pCpnt->Full, pCpnt->IR, pCpnt->Lux); }
-		#endif
+			#if defined(VERBOSE)
+				if (err == ERROR_OVERFLOW)	{ printf("APDS9930; ALS Sensor saturation reached!\r\n"); }
+				else						{ printf("APDS9930: Full %d IR %d Lux: %lul\r\n", pCpnt->Full, pCpnt->IR, pCpnt->Lux); }
+			#endif
+		}
 	}
 
-	if ((ST->Bits.PINT) && (ST->Bits.PVALID))
+	if (pCpnt->cfg.PIEN)
 	{
-		pCpnt->Prox = MAKEWORD(DATA[5], DATA[6]);
+		if ((ST->Bits.PINT) && (ST->Bits.PVALID))
+		{
+			pCpnt->Prox = MAKEWORD(DATA[5], DATA[6]);
 
-		#if defined(VERBOSE)
-			printf("APDS9930: Prox %d\r\n", pCpnt->Prox);
-		#endif
+			#if defined(VERBOSE)
+				printf("APDS9930: Prox %d\r\n", pCpnt->Prox);
+			#endif
+		}
 	}
 
-	if ((ST->Bits.AINT) && (ST->Bits.PINT))	{ return APDS9930_SF_Clear_ALS_PROX_IT(pCpnt); }
-	else if (ST->Bits.AINT)					{ return APDS9930_SF_Clear_ALS_IT(pCpnt); }
-	else if (ST->Bits.PINT)					{ return APDS9930_SF_Clear_PROX_IT(pCpnt); }
+	if ((pCpnt->cfg.AIEN) && (pCpnt->cfg.PIEN))	{ return APDS9930_SF_Clear_ALS_PROX_IT(pCpnt); }
+	else if (pCpnt->cfg.AIEN)					{ return APDS9930_SF_Clear_ALS_IT(pCpnt); }
+	else if (pCpnt->cfg.PIEN)					{ return APDS9930_SF_Clear_PROX_IT(pCpnt); }
 
 	return ERROR_OK;
 }

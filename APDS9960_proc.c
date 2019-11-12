@@ -41,8 +41,10 @@ __WEAK FctERR NONNULL__ APDS9960_Init_Sequence(APDS9960_t * pCpnt)
 	pCpnt->cfg.Prox_Strength = APDS9960__DS_12_5MA;
 	pCpnt->cfg.AIEN = true;
 	pCpnt->cfg.PIEN = true;
-	pCpnt->cfg.GIEN = true;
+	pCpnt->cfg.GIEN = false;
 	pCpnt->cfg.WEN = true;
+
+	memcpy(&pCpnt->cfg.mat, &CLS_RGB2XYZ_Default, sizeof(pCpnt->cfg.mat));
 
 	// get ID & check against values for APDS9960
 	err = APDS9960_Get_ChipID(pCpnt, &pCpnt->cfg.Id);
@@ -86,32 +88,67 @@ __WEAK FctERR NONNULL__ APDS9960_Init_Sequence(APDS9960_t * pCpnt)
 /****************************************************************/
 
 
+/*!\brief Converts the RGB values to color temperature in Kelvin degrees
+** \param[in] r - Red value
+** \param[in] g - Green value
+** \param[in] b - Blue value
+** \return FctERR - error code
+**/
+static FctERR NONNULL__ APDS9960_calc(APDS9960_t * pCpnt, const uint16_t r, const uint16_t g, const uint16_t b)
+{
+	CLS_get_chromacity(pCpnt->xy, &pCpnt->Lux, pCpnt->cfg.mat, r, g, b);
+	CLS_get_CCT(&pCpnt->Temp, pCpnt->xy);
+
+	return ERROR_OK;
+}
+
+
 __WEAK FctERR NONNULL__ APDS9960_handler(APDS9960_t * pCpnt)
 {
-	uint8_t						DATA[10];
-	uint8_t						GDATA[2], GDATAS[4];
-	uAPDS9960_REG__STATUS *		ST = (uAPDS9960_REG__STATUS *) DATA;
-	uAPDS9960_REG__GSTATUS *	GST = (uAPDS9960_REG__GSTATUS *) &GDATA[1];
-	FctERR						err;
+	uint8_t					DATA[10];
+	uAPDS9960_REG__STATUS *	ST = (uAPDS9960_REG__STATUS *) DATA;
+	FctERR					err;
 
 	err = APDS9960_Read(pCpnt->cfg.slave_inst, DATA, APDS9960__STATUS, sizeof(DATA));
 	if (err)	{ return err; }
 
-	if ((ST->Bits.AINT) && (ST->Bits.AVALID))
+	if (pCpnt->cfg.AIEN)
 	{
-		pCpnt->Clear = MAKEWORD(DATA[1], DATA[2]);
-		pCpnt->Red = MAKEWORD(DATA[3], DATA[4]);
-		pCpnt->Green = MAKEWORD(DATA[5], DATA[6]);
-		pCpnt->Blue = MAKEWORD(DATA[7], DATA[8]);
+		if ((ST->Bits.AINT) && (ST->Bits.AVALID))
+		{
+			pCpnt->Clear = MAKEWORD(DATA[1], DATA[2]);
+			pCpnt->Red = MAKEWORD(DATA[3], DATA[4]);
+			pCpnt->Green = MAKEWORD(DATA[5], DATA[6]);
+			pCpnt->Blue = MAKEWORD(DATA[7], DATA[8]);
+			err = APDS9960_calc(pCpnt, pCpnt->Red, pCpnt->Green, pCpnt->Blue);
+
+			#if defined(VERBOSE)
+				printf("APDS9960: C%d R%d G%d B%d x%d.%04d y%d.%04d Lux: %lul Temp: %luK\r\n",
+						pCpnt->Clear, pCpnt->Red, pCpnt->Green, pCpnt->Blue,
+						(uint16_t) pCpnt->xy[0], get_fp_dec(pCpnt->xy[0], 4),
+						(uint16_t) pCpnt->xy[1], get_fp_dec(pCpnt->xy[1], 4),
+						pCpnt->Lux, pCpnt->Temp);
+			#endif
+		}
 	}
 
-	if ((ST->Bits.PINT) && (ST->Bits.PVALID))
+	if (pCpnt->cfg.PIEN)
 	{
-		pCpnt->Prox = DATA[9];
+		if ((ST->Bits.PINT) && (ST->Bits.PVALID))
+		{
+			pCpnt->Prox = DATA[9];
+
+			#if defined(VERBOSE)
+				printf("APDS9960: Prox %d\r\n", pCpnt->Prox);
+			#endif
+		}
 	}
 
-	if (ST->Bits.GINT)
+	if ((pCpnt->cfg.GIEN) && (ST->Bits.GINT))
 	{
+		uint8_t						GDATA[2], GDATAS[4];
+		uAPDS9960_REG__GSTATUS *	GST = (uAPDS9960_REG__GSTATUS *) &GDATA[1];
+
 		err = APDS9960_Read(pCpnt->cfg.slave_inst, GDATA, APDS9960__GFLVL, sizeof(GDATA));
 		if (err)	{ return err; }
 
@@ -128,9 +165,9 @@ __WEAK FctERR NONNULL__ APDS9960_handler(APDS9960_t * pCpnt)
 		}
 	}
 
-	if ((ST->Bits.AINT) && (ST->Bits.PINT))	{ return APDS9960_SF_Clear_ALS_PROX_IT(pCpnt); }
-	else if (ST->Bits.AINT)					{ return APDS9960_SF_Clear_ALS_IT(pCpnt); }
-	else if (ST->Bits.PINT)					{ return APDS9960_SF_Clear_PROX_IT(pCpnt); }
+	if ((pCpnt->cfg.AIEN) && (pCpnt->cfg.PIEN))	{ return APDS9960_SF_Clear_ALS_PROX_IT(pCpnt); }
+	else if (pCpnt->cfg.AIEN)					{ return APDS9960_SF_Clear_ALS_IT(pCpnt); }
+	else if (pCpnt->cfg.PIEN)					{ return APDS9960_SF_Clear_PROX_IT(pCpnt); }
 
 	return ERROR_OK;
 }

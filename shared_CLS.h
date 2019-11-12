@@ -18,7 +18,7 @@
 /****************************************************************/
 
 
-extern const double CLS_RGB2XYZ_Default[3][3];
+extern const float CLS_RGB2XYZ_Default[3][3];
 
 
 /*!\brief Determining chromacity following RGB values
@@ -29,14 +29,14 @@ extern const double CLS_RGB2XYZ_Default[3][3];
 ** \param[in] b - Blue value
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ CLS_get_chromacity(float xy[2], uint32_t * illum, const double mat[3][3], const uint16_t r, const uint16_t g, const uint16_t b);
+FctERR NONNULL__ CLS_get_chromacity(float xy[2], uint32_t * const illum, const float mat[3][3], const uint16_t r, const uint16_t g, const uint16_t b);
 
 /*!\brief Determining CCT (correlated temperature) following xy values
 ** \param[in,out] cct - Pointer to CCT result
 ** \param[in] xy - Pointer to chromacity coordinates
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ CLS_get_CCT(uint32_t * cct, const float xy[2]);
+FctERR NONNULL__ CLS_get_CCT(uint32_t * const cct, const float xy[2]);
 
 
 /****************************************************************/

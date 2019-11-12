@@ -16,6 +16,44 @@
 /****************************************************************/
 
 
+FctERR NONNULL__ PCA9685_CalcVal(uint8_t val[4], const uint16_t duty, const uint16_t delay)
+{
+	if ((duty > 4095) || (delay >= 4095))	{ return ERROR_RANGE; }
+
+	uint16_t ONCount = delay;
+	uint16_t OFFCount = (delay + duty) % 4095;
+
+	if (duty == 0)			{ OFFCount |= 0x1000; }	// Off count set to 4096 to fill bit FullOnOff
+	else if (duty == 4095)	{ ONCount |= 0x1000; }	// On count set to 4096 to fill bit FullOnOff
+
+	val[0] = LOBYTE(ONCount);
+	val[1] = HIBYTE(ONCount);
+	val[2] = LOBYTE(OFFCount);
+	val[3] = HIBYTE(OFFCount);
+
+	return ERROR_OK;
+}
+
+
+FctERR NONNULL__ PCA9685_CalcVal_NoDelay(uint8_t val[4], const uint16_t duty)
+{
+	if (duty > 4095)	{ return ERROR_RANGE; }
+
+	uint16_t ONCount = 0;
+	uint16_t OFFCount = duty;
+
+	if (duty == 0)			{ OFFCount |= 0x1000; }	// Off count set to 4096 to fill bit FullOnOff
+	else if (duty == 4095)	{ ONCount |= 0x1000; }	// On count set to 4096 to fill bit FullOnOff
+
+	val[0] = LOBYTE(ONCount);
+	val[1] = HIBYTE(ONCount);
+	val[2] = LOBYTE(OFFCount);
+	val[3] = HIBYTE(OFFCount);
+
+	return ERROR_OK;
+}
+
+
 FctERR NONNULL__ PCA9685_Set_Latch(PCA9685_t * pCpnt, const PCA96xx_latch latch)
 {
 	uPCA9685_REG__MODE2	MODE2;
@@ -82,7 +120,7 @@ FctERR NONNULL__ PCA9685_ReadRegister(PCA9685_t * pCpnt, const PCA9685_reg reg, 
 {
 	*val = 0;
 
-	if ((reg >= PCA9685__LED15_OFF_H) && (reg <= PCA9685__ALL_LED_ON_L))	{ return ERROR_RANGE; } // Unknown channel
+	if ((reg > PCA9685__LED15_OFF_H) && (reg < PCA9685__ALL_LED_ON_L))	{ return ERROR_RANGE; } // Unknown register
 
 	return PCA9685_Read(pCpnt->cfg.slave_inst, val, reg, 1);
 }
@@ -95,7 +133,7 @@ FctERR NONNULL__ PCA9685_ReadVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan, uin
 
 	*duty = 0;
 
-	if (chan > PCA9xxx__PWM16)		{ return ERROR_RANGE; } // Unknown channel
+	if (chan > PCA9xxx__PWM16)	{ return ERROR_RANGE; } // Unknown channel
 
 	err = PCA9685_Read(pCpnt->cfg.slave_inst, DATA, LED_OFFSET_L(chan), sizeof(DATA));
 
@@ -143,20 +181,16 @@ FctERR NONNULL__ PCA9685_ReadValByte(PCA9685_t * pCpnt, const PCA9xxx_chan chan,
 FctERR NONNULL__ PCA9685_PutVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan, const uint16_t duty, const uint16_t delay)
 {
 	PCA9685_reg RegAddr;
+	uint8_t		DATA[4];
+	FctERR		err;
 
-	if ((duty > 4095) || (delay >= 4095))		{ return ERROR_RANGE; }
+	if (chan == PCA96xx__ALL)			{ RegAddr = PCA9685__ALL_LED_ON_L; }	// All channels at once
+	else if (chan <= PCA9xxx__PWM16)	{ RegAddr = LED_OFFSET_L(chan); }		// Regular channel
+	else								{ return ERROR_RANGE; }					// Unknown channel
 
-	if (chan == PCA96xx__ALL)					{ RegAddr = PCA9685__ALL_LED_ON_L; }	// All channels at once
-	else if (chan <= PCA9xxx__PWM16)			{ RegAddr = LED_OFFSET_L(chan); }		// Regular channel
-	else										{ return ERROR_RANGE; }					// Unknown channel
+	err = PCA9685_CalcVal(DATA, duty, delay);
+	if (err)	{ return err; }
 
-	uint16_t ONCount = delay;
-	uint16_t OFFCount = (delay + duty) % 4095;
-
-	if (duty == 0)			{ OFFCount |= 0x1000; }	// Off count set to 4096 to fill bit FullOnOff
-	else if (duty == 4095)	{ ONCount |= 0x1000; }	// On count set to 4096 to fill bit FullOnOff
-
-	const uint8_t DATA[4] = { LOBYTE(ONCount), HIBYTE(ONCount), LOBYTE(OFFCount), HIBYTE(OFFCount) };
 	return PCA9685_Write(pCpnt->cfg.slave_inst, DATA, RegAddr, sizeof(DATA));
 }
 

@@ -37,6 +37,24 @@
 // *****************************************************************************
 // Section: Interface Routines
 // *****************************************************************************
+/*!\brief Computes values for PCA9685 registers (4bytes) following duty and delay
+** \note Useful to manually fill an array with registers values to send multiple channels at once in one I2C transaction
+** \note If no delay is required, PCA9685_CalcVal_NoDelay may be used instead
+** \param[in,out] val - Pointer to 4 bytes array output
+** \param[in] duty - Duty cycle coded on 12b (0-4095)
+** \param[in] delay - Delay coded on 12b (0-<4095)
+** \return FctERR - error code
+**/
+FctERR NONNULL__ PCA9685_CalcVal(uint8_t val[4], const uint16_t duty, const uint16_t delay);
+
+/*!\brief Computes values for PCA9685 registers (4bytes) following duty (without delay)
+** \note Useful to manually fill an array with registers values to send multiple channels at once in one I2C transaction
+** \param[in,out] val - Pointer to 4 bytes array output
+** \param[in] duty - Duty cycle coded on 12b (0-4095)
+** \return FctERR - error code
+**/
+FctERR NONNULL__ PCA9685_CalcVal_NoDelay(uint8_t val[4], const uint16_t duty);
+
 /*!\brief Convert Frequency to Prescaler byte register
 ** \param[in] pCpnt - Pointer to PCA9685 component
 ** \param[in,out] byte - Pointer to output value
@@ -122,7 +140,7 @@ FctERR NONNULL__ PCA9685_ReadValByte(PCA9685_t * pCpnt, const PCA9xxx_chan chan,
 ** \param[in] pCpnt - Pointer to PCA9685 component
 ** \param[in] chan - Channel number (1 to 16 / PCA9685_ALLCALL can be used to address all channels at the same time)
 ** \param[in] duty - Duty cycle coded on 12b (0-4095)
-** \param[in] delay - Delay coded on 12b (0-4095)
+** \param[in] delay - Delay coded on 12b (0-<4095)
 ** \return FctERR - ErrorCode
 **/
 FctERR NONNULL__ PCA9685_PutVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan, const uint16_t duty, const uint16_t delay);
@@ -149,7 +167,8 @@ __INLINE FctERR NONNULL__ PCA9685_PutValPerc(PCA9685_t * pCpnt, const PCA9xxx_ch
 	if ((delay < 0.0f) || (delay >= 100.0f))	{ return ERROR_RANGE; }
 	return PCA9685_PutVal(pCpnt, chan, (uint16_t) ((duty / 100.0f) * 4095), (uint16_t) ((delay / 100.0f) * 4095)); }
 
-/*!\brief Sends I2C lighting ON values to apply to a particular or all channels for PCA9685
+/*!\brief Sends I2C lighting ON values to apply to a particular or all channels for PCA9685 (no delay)
+** \note No configured delay
 ** \param[in] pCpnt - Pointer to PCA9685 component
 ** \param[in] chan - Channel number (1 to 16 / PCA9685_ALLCALL can be used to address all channels at the same time)
 ** \return FctERR - ErrorCode
@@ -157,7 +176,8 @@ __INLINE FctERR NONNULL__ PCA9685_PutValPerc(PCA9685_t * pCpnt, const PCA9xxx_ch
 FctERR NONNULL__ PCA9685_SetVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan);
 
 
-/*!\brief Sends I2C PWm OFF values to apply to a particular or all channels for PCA9685
+/*!\brief Sends I2C PWm OFF values to apply to a particular or all channels for PCA9685 (no delay)
+** \note No configured delay
 ** \param[in] pCpnt - Pointer to PCA9685 component
 ** \param[in] chan - Channel number (1 to 16 / PCA9685_ALLCALL can be used to address all channels at the same time)
 ** \return FctERR - ErrorCode

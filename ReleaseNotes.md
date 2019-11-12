@@ -30,6 +30,7 @@ SOFTWARE.
 * AMG88: added
 * APDS9930: added (+ warning if APDS9960 also compiled, OFFSET union removed as coded as signed 8bits integer)
 * APDS9960: added with fixes and default handler
+* APDS99xx: use of config bits (instead of Status register ones) to trigger proper interrupt(s) clear function
 * BMP180: fixed temperature and pressure calculation (no use of unsigned LSHIFT or RSHIFT for signed calculations)
 * FM24C: added possibility to customize FM24C_SIZE macro if needed
 * MCP4725: Fixed general call function (transmit command, not receive), and taking I2C_HandleTypeDef pointer as parameter
@@ -54,8 +55,10 @@ SOFTWARE.
 * PCA9685: possible handling of external clock and computation of prescaler and frequency modified
 * PCA9685: functions to compute frequency/prescaler for outputs frequency rationalization with PCA9532 functions
 * PCA9685: Refactoring and changes to handle PCA9685 outputs shifting (delay on)
+* PCA9685: Dedicated functions to compute PWM register values (useful to manually fill an array with registers values to send multiple channels at once in one I2C transaction)
 * shared_ALS: added files for common code regarding ambient light sensing
 * shared_CLS: added files for common code regarding color light sensing (RGB to chromacity CIE1931 xy conversion and CCT calculation)
+* shared_CLS: double precision now single precision
 * shared_Temperature: added files for common code regarding temperature conversion (Ceelsius & Farenheit)
 * TCS3400, TCS3472: added matrix in peripheral configuration struct (to be able to use custom matrix for RGB to XYZ conversion)
 * TCS34xx, TSL2591: set x(I)EN flags with same value in weak init sequence

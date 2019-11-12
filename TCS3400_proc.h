@@ -55,7 +55,7 @@ typedef struct TCS3400_t {
 	bool			Saturation;			//!< Current Sensor saturation status
 	struct {
 	I2C_slave_t *	slave_inst;			//!< Slave structure
-	double			mat[3][3];			//!< RGB to XYZ matrix
+	float			mat[3][3];			//!< RGB to XYZ matrix
 	TCS3400_gain	Gain;				//!< Sensor gain config
 	uint8_t			Integ_reg;			//!< Sensor integration time config (value written to register)
 	uint16_t		Integ;				//!< Sensor integration time config

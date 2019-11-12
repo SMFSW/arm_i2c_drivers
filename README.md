@@ -38,7 +38,7 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 
 - **APDS9960**: Digital Proximity, Ambient Light, RGB and Gesture Sensor
 
-  -> _CODING IN PROGRESS_
+  -> _WORKING, TESTS PENDING (GESTURE DISABLED YET)_
 
 - **AT42QT1244**: 24-key QMatrix FMEA IEC/EN/UL60730 Touch Sensor
 
@@ -94,7 +94,7 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 
 - **PCA9685**: 16-channel, 12-bit PWM Fm+ I2C-bus LED controller
 
-  -> _WORKING (TODO: handle more extensions)_
+  -> _WORKING_
 
 - **PCF8523**: Real-Time Clock (RTC) and calendar
 
@@ -141,12 +141,13 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 
 You may also:
 
-- contribute to devices additions using the template in subfolder
+- contribute with more devices using templates in subfolder
+  - if in doubt, `multiple` template implementation is recommended
 - raise issue on github to ask for particular devices
 
 ## TODO
 
-- FreeRTOS compatibility using R/W functions using interrupts with callbacks
+- FreeRTOS compatibility using R/W functions using interrupts with callbacks (when possible)
 
 ## Misc
 

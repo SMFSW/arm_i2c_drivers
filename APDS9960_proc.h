@@ -50,7 +50,7 @@ typedef struct APDS9960_t {
 	bool						Saturation;			//!< Current Sensor saturation status
 	struct {
 	I2C_slave_t *				slave_inst;			//!< Slave structure
-	double						mat[3][3];			//!< RGB to XYZ matrix
+	float						mat[3][3];			//!< RGB to XYZ matrix
 	APDS9960_als_gain			ADC_Gain;			//!< ADC (ALS & Color) sensor gain config
 	APDS9960_prox_gain			Prox_Gain;			//!< Proximity sensor gain config
 	APDS9960_pulse_length		Prox_Length;			//!< Proximity LED pulse length
