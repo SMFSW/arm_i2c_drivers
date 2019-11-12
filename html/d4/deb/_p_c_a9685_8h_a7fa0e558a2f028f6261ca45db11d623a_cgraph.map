@@ -1,20 +1,21 @@
 <map id="PCA9685_Init" name="PCA9685_Init">
-<area shape="rect" id="node2" href="$d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="195,284,303,311"/>
-<area shape="rect" id="node3" href="$d4/d97/_p_c_a9685__proc_8c.html#a6e9b5100a9232482cb86ed5b115ac8ad" title="Initialization Sequence for PCA9685 peripheral. " alt="" coords="160,335,337,361"/>
-<area shape="rect" id="node19" href="$d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="189,385,308,412"/>
-<area shape="rect" id="node4" href="$d5/d22/_p_c_a9685__proc_8h.html#a43cef4cc45a4317afbc2b0adca8f27bd" title="Sets external clock frequency. " alt="" coords="385,208,569,235"/>
-<area shape="rect" id="node5" href="$de/dca/_p_c_a9685_8c.html#a19e471c9dd64911bd669d77edf64850f" title="I2C Write function for PCA9685. " alt="" coords="873,309,991,336"/>
+<area shape="rect" id="node2" href="$d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="195,107,303,133"/>
+<area shape="rect" id="node3" href="$d4/d97/_p_c_a9685__proc_8c.html#a6e9b5100a9232482cb86ed5b115ac8ad" title="Initialization Sequence for PCA9685 peripheral. " alt="" coords="160,157,337,184"/>
+<area shape="rect" id="node20" href="$d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="189,208,308,235"/>
+<area shape="rect" id="node4" href="$d5/d22/_p_c_a9685__proc_8h.html#a43cef4cc45a4317afbc2b0adca8f27bd" title="Sets external clock frequency. " alt="" coords="385,5,569,32"/>
+<area shape="rect" id="node5" href="$de/dca/_p_c_a9685_8c.html#a19e471c9dd64911bd669d77edf64850f" title="I2C Write function for PCA9685. " alt="" coords="873,157,991,184"/>
 <area shape="rect" id="node8" href="$d3/d57/_p_c_a9685__ex_8h.html#a362f92dfc5a04bee979bfdb06df8cb44" title="Convert Frequency to Prescaler byte register. " alt="" coords="847,411,1017,437"/>
-<area shape="rect" id="node9" href="$d3/d57/_p_c_a9685__ex_8h.html#a7bff35ee1bfc32f73492cb237f83f697" title="Convert Prescaler byte register to Frequency (in Hz) " alt="" coords="392,259,563,285"/>
-<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1065,259,1183,285"/>
-<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1071,309,1177,336"/>
-<area shape="rect" id="node10" href="$d3/d57/_p_c_a9685__ex_8h.html#aef35f185a62d73c7d697b5df08ae5b7e" title="Set latch type for PCA9685 peripheral. " alt="" coords="633,259,783,285"/>
-<area shape="rect" id="node12" href="$d3/d57/_p_c_a9685__ex_8h.html#a4148be6f53393ba4a04d01b233cee2f2" title="Set frequency for PCA9685 peripheral. " alt="" coords="617,360,799,387"/>
-<area shape="rect" id="node13" href="$d3/d57/_p_c_a9685__ex_8h.html#ad9385ccd48e1586097d7f37e1ee29132" title="Reset for PCA9685 peripheral. " alt="" coords="647,157,769,184"/>
-<area shape="rect" id="node14" href="$d3/d57/_p_c_a9685__ex_8h.html#a43f7f89c8444a93594f6c9d782db731c" title="General call reset function for PCA9685. " alt="" coords="636,208,780,235"/>
-<area shape="rect" id="node15" href="$d3/d57/_p_c_a9685__ex_8h.html#a1379f6ccb909098b09e1170f56b3a632" title="Reads I2C register from PCA9685. " alt="" coords="623,107,793,133"/>
-<area shape="rect" id="node16" href="$d3/d57/_p_c_a9685__ex_8h.html#a7a288a67b24c2999f3bdbf38650e9226" title="Reads I2C lighting values from a LED and Computes the corresponding duty cycle value (12b) ..." alt="" coords="639,5,777,32"/>
-<area shape="rect" id="node17" href="$d3/d57/_p_c_a9685__ex_8h.html#a038062a57cd77b9886e6ea2bd7332f9f" title="Reads I2C lighting values from a LED and Computes the corresponding duty cycle value (Byte) ..." alt="" coords="625,56,791,83"/>
-<area shape="rect" id="node18" href="$d3/d57/_p_c_a9685__ex_8h.html#a659aa74abbc11db17389f3b031d209b0" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685 (12b) ..." alt="" coords="645,309,771,336"/>
-<area shape="rect" id="node11" href="$de/dca/_p_c_a9685_8c.html#abd867bbd8cae7b60749050a9c68c279a" title="I2C Read function for PCA9685. " alt="" coords="873,259,991,285"/>
+<area shape="rect" id="node9" href="$d3/d57/_p_c_a9685__ex_8h.html#a7bff35ee1bfc32f73492cb237f83f697" title="Convert Prescaler byte register to Frequency (in Hz) " alt="" coords="392,284,563,311"/>
+<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1065,157,1183,184"/>
+<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1071,208,1177,235"/>
+<area shape="rect" id="node10" href="$d3/d57/_p_c_a9685__ex_8h.html#aef35f185a62d73c7d697b5df08ae5b7e" title="Set latch type for PCA9685 peripheral. " alt="" coords="633,157,783,184"/>
+<area shape="rect" id="node12" href="$d3/d57/_p_c_a9685__ex_8h.html#a4148be6f53393ba4a04d01b233cee2f2" title="Set frequency for PCA9685 peripheral. " alt="" coords="617,309,799,336"/>
+<area shape="rect" id="node13" href="$d3/d57/_p_c_a9685__ex_8h.html#ad9385ccd48e1586097d7f37e1ee29132" title="Reset for PCA9685 peripheral. " alt="" coords="647,360,769,387"/>
+<area shape="rect" id="node14" href="$d3/d57/_p_c_a9685__ex_8h.html#a43f7f89c8444a93594f6c9d782db731c" title="General call reset function for PCA9685. " alt="" coords="636,411,780,437"/>
+<area shape="rect" id="node15" href="$d3/d57/_p_c_a9685__ex_8h.html#a1379f6ccb909098b09e1170f56b3a632" title="Reads I2C register from PCA9685. " alt="" coords="623,259,793,285"/>
+<area shape="rect" id="node16" href="$d3/d57/_p_c_a9685__ex_8h.html#a7a288a67b24c2999f3bdbf38650e9226" title="Reads I2C lighting values from a LED and Computes the corresponding duty cycle value (12b) ..." alt="" coords="639,461,777,488"/>
+<area shape="rect" id="node17" href="$d3/d57/_p_c_a9685__ex_8h.html#a038062a57cd77b9886e6ea2bd7332f9f" title="Reads I2C lighting values from a LED and Computes the corresponding duty cycle value (Byte) ..." alt="" coords="625,208,791,235"/>
+<area shape="rect" id="node18" href="$d3/d57/_p_c_a9685__ex_8h.html#a659aa74abbc11db17389f3b031d209b0" title="Computes and send I2C lighting values to apply to a particular or all channels for PCA9685 (12b) ..." alt="" coords="645,107,771,133"/>
+<area shape="rect" id="node11" href="$de/dca/_p_c_a9685_8c.html#abd867bbd8cae7b60749050a9c68c279a" title="I2C Read function for PCA9685. " alt="" coords="873,208,991,235"/>
+<area shape="rect" id="node19" href="$df/d1d/_p_c_a9685__ex_8c.html#a4a5535e36528946a5ffc3a526c83cc03" title="Computes values for PCA9685 registers (4bytes) following duty and delay. " alt="" coords="865,107,999,133"/>
 </map>

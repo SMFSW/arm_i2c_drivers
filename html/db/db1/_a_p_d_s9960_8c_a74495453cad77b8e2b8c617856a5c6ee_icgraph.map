@@ -1,8 +1,6 @@
 <map id="APDS9960_Write_Special" name="APDS9960_Write_Special">
 <area shape="rect" id="node2" href="$da/db5/_a_p_d_s9960__ex_8h.html#a0cee9b60c2676b12ca754d8dc3aa9786" title="Force interruption. " alt="" coords="254,5,426,32"/>
 <area shape="rect" id="node3" href="$da/db5/_a_p_d_s9960__ex_8h.html#a0348d8f5f2389b7e3456f67e1ca744f5" title="Clear pending Proximity interruption. " alt="" coords="235,56,445,83"/>
-<area shape="rect" id="node6" href="$da/db5/_a_p_d_s9960__ex_8h.html#aa46fba3aefdc2fc34ac6e9a6d4377517" title="Clear pending ALS interruption. " alt="" coords="239,107,441,133"/>
-<area shape="rect" id="node7" href="$da/db5/_a_p_d_s9960__ex_8h.html#ac4ec97026a93bb265f5daeaa81db7edf" title="Clear pending ALS &amp; Proximity interruptions. " alt="" coords="247,158,433,199"/>
-<area shape="rect" id="node4" href="$df/d17/_a_p_d_s9960__proc_8h.html#acbd98fa25322d45e5be0fcbc5977d6d6" title="Handler for APDS9960 peripheral. " alt="" coords="493,107,639,133"/>
-<area shape="rect" id="node5" href="$df/d17/_a_p_d_s9960__proc_8h.html#afa04bc1a2bded2ddd64565252ac7c6b9" title="Handler for all APDS9960 peripherals. " alt="" coords="687,107,853,133"/>
+<area shape="rect" id="node4" href="$da/db5/_a_p_d_s9960__ex_8h.html#aa46fba3aefdc2fc34ac6e9a6d4377517" title="Clear pending ALS interruption. " alt="" coords="239,107,441,133"/>
+<area shape="rect" id="node5" href="$da/db5/_a_p_d_s9960__ex_8h.html#ac4ec97026a93bb265f5daeaa81db7edf" title="Clear pending ALS &amp; Proximity interruptions. " alt="" coords="247,158,433,199"/>
 </map>

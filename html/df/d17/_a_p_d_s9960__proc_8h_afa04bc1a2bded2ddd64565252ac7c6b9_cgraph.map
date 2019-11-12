@@ -1,10 +1,6 @@
 <map id="APDS9960_handler_all" name="APDS9960_handler_all">
-<area shape="rect" id="node2" href="$df/d17/_a_p_d_s9960__proc_8h.html#acbd98fa25322d45e5be0fcbc5977d6d6" title="Handler for APDS9960 peripheral. " alt="" coords="220,93,365,120"/>
-<area shape="rect" id="node3" href="$db/db1/_a_p_d_s9960_8c.html#accf1647389a8e387e4525d4c37435857" title="I2C Read function for APDS9960. " alt="" coords="455,5,583,32"/>
-<area shape="rect" id="node6" href="$da/db5/_a_p_d_s9960__ex_8h.html#ac4ec97026a93bb265f5daeaa81db7edf" title="Clear pending ALS &amp; Proximity interruptions. " alt="" coords="426,57,611,98"/>
-<area shape="rect" id="node8" href="$da/db5/_a_p_d_s9960__ex_8h.html#aa46fba3aefdc2fc34ac6e9a6d4377517" title="Clear pending ALS interruption. " alt="" coords="417,123,620,149"/>
-<area shape="rect" id="node9" href="$da/db5/_a_p_d_s9960__ex_8h.html#a0348d8f5f2389b7e3456f67e1ca744f5" title="Clear pending Proximity interruption. " alt="" coords="413,173,624,200"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="704,5,821,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="901,89,1008,116"/>
-<area shape="rect" id="node7" href="$db/db1/_a_p_d_s9960_8c.html#a74495453cad77b8e2b8c617856a5c6ee" title="I2C Special function Write function for APDS9960. " alt="" coords="672,119,853,145"/>
+<area shape="rect" id="node2" href="$df/d17/_a_p_d_s9960__proc_8h.html#acbd98fa25322d45e5be0fcbc5977d6d6" title="Handler for APDS9960 peripheral. " alt="" coords="220,31,365,57"/>
+<area shape="rect" id="node3" href="$db/db1/_a_p_d_s9960_8c.html#accf1647389a8e387e4525d4c37435857" title="I2C Read function for APDS9960. " alt="" coords="413,31,541,57"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="589,5,707,32"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="595,56,701,83"/>
 </map>
