@@ -30,7 +30,10 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
+#ifndef FM24C_BASE_ADDR
+//! \note Define FM24C_BASE_ADDR in globals.h or at project to change default device base address
 #define FM24C_BASE_ADDR		0x50				//!< FM24C Base address
+#endif
 
 
 #define	FM24C_BANK_SIZE		0x100				//!< FM24C bank size (in bytes)
@@ -39,7 +42,7 @@
 #define	FM24C16B_SIZE		0x800				//!< FM24C size (in bytes)
 
 #ifndef FM24C_SIZE
-//!< FM24C_SIZE defaults to FM24C16B size, but can be defined in globals.h or at project level for FM24C04B for example
+//! \note FM24C_SIZE defaults to FM24C16B size, but can be defined in globals.h or at project level to FM24C04B_SIZE (for example)
 #define FM24C_SIZE			FM24C16B_SIZE		//!< FM24C size
 #endif
 

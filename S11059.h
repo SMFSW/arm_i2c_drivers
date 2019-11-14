@@ -31,7 +31,10 @@
 // *****************************************************************************
 #define S11059_ADDR			0x2A			//!< S11059 address
 
+#ifndef S11059_BASE_ADDR
+//! \note Define S11059_BASE_ADDR in globals.h or at project to change default device base address
 #define S11059_BASE_ADDR	S11059_ADDR		//!< S11059 Base address
+#endif
 
 
 // *****************************************************************************

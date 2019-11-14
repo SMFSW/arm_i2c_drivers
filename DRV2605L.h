@@ -24,7 +24,10 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
+#ifndef DRV2605L_BASE_ADDR
+//! \note Define DRV2605L_BASE_ADDR in globals.h or at project to change default device base address
 #define DRV2605L_BASE_ADDR		0x5A		//!< DRV2605L Base address
+#endif
 
 
 // *****************************************************************************

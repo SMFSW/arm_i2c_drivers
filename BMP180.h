@@ -29,7 +29,11 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
+#ifndef BMP180_BASE_ADDR
+//! \note Define BMP180_BASE_ADDR in globals.h or at project to change default device base address
 #define BMP180_BASE_ADDR	0x77		//!< BMP180 Base address
+#endif
+
 
 // *****************************************************************************
 // Section: Datas

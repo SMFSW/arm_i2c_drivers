@@ -31,7 +31,10 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
+#ifndef PCA9532_BASE_ADDR
+//! \note Define PCA9532_BASE_ADDR in globals.h or at project to change default device base address
 #define	PCA9532_BASE_ADDR			0x60		//!< PCA9532 Base Address
+#endif
 
 
 // *****************************************************************************

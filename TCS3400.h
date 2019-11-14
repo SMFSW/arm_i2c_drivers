@@ -34,7 +34,10 @@
 #define TCS34005_ADDR			0x29			//!< TCS34005 Base address
 #define TCS34007_ADDR			0x29			//!< TCS34007 Base address
 
+#ifndef TCS3400_BASE_ADDR
+//! \note Define TCS3400_BASE_ADDR in globals.h or at project to change default device base address
 #define TCS3400_BASE_ADDR		TCS34005_ADDR	//!< TCS3400 Base address
+#endif
 
 
 // *****************************************************************************

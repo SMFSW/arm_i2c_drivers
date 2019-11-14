@@ -30,7 +30,10 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
+#ifndef MTCH6102_BASE_ADDR
+//! \note Define MTCH6102_BASE_ADDR in globals.h or at project to change default device base address
 #define MTCH6102_BASE_ADDR	0x25		//!< MTCH6102 default address value
+#endif
 
 
 // *****************************************************************************

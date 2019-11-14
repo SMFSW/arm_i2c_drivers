@@ -26,7 +26,10 @@
 // *****************************************************************************
 #define $CPNT$_ADDR			0x00			//!< $CPNT$ address
 
+#ifndef $CPNT$_BASE_ADDR
+//! \note Define $CPNT$_BASE_ADDR in globals.h or at project to change default device base address
 #define $CPNT$_BASE_ADDR	$CPNT$_ADDR		//!< $CPNT$ Base address
+#endif
 
 
 // *****************************************************************************

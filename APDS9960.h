@@ -32,7 +32,10 @@
 // *****************************************************************************
 #define APDS9960_ADDR		0x39				//!< APDS9960 address
 
+#ifndef APDS9960_BASE_ADDR
+//! \note Define APDS9960_BASE_ADDR in globals.h or at project to change default device base address
 #define APDS9960_BASE_ADDR	APDS9960_ADDR		//!< APDS9960 Base address
+#endif
 
 
 // *****************************************************************************

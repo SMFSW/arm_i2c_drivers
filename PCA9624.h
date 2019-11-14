@@ -31,9 +31,11 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
+#ifndef PCA9624_BASE_ADDR
+//! \note Define PCA9624_BASE_ADDR in globals.h or at project to change default device base address
+//! \warning no real base default address
 #define	PCA9624_BASE_ADDR			0x00		//!< PCA9624 Base Address
-//\warning no real base default address
-
+#endif
 
 // *****************************************************************************
 // Section: Datas

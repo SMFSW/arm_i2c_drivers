@@ -35,7 +35,10 @@
 #define AT42QT1244_ADDR_A1		17					//!< AT42QT1244 address (A0 tied to GND & A1 tied to PWR)
 #define AT42QT1244_ADDR_A01		117					//!< AT42QT1244 address (A0 & A1 tied to PWR)
 
+#ifndef AT42QT1244_BASE_ADDR
+//! \note Define AT42QT1244_BASE_ADDR in globals.h or at project to change default device base address
 #define AT42QT1244_BASE_ADDR	AT42QT1244_ADDR		//!< AT42QT1244 Base address
+#endif
 
 
 // *****************************************************************************

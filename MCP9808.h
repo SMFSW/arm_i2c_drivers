@@ -31,7 +31,10 @@
 // *****************************************************************************
 #define MCP9808_ADDR		0x18			//!< MCP9808 address
 
+#ifndef MCP9808_BASE_ADDR
+//! \note Define MCP9808_BASE_ADDR in globals.h or at project to change default device base address
 #define MCP9808_BASE_ADDR	MCP9808_ADDR	//!< MCP9808 Base address
+#endif
 
 
 // *****************************************************************************

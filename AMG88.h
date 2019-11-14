@@ -32,7 +32,10 @@
 // *****************************************************************************
 #define AMG88_ADDR			0x68			//!< AMG88 address
 
+#ifndef AMG88_BASE_ADDR
+//! \note Define AMG88_BASE_ADDR in globals.h or at project to change default device base address
 #define AMG88_BASE_ADDR		AMG88_ADDR		//!< AMG88 Base address
+#endif
 
 
 // *****************************************************************************

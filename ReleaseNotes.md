@@ -27,6 +27,7 @@ SOFTWARE.
 	- except: DS_GPMS, PCF8523 & DRV2605L
 * template update (splitted into singleton/multiple device(s))
 * more NONNULL__ checks
+* possibility to set different device base address than default set in header (at project level or in globals.h)
 * AMG88: added
 * APDS9930: added (+ warning if APDS9960 also compiled, OFFSET union removed as coded as signed 8bits integer)
 * APDS9960: added with fixes and default handler

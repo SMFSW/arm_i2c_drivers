@@ -25,7 +25,10 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
+#ifndef PCF8523_BASE_ADDR
+//! \note Define PCF8523_BASE_ADDR in globals.h or at project to change default device base address
 #define PCF8523_BASE_ADDR	0x68		//!< PCF8523 Base address
+#endif
 
 
 // *****************************************************************************

@@ -31,7 +31,10 @@
 #define GPMS_JUMPER_A0		2									//!< DS-GPM.S index with jumper A0
 #define GPMS_JUMPER_NONE	3									//!< DS-GPM.S index with no jumper
 
+#ifndef GPMS_BASE_ADDR
+//! \note Define GPMS_BASE_ADDR in globals.h or at project to change default device base address
 #define GPMS_BASE_ADDR		(GPMS_ADDR + GPMS_JUMPER_A0_A1)		//!< DS-GPM.S Base address
+#endif
 
 
 // *****************************************************************************

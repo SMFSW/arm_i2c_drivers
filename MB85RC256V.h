@@ -29,7 +29,11 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
+#ifndef MB85RC256V_BASE_ADDR
+//! \note Define MB85RC256V_BASE_ADDR in globals.h or at project to change default device base address
 #define MB85RC256V_BASE_ADDR	0x50			//!< MB85RC256V Base address
+#endif
+
 
 #define MB85RC256V_SIZE			0x8000			//!< MB85RC256V size (in bytes)
 

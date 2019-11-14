@@ -29,7 +29,10 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
+#ifndef TSL2591_BASE_ADDR
+//! \note Define TSL2591_BASE_ADDR in globals.h or at project to change default device base address
 #define TSL2591_BASE_ADDR		0x29		//!< TSL2591 Base address
+#endif
 
 
 // *****************************************************************************

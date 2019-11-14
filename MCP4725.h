@@ -36,7 +36,10 @@
 #define MCP4725A1_ADDR		0x62			//!< MCP4725 with A1 address
 #define MCP4725A2_ADDR		0x64			//!< MCP4725 with A2 address
 
+#ifndef MCP4725_BASE_ADDR
+//! \note Define MCP4725_BASE_ADDR in globals.h or at project to change default device base address
 #define MCP4725_BASE_ADDR	MCP4725A1_ADDR	//!< MCP4725 Base address
+#endif
 
 
 // *****************************************************************************
