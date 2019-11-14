@@ -12,6 +12,7 @@
 /****************************************************************/
 // std libs
 #include <stdlib.h>
+#include "tick_utils.h"
 /****************************************************************/
 
 
@@ -91,34 +92,41 @@ FctERR NONNULL__ AT42QT1244_Read(I2C_slave_t * pSlave, uint8_t * data, const uin
 	if (addr > AT42QT__SETUP_HOST_CRC_MSB)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > AT42QT__SETUP_HOST_CRC_MSB + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
-	FctERR		err;
-	uint16_t	crc = 0;
-	uint8_t		preamble[2] = { (uint8_t) addr, (uint8_t) nb };
-	uint8_t *	tmp_read = malloc(nb + 2);
+	uint8_t * read = malloc(nb + 2);
+
+	if (read == NULL)									{ return ERROR_MEMORY; }	// Memory allocation failed
+
+	FctERR	err;
+	uint8_t	preamble[2] = { addr, nb };
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Master_Transmit(pSlave->cfg.bus_inst, pSlave->cfg.addr, preamble, nb, pSlave->cfg.timeout);
 	I2C_set_busy(pSlave, false);
 	err = HALERRtoFCTERR(pSlave->status);
 
-	// TODO: WAIT 150us to add??
-
 	if (pSlave->status == HAL_OK)
 	{
-		pSlave->status = HAL_I2C_Master_Receive(pSlave->cfg.bus_inst, pSlave->cfg.addr, tmp_read, nb + 2, pSlave->cfg.timeout);
+		Delay_us(150);	// Have to wait for 150us
+		I2C_set_busy(pSlave, true);
+		pSlave->status = HAL_I2C_Master_Receive(pSlave->cfg.bus_inst, pSlave->cfg.addr, read, nb + 2, pSlave->cfg.timeout);
+		I2C_set_busy(pSlave, false);
 		err = HALERRtoFCTERR(pSlave->status);
 	}
 
 	if (pSlave->status == HAL_OK)
 	{
+		uint16_t crc = 0;
+
 		// Checksum calculation
-		for (int i = 0 ; i < nb ; i++)	{ crc = crc16(crc, tmp_read[i]); }
+		crc = crc16(crc, RSHIFT(pSlave->cfg.addr, 1));
+		for (int i = 0 ; i < sizeof(preamble) ; i++)	{ crc = crc16(crc, preamble[i]); }
+		for (int i = 0 ; i < nb ; i++)					{ crc = crc16(crc, read[i]); }
 		// Copy to destination if crc is ok
-		if (crc == MAKEWORD(tmp_read[nb], tmp_read[nb + 1]))	{ memcpy(data, tmp_read, nb); }
-		else													{ err = ERROR_CRC; }
+		if (crc == MAKEWORD(read[nb], read[nb + 1]))	{ memcpy(data, read, nb); }
+		else											{ err = ERROR_CRC; }
 	}
 
-	free(tmp_read);
+	free(read);
 	return err;
 }
 

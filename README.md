@@ -7,7 +7,7 @@ ARM I2C Drivers for various components
 - sarmfsw
   - [sarmfsw](https://github.com/SMFSW/sarmfsw)
 
-- HARMcksL
+- HARMcksL (following used components(s))
   - [HARMcksL](https://github.com/SMFSW/HARMcksL)
 
 ## Usage
