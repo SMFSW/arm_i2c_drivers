@@ -32,9 +32,10 @@ SOFTWARE.
 * APDS9930: added (+ warning if APDS9960 also compiled, OFFSET union removed as coded as signed 8bits integer)
 * APDS9960: added with fixes and default handler
 * APDS99xx: use of config bits (instead of Status register ones) to trigger proper interrupt(s) clear function
-* AT42QT1244: fixed delay for reading transmissions and bytes used for crc calculation
+* AT42QT1244: fixed read transactions (and fixes for read transactions)
 * AT42QT1244: crc calculation not static (to be able to use it to generate crc for setup block)
-* AT42QT1244: weak handler implemented
+* AT42QT1244: added function to compute setup block crc (with reset & delays)
+* AT42QT1244: weak handler & init implementations
 * BMP180: fixed temperature and pressure calculation (no use of unsigned LSHIFT or RSHIFT for signed calculations)
 * FM24C: added possibility to customize FM24C_SIZE macro if needed
 * MCP4725: Fixed general call function (transmit command, not receive), and taking I2C_HandleTypeDef pointer as parameter
@@ -60,6 +61,7 @@ SOFTWARE.
 * PCA9685: functions to compute frequency/prescaler for outputs frequency rationalization with PCA9532 functions
 * PCA9685: Refactoring and changes to handle PCA9685 outputs shifting (delay on)
 * PCA9685: Dedicated functions to compute PWM register values (useful to manually fill an array with registers values to send multiple channels at once in one I2C transaction)
+* README.md: updated (and added limitations section)
 * shared_ALS: added files for common code regarding ambient light sensing
 * shared_CLS: added files for common code regarding color light sensing (RGB to chromacity CIE1931 xy conversion and CCT calculation)
 * shared_CLS: double precision now single precision

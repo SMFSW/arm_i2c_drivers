@@ -21,10 +21,10 @@ FctERR NONNULL__ AT42QT1244_Send_Command(AT42QT1244_t * pCpnt, const AT42QT_cmd 
 
 FctERR NONNULL__ AT42QT1244_Send_Setup(AT42QT1244_t * pCpnt, const uint8_t * setup, const uint8_t addr, const uint8_t Nb)
 {
-	FctERR	err = AT42QT1244_Send_Command(pCpnt, AT42QT__WRITE_SETUPS);
+	FctERR err = AT42QT1244_Send_Command(pCpnt, AT42QT__WRITE_SETUPS);
 	if (err)	{ return err; }
 
-	return AT42QT1244_Write(pCpnt->cfg.slave_inst, (uint8_t *) setup, addr, Nb);
+	return AT42QT1244_Write(pCpnt->cfg.slave_inst, setup, addr, Nb);
 }
 
 
@@ -36,12 +36,13 @@ FctERR NONNULL__ AT42QT1244_Setup_Key(AT42QT1244_t * pCpnt, const uint8_t Key, c
 
 	if (Key > AT42QT__CALIBRATE_KEY_23)	{ return ERROR_VALUE; }
 
-	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, (uint8_t *) &TMP, AT42QT__SETUP_KEYS_MODE_0 + Key, sizeof(TMP));	// 165 is the NDIL register of the 1st key
+	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, &TMP.Byte, AT42QT__SETUP_KEYS_MODE_0 + Key, sizeof(TMP));	// 165 is the NDIL register of the 1st key
 	if (err)	{ return err; }
 
 	TMP.Bits.NDIL = use ? NDIL_Val : 0;
-	return AT42QT1244_Send_Setup(pCpnt, (uint8_t *) &TMP, AT42QT__SETUP_KEYS_MODE_0 + Key, sizeof(TMP));
+	return AT42QT1244_Send_Setup(pCpnt, &TMP.Byte, AT42QT__SETUP_KEYS_MODE_0 + Key, sizeof(TMP));
 }
+
 
 FctERR NONNULL__ AT42QT1244_Setup_FHM(AT42QT1244_t * pCpnt, const AT42QT_FHM FHM)
 {
@@ -50,11 +51,52 @@ FctERR NONNULL__ AT42QT1244_Setup_FHM(AT42QT1244_t * pCpnt, const AT42QT_FHM FHM
 
 	if (FHM > AT42QT__FHM_FREQUENCY_SWEEP)	{ return ERROR_VALUE; }
 
-	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, (uint8_t *) &TMP, AT42QT__SETUP_FREQ_HOPING_DWELL, 1);
+	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, &TMP.Byte, AT42QT__SETUP_FREQ_HOPING_DWELL, 1);
 	if (err)	{ return err; }
 
 	TMP.Bits.FHM = FHM;
-	return AT42QT1244_Send_Setup(pCpnt, (uint8_t *) &TMP, AT42QT__SETUP_FREQ_HOPING_DWELL, 1);
+	return AT42QT1244_Send_Setup(pCpnt, &TMP.Byte, AT42QT__SETUP_FREQ_HOPING_DWELL, 1);
+}
+
+
+FctERR NONNULL__ AT42QT1244_Setup_CRC(AT42QT1244_t * pCpnt, uint16_t * crc)
+{
+	uint8_t		SETUP[108],	HCRC[2];
+	FctERR		err;
+
+	#if defined(HAL_IWDG_MODULE_ENABLED)
+		// Refresh watchdog (as the whole procedure may take up some time)
+		HAL_IWDG_Refresh(&hiwdg);
+	#endif
+
+	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, SETUP, AT42QT__SETUP_KEYS_THRESHOLD_0, sizeof(SETUP));
+	if (err)	{ return err; }
+
+	for (unsigned int i = 0 ; i < sizeof(SETUP) ; i++)
+	{
+		*crc = AT42QT1244_crc16(*crc, SETUP[i]);
+	}
+
+	HCRC[0] = LOBYTE(*crc);
+	HCRC[1] = HIBYTE(*crc);
+	err = AT42QT1244_Send_Setup(pCpnt, HCRC, AT42QT__SETUP_HOST_CRC_LSB, sizeof(HCRC));
+
+	if (!err)	{ err = AT42QT1244_Reset(pCpnt); }
+
+	return err;
+}
+
+
+FctERR NONNULL__ AT42QT1244_Reset(AT42QT1244_t * pCpnt)
+{
+	FctERR err;
+
+	AT42QT1244_Set_Reset_Time(pCpnt);
+	err = AT42QT1244_Send_Command(pCpnt, AT42QT__RESET_DEVICE);
+
+	if (!err)	{ AT42QT1244_Delay_PowerOn(pCpnt); }
+
+	return err;
 }
 
 

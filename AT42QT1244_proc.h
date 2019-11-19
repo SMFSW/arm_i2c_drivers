@@ -26,8 +26,9 @@
 ** \brief AT42QT1244 user interface struct
 **/
 typedef struct AT42QT1244_t {
-	uAT42QT_REG__DEVICE_STATUS	status;				//!< Device status
+	uint32_t					hPowerOn;			//!< Time of the last reset
 	uint32_t					keys;				//!< Keys results
+	uAT42QT_REG__DEVICE_STATUS	status;				//!< Device status
 	struct {
 	I2C_slave_t *				slave_inst;			//!< Slave structure
 	} cfg;
@@ -49,6 +50,18 @@ extern AT42QT1244_t AT42QT1244[I2C_AT42QT1244_NB];	//!< AT42QT1244 User structur
 ** \return FctERR - error code
 **/
 FctERR NONNULL__ AT42QT1244_Init_Sequence(AT42QT1244_t * pCpnt);
+
+
+/*!\brief Set last reset time for AT42QT1244 peripheral
+**/
+__INLINE void NONNULL_INLINE__ AT42QT1244_Set_Reset_Time(AT42QT1244_t * pCpnt) {
+	pCpnt->hPowerOn = HAL_GetTick(); }
+
+/*!\brief 100ms delay generator for AT42QT1244 peripheral
+** \warning Delay is in blocking mode (only interrupts will run) and can take up to 100ms
+** \param[in] pCpnt - Pointer to AT42QT1244 component
+**/
+void NONNULL__ AT42QT1244_Delay_PowerOn(AT42QT1244_t * pCpnt);
 
 
 /*!\brief 16bits CRC calculation for AT42QT1244

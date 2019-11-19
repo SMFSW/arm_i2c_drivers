@@ -35,15 +35,15 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 
 - **APDS9930**: Digital Proximity and Ambient Light Sensor
 
-  -> _WORKING, TESTS PENDING_
+  -> _WORKING_
 
 - **APDS9960**: Digital Proximity, Ambient Light, RGB and Gesture Sensor
 
-  -> _WORKING, TESTS PENDING (GESTURE DISABLED YET)_
+  -> _WORKING, (GESTURES TO TEST/SWITCH, DISABLED YET)_
 
 - **AT42QT1244**: 24-key QMatrix FMEA IEC/EN/UL60730 Touch Sensor
 
-  -> _NOT TESTED YET_
+  -> _WORKING_
 
 - **BMP180**: Digital pressure sensor
 
@@ -51,7 +51,7 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 
 - **DRV2605L**: 2 to 5.2V Haptic Driver for LRA and ERM With Effect Library and Smart-Loop Architecture
 
-  -> _WORKING, TESTS PENDING_
+  -> _WORKING_
 
 - **DS-GPM.S**: 99 Channel Positioning System (GPS + GLONASS) Shield
 
@@ -118,20 +118,20 @@ Please keep in mind some components are somewhat custom and needs to be accesses
   -> _WORKING (TODO: auto-integration & persistence in the works)_
 
 
-## FRAM / EEPROM
+## FRAM / EEPROM notes
 
-- Use FM24C for I2C address banked components (with 8b internal address):
+- Use FM24C for I2C addresses banked components (with 8b internal address):
   - Tested on:
     - FM24C16B
     - FM24C04B
     - BR24T04FVM
 
-- Use MB85RC256V for 16b internal address components:
+- Use MB85RC256V for 16b internal addresses components:
   - Tested on:
     - MB85RC256V
     - FM24CL64B
 
-## Next peripherals
+## Following peripherals (?)
 
 - EEPROM/FRAM (few others if needed?)
 - Capacitive (MPR121)
@@ -146,9 +146,15 @@ You may also:
   - if in doubt, `multiple` template implementation is recommended
 - raise issue on github to ask for particular devices
 
+## Limitations
+
+- Compatibility with interrupt driven R/W transactions (when possible & usefull, yet already tested manually on some components)
+- Multiple components declaration are implicitly set to belong to a single I2C peripheral instance 
+
 ## TODO
 
-- FreeRTOS compatibility using R/W functions using interrupts with callbacks (when possible)
+- Any RTOS compatibility (blocking transactions doesn't match with RTOS task timings) 
+- (FreeRTOS) compatibility using R/W functions using interrupts with callbacks (when possible)
 
 ## Misc
 

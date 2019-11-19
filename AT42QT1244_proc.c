@@ -33,18 +33,56 @@ uint16_t AT42QT1244_crc16(uint16_t crc, const uint8_t data)
 
 __WEAK FctERR NONNULL__ AT42QT1244_Init_Sequence(AT42QT1244_t * pCpnt)
 {
-	FctERR err = ERROR_OK;
+	FctERR	err;
+	uint8_t	DATA[2];
 
-	// No special init sequence here, depends what is needed and the design.
-	// Keep in mind that the chip is ready to communicate only after about 95ms when it's being powered up or reseted.
-//	err |= AT42QT1244_Calibrate_Freq_Hopping(pCpnt);
-//	err |= AT42QT1244_Calibrate_All_Keys(pCpnt);
+	AT42QT1244_Delay_PowerOn(pCpnt);	// Trying to ensure component is ready to communicate (assuming host and component are powered and starting almost simultaneously)
+
+	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, DATA, AT42QT__SETUP_HOST_CRC_LSB, 2);	// Read HCRC from device
+
+/***
+	if (!err)
+	{
+		const uint8_t	idx = pCpnt - AT42QT1244;
+		const uint16_t	HCRC = NVM_Get_AT42QT1244_HCRC(idx);			// USER IMPLEMENTED: Get previously computed HCRC from host to check against component one
+
+		if (HCRC != (MAKEWORD(DATA[0], DATA[1])))	// HCRC mismatch between host and component, setup needs to be performed
+		{
+			// Example: Setup the component to disable unused keys (last 14 ones)
+			const uint8_t DATA[14] = { 0 };
+			err |= AT42QT1244_Send_Setup(pCpnt, DATA, AT42QT__SETUP_KEYS_MODE_10, sizeof(DATA));
+
+			if (!err)
+			{
+				uint16_t crc;
+				err = AT42QT1244_Setup_CRC(pCpnt, &crc);
+				//if (!err)	{ NVM_Save_AT42QT1244_HCRC(idx, crc); }		// USER IMPLEMENTED: Save new HCRC to host non-volatile memory
+			}
+		}
+	}
+***/
 
 	return err;
 }
 
 
 /****************************************************************/
+
+
+void NONNULL__ AT42QT1244_Delay_PowerOn(AT42QT1244_t * pCpnt)
+{
+	const uint8_t	loop_delay = 2;		// 2ms delay for each loop (consider watchdog period if used, on ms basis)
+	const uint32_t	PON_time = 100;		// Power on time with initialization given in datasheet (95ms rounded to 100)
+	const uint32_t	loops = (PON_time - (HAL_GetTick() - pCpnt->hPowerOn)) / loop_delay;
+
+	for (unsigned int i = 0 ; i < loops ; i++)
+	{
+		#if defined(HAL_IWDG_MODULE_ENABLED)
+			HAL_IWDG_Refresh(&hiwdg);
+		#endif
+		HAL_Delay(loop_delay);
+	}
+}
 
 
 FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * pCpnt)
@@ -122,7 +160,11 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * pCpnt)
 	if (err)	{ return err; }
 
 	// Enable frequency hopping mode
-	return AT42QT1244_Setup_FHM(pCpnt, AT42QT__FHM_ADJ_KEYS_REF_DURING_HOP);
+	err |= AT42QT1244_Setup_FHM(pCpnt, AT42QT__FHM_ADJ_KEYS_REF_DURING_HOP);
+	if (err)	{ return err; }
+
+	uint16_t hcrc;
+	return AT42QT1244_Setup_CRC(pCpnt, &hcrc);
 }
 
 
@@ -158,10 +200,6 @@ __WEAK FctERR NONNULL__ AT42QT1244_handler(AT42QT1244_t * pCpnt)
 {
 	FctERR err = AT42QT1244_Get_Keys(pCpnt, &pCpnt->keys);
 
-	// As stated in the datasheet, reading Detect Status register 1 should clear interrupt pin,
-	// yet needs to read the register once more, after getting all 3 Detect Status registers.
-	// Reading Device Status register clears interrupt pin.
-	// TODO: datasheet being only preliminary, will have to see when a new version will be available.
 	err |= AT42QT1244_Get_Status(pCpnt, &pCpnt->status);
 
 	return err;

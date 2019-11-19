@@ -77,7 +77,7 @@ FctERR NONNULL__ AT42QT1244_Read(I2C_slave_t * pSlave, uint8_t * data, const uin
 	uint8_t	preamble[2] = { addr, nb };
 
 	I2C_set_busy(pSlave, true);
-	pSlave->status = HAL_I2C_Master_Transmit(pSlave->cfg.bus_inst, pSlave->cfg.addr, preamble, nb, pSlave->cfg.timeout);
+	pSlave->status = HAL_I2C_Master_Transmit(pSlave->cfg.bus_inst, pSlave->cfg.addr, preamble, sizeof(preamble), pSlave->cfg.timeout);
 	I2C_set_busy(pSlave, false);
 	err = HALERRtoFCTERR(pSlave->status);
 
@@ -92,15 +92,14 @@ FctERR NONNULL__ AT42QT1244_Read(I2C_slave_t * pSlave, uint8_t * data, const uin
 
 	if (pSlave->status == HAL_OK)
 	{
-		uint16_t crc = 0;
-
 		// Checksum calculation
-		crc = AT42QT1244_crc16(crc, RSHIFT(pSlave->cfg.addr, 1));
-		for (int i = 0 ; i < sizeof(preamble) ; i++)	{ crc = AT42QT1244_crc16(crc, preamble[i]); }
-		for (int i = 0 ; i < nb ; i++)					{ crc = AT42QT1244_crc16(crc, read[i]); }
+		uint16_t crc = AT42QT1244_crc16(0, RSHIFT(pSlave->cfg.addr, 1));
+		for (unsigned int i = 0 ; i < sizeof(preamble) ; i++)	{ crc = AT42QT1244_crc16(crc, preamble[i]); }
+		for (unsigned int i = 0 ; i < nb ; i++)					{ crc = AT42QT1244_crc16(crc, read[i]); }
+
 		// Copy to destination if crc is ok
-		if (crc == MAKEWORD(read[nb], read[nb + 1]))	{ memcpy(data, read, nb); }
-		else											{ err = ERROR_CRC; }
+		if (crc == MAKEWORD(read[nb], read[nb + 1]))			{ memcpy(data, read, nb); }
+		else													{ err = ERROR_CRC; }
 	}
 
 	free(read);

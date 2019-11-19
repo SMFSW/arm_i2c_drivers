@@ -80,6 +80,7 @@ typedef union uAT42QT_REG_MAP {
 FctERR NONNULL__ AT42QT1244_Send_Command(AT42QT1244_t * pCpnt, const AT42QT_cmd cmd);
 
 /*!\brief Send setup parameters to AT42QT1244 peripheral
+** \warning When all needed setups are written, you have to call AT42QT1244_Setup_CRC to compute and save new HCRC in component
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
 ** \param[in] setup - Parameters to send
 ** \param[in] addr - Setup address in AT42QT1244 peripheral
@@ -89,6 +90,7 @@ FctERR NONNULL__ AT42QT1244_Send_Command(AT42QT1244_t * pCpnt, const AT42QT_cmd 
 FctERR NONNULL__ AT42QT1244_Send_Setup(AT42QT1244_t * pCpnt, const uint8_t * setup, const uint8_t addr, const uint8_t nb);
 
 /*!\brief Key use setup for AT42QT1244 peripheral
+** \warning When all needed setups are written, you have to call AT42QT1244_Setup_CRC to compute and save new HCRC in component
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
 ** \param[in] Key - Key to configure
 ** \param[in] use - Key enabled/disabled
@@ -97,6 +99,7 @@ FctERR NONNULL__ AT42QT1244_Send_Setup(AT42QT1244_t * pCpnt, const uint8_t * set
 FctERR NONNULL__ AT42QT1244_Setup_Key(AT42QT1244_t * pCpnt, const uint8_t Key, const bool use);
 
 /*!\brief Key enable for AT42QT1244 peripheral
+** \warning When all needed setups are written, you have to call AT42QT1244_Setup_CRC to compute and save new HCRC in component
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
 ** \param[in] Key - Key to enable
 ** \return FctERR - error code
@@ -105,6 +108,7 @@ __INLINE FctERR NONNULL_INLINE__ AT42QT1244_Key_Enable(AT42QT1244_t * pCpnt, con
 	return AT42QT1244_Setup_Key(pCpnt, Key, true); }
 
 /*!\brief Key disable for AT42QT1244 peripheral
+** \warning When all needed setups are written, you have to call AT42QT1244_Setup_CRC to compute and save new HCRC in component
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
 ** \param[in] Key - Key to disable
 ** \return FctERR - error code
@@ -112,12 +116,31 @@ __INLINE FctERR NONNULL_INLINE__ AT42QT1244_Key_Enable(AT42QT1244_t * pCpnt, con
 __INLINE FctERR NONNULL_INLINE__ AT42QT1244_Key_Disable(AT42QT1244_t * pCpnt, const uint8_t Key) {
 	return AT42QT1244_Setup_Key(pCpnt, Key, false); }
 
-/*!\brief Frequency hopping moode setup for AT42QT1244 peripheral
+/*!\brief Frequency hopping mode setup for AT42QT1244 peripheral
+** \warning When all needed setups are written, you have to call AT42QT1244_Setup_CRC to compute and save new HCRC in component
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
 ** \param[in] FHM - Frequency hopping mode parameters
 ** \return FctERR - error code
 **/
 FctERR NONNULL__ AT42QT1244_Setup_FHM(AT42QT1244_t * pCpnt, const AT42QT_FHM FHM);
+
+/*!\brief Calculate Host CRC for AT42QT1244 peripheral
+** \note CRC is calculated using setup block values from component
+** \note As the whole setup CRC procedure may take some time, iwdg is automatically refresh if used
+** \warning After CRC is written, AT42QT1244_Reset is called, leading to a blocking delay described in AT42QT1244_Delay_PowerOn
+** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \param[in] crc - Pointer to host CRC value (for reference)
+** \return FctERR - error code
+**/
+FctERR NONNULL__ AT42QT1244_Setup_CRC(AT42QT1244_t * pCpnt, uint16_t * crc);
+
+
+/*!\brief Reset command for AT42QT1244 peripheral
+** \warning After Reset command is sent, a blocking delay described in AT42QT1244_Delay_PowerOn is called to let component initialize properly
+** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \return FctERR - error code
+**/
+FctERR NONNULL__ AT42QT1244_Reset(AT42QT1244_t * pCpnt);
 
 
 /*!\brief Get keys detect status for AT42QT1244 peripheral
@@ -152,14 +175,6 @@ __INLINE FctERR NONNULL_INLINE__ AT42QT1244_Get_Status(AT42QT1244_t * pCpnt, uAT
 ** \return Calibration status
 **/
 int NONNULL__ AT42QT1244_is_Calib_Pending(AT42QT1244_t * pCpnt);
-
-
-/*!\brief Reset command for AT42QT1244 peripheral
-** \param[in] pCpnt - Pointer to AT42QT1244 component
-** \return FctERR - error code
-**/
-__INLINE FctERR NONNULL_INLINE__ AT42QT1244_Reset(AT42QT1244_t * pCpnt) {
-	return AT42QT1244_Send_Command(pCpnt, AT42QT__RESET_DEVICE); }
 
 
 /****************************************************************/
