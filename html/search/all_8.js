@@ -24,6 +24,7 @@ var searchData=
   ['hours',['HOURS',['../dc/dee/unionu_p_c_f8523___r_e_g_____h_o_u_r_s.html#a49c7dd6e918a2817a3f528506293cf3a',1,'uPCF8523_REG__HOURS::HOURS()'],['../dd/d02/struct_g_p_m_s__hour.html#aae6b3598ffea6a93b9150a1a17d51649',1,'GPMS_hour::Hours()'],['../dd/d7c/unionu_p_c_f8523___r_e_g___m_a_p.html#a2c71c85ddeda4712229162dff6da298c',1,'uPCF8523_REG_MAP::Hours()'],['../d2/de7/struct_p_c_f8523__time.html#a331c5fbf1f2911bfbb53b4546a7b07b1',1,'PCF8523_time::Hours()']]],
   ['hours_5ftens',['Hours_Tens',['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#ab2cee63b5592d69b4e26ff9133bca03d',1,'uGPMS_RD_REG_MAP']]],
   ['hours_5funits',['Hours_Units',['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#aaf0da284fdb732f23855cd169018dc35',1,'uGPMS_RD_REG_MAP']]],
+  ['hpoweron',['hPowerOn',['../da/dbc/struct_a_t42_q_t1244__t.html#ad1fc994d0692d0600d933b2d4644a26d',1,'AT42QT1244_t']]],
   ['hstartconversion',['hStartConversion',['../d6/db8/struct_b_m_p180__t.html#a653590421315112fe440746d31d6966f',1,'BMP180_t::hStartConversion()'],['../d8/df6/struct_s11059__t.html#aa6fa7e97b333219b36f7cc868ac6fe24',1,'S11059_t::hStartConversion()']]],
   ['hysteresis',['Hysteresis',['../d3/d88/unionu_m_c_p9808___r_e_g_____c_f_g.html#a27808b3ea0119b9b2828ae4901504841',1,'uMCP9808_REG__CFG']]]
 ];

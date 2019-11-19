@@ -1,5 +1,9 @@
 <map id="AT42QT1244_Get_Keys" name="AT42QT1244_Get_Keys">
-<area shape="rect" id="node2" href="$df/de4/_a_t42_q_t1244__ex_8h.html#ac1d9c4e4dd2caa03650d8b3cba247916" title="Key disable for AT42QT1244 peripheral. " alt="" coords="221,5,407,32"/>
-<area shape="rect" id="node3" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a854b51ce8fcd7b0e31f6a5780e9ec254" title="Handler for AT42QT1244 peripheral. " alt="" coords="235,56,393,83"/>
-<area shape="rect" id="node4" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#aa73f0198407c13924543df4bc8c55a5a" title="Handler for all AT42QT1244 peripherals. " alt="" coords="455,56,633,83"/>
+<area shape="rect" id="node2" href="$df/de4/_a_t42_q_t1244__ex_8h.html#ac1d9c4e4dd2caa03650d8b3cba247916" title="Key disable for AT42QT1244 peripheral. " alt="" coords="1104,43,1289,69"/>
+<area shape="rect" id="node3" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a854b51ce8fcd7b0e31f6a5780e9ec254" title="Handler for AT42QT1244 peripheral. " alt="" coords="221,68,379,95"/>
+<area shape="rect" id="node4" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#acfb6482cbe5c4c04fd8e85a001e0480f" title="Set last reset time for AT42QT1244 peripheral. " alt="" coords="427,68,637,95"/>
+<area shape="rect" id="node8" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#aa73f0198407c13924543df4bc8c55a5a" title="Handler for all AT42QT1244 peripherals. " alt="" coords="443,119,621,145"/>
+<area shape="rect" id="node5" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a3ebaacb4c3df87fe141ce023144f521b" title="Reset command for AT42QT1244 peripheral. " alt="" coords="685,68,829,95"/>
+<area shape="rect" id="node6" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a693651a6902d75fd70b1dbe21e6f1d1c" title="Calculate Host CRC for AT42QT1244 peripheral. " alt="" coords="877,93,1056,120"/>
+<area shape="rect" id="node7" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a91927af00b87bcdb36fa6c77ede449c9" title="Frequencies calibration for AT42QT1244 peripheral. " alt="" coords="1113,115,1280,157"/>
 </map>

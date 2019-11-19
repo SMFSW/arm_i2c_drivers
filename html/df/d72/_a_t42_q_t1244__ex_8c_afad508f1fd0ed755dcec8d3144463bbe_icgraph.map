@@ -1,10 +1,14 @@
 <map id="AT42QT1244_is_Calib_Pending" name="AT42QT1244_is_Calib_Pending">
-<area shape="rect" id="node2" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a39b521497c30e06f91ea03cd6b924d1b" title="Get status of AT42QT1244 peripheral. " alt="" coords="211,130,392,157"/>
-<area shape="rect" id="node4" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a91927af00b87bcdb36fa6c77ede449c9" title="Frequencies calibration for AT42QT1244 peripheral. " alt="" coords="888,144,1055,185"/>
-<area shape="rect" id="node5" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a3ae85fa66862d660adec8cd6eb12b631" title="Low level calibration for AT42QT1244 peripheral. " alt="" coords="659,173,826,215"/>
-<area shape="rect" id="node6" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#abef8f12632de2909925c87d2385f0bd4" title="All keys calibration for AT42QT1244 peripheral. " alt="" coords="659,5,826,47"/>
-<area shape="rect" id="node7" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a2f129d5dd0869ca45581c113933a8dfc" title="Key calibration for AT42QT1244 peripheral. " alt="" coords="645,239,840,266"/>
-<area shape="rect" id="node3" href="$df/de4/_a_t42_q_t1244__ex_8h.html#afad508f1fd0ed755dcec8d3144463bbe" title="Get calibration status for AT42QT1244 peripheral. " alt="" coords="440,123,597,164"/>
-<area shape="rect" id="node8" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a854b51ce8fcd7b0e31f6a5780e9ec254" title="Handler for AT42QT1244 peripheral. " alt="" coords="440,71,597,98"/>
-<area shape="rect" id="node9" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#aa73f0198407c13924543df4bc8c55a5a" title="Handler for all AT42QT1244 peripherals. " alt="" coords="653,71,832,98"/>
+<area shape="rect" id="node2" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a39b521497c30e06f91ea03cd6b924d1b" title="Get status of AT42QT1244 peripheral. " alt="" coords="211,211,392,237"/>
+<area shape="rect" id="node4" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a91927af00b87bcdb36fa6c77ede449c9" title="Frequencies calibration for AT42QT1244 peripheral. " alt="" coords="1575,178,1741,219"/>
+<area shape="rect" id="node9" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a3ae85fa66862d660adec8cd6eb12b631" title="Low level calibration for AT42QT1244 peripheral. " alt="" coords="659,313,826,354"/>
+<area shape="rect" id="node10" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#abef8f12632de2909925c87d2385f0bd4" title="All keys calibration for AT42QT1244 peripheral. " alt="" coords="659,94,826,135"/>
+<area shape="rect" id="node11" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a2f129d5dd0869ca45581c113933a8dfc" title="Key calibration for AT42QT1244 peripheral. " alt="" coords="645,261,840,288"/>
+<area shape="rect" id="node3" href="$df/de4/_a_t42_q_t1244__ex_8h.html#afad508f1fd0ed755dcec8d3144463bbe" title="Get calibration status for AT42QT1244 peripheral. " alt="" coords="440,203,597,245"/>
+<area shape="rect" id="node12" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a854b51ce8fcd7b0e31f6a5780e9ec254" title="Handler for AT42QT1244 peripheral. " alt="" coords="440,152,597,179"/>
+<area shape="rect" id="node5" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#acfb6482cbe5c4c04fd8e85a001e0480f" title="Set last reset time for AT42QT1244 peripheral. " alt="" coords="888,160,1099,187"/>
+<area shape="rect" id="node6" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a3ebaacb4c3df87fe141ce023144f521b" title="Reset command for AT42QT1244 peripheral. " alt="" coords="1147,312,1291,339"/>
+<area shape="rect" id="node7" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a693651a6902d75fd70b1dbe21e6f1d1c" title="Calculate Host CRC for AT42QT1244 peripheral. " alt="" coords="1339,312,1517,339"/>
+<area shape="rect" id="node8" href="$df/de4/_a_t42_q_t1244__ex_8h.html#ac1d9c4e4dd2caa03650d8b3cba247916" title="Key disable for AT42QT1244 peripheral. " alt="" coords="1565,337,1751,364"/>
+<area shape="rect" id="node13" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#aa73f0198407c13924543df4bc8c55a5a" title="Handler for all AT42QT1244 peripherals. " alt="" coords="653,43,832,69"/>
 </map>
