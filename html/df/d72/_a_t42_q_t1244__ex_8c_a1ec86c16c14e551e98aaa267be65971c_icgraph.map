@@ -1,7 +1,7 @@
 <map id="AT42QT1244_Send_Setup" name="AT42QT1244_Send_Setup">
-<area shape="rect" id="node2" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a34f8a56f245d912dcdbef4ec4a41e76b" title="AT42QT1244_Setup_Key" alt="" coords="243,45,419,72"/>
-<area shape="rect" id="node5" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a46a9fc32db3eb219ec0b7373de94a461" title="AT42QT1244_Setup_FHM" alt="" coords="240,96,423,123"/>
-<area shape="rect" id="node6" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a5e338a5f0e2887657c1a3bb36bc9a8db" title="AT42QT1244_Calibrate\l_Freq_Offset" alt="" coords="480,118,647,159"/>
-<area shape="rect" id="node3" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a556a2b48e97e129cc14fe8c10417364a" title="AT42QT1244_Key_Enable" alt="" coords="473,5,654,32"/>
-<area shape="rect" id="node4" href="$df/de4/_a_t42_q_t1244__ex_8h.html#ac1d9c4e4dd2caa03650d8b3cba247916" title="AT42QT1244_Key_Disable" alt="" coords="471,56,656,83"/>
+<area shape="rect" id="node2" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a34f8a56f245d912dcdbef4ec4a41e76b" title="Key use setup for AT42QT1244 peripheral. " alt="" coords="243,13,419,40"/>
+<area shape="rect" id="node5" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a46a9fc32db3eb219ec0b7373de94a461" title="Frequency hopping moode setup for AT42QT1244 peripheral. " alt="" coords="240,64,423,91"/>
+<area shape="rect" id="node6" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a91927af00b87bcdb36fa6c77ede449c9" title="Frequencies calibration for AT42QT1244 peripheral. " alt="" coords="480,107,647,149"/>
+<area shape="rect" id="node3" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a556a2b48e97e129cc14fe8c10417364a" title="Key enable for AT42QT1244 peripheral. " alt="" coords="473,5,654,32"/>
+<area shape="rect" id="node4" href="$df/de4/_a_t42_q_t1244__ex_8h.html#ac1d9c4e4dd2caa03650d8b3cba247916" title="Key disable for AT42QT1244 peripheral. " alt="" coords="471,56,656,83"/>
 </map>
