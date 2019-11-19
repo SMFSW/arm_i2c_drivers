@@ -17,12 +17,14 @@
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
-// TODO: doxygen
 
 
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
+/*!\union uAT42QT_REG_MAP
+** \brief Union of AT42QT1244 registry map
+**/
 typedef union uAT42QT_REG_MAP {
 	uint8_t Bytes[251];
 	struct {
@@ -70,34 +72,94 @@ typedef union uAT42QT_REG_MAP {
 /*** High level methods and functions ***/
 /****************************************/
 
+/*!\brief Send command to AT42QT1244 peripheral
+** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \param[in] cmd - Command to send
+** \return FctERR - error code
+**/
 FctERR NONNULL__ AT42QT1244_Send_Command(AT42QT1244_t * pCpnt, const AT42QT_cmd cmd);
+
+/*!\brief Send setup parameters to AT42QT1244 peripheral
+** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \param[in] setup - Parameters to send
+** \param[in] addr - Setup address in AT42QT1244 peripheral
+** \param[in] nb - Number of setup values to send
+** \return FctERR - error code
+**/
 FctERR NONNULL__ AT42QT1244_Send_Setup(AT42QT1244_t * pCpnt, const uint8_t * setup, const uint8_t addr, const uint8_t nb);
 
+/*!\brief Key use setup for AT42QT1244 peripheral
+** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \param[in] Key - Key to configure
+** \param[in] use - Key enabled/disabled
+** \return FctERR - error code
+**/
 FctERR NONNULL__ AT42QT1244_Setup_Key(AT42QT1244_t * pCpnt, const uint8_t Key, const bool use);
+
+/*!\brief Key enable for AT42QT1244 peripheral
+** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \param[in] Key - Key to enable
+** \return FctERR - error code
+**/
+__INLINE FctERR NONNULL_INLINE__ AT42QT1244_Key_Enable(AT42QT1244_t * pCpnt, const uint8_t Key) {
+	return AT42QT1244_Setup_Key(pCpnt, Key, true); }
+
+/*!\brief Key disable for AT42QT1244 peripheral
+** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \param[in] Key - Key to disable
+** \return FctERR - error code
+**/
+__INLINE FctERR NONNULL_INLINE__ AT42QT1244_Key_Disable(AT42QT1244_t * pCpnt, const uint8_t Key) {
+	return AT42QT1244_Setup_Key(pCpnt, Key, false); }
+
+/*!\brief Frequency hopping moode setup for AT42QT1244 peripheral
+** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \param[in] FHM - Frequency hopping mode parameters
+** \return FctERR - error code
+**/
 FctERR NONNULL__ AT42QT1244_Setup_FHM(AT42QT1244_t * pCpnt, const AT42QT_FHM FHM);
 
+
+/*!\brief Get keys detect status for AT42QT1244 peripheral
+** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \param[in] Keys - Pointer to keys result
+** \return FctERR - error code
+**/
 FctERR NONNULL__ AT42QT1244_Get_Keys(AT42QT1244_t * pCpnt, uint32_t * Keys);
 
-int NONNULL__ AT42QT1244_is_Calib_Pending(AT42QT1244_t * pCpnt);
 
-
+/*!\brief Get key data for AT42QT1244 peripheral
+** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \param[in] Key_Data - Pointer to key data result
+** \param[in] Key_Num - Key to get datas
+** \return FctERR - error code
+**/
 __INLINE FctERR NONNULL_INLINE__ AT42QT1244_Get_Key_Data(AT42QT1244_t * pCpnt, uAT42QT_REG__KEY_DATA * Key_Data, const uint8_t Key_Num) {
 	return AT42QT1244_Read(pCpnt->cfg.slave_inst, (uint8_t *) Key_Data, AT42QT__DATA_KEY_1 + (Key_Num * sizeof(uAT42QT_REG__KEY_DATA)), sizeof(uAT42QT_REG__KEY_DATA)); }
 
 
+/*!\brief Get status of AT42QT1244 peripheral
+** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \param[in] st - Pointer to peripheral status result
+** \return FctERR - error code
+**/
 __INLINE FctERR NONNULL_INLINE__ AT42QT1244_Get_Status(AT42QT1244_t * pCpnt, uAT42QT_REG__DEVICE_STATUS * st) {
 	return AT42QT1244_Read(pCpnt->cfg.slave_inst, (uint8_t *) st, AT42QT__DEVICE_STATUS, 1); }
 
 
+/*!\brief Get calibration status for AT42QT1244 peripheral
+** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \return Calibration status
+**/
+int NONNULL__ AT42QT1244_is_Calib_Pending(AT42QT1244_t * pCpnt);
+
+
+/*!\brief Reset command for AT42QT1244 peripheral
+** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \return FctERR - error code
+**/
 __INLINE FctERR NONNULL_INLINE__ AT42QT1244_Reset(AT42QT1244_t * pCpnt) {
 	return AT42QT1244_Send_Command(pCpnt, AT42QT__RESET_DEVICE); }
-
-
-__INLINE FctERR NONNULL_INLINE__ AT42QT1244_Key_Enable(AT42QT1244_t * pCpnt, const uint8_t Key) {
-	return AT42QT1244_Setup_Key(pCpnt, Key, true); }
-
-__INLINE FctERR NONNULL_INLINE__ AT42QT1244_Key_Disable(AT42QT1244_t * pCpnt, const uint8_t Key) {
-	return AT42QT1244_Setup_Key(pCpnt, Key, false); }
 
 
 /****************************************************************/

@@ -12,6 +12,7 @@
 /****************************************************************/
 // std libs
 #include <stdlib.h>
+// HARMcksL libs
 #include "tick_utils.h"
 /****************************************************************/
 
@@ -19,30 +20,6 @@
 static const I2C_slave_t AT42QT1244_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
 I2C_slave_t AT42QT1244_hal[I2C_AT42QT1244_NB];
-
-
-/****************************************************************/
-
-
-/*!\brief 16bits CRC calculation for AT42QT1244
-** \details 16bits crc calculation. Initial crc entry must be 0.
-** The message is not augmented with 'zero' bits. polynomial = X16 + X15 + X2 + 1
-** Repeat this function for each data block byte, folding the result back into the call parameter crc
-** \param[in] crc - current crc value
-** \param[in] data - new data for crc
-** \return New CRC value
-**/
-static uint16_t crc16(uint16_t crc, const uint8_t data)
-{
-	crc ^= (uint16_t) LSHIFT(data, 8);
-	for (int i = 7 ; i >= 0 ; i--)
-	{
-		if (crc & 0x8000)	{ crc = (crc << 1) ^ 0x1021; }
-		else				{ crc <<= 1; }
-	}
-
-	return crc;
-}
 
 
 /****************************************************************/
@@ -118,9 +95,9 @@ FctERR NONNULL__ AT42QT1244_Read(I2C_slave_t * pSlave, uint8_t * data, const uin
 		uint16_t crc = 0;
 
 		// Checksum calculation
-		crc = crc16(crc, RSHIFT(pSlave->cfg.addr, 1));
-		for (int i = 0 ; i < sizeof(preamble) ; i++)	{ crc = crc16(crc, preamble[i]); }
-		for (int i = 0 ; i < nb ; i++)					{ crc = crc16(crc, read[i]); }
+		crc = AT42QT1244_crc16(crc, RSHIFT(pSlave->cfg.addr, 1));
+		for (int i = 0 ; i < sizeof(preamble) ; i++)	{ crc = AT42QT1244_crc16(crc, preamble[i]); }
+		for (int i = 0 ; i < nb ; i++)					{ crc = AT42QT1244_crc16(crc, read[i]); }
 		// Copy to destination if crc is ok
 		if (crc == MAKEWORD(read[nb], read[nb + 1]))	{ memcpy(data, read, nb); }
 		else											{ err = ERROR_CRC; }

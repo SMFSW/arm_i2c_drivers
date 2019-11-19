@@ -15,20 +15,39 @@
 AT42QT1244_t AT42QT1244[I2C_AT42QT1244_NB];
 
 
-
-/****************************************************************/
-
-
-__WEAK FctERR NONNULL__ AT42QT1244_Init_Sequence(AT42QT1244_t * pCpnt)
+uint16_t AT42QT1244_crc16(uint16_t crc, const uint8_t data)
 {
-	return ERROR_OK;
+	crc ^= (uint16_t) LSHIFT(data, 8);
+	for (int i = 7 ; i >= 0 ; i--)
+	{
+		if (crc & 0x8000)	{ crc = (crc << 1) ^ 0x1021; }
+		else				{ crc <<= 1; }
+	}
+
+	return crc;
 }
 
 
 /****************************************************************/
 
 
-FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Offset(AT42QT1244_t * pCpnt)
+__WEAK FctERR NONNULL__ AT42QT1244_Init_Sequence(AT42QT1244_t * pCpnt)
+{
+	FctERR err = ERROR_OK;
+
+	// No special init sequence here, depends what is needed and the design.
+	// Keep in mind that the chip is ready to communicate only after about 95ms when it's being powered up or reseted.
+//	err |= AT42QT1244_Calibrate_Freq_Hopping(pCpnt);
+//	err |= AT42QT1244_Calibrate_All_Keys(pCpnt);
+
+	return err;
+}
+
+
+/****************************************************************/
+
+
+FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * pCpnt)
 {
 	FctERR		err;
 	int			calib = 1, i, j;
@@ -102,7 +121,7 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Offset(AT42QT1244_t * pCpnt)
 	err = AT42QT1244_Send_Setup(pCpnt, &CFO[0][0], AT42QT__SETUP_CFO_1_0, sizeof(CFO));
 	if (err)	{ return err; }
 
-	// Enable frequency hoping mode
+	// Enable frequency hopping mode
 	return AT42QT1244_Setup_FHM(pCpnt, AT42QT__FHM_ADJ_KEYS_REF_DURING_HOP);
 }
 
@@ -137,7 +156,15 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Key(AT42QT1244_t * pCpnt, uint8_t Key)
 
 __WEAK FctERR NONNULL__ AT42QT1244_handler(AT42QT1244_t * pCpnt)
 {
-	return ERROR_OK;
+	FctERR err = AT42QT1244_Get_Keys(pCpnt, &pCpnt->keys);
+
+	// As stated in the datasheet, reading Detect Status register 1 should clear interrupt pin,
+	// yet needs to read the register once more, after getting all 3 Detect Status registers.
+	// Reading Device Status register clears interrupt pin.
+	// TODO: datasheet being only preliminary, will have to see when a new version will be available.
+	err |= AT42QT1244_Get_Status(pCpnt, &pCpnt->status);
+
+	return err;
 }
 
 

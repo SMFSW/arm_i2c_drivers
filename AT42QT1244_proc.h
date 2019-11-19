@@ -17,7 +17,6 @@
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
-// TODO: doxygen
 
 
 // *****************************************************************************
@@ -27,8 +26,10 @@
 ** \brief AT42QT1244 user interface struct
 **/
 typedef struct AT42QT1244_t {
+	uAT42QT_REG__DEVICE_STATUS	status;				//!< Device status
+	uint32_t					keys;				//!< Keys results
 	struct {
-	I2C_slave_t *	slave_inst;			//!< Slave structure
+	I2C_slave_t *				slave_inst;			//!< Slave structure
 	} cfg;
 } AT42QT1244_t;
 
@@ -49,15 +50,44 @@ extern AT42QT1244_t AT42QT1244[I2C_AT42QT1244_NB];	//!< AT42QT1244 User structur
 **/
 FctERR NONNULL__ AT42QT1244_Init_Sequence(AT42QT1244_t * pCpnt);
 
-FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Offset(AT42QT1244_t * pCpnt);
+
+/*!\brief 16bits CRC calculation for AT42QT1244
+** \details 16bits crc calculation. Initial crc entry must be 0.
+** The message is not augmented with 'zero' bits. polynomial = X16 + X15 + X2 + 1
+** Repeat this function for each data block byte, folding the result back into the call parameter crc
+** \param[in] crc - current crc value
+** \param[in] data - new data for crc
+** \return New CRC value
+**/
+uint16_t AT42QT1244_crc16(uint16_t crc, const uint8_t data);
 
 
+/*!\brief Frequencies calibration for AT42QT1244 peripheral
+** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \return FctERR - error code
+**/
+FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * pCpnt);
+
+
+/*!\brief Low level calibration for AT42QT1244 peripheral
+** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \return FctERR - error code
+**/
 FctERR NONNULL__ AT42QT1244_Calibrate_Low_Level(AT42QT1244_t * pCpnt);
 
 
+/*!\brief All keys calibration for AT42QT1244 peripheral
+** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \return FctERR - error code
+**/
 FctERR NONNULL__ AT42QT1244_Calibrate_All_Keys(AT42QT1244_t * pCpnt);
 
 
+/*!\brief Key calibration for AT42QT1244 peripheral
+** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \param[in] Key - Key to calibrate
+** \return FctERR - error code
+**/
 FctERR NONNULL__ AT42QT1244_Calibrate_Key(AT42QT1244_t * pCpnt, uint8_t Key);
 
 

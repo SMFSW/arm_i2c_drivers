@@ -33,6 +33,8 @@ SOFTWARE.
 * APDS9960: added with fixes and default handler
 * APDS99xx: use of config bits (instead of Status register ones) to trigger proper interrupt(s) clear function
 * AT42QT1244: fixed delay for reading transmissions and bytes used for crc calculation
+* AT42QT1244: crc calculation not static (to be able to use it to generate crc for setup block)
+* AT42QT1244: weak handler implemented
 * BMP180: fixed temperature and pressure calculation (no use of unsigned LSHIFT or RSHIFT for signed calculations)
 * FM24C: added possibility to customize FM24C_SIZE macro if needed
 * MCP4725: Fixed general call function (transmit command, not receive), and taking I2C_HandleTypeDef pointer as parameter
