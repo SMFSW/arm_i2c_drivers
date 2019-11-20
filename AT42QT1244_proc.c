@@ -18,7 +18,7 @@ AT42QT1244_t AT42QT1244[I2C_AT42QT1244_NB];
 uint16_t AT42QT1244_crc16(uint16_t crc, const uint8_t data)
 {
 	crc ^= (uint16_t) LSHIFT(data, 8);
-	for (int i = 7 ; i >= 0 ; i--)
+	for (unsigned int i = 0 ; i < 8 ; i++)
 	{
 		if (crc & 0x8000)	{ crc = (crc << 1) ^ 0x1021; }
 		else				{ crc <<= 1; }
