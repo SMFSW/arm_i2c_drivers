@@ -1,6 +1,6 @@
 /*!\file AT42QT1244_proc.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2019, SMFSW
+** \copyright MIT (c) 2017-2020, SMFSW
 ** \brief AT42QT1244 Driver procedures
 ** \details AT42QT1244: 24-key QMatrix FMEA IEC/EN/UL60730 Touch Sensor
 **/
@@ -72,10 +72,10 @@ __WEAK FctERR NONNULL__ AT42QT1244_Init_Sequence(AT42QT1244_t * pCpnt)
 void NONNULL__ AT42QT1244_Delay_PowerOn(AT42QT1244_t * pCpnt)
 {
 	const uint8_t	loop_delay = 2;		// 2ms delay for each loop (consider watchdog period if used, on ms basis)
-	const uint32_t	PON_time = 100;		// Power on time with initialization given in datasheet (95ms rounded to 100)
-	const uint32_t	loops = (PON_time - (HAL_GetTick() - pCpnt->hPowerOn)) / loop_delay;
+	const int32_t	PON_time = 100;		// Power on time with initialization given in datasheet (95ms rounded to 100)
+	const int32_t	loops = max(0, (int32_t) (PON_time - (HAL_GetTick() - pCpnt->hPowerOn))) / loop_delay;
 
-	for (unsigned int i = 0 ; i < loops ; i++)
+	for (int i = 0 ; i < loops ; i++)
 	{
 		#if defined(HAL_IWDG_MODULE_ENABLED)
 			HAL_IWDG_Refresh(&hiwdg);

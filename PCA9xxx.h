@@ -1,6 +1,6 @@
 /*!\file PCA9xxx.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2019, SMFSW
+** \copyright MIT (c) 2017-2020, SMFSW
 ** \brief PCA9xxx shared declarations
 **/
 /****************************************************************/

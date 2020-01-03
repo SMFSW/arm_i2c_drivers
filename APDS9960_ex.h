@@ -1,6 +1,6 @@
 /*!\file APDS9960_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2019, SMFSW
+** \copyright MIT (c) 2017-2020, SMFSW
 ** \brief APDS9960 Driver extensions
 ** \details APDS9960: Digital Proximity, Ambient Light, RGB and Gesture Sensor
 **/

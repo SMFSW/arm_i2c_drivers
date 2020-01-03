@@ -1,6 +1,6 @@
 /*!\file I2C_component.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2019, SMFSW
+** \copyright MIT (c) 2017-2020, SMFSW
 ** \brief Base I2C component
 **/
 /****************************************************************/

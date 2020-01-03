@@ -2,7 +2,7 @@
 
 The MIT License (MIT)
 
-Copyright (c) 2017-2019 SMFSW (Sebastien Bizien)
+Copyright (c) 2017-2020 SMFSW (Sebastien Bizien)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -35,6 +35,7 @@ SOFTWARE.
 * AT42QT1244: fixed read transactions (and fixes for read transactions)
 * AT42QT1244: crc calculation not static (to be able to use it to generate crc for setup block)
 * AT42QT1244: added function to compute setup block crc (with reset & delays)
+* AT42QT1244: delay fix
 * AT42QT1244: weak handler & init implementations
 * BMP180: fixed temperature and pressure calculation (no use of unsigned LSHIFT or RSHIFT for signed calculations)
 * FM24C: added possibility to customize FM24C_SIZE macro if needed
