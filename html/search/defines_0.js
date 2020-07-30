@@ -15,5 +15,7 @@ var searchData=
   ['at42qt1244_5faddr_5fa0',['AT42QT1244_ADDR_A0',['../dd/d4f/_a_t42_q_t1244_8h.html#a1a5ce9959102e499b64e3f0f3dd56e20',1,'AT42QT1244.h']]],
   ['at42qt1244_5faddr_5fa01',['AT42QT1244_ADDR_A01',['../dd/d4f/_a_t42_q_t1244_8h.html#a303050699abf4e7d1eb00184a01ccdb1',1,'AT42QT1244.h']]],
   ['at42qt1244_5faddr_5fa1',['AT42QT1244_ADDR_A1',['../dd/d4f/_a_t42_q_t1244_8h.html#a9fbc17af3f5677ff2e4b01bab981ce9c',1,'AT42QT1244.h']]],
-  ['at42qt1244_5fbase_5faddr',['AT42QT1244_BASE_ADDR',['../dd/d4f/_a_t42_q_t1244_8h.html#aca65ab3fd95c4d999752f8295646fc40',1,'AT42QT1244.h']]]
+  ['at42qt1244_5fbase_5faddr',['AT42QT1244_BASE_ADDR',['../dd/d4f/_a_t42_q_t1244_8h.html#aca65ab3fd95c4d999752f8295646fc40',1,'AT42QT1244.h']]],
+  ['at42qt1244_5fcheck_5fcrc',['AT42QT1244_CHECK_CRC',['../dd/d4f/_a_t42_q_t1244_8h.html#a107d47cd33853c5a95dcd8c91e32659d',1,'AT42QT1244.h']]],
+  ['at42qt1244_5fmax_5fkeys',['AT42QT1244_MAX_KEYS',['../dd/d4f/_a_t42_q_t1244_8h.html#a4b55d020c9c6a228a8d5b83534a9b44a',1,'AT42QT1244.h']]]
 ];

@@ -1,10 +1,10 @@
 <map id="AT42QT1244_handler_all" name="AT42QT1244_handler_all">
-<area shape="rect" id="node2" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a854b51ce8fcd7b0e31f6a5780e9ec254" title="Handler for AT42QT1244 peripheral. " alt="" coords="232,85,389,112"/>
-<area shape="rect" id="node3" href="$df/d72/_a_t42_q_t1244__ex_8c.html#ab8e1dcc0fb58f95a8b5a259d67068dd2" title="Get keys detect status for AT42QT1244 peripheral. " alt="" coords="444,59,612,85"/>
-<area shape="rect" id="node8" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a39b521497c30e06f91ea03cd6b924d1b" title="Get status of AT42QT1244 peripheral. " alt="" coords="437,111,619,137"/>
+<area shape="rect" id="node2" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a854b51ce8fcd7b0e31f6a5780e9ec254" title="Handler for AT42QT1244 peripheral. " alt="" coords="232,87,389,113"/>
+<area shape="rect" id="node3" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a39b521497c30e06f91ea03cd6b924d1b" title="Get status of AT42QT1244 peripheral. " alt="" coords="437,113,619,140"/>
+<area shape="rect" id="node9" href="$df/d72/_a_t42_q_t1244__ex_8c.html#ab8e1dcc0fb58f95a8b5a259d67068dd2" title="Get keys detect status for AT42QT1244 peripheral. " alt="" coords="444,59,612,85"/>
 <area shape="rect" id="node4" href="$d3/dc4/_a_t42_q_t1244_8c.html#ab867525e9212e042aec44bc34932ae44" title="I2C Read function for AT42QT1244. " alt="" coords="675,56,815,83"/>
+<area shape="rect" id="node8" href="$df/de4/_a_t42_q_t1244__ex_8h.html#afad508f1fd0ed755dcec8d3144463bbe" title="Get calibration status for AT42QT1244 peripheral. " alt="" coords="667,107,824,149"/>
 <area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="885,5,1003,32"/>
 <area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="891,56,997,83"/>
 <area shape="rect" id="node7" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#ad2998daf6e9e01b5d72b96ac64a2f78e" title="16bits CRC calculation for AT42QT1244 " alt="" coords="872,107,1016,133"/>
-<area shape="rect" id="node9" href="$df/de4/_a_t42_q_t1244__ex_8h.html#afad508f1fd0ed755dcec8d3144463bbe" title="Get calibration status for AT42QT1244 peripheral. " alt="" coords="667,107,824,149"/>
 </map>

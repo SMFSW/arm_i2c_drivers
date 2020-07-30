@@ -1,0 +1,8 @@
+<map id="AT42QT1244_Setup_FHM" name="AT42QT1244_Setup_FHM">
+<area shape="rect" id="node2" href="$d3/dc4/_a_t42_q_t1244_8c.html#ab867525e9212e042aec44bc34932ae44" title="I2C Read function for AT42QT1244. " alt="" coords="471,56,611,83"/>
+<area shape="rect" id="node6" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a90510a43ec181df5b5a50f67cb61abd3" title="Send setup parameters to AT42QT1244 peripheral. " alt="" coords="236,81,423,108"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="672,5,789,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="677,56,784,83"/>
+<area shape="rect" id="node5" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#ad2998daf6e9e01b5d72b96ac64a2f78e" title="16bits CRC calculation for AT42QT1244 " alt="" coords="659,107,803,133"/>
+<area shape="rect" id="node7" href="$d3/dc4/_a_t42_q_t1244_8c.html#aefc0247934f27b0e2fc64979aee373b7" title="I2C Write function for AT42QT1244. " alt="" coords="471,5,611,32"/>
+</map>
