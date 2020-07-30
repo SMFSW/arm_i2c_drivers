@@ -32,9 +32,11 @@ SOFTWARE.
 * APDS9930: added (+ warning if APDS9960 also compiled, OFFSET union removed as coded as signed 8bits integer)
 * APDS9960: added with fixes and default handler
 * APDS99xx: use of config bits (instead of Status register ones) to trigger proper interrupt(s) clear function
-* AT42QT1244: fixed read transactions (and fixes for read transactions)
 * AT42QT1244: crc calculation not static (to be able to use it to generate crc for setup block)
-* AT42QT1244: added function to compute setup block crc (with reset & delays)
+* AT42QT1244: AT42QT1244_Send_Setup to write whole setup block at once with updated CRC, also returned in given function parameter
+* AT42QT1244: all functions writing setup register updated to have new CRC as returned parameter
+* AT42QT1244: AT42QT1244_CHECK_CRC added to enable/disable CRC checks after read transactions
+* AT42QT1244: former AT42QT1244_Setup_Key becomes AT42QT1244_Setup_Keys (allowing writing multiple keys at once with a mask)
 * AT42QT1244: delay fix
 * AT42QT1244: weak handler & init implementations
 * BMP180: fixed temperature and pressure calculation (no use of unsigned LSHIFT or RSHIFT for signed calculations)

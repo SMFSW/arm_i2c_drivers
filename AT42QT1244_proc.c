@@ -54,9 +54,8 @@ __WEAK FctERR NONNULL__ AT42QT1244_Init_Sequence(AT42QT1244_t * pCpnt)
 
 			if (!err)
 			{
-				uint16_t crc;
-				err = AT42QT1244_Setup_CRC(pCpnt, &crc);
 				//if (!err)	{ NVM_Save_AT42QT1244_HCRC(idx, crc); }		// USER IMPLEMENTED: Save new HCRC to host non-volatile memory
+				err = AT42QT1244_Reset(pCpnt);
 			}
 		}
 	}
@@ -85,12 +84,12 @@ void NONNULL__ AT42QT1244_Delay_PowerOn(AT42QT1244_t * pCpnt)
 }
 
 
-FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * pCpnt)
+FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * pCpnt, uint16_t * const hcrc)
 {
 	FctERR		err;
 	int			calib = 1, i, j;
 	uint8_t		Freqs[3], CFO[2][24];
-	uint16_t	Refs[3][24];
+	uint16_t	Refs[3][24], crc;
 
 	// Low Level calibration to set automatically FREQ0 to FREQ2
 	err = AT42QT1244_Calibrate_Low_Level(pCpnt);
@@ -110,7 +109,7 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * pCpnt)
 	if (err)	{ return err; }
 
 	// Disable frequency hoping mode
-	err = AT42QT1244_Setup_FHM(pCpnt, AT42QT__FHM_OFF);
+	err = AT42QT1244_Setup_FHM(pCpnt, &crc, AT42QT__FHM_OFF);
 	if (err)	{ return err; }
 
 	for (i = 0 ; i < 2 ; i++)
@@ -118,7 +117,7 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * pCpnt)
 		calib = 1;	// Reset calib for while loop
 
 		// Send FREQ0, FREQ1, then FREQ2 to FREQ0 reg
-		err = AT42QT1244_Send_Setup(pCpnt, &Freqs[i], AT42QT__SETUP_FREQ0, 1);
+		err = AT42QT1244_Send_Setup(pCpnt, &crc, &Freqs[i], AT42QT__SETUP_FREQ0, 1);
 		if (err)	{ return err; }
 
 		// Launch calibration for all keys
@@ -145,7 +144,7 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * pCpnt)
 	}
 
 	// Write FREQ0 back
-	err = AT42QT1244_Send_Setup(pCpnt, &Freqs[0], AT42QT__SETUP_FREQ0, 1);
+	err = AT42QT1244_Send_Setup(pCpnt, &crc, &Freqs[0], AT42QT__SETUP_FREQ0, 1);
 	if (err)	{ return err; }
 
 	// Compute CFO values
@@ -156,15 +155,14 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * pCpnt)
 	}
 
 	// Write CFO values
-	err = AT42QT1244_Send_Setup(pCpnt, &CFO[0][0], AT42QT__SETUP_CFO_1_0, sizeof(CFO));
+	err = AT42QT1244_Send_Setup(pCpnt, &crc, &CFO[0][0], AT42QT__SETUP_CFO_1_0, sizeof(CFO));
 	if (err)	{ return err; }
 
 	// Enable frequency hopping mode
-	err |= AT42QT1244_Setup_FHM(pCpnt, AT42QT__FHM_ADJ_KEYS_REF_DURING_HOP);
-	if (err)	{ return err; }
+	err |= AT42QT1244_Setup_FHM(pCpnt, &crc, AT42QT__FHM_ADJ_KEYS_REF_DURING_HOP);
 
-	uint16_t hcrc;
-	return AT42QT1244_Setup_CRC(pCpnt, &hcrc);
+	*hcrc = crc;
+	return err;
 }
 
 
@@ -198,9 +196,9 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Key(AT42QT1244_t * pCpnt, uint8_t Key)
 
 __WEAK FctERR NONNULL__ AT42QT1244_handler(AT42QT1244_t * pCpnt)
 {
-	FctERR err = AT42QT1244_Get_Keys(pCpnt, &pCpnt->keys);
+	FctERR err = AT42QT1244_Get_Status(pCpnt, &pCpnt->status);
 
-	err |= AT42QT1244_Get_Status(pCpnt, &pCpnt->status);
+	err |= AT42QT1244_Get_Keys(pCpnt, &pCpnt->keys);
 
 	return err;
 }

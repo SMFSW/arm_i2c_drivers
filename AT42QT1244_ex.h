@@ -75,64 +75,38 @@ typedef union uAT42QT_REG_MAP {
 /*!\brief Send command to AT42QT1244 peripheral
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
 ** \param[in] cmd - Command to send
+** \note \ref AT42QT__WRITE_SETUPS cannot be used in this function (does not make sense, as it's used to write whole setup in one transmission)
 ** \return FctERR - error code
 **/
 FctERR NONNULL__ AT42QT1244_Send_Command(AT42QT1244_t * pCpnt, const AT42QT_cmd cmd);
 
 /*!\brief Send setup parameters to AT42QT1244 peripheral
-** \warning When all needed setups are written, you have to call AT42QT1244_Setup_CRC to compute and save new HCRC in component
+** \note No AT42QT1244 peripheral reset done after writing setups, should be customly implemented when needed
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \param[in,out] hcrc - Pointer to resulting CRC value
 ** \param[in] setup - Parameters to send
 ** \param[in] addr - Setup address in AT42QT1244 peripheral
 ** \param[in] nb - Number of setup values to send
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AT42QT1244_Send_Setup(AT42QT1244_t * pCpnt, const uint8_t * setup, const uint8_t addr, const uint8_t nb);
+FctERR NONNULL__ AT42QT1244_Send_Setup(AT42QT1244_t * pCpnt, uint16_t * const hcrc, const uint8_t * setup, const uint8_t addr, const uint8_t nb);
 
 /*!\brief Key use setup for AT42QT1244 peripheral
-** \warning When all needed setups are written, you have to call AT42QT1244_Setup_CRC to compute and save new HCRC in component
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
-** \param[in] Key - Key to configure
+** \param[in,out] hcrc - Pointer to resulting CRC value
+** \param[in] mask_keys - mask for keys to configure
 ** \param[in] use - Key enabled/disabled
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AT42QT1244_Setup_Key(AT42QT1244_t * pCpnt, const uint8_t Key, const bool use);
-
-/*!\brief Key enable for AT42QT1244 peripheral
-** \warning When all needed setups are written, you have to call AT42QT1244_Setup_CRC to compute and save new HCRC in component
-** \param[in] pCpnt - Pointer to AT42QT1244 component
-** \param[in] Key - Key to enable
-** \return FctERR - error code
-**/
-__INLINE FctERR NONNULL_INLINE__ AT42QT1244_Key_Enable(AT42QT1244_t * pCpnt, const uint8_t Key) {
-	return AT42QT1244_Setup_Key(pCpnt, Key, true); }
-
-/*!\brief Key disable for AT42QT1244 peripheral
-** \warning When all needed setups are written, you have to call AT42QT1244_Setup_CRC to compute and save new HCRC in component
-** \param[in] pCpnt - Pointer to AT42QT1244 component
-** \param[in] Key - Key to disable
-** \return FctERR - error code
-**/
-__INLINE FctERR NONNULL_INLINE__ AT42QT1244_Key_Disable(AT42QT1244_t * pCpnt, const uint8_t Key) {
-	return AT42QT1244_Setup_Key(pCpnt, Key, false); }
+FctERR NONNULL__ AT42QT1244_Setup_Keys(AT42QT1244_t * pCpnt, uint16_t * const hcrc, const uint32_t mask_keys, const bool use);
 
 /*!\brief Frequency hopping mode setup for AT42QT1244 peripheral
-** \warning When all needed setups are written, you have to call AT42QT1244_Setup_CRC to compute and save new HCRC in component
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \param[in,out] hcrc - Pointer to resulting CRC value
 ** \param[in] FHM - Frequency hopping mode parameters
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AT42QT1244_Setup_FHM(AT42QT1244_t * pCpnt, const AT42QT_FHM FHM);
-
-/*!\brief Calculate Host CRC for AT42QT1244 peripheral
-** \note CRC is calculated using setup block values from component
-** \note As the whole setup CRC procedure may take some time, iwdg is automatically refresh if used
-** \warning After CRC is written, AT42QT1244_Reset is called, leading to a blocking delay described in AT42QT1244_Delay_PowerOn
-** \param[in] pCpnt - Pointer to AT42QT1244 component
-** \param[in] crc - Pointer to host CRC value (for reference)
-** \return FctERR - error code
-**/
-FctERR NONNULL__ AT42QT1244_Setup_CRC(AT42QT1244_t * pCpnt, uint16_t * crc);
+FctERR NONNULL__ AT42QT1244_Setup_FHM(AT42QT1244_t * pCpnt, uint16_t * const hcrc, const AT42QT_FHM FHM);
 
 
 /*!\brief Reset command for AT42QT1244 peripheral

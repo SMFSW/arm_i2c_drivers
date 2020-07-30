@@ -77,13 +77,15 @@ uint16_t AT42QT1244_crc16(uint16_t crc, const uint8_t data);
 
 /*!\brief Frequencies calibration for AT42QT1244 peripheral
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \param[in,out] hcrc - Pointer to resulting CRC value
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * pCpnt);
+FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * pCpnt, uint16_t * const hcrc);
 
 
 /*!\brief Low level calibration for AT42QT1244 peripheral
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \param[in,out] hcrc - Pointer to resulting CRC value
 ** \return FctERR - error code
 **/
 FctERR NONNULL__ AT42QT1244_Calibrate_Low_Level(AT42QT1244_t * pCpnt);
@@ -91,6 +93,7 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Low_Level(AT42QT1244_t * pCpnt);
 
 /*!\brief All keys calibration for AT42QT1244 peripheral
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \param[in,out] hcrc - Pointer to resulting CRC value
 ** \return FctERR - error code
 **/
 FctERR NONNULL__ AT42QT1244_Calibrate_All_Keys(AT42QT1244_t * pCpnt);

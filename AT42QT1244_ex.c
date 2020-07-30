@@ -14,37 +14,66 @@
 
 FctERR NONNULL__ AT42QT1244_Send_Command(AT42QT1244_t * pCpnt, const AT42QT_cmd cmd)
 {
-	if ((cmd > AT42QT__RESET_DEVICE) && (cmd < AT42QT__LOW_LEVEL_CALIBRATION))	{ return ERROR_VALUE; }
+	if ((cmd > AT42QT__RESET_DEVICE) && (cmd < AT42QT__LOW_LEVEL_CALIBRATION) && (cmd != AT42QT__WRITE_SETUPS))	{ return ERROR_VALUE; }
 	return AT42QT1244_Write(pCpnt->cfg.slave_inst, (uint8_t *) &cmd, AT42QT__CONTROL_COMMAND, 1);
 }
 
 
-FctERR NONNULL__ AT42QT1244_Send_Setup(AT42QT1244_t * pCpnt, const uint8_t * setup, const uint8_t addr, const uint8_t Nb)
+FctERR NONNULL__ AT42QT1244_Send_Setup(AT42QT1244_t * pCpnt, uint16_t * const hcrc, const uint8_t * setup, const uint8_t addr, const uint8_t Nb)
 {
-	FctERR err = AT42QT1244_Send_Command(pCpnt, AT42QT__WRITE_SETUPS);
-	if (err)	{ return err; }
+	uint8_t	SETUP[111];
+	FctERR	err;
 
-	return AT42QT1244_Write(pCpnt->cfg.slave_inst, setup, addr, Nb);
+	if ((addr < AT42QT__SETUP_KEYS_THRESHOLD_0) || (addr > AT42QT__SETUP_NOISE))	{ return ERROR_VALUE; }
+	if (Nb > AT42QT__SETUP_NOISE - AT42QT__SETUP_KEYS_THRESHOLD_0 + 1)				{ return ERROR_RANGE; }
+
+#if defined(HAL_IWDG_MODULE_ENABLED)
+	HAL_IWDG_Refresh(&hiwdg);	// Refresh watchdog (as the whole procedure may take up some time)
+#endif
+
+	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, &SETUP[1], AT42QT__SETUP_KEYS_THRESHOLD_0, sizeof(SETUP) - 3);	// No need to read COMMAND & CRC registers
+
+	if (!err)
+	{
+		SETUP[0] = AT42QT__WRITE_SETUPS;
+		memcpy(&SETUP[AT42QT__SETUP_KEYS_THRESHOLD_0 - addr], setup, Nb);
+
+		*hcrc = 0;
+		for (unsigned int i = 1 ; i < sizeof(SETUP) - 2 ; i++)	// CRC excluding COMMAND & CRC registers
+		{
+			*hcrc = AT42QT1244_crc16(*hcrc, SETUP[i]);
+		}
+		SETUP[110] = LOBYTE(*hcrc);
+		SETUP[111] = HIBYTE(*hcrc);
+
+		err |= AT42QT1244_Write(pCpnt->cfg.slave_inst, SETUP, AT42QT__CONTROL_COMMAND, sizeof(SETUP));
+	}
+
+	return err;
 }
 
 
-FctERR NONNULL__ AT42QT1244_Setup_Key(AT42QT1244_t * pCpnt, const uint8_t Key, const bool use)
+FctERR NONNULL__ AT42QT1244_Setup_Keys(AT42QT1244_t * pCpnt, uint16_t * const hcrc, const uint32_t mask_keys, const bool use)
 {
-	const uint8_t				NDIL_Val = 4;		// 4 is the default NDIL value
-	uAT42QT_REG__SETUP_165_188	TMP;
+	const uint8_t				NDIL_Val = 4;				// 4 is the default NDIL value
+	uAT42QT_REG__SETUP_165_188	TMP[AT42QT1244_MAX_KEYS];
 	FctERR						err;
 
-	if (Key > AT42QT__CALIBRATE_KEY_23)	{ return ERROR_VALUE; }
-
-	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, &TMP.Byte, AT42QT__SETUP_KEYS_MODE_0 + Key, sizeof(TMP));	// 165 is the NDIL register of the 1st key
+	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, &TMP[0].Byte, AT42QT__SETUP_KEYS_MODE_0, sizeof(TMP));	// 165 is the NDIL register of the 1st key
 	if (err)	{ return err; }
 
-	TMP.Bits.NDIL = use ? NDIL_Val : 0;
-	return AT42QT1244_Send_Setup(pCpnt, &TMP.Byte, AT42QT__SETUP_KEYS_MODE_0 + Key, sizeof(TMP));
+	for (unsigned int i = 0, j = 1 ; i < AT42QT1244_MAX_KEYS ; i++, j <<= 1)
+	{
+		if (!(mask_keys & j))	{ continue; }	// Skip key if not in the mask
+
+		TMP[i].Bits.NDIL = use ? NDIL_Val : 0;
+	}
+
+	return AT42QT1244_Send_Setup(pCpnt, hcrc, &TMP[0].Byte, AT42QT__SETUP_KEYS_MODE_0, sizeof(TMP));
 }
 
 
-FctERR NONNULL__ AT42QT1244_Setup_FHM(AT42QT1244_t * pCpnt, const AT42QT_FHM FHM)
+FctERR NONNULL__ AT42QT1244_Setup_FHM(AT42QT1244_t * pCpnt, uint16_t * const hcrc, const AT42QT_FHM FHM)
 {
 	uAT42QT_REG__SETUP_244	TMP;
 	FctERR					err;
@@ -55,35 +84,7 @@ FctERR NONNULL__ AT42QT1244_Setup_FHM(AT42QT1244_t * pCpnt, const AT42QT_FHM FHM
 	if (err)	{ return err; }
 
 	TMP.Bits.FHM = FHM;
-	return AT42QT1244_Send_Setup(pCpnt, &TMP.Byte, AT42QT__SETUP_FREQ_HOPING_DWELL, 1);
-}
-
-
-FctERR NONNULL__ AT42QT1244_Setup_CRC(AT42QT1244_t * pCpnt, uint16_t * crc)
-{
-	uint8_t		SETUP[108],	HCRC[2];
-	FctERR		err;
-
-	#if defined(HAL_IWDG_MODULE_ENABLED)
-		// Refresh watchdog (as the whole procedure may take up some time)
-		HAL_IWDG_Refresh(&hiwdg);
-	#endif
-
-	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, SETUP, AT42QT__SETUP_KEYS_THRESHOLD_0, sizeof(SETUP));
-	if (err)	{ return err; }
-
-	for (unsigned int i = 0 ; i < sizeof(SETUP) ; i++)
-	{
-		*crc = AT42QT1244_crc16(*crc, SETUP[i]);
-	}
-
-	HCRC[0] = LOBYTE(*crc);
-	HCRC[1] = HIBYTE(*crc);
-	err = AT42QT1244_Send_Setup(pCpnt, HCRC, AT42QT__SETUP_HOST_CRC_LSB, sizeof(HCRC));
-
-	if (!err)	{ err = AT42QT1244_Reset(pCpnt); }
-
-	return err;
+	return AT42QT1244_Send_Setup(pCpnt, hcrc, &TMP.Byte, AT42QT__SETUP_FREQ_HOPING_DWELL, 1);
 }
 
 

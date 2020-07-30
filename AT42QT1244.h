@@ -40,6 +40,12 @@
 #define AT42QT1244_BASE_ADDR	AT42QT1244_ADDR		//!< AT42QT1244 Base address
 #endif
 
+#ifndef AT42QT1244_CHECK_CRC
+//! \note Define AT42QT1244_CHECK_CRC in globals.h or at project to change CRC check behavior
+#define AT42QT1244_CHECK_CRC	1					//!< AT42QT1244 read transactions CRC check
+#endif
+
+#define AT42QT1244_MAX_KEYS		24					//!< AT42QT1244 peripheral maximum number of keys
 
 // *****************************************************************************
 // Section: Datas

@@ -11,7 +11,9 @@
 #if defined(I2C_AT42QT1244)
 /****************************************************************/
 // std libs
+#if AT42QT1244_CHECK_CRC
 #include <stdlib.h>
+#endif
 // HARMcksL libs
 #include "tick_utils.h"
 /****************************************************************/
@@ -68,9 +70,10 @@ FctERR NONNULL__ AT42QT1244_Read(I2C_slave_t * pSlave, uint8_t * data, const uin
 	if (addr > AT42QT__SETUP_HOST_CRC_MSB)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > AT42QT__SETUP_HOST_CRC_MSB + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
+#if AT42QT1244_CHECK_CRC
 	uint8_t * read = malloc(nb + 2);
-
 	if (read == NULL)									{ return ERROR_MEMORY; }	// Memory allocation failed
+#endif
 
 	FctERR	err;
 	uint8_t	preamble[2] = { addr, nb };
@@ -84,11 +87,16 @@ FctERR NONNULL__ AT42QT1244_Read(I2C_slave_t * pSlave, uint8_t * data, const uin
 	{
 		Delay_us(150);	// Have to wait for 150us
 		I2C_set_busy(pSlave, true);
+#if AT42QT1244_CHECK_CRC
 		pSlave->status = HAL_I2C_Master_Receive(pSlave->cfg.bus_inst, pSlave->cfg.addr, read, nb + 2, pSlave->cfg.timeout);
+#else
+		pSlave->status = HAL_I2C_Master_Receive(pSlave->cfg.bus_inst, pSlave->cfg.addr, data, nb, pSlave->cfg.timeout);
+#endif
 		I2C_set_busy(pSlave, false);
 		err = HALERRtoFCTERR(pSlave->status);
 	}
 
+#if AT42QT1244_CHECK_CRC
 	if (!err)
 	{
 		// Checksum calculation
@@ -102,6 +110,8 @@ FctERR NONNULL__ AT42QT1244_Read(I2C_slave_t * pSlave, uint8_t * data, const uin
 	}
 
 	free(read);
+#endif
+
 	return err;
 }
 
