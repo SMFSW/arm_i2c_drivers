@@ -24,6 +24,8 @@ FctERR NONNULL__ AT42QT1244_Send_Setup(AT42QT1244_t * pCpnt, uint16_t * const hc
 	uint8_t	SETUP[111];
 	FctERR	err;
 
+	*hcrc = 0;
+
 	if ((addr < AT42QT__SETUP_KEYS_THRESHOLD_0) || (addr > AT42QT__SETUP_NOISE))	{ return ERROR_VALUE; }
 	if (Nb > AT42QT__SETUP_NOISE - AT42QT__SETUP_KEYS_THRESHOLD_0 + 1)				{ return ERROR_RANGE; }
 
@@ -36,15 +38,12 @@ FctERR NONNULL__ AT42QT1244_Send_Setup(AT42QT1244_t * pCpnt, uint16_t * const hc
 	if (!err)
 	{
 		SETUP[0] = AT42QT__WRITE_SETUPS;
-		memcpy(&SETUP[AT42QT__SETUP_KEYS_THRESHOLD_0 - addr], setup, Nb);
+		memcpy(&SETUP[addr - AT42QT__SETUP_KEYS_THRESHOLD_0] + 1, setup, Nb);
 
-		*hcrc = 0;
-		for (unsigned int i = 1 ; i < sizeof(SETUP) - 2 ; i++)	// CRC excluding COMMAND & CRC registers
-		{
-			*hcrc = AT42QT1244_crc16(*hcrc, SETUP[i]);
-		}
-		SETUP[110] = LOBYTE(*hcrc);
-		SETUP[111] = HIBYTE(*hcrc);
+		// Compute CRC excluding COMMAND & CRC registers
+		for (unsigned int i = 1 ; i < sizeof(SETUP) - 2 ; i++)	{ *hcrc = AT42QT1244_crc16(*hcrc, SETUP[i]); }
+		SETUP[sizeof(SETUP) - 2] = LOBYTE(*hcrc);
+		SETUP[sizeof(SETUP) - 1] = HIBYTE(*hcrc);
 
 		err |= AT42QT1244_Write(pCpnt->cfg.slave_inst, SETUP, AT42QT__CONTROL_COMMAND, sizeof(SETUP));
 	}

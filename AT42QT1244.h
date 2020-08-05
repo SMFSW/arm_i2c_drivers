@@ -179,12 +179,12 @@ typedef enum PACK__ AT42QT_fhm_mode {
 typedef union uAT42QT_REG__KEY_DATA {
 	uint32_t Raw;
 	struct {
+		uint32_t Signal						:12;	//!< Signal
+		uint32_t Normal_Detector_Integrator	:4;		//!< Normal detector integrator
 		uint32_t Reference					:12;	//!< Reference
 		uint32_t LSL_Failure				:1;		//!< LSL failure
 		uint32_t FMEA_Failure				:1;		//!< FMEA failure
 		uint32_t 							:2;
-		uint32_t Signal						:12;	//!< Signal
-		uint32_t Normal_Detector_Integrator	:4;		//!< Normal detector integrator
 	} Data;
 } uAT42QT_REG__KEY_DATA;
 
