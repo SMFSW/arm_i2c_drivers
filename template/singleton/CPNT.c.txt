@@ -26,7 +26,7 @@ __WEAK FctERR $CPNT$_Init(void)
 {
 	FctERR err;
 
-	err = I2C_slave_init(&$CPNT$_hal, I2C_$CPNT$, $CPNT$_BASE_ADDR, I2C_slave_timeout);
+	err = I2C_slave_init(&$CPNT$_hal, I2C_$CPNT$, $CPNT$_BASE_ADDR, $CPNT$_hal.cfg.timeout);
 	if (!err)	{ err = $CPNT$_Init_Sequence(); }
 
 	if (err)	{ I2C_set_enable(&$CPNT$_hal, false); }

@@ -33,7 +33,7 @@ FctERR NONNULL__ MB85RC256V_Init(const uint8_t idx, const I2C_HandleTypeDef * hi
 
 	I2C_PERIPHERAL_SET_DEFAULTS(MB85RC256V, idx, devAddress);
 
-	err = I2C_slave_init(&MB85RC256V_hal[idx], hi2c, devAddress, I2C_slave_timeout);
+	err = I2C_slave_init(&MB85RC256V_hal[idx], hi2c, devAddress, MB85RC256V_hal[idx].cfg.timeout);
 	if (!err)	{ err = MB85RC256V_Init_Sequence(&MB85RC256V[idx]); }
 
 	if (err)	{ I2C_set_enable(&MB85RC256V_hal[idx], false); }

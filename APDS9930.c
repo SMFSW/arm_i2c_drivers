@@ -32,7 +32,7 @@ FctERR NONNULL__ APDS9930_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c
 
 	I2C_PERIPHERAL_SET_DEFAULTS(APDS9930, idx, devAddress);
 
-	err = I2C_slave_init(&APDS9930_hal[idx], hi2c, devAddress, I2C_slave_timeout);
+	err = I2C_slave_init(&APDS9930_hal[idx], hi2c, devAddress, APDS9930_hal[idx].cfg.timeout);
 	if (!err)	{ err = APDS9930_Init_Sequence(&APDS9930[idx]); }
 
 	if (err)	{ I2C_set_enable(&APDS9930_hal[idx], false); }

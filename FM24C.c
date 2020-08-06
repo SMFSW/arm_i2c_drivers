@@ -37,7 +37,7 @@ FctERR NONNULL__ FM24C_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, c
 
 	I2C_PERIPHERAL_SET_DEFAULTS(FM24C, idx, devAddress);
 
-	err = I2C_slave_init(&FM24C_hal[idx], hi2c, devAddress, I2C_slave_timeout);
+	err = I2C_slave_init(&FM24C_hal[idx], hi2c, devAddress, FM24C_hal[idx].cfg.timeout);
 
 	if (err)	{ I2C_set_enable(&FM24C_hal[idx], false); }
 

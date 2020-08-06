@@ -28,7 +28,7 @@ FctERR NONNULL__ S11059_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, 
 
 	I2C_PERIPHERAL_SET_DEFAULTS(S11059, idx, devAddress);
 
-	err = I2C_slave_init(&S11059_hal[idx], hi2c, devAddress, I2C_slave_timeout);
+	err = I2C_slave_init(&S11059_hal[idx], hi2c, devAddress, S11059_hal[idx].cfg.timeout);
 	if (!err)	{ err = S11059_Init_Sequence(&S11059[idx]); }
 
 	if (err)	{ I2C_set_enable(&S11059_hal[idx], false); }

@@ -28,7 +28,7 @@ FctERR NONNULL__ MCP9808_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c,
 
 	I2C_PERIPHERAL_SET_DEFAULTS(MCP9808, idx, devAddress);
 
-	err = I2C_slave_init(&MCP9808_hal[idx], hi2c, devAddress, I2C_slave_timeout);
+	err = I2C_slave_init(&MCP9808_hal[idx], hi2c, devAddress, MCP9808_hal[idx].cfg.timeout);
 	if (!err)	{ err = MCP9808_Init_Sequence(&MCP9808[idx]); }
 
 	if (err)	{ I2C_set_enable(&MCP9808_hal[idx], false); }

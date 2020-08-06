@@ -32,7 +32,7 @@ FctERR NONNULL__ PCA9685_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c,
 
 	I2C_PERIPHERAL_SET_DEFAULTS(PCA9685, idx, devAddress);
 
-	err = I2C_slave_init(&PCA9685_hal[idx], hi2c, devAddress, I2C_slave_timeout);
+	err = I2C_slave_init(&PCA9685_hal[idx], hi2c, devAddress, PCA9685_hal[idx].cfg.timeout);
 	if (!err)	{ err = PCA9685_Init_Sequence(&PCA9685[idx]); }
 
 	if (err)	{ I2C_set_enable(&PCA9685_hal[idx], false); }

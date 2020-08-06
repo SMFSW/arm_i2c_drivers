@@ -28,7 +28,7 @@ FctERR NONNULL__ BMP180_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, 
 
 	I2C_PERIPHERAL_SET_DEFAULTS(BMP180, idx, devAddress);
 
-	err = I2C_slave_init(&BMP180_hal[idx], hi2c, devAddress, I2C_slave_timeout);
+	err = I2C_slave_init(&BMP180_hal[idx], hi2c, devAddress, BMP180_hal[idx].cfg.timeout);
 	if (!err)	{ err = BMP180_Init_Sequence(&BMP180[idx]); }
 
 	if (err)	{ I2C_set_enable(&BMP180_hal[idx], false); }

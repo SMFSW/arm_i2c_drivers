@@ -28,7 +28,7 @@ FctERR NONNULL__ PCA9532_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c,
 
 	I2C_PERIPHERAL_SET_DEFAULTS(PCA9532, idx, devAddress);
 
-	err = I2C_slave_init(&PCA9532_hal[idx], hi2c, devAddress, I2C_slave_timeout);
+	err = I2C_slave_init(&PCA9532_hal[idx], hi2c, devAddress, PCA9532_hal[idx].cfg.timeout);
 	PCA9532_Set_Auto_Increment(&PCA9532[idx], PCA95xx__AUTO_INC_ALL);
 	if (!err)	{ err = PCA9532_Init_Sequence(&PCA9532[idx]); }
 

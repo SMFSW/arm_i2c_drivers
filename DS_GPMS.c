@@ -22,7 +22,7 @@ __WEAK FctERR GPMS_Init(void)
 {
 	FctERR err;
 
-	err = I2C_slave_init(&GPMS_hal, I2C_GPMS, GPMS_BASE_ADDR, I2C_slave_timeout);
+	err = I2C_slave_init(&GPMS_hal, I2C_GPMS, GPMS_BASE_ADDR, GPMS_hal.cfg.timeout);
 	if (!err)	{ err = GPMS_Init_Sequence(); }
 
 	if (err)	{ I2C_set_enable(&GPMS_hal, false); }

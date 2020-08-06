@@ -32,7 +32,7 @@ FctERR NONNULL__ PCA9624_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c,
 
 	I2C_PERIPHERAL_SET_DEFAULTS(PCA9624, idx, devAddress);
 
-	err = I2C_slave_init(&PCA9624_hal[idx], hi2c, devAddress, I2C_slave_timeout);
+	err = I2C_slave_init(&PCA9624_hal[idx], hi2c, devAddress, PCA9624_hal[idx].cfg.timeout);
 	PCA9624_Set_Auto_Increment(&PCA9624[idx], PCA962x__AUTO_INC_ALL);
 	if (!err)	{ err = PCA9624_Init_Sequence(&PCA9624[idx]); }
 

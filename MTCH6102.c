@@ -33,7 +33,7 @@ FctERR NONNULL__ MTCH6102_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c
 
 	MTCH6102_last_access[idx] = 0;
 
-	err = I2C_slave_init(&MTCH6102_hal[idx], hi2c, devAddress, I2C_slave_timeout);
+	err = I2C_slave_init(&MTCH6102_hal[idx], hi2c, devAddress, MTCH6102_hal[idx].cfg.timeout);
 	if (!err)	{ err = MTCH6102_Init_Sequence(&MTCH6102[idx]); }
 
 	if (err)	{ I2C_set_enable(&MTCH6102_hal[idx], false); }

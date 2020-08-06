@@ -28,7 +28,7 @@ FctERR NONNULL__ AMG88_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, c
 
 	I2C_PERIPHERAL_SET_DEFAULTS(AMG88, idx, devAddress);
 
-	err = I2C_slave_init(&AMG88_hal[idx], hi2c, devAddress, I2C_slave_timeout);
+	err = I2C_slave_init(&AMG88_hal[idx], hi2c, devAddress, AMG88_hal[idx].cfg.timeout);
 	if (!err)	{ err = AMG88_Init_Sequence(&AMG88[idx]); }
 
 	if (err)	{ I2C_set_enable(&AMG88_hal[idx], false); }
