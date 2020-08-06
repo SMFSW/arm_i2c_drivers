@@ -178,7 +178,7 @@ typedef enum PACK__ AT42QT_fhm_mode {
 
 typedef union uAT42QT_REG__KEY_DATA {
 	uint32_t Raw;
-	struct {
+	struct PACK__ {
 		uint32_t Signal						:12;	//!< Signal
 		uint32_t Normal_Detector_Integrator	:4;		//!< Normal detector integrator
 		uint32_t Reference					:12;	//!< Reference
@@ -190,7 +190,7 @@ typedef union uAT42QT_REG__KEY_DATA {
 
 typedef union uAT42QT_REG__DEVICE_STATUS {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t CRC_Incorrect		:1;		//!< Setups CRC does not match HCRC
 		uint8_t Mains_Sync_Error	:1;		//!< Mains sync error
 		uint8_t Key_In_Calib		:1;		//!< Key in calibration
@@ -203,7 +203,7 @@ typedef union uAT42QT_REG__DEVICE_STATUS {
 
 typedef union uAT42QT_REG__SETUP_141_164 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t NTHR_PTHR	:2;		//!< Threshold
 		uint8_t NDRIFT		:3;		//!< Drift compensation
 		uint8_t BL			:2;		//!< Burst length
@@ -212,7 +212,7 @@ typedef union uAT42QT_REG__SETUP_141_164 {
 
 typedef union uAT42QT_REG__SETUP_165_188 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t NDIL	:3;		//!< No detection
 		uint8_t FDIL	:3;		//!< False detection
 		uint8_t AKS		:1;		//!< Adjacent Key suppression technology
@@ -222,7 +222,7 @@ typedef union uAT42QT_REG__SETUP_165_188 {
 
 typedef union uAT42QT_REG__SETUP_238 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t SLEEP	:3;		//!< Sleep duration
 		uint8_t MSYNC	:1;		//!< Main sync
 		uint8_t NHYST	:2;		//!< Negative hysteresis
@@ -232,7 +232,7 @@ typedef union uAT42QT_REG__SETUP_238 {
 
 typedef union uAT42QT_REG__SETUP_241 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t PDRIFT	:3;		//!< Positive drift compensation
 		uint8_t SSYNC	:5;		//!< Oscilloscope sync
 	} Bits;
@@ -240,14 +240,14 @@ typedef union uAT42QT_REG__SETUP_241 {
 
 typedef union uAT42QT_REG__SETUP_242 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t LSL		:8;		//!< Lower signal limit (LSB)
 	} Bits;
 } uAT42QT_REG__SETUP_242;
 
 typedef union uAT42QT_REG__SETUP_243 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t LSL		:3;		//!< Lower signal limit (MSB)
 		uint8_t KGTT	:5;		//!< Key gain test threshold
 	} Bits;
@@ -255,7 +255,7 @@ typedef union uAT42QT_REG__SETUP_243 {
 
 typedef union uAT42QT_REG__SETUP_244 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t		DWELL	:3;		//!< Dwell time
 		uint8_t		RIB		:1;		//!< Restart interrupted burst
 		uint8_t		THRM	:2;		//!< Threshold multiplier
@@ -265,7 +265,7 @@ typedef union uAT42QT_REG__SETUP_244 {
 
 typedef union uAT42QT_REG__SETUP_248 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t NSTHR	:4;		//!< Noise threshold
 		uint8_t NIL		:4;		//!< Noise integrator limit
 	} Bits;

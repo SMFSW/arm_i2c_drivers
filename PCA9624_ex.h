@@ -24,7 +24,7 @@
 // *****************************************************************************
 typedef union uPCA9624_REG_MAP {
 	uint8_t Bytes[0x11];
-	struct {
+	struct PACK__ {
 		uPCA9624_REG__MODE1		MODE1;
 		uPCA9624_REG__MODE2		MODE2;
 		uint8_t					PWM0;

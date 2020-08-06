@@ -53,7 +53,7 @@
 ** \brief FM24C user interface struct
 **/
 typedef struct FM24C_t {
-	struct {
+	struct PACK__ {
 	I2C_slave_t *	slave_inst;		//!< Slave structure
 	} cfg;
 } FM24C_t;

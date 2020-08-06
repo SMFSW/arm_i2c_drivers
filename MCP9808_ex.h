@@ -27,7 +27,7 @@
 **/
 typedef union uMCP9808_REG_MAP {
 	uint16_t Words[9];
-	struct {
+	struct PACK__ {
 		uint16_t				RFU;				//!< RFU, Reserved for Future Use (Read-Only register)
 		uMCP9808_REG__CFG		CONFIG;				//!< Configuration register (CONFIG)
 		uMCP9808_REG__TEMP_LIM	TUpper;				//!< Alert Temperature Upper Boundary Trip register (T_upper)

@@ -37,7 +37,7 @@ typedef enum PACK__ TSL2591_light {
 **/
 typedef union uTSL2591_REG_MAP {
 	uint8_t Bytes[23];
-	struct {
+	struct PACK__ {
 		uTSL2591_REG__ENABLE	ENABLE;		//!< Enables states and interrupts
 		uTSL2591_REG__CONFIG	CONFIG;		//!< ALS gain and integration time configuration
 		uint8_t					:8;

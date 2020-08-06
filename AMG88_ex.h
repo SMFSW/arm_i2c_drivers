@@ -32,7 +32,7 @@
 **/
 typedef union uAMG88_REG_MAP {
 	uint8_t Bytes[256];
-	struct {
+	struct PACK__ {
 		uint8_t	Reg_1;
 		uint8_t	Reg_2;
 	} Reg;
@@ -48,14 +48,14 @@ typedef union uAMG88_REG_MAP {
 
 /*!\brief Convert raw thermistor temperature to celsius degrees
 ** \param[in] therm - Raw thermistor value
-** \return Thermistor temperature (in °C)
+** \return Thermistor temperature (in ï¿½C)
 **/
 float AMG88_Convert_Thermistor_Raw(const uint16_t therm);
 
 
 /*!\brief Convert raw pixel temperature to celsius degrees
 ** \param[in] pixel - Raw pixel value
-** \return Pixel temperature (in °C)
+** \return Pixel temperature (in ï¿½C)
 **/
 float AMG88_Convert_Pixel_Raw(const uint16_t pixel);
 

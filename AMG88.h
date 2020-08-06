@@ -230,7 +230,7 @@ typedef enum PACK__ AMG88_mode {
 **/
 typedef union uAMG88_REG__FRAME_RATE {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t FPS		:1;	//!< Frame mode (1: 1FPS ; 0: 10FPS)
 		uint8_t			:7;
 	} Bits;
@@ -242,7 +242,7 @@ typedef union uAMG88_REG__FRAME_RATE {
 **/
 typedef union uAMG88_REG__INT_CONTROL {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t INTEN	:1;	//!< INT Output (0: reactive (Hi-Z) ; 1: active)
 		uint8_t INTMOD	:1;	//!< Interrupt Mode (0: Difference ; 1: Absolute)
 		uint8_t			:6;
@@ -255,7 +255,7 @@ typedef union uAMG88_REG__INT_CONTROL {
 **/
 typedef union uAMG88_REG__STATUS {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t			:1;
 		uint8_t INTF	:1;	//!< Interrupt Outbreak
 		uint8_t OVF_IRS	:1;	//!< Temperature Output Overflow
@@ -270,7 +270,7 @@ typedef union uAMG88_REG__STATUS {
 **/
 typedef union uAMG88_REG__STATUS_CLEAR {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t			:1;
 		uint8_t INTCLR	:1;	//!< Interrupt Flag Clear
 		uint8_t OVS_CLR	:1;	//!< Temperature Output Overflow Flag Clear
@@ -285,7 +285,7 @@ typedef union uAMG88_REG__STATUS_CLEAR {
 **/
 typedef union uAMG88_REG__AVERAGE {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t			:5;
 		uint8_t MAMOD	:1;	//!< Moving average Output Mode (0: single ; 1: twice)
 		uint8_t			:2;
@@ -298,7 +298,7 @@ typedef union uAMG88_REG__AVERAGE {
 **/
 typedef union uAMG88_REG__TEMP {
 	uint16_t Word;
-	struct {
+	struct PACK__ {
 		//! \warning temp is coded as absolute (thermistor), or as twos complement (pixels and thresholds)
 		uint16_t temp			:11;	//!< Temperature value (absolute)
 		uint16_t sign			:1;		//!< Temperature sign
@@ -313,7 +313,7 @@ typedef union uAMG88_REG__TEMP {
 typedef union uAMG88_REG__INT {
 	uint64_t LWord;
 	uint8_t Bytes[8];
-	struct {
+	struct PACK__ {
 		uint64_t	PIX01	:1;		//!< Pixel 01 interrupt
 		uint64_t	PIX02	:1;		//!< Pixel 02 interrupt
 		uint64_t	PIX03	:1;		//!< Pixel 03 interrupt

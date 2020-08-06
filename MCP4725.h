@@ -81,7 +81,7 @@ typedef enum PACK__ MCP4725_pd {
 **/
 typedef union uMCP4725_REG__CMD {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t				:1;
 		MCP4725_pd	PD		:2;		//!< Power down mode
 		uint8_t				:2;

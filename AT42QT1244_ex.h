@@ -27,7 +27,7 @@
 **/
 typedef union uAT42QT_REG_MAP {
 	uint8_t Bytes[251];
-	struct {
+	struct PACK__ {
 		uint8_t						Res_1;
 		uint8_t						Res_2;
 		uint8_t						Counter_100ms;

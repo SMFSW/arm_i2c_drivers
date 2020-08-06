@@ -24,7 +24,7 @@
 // *****************************************************************************
 typedef union uPCA9532_REG_MAP {
 	uint8_t Bytes[10];
-	struct {
+	struct PACK__ {
 		uPCA9532_REG__INPUT0	INPUT0;
 		uPCA9532_REG__INPUT1	INPUT1;
 		uint8_t					PSC0;

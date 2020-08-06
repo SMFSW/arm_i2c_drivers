@@ -42,7 +42,7 @@
 // Section: Types
 // *****************************************************************************
 typedef struct MB85RC256V_t {
-	struct {
+	struct PACK__ {
 	I2C_slave_t *	slave_inst;			//!< Slave structure
 	uint16_t		Manufacture_ID;
 	uint8_t			Density;

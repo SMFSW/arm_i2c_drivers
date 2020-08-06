@@ -126,7 +126,7 @@ typedef enum PACK__ PCF8523_power {
 **/
 typedef union uPCF8523_REG__CTRL1 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t CIE			:1;		//!< 0: no correction interrupt generated, 1: interrupt pulses are generated at every correction cycle
 		uint8_t AIE			:1;		//!< Alarm interrupt enable
 		uint8_t SIE			:1;		//!< Second interrupt enable
@@ -144,7 +144,7 @@ typedef union uPCF8523_REG__CTRL1 {
 **/
 typedef union uPCF8523_REG__CTRL2 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t CTBIE	:1;		//!< Countdown timer B enable
 		uint8_t CTAIE	:1;		//!< Countdown timer A enable
 		uint8_t WTAIE	:1;		//!< Watchdog timer A enable
@@ -162,7 +162,7 @@ typedef union uPCF8523_REG__CTRL2 {
 **/
 typedef union uPCF8523_REG__CTRL3 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t			BLIE	:1;		//!< Battery Low (1: interrupt generated when BLF is set)
 		uint8_t			BSIE	:1;		//!< Battery Switch-over (1: interrupt generated when BSF is set)
 		uint8_t			BLF		:1;		//!< Battery status (0: battery status Ok; 1: Battery low)
@@ -178,7 +178,7 @@ typedef union uPCF8523_REG__CTRL3 {
 **/
 typedef union uPCF8523_REG__SECONDS {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t SECONDS	:7;		//!< Seconds
 		uint8_t OS		:1;		//!< Clock integrity
 	} Bits;
@@ -190,7 +190,7 @@ typedef union uPCF8523_REG__SECONDS {
 **/
 typedef union uPCF8523_REG__MINUTES {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t MINUTES	:7;		//!< Minutes
 		// AEN_M: Only for Minute Alarm
 		uint8_t AEN_M	:1;		//!< Alarm enabled
@@ -203,16 +203,16 @@ typedef union uPCF8523_REG__MINUTES {
 **/
 typedef union uPCF8523_REG__HOURS {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		union {
-			struct {
+			struct PACK__ {
 				uint8_t HOURS	:5;		//!< Hours (12h format)
 				uint8_t AMPM	:1;		//!< AM / PM
 				uint8_t			:1;
 				// AEN_H: Only for Hour Alarm
 				uint8_t AEN_H	:1;		//!< Alarm enabled
 			} TWELVE;
-			struct {
+			struct PACK__ {
 				uint8_t HOURS	:6;		//!< Hours (24h format)
 				uint8_t			:1;
 				// AEN_H: Only for Hour Alarm
@@ -228,7 +228,7 @@ typedef union uPCF8523_REG__HOURS {
 **/
 typedef union uPCF8523_REG__DAYS {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t DAYS	:6;		//!< Days
 		uint8_t			:1;
 		// AEN_D: Only for Day Alarm
@@ -242,7 +242,7 @@ typedef union uPCF8523_REG__DAYS {
 **/
 typedef union uPCF8523_REG__WEEKDAYS {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		PCF8523_weekdays WEEKDAYS	:3;		//!< Weekdays
 		uint8_t						:4;
 		// AEN_D: only for Weekday Alarm
@@ -256,7 +256,7 @@ typedef union uPCF8523_REG__WEEKDAYS {
 **/
 typedef union uPCF8523_REG__OFFSET {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t OFFSET	:7;		//!< offset value (+63 to -64) MODE = 0: offset step 4.340ppm, MODE = 1: offset step 4.069ppm
 		int8_t MODE		:1;		//!< 0: offset is made once every two hours, 1: offset is made once every minute
 	} Bits;
@@ -268,7 +268,7 @@ typedef union uPCF8523_REG__OFFSET {
 **/
 typedef union uPCF8523_REG__CLKOUT_CTRL {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t TBC		:1;		//!< timer B is enabled (if CTBIE (register Control_2) is set logic 1, the interrupt is activated when the countdown timed out)
 		uint8_t TAC		:2;		//!< b00: disabled, b01: timer A countdown timer, b10: timer A watchdog timer
 		uint8_t COF		:3;		//!< CLKOUT frequency selection
@@ -283,7 +283,7 @@ typedef union uPCF8523_REG__CLKOUT_CTRL {
 **/
 typedef union uPCF8523_REG__B_FREQ_CTRL {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t TBQ		:3;		//!< source clock for timer B
 		uint8_t			:1;
 		uint8_t TBW		:3;		//!< low pulse width for pulsed timer B interrupt

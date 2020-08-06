@@ -225,7 +225,7 @@ typedef enum PACK__ APDS9960_gesture_dim {
 **/
 typedef union uAPDS9960_REG__ENABLE {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t PON		:1;	//!< Power ON. This field activates the internal oscillator to permit the timers and ADC channels to operate
 		uint8_t AEN		:1;	//!< ALS Enable. This field activates ALS function. Writing a one activates the ALS. Writing a zero disables the ALS
 		uint8_t PEN		:1;	//!< Proximity Detect Enable. This field activates the proximity detection. Writing a 1 activates the proximity. Writing a 0 disables the proximity.
@@ -243,7 +243,7 @@ typedef union uAPDS9960_REG__ENABLE {
 **/
 typedef union uAPDS9960_REG__PERSIST {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		APDS9960_als_it_persist		APERS	:4;	//!< Interrupt persistence. Controls rate of interrupt to the host processor.
 		APDS9960_prox_it_persist	PPERS	:4;	//!< Proximity interrupt persistence. Controls rate of proximity interrupt to the host processor.
 	} Bits;
@@ -255,7 +255,7 @@ typedef union uAPDS9960_REG__PERSIST {
 **/
 typedef union uAPDS9960_REG__CONFIG1 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t			:1;
 		uint8_t	WLONG	:1;	//!< Wait Long. When asserted, the wait cycles are increased by a factor 12x from that programmed in the WTIME register.
 		uint8_t			:3;	//!< ALS gain level. When asserted, the 1� and 8� ALS gain (AGAIN) modes are scaled by 0.16. Otherwise, AGAIN is scaled by 1. Do not use with AGAIN greater than 8�.
@@ -269,7 +269,7 @@ typedef union uAPDS9960_REG__CONFIG1 {
 **/
 typedef union uAPDS9960_REG__CONFIG2 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t				_WRITE1		:1;	//!< Reserved. Write as 1
 		uint8_t							:3;
 		APDS9960_led_boost	LED_BOOST	:2;	//!< Additional LDR current during proximity and gesture LED pulses. Current value, set by LDRIVE, is increased by the percentage of LED_BOOST.
@@ -283,7 +283,7 @@ typedef union uAPDS9960_REG__CONFIG2 {
 **/
 typedef union uAPDS9960_REG__CONFIG3 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t	PMASK_R		:1;	//!< Proximity Mask RIGHT Enable. Writing a 1 disables this photodiode.
 		uint8_t	PMASK_L		:1;	//!< Proximity Mask LEFT Enable. Writing a 1 disables this photodiode.
 		uint8_t	PMASK_D		:1;	//!< Proximity Mask DOWN Enable. Writing a 1 disables this photodiode.
@@ -299,7 +299,7 @@ typedef union uAPDS9960_REG__CONFIG3 {
 **/
 typedef union uAPDS9960_REG__GCONFIG1 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t	GEXPERS		:2;	//!< Gesture Exit Persistence. When a number of consecutive �gesture end� occurrences become equal or greater to the GEPERS value, the Gesture state machine is exited.
 		uint8_t	GEXMSK_R	:1;	//!< R detector data will not be included in sum if set to 1.
 		uint8_t	GEXMSK_L	:1;	//!< L detector data will not be included in sum if set to 1.
@@ -314,7 +314,7 @@ typedef union uAPDS9960_REG__GCONFIG1 {
 **/
 typedef union uAPDS9960_REG__GCONFIG2 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t					GWTIME	:3;	//!< Gesture Wait Time. The GWTIME controls the amount of time in a low power mode between gesture detection cycles.
 		APDS9960_drive_strength	GLDRIVE	:2;	//!< Gesture LED Drive Strength. Sets LED Drive Strength in gesture mode.
 		APDS9960_prox_gain		GGAIN	:2;	//!< Gesture Gain Control. Sets the gain of the proximity receiver in gesture mode.
@@ -327,7 +327,7 @@ typedef union uAPDS9960_REG__GCONFIG2 {
 **/
 typedef union uAPDS9960_REG__GCONFIG3 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		APDS9960_gesture_dim	GDIMS	:2;	//!< Gesture Dimension Select. Selects which gesture photodiode pairs are enabled to gather results during gesture.
 		uint8_t							:6;
 	} Bits;
@@ -338,7 +338,7 @@ typedef union uAPDS9960_REG__GCONFIG3 {
 **/
 typedef union uAPDS9960_REG__GCONFIG4 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t	GMODE		:1;	//!< Gesture Mode. Reading this bit reports if the gesture state machine is actively running, 1 = Gesture, 0= ALS, Proximity, Color.
 		uint8_t	GIEN		:1;	//!< Gesture interrupt enable. Gesture Interrupt Enable. When asserted, all gesture related interrupts are unmasked.
 		uint8_t	GFIFO_CLR	:1;	//!< Setting this bit to '1' clears GFIFO, GINT, GVALID, GFIFO_OV and GFIFO_LVL.
@@ -352,7 +352,7 @@ typedef union uAPDS9960_REG__GCONFIG4 {
 **/
 typedef union uAPDS9960_REG__PULSE {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t					PULSE	:6;	//!< Pulse Count. Specifies the number of pulses to be generated on LDR. Number of pulses is set by xPULSE value plus 1.
 		APDS9960_pulse_length	PLEN	:2;	//!< Pulse Length. Sets the LED-ON pulse width during a LDR pulse.
 	} Bits;
@@ -364,7 +364,7 @@ typedef union uAPDS9960_REG__PULSE {
 **/
 typedef union uAPDS9960_REG__CONTROL {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		APDS9960_als_gain		AGAIN	:2;	//!< ALS and Color Gain Control.
 		APDS9960_prox_gain		PGAIN	:2;	//!< Proximity Gain Control.
 		uint8_t							:2;	//!< Proximity Diode Select.
@@ -378,7 +378,7 @@ typedef union uAPDS9960_REG__CONTROL {
 **/
 typedef union uAPDS9960_REG__STATUS {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t AVALID	:1;		//!< ALS Valid. Indicates that an ALS cycle has completed since AEN was asserted or since a read from any of the ALS/Color data registers.
 		uint8_t PVALID	:1;		//!< Proximity Valid. Proximity Valid. Indicates that a proximity cycle has completed since PEN was asserted or since PDATA was last read. A read of PDATA automatically clears PVALID.
 		uint8_t GINT	:1;		//!< Gesture Interrupt. GINT is asserted when GFVLV becomes greater than GFIFOTH or if GVALID has become asserted when GMODE transitioned to zero. The bit is reset when FIFO is completely emptied (read).
@@ -395,7 +395,7 @@ typedef union uAPDS9960_REG__STATUS {
 **/
 typedef union uAPDS9960_REG__GSTATUS {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t GVALID	:1;		//!< Gesture FIFO Data. GVALID bit is sent when GFLVL becomes greater than GFIFOTH (i.e. FIFO has enough data to set GINT). GFIFOD is reset when GMODE = 0 and the GFLVL=0 (i.e., All FIFO data has been read).
 		uint8_t GFOV	:1;		//!< Gesture FIFO Overflow. A setting of 1 indicates that the FIFO has filled to capacity and that new gesture detector data has been lost.
 		uint8_t			:6;

@@ -172,7 +172,7 @@ typedef enum PACK__ GPMS_north {
 **/
 typedef union uGPMS_REG__STATUS {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t FW_VERSION_MINOR	:4;		//!< Firmware version minor (0-15)
 		uint8_t FW_VERSION_MAJOR	:3;		//!< Firmware version major (0-3)
 		uint8_t POS_FOUND			:1;		//!< Position found bit (0 = Not found, 1 = Found) 

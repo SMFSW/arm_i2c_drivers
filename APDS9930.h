@@ -185,7 +185,7 @@ typedef enum PACK__ APDS9930_prox_it_persist {
 **/
 typedef union uAPDS9930_CMD {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		APDS9930_spec_func		ADDR		:5;		//!< Address field/special function field
 		APDS9930_transaction	TRANSACTION	:2;		//!< Select type of transaction to follow in subsequent data transfers
 		uint8_t					CMD			:1;		//!< Select command register. Must write as 1 when addressing Command register
@@ -198,7 +198,7 @@ typedef union uAPDS9930_CMD {
 **/
 typedef union uAPDS9930_REG__ENABLE {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t PON		:1;	//!< Power ON. This field activates the internal oscillator to permit the timers and ADC channels to operate
 		uint8_t AEN		:1;	//!< ALS Enable. This field activates ALS function. Writing a one activates the ALS. Writing a zero disables the ALS
 		uint8_t PEN		:1;	//!< Proximity Enable. This bit activates the proximity function. Writing a 1 enables proximity. Writing a 0 disables proximity.
@@ -216,7 +216,7 @@ typedef union uAPDS9930_REG__ENABLE {
 **/
 typedef union uAPDS9930_REG__CONFIG {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t	PDL		:1;	//!< Proximity drive level. When asserted, the proximity LDR drive current is reduced by 9
 		uint8_t	WLONG	:1;	//!< Wait Long. When asserted, the wait cycles are increased by a factor 12x from that programmed in the WTIME register.
 		uint8_t	AGL		:1;	//!< ALS gain level. When asserted, the 1× and 8× ALS gain (AGAIN) modes are scaled by 0.16. Otherwise, AGAIN is scaled by 1. Do not use with AGAIN greater than 8×.
@@ -230,7 +230,7 @@ typedef union uAPDS9930_REG__CONFIG {
 **/
 typedef union uAPDS9930_REG__CONTROL {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		APDS9930_als_gain		AGAIN	:2;	//!< ALS Gain Control.
 		APDS9930_prox_gain		PGAIN	:2;	//!< Proximity Gain Control.
 		APDS9930_prox_diode		PDIODE	:2;	//!< Proximity Diode Select.
@@ -244,7 +244,7 @@ typedef union uAPDS9930_REG__CONTROL {
 **/
 typedef union uAPDS9930_REG__PERSIST {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		APDS9930_als_it_persist		APERS	:4;	//!< Interrupt persistence. Controls rate of interrupt to the host processor.
 		APDS9930_prox_it_persist	PPERS	:4;	//!< Proximity interrupt persistence. Controls rate of proximity interrupt to the host processor.
 	} Bits;
@@ -256,7 +256,7 @@ typedef union uAPDS9930_REG__PERSIST {
 **/
 typedef union uAPDS9930_REG__STATUS {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t AVALID	:1;		//!< ALS Valid. Indicates that the ALS Ch0/Ch1 channels have completed an integration cycle.
 		uint8_t PVALID	:1;		//!< PS Valid. Indicates that the PS has completed an integration cycle.
 		uint8_t			:2;

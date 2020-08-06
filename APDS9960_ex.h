@@ -44,7 +44,7 @@ typedef enum PACK__ APDS9960_chan {
 **/
 typedef union uAPDS9960_REG_MAP {
 	uint8_t Bytes[176];
-	struct {
+	struct PACK__ {
 		uint8_t					RAM[128];	//!< APDS9960 RAM
 		uAPDS9960_REG__ENABLE	ENABLE;		//!< Enables of states and interrupts
 		uint8_t					ATIME;		//!< ALS ADC time

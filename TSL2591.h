@@ -136,7 +136,7 @@ typedef enum PACK__ TSL2591_it_persist {
 **/
 typedef union uTSL2591_CMD {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		TSL2591_spec_func	ADDR		:5;		//!< Address field/special function field
 		TSL2591_transaction	TRANSACTION	:2;		//!< Select type of transaction to follow in subsequent data transfers
 		uint8_t				CMD			:1;		//!< Select command register. Must write as 1 when addressing Command register
@@ -149,7 +149,7 @@ typedef union uTSL2591_CMD {
 **/
 typedef union uTSL2591_REG__ENABLE {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t PON		:1;	//!< Power ON. This field activates the internal oscillator to permit the timers and ADC channels to operate
 		uint8_t AEN		:1;	//!< ALS Enable. This field activates ALS function. Writing a one activates the ALS. Writing a zero disables the ALS
 		uint8_t 		:1;
@@ -166,7 +166,7 @@ typedef union uTSL2591_REG__ENABLE {
 **/
 typedef union uTSL2591_REG__CONFIG {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		TSL2591_integ	ATIME	:3;	//!< ALS time sets the internal ADC integration time for both photo-diode channels
 		uint8_t					:1;
 		TSL2591_gain	AGAIN	:2;	//!< ALS gain sets the gain for internal integration amplifiers for both photo-diode channels
@@ -181,7 +181,7 @@ typedef union uTSL2591_REG__CONFIG {
 **/
 typedef union uTSL2591_REG__PERSIST {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		TSL2591_it_persist	PERSIST	:4;	//!< ALS interrupt persistence filter
 		uint8_t 					:4;	//!< Reserved. Write as 0
 	} Bits;
@@ -193,7 +193,7 @@ typedef union uTSL2591_REG__PERSIST {
 **/
 typedef union uTSL2591_REG__STATUS {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t AVALID	:1;		//!< ALS Valid. Indicates that the ADC channels have completed an integration cycle since the AEN bit was asserted
 		uint8_t			:3;
 		uint8_t AINT	:1;		//!< ALS Interrupt. Indicates that the device is asserting an ALS interrupt

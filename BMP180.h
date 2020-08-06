@@ -105,7 +105,7 @@ typedef enum PACK__ BMP180_measure {
 **/
 typedef union uBMP180_REG__OUT_MSB {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t ADC_OUT_MSB		:8;		//!< ADC out msb
 	} Bits;
 } uBMP180_REG__OUT_MSB;
@@ -115,7 +115,7 @@ typedef union uBMP180_REG__OUT_MSB {
 **/
 typedef union uBMP180_REG__OUT_LSB {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t ADC_OUT_LSB		:8;		//!< ADC out lsb
 	} Bits;
 } uBMP180_REG__OUT_LSB;
@@ -125,7 +125,7 @@ typedef union uBMP180_REG__OUT_LSB {
 **/
 typedef union uBMP180_REG__OUT_XLSB {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t 				:3;
 		uint8_t ADC_OUT_XLSB	:5;		//!< ADC out xlsb
 	} Bits;
@@ -136,7 +136,7 @@ typedef union uBMP180_REG__OUT_XLSB {
 **/
 typedef union uBMP180_REG__MEAS_CTRL {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		BMP180_meas			MEAS_CTRL	:5;		//!< Command temperature or pressure
 		uint8_t				SCO			:1;		//!< Start of conversion. The value of this bit stays 1 during conversion and is reset to 0 after conversion is complete (data registers are filled)
 		BMP180_oversampling	OSS			:2;		//!< Controls the oversampling ratio for pressure measurement (00b: single, 01b: 2 times, 10b: 4 times, 11b: 8 times)

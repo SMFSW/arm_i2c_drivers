@@ -38,7 +38,7 @@ typedef enum PACK__ S11059_chan {
 **/
 typedef union uS11059_REG_MAP {
 	uint8_t Bytes[11];
-	struct {
+	struct PACK__ {
 		uS11059_REG__CONTROL	Control;			//!< Control register
 		uint8_t					Manual_Timing_MSB;	//!< Integration time manual setting register MSB
 		uint8_t					Manual_Timing_LSB;	//!< Integration time manual setting register LSB

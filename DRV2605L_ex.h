@@ -27,7 +27,7 @@
 **/
 typedef union uDRV_REG_MAP {
 	uint8_t Bytes[0x21];
-	struct {
+	struct PACK__ {
 		uDRV_REG__STATUS				Status;
 		uDRV_REG__MODE					Mode;
 		uint8_t							RTP_Input;

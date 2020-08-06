@@ -89,7 +89,7 @@ typedef enum PACK__ MCP9808_hyst {
 **/
 typedef union uMCP9808_REG__CFG {
 	uint16_t Word;
-	struct {
+	struct PACK__ {
 		uint16_t		AlertMod	:1;		//!< Alert output mode bit (0: Comparator output, 1: Interrupt output)
 		uint16_t		AlertPol	:1;		//!< Alert output polarity bit (0: active low, 1: active high)
 		uint16_t		AlertSel	:1;		//!< Alert output select bit (0: alert output for TUpper TLower & TCrit, 1: TA > TCrit only)
@@ -110,7 +110,7 @@ typedef union uMCP9808_REG__CFG {
 **/
 typedef union uMCP9808_REG__TEMP_LIM {
 	uint16_t Word;
-	struct {
+	struct PACK__ {
 		uint16_t			:2;
 		uint16_t Decimal	:2;		//!< Temperature boundary limits (fractional part)
 		uint16_t Integer	:8;		//!< Temperature boundary limits (integer part)
@@ -125,7 +125,7 @@ typedef union uMCP9808_REG__TEMP_LIM {
 **/
 typedef union uMCP9808_REG__TEMP_AMB {
 	uint16_t Word;
-	struct {
+	struct PACK__ {
 		uint16_t Decimal	:4;		//!< Ambient temperature (fractional part)
 		uint16_t Integer	:8;		//!< Ambient temperature (integer part)
 		uint16_t Sign		:1;		//!< Sign (0: Positive, 1: Negative)

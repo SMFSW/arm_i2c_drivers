@@ -307,7 +307,7 @@ typedef enum PACK__ DRV2605L_effect {
 **/
 typedef union uDRV_REG__STATUS {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t OC_DETECT		:1;		//!< Latching over current detection flag
 		uint8_t OVER_TEMP		:1;		//!< Latching over temperature detection flag
 		uint8_t					:1;
@@ -322,7 +322,7 @@ typedef union uDRV_REG__STATUS {
 **/
 typedef union uDRV_REG__MODE {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		DRV2605L_mode	MODE		:3;		//!< Working mode
 		uint8_t						:3;
 		uint8_t			STANDBY		:1;		//!< Software standby
@@ -335,7 +335,7 @@ typedef union uDRV_REG__MODE {
 **/
 typedef union uDRV_REG__LIBRARY_SELECTION {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		DRV2605L_lib	LIBRARY_SEL	:3;		//!< Waveform library selection value
 		uint8_t						:1;
 		uint8_t			HI_Z		:1;		//!< True high impedance state
@@ -348,7 +348,7 @@ typedef union uDRV_REG__LIBRARY_SELECTION {
 **/
 typedef union uDRV_REG__WAVEFORM_SEQUENCER {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		DRV2605L_eff	WAV_FRM_SEQ	:7;		//!< Waveform sequence value
 		uint8_t			WAIT		:1;		//!< Delay between waveforms
 	} Bits;
@@ -359,7 +359,7 @@ typedef union uDRV_REG__WAVEFORM_SEQUENCER {
 **/
 typedef union uDRV_REG__GO {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		DRV2605L_go GO	:1;		//!< Fire processes
 		uint8_t 		:7;
 	} Bits;
@@ -370,7 +370,7 @@ typedef union uDRV_REG__GO {
 **/
 typedef union uDRV_REG__ATV_CONTROL {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		DRV2605L_filter	ATH_FILTER		:2;		//!< Low pass filter frequency
 		DRV2605L_peak	ATH_PEAK_TIME	:2;		//!< Peak detection time
 		uint8_t 						:4;
@@ -382,7 +382,7 @@ typedef union uDRV_REG__ATV_CONTROL {
 **/
 typedef union uDRV_REG__FEEDBACK_CONTROL {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t			BEMF_GAIN		:2;		//!< Analog gain for back-EMF amplifier
 		uint8_t			LOOP_GAIN		:2;		//!< Loop gain for the feedback control
 		uint8_t			FB_BRAKE_FACTOR	:3;		//!< Feedback gain ratio between braking gain and driving gain
@@ -395,7 +395,7 @@ typedef union uDRV_REG__FEEDBACK_CONTROL {
 **/
 typedef union uDRV_REG__CONTROL_1 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t DRIVE_TIME		:5;		//!< LRA: sets initial guess for LRA drive-time / ERM: sets the sample rate for the back-EMF detection
 		uint8_t AC_COUPLE		:1;		//!< Apply 0.9V to IN_TRIG pin (only useful for analog input mode)
 		uint8_t 				:1;
@@ -408,7 +408,7 @@ typedef union uDRV_REG__CONTROL_1 {
 **/
 typedef union uDRV_REG__CONTROL_2 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t IDISS_TIME			:2;		//!< Current dissipation time
 		uint8_t BLANKING_TIME		:2;		//!< Blanking time before the back-EMF AD makes a conversion
 		uint8_t SAMPLE_TIME			:2;		//!< LRA auto-resonance sampling time
@@ -422,7 +422,7 @@ typedef union uDRV_REG__CONTROL_2 {
 **/
 typedef union uDRV_REG__CONTROL_3 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		DRV2605L_loop		LRA_OPEN_LOOP	:1;		//!< Open-loop drive option for LRA mode (auto-resonance/open loop)
 		DRV2605L_input		N_PWM_ANALOG	:1;		//!< Input mode for IN_TRIG when MODE[2:0]=3 (PWM/Analog input)
 		uint8_t				LRA_DRIVE_MODE	:1;		//!< Drive mode for the LRA algorithm (Once/Twice per cycle)
@@ -438,7 +438,7 @@ typedef union uDRV_REG__CONTROL_3 {
 **/
 typedef union uDRV_REG__CONTROL_4 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t OTP_PROGRAM		:1;		//!< Launch programming process of OTP
 		uint8_t 				:1;
 		uint8_t OTP_STATUS		:1;		//!< OTP memory status (not programmed/programmed)
@@ -453,7 +453,7 @@ typedef union uDRV_REG__CONTROL_4 {
 **/
 typedef union uDRV_REG__CONTROL_5 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t IDISS_TIME			:2;		//!< MSB of IDISS_TIME from CONTROL_2
 		uint8_t BLANKING_TIME		:2;		//!< MSB of BLANKING_TIME from CONTROL_2
 		uint8_t PLAYBACK_INTERVAL	:1;		//!< Memory playback interval (5ms/1ms)

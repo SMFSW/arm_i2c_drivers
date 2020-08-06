@@ -29,6 +29,7 @@ SOFTWARE.
 * more NONNULL__ checks
 * possibility to set different device base address than default set in header (at project level or in globals.h)
 * init function for peripherals use value in structure for timeout init (in case using a custom timeout)
+* all register unions have their struct definition packed
 * AMG88: added
 * APDS9930: added (+ warning if APDS9960 also compiled, OFFSET union removed as coded as signed 8bits integer)
 * APDS9960: added with fixes and default handler

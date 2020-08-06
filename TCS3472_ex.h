@@ -38,7 +38,7 @@ typedef enum PACK__ TCS3472_chan {
 **/
 typedef union uTCS3472_REG_MAP {
 	uint8_t Bytes[28];
-	struct {
+	struct PACK__ {
 		uTCS3472_REG__ENABLE	ENABLE;		//!< Enables states and interrupts
 		uint8_t					ATIME;		//!< RGBC time
 		uint8_t					:8;

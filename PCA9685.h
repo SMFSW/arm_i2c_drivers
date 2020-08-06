@@ -134,7 +134,7 @@ typedef enum PACK__ PCA9685_reg_map {
 **/
 typedef union PACK__ uPCA9685_REG__MODE1 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t ALLCALL	:1;		//!< All CALL address acknowledgment
 		uint8_t SUB3	:1;		//!< Sub-address 3 acknowledgment
 		uint8_t SUB2	:1;		//!< Sub-address 2 acknowledgment
@@ -153,7 +153,7 @@ typedef union PACK__ uPCA9685_REG__MODE1 {
 **/
 typedef union PACK__ uPCA9685_REG__MODE2 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t 		OUTNE	:2;
 		uint8_t			OUTDRV	:1;		//!< 0: Open drain, 1: Totem Pole
 		PCA96xx_latch	OCH		:1;		//!< 0: update on STOP, 1: update on ACK
@@ -168,11 +168,11 @@ typedef union PACK__ uPCA9685_REG__MODE2 {
 **/
 typedef union PACK__ uPCA9685_REG__DUTY {
 	uint16_t Word;
-	struct {
+	struct PACK__ {
 		uint8_t LSB;				//!< Less significant byte
 		uint8_t MSB;				//!< Most significant byte
 	} Bytes;
-	struct {
+	struct PACK__ {
 		uint16_t 	VAL		:12;	//!< Value
 		uint16_t	FULL	:1;		//!< Full bit
 		uint16_t 			:3;

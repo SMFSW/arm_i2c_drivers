@@ -70,7 +70,7 @@ typedef enum PACK__ $CPNT$_enum {
 **/
 typedef union u$CPNT$_REG__REG1 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t BIT0			:1;		//!< BIT0 description (LSB first)
 		uint8_t 				:6;
 		uint8_t BIT1			:1;		//!< BIT1 description (MSB last)

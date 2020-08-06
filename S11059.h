@@ -112,7 +112,7 @@ typedef enum PACK__ S11059_adc_reset {
 **/
 typedef union uS11059_REG__CONTROL {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		S11059_prescaler	INTEG_PRESCL		:2;		//!< Integration time setting (prescaler)
 		S11059_integ		INTEG_MODE			:1;		//!< Integration mode
 		S11059_gain			GAIN_SELECTION		:1;		//!< Gain selection

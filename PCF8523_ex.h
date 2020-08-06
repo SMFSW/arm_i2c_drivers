@@ -32,7 +32,7 @@
 **/
 typedef union uPCF8523_REG_MAP {
 	uint8_t Bytes[20];
-	struct {
+	struct PACK__ {
 		uPCF8523_REG__CTRL1			Control_1;
 		uPCF8523_REG__CTRL2			Control_2;
 		uPCF8523_REG__CTRL3			Control_3;

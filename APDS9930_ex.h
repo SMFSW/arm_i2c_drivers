@@ -39,7 +39,7 @@ typedef enum PACK__ APDS9930_chan {
 **/
 typedef union uAPDS9930_REG_MAP {
 	uint8_t Bytes[31];
-	struct {
+	struct PACK__ {
 		uAPDS9930_REG__ENABLE	ENABLE;		//!< Enables of states and interrupts
 		uint8_t					ATIME;		//!< ALS ADC time
 		uint8_t					PTIME;		//!< Proximity ADC time

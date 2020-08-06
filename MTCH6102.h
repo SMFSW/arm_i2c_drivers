@@ -318,7 +318,7 @@ typedef enum PACK__ MTCH6102_GESTURE_DIAGNOSTIC {
 // TOUCH REGISTERS
 typedef union {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t FRAME	:4;		//!< Increments on every touch frame
 		uint8_t			:1;
 		uint8_t LRG		:1;		//!<Large activation is present
@@ -329,21 +329,21 @@ typedef union {
 
 typedef union {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t TOUCHX11_4	:8;		//!< coord TOUCHX<11:4>
 	} Bits;
 } uMTCH_REG__TOUCHX;
 
 typedef union {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t TOUCHY11_4	:8;		//!< coord TOUCHY<11:4>
 	} Bits;
 } uMTCH_REG__TOUCHY;
 
 typedef union {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t TOUCHX3_0	:4;		//!< coord TOUCHX<3:0>
 		uint8_t TOUCHY3_0	:4;		//!< coord TOUCHY<3:0>
 	} Bits;
@@ -352,7 +352,7 @@ typedef union {
 // CORE REGISTERS
 typedef union {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t NV	:1;
 		uint8_t DEF	:1;
 		uint8_t CFG	:1;
@@ -365,7 +365,7 @@ typedef union {
 
 typedef union {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t				:4;
 		MTCH6102_MODE MODE	:4;		//!< Working mode
 	} Bits;
@@ -373,7 +373,7 @@ typedef union {
 
 typedef union {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		MTCH6102_TYPE	TYPE	:4;		//!< Type of result
 		MTCH6102_CH		CH		:4;		//!< Channel
 	} Bits;

@@ -76,7 +76,7 @@ typedef enum PACK__ PCA9624_reg_map {
 **/
 typedef union PACK__ uPCA9624_REG__MODE1 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t ALLCALL	:1;		//!< All CALL address acknowledgment
 		uint8_t SUB3	:1;		//!< Sub-address 3 acknowledgment
 		uint8_t SUB2	:1;		//!< Sub-address 2 acknowledgment
@@ -93,7 +93,7 @@ typedef union PACK__ uPCA9624_REG__MODE1 {
 **/
 typedef union PACK__ uPCA9624_REG__MODE2 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t 				:3;
 		PCA96xx_latch	OCH		:1;		//!< 0: update on STOP, 1: update on ACK
 		uint8_t			INVRT	:1;		//!< Reserved, Write must always be a logic 0
@@ -107,7 +107,7 @@ typedef union PACK__ uPCA9624_REG__MODE2 {
 **/
 typedef union PACK__ uPCA9624_REG__LEDOUT0 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		PCA962x_ledout LDR0	:2;		//!< LED0 output state control
 		PCA962x_ledout LDR1	:2;		//!< LED1 output state control
 		PCA962x_ledout LDR2	:2;		//!< LED2 output state control
@@ -120,7 +120,7 @@ typedef union PACK__ uPCA9624_REG__LEDOUT0 {
 **/
 typedef union PACK__ uPCA9624_REG__LEDOUT1 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		PCA962x_ledout LDR4	:2;		//!< LED4 output state control
 		PCA962x_ledout LDR5	:2;		//!< LED5 output state control
 		PCA962x_ledout LDR6	:2;		//!< LED6 output state control
@@ -133,7 +133,7 @@ typedef union PACK__ uPCA9624_REG__LEDOUT1 {
 **/
 typedef union PACK__ uPCA9624_REG__LEDOUT {
 	uint16_t Word;
-	struct {
+	struct PACK__ {
 		PCA962x_ledout LDR0	:2;		//!< LED0 output state control
 		PCA962x_ledout LDR1	:2;		//!< LED1 output state control
 		PCA962x_ledout LDR2	:2;		//!< LED2 output state control

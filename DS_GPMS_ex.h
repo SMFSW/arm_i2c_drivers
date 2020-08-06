@@ -33,7 +33,7 @@
 **/
 typedef union uGPMS_WR_REG_MAP {
 	uint8_t Bytes[3];
-	struct {
+	struct PACK__ {
 		uint8_t		IO_Direction;
 		uint8_t		IO_Input_Type;
 		uint8_t		IO_Port_Output;
@@ -124,7 +124,7 @@ typedef union uGPMS_RD_REG_MAP {
 __INLINE FctERR INLINE__ GPMS_Set_Mode(const GPMS_mode mode) {
 	return GPMS_Write((uint8_t *) &mode, GPMS__GPS_MODE, 1); }
 
-	
+
 __INLINE FctERR NONNULL_INLINE__ GPMS_Get_Mode(GPMS_mode * mode) {
 	return GPMS_Read((uint8_t *) mode, GPMS__GPS_MODE, 1); }
 

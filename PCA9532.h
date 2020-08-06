@@ -68,7 +68,7 @@ typedef enum PACK__ PCA9532_reg_map {
 **/
 typedef union PACK__ uPCA9532_REG__INPUT0 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t LED0		:1;		//!< LED0 input pin state
 		uint8_t LED1		:1;		//!< LED1 input pin state
 		uint8_t LED2		:1;		//!< LED2 input pin state
@@ -85,7 +85,7 @@ typedef union PACK__ uPCA9532_REG__INPUT0 {
 **/
 typedef union PACK__ uPCA9532_REG__INPUT1 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t LED8		:1;		//!< LED8 input pin state
 		uint8_t LED9		:1;		//!< LED9 input pin state
 		uint8_t LED10		:1;		//!< LED10 input pin state
@@ -102,7 +102,7 @@ typedef union PACK__ uPCA9532_REG__INPUT1 {
 **/
 typedef union PACK__ uPCA9532_REG__INPUT {
 	uint16_t Word;
-	struct {
+	struct PACK__ {
 		uint16_t LED0		:1;		//!< LED0 input pin state
 		uint16_t LED1		:1;		//!< LED1 input pin state
 		uint16_t LED2		:1;		//!< LED2 input pin state
@@ -128,7 +128,7 @@ typedef union PACK__ uPCA9532_REG__INPUT {
 **/
 typedef union PACK__ uPCA9532_REG__LS0 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		PCA95xx_ledsel LED0		:2;		//!< LED0 output state control
 		PCA95xx_ledsel LED1		:2;		//!< LED1 output state control
 		PCA95xx_ledsel LED2		:2;		//!< LED2 output state control
@@ -141,7 +141,7 @@ typedef union PACK__ uPCA9532_REG__LS0 {
 **/
 typedef union PACK__ uPCA9532_REG__LS1 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		PCA95xx_ledsel LED4		:2;		//!< LED4 output state control
 		PCA95xx_ledsel LED5		:2;		//!< LED5 output state control
 		PCA95xx_ledsel LED6		:2;		//!< LED6 output state control
@@ -154,7 +154,7 @@ typedef union PACK__ uPCA9532_REG__LS1 {
 **/
 typedef union PACK__ uPCA9532_REG__LS2 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		PCA95xx_ledsel LED8		:2;		//!< LED8 output state control
 		PCA95xx_ledsel LED9		:2;		//!< LED9 output state control
 		PCA95xx_ledsel LED10	:2;		//!< LED10 output state control
@@ -167,7 +167,7 @@ typedef union PACK__ uPCA9532_REG__LS2 {
 **/
 typedef union PACK__ uPCA9532_REG__LS3 {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		PCA95xx_ledsel LED12	:2;		//!< LED12 output state control
 		PCA95xx_ledsel LED13	:2;		//!< LED13 output state control
 		PCA95xx_ledsel LED14	:2;		//!< LED14 output state control
@@ -180,7 +180,7 @@ typedef union PACK__ uPCA9532_REG__LS3 {
 **/
 typedef union PACK__ uPCA9532_REG__LS {
 	uint32_t DWord;
-	struct {
+	struct PACK__ {
 		PCA95xx_ledsel LED0		:2;		//!< LED0 output state control
 		PCA95xx_ledsel LED1		:2;		//!< LED1 output state control
 		PCA95xx_ledsel LED2		:2;		//!< LED2 output state control

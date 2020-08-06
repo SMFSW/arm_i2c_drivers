@@ -121,7 +121,7 @@ typedef enum PACK__ TCS3400_it_persist {
 **/
 typedef union uTCS3400_REG__ENABLE {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t PON		:1;	//!< Power ON. This field activates the internal oscillator to permit the timers and ADC channels to operate
 		uint8_t AEN		:1;	//!< ADC enable. This bit activates the four-channel (RGBC) ADC. Writing a 1 enables the ADC
 		uint8_t 		:1;
@@ -139,7 +139,7 @@ typedef union uTCS3400_REG__ENABLE {
 **/
 typedef union uTCS3400_REG__PERSIST {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		TCS3400_it_persist	PERSIST	:4;	//!< ALS interrupt persistence filter
 		uint8_t 					:4;	//!< Reserved. Write as 0
 	} Bits;
@@ -151,7 +151,7 @@ typedef union uTCS3400_REG__PERSIST {
 **/
 typedef union uTCS3400_REG__CONFIG {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t			:1;
 		uint8_t WLONG	:1;	//!< Wait long. When asserted, the wait cycles are increased by a factor 12x from that programmed in the WTIME register
 		uint8_t			:6;
@@ -164,7 +164,7 @@ typedef union uTCS3400_REG__CONFIG {
 **/
 typedef union uTCS3400_REG__CONTROL {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		TCS3400_gain	AGAIN	:2;	//!< ALS gain sets the gain for internal integration amplifiers for both photo-diode channels
 		uint8_t					:6;
 	} Bits;
@@ -176,7 +176,7 @@ typedef union uTCS3400_REG__CONTROL {
 **/
 typedef union uTCS3400_REG__AUX {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t			:5;
 		uint8_t	ASIEN	:1;	//!< 0 disables, 1 enables ALS Saturation Interrupt
 		uint8_t			:2;
@@ -189,7 +189,7 @@ typedef union uTCS3400_REG__AUX {
 **/
 typedef union uTCS3400_REG__STATUS {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t AVALID	:1;		//!< RGBC Valid. Indicates that the RGBC channels have completed an integration cycle
 		uint8_t			:3;
 		uint8_t AINT	:1;		//!< RGBC clear channel Interrupt
@@ -204,7 +204,7 @@ typedef union uTCS3400_REG__STATUS {
 **/
 typedef union uTCS3400_REG__IR {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t		:7;
 		uint8_t	IR	:1;	//!< IR Sensor access. If this bit is set the clear channel reports the measurement from the IR sensor (center diode)
 	} Bits;

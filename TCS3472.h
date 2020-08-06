@@ -129,7 +129,7 @@ typedef enum PACK__ TCS3472_it_persist {
 **/
 typedef union uTCS3472_CMD {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		TCS3472_spec_func	ADDR		:5;		//!< Address field/special function field
 		TCS3472_transaction	TRANSACTION	:2;		//!< Select type of transaction to follow in subsequent data transfers
 		uint8_t				CMD			:1;		//!< Select command register. Must write as 1 when addressing Command register
@@ -142,7 +142,7 @@ typedef union uTCS3472_CMD {
 **/
 typedef union uTCS3472_REG__ENABLE {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t PON		:1;	//!< Power ON. This field activates the internal oscillator to permit the timers and ADC channels to operate
 		uint8_t AEN		:1;	//!< RGBC enable. This bit activates the two-channel ADC. Writing a 1 activates the RGBC
 		uint8_t 		:1;
@@ -158,7 +158,7 @@ typedef union uTCS3472_REG__ENABLE {
 **/
 typedef union uTCS3472_REG__PERSIST {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		TCS3472_it_persist	PERSIST	:4;	//!< ALS interrupt persistence filter
 		uint8_t 					:4;	//!< Reserved. Write as 0
 	} Bits;
@@ -170,7 +170,7 @@ typedef union uTCS3472_REG__PERSIST {
 **/
 typedef union uTCS3472_REG__CONFIG {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t			:1;
 		uint8_t WLONG	:1;	//!< Wait long. When asserted, the wait cycles are increased by a factor 12x from that programmed in the WTIME register
 		uint8_t			:6;
@@ -183,7 +183,7 @@ typedef union uTCS3472_REG__CONFIG {
 **/
 typedef union uTCS3472_REG__CONTROL {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		TCS3472_gain	AGAIN	:2;	//!< ALS gain sets the gain for internal integration amplifiers for both photo-diode channels
 		uint8_t					:6;
 	} Bits;
@@ -195,7 +195,7 @@ typedef union uTCS3472_REG__CONTROL {
 **/
 typedef union uTCS3472_REG__STATUS {
 	uint8_t Byte;
-	struct {
+	struct PACK__ {
 		uint8_t AVALID	:1;		//!< RGBC Valid. Indicates that the RGBC channels have completed an integration cycle
 		uint8_t			:3;
 		uint8_t AINT	:1;		//!< RGBC clear channel Interrupt
