@@ -16,7 +16,7 @@ var searchData=
   ['tcs3472',['TCS3472',['../d7/d71/_t_c_s3472__proc_8c.html#a5ee70186e0e21db4032d0baefc88f5a1',1,'TCS3472():&#160;TCS3472_proc.c'],['../d6/d96/_t_c_s3472__proc_8h.html#a5ee70186e0e21db4032d0baefc88f5a1',1,'TCS3472():&#160;TCS3472_proc.c']]],
   ['tcs3472_5fgain_5ftab',['TCS3472_gain_tab',['../d7/d71/_t_c_s3472__proc_8c.html#a9eb7d40feae877c42a8a794755c21a7e',1,'TCS3472_proc.c']]],
   ['tcs3472_5fhal',['TCS3472_hal',['../df/dfb/_t_c_s3472_8c.html#a87032ab10557ea01cafdc6556591ff24',1,'TCS3472_hal():&#160;TCS3472.c'],['../d8/ddc/_t_c_s3472_8h.html#a87032ab10557ea01cafdc6556591ff24',1,'TCS3472_hal():&#160;TCS3472.c']]],
-  ['temp',['temp',['../d7/d6f/unionu_a_m_g88___r_e_g_____t_e_m_p.html#afd5eff85a9775515ee270fa33e77b829',1,'uAMG88_REG__TEMP::temp()'],['../dc/ded/struct_a_p_d_s9960__t.html#ac041eb55ab73f16111a9715fb315d4f0',1,'APDS9960_t::Temp()'],['../d3/d18/struct_t_c_s3400__t.html#a3cb7232dcb55a986503a088a8c78cea1',1,'TCS3400_t::Temp()'],['../d8/d5b/struct_t_c_s3472__t.html#a6b2d20e295d4fb0a70ab037cf21b45d6',1,'TCS3472_t::Temp()']]],
+  ['temp',['Temp',['../dc/ded/struct_a_p_d_s9960__t.html#ac041eb55ab73f16111a9715fb315d4f0',1,'APDS9960_t::Temp()'],['../d3/d18/struct_t_c_s3400__t.html#a3cb7232dcb55a986503a088a8c78cea1',1,'TCS3400_t::Temp()'],['../d8/d5b/struct_t_c_s3472__t.html#a6b2d20e295d4fb0a70ab037cf21b45d6',1,'TCS3472_t::Temp()'],['../d7/d6f/unionu_a_m_g88___r_e_g_____t_e_m_p.html#afd5eff85a9775515ee270fa33e77b829',1,'uAMG88_REG__TEMP::temp()']]],
   ['temperature',['Temperature',['../d6/db8/struct_b_m_p180__t.html#a312fb852252c33f19218f5242f9de4ea',1,'BMP180_t::Temperature()'],['../db/d83/struct_m_c_p9808__t.html#a240f5eac719b46d98ffd71d8ece70a6d',1,'MCP9808_t::Temperature()']]],
   ['thermistor',['Thermistor',['../d9/d69/struct_a_m_g88__t.html#ae389761c6c8eb83574d619a52ec1875f',1,'AMG88_t']]],
   ['thrm',['THRM',['../d5/de7/unionu_a_t42_q_t___r_e_g_____s_e_t_u_p__244.html#a7f0593bdfa93c42c44f2bf3bad787cbe',1,'uAT42QT_REG__SETUP_244']]],
@@ -28,7 +28,7 @@ var searchData=
   ['tmr_5fb_5ffreq_5fctrl',['Tmr_B_freq_ctrl',['../dd/d7c/unionu_p_c_f8523___r_e_g___m_a_p.html#af9ef7c176d0b9e758bd88bd781c415b0',1,'uPCF8523_REG_MAP']]],
   ['tmr_5fb_5freg',['Tmr_B_reg',['../dd/d7c/unionu_p_c_f8523___r_e_g___m_a_p.html#a3bb859e8c79df65878fcf9519ef8b5f2',1,'uPCF8523_REG_MAP']]],
   ['tmr_5fclkout_5fctrl',['Tmr_CLKOUT_ctrl',['../dd/d7c/unionu_p_c_f8523___r_e_g___m_a_p.html#a27998c8787cb3b7084ddeed618180563',1,'uPCF8523_REG_MAP']]],
-  ['touch',['Touch',['../df/d8e/struct_m_t_c_h6102__gesture.html#a4d8866cc5824339ddd6a5d7531ea6bf9',1,'MTCH6102_gesture::Touch()'],['../d5/d63/struct_m_t_c_h6102__t.html#a8f83a0ed216a34a0c4659cbad9f5fa32',1,'MTCH6102_t::touch()']]],
+  ['touch',['touch',['../d5/d63/struct_m_t_c_h6102__t.html#a8f83a0ed216a34a0c4659cbad9f5fa32',1,'MTCH6102_t::touch()'],['../df/d8e/struct_m_t_c_h6102__gesture.html#a4d8866cc5824339ddd6a5d7531ea6bf9',1,'MTCH6102_gesture::Touch()']]],
   ['touch_5flsb',['Touch_lsb',['../dd/dd0/struct_m_t_c_h6102__raw__gesture.html#a1c817d1f4379a0fb5384e3e18994434a',1,'MTCH6102_raw_gesture']]],
   ['touch_5fstate',['Touch_state',['../dd/dd0/struct_m_t_c_h6102__raw__gesture.html#a4216a5a8e72a44c27bc5998e68b58f75',1,'MTCH6102_raw_gesture']]],
   ['touch_5fx',['Touch_x',['../dd/dd0/struct_m_t_c_h6102__raw__gesture.html#af503c42c9143de8f6d4db81fbf104cbc',1,'MTCH6102_raw_gesture']]],
@@ -43,8 +43,8 @@ var searchData=
   ['tsl2591_5fhal',['TSL2591_hal',['../d2/d68/_t_s_l2591_8c.html#a82d4f4c3ef3e8a4c402fdd80c6728693',1,'TSL2591_hal():&#160;TSL2591.c'],['../da/d96/_t_s_l2591_8h.html#a82d4f4c3ef3e8a4c402fdd80c6728693',1,'TSL2591_hal():&#160;TSL2591.c']]],
   ['tsl2591_5finteg_5ftab',['TSL2591_integ_tab',['../db/dba/_t_s_l2591__proc_8c.html#a291294a3d19a3c54e311003ed7c8555d',1,'TSL2591_proc.c']]],
   ['tupper',['TUpper',['../d1/d02/unionu_m_c_p9808___r_e_g___m_a_p.html#aa334ccb2b5ec4dd6137e2e883c676fa3',1,'uMCP9808_REG_MAP::TUpper()'],['../db/d83/struct_m_c_p9808__t.html#a3e27ae6b62744667dcd4a164e343623a',1,'MCP9808_t::TUpper()']]],
-  ['twelve',['TWELVE',['../dc/dee/unionu_p_c_f8523___r_e_g_____h_o_u_r_s.html#a4d77cf8b9e1650d38b55ede09d8c0590',1,'uPCF8523_REG__HOURS']]],
-  ['twentyfour',['TWENTYFOUR',['../dc/dee/unionu_p_c_f8523___r_e_g_____h_o_u_r_s.html#a438f52c8824a2d7dada248e54c07ce19',1,'uPCF8523_REG__HOURS']]],
+  ['twelve',['TWELVE',['../dc/dee/unionu_p_c_f8523___r_e_g_____h_o_u_r_s.html#a1d6f3153a3b81c875a7b51e317f1114d',1,'uPCF8523_REG__HOURS']]],
+  ['twentyfour',['TWENTYFOUR',['../dc/dee/unionu_p_c_f8523___r_e_g_____h_o_u_r_s.html#aff8dfdf0df1fc4e291e5fd159603cf40',1,'uPCF8523_REG__HOURS']]],
   ['txdownwards',['TxDownwards',['../d5/d63/struct_m_t_c_h6102__t.html#a852ce2d8442fe3461567943b003c612c',1,'MTCH6102_t']]],
   ['type',['TYPE',['../d5/d03/unionu_m_t_c_h___r_e_g_____m_o_d_e___c_o_n.html#a299ca61e2c464fa2a1942d8fa1cc1fa4',1,'uMTCH_REG__MODE_CON']]]
 ];
