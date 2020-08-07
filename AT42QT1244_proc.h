@@ -18,6 +18,11 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
 
+#ifndef AT42QT1244_GET_KEYS_ONLY
+//! \note Define AT42QT1244_GET_KEYS_ONLY in globals.h or at project to change read behavior
+#define AT42QT1244_GET_KEYS_ONLY	1		//!< AT42QT1244 get keys status only
+#endif
+
 
 // *****************************************************************************
 // Section: Types
@@ -27,8 +32,13 @@
 **/
 typedef struct AT42QT1244_t {
 	uint32_t					hPowerOn;			//!< Time of the last reset
-	uint32_t					keys;				//!< Keys results
+#if	!AT42QT1244_GET_KEYS_ONLY
+	uint8_t						cnt_100ms;			//!< 100ms counter
+	uint8_t						cnt_SignalFail;		//!< Signal Fail counter
+	uint8_t						cnt_MatrixScan;		//!< Matrix Scan counter
 	uAT42QT_REG__DEVICE_STATUS	status;				//!< Device status
+#endif
+	uint32_t					keys;				//!< Keys results
 	struct {
 	I2C_slave_t *				slave_inst;			//!< Slave structure
 	} cfg;

@@ -40,13 +40,13 @@ typedef union uAT42QT_REG_MAP {
 		uint8_t						Res_3;
 		uint8_t						Current_Frequency;
 		uint8_t						Current_Pulse_Spacing;
-		uAT42QT_REG__KEY_DATA		KeyData[24];
+		uAT42QT_REG__KEY_DATA		KeyData[AT42QT1244_MAX_KEYS];
 		uint8_t						Res_4[31];
 		uint8_t						Control_Command;
-		uAT42QT_REG__SETUP_141_164	Setup_Key_Thr[24];
-		uAT42QT_REG__SETUP_165_188	Setup_Key_Mode[24];
-		uint8_t						Setup_Calib_Frequency_Offset_1[24];
-		uint8_t						Setup_Calib_Frequency_Offset_2[24];
+		uAT42QT_REG__SETUP_141_164	Setup_Key_Thr[AT42QT1244_MAX_KEYS];
+		uAT42QT_REG__SETUP_165_188	Setup_Key_Mode[AT42QT1244_MAX_KEYS];
+		uint8_t						Setup_Calib_Frequency_Offset_1[AT42QT1244_MAX_KEYS];
+		uint8_t						Setup_Calib_Frequency_Offset_2[AT42QT1244_MAX_KEYS];
 		uint8_t						Setup_Negative_Recall_Delay;
 		uAT42QT_REG__SETUP_238		Setup_Debug_MSync;
 		uint8_t						Setup_Awake_Timeout;
@@ -59,7 +59,10 @@ typedef union uAT42QT_REG_MAP {
 		uint8_t						Setup_Frequency_1;
 		uint8_t						Setup_Frequency_2;
 		uAT42QT_REG__SETUP_248		Setup_Noise;
-		uint8_t						Setup_Host_CRC[2];	//!< Host CRC (LSB at addr 249, MSB at addr 250)
+		union {
+		uint8_t						Setup_Host_CRC[2];		//!< Host CRC (LSB at addr 249, MSB at addr 250)
+		uint16_t					Setup_Host_CRC_Word;	//!< Host CRC
+		};
 		uint8_t						Setup_Positive_Recalibration_Delay;
 	} Reg;
 } uAT42QT_REG_MAP;

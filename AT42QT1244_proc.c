@@ -196,9 +196,23 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Key(AT42QT1244_t * pCpnt, uint8_t Key)
 
 __WEAK FctERR NONNULL__ AT42QT1244_handler(AT42QT1244_t * pCpnt)
 {
-	FctERR err = AT42QT1244_Get_Status(pCpnt, &pCpnt->status);
+	FctERR err;
 
-	err |= AT42QT1244_Get_Keys(pCpnt, &pCpnt->keys);
+#if AT42QT1244_GET_KEYS_ONLY
+	err = AT42QT1244_Get_Keys(pCpnt, &pCpnt->keys);
+#else
+	uint8_t TMP[7];
+	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, TMP, AT42QT__CNT_100MS, sizeof(TMP));
+
+	if (!err)
+	{
+		pCpnt->cnt_100ms = TMP[0];
+		pCpnt->cnt_SignalFail = TMP[1];
+		pCpnt->cnt_MatrixScan = TMP[2];
+		pCpnt->status.Byte = TMP[3];
+		pCpnt->keys = (LSHIFT(TMP[6], 16) + LSHIFT(TMP[5], 8) + TMP[4]) & 0x00FFFFFFUL;
+	}
+#endif
 
 	return err;
 }
