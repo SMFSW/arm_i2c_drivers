@@ -36,7 +36,6 @@ SOFTWARE.
 * APDS99xx: use of config bits (instead of Status register ones) to trigger proper interrupt(s) clear function
 * AT42QT1244: AT42QT1244_GET_KEYS_ONLY option added to read only key status in handler (otherwise reads status registers too)
 * AT42QT1244: Added union for HOST_CRC
-* AT42QT1244: timeout value increased compared to default one (ensuring enough time to write the whole setup block)
 * AT42QT1244: Fix uAT42QT_REG__KEY_DATA bitfield order
 * AT42QT1244: crc calculation not static (to be able to use it to generate crc for setup block)
 * AT42QT1244: AT42QT1244_Send_Setup to write whole setup block at once with updated CRC, also returned in given function parameter
@@ -44,6 +43,7 @@ SOFTWARE.
 * AT42QT1244: AT42QT1244_CHECK_CRC added to enable/disable CRC checks after read transactions
 * AT42QT1244: former AT42QT1244_Setup_Key becomes AT42QT1244_Setup_Keys (allowing writing multiple keys at once with a mask)
 * AT42QT1244: delay fix
+* AT42QT1244: Few delay added between each communication for calibration pending in FHM setup procedure
 * AT42QT1244: weak handler & init implementations
 * BMP180: fixed temperature and pressure calculation (no use of unsigned LSHIFT or RSHIFT for signed calculations)
 * FM24C: added possibility to customize FM24C_SIZE macro if needed

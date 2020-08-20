@@ -85,6 +85,7 @@ FctERR NONNULL__ AT42QT1244_Send_Command(AT42QT1244_t * pCpnt, const AT42QT_cmd 
 
 /*!\brief Send setup parameters to AT42QT1244 peripheral
 ** \note No AT42QT1244 peripheral reset done after writing setups, should be customly implemented when needed
+** \note Some issues encountered while writing setup block (reason unidentified), resetting the MCU and trying to write again seems to solve issue
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
 ** \param[in,out] hcrc - Pointer to resulting CRC value
 ** \param[in] setup - Parameters to send

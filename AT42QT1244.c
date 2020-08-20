@@ -19,8 +19,7 @@
 /****************************************************************/
 
 
-//! \note Timeout increased compared to default value, ensuring no timeout occurs when writing whole setup block (111 bytes)
-static const I2C_slave_t AT42QT1244_defaults = { { pNull, 0, 30, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
+static const I2C_slave_t AT42QT1244_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
 I2C_slave_t AT42QT1244_hal[I2C_AT42QT1244_NB];
 

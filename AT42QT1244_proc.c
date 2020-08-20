@@ -9,6 +9,9 @@
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_AT42QT1244)
+
+// HARMcksL libs
+#include "tick_utils.h"
 /****************************************************************/
 
 
@@ -40,26 +43,30 @@ __WEAK FctERR NONNULL__ AT42QT1244_Init_Sequence(AT42QT1244_t * pCpnt)
 
 	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, DATA, AT42QT__SETUP_HOST_CRC_LSB, 2);	// Read HCRC from device
 
-/***
+/*! \code
+	// Example: Setup the component to disable unused keys (last 14 ones)
 	if (!err)
 	{
 		const uint8_t	idx = pCpnt - AT42QT1244;
-		const uint16_t	HCRC = NVM_Get_AT42QT1244_HCRC(idx);			// USER IMPLEMENTED: Get previously computed HCRC from host to check against component one
+		const uint16_t	HCRC = NVM_Get_AT42QT1244_HCRC(idx);	// USER IMPLEMENTED: Get previously computed HCRC from host to check against component one
 
 		if (HCRC != (MAKEWORD(DATA[0], DATA[1])))	// HCRC mismatch between host and component, setup needs to be performed
 		{
-			// Example: Setup the component to disable unused keys (last 14 ones)
 			const uint8_t DATA[14] = { 0 };
 			err |= AT42QT1244_Send_Setup(pCpnt, DATA, AT42QT__SETUP_KEYS_MODE_10, sizeof(DATA));
 
-			if (!err)
+			// Some issues encountered while writing setup block (reason unidentified), resetting the MCU and trying to write again seems to solve issue
+			if (err)	{ NVIC_SystemReset(); }
+			else
 			{
-				//if (!err)	{ NVM_Save_AT42QT1244_HCRC(idx, crc); }		// USER IMPLEMENTED: Save new HCRC to host non-volatile memory
-				err = AT42QT1244_Reset(pCpnt);
+				NVM_Save_AT42QT1244_HCRC(idx, crc);				// USER IMPLEMENTED: Save new HCRC to host non-volatile memory
+
+				AT42QT1244_Reset(pCpnt);
+				NVIC_SystemReset();								// Ensure CRC is properly written in NVM (not relying on interrupts) before reset
 			}
 		}
 	}
-***/
+\endcode */
 
 	return err;
 }
@@ -129,6 +136,7 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * pCpnt, uint16_
 			#if defined(HAL_IWDG_MODULE_ENABLED)
 				HAL_IWDG_Refresh(&hiwdg);
 			#endif
+			Delay_us(1000);
 			calib = AT42QT1244_is_Calib_Pending(pCpnt);
 			if (calib == -1)	{ return ERROR_NOTAVAIL; }
 		}
