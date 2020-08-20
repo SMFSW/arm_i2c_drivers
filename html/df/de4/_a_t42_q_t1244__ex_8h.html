@@ -586,7 +586,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Send setup parameters to AT42QT1244 peripheral. </p>
-<dl class="section note"><dt>Note</dt><dd>No AT42QT1244 peripheral reset done after writing setups, should be customly implemented when needed </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>No AT42QT1244 peripheral reset done after writing setups, should be customly implemented when needed </dd>
+<dd>
+Some issues encountered while writing setup block (reason unidentified), resetting the MCU and trying to write again seems to solve issue </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to AT42QT1244 component </td></tr>
