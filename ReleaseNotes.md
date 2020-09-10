@@ -34,6 +34,7 @@ SOFTWARE.
 * APDS9930: added (+ warning if APDS9960 also compiled, OFFSET union removed as coded as signed 8bits integer)
 * APDS9960: added with fixes and default handler
 * APDS99xx: use of config bits (instead of Status register ones) to trigger proper interrupt(s) clear function
+* AT42QT1244: renaming of bitfield bit DEBUG in uAT42QT_REG__SETUP_238 (potential compilation issue, DEBUG symbol being defined in some latest STM32 HAL)
 * AT42QT1244: AT42QT1244_GET_KEYS_ONLY option added to read only key status in handler (otherwise reads status registers too)
 * AT42QT1244: Added union for HOST_CRC
 * AT42QT1244: Fix uAT42QT_REG__KEY_DATA bitfield order
