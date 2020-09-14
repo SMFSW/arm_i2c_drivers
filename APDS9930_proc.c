@@ -136,6 +136,9 @@ __WEAK FctERR NONNULL__ APDS9930_handler(APDS9930_t * pCpnt)
 	uint8_t					DATA[7];
 	uAPDS9930_REG__STATUS *	ST = (uAPDS9930_REG__STATUS *) DATA;
 	FctERR					err;
+	#if defined(VERBOSE)
+		const uint8_t		idx = pCpnt - APDS9930;
+	#endif
 
 	err = APDS9930_Read(pCpnt->cfg.slave_inst, DATA, APDS9930__STATUS, sizeof(DATA));
 	if (err)	{ return err; }
@@ -149,8 +152,8 @@ __WEAK FctERR NONNULL__ APDS9930_handler(APDS9930_t * pCpnt)
 			err = APDS9930_calc(pCpnt, pCpnt->Full, pCpnt->IR);
 
 			#if defined(VERBOSE)
-				if (err == ERROR_OVERFLOW)	{ printf("APDS9930; ALS Sensor saturation reached!\r\n"); }
-				else						{ printf("APDS9930: Full %d IR %d Lux: %lul\r\n", pCpnt->Full, pCpnt->IR, pCpnt->Lux); }
+				if (err == ERROR_OVERFLOW)	{ printf("APDS9930 id%d: ALS Sensor saturation reached!\r\n", idx); }
+				else						{ printf("APDS9930 id%d: Full %d IR %d Lux: %lul\r\n", idx, pCpnt->Full, pCpnt->IR, pCpnt->Lux); }
 			#endif
 		}
 	}
@@ -162,7 +165,7 @@ __WEAK FctERR NONNULL__ APDS9930_handler(APDS9930_t * pCpnt)
 			pCpnt->Prox = MAKEWORD(DATA[5], DATA[6]);
 
 			#if defined(VERBOSE)
-				printf("APDS9930: Prox %d\r\n", pCpnt->Prox);
+				printf("APDS9930 id%d: Prox %d\r\n", idx, pCpnt->Prox);
 			#endif
 		}
 	}

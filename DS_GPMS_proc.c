@@ -200,11 +200,11 @@ __WEAK FctERR GPMS_handler(void)
 	if (err)	{ return err; }
 
 	#if defined(VERBOSE)
-		printf("GPMS: Date %d/%d/%d Time %dH:%dmn:%ds\r\n", GPMS.Date.Day, GPMS.Date.Month, GPMS.Date.Year, GPMS.Hour.Hours, GPMS.Hour.Minutes, GPMS.Hour.Seconds);
-		printf("Lat: %c %d°%d.%04dmin, Lon: %c %d°%d.%04dmin\r\n",
-				GPMS.Latitude.Direction, GPMS.Latitude.Degrees, (uint16_t) GPMS.Latitude.Minutes, get_fp_dec(GPMS.Latitude.Minutes, 4),
-				GPMS.Longitude.Direction,GPMS.Longitude.Degrees, (uint16_t) GPMS.Longitude.Minutes, get_fp_dec(GPMS.Longitude.Minutes, 4));
-		printf("Heading: True %d.%d Mag %d.%d, Speed: %d.%dkm/h, altitude: %d\r\n",
+		printf("GPMS: %d/%d/%d %d:%d:%d\r\n", GPMS.Date.Year, GPMS.Date.Month, GPMS.Date.Day, GPMS.Hour.Hours, GPMS.Hour.Minutes, GPMS.Hour.Seconds);
+		printf("Lat: %dÂ°%d.%04d\'%c, Lon: %dÂ°%d.%04d\'%c\r\n",
+				GPMS.Latitude.Degrees, (uint16_t) GPMS.Latitude.Minutes, get_fp_dec(GPMS.Latitude.Minutes, 4), GPMS.Latitude.Direction,
+				GPMS.Longitude.Degrees, (uint16_t) GPMS.Longitude.Minutes, get_fp_dec(GPMS.Longitude.Minutes, 4), GPMS.Longitude.Direction);
+		printf("Heading: True %d.%d Mag %d.%d, Speed: %d.%dkm/h, Altitude: %dm\r\n",
 				(uint16_t) GPMS.Heading_True, get_fp_dec(GPMS.Heading_True, 1),
 				(uint16_t) GPMS.Heading_Magnetic, get_fp_dec(GPMS.Heading_Magnetic, 1),
 				(uint16_t) GPMS.Speed, get_fp_dec(GPMS.Speed, 1),

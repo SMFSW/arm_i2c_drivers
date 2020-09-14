@@ -167,7 +167,7 @@ FctERR NONNULLX__(1) BMP180_Get_Pressure(BMP180_t * pCpnt, float * pres)
 	pCpnt->Pressure = compp / 100;	// From kPa to hPa
 
 	t = ((float) b5 + 8) / 16;
-	pCpnt->Temperature = t / 10;	// temperature given in 0.1°C (thus divide by 10 to get °C)
+	pCpnt->Temperature = t / 10;	// temperature given in 0.1ï¿½C (thus divide by 10 to get ï¿½C)
 
 	pCpnt->Altitude = BMP180_Pressure_To_Altitude(pCpnt->Pressure);
 	pCpnt->SeaLevelPressure = BMP180_seaLevel_Pressure_For_Altitude(pCpnt->Altitude, pCpnt->Pressure);
@@ -194,7 +194,7 @@ FctERR NONNULLX__(1) BMP180_Get_Temperature(BMP180_t * pCpnt, float * temp)
 	b5 = computeB5(pCpnt, UT);
 	t = ((float) b5 + 8) / 16;
 
-	pCpnt->Temperature = t / 10;	// temperature given in 0.1°C (thus divide by 10 to get °C)
+	pCpnt->Temperature = t / 10;	// temperature given in 0.1ï¿½C (thus divide by 10 to get ï¿½C)
 
 	if (temp)	{ *temp = pCpnt->Temperature; }
 
@@ -213,8 +213,10 @@ __WEAK FctERR NONNULL__ BMP180_handler(BMP180_t * pCpnt)
 	if (err)	{ return err; }
 
 	#if defined(VERBOSE)
-		printf("BMP180: Pressure %ldhPa, Temperature %d.%02d°C, Alt %ldm, Pressure at sea level %ldhPa\r\n",
-				(int32_t) pCpnt->Pressure, (int16_t) pCpnt->Temperature, get_fp_dec(pCpnt->Temperature, 2), (int32_t) pCpnt->Altitude, (int32_t) pCpnt->SeaLevelPressure);
+		const uint8_t idx = pCpnt - BMP180;
+		printf("BMP180 id%d: Pressure %ldhPa, Temperature %d.%02dÂ°C, Alt %ldm, Pressure at sea level %ldhPa\r\n",
+				idx, (int32_t) pCpnt->Pressure, (int16_t) pCpnt->Temperature, get_fp_dec(pCpnt->Temperature, 2),
+				(int32_t) pCpnt->Altitude, (int32_t) pCpnt->SeaLevelPressure);
 	#endif
 
 	return err;

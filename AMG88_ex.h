@@ -32,10 +32,6 @@
 **/
 typedef union uAMG88_REG_MAP {
 	uint8_t Bytes[256];
-	struct PACK__ {
-		uint8_t	Reg_1;
-		uint8_t	Reg_2;
-	} Reg;
 } uAMG88_REG_MAP;
 
 

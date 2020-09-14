@@ -207,7 +207,7 @@ __WEAK FctERR PCF8523_handler(void)
 	if (err)	{ return err; }
 
 	#if defined(VERBOSE)
-		printf("Date: %d/%d/%d - Time: %d:%d:%d\r\n", PCF8523.date.Month, PCF8523.date.Day, PCF8523.date.Year, PCF8523.time.Hours, PCF8523.time.Minutes, PCF8523.time.Seconds);
+		printf("PCF8523: %d/%d/%d %d:%d:%d\r\n", PCF8523.date.Year, PCF8523.date.Month, PCF8523.date.Day, PCF8523.time.Hours, PCF8523.time.Minutes, PCF8523.time.Seconds);
 	#endif
 
 	return ERROR_OK;

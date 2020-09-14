@@ -222,6 +222,11 @@ __WEAK FctERR NONNULL__ AT42QT1244_handler(AT42QT1244_t * pCpnt)
 	}
 #endif
 
+#if defined(VERBOSE)
+	const uint8_t idx = pCpnt - AT42QT1244;
+	printf("AT42QT1244 id%d: keys state 0x%lX", idx, pCpnt->keys);
+#endif
+
 	return err;
 }
 

@@ -33,10 +33,10 @@
 ** \brief $CPNT$ user interface struct
 **/
 typedef struct $CPNT$_t {
-	uint16_t		$CPNT$_val_1;		//!< Current val_1
+	uint8_t			$CPNT$_val_1;		//!< Current val_1
 	struct {
 	I2C_slave_t *	slave_inst;			//!< Slave structure
-	uint16_t		$CPNT$_param_1;		//!< param_1 config
+	uint8_t			$CPNT$_param_1;		//!< param_1 config
 	uint8_t			Id;					//!< $CPNT$ chip ID
 	} cfg;
 } $CPNT$_t;

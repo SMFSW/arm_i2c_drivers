@@ -127,8 +127,9 @@ __WEAK FctERR NONNULL__ TSL2591_handler(TSL2591_t * pCpnt)
 		err = calculateLux(pCpnt, pCpnt->Full, pCpnt->IR);
 
 		#if defined(VERBOSE)
-			if (err == ERROR_OVERFLOW)	{ printf("TSL2591; Sensor saturation reached!\r\n"); }
-			else						{ printf("TSL2591: Full %d IR %d Lux: %lul\r\n", pCpnt->Full, pCpnt->IR, pCpnt->Lux); }
+			const uint8_t idx = pCpnt - TSL2591;
+			if (err == ERROR_OVERFLOW)	{ printf("TSL2591 id%d: Sensor saturation reached!\r\n", idx); }
+			else						{ printf("TSL2591 id%d: Full %d IR %d Lux: %lul\r\n", idx, pCpnt->Full, pCpnt->IR, pCpnt->Lux); }
 		#endif
 	}
 

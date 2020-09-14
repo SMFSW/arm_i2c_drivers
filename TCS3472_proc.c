@@ -116,9 +116,10 @@ __WEAK FctERR NONNULL__ TCS3472_handler(TCS3472_t * pCpnt)
 		err = TCS3472_calc(pCpnt, pCpnt->Red, pCpnt->Green, pCpnt->Blue);
 
 		#if defined(VERBOSE)
-			if (err == ERROR_OVERFLOW)	{ printf("TCS3472: Sensor saturation reached!\r\n"); }
-			else						{ printf("TCS3472: C%d R%d G%d B%d x%d.%04d y%d.%04d Lux: %lul Temp: %luK\r\n",
-												pCpnt->Clear, pCpnt->Red, pCpnt->Green, pCpnt->Blue,
+			const uint8_t idx = pCpnt - TCS3472;
+			if (err == ERROR_OVERFLOW)	{ printf("TCS3472 id%d: Sensor saturation reached!\r\n", idx); }
+			else						{ printf("TCS3472 id%d: C%d R%d G%d B%d x%d.%04d y%d.%04d Lux: %lul Temp: %luK\r\n",
+												idx, pCpnt->Clear, pCpnt->Red, pCpnt->Green, pCpnt->Blue,
 												(uint16_t) pCpnt->xy[0], get_fp_dec(pCpnt->xy[0], 4),
 												(uint16_t) pCpnt->xy[1], get_fp_dec(pCpnt->xy[1], 4),
 												pCpnt->Lux, pCpnt->Temp); }

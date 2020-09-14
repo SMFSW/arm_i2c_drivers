@@ -48,6 +48,7 @@ __WEAK FctERR NONNULL__ $CPNT$_handler($CPNT$_t * pCpnt)
 	if (err)	{ return err; }
 
 	#if defined(VERBOSE)
+		const uint8_t idx = pCpnt - $CPNT$;
 		printf("$CPNT$ id%d: FUBARED %d", idx, pCpnt->$CPNT$_val_1);
 	#endif
 

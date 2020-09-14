@@ -152,7 +152,8 @@ __WEAK FctERR NONNULL__ MCP9808_handler(MCP9808_t * pCpnt)
 	}
 
 	#if defined(VERBOSE)
-		printf("MCP9808: Temperature %d.%03d°C\r\n", (int16_t) pCpnt->Temperature, get_fp_dec(pCpnt->Temperature, 3));
+		const uint8_t idx = pCpnt - MCP9808;
+		printf("MCP9808 id%d: Temperature %d.%03dÂ°C\r\n", idx, (int16_t) pCpnt->Temperature, get_fp_dec(pCpnt->Temperature, 3));
 	#endif
 
 	return err;

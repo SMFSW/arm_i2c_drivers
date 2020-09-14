@@ -363,13 +363,6 @@ __WEAK FctERR NONNULL__ MTCH6102_handler(MTCH6102_t * const pCpnt)
 
 	FctERR				err;
 	MTCH6102_raw_gest	Gesture;
-	MTCH6102_raw_sense	SensValues;
-
-	if (get_values)
-	{
-		err = MTCH6102_Get_Raw(pCpnt, &SensValues);
-		if (err)	{ return err; }
-	}
 
 	err = MTCH6102_Get_Gest(pCpnt, &Gesture);
 	if (err)	{ return err; }
@@ -378,19 +371,25 @@ __WEAK FctERR NONNULL__ MTCH6102_handler(MTCH6102_t * const pCpnt)
 	if (err)	{ return err; }
 
 	#if defined(VERBOSE)
-		char str_gest[18], str_diag[64];
+		const uint8_t	idx = pCpnt - MTCH6102;
+		char			str_gest[18], str_diag[64];
 
 		MTCH6102_gesture_to_str(str_gest, pCpnt->touch.State);
 		MTCH6102_diag_to_str(str_diag, pCpnt->touch.Diag);
 
-		printf("%d %d %d STATE: 0x%X\t DIAG:0x%X", pCpnt->touch.Touch, pCpnt->touch.Gesture, pCpnt->touch.Large, pCpnt->touch.State, pCpnt->touch.Diag);
-		printf("\tX: %d\tY: %d\tFrm: %d", pCpnt->touch.Coords.x, pCpnt->touch.Coords.y, pCpnt->touch.Frame);
+		printf("MTCH6102 id%d: T%d G%d L%d STATE: 0x%02X\t DIAG:0x%02X", idx, pCpnt->touch.Touch, pCpnt->touch.Gesture, pCpnt->touch.Large, pCpnt->touch.State, pCpnt->touch.Diag);
+		printf("\tX: %-4d\tY: %-4d\t\tFrm: %d", pCpnt->touch.Coords.x, pCpnt->touch.Coords.y, pCpnt->touch.Frame);	// Coords padded to 3 digits with sign
 		printf("\tST: %-18s\tDG: %s\r\n", str_gest, str_diag);	// Gesture string padded to 18 chars
 
 		if (get_values)
 		{
-			printf("Sensor Values:");
-			for (int i = 0; i < sizeof(SensValues) ; i++)	{ printf("%d ", SensValues.sensor[i]); }
+			MTCH6102_raw_sense SensValues;
+
+			err = MTCH6102_Get_Raw(pCpnt, &SensValues);
+			if (err)	{ return err; }
+
+			printf("Sensor Values: ");
+			for (int i = 0; i < sizeof(SensValues) ; i++)	{ printf("%04d ", SensValues.sensor[i]); }
 			printf("\r\n");
 		}
 	#endif

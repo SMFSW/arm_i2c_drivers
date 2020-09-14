@@ -87,7 +87,8 @@ __WEAK FctERR NONNULL__ S11059_handler(S11059_t * pCpnt)
 		pCpnt->IR = MAKEWORD(DATA[7], DATA[6]);
 
 		#if defined(VERBOSE)
-			printf("S11059: R%d G%d B%d IR%d\r\n", pCpnt->Red, pCpnt->Green, pCpnt->Blue, pCpnt->IR);
+			const uint8_t idx = pCpnt - S11059;
+			printf("S11059 id%d: R%d G%d B%d IR%d\r\n", idx, pCpnt->Red, pCpnt->Green, pCpnt->Blue, pCpnt->IR);
 		#endif
 	}
 

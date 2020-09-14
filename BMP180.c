@@ -71,15 +71,15 @@ FctERR NONNULL__ BMP180_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_
 
 FctERR NONNULL__ BMP180_Read_Word(I2C_slave_t * pSlave, uint16_t * data, const uint16_t addr)
 {
-	uint8_t	WREG[2];
+	uint8_t	RREG[2];
 	FctERR	err;
 
 	if (addr > BMP180__OUT_XLSB)		{ return ERROR_RANGE; }		// Unknown register
 
-	err = BMP180_Read(pSlave, WREG, addr, 2);
+	err = BMP180_Read(pSlave, RREG, addr, 2);
 	if (err)	{ return err; }
 
-	*data = MAKEWORD(WREG[1], WREG[0]);
+	*data = MAKEWORD(RREG[1], RREG[0]);
 	return HALERRtoFCTERR(pSlave->status);
 }
 

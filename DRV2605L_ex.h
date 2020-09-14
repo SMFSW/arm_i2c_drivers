@@ -26,7 +26,7 @@
 ** \brief DRV2605L Register map union
 **/
 typedef union uDRV_REG_MAP {
-	uint8_t Bytes[0x21];
+	uint8_t Bytes[35];
 	struct PACK__ {
 		uDRV_REG__STATUS				Status;
 		uDRV_REG__MODE					Mode;

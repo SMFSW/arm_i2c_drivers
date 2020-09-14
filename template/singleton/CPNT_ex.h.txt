@@ -51,7 +51,7 @@ typedef union u$CPNT$_EXT__EXT1 {
 **/
 typedef union u$CPNT$_REG_MAP {
 	uint8_t Bytes[2];
-	struct {
+	struct PACK__ {
 		u$CPNT$_REG__REG1	Reg_1;
 		u$CPNT$_REG__REG1	Reg_2;
 	} Reg;

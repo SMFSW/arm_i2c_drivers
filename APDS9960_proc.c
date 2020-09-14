@@ -108,6 +108,9 @@ __WEAK FctERR NONNULL__ APDS9960_handler(APDS9960_t * pCpnt)
 	uint8_t					DATA[10];
 	uAPDS9960_REG__STATUS *	ST = (uAPDS9960_REG__STATUS *) DATA;
 	FctERR					err;
+	#if defined(VERBOSE)
+		const uint8_t		idx = pCpnt - APDS9960;
+	#endif
 
 	err = APDS9960_Read(pCpnt->cfg.slave_inst, DATA, APDS9960__STATUS, sizeof(DATA));
 	if (err)	{ return err; }
@@ -123,8 +126,8 @@ __WEAK FctERR NONNULL__ APDS9960_handler(APDS9960_t * pCpnt)
 			err = APDS9960_calc(pCpnt, pCpnt->Red, pCpnt->Green, pCpnt->Blue);
 
 			#if defined(VERBOSE)
-				printf("APDS9960: C%d R%d G%d B%d x%d.%04d y%d.%04d Lux: %lul Temp: %luK\r\n",
-						pCpnt->Clear, pCpnt->Red, pCpnt->Green, pCpnt->Blue,
+				printf("APDS9960 id%d: C%d R%d G%d B%d x%d.%04d y%d.%04d Lux: %lul Temp: %luK\r\n",
+						idx, pCpnt->Clear, pCpnt->Red, pCpnt->Green, pCpnt->Blue,
 						(uint16_t) pCpnt->xy[0], get_fp_dec(pCpnt->xy[0], 4),
 						(uint16_t) pCpnt->xy[1], get_fp_dec(pCpnt->xy[1], 4),
 						pCpnt->Lux, pCpnt->Temp);
@@ -139,7 +142,7 @@ __WEAK FctERR NONNULL__ APDS9960_handler(APDS9960_t * pCpnt)
 			pCpnt->Prox = DATA[9];
 
 			#if defined(VERBOSE)
-				printf("APDS9960: Prox %d\r\n", pCpnt->Prox);
+				printf("APDS9960 id%d: Prox %d\r\n", idx, pCpnt->Prox);
 			#endif
 		}
 	}
