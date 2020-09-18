@@ -3,6 +3,11 @@
 ** \copyright MIT (c) 2017-2020, SMFSW
 ** \brief MB85RC256V Driver procedures
 ** \details MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM
+** \note	Compatibility (tested):
+**				- MB85RC256V
+**				- FM24CL64B
+** \note	Compatibility:
+**				- other components using same i2c protocol may be compatible
 **/
 /****************************************************************/
 #ifndef __MB85RC256V_PROC_H__

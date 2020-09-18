@@ -22,6 +22,7 @@ SOFTWARE.
 
 ## v1.0
 
+* Some informations added in components doxygen documentation for compatibility with other devices
 * implementation of multiple peripheral of the same type (for devices that may most likely not being alone in a project)
 	- needed a few refactoring (inlines becoming functions / some typedefs moved)
 	- except: DS_GPMS, PCF8523 & DRV2605L
@@ -30,6 +31,8 @@ SOFTWARE.
 * possibility to set different device base address than default set in header (at project level or in globals.h)
 * init function for peripherals use value in structure for timeout init (in case using a custom timeout)
 * all register unions have their struct definition packed
+* VERBOSE mode padding and refactoring following components (also displaying component index when applicable)
+* ADS1115: added
 * AMG88: added
 * APDS9930: added (+ warning if APDS9960 also compiled, OFFSET union removed as coded as signed 8bits integer)
 * APDS9960: added with fixes and default handler
@@ -47,6 +50,7 @@ SOFTWARE.
 * AT42QT1244: Few delay added between each communication for calibration pending in FHM setup procedure
 * AT42QT1244: weak handler & init implementations
 * BMP180: fixed temperature and pressure calculation (no use of unsigned LSHIFT or RSHIFT for signed calculations)
+* DRV2605: fixed init following timeout configuration using defaults from structure
 * FM24C: added possibility to customize FM24C_SIZE macro if needed
 * MCP4725: Fixed general call function (transmit command, not receive), and taking I2C_HandleTypeDef pointer as parameter
 * MTCH6102: 1ms delay between each transaction end has been added to ensure proper communication flow

@@ -4,6 +4,12 @@
 ** \brief FM24C Driver extensions
 ** \details FM24C16B: 16-Kbit (2K * 8) Serial I2C F-RAM
 **			FM24C04B: 4-Kbit (512 * 8) Serial I2C F-RAM
+** \note	Compatibility (tested):
+**				- FM24C16B
+**				- FM24C04B
+**				- BR24T04FVM
+** \note	Compatibility:
+**				- other components using same i2c protocol may be compatible
 **/
 /****************************************************************/
 #ifndef __FM24C_EX_H__

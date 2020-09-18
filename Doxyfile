@@ -2055,6 +2055,7 @@ INCLUDE_FILE_PATTERNS  = *.h
 PREDEFINED             = DOXY=1 \
                          HAL_I2C_MODULE_ENABLED \
                          HAL_IWDG_MODULE_ENABLED \
+                         I2C_ADS1115=&hi2c \
                          I2C_AMG88=&hi2c \
                          I2C_APDS9930=&hi2c \
                          I2C_APDS9960=&hi2c \
