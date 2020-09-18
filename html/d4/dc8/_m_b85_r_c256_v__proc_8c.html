@@ -96,7 +96,16 @@ Functions</h2></td></tr>
 <div class="textblock"><p>MB85RC256V Driver procedures. </p>
 <dl class="section author"><dt>Author</dt><dd>SMFSW </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2020, SMFSW</dd></dl>
-<p>MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM </p>
+<p>MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM </p><dl class="section note"><dt>Note</dt><dd>Compatibility (tested):<ul>
+<li>MB85RC256V</li>
+<li>FM24CL64B </li>
+</ul>
+</dd>
+<dd>
+Compatibility:<ul>
+<li>other components using same i2c protocol may be compatible </li>
+</ul>
+</dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="ab5b6df102c19e188b263009bc0c8d986"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab5b6df102c19e188b263009bc0c8d986">&#9670;&nbsp;</a></span>MB85RC256V_Get_ID()</h2>
@@ -162,7 +171,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Initialization Sequence for MB85RC256V peripheral. </p>
-<dl class="weak"><dt><b><a class="el" href="../../d0/d58/weak.html#_weak000016">Weak Functions:</a></b></dt><dd>MB85RC256V Init sequence may be user implemented if custom initialization sequence needed </dd></dl>
+<dl class="weak"><dt><b><a class="el" href="../../d0/d58/weak.html#_weak000018">Weak Functions:</a></b></dt><dd>MB85RC256V Init sequence may be user implemented if custom initialization sequence needed </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MB85RC256V component </td></tr>

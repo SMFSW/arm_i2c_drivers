@@ -1,5 +1,14 @@
 var searchData=
 [
+  ['ads1115_5fcomp',['ADS1115_comp',['../df/d61/_a_d_s1115_8h.html#a8c1d4dd21e1acb05987c65cfaaa7acd8',1,'ADS1115.h']]],
+  ['ads1115_5fgain',['ADS1115_gain',['../df/d61/_a_d_s1115_8h.html#a639b5ff8b088b1baa081160b3051d7f0',1,'ADS1115.h']]],
+  ['ads1115_5flatch',['ADS1115_latch',['../df/d61/_a_d_s1115_8h.html#a9fd93577d3e1807fc9a0da3842b84c05',1,'ADS1115.h']]],
+  ['ads1115_5fmode',['ADS1115_mode',['../df/d61/_a_d_s1115_8h.html#a6105106192890648c4cb1a059a1d4b79',1,'ADS1115.h']]],
+  ['ads1115_5fmux',['ADS1115_mux',['../df/d61/_a_d_s1115_8h.html#ab57042083819ff35d983915ee0ae7b15',1,'ADS1115.h']]],
+  ['ads1115_5fpolarity',['ADS1115_polarity',['../df/d61/_a_d_s1115_8h.html#afc46ff02d1820616c5fa5477c0670f6a',1,'ADS1115.h']]],
+  ['ads1115_5fqueue',['ADS1115_queue',['../df/d61/_a_d_s1115_8h.html#a9dab2e546a6fc9d6ab09699996883f35',1,'ADS1115.h']]],
+  ['ads1115_5frate',['ADS1115_rate',['../df/d61/_a_d_s1115_8h.html#aa2a2ad3f2ad93083e50416775293d713',1,'ADS1115.h']]],
+  ['ads1115_5freg_5fmap',['ADS1115_reg_map',['../df/d61/_a_d_s1115_8h.html#a137644e585c986fdce5b8a1eb82a9db2',1,'ADS1115.h']]],
   ['amg88_5fmode',['AMG88_mode',['../d8/d4e/_a_m_g88_8h.html#a796db61606a45c03e952c41451f3a144',1,'AMG88.h']]],
   ['amg88_5freg_5fmap',['AMG88_reg_map',['../d8/d4e/_a_m_g88_8h.html#a0a4bb2f0893d72a3479641e412796b03',1,'AMG88.h']]],
   ['amg88_5freset',['AMG88_reset',['../d8/d4e/_a_m_g88_8h.html#a9644104ef61afc266022d23caae4e70e',1,'AMG88.h']]],

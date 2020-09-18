@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['uads1115_5freg_5f_5fcfg',['uADS1115_REG__CFG',['../df/d61/_a_d_s1115_8h.html#a9531642c0b836027bbe7930e90f8e572',1,'ADS1115.h']]],
+  ['uads1115_5freg_5fmap',['uADS1115_REG_MAP',['../d8/d4b/_a_d_s1115__ex_8h.html#a7a6002d0b41d2835f9442a38b858d0fd',1,'ADS1115_ex.h']]],
   ['uamg88_5freg_5f_5faverage',['uAMG88_REG__AVERAGE',['../d8/d4e/_a_m_g88_8h.html#aa21d0bf235518bc1e15d56e4232b0fd6',1,'AMG88.h']]],
   ['uamg88_5freg_5f_5fframe_5frate',['uAMG88_REG__FRAME_RATE',['../d8/d4e/_a_m_g88_8h.html#ae70b65c73714680d5dbdfdec40dba7f7',1,'AMG88.h']]],
   ['uamg88_5freg_5f_5fint',['uAMG88_REG__INT',['../d8/d4e/_a_m_g88_8h.html#a1a4f52fa6479ec4f623ecde76fa36acf',1,'AMG88.h']]],

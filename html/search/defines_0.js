@@ -1,5 +1,10 @@
 var searchData=
 [
+  ['ads1115_5faddr_5fgnd',['ADS1115_ADDR_GND',['../df/d61/_a_d_s1115_8h.html#ab41e924cb6d7736e788a39ead412b42f',1,'ADS1115.h']]],
+  ['ads1115_5faddr_5fscl',['ADS1115_ADDR_SCL',['../df/d61/_a_d_s1115_8h.html#a242f67cb187e42a5e7083b2c6903e38d',1,'ADS1115.h']]],
+  ['ads1115_5faddr_5fsda',['ADS1115_ADDR_SDA',['../df/d61/_a_d_s1115_8h.html#aaa7d46193354ddb3b3754af0d89a3d87',1,'ADS1115.h']]],
+  ['ads1115_5faddr_5fvdd',['ADS1115_ADDR_VDD',['../df/d61/_a_d_s1115_8h.html#ab3dc11f4c8758fa0ae4789d14ba54df1',1,'ADS1115.h']]],
+  ['ads1115_5fbase_5faddr',['ADS1115_BASE_ADDR',['../df/d61/_a_d_s1115_8h.html#a0e1616c572ce5937b4fdbe7714d9dc8a',1,'ADS1115.h']]],
   ['amg88_5faddr',['AMG88_ADDR',['../d8/d4e/_a_m_g88_8h.html#a39a37174babe9d7d7732a9d87a9249b2',1,'AMG88.h']]],
   ['amg88_5fbase_5faddr',['AMG88_BASE_ADDR',['../d8/d4e/_a_m_g88_8h.html#a20a1ab627c2168587be060efd50cf5fe',1,'AMG88.h']]],
   ['amg88_5fchip_5fid',['AMG88_CHIP_ID',['../da/de9/_a_m_g88__proc_8h.html#a96b284c454606b08d05b4604e07427d6',1,'AMG88_proc.h']]],

@@ -1,5 +1,11 @@
 var searchData=
 [
+  ['ads1115_2ec',['ADS1115.c',['../db/de1/_a_d_s1115_8c.html',1,'']]],
+  ['ads1115_2eh',['ADS1115.h',['../df/d61/_a_d_s1115_8h.html',1,'']]],
+  ['ads1115_5fex_2ec',['ADS1115_ex.c',['../d8/d63/_a_d_s1115__ex_8c.html',1,'']]],
+  ['ads1115_5fex_2eh',['ADS1115_ex.h',['../d8/d4b/_a_d_s1115__ex_8h.html',1,'']]],
+  ['ads1115_5fproc_2ec',['ADS1115_proc.c',['../da/d08/_a_d_s1115__proc_8c.html',1,'']]],
+  ['ads1115_5fproc_2eh',['ADS1115_proc.h',['../d4/d35/_a_d_s1115__proc_8h.html',1,'']]],
   ['amg88_2ec',['AMG88.c',['../df/d52/_a_m_g88_8c.html',1,'']]],
   ['amg88_2eh',['AMG88.h',['../d8/d4e/_a_m_g88_8h.html',1,'']]],
   ['amg88_5fex_2ec',['AMG88_ex.c',['../de/d9d/_a_m_g88__ex_8c.html',1,'']]],

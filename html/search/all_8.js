@@ -14,6 +14,7 @@ var searchData=
   ['heading_5fmag_5ftrue_5funits',['Heading_Mag_True_Units',['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#a1b3e2c05f46c4d922797145649438c03',1,'uGPMS_RD_REG_MAP']]],
   ['heading_5fmagnetic',['Heading_Magnetic',['../d6/dd1/struct_g_p_m_s__t.html#ae0ec83bcfc6b731aa508dea72d8adcf5',1,'GPMS_t']]],
   ['heading_5ftrue',['Heading_True',['../d6/dd1/struct_g_p_m_s__t.html#aad20bff817462f51fea29f47b23a5885',1,'GPMS_t']]],
+  ['hi_5fthresh',['Hi_Thresh',['../d1/d1d/unionu_a_d_s1115___r_e_g___m_a_p.html#a0d14ef6d5ab7c9a38da7d37f3ae74d27',1,'uADS1115_REG_MAP::Hi_Thresh()'],['../dd/da4/struct_a_d_s1115__t.html#ac1d68dbd6939ed8549586f0af7e6c2b5',1,'ADS1115_t::Hi_Thresh()']]],
   ['hi_5fz',['HI_Z',['../de/d3c/unionu_d_r_v___r_e_g_____l_i_b_r_a_r_y___s_e_l_e_c_t_i_o_n.html#a49a7a4618cc9871dfdabd5053143d393',1,'uDRV_REG__LIBRARY_SELECTION']]],
   ['highalert',['HighAlert',['../db/d83/struct_m_c_p9808__t.html#acc5c7f797d870809cc36e926f460533a',1,'MCP9808_t']]],
   ['highthreshold',['HighThreshold',['../d3/d18/struct_t_c_s3400__t.html#a20c408396cd3acc3c8e76e8922792d6b',1,'TCS3400_t::HighThreshold()'],['../d8/d5b/struct_t_c_s3472__t.html#adf82b4a75c612e72e9256d16d0f14350',1,'TCS3472_t::HighThreshold()'],['../d7/d5e/struct_t_s_l2591__t.html#a64458ad758f12458c927d0a6a552c019',1,'TSL2591_t::HighThreshold()']]],

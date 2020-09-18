@@ -1,0 +1,7 @@
+<map id="ADS1115_handler_all" name="ADS1115_handler_all">
+<area shape="rect" id="node2" href="$d4/d35/_a_d_s1115__proc_8h.html#a9c47baa9b025562935b7113d4f9e186a" title="Handler for ADS1115 peripheral. " alt="" coords="212,31,349,57"/>
+<area shape="rect" id="node3" href="$db/de1/_a_d_s1115_8c.html#a7901402897c2af57cb7fbcf93b90b113" title="I2C Read function for ADS1115. " alt="" coords="397,5,517,32"/>
+<area shape="rect" id="node6" href="$db/de1/_a_d_s1115_8c.html#a50f379423ce4c0426982793ef0246b88" title="I2C Write function for ADS1115. " alt="" coords="397,56,517,83"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="565,5,683,32"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="571,56,677,83"/>
+</map>

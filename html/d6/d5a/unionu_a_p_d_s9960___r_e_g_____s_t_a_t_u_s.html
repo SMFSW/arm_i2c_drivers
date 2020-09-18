@@ -76,32 +76,32 @@ $(function() {
 Data Fields</h2></td></tr>
 <tr class="memitem:aa2dfab9b81af887a9711dc6a494a5ebd"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5a/unionu_a_p_d_s9960___r_e_g_____s_t_a_t_u_s.html#aa2dfab9b81af887a9711dc6a494a5ebd">Byte</a></td></tr>
 <tr class="separator:aa2dfab9b81af887a9711dc6a494a5ebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0711b89d29957ad774adbee661aeb655"><td class="memItemLeft" >struct {</td></tr>
-<tr class="memitem:ad9a86f1c1e667e9a34d16a4047c5e667"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d6/d5a/unionu_a_p_d_s9960___r_e_g_____s_t_a_t_u_s.html#a834e528434ef5fa5d34d5f12374de466">AVALID</a>:1</td></tr>
-<tr class="memdesc:ad9a86f1c1e667e9a34d16a4047c5e667"><td class="mdescLeft">&#160;</td><td class="mdescRight">ALS Valid. Indicates that an ALS cycle has completed since AEN was asserted or since a read from any of the ALS/Color data registers.  <a href="#ad9a86f1c1e667e9a34d16a4047c5e667">More...</a><br /></td></tr>
-<tr class="separator:ad9a86f1c1e667e9a34d16a4047c5e667"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca09bebb4eecabc982f0fa25802cff0c"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d6/d5a/unionu_a_p_d_s9960___r_e_g_____s_t_a_t_u_s.html#a454672d42ca6bff5bd2966c530130c8d">PVALID</a>:1</td></tr>
-<tr class="memdesc:aca09bebb4eecabc982f0fa25802cff0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Proximity Valid. Proximity Valid. Indicates that a proximity cycle has completed since PEN was asserted or since PDATA was last read. A read of PDATA automatically clears PVALID.  <a href="#aca09bebb4eecabc982f0fa25802cff0c">More...</a><br /></td></tr>
-<tr class="separator:aca09bebb4eecabc982f0fa25802cff0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ed09d5c038bea23de029ae2ca7874c0"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d6/d5a/unionu_a_p_d_s9960___r_e_g_____s_t_a_t_u_s.html#ae6a58afc2917b82a0f8d15cb0d46afd3">GINT</a>:1</td></tr>
-<tr class="memdesc:a7ed09d5c038bea23de029ae2ca7874c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gesture Interrupt. GINT is asserted when GFVLV becomes greater than GFIFOTH or if GVALID has become asserted when GMODE transitioned to zero. The bit is reset when FIFO is completely emptied (read).  <a href="#a7ed09d5c038bea23de029ae2ca7874c0">More...</a><br /></td></tr>
-<tr class="separator:a7ed09d5c038bea23de029ae2ca7874c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a884258404d41a6f75625d869c10fc539"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d6/d5a/unionu_a_p_d_s9960___r_e_g_____s_t_a_t_u_s.html#aca11ddcfb4aa4b959375d21488a8ba8f">__pad0__</a>:1</td></tr>
-<tr class="separator:a884258404d41a6f75625d869c10fc539"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ff28c2e4f21eaf3783c9aa44b8d3fa2"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d6/d5a/unionu_a_p_d_s9960___r_e_g_____s_t_a_t_u_s.html#ab1be93c4b427e3874cb217c39848ac95">AINT</a>:1</td></tr>
-<tr class="memdesc:a2ff28c2e4f21eaf3783c9aa44b8d3fa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ALS Interrupt. This bit triggers an interrupt if AIEN in ENABLE is set.  <a href="#a2ff28c2e4f21eaf3783c9aa44b8d3fa2">More...</a><br /></td></tr>
-<tr class="separator:a2ff28c2e4f21eaf3783c9aa44b8d3fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d8cb4fb7e5f351923e19dfd3321537f"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d6/d5a/unionu_a_p_d_s9960___r_e_g_____s_t_a_t_u_s.html#ab2f342c98478dc9bb156e4866b3399d9">PINT</a>:1</td></tr>
-<tr class="memdesc:a9d8cb4fb7e5f351923e19dfd3321537f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Proximity Interrupt. This bit triggers an interrupt if PIEN in ENABLE is set.  <a href="#a9d8cb4fb7e5f351923e19dfd3321537f">More...</a><br /></td></tr>
-<tr class="separator:a9d8cb4fb7e5f351923e19dfd3321537f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8032163480b254526ccc02a0a3e2ec6"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d6/d5a/unionu_a_p_d_s9960___r_e_g_____s_t_a_t_u_s.html#afb0766dfc84dbdf757cb6cf440159a5e">PGSAT</a>:1</td></tr>
-<tr class="memdesc:ad8032163480b254526ccc02a0a3e2ec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates that an analog saturation event occurred during a previous proximity or gesture cycle. Once set, this bit remains set until cleared by clear proximity interrupt special function command (0xE5 PICLEAR) or by disabling Prox (PEN=0). This bit triggers an interrupt if PSIEN is set.  <a href="#ad8032163480b254526ccc02a0a3e2ec6">More...</a><br /></td></tr>
-<tr class="separator:ad8032163480b254526ccc02a0a3e2ec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ae25a94e0ebf44cd50a12b900594838"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d6/d5a/unionu_a_p_d_s9960___r_e_g_____s_t_a_t_u_s.html#aefcced3ee34984d8692ed82cab2e1959">CPSAT</a>:1</td></tr>
-<tr class="memdesc:a3ae25a94e0ebf44cd50a12b900594838"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear Photodiode Saturation. When asserted, the analog sensor was at the upper end of its dynamic range. The bit can be de-asserted by sending a Clear channel interrupt command (0xE6 CICLEAR) or by disabling the ADC (AEN=0). This bit triggers an interrupt if CPSIEN is set.  <a href="#a3ae25a94e0ebf44cd50a12b900594838">More...</a><br /></td></tr>
-<tr class="separator:a3ae25a94e0ebf44cd50a12b900594838"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0711b89d29957ad774adbee661aeb655"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5a/unionu_a_p_d_s9960___r_e_g_____s_t_a_t_u_s.html#a0711b89d29957ad774adbee661aeb655">Bits</a></td></tr>
-<tr class="separator:a0711b89d29957ad774adbee661aeb655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a17b6abf9e428f7d8eff827d967768b"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:ab14e7d3970906c59ba07c66bcc823b47"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d6/d5a/unionu_a_p_d_s9960___r_e_g_____s_t_a_t_u_s.html#a834e528434ef5fa5d34d5f12374de466">AVALID</a>:1</td></tr>
+<tr class="memdesc:ab14e7d3970906c59ba07c66bcc823b47"><td class="mdescLeft">&#160;</td><td class="mdescRight">ALS Valid. Indicates that an ALS cycle has completed since AEN was asserted or since a read from any of the ALS/Color data registers.  <a href="#ab14e7d3970906c59ba07c66bcc823b47">More...</a><br /></td></tr>
+<tr class="separator:ab14e7d3970906c59ba07c66bcc823b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dcc52566648ad0bf463434419cb12f1"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d6/d5a/unionu_a_p_d_s9960___r_e_g_____s_t_a_t_u_s.html#a454672d42ca6bff5bd2966c530130c8d">PVALID</a>:1</td></tr>
+<tr class="memdesc:a0dcc52566648ad0bf463434419cb12f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Proximity Valid. Proximity Valid. Indicates that a proximity cycle has completed since PEN was asserted or since PDATA was last read. A read of PDATA automatically clears PVALID.  <a href="#a0dcc52566648ad0bf463434419cb12f1">More...</a><br /></td></tr>
+<tr class="separator:a0dcc52566648ad0bf463434419cb12f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af60ab40bf654a671d37e5a4e551575f9"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d6/d5a/unionu_a_p_d_s9960___r_e_g_____s_t_a_t_u_s.html#ae6a58afc2917b82a0f8d15cb0d46afd3">GINT</a>:1</td></tr>
+<tr class="memdesc:af60ab40bf654a671d37e5a4e551575f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gesture Interrupt. GINT is asserted when GFVLV becomes greater than GFIFOTH or if GVALID has become asserted when GMODE transitioned to zero. The bit is reset when FIFO is completely emptied (read).  <a href="#af60ab40bf654a671d37e5a4e551575f9">More...</a><br /></td></tr>
+<tr class="separator:af60ab40bf654a671d37e5a4e551575f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e6629dd221e7f21fcb30d744f03c728"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d6/d5a/unionu_a_p_d_s9960___r_e_g_____s_t_a_t_u_s.html#aca11ddcfb4aa4b959375d21488a8ba8f">__pad0__</a>:1</td></tr>
+<tr class="separator:a3e6629dd221e7f21fcb30d744f03c728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3df975f6c826fbfd37bbbef462ffb523"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d6/d5a/unionu_a_p_d_s9960___r_e_g_____s_t_a_t_u_s.html#ab1be93c4b427e3874cb217c39848ac95">AINT</a>:1</td></tr>
+<tr class="memdesc:a3df975f6c826fbfd37bbbef462ffb523"><td class="mdescLeft">&#160;</td><td class="mdescRight">ALS Interrupt. This bit triggers an interrupt if AIEN in ENABLE is set.  <a href="#a3df975f6c826fbfd37bbbef462ffb523">More...</a><br /></td></tr>
+<tr class="separator:a3df975f6c826fbfd37bbbef462ffb523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b3caa4c9d30ada9c260bd5dc227ee56"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d6/d5a/unionu_a_p_d_s9960___r_e_g_____s_t_a_t_u_s.html#ab2f342c98478dc9bb156e4866b3399d9">PINT</a>:1</td></tr>
+<tr class="memdesc:a8b3caa4c9d30ada9c260bd5dc227ee56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Proximity Interrupt. This bit triggers an interrupt if PIEN in ENABLE is set.  <a href="#a8b3caa4c9d30ada9c260bd5dc227ee56">More...</a><br /></td></tr>
+<tr class="separator:a8b3caa4c9d30ada9c260bd5dc227ee56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78634270133b685312863a2a32844ce4"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d6/d5a/unionu_a_p_d_s9960___r_e_g_____s_t_a_t_u_s.html#afb0766dfc84dbdf757cb6cf440159a5e">PGSAT</a>:1</td></tr>
+<tr class="memdesc:a78634270133b685312863a2a32844ce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates that an analog saturation event occurred during a previous proximity or gesture cycle. Once set, this bit remains set until cleared by clear proximity interrupt special function command (0xE5 PICLEAR) or by disabling Prox (PEN=0). This bit triggers an interrupt if PSIEN is set.  <a href="#a78634270133b685312863a2a32844ce4">More...</a><br /></td></tr>
+<tr class="separator:a78634270133b685312863a2a32844ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abba9e127f363b7af7924229cf91abd61"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d6/d5a/unionu_a_p_d_s9960___r_e_g_____s_t_a_t_u_s.html#aefcced3ee34984d8692ed82cab2e1959">CPSAT</a>:1</td></tr>
+<tr class="memdesc:abba9e127f363b7af7924229cf91abd61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear Photodiode Saturation. When asserted, the analog sensor was at the upper end of its dynamic range. The bit can be de-asserted by sending a Clear channel interrupt command (0xE6 CICLEAR) or by disabling the ADC (AEN=0). This bit triggers an interrupt if CPSIEN is set.  <a href="#abba9e127f363b7af7924229cf91abd61">More...</a><br /></td></tr>
+<tr class="separator:abba9e127f363b7af7924229cf91abd61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a17b6abf9e428f7d8eff827d967768b"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5a/unionu_a_p_d_s9960___r_e_g_____s_t_a_t_u_s.html#a7a17b6abf9e428f7d8eff827d967768b">Bits</a></td></tr>
+<tr class="separator:a7a17b6abf9e428f7d8eff827d967768b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Union for STATUS register of APDS9960. </p>
@@ -152,8 +152,8 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="a0711b89d29957ad774adbee661aeb655"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0711b89d29957ad774adbee661aeb655">&#9670;&nbsp;</a></span>Bits</h2>
+<a id="a7a17b6abf9e428f7d8eff827d967768b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a17b6abf9e428f7d8eff827d967768b">&#9670;&nbsp;</a></span>Bits</h2>
 
 <div class="memitem">
 <div class="memproto">

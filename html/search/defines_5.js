@@ -2,6 +2,7 @@ var searchData=
 [
   ['i2c_5faddr',['I2C_ADDR',['../d6/dd6/_i2_c__component_8h.html#ad5c7bd690e94d726dda8f5f183d85687',1,'I2C_component.h']]],
   ['i2c_5faddr_5fgeneral_5fcall',['I2C_ADDR_General_Call',['../d6/dd6/_i2_c__component_8h.html#a70eb641f4acac227040e4d6dd7708c3e',1,'I2C_component.h']]],
+  ['i2c_5fads1115_5fnb',['I2C_ADS1115_NB',['../df/d61/_a_d_s1115_8h.html#a7eaf7ec6a8d54d5e3d50988da3e71a3a',1,'ADS1115.h']]],
   ['i2c_5famg88_5fnb',['I2C_AMG88_NB',['../d8/d4e/_a_m_g88_8h.html#a0412fc1bd6debfd4408b7694c2b5af34',1,'AMG88.h']]],
   ['i2c_5fapds9930_5fnb',['I2C_APDS9930_NB',['../d6/dd1/_a_p_d_s9930_8h.html#a69d0d383cb48eeaa95f8bd09aac7b98b',1,'APDS9930.h']]],
   ['i2c_5fapds9960_5fnb',['I2C_APDS9960_NB',['../d2/dbf/_a_p_d_s9960_8h.html#afbccbef822849101858a846b9e15f71c',1,'APDS9960.h']]],

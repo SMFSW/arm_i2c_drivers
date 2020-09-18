@@ -117,7 +117,16 @@ Functions</h2></td></tr>
 <div class="textblock"><p>MB85RC256V Driver extensions. </p>
 <dl class="section author"><dt>Author</dt><dd>SMFSW </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2020, SMFSW</dd></dl>
-<p>MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM </p>
+<p>MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM </p><dl class="section note"><dt>Note</dt><dd>Compatibility (tested):<ul>
+<li>MB85RC256V</li>
+<li>FM24CL64B </li>
+</ul>
+</dd>
+<dd>
+Compatibility:<ul>
+<li>other components using same i2c protocol may be compatible </li>
+</ul>
+</dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a8a51efd2f7a4674b53f7128968719515"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8a51efd2f7a4674b53f7128968719515">&#9670;&nbsp;</a></span>MB85RC256V_Read_Type</h2>
@@ -156,7 +165,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">__INLINE FctERR NONNULL_INLINE__ MB85RC256V_Get_##name(type * rd) { \</div><div class="line">                                                            return <a class="code" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a00a005a9513a3f509187ba881fabd163">MB85RC256V_Read</a>(cpnt, &amp;rd, addr, <span class="keyword">sizeof</span>(type)); }</div><div class="ttc" id="_m_b85_r_c256_v_8c_html_a00a005a9513a3f509187ba881fabd163"><div class="ttname"><a href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a00a005a9513a3f509187ba881fabd163">MB85RC256V_Read</a></div><div class="ttdeci">FctERR MB85RC256V_Read(MB85RC256V_t *pCpnt, uint8_t *data, const uint16_t addr, const uint16_t nb)</div><div class="ttdoc">I2C Read function for MB85RC256V. </div><div class="ttdef"><b>Definition:</b> MB85RC256V.c:68</div></div>
+<b>Value:</b><div class="fragment"><div class="line">__INLINE FctERR NONNULL_INLINE__ MB85RC256V_Get_##name(type * rd) { \</div><div class="line">                                                            return <a class="code" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a00a005a9513a3f509187ba881fabd163">MB85RC256V_Read</a>(cpnt, &amp;rd, addr, <span class="keyword">sizeof</span>(type)); }</div><div class="ttc" id="_m_b85_r_c256_v_8c_html_a00a005a9513a3f509187ba881fabd163"><div class="ttname"><a href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a00a005a9513a3f509187ba881fabd163">MB85RC256V_Read</a></div><div class="ttdeci">FctERR MB85RC256V_Read(MB85RC256V_t *pCpnt, uint8_t *data, const uint16_t addr, const uint16_t nb)</div><div class="ttdoc">I2C Read function for MB85RC256V. </div><div class="ttdef"><b>Definition:</b> MB85RC256V.c:73</div></div>
 </div><!-- fragment -->
 <p>Macro to create function to read value(s) from MB85RC256V. </p>
 
@@ -199,7 +208,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">__INLINE FctERR INLINE__ MB85RC256V_Set_##name(type wr) {   \</div><div class="line">                                                            return <a class="code" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a640bd37b33711d5c0b32bde7c603cabe">MB85RC256V_Write</a>(cpnt, &amp;wr, addr, <span class="keyword">sizeof</span>(type)); }</div><div class="ttc" id="_m_b85_r_c256_v_8c_html_a640bd37b33711d5c0b32bde7c603cabe"><div class="ttname"><a href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a640bd37b33711d5c0b32bde7c603cabe">MB85RC256V_Write</a></div><div class="ttdeci">FctERR MB85RC256V_Write(MB85RC256V_t *pCpnt, const uint8_t *data, const uint16_t addr, const uint16_t nb)</div><div class="ttdoc">I2C Write function for MB85RC256V. </div><div class="ttdef"><b>Definition:</b> MB85RC256V.c:51</div></div>
+<b>Value:</b><div class="fragment"><div class="line">__INLINE FctERR INLINE__ MB85RC256V_Set_##name(type wr) {   \</div><div class="line">                                                            return <a class="code" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a640bd37b33711d5c0b32bde7c603cabe">MB85RC256V_Write</a>(cpnt, &amp;wr, addr, <span class="keyword">sizeof</span>(type)); }</div><div class="ttc" id="_m_b85_r_c256_v_8c_html_a640bd37b33711d5c0b32bde7c603cabe"><div class="ttname"><a href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a640bd37b33711d5c0b32bde7c603cabe">MB85RC256V_Write</a></div><div class="ttdeci">FctERR MB85RC256V_Write(MB85RC256V_t *pCpnt, const uint8_t *data, const uint16_t addr, const uint16_t nb)</div><div class="ttdoc">I2C Write function for MB85RC256V. </div><div class="ttdef"><b>Definition:</b> MB85RC256V.c:56</div></div>
 </div><!-- fragment -->
 <p>Macro to create function to write value(s) to MB85RC256V. </p>
 
