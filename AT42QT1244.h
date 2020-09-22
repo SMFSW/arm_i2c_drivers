@@ -226,7 +226,7 @@ typedef union uAT42QT_REG__SETUP_238 {
 		uint8_t SLEEP	:3;		//!< Sleep duration
 		uint8_t MSYNC	:1;		//!< Main sync
 		uint8_t NHYST	:2;		//!< Negative hysteresis
-		uint8_t DBG		:1;		//!< Debug output
+		uint8_t DBUG	:1;		//!< Debug output (E removed not to be asserted as DEBUG macro)
 	} Bits;
 } uAT42QT_REG__SETUP_238;
 

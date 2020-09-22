@@ -29,11 +29,9 @@ FctERR NONNULL__ BMP180_Start_Conversion(BMP180_t * pCpnt, const BMP180_meas mea
 	if (meas == BMP180__MEAS_PRESSURE)	{ CTRL.Bits.OSS = pCpnt->cfg.OSS; }
 
 	err = BMP180_Write(pCpnt->cfg.slave_inst, (uint8_t *) &CTRL.Byte, BMP180__CTRL_MEAS, 1);
-	if(err)		{ return err; }
-
 	pCpnt->hStartConversion = HAL_GetTick();
 
-	return ERROR_OK;
+	return err;
 }
 
 

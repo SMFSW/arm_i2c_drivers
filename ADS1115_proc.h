@@ -26,8 +26,16 @@
 
 
 // *****************************************************************************
-// Section: Constants
+// Section: Types
 // *****************************************************************************
+/*!\enum ADS1115_func
+** \brief Function enum for ADS1115
+**/
+typedef enum ADS1115_func {
+	ADS1115__FUNC_SINGLE_DIFF = 0,	//!< Continuous conversion mode
+	ADS1115__FUNC_MULTIPLE_DIFF,	//!< Power-down single-shot mode
+	ADS1115__FUNC_SINGLE_ENDED,		//!< Power-down single-shot mode
+} ADS1115_func;
 
 
 // *****************************************************************************
@@ -37,12 +45,16 @@
 ** \brief ADS1115 user interface struct
 **/
 typedef struct ADS1115_t {
-	int16_t				AIN[4];			//!< Conversion results
+	int16_t				AIN[4];				//!< Conversion results
+	uint8_t				AIN_idx;			//!< Current AIN index
 	struct {
-	I2C_slave_t *		slave_inst;		//!< Slave structure
-	uADS1115_REG__CFG	Config;			//!< Config register
-	int16_t				Lo_Thresh;		//!< Lo-thresh register
-	int16_t				Hi_Thresh;		//!< Hi-thresh register
+	I2C_slave_t *		slave_inst;			//!< Slave structure
+	ADS1115_func		function;			//!< Functional mode
+	ADS1115_mode		mode;				//!< Mode (single shot / Continuous conversion)
+	uint8_t				nb;					//!< Number of channels (irrelevant for ADS1115__FUNC_SINGLE_DIFF func)
+	uADS1115_REG__CFG	Config;				//!< Config register
+	int16_t				Lo_Thresh;			//!< Lo-thresh register
+	int16_t				Hi_Thresh;			//!< Hi-thresh register
 	} cfg;
 } ADS1115_t;
 

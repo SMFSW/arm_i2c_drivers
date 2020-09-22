@@ -30,32 +30,31 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 ## Supported devices
 
 - **ADS1115**: Ultra-Small, Low-Power, 16-Bit Analog-to-Digital Converter with Internal Reference
-
-  - STATUS: WORKING (TODO: timing constraints following conversion rate, config functions & comparator use)
+  - **STATUS**: WORKING
 
 - **AMG88**: Infrared Array Sensor (Grid-EYE)
-  - STATUS: WORKING (TODO: recognition)
+  - **STATUS**: WORKING (TODO: recognition)
 
 - **APDS9930**: Digital Proximity and Ambient Light Sensor
-  - STATUS: WORKING
+  - **STATUS**: WORKING
 
 - **APDS9960**: Digital Proximity, Ambient Light, RGB and Gesture Sensor
-  - STATUS: WORKING, (TODO: GESTURES TO TEST/SWITCH, DISABLED YET)
+  - **STATUS**: WORKING, (TODO: GESTURES TO TEST/SWITCH, DISABLED YET)
 
 - **AT42QT1244**: 24-key QMatrix FMEA IEC/EN/UL60730 Touch Sensor
-  - STATUS: WORKING
+  - **STATUS**: WORKING
 
 - **BMP180**: Digital pressure sensor
-  - STATUS: WORKING
+  - **STATUS**: WORKING
 
 - **DRV2605L**: 2 to 5.2V Haptic Driver for LRA and ERM With Effect Library and Smart-Loop Architecture
-  - STATUS: WORKING
+  - **STATUS**: WORKING
 
 - **DS-GPM.S**: 99 Channel Positioning System (GPS + GLONASS) Shield
-  - STATUS: WORKING
+  - **STATUS**: WORKING
 
 - **FM24C**: 4/16-Kbit (512/2K * 8) Serial I2C F-RAM
-  - STATUS: WORKING
+  - **STATUS**: WORKING
   - Use FM24C for I2C addresses banked components (with 8b internal address):
     - Tested on:
       - FM24C16B
@@ -63,51 +62,57 @@ Please keep in mind some components are somewhat custom and needs to be accesses
       - BR24T04FVM
 
 - **L3GD20H**: MEMS motion sensor, three-axis digital output gyroscope
-  - STATUS: CODING IN PROGRESS / NO TESTS YET
+  - **STATUS**: CODING IN PROGRESS / NO TESTS YET
 
 - **LSM303DLHC**: Ultra compact high performance e-compass 3D accelerometer and 3D magnetometer module
-  - STATUS: CODING IN PROGRESS / NO TESTS YET
+  - **STATUS**: CODING IN PROGRESS / NO TESTS YET
 
 - **MB85RC256V**: 256-Kbit (32K * 8) I2C Memory FRAM
-  - STATUS: WORKING
+  - **STATUS**: WORKING
   - Use MB85RC256V for 16b internal addresses components:
     - Tested on:
       - MB85RC256V
       - FM24CL64B
 
 - **MCP4725**: 12-Bit Digital-to-Analog Converter with EEPROM Memory
-  - STATUS: WORKING
+  - **STATUS**: WORKING
 
 - **MCP9808**: +/-0.5C Maximum Accuracy Digital Temperature Sensor
-  - STATUS: WORKING
+  - **STATUS**: WORKING
 
 - **MTCH6102**: Low-Power Projected Capacitive Touch Controller
-  - STATUS: WORKING
+  - **STATUS**: WORKING
 
 - **PCA9532**: 16-bit I2C-bus LED dimmer
-  - STATUS: WORKING
+  - **STATUS**: WORKING
 
 - **PCA9624**: 8-bit Fm+ I2C-bus 100mA 40V LED driver
-  - STATUS: WORKING
+  - **STATUS**: WORKING
 
 - **PCA9685**: 16-channel, 12-bit PWM Fm+ I2C-bus LED controller
-  - STATUS: WORKING
+  - **STATUS**: WORKING
 
 - **PCF8523**: Real-Time Clock (RTC) and calendar
-  - STATUS: _WORKING (TODO: handle clkout and alarms)
+  - **STATUS**: _WORKING (TODO: handle clkout and alarms)
 
 - **S11059**: I2C interface-compatible color sensor
-  - STATUS: WORKING
+  - **STATUS**: WORKING
 
 - **TCS3400**: Color light-to-digital converter
-  - STATUS: WORKING (TODO: auto-integration & persistence in the works)
+  - **STATUS**: WORKING (TODO: auto-integration & persistence in the works)
 
 - **TCS3472**: Color light-to-digital converter with IR filter
-  - STATUS: WORKING (TODO: auto-integration & persistence in the works)
+  - **STATUS**: WORKING (TODO: auto-integration & persistence in the works)
 
 - **TSL2591**: Very-high sensitivity light-to-digital converter
-  - STATUS: WORKING (TODO: auto-integration & persistence in the works)
+  - **STATUS**: WORKING (TODO: auto-integration & persistence in the works)
 
+## Multiple component type on single project (singleton components excluded)
+
+- If multiple component type are used on the same MCU device:
+	- A for loop can be used passing I2C_$CPNT$ if all components are tied to the same i2C instance (physical bus)
+	- In case same multiple same component type are used on different physical busses, please pass each instance to $CPNT$_Init
+		- note: formerly, I2C_$CPNT$ was used to determine device type enabling (and its instance); as long as enabled with former I2C_$CPNT$, init function can be called using other params
 
 ## Following peripherals (?)
 
@@ -127,7 +132,6 @@ You may also:
 ## Limitations
 
 - Compatibility with interrupt driven R/W transactions (when possible & usefull, yet already tested manually on some components)
-- Multiple components declaration are implicitly set to belong to a single I2C peripheral instance 
 
 ## TODO
 
