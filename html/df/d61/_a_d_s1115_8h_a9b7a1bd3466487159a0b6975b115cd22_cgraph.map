@@ -1,8 +1,6 @@
 <map id="ADS1115_Init" name="ADS1115_Init">
 <area shape="rect" id="node2" href="$d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="197,5,305,32"/>
 <area shape="rect" id="node3" href="$da/d08/_a_d_s1115__proc_8c.html#a6ff50eea6d7569e24d94154636fa2807" title="Initialization Sequence for ADS1115 peripheral. " alt="" coords="161,56,340,83"/>
-<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="191,107,310,133"/>
-<area shape="rect" id="node4" href="$db/de1/_a_d_s1115_8c.html#a50f379423ce4c0426982793ef0246b88" title="I2C Write function for ADS1115. " alt="" coords="388,56,508,83"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="556,31,673,57"/>
-<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="561,81,668,108"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="191,107,310,133"/>
+<area shape="rect" id="node4" href="$d8/d63/_a_d_s1115__ex_8c.html#a1b491483199b3471af10a35360715220" title="Set ADS1115 functional mode. " alt="" coords="388,56,559,83"/>
 </map>

@@ -1,0 +1,5 @@
+<map id="ADS1115_Get_raw_value" name="ADS1115_Get_raw_value">
+<area shape="rect" id="node2" href="$d8/d4b/_a_d_s1115__ex_8h.html#aa6f80233e26b7978d1ae4ea8612dff01" title="Get ADS1115 raw channel value in µV. " alt="" coords="236,5,419,47"/>
+<area shape="rect" id="node3" href="$d8/d4b/_a_d_s1115__ex_8h.html#adfbbaf87b988da2143c9b632f486cb52" title="Get ADS1115 raw channel value in mV. " alt="" coords="236,71,419,112"/>
+<area shape="rect" id="node4" href="$d8/d4b/_a_d_s1115__ex_8h.html#a4f97c9148834a6abbf87c74b6c8dfd3f" title="Get ADS1115 raw channel value in V. " alt="" coords="236,136,419,177"/>
+</map>

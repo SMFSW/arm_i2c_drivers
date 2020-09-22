@@ -2,6 +2,7 @@ var searchData=
 [
   ['n_5ferm_5flra',['N_ERM_LRA',['../d5/db8/unionu_d_r_v___r_e_g_____f_e_e_d_b_a_c_k___c_o_n_t_r_o_l.html#a083609cf851d89d4708e15af4dc63c42',1,'uDRV_REG__FEEDBACK_CONTROL']]],
   ['n_5fpwm_5fanalog',['N_PWM_ANALOG',['../d3/d19/unionu_d_r_v___r_e_g_____c_o_n_t_r_o_l__3.html#a3af4a45d14df2efcb11b01264225058f',1,'uDRV_REG__CONTROL_3']]],
+  ['nb',['nb',['../dd/da4/struct_a_d_s1115__t.html#a523decb14d1851171f60eed70f379c7e',1,'ADS1115_t']]],
   ['nb_5frx',['nb_rx',['../d5/d63/struct_m_t_c_h6102__t.html#aec9a8b96cbd7c98d8d037b2f4095a76d',1,'MTCH6102_t']]],
   ['nb_5ftx',['nb_tx',['../d5/d63/struct_m_t_c_h6102__t.html#adc15a3c6b14fb093bd30f7d1533ab51c',1,'MTCH6102_t']]],
   ['ndil',['NDIL',['../d3/d05/unionu_a_t42_q_t___r_e_g_____s_e_t_u_p__165__188.html#ac77a91a0a8cd817c86800e7cf2683120',1,'uAT42QT_REG__SETUP_165_188']]],

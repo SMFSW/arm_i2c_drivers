@@ -1,7 +1,4 @@
 <map id="ADS1115_Write" name="ADS1115_Write">
-<area shape="rect" id="node2" href="$d4/d35/_a_d_s1115__proc_8h.html#a6ff50eea6d7569e24d94154636fa2807" title="Initialization Sequence for ADS1115 peripheral. " alt="" coords="173,5,352,32"/>
-<area shape="rect" id="node5" href="$d4/d35/_a_d_s1115__proc_8h.html#a9c47baa9b025562935b7113d4f9e186a" title="Handler for ADS1115 peripheral. " alt="" coords="194,56,331,83"/>
-<area shape="rect" id="node3" href="$df/d61/_a_d_s1115_8h.html#a9b7a1bd3466487159a0b6975b115cd22" title="Initialization for ADS1115 peripheral. " alt="" coords="425,5,533,32"/>
-<area shape="rect" id="node4" href="$df/d61/_a_d_s1115_8h.html#aca8481f4d0bcf062cde74d6947a0809d" title="Initialization for ADS1115 peripheral. " alt="" coords="607,5,761,32"/>
-<area shape="rect" id="node6" href="$d4/d35/_a_d_s1115__proc_8h.html#a3871b0c6703b8b4bb3915172dfd98072" title="Handler for all ADS1115 peripherals. " alt="" coords="400,56,559,83"/>
+<area shape="rect" id="node2" href="$d8/d4b/_a_d_s1115__ex_8h.html#a3c5ef0cd0de3f31455383fcc74f0e3d5" title="Set ADS1115 low threshold. " alt="" coords="176,5,380,32"/>
+<area shape="rect" id="node3" href="$d8/d4b/_a_d_s1115__ex_8h.html#a7934f0075d336875c692f4b464c2cf28" title="Set ADS1115 high threshold. " alt="" coords="173,56,383,83"/>
 </map>

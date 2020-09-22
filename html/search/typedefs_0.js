@@ -1,6 +1,7 @@
 var searchData=
 [
   ['ads1115_5fcomp',['ADS1115_comp',['../df/d61/_a_d_s1115_8h.html#ac20ab4605602a477ad67969c78a26e08',1,'ADS1115.h']]],
+  ['ads1115_5ffunc',['ADS1115_func',['../d4/d35/_a_d_s1115__proc_8h.html#a8d08540d8b838fb12006199f054ff279',1,'ADS1115_proc.h']]],
   ['ads1115_5fgain',['ADS1115_gain',['../df/d61/_a_d_s1115_8h.html#a73e554ee2ef8f8fad314694288870c23',1,'ADS1115.h']]],
   ['ads1115_5flatch',['ADS1115_latch',['../df/d61/_a_d_s1115_8h.html#aa1d01b083c7e1e8023fb40b37ede393d',1,'ADS1115.h']]],
   ['ads1115_5fmode',['ADS1115_mode',['../df/d61/_a_d_s1115_8h.html#ae1ef7f96ae5e36de89b6c9ffee3bad47',1,'ADS1115.h']]],

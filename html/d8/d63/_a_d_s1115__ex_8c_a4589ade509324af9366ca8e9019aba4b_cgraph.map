@@ -1,0 +1,5 @@
+<map id="ADS1115_Get_Conversion" name="ADS1115_Get_Conversion">
+<area shape="rect" id="node2" href="$db/de1/_a_d_s1115_8c.html#a7901402897c2af57cb7fbcf93b90b113" title="I2C Read function for ADS1115. " alt="" coords="244,31,364,57"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="412,5,529,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="417,56,524,83"/>
+</map>

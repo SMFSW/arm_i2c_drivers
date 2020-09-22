@@ -143,15 +143,23 @@ Alternately may be called when event occurs on ADS1115 pin </dd></dl>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>In case of ADS1115__MODE_CONTINUOUS, conversion time need to be respected (thus ADS1115_get_conv_ms may be used to help ensure that) </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d08/_a_d_s1115__proc_8c_a9c47baa9b025562935b7113d4f9e186a_cgraph.png" border="0" usemap="#da/d08/_a_d_s1115__proc_8c_a9c47baa9b025562935b7113d4f9e186a_cgraph" alt=""/></div>
 <map name="da/d08/_a_d_s1115__proc_8c_a9c47baa9b025562935b7113d4f9e186a_cgraph" id="da/d08/_a_d_s1115__proc_8c_a9c47baa9b025562935b7113d4f9e186a_cgraph">
-<area shape="rect" id="node2" href="../../db/de1/_a_d_s1115_8c.html#a7901402897c2af57cb7fbcf93b90b113" title="I2C Read function for ADS1115. " alt="" coords="191,5,311,32"/>
-<area shape="rect" id="node5" href="../../db/de1/_a_d_s1115_8c.html#a50f379423ce4c0426982793ef0246b88" title="I2C Write function for ADS1115. " alt="" coords="191,56,311,83"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="359,5,476,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="364,56,471,83"/>
+<area shape="rect" id="node2" href="../../d8/d63/_a_d_s1115__ex_8c.html#a0f93ee9c39fa94942d3063fef628d9dc" title="Start ADS1115 Next conversion. " alt="" coords="191,8,420,35"/>
+<area shape="rect" id="node4" href="../../d8/d63/_a_d_s1115__ex_8c.html#a4589ade509324af9366ca8e9019aba4b" title="Get ADS1115 conversion. " alt="" coords="210,60,401,87"/>
+<area shape="rect" id="node8" href="../../d8/d4b/_a_d_s1115__ex_8h.html#abe48ca925743437914ccb605d2a897a0" title="Get ADS1115 raw channel value. " alt="" coords="214,115,397,141"/>
+<area shape="rect" id="node12" href="../../d8/d63/_a_d_s1115__ex_8c.html#adfbbaf87b988da2143c9b632f486cb52" title="Get ADS1115 raw channel value in mV. " alt="" coords="214,166,397,207"/>
+<area shape="rect" id="node3" href="../../d8/d63/_a_d_s1115__ex_8c.html#ab1c795ffd4d3da860cfa9e0c7ea69073" title="Start ADS1115 conversion. " alt="" coords="468,5,667,32"/>
+<area shape="rect" id="node5" href="../../db/de1/_a_d_s1115_8c.html#a7901402897c2af57cb7fbcf93b90b113" title="I2C Read function for ADS1115. " alt="" coords="507,56,627,83"/>
+<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="715,31,832,57"/>
+<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="720,81,827,108"/>
+<area shape="rect" id="node9" href="../../d8/d4b/_a_d_s1115__ex_8h.html#aa6f80233e26b7978d1ae4ea8612dff01" title="Get ADS1115 raw channel value in µV. " alt="" coords="476,107,659,149"/>
+<area shape="rect" id="node10" href="../../d8/d4b/_a_d_s1115__ex_8h.html#adfbbaf87b988da2143c9b632f486cb52" title="Get ADS1115 raw channel value in mV. " alt="" coords="476,173,659,214"/>
+<area shape="rect" id="node11" href="../../d8/d4b/_a_d_s1115__ex_8h.html#a4f97c9148834a6abbf87c74b6c8dfd3f" title="Get ADS1115 raw channel value in V. " alt="" coords="476,238,659,279"/>
 </map>
 </div>
 <div class="dynheader">
@@ -195,9 +203,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d08/_a_d_s1115__proc_8c_a6ff50eea6d7569e24d94154636fa2807_cgraph.png" border="0" usemap="#da/d08/_a_d_s1115__proc_8c_a6ff50eea6d7569e24d94154636fa2807_cgraph" alt=""/></div>
 <map name="da/d08/_a_d_s1115__proc_8c_a6ff50eea6d7569e24d94154636fa2807_cgraph" id="da/d08/_a_d_s1115__proc_8c_a6ff50eea6d7569e24d94154636fa2807_cgraph">
-<area shape="rect" id="node2" href="../../db/de1/_a_d_s1115_8c.html#a50f379423ce4c0426982793ef0246b88" title="I2C Write function for ADS1115. " alt="" coords="232,31,352,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="400,5,517,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="405,56,512,83"/>
+<area shape="rect" id="node2" href="../../d8/d63/_a_d_s1115__ex_8c.html#a1b491483199b3471af10a35360715220" title="Set ADS1115 functional mode. " alt="" coords="232,5,403,32"/>
 </map>
 </div>
 <div class="dynheader">

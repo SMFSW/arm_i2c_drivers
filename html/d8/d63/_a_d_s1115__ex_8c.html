@@ -61,6 +61,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ADS1115_ex.c File Reference</div>  </div>
@@ -70,6 +71,7 @@ $(function() {
 <p>ADS1115 Driver extensions.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="../../df/d61/_a_d_s1115_8h_source.html">ADS1115.h</a>&quot;</code><br />
+<code>#include &quot;tick_utils.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for ADS1115_ex.c:</div>
 <div class="dyncontent">
@@ -83,11 +85,63 @@ Include dependency graph for ADS1115_ex.c:</div>
 </map>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ac0cbe9a144228930fac392307dce2e79"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d63/_a_d_s1115__ex_8c.html#ac0cbe9a144228930fac392307dce2e79">ADS1115_SPStoUS</a>(SPS)&#160;&#160;&#160;(uint16_t) (((1.0f / (float) SPS) * 1.3f) * 1000000)</td></tr>
+<tr class="separator:ac0cbe9a144228930fac392307dce2e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89eb6631cebee45497ea91a1b6df103c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d63/_a_d_s1115__ex_8c.html#a89eb6631cebee45497ea91a1b6df103c">ADS1115_SPStoMS</a>(SPS)&#160;&#160;&#160;(uint16_t) (((1.0f / (float) SPS) * 1.3f) * 1000)</td></tr>
+<tr class="separator:a89eb6631cebee45497ea91a1b6df103c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1bc805b7527bce8ff9e8acd2c2498d1b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d63/_a_d_s1115__ex_8c.html#a1bc805b7527bce8ff9e8acd2c2498d1b">ADS1115_convert_to_uV</a> (const int16_t val, const <a class="el" href="../../df/d61/_a_d_s1115_8h.html#a639b5ff8b088b1baa081160b3051d7f0">ADS1115_gain</a> gain)</td></tr>
-<tr class="memdesc:a1bc805b7527bce8ff9e8acd2c2498d1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert ADS1115 value to µV.  <a href="#a1bc805b7527bce8ff9e8acd2c2498d1b">More...</a><br /></td></tr>
-<tr class="separator:a1bc805b7527bce8ff9e8acd2c2498d1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af00d88025cca9b526606269abaf857d7"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d63/_a_d_s1115__ex_8c.html#af00d88025cca9b526606269abaf857d7">ADS1115_Get_conv_us</a> (<a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *pCpnt)</td></tr>
+<tr class="memdesc:af00d88025cca9b526606269abaf857d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get conversion time for ADS1115 component (µs)  <a href="#af00d88025cca9b526606269abaf857d7">More...</a><br /></td></tr>
+<tr class="separator:af00d88025cca9b526606269abaf857d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41ab200b48b69989a973d3a0fbd25739"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d63/_a_d_s1115__ex_8c.html#a41ab200b48b69989a973d3a0fbd25739">ADS1115_Get_conv_ms</a> (<a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *pCpnt)</td></tr>
+<tr class="memdesc:a41ab200b48b69989a973d3a0fbd25739"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get conversion time for ADS1115 component (ms)  <a href="#a41ab200b48b69989a973d3a0fbd25739">More...</a><br /></td></tr>
+<tr class="separator:a41ab200b48b69989a973d3a0fbd25739"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4589ade509324af9366ca8e9019aba4b"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d63/_a_d_s1115__ex_8c.html#a4589ade509324af9366ca8e9019aba4b">ADS1115_Get_Conversion</a> (<a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *pCpnt)</td></tr>
+<tr class="memdesc:a4589ade509324af9366ca8e9019aba4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ADS1115 conversion.  <a href="#a4589ade509324af9366ca8e9019aba4b">More...</a><br /></td></tr>
+<tr class="separator:a4589ade509324af9366ca8e9019aba4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b491483199b3471af10a35360715220"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d63/_a_d_s1115__ex_8c.html#a1b491483199b3471af10a35360715220">ADS1115_Set_Function</a> (<a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *pCpnt, const <a class="el" href="../../d4/d35/_a_d_s1115__proc_8h.html#af979588cfd1bed1e7f762aa95e5f5368">ADS1115_func</a> func, const <a class="el" href="../../df/d61/_a_d_s1115_8h.html#a6105106192890648c4cb1a059a1d4b79">ADS1115_mode</a> mode, const uint8_t nb)</td></tr>
+<tr class="memdesc:a1b491483199b3471af10a35360715220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set ADS1115 functional mode.  <a href="#a1b491483199b3471af10a35360715220">More...</a><br /></td></tr>
+<tr class="separator:a1b491483199b3471af10a35360715220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30b598c2961825e5025f50670bf7e79a"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d63/_a_d_s1115__ex_8c.html#a30b598c2961825e5025f50670bf7e79a">ADS1115_Set_Mode</a> (<a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *pCpnt, const <a class="el" href="../../df/d61/_a_d_s1115_8h.html#a6105106192890648c4cb1a059a1d4b79">ADS1115_mode</a> mode)</td></tr>
+<tr class="memdesc:a30b598c2961825e5025f50670bf7e79a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set ADS1115 mode.  <a href="#a30b598c2961825e5025f50670bf7e79a">More...</a><br /></td></tr>
+<tr class="separator:a30b598c2961825e5025f50670bf7e79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98267be4b316eef42138b2a98bad4915"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d63/_a_d_s1115__ex_8c.html#a98267be4b316eef42138b2a98bad4915">ADS1115_Set_Gain</a> (<a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *pCpnt, const <a class="el" href="../../df/d61/_a_d_s1115_8h.html#a639b5ff8b088b1baa081160b3051d7f0">ADS1115_gain</a> gain)</td></tr>
+<tr class="memdesc:a98267be4b316eef42138b2a98bad4915"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set ADS1115 gain.  <a href="#a98267be4b316eef42138b2a98bad4915">More...</a><br /></td></tr>
+<tr class="separator:a98267be4b316eef42138b2a98bad4915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a139cefca2ba9658d6fb1ecd8d1f742ed"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d63/_a_d_s1115__ex_8c.html#a139cefca2ba9658d6fb1ecd8d1f742ed">ADS1115_Set_Rate</a> (<a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *pCpnt, const <a class="el" href="../../df/d61/_a_d_s1115_8h.html#aa2a2ad3f2ad93083e50416775293d713">ADS1115_rate</a> rate)</td></tr>
+<tr class="memdesc:a139cefca2ba9658d6fb1ecd8d1f742ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set ADS1115 rate.  <a href="#a139cefca2ba9658d6fb1ecd8d1f742ed">More...</a><br /></td></tr>
+<tr class="separator:a139cefca2ba9658d6fb1ecd8d1f742ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37989aa36ec873d9d465f0cb098fc4dc"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d63/_a_d_s1115__ex_8c.html#a37989aa36ec873d9d465f0cb098fc4dc">ADS1115_Set_CompMode</a> (<a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *pCpnt, const <a class="el" href="../../df/d61/_a_d_s1115_8h.html#a8c1d4dd21e1acb05987c65cfaaa7acd8">ADS1115_comp</a> comp)</td></tr>
+<tr class="memdesc:a37989aa36ec873d9d465f0cb098fc4dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set ADS1115 Comparator mode.  <a href="#a37989aa36ec873d9d465f0cb098fc4dc">More...</a><br /></td></tr>
+<tr class="separator:a37989aa36ec873d9d465f0cb098fc4dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab47d757fdf5b2f6fb1b1b3dcd17955a3"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d63/_a_d_s1115__ex_8c.html#ab47d757fdf5b2f6fb1b1b3dcd17955a3">ADS1115_Set_CompPolarity</a> (<a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *pCpnt, const <a class="el" href="../../df/d61/_a_d_s1115_8h.html#afc46ff02d1820616c5fa5477c0670f6a">ADS1115_polarity</a> pol)</td></tr>
+<tr class="memdesc:ab47d757fdf5b2f6fb1b1b3dcd17955a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set ADS1115 Comparator polarity.  <a href="#ab47d757fdf5b2f6fb1b1b3dcd17955a3">More...</a><br /></td></tr>
+<tr class="separator:ab47d757fdf5b2f6fb1b1b3dcd17955a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bbbf9e42e1106faa2ce764b4f523f9a"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d63/_a_d_s1115__ex_8c.html#a4bbbf9e42e1106faa2ce764b4f523f9a">ADS1115_Set_CompLatch</a> (<a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *pCpnt, const <a class="el" href="../../df/d61/_a_d_s1115_8h.html#a9fd93577d3e1807fc9a0da3842b84c05">ADS1115_latch</a> latch)</td></tr>
+<tr class="memdesc:a4bbbf9e42e1106faa2ce764b4f523f9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set ADS1115 Comparator latch.  <a href="#a4bbbf9e42e1106faa2ce764b4f523f9a">More...</a><br /></td></tr>
+<tr class="separator:a4bbbf9e42e1106faa2ce764b4f523f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56ede397932a34f13a08c9edbefe2b6a"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d63/_a_d_s1115__ex_8c.html#a56ede397932a34f13a08c9edbefe2b6a">ADS1115_Set_CompQueue</a> (<a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *pCpnt, const <a class="el" href="../../df/d61/_a_d_s1115_8h.html#a9dab2e546a6fc9d6ab09699996883f35">ADS1115_queue</a> queue)</td></tr>
+<tr class="memdesc:a56ede397932a34f13a08c9edbefe2b6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set ADS1115 Comparator queue.  <a href="#a56ede397932a34f13a08c9edbefe2b6a">More...</a><br /></td></tr>
+<tr class="separator:a56ede397932a34f13a08c9edbefe2b6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1c795ffd4d3da860cfa9e0c7ea69073"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d63/_a_d_s1115__ex_8c.html#ab1c795ffd4d3da860cfa9e0c7ea69073">ADS1115_Start_Conversion</a> (<a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *pCpnt, const <a class="el" href="../../df/d61/_a_d_s1115_8h.html#ab57042083819ff35d983915ee0ae7b15">ADS1115_mux</a> chan)</td></tr>
+<tr class="memdesc:ab1c795ffd4d3da860cfa9e0c7ea69073"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start ADS1115 conversion.  <a href="#ab1c795ffd4d3da860cfa9e0c7ea69073">More...</a><br /></td></tr>
+<tr class="separator:ab1c795ffd4d3da860cfa9e0c7ea69073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f93ee9c39fa94942d3063fef628d9dc"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d63/_a_d_s1115__ex_8c.html#a0f93ee9c39fa94942d3063fef628d9dc">ADS1115_Start_NextConversion</a> (<a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *pCpnt)</td></tr>
+<tr class="memdesc:a0f93ee9c39fa94942d3063fef628d9dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start ADS1115 Next conversion.  <a href="#a0f93ee9c39fa94942d3063fef628d9dc">More...</a><br /></td></tr>
+<tr class="separator:a0f93ee9c39fa94942d3063fef628d9dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6f80233e26b7978d1ae4ea8612dff01"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d63/_a_d_s1115__ex_8c.html#aa6f80233e26b7978d1ae4ea8612dff01">ADS1115_Get_converted_value_uV</a> (<a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *pCpnt, const uint8_t chan)</td></tr>
+<tr class="memdesc:aa6f80233e26b7978d1ae4ea8612dff01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ADS1115 raw channel value in µV.  <a href="#aa6f80233e26b7978d1ae4ea8612dff01">More...</a><br /></td></tr>
+<tr class="separator:aa6f80233e26b7978d1ae4ea8612dff01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfbbaf87b988da2143c9b632f486cb52"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d63/_a_d_s1115__ex_8c.html#adfbbaf87b988da2143c9b632f486cb52">ADS1115_Get_converted_value_mV</a> (<a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *pCpnt, const uint8_t chan)</td></tr>
+<tr class="memdesc:adfbbaf87b988da2143c9b632f486cb52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ADS1115 raw channel value in mV.  <a href="#adfbbaf87b988da2143c9b632f486cb52">More...</a><br /></td></tr>
+<tr class="separator:adfbbaf87b988da2143c9b632f486cb52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f97c9148834a6abbf87c74b6c8dfd3f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d63/_a_d_s1115__ex_8c.html#a4f97c9148834a6abbf87c74b6c8dfd3f">ADS1115_Get_converted_value_V</a> (<a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *pCpnt, const uint8_t chan)</td></tr>
+<tr class="memdesc:a4f97c9148834a6abbf87c74b6c8dfd3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ADS1115 raw channel value in V.  <a href="#a4f97c9148834a6abbf87c74b6c8dfd3f">More...</a><br /></td></tr>
+<tr class="separator:a4f97c9148834a6abbf87c74b6c8dfd3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>ADS1115 Driver extensions. </p>
@@ -104,18 +158,515 @@ Compatibility should be assured with:<ul>
 <li>ADS1x1x (check datasheets for compatibility informations) </li>
 </ul>
 </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="a1bc805b7527bce8ff9e8acd2c2498d1b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1bc805b7527bce8ff9e8acd2c2498d1b">&#9670;&nbsp;</a></span>ADS1115_convert_to_uV()</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a89eb6631cebee45497ea91a1b6df103c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89eb6631cebee45497ea91a1b6df103c">&#9670;&nbsp;</a></span>ADS1115_SPStoMS</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float ADS1115_convert_to_uV </td>
+          <td class="memname">#define ADS1115_SPStoMS</td>
           <td>(</td>
-          <td class="paramtype">const int16_t&#160;</td>
-          <td class="paramname"><em>val</em>, </td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">SPS</td><td>)</td>
+          <td>&#160;&#160;&#160;(uint16_t) (((1.0f / (float) SPS) * 1.3f) * 1000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0cbe9a144228930fac392307dce2e79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0cbe9a144228930fac392307dce2e79">&#9670;&nbsp;</a></span>ADS1115_SPStoUS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADS1115_SPStoUS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">SPS</td><td>)</td>
+          <td>&#160;&#160;&#160;(uint16_t) (((1.0f / (float) SPS) * 1.3f) * 1000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section note"><dt>Note</dt><dd>Assuming max data rate drift following temperature does not exceed 3% (* 1.3) </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a41ab200b48b69989a973d3a0fbd25739"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41ab200b48b69989a973d3a0fbd25739">&#9670;&nbsp;</a></span>ADS1115_Get_conv_ms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t ADS1115_Get_conv_ms </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get conversion time for ADS1115 component (ms) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to ADS1115 component </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Conversion time in ms </dd></dl>
+
+</div>
+</div>
+<a id="af00d88025cca9b526606269abaf857d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af00d88025cca9b526606269abaf857d7">&#9670;&nbsp;</a></span>ADS1115_Get_conv_us()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t ADS1115_Get_conv_us </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get conversion time for ADS1115 component (µs) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to ADS1115 component </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Conversion time in µs </dd></dl>
+
+</div>
+</div>
+<a id="a4589ade509324af9366ca8e9019aba4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4589ade509324af9366ca8e9019aba4b">&#9670;&nbsp;</a></span>ADS1115_Get_Conversion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR ADS1115_Get_Conversion </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get ADS1115 conversion. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to ADS1115 component </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">queue</td><td>- Comparator queue </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d63/_a_d_s1115__ex_8c_a4589ade509324af9366ca8e9019aba4b_cgraph.png" border="0" usemap="#d8/d63/_a_d_s1115__ex_8c_a4589ade509324af9366ca8e9019aba4b_cgraph" alt=""/></div>
+<map name="d8/d63/_a_d_s1115__ex_8c_a4589ade509324af9366ca8e9019aba4b_cgraph" id="d8/d63/_a_d_s1115__ex_8c_a4589ade509324af9366ca8e9019aba4b_cgraph">
+<area shape="rect" id="node2" href="../../db/de1/_a_d_s1115_8c.html#a7901402897c2af57cb7fbcf93b90b113" title="I2C Read function for ADS1115. " alt="" coords="244,31,364,57"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="412,5,529,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="417,56,524,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d63/_a_d_s1115__ex_8c_a4589ade509324af9366ca8e9019aba4b_icgraph.png" border="0" usemap="#d8/d63/_a_d_s1115__ex_8c_a4589ade509324af9366ca8e9019aba4b_icgraph" alt=""/></div>
+<map name="d8/d63/_a_d_s1115__ex_8c_a4589ade509324af9366ca8e9019aba4b_icgraph" id="d8/d63/_a_d_s1115__ex_8c_a4589ade509324af9366ca8e9019aba4b_icgraph">
+<area shape="rect" id="node2" href="../../d4/d35/_a_d_s1115__proc_8h.html#a9c47baa9b025562935b7113d4f9e186a" title="Handler for ADS1115 peripheral. " alt="" coords="244,5,381,32"/>
+<area shape="rect" id="node3" href="../../d4/d35/_a_d_s1115__proc_8h.html#a3871b0c6703b8b4bb3915172dfd98072" title="Handler for all ADS1115 peripherals. " alt="" coords="429,5,588,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adfbbaf87b988da2143c9b632f486cb52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfbbaf87b988da2143c9b632f486cb52">&#9670;&nbsp;</a></span>ADS1115_Get_converted_value_mV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ADS1115_Get_converted_value_mV </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>chan</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get ADS1115 raw channel value in mV. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to ADS1115 component </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">chan</td><td>- ADS1115 channel </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Converted channel value (mV) </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d63/_a_d_s1115__ex_8c_adfbbaf87b988da2143c9b632f486cb52_icgraph.png" border="0" usemap="#d8/d63/_a_d_s1115__ex_8c_adfbbaf87b988da2143c9b632f486cb52_icgraph" alt=""/></div>
+<map name="d8/d63/_a_d_s1115__ex_8c_adfbbaf87b988da2143c9b632f486cb52_icgraph" id="d8/d63/_a_d_s1115__ex_8c_adfbbaf87b988da2143c9b632f486cb52_icgraph">
+<area shape="rect" id="node2" href="../../d8/d4b/_a_d_s1115__ex_8h.html#abe48ca925743437914ccb605d2a897a0" title="Get ADS1115 raw channel value. " alt="" coords="236,5,419,32"/>
+<area shape="rect" id="node3" href="../../d4/d35/_a_d_s1115__proc_8h.html#a9c47baa9b025562935b7113d4f9e186a" title="Handler for ADS1115 peripheral. " alt="" coords="467,31,604,57"/>
+<area shape="rect" id="node4" href="../../d4/d35/_a_d_s1115__proc_8h.html#a3871b0c6703b8b4bb3915172dfd98072" title="Handler for all ADS1115 peripherals. " alt="" coords="652,31,811,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa6f80233e26b7978d1ae4ea8612dff01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6f80233e26b7978d1ae4ea8612dff01">&#9670;&nbsp;</a></span>ADS1115_Get_converted_value_uV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ADS1115_Get_converted_value_uV </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>chan</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get ADS1115 raw channel value in µV. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to ADS1115 component </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">chan</td><td>- ADS1115 channel </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Converted channel value (µV) </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d63/_a_d_s1115__ex_8c_aa6f80233e26b7978d1ae4ea8612dff01_icgraph.png" border="0" usemap="#d8/d63/_a_d_s1115__ex_8c_aa6f80233e26b7978d1ae4ea8612dff01_icgraph" alt=""/></div>
+<map name="d8/d63/_a_d_s1115__ex_8c_aa6f80233e26b7978d1ae4ea8612dff01_icgraph" id="d8/d63/_a_d_s1115__ex_8c_aa6f80233e26b7978d1ae4ea8612dff01_icgraph">
+<area shape="rect" id="node2" href="../../d8/d4b/_a_d_s1115__ex_8h.html#abe48ca925743437914ccb605d2a897a0" title="Get ADS1115 raw channel value. " alt="" coords="236,13,419,39"/>
+<area shape="rect" id="node3" href="../../d4/d35/_a_d_s1115__proc_8h.html#a9c47baa9b025562935b7113d4f9e186a" title="Handler for ADS1115 peripheral. " alt="" coords="467,13,604,39"/>
+<area shape="rect" id="node4" href="../../d4/d35/_a_d_s1115__proc_8h.html#a3871b0c6703b8b4bb3915172dfd98072" title="Handler for all ADS1115 peripherals. " alt="" coords="652,13,811,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4f97c9148834a6abbf87c74b6c8dfd3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f97c9148834a6abbf87c74b6c8dfd3f">&#9670;&nbsp;</a></span>ADS1115_Get_converted_value_V()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ADS1115_Get_converted_value_V </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>chan</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get ADS1115 raw channel value in V. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to ADS1115 component </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">chan</td><td>- ADS1115 channel </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Converted channel value (V) </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d63/_a_d_s1115__ex_8c_a4f97c9148834a6abbf87c74b6c8dfd3f_icgraph.png" border="0" usemap="#d8/d63/_a_d_s1115__ex_8c_a4f97c9148834a6abbf87c74b6c8dfd3f_icgraph" alt=""/></div>
+<map name="d8/d63/_a_d_s1115__ex_8c_a4f97c9148834a6abbf87c74b6c8dfd3f_icgraph" id="d8/d63/_a_d_s1115__ex_8c_a4f97c9148834a6abbf87c74b6c8dfd3f_icgraph">
+<area shape="rect" id="node2" href="../../d8/d4b/_a_d_s1115__ex_8h.html#abe48ca925743437914ccb605d2a897a0" title="Get ADS1115 raw channel value. " alt="" coords="236,13,419,39"/>
+<area shape="rect" id="node3" href="../../d4/d35/_a_d_s1115__proc_8h.html#a9c47baa9b025562935b7113d4f9e186a" title="Handler for ADS1115 peripheral. " alt="" coords="467,13,604,39"/>
+<area shape="rect" id="node4" href="../../d4/d35/_a_d_s1115__proc_8h.html#a3871b0c6703b8b4bb3915172dfd98072" title="Handler for all ADS1115 peripherals. " alt="" coords="652,13,811,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4bbbf9e42e1106faa2ce764b4f523f9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bbbf9e42e1106faa2ce764b4f523f9a">&#9670;&nbsp;</a></span>ADS1115_Set_CompLatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR ADS1115_Set_CompLatch </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/d61/_a_d_s1115_8h.html#a9fd93577d3e1807fc9a0da3842b84c05">ADS1115_latch</a>&#160;</td>
+          <td class="paramname"><em>latch</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set ADS1115 Comparator latch. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to ADS1115 component </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">latch</td><td>- Comparator latch </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
+
+</div>
+</div>
+<a id="a37989aa36ec873d9d465f0cb098fc4dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37989aa36ec873d9d465f0cb098fc4dc">&#9670;&nbsp;</a></span>ADS1115_Set_CompMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR ADS1115_Set_CompMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/d61/_a_d_s1115_8h.html#a8c1d4dd21e1acb05987c65cfaaa7acd8">ADS1115_comp</a>&#160;</td>
+          <td class="paramname"><em>comp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set ADS1115 Comparator mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to ADS1115 component </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">comp</td><td>- Comparator Mode </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
+
+</div>
+</div>
+<a id="ab47d757fdf5b2f6fb1b1b3dcd17955a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab47d757fdf5b2f6fb1b1b3dcd17955a3">&#9670;&nbsp;</a></span>ADS1115_Set_CompPolarity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR ADS1115_Set_CompPolarity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/d61/_a_d_s1115_8h.html#afc46ff02d1820616c5fa5477c0670f6a">ADS1115_polarity</a>&#160;</td>
+          <td class="paramname"><em>pol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set ADS1115 Comparator polarity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to ADS1115 component </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pol</td><td>- Comparator Polarity </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
+
+</div>
+</div>
+<a id="a56ede397932a34f13a08c9edbefe2b6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56ede397932a34f13a08c9edbefe2b6a">&#9670;&nbsp;</a></span>ADS1115_Set_CompQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR ADS1115_Set_CompQueue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/d61/_a_d_s1115_8h.html#a9dab2e546a6fc9d6ab09699996883f35">ADS1115_queue</a>&#160;</td>
+          <td class="paramname"><em>queue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set ADS1115 Comparator queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to ADS1115 component </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">queue</td><td>- Comparator queue </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
+
+</div>
+</div>
+<a id="a1b491483199b3471af10a35360715220"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b491483199b3471af10a35360715220">&#9670;&nbsp;</a></span>ADS1115_Set_Function()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR ADS1115_Set_Function </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d4/d35/_a_d_s1115__proc_8h.html#af979588cfd1bed1e7f762aa95e5f5368">ADS1115_func</a>&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/d61/_a_d_s1115_8h.html#a6105106192890648c4cb1a059a1d4b79">ADS1115_mode</a>&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>nb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set ADS1115 functional mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to ADS1115 component </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>- ADS1115 function </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>- ADS1115 mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nb</td><td>- Number of channels used </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d63/_a_d_s1115__ex_8c_a1b491483199b3471af10a35360715220_icgraph.png" border="0" usemap="#d8/d63/_a_d_s1115__ex_8c_a1b491483199b3471af10a35360715220_icgraph" alt=""/></div>
+<map name="d8/d63/_a_d_s1115__ex_8c_a1b491483199b3471af10a35360715220_icgraph" id="d8/d63/_a_d_s1115__ex_8c_a1b491483199b3471af10a35360715220_icgraph">
+<area shape="rect" id="node2" href="../../d4/d35/_a_d_s1115__proc_8h.html#a6ff50eea6d7569e24d94154636fa2807" title="Initialization Sequence for ADS1115 peripheral. " alt="" coords="224,5,403,32"/>
+<area shape="rect" id="node3" href="../../df/d61/_a_d_s1115_8h.html#a9b7a1bd3466487159a0b6975b115cd22" title="Initialization for ADS1115 peripheral. " alt="" coords="451,5,559,32"/>
+<area shape="rect" id="node4" href="../../df/d61/_a_d_s1115_8h.html#aca8481f4d0bcf062cde74d6947a0809d" title="Initialization for ADS1115 peripheral. " alt="" coords="607,5,761,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a98267be4b316eef42138b2a98bad4915"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98267be4b316eef42138b2a98bad4915">&#9670;&nbsp;</a></span>ADS1115_Set_Gain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR ADS1115_Set_Gain </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -131,22 +682,184 @@ Compatibility should be assured with:<ul>
       </table>
 </div><div class="memdoc">
 
-<p>Convert ADS1115 value to µV. </p>
+<p>Set ADS1115 gain. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>- ADS1115 value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>- ADS1115 configured gain </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to ADS1115 component </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>- Gain </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Converted value </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
+
+</div>
+</div>
+<a id="a30b598c2961825e5025f50670bf7e79a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30b598c2961825e5025f50670bf7e79a">&#9670;&nbsp;</a></span>ADS1115_Set_Mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR ADS1115_Set_Mode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/d61/_a_d_s1115_8h.html#a6105106192890648c4cb1a059a1d4b79">ADS1115_mode</a>&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set ADS1115 mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to ADS1115 component </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>- Mode </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
+
+</div>
+</div>
+<a id="a139cefca2ba9658d6fb1ecd8d1f742ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a139cefca2ba9658d6fb1ecd8d1f742ed">&#9670;&nbsp;</a></span>ADS1115_Set_Rate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR ADS1115_Set_Rate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/d61/_a_d_s1115_8h.html#aa2a2ad3f2ad93083e50416775293d713">ADS1115_rate</a>&#160;</td>
+          <td class="paramname"><em>rate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set ADS1115 rate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to ADS1115 component </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rate</td><td>- Data rate </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
+
+</div>
+</div>
+<a id="ab1c795ffd4d3da860cfa9e0c7ea69073"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1c795ffd4d3da860cfa9e0c7ea69073">&#9670;&nbsp;</a></span>ADS1115_Start_Conversion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR ADS1115_Start_Conversion </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/d61/_a_d_s1115_8h.html#ab57042083819ff35d983915ee0ae7b15">ADS1115_mux</a>&#160;</td>
+          <td class="paramname"><em>chan</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start ADS1115 conversion. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to ADS1115 component </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">chan</td><td>- Channel </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d8/d63/_a_d_s1115__ex_8c_a1bc805b7527bce8ff9e8acd2c2498d1b_icgraph.png" border="0" usemap="#d8/d63/_a_d_s1115__ex_8c_a1bc805b7527bce8ff9e8acd2c2498d1b_icgraph" alt=""/></div>
-<map name="d8/d63/_a_d_s1115__ex_8c_a1bc805b7527bce8ff9e8acd2c2498d1b_icgraph" id="d8/d63/_a_d_s1115__ex_8c_a1bc805b7527bce8ff9e8acd2c2498d1b_icgraph">
-<area shape="rect" id="node2" href="../../d8/d4b/_a_d_s1115__ex_8h.html#ad1ca1bf08c622c496bc26cc3962ee58e" title="Convert ADS1115 value to V. " alt="" coords="241,5,415,32"/>
-<area shape="rect" id="node3" href="../../d8/d4b/_a_d_s1115__ex_8h.html#a577767b24cf127c09427633cf849e882" title="Convert ADS1115 value to mV. " alt="" coords="235,56,421,83"/>
+<div class="center"><img src="../../d8/d63/_a_d_s1115__ex_8c_ab1c795ffd4d3da860cfa9e0c7ea69073_icgraph.png" border="0" usemap="#d8/d63/_a_d_s1115__ex_8c_ab1c795ffd4d3da860cfa9e0c7ea69073_icgraph" alt=""/></div>
+<map name="d8/d63/_a_d_s1115__ex_8c_ab1c795ffd4d3da860cfa9e0c7ea69073_icgraph" id="d8/d63/_a_d_s1115__ex_8c_ab1c795ffd4d3da860cfa9e0c7ea69073_icgraph">
+<area shape="rect" id="node2" href="../../d8/d4b/_a_d_s1115__ex_8h.html#a0f93ee9c39fa94942d3063fef628d9dc" title="Start ADS1115 Next conversion. " alt="" coords="252,56,481,83"/>
+<area shape="rect" id="node3" href="../../d8/d4b/_a_d_s1115__ex_8h.html#ae10c648127de72307a53d7b0e4d14856" title="Get ADS1115 high threshold. " alt="" coords="529,5,740,32"/>
+<area shape="rect" id="node4" href="../../d4/d35/_a_d_s1115__proc_8h.html#a9c47baa9b025562935b7113d4f9e186a" title="Handler for ADS1115 peripheral. " alt="" coords="566,56,703,83"/>
+<area shape="rect" id="node5" href="../../d4/d35/_a_d_s1115__proc_8h.html#a3871b0c6703b8b4bb3915172dfd98072" title="Handler for all ADS1115 peripherals. " alt="" coords="788,56,947,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0f93ee9c39fa94942d3063fef628d9dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f93ee9c39fa94942d3063fef628d9dc">&#9670;&nbsp;</a></span>ADS1115_Start_NextConversion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR ADS1115_Start_NextConversion </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/da4/struct_a_d_s1115__t.html">ADS1115_t</a> *&#160;</td>
+          <td class="paramname"><em>pCpnt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start ADS1115 Next conversion. </p>
+<dl class="section note"><dt>Note</dt><dd>Using ADS1115__MODE_CONTINUOUS with ADS1115__FUNC_SINGLE_DIFF or single channel used, function ADS1115_Get_Conversion may be used instead </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to ADS1115 component </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d63/_a_d_s1115__ex_8c_a0f93ee9c39fa94942d3063fef628d9dc_cgraph.png" border="0" usemap="#d8/d63/_a_d_s1115__ex_8c_a0f93ee9c39fa94942d3063fef628d9dc_cgraph" alt=""/></div>
+<map name="d8/d63/_a_d_s1115__ex_8c_a0f93ee9c39fa94942d3063fef628d9dc_cgraph" id="d8/d63/_a_d_s1115__ex_8c_a0f93ee9c39fa94942d3063fef628d9dc_cgraph">
+<area shape="rect" id="node2" href="../../d8/d63/_a_d_s1115__ex_8c.html#ab1c795ffd4d3da860cfa9e0c7ea69073" title="Start ADS1115 conversion. " alt="" coords="283,5,481,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d63/_a_d_s1115__ex_8c_a0f93ee9c39fa94942d3063fef628d9dc_icgraph.png" border="0" usemap="#d8/d63/_a_d_s1115__ex_8c_a0f93ee9c39fa94942d3063fef628d9dc_icgraph" alt=""/></div>
+<map name="d8/d63/_a_d_s1115__ex_8c_a0f93ee9c39fa94942d3063fef628d9dc_icgraph" id="d8/d63/_a_d_s1115__ex_8c_a0f93ee9c39fa94942d3063fef628d9dc_icgraph">
+<area shape="rect" id="node2" href="../../d8/d4b/_a_d_s1115__ex_8h.html#ae10c648127de72307a53d7b0e4d14856" title="Get ADS1115 high threshold. " alt="" coords="283,5,493,32"/>
+<area shape="rect" id="node3" href="../../d4/d35/_a_d_s1115__proc_8h.html#a9c47baa9b025562935b7113d4f9e186a" title="Handler for ADS1115 peripheral. " alt="" coords="319,56,457,83"/>
+<area shape="rect" id="node4" href="../../d4/d35/_a_d_s1115__proc_8h.html#a3871b0c6703b8b4bb3915172dfd98072" title="Handler for all ADS1115 peripherals. " alt="" coords="541,56,700,83"/>
 </map>
 </div>
 
