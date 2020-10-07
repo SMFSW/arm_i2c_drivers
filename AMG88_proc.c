@@ -68,12 +68,12 @@ __WEAK FctERR NONNULL__ AMG88_handler(AMG88_t * pCpnt)
 
 	#if defined(VERBOSE)
 		const uint8_t idx = pCpnt - AMG88;
-		printf("AMG88 id%d: Thermistor %d.%02°C\r\n", idx, (int16_t) thermistor, get_fp_dec(thermistor, 2));
+		printf("AMG88 id%d: Thermistor %d.%02ld°C\r\n", idx, (int16_t) thermistor, get_fp_dec(thermistor, 2));
 		printf("AMG88 id%d: Pixels Temperature (°C)", idx);
 		for (unsigned int i = 0 ; i < SZ_OBJ(temp, float) ; i++)
 		{
 			if (i % 8 == 0)	{ printf("\r\n"); }
-			printf("%03d.%02d ", (int16_t) temp[i], get_fp_dec(temp[i], 2));
+			printf("%03d.%02ld ", (int16_t) temp[i], get_fp_dec(temp[i], 2));
 		}
 		printf("\r\n");
 	#endif

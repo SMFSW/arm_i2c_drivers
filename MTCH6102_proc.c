@@ -378,7 +378,7 @@ __WEAK FctERR NONNULL__ MTCH6102_handler(MTCH6102_t * const pCpnt)
 		MTCH6102_diag_to_str(str_diag, pCpnt->touch.Diag);
 
 		printf("MTCH6102 id%d: T%d G%d L%d STATE: 0x%02X\t DIAG:0x%02X", idx, pCpnt->touch.Touch, pCpnt->touch.Gesture, pCpnt->touch.Large, pCpnt->touch.State, pCpnt->touch.Diag);
-		printf("\tX: %-4d\tY: %-4d\t\tFrm: %d", pCpnt->touch.Coords.x, pCpnt->touch.Coords.y, pCpnt->touch.Frame);	// Coords padded to 3 digits with sign
+		printf("\tX: %-4ld\tY: %-4ld\t\tFrm: %d", pCpnt->touch.Coords.x, pCpnt->touch.Coords.y, pCpnt->touch.Frame);	// Coords padded to 3 digits with sign
 		printf("\tST: %-18s\tDG: %s\r\n", str_gest, str_diag);	// Gesture string padded to 18 chars
 
 		if (get_values)

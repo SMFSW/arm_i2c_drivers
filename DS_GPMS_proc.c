@@ -201,10 +201,10 @@ __WEAK FctERR GPMS_handler(void)
 
 	#if defined(VERBOSE)
 		printf("GPMS: %d/%d/%d %d:%d:%d\r\n", GPMS.Date.Year, GPMS.Date.Month, GPMS.Date.Day, GPMS.Hour.Hours, GPMS.Hour.Minutes, GPMS.Hour.Seconds);
-		printf("Lat: %d°%d.%04d\'%c, Lon: %d°%d.%04d\'%c\r\n",
+		printf("Lat: %d°%d.%04ld\'%c, Lon: %d°%d.%04ld\'%c\r\n",
 				GPMS.Latitude.Degrees, (uint16_t) GPMS.Latitude.Minutes, get_fp_dec(GPMS.Latitude.Minutes, 4), GPMS.Latitude.Direction,
 				GPMS.Longitude.Degrees, (uint16_t) GPMS.Longitude.Minutes, get_fp_dec(GPMS.Longitude.Minutes, 4), GPMS.Longitude.Direction);
-		printf("Heading: True %d.%d Mag %d.%d, Speed: %d.%dkm/h, Altitude: %dm\r\n",
+		printf("Heading: True %d.%ld Mag %d.%ld, Speed: %d.%ldkm/h, Altitude: %dm\r\n",
 				(uint16_t) GPMS.Heading_True, get_fp_dec(GPMS.Heading_True, 1),
 				(uint16_t) GPMS.Heading_Magnetic, get_fp_dec(GPMS.Heading_Magnetic, 1),
 				(uint16_t) GPMS.Speed, get_fp_dec(GPMS.Speed, 1),

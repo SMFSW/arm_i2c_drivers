@@ -214,7 +214,7 @@ __WEAK FctERR NONNULL__ BMP180_handler(BMP180_t * pCpnt)
 
 	#if defined(VERBOSE)
 		const uint8_t idx = pCpnt - BMP180;
-		printf("BMP180 id%d: Pressure %ldhPa, Temperature %d.%02d°C, Alt %ldm, Pressure at sea level %ldhPa\r\n",
+		printf("BMP180 id%d: Pressure %ldhPa, Temperature %d.%02ld°C, Alt %ldm, Pressure at sea level %ldhPa\r\n",
 				idx, (int32_t) pCpnt->Pressure, (int16_t) pCpnt->Temperature, get_fp_dec(pCpnt->Temperature, 2),
 				(int32_t) pCpnt->Altitude, (int32_t) pCpnt->SeaLevelPressure);
 	#endif
