@@ -124,7 +124,7 @@ FctERR NONNULL__ FM24C_ReadWrite(FM24C_t * pCpnt, uint8_t * data, const uint16_t
 
 /****************************************************************/
 #elif !defined(NO_WARN_I2C_DRIVERS)
-#warning "You have to define I2C_FM24C in globals.h with an I2C instance for this to work!"
+#warning "You have to define I2C_FM24C for component to be enabled!"
 #endif
 #endif
 /****************************************************************/

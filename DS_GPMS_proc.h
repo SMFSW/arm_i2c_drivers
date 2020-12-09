@@ -109,10 +109,11 @@ FctERR GPMS_Get_Altitude(uint16_t * altitude);
 FctERR GPMS_handler(void);
 
 /****************************************************************/
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __DS_GPMS_PROC_H__ */
 /****************************************************************/

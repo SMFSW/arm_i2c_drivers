@@ -13,7 +13,6 @@
 #endif
 
 #include "sarmfsw.h"
-#include "globals.h"
 
 #include "I2C_component.h"
 #include "I2C_peripheral.h"
@@ -23,7 +22,7 @@
 // TODO: doxygen
 
 #ifndef I2C_AT42QT1244_NB
-//! \note Define I2C_AT42QT1244_NB in globals.h or at project to enable multiple peripherals of this type
+//! \note Define I2C_AT42QT1244_NB to enable multiple peripherals of this type
 #define I2C_AT42QT1244_NB	1	//!< Number of AT42QT1244 peripherals
 #endif
 
@@ -36,12 +35,12 @@
 #define AT42QT1244_ADDR_A01		117					//!< AT42QT1244 address (A0 & A1 tied to PWR)
 
 #ifndef AT42QT1244_BASE_ADDR
-//! \note Define AT42QT1244_BASE_ADDR in globals.h or at project to change default device base address
+//! \note Define AT42QT1244_BASE_ADDR to change default device base address
 #define AT42QT1244_BASE_ADDR	AT42QT1244_ADDR		//!< AT42QT1244 Base address
 #endif
 
 #ifndef AT42QT1244_CHECK_CRC
-//! \note Define AT42QT1244_CHECK_CRC in globals.h or at project to change CRC check behavior
+//! \note Define AT42QT1244_CHECK_CRC to change CRC check behavior
 #define AT42QT1244_CHECK_CRC	1					//!< AT42QT1244 read transactions CRC check
 #endif
 
@@ -322,10 +321,11 @@ FctERR NONNULL__ AT42QT1244_Read(I2C_slave_t * pSlave, uint8_t * data, const uin
 #include "AT42QT1244_proc.h"	// Include procedures
 #include "AT42QT1244_ex.h"		// Include extensions
 
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __AT42QT1244_H__ */
 /****************************************************************/

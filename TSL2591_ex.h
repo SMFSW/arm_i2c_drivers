@@ -253,10 +253,11 @@ __INLINE FctERR NONNULL_INLINE__ TSL2591_Get_IR(TSL2591_t * pCpnt, uint16_t * ir
 
 
 /****************************************************************/
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __TSL2591_EX_H__ */
 /****************************************************************/

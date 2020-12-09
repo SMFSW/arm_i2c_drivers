@@ -19,7 +19,6 @@
 #endif
 
 #include "sarmfsw.h"
-#include "globals.h"
 
 #include "I2C_component.h"
 #include "I2C_peripheral.h"
@@ -29,7 +28,7 @@
 
 
 #ifndef I2C_ADS1115_NB
-//! \note Define I2C_ADS1115_NB in globals.h or at project to enable multiple peripherals of this type
+//! \note Define I2C_ADS1115_NB to enable multiple peripherals of this type
 #define I2C_ADS1115_NB	1	//!< Number of ADS1115 peripherals
 #endif
 
@@ -42,7 +41,7 @@
 #define ADS1115_ADDR_SCL	0x4B				//!< ADS1115 address (ADR tied to SCL)
 
 #ifndef ADS1115_BASE_ADDR
-//! \note Define ADS1115_BASE_ADDR in globals.h or at project to change default device base address
+//! \note Define ADS1115_BASE_ADDR to change default device base address
 #define ADS1115_BASE_ADDR	ADS1115_ADDR_GND	//!< ADS1115 Base address
 #endif
 
@@ -227,10 +226,11 @@ FctERR NONNULL__ ADS1115_Read(I2C_slave_t * pSlave, uint16_t * data, const uint1
 #include "ADS1115_proc.h"	// Include procedures
 #include "ADS1115_ex.h"		// Include extensions
 
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __ADS1115_H__ */
 /****************************************************************/

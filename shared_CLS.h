@@ -12,7 +12,6 @@
 #endif
 
 #include "sarmfsw.h"
-#include "globals.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -40,10 +39,11 @@ FctERR NONNULL__ CLS_get_CCT(uint32_t * const cct, const float xy[2]);
 
 
 /****************************************************************/
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __SHARED_CLS_H__ */
 /****************************************************************/

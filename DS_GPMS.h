@@ -13,7 +13,6 @@
 #endif
 
 #include "sarmfsw.h"
-#include "globals.h"
 
 #include "I2C_component.h"
 
@@ -32,7 +31,7 @@
 #define GPMS_JUMPER_NONE	3									//!< DS-GPM.S index with no jumper
 
 #ifndef GPMS_BASE_ADDR
-//! \note Define GPMS_BASE_ADDR in globals.h or at project to change default device base address
+//! \note Define GPMS_BASE_ADDR to change default device base address
 #define GPMS_BASE_ADDR		(GPMS_ADDR + GPMS_JUMPER_A0_A1)		//!< DS-GPM.S Base address
 #endif
 
@@ -175,8 +174,8 @@ typedef union uGPMS_REG__STATUS {
 	struct PACK__ {
 		uint8_t FW_VERSION_MINOR	:4;		//!< Firmware version minor (0-15)
 		uint8_t FW_VERSION_MAJOR	:3;		//!< Firmware version major (0-3)
-		uint8_t POS_FOUND			:1;		//!< Position found bit (0 = Not found, 1 = Found) 
-		uint8_t MOTION				:1;		//!< Motion bit (0 = Standstill, 1 = Moving) 
+		uint8_t POS_FOUND			:1;		//!< Position found bit (0 = Not found, 1 = Found)
+		uint8_t MOTION				:1;		//!< Motion bit (0 = Standstill, 1 = Moving)
 	} Bits;
 } uGPMS_REG__STATUS;
 
@@ -221,10 +220,11 @@ FctERR NONNULL__ GPMS_Read(uint8_t * data, const uint16_t addr, const uint16_t n
 #include "DS_GPMS_ex.h"		// Include extensions
 #include "DS_GPMS_proc.h"	// Include procedures
 
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __DS_GPMS_H__ */
 /****************************************************************/

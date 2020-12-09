@@ -183,10 +183,11 @@ __INLINE FctERR NONNULL_INLINE__ AMG88_Get_Pixel_Raw(AMG88_t * pCpnt, uint16_t *
 
 
 /****************************************************************/
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __AMG88_EX_H__ */
 /****************************************************************/

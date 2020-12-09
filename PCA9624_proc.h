@@ -57,10 +57,11 @@ extern PCA9624_t	PCA9624[I2C_PCA9624_NB];	//!< PCA9624 User structure
 FctERR NONNULL__ PCA9624_Init_Sequence(PCA9624_t * pCpnt);
 
 /****************************************************************/
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif	/* __PCA9624_PROC_H__ */
 /****************************************************************/

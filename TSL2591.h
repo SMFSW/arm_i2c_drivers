@@ -13,7 +13,6 @@
 #endif
 
 #include "sarmfsw.h"
-#include "globals.h"
 
 #include "I2C_component.h"
 #include "I2C_peripheral.h"
@@ -22,7 +21,7 @@
 /****************************************************************/
 
 #ifndef I2C_TSL2591_NB
-//! \note Define I2C_TSL2591_NB in globals.h or at project to enable multiple peripherals of this type
+//! \note Define I2C_TSL2591_NB to enable multiple peripherals of this type
 #define I2C_TSL2591_NB	1	//!< Number of TSL2591 peripherals
 #endif
 
@@ -30,7 +29,7 @@
 // Section: Constants
 // *****************************************************************************
 #ifndef TSL2591_BASE_ADDR
-//! \note Define TSL2591_BASE_ADDR in globals.h or at project to change default device base address
+//! \note Define TSL2591_BASE_ADDR to change default device base address
 #define TSL2591_BASE_ADDR		0x29		//!< TSL2591 Base address
 #endif
 
@@ -279,10 +278,11 @@ FctERR NONNULL__ TSL2591_Write_Special(I2C_slave_t * pSlave, const TSL2591_spec_
 #include "TSL2591_proc.h"	// Include procedures
 #include "TSL2591_ex.h"		// Include extensions
 
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __TSL2591_H__ */
 /****************************************************************/

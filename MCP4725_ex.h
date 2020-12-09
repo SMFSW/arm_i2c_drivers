@@ -66,10 +66,11 @@ FctERR NONNULL__ MCP4725_Read_State(MCP4725_t * pCpnt, bool * state);
 
 
 /****************************************************************/
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __MCP4725_EX_H__ */
 /****************************************************************/

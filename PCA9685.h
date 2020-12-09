@@ -13,7 +13,6 @@
 #endif
 
 #include "sarmfsw.h"
-#include "globals.h"
 
 #include "I2C_component.h"
 #include "I2C_peripheral.h"
@@ -24,7 +23,7 @@
 /****************************************************************/
 
 #ifndef I2C_PCA9685_NB
-//! \note Define I2C_PCA9685_NB in globals.h or at project to enable multiple peripherals of this type
+//! \note Define I2C_PCA9685_NB to enable multiple peripherals of this type
 #define I2C_PCA9685_NB	1	//!< Number of PCA9685 peripherals
 #endif
 
@@ -32,7 +31,7 @@
 // Section: Constants
 // *****************************************************************************
 #ifndef PCA9685_BASE_ADDR
-//! \note Define PCA9685_BASE_ADDR in globals.h or at project to change default device base address
+//! \note Define PCA9685_BASE_ADDR to change default device base address
 #define	PCA9685_BASE_ADDR		0x40		//!< PCA9685 Base Address
 #endif
 
@@ -230,10 +229,11 @@ FctERR NONNULL__ PCA9685_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16
 #include "PCA9685_proc.h"	// Include procedures
 #include "PCA9685_ex.h"		// Include extensions
 
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif	/* __PCA9685_H__ */
 /****************************************************************/

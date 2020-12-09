@@ -13,7 +13,6 @@
 #endif
 
 #include "sarmfsw.h"
-#include "globals.h"
 
 #include "I2C_component.h"
 #include "I2C_peripheral.h"
@@ -24,7 +23,7 @@
 /****************************************************************/
 
 #ifndef I2C_PCA9624_NB
-//! \note Define I2C_PCA9624_NB in globals.h or at project to enable multiple peripherals of this type
+//! \note Define I2C_PCA9624_NB to enable multiple peripherals of this type
 #define I2C_PCA9624_NB	1	//!< Number of PCA9624 peripherals
 #endif
 
@@ -32,7 +31,7 @@
 // Section: Constants
 // *****************************************************************************
 #ifndef PCA9624_BASE_ADDR
-//! \note Define PCA9624_BASE_ADDR in globals.h or at project to change default device base address
+//! \note Define PCA9624_BASE_ADDR to change default device base address
 //! \warning no real base default address
 #define	PCA9624_BASE_ADDR			0x00		//!< PCA9624 Base Address
 #endif
@@ -196,10 +195,11 @@ FctERR NONNULL__ PCA9624_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16
 #include "PCA9624_proc.h"	// Include procedures
 #include "PCA9624_ex.h"		// Include extensions
 
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif	/* __PCA9624_H__ */
 /****************************************************************/

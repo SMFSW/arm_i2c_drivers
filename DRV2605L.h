@@ -13,7 +13,6 @@
 #endif
 
 #include "sarmfsw.h"
-#include "globals.h"
 
 #include "I2C_component.h"
 
@@ -25,7 +24,7 @@
 // Section: Constants
 // *****************************************************************************
 #ifndef DRV2605L_BASE_ADDR
-//! \note Define DRV2605L_BASE_ADDR in globals.h or at project to change default device base address
+//! \note Define DRV2605L_BASE_ADDR to change default device base address
 #define DRV2605L_BASE_ADDR		0x5A		//!< DRV2605L Base address
 #endif
 
@@ -504,10 +503,11 @@ FctERR NONNULL__ DRV2605L_Read(uint8_t * data, const uint16_t addr, const uint16
 #include "DRV2605L_ex.h"	// Include extensions
 #include "DRV2605L_proc.h"	// Include procedures
 
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __DRV2605L_H__ */
 /****************************************************************/

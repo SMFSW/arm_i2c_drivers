@@ -13,7 +13,6 @@
 #endif
 
 #include "sarmfsw.h"
-#include "globals.h"
 
 #include "I2C_component.h"
 #include "I2C_peripheral.h"
@@ -23,7 +22,7 @@
 
 
 #ifndef I2C_APDS9960_NB
-//! \note Define I2C_APDS9960_NB in globals.h or at project to enable multiple peripherals of this type
+//! \note Define I2C_APDS9960_NB to enable multiple peripherals of this type
 #define I2C_APDS9960_NB	1	//!< Number of APDS9960 peripherals
 #endif
 
@@ -33,7 +32,7 @@
 #define APDS9960_ADDR		0x39				//!< APDS9960 address
 
 #ifndef APDS9960_BASE_ADDR
-//! \note Define APDS9960_BASE_ADDR in globals.h or at project to change default device base address
+//! \note Define APDS9960_BASE_ADDR to change default device base address
 #define APDS9960_BASE_ADDR	APDS9960_ADDR		//!< APDS9960 Base address
 #endif
 
@@ -479,10 +478,11 @@ FctERR NONNULL__ APDS9960_Write_Special(I2C_slave_t * pSlave, const APDS9960_spe
 #include "APDS9960_proc.h"	// Include procedures
 #include "APDS9960_ex.h"	// Include extensions
 
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __APDS9960_H__ */
 /****************************************************************/

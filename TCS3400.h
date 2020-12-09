@@ -13,7 +13,6 @@
 #endif
 
 #include "sarmfsw.h"
-#include "globals.h"
 
 #include "I2C_component.h"
 #include "I2C_peripheral.h"
@@ -22,7 +21,7 @@
 /****************************************************************/
 
 #ifndef I2C_TCS3400_NB
-//! \note Define I2C_TCS3400_NB in globals.h or at project to enable multiple peripherals of this type
+//! \note Define I2C_TCS3400_NB to enable multiple peripherals of this type
 #define I2C_TCS3400_NB	1	//!< Number of TCS3400 peripherals
 #endif
 
@@ -35,7 +34,7 @@
 #define TCS34007_ADDR			0x29			//!< TCS34007 Base address
 
 #ifndef TCS3400_BASE_ADDR
-//! \note Define TCS3400_BASE_ADDR in globals.h or at project to change default device base address
+//! \note Define TCS3400_BASE_ADDR to change default device base address
 #define TCS3400_BASE_ADDR		TCS34005_ADDR	//!< TCS3400 Base address
 #endif
 
@@ -279,10 +278,11 @@ FctERR NONNULL__ TCS3400_Read_Word(I2C_slave_t * pSlave, uint16_t * data, const 
 #include "TCS3400_proc.h"	// Include procedures
 #include "TCS3400_ex.h"		// Include extensions
 
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __TCS3400_H__ */
 /****************************************************************/

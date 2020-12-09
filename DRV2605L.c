@@ -62,7 +62,7 @@ FctERR NONNULL__ DRV2605L_Read(uint8_t * data, const uint16_t addr, const uint16
 
 /****************************************************************/
 #elif !defined(NO_WARN_I2C_DRIVERS)
-#warning "You have to define I2C_DRV2605L in globals.h with an I2C instance for this to work!"
+#warning "You have to define I2C_DRV2605L for component to be enabled!"
 #endif
 #endif
 /****************************************************************/

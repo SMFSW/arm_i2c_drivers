@@ -13,7 +13,6 @@
 #endif
 
 #include "sarmfsw.h"
-#include "globals.h"
 
 #include "I2C_component.h"
 #include "I2C_peripheral.h"
@@ -22,7 +21,7 @@
 /****************************************************************/
 
 #ifndef I2C_APDS9930_NB
-//! \note Define I2C_APDS9930_NB in globals.h or at project to enable multiple peripherals of this type
+//! \note Define I2C_APDS9930_NB to enable multiple peripherals of this type
 #define I2C_APDS9930_NB	1	//!< Number of APDS9930 peripherals
 #endif
 
@@ -32,7 +31,7 @@
 #define APDS9930_ADDR		0x39				//!< APDS9930 address
 
 #ifndef APDS9930_BASE_ADDR
-//! \note Define APDS9930_BASE_ADDR in globals.h or at project to change default device base address
+//! \note Define APDS9930_BASE_ADDR to change default device base address
 #define APDS9930_BASE_ADDR	APDS9930_ADDR		//!< APDS9930 Base address
 #endif
 
@@ -219,7 +218,7 @@ typedef union uAPDS9930_REG__CONFIG {
 	struct PACK__ {
 		uint8_t	PDL		:1;	//!< Proximity drive level. When asserted, the proximity LDR drive current is reduced by 9
 		uint8_t	WLONG	:1;	//!< Wait Long. When asserted, the wait cycles are increased by a factor 12x from that programmed in the WTIME register.
-		uint8_t	AGL		:1;	//!< ALS gain level. When asserted, the 1× and 8× ALS gain (AGAIN) modes are scaled by 0.16. Otherwise, AGAIN is scaled by 1. Do not use with AGAIN greater than 8×.
+		uint8_t	AGL		:1;	//!< ALS gain level. When asserted, the 1ï¿½ and 8ï¿½ ALS gain (AGAIN) modes are scaled by 0.16. Otherwise, AGAIN is scaled by 1. Do not use with AGAIN greater than 8ï¿½.
 		uint8_t			:5;
 	} Bits;
 } uAPDS9930_REG__CONFIG;
@@ -344,10 +343,11 @@ FctERR NONNULL__ APDS9930_Write_Special(I2C_slave_t * pSlave, const APDS9930_spe
 #include "APDS9930_proc.h"	// Include procedures
 #include "APDS9930_ex.h"	// Include extensions
 
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __APDS9930_H__ */
 /****************************************************************/

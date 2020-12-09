@@ -13,7 +13,6 @@
 #endif
 
 #include "sarmfsw.h"
-#include "globals.h"
 
 #include "I2C_component.h"
 #include "I2C_peripheral.h"
@@ -22,7 +21,7 @@
 /****************************************************************/
 
 #ifndef I2C_MCP9808_NB
-//! \note Define I2C_MCP9808_NB in globals.h or at project to enable multiple peripherals of this type
+//! \note Define I2C_MCP9808_NB to enable multiple peripherals of this type
 #define I2C_MCP9808_NB	1	//!< Number of MCP9808 peripherals
 #endif
 
@@ -32,7 +31,7 @@
 #define MCP9808_ADDR		0x18			//!< MCP9808 address
 
 #ifndef MCP9808_BASE_ADDR
-//! \note Define MCP9808_BASE_ADDR in globals.h or at project to change default device base address
+//! \note Define MCP9808_BASE_ADDR to change default device base address
 #define MCP9808_BASE_ADDR	MCP9808_ADDR	//!< MCP9808 Base address
 #endif
 
@@ -186,10 +185,11 @@ FctERR NONNULL__ MCP9808_Read(I2C_slave_t * pSlave, uint16_t * data, const uint1
 #include "MCP9808_proc.h"	// Include procedures
 #include "MCP9808_ex.h"		// Include extensions
 
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __MCP9808_H__ */
 /****************************************************************/

@@ -112,7 +112,7 @@ FctERR NONNULL__ APDS9960_Write_Special(I2C_slave_t * pSlave, const APDS9960_spe
 
 /****************************************************************/
 #elif !defined(NO_WARN_I2C_DRIVERS)
-#warning "You have to define I2C_APDS9960 in globals.h with an I2C instance for this to work!"
+#warning "You have to define I2C_APDS9960 for component to be enabled!"
 #endif
 #endif
 /****************************************************************/

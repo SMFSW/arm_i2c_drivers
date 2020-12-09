@@ -18,7 +18,6 @@
 #endif
 
 #include "sarmfsw.h"
-#include "globals.h"
 
 #include "I2C_component.h"
 #include "I2C_peripheral.h"
@@ -27,7 +26,7 @@
 /****************************************************************/
 
 #ifndef I2C_MB85RC256V_NB
-//! \note Define I2C_MB85RC256V_NB in globals.h or at project to enable multiple peripherals of this type
+//! \note Define I2C_MB85RC256V_NB to enable multiple peripherals of this type
 #define I2C_MB85RC256V_NB	1	//!< Number of MB85RC256V peripherals
 #endif
 
@@ -35,7 +34,7 @@
 // Section: Constants
 // *****************************************************************************
 #ifndef MB85RC256V_BASE_ADDR
-//! \note Define MB85RC256V_BASE_ADDR in globals.h or at project to change default device base address
+//! \note Define MB85RC256V_BASE_ADDR to change default device base address
 #define MB85RC256V_BASE_ADDR	0x50			//!< MB85RC256V Base address
 #endif
 
@@ -120,10 +119,11 @@ FctERR NONNULL__ MB85RC256V_Read_ID(MB85RC256V_t * pCpnt, uint8_t * data);
 #include "MB85RC256V_proc.h"	// Include procedures
 #include "MB85RC256V_ex.h"		// Include extensions
 
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __MB85RC256V_H__ */
 /****************************************************************/

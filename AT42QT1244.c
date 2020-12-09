@@ -118,7 +118,7 @@ FctERR NONNULL__ AT42QT1244_Read(I2C_slave_t * pSlave, uint8_t * data, const uin
 
 /****************************************************************/
 #elif !defined(NO_WARN_I2C_DRIVERS)
-#warning "You have to define I2C_AT42QT1244 in globals.h with an I2C instance for this to work!"
+#warning "You have to define I2C_AT42QT1244 for component to be enabled!"
 #endif
 #endif
 /****************************************************************/

@@ -98,7 +98,7 @@ FctERR NONNULL__ S11059_Read_Word(I2C_slave_t * pSlave, uint16_t * data, const u
 
 /****************************************************************/
 #elif !defined(NO_WARN_I2C_DRIVERS)
-#warning "You have to define I2C_S11059 in globals.h with an I2C instance for this to work!"
+#warning "You have to define I2C_S11059 for component to be enabled!"
 #endif
 #endif
 /****************************************************************/

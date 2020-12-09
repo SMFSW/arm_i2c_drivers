@@ -92,10 +92,11 @@ FctERR NONNULL__ MCP4725_Set_Volts(MCP4725_t * pCpnt, const float volts);
 
 
 /****************************************************************/
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __MCP4725_PROC_H__ */
 /****************************************************************/

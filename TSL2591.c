@@ -130,7 +130,7 @@ FctERR NONNULL__ TSL2591_Write_Special(I2C_slave_t * pSlave, const TSL2591_spec_
 
 /****************************************************************/
 #elif !defined(NO_WARN_I2C_DRIVERS)
-#warning "You have to define I2C_TSL2591 in globals.h with an I2C instance for this to work!"
+#warning "You have to define I2C_TSL2591 for component to be enabled!"
 #endif
 #endif
 /****************************************************************/

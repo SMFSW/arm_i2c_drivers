@@ -13,7 +13,6 @@
 #endif
 
 #include "sarmfsw.h"
-#include "globals.h"
 
 #include "I2C_component.h"
 
@@ -26,7 +25,7 @@
 // Section: Constants
 // *****************************************************************************
 #ifndef PCF8523_BASE_ADDR
-//! \note Define PCF8523_BASE_ADDR in globals.h or at project to change default device base address
+//! \note Define PCF8523_BASE_ADDR to change default device base address
 #define PCF8523_BASE_ADDR	0x68		//!< PCF8523 Base address
 #endif
 
@@ -332,10 +331,11 @@ FctERR NONNULL__ PCF8523_Read(uint8_t * data, const uint16_t addr, const uint16_
 #include "PCF8523_ex.h"		// Include extensions
 #include "PCF8523_proc.h"	// Include procedures
 
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __PCF8523_H__ */
 /****************************************************************/

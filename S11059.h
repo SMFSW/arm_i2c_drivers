@@ -13,7 +13,6 @@
 #endif
 
 #include "sarmfsw.h"
-#include "globals.h"
 
 #include "I2C_component.h"
 #include "I2C_peripheral.h"
@@ -22,7 +21,7 @@
 /****************************************************************/
 
 #ifndef I2C_S11059_NB
-//! \note Define I2C_S11059_NB in globals.h or at project to enable multiple peripherals of this type
+//! \note Define I2C_S11059_NB to enable multiple peripherals of this type
 #define I2C_S11059_NB	1	//!< Number of S11059 peripherals
 #endif
 
@@ -32,7 +31,7 @@
 #define S11059_ADDR			0x2A			//!< S11059 address
 
 #ifndef S11059_BASE_ADDR
-//! \note Define S11059_BASE_ADDR in globals.h or at project to change default device base address
+//! \note Define S11059_BASE_ADDR to change default device base address
 #define S11059_BASE_ADDR	S11059_ADDR		//!< S11059 Base address
 #endif
 
@@ -192,10 +191,11 @@ FctERR NONNULL__ S11059_Read_Word(I2C_slave_t * pSlave, uint16_t * data, const u
 #include "S11059_proc.h"	// Include procedures
 #include "S11059_ex.h"		// Include extensions
 
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __S11059_H__ */
 /****************************************************************/

@@ -122,10 +122,11 @@ FctERR NONNULL__ PCF8523_Check_Clock_Integrity(bool * integrity);
 
 
 /****************************************************************/
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __PCF8523_EX_H__ */
 /****************************************************************/

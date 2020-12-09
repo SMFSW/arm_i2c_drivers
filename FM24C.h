@@ -20,7 +20,6 @@
 #endif
 
 #include "sarmfsw.h"
-#include "globals.h"
 
 #include "I2C_component.h"
 #include "I2C_peripheral.h"
@@ -29,7 +28,7 @@
 /****************************************************************/
 
 #ifndef I2C_FM24C_NB
-//! \note Define I2C_FM24C_NB in globals.h or at project to enable multiple peripherals of this type
+//! \note Define I2C_FM24C_NB to enable multiple peripherals of this type
 #define I2C_FM24C_NB	1	//!< Number of FM24C peripherals
 #endif
 
@@ -37,7 +36,7 @@
 // Section: Constants
 // *****************************************************************************
 #ifndef FM24C_BASE_ADDR
-//! \note Define FM24C_BASE_ADDR in globals.h or at project to change default device base address
+//! \note Define FM24C_BASE_ADDR to change default device base address
 #define FM24C_BASE_ADDR		0x50				//!< FM24C Base address
 #endif
 
@@ -48,7 +47,7 @@
 #define	FM24C16B_SIZE		0x800				//!< FM24C size (in bytes)
 
 #ifndef FM24C_SIZE
-//! \note FM24C_SIZE defaults to FM24C16B size, but can be defined in globals.h or at project level to FM24C04B_SIZE (for example)
+//! \note FM24C_SIZE defaults to FM24C16B size, but can be defined level to FM24C04B_SIZE (for example)
 #define FM24C_SIZE			FM24C16B_SIZE		//!< FM24C size
 #endif
 
@@ -162,10 +161,11 @@ __INLINE FctERR NONNULL_INLINE__ FM24C_Read(FM24C_t * pCpnt, uint8_t * data, con
 /****************************************************************/
 #include "FM24C_ex.h"		// Include extensions
 
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __FM24C_H__ */
 /****************************************************************/

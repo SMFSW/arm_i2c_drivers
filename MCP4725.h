@@ -13,7 +13,6 @@
 #endif
 
 #include "sarmfsw.h"
-#include "globals.h"
 
 #include "I2C_component.h"
 #include "I2C_peripheral.h"
@@ -22,7 +21,7 @@
 /****************************************************************/
 
 #ifndef I2C_MCP4725_NB
-//! \note Define I2C_MCP4725_NB in globals.h or at project to enable multiple peripherals of this type
+//! \note Define I2C_MCP4725_NB to enable multiple peripherals of this type
 #define I2C_MCP4725_NB	1	//!< Number of MCP4725 peripherals
 #endif
 
@@ -37,7 +36,7 @@
 #define MCP4725A2_ADDR		0x64			//!< MCP4725 with A2 address
 
 #ifndef MCP4725_BASE_ADDR
-//! \note Define MCP4725_BASE_ADDR in globals.h or at project to change default device base address
+//! \note Define MCP4725_BASE_ADDR to change default device base address
 #define MCP4725_BASE_ADDR	MCP4725A1_ADDR	//!< MCP4725 Base address
 #endif
 
@@ -146,10 +145,11 @@ FctERR NONNULL__ MCP4725_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16
 #include "MCP4725_proc.h"	// Include procedures
 #include "MCP4725_ex.h"		// Include extensions
 
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __MCP4725_H__ */
 /****************************************************************/

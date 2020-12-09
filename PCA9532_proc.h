@@ -61,10 +61,11 @@ extern PCA9532_t	PCA9532[I2C_PCA9532_NB];	//!< PCA9532 User structure
 FctERR NONNULL__ PCA9532_Init_Sequence(PCA9532_t * pCpnt);
 
 /****************************************************************/
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif	/* __PCA9532_PROC_H__ */
 /****************************************************************/

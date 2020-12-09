@@ -186,10 +186,11 @@ FctERR NONNULL__ PCA9685_ClrVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan);
 
 
 /****************************************************************/
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif	/* __PCA9685_EX_H__ */
 /****************************************************************/

@@ -13,7 +13,6 @@
 #endif
 
 #include "sarmfsw.h"
-#include "globals.h"
 
 #include "I2C_component.h"
 #include "I2C_peripheral.h"
@@ -23,7 +22,7 @@
 
 
 #ifndef I2C_AMG88_NB
-//! \note Define I2C_AMG88_NB in globals.h or at project to enable multiple peripherals of this type
+//! \note Define I2C_AMG88_NB to enable multiple peripherals of this type
 #define I2C_AMG88_NB	1	//!< Number of AMG88 peripherals
 #endif
 
@@ -33,7 +32,7 @@
 #define AMG88_ADDR			0x68			//!< AMG88 address
 
 #ifndef AMG88_BASE_ADDR
-//! \note Define AMG88_BASE_ADDR in globals.h or at project to change default device base address
+//! \note Define AMG88_BASE_ADDR to change default device base address
 #define AMG88_BASE_ADDR		AMG88_ADDR		//!< AMG88 Base address
 #endif
 
@@ -450,10 +449,11 @@ FctERR NONNULL__ AMG88_Read_Word(I2C_slave_t * pSlave, uint16_t * data, const ui
 #include "AMG88_proc.h"	// Include procedures
 #include "AMG88_ex.h"		// Include extensions
 
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __AMG88_H__ */
 /****************************************************************/

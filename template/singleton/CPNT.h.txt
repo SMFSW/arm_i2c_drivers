@@ -13,7 +13,6 @@
 #endif
 
 #include "sarmfsw.h"
-#include "globals.h"
 
 #include "I2C_component.h"
 
@@ -27,7 +26,7 @@
 #define $CPNT$_ADDR			0x00			//!< $CPNT$ address
 
 #ifndef $CPNT$_BASE_ADDR
-//! \note Define $CPNT$_BASE_ADDR in globals.h or at project to change default device base address
+//! \note Define $CPNT$_BASE_ADDR to change default device base address
 #define $CPNT$_BASE_ADDR	$CPNT$_ADDR		//!< $CPNT$ Base address
 #endif
 
@@ -112,10 +111,11 @@ FctERR NONNULL__ $CPNT$_Read(uint8_t * data, const uint16_t addr, const uint16_t
 #include "$CPNT$_proc.h"	// Include procedures
 #include "$CPNT$_ex.h"		// Include extensions
 
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __$CPNT$_H__ */
 /****************************************************************/

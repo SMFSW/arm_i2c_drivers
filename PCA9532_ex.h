@@ -157,10 +157,11 @@ FctERR NONNULL__ PCA9532_SetDuty(PCA9532_t * const pCpnt, const float duty, cons
 
 
 /****************************************************************/
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif	/* __PCA9532_EX_H__ */
 /****************************************************************/

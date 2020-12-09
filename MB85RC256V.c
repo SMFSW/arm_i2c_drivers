@@ -99,7 +99,7 @@ FctERR NONNULL__ MB85RC256V_Read_ID(MB85RC256V_t * pCpnt, uint8_t * data)
 
 /****************************************************************/
 #elif !defined(NO_WARN_I2C_DRIVERS)
-#warning "You have to define I2C_MB85RC256V in globals.h with an I2C instance for this to work!"
+#warning "You have to define I2C_MB85RC256V for component to be enabled!"
 #endif
 #endif
 /****************************************************************/

@@ -81,10 +81,11 @@ __INLINE uint32_t NONNULL_INLINE__ PCA9685_Get_Clock_Freq(PCA9685_t * pCpnt) {
 
 
 /****************************************************************/
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif	/* __PCA9685_PROC_H__ */
 /****************************************************************/

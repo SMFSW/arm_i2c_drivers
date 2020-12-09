@@ -13,7 +13,6 @@
 #endif
 
 #include "sarmfsw.h"
-#include "globals.h"
 
 #include "I2C_component.h"
 #include "I2C_peripheral.h"
@@ -22,7 +21,7 @@
 /****************************************************************/
 
 #ifndef I2C_BMP180_NB
-//! \note Define I2C_BMP180_NB in globals.h or at project to enable multiple peripherals of this type
+//! \note Define I2C_BMP180_NB to enable multiple peripherals of this type
 #define I2C_BMP180_NB	1	//!< Number of BMP180 peripherals
 #endif
 
@@ -30,7 +29,7 @@
 // Section: Constants
 // *****************************************************************************
 #ifndef BMP180_BASE_ADDR
-//! \note Define BMP180_BASE_ADDR in globals.h or at project to change default device base address
+//! \note Define BMP180_BASE_ADDR to change default device base address
 #define BMP180_BASE_ADDR	0x77		//!< BMP180 Base address
 #endif
 
@@ -202,10 +201,11 @@ FctERR NONNULL__ BMP180_Read_Word(I2C_slave_t * pSlave, uint16_t * data, const u
 #include "BMP180_proc.h"	// Include procedures
 #include "BMP180_ex.h"		// Include extensions
 
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __BMP180_H__ */
 /****************************************************************/

@@ -131,7 +131,7 @@ FctERR NONNULL__ TCS3472_Write_Special(I2C_slave_t * pSlave, const TCS3472_spec_
 
 /****************************************************************/
 #elif !defined(NO_WARN_I2C_DRIVERS)
-#warning "You have to define I2C_TCS3472 in globals.h with an I2C instance for this to work!"
+#warning "You have to define I2C_TCS3472 for component to be enabled!"
 #endif
 #endif
 /****************************************************************/

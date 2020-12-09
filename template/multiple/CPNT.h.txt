@@ -13,7 +13,6 @@
 #endif
 
 #include "sarmfsw.h"
-#include "globals.h"
 
 #include "I2C_component.h"
 #include "I2C_peripheral.h"
@@ -23,7 +22,7 @@
 
 
 #ifndef I2C_$CPNT$_NB
-//! \note Define I2C_$CPNT$_NB in globals.h or at project to enable multiple peripherals of this type
+//! \note Define I2C_$CPNT$_NB to enable multiple peripherals of this type
 #define I2C_$CPNT$_NB	1	//!< Number of $CPNT$ peripherals
 #endif
 
@@ -33,7 +32,7 @@
 #define $CPNT$_ADDR			0x00			//!< $CPNT$ address
 
 #ifndef $CPNT$_BASE_ADDR
-//! \note Define $CPNT$_BASE_ADDR in globals.h or at project to change default device base address
+//! \note Define $CPNT$_BASE_ADDR to change default device base address
 #define $CPNT$_BASE_ADDR	$CPNT$_ADDR		//!< $CPNT$ Base address
 #endif
 
@@ -128,10 +127,11 @@ FctERR NONNULL__ $CPNT$_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_
 #include "$CPNT$_proc.h"	// Include procedures
 #include "$CPNT$_ex.h"		// Include extensions
 
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __$CPNT$_H__ */
 /****************************************************************/

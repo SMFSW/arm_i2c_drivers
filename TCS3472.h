@@ -13,7 +13,6 @@
 #endif
 
 #include "sarmfsw.h"
-#include "globals.h"
 
 #include "I2C_component.h"
 #include "I2C_peripheral.h"
@@ -22,7 +21,7 @@
 /****************************************************************/
 
 #ifndef I2C_TCS3472_NB
-//! \note Define I2C_TCS3472_NB in globals.h or at project to enable multiple peripherals of this type
+//! \note Define I2C_TCS3472_NB to enable multiple peripherals of this type
 #define I2C_TCS3472_NB	1	//!< Number of TCS3472 peripherals
 #endif
 
@@ -35,7 +34,7 @@
 #define TCS34727_ADDR			0x29			//!< TCS34727 Base address
 
 #ifndef TCS3472_BASE_ADDR
-//! \note Define TCS3472_BASE_ADDR in globals.h or at project to change default device base address
+//! \note Define TCS3472_BASE_ADDR to change default device base address
 #define TCS3472_BASE_ADDR		TCS34725_ADDR	//!< TCS3472 Base address
 #endif
 
@@ -280,10 +279,11 @@ FctERR NONNULL__ TCS3472_Write_Special(I2C_slave_t * pSlave, const TCS3472_spec_
 #include "TCS3472_proc.h"	// Include procedures
 #include "TCS3472_ex.h"		// Include extensions
 
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __TCS3472_H__ */
 /****************************************************************/

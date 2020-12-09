@@ -2,6 +2,7 @@
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2020, SMFSW
 ** \brief Base I2C component
+** \note Needed symbols may be defined level. If globals.h is not used, symbol NO_GLOBALS_HEADER needs to be defined.
 **/
 /****************************************************************/
 #ifndef __I2C_COMPONENT_H__
@@ -13,6 +14,10 @@
 
 #include <string.h>
 #include "sarmfsw.h"
+
+#ifndef NO_GLOBALS_HEADER
+#include "globals.h"
+#endif
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -207,10 +212,11 @@ __INLINE uint16_t NONNULL_INLINE__ I2C_get_slave_max_speed(const I2C_slave_t * s
 
 
 /****************************************************************/
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif	/* __I2C_COMPONENT_H__ */
 /****************************************************************/

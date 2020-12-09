@@ -13,7 +13,6 @@
 #endif
 
 #include "sarmfsw.h"
-#include "globals.h"
 
 #include "I2C_component.h"
 #include "I2C_peripheral.h"
@@ -23,7 +22,7 @@
 // TODO: doxygen
 
 #ifndef I2C_MTCH6102_NB
-//! \note Define I2C_MTCH6102_NB in globals.h or at project to enable multiple peripherals of this type
+//! \note Define I2C_MTCH6102_NB to enable multiple peripherals of this type
 #define I2C_MTCH6102_NB	1	//!< Number of MTCH6102 peripherals
 #endif
 
@@ -31,7 +30,7 @@
 // Section: Constants
 // *****************************************************************************
 #ifndef MTCH6102_BASE_ADDR
-//! \note Define MTCH6102_BASE_ADDR in globals.h or at project to change default device base address
+//! \note Define MTCH6102_BASE_ADDR to change default device base address
 #define MTCH6102_BASE_ADDR	0x25		//!< MTCH6102 default address value
 #endif
 
@@ -434,10 +433,11 @@ FctERR NONNULL__ MTCH6102_Read(I2C_slave_t * pSlave, uint8_t * data, const uint1
 #include "MTCH6102_proc.h"	// Include procedures
 #include "MTCH6102_ex.h"	// Include extensions
 
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif	/* __MTCH6102_H__ */
 /****************************************************************/

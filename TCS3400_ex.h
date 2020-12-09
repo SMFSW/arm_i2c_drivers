@@ -259,10 +259,11 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Get_Blue(TCS3400_t * pCpnt, uint16_t * 
 
 
 /****************************************************************/
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __TCS3400_EX_H__ */
 /****************************************************************/

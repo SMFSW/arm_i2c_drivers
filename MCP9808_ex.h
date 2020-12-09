@@ -141,10 +141,11 @@ __INLINE FctERR NONNULL_INLINE__ MCP9808_Get_ChipID(MCP9808_t * pCpnt, uint16_t 
 
 
 /****************************************************************/
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __MCP9808_EX_H__ */
 /****************************************************************/

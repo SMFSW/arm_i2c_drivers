@@ -62,7 +62,7 @@ FctERR NONNULL__ GPMS_Read(uint8_t * data, const uint16_t addr, const uint16_t n
 
 /****************************************************************/
 #elif !defined(NO_WARN_I2C_DRIVERS)
-#warning "You have to define I2C_GPMS in globals.h with an I2C instance for this to work!"
+#warning "You have to define I2C_GPMS for component to be enabled!"
 #endif
 #endif
 /****************************************************************/

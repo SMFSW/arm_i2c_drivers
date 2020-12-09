@@ -264,10 +264,11 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Blue(TCS3472_t * pCpnt, uint16_t * 
 
 
 /****************************************************************/
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __TCS3472_EX_H__ */
 /****************************************************************/

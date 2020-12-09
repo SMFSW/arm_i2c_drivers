@@ -6,6 +6,8 @@
 /****************************************************************/
 #include "shared_CLS.h"
 
+#include "I2C_Component.h"
+
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_APDS9960) || defined(I2C_S11059) || defined(I2C_TCS3400) || defined(I2C_TCS3472)
 /****************************************************************/

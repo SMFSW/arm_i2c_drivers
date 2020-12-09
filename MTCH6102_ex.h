@@ -256,10 +256,11 @@ __INLINE FctERR NONNULL_INLINE__ MTCH6102_Get_Gest(const MTCH6102_t * const pCpn
 
 
 /****************************************************************/
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif	/* __MTCH6102_EX_H__ */
 /****************************************************************/

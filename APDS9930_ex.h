@@ -337,10 +337,11 @@ __INLINE FctERR NONNULL_INLINE__ APDS9930_Get_Prox(APDS9930_t * pCpnt, uint16_t 
 
 
 /****************************************************************/
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __APDS9930_EX_H__ */
 /****************************************************************/

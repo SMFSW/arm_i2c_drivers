@@ -327,10 +327,11 @@ __INLINE FctERR NONNULL_INLINE__ DRV2605L_Get_ChipID(uint8_t * id) {
 
 
 /****************************************************************/
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __DRV2605L_EX_H__ */
 /****************************************************************/

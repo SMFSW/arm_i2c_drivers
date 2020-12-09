@@ -140,10 +140,11 @@ __INLINE FctERR NONNULL_INLINE__ GPMS_Get_IO_Value(uint8_t * io, uint8_t chan) {
 
 
 /****************************************************************/
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __DS_GPMS_EX_H__ */
 /****************************************************************/

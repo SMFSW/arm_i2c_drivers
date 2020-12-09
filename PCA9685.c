@@ -75,7 +75,7 @@ FctERR NONNULL__ PCA9685_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16
 
 /****************************************************************/
 #elif !defined(NO_WARN_I2C_DRIVERS)
-#warning "You have to define I2C_PCA9685 in globals.h with an I2C instance for this to work!"
+#warning "You have to define I2C_PCA9685 for component to be enabled!"
 #endif
 #endif
 /****************************************************************/

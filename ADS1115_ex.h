@@ -214,10 +214,11 @@ float NONNULL__ ADS1115_Get_converted_value_V(ADS1115_t * pCpnt, const uint8_t c
 
 
 /****************************************************************/
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __ADS1115_EX_H__ */
 /****************************************************************/

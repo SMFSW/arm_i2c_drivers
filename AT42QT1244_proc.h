@@ -19,7 +19,7 @@
 /****************************************************************/
 
 #ifndef AT42QT1244_GET_KEYS_ONLY
-//! \note Define AT42QT1244_GET_KEYS_ONLY in globals.h or at project to change read behavior
+//! \note Define AT42QT1244_GET_KEYS_ONLY to change read behavior
 #define AT42QT1244_GET_KEYS_ONLY	0		//!< AT42QT1244 get keys status only
 #endif
 
@@ -137,10 +137,11 @@ __INLINE void INLINE__ AT42QT1244_handler_all(void) {
 
 
 /****************************************************************/
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __AT42QT1244_PROC_H__ */
 /****************************************************************/

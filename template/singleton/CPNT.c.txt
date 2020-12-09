@@ -66,7 +66,7 @@ FctERR NONNULL__ $CPNT$_Read(uint8_t * data, const uint16_t addr, const uint16_t
 
 /****************************************************************/
 #elif !defined(NO_WARN_I2C_DRIVERS)
-#warning "You have to define I2C_$CPNT$ in globals.h with an I2C instance for this to work!"
+#warning "You have to define I2C_$CPNT$ for component to be enabled!"
 #endif
 #endif
 /****************************************************************/

@@ -22,6 +22,9 @@ SOFTWARE.
 
 ## v1.0
 
+* Fix for cpp preprocessor end bracket misplacement in regard of other endif directives in headers
+* rationalization of includes (globals.h included at less possible places)
+* comments and warnings/errors refactoring
 * strict aliasing types in printf statements
 * Some informations added in components doxygen documentation for compatibility with other devices
 * implementation of multiple peripheral of the same type (for devices that may most likely not being alone in a project)

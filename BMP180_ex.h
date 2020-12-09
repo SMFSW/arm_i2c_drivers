@@ -73,10 +73,11 @@ FctERR NONNULL__ BMP180_Get_Pressure_Raw(BMP180_t * pCpnt, int32_t * pr);
 
 
 /****************************************************************/
+#endif
+
 #ifdef __cplusplus
 	}
 #endif
 
-#endif
 #endif /* __BMP180_EX_H__ */
 /****************************************************************/
