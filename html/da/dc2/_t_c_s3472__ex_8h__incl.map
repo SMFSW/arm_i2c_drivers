@@ -1,7 +1,7 @@
 <map id="TCS3472_ex.h" name="TCS3472_ex.h">
-<area shape="rect" id="node3" href="$d8/ddc/_t_c_s3472_8h.html" title="TCS3472 Driver. " alt="" coords="171,80,262,107"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="255,155,389,181"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="414,155,539,181"/>
-<area shape="rect" id="node8" href="$d6/d96/_t_c_s3472__proc_8h.html" title="TCS3472 Driver procedures. " alt="" coords="54,155,179,181"/>
-<area shape="rect" id="node9" href="$df/ded/shared___c_l_s_8h.html" title="Color Light Sensing shared. " alt="" coords="36,229,147,256"/>
+<area shape="rect" id="node3" href="$d8/ddc/_t_c_s3472_8h.html" title="TCS3472 Driver. " alt="" coords="135,80,226,107"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="36,155,170,181"/>
+<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="195,155,320,181"/>
+<area shape="rect" id="node8" href="$d6/d96/_t_c_s3472__proc_8h.html" title="TCS3472 Driver procedures. " alt="" coords="344,155,470,181"/>
+<area shape="rect" id="node9" href="$df/ded/shared___c_l_s_8h.html" title="Color Light Sensing shared. " alt="" coords="386,229,497,256"/>
 </map>

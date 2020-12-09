@@ -1,6 +1,6 @@
 <map id="S11059.h" name="S11059.h">
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="299,80,434,107"/>
-<area shape="rect" id="node6" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="459,80,584,107"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="450,80,585,107"/>
+<area shape="rect" id="node6" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="300,80,425,107"/>
 <area shape="rect" id="node7" href="$dc/d4b/_s11059__proc_8h.html" title="S11059 Driver procedures. " alt="" coords="27,80,146,107"/>
 <area shape="rect" id="node8" href="$d9/da9/_s11059__ex_8h.html" title="S11059 Driver extensions. " alt="" coords="170,80,275,107"/>
 </map>

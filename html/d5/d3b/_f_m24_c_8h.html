@@ -74,7 +74,6 @@ $(function() {
 <p>FM24C Driver.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;sarmfsw.h&quot;</code><br />
-<code>#include &quot;globals.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d6/dd6/_i2_c__component_8h_source.html">I2C_component.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../dc/d5d/_i2_c__peripheral_8h_source.html">I2C_peripheral.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../de/d95/_f_m24_c__ex_8h_source.html">FM24C_ex.h</a>&quot;</code><br />
@@ -83,9 +82,9 @@ Include dependency graph for FM24C.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d8/d7d/_f_m24_c_8h__incl.png" border="0" usemap="#_f_m24_c_8h" alt=""/></div>
 <map name="_f_m24_c_8h" id="_f_m24_c_8h">
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="329,80,463,107"/>
-<area shape="rect" id="node6" href="../../dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="179,80,304,107"/>
-<area shape="rect" id="node7" href="../../de/d95/_f_m24_c__ex_8h.html" title="FM24C Driver extensions. " alt="" coords="5,80,104,107"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="294,80,429,107"/>
+<area shape="rect" id="node6" href="../../dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="144,80,270,107"/>
+<area shape="rect" id="node7" href="../../de/d95/_f_m24_c__ex_8h.html" title="FM24C Driver extensions. " alt="" coords="22,80,120,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -243,7 +242,7 @@ Compatibility:<ul>
 </div><div class="memdoc">
 
 <p>FM24C Base address. </p>
-<dl class="section note"><dt>Note</dt><dd>Define FM24C_BASE_ADDR in globals.h or at project to change default device base address </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Define FM24C_BASE_ADDR to change default device base address </dd></dl>
 
 </div>
 </div>
@@ -260,7 +259,7 @@ Compatibility:<ul>
 </div><div class="memdoc">
 
 <p>FM24C size. </p>
-<dl class="section note"><dt>Note</dt><dd>FM24C_SIZE defaults to FM24C16B size, but can be defined in globals.h or at project level to FM24C04B_SIZE (for example) </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>FM24C_SIZE defaults to FM24C16B size, but can be defined level to FM24C04B_SIZE (for example) </dd></dl>
 
 </div>
 </div>
@@ -277,7 +276,7 @@ Compatibility:<ul>
 </div><div class="memdoc">
 
 <p>Number of FM24C peripherals. </p>
-<dl class="section note"><dt>Note</dt><dd>Define I2C_FM24C_NB in globals.h or at project to enable multiple peripherals of this type </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Define I2C_FM24C_NB to enable multiple peripherals of this type </dd></dl>
 
 </div>
 </div>

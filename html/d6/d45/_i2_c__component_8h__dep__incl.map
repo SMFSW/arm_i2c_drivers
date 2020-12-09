@@ -3,24 +3,26 @@
 <area shape="rect" id="node8" href="$d8/d4e/_a_m_g88_8h.html" title="AMG88 Driver. " alt="" coords="963,80,1043,107"/>
 <area shape="rect" id="node14" href="$d6/dd1/_a_p_d_s9930_8h.html" title="APDS9930 Driver. " alt="" coords="1641,80,1743,107"/>
 <area shape="rect" id="node20" href="$d2/dbf/_a_p_d_s9960_8h.html" title="APDS9960 Driver. " alt="" coords="2383,80,2486,107"/>
-<area shape="rect" id="node26" href="$dd/d4f/_a_t42_q_t1244_8h.html" title="AT42QT1244 Driver. " alt="" coords="3067,80,3181,107"/>
-<area shape="rect" id="node32" href="$d3/d7d/_b_m_p180_8h.html" title="BMP180 Driver. " alt="" coords="3206,80,3293,107"/>
-<area shape="rect" id="node35" href="$d5/d47/_d_r_v2605_l_8h.html" title="DRV2605L Driver. " alt="" coords="3317,80,3416,107"/>
-<area shape="rect" id="node36" href="$dd/d26/_d_s___g_p_m_s_8h.html" title="DS&#45;GPM.S Driver. " alt="" coords="3440,80,3539,107"/>
-<area shape="rect" id="node37" href="$d5/d3b/_f_m24_c_8h.html" title="FM24C Driver. " alt="" coords="3563,80,3640,107"/>
-<area shape="rect" id="node38" href="$d7/d97/_i2_c__component_8c.html" title="Base I2C component. " alt="" coords="3664,80,3797,107"/>
-<area shape="rect" id="node39" href="$d7/d3b/_m_b85_r_c256_v_8h.html" title="MB85RC256V Driver. " alt="" coords="3821,80,3939,107"/>
-<area shape="rect" id="node40" href="$df/d9f/_m_c_p4725_8h.html" title="MCP4725 Driver. " alt="" coords="3963,80,4058,107"/>
-<area shape="rect" id="node41" href="$d8/d57/_m_c_p9808_8h.html" title="MCP9808 Driver. " alt="" coords="4082,80,4177,107"/>
-<area shape="rect" id="node42" href="$da/da9/_m_t_c_h6102_8h.html" title="MTCH6102 Driver. " alt="" coords="4201,80,4303,107"/>
-<area shape="rect" id="node43" href="$d3/df9/_p_c_a9532_8h.html" title="PCA9532 Driver. " alt="" coords="4327,80,4419,107"/>
-<area shape="rect" id="node44" href="$d4/dc2/_p_c_a9624_8h.html" title="PCA9624 Driver. " alt="" coords="4443,80,4535,107"/>
-<area shape="rect" id="node45" href="$d4/deb/_p_c_a9685_8h.html" title="PCA9685 Driver. " alt="" coords="4559,80,4651,107"/>
-<area shape="rect" id="node46" href="$dd/d42/_p_c_f8523_8h.html" title="PCF8523 Driver. " alt="" coords="4676,80,4767,107"/>
-<area shape="rect" id="node47" href="$d1/d8f/_s11059_8h.html" title="S11059 Driver. " alt="" coords="4791,80,4873,107"/>
-<area shape="rect" id="node48" href="$d9/d51/_t_c_s3400_8h.html" title="TCS3400 Driver. " alt="" coords="4897,80,4988,107"/>
-<area shape="rect" id="node49" href="$d8/ddc/_t_c_s3472_8h.html" title="TCS3472 Driver. " alt="" coords="5012,80,5103,107"/>
-<area shape="rect" id="node50" href="$da/d96/_t_s_l2591_8h.html" title="TSL2591 Driver. " alt="" coords="5127,80,5217,107"/>
+<area shape="rect" id="node26" href="$dd/d4f/_a_t42_q_t1244_8h.html" title="AT42QT1244 Driver. " alt="" coords="2984,80,3099,107"/>
+<area shape="rect" id="node32" href="$d3/d7d/_b_m_p180_8h.html" title="BMP180 Driver. " alt="" coords="3123,80,3210,107"/>
+<area shape="rect" id="node33" href="$d5/d47/_d_r_v2605_l_8h.html" title="DRV2605L Driver. " alt="" coords="3235,80,3333,107"/>
+<area shape="rect" id="node34" href="$dd/d26/_d_s___g_p_m_s_8h.html" title="DS&#45;GPM.S Driver. " alt="" coords="3357,80,3456,107"/>
+<area shape="rect" id="node35" href="$d5/d3b/_f_m24_c_8h.html" title="FM24C Driver. " alt="" coords="3480,80,3557,107"/>
+<area shape="rect" id="node36" href="$d7/d97/_i2_c__component_8c.html" title="Base I2C component. " alt="" coords="3581,80,3715,107"/>
+<area shape="rect" id="node37" href="$d7/d3b/_m_b85_r_c256_v_8h.html" title="MB85RC256V Driver. " alt="" coords="3739,80,3856,107"/>
+<area shape="rect" id="node38" href="$df/d9f/_m_c_p4725_8h.html" title="MCP4725 Driver. " alt="" coords="3881,80,3975,107"/>
+<area shape="rect" id="node39" href="$d8/d57/_m_c_p9808_8h.html" title="MCP9808 Driver. " alt="" coords="3999,80,4094,107"/>
+<area shape="rect" id="node40" href="$da/da9/_m_t_c_h6102_8h.html" title="MTCH6102 Driver. " alt="" coords="4118,80,4221,107"/>
+<area shape="rect" id="node41" href="$d3/df9/_p_c_a9532_8h.html" title="PCA9532 Driver. " alt="" coords="4245,80,4337,107"/>
+<area shape="rect" id="node42" href="$d4/dc2/_p_c_a9624_8h.html" title="PCA9624 Driver. " alt="" coords="4361,80,4453,107"/>
+<area shape="rect" id="node43" href="$d4/deb/_p_c_a9685_8h.html" title="PCA9685 Driver. " alt="" coords="4477,80,4569,107"/>
+<area shape="rect" id="node44" href="$dd/d42/_p_c_f8523_8h.html" title="PCF8523 Driver. " alt="" coords="4593,80,4684,107"/>
+<area shape="rect" id="node45" href="$d1/d8f/_s11059_8h.html" title="S11059 Driver. " alt="" coords="4708,80,4791,107"/>
+<area shape="rect" id="node46" href="$d0/d63/shared___a_l_s_8c.html" title="Ambient Light Sensing shared. " alt="" coords="4815,80,4924,107"/>
+<area shape="rect" id="node47" href="$da/da0/shared___c_l_s_8c.html" title="Color Light Sensing shared. " alt="" coords="4948,80,5057,107"/>
+<area shape="rect" id="node48" href="$d9/d51/_t_c_s3400_8h.html" title="TCS3400 Driver. " alt="" coords="5081,80,5172,107"/>
+<area shape="rect" id="node49" href="$d8/ddc/_t_c_s3472_8h.html" title="TCS3472 Driver. " alt="" coords="5196,80,5287,107"/>
+<area shape="rect" id="node50" href="$da/d96/_t_s_l2591_8h.html" title="TSL2591 Driver. " alt="" coords="5311,80,5401,107"/>
 <area shape="rect" id="node3" href="$db/de1/_a_d_s1115_8c.html" title="ADS1115 Driver. " alt="" coords="5,155,99,181"/>
 <area shape="rect" id="node4" href="$d4/d35/_a_d_s1115__proc_8h.html" title="ADS1115 Driver procedures. " alt="" coords="123,155,253,181"/>
 <area shape="rect" id="node5" href="$d8/d4b/_a_d_s1115__ex_8h.html" title="ADS1115 Driver extensions. " alt="" coords="277,155,393,181"/>
@@ -46,6 +48,4 @@
 <area shape="rect" id="node29" href="$df/de4/_a_t42_q_t1244__ex_8h.html" title="AT42QT1244 Driver extensions. " alt="" coords="3140,155,3276,181"/>
 <area shape="rect" id="node30" href="$df/d72/_a_t42_q_t1244__ex_8c.html" title="AT42QT1244 Driver extensions. " alt="" coords="3301,155,3435,181"/>
 <area shape="rect" id="node31" href="$dd/de3/_a_t42_q_t1244__proc_8c.html" title="AT42QT1244 Driver procedures. " alt="" coords="3459,155,3607,181"/>
-<area shape="rect" id="node33" href="$d8/d11/_b_m_p180_8c.html" title="BMP180 Driver. " alt="" coords="3632,155,3717,181"/>
-<area shape="rect" id="node34" href="$dc/d50/_b_m_p180__proc_8h.html" title="BMP180 Driver procedures. " alt="" coords="3742,155,3863,181"/>
 </map>

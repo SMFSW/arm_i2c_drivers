@@ -1,6 +1,6 @@
 <map id="MTCH6102_proc.h" name="MTCH6102_proc.h">
-<area shape="rect" id="node3" href="$da/da9/_m_t_c_h6102_8h.html" title="MTCH6102 Driver. " alt="" coords="155,80,257,107"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="292,155,427,181"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="451,155,577,181"/>
-<area shape="rect" id="node8" href="$dc/d5e/_m_t_c_h6102__ex_8h.html" title="MTCH6102 Driver extensions. " alt="" coords="144,155,268,181"/>
+<area shape="rect" id="node3" href="$da/da9/_m_t_c_h6102_8h.html" title="MTCH6102 Driver. " alt="" coords="40,80,142,107"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="328,155,462,181"/>
+<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="178,155,303,181"/>
+<area shape="rect" id="node8" href="$dc/d5e/_m_t_c_h6102__ex_8h.html" title="MTCH6102 Driver extensions. " alt="" coords="29,155,153,181"/>
 </map>

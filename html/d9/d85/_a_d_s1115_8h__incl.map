@@ -1,6 +1,6 @@
 <map id="ADS1115.h" name="ADS1115.h">
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="321,80,456,107"/>
-<area shape="rect" id="node6" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="481,80,606,107"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="472,80,607,107"/>
+<area shape="rect" id="node6" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="322,80,447,107"/>
 <area shape="rect" id="node7" href="$d4/d35/_a_d_s1115__proc_8h.html" title="ADS1115 Driver procedures. " alt="" coords="28,80,157,107"/>
 <area shape="rect" id="node8" href="$d8/d4b/_a_d_s1115__ex_8h.html" title="ADS1115 Driver extensions. " alt="" coords="181,80,297,107"/>
 </map>

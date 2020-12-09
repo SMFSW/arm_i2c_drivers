@@ -1,7 +1,7 @@
 <map id="PCA9624.h" name="PCA9624.h">
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="609,80,744,107"/>
-<area shape="rect" id="node6" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="459,80,585,107"/>
-<area shape="rect" id="node7" href="$d3/dee/_p_c_a9xxx_8h.html" title="PCA9xxx shared declarations. " alt="" coords="5,80,95,107"/>
-<area shape="rect" id="node8" href="$d0/de0/_p_c_a9624__proc_8h.html" title="PCA9624 Driver procedures. " alt="" coords="119,80,245,107"/>
-<area shape="rect" id="node9" href="$d6/dfc/_p_c_a9624__ex_8h.html" title="PCA9624 Driver extensions. " alt="" coords="270,80,385,107"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="611,80,745,107"/>
+<area shape="rect" id="node6" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="461,80,586,107"/>
+<area shape="rect" id="node7" href="$d3/dee/_p_c_a9xxx_8h.html" title="PCA9xxx shared declarations. " alt="" coords="347,80,436,107"/>
+<area shape="rect" id="node8" href="$d0/de0/_p_c_a9624__proc_8h.html" title="PCA9624 Driver procedures. " alt="" coords="5,80,132,107"/>
+<area shape="rect" id="node9" href="$d6/dfc/_p_c_a9624__ex_8h.html" title="PCA9624 Driver extensions. " alt="" coords="157,80,271,107"/>
 </map>
