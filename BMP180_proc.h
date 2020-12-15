@@ -15,6 +15,8 @@
 #include "sarmfsw.h"
 #include "BMP180.h"
 
+#include "shared_APS.h"
+
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
 
@@ -23,8 +25,6 @@
 // Section: Constants
 // *****************************************************************************
 #define BMP180_CHIP_ID		0x55			//!< BMP180 Chip ID to check against
-
-#define SEA_LEVEL_PRESSURE	1013.25f		//!< Sea pressure level (hPa)
 
 
 // *****************************************************************************
@@ -54,13 +54,13 @@ typedef struct BMP180_t {
 	float					Pressure;			//!< Current atmospheric pressure
 	float					Temperature;		//!< Current temperature
 	float					Altitude;			//!< Current altitude
-	float					SeaLevelPressure;	//!< Current atmospheric pressure at sea level
 	uint32_t				hStartConversion;	//!< Last conversion start tick
 	struct {
 	I2C_slave_t *			slave_inst;			//!< Slave structure
 	BMP180_oversampling		OSS;				//!< Oversampling
 	BMP180_calib			Calib;				//!< Calibration values
 	uint8_t					ID;					//!< Chip ID
+	float					SeaLevelPressure;	//!< Current atmospheric pressure at sea level
 	} cfg;
 } BMP180_t;
 
@@ -73,6 +73,13 @@ extern BMP180_t BMP180[I2C_BMP180_NB];			//!< BMP180 User structure
 /******************/
 /*** Procedures ***/
 /******************/
+
+/*!\brief Setter of Sea Level pressure for BMP180 peripheral
+** \weak BMP180 Sea Level pressure setter may be user implemented
+** \param[in] pCpnt - Pointer to BMP180 component
+** \return FctERR - error code
+**/
+FctERR NONNULL__ BMP180_Set_SeaLevel_Pressure(BMP180_t * pCpnt);
 
 /*!\brief Initialization Sequence for BMP180 peripheral
 ** \weak BMP180 Init sequence may be user implemented if custom initialization sequence needed
@@ -92,10 +99,10 @@ FctERR NONNULL__ BMP180_Set_Oversampling(BMP180_t * pCpnt, const BMP180_oversamp
 
 /*!\brief Get calibration parameters from BMP180 peripheral
 ** \param[in] pCpnt - Pointer to BMP180 component
-** \param[in,out] calib - pointer to calibration structure to read to
+** \param[in,out] pCalib - pointer to calibration structure to read to
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ BMP180_Get_Calibration(BMP180_t * pCpnt, BMP180_calib * calib);
+FctERR NONNULL__ BMP180_Get_Calibration(BMP180_t * pCpnt, BMP180_calib * pCalib);
 
 /*!\brief Gets the compensated pressure level
 ** \param[in] pCpnt - Pointer to BMP180 component

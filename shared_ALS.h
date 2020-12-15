@@ -13,6 +13,8 @@
 
 #include "sarmfsw.h"
 
+#include "I2C_Component.h"
+
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
 

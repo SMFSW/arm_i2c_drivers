@@ -28,8 +28,8 @@ SOFTWARE.
 * strict aliasing types in printf statements
 * Some informations added in components doxygen documentation for compatibility with other devices
 * implementation of multiple peripheral of the same type (for devices that may most likely not being alone in a project)
-	- needed a few refactoring (inlines becoming functions / some typedefs moved)
-	- except: DS_GPMS, PCF8523 & DRV2605L
+  * needed a few refactoring (inlines becoming functions / some typedefs moved)
+  * except: DS_GPMS, PCF8523 & DRV2605L
 * template update (splitted into singleton/multiple device(s))
 * more NONNULL__ checks
 * possibility to set different device base address than default set in header (at project level or in globals.h)
@@ -54,14 +54,15 @@ SOFTWARE.
 * AT42QT1244: Few delay added between each communication for calibration pending in FHM setup procedure
 * AT42QT1244: weak handler & init implementations
 * BMP180: fixed temperature and pressure calculation (no use of unsigned LSHIFT or RSHIFT for signed calculations)
+* BMP180: changes to allow (custom) intialization of sea level pressure for the component (relying on shared_APS module)
 * DRV2605: fixed init following timeout configuration using defaults from structure
 * FM24C: added possibility to customize FM24C_SIZE macro if needed
 * MCP4725: Fixed general call function (transmit command, not receive), and taking I2C_HandleTypeDef pointer as parameter
 * MTCH6102: 1ms delay between each transaction end has been added to ensure proper communication flow
 * MTCH6102: As MTCH6102 seems somewhat erratic on first try when it comes to configure it, I often get default RX/TX number values after config performed with custom projects:
-	- added a while loop to test if parameters are taken into account (it works well the second time if not on the first time)...
-	- I already encountered a lot of issues with this chip, related to timing between transactions, power on, etc... mostly when it comes to configure chip or store to NV storage
-	- As the Datasheet is very light about these subjects (and I got no answers from Microchip), here are some workarounds that seems to be working all the time (so far)
+  * added a while loop to test if parameters are taken into account (it works well the second time if not on the first time)...
+  * I already encountered a lot of issues with this chip, related to timing between transactions, power on, etc... mostly when it comes to configure chip or store to NV storage
+  * As the Datasheet is very light about these subjects (and I got no answers from Microchip), here are some workarounds that seems to be working all the time (so far)
 * MTCH6102: splitted init function into several functions (to also be able to store settings to Non-volatile storage)
 * MTCH6102: period calculation doesn't use floats anymore to save some flash space
 * MTCH6102: simplified MTCH6102_Get_MFG_Results
@@ -80,6 +81,7 @@ SOFTWARE.
 * PCA9685: Refactoring and changes to handle PCA9685 outputs shifting (delay on)
 * PCA9685: Dedicated functions to compute PWM register values (useful to manually fill an array with registers values to send multiple channels at once in one I2C transaction)
 * README.md: updated (and added limitations section)
+* shared_APS: added files for common code regarding ambient pressure sensing
 * shared_ALS: added files for common code regarding ambient light sensing
 * shared_CLS: added files for common code regarding color light sensing (RGB to chromacity CIE1931 xy conversion and CCT calculation)
 * shared_CLS: double precision now single precision
@@ -105,7 +107,7 @@ SOFTWARE.
 * rationalization of includes
 * init sequence returns with error value if something goes wrong during initialization
 * implementation of slave instance (slave_inst) in xxx_proc files (easier debug access to component structure except special cases)
-* I2C_component: instance inst becomes bus_inst (new slave_inst implementation in xxx_proc files to avoid name confusions) 
+* I2C_component: instance inst becomes bus_inst (new slave_inst implementation in xxx_proc files to avoid name confusions)
 * FM24C & MB85RC256V: added macros to create simple inlines to read/write values from addresses (to use in some header)
 * MTCH6102: added standalone function for commands & inlines for configuration, restore to defaults & tests commands
 * MTCH6102: added filtering type configuration function & inlines for configuration

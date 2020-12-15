@@ -110,9 +110,9 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 ## Multiple component type on single project (singleton components excluded)
 
 - If multiple component type are used on the same MCU device:
-	- A for loop can be used passing I2C_$CPNT$ if all components are tied to the same i2C instance (physical bus)
-	- In case same multiple same component type are used on different physical busses, please pass each instance to $CPNT$_Init
-		- note: formerly, I2C_$CPNT$ was used to determine device type enabling (and its instance); as long as enabled with former I2C_$CPNT$, init function can be called using other params
+  - A for loop can be used passing I2C_$CPNT$ if all components are tied to the same i2C instance (physical bus)
+  - In case same multiple same component type are used on different physical busses, please pass each instance to $CPNT$_Init
+    - note: formerly, I2C_$CPNT$ was used to determine device type enabling (and its instance); as long as enabled with former I2C_$CPNT$, init function can be called using other params
 
 ## Following peripherals (?)
 
@@ -135,7 +135,7 @@ You may also:
 
 ## TODO
 
-- Any RTOS compatibility (blocking transactions doesn't match with RTOS task timings) 
+- Any RTOS compatibility (blocking transactions doesn't match with RTOS task timings)
 - (FreeRTOS) compatibility using R/W functions using interrupts with callbacks (when possible)
 
 ## Misc

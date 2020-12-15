@@ -6,8 +6,6 @@
 /****************************************************************/
 #include "shared_ALS.h"
 
-#include "I2C_Component.h"
-
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_APDS9930) || defined(I2C_TSL2591)
 /****************************************************************/
