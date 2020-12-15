@@ -1,6 +1,7 @@
 <map id="BMP180_proc.h" name="BMP180_proc.h">
-<area shape="rect" id="node3" href="$d3/d7d/_b_m_p180_8h.html" title="BMP180 Driver. " alt="" coords="40,80,126,107"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="312,155,446,181"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="162,155,287,181"/>
+<area shape="rect" id="node3" href="$d3/d7d/_b_m_p180_8h.html" title="BMP180 Driver. " alt="" coords="131,80,218,107"/>
+<area shape="rect" id="node9" href="$d8/daa/shared___a_p_s_8h.html" title="Ambient Pressure Sensing shared. " alt="" coords="319,80,430,107"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="413,155,547,181"/>
+<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="212,155,337,181"/>
 <area shape="rect" id="node8" href="$d8/dfb/_b_m_p180__ex_8h.html" title="BMP180 Driver extensions. " alt="" coords="29,155,137,181"/>
 </map>

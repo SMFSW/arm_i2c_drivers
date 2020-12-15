@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['get_5fsealevel_5fpressure',['Get_SeaLevel_Pressure',['../da/d3c/shared___a_p_s_8c.html#a74c279e4d9a609d3f13f66342e7c731f',1,'Get_SeaLevel_Pressure(void):&#160;shared_APS.c'],['../d8/daa/shared___a_p_s_8h.html#a74c279e4d9a609d3f13f66342e7c731f',1,'Get_SeaLevel_Pressure(void):&#160;shared_APS.c']]],
   ['gpms_5fget_5faltitude',['GPMS_Get_Altitude',['../dd/d17/_d_s___g_p_m_s__proc_8c.html#a86d0f8b7d43d9bf0b3e729a50e9d7917',1,'GPMS_Get_Altitude(uint16_t *altitude):&#160;DS_GPMS_proc.c'],['../de/d15/_d_s___g_p_m_s__proc_8h.html#a86d0f8b7d43d9bf0b3e729a50e9d7917',1,'GPMS_Get_Altitude(uint16_t *altitude):&#160;DS_GPMS_proc.c']]],
   ['gpms_5fget_5fdate',['GPMS_Get_Date',['../dd/d17/_d_s___g_p_m_s__proc_8c.html#aaf89d2fe9019cbed8693b5687052f5c3',1,'GPMS_Get_Date(GPMS_date *date):&#160;DS_GPMS_proc.c'],['../de/d15/_d_s___g_p_m_s__proc_8h.html#aaf89d2fe9019cbed8693b5687052f5c3',1,'GPMS_Get_Date(GPMS_date *date):&#160;DS_GPMS_proc.c']]],
   ['gpms_5fget_5fheading',['GPMS_Get_Heading',['../dd/d17/_d_s___g_p_m_s__proc_8c.html#aeee64a7d23d01b417a41fc01635f1ed0',1,'GPMS_Get_Heading(float *heading, const GPMS_north type):&#160;DS_GPMS_proc.c'],['../de/d15/_d_s___g_p_m_s__proc_8h.html#aeee64a7d23d01b417a41fc01635f1ed0',1,'GPMS_Get_Heading(float *heading, const GPMS_north type):&#160;DS_GPMS_proc.c']]],

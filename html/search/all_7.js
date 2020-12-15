@@ -17,6 +17,7 @@ var searchData=
   ['gest_5fdiag',['Gest_diag',['../dd/dd0/struct_m_t_c_h6102__raw__gesture.html#a59d559c694b60a64360e047b1fc1d842',1,'MTCH6102_raw_gesture']]],
   ['gest_5fstate',['Gest_state',['../dd/dd0/struct_m_t_c_h6102__raw__gesture.html#ade6b80e1ab060523306784d2b016e3f3',1,'MTCH6102_raw_gesture']]],
   ['gesture',['Gesture',['../df/d8e/struct_m_t_c_h6102__gesture.html#a3976ee84616324d5ed5b29e084c80e12',1,'MTCH6102_gesture::Gesture()'],['../da/da9/_m_t_c_h6102_8h.html#a1fbd84c418d57e261abb68d66112603da30686131d6ac28367c6c3ee33ba36ae2',1,'Gesture():&#160;MTCH6102.h']]],
+  ['get_5fsealevel_5fpressure',['Get_SeaLevel_Pressure',['../da/d3c/shared___a_p_s_8c.html#a74c279e4d9a609d3f13f66342e7c731f',1,'Get_SeaLevel_Pressure(void):&#160;shared_APS.c'],['../d8/daa/shared___a_p_s_8h.html#a74c279e4d9a609d3f13f66342e7c731f',1,'Get_SeaLevel_Pressure(void):&#160;shared_APS.c']]],
   ['gexmsk_5fd',['GEXMSK_D',['../df/dc7/unionu_a_p_d_s9960___r_e_g_____g_c_o_n_f_i_g1.html#a43f567546a80b27aac1577db546d8652',1,'uAPDS9960_REG__GCONFIG1']]],
   ['gexmsk_5fl',['GEXMSK_L',['../df/dc7/unionu_a_p_d_s9960___r_e_g_____g_c_o_n_f_i_g1.html#a2c41a06402adadde60dcad88c6cdab48',1,'uAPDS9960_REG__GCONFIG1']]],
   ['gexmsk_5fr',['GEXMSK_R',['../df/dc7/unionu_a_p_d_s9960___r_e_g_____g_c_o_n_f_i_g1.html#ac7f4ab1b2b1583273310709da2fcf76d',1,'uAPDS9960_REG__GCONFIG1']]],

@@ -1,7 +1,7 @@
 <map id="APDS9930_proc.h" name="APDS9930_proc.h">
-<area shape="rect" id="node3" href="$d6/dd1/_a_p_d_s9930_8h.html" title="APDS9930 Driver. " alt="" coords="303,80,405,107"/>
-<area shape="rect" id="node9" href="$db/d70/shared___a_l_s_8h.html" title="Ambient Light Sensing shared. " alt="" coords="429,80,540,107"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="5,155,140,181"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="165,155,290,181"/>
-<area shape="rect" id="node8" href="$d5/d4f/_a_p_d_s9930__ex_8h.html" title="APDS9930 Driver extensions. " alt="" coords="365,155,489,181"/>
+<area shape="rect" id="node3" href="$d6/dd1/_a_p_d_s9930_8h.html" title="APDS9930 Driver. " alt="" coords="140,80,243,107"/>
+<area shape="rect" id="node9" href="$db/d70/shared___a_l_s_8h.html" title="Ambient Light Sensing shared. " alt="" coords="336,80,447,107"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="429,155,564,181"/>
+<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="229,155,354,181"/>
+<area shape="rect" id="node8" href="$d5/d4f/_a_p_d_s9930__ex_8h.html" title="APDS9930 Driver extensions. " alt="" coords="29,155,153,181"/>
 </map>

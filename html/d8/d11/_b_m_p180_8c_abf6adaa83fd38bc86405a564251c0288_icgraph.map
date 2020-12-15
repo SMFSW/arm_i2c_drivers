@@ -3,7 +3,7 @@
 <area shape="rect" id="node13" href="$d8/dfb/_b_m_p180__ex_8h.html#acfbb5f5d3f05b5f1358f72892d4ece48" title="Get Raw Pressure. " alt="" coords="378,5,577,32"/>
 <area shape="rect" id="node14" href="$d8/dfb/_b_m_p180__ex_8h.html#ae43f89829b6efc406dd9517ff59e6a86" title="Get BMP180 chip ID. " alt="" coords="165,132,317,159"/>
 <area shape="rect" id="node3" href="$d8/dfb/_b_m_p180__ex_8h.html#a859c9f2ebf5b3a81bc393458418c2c4d" title="Get Raw Temperature. " alt="" coords="365,56,589,83"/>
-<area shape="rect" id="node9" href="$dc/d50/_b_m_p180__proc_8h.html#ad632e93e1740bb9421d43eeea5f120e7" title="Get calibration parameters from BMP180 peripheral. " alt="" coords="388,107,567,133"/>
+<area shape="rect" id="node9" href="$dc/d50/_b_m_p180__proc_8h.html#a2fef8f514b0c7bd2e1cfb3446c809b59" title="Get calibration parameters from BMP180 peripheral. " alt="" coords="388,107,567,133"/>
 <area shape="rect" id="node4" href="$d8/dfb/_b_m_p180__ex_8h.html#af117431545dbbd23c1e495f35002e443" title="Reset BMP180 chip. " alt="" coords="675,5,791,32"/>
 <area shape="rect" id="node5" href="$dc/d50/_b_m_p180__proc_8h.html#a8111dfccecbfb16a41a0069a0755ed0c" title="Gets the compensated pressure level. " alt="" coords="650,56,817,83"/>
 <area shape="rect" id="node8" href="$dc/d50/_b_m_p180__proc_8h.html#a061b4b5aefbd8a7d0c5309a923e914ef" title="Get the temperature. " alt="" coords="637,107,829,133"/>
