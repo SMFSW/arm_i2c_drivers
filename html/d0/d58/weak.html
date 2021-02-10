@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">I2C_Drivers (ARM)
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">SMFSW collection of HAL I2C Drivers for ARM</div>
   </td>
@@ -95,7 +95,7 @@ $(function() {
 <dd>DRV2605L Base address may be changed if user implemented  </dd>
 <dt><a class="anchor" id="_weak000015"></a>Global <a class="el" href="../../d1/da7/_d_r_v2605_l__proc_8h.html#ad908d57c1a4cba53e09981a387145d87">DRV2605L_Init_Sequence</a>  (void)</dt>
 <dd>DRV2605L Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000033"></a>Global <a class="el" href="../../d8/daa/shared___a_p_s_8h.html#a74c279e4d9a609d3f13f66342e7c731f">Get_SeaLevel_Pressure</a>  (void)</dt>
+<dt><a class="anchor" id="_weak000034"></a>Global <a class="el" href="../../d8/daa/shared___a_p_s_8h.html#a74c279e4d9a609d3f13f66342e7c731f">Get_SeaLevel_Pressure</a>  (void)</dt>
 <dd>Get_SeaLevel_Pressure is recommended to be user implemented (average value returned by weak implementation)  </dd>
 <dt><a class="anchor" id="_weak000018"></a>Global <a class="el" href="../../de/d15/_d_s___g_p_m_s__proc_8h.html#aff5733ad2e92d99197589a16dfb9138c">GPMS_handler</a>  (void)</dt>
 <dd>GPMS handler may be user implemented to suit custom needs  </dd>
@@ -121,27 +121,29 @@ $(function() {
 <dd>PCA9624 Init sequence may be user implemented if custom initialization sequence needed  </dd>
 <dt><a class="anchor" id="_weak000027"></a>Global <a class="el" href="../../d5/d22/_p_c_a9685__proc_8h.html#a6e9b5100a9232482cb86ed5b115ac8ad">PCA9685_Init_Sequence</a>  (<a class="el" href="../../d3/d48/struct_p_c_a9685__t.html" title="PCA9685 user interface struct. ">PCA9685_t</a> *pCpnt)</dt>
 <dd>PCA9685 Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000030"></a>Global <a class="el" href="../../d4/d61/_p_c_f8523__proc_8h.html#a0c61d7181df53ea43460c13575563e92">PCF8523_handler</a>  (void)</dt>
+<dt><a class="anchor" id="_weak000028"></a>Global <a class="el" href="../../df/d04/_p_c_a9956__proc_8h.html#a1c55c5f56740dc2447bc6e17724ab99b">PCA9956_Init_Sequence</a>  (<a class="el" href="../../df/d75/struct_p_c_a9956__t.html" title="PCA9956 user interface struct. ">PCA9956_t</a> *pCpnt)</dt>
+<dd>PCA9956 Init sequence may be user implemented if custom initialization sequence needed  </dd>
+<dt><a class="anchor" id="_weak000031"></a>Global <a class="el" href="../../d4/d61/_p_c_f8523__proc_8h.html#a0c61d7181df53ea43460c13575563e92">PCF8523_handler</a>  (void)</dt>
 <dd>PCF8523 handler may be user implemented to suit custom needs  </dd>
-<dt><a class="anchor" id="_weak000028"></a>Global <a class="el" href="../../dd/d42/_p_c_f8523_8h.html#aa61e54475342c7382da01eb61e44da09">PCF8523_Init</a>  (void)</dt>
+<dt><a class="anchor" id="_weak000029"></a>Global <a class="el" href="../../dd/d42/_p_c_f8523_8h.html#aa61e54475342c7382da01eb61e44da09">PCF8523_Init</a>  (void)</dt>
 <dd>PCF8523 Base address may be changed if user implemented  </dd>
-<dt><a class="anchor" id="_weak000029"></a>Global <a class="el" href="../../d4/d61/_p_c_f8523__proc_8h.html#a04365ddacd950492c16035fb554c3b72">PCF8523_Init_Sequence</a>  (void)</dt>
+<dt><a class="anchor" id="_weak000030"></a>Global <a class="el" href="../../d4/d61/_p_c_f8523__proc_8h.html#a04365ddacd950492c16035fb554c3b72">PCF8523_Init_Sequence</a>  (void)</dt>
 <dd>PCF8523 Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000032"></a>Global <a class="el" href="../../dc/d4b/_s11059__proc_8h.html#a05d21f3e722343cbf495d85bf63bc163">S11059_handler</a>  (<a class="el" href="../../d8/df6/struct_s11059__t.html" title="S11059 user interface struct. ">S11059_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000033"></a>Global <a class="el" href="../../dc/d4b/_s11059__proc_8h.html#a05d21f3e722343cbf495d85bf63bc163">S11059_handler</a>  (<a class="el" href="../../d8/df6/struct_s11059__t.html" title="S11059 user interface struct. ">S11059_t</a> *pCpnt)</dt>
 <dd>S11059 handler may be user implemented to suit custom needs  </dd>
-<dt><a class="anchor" id="_weak000031"></a>Global <a class="el" href="../../dc/d4b/_s11059__proc_8h.html#a63d3bbbec413af54e3edd2dae0243d92">S11059_Init_Sequence</a>  (<a class="el" href="../../d8/df6/struct_s11059__t.html" title="S11059 user interface struct. ">S11059_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000032"></a>Global <a class="el" href="../../dc/d4b/_s11059__proc_8h.html#a63d3bbbec413af54e3edd2dae0243d92">S11059_Init_Sequence</a>  (<a class="el" href="../../d8/df6/struct_s11059__t.html" title="S11059 user interface struct. ">S11059_t</a> *pCpnt)</dt>
 <dd>S11059 Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000035"></a>Global <a class="el" href="../../d9/d14/_t_c_s3400__proc_8h.html#a5bdb9cbfd0626af529e9f6c3ff506e29">TCS3400_handler</a>  (<a class="el" href="../../d3/d18/struct_t_c_s3400__t.html" title="TCS3400 user interface struct. ">TCS3400_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000036"></a>Global <a class="el" href="../../d9/d14/_t_c_s3400__proc_8h.html#a5bdb9cbfd0626af529e9f6c3ff506e29">TCS3400_handler</a>  (<a class="el" href="../../d3/d18/struct_t_c_s3400__t.html" title="TCS3400 user interface struct. ">TCS3400_t</a> *pCpnt)</dt>
 <dd>TCS3400 handler may be user implemented to suit custom needs  </dd>
-<dt><a class="anchor" id="_weak000034"></a>Global <a class="el" href="../../d9/d14/_t_c_s3400__proc_8h.html#a8fb5d620337b38aafea461ffa303894d">TCS3400_Init_Sequence</a>  (<a class="el" href="../../d3/d18/struct_t_c_s3400__t.html" title="TCS3400 user interface struct. ">TCS3400_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000035"></a>Global <a class="el" href="../../d9/d14/_t_c_s3400__proc_8h.html#a8fb5d620337b38aafea461ffa303894d">TCS3400_Init_Sequence</a>  (<a class="el" href="../../d3/d18/struct_t_c_s3400__t.html" title="TCS3400 user interface struct. ">TCS3400_t</a> *pCpnt)</dt>
 <dd>TCS3400 Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000037"></a>Global <a class="el" href="../../d6/d96/_t_c_s3472__proc_8h.html#a99572a1675914a37b3e51592a929cee1">TCS3472_handler</a>  (<a class="el" href="../../d8/d5b/struct_t_c_s3472__t.html" title="TCS3472 user interface struct. ">TCS3472_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000038"></a>Global <a class="el" href="../../d6/d96/_t_c_s3472__proc_8h.html#a99572a1675914a37b3e51592a929cee1">TCS3472_handler</a>  (<a class="el" href="../../d8/d5b/struct_t_c_s3472__t.html" title="TCS3472 user interface struct. ">TCS3472_t</a> *pCpnt)</dt>
 <dd>TCS3472 handler may be user implemented to suit custom needs  </dd>
-<dt><a class="anchor" id="_weak000036"></a>Global <a class="el" href="../../d6/d96/_t_c_s3472__proc_8h.html#aa3932aaece6a7b7d1a711dfa32e3765d">TCS3472_Init_Sequence</a>  (<a class="el" href="../../d8/d5b/struct_t_c_s3472__t.html" title="TCS3472 user interface struct. ">TCS3472_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000037"></a>Global <a class="el" href="../../d6/d96/_t_c_s3472__proc_8h.html#aa3932aaece6a7b7d1a711dfa32e3765d">TCS3472_Init_Sequence</a>  (<a class="el" href="../../d8/d5b/struct_t_c_s3472__t.html" title="TCS3472 user interface struct. ">TCS3472_t</a> *pCpnt)</dt>
 <dd>TCS3472 Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000039"></a>Global <a class="el" href="../../d7/d6e/_t_s_l2591__proc_8h.html#a603cc00f013d5d6c6696bfec7ed87b44">TSL2591_handler</a>  (<a class="el" href="../../d7/d5e/struct_t_s_l2591__t.html" title="TSL2591 user interface struct. ">TSL2591_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000040"></a>Global <a class="el" href="../../d7/d6e/_t_s_l2591__proc_8h.html#a603cc00f013d5d6c6696bfec7ed87b44">TSL2591_handler</a>  (<a class="el" href="../../d7/d5e/struct_t_s_l2591__t.html" title="TSL2591 user interface struct. ">TSL2591_t</a> *pCpnt)</dt>
 <dd>TSL2591 handler may be user implemented to suit custom needs  </dd>
-<dt><a class="anchor" id="_weak000038"></a>Global <a class="el" href="../../d7/d6e/_t_s_l2591__proc_8h.html#a2041117e46b601378a1df06a4957cd4f">TSL2591_Init_Sequence</a>  (<a class="el" href="../../d7/d5e/struct_t_s_l2591__t.html" title="TSL2591 user interface struct. ">TSL2591_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000039"></a>Global <a class="el" href="../../d7/d6e/_t_s_l2591__proc_8h.html#a2041117e46b601378a1df06a4957cd4f">TSL2591_Init_Sequence</a>  (<a class="el" href="../../d7/d5e/struct_t_s_l2591__t.html" title="TSL2591 user interface struct. ">TSL2591_t</a> *pCpnt)</dt>
 <dd>TSL2591 Init sequence may be user implemented if custom initialization sequence needed </dd>
 </dl>
 </div></div><!-- contents -->

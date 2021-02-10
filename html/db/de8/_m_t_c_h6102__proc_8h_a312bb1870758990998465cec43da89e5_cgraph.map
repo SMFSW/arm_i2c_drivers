@@ -1,10 +1,10 @@
 <map id="MTCH6102_handler_all" name="MTCH6102_handler_all">
 <area shape="rect" id="node2" href="$db/de8/_m_t_c_h6102__proc_8h.html#a342679a8eaa19001a2d661ca14c50139" title="Handler for MTCH6102 peripheral. " alt="" coords="220,123,365,149"/>
-<area shape="rect" id="node3" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a6e4dca81f18906253bc5300c3a485b8e" title="Get MTCH6102 Raw gesture datas. " alt="" coords="430,5,587,32"/>
+<area shape="rect" id="node3" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a6e4dca81f18906253bc5300c3a485b8e" title="Get MTCH6102 gesture data. " alt="" coords="430,5,587,32"/>
 <area shape="rect" id="node6" href="$d2/d60/_m_t_c_h6102__proc_8c.html#a6c8c05288ed1e532bb558523a8a6cbf1" title="Decode raw MTCH6102 datas to touch datas. " alt="" coords="415,57,602,98"/>
 <area shape="rect" id="node7" href="$d2/d60/_m_t_c_h6102__proc_8c.html#aa096140ed9f47e75ade274efb0f28f1d" title="Get gesture string from gesture data. " alt="" coords="413,123,604,149"/>
 <area shape="rect" id="node8" href="$d2/d60/_m_t_c_h6102__proc_8c.html#ac5fc1b84e793c77cff155d5f6de42db9" title="Get diagnostic string from diagnostic data. " alt="" coords="425,173,593,200"/>
-<area shape="rect" id="node9" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a7c5ed64610073758050d2708ddf217d9" title="Get MTCH6102 Raw sensor values datas. " alt="" coords="433,224,585,251"/>
+<area shape="rect" id="node9" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a7c5ed64610073758050d2708ddf217d9" title="Get MTCH6102 Raw sensor values data. " alt="" coords="433,224,585,251"/>
 <area shape="rect" id="node4" href="$da/d78/_m_t_c_h6102_8c.html#a2def4bf75a8f4418b4b79478b849d24d" title="I2C Read function for MTCH6102. " alt="" coords="652,115,780,141"/>
 <area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="828,115,945,141"/>
 </map>

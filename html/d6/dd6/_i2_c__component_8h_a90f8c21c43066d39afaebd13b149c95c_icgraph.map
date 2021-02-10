@@ -14,11 +14,12 @@
 <area shape="rect" id="node24" href="$d3/df9/_p_c_a9532_8h.html#a53117549a86481f7203371b537bc7084" title="Initialization for PCA9532 peripheral. " alt="" coords="185,613,292,640"/>
 <area shape="rect" id="node26" href="$d4/dc2/_p_c_a9624_8h.html#a533ea8e2a7967b9ae7588d9f028bc839" title="Initialization for PCA9624 peripheral. " alt="" coords="185,664,292,691"/>
 <area shape="rect" id="node28" href="$d4/deb/_p_c_a9685_8h.html#a7fa0e558a2f028f6261ca45db11d623a" title="Initialization for PCA9685 peripheral. " alt="" coords="185,715,292,741"/>
-<area shape="rect" id="node30" href="$dd/d42/_p_c_f8523_8h.html#aa61e54475342c7382da01eb61e44da09" title="Initialization for PCF8523 peripheral peripheral. " alt="" coords="187,765,291,792"/>
-<area shape="rect" id="node31" href="$d1/d8f/_s11059_8h.html#aaaa62f952fb19007b1c6592422c88221" title="Initialization for S11059 peripheral. " alt="" coords="190,816,287,843"/>
-<area shape="rect" id="node33" href="$d9/d51/_t_c_s3400_8h.html#ab9ee131767fd0818271fd8d639c57b85" title="Initialization for TCS3400 peripheral. " alt="" coords="187,867,291,893"/>
-<area shape="rect" id="node35" href="$d8/ddc/_t_c_s3472_8h.html#a84f70b0cac4b182e04ee6a95ab466d3b" title="Initialization for TCS3472 peripheral. " alt="" coords="187,917,291,944"/>
-<area shape="rect" id="node37" href="$da/d96/_t_s_l2591_8h.html#a3e5d6c27f6e4ba0ad68acc6b29a18d27" title="Initialization for TSL2591 peripheral. " alt="" coords="187,968,290,995"/>
+<area shape="rect" id="node30" href="$d4/d1d/_p_c_a9956_8h.html#a9ee46a2b824b7043c27b4178623d49b6" title="Initialization for PCA9956 peripheral. " alt="" coords="185,765,292,792"/>
+<area shape="rect" id="node32" href="$dd/d42/_p_c_f8523_8h.html#aa61e54475342c7382da01eb61e44da09" title="Initialization for PCF8523 peripheral peripheral. " alt="" coords="187,816,291,843"/>
+<area shape="rect" id="node33" href="$d1/d8f/_s11059_8h.html#aaaa62f952fb19007b1c6592422c88221" title="Initialization for S11059 peripheral. " alt="" coords="190,867,287,893"/>
+<area shape="rect" id="node35" href="$d9/d51/_t_c_s3400_8h.html#ab9ee131767fd0818271fd8d639c57b85" title="Initialization for TCS3400 peripheral. " alt="" coords="187,917,291,944"/>
+<area shape="rect" id="node37" href="$d8/ddc/_t_c_s3472_8h.html#a84f70b0cac4b182e04ee6a95ab466d3b" title="Initialization for TCS3472 peripheral. " alt="" coords="187,968,291,995"/>
+<area shape="rect" id="node39" href="$da/d96/_t_s_l2591_8h.html#a3e5d6c27f6e4ba0ad68acc6b29a18d27" title="Initialization for TSL2591 peripheral. " alt="" coords="187,1019,290,1045"/>
 <area shape="rect" id="node3" href="$df/d61/_a_d_s1115_8h.html#aca8481f4d0bcf062cde74d6947a0809d" title="Initialization for ADS1115 peripheral. " alt="" coords="365,5,520,32"/>
 <area shape="rect" id="node5" href="$d8/d4e/_a_m_g88_8h.html#ab22f18773c85421d2b743e415ed14fa7" title="Initialization for AMG88 peripheral. " alt="" coords="373,56,513,83"/>
 <area shape="rect" id="node7" href="$d6/dd1/_a_p_d_s9930_8h.html#a3db18cf0df8a0184fb7ac2a8c2429dab" title="Initialization for APDS9930 peripheral. " alt="" coords="361,107,524,133"/>
@@ -32,8 +33,9 @@
 <area shape="rect" id="node25" href="$d3/df9/_p_c_a9532_8h.html#ae3bc95cfa1ac91a201ac0543ced4bb03" title="Initialization for PCA9532 peripheral. " alt="" coords="367,613,519,640"/>
 <area shape="rect" id="node27" href="$d4/dc2/_p_c_a9624_8h.html#a9d2bfb0bec12fff1be494de387f015a2" title="Initialization for PCA9624 peripheral. " alt="" coords="367,664,519,691"/>
 <area shape="rect" id="node29" href="$d4/deb/_p_c_a9685_8h.html#a5446c995c445067011d256bc587b164e" title="Initialization for PCA9685 peripheral. " alt="" coords="367,715,519,741"/>
-<area shape="rect" id="node32" href="$d1/d8f/_s11059_8h.html#a54b2b645d23ab3654253ec5165873303" title="Initialization for S11059 peripheral. " alt="" coords="371,816,514,843"/>
-<area shape="rect" id="node34" href="$d9/d51/_t_c_s3400_8h.html#ae1122436ee0aa2cf81cec91006589ad6" title="Initialization for TCS3400 peripheral. " alt="" coords="367,867,518,893"/>
-<area shape="rect" id="node36" href="$d8/ddc/_t_c_s3472_8h.html#a3a35824646bde380a0d9bb1be68e8002" title="Initialization for TCS3472 peripheral. " alt="" coords="367,917,518,944"/>
-<area shape="rect" id="node38" href="$da/d96/_t_s_l2591_8h.html#a340d5559e9623f12628e013d814ac718" title="Initialization for TSL2591 peripheral. " alt="" coords="368,968,517,995"/>
+<area shape="rect" id="node31" href="$d4/d1d/_p_c_a9956_8h.html#a0f59108faf0e099c5dcf21355152c2e1" title="Initialization for PCA9956 peripheral. " alt="" coords="367,765,519,792"/>
+<area shape="rect" id="node34" href="$d1/d8f/_s11059_8h.html#a54b2b645d23ab3654253ec5165873303" title="Initialization for S11059 peripheral. " alt="" coords="371,867,514,893"/>
+<area shape="rect" id="node36" href="$d9/d51/_t_c_s3400_8h.html#ae1122436ee0aa2cf81cec91006589ad6" title="Initialization for TCS3400 peripheral. " alt="" coords="367,917,518,944"/>
+<area shape="rect" id="node38" href="$d8/ddc/_t_c_s3472_8h.html#a3a35824646bde380a0d9bb1be68e8002" title="Initialization for TCS3472 peripheral. " alt="" coords="367,968,518,995"/>
+<area shape="rect" id="node40" href="$da/d96/_t_s_l2591_8h.html#a340d5559e9623f12628e013d814ac718" title="Initialization for TSL2591 peripheral. " alt="" coords="368,1019,517,1045"/>
 </map>

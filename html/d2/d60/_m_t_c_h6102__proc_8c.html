@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">I2C_Drivers (ARM)
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">SMFSW collection of HAL I2C Drivers for ARM</div>
   </td>
@@ -125,7 +125,7 @@ Variables</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>MTCH6102 Driver procedures. </p>
 <dl class="section author"><dt>Author</dt><dd>SMFSW </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2020, SMFSW</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2021, SMFSW</dd></dl>
 <p>MTCH6102: Low-Power Projected Capacitive Touch Controller </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a15eac00544e71163632f5a2625a3b888"></a>
@@ -207,6 +207,8 @@ Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">pCpnt</td><td>- Pointer to MTCH6102 component </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">store_to_nv</td><td>- Store to non-volatile memory after configuration </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">active_per</td><td>- Active period value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">idle_per</td><td>- Idle period value </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">filter</td><td>- Filter type </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">filter_str</td><td>- Filter strength </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">base_filter</td><td>- Base filter type </td></tr>
@@ -484,11 +486,11 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d60/_m_t_c_h6102__proc_8c_a342679a8eaa19001a2d661ca14c50139_cgraph.png" border="0" usemap="#d2/d60/_m_t_c_h6102__proc_8c_a342679a8eaa19001a2d661ca14c50139_cgraph" alt=""/></div>
 <map name="d2/d60/_m_t_c_h6102__proc_8c_a342679a8eaa19001a2d661ca14c50139_cgraph" id="d2/d60/_m_t_c_h6102__proc_8c_a342679a8eaa19001a2d661ca14c50139_cgraph">
-<area shape="rect" id="node2" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a6e4dca81f18906253bc5300c3a485b8e" title="Get MTCH6102 Raw gesture datas. " alt="" coords="215,5,373,32"/>
+<area shape="rect" id="node2" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a6e4dca81f18906253bc5300c3a485b8e" title="Get MTCH6102 gesture data. " alt="" coords="215,5,373,32"/>
 <area shape="rect" id="node5" href="../../d2/d60/_m_t_c_h6102__proc_8c.html#a6c8c05288ed1e532bb558523a8a6cbf1" title="Decode raw MTCH6102 datas to touch datas. " alt="" coords="201,57,387,98"/>
 <area shape="rect" id="node6" href="../../d2/d60/_m_t_c_h6102__proc_8c.html#aa096140ed9f47e75ade274efb0f28f1d" title="Get gesture string from gesture data. " alt="" coords="199,123,389,149"/>
 <area shape="rect" id="node7" href="../../d2/d60/_m_t_c_h6102__proc_8c.html#ac5fc1b84e793c77cff155d5f6de42db9" title="Get diagnostic string from diagnostic data. " alt="" coords="210,173,378,200"/>
-<area shape="rect" id="node8" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a7c5ed64610073758050d2708ddf217d9" title="Get MTCH6102 Raw sensor values datas. " alt="" coords="218,224,370,251"/>
+<area shape="rect" id="node8" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a7c5ed64610073758050d2708ddf217d9" title="Get MTCH6102 Raw sensor values data. " alt="" coords="218,224,370,251"/>
 <area shape="rect" id="node3" href="../../da/d78/_m_t_c_h6102_8c.html#a2def4bf75a8f4418b4b79478b849d24d" title="I2C Read function for MTCH6102. " alt="" coords="437,115,565,141"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="613,115,731,141"/>
 </map>
@@ -553,11 +555,11 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node9" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a4c1612bb1afca9818d54ff05c5fa4191" title="Execute MTCH6102 command. " alt="" coords="1043,545,1207,571"/>
 <area shape="rect" id="node8" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1444,531,1561,558"/>
 <area shape="rect" id="node10" href="../../da/d78/_m_t_c_h6102_8c.html#a7d23a0da90fbc047e384e603c436be75" title="I2C Write function for MTCH6102. " alt="" coords="1268,658,1396,685"/>
-<area shape="rect" id="node17" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a6e4dca81f18906253bc5300c3a485b8e" title="Get MTCH6102 Raw gesture datas. " alt="" coords="1046,173,1203,199"/>
+<area shape="rect" id="node17" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a6e4dca81f18906253bc5300c3a485b8e" title="Get MTCH6102 gesture data. " alt="" coords="1046,173,1203,199"/>
 <area shape="rect" id="node18" href="../../d2/d60/_m_t_c_h6102__proc_8c.html#a6c8c05288ed1e532bb558523a8a6cbf1" title="Decode raw MTCH6102 datas to touch datas. " alt="" coords="1031,376,1218,417"/>
 <area shape="rect" id="node19" href="../../d2/d60/_m_t_c_h6102__proc_8c.html#aa096140ed9f47e75ade274efb0f28f1d" title="Get gesture string from gesture data. " alt="" coords="1029,274,1220,301"/>
 <area shape="rect" id="node20" href="../../d2/d60/_m_t_c_h6102__proc_8c.html#ac5fc1b84e793c77cff155d5f6de42db9" title="Get diagnostic string from diagnostic data. " alt="" coords="1041,325,1209,351"/>
-<area shape="rect" id="node21" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a7c5ed64610073758050d2708ddf217d9" title="Get MTCH6102 Raw sensor values datas. " alt="" coords="1049,223,1201,250"/>
+<area shape="rect" id="node21" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a7c5ed64610073758050d2708ddf217d9" title="Get MTCH6102 Raw sensor values data. " alt="" coords="1049,223,1201,250"/>
 <area shape="rect" id="node23" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a0f9ba08c0ae08f4871e96da7288dc1b5" title="Configure MTCH6102controller (after parameters have been changed) " alt="" coords="780,539,963,580"/>
 <area shape="rect" id="node24" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#afa22740ded5a6bb154614a7ea3ee4d5c" title="Write MTCH6102 parameters to non volatile storage. " alt="" coords="779,656,964,697"/>
 </map>

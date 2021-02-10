@@ -1,0 +1,11 @@
+<map id="PCA9956_Read" name="PCA9956_Read">
+<area shape="rect" id="node2" href="$dd/ddf/_p_c_a9956__ex_8h.html#a1c293d3b30faed552452a938635e5025" title="Set auto increment option for PCA9956 registers. " alt="" coords="172,107,391,133"/>
+<area shape="rect" id="node7" href="$dd/ddf/_p_c_a9956__ex_8h.html#a7f21a33493c7aa5605cedcd1b35b795d" title="Set latch type for PCA9956 peripheral. " alt="" coords="206,5,357,32"/>
+<area shape="rect" id="node8" href="$dd/ddf/_p_c_a9956__ex_8h.html#a817cee4219dfebd0469108badaa73294" title="Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8..." alt="" coords="213,56,350,83"/>
+<area shape="rect" id="node9" href="$dd/ddf/_p_c_a9956__ex_8h.html#a72082f17a461d30c7cc8c0d0fb95e5e4" title="Reads I2C register from PCA9956. " alt="" coords="197,157,366,184"/>
+<area shape="rect" id="node10" href="$dd/ddf/_p_c_a9956__ex_8h.html#a617e11246f1d855ab91ce29e6007258d" title="Reads I2C LEDs error flags. " alt="" coords="444,183,611,209"/>
+<area shape="rect" id="node3" href="$dd/ddf/_p_c_a9956__ex_8h.html#a1f23873e665562e66821beeb83bc510c" title="Set MODE2 register. " alt="" coords="446,56,609,83"/>
+<area shape="rect" id="node4" href="$df/d04/_p_c_a9956__proc_8h.html#a1c55c5f56740dc2447bc6e17724ab99b" title="Initialization Sequence for PCA9956 peripheral. " alt="" coords="439,107,616,133"/>
+<area shape="rect" id="node5" href="$d4/d1d/_p_c_a9956_8h.html#a9ee46a2b824b7043c27b4178623d49b6" title="Initialization for PCA9956 peripheral. " alt="" coords="664,107,771,133"/>
+<area shape="rect" id="node6" href="$d4/d1d/_p_c_a9956_8h.html#a0f59108faf0e099c5dcf21355152c2e1" title="Initialization for PCA9956 peripheral. " alt="" coords="819,107,971,133"/>
+</map>

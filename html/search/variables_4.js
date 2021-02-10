@@ -24,7 +24,7 @@ var searchData=
   ['diag',['Diag',['../df/d8e/struct_m_t_c_h6102__gesture.html#a439e364b6e784162954e5694eb1f4704',1,'MTCH6102_gesture']]],
   ['diag_5fresult',['DIAG_RESULT',['../db/dbf/unionu_d_r_v___r_e_g_____s_t_a_t_u_s.html#a512859650a25b1fa68f908f9fe91fe56',1,'uDRV_REG__STATUS']]],
   ['direction',['Direction',['../d7/dca/struct_g_p_m_s__coord.html#a78f1d37a1a14f0df9966d0e9c0a2f2c0',1,'GPMS_coord']]],
-  ['dmblnk',['DMBLNK',['../da/d7f/unionu_p_c_a9624___r_e_g_____m_o_d_e2.html#a9b185dde746532e8f7efe5215f1d6d4e',1,'uPCA9624_REG__MODE2']]],
+  ['dmblnk',['DMBLNK',['../da/d7f/unionu_p_c_a9624___r_e_g_____m_o_d_e2.html#a9b185dde746532e8f7efe5215f1d6d4e',1,'uPCA9624_REG__MODE2::DMBLNK()'],['../d3/dfa/unionu_p_c_a9956___r_e_g_____m_o_d_e2.html#a9c6bc40b1a4dff78ff8f8743e557fbc3',1,'uPCA9956_REG__MODE2::DMBLNK()']]],
   ['dom_5ftens',['DOM_Tens',['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#a88ebf67d2bc2b4fc04c97f07ae1665ff',1,'uGPMS_RD_REG_MAP']]],
   ['dom_5funits',['DOM_Units',['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#ab8a31099e7e05bc4992c1de0123af424',1,'uGPMS_RD_REG_MAP']]],
   ['dr',['DR',['../d1/d47/unionu_a_d_s1115___r_e_g_____c_f_g.html#aca1fcfb5e20c500c9778ecb1beb96911',1,'uADS1115_REG__CFG']]],
@@ -34,5 +34,5 @@ var searchData=
   ['duty0',['Duty0',['../dd/d3d/struct_p_c_a9532__t.html#ab9ef2276e2d73fe3c9d4ba13b59d80e6',1,'PCA9532_t']]],
   ['duty1',['Duty1',['../dd/d3d/struct_p_c_a9532__t.html#a6a254bd8b420b3b5971f60428be41b3f',1,'PCA9532_t']]],
   ['dwell',['DWELL',['../d5/de7/unionu_a_t42_q_t___r_e_g_____s_e_t_u_p__244.html#a865c278c28242cb3137dec22791246a0',1,'uAT42QT_REG__SETUP_244']]],
-  ['dword',['DWord',['../d0/d44/unionu_p_c_a9532___r_e_g_____l_s.html#ab0198ea0c6b7a235d5fef31f6aa337f1',1,'uPCA9532_REG__LS']]]
+  ['dword',['DWord',['../d0/d44/unionu_p_c_a9532___r_e_g_____l_s.html#ab0198ea0c6b7a235d5fef31f6aa337f1',1,'uPCA9532_REG__LS::DWord()'],['../df/dac/unionu_p_c_a9956___r_e_g_____l_e_d_o_u_t.html#aa6363f8d9b32d095094465d224e41088',1,'uPCA9956_REG__LEDOUT::DWord()'],['../d0/db8/unionu_p_c_a9956___r_e_g_____e_f_l_a_g.html#a79122491429c5eb823152b88739e4e4c',1,'uPCA9956_REG__EFLAG::DWord()']]]
 ];

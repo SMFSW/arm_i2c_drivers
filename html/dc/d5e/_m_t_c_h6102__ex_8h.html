@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">I2C_Drivers (ARM)
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">SMFSW collection of HAL I2C Drivers for ARM</div>
   </td>
@@ -216,16 +216,16 @@ Functions</h2></td></tr>
 <tr class="memdesc:a2571540733f6f9648211caafe8149500"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MTCH6102 baseline filter thresholds.  <a href="#a2571540733f6f9648211caafe8149500">More...</a><br /></td></tr>
 <tr class="separator:a2571540733f6f9648211caafe8149500"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c5ed64610073758050d2708ddf217d9"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a7c5ed64610073758050d2708ddf217d9">MTCH6102_Get_Raw</a> (const <a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html">MTCH6102_t</a> *const pCpnt, <a class="el" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#acacd9b65773dc80cf3ae02892cd7fa82">MTCH6102_raw_sense</a> *const raw)</td></tr>
-<tr class="memdesc:a7c5ed64610073758050d2708ddf217d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get MTCH6102 Raw sensor values datas.  <a href="#a7c5ed64610073758050d2708ddf217d9">More...</a><br /></td></tr>
+<tr class="memdesc:a7c5ed64610073758050d2708ddf217d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get MTCH6102 Raw sensor values data.  <a href="#a7c5ed64610073758050d2708ddf217d9">More...</a><br /></td></tr>
 <tr class="separator:a7c5ed64610073758050d2708ddf217d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e4dca81f18906253bc5300c3a485b8e"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a6e4dca81f18906253bc5300c3a485b8e">MTCH6102_Get_Gest</a> (const <a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html">MTCH6102_t</a> *const pCpnt, <a class="el" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a3f5b74ff31867fa3cf725fa6b2ea433f">MTCH6102_raw_gest</a> *const gest)</td></tr>
-<tr class="memdesc:a6e4dca81f18906253bc5300c3a485b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get MTCH6102 Raw gesture datas.  <a href="#a6e4dca81f18906253bc5300c3a485b8e">More...</a><br /></td></tr>
+<tr class="memdesc:a6e4dca81f18906253bc5300c3a485b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get MTCH6102 gesture data.  <a href="#a6e4dca81f18906253bc5300c3a485b8e">More...</a><br /></td></tr>
 <tr class="separator:a6e4dca81f18906253bc5300c3a485b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>MTCH6102 Driver extensions. </p>
 <dl class="section author"><dt>Author</dt><dd>SMFSW </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2020, SMFSW</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2021, SMFSW</dd></dl>
 <p>MTCH6102: Low-Power Projected Capacitive Touch Controller </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a83a7533d07ed03cf33ad619187072fae"></a>
@@ -664,11 +664,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Get MTCH6102 Raw gesture datas. </p>
+<p>Get MTCH6102 gesture data. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MTCH6102 component </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">raw</td><td>- Pointer to raw datas result </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gest</td><td>- Pointer to gesture data result </td></tr>
   </table>
   </dd>
 </dl>
@@ -852,11 +852,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Get MTCH6102 Raw sensor values datas. </p>
+<p>Get MTCH6102 Raw sensor values data. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MTCH6102 component </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">raw</td><td>- Pointer to raw datas result </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">raw</td><td>- Pointer to raw data result </td></tr>
   </table>
   </dd>
 </dl>
@@ -1086,7 +1086,7 @@ Here is the call graph for this function:</div>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MTCH6102 component </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">pos</td><td>- Positive filter value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pos</td><td>- Negative filter value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">neg</td><td>- Negative filter value </td></tr>
   </table>
   </dd>
 </dl>

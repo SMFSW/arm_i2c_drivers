@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">I2C_Drivers (ARM)
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">SMFSW collection of HAL I2C Drivers for ARM</div>
   </td>
@@ -76,30 +76,30 @@ $(function() {
 Data Fields</h2></td></tr>
 <tr class="memitem:aac1e7772cf442f699b35933449c5efd0"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d3b/unionu_p_c_f8523___r_e_g_____c_l_k_o_u_t___c_t_r_l.html#aac1e7772cf442f699b35933449c5efd0">Byte</a></td></tr>
 <tr class="separator:aac1e7772cf442f699b35933449c5efd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab023ae36a0998f41c25273766db6978e"><td class="memItemLeft" >struct {</td></tr>
-<tr class="memitem:a8ee8accd5681a3e0ea2b809cdae1936d"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../dd/d3b/unionu_p_c_f8523___r_e_g_____c_l_k_o_u_t___c_t_r_l.html#aed2218c473e89d59aaa07e634e222406">TBC</a>:1</td></tr>
-<tr class="memdesc:a8ee8accd5681a3e0ea2b809cdae1936d"><td class="mdescLeft">&#160;</td><td class="mdescRight">timer B is enabled (if CTBIE (register Control_2) is set logic 1, the interrupt is activated when the countdown timed out)  <a href="#a8ee8accd5681a3e0ea2b809cdae1936d">More...</a><br /></td></tr>
-<tr class="separator:a8ee8accd5681a3e0ea2b809cdae1936d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac04d515380d844aa1d926224649c7bf5"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../dd/d3b/unionu_p_c_f8523___r_e_g_____c_l_k_o_u_t___c_t_r_l.html#a4430ae686950773bd071c704909ce63e">TAC</a>:2</td></tr>
-<tr class="memdesc:ac04d515380d844aa1d926224649c7bf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">b00: disabled, b01: timer A countdown timer, b10: timer A watchdog timer  <a href="#ac04d515380d844aa1d926224649c7bf5">More...</a><br /></td></tr>
-<tr class="separator:ac04d515380d844aa1d926224649c7bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a508e3b8b064424f83c794d8f6daec965"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../dd/d3b/unionu_p_c_f8523___r_e_g_____c_l_k_o_u_t___c_t_r_l.html#a71643aa4aace21f18d761db63d814d67">COF</a>:3</td></tr>
-<tr class="memdesc:a508e3b8b064424f83c794d8f6daec965"><td class="mdescLeft">&#160;</td><td class="mdescRight">CLKOUT frequency selection.  <a href="#a508e3b8b064424f83c794d8f6daec965">More...</a><br /></td></tr>
-<tr class="separator:a508e3b8b064424f83c794d8f6daec965"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24c57ea3b62d3fd4315589ea6dc15dc5"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../dd/d3b/unionu_p_c_f8523___r_e_g_____c_l_k_o_u_t___c_t_r_l.html#aec227abd49ccb2c4a53820aa8ab2ffb4">TBM</a>:1</td></tr>
-<tr class="memdesc:a24c57ea3b62d3fd4315589ea6dc15dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">0: permanent active interrupt, 1: pulsed interrupt -&gt; for timer B  <a href="#a24c57ea3b62d3fd4315589ea6dc15dc5">More...</a><br /></td></tr>
-<tr class="separator:a24c57ea3b62d3fd4315589ea6dc15dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43ae9bd5c07e05ff69049adc40c5f21c"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../dd/d3b/unionu_p_c_f8523___r_e_g_____c_l_k_o_u_t___c_t_r_l.html#a7f6b87b3d44c18fb7f8c28ae5ba63d1e">TAM</a>:1</td></tr>
-<tr class="memdesc:a43ae9bd5c07e05ff69049adc40c5f21c"><td class="mdescLeft">&#160;</td><td class="mdescRight">0: permanent active interrupt, 1: pulsed interrupt -&gt; for timer A and for the second interrupt timer  <a href="#a43ae9bd5c07e05ff69049adc40c5f21c">More...</a><br /></td></tr>
-<tr class="separator:a43ae9bd5c07e05ff69049adc40c5f21c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab023ae36a0998f41c25273766db6978e"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d3b/unionu_p_c_f8523___r_e_g_____c_l_k_o_u_t___c_t_r_l.html#ab023ae36a0998f41c25273766db6978e">Bits</a></td></tr>
-<tr class="separator:ab023ae36a0998f41c25273766db6978e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdcde86028f64d8ac6c34d423fca2304"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:a3d9fe3d739f17ff80bd0630d5a78c859"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../dd/d3b/unionu_p_c_f8523___r_e_g_____c_l_k_o_u_t___c_t_r_l.html#aed2218c473e89d59aaa07e634e222406">TBC</a>:1</td></tr>
+<tr class="memdesc:a3d9fe3d739f17ff80bd0630d5a78c859"><td class="mdescLeft">&#160;</td><td class="mdescRight">timer B is enabled (if CTBIE (register Control_2) is set logic 1, the interrupt is activated when the countdown timed out)  <a href="#a3d9fe3d739f17ff80bd0630d5a78c859">More...</a><br /></td></tr>
+<tr class="separator:a3d9fe3d739f17ff80bd0630d5a78c859"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa1921697d886e9eec44c8eb4c5ccad4"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../dd/d3b/unionu_p_c_f8523___r_e_g_____c_l_k_o_u_t___c_t_r_l.html#a4430ae686950773bd071c704909ce63e">TAC</a>:2</td></tr>
+<tr class="memdesc:aaa1921697d886e9eec44c8eb4c5ccad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">b00: disabled, b01: timer A countdown timer, b10: timer A watchdog timer  <a href="#aaa1921697d886e9eec44c8eb4c5ccad4">More...</a><br /></td></tr>
+<tr class="separator:aaa1921697d886e9eec44c8eb4c5ccad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedfeeab21eac127573d49e24e25180b2"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../dd/d3b/unionu_p_c_f8523___r_e_g_____c_l_k_o_u_t___c_t_r_l.html#a71643aa4aace21f18d761db63d814d67">COF</a>:3</td></tr>
+<tr class="memdesc:aedfeeab21eac127573d49e24e25180b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">CLKOUT frequency selection.  <a href="#aedfeeab21eac127573d49e24e25180b2">More...</a><br /></td></tr>
+<tr class="separator:aedfeeab21eac127573d49e24e25180b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8668e07c9968c099326a51f959fc5a5c"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../dd/d3b/unionu_p_c_f8523___r_e_g_____c_l_k_o_u_t___c_t_r_l.html#aec227abd49ccb2c4a53820aa8ab2ffb4">TBM</a>:1</td></tr>
+<tr class="memdesc:a8668e07c9968c099326a51f959fc5a5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">0: permanent active interrupt, 1: pulsed interrupt -&gt; for timer B  <a href="#a8668e07c9968c099326a51f959fc5a5c">More...</a><br /></td></tr>
+<tr class="separator:a8668e07c9968c099326a51f959fc5a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f20f63408b15eb42cd483584e6129c2"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../dd/d3b/unionu_p_c_f8523___r_e_g_____c_l_k_o_u_t___c_t_r_l.html#a7f6b87b3d44c18fb7f8c28ae5ba63d1e">TAM</a>:1</td></tr>
+<tr class="memdesc:a2f20f63408b15eb42cd483584e6129c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">0: permanent active interrupt, 1: pulsed interrupt -&gt; for timer A and for the second interrupt timer  <a href="#a2f20f63408b15eb42cd483584e6129c2">More...</a><br /></td></tr>
+<tr class="separator:a2f20f63408b15eb42cd483584e6129c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdcde86028f64d8ac6c34d423fca2304"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d3b/unionu_p_c_f8523___r_e_g_____c_l_k_o_u_t___c_t_r_l.html#abdcde86028f64d8ac6c34d423fca2304">Bits</a></td></tr>
+<tr class="separator:abdcde86028f64d8ac6c34d423fca2304"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Union for Tmr_CLKOUT_ctrl for PCF8523 peripheral peripheral. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="ab023ae36a0998f41c25273766db6978e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab023ae36a0998f41c25273766db6978e">&#9670;&nbsp;</a></span>Bits</h2>
+<a id="abdcde86028f64d8ac6c34d423fca2304"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdcde86028f64d8ac6c34d423fca2304">&#9670;&nbsp;</a></span>Bits</h2>
 
 <div class="memitem">
 <div class="memproto">

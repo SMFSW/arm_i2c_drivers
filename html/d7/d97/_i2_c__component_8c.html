@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">I2C_Drivers (ARM)
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">SMFSW collection of HAL I2C Drivers for ARM</div>
   </td>
@@ -94,7 +94,7 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base I2C component. </p>
 <dl class="section author"><dt>Author</dt><dd>SMFSW </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2020, SMFSW </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2021, SMFSW </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Components with a xxx_proc file can access <a class="el" href="../../df/df6/struct_i2_c__slave__t.html" title="ci2c slave config and control parameters ">I2C_slave_t</a> instance through CPNT-&gt;cfg.slave_inst. Please keep in mind some components are somewhat custom and needs to be accesses through CPNT-&gt;cfg.slave_inst_xxx instead if needed. </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="ac2903db975bae3ed441076c36e4735d9"></a>
@@ -242,11 +242,12 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node24" href="../../d3/df9/_p_c_a9532_8h.html#a53117549a86481f7203371b537bc7084" title="Initialization for PCA9532 peripheral. " alt="" coords="175,613,281,640"/>
 <area shape="rect" id="node26" href="../../d4/dc2/_p_c_a9624_8h.html#a533ea8e2a7967b9ae7588d9f028bc839" title="Initialization for PCA9624 peripheral. " alt="" coords="175,664,281,691"/>
 <area shape="rect" id="node28" href="../../d4/deb/_p_c_a9685_8h.html#a7fa0e558a2f028f6261ca45db11d623a" title="Initialization for PCA9685 peripheral. " alt="" coords="175,715,281,741"/>
-<area shape="rect" id="node30" href="../../dd/d42/_p_c_f8523_8h.html#aa61e54475342c7382da01eb61e44da09" title="Initialization for PCF8523 peripheral peripheral. " alt="" coords="176,765,280,792"/>
-<area shape="rect" id="node31" href="../../d1/d8f/_s11059_8h.html#aaaa62f952fb19007b1c6592422c88221" title="Initialization for S11059 peripheral. " alt="" coords="179,816,277,843"/>
-<area shape="rect" id="node33" href="../../d9/d51/_t_c_s3400_8h.html#ab9ee131767fd0818271fd8d639c57b85" title="Initialization for TCS3400 peripheral. " alt="" coords="176,867,280,893"/>
-<area shape="rect" id="node35" href="../../d8/ddc/_t_c_s3472_8h.html#a84f70b0cac4b182e04ee6a95ab466d3b" title="Initialization for TCS3472 peripheral. " alt="" coords="176,917,280,944"/>
-<area shape="rect" id="node37" href="../../da/d96/_t_s_l2591_8h.html#a3e5d6c27f6e4ba0ad68acc6b29a18d27" title="Initialization for TSL2591 peripheral. " alt="" coords="177,968,279,995"/>
+<area shape="rect" id="node30" href="../../d4/d1d/_p_c_a9956_8h.html#a9ee46a2b824b7043c27b4178623d49b6" title="Initialization for PCA9956 peripheral. " alt="" coords="175,765,281,792"/>
+<area shape="rect" id="node32" href="../../dd/d42/_p_c_f8523_8h.html#aa61e54475342c7382da01eb61e44da09" title="Initialization for PCF8523 peripheral peripheral. " alt="" coords="176,816,280,843"/>
+<area shape="rect" id="node33" href="../../d1/d8f/_s11059_8h.html#aaaa62f952fb19007b1c6592422c88221" title="Initialization for S11059 peripheral. " alt="" coords="179,867,277,893"/>
+<area shape="rect" id="node35" href="../../d9/d51/_t_c_s3400_8h.html#ab9ee131767fd0818271fd8d639c57b85" title="Initialization for TCS3400 peripheral. " alt="" coords="176,917,280,944"/>
+<area shape="rect" id="node37" href="../../d8/ddc/_t_c_s3472_8h.html#a84f70b0cac4b182e04ee6a95ab466d3b" title="Initialization for TCS3472 peripheral. " alt="" coords="176,968,280,995"/>
+<area shape="rect" id="node39" href="../../da/d96/_t_s_l2591_8h.html#a3e5d6c27f6e4ba0ad68acc6b29a18d27" title="Initialization for TSL2591 peripheral. " alt="" coords="177,1019,279,1045"/>
 <area shape="rect" id="node3" href="../../df/d61/_a_d_s1115_8h.html#aca8481f4d0bcf062cde74d6947a0809d" title="Initialization for ADS1115 peripheral. " alt="" coords="355,5,509,32"/>
 <area shape="rect" id="node5" href="../../d8/d4e/_a_m_g88_8h.html#ab22f18773c85421d2b743e415ed14fa7" title="Initialization for AMG88 peripheral. " alt="" coords="362,56,502,83"/>
 <area shape="rect" id="node7" href="../../d6/dd1/_a_p_d_s9930_8h.html#a3db18cf0df8a0184fb7ac2a8c2429dab" title="Initialization for APDS9930 peripheral. " alt="" coords="351,107,513,133"/>
@@ -260,10 +261,11 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node25" href="../../d3/df9/_p_c_a9532_8h.html#ae3bc95cfa1ac91a201ac0543ced4bb03" title="Initialization for PCA9532 peripheral. " alt="" coords="356,613,508,640"/>
 <area shape="rect" id="node27" href="../../d4/dc2/_p_c_a9624_8h.html#a9d2bfb0bec12fff1be494de387f015a2" title="Initialization for PCA9624 peripheral. " alt="" coords="356,664,508,691"/>
 <area shape="rect" id="node29" href="../../d4/deb/_p_c_a9685_8h.html#a5446c995c445067011d256bc587b164e" title="Initialization for PCA9685 peripheral. " alt="" coords="356,715,508,741"/>
-<area shape="rect" id="node32" href="../../d1/d8f/_s11059_8h.html#a54b2b645d23ab3654253ec5165873303" title="Initialization for S11059 peripheral. " alt="" coords="361,816,503,843"/>
-<area shape="rect" id="node34" href="../../d9/d51/_t_c_s3400_8h.html#ae1122436ee0aa2cf81cec91006589ad6" title="Initialization for TCS3400 peripheral. " alt="" coords="357,867,507,893"/>
-<area shape="rect" id="node36" href="../../d8/ddc/_t_c_s3472_8h.html#a3a35824646bde380a0d9bb1be68e8002" title="Initialization for TCS3472 peripheral. " alt="" coords="357,917,507,944"/>
-<area shape="rect" id="node38" href="../../da/d96/_t_s_l2591_8h.html#a340d5559e9623f12628e013d814ac718" title="Initialization for TSL2591 peripheral. " alt="" coords="357,968,507,995"/>
+<area shape="rect" id="node31" href="../../d4/d1d/_p_c_a9956_8h.html#a0f59108faf0e099c5dcf21355152c2e1" title="Initialization for PCA9956 peripheral. " alt="" coords="356,765,508,792"/>
+<area shape="rect" id="node34" href="../../d1/d8f/_s11059_8h.html#a54b2b645d23ab3654253ec5165873303" title="Initialization for S11059 peripheral. " alt="" coords="361,867,503,893"/>
+<area shape="rect" id="node36" href="../../d9/d51/_t_c_s3400_8h.html#ae1122436ee0aa2cf81cec91006589ad6" title="Initialization for TCS3400 peripheral. " alt="" coords="357,917,507,944"/>
+<area shape="rect" id="node38" href="../../d8/ddc/_t_c_s3472_8h.html#a3a35824646bde380a0d9bb1be68e8002" title="Initialization for TCS3472 peripheral. " alt="" coords="357,968,507,995"/>
+<area shape="rect" id="node40" href="../../da/d96/_t_s_l2591_8h.html#a340d5559e9623f12628e013d814ac718" title="Initialization for TSL2591 peripheral. " alt="" coords="357,1019,507,1045"/>
 </map>
 </div>
 

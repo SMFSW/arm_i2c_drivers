@@ -1,6 +1,6 @@
 <map id="uPCA9624_REG_MAP" name="uPCA9624_REG_MAP">
 <area shape="rect" id="node2" href="$d2/d81/unionu_p_c_a9624___r_e_g_____m_o_d_e1.html" title="Union for MODE1 register of PCA9624. " alt="" coords="5,5,188,32"/>
 <area shape="rect" id="node3" href="$da/d7f/unionu_p_c_a9624___r_e_g_____m_o_d_e2.html" title="Union for MODE2 register of PCA9624. " alt="" coords="212,5,395,32"/>
-<area shape="rect" id="node4" href="$dd/dbd/unionu_p_c_a9624___r_e_g_____l_e_d_o_u_t0.html" title="Union for LEDOUT0 register of PCA9624. " alt="" coords="419,5,614,32"/>
-<area shape="rect" id="node5" href="$d3/dc4/unionu_p_c_a9624___r_e_g_____l_e_d_o_u_t1.html" title="Union for LEDOUT1 register of PCA9624. " alt="" coords="638,5,833,32"/>
+<area shape="rect" id="node4" href="$d9/dcb/unionu_p_c_a9xxx___r_e_g_____l_e_d_o_u_t0.html" title="Union for LEDOUT0 register of PCA9xxx. " alt="" coords="419,5,611,32"/>
+<area shape="rect" id="node5" href="$d8/d56/unionu_p_c_a9xxx___r_e_g_____l_e_d_o_u_t1.html" title="Union for LEDOUT1 register of PCA9xxx. " alt="" coords="635,5,827,32"/>
 </map>

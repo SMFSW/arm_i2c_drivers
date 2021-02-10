@@ -1,51 +1,51 @@
 <map id="I2C_component.h" name="I2C_component.h">
-<area shape="rect" id="node2" href="$df/d61/_a_d_s1115_8h.html" title="ADS1115 Driver. " alt="" coords="366,80,461,107"/>
-<area shape="rect" id="node8" href="$d8/d4e/_a_m_g88_8h.html" title="AMG88 Driver. " alt="" coords="1035,80,1115,107"/>
-<area shape="rect" id="node14" href="$d6/dd1/_a_p_d_s9930_8h.html" title="APDS9930 Driver. " alt="" coords="1726,80,1829,107"/>
-<area shape="rect" id="node20" href="$db/d70/shared___a_l_s_8h.html" title="Ambient Light Sensing shared. " alt="" coords="2085,80,2195,107"/>
-<area shape="rect" id="node22" href="$d2/dbf/_a_p_d_s9960_8h.html" title="APDS9960 Driver. " alt="" coords="2289,229,2391,256"/>
-<area shape="rect" id="node28" href="$df/ded/shared___c_l_s_8h.html" title="Color Light Sensing shared. " alt="" coords="2574,80,2685,107"/>
-<area shape="rect" id="node31" href="$d9/d51/_t_c_s3400_8h.html" title="TCS3400 Driver. " alt="" coords="2784,229,2875,256"/>
-<area shape="rect" id="node33" href="$d8/ddc/_t_c_s3472_8h.html" title="TCS3472 Driver. " alt="" coords="2584,229,2675,256"/>
-<area shape="rect" id="node34" href="$dd/d4f/_a_t42_q_t1244_8h.html" title="AT42QT1244 Driver. " alt="" coords="2817,80,2932,107"/>
-<area shape="rect" id="node35" href="$d3/d7d/_b_m_p180_8h.html" title="BMP180 Driver. " alt="" coords="2957,80,3043,107"/>
-<area shape="rect" id="node36" href="$d8/daa/shared___a_p_s_8h.html" title="Ambient Pressure Sensing shared. " alt="" coords="3067,80,3178,107"/>
-<area shape="rect" id="node37" href="$d5/d47/_d_r_v2605_l_8h.html" title="DRV2605L Driver. " alt="" coords="3203,80,3301,107"/>
-<area shape="rect" id="node38" href="$dd/d26/_d_s___g_p_m_s_8h.html" title="DS&#45;GPM.S Driver. " alt="" coords="3325,80,3424,107"/>
-<area shape="rect" id="node39" href="$d5/d3b/_f_m24_c_8h.html" title="FM24C Driver. " alt="" coords="3448,80,3525,107"/>
-<area shape="rect" id="node40" href="$d7/d97/_i2_c__component_8c.html" title="Base I2C component. " alt="" coords="3549,80,3683,107"/>
-<area shape="rect" id="node41" href="$d7/d3b/_m_b85_r_c256_v_8h.html" title="MB85RC256V Driver. " alt="" coords="3707,80,3824,107"/>
-<area shape="rect" id="node42" href="$df/d9f/_m_c_p4725_8h.html" title="MCP4725 Driver. " alt="" coords="3849,80,3943,107"/>
-<area shape="rect" id="node43" href="$d8/d57/_m_c_p9808_8h.html" title="MCP9808 Driver. " alt="" coords="3967,80,4062,107"/>
-<area shape="rect" id="node44" href="$da/da9/_m_t_c_h6102_8h.html" title="MTCH6102 Driver. " alt="" coords="4086,80,4189,107"/>
-<area shape="rect" id="node45" href="$d3/df9/_p_c_a9532_8h.html" title="PCA9532 Driver. " alt="" coords="4213,80,4305,107"/>
-<area shape="rect" id="node46" href="$d4/dc2/_p_c_a9624_8h.html" title="PCA9624 Driver. " alt="" coords="4329,80,4421,107"/>
-<area shape="rect" id="node47" href="$d4/deb/_p_c_a9685_8h.html" title="PCA9685 Driver. " alt="" coords="4445,80,4537,107"/>
-<area shape="rect" id="node48" href="$dd/d42/_p_c_f8523_8h.html" title="PCF8523 Driver. " alt="" coords="4561,80,4652,107"/>
-<area shape="rect" id="node49" href="$d1/d8f/_s11059_8h.html" title="S11059 Driver. " alt="" coords="4676,80,4759,107"/>
-<area shape="rect" id="node50" href="$da/d96/_t_s_l2591_8h.html" title="TSL2591 Driver. " alt="" coords="4783,80,4873,107"/>
-<area shape="rect" id="node3" href="$db/de1/_a_d_s1115_8c.html" title="ADS1115 Driver. " alt="" coords="157,155,251,181"/>
-<area shape="rect" id="node4" href="$d4/d35/_a_d_s1115__proc_8h.html" title="ADS1115 Driver procedures. " alt="" coords="275,155,405,181"/>
-<area shape="rect" id="node5" href="$d8/d4b/_a_d_s1115__ex_8h.html" title="ADS1115 Driver extensions. " alt="" coords="429,155,545,181"/>
-<area shape="rect" id="node6" href="$d8/d63/_a_d_s1115__ex_8c.html" title="ADS1115 Driver extensions. " alt="" coords="569,155,684,181"/>
-<area shape="rect" id="node7" href="$da/d08/_a_d_s1115__proc_8c.html" title="ADS1115 Driver procedures. " alt="" coords="5,155,133,181"/>
-<area shape="rect" id="node9" href="$df/d52/_a_m_g88_8c.html" title="AMG88 Driver. " alt="" coords="847,155,926,181"/>
-<area shape="rect" id="node10" href="$da/de9/_a_m_g88__proc_8h.html" title="AMG88 Driver procedures. " alt="" coords="951,155,1065,181"/>
-<area shape="rect" id="node11" href="$dc/db3/_a_m_g88__ex_8h.html" title="AMG88 Driver extensions. " alt="" coords="1090,155,1193,181"/>
-<area shape="rect" id="node12" href="$de/d9d/_a_m_g88__ex_8c.html" title="AMG88 Driver extensions. " alt="" coords="1217,155,1319,181"/>
-<area shape="rect" id="node13" href="$d4/d51/_a_m_g88__proc_8c.html" title="AMG88 Driver procedures. " alt="" coords="708,155,823,181"/>
-<area shape="rect" id="node15" href="$de/d85/_a_p_d_s9930_8c.html" title="APDS9930 Driver. " alt="" coords="1799,155,1900,181"/>
+<area shape="rect" id="node2" href="$df/d61/_a_d_s1115_8h.html" title="ADS1115 Driver. " alt="" coords="431,80,526,107"/>
+<area shape="rect" id="node8" href="$d8/d4e/_a_m_g88_8h.html" title="AMG88 Driver. " alt="" coords="1093,80,1173,107"/>
+<area shape="rect" id="node14" href="$d6/dd1/_a_p_d_s9930_8h.html" title="APDS9930 Driver. " alt="" coords="1713,80,1815,107"/>
+<area shape="rect" id="node20" href="$db/d70/shared___a_l_s_8h.html" title="Ambient Light Sensing shared. " alt="" coords="2159,80,2270,107"/>
+<area shape="rect" id="node22" href="$d2/dbf/_a_p_d_s9960_8h.html" title="APDS9960 Driver. " alt="" coords="2238,229,2341,256"/>
+<area shape="rect" id="node28" href="$df/ded/shared___c_l_s_8h.html" title="Color Light Sensing shared. " alt="" coords="2437,80,2547,107"/>
+<area shape="rect" id="node31" href="$d9/d51/_t_c_s3400_8h.html" title="TCS3400 Driver. " alt="" coords="2451,229,2541,256"/>
+<area shape="rect" id="node32" href="$dd/d4f/_a_t42_q_t1244_8h.html" title="AT42QT1244 Driver. " alt="" coords="2623,80,2737,107"/>
+<area shape="rect" id="node33" href="$d3/d7d/_b_m_p180_8h.html" title="BMP180 Driver. " alt="" coords="2762,80,2849,107"/>
+<area shape="rect" id="node34" href="$d8/daa/shared___a_p_s_8h.html" title="Ambient Pressure Sensing shared. " alt="" coords="2873,80,2983,107"/>
+<area shape="rect" id="node35" href="$d5/d47/_d_r_v2605_l_8h.html" title="DRV2605L Driver. " alt="" coords="3008,80,3107,107"/>
+<area shape="rect" id="node36" href="$dd/d26/_d_s___g_p_m_s_8h.html" title="DS&#45;GPM.S Driver. " alt="" coords="3131,80,3229,107"/>
+<area shape="rect" id="node37" href="$d5/d3b/_f_m24_c_8h.html" title="FM24C Driver. " alt="" coords="3253,80,3331,107"/>
+<area shape="rect" id="node38" href="$d7/d97/_i2_c__component_8c.html" title="Base I2C component. " alt="" coords="3355,80,3488,107"/>
+<area shape="rect" id="node39" href="$d7/d3b/_m_b85_r_c256_v_8h.html" title="MB85RC256V Driver. " alt="" coords="3512,80,3629,107"/>
+<area shape="rect" id="node40" href="$df/d9f/_m_c_p4725_8h.html" title="MCP4725 Driver. " alt="" coords="3654,80,3749,107"/>
+<area shape="rect" id="node41" href="$d8/d57/_m_c_p9808_8h.html" title="MCP9808 Driver. " alt="" coords="3773,80,3867,107"/>
+<area shape="rect" id="node42" href="$da/da9/_m_t_c_h6102_8h.html" title="MTCH6102 Driver. " alt="" coords="3891,80,3994,107"/>
+<area shape="rect" id="node43" href="$d3/df9/_p_c_a9532_8h.html" title="PCA9532 Driver. " alt="" coords="4018,80,4110,107"/>
+<area shape="rect" id="node44" href="$d4/dc2/_p_c_a9624_8h.html" title="PCA9624 Driver. " alt="" coords="4134,80,4226,107"/>
+<area shape="rect" id="node45" href="$d4/deb/_p_c_a9685_8h.html" title="PCA9685 Driver. " alt="" coords="4250,80,4342,107"/>
+<area shape="rect" id="node46" href="$d4/d1d/_p_c_a9956_8h.html" title="PCA9956 Driver. " alt="" coords="4366,80,4458,107"/>
+<area shape="rect" id="node47" href="$dd/d42/_p_c_f8523_8h.html" title="PCF8523 Driver. " alt="" coords="4483,80,4573,107"/>
+<area shape="rect" id="node48" href="$d1/d8f/_s11059_8h.html" title="S11059 Driver. " alt="" coords="4597,80,4680,107"/>
+<area shape="rect" id="node49" href="$d8/ddc/_t_c_s3472_8h.html" title="TCS3472 Driver. " alt="" coords="4704,80,4795,107"/>
+<area shape="rect" id="node50" href="$da/d96/_t_s_l2591_8h.html" title="TSL2591 Driver. " alt="" coords="4819,80,4909,107"/>
+<area shape="rect" id="node3" href="$db/de1/_a_d_s1115_8c.html" title="ADS1115 Driver. " alt="" coords="296,155,389,181"/>
+<area shape="rect" id="node4" href="$d4/d35/_a_d_s1115__proc_8h.html" title="ADS1115 Driver procedures. " alt="" coords="414,155,543,181"/>
+<area shape="rect" id="node5" href="$d8/d4b/_a_d_s1115__ex_8h.html" title="ADS1115 Driver extensions. " alt="" coords="567,155,683,181"/>
+<area shape="rect" id="node6" href="$d8/d63/_a_d_s1115__ex_8c.html" title="ADS1115 Driver extensions. " alt="" coords="5,155,120,181"/>
+<area shape="rect" id="node7" href="$da/d08/_a_d_s1115__proc_8c.html" title="ADS1115 Driver procedures. " alt="" coords="144,155,272,181"/>
+<area shape="rect" id="node9" href="$df/d52/_a_m_g88_8c.html" title="AMG88 Driver. " alt="" coords="973,155,1051,181"/>
+<area shape="rect" id="node10" href="$da/de9/_a_m_g88__proc_8h.html" title="AMG88 Driver procedures. " alt="" coords="1076,155,1191,181"/>
+<area shape="rect" id="node11" href="$dc/db3/_a_m_g88__ex_8h.html" title="AMG88 Driver extensions. " alt="" coords="1215,155,1318,181"/>
+<area shape="rect" id="node12" href="$de/d9d/_a_m_g88__ex_8c.html" title="AMG88 Driver extensions. " alt="" coords="708,155,809,181"/>
+<area shape="rect" id="node13" href="$d4/d51/_a_m_g88__proc_8c.html" title="AMG88 Driver procedures. " alt="" coords="833,155,948,181"/>
+<area shape="rect" id="node15" href="$de/d85/_a_p_d_s9930_8c.html" title="APDS9930 Driver. " alt="" coords="1503,155,1604,181"/>
 <area shape="rect" id="node16" href="$d1/d45/_a_p_d_s9930__proc_8h.html" title="APDS9930 Driver procedures. " alt="" coords="1925,155,2062,181"/>
-<area shape="rect" id="node17" href="$d5/d4f/_a_p_d_s9930__ex_8h.html" title="APDS9930 Driver extensions. " alt="" coords="1343,155,1467,181"/>
-<area shape="rect" id="node18" href="$d2/d97/_a_p_d_s9930__ex_8c.html" title="APDS9930 Driver extensions. " alt="" coords="1492,155,1615,181"/>
-<area shape="rect" id="node19" href="$d9/d54/_a_p_d_s9930__proc_8c.html" title="APDS9930 Driver procedures. " alt="" coords="1639,155,1775,181"/>
-<area shape="rect" id="node21" href="$df/d17/_a_p_d_s9960__proc_8h.html" title="APDS9960 Driver procedures. " alt="" coords="2271,155,2409,181"/>
+<area shape="rect" id="node17" href="$d5/d4f/_a_p_d_s9930__ex_8h.html" title="APDS9930 Driver extensions. " alt="" coords="1629,155,1753,181"/>
+<area shape="rect" id="node18" href="$d2/d97/_a_p_d_s9930__ex_8c.html" title="APDS9930 Driver extensions. " alt="" coords="1777,155,1900,181"/>
+<area shape="rect" id="node19" href="$d9/d54/_a_p_d_s9930__proc_8c.html" title="APDS9930 Driver procedures. " alt="" coords="1343,155,1479,181"/>
+<area shape="rect" id="node21" href="$df/d17/_a_p_d_s9960__proc_8h.html" title="APDS9960 Driver procedures. " alt="" coords="2221,155,2358,181"/>
 <area shape="rect" id="node27" href="$d0/d63/shared___a_l_s_8c.html" title="Ambient Light Sensing shared. " alt="" coords="2087,155,2196,181"/>
-<area shape="rect" id="node23" href="$db/db1/_a_p_d_s9960_8c.html" title="APDS9960 Driver. " alt="" coords="2152,304,2253,331"/>
-<area shape="rect" id="node24" href="$da/db5/_a_p_d_s9960__ex_8h.html" title="APDS9960 Driver extensions. " alt="" coords="2278,304,2402,331"/>
-<area shape="rect" id="node25" href="$df/d4f/_a_p_d_s9960__ex_8c.html" title="APDS9960 Driver extensions. " alt="" coords="2427,304,2549,331"/>
-<area shape="rect" id="node26" href="$dd/d2e/_a_p_d_s9960__proc_8c.html" title="APDS9960 Driver procedures. " alt="" coords="2573,304,2709,331"/>
-<area shape="rect" id="node29" href="$da/da0/shared___c_l_s_8c.html" title="Color Light Sensing shared. " alt="" coords="2433,155,2543,181"/>
-<area shape="rect" id="node30" href="$d9/d14/_t_c_s3400__proc_8h.html" title="TCS3400 Driver procedures. " alt="" coords="2767,155,2892,181"/>
-<area shape="rect" id="node32" href="$d6/d96/_t_c_s3472__proc_8h.html" title="TCS3472 Driver procedures. " alt="" coords="2567,155,2692,181"/>
+<area shape="rect" id="node23" href="$db/db1/_a_p_d_s9960_8c.html" title="APDS9960 Driver. " alt="" coords="2101,304,2203,331"/>
+<area shape="rect" id="node24" href="$da/db5/_a_p_d_s9960__ex_8h.html" title="APDS9960 Driver extensions. " alt="" coords="2227,304,2351,331"/>
+<area shape="rect" id="node25" href="$df/d4f/_a_p_d_s9960__ex_8c.html" title="APDS9960 Driver extensions. " alt="" coords="2376,304,2499,331"/>
+<area shape="rect" id="node26" href="$dd/d2e/_a_p_d_s9960__proc_8c.html" title="APDS9960 Driver procedures. " alt="" coords="2523,304,2659,331"/>
+<area shape="rect" id="node29" href="$da/da0/shared___c_l_s_8c.html" title="Color Light Sensing shared. " alt="" coords="2583,155,2692,181"/>
+<area shape="rect" id="node30" href="$d9/d14/_t_c_s3400__proc_8h.html" title="TCS3400 Driver procedures. " alt="" coords="2433,155,2559,181"/>
 </map>

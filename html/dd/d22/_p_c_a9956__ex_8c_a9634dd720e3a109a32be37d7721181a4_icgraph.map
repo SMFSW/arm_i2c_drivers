@@ -1,0 +1,6 @@
+<map id="PCA9956_Set_Mode_LEDs" name="PCA9956_Set_Mode_LEDs">
+<area shape="rect" id="node2" href="$dd/ddf/_p_c_a9956__ex_8h.html#a1f23873e665562e66821beeb83bc510c" title="Set MODE2 register. " alt="" coords="251,5,414,32"/>
+<area shape="rect" id="node3" href="$df/d04/_p_c_a9956__proc_8h.html#a1c55c5f56740dc2447bc6e17724ab99b" title="Initialization Sequence for PCA9956 peripheral. " alt="" coords="244,56,421,83"/>
+<area shape="rect" id="node4" href="$d4/d1d/_p_c_a9956_8h.html#a9ee46a2b824b7043c27b4178623d49b6" title="Initialization for PCA9956 peripheral. " alt="" coords="469,56,576,83"/>
+<area shape="rect" id="node5" href="$d4/d1d/_p_c_a9956_8h.html#a0f59108faf0e099c5dcf21355152c2e1" title="Initialization for PCA9956 peripheral. " alt="" coords="624,56,776,83"/>
+</map>

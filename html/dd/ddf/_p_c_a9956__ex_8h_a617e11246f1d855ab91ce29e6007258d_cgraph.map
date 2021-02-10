@@ -1,0 +1,6 @@
+<map id="PCA9956_ReadEFLAGs" name="PCA9956_ReadEFLAGs">
+<area shape="rect" id="node2" href="$df/d5e/_p_c_a9956_8c.html#aaab84cb94e5542d51b2d99463079d907" title="I2C Read function for PCA9956. " alt="" coords="437,31,556,57"/>
+<area shape="rect" id="node5" href="$dd/ddf/_p_c_a9956__ex_8h.html#a72082f17a461d30c7cc8c0d0fb95e5e4" title="Reads I2C register from PCA9956. " alt="" coords="220,56,389,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="604,5,721,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="609,56,716,83"/>
+</map>

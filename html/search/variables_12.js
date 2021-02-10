@@ -28,7 +28,7 @@ var searchData=
   ['tmr_5fb_5ffreq_5fctrl',['Tmr_B_freq_ctrl',['../dd/d7c/unionu_p_c_f8523___r_e_g___m_a_p.html#af9ef7c176d0b9e758bd88bd781c415b0',1,'uPCF8523_REG_MAP']]],
   ['tmr_5fb_5freg',['Tmr_B_reg',['../dd/d7c/unionu_p_c_f8523___r_e_g___m_a_p.html#a3bb859e8c79df65878fcf9519ef8b5f2',1,'uPCF8523_REG_MAP']]],
   ['tmr_5fclkout_5fctrl',['Tmr_CLKOUT_ctrl',['../dd/d7c/unionu_p_c_f8523___r_e_g___m_a_p.html#a27998c8787cb3b7084ddeed618180563',1,'uPCF8523_REG_MAP']]],
-  ['touch',['touch',['../d5/d63/struct_m_t_c_h6102__t.html#a8f83a0ed216a34a0c4659cbad9f5fa32',1,'MTCH6102_t::touch()'],['../df/d8e/struct_m_t_c_h6102__gesture.html#a4d8866cc5824339ddd6a5d7531ea6bf9',1,'MTCH6102_gesture::Touch()']]],
+  ['touch',['Touch',['../df/d8e/struct_m_t_c_h6102__gesture.html#a4d8866cc5824339ddd6a5d7531ea6bf9',1,'MTCH6102_gesture::Touch()'],['../d5/d63/struct_m_t_c_h6102__t.html#a8f83a0ed216a34a0c4659cbad9f5fa32',1,'MTCH6102_t::touch()']]],
   ['touch_5flsb',['Touch_lsb',['../dd/dd0/struct_m_t_c_h6102__raw__gesture.html#a1c817d1f4379a0fb5384e3e18994434a',1,'MTCH6102_raw_gesture']]],
   ['touch_5fstate',['Touch_state',['../dd/dd0/struct_m_t_c_h6102__raw__gesture.html#a4216a5a8e72a44c27bc5998e68b58f75',1,'MTCH6102_raw_gesture']]],
   ['touch_5fx',['Touch_x',['../dd/dd0/struct_m_t_c_h6102__raw__gesture.html#af503c42c9143de8f6d4db81fbf104cbc',1,'MTCH6102_raw_gesture']]],
@@ -43,8 +43,8 @@ var searchData=
   ['tsl2591_5fhal',['TSL2591_hal',['../d2/d68/_t_s_l2591_8c.html#a82d4f4c3ef3e8a4c402fdd80c6728693',1,'TSL2591_hal():&#160;TSL2591.c'],['../da/d96/_t_s_l2591_8h.html#a82d4f4c3ef3e8a4c402fdd80c6728693',1,'TSL2591_hal():&#160;TSL2591.c']]],
   ['tsl2591_5finteg_5ftab',['TSL2591_integ_tab',['../db/dba/_t_s_l2591__proc_8c.html#a291294a3d19a3c54e311003ed7c8555d',1,'TSL2591_proc.c']]],
   ['tupper',['TUpper',['../d1/d02/unionu_m_c_p9808___r_e_g___m_a_p.html#aa334ccb2b5ec4dd6137e2e883c676fa3',1,'uMCP9808_REG_MAP::TUpper()'],['../db/d83/struct_m_c_p9808__t.html#a3e27ae6b62744667dcd4a164e343623a',1,'MCP9808_t::TUpper()']]],
-  ['twelve',['TWELVE',['../dc/dee/unionu_p_c_f8523___r_e_g_____h_o_u_r_s.html#a45c527c36e1aa35799679ee30915510f',1,'uPCF8523_REG__HOURS']]],
-  ['twentyfour',['TWENTYFOUR',['../dc/dee/unionu_p_c_f8523___r_e_g_____h_o_u_r_s.html#aa66f77ba659241d11e5265055bd69b0c',1,'uPCF8523_REG__HOURS']]],
+  ['twelve',['TWELVE',['../dc/dee/unionu_p_c_f8523___r_e_g_____h_o_u_r_s.html#a3ee278522db42ab27b567b39549973c5',1,'uPCF8523_REG__HOURS']]],
+  ['twentyfour',['TWENTYFOUR',['../dc/dee/unionu_p_c_f8523___r_e_g_____h_o_u_r_s.html#a059956999ec3a434e56defaa00a36cd4',1,'uPCF8523_REG__HOURS']]],
   ['txdownwards',['TxDownwards',['../d5/d63/struct_m_t_c_h6102__t.html#a852ce2d8442fe3461567943b003c612c',1,'MTCH6102_t']]],
   ['type',['TYPE',['../d5/d03/unionu_m_t_c_h___r_e_g_____m_o_d_e___c_o_n.html#a299ca61e2c464fa2a1942d8fa1cc1fa4',1,'uMTCH_REG__MODE_CON']]]
 ];
