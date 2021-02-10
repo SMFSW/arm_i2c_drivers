@@ -1,6 +1,6 @@
 /*!\file PCA9685_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2020, SMFSW
+** \copyright MIT (c) 2017-2021, SMFSW
 ** \brief PCA9685 Driver extensions
 ** \details PCA9685: 16-channel, 12-bit PWM Fm+ I2C-bus LED controller
 **/
@@ -95,29 +95,6 @@ FctERR NONNULL__ PCA9685_Set_Latch(PCA9685_t * pCpnt, const PCA96xx_latch latch)
 FctERR NONNULL__ PCA9685_Set_Frequency(PCA9685_t * pCpnt, const uint16_t freq);
 
 
-/*!\brief Reset for PCA9685 peripheral
-** \param[in] pCpnt - Pointer to PCA9685 component
-** \return FctERR - error code
-**/
-FctERR NONNULL__ PCA9685_Reset(PCA9685_t * pCpnt);
-
-
-/*!\brief General call reset function for PCA9685
-** \param[in] hi2c - pointer to general call I2C instance
-** \return FctERR - error code
-**/
-FctERR NONNULL__ PCA9685_Reset_All(I2C_HandleTypeDef * hi2c);
-
-
-/*!\brief Reads I2C register from PCA9685
-** \param[in] pCpnt - Pointer to PCA9685 component
-** \param[in] reg - Register address to read from
-** \param[in,out] val - Pointer to the data for receive
-** \return FctERR - ErrorCode
-**/
-FctERR NONNULL__ PCA9685_ReadRegister(PCA9685_t * pCpnt, const PCA9685_reg reg, uint8_t * val);
-
-
 /*!\brief Reads I2C lighting values from a LED and Computes the corresponding duty cycle value (12b)
 ** \param[in] pCpnt - Pointer to PCA9685 component
 ** \param[in] chan - Channel number (1 to 16)
@@ -183,6 +160,29 @@ FctERR NONNULL__ PCA9685_SetVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan);
 ** \return FctERR - ErrorCode
 **/
 FctERR NONNULL__ PCA9685_ClrVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan);
+
+
+/*!\brief Reset for PCA9685 peripheral
+** \param[in] pCpnt - Pointer to PCA9685 component
+** \return FctERR - error code
+**/
+FctERR NONNULL__ PCA9685_Reset(PCA9685_t * pCpnt);
+
+
+/*!\brief General call reset function for PCA9685
+** \param[in] hi2c - pointer to general call I2C instance
+** \return FctERR - error code
+**/
+FctERR NONNULL__ PCA9685_Reset_All(I2C_HandleTypeDef * hi2c);
+
+
+/*!\brief Reads I2C register from PCA9685
+** \param[in] pCpnt - Pointer to PCA9685 component
+** \param[in] reg - Register address to read from
+** \param[in,out] val - Pointer to the data for receive
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ PCA9685_ReadRegister(PCA9685_t * pCpnt, const PCA9685_reg reg, uint8_t * val);
 
 
 /****************************************************************/

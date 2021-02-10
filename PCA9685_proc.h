@@ -1,6 +1,6 @@
 /*!\file PCA9685_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2020, SMFSW
+** \copyright MIT (c) 2017-2021, SMFSW
 ** \brief PCA9685 Driver procedures
 ** \details PCA9685: 16-channel, 12-bit PWM Fm+ I2C-bus LED controller
 **/

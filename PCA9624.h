@@ -1,6 +1,6 @@
 /*!\file PCA9624.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2020, SMFSW
+** \copyright MIT (c) 2017-2021, SMFSW
 ** \brief PCA9624 Driver
 ** \details PCA9624: 8-bit Fm+ I2C-bus 100mA 40V LED driver
 **/
@@ -101,31 +101,6 @@ typedef union PACK__ uPCA9624_REG__MODE2 {
 	} Bits;
 } uPCA9624_REG__MODE2;
 
-/*!\union uPCA9624_REG__LEDOUT0
-** \brief Union for LEDOUT0 register of PCA9624
-**/
-typedef union PACK__ uPCA9624_REG__LEDOUT0 {
-	uint8_t Byte;
-	struct PACK__ {
-		PCA962x_ledout LDR0	:2;		//!< LED0 output state control
-		PCA962x_ledout LDR1	:2;		//!< LED1 output state control
-		PCA962x_ledout LDR2	:2;		//!< LED2 output state control
-		PCA962x_ledout LDR3	:2;		//!< LED3 output state control
-	} Bits;
-} uPCA9624_REG__LEDOUT0;
-
-/*!\union uPCA9624_REG__LEDOUT1
-** \brief Union for LEDOUT1 register of PCA9624
-**/
-typedef union PACK__ uPCA9624_REG__LEDOUT1 {
-	uint8_t Byte;
-	struct PACK__ {
-		PCA962x_ledout LDR4	:2;		//!< LED4 output state control
-		PCA962x_ledout LDR5	:2;		//!< LED5 output state control
-		PCA962x_ledout LDR6	:2;		//!< LED6 output state control
-		PCA962x_ledout LDR7	:2;		//!< LED7 output state control
-	} Bits;
-} uPCA9624_REG__LEDOUT1;
 
 /*!\union uPCA9624_REG__LEDOUT
 ** \brief Union for LEDOUT registers of PCA9624

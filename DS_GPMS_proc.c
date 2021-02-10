@@ -1,6 +1,6 @@
 /*!\file DS_GPMS_proc.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2020, SMFSW
+** \copyright MIT (c) 2017-2021, SMFSW
 ** \brief DS-GPM.S Driver procedures
 ** \details DS-GPM.S: 99 Channel Positioning System (GPS + GLONASS) Shield
 **/

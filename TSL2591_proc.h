@@ -1,6 +1,6 @@
 /*!\file TSL2591_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2020, SMFSW
+** \copyright MIT (c) 2017-2021, SMFSW
 ** \brief TSL2591 Driver procedures
 ** \details TSL2591: Very-high sensitivity light-to-digital converter
 **/
@@ -83,7 +83,6 @@ FctERR NONNULL__ TSL2591_Init_Sequence(TSL2591_t * pCpnt);
 /*!\brief Set proper CPL value (Counts per kiloLux)
  * \note Should be called after Configuration change of Integration time or Gain
 ** \param[in] pCpnt - Pointer to TSL2591 component
-** \return FctERR - error code
 **/
 void NONNULL__ TSL2591_Set_CPL(TSL2591_t * pCpnt);
 

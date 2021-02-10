@@ -1,6 +1,6 @@
 /*!\file shared_CLS.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2020, SMFSW
+** \copyright MIT (c) 2017-2021, SMFSW
 ** \brief Color Light Sensing shared
 **/
 /****************************************************************/
@@ -25,6 +25,7 @@ extern const float CLS_RGB2XYZ_Default[3][3];
 /*!\brief Determining chromacity following RGB values
 ** \param[in,out] xy - Pointer to chromacity coordinates result
 ** \param[in,out] illum - Pointer to illuminance result
+** \param[in] mat - pointer to conversion matrix (RGB to XYZ)
 ** \param[in] r - Red value
 ** \param[in] g - Green value
 ** \param[in] b - Blue value

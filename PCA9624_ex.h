@@ -1,6 +1,6 @@
 /*!\file PCA9624_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2020, SMFSW
+** \copyright MIT (c) 2017-2021, SMFSW
 ** \brief PCA9624 Driver extensions
 ** \details PCA9624: 8-bit Fm+ I2C-bus 100mA 40V LED driver
 **/
@@ -56,8 +56,8 @@ typedef union uPCA9624_REG_MAP {
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ PCA9624_Set_Auto_Increment(PCA9624_t * const pCpnt, const PCA962x_reg_inc inc) {
-	if (RSHIFT(inc, 5) > RSHIFT(PCA962x__AUTO_INC_BRIGHT_GLOBAL, 5))	{ return ERROR_VALUE; }
-	pCpnt->cfg.auto_inc = inc & PCA962x__AUTO_INC_BRIGHT_GLOBAL;		// Mask inc just in case
+	if (RSHIFT(inc, 5) > RSHIFT(PCA9xxx__AUTO_INC_BRIGHT_GLOBAL, 5))	{ return ERROR_VALUE; }
+	pCpnt->cfg.auto_inc = inc & PCA9xxx__AUTO_INC_BRIGHT_GLOBAL;		// Mask inc just in case
 	return ERROR_OK; }
 
 /*!\brief Set MODE1 register
@@ -76,6 +76,7 @@ __INLINE FctERR NONNULL_INLINE__ PCA9624_Set_MODE1(PCA9624_t * const pCpnt, cons
 __INLINE FctERR NONNULL_INLINE__ PCA9624_Set_MODE2(PCA9624_t * const pCpnt, uPCA9624_REG__MODE2 MODE2) {
 	MODE2.Byte = (MODE2.Byte | 0x05) & ~0x12;	// Setting reserved bits to appropriate values
 	return PCA9624_Write(pCpnt->cfg.slave_inst, (uint8_t *) &MODE2, PCA9624__MODE2, sizeof(MODE2)); }
+
 
 /*!\brief Set latch type for PCA9624 peripheral
 ** \param[in,out] pCpnt - Pointer to PCA9624 component
@@ -101,27 +102,6 @@ FctERR NONNULL__ PCA9624_Set_Mode_LED(PCA9624_t * const pCpnt, const PCA9xxx_cha
 ** \return FctERR - error code
 **/
 FctERR NONNULL__ PCA9624_Set_Mode_LEDs(PCA9624_t * const pCpnt, const uint8_t chans, const PCA962x_ledout mode);
-
-
-/*!\brief Reset for PCA9624 peripheral
-** \param[in] pCpnt - Pointer to PCA9624 component
-** \return FctERR - error code
-**/
-FctERR NONNULL__ PCA9624_Reset(PCA9624_t * const pCpnt);
-
-/*!\brief General call reset function for PCA9624
-** \param[in] hi2c - pointer to general call I2C instance
-** \return FctERR - error code
-**/
-FctERR NONNULL__ PCA9624_Reset_All(const I2C_HandleTypeDef * const hi2c);
-
-/*!\brief Reads I2C register from PCA9624
-** \param[in] pCpnt - Pointer to PCA9624 component
-** \param[in] reg - Register address to read from
-** \param[in,out] val - Pointer to the data for receive
-** \return FctERR - ErrorCode
-**/
-FctERR NONNULL__ PCA9624_ReadRegister(PCA9624_t * const pCpnt, const PCA9624_reg reg, uint8_t * const val);
 
 
 /*!\brief Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8_t)
@@ -156,6 +136,27 @@ FctERR NONNULL__ PCA9624_SetVal(PCA9624_t * const pCpnt, const PCA9xxx_chan chan
 ** \return FctERR - ErrorCode
 **/
 FctERR NONNULL__ PCA9624_ClrVal(PCA9624_t * const pCpnt, const PCA9xxx_chan chan);
+
+
+/*!\brief Reset for PCA9624 peripheral
+** \param[in] pCpnt - Pointer to PCA9624 component
+** \return FctERR - error code
+**/
+FctERR NONNULL__ PCA9624_Reset(PCA9624_t * const pCpnt);
+
+/*!\brief General call reset function for PCA9624
+** \param[in] hi2c - pointer to general call I2C instance
+** \return FctERR - error code
+**/
+FctERR NONNULL__ PCA9624_Reset_All(const I2C_HandleTypeDef * const hi2c);
+
+/*!\brief Reads I2C register from PCA9624
+** \param[in] pCpnt - Pointer to PCA9624 component
+** \param[in] reg - Register address to read from
+** \param[in,out] val - Pointer to the data for receive
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ PCA9624_ReadRegister(PCA9624_t * const pCpnt, const PCA9624_reg reg, uint8_t * const val);
 
 
 /****************************************************************/

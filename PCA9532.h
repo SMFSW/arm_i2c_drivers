@@ -1,6 +1,6 @@
 /*!\file PCA9532.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2020, SMFSW
+** \copyright MIT (c) 2017-2021, SMFSW
 ** \brief PCA9532 Driver
 ** \details PCA9532: 16-bit I2C-bus LED dimmer
 **/

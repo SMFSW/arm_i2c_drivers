@@ -1,6 +1,6 @@
 /*!\file MTCH6102_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2020, SMFSW
+** \copyright MIT (c) 2017-2021, SMFSW
 ** \brief MTCH6102 Driver extensions
 ** \details MTCH6102: Low-Power Projected Capacitive Touch Controller
 **/
@@ -229,7 +229,7 @@ __INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Base_Interval(const MTCH6102_t * c
 /*!\brief Set MTCH6102 baseline filter thresholds
 ** \param[in] pCpnt - Pointer to MTCH6102 component
 ** \param[in] pos - Positive filter value
-** \param[in] pos - Negative filter value
+** \param[in] neg - Negative filter value
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Base_Filter(const MTCH6102_t * const pCpnt, const uint8_t pos, const uint8_t neg) {
@@ -238,17 +238,17 @@ __INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Base_Filter(const MTCH6102_t * con
 
 
 /*** Acquisition ***/
-/*!\brief Get MTCH6102 Raw sensor values datas
+/*!\brief Get MTCH6102 Raw sensor values data
 ** \param[in] pCpnt - Pointer to MTCH6102 component
-** \param[in] raw - Pointer to raw datas result
+** \param[in] raw - Pointer to raw data result
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ MTCH6102_Get_Raw(const MTCH6102_t * const pCpnt, MTCH6102_raw_sense * const raw) {
 	return MTCH6102_Read(pCpnt->cfg.slave_inst, (uint8_t *) raw, MTCH__SENSOR_VALUE_RX0, sizeof(MTCH6102_raw_sense)); }
 
-/*!\brief Get MTCH6102 Raw gesture datas
+/*!\brief Get MTCH6102 gesture data
 ** \param[in] pCpnt - Pointer to MTCH6102 component
-** \param[in] raw - Pointer to raw datas result
+** \param[in] gest - Pointer to gesture data result
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ MTCH6102_Get_Gest(const MTCH6102_t * const pCpnt, MTCH6102_raw_gest * const gest) {

@@ -2,7 +2,7 @@
 
 The MIT License (MIT)
 
-Copyright (c) 2017-2020 SMFSW (Sebastien Bizien)
+Copyright (c) 2017-2021 SMFSW (Sebastien Bizien)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,6 +19,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## v1.1
+
+* Doxygen comments fixes for the whole library
+* PCA9956: added
+* PCA9xxx & PCA9624 & PCA9685: typedefs changed and created for consistency across peripherals
 
 ## v1.0
 

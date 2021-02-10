@@ -1,19 +1,19 @@
-/*!\file PCA9624_proc.h
+/*!\file PCA9956_proc.h
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2021, SMFSW
-** \brief PCA9624 Driver procedures
-** \details PCA9624: 8-bit Fm+ I2C-bus 100mA 40V LED driver
+** \brief PCA9956 Driver procedures
+** \details PCA9956: 24-channel Fm+ I2C-bus 57 mA/20 V constant current LED driver
 **/
 /****************************************************************/
-#ifndef __PCA9624_PROC_H__
-	#define __PCA9624_PROC_H__
+#ifndef __PCA9956_PROC_H__
+	#define __PCA9956_PROC_H__
 
 #ifdef __cplusplus
 	extern "C" {
 #endif
 
 #include "sarmfsw.h"
-#include "PCA9624.h"
+#include "PCA9956.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
@@ -22,24 +22,24 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define	PCA9624_NB_CHANNELS		8			//!< PCA9624 Number of channels
+#define	PCA9956_NB_CHANNELS		24			//!< PCA9956 Number of channels
 
 
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct PCA9624_t
-** \brief PCA9624 user interface struct
+/*!\struct PCA9956_t
+** \brief PCA9956 user interface struct
 **/
-typedef struct PCA9624_t {
-	uPCA9624_REG__LEDOUT	LDR;			//!< LED output drive registers
+typedef struct PCA9956_t {
+	uPCA9956_REG__LEDOUT	LDR;			//!< LED output drive registers
 	struct {
 	I2C_slave_t *			slave_inst;		//!< Slave structure
-	PCA962x_reg_inc			auto_inc;		//!< Auto increment configuration
+	PCA9956_reg_inc			auto_inc;		//!< Auto increment configuration
 	} cfg;
-} PCA9624_t;
+} PCA9956_t;
 
-extern PCA9624_t	PCA9624[I2C_PCA9624_NB];	//!< PCA9624 User structure
+extern PCA9956_t	PCA9956[I2C_PCA9956_NB];	//!< PCA9956 User structure
 
 
 // *****************************************************************************
@@ -49,12 +49,13 @@ extern PCA9624_t	PCA9624[I2C_PCA9624_NB];	//!< PCA9624 User structure
 /*** Procedures ***/
 /******************/
 
-/*!\brief Initialization Sequence for PCA9624 peripheral
-** \weak PCA9624 Init sequence may be user implemented if custom initialization sequence needed
-** \param[in] pCpnt - Pointer to PCA9624 component
-** \return FctERR - error code
+/*!\brief Initialization Sequence for PCA9956 peripheral
+** \weak PCA9956 Init sequence may be user implemented if custom initialization sequence needed
+** \param[in] pCpnt - Pointer to PCA9956 component
+** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCA9624_Init_Sequence(PCA9624_t * pCpnt);
+FctERR NONNULL__ PCA9956_Init_Sequence(PCA9956_t * pCpnt);
+
 
 /****************************************************************/
 #endif
@@ -63,5 +64,5 @@ FctERR NONNULL__ PCA9624_Init_Sequence(PCA9624_t * pCpnt);
 	}
 #endif
 
-#endif	/* __PCA9624_PROC_H__ */
+#endif	/* __PCA9956_PROC_H__ */
 /****************************************************************/

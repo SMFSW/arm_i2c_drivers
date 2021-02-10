@@ -1,6 +1,6 @@
 /*!\file AMG88_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2020, SMFSW
+** \copyright MIT (c) 2017-2021, SMFSW
 ** \brief AMG88 Driver extensions
 ** \details AMG88: Infrared Array Sensor (Grid-EYE)
 **/
@@ -115,7 +115,7 @@ __INLINE FctERR NONNULL_INLINE__ AMG88_Set_FPS(AMG88_t * pCpnt, const bool ten) 
 
 /*!\brief Set AMG88 Moving Average
 ** \param[in] pCpnt - Pointer to AMG88 component
-** \param[in] MA - Twice moving average when set to true
+** \param[in] twice - Twice moving average when set to true
 ** \return Error code
 **/
 __INLINE FctERR NONNULL_INLINE__ AMG88_Set_MA(AMG88_t * pCpnt, const bool twice) {
@@ -156,7 +156,7 @@ FctERR NONNULL__ AMG88_Set_Interrupt_Levels(AMG88_t * pCpnt, const float temp_LV
 
 /*!\brief Get interrupts registers
 ** \param[in] pCpnt - Pointer to AMG88 component
-** \param[in,out] temp - Pointer to interrupts result
+** \param[in,out] interrupts - Pointer to interrupts result
 ** \return Error code
 **/
 __INLINE FctERR NONNULL_INLINE__ AMG88_Get_interrupts(AMG88_t * pCpnt, uAMG88_REG__INT * interrupts) {

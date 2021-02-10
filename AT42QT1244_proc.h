@@ -1,6 +1,6 @@
 /*!\file AT42QT1244_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2020, SMFSW
+** \copyright MIT (c) 2017-2021, SMFSW
 ** \brief AT42QT1244 Driver procedures
 ** \details AT42QT1244: 24-key QMatrix FMEA IEC/EN/UL60730 Touch Sensor
 **/
@@ -95,7 +95,6 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * pCpnt, uint16_
 
 /*!\brief Low level calibration for AT42QT1244 peripheral
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
-** \param[in,out] hcrc - Pointer to resulting CRC value
 ** \return FctERR - error code
 **/
 FctERR NONNULL__ AT42QT1244_Calibrate_Low_Level(AT42QT1244_t * pCpnt);
@@ -103,7 +102,6 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Low_Level(AT42QT1244_t * pCpnt);
 
 /*!\brief All keys calibration for AT42QT1244 peripheral
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
-** \param[in,out] hcrc - Pointer to resulting CRC value
 ** \return FctERR - error code
 **/
 FctERR NONNULL__ AT42QT1244_Calibrate_All_Keys(AT42QT1244_t * pCpnt);

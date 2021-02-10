@@ -1,6 +1,6 @@
 /*!\file I2C_component.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2020, SMFSW
+** \copyright MIT (c) 2017-2021, SMFSW
 ** \brief Base I2C component
 ** \note Needed symbols may be defined level. If globals.h is not used, symbol NO_GLOBALS_HEADER needs to be defined.
 **/

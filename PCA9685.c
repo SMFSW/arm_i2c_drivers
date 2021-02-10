@@ -1,6 +1,6 @@
 /*!\file PCA9685.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2020, SMFSW
+** \copyright MIT (c) 2017-2021, SMFSW
 ** \brief PCA9685 Driver
 ** \details PCA9685: 16-channel, 12-bit PWM Fm+ I2C-bus LED controller
 **/
@@ -10,8 +10,8 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_PCA9685)
 /****************************************************************/
-#if defined(I2C_PCA9624)
-#warning "PCA9685 -> Multiple PCA96xx types: use with caution if using CALL addresses if on same I2C bus!!!"
+#if defined(I2C_PCA9624) || defined(PCA9956)
+#warning "PCA9685 -> Multiple PCA9xxx types: use with caution if using CALL addresses if on same I2C bus!!!"
 #endif
 /****************************************************************/
 

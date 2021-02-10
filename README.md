@@ -92,6 +92,9 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 - **PCA9685**: 16-channel, 12-bit PWM Fm+ I2C-bus LED controller
   - **STATUS**: WORKING
 
+- **PCA9956**: 24-channel Fm+ I2C-bus 57 mA/20 V constant current LED driver
+  - **STATUS**: CODING IN PROGRESS / NO TESTS YET
+
 - **PCF8523**: Real-Time Clock (RTC) and calendar
   - **STATUS**: _WORKING (TODO: handle clkout and alarms)
 

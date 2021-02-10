@@ -1,6 +1,6 @@
 /*!\file ADS1115_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2020, SMFSW
+** \copyright MIT (c) 2017-2021, SMFSW
 ** \brief ADS1115 Driver extensions
 ** \details ADS1115: Ultra-Small, Low-Power, 16-Bit Analog-to-Digital Converter with Internal Reference
 ** \note	Compatibility with:
@@ -69,7 +69,6 @@ uint16_t NONNULL__ ADS1115_Get_conv_ms(ADS1115_t * pCpnt);
 
 /*!\brief Get ADS1115 conversion
 ** \param[in] pCpnt - Pointer to ADS1115 component
-** \param[in] queue - Comparator queue
 ** \return FctERR - error code
 **/
 FctERR NONNULL__ ADS1115_Get_Conversion(ADS1115_t * pCpnt);

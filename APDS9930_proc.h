@@ -1,6 +1,6 @@
 /*!\file APDS9930_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2020, SMFSW
+** \copyright MIT (c) 2017-2021, SMFSW
 ** \brief APDS9930 Driver procedures
 ** \details APDS9930: Digital Proximity and Ambient Light Sensor
 **/
@@ -129,7 +129,6 @@ FctERR NONNULL__ APDS9930_Init_Sequence(APDS9930_t * pCpnt);
 /*!\brief Set proper LPC value (Lux per Count)
  * \note Should be called after Configuration change of Integration time or Gain
 ** \param[in] pCpnt - Pointer to APDS9930 component
-** \return FctERR - error code
 **/
 void NONNULL__ APDS9930_Set_LPC(APDS9930_t * pCpnt);
 

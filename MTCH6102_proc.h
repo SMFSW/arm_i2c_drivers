@@ -1,6 +1,6 @@
 /*!\file MTCH6102_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2020, SMFSW
+** \copyright MIT (c) 2017-2021, SMFSW
 ** \brief MTCH6102 Driver procedures
 ** \details MTCH6102: Low-Power Projected Capacitive Touch Controller
 **/
@@ -95,6 +95,8 @@ FctERR NONNULL__ MTCH6102_Init_Sequence(MTCH6102_t * const pCpnt);
 /*!\brief Configure MTCH6102 parameters needing configure step
 ** \param[in,out] pCpnt - Pointer to MTCH6102 component
 ** \param[in] store_to_nv - Store to non-volatile memory after configuration
+** \param[in] active_per - Active period value
+** \param[in] idle_per - Idle period value
 ** \param[in] filter - Filter type
 ** \param[in] filter_str - Filter strength
 ** \param[in] base_filter - Base filter type
