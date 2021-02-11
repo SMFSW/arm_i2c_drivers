@@ -10,7 +10,7 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_PCA9624)
 /****************************************************************/
-#if defined(I2C_PCA9685) || defined(PCA9956)
+#if defined(I2C_PCA9685) || defined(I2C_PCA9956)
 #warning "PCA9624 -> Multiple PCA9xxx types: use with caution if using CALL addresses if on same I2C bus!!!"
 #endif
 /****************************************************************/

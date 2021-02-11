@@ -61,7 +61,9 @@ FctERR NONNULL__ PCA9624_Set_Mode_LEDs(PCA9624_t * const pCpnt, const uint8_t ch
 
 	SET_BITS_VAL(pCpnt->LDR.Word, mask, val);
 
-	return PCA9624_Write(pCpnt->cfg.slave_inst, (uint8_t *) &pCpnt->LDR, PCA9624__LEDOUT0, sizeof(pCpnt->LDR));
+	const uint8_t TMP[2] = { LOBYTE(pCpnt->LDR.Word), HIBYTE(pCpnt->LDR.Word) };
+
+	return PCA9624_Write(pCpnt->cfg.slave_inst, TMP, PCA9624__LEDOUT0, sizeof(pCpnt->LDR));
 }
 
 
@@ -89,7 +91,7 @@ FctERR NONNULL__ PCA9624_SetVal(PCA9624_t * const pCpnt, const PCA9xxx_chan chan
 
 	if (chan > PCA9xxx__PWM8)	{ return ERROR_RANGE; }	// Unknown channel
 
-	return PCA9624_Write(pCpnt->cfg.slave_inst, (uint8_t *) &VAL, PCA9624__PWM0 + chan, sizeof(VAL));
+	return PCA9624_Write(pCpnt->cfg.slave_inst, &VAL, PCA9624__PWM0 + chan, sizeof(VAL));
 }
 
 
@@ -99,7 +101,7 @@ FctERR NONNULL__ PCA9624_ClrVal(PCA9624_t * const pCpnt, const PCA9xxx_chan chan
 
 	if (chan > PCA9xxx__PWM8)	{ return ERROR_RANGE; }	// Unknown channel
 
-	return PCA9624_Write(pCpnt->cfg.slave_inst, (uint8_t *) &VAL, PCA9624__PWM0 + chan, sizeof(VAL));
+	return PCA9624_Write(pCpnt->cfg.slave_inst, &VAL, PCA9624__PWM0 + chan, sizeof(VAL));
 }
 
 

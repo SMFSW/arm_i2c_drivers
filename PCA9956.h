@@ -179,7 +179,7 @@ typedef union PACK__ uPCA9956_REG__MODE2 {
 ** \brief Union for LEDOUT registers of PCA9956
 **/
 typedef union PACK__ uPCA9956_REG__LEDOUT {
-	uint64_t DWord;
+	uint64_t LWord;
 	struct PACK__ {
 		PCA9956_ledout LDR0		:2;		//!< LED0 output state control
 		PCA9956_ledout LDR1		:2;		//!< LED1 output state control
@@ -214,7 +214,7 @@ typedef union PACK__ uPCA9956_REG__LEDOUT {
 ** \brief Union for EFLAG registers of PCA9956
 **/
 typedef union PACK__ uPCA9956_REG__EFLAG {
-	uint64_t DWord;
+	uint64_t LWord;
 	struct PACK__ {
 		PCA9956_eflag ERR0		:2;		//!< LED0 error status
 		PCA9956_eflag ERR1		:2;		//!< LED1 error status

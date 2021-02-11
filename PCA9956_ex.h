@@ -139,8 +139,7 @@ FctERR NONNULL__ PCA9956_ClrVal(PCA9956_t * const pCpnt, const PCA9xxx_chan chan
 ** \param[in,out] eflags - Pointer to the error flags data for receive
 ** \return FctERR - ErrorCode
 **/
-__INLINE FctERR NONNULL_INLINE__ PCA9956_ReadEFLAGs(PCA9956_t * const pCpnt, uPCA9956_REG__EFLAG * const eflags) {
-	return PCA9956_Read(pCpnt->cfg.slave_inst, (uint8_t *) eflags, PCA9956__EFLAG0, 6); }
+FctERR NONNULL__ PCA9956_ReadEFLAGs(PCA9956_t * const pCpnt, uPCA9956_REG__EFLAG * const eflags);
 
 
 /*!\brief Reads I2C register from PCA9956
