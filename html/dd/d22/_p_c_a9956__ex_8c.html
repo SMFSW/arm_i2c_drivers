@@ -121,6 +121,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ae1e617a23120269e52293fac43d2ac63"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d22/_p_c_a9956__ex_8c.html#ae1e617a23120269e52293fac43d2ac63">PCA9956_ClrVal</a> (<a class="el" href="../../df/d75/struct_p_c_a9956__t.html">PCA9956_t</a> *const pCpnt, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> chan)</td></tr>
 <tr class="memdesc:ae1e617a23120269e52293fac43d2ac63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends I2C PWM OFF values to apply to a particular channel for PCA9956.  <a href="#ae1e617a23120269e52293fac43d2ac63">More...</a><br /></td></tr>
 <tr class="separator:ae1e617a23120269e52293fac43d2ac63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a617e11246f1d855ab91ce29e6007258d"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d22/_p_c_a9956__ex_8c.html#a617e11246f1d855ab91ce29e6007258d">PCA9956_ReadEFLAGs</a> (<a class="el" href="../../df/d75/struct_p_c_a9956__t.html">PCA9956_t</a> *const pCpnt, <a class="el" href="../../d0/db8/unionu_p_c_a9956___r_e_g_____e_f_l_a_g.html">uPCA9956_REG__EFLAG</a> *const eflags)</td></tr>
+<tr class="memdesc:a617e11246f1d855ab91ce29e6007258d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads I2C LEDs error flags.  <a href="#a617e11246f1d855ab91ce29e6007258d">More...</a><br /></td></tr>
+<tr class="separator:a617e11246f1d855ab91ce29e6007258d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72082f17a461d30c7cc8c0d0fb95e5e4"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d22/_p_c_a9956__ex_8c.html#a72082f17a461d30c7cc8c0d0fb95e5e4">PCA9956_ReadRegister</a> (<a class="el" href="../../df/d75/struct_p_c_a9956__t.html">PCA9956_t</a> *pCpnt, const <a class="el" href="../../d4/d1d/_p_c_a9956_8h.html#ae10230e2e66901bf2ed606f7a64925d6">PCA9956_reg</a> reg, uint8_t *val)</td></tr>
 <tr class="memdesc:a72082f17a461d30c7cc8c0d0fb95e5e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads I2C register from PCA9956.  <a href="#a72082f17a461d30c7cc8c0d0fb95e5e4">More...</a><br /></td></tr>
 <tr class="separator:a72082f17a461d30c7cc8c0d0fb95e5e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -250,6 +253,62 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a617e11246f1d855ab91ce29e6007258d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a617e11246f1d855ab91ce29e6007258d">&#9670;&nbsp;</a></span>PCA9956_ReadEFLAGs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR PCA9956_ReadEFLAGs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/d75/struct_p_c_a9956__t.html">PCA9956_t</a> *const&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/db8/unionu_p_c_a9956___r_e_g_____e_f_l_a_g.html">uPCA9956_REG__EFLAG</a> *const&#160;</td>
+          <td class="paramname"><em>eflags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reads I2C LEDs error flags. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to PCA9956 component </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">eflags</td><td>- Pointer to the error flags data for receive </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d22/_p_c_a9956__ex_8c_a617e11246f1d855ab91ce29e6007258d_cgraph.png" border="0" usemap="#dd/d22/_p_c_a9956__ex_8c_a617e11246f1d855ab91ce29e6007258d_cgraph" alt=""/></div>
+<map name="dd/d22/_p_c_a9956__ex_8c_a617e11246f1d855ab91ce29e6007258d_cgraph" id="dd/d22/_p_c_a9956__ex_8c_a617e11246f1d855ab91ce29e6007258d_cgraph">
+<area shape="rect" id="node2" href="../../df/d5e/_p_c_a9956_8c.html#aaab84cb94e5542d51b2d99463079d907" title="I2C Read function for PCA9956. " alt="" coords="220,31,339,57"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="387,5,504,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="392,56,499,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d22/_p_c_a9956__ex_8c_a617e11246f1d855ab91ce29e6007258d_icgraph.png" border="0" usemap="#dd/d22/_p_c_a9956__ex_8c_a617e11246f1d855ab91ce29e6007258d_icgraph" alt=""/></div>
+<map name="dd/d22/_p_c_a9956__ex_8c_a617e11246f1d855ab91ce29e6007258d_icgraph" id="dd/d22/_p_c_a9956__ex_8c_a617e11246f1d855ab91ce29e6007258d_icgraph">
+<area shape="rect" id="node2" href="../../dd/ddf/_p_c_a9956__ex_8h.html#a1f23873e665562e66821beeb83bc510c" title="Set MODE2 register. " alt="" coords="220,5,383,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a72082f17a461d30c7cc8c0d0fb95e5e4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a72082f17a461d30c7cc8c0d0fb95e5e4">&#9670;&nbsp;</a></span>PCA9956_ReadRegister()</h2>
 
@@ -307,7 +366,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d22/_p_c_a9956__ex_8c_a72082f17a461d30c7cc8c0d0fb95e5e4_icgraph.png" border="0" usemap="#dd/d22/_p_c_a9956__ex_8c_a72082f17a461d30c7cc8c0d0fb95e5e4_icgraph" alt=""/></div>
 <map name="dd/d22/_p_c_a9956__ex_8c_a72082f17a461d30c7cc8c0d0fb95e5e4_icgraph" id="dd/d22/_p_c_a9956__ex_8c_a72082f17a461d30c7cc8c0d0fb95e5e4_icgraph">
-<area shape="rect" id="node2" href="../../dd/ddf/_p_c_a9956__ex_8h.html#a617e11246f1d855ab91ce29e6007258d" title="Reads I2C LEDs error flags. " alt="" coords="223,5,389,32"/>
+<area shape="rect" id="node2" href="../../dd/ddf/_p_c_a9956__ex_8h.html#a1f23873e665562e66821beeb83bc510c" title="Set MODE2 register. " alt="" coords="223,5,385,32"/>
 </map>
 </div>
 
