@@ -211,7 +211,7 @@ FctERR NONNULL__ ADS1115_Start_Conversion(ADS1115_t * pCpnt, const ADS1115_mux c
 {
 	FctERR err;
 
-	if (chan > ADS1115__MUX_pAIN3_nGND)		{ return ERROR_VALUE; }		// Unknown conversion
+	if (chan > ADS1115__MUX_pAIN3_nGND)	{ return ERROR_VALUE; }	// Unknown conversion
 
 	pCpnt->cfg.Config.Bits.MUX = chan;
 	pCpnt->cfg.Config.Bits.OS = (pCpnt->cfg.mode == ADS1115__MODE_SINGLE_SHOT) ? true : false;

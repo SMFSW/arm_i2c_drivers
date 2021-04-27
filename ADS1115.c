@@ -15,6 +15,9 @@
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_ADS1115)
+
+// HARMcksL libs
+#include "tick_utils.h"
 /****************************************************************/
 
 
@@ -38,6 +41,7 @@ FctERR NONNULL__ ADS1115_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c,
 	if (!err)	{ err = ADS1115_Init_Sequence(&ADS1115[idx]); }
 
 	if (err)	{ I2C_set_enable(&ADS1115_hal[idx], false); }
+	else		{ init_Delay_Generator(); }
 
 	return ERROR_OK;
 }

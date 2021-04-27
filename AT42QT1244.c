@@ -9,7 +9,7 @@
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_AT42QT1244)
-/****************************************************************/
+
 // std libs
 #if AT42QT1244_CHECK_CRC
 #include <stdlib.h>
@@ -39,6 +39,7 @@ FctERR NONNULL__ AT42QT1244_Init(const uint8_t idx, const I2C_HandleTypeDef * hi
 	if (!err)	{ err = AT42QT1244_Init_Sequence(&AT42QT1244[idx]); }
 
 	if (err)	{ I2C_set_enable(&AT42QT1244_hal[idx], false); }
+	else		{ init_Delay_Generator(); }
 
 	return err;
 }
