@@ -95,21 +95,20 @@ FctERR NONNULL__ FM24C_Read_Banked(FM24C_t * pCpnt, uint8_t * data, const uint16
 
 FctERR NONNULL__ FM24C_ReadWrite(FM24C_t * pCpnt, uint8_t * data, const uint16_t addr, const uint16_t nb, const bool wr)
 {
-	FctERR		err = ERROR_OK;
-	uint16_t	subaddr, bank, n;
+	FctERR err = ERROR_OK;
 
 	if (nb > FM24C_BANK_SIZE * 2)	{ return ERROR_VALUE; }	// The function handle only one bank crossing
 
-	div_t temp = div(addr, FM24C_BANK_SIZE);	// Divide address by bank size
-	uint16_t nbBank2 = max(0, (temp.rem + nb - FM24C_BANK_SIZE));	// Number of bytes for bank+1 (if bank crossing)
-	uint16_t nbBank1 = nb - nbBank2;								// Number of bytes for bank
-	int nbloop = nbBank2 ? 2 : 1;									// Number of for loop iterations
+	const div_t		temp = div(addr, FM24C_BANK_SIZE);								// Divide address by bank size
+	const uint16_t	nbBank2 = max(0, (int16_t) (temp.rem + nb - FM24C_BANK_SIZE));	// Number of bytes for bank+1 (if bank crossing)
+	const uint16_t	nbBank1 = nb - nbBank2;											// Number of bytes for bank
+	const int		nbloop = nbBank2 ? 2 : 1;										// Number of for loop iterations
 
 	for (int i = 0 ; i < nbloop ; i++)
 	{
-		n = i ? nbBank2 : nbBank1;
-		subaddr = i ? 0 : temp.rem;
-		bank = temp.quot + i;
+		const uint16_t n = i ? nbBank2 : nbBank1;
+		const uint16_t subaddr = i ? 0 : temp.rem;
+		const uint16_t bank = temp.quot + i;
 
 		if (wr)		{ err = FM24C_Write_Banked(pCpnt, &data[nbBank1 * i], subaddr, bank, n); }	// Write
 		if (err)	{ break; }																	// Break if error occurred

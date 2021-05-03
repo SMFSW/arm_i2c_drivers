@@ -24,6 +24,7 @@ SOFTWARE.
 
 * Doxygen comments fixes for the whole library
 * ADS1115 & AT42QT1244: call to init_Delay_us added (following changes in HARMcksL library)
+* FM24C: refactoring of FM24C_ReadWrite
 * PCA9956: added
 * PCA9624: WORD not written directly in PCA9624_Set_Mode_LEDs (to work no matter endian)
 * PCA9xxx & PCA9624 & PCA9685: typedefs changed and created for consistency across peripherals
