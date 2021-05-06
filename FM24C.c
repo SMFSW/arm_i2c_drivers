@@ -26,7 +26,7 @@
 /****************************************************************/
 
 
-static const I2C_slave_t FM24C_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FMP }, 0, HAL_OK, true, false };
+static const I2C_slave_t FM24C_defaults = { { pNull, 0, I2C_eep_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FMP }, 0, HAL_OK, true, false };
 
 I2C_slave_t FM24C_hal[I2C_FM24C_NB];
 FM24C_t FM24C[I2C_FM24C_NB];

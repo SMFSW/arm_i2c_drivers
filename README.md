@@ -60,6 +60,8 @@ Please keep in mind some components are somewhat custom and needs to be accesses
       - FM24C16B
       - FM24C04B
       - BR24T04FVM
+  - Transaction timeout set to 1s:
+    - There shouldn't be any timeout reached for these components, otherwise refer to MB85RC256V comment
 
 - **L3GD20H**: MEMS motion sensor, three-axis digital output gyroscope
   - **STATUS**: CODING IN PROGRESS / NO TESTS YET
@@ -73,6 +75,8 @@ Please keep in mind some components are somewhat custom and needs to be accesses
     - Tested on:
       - MB85RC256V
       - FM24CL64B
+  - Transaction timeout set to 1s:
+    - For bigger size components, in case timeout is reached, read/write transactions may be split in multiple calls as workaround
 
 - **MCP4725**: 12-Bit Digital-to-Analog Converter with EEPROM Memory
   - **STATUS**: WORKING

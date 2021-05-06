@@ -23,6 +23,9 @@ SOFTWARE.
 ## v1.1
 
 * Doxygen comments fixes for the whole library
+* I2C_slave_timeout set to 50ms instead of 20ms (in case of components with lots to read at low speed)
+* I2C_eep_slave_timeout added, set to 1s (for EEPROM/FRAM components type) to keep some margin for really long transactions
+  * For bigger size components, in case timeout is reached, read/write transactions may be split in multiple calls as workaround
 * ADS1115 & AT42QT1244: call to init_Delay_us added (following changes in HARMcksL library)
 * FM24C: refactoring of FM24C_ReadWrite
 * PCA9956: added

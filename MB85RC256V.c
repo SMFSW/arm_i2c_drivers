@@ -21,7 +21,7 @@
 /****************************************************************/
 
 
-static const I2C_slave_t MB85RC256V_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_16BIT, I2C_FMP }, 0, HAL_OK, true, false };
+static const I2C_slave_t MB85RC256V_defaults = { { pNull, 0, I2C_eep_slave_timeout, I2C_MEMADD_SIZE_16BIT, I2C_FMP }, 0, HAL_OK, true, false };
 
 I2C_slave_t MB85RC256V_hal[I2C_MB85RC256V_NB];
 MB85RC256V_t MB85RC256V[I2C_MB85RC256V_NB];
