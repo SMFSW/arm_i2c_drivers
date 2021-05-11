@@ -29,7 +29,7 @@
 #define	I2C_ADDR_General_Call	0			//!< I2C general call address
 
 #define I2C_slave_timeout		50			//!< Default timeout for transaction on I2C
-#define I2C_eep_slave_timeout	1000		//!< Default timeout for eeprom like components transaction on I2C
+#define I2C_eep_slave_timeout	500			//!< Default timeout for eeprom type components transaction on I2C
 
 
 #define I2C_ADDR(a)				((a) << 1)	//!< Macro to shift \b a 1 bit left to define 7b I2C address
