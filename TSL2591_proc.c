@@ -12,7 +12,7 @@
 /****************************************************************/
 
 
-TSL2591_t TSL2591[I2C_TSL2591_NB];
+TSL2591_t TSL2591[I2C_TSL2591_NB] = { 0 };
 
 const uint16_t TSL2591_gain_tab[4] = { 1, 25, 400, 9200 };	// Medium gain is 24.5, thus 25 used
 const uint16_t TSL2591_integ_tab[6] = { 100, 200, 300, 400, 500, 600 };
@@ -21,7 +21,7 @@ const uint16_t TSL2591_integ_tab[6] = { 100, 200, 300, 400, 500, 600 };
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ TSL2591_Init_Sequence(TSL2591_t * pCpnt)
+__WEAK FctERR NONNULL__ TSL2591_Init_Sequence(TSL2591_t * const pCpnt)
 {
 	uTSL2591_REG__ENABLE	EN = { 0 };
 	uTSL2591_REG__CONFIG	CFG = { 0 };
@@ -61,7 +61,7 @@ __WEAK FctERR NONNULL__ TSL2591_Init_Sequence(TSL2591_t * pCpnt)
 /****************************************************************/
 
 
-void NONNULL__ TSL2591_Set_CPL(TSL2591_t * pCpnt)
+void NONNULL__ TSL2591_Set_CPL(TSL2591_t * const pCpnt)
 {
 	// GA = 1 / Transmitivity -> e.g., for 5% transmissive glass, GA = 1 / 0.05
 	const float	GA = 100.0f / TSL2591_GLASS_TRANSMISSIVITY;
@@ -79,7 +79,7 @@ void NONNULL__ TSL2591_Set_CPL(TSL2591_t * pCpnt)
 ** \param[in] ir - Green value
 ** \return FctERR - error code
 **/
-static NONNULL__ FctERR calculateLux(TSL2591_t * pCpnt, const uint16_t full, const uint16_t ir)
+static NONNULL__ FctERR calculateLux(TSL2591_t * const pCpnt, const uint16_t full, const uint16_t ir)
 {
 	const float	B = 1.64f, C = 0.59f, D = 0.86f, DF = 408.0f;
 	// SATURATION = 1024 * (256 - ATIME_ms) if ATIME_ms > 172ms
@@ -111,7 +111,7 @@ static NONNULL__ FctERR calculateLux(TSL2591_t * pCpnt, const uint16_t full, con
 }
 
 
-__WEAK FctERR NONNULL__ TSL2591_handler(TSL2591_t * pCpnt)
+__WEAK FctERR NONNULL__ TSL2591_handler(TSL2591_t * const pCpnt)
 {
 	uint8_t					DATA[5];
 	uTSL2591_REG__STATUS *	ST = (uTSL2591_REG__STATUS *) DATA;
@@ -136,6 +136,18 @@ __WEAK FctERR NONNULL__ TSL2591_handler(TSL2591_t * pCpnt)
 	if (ST->Bits.AINT)	{ return TSL2591_SF_Clear_IT(pCpnt); }
 
 	return ERROR_OK;
+}
+
+
+__WEAK FctERR NONNULL__ TSL2591_handler_it(TSL2591_t * const pCpnt)
+{
+	FctERR	err;
+	bool	interrupt;
+
+	err = TSL2591_INT_GPIO_Get(pCpnt, &interrupt);
+	if ((!err) && interrupt)	{ err = TSL2591_handler(pCpnt); }
+
+	return err;
 }
 
 

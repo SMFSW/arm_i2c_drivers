@@ -79,14 +79,14 @@ extern BMP180_t BMP180[I2C_BMP180_NB];			//!< BMP180 User structure
 ** \param[in] pCpnt - Pointer to BMP180 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ BMP180_Set_SeaLevel_Pressure(BMP180_t * pCpnt);
+FctERR NONNULL__ BMP180_Set_SeaLevel_Pressure(BMP180_t * const pCpnt);
 
 /*!\brief Initialization Sequence for BMP180 peripheral
 ** \weak BMP180 Init sequence may be user implemented if custom initialization sequence needed
 ** \param[in] pCpnt - Pointer to BMP180 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ BMP180_Init_Sequence(BMP180_t * pCpnt);
+FctERR NONNULL__ BMP180_Init_Sequence(BMP180_t * const pCpnt);
 
 
 /*!\brief Set oversampling for BMP180 peripheral
@@ -94,7 +94,7 @@ FctERR NONNULL__ BMP180_Init_Sequence(BMP180_t * pCpnt);
 ** \param[in,out] oss - oversampling value
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ BMP180_Set_Oversampling(BMP180_t * pCpnt, const BMP180_oversampling oss);
+FctERR NONNULL__ BMP180_Set_Oversampling(BMP180_t * const pCpnt, const BMP180_oversampling oss);
 
 
 /*!\brief Get calibration parameters from BMP180 peripheral
@@ -102,21 +102,21 @@ FctERR NONNULL__ BMP180_Set_Oversampling(BMP180_t * pCpnt, const BMP180_oversamp
 ** \param[in,out] pCalib - pointer to calibration structure to read to
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ BMP180_Get_Calibration(BMP180_t * pCpnt, BMP180_calib * pCalib);
+FctERR NONNULL__ BMP180_Get_Calibration(BMP180_t * const pCpnt, BMP180_calib * pCalib);
 
 /*!\brief Gets the compensated pressure level
 ** \param[in] pCpnt - Pointer to BMP180 component
 ** \param[in,out] pres - pointer to atmospheric pressure level to read to (in hPa)
 ** \return FctERR - error code
 **/
-FctERR NONNULLX__(1) BMP180_Get_Pressure(BMP180_t * pCpnt, float * pres);
+FctERR NONNULLX__(1) BMP180_Get_Pressure(BMP180_t * const pCpnt, float * pres);
 
 /*!\brief Get the temperature
 ** \param[in] pCpnt - Pointer to BMP180 component
 ** \param[in,out] temp - pointer to temperature to read to (in Celsius degrees)
 ** \return FctERR - error code
 **/
-FctERR NONNULLX__(1) BMP180_Get_Temperature(BMP180_t * pCpnt, float * temp);
+FctERR NONNULLX__(1) BMP180_Get_Temperature(BMP180_t * const pCpnt, float * temp);
 
 
 /*!\brief Handler for BMP180 peripheral
@@ -125,7 +125,7 @@ FctERR NONNULLX__(1) BMP180_Get_Temperature(BMP180_t * pCpnt, float * temp);
 ** \param[in] pCpnt - Pointer to BMP180 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ BMP180_handler(BMP180_t * pCpnt);
+FctERR NONNULL__ BMP180_handler(BMP180_t * const pCpnt);
 
 
 /*!\brief Handler for all BMP180 peripherals

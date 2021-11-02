@@ -54,7 +54,7 @@ FctERR NONNULL__ PCA9685_CalcVal_NoDelay(uint8_t val[4], const uint16_t duty)
 }
 
 
-FctERR NONNULL__ PCA9685_Set_Latch(PCA9685_t * pCpnt, const PCA96xx_latch latch)
+FctERR NONNULL__ PCA9685_Set_Latch(PCA9685_t * const pCpnt, const PCA96xx_latch latch)
 {
 	uPCA9685_REG__MODE2	MODE2;
 	FctERR				err;
@@ -69,7 +69,7 @@ FctERR NONNULL__ PCA9685_Set_Latch(PCA9685_t * pCpnt, const PCA96xx_latch latch)
 }
 
 
-FctERR NONNULL__ PCA9685_Set_Frequency(PCA9685_t * pCpnt, const uint16_t freq)
+FctERR NONNULL__ PCA9685_Set_Frequency(PCA9685_t * const pCpnt, const uint16_t freq)
 {
 	uPCA9685_REG__MODE1	MODE1;
 	uint8_t				DATA;
@@ -98,7 +98,7 @@ FctERR NONNULL__ PCA9685_Set_Frequency(PCA9685_t * pCpnt, const uint16_t freq)
 }
 
 
-FctERR NONNULL__ PCA9685_ReadVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan, uint16_t * duty)
+FctERR NONNULL__ PCA9685_ReadVal(PCA9685_t * const pCpnt, const PCA9xxx_chan chan, uint16_t * duty)
 {
 	FctERR		err;
 	uint8_t		DATA[4];
@@ -124,7 +124,7 @@ FctERR NONNULL__ PCA9685_ReadVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan, uin
 }
 
 
-FctERR NONNULL__ PCA9685_ReadValByte(PCA9685_t * pCpnt, const PCA9xxx_chan chan, uint8_t * duty)
+FctERR NONNULL__ PCA9685_ReadValByte(PCA9685_t * const pCpnt, const PCA9xxx_chan chan, uint8_t * duty)
 {
 	FctERR		err = ERROR_OK;
 	uint8_t		DATA[4];
@@ -150,7 +150,7 @@ FctERR NONNULL__ PCA9685_ReadValByte(PCA9685_t * pCpnt, const PCA9xxx_chan chan,
 }
 
 
-FctERR NONNULL__ PCA9685_PutVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan, const uint16_t duty, const uint16_t delay)
+FctERR NONNULL__ PCA9685_PutVal(PCA9685_t * const pCpnt, const PCA9xxx_chan chan, const uint16_t duty, const uint16_t delay)
 {
 	PCA9685_reg RegAddr;
 	uint8_t		DATA[4];
@@ -167,7 +167,7 @@ FctERR NONNULL__ PCA9685_PutVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan, cons
 }
 
 
-FctERR NONNULL__ PCA9685_SetVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan)
+FctERR NONNULL__ PCA9685_SetVal(PCA9685_t * const pCpnt, const PCA9xxx_chan chan)
 {
 	PCA9685_reg RegAddr;
 
@@ -180,7 +180,7 @@ FctERR NONNULL__ PCA9685_SetVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan)
 }
 
 
-FctERR NONNULL__ PCA9685_ClrVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan)
+FctERR NONNULL__ PCA9685_ClrVal(PCA9685_t * const pCpnt, const PCA9xxx_chan chan)
 {
 	PCA9685_reg RegAddr;
 
@@ -193,7 +193,7 @@ FctERR NONNULL__ PCA9685_ClrVal(PCA9685_t * pCpnt, const PCA9xxx_chan chan)
 }
 
 
-FctERR NONNULL__ PCA9685_Reset(PCA9685_t * pCpnt)
+FctERR NONNULL__ PCA9685_Reset(PCA9685_t * const pCpnt)
 {
 	uint8_t			DATA = 0x06;
 	I2C_slave_t *	pSlave = pCpnt->cfg.slave_inst;
@@ -211,7 +211,7 @@ FctERR NONNULL__ PCA9685_Reset_All(I2C_HandleTypeDef * hi2c)
 }
 
 
-FctERR NONNULL__ PCA9685_ReadRegister(PCA9685_t * pCpnt, const PCA9685_reg reg, uint8_t * val)
+FctERR NONNULL__ PCA9685_ReadRegister(PCA9685_t * const pCpnt, const PCA9685_reg reg, uint8_t * val)
 {
 	*val = 0;
 
@@ -219,6 +219,16 @@ FctERR NONNULL__ PCA9685_ReadRegister(PCA9685_t * pCpnt, const PCA9685_reg reg, 
 
 	return PCA9685_Read(pCpnt->cfg.slave_inst, val, reg, 1);
 }
+
+
+/****************************************************************/
+
+
+__WEAK FctERR NONNULL__ PCA9685_OE_GPIO_Init(PCA9685_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	return I2C_peripheral_GPIO_init(&pCpnt->cfg.OE_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+
+__WEAK FctERR NONNULL__ PCA9685_OE_GPIO_Set(PCA9685_t * const pCpnt, const bool state) {
+	return I2C_peripheral_GPIO_set(&pCpnt->cfg.OE_GPIO, state); }
 
 
 /****************************************************************/

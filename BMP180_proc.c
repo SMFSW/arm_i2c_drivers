@@ -13,7 +13,7 @@
 
 //#define BMP180_TST	//!< Defined to check calculations with datasheet
 
-BMP180_t BMP180[I2C_BMP180_NB];
+BMP180_t BMP180[I2C_BMP180_NB] = { 0 };
 
 extern uint8_t BMP180_OSS_time[4];
 
@@ -29,7 +29,7 @@ static void BMP180_Test_Result(const char * str, const bool res)
 #endif
 
 
-__WEAK FctERR NONNULL__ BMP180_Set_SeaLevel_Pressure(BMP180_t * pCpnt)
+__WEAK FctERR NONNULL__ BMP180_Set_SeaLevel_Pressure(BMP180_t * const pCpnt)
 {
 	pCpnt->cfg.SeaLevelPressure = Get_SeaLevel_Pressure();
 
@@ -37,7 +37,7 @@ __WEAK FctERR NONNULL__ BMP180_Set_SeaLevel_Pressure(BMP180_t * pCpnt)
 }
 
 
-__WEAK FctERR NONNULL__ BMP180_Init_Sequence(BMP180_t * pCpnt)
+__WEAK FctERR NONNULL__ BMP180_Init_Sequence(BMP180_t * const pCpnt)
 {
 	FctERR	err;
 
@@ -73,7 +73,7 @@ __WEAK FctERR NONNULL__ BMP180_Init_Sequence(BMP180_t * pCpnt)
 /****************************************************************/
 
 
-FctERR NONNULL__ BMP180_Set_Oversampling(BMP180_t * pCpnt, const BMP180_oversampling oss)
+FctERR NONNULL__ BMP180_Set_Oversampling(BMP180_t * const pCpnt, const BMP180_oversampling oss)
 {
 	if (oss > BMP180__OSS_8_TIME)	{ return ERROR_VALUE; }	// Unknown Oversampling
 
@@ -82,7 +82,7 @@ FctERR NONNULL__ BMP180_Set_Oversampling(BMP180_t * pCpnt, const BMP180_oversamp
 }
 
 
-FctERR NONNULL__ BMP180_Get_Calibration(BMP180_t * pCpnt, BMP180_calib * pCalib)
+FctERR NONNULL__ BMP180_Get_Calibration(BMP180_t * const pCpnt, BMP180_calib * pCalib)
 {
 	int16_t *	addr = (int16_t *) pCalib;
 	FctERR		err = ERROR_OK;
@@ -121,7 +121,7 @@ static float B5_To_Celcius(const int32_t B5)
 }
 
 
-FctERR NONNULLX__(1) BMP180_Get_Pressure(BMP180_t * pCpnt, float * pres)
+FctERR NONNULLX__(1) BMP180_Get_Pressure(BMP180_t * const pCpnt, float * pres)
 {
 	int32_t						UT = 0, UP = 0, compp = 0;
 	int32_t						x1, x2, b6, x3, b3, p;
@@ -184,7 +184,7 @@ FctERR NONNULLX__(1) BMP180_Get_Pressure(BMP180_t * pCpnt, float * pres)
 }
 
 
-FctERR NONNULLX__(1) BMP180_Get_Temperature(BMP180_t * pCpnt, float * temp)
+FctERR NONNULLX__(1) BMP180_Get_Temperature(BMP180_t * const pCpnt, float * temp)
 {
 	int32_t	UT = 0;
 	FctERR	err = ERROR_OK;
@@ -215,7 +215,7 @@ FctERR NONNULLX__(1) BMP180_Get_Temperature(BMP180_t * pCpnt, float * temp)
 }
 
 
-__WEAK FctERR NONNULL__ BMP180_handler(BMP180_t * pCpnt)
+__WEAK FctERR NONNULL__ BMP180_handler(BMP180_t * const pCpnt)
 {
 	FctERR	err;
 

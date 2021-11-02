@@ -43,22 +43,23 @@
 ** \brief TSL2591 user interface struct
 **/
 typedef struct TSL2591_t {
-	uint16_t		Full;				//!< Current Full spectrum raw value
-	uint16_t		IR;					//!< Current IR raw value
-	uint32_t		Lux;				//!< Current Illuminance (lux)
-	float			IRF;				//!< Current Current IR ratio
-	bool			SaturationRipple;	//!< Current Ripple saturation status (75% of saturation value)
-	bool			Saturation;			//!< Current Sensor saturation status
+	uint16_t			Full;				//!< Current Full spectrum raw value
+	uint16_t			IR;					//!< Current IR raw value
+	uint32_t			Lux;				//!< Current Illuminance (lux)
+	float				IRF;				//!< Current Current IR ratio
+	bool				SaturationRipple;	//!< Current Ripple saturation status (75% of saturation value)
+	bool				Saturation;			//!< Current Sensor saturation status
 	struct {
-	I2C_slave_t *	slave_inst;			//!< Slave structure
-	uint32_t		CPkL;				//!< Counts Per kiloLux config
-	float			DER;				//!< Accuracy (+/- DER lux) config
-	TSL2591_gain	Gain;				//!< Sensor gain config
-	TSL2591_integ	Integ;				//!< Sensor integration time config
-	uint16_t		LowThreshold;		//!< Low Threshold config
-	uint16_t		HighThreshold;		//!< High Threshold config
-	bool			AIEN;				//!< Sensor ALS (Ambient Light Sensing) interrupts enabled config
-	uint8_t			ID;					//!< Chip ID
+	I2C_slave_t *		slave_inst;			//!< Slave structure
+	PeripheralGPIO_t	INT_GPIO;			//!< Interrupt GPIO struct
+	uint32_t			CPkL;				//!< Counts Per kiloLux config
+	float				DER;				//!< Accuracy (+/- DER lux) config
+	TSL2591_gain		Gain;				//!< Sensor gain config
+	TSL2591_integ		Integ;				//!< Sensor integration time config
+	uint16_t			LowThreshold;		//!< Low Threshold config
+	uint16_t			HighThreshold;		//!< High Threshold config
+	bool				AIEN;				//!< Sensor ALS (Ambient Light Sensing) interrupts enabled config
+	uint8_t				ID;					//!< Chip ID
 	} cfg;
 } TSL2591_t;
 
@@ -77,30 +78,41 @@ extern TSL2591_t	TSL2591[I2C_TSL2591_NB];	//!< TSL2591 User structure
 ** \param[in] pCpnt - Pointer to TSL2591 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TSL2591_Init_Sequence(TSL2591_t * pCpnt);
+FctERR NONNULL__ TSL2591_Init_Sequence(TSL2591_t * const pCpnt);
 
 
 /*!\brief Set proper CPL value (Counts per kiloLux)
  * \note Should be called after Configuration change of Integration time or Gain
 ** \param[in] pCpnt - Pointer to TSL2591 component
 **/
-void NONNULL__ TSL2591_Set_CPL(TSL2591_t * pCpnt);
+void NONNULL__ TSL2591_Set_CPL(TSL2591_t * const pCpnt);
 
 /*!\brief Get current Illuminance (in lux)
 ** \param[in] pCpnt - Pointer to TSL2591 component
 ** \return FctERR - error code
 **/
-__INLINE uint32_t NONNULL_INLINE__ TSL2591_Get_Lux(TSL2591_t * pCpnt) {
+__INLINE uint32_t NONNULL_INLINE__ TSL2591_Get_Lux(TSL2591_t * const pCpnt) {
 	return pCpnt->Lux; }
+
 
 /*!\brief Handler for TSL2591 peripheral
 ** \weak TSL2591 handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle TSL2591 tasks
-** \note Alternately may be called when event occurs on TSL2591 pin
+** \note Alternately may be called when event occurs on TSL2591 pin (or by calling \ref TSL2591_handler_it instead)
 ** \param[in] pCpnt - Pointer to TSL2591 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TSL2591_handler(TSL2591_t * pCpnt);
+FctERR NONNULL__ TSL2591_handler(TSL2591_t * const pCpnt);
+
+/*!\brief Handler for TSL2591 peripheral GPIO interrupt
+** \note \ref TSL2591_INT_GPIO_Init has to be called at init before using interrupt handler function
+** \weak TSL2591 GPIO interrupt handler may be user implemented to suit custom needs
+** \note May be called periodically to handle TSL2591 tasks through interrupts
+** \param[in] pCpnt - Pointer to TSL2591 component
+** \return FctERR - error code
+**/
+FctERR NONNULL__ TSL2591_handler_it(TSL2591_t * const pCpnt);
+
 
 /*!\brief Handler for all TSL2591 peripherals
 ** \note May be called periodically to handle all TSL2591 tasks
@@ -108,6 +120,15 @@ FctERR NONNULL__ TSL2591_handler(TSL2591_t * pCpnt);
 __INLINE void INLINE__ TSL2591_handler_all(void) {
 	for (TSL2591_t * pCpnt = TSL2591 ; pCpnt < &TSL2591[I2C_TSL2591_NB] ; pCpnt++) {
 		TSL2591_handler(pCpnt); }
+}
+
+/*!\brief Handler for all TSL2591 peripherals GPIO interrupt
+** \note \ref TSL2591_INT_GPIO_Init has to be called at init before using interrupt handler function
+** \note May be called periodically to handle all TSL2591 tasks
+**/
+__INLINE void INLINE__ TSL2591_handler_it_all(void) {
+	for (TSL2591_t * pCpnt = TSL2591 ; pCpnt < &TSL2591[I2C_TSL2591_NB] ; pCpnt++) {
+		TSL2591_handler_it(pCpnt); }
 }
 
 

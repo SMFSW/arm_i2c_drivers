@@ -175,7 +175,7 @@ FctERR BMP180_Init_Single(void);
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ BMP180_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ BMP180_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for BMP180
@@ -185,7 +185,7 @@ FctERR NONNULL__ BMP180_Write(I2C_slave_t * pSlave, const uint8_t * data, const 
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ BMP180_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ BMP180_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Word Read function for BMP180
@@ -194,7 +194,7 @@ FctERR NONNULL__ BMP180_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_
 ** \param[in] addr - Address to read from
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ BMP180_Read_Word(I2C_slave_t * pSlave, uint16_t * data, const uint16_t addr);
+FctERR NONNULL__ BMP180_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, const uint16_t addr);
 
 
 /****************************************************************/

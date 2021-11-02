@@ -51,7 +51,7 @@ extern MCP4725_t	MCP4725[I2C_MCP4725_NB];	//!< MCP4725 User structure
 ** \param[in] pCpnt - Pointer to MCP4725 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP4725_Init_Sequence(MCP4725_t * pCpnt);
+FctERR NONNULL__ MCP4725_Init_Sequence(MCP4725_t * const pCpnt);
 
 
 /*!\brief Set mode of the MCP4725 peripheral
@@ -59,21 +59,21 @@ FctERR NONNULL__ MCP4725_Init_Sequence(MCP4725_t * pCpnt);
 ** \param[in] mode - operating mode of MCP4725
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP4725_Set_Mode(MCP4725_t * pCpnt, const MCP4725_cmd mode);
+FctERR NONNULL__ MCP4725_Set_Mode(MCP4725_t * const pCpnt, const MCP4725_cmd mode);
 
 /*!\brief Set Power down mode of the MCP4725 peripheral
 ** \param[in] pCpnt - Pointer to MCP4725 component
 ** \param[in] pd - Power down mode of MCP4725
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP4725_Set_PowerDown(MCP4725_t * pCpnt, const MCP4725_pd pd);
+FctERR NONNULL__ MCP4725_Set_PowerDown(MCP4725_t * const pCpnt, const MCP4725_pd pd);
 
 /*!\brief Set VRef for MCP4725 peripheral
 ** \param[in] pCpnt - Pointer to MCP4725 component
 ** \param[in] vref - Voltage reference of MCP4725
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP4725_Set_VRef(MCP4725_t * pCpnt, const float vref);
+FctERR NONNULL__ MCP4725_Set_VRef(MCP4725_t * const pCpnt, const float vref);
 
 
 /*!\brief Write Raw DAC value to MCP4725 peripheral
@@ -81,14 +81,14 @@ FctERR NONNULL__ MCP4725_Set_VRef(MCP4725_t * pCpnt, const float vref);
 ** \param[in] val - Raw DAC value
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP4725_Set_Val(MCP4725_t * pCpnt, const uint16_t val);
+FctERR NONNULL__ MCP4725_Set_Val(MCP4725_t * const pCpnt, const uint16_t val);
 
 /*!\brief Write DAC value (in Volts) to MCP4725 peripheral
 ** \param[in] pCpnt - Pointer to MCP4725 component
 ** \param[in] volts - Volts DAC value
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP4725_Set_Volts(MCP4725_t * pCpnt, const float volts);
+FctERR NONNULL__ MCP4725_Set_Volts(MCP4725_t * const pCpnt, const float volts);
 
 
 /****************************************************************/

@@ -416,7 +416,7 @@ FctERR MTCH6102_Init_Single(void);
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MTCH6102_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ MTCH6102_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for MTCH6102
@@ -426,7 +426,7 @@ FctERR NONNULL__ MTCH6102_Write(I2C_slave_t * pSlave, const uint8_t * data, cons
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MTCH6102_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ MTCH6102_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /****************************************************************/

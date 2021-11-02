@@ -33,11 +33,13 @@
 ** \brief $CPNT$ user interface struct
 **/
 typedef struct $CPNT$_t {
-	uint8_t			$CPNT$_val_1;		//!< Current val_1
+	uint8_t				$CPNT$_val_1;		//!< Current val_1
 	struct {
-	I2C_slave_t *	slave_inst;			//!< Slave structure
-	uint8_t			$CPNT$_param_1;		//!< param_1 config
-	uint8_t			Id;					//!< $CPNT$ chip ID
+	I2C_slave_t *		slave_inst;			//!< Slave structure
+	PeripheralGPIO_t	INT_GPIO;			//!< Interrupt GPIO struct
+	PeripheralGPIO_t	RST_GPIO;			//!< Reset GPIO struct
+	uint8_t				$CPNT$_param_1;		//!< param_1 config
+	uint8_t				Id;					//!< $CPNT$ chip ID
 	} cfg;
 } $CPNT$_t;
 
@@ -56,17 +58,26 @@ extern $CPNT$_t $CPNT$[I2C_$CPNT$_NB];		//!< $CPNT$ User structure
 ** \param[in] pCpnt - Pointer to $CPNT$ component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ $CPNT$_Init_Sequence($CPNT$_t * pCpnt);
+FctERR NONNULL__ $CPNT$_Init_Sequence($CPNT$_t * const pCpnt);
 
 
 /*!\brief Handler for $CPNT$ peripheral
 ** \weak $CPNT$ handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle $CPNT$ tasks
-** \note Alternately may be called when event occurs on $CPNT$ pin
+** \note Alternately may be called when event occurs on $CPNT$ pin (or by calling \ref $CPNT$_handler_it instead)
 ** \param[in] pCpnt - Pointer to $CPNT$ component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ $CPNT$_handler($CPNT$_t * pCpnt);
+FctERR NONNULL__ $CPNT$_handler($CPNT$_t * const pCpnt);
+
+/*!\brief Handler for $CPNT$ peripheral GPIO interrupt
+** \note \ref $CPNT$_XXX_GPIO_Init has to be called at init before using interrupt handler function
+** \weak $CPNT$ GPIO interrupt handler may be user implemented to suit custom needs
+** \note May be called periodically to handle $CPNT$ tasks through interrupts
+** \param[in] pCpnt - Pointer to $CPNT$ component
+** \return FctERR - error code
+**/
+FctERR NONNULL__ $CPNT$_handler_it($CPNT$_t * const pCpnt);
 
 
 /*!\brief Handler for all $CPNT$ peripherals
@@ -75,6 +86,15 @@ FctERR NONNULL__ $CPNT$_handler($CPNT$_t * pCpnt);
 __INLINE void INLINE__ $CPNT$_handler_all(void) {
 	for ($CPNT$_t * pCpnt = $CPNT$ ; pCpnt < &$CPNT$[I2C_$CPNT$_NB] ; pCpnt++) {
 		$CPNT$_handler(pCpnt); }
+}
+
+/*!\brief Handler for all $CPNT$ peripherals GPIO interrupt
+** \note \ref $CPNT$_XXX_GPIO_Init has to be called at init before using interrupt handler function
+** \note May be called periodically to handle all $CPNT$ tasks
+**/
+__INLINE void INLINE__ $CPNT$_handler_it_all(void) {
+	for ($CPNT$_t * pCpnt = $CPNT$ ; pCpnt < &$CPNT$[I2C_$CPNT$_NB] ; pCpnt++) {
+		$CPNT$_handler_it(pCpnt); }
 }
 
 

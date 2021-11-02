@@ -15,9 +15,6 @@
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_ADS1115)
-
-// HARMcksL libs
-#include "tick_utils.h"
 /****************************************************************/
 
 
@@ -75,22 +72,22 @@ static const float ADS1115_step[8] = {
 ** \param[in] pCpnt - Pointer to ADS1115 component
 ** \return FctERR - error code
 **/
-__STATIC_INLINE FctERR NONNULL_INLINE__ _write_cfg(ADS1115_t * pCpnt) {
+__STATIC_INLINE FctERR NONNULL_INLINE__ _write_cfg(ADS1115_t * const pCpnt) {
 	return ADS1115_Write(pCpnt->cfg.slave_inst, &pCpnt->cfg.Config.Word, ADS1115__CONFIG); }
 
 
-uint16_t ADS1115_Get_conv_us(ADS1115_t * pCpnt) {
+uint16_t ADS1115_Get_conv_us(ADS1115_t * const pCpnt) {
 	return ADS1115_conv_us[pCpnt->cfg.Config.Bits.DR]; }
 
-uint16_t ADS1115_Get_conv_ms(ADS1115_t * pCpnt) {
+uint16_t ADS1115_Get_conv_ms(ADS1115_t * const pCpnt) {
 	return ADS1115_conv_ms[pCpnt->cfg.Config.Bits.DR]; }
 
 
-FctERR NONNULL__ ADS1115_Get_Conversion(ADS1115_t * pCpnt) {
+FctERR NONNULL__ ADS1115_Get_Conversion(ADS1115_t * const pCpnt) {
 	return ADS1115_Read(pCpnt->cfg.slave_inst, (uint16_t *) &pCpnt->AIN[pCpnt->AIN_idx], ADS1115__CONVERSION); }
 
 
-FctERR NONNULL__ ADS1115_Set_Function(ADS1115_t * pCpnt, const ADS1115_func func, const ADS1115_mode mode, const uint8_t nb)
+FctERR NONNULL__ ADS1115_Set_Function(ADS1115_t * const pCpnt, const ADS1115_func func, const ADS1115_mode mode, const uint8_t nb)
 {
 	if (func > ADS1115__FUNC_SINGLE_ENDED)	{ return ERROR_VALUE; }	// Unknown conversion
 	if (mode > ADS1115__MODE_SINGLE_SHOT)	{ return ERROR_VALUE; }	// Unknown mode
@@ -136,7 +133,7 @@ FctERR NONNULL__ ADS1115_Set_Function(ADS1115_t * pCpnt, const ADS1115_func func
 }
 
 
-FctERR NONNULL__ ADS1115_Set_Mode(ADS1115_t * pCpnt, const ADS1115_mode mode)
+FctERR NONNULL__ ADS1115_Set_Mode(ADS1115_t * const pCpnt, const ADS1115_mode mode)
 {
 	if (mode > ADS1115__MODE_SINGLE_SHOT)	{ return ERROR_VALUE; }	// Unknown mode
 
@@ -147,7 +144,7 @@ FctERR NONNULL__ ADS1115_Set_Mode(ADS1115_t * pCpnt, const ADS1115_mode mode)
 }
 
 
-FctERR NONNULL__ ADS1115_Set_Gain(ADS1115_t * pCpnt, const ADS1115_gain gain)
+FctERR NONNULL__ ADS1115_Set_Gain(ADS1115_t * const pCpnt, const ADS1115_gain gain)
 {
 	if (gain > ADS1115__FS_256mV_3)	{ return ERROR_VALUE; }	// Unknown gain
 
@@ -157,7 +154,7 @@ FctERR NONNULL__ ADS1115_Set_Gain(ADS1115_t * pCpnt, const ADS1115_gain gain)
 }
 
 
-FctERR NONNULL__ ADS1115_Set_Rate(ADS1115_t * pCpnt, const ADS1115_rate rate)
+FctERR NONNULL__ ADS1115_Set_Rate(ADS1115_t * const pCpnt, const ADS1115_rate rate)
 {
 	if (rate > ADS1115__SPS_860)	{ return ERROR_VALUE; }	// Unknown data rate
 
@@ -167,7 +164,7 @@ FctERR NONNULL__ ADS1115_Set_Rate(ADS1115_t * pCpnt, const ADS1115_rate rate)
 }
 
 
-FctERR NONNULL__ ADS1115_Set_CompMode(ADS1115_t * pCpnt, const ADS1115_comp comp)
+FctERR NONNULL__ ADS1115_Set_CompMode(ADS1115_t * const pCpnt, const ADS1115_comp comp)
 {
 	if (comp > ADS1115__COMP_WINDOW)	{ return ERROR_VALUE; }	// Unknown comparator mode
 
@@ -177,7 +174,7 @@ FctERR NONNULL__ ADS1115_Set_CompMode(ADS1115_t * pCpnt, const ADS1115_comp comp
 }
 
 
-FctERR NONNULL__ ADS1115_Set_CompPolarity(ADS1115_t * pCpnt, const ADS1115_polarity pol)
+FctERR NONNULL__ ADS1115_Set_CompPolarity(ADS1115_t * const pCpnt, const ADS1115_polarity pol)
 {
 	if (pol > ADS1115__POL_HIGH)	{ return ERROR_VALUE; }	// Unknown comparator polarity
 
@@ -187,7 +184,7 @@ FctERR NONNULL__ ADS1115_Set_CompPolarity(ADS1115_t * pCpnt, const ADS1115_polar
 }
 
 
-FctERR NONNULL__ ADS1115_Set_CompLatch(ADS1115_t * pCpnt, const ADS1115_latch latch)
+FctERR NONNULL__ ADS1115_Set_CompLatch(ADS1115_t * const pCpnt, const ADS1115_latch latch)
 {
 	if (latch > ADS1115__LATCH_ENABLE)	{ return ERROR_VALUE; }	// Unknown comparator latch
 
@@ -197,7 +194,7 @@ FctERR NONNULL__ ADS1115_Set_CompLatch(ADS1115_t * pCpnt, const ADS1115_latch la
 }
 
 
-FctERR NONNULL__ ADS1115_Set_CompQueue(ADS1115_t * pCpnt, const ADS1115_queue queue)
+FctERR NONNULL__ ADS1115_Set_CompQueue(ADS1115_t * const pCpnt, const ADS1115_queue queue)
 {
 	if (queue > ADS1115__QUEUE_DISABLE)	{ return ERROR_VALUE; }	// Unknown comparator queue mode
 
@@ -207,27 +204,18 @@ FctERR NONNULL__ ADS1115_Set_CompQueue(ADS1115_t * pCpnt, const ADS1115_queue qu
 }
 
 
-FctERR NONNULL__ ADS1115_Start_Conversion(ADS1115_t * pCpnt, const ADS1115_mux chan)
+FctERR NONNULL__ ADS1115_Start_Conversion(ADS1115_t * const pCpnt, const ADS1115_mux chan)
 {
-	FctERR err;
-
 	if (chan > ADS1115__MUX_pAIN3_nGND)	{ return ERROR_VALUE; }	// Unknown conversion
 
 	pCpnt->cfg.Config.Bits.MUX = chan;
 	pCpnt->cfg.Config.Bits.OS = (pCpnt->cfg.mode == ADS1115__MODE_SINGLE_SHOT) ? true : false;
 
-	err = _write_cfg(pCpnt);
-
-	if (pCpnt->cfg.mode == ADS1115__MODE_SINGLE_SHOT)
-	{
-		Delay_us(ADS1115_Get_conv_us(pCpnt));
-	}
-
-	return err;
+	return _write_cfg(pCpnt);
 }
 
 
-FctERR NONNULL__ ADS1115_Start_NextConversion(ADS1115_t * pCpnt)
+FctERR NONNULL__ ADS1115_Start_NextConversion(ADS1115_t * const pCpnt)
 {
 	if (pCpnt->cfg.function > ADS1115__FUNC_SINGLE_ENDED)	{ return ERROR_VALUE; }		// Unknown conversion
 
@@ -285,20 +273,30 @@ __STATIC_INLINE float ADS1115_convert_to_V(const int16_t val, const ADS1115_gain
 }
 
 
-float NONNULL__ ADS1115_Get_converted_value_uV(ADS1115_t * pCpnt, const uint8_t chan)
+float NONNULL__ ADS1115_Get_converted_value_uV(ADS1115_t * const pCpnt, const uint8_t chan)
 {
 	return ADS1115_convert_to_uV(ADS1115_Get_raw_value(pCpnt, chan), pCpnt->cfg.Config.Bits.PGA);
 }
 
-float NONNULL__ ADS1115_Get_converted_value_mV(ADS1115_t * pCpnt, const uint8_t chan)
+float NONNULL__ ADS1115_Get_converted_value_mV(ADS1115_t * const pCpnt, const uint8_t chan)
 {
 	return ADS1115_convert_to_mV(ADS1115_Get_raw_value(pCpnt, chan), pCpnt->cfg.Config.Bits.PGA);
 }
 
-float NONNULL__ ADS1115_Get_converted_value_V(ADS1115_t * pCpnt, const uint8_t chan)
+float NONNULL__ ADS1115_Get_converted_value_V(ADS1115_t * const pCpnt, const uint8_t chan)
 {
 	return ADS1115_convert_to_V(ADS1115_Get_raw_value(pCpnt, chan), pCpnt->cfg.Config.Bits.PGA);
 }
+
+
+/****************************************************************/
+
+
+__WEAK FctERR NONNULL__ ADS1115_RDY_GPIO_Init(ADS1115_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	return I2C_peripheral_GPIO_init(&pCpnt->cfg.RDY_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+
+__WEAK FctERR NONNULL__ ADS1115_RDY_GPIO_Get(ADS1115_t * const pCpnt, bool * const pState) {
+	return I2C_peripheral_GPIO_get(&pCpnt->cfg.RDY_GPIO, pState); }
 
 
 /****************************************************************/

@@ -12,14 +12,14 @@
 /****************************************************************/
 
 
-FctERR NONNULL__ AT42QT1244_Send_Command(AT42QT1244_t * pCpnt, const AT42QT_cmd cmd)
+FctERR NONNULL__ AT42QT1244_Send_Command(AT42QT1244_t * const pCpnt, const AT42QT_cmd cmd)
 {
 	if ((cmd > AT42QT__RESET_DEVICE) && (cmd < AT42QT__LOW_LEVEL_CALIBRATION) && (cmd != AT42QT__WRITE_SETUPS))	{ return ERROR_VALUE; }
 	return AT42QT1244_Write(pCpnt->cfg.slave_inst, (uint8_t *) &cmd, AT42QT__CONTROL_COMMAND, 1);
 }
 
 
-FctERR NONNULL__ AT42QT1244_Send_Setup(AT42QT1244_t * pCpnt, uint16_t * const hcrc, const uint8_t * setup, const uint8_t addr, const uint8_t Nb)
+FctERR NONNULL__ AT42QT1244_Send_Setup(AT42QT1244_t * const pCpnt, uint16_t * const hcrc, const uint8_t * setup, const uint8_t addr, const uint8_t Nb)
 {
 	uint8_t	SETUP[111];
 	FctERR	err;
@@ -52,7 +52,7 @@ FctERR NONNULL__ AT42QT1244_Send_Setup(AT42QT1244_t * pCpnt, uint16_t * const hc
 }
 
 
-FctERR NONNULL__ AT42QT1244_Setup_Keys(AT42QT1244_t * pCpnt, uint16_t * const hcrc, const uint32_t mask_keys, const bool use)
+FctERR NONNULL__ AT42QT1244_Setup_Keys(AT42QT1244_t * const pCpnt, uint16_t * const hcrc, const uint32_t mask_keys, const bool use)
 {
 	const uint8_t				NDIL_Val = 4;				// 4 is the default NDIL value
 	uAT42QT_REG__SETUP_165_188	TMP[AT42QT1244_MAX_KEYS];
@@ -72,7 +72,7 @@ FctERR NONNULL__ AT42QT1244_Setup_Keys(AT42QT1244_t * pCpnt, uint16_t * const hc
 }
 
 
-FctERR NONNULL__ AT42QT1244_Setup_FHM(AT42QT1244_t * pCpnt, uint16_t * const hcrc, const AT42QT_FHM FHM)
+FctERR NONNULL__ AT42QT1244_Setup_FHM(AT42QT1244_t * const pCpnt, uint16_t * const hcrc, const AT42QT_FHM FHM)
 {
 	uAT42QT_REG__SETUP_244	TMP;
 	FctERR					err;
@@ -87,7 +87,7 @@ FctERR NONNULL__ AT42QT1244_Setup_FHM(AT42QT1244_t * pCpnt, uint16_t * const hcr
 }
 
 
-FctERR NONNULL__ AT42QT1244_Reset(AT42QT1244_t * pCpnt)
+FctERR NONNULL__ AT42QT1244_Reset(AT42QT1244_t * const pCpnt)
 {
 	FctERR err;
 
@@ -100,7 +100,7 @@ FctERR NONNULL__ AT42QT1244_Reset(AT42QT1244_t * pCpnt)
 }
 
 
-FctERR NONNULL__ AT42QT1244_Get_Keys(AT42QT1244_t * pCpnt, uint32_t * Keys)
+FctERR NONNULL__ AT42QT1244_Get_Keys(AT42QT1244_t * const pCpnt, uint32_t * Keys)
 {
 	uint8_t TMP[3];
 	FctERR	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, TMP, AT42QT__DETECT_STATUS_1, sizeof(TMP));
@@ -111,7 +111,7 @@ FctERR NONNULL__ AT42QT1244_Get_Keys(AT42QT1244_t * pCpnt, uint32_t * Keys)
 }
 
 
-int NONNULL__ AT42QT1244_is_Calib_Pending(AT42QT1244_t * pCpnt)
+int NONNULL__ AT42QT1244_is_Calib_Pending(AT42QT1244_t * const pCpnt)
 {
 	uAT42QT_REG__DEVICE_STATUS ST;
 	FctERR err = AT42QT1244_Get_Status(pCpnt, &ST);
@@ -119,6 +119,23 @@ int NONNULL__ AT42QT1244_is_Calib_Pending(AT42QT1244_t * pCpnt)
 
 	return ST.Bits.Key_In_Calib;
 }
+
+
+/****************************************************************/
+
+
+__WEAK FctERR NONNULL__ AT42QT1244_CHANGE_GPIO_Init(AT42QT1244_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	return I2C_peripheral_GPIO_init(&pCpnt->cfg.CHANGE_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+
+__WEAK FctERR NONNULL__ AT42QT1244_CHANGE_GPIO_Get(AT42QT1244_t * const pCpnt, bool * const pState) {
+	return I2C_peripheral_GPIO_get(&pCpnt->cfg.CHANGE_GPIO, pState); }
+
+
+__WEAK FctERR NONNULL__ AT42QT1244_RST_GPIO_Init(AT42QT1244_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	return I2C_peripheral_GPIO_init(&pCpnt->cfg.RST_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+
+__WEAK FctERR NONNULL__ AT42QT1244_RST_GPIO_Set(AT42QT1244_t * const pCpnt, const bool state) {
+	return I2C_peripheral_GPIO_set(&pCpnt->cfg.RST_GPIO, state); }
 
 
 /****************************************************************/

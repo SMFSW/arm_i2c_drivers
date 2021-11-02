@@ -37,6 +37,8 @@
 typedef struct DRV2605L_t {
 	struct {
 	I2C_slave_t *		slave_inst;	//!< Slave structure
+	PeripheralGPIO_t	EN_GPIO;	//!< Enable GPIO struct
+	PeripheralGPIO_t	TRIG_GPIO;	//!< Trigger GPIO struct
 	DRV2605L_mode		Mode;		//!< Current haptic driver mode
 	DRV2605L_act		ERM_LRA;	//!< Current haptic actuator type
 	DRV2605L_loop		Open_Loop;	//!< Current loop type (0 closed loop / auto resonance, 1 open)

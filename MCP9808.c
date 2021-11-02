@@ -43,7 +43,7 @@ FctERR MCP9808_Init_Single(void) {
 /****************************************************************/
 
 
-FctERR NONNULL__ MCP9808_Write(I2C_slave_t * pSlave, const uint16_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ MCP9808_Write(I2C_slave_t * const pSlave, const uint16_t * data, const uint16_t addr, const uint16_t nb)
 {
 	uint8_t DATA[2];
 
@@ -76,7 +76,7 @@ FctERR NONNULL__ MCP9808_Write(I2C_slave_t * pSlave, const uint16_t * data, cons
 }
 
 
-FctERR NONNULL__ MCP9808_Read(I2C_slave_t * pSlave, uint16_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ MCP9808_Read(I2C_slave_t * const pSlave, uint16_t * data, const uint16_t addr, const uint16_t nb)
 {
 	uint8_t DATA[2];
 

@@ -153,7 +153,7 @@ FctERR PCA9624_Init_Single(void);
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ PCA9624_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ PCA9624_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for PCA9624
@@ -163,7 +163,7 @@ FctERR NONNULL__ PCA9624_Write(I2C_slave_t * pSlave, const uint8_t * data, const
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ PCA9624_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ PCA9624_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /****************************************************************/

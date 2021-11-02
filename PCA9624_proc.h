@@ -35,6 +35,7 @@ typedef struct PCA9624_t {
 	uPCA9624_REG__LEDOUT	LDR;			//!< LED output drive registers
 	struct {
 	I2C_slave_t *			slave_inst;		//!< Slave structure
+	PeripheralGPIO_t		OE_GPIO;		//!< Output Enable GPIO struct
 	PCA962x_reg_inc			auto_inc;		//!< Auto increment configuration
 	} cfg;
 } PCA9624_t;
@@ -54,7 +55,7 @@ extern PCA9624_t	PCA9624[I2C_PCA9624_NB];	//!< PCA9624 User structure
 ** \param[in] pCpnt - Pointer to PCA9624 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ PCA9624_Init_Sequence(PCA9624_t * pCpnt);
+FctERR NONNULL__ PCA9624_Init_Sequence(PCA9624_t * const pCpnt);
 
 /****************************************************************/
 #endif

@@ -16,13 +16,13 @@
 /****************************************************************/
 
 
-$CPNT$_t $CPNT$[I2C_$CPNT$_NB];
+$CPNT$_t $CPNT$[I2C_$CPNT$_NB] = { 0 };
 
 
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ $CPNT$_Init_Sequence($CPNT$_t * pCpnt)
+__WEAK FctERR NONNULL__ $CPNT$_Init_Sequence($CPNT$_t * const pCpnt)
 {
 	FctERR err;
 
@@ -40,7 +40,7 @@ __WEAK FctERR NONNULL__ $CPNT$_Init_Sequence($CPNT$_t * pCpnt)
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ $CPNT$_handler($CPNT$_t * pCpnt)
+__WEAK FctERR NONNULL__ $CPNT$_handler($CPNT$_t * const pCpnt)
 {
 	FctERR	err;
 
@@ -53,6 +53,18 @@ __WEAK FctERR NONNULL__ $CPNT$_handler($CPNT$_t * pCpnt)
 	#endif
 
 	return ERROR_OK;
+}
+
+
+__WEAK FctERR NONNULL__ $CPNT$_handler_it($CPNT$_t * const pCpnt)
+{
+	FctERR	err;
+	bool	interrupt;
+
+	err = $CPNT$_RDY_GPIO_Get(pCpnt, &interrupt);
+	if ((!err) && interrupt)	{ err = $CPNT$_handler(pCpnt); }
+
+	return err;
 }
 
 

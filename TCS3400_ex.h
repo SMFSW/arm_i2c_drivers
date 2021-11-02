@@ -46,7 +46,7 @@ typedef enum PACK__ TCS3400_chan {
 ** \param[in] en - 0 Disable, 1 Enable
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3400_Write_En(TCS3400_t * pCpnt, const uint8_t en) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Write_En(TCS3400_t * const pCpnt, const uint8_t en) {
 	return TCS3400_Write(pCpnt->cfg.slave_inst, (uint8_t *) &en, TCS3400__ENABLE, 1); }
 
 /*!\brief Write TCS3400 Config register
@@ -54,7 +54,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Write_En(TCS3400_t * pCpnt, const uint8
 ** \param[in] cfg - Configuration register value
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3400_Write_Cfg(TCS3400_t * pCpnt, const uint8_t cfg) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Write_Cfg(TCS3400_t * const pCpnt, const uint8_t cfg) {
 	return TCS3400_Write(pCpnt->cfg.slave_inst, (uint8_t *) &cfg, TCS3400__CONFIG, 1); }
 
 /*!\brief Write TCS3400 Control register
@@ -62,7 +62,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Write_Cfg(TCS3400_t * pCpnt, const uint
 ** \param[in] ctl - Control register value
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3400_Write_Ctl(TCS3400_t * pCpnt, const uint8_t ctl) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Write_Ctl(TCS3400_t * const pCpnt, const uint8_t ctl) {
 	return TCS3400_Write(pCpnt->cfg.slave_inst, (uint8_t *) &ctl, TCS3400__CONTROL, 1); }
 
 
@@ -71,35 +71,35 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Write_Ctl(TCS3400_t * pCpnt, const uint
 ** \param[in] en - 0 Disable, 1 Enable
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3400_Set_PON(TCS3400_t * pCpnt, const bool en);
+FctERR NONNULL__ TCS3400_Set_PON(TCS3400_t * const pCpnt, const bool en);
 
 /*!\brief Clear module Enable / Disable
 ** \param[in] pCpnt - Pointer to TCS3400 component
 ** \param[in] en - 0 Disable, 1 Enable
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3400_Set_AEN(TCS3400_t * pCpnt, const bool en);
+FctERR NONNULL__ TCS3400_Set_AEN(TCS3400_t * const pCpnt, const bool en);
 
 /*!\brief Clear interrupt module Enable / Disable
 ** \param[in] pCpnt - Pointer to TCS3400 component
 ** \param[in] en - 0 Disable, 1 Enable
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3400_Set_AIEN(TCS3400_t * pCpnt, const bool en);
+FctERR NONNULL__ TCS3400_Set_AIEN(TCS3400_t * const pCpnt, const bool en);
 
 /*!\brief WAIT module Enable / Disable
 ** \param[in] pCpnt - Pointer to TCS3400 component
 ** \param[in] en - 0 Disable, 1 Enable
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3400_Set_WEN(TCS3400_t * pCpnt, const bool en);
+FctERR NONNULL__ TCS3400_Set_WEN(TCS3400_t * const pCpnt, const bool en);
 
 /*!\brief Sleep After Interrupt Enable / Disable
 ** \param[in] pCpnt - Pointer to TCS3400 component
 ** \param[in] en - 0 Disable, 1 Enable
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3400_Set_SAI(TCS3400_t * pCpnt, const bool en);
+FctERR NONNULL__ TCS3400_Set_SAI(TCS3400_t * const pCpnt, const bool en);
 
 
 /*!\brief Gain configuration
@@ -107,7 +107,7 @@ FctERR NONNULL__ TCS3400_Set_SAI(TCS3400_t * pCpnt, const bool en);
 ** \param[in] gain - Gain value
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3400_Set_Gain(TCS3400_t * pCpnt, const TCS3400_gain gain);
+FctERR NONNULL__ TCS3400_Set_Gain(TCS3400_t * const pCpnt, const TCS3400_gain gain);
 
 
 /*!\brief ALS Persistence configuration
@@ -115,7 +115,7 @@ FctERR NONNULL__ TCS3400_Set_Gain(TCS3400_t * pCpnt, const TCS3400_gain gain);
 ** \param[in] persist - Persistence value
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3400_Set_Pesistence(TCS3400_t * pCpnt, const TCS3400_it_persist persist) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Set_Pesistence(TCS3400_t * const pCpnt, const TCS3400_it_persist persist) {
 	uTCS3400_REG__PERSIST PERS = { .Bits.PERSIST = persist };
 	return TCS3400_Write(pCpnt->cfg.slave_inst, &PERS.Byte, TCS3400__PERSIST, 1); }
 
@@ -125,14 +125,14 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Set_Pesistence(TCS3400_t * pCpnt, const
 ** \param[in] integ - Integration time value (from 3ms to 712ms)
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3400_Set_Integration_Time(TCS3400_t * pCpnt, const uint16_t integ);
+FctERR NONNULL__ TCS3400_Set_Integration_Time(TCS3400_t * const pCpnt, const uint16_t integ);
 
 /*!\brief Wait time configuration
 ** \param[in] pCpnt - Pointer to TCS3400 component
 ** \param[in] wait - Wait time value (from 3ms to 8540ms)
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3400_Set_Wait_Time(TCS3400_t * pCpnt, const uint16_t wait);
+FctERR NONNULL__ TCS3400_Set_Wait_Time(TCS3400_t * const pCpnt, const uint16_t wait);
 
 
 /*!\brief ALS interrupt low threshold configuration
@@ -140,7 +140,7 @@ FctERR NONNULL__ TCS3400_Set_Wait_Time(TCS3400_t * pCpnt, const uint16_t wait);
 ** \param[in] thr - Low threshold value
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3400_Set_AILT(TCS3400_t * pCpnt, const uint16_t thr) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Set_AILT(TCS3400_t * const pCpnt, const uint16_t thr) {
 	return TCS3400_Write_Word(pCpnt->cfg.slave_inst, (uint16_t *) &thr, TCS3400__AILTL); }
 
 /*!\brief ALS interrupt high threshold configuration
@@ -148,7 +148,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Set_AILT(TCS3400_t * pCpnt, const uint1
 ** \param[in] thr - High threshold value
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3400_Set_AIHT(TCS3400_t * pCpnt, const uint16_t thr) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Set_AIHT(TCS3400_t * const pCpnt, const uint16_t thr) {
 	return TCS3400_Write_Word(pCpnt->cfg.slave_inst, (uint16_t *) &thr, TCS3400__AIHTL); }
 
 /*!\brief ALS interrupt thresholds configuration
@@ -157,7 +157,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Set_AIHT(TCS3400_t * pCpnt, const uint1
 ** \param[in] hthr - High threshold value
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3400_Set_AIT(TCS3400_t * pCpnt, const uint16_t lthr, const uint16_t hthr) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Set_AIT(TCS3400_t * const pCpnt, const uint16_t lthr, const uint16_t hthr) {
 	uint8_t DAT[4] = { LOBYTE(lthr), HIBYTE(lthr), LOBYTE(hthr), HIBYTE(hthr) };
 	return TCS3400_Write(pCpnt->cfg.slave_inst, DAT, TCS3400__AILTL, sizeof(DAT)); }
 
@@ -167,7 +167,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Set_AIT(TCS3400_t * pCpnt, const uint16
 ** \param[in] pCpnt - Pointer to TCS3400 component
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3400_Force_IT(TCS3400_t * pCpnt) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Force_IT(TCS3400_t * const pCpnt) {
 	uint8_t REG = 0xFF;
 	return TCS3400_Write(pCpnt->cfg.slave_inst, &REG, TCS3400__IFORCE, 1); }
 
@@ -176,7 +176,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Force_IT(TCS3400_t * pCpnt) {
 ** \param[in] pCpnt - Pointer to TCS3400 component
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3400_Clear_IR_IT(TCS3400_t * pCpnt) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Clear_IR_IT(TCS3400_t * const pCpnt) {
 	uint8_t REG = 0xFF;
 	return TCS3400_Write(pCpnt->cfg.slave_inst, &REG, TCS3400__CICLEAR, 1); }
 
@@ -185,7 +185,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Clear_IR_IT(TCS3400_t * pCpnt) {
 ** \param[in] pCpnt - Pointer to TCS3400 component
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3400_Clear_All_IT(TCS3400_t * pCpnt) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Clear_All_IT(TCS3400_t * const pCpnt) {
 	uint8_t REG = 0xFF;
 	return TCS3400_Write(pCpnt->cfg.slave_inst, &REG, TCS3400__AICLEAR, 1); }
 
@@ -196,7 +196,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Clear_All_IT(TCS3400_t * pCpnt) {
 ** \param[in,out] id - pointer to Revision ID result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3400_Get_RevID(TCS3400_t * pCpnt, uint8_t * id) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Get_RevID(TCS3400_t * const pCpnt, uint8_t * id) {
 	return TCS3400_Read(pCpnt->cfg.slave_inst, id, TCS3400__REVID, 1); }
 
 /*!\brief Get TCS3400 Device ID
@@ -204,7 +204,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Get_RevID(TCS3400_t * pCpnt, uint8_t * 
 ** \param[in,out] id - pointer to Device ID result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3400_Get_DeviceID(TCS3400_t * pCpnt, uint8_t * id) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Get_DeviceID(TCS3400_t * const pCpnt, uint8_t * id) {
 	return TCS3400_Read(pCpnt->cfg.slave_inst, id, TCS3400__ID, 1); }
 
 
@@ -213,7 +213,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Get_DeviceID(TCS3400_t * pCpnt, uint8_t
 ** \param[in,out] buf - pointer to conversions tab result
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3400_Get_Channels(TCS3400_t * pCpnt, uint16_t buf[]);
+FctERR NONNULL__ TCS3400_Get_Channels(TCS3400_t * const pCpnt, uint16_t buf[]);
 
 /*!\brief Get Specific channel conversion
 ** \param[in] pCpnt - Pointer to TCS3400 component
@@ -221,7 +221,7 @@ FctERR NONNULL__ TCS3400_Get_Channels(TCS3400_t * pCpnt, uint16_t buf[]);
 ** \param[in] chan - Channel to get
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3400_Get_Channel(TCS3400_t * pCpnt, uint16_t * buf, const TCS3400_chan chan) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Get_Channel(TCS3400_t * const pCpnt, uint16_t * buf, const TCS3400_chan chan) {
 	if (chan > TCS3400__CHAN_BLUE)	{ return ERROR_VALUE; }	// Unknown channel
 	return TCS3400_Read_Word(pCpnt->cfg.slave_inst, buf, TCS3400__CDATAL + (2 * chan)); }
 
@@ -230,7 +230,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Get_Channel(TCS3400_t * pCpnt, uint16_t
 ** \param[in,out] clr - pointer to Clear conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3400_Get_Clear(TCS3400_t * pCpnt, uint16_t * clr) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Get_Clear(TCS3400_t * const pCpnt, uint16_t * clr) {
 	return TCS3400_Read_Word(pCpnt->cfg.slave_inst, clr, TCS3400__CDATAL); }
 
 /*!\brief Get Red channel conversion
@@ -238,7 +238,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Get_Clear(TCS3400_t * pCpnt, uint16_t *
 ** \param[in,out] r - pointer to Red conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3400_Get_Red(TCS3400_t * pCpnt, uint16_t * r) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Get_Red(TCS3400_t * const pCpnt, uint16_t * r) {
 	return TCS3400_Read_Word(pCpnt->cfg.slave_inst, r, TCS3400__RDATAL); }
 
 /*!\brief Get Green channel conversion
@@ -246,7 +246,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Get_Red(TCS3400_t * pCpnt, uint16_t * r
 ** \param[in,out] g - pointer to Green conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3400_Get_Green(TCS3400_t * pCpnt, uint16_t * g) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Get_Green(TCS3400_t * const pCpnt, uint16_t * g) {
 	return TCS3400_Read_Word(pCpnt->cfg.slave_inst, g, TCS3400__GDATAL); }
 
 /*!\brief Get Blue channel conversion
@@ -254,8 +254,31 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Get_Green(TCS3400_t * pCpnt, uint16_t *
 ** \param[in,out] b - pointer to Blue conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3400_Get_Blue(TCS3400_t * pCpnt, uint16_t * b) {
+__INLINE FctERR NONNULL_INLINE__ TCS3400_Get_Blue(TCS3400_t * const pCpnt, uint16_t * b) {
 	return TCS3400_Read_Word(pCpnt->cfg.slave_inst, b, TCS3400__BDATAL); }
+
+
+/*******************/
+/*** GPIO access ***/
+/*******************/
+
+/*!\brief Interrupt GPIO pin init for TCS3400
+** \weak TCS3400 Interrupt GPIO pin init may be user implemented if needed
+** \param[in] pCpnt - Pointer to TCS3400 component
+** \param[in] GPIOx - INT port
+** \param[in] GPIO_Pin - INT pin
+** \param[in] GPIO_Active: INT pin active state
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ TCS3400_INT_GPIO_Init(TCS3400_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+
+/*!\brief Interrupt GPIO pin getter for TCS3400
+** \weak TCS3400 Interrupt GPIO pin getter may be user implemented if needed
+** \param[in] pCpnt - Pointer to TCS3400 component
+** \param[in,out] pState - Pointer to INT pin state variable (0: inactive, 1: active)
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ TCS3400_INT_GPIO_Get(TCS3400_t * const pCpnt, bool * const pState);
 
 
 /****************************************************************/

@@ -159,6 +159,29 @@ FctERR NONNULL__ PCA9624_Reset_All(const I2C_HandleTypeDef * const hi2c);
 FctERR NONNULL__ PCA9624_ReadRegister(PCA9624_t * const pCpnt, const PCA9624_reg reg, uint8_t * const val);
 
 
+/*******************/
+/*** GPIO access ***/
+/*******************/
+
+/*!\brief Output Enable GPIO pin init for PCA9624
+** \weak PCA9624 Output Enable GPIO pin init may be user implemented if needed
+** \param[in] pCpnt - Pointer to PCA9624 component
+** \param[in] GPIOx - OE port
+** \param[in] GPIO_Pin - OE pin
+** \param[in] GPIO_Active: OE pin active state
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ PCA9624_OE_GPIO_Init(PCA9624_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+
+/*!\brief Output Enable GPIO pin setter for PCA9624
+** \weak PCA9624 Output Enable GPIO pin setter may be user implemented if needed
+** \param[in] pCpnt - Pointer to PCA9624 component
+** \param[in] state - state to write on OE pin (0: inactive, 1: active)
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ PCA9624_OE_GPIO_Set(PCA9624_t * const pCpnt, const bool state);
+
+
 /****************************************************************/
 #endif
 

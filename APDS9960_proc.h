@@ -50,6 +50,7 @@ typedef struct APDS9960_t {
 	bool						Saturation;			//!< Current Sensor saturation status
 	struct {
 	I2C_slave_t *				slave_inst;			//!< Slave structure
+	PeripheralGPIO_t			INT_GPIO;			//!< Interrupt GPIO struct
 	float						mat[3][3];			//!< RGB to XYZ matrix
 	APDS9960_als_gain			ADC_Gain;			//!< ADC (ALS & Color) sensor gain config
 	APDS9960_prox_gain			Prox_Gain;			//!< Proximity sensor gain config
@@ -86,17 +87,25 @@ extern APDS9960_t APDS9960[I2C_APDS9960_NB];		//!< APDS9960 User structure
 ** \param[in] pCpnt - Pointer to APDS9960 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ APDS9960_Init_Sequence(APDS9960_t * pCpnt);
+FctERR NONNULL__ APDS9960_Init_Sequence(APDS9960_t * const pCpnt);
 
 
 /*!\brief Handler for APDS9960 peripheral
 ** \weak APDS9960 handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle APDS9960 tasks
-** \note Alternately may be called when event occurs on APDS9960 pin
+** \note Alternately may be called when event occurs on APDS9960 pin (or by calling \ref APDS9960_handler_it instead)
 ** \param[in] pCpnt - Pointer to APDS9960 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ APDS9960_handler(APDS9960_t * pCpnt);
+FctERR NONNULL__ APDS9960_handler(APDS9960_t * const pCpnt);
+
+/*!\brief Handler for APDS9960 peripheral GPIO interrupt
+** \weak APDS9960 GPIO interrupt handler may be user implemented to suit custom needs
+** \note May be called periodically to handle APDS9960 tasks through interrupts
+** \param[in] pCpnt - Pointer to APDS9960 component
+** \return FctERR - error code
+**/
+FctERR NONNULL__ APDS9960_handler_it(APDS9960_t * const pCpnt);
 
 
 /*!\brief Handler for all APDS9960 peripherals
@@ -105,6 +114,14 @@ FctERR NONNULL__ APDS9960_handler(APDS9960_t * pCpnt);
 __INLINE void INLINE__ APDS9960_handler_all(void) {
 	for (APDS9960_t * pCpnt = APDS9960 ; pCpnt < &APDS9960[I2C_APDS9960_NB] ; pCpnt++) {
 		APDS9960_handler(pCpnt); }
+}
+
+/*!\brief Handler for all APDS9960 peripherals GPIO interrupt
+** \note May be called periodically to handle all APDS9960 tasks
+**/
+__INLINE void INLINE__ APDS9960_handler_it_all(void) {
+	for (APDS9960_t * pCpnt = APDS9960 ; pCpnt < &APDS9960[I2C_APDS9960_NB] ; pCpnt++) {
+		APDS9960_handler_it(pCpnt); }
 }
 
 

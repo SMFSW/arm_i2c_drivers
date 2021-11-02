@@ -15,13 +15,13 @@
 /****************************************************************/
 
 
-PCA9685_t PCA9685[I2C_PCA9685_NB];
+PCA9685_t PCA9685[I2C_PCA9685_NB] = { 0 };
 
 
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ PCA9685_Init_Sequence(PCA9685_t * pCpnt)
+__WEAK FctERR NONNULL__ PCA9685_Init_Sequence(PCA9685_t * const pCpnt)
 {
 	FctERR				err = PCA9685_Set_Clock_Freq(pCpnt, PCA9685_CLOCK_FREQ);	// Assuming internal clock used
 	uPCA9685_REG__MODE1	MODE1 = { 0 };

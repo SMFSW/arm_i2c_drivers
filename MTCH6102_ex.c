@@ -133,6 +133,23 @@ FctERR NONNULL__ MTCH6102_Set_Filter(const MTCH6102_t * const pCpnt, const MTCH6
 
 
 /****************************************************************/
+
+
+__WEAK FctERR NONNULL__ MTCH6102_INT_GPIO_Init(MTCH6102_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	return I2C_peripheral_GPIO_init(&pCpnt->cfg.INT_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+
+__WEAK FctERR NONNULL__ MTCH6102_INT_GPIO_Get(MTCH6102_t * const pCpnt, bool * const pState) {
+	return I2C_peripheral_GPIO_get(&pCpnt->cfg.INT_GPIO, pState); }
+
+
+__WEAK FctERR NONNULL__ MTCH6102_SYNC_GPIO_Init(MTCH6102_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	return I2C_peripheral_GPIO_init(&pCpnt->cfg.SYNC_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+
+__WEAK FctERR NONNULL__ MTCH6102_SYNC_GPIO_Get(MTCH6102_t * const pCpnt, bool * const pState) {
+	return I2C_peripheral_GPIO_get(&pCpnt->cfg.SYNC_GPIO, pState); }
+
+
+/****************************************************************/
 #endif
 #endif
 /****************************************************************/

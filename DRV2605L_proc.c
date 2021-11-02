@@ -12,7 +12,7 @@
 /****************************************************************/
 
 
-DRV2605L_t DRV2605L = { { &DRV2605_hal, DRV__MODE_INTERNAL_TRIGGER, DRV__ACT_ERM, DRV__OPEN_LOOP, DRV__IN_PWM, DRV__RTP_SIGNED, 0 } };
+DRV2605L_t DRV2605L = { { &DRV2605_hal, { 0 }, { 0 }, DRV__MODE_INTERNAL_TRIGGER, DRV__ACT_ERM, DRV__OPEN_LOOP, DRV__IN_PWM, DRV__RTP_SIGNED, 0 } };
 
 
 /****************************************************************/

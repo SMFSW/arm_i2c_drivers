@@ -12,7 +12,7 @@
 /****************************************************************/
 
 
-FctERR NONNULL__ MCP9808_Write_Config(MCP9808_t * pCpnt, const uint16_t cfg)
+FctERR NONNULL__ MCP9808_Write_Config(MCP9808_t * const pCpnt, const uint16_t cfg)
 {
 	uMCP9808_REG__CFG	CFG;
 	FctERR				err;
@@ -33,7 +33,7 @@ FctERR NONNULL__ MCP9808_Write_Config(MCP9808_t * pCpnt, const uint16_t cfg)
 }
 
 
-FctERR NONNULL__ MCP9808_Shutdown(MCP9808_t * pCpnt, const bool shutdown)
+FctERR NONNULL__ MCP9808_Shutdown(MCP9808_t * const pCpnt, const bool shutdown)
 {
 	uMCP9808_REG__CFG	CFG;
 	FctERR				err;
@@ -46,7 +46,7 @@ FctERR NONNULL__ MCP9808_Shutdown(MCP9808_t * pCpnt, const bool shutdown)
 }
 
 
-FctERR NONNULL__ MCP9808_Set_AlertHysteresis(MCP9808_t * pCpnt, const MCP9808_hyst hys)
+FctERR NONNULL__ MCP9808_Set_AlertHysteresis(MCP9808_t * const pCpnt, const MCP9808_hyst hys)
 {
 	uMCP9808_REG__CFG	CFG;
 	FctERR				err;
@@ -59,7 +59,7 @@ FctERR NONNULL__ MCP9808_Set_AlertHysteresis(MCP9808_t * pCpnt, const MCP9808_hy
 }
 
 
-FctERR NONNULL__ MCP9808_Set_AlertType(MCP9808_t * pCpnt, const bool comparator)
+FctERR NONNULL__ MCP9808_Set_AlertType(MCP9808_t * const pCpnt, const bool comparator)
 {
 	uMCP9808_REG__CFG	CFG;
 	FctERR				err;
@@ -76,7 +76,7 @@ FctERR NONNULL__ MCP9808_Set_AlertType(MCP9808_t * pCpnt, const bool comparator)
 }
 
 
-FctERR NONNULL__ MCP9808_Set_AlertOutput(MCP9808_t * pCpnt, const bool en, const bool alt)
+FctERR NONNULL__ MCP9808_Set_AlertOutput(MCP9808_t * const pCpnt, const bool en, const bool alt)
 {
 	uMCP9808_REG__CFG	CFG;
 	FctERR				err;
@@ -91,7 +91,7 @@ FctERR NONNULL__ MCP9808_Set_AlertOutput(MCP9808_t * pCpnt, const bool en, const
 }
 
 
-FctERR NONNULL__ MCP9808_Set_AlertLock(MCP9808_t * pCpnt, const MCP9808_alert alt, const bool lock)
+FctERR NONNULL__ MCP9808_Set_AlertLock(MCP9808_t * const pCpnt, const MCP9808_alert alt, const bool lock)
 {
 	uMCP9808_REG__CFG	CFG;
 	FctERR				err;
@@ -109,7 +109,7 @@ FctERR NONNULL__ MCP9808_Set_AlertLock(MCP9808_t * pCpnt, const MCP9808_alert al
 }
 
 
-FctERR NONNULL__ MCP9808_Set_Resolution(MCP9808_t * pCpnt, const MCP9808_res res)
+FctERR NONNULL__ MCP9808_Set_Resolution(MCP9808_t * const pCpnt, const MCP9808_res res)
 {
 	uint16_t	RES = res;
 	FctERR		err;
@@ -126,7 +126,7 @@ FctERR NONNULL__ MCP9808_Set_Resolution(MCP9808_t * pCpnt, const MCP9808_res res
 }
 
 
-FctERR NONNULL__ MCP9808_Get_Resolution(MCP9808_t * pCpnt, MCP9808_res * res)
+FctERR NONNULL__ MCP9808_Get_Resolution(MCP9808_t * const pCpnt, MCP9808_res * res)
 {
 	uint16_t	RES;
 	FctERR		err;
@@ -137,6 +137,16 @@ FctERR NONNULL__ MCP9808_Get_Resolution(MCP9808_t * pCpnt, MCP9808_res * res)
 	*res = RES;
 	return ERROR_OK;
 }
+
+
+/****************************************************************/
+
+
+__WEAK FctERR NONNULL__ MCP9808_Alert_GPIO_Init(MCP9808_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	return I2C_peripheral_GPIO_init(&pCpnt->cfg.Alert_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+
+__WEAK FctERR NONNULL__ MCP9808_Alert_GPIO_Get(MCP9808_t * const pCpnt, bool * const pState) {
+	return I2C_peripheral_GPIO_get(&pCpnt->cfg.Alert_GPIO, pState); }
 
 
 /****************************************************************/

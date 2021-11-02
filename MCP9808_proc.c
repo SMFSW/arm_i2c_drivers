@@ -15,7 +15,7 @@
 /****************************************************************/
 
 
-MCP9808_t MCP9808[I2C_MCP9808_NB];
+MCP9808_t MCP9808[I2C_MCP9808_NB] = { 0 };
 
 static uint8_t MCP9808_conv_time[4] = { 30, 65, 130, 250 };						//!< Conversion times for MCP9808
 static float MCP9808_resolution_steps[4] = { 0.5f, 0.25f, 0.125f, 0.0625f };	//!< Resolution steps for MCP9808
@@ -24,7 +24,7 @@ static float MCP9808_resolution_steps[4] = { 0.5f, 0.25f, 0.125f, 0.0625f };	//!
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ MCP9808_Init_Sequence(MCP9808_t * pCpnt)
+__WEAK FctERR NONNULL__ MCP9808_Init_Sequence(MCP9808_t * const pCpnt)
 {
 	FctERR err;
 
@@ -61,7 +61,7 @@ __WEAK FctERR NONNULL__ MCP9808_Init_Sequence(MCP9808_t * pCpnt)
 /****************************************************************/
 
 
-FctERR NONNULL__ MCP9808_Set_AlertTemp(MCP9808_t * pCpnt, const float temp, const MCP9808_alert alt)
+FctERR NONNULL__ MCP9808_Set_AlertTemp(MCP9808_t * const pCpnt, const float temp, const MCP9808_alert alt)
 {
 	uMCP9808_REG__TEMP_LIM	ALT = { 0 };
 	float *					alert = &pCpnt->cfg.HighAlert + alt;
@@ -87,7 +87,7 @@ FctERR NONNULL__ MCP9808_Set_AlertTemp(MCP9808_t * pCpnt, const float temp, cons
 }
 
 
-FctERR NONNULLX__(1) MCP9808_Get_AlertTemp(MCP9808_t * pCpnt, float * temp, MCP9808_alert alt)
+FctERR NONNULLX__(1) MCP9808_Get_AlertTemp(MCP9808_t * const pCpnt, float * temp, MCP9808_alert alt)
 {
 	uMCP9808_REG__TEMP_LIM	ALT;
 	float					tmp;
@@ -111,7 +111,7 @@ FctERR NONNULLX__(1) MCP9808_Get_AlertTemp(MCP9808_t * pCpnt, float * temp, MCP9
 }
 
 
-FctERR NONNULLX__(1) MCP9808_Get_Temperature(MCP9808_t * pCpnt, float * temp)
+FctERR NONNULLX__(1) MCP9808_Get_Temperature(MCP9808_t * const pCpnt, float * temp)
 {
 	uMCP9808_REG__TEMP_AMB	TEMP;
 	float					tmp;
@@ -135,7 +135,7 @@ FctERR NONNULLX__(1) MCP9808_Get_Temperature(MCP9808_t * pCpnt, float * temp)
 }
 
 
-__WEAK FctERR NONNULL__ MCP9808_handler(MCP9808_t * pCpnt)
+__WEAK FctERR NONNULL__ MCP9808_handler(MCP9808_t * const pCpnt)
 {
 	FctERR	err = ERROR_NOTAVAIL;	// In case no new data available
 
@@ -155,6 +155,18 @@ __WEAK FctERR NONNULL__ MCP9808_handler(MCP9808_t * pCpnt)
 		const uint8_t idx = pCpnt - MCP9808;
 		printf("MCP9808 id%d: Temperature %d.%03ld°C\r\n", idx, (int16_t) pCpnt->Temperature, get_fp_dec(pCpnt->Temperature, 3));
 	#endif
+
+	return err;
+}
+
+
+__WEAK FctERR NONNULL__ MCP9808_handler_it(MCP9808_t * const pCpnt)
+{
+	FctERR	err;
+	bool	interrupt;
+
+	err = MCP9808_Alert_GPIO_Get(pCpnt, &interrupt);
+	if ((!err) && interrupt)	{ err = MCP9808_handler(pCpnt); }
 
 	return err;
 }

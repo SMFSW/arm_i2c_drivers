@@ -12,7 +12,7 @@
 /****************************************************************/
 
 
-APDS9960_t APDS9960[I2C_APDS9960_NB];
+APDS9960_t APDS9960[I2C_APDS9960_NB] = { 0 };
 
 const uint8_t APDS9960_ALS_gain_tab[4] = { 1, 4, 16, 64 };
 const uint8_t APDS9960_Prox_gain_tab[4] = { 1, 2, 4, 8 };
@@ -21,7 +21,7 @@ const uint8_t APDS9960_Prox_gain_tab[4] = { 1, 2, 4, 8 };
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ APDS9960_Init_Sequence(APDS9960_t * pCpnt)
+__WEAK FctERR NONNULL__ APDS9960_Init_Sequence(APDS9960_t * const pCpnt)
 {
 	uAPDS9960_REG__ENABLE	EN = { 0 };
 	FctERR					err = ERROR_OK;
@@ -94,7 +94,7 @@ __WEAK FctERR NONNULL__ APDS9960_Init_Sequence(APDS9960_t * pCpnt)
 ** \param[in] b - Blue value
 ** \return FctERR - error code
 **/
-static FctERR NONNULL__ APDS9960_calc(APDS9960_t * pCpnt, const uint16_t r, const uint16_t g, const uint16_t b)
+static FctERR NONNULL__ APDS9960_calc(APDS9960_t * const pCpnt, const uint16_t r, const uint16_t g, const uint16_t b)
 {
 	CLS_get_chromacity(pCpnt->xy, &pCpnt->Lux, pCpnt->cfg.mat, r, g, b);
 	CLS_get_CCT(&pCpnt->Temp, pCpnt->xy);
@@ -103,7 +103,7 @@ static FctERR NONNULL__ APDS9960_calc(APDS9960_t * pCpnt, const uint16_t r, cons
 }
 
 
-__WEAK FctERR NONNULL__ APDS9960_handler(APDS9960_t * pCpnt)
+__WEAK FctERR NONNULL__ APDS9960_handler(APDS9960_t * const pCpnt)
 {
 	uint8_t					DATA[10];
 	uAPDS9960_REG__STATUS *	ST = (uAPDS9960_REG__STATUS *) DATA;
@@ -173,6 +173,18 @@ __WEAK FctERR NONNULL__ APDS9960_handler(APDS9960_t * pCpnt)
 	else if (pCpnt->cfg.PIEN)					{ return APDS9960_SF_Clear_PROX_IT(pCpnt); }
 
 	return ERROR_OK;
+}
+
+
+__WEAK FctERR NONNULL__ APDS9960_handler_it(APDS9960_t * const pCpnt)
+{
+	FctERR	err;
+	bool	interrupt;
+
+	err = APDS9960_INT_GPIO_Get(pCpnt, &interrupt);
+	if ((!err) && interrupt)	{ err = APDS9960_handler(pCpnt); }
+
+	return err;
 }
 
 

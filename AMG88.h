@@ -414,7 +414,7 @@ FctERR AMG88_Init_Single(void);
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AMG88_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ AMG88_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for AMG88
@@ -424,7 +424,7 @@ FctERR NONNULL__ AMG88_Write(I2C_slave_t * pSlave, const uint8_t * data, const u
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AMG88_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ AMG88_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Word Write (low endian) function for AMG88
@@ -433,7 +433,7 @@ FctERR NONNULL__ AMG88_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t
 ** \param[in] addr - Address to write to
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AMG88_Write_Word(I2C_slave_t * pSlave, const uint16_t * data, const uint16_t addr);
+FctERR NONNULL__ AMG88_Write_Word(I2C_slave_t * const pSlave, const uint16_t * data, const uint16_t addr);
 
 
 /*!\brief I2C Word Read (low endian) function for AMG88
@@ -442,7 +442,7 @@ FctERR NONNULL__ AMG88_Write_Word(I2C_slave_t * pSlave, const uint16_t * data, c
 ** \param[in] addr - Address to read from
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AMG88_Read_Word(I2C_slave_t * pSlave, uint16_t * data, const uint16_t addr);
+FctERR NONNULL__ AMG88_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, const uint16_t addr);
 
 
 /****************************************************************/

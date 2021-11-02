@@ -5,7 +5,7 @@
 ** \details MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM
 ** \note	Compatibility (tested):
 **				- MB85RC256V
-**				- FM24CL64B
+**				- MB85RC256VL64B
 ** \note	Compatibility:
 **				- other components using same i2c protocol may be compatible
 **/
@@ -40,7 +40,30 @@
 ** \param[in] pCpnt - Pointer to MB85RC256V component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MB85RC256V_Mass_Erase(MB85RC256V_t * pCpnt);
+FctERR NONNULL__ MB85RC256V_Mass_Erase(MB85RC256V_t * const pCpnt);
+
+
+/*******************/
+/*** GPIO access ***/
+/*******************/
+
+/*!\brief Write Protect GPIO pin init for MB85RC256V
+** \weak MB85RC256V Write Protect GPIO pin init may be user implemented if needed
+** \param[in] pCpnt - Pointer to MB85RC256V component
+** \param[in] GPIOx - WP port
+** \param[in] GPIO_Pin - WP pin
+** \param[in] GPIO_Active: WP pin active state
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ MB85RC256V_WP_GPIO_Init(MB85RC256V_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+
+/*!\brief Write Protect GPIO pin getter for MB85RC256V
+** \weak MB85RC256V Write Protect GPIO pin getter may be user implemented if needed
+** \param[in] pCpnt - Pointer to MB85RC256V component
+** \param[in,out] pState - Pointer to WP pin state variable (0: inactive, 1: active)
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ MB85RC256V_WP_GPIO_Get(MB85RC256V_t * const pCpnt, bool * const pState);
 
 
 /****************************************************************/

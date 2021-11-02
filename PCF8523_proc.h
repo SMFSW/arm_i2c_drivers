@@ -49,13 +49,15 @@ typedef struct PCF8523_time {
 
 
 typedef struct PCF8523_t {
-	PCF8523_date	date;
-	PCF8523_time	time;
+	PCF8523_date		date;
+	PCF8523_time		time;
 	struct {
-	I2C_slave_t *	slave_inst;		//!< Slave structure
-	uint8_t			Src_Clock_A;
-	uint8_t			Src_Clock_B;
-	bool			Hour_Format;	//!< 0: 24h; 1: 12h
+	I2C_slave_t *		slave_inst;		//!< Slave structure
+	PeripheralGPIO_t	INT1_GPIO;			//!< Interrupt 1 GPIO struct
+	PeripheralGPIO_t	INT2_GPIO;			//!< Interrupt 2 GPIO struct
+	uint8_t				Src_Clock_A;
+	uint8_t				Src_Clock_B;
+	bool				Hour_Format;	//!< 0: 24h; 1: 12h
 	} cfg;
 } PCF8523_t;
 
@@ -89,10 +91,19 @@ FctERR PCF8523_Get_Time(PCF8523_time * time, const bool BCD);
 /*!\brief Handler for PCF8523 peripheral
 ** \weak PCF8523 handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle PCF8523 tasks
-** \note Alternately may be called when event occurs on PCF8523 pin
+** \note Alternately may be called when event occurs on PCF8523 pin (or by calling \ref PCF8523_handler_it instead)
 ** \return FctERR - error code
 **/
 FctERR PCF8523_handler(void);
+
+/*!\brief Handler for PCF8523 peripheral GPIO interrupt
+** \note \ref PCF8523_INT1_GPIO_Init / \ref PCF8523_INT2_GPIO_Init have to be called at init before using interrupt handler function
+** \weak PCF8523 GPIO interrupt handler may be user implemented to suit custom needs
+** \note May be called periodically to handle PCF8523 tasks through interrupts
+** \param[in] pCpnt - Pointer to PCF8523 component
+** \return FctERR - error code
+**/
+FctERR PCF8523_handler_it(void);
 
 
 /****************************************************************/

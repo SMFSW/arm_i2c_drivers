@@ -87,6 +87,7 @@ typedef struct APDS9930_t {
 	bool						Saturation;			//!< Current Sensor saturation status
 	struct {
 	I2C_slave_t *				slave_inst;			//!< Slave structure
+	PeripheralGPIO_t			INT_GPIO;			//!< Interrupt GPIO struct
 	float						GA;					//!< Glass attenuation factor
 	float						LPC;				//!< Lux per count config
 	APDS9930_als_gain_ex		ALS_Gain;			//!< ALS sensor gain config
@@ -123,30 +124,41 @@ extern APDS9930_t	APDS9930[I2C_APDS9930_NB];	//!< APDS9930 User structure
 ** \param[in] pCpnt - Pointer to APDS9930 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ APDS9930_Init_Sequence(APDS9930_t * pCpnt);
+FctERR NONNULL__ APDS9930_Init_Sequence(APDS9930_t * const pCpnt);
 
 
 /*!\brief Set proper LPC value (Lux per Count)
  * \note Should be called after Configuration change of Integration time or Gain
 ** \param[in] pCpnt - Pointer to APDS9930 component
 **/
-void NONNULL__ APDS9930_Set_LPC(APDS9930_t * pCpnt);
+void NONNULL__ APDS9930_Set_LPC(APDS9930_t * const pCpnt);
 
 /*!\brief Get current Illuminance (in lux)
 ** \param[in] pCpnt - Pointer to APDS9930 component
 ** \return FctERR - error code
 **/
-__INLINE uint32_t NONNULL_INLINE__ APDS9930_Get_Lux(APDS9930_t * pCpnt) {
+__INLINE uint32_t NONNULL_INLINE__ APDS9930_Get_Lux(APDS9930_t * const pCpnt) {
 	return pCpnt->Lux; }
+
 
 /*!\brief Handler for APDS9930 peripheral
 ** \weak APDS9930 handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle APDS9930 tasks
-** \note Alternately may be called when event occurs on APDS9930 pin
+** \note Alternately may be called when event occurs on APDS9930 pin (or by calling \ref APDS9930_handler_it instead)
 ** \param[in] pCpnt - Pointer to APDS9930 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ APDS9930_handler(APDS9930_t * pCpnt);
+FctERR NONNULL__ APDS9930_handler(APDS9930_t * const pCpnt);
+
+/*!\brief Handler for APDS9930 peripheral GPIO interrupt
+** \note \ref APDS9930_INT_GPIO_Init has to be called at init before using interrupt handler function
+** \weak APDS9930 GPIO interrupt handler may be user implemented to suit custom needs
+** \note May be called periodically to handle APDS9930 tasks through interrupts
+** \param[in] pCpnt - Pointer to APDS9930 component
+** \return FctERR - error code
+**/
+FctERR NONNULL__ APDS9930_handler_it(APDS9930_t * const pCpnt);
+
 
 /*!\brief Handler for all APDS9930 peripherals
 ** \note May be called periodically to handle all APDS9930 tasks
@@ -154,6 +166,15 @@ FctERR NONNULL__ APDS9930_handler(APDS9930_t * pCpnt);
 __INLINE void INLINE__ APDS9930_handler_all(void) {
 	for (APDS9930_t * pCpnt = APDS9930 ; pCpnt < &APDS9930[I2C_APDS9930_NB] ; pCpnt++) {
 		APDS9930_handler(pCpnt); }
+}
+
+/*!\brief Handler for all APDS9930 peripherals GPIO interrupt
+** \note \ref APDS9930_INT_GPIO_Init has to be called at init before using interrupt handler function
+** \note May be called periodically to handle all APDS9930 tasks
+**/
+__INLINE void INLINE__ APDS9930_handler_it_all(void) {
+	for (APDS9930_t * pCpnt = APDS9930 ; pCpnt < &APDS9930[I2C_APDS9930_NB] ; pCpnt++) {
+		APDS9930_handler_it(pCpnt); }
 }
 
 

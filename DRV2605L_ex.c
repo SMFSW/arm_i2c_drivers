@@ -415,6 +415,23 @@ FctERR NONNULL__ DRV2605L_Get_ResonancePeriod(uint16_t * per)
 
 
 /****************************************************************/
+
+
+__WEAK FctERR NONNULL__ DRV2605L_EN_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	return I2C_peripheral_GPIO_init(&DRV2605L.cfg.EN_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+
+__WEAK FctERR DRV2605L_EN_GPIO_Set(const bool state) {
+	return I2C_peripheral_GPIO_set(&DRV2605L.cfg.EN_GPIO, state); }
+
+
+__WEAK FctERR NONNULL__ DRV2605L_TRIG_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	return I2C_peripheral_GPIO_init(&DRV2605L.cfg.TRIG_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+
+__WEAK FctERR DRV2605L_TRIG_GPIO_Set(const bool state) {
+	return I2C_peripheral_GPIO_set(&DRV2605L.cfg.TRIG_GPIO, state); }
+
+
+/****************************************************************/
 #endif
 #endif
 /****************************************************************/

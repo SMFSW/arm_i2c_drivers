@@ -52,7 +52,7 @@ FctERR ADS1115_Init_Single(void) {
 /****************************************************************/
 
 
-FctERR NONNULL__ ADS1115_Write(I2C_slave_t * pSlave, const uint16_t * data, const uint16_t addr)
+FctERR NONNULL__ ADS1115_Write(I2C_slave_t * const pSlave, const uint16_t * data, const uint16_t addr)
 {
 	if (!I2C_is_enabled(pSlave))		{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (addr > ADS1115__HI_THRESH)		{ return ERROR_RANGE; }		// Unknown register
@@ -66,7 +66,7 @@ FctERR NONNULL__ ADS1115_Write(I2C_slave_t * pSlave, const uint16_t * data, cons
 }
 
 
-FctERR NONNULL__ ADS1115_Read(I2C_slave_t * pSlave, uint16_t * data, const uint16_t addr)
+FctERR NONNULL__ ADS1115_Read(I2C_slave_t * const pSlave, uint16_t * data, const uint16_t addr)
 {
 	uint8_t	RREG[2];
 

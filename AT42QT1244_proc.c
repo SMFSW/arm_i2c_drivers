@@ -15,7 +15,7 @@
 /****************************************************************/
 
 
-AT42QT1244_t AT42QT1244[I2C_AT42QT1244_NB];
+AT42QT1244_t AT42QT1244[I2C_AT42QT1244_NB] = { 0 };
 
 
 uint16_t AT42QT1244_crc16(uint16_t crc, const uint8_t data)
@@ -34,7 +34,7 @@ uint16_t AT42QT1244_crc16(uint16_t crc, const uint8_t data)
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ AT42QT1244_Init_Sequence(AT42QT1244_t * pCpnt)
+__WEAK FctERR NONNULL__ AT42QT1244_Init_Sequence(AT42QT1244_t * const pCpnt)
 {
 	FctERR	err;
 	uint8_t	DATA[2];
@@ -75,7 +75,7 @@ __WEAK FctERR NONNULL__ AT42QT1244_Init_Sequence(AT42QT1244_t * pCpnt)
 /****************************************************************/
 
 
-void NONNULL__ AT42QT1244_Delay_PowerOn(AT42QT1244_t * pCpnt)
+void NONNULL__ AT42QT1244_Delay_PowerOn(AT42QT1244_t * const pCpnt)
 {
 	const uint8_t	loop_delay = 2;		// 2ms delay for each loop (consider watchdog period if used, on ms basis)
 	const int32_t	PON_time = 100;		// Power on time with initialization given in datasheet (95ms rounded to 100)
@@ -91,7 +91,7 @@ void NONNULL__ AT42QT1244_Delay_PowerOn(AT42QT1244_t * pCpnt)
 }
 
 
-FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * pCpnt, uint16_t * const hcrc)
+FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * const pCpnt, uint16_t * const hcrc)
 {
 	FctERR		err;
 	int			calib = 1, i, j;
@@ -174,7 +174,7 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * pCpnt, uint16_
 }
 
 
-FctERR NONNULL__ AT42QT1244_Calibrate_Low_Level(AT42QT1244_t * pCpnt)
+FctERR NONNULL__ AT42QT1244_Calibrate_Low_Level(AT42QT1244_t * const pCpnt)
 {
 	if (AT42QT1244_is_Calib_Pending(pCpnt))	{ return ERROR_BUSY; }
 
@@ -182,7 +182,7 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Low_Level(AT42QT1244_t * pCpnt)
 }
 
 
-FctERR NONNULL__ AT42QT1244_Calibrate_All_Keys(AT42QT1244_t * pCpnt)
+FctERR NONNULL__ AT42QT1244_Calibrate_All_Keys(AT42QT1244_t * const pCpnt)
 {
 	if (AT42QT1244_is_Calib_Pending(pCpnt))	{ return ERROR_BUSY; }
 
@@ -190,7 +190,7 @@ FctERR NONNULL__ AT42QT1244_Calibrate_All_Keys(AT42QT1244_t * pCpnt)
 }
 
 
-FctERR NONNULL__ AT42QT1244_Calibrate_Key(AT42QT1244_t * pCpnt, uint8_t Key)
+FctERR NONNULL__ AT42QT1244_Calibrate_Key(AT42QT1244_t * const pCpnt, uint8_t Key)
 {
 	if (Key > AT42QT__CALIBRATE_KEY_23)		{ return ERROR_VALUE; }
 	if (AT42QT1244_is_Calib_Pending(pCpnt))	{ return ERROR_BUSY; }
@@ -202,7 +202,7 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Key(AT42QT1244_t * pCpnt, uint8_t Key)
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ AT42QT1244_handler(AT42QT1244_t * pCpnt)
+__WEAK FctERR NONNULL__ AT42QT1244_handler(AT42QT1244_t * const pCpnt)
 {
 	FctERR err;
 
@@ -226,6 +226,18 @@ __WEAK FctERR NONNULL__ AT42QT1244_handler(AT42QT1244_t * pCpnt)
 	const uint8_t idx = pCpnt - AT42QT1244;
 	printf("AT42QT1244 id%d: keys state 0x%lX", idx, pCpnt->keys);
 #endif
+
+	return err;
+}
+
+
+__WEAK FctERR NONNULL__ AT42QT1244_handler_it(AT42QT1244_t * const pCpnt)
+{
+	FctERR	err;
+	bool	interrupt;
+
+	err = AT42QT1244_CHANGE_GPIO_Get(pCpnt, &interrupt);
+	if ((!err) && interrupt)	{ err = AT42QT1244_handler(pCpnt); }
 
 	return err;
 }

@@ -49,6 +49,7 @@ typedef struct ADS1115_t {
 	uint8_t				AIN_idx;			//!< Current AIN index
 	struct {
 	I2C_slave_t *		slave_inst;			//!< Slave structure
+	PeripheralGPIO_t	RDY_GPIO;			//!< Ready GPIO struct
 	ADS1115_func		function;			//!< Functional mode
 	ADS1115_mode		mode;				//!< Mode (single shot / Continuous conversion)
 	uint8_t				nb;					//!< Number of channels (irrelevant for ADS1115__FUNC_SINGLE_DIFF func)
@@ -73,17 +74,26 @@ extern ADS1115_t ADS1115[I2C_ADS1115_NB];		//!< ADS1115 User structure
 ** \param[in] pCpnt - Pointer to ADS1115 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ ADS1115_Init_Sequence(ADS1115_t * pCpnt);
+FctERR NONNULL__ ADS1115_Init_Sequence(ADS1115_t * const pCpnt);
 
 
 /*!\brief Handler for ADS1115 peripheral
 ** \weak ADS1115 handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle ADS1115 tasks
-** \note Alternately may be called when event occurs on ADS1115 pin
+** \note Alternately may be called when event occurs on ADS1115 pin (or by calling \ref ADS1115_handler_it instead)
 ** \param[in] pCpnt - Pointer to ADS1115 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ ADS1115_handler(ADS1115_t * pCpnt);
+FctERR NONNULL__ ADS1115_handler(ADS1115_t * const pCpnt);
+
+/*!\brief Handler for ADS1115 peripheral GPIO interrupt
+** \note \ref ADS1115_RDY_GPIO_Init has to be called at init before using interrupt handler function
+** \weak ADS1115 GPIO interrupt handler may be user implemented to suit custom needs
+** \note May be called periodically to handle ADS1115 tasks through interrupts
+** \param[in] pCpnt - Pointer to ADS1115 component
+** \return FctERR - error code
+**/
+FctERR NONNULL__ ADS1115_handler_it(ADS1115_t * const pCpnt);
 
 
 /*!\brief Handler for all ADS1115 peripherals
@@ -92,6 +102,15 @@ FctERR NONNULL__ ADS1115_handler(ADS1115_t * pCpnt);
 __INLINE void INLINE__ ADS1115_handler_all(void) {
 	for (ADS1115_t * pCpnt = ADS1115 ; pCpnt < &ADS1115[I2C_ADS1115_NB] ; pCpnt++) {
 		ADS1115_handler(pCpnt); }
+}
+
+/*!\brief Handler for all ADS1115 peripherals GPIO interrupt
+** \note \ref ADS1115_RDY_GPIO_Init has to be called at init before using interrupt handler function
+** \note May be called periodically to handle all ADS1115 tasks
+**/
+__INLINE void INLINE__ ADS1115_handler_it_all(void) {
+	for (ADS1115_t * pCpnt = ADS1115 ; pCpnt < &ADS1115[I2C_ADS1115_NB] ; pCpnt++) {
+		ADS1115_handler_it(pCpnt); }
 }
 
 

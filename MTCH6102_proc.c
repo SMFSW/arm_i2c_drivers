@@ -15,7 +15,7 @@
 #include <stdlib.h>
 /****************************************************************/
 
-MTCH6102_t MTCH6102[I2C_MTCH6102_NB];
+MTCH6102_t MTCH6102[I2C_MTCH6102_NB] = { 0 };
 
 
 #if defined(MTCH6102_DEFAULT_CONFIG_DEF)
@@ -395,6 +395,18 @@ __WEAK FctERR NONNULL__ MTCH6102_handler(MTCH6102_t * const pCpnt)
 	#endif
 
 	return ERROR_OK;
+}
+
+
+__WEAK FctERR NONNULL__ MTCH6102_handler_it(MTCH6102_t * const pCpnt)
+{
+	FctERR	err;
+	bool	interrupt;
+
+	err = MTCH6102_INT_GPIO_Get(pCpnt, &interrupt);
+	if ((!err) && interrupt)	{ err = MTCH6102_handler(pCpnt); }
+
+	return err;
 }
 
 

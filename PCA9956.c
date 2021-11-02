@@ -47,7 +47,7 @@ FctERR PCA9956_Init_Single(void) {
 /****************************************************************/
 
 
-FctERR NONNULL__ PCA9956_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ PCA9956_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	const PCA962x_reg_inc inc_mode = PCA9956[pSlave - PCA9956_hal].cfg.auto_inc & 0x80;
 
@@ -62,7 +62,7 @@ FctERR NONNULL__ PCA9956_Write(I2C_slave_t * pSlave, const uint8_t * data, const
 }
 
 
-FctERR NONNULL__ PCA9956_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ PCA9956_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	const PCA962x_reg_inc inc_mode = PCA9956[pSlave - PCA9956_hal].cfg.auto_inc & 0x80;
 

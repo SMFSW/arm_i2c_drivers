@@ -32,10 +32,12 @@
 ** \brief PCA9956 user interface struct
 **/
 typedef struct PCA9956_t {
-	uPCA9956_REG__LEDOUT	LDR;			//!< LED output drive registers
+	uPCA9956_REG__LEDOUT	LDR;				//!< LED output drive registers
 	struct {
-	I2C_slave_t *			slave_inst;		//!< Slave structure
-	PCA9956_reg_inc			auto_inc;		//!< Auto increment configuration
+	I2C_slave_t *			slave_inst;			//!< Slave structure
+	PeripheralGPIO_t		RST_GPIO;			//!< Reset GPIO struct
+	PeripheralGPIO_t		OE_GPIO;			//!< Output Enable GPIO struct
+	PCA9956_reg_inc			auto_inc;			//!< Auto increment configuration
 	} cfg;
 } PCA9956_t;
 
@@ -54,7 +56,16 @@ extern PCA9956_t	PCA9956[I2C_PCA9956_NB];	//!< PCA9956 User structure
 ** \param[in] pCpnt - Pointer to PCA9956 component
 ** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCA9956_Init_Sequence(PCA9956_t * pCpnt);
+FctERR NONNULL__ PCA9956_Init_Sequence(PCA9956_t * const pCpnt);
+
+
+/*!\brief Compute IREF for PCA9956 peripheral
+** \param[in,out] pIREF - Pointer to IREF result
+** \param[in] Rext - Rext value (in KOhm)
+** \param[in] current - Target current (in mA)
+** \return FctERR - ErrorCode (in case of IREF value overflow)
+**/
+FctERR PCA9956_calc_IREF(uint8_t * const pIREF, const float Rext, const float current);
 
 
 /****************************************************************/

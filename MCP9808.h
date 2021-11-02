@@ -168,7 +168,7 @@ FctERR MCP9808_Init_Single(void);
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP9808_Write(I2C_slave_t * pSlave, const uint16_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ MCP9808_Write(I2C_slave_t * const pSlave, const uint16_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for MCP9808
@@ -178,7 +178,7 @@ FctERR NONNULL__ MCP9808_Write(I2C_slave_t * pSlave, const uint16_t * data, cons
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP9808_Read(I2C_slave_t * pSlave, uint16_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ MCP9808_Read(I2C_slave_t * const pSlave, uint16_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /****************************************************************/

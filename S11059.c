@@ -43,7 +43,7 @@ FctERR S11059_Init_Single(void) {
 /****************************************************************/
 
 
-FctERR NONNULL__ S11059_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ S11059_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(pSlave))						{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (addr > S11059__MANUAL_TIMING_LSB)				{ return ERROR_RANGE; }		// Unknown register (or read only register)
@@ -56,7 +56,7 @@ FctERR NONNULL__ S11059_Write(I2C_slave_t * pSlave, const uint8_t * data, const 
 }
 
 
-FctERR NONNULL__ S11059_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ S11059_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (addr > S11059__IR_DATA_LSB)				{ return ERROR_RANGE; }		// Unknown register
@@ -69,7 +69,7 @@ FctERR NONNULL__ S11059_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_
 }
 
 
-FctERR NONNULL__ S11059_Write_Word(I2C_slave_t * pSlave, const uint16_t * data, const uint16_t addr)
+FctERR NONNULL__ S11059_Write_Word(I2C_slave_t * const pSlave, const uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 
@@ -81,7 +81,7 @@ FctERR NONNULL__ S11059_Write_Word(I2C_slave_t * pSlave, const uint16_t * data, 
 }
 
 
-FctERR NONNULL__ S11059_Read_Word(I2C_slave_t * pSlave, uint16_t * data, const uint16_t addr)
+FctERR NONNULL__ S11059_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 	FctERR	err;

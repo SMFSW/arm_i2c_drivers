@@ -255,6 +255,48 @@ __INLINE FctERR NONNULL_INLINE__ MTCH6102_Get_Gest(const MTCH6102_t * const pCpn
 	return MTCH6102_Read(pCpnt->cfg.slave_inst, (uint8_t *) gest, MTCH__TOUCH_STATE, sizeof(MTCH6102_raw_gest)); }
 
 
+/*******************/
+/*** GPIO access ***/
+/*******************/
+
+/*!\brief Interrupt GPIO pin init for MTCH6102
+** \weak MTCH6102 Interrupt GPIO pin init may be user implemented if needed
+** \param[in] pCpnt - Pointer to MTCH6102 component
+** \param[in] GPIOx - INT port
+** \param[in] GPIO_Pin - INT pin
+** \param[in] GPIO_Active: INT pin active state
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ MTCH6102_INT_GPIO_Init(MTCH6102_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+
+/*!\brief Interrupt GPIO pin getter for MTCH6102
+** \weak MTCH6102 Interrupt GPIO pin getter may be user implemented if needed
+** \param[in] pCpnt - Pointer to MTCH6102 component
+** \param[in,out] pState - Pointer to INT pin state variable (0: inactive, 1: active)
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ MTCH6102_INT_GPIO_Get(MTCH6102_t * const pCpnt, bool * const pState);
+
+
+/*!\brief Synchro GPIO pin init for MTCH6102
+** \weak MTCH6102 Synchro GPIO pin init may be user implemented if needed
+** \param[in] pCpnt - Pointer to MTCH6102 component
+** \param[in] GPIOx - SYNC port
+** \param[in] GPIO_Pin - SYNC pin
+** \param[in] GPIO_Active: SYNC pin active state
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ MTCH6102_SYNC_GPIO_Init(MTCH6102_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+
+/*!\brief Synchro GPIO pin getter for MTCH6102
+** \weak MTCH6102 Synchro GPIO pin getter may be user implemented if needed
+** \param[in] pCpnt - Pointer to MTCH6102 component
+** \param[in,out] pState - Pointer to SYNC pin state variable (0: inactive, 1: active)
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ MTCH6102_SYNC_GPIO_Get(MTCH6102_t * const pCpnt, bool * const pState);
+
+
 /****************************************************************/
 #endif
 

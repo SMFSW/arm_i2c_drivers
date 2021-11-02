@@ -326,6 +326,44 @@ __INLINE FctERR NONNULL_INLINE__ DRV2605L_Get_ChipID(uint8_t * id) {
 	return err; }
 
 
+/*******************/
+/*** GPIO access ***/
+/*******************/
+
+/*!\brief Enable GPIO pin init for DRV2605L
+** \weak DRV2605L Enable GPIO pin init may be user implemented if needed
+** \param[in] GPIOx - EN port
+** \param[in] GPIO_Pin - EN pin
+** \param[in] GPIO_Active: EN pin active state
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ DRV2605L_EN_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+
+/*!\brief Enable GPIO pin setter for DRV2605L
+** \weak DRV2605L Enable GPIO pin setter may be user implemented if needed
+** \param[in] state - state to write on EN pin (0: inactive, 1: active)
+** \return FctERR - ErrorCode
+**/
+FctERR DRV2605L_EN_GPIO_Set(const bool state);
+
+
+/*!\brief Trigger GPIO pin init for DRV2605L
+** \weak DRV2605L Trigger GPIO pin init may be user implemented if needed
+** \param[in] GPIOx - TRIG port
+** \param[in] GPIO_Pin - TRIG pin
+** \param[in] GPIO_Active: TRIG pin active state
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ DRV2605L_TRIG_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+
+/*!\brief Trigger GPIO pin setter for DRV2605L
+** \weak DRV2605L Trigger GPIO pin setter may be user implemented if needed
+** \param[in] state - state to write on TRIG pin (0: inactive, 1: active)
+** \return FctERR - ErrorCode
+**/
+FctERR DRV2605L_TRIG_GPIO_Set(const bool state);
+
+
 /****************************************************************/
 #endif
 

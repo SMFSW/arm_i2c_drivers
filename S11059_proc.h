@@ -58,7 +58,7 @@ extern S11059_t S11059[I2C_S11059_NB];			//!< S11059 User structure
 ** \param[in] pCpnt - Pointer to S11059 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ S11059_Init_Sequence(S11059_t * pCpnt);
+FctERR NONNULL__ S11059_Init_Sequence(S11059_t * const pCpnt);
 
 
 /*!\brief Get S11059 integration time for all channels
@@ -73,11 +73,10 @@ uint32_t S11059_Get_Full_Integration_Time(const S11059_integ mode, const S11059_
 /*!\brief Handler for S11059 peripheral
 ** \weak S11059 handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle S11059 tasks
-** \note Alternately may be called when event occurs on S11059 pin
 ** \param[in] pCpnt - Pointer to S11059 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ S11059_handler(S11059_t * pCpnt);
+FctERR NONNULL__ S11059_handler(S11059_t * const pCpnt);
 
 
 /*!\brief Handler for all S11059 peripherals

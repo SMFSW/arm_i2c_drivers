@@ -12,7 +12,7 @@
 /****************************************************************/
 
 
-FctERR NONNULL__ MCP4725_Write_Command(MCP4725_t * pCpnt, const uint16_t val)
+FctERR NONNULL__ MCP4725_Write_Command(MCP4725_t * const pCpnt, const uint16_t val)
 {
 	uint8_t	CMD[3];
 
@@ -34,7 +34,7 @@ FctERR NONNULL__ MCP4725_Write_Command(MCP4725_t * pCpnt, const uint16_t val)
 }
 
 
-FctERR NONNULL__ MCP4725_Read_DAC(MCP4725_t * pCpnt, uint16_t * val)
+FctERR NONNULL__ MCP4725_Read_DAC(MCP4725_t * const pCpnt, uint16_t * val)
 {
 	uint8_t	REG[3];
 	FctERR	err;
@@ -47,7 +47,7 @@ FctERR NONNULL__ MCP4725_Read_DAC(MCP4725_t * pCpnt, uint16_t * val)
 }
 
 
-FctERR NONNULL__ MCP4725_Read_State(MCP4725_t * pCpnt, bool * state)
+FctERR NONNULL__ MCP4725_Read_State(MCP4725_t * const pCpnt, bool * state)
 {
 	uint8_t	REG;
 	FctERR	err;

@@ -29,7 +29,7 @@
 static const I2C_slave_t FM24C_defaults = { { pNull, 0, I2C_eep_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FMP }, 0, HAL_OK, true, false };
 
 I2C_slave_t FM24C_hal[I2C_FM24C_NB];
-FM24C_t FM24C[I2C_FM24C_NB];
+FM24C_t FM24C[I2C_FM24C_NB] = { 0 };
 
 
 /****************************************************************/
@@ -57,9 +57,9 @@ FctERR FM24C_Init_Single(void) {
 /****************************************************************/
 
 
-FctERR NONNULL__ FM24C_Write_Banked(FM24C_t * pCpnt, const uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb)
+FctERR NONNULL__ FM24C_Write_Banked(FM24C_t * const pCpnt, const uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb)
 {
-	I2C_slave_t * pSlave = pCpnt->cfg.slave_inst;
+	I2C_slave_t * const pSlave = pCpnt->cfg.slave_inst;
 
 	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (bank >= (FM24C_SIZE / FM24C_BANK_SIZE))	{ return ERROR_RANGE; }		// Unknown bank
@@ -75,9 +75,9 @@ FctERR NONNULL__ FM24C_Write_Banked(FM24C_t * pCpnt, const uint8_t * data, const
 }
 
 
-FctERR NONNULL__ FM24C_Read_Banked(FM24C_t * pCpnt, uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb)
+FctERR NONNULL__ FM24C_Read_Banked(FM24C_t * const pCpnt, uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb)
 {
-	I2C_slave_t * pSlave = pCpnt->cfg.slave_inst;
+	I2C_slave_t * const pSlave = pCpnt->cfg.slave_inst;
 
 	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (bank >= (FM24C_SIZE / FM24C_BANK_SIZE))	{ return ERROR_RANGE; }		// Unknown bank
@@ -93,7 +93,7 @@ FctERR NONNULL__ FM24C_Read_Banked(FM24C_t * pCpnt, uint8_t * data, const uint16
 }
 
 
-FctERR NONNULL__ FM24C_ReadWrite(FM24C_t * pCpnt, uint8_t * data, const uint16_t addr, const uint16_t nb, const bool wr)
+FctERR NONNULL__ FM24C_ReadWrite(FM24C_t * const pCpnt, uint8_t * data, const uint16_t addr, const uint16_t nb, const bool wr)
 {
 	FctERR err = ERROR_OK;
 

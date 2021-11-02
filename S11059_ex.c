@@ -12,7 +12,7 @@
 /****************************************************************/
 
 
-FctERR NONNULL__ S11059_Set_ADC(S11059_t * pCpnt, const S11059_adc_reset adc)
+FctERR NONNULL__ S11059_Set_ADC(S11059_t * const pCpnt, const S11059_adc_reset adc)
 {
 	uS11059_REG__CONTROL	CTL;
 	FctERR					err;
@@ -30,7 +30,7 @@ FctERR NONNULL__ S11059_Set_ADC(S11059_t * pCpnt, const S11059_adc_reset adc)
 }
 
 
-FctERR NONNULL__ S11059_Set_Standby(S11059_t * pCpnt, const S11059_standby_fct standby)
+FctERR NONNULL__ S11059_Set_Standby(S11059_t * const pCpnt, const S11059_standby_fct standby)
 {
 	uS11059_REG__CONTROL	CTL;
 	FctERR					err;
@@ -48,7 +48,7 @@ FctERR NONNULL__ S11059_Set_Standby(S11059_t * pCpnt, const S11059_standby_fct s
 }
 
 
-FctERR NONNULL__ S11059_Set_Gain(S11059_t * pCpnt, const S11059_gain gain)
+FctERR NONNULL__ S11059_Set_Gain(S11059_t * const pCpnt, const S11059_gain gain)
 {
 	uS11059_REG__CONTROL	CTL;
 	FctERR					err;
@@ -66,7 +66,7 @@ FctERR NONNULL__ S11059_Set_Gain(S11059_t * pCpnt, const S11059_gain gain)
 }
 
 
-FctERR NONNULL__ S11059_Set_Integration(S11059_t * pCpnt, const S11059_integ mode, const S11059_prescaler prescaler)
+FctERR NONNULL__ S11059_Set_Integration(S11059_t * const pCpnt, const S11059_integ mode, const S11059_prescaler prescaler)
 {
 	uS11059_REG__CONTROL	CTL;
 	FctERR					err;
@@ -86,7 +86,7 @@ FctERR NONNULL__ S11059_Set_Integration(S11059_t * pCpnt, const S11059_integ mod
 }
 
 
-FctERR NONNULL__ S11059_Set_Integration_Multiplier(S11059_t * pCpnt, const uint16_t mult)
+FctERR NONNULL__ S11059_Set_Integration_Multiplier(S11059_t * const pCpnt, const uint16_t mult)
 {
 	FctERR	err;
 
@@ -99,7 +99,7 @@ FctERR NONNULL__ S11059_Set_Integration_Multiplier(S11059_t * pCpnt, const uint1
 }
 
 
-FctERR NONNULL__ S11059_Get_Standby(S11059_t * pCpnt, S11059_standby_fct * standby)
+FctERR NONNULL__ S11059_Get_Standby(S11059_t * const pCpnt, S11059_standby_fct * standby)
 {
 	uS11059_REG__CONTROL	CTL;
 	FctERR					err;

@@ -16,7 +16,7 @@
 /****************************************************************/
 
 
-FctERR NONNULL__ $CPNT$_fct($CPNT$_t * pCpnt)
+FctERR NONNULL__ $CPNT$_fct($CPNT$_t * const pCpnt)
 {
 	FctERR err;
 
@@ -25,6 +25,23 @@ FctERR NONNULL__ $CPNT$_fct($CPNT$_t * pCpnt)
 
 	return err;
 }
+
+
+/****************************************************************/
+
+
+__WEAK FctERR NONNULL__ $CPNT$_INT_GPIO_Init($CPNT$_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	return I2C_peripheral_GPIO_init(&pCpnt->cfg.INT_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+
+__WEAK FctERR NONNULL__ $CPNT$_INT_GPIO_Get($CPNT$_t * const pCpnt, bool * const pState) {
+	return I2C_peripheral_GPIO_get(&pCpnt->cfg.INT_GPIO, pState); }
+
+
+__WEAK FctERR NONNULL__ $CPNT$_RST_GPIO_Init($CPNT$_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	return I2C_peripheral_GPIO_init(&pCpnt->cfg.RST_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+
+__WEAK FctERR NONNULL__ $CPNT$_RST_GPIO_Set($CPNT$_t * const pCpnt, const bool state) {
+	return I2C_peripheral_GPIO_set(&pCpnt->cfg.RST_GPIO, state); }
 
 
 /****************************************************************/

@@ -16,7 +16,7 @@
 /****************************************************************/
 
 
-$CPNT$_t $CPNT$ = { 0, { &$CPNT$_hal, 0, 0 } };
+$CPNT$_t $CPNT$ = { 0, { &$CPNT$_hal, { 0 }, 0, 0 } };
 
 
 /****************************************************************/
@@ -52,6 +52,18 @@ __WEAK FctERR $CPNT$_handler(void)
 	#endif
 
 	return ERROR_OK;
+}
+
+
+__WEAK FctERR NONNULL__ $CPNT$_handler_it(void)
+{
+	FctERR	err;
+	bool	interrupt;
+
+	err = $CPNT$_RDY_GPIO_Get(&interrupt);
+	if ((!err) && interrupt)	{ err = $CPNT$_handler(); }
+
+	return err;
 }
 
 

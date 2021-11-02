@@ -43,14 +43,14 @@
 ** \param[in] pCpnt - Pointer to MB85RC256V component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MB85RC256V_Init_Sequence(MB85RC256V_t * pCpnt);
+FctERR NONNULL__ MB85RC256V_Init_Sequence(MB85RC256V_t * const pCpnt);
 
 
 /*!\brief Get ID from MB85RC256V peripheral
 ** \param[in] pCpnt - Pointer to MB85RC256V component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MB85RC256V_Get_ID(MB85RC256V_t * pCpnt);
+FctERR NONNULL__ MB85RC256V_Get_ID(MB85RC256V_t * const pCpnt);
 
 
 /****************************************************************/

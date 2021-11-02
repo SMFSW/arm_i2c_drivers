@@ -109,6 +109,16 @@ FctERR NONNULL__ PCA9532_SetDuty(PCA9532_t * const pCpnt, const float duty, cons
 
 
 /****************************************************************/
+
+
+__WEAK FctERR NONNULL__ PCA9532_RST_GPIO_Init(PCA9532_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	return I2C_peripheral_GPIO_init(&pCpnt->cfg.RST_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+
+__WEAK FctERR NONNULL__ PCA9532_RST_GPIO_Set(PCA9532_t * const pCpnt, const bool state) {
+	return I2C_peripheral_GPIO_set(&pCpnt->cfg.RST_GPIO, state); }
+
+
+/****************************************************************/
 #endif
 #endif
 /****************************************************************/

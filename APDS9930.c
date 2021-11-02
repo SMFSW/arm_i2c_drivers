@@ -47,7 +47,7 @@ FctERR APDS9930_Init_Single(void) {
 /****************************************************************/
 
 
-FctERR NONNULL__ APDS9930_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ APDS9930_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	uAPDS9930_CMD CMD;
 
@@ -66,7 +66,7 @@ FctERR NONNULL__ APDS9930_Write(I2C_slave_t * pSlave, const uint8_t * data, cons
 }
 
 
-FctERR NONNULL__ APDS9930_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ APDS9930_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	uAPDS9930_CMD CMD;
 
@@ -85,7 +85,7 @@ FctERR NONNULL__ APDS9930_Read(I2C_slave_t * pSlave, uint8_t * data, const uint1
 }
 
 
-FctERR NONNULL__ APDS9930_Write_Word(I2C_slave_t * pSlave, const uint16_t * data, const uint16_t addr)
+FctERR NONNULL__ APDS9930_Write_Word(I2C_slave_t * const pSlave, const uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 
@@ -97,7 +97,7 @@ FctERR NONNULL__ APDS9930_Write_Word(I2C_slave_t * pSlave, const uint16_t * data
 }
 
 
-FctERR NONNULL__ APDS9930_Read_Word(I2C_slave_t * pSlave, uint16_t * data, const uint16_t addr)
+FctERR NONNULL__ APDS9930_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 	FctERR	err;
@@ -112,7 +112,7 @@ FctERR NONNULL__ APDS9930_Read_Word(I2C_slave_t * pSlave, uint16_t * data, const
 }
 
 
-FctERR NONNULL__ APDS9930_Write_Special(I2C_slave_t * pSlave, const APDS9930_spec_func func)
+FctERR NONNULL__ APDS9930_Write_Special(I2C_slave_t * const pSlave, const APDS9930_spec_func func)
 {
 	uAPDS9930_CMD CMD;
 

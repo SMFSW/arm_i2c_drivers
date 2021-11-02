@@ -24,7 +24,7 @@
 static const I2C_slave_t MB85RC256V_defaults = { { pNull, 0, I2C_eep_slave_timeout, I2C_MEMADD_SIZE_16BIT, I2C_FMP }, 0, HAL_OK, true, false };
 
 I2C_slave_t MB85RC256V_hal[I2C_MB85RC256V_NB];
-MB85RC256V_t MB85RC256V[I2C_MB85RC256V_NB];
+MB85RC256V_t MB85RC256V[I2C_MB85RC256V_NB] = { 0 };
 
 
 /****************************************************************/
@@ -53,9 +53,9 @@ FctERR MB85RC256V_Init_Single(void) {
 /****************************************************************/
 
 
-FctERR NONNULL__ MB85RC256V_Write(MB85RC256V_t * pCpnt, const uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ MB85RC256V_Write(MB85RC256V_t * const pCpnt, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	I2C_slave_t * pSlave = pCpnt->cfg.slave_inst;
+	I2C_slave_t * const pSlave = pCpnt->cfg.slave_inst;
 
 	if (!I2C_is_enabled(pSlave))		{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (addr >= MB85RC256V_SIZE)		{ return ERROR_RANGE; }		// Unknown register
@@ -70,9 +70,9 @@ FctERR NONNULL__ MB85RC256V_Write(MB85RC256V_t * pCpnt, const uint8_t * data, co
 }
 
 
-FctERR NONNULL__ MB85RC256V_Read(MB85RC256V_t * pCpnt, uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ MB85RC256V_Read(MB85RC256V_t * const pCpnt, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	I2C_slave_t * pSlave = pCpnt->cfg.slave_inst;
+	I2C_slave_t * const pSlave = pCpnt->cfg.slave_inst;
 
 	if (!I2C_is_enabled(pSlave))		{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (addr >= MB85RC256V_SIZE)		{ return ERROR_RANGE; }		// Unknown register
@@ -85,9 +85,9 @@ FctERR NONNULL__ MB85RC256V_Read(MB85RC256V_t * pCpnt, uint8_t * data, const uin
 }
 
 
-FctERR NONNULL__ MB85RC256V_Read_ID(MB85RC256V_t * pCpnt, uint8_t * data)
+FctERR NONNULL__ MB85RC256V_Read_ID(MB85RC256V_t * const pCpnt, uint8_t * data)
 {
-	I2C_slave_t * pSlave = pCpnt->cfg.slave_inst;
+	I2C_slave_t * const pSlave = pCpnt->cfg.slave_inst;
 
 	if (!I2C_is_enabled(pSlave))		{ return ERROR_DISABLED; }	// Peripheral disabled
 

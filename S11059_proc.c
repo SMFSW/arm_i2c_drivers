@@ -12,7 +12,7 @@
 /****************************************************************/
 
 
-S11059_t S11059[I2C_S11059_NB];
+S11059_t S11059[I2C_S11059_NB] = { 0 };
 
 static float S11059_Integ_tab[4] = { 87.5f, 1400.0f, 22400.0f, 179200.0f };		//!< S11059 integration time table (in us)
 
@@ -20,7 +20,7 @@ static float S11059_Integ_tab[4] = { 87.5f, 1400.0f, 22400.0f, 179200.0f };		//!
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ S11059_Init_Sequence(S11059_t * pCpnt)
+__WEAK FctERR NONNULL__ S11059_Init_Sequence(S11059_t * const pCpnt)
 {
 	uS11059_REG__CONTROL	CTL = { 0 };
 	FctERR					err;
@@ -69,7 +69,7 @@ uint32_t S11059_Get_Full_Integration_Time(const S11059_integ mode, const S11059_
 }
 
 
-__WEAK FctERR NONNULL__ S11059_handler(S11059_t * pCpnt)
+__WEAK FctERR NONNULL__ S11059_handler(S11059_t * const pCpnt)
 {
 	uint8_t	DATA[8];
 	FctERR	err;

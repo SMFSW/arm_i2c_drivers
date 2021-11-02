@@ -12,7 +12,7 @@
 /****************************************************************/
 
 
-FctERR NONNULL__ TCS3472_Set_PON(TCS3472_t * pCpnt, const bool en)
+FctERR NONNULL__ TCS3472_Set_PON(TCS3472_t * const pCpnt, const bool en)
 {
 	uTCS3472_REG__ENABLE EN;
 	FctERR				err;
@@ -25,7 +25,7 @@ FctERR NONNULL__ TCS3472_Set_PON(TCS3472_t * pCpnt, const bool en)
 }
 
 
-FctERR NONNULL__ TCS3472_Set_AEN(TCS3472_t * pCpnt, const bool en)
+FctERR NONNULL__ TCS3472_Set_AEN(TCS3472_t * const pCpnt, const bool en)
 {
 	uTCS3472_REG__ENABLE	EN;
 	FctERR					err;
@@ -38,7 +38,7 @@ FctERR NONNULL__ TCS3472_Set_AEN(TCS3472_t * pCpnt, const bool en)
 }
 
 
-FctERR NONNULL__ TCS3472_Set_AIEN(TCS3472_t * pCpnt, const bool en)
+FctERR NONNULL__ TCS3472_Set_AIEN(TCS3472_t * const pCpnt, const bool en)
 {
 	uTCS3472_REG__ENABLE	EN;
 	FctERR					err;
@@ -55,7 +55,7 @@ FctERR NONNULL__ TCS3472_Set_AIEN(TCS3472_t * pCpnt, const bool en)
 }
 
 
-FctERR NONNULL__ TCS3472_Set_WEN(TCS3472_t * pCpnt, const bool en)
+FctERR NONNULL__ TCS3472_Set_WEN(TCS3472_t * const pCpnt, const bool en)
 {
 	uTCS3472_REG__ENABLE	EN;
 	FctERR					err;
@@ -72,7 +72,7 @@ FctERR NONNULL__ TCS3472_Set_WEN(TCS3472_t * pCpnt, const bool en)
 }
 
 
-FctERR NONNULL__ TCS3472_Set_Gain(TCS3472_t * pCpnt, const TCS3472_gain gain)
+FctERR NONNULL__ TCS3472_Set_Gain(TCS3472_t * const pCpnt, const TCS3472_gain gain)
 {
 	uTCS3472_REG__CONTROL	CTL;
 	FctERR					err;
@@ -92,7 +92,7 @@ FctERR NONNULL__ TCS3472_Set_Gain(TCS3472_t * pCpnt, const TCS3472_gain gain)
 }
 
 
-FctERR NONNULL__ TCS3472_Set_Integration_Time(TCS3472_t * pCpnt, const uint16_t integ)
+FctERR NONNULL__ TCS3472_Set_Integration_Time(TCS3472_t * const pCpnt, const uint16_t integ)
 {
 	uint8_t	ATIME;
 	FctERR	err;
@@ -112,7 +112,7 @@ FctERR NONNULL__ TCS3472_Set_Integration_Time(TCS3472_t * pCpnt, const uint16_t 
 }
 
 
-FctERR NONNULL__ TCS3472_Set_Wait_Time(TCS3472_t * pCpnt, const uint16_t wait)
+FctERR NONNULL__ TCS3472_Set_Wait_Time(TCS3472_t * const pCpnt, const uint16_t wait)
 {
 	uTCS3472_REG__CONFIG	CFG = { 0 };
 	uint8_t					WAIT;
@@ -146,7 +146,7 @@ FctERR NONNULL__ TCS3472_Set_Wait_Time(TCS3472_t * pCpnt, const uint16_t wait)
 }
 
 
-FctERR NONNULL__ TCS3472_Get_Channels(TCS3472_t * pCpnt, uint16_t buf[])
+FctERR NONNULL__ TCS3472_Get_Channels(TCS3472_t * const pCpnt, uint16_t buf[])
 {
 	uint8_t	TMP[2];
 	FctERR	err;
@@ -160,6 +160,16 @@ FctERR NONNULL__ TCS3472_Get_Channels(TCS3472_t * pCpnt, uint16_t buf[])
 
 	return err;
 }
+
+
+/****************************************************************/
+
+
+__WEAK FctERR NONNULL__ TCS3472_INT_GPIO_Init(TCS3472_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	return I2C_peripheral_GPIO_init(&pCpnt->cfg.INT_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+
+__WEAK FctERR NONNULL__ TCS3472_INT_GPIO_Get(TCS3472_t * const pCpnt, bool * const pState) {
+	return I2C_peripheral_GPIO_get(&pCpnt->cfg.INT_GPIO, pState); }
 
 
 /****************************************************************/

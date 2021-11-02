@@ -27,7 +27,7 @@ float AMG88_Convert_Thermistor_Raw(const uint16_t therm)
 
 float AMG88_Convert_Pixel_Raw(const uint16_t pixel)
 {
-	// VAL is signed 12b, result done by shifting to 16b signed and multiplying by granularity (0.25°C) divided by 16
+	// VAL is signed 12b, result done by shifting to 16b signed and multiplying by granularity (0.25ï¿½C) divided by 16
 	return (float) ((int16_t) (pixel * 16) * 0.015625f);
 }
 
@@ -39,7 +39,7 @@ uint16_t AMG88_Convert_Temp_To_Int(const float temp)
 }
 
 
-FctERR NONNULL__ AMG88_Get_thermistor_temp(AMG88_t * pCpnt, float * temp)
+FctERR NONNULL__ AMG88_Get_thermistor_temp(AMG88_t * const pCpnt, float * temp)
 {
 	FctERR		err;
 	uint16_t	VAL;
@@ -53,7 +53,7 @@ FctERR NONNULL__ AMG88_Get_thermistor_temp(AMG88_t * pCpnt, float * temp)
 }
 
 
-FctERR NONNULL__ AMG88_Get_pixel_temp(AMG88_t * pCpnt, float * temp, const uint8_t pixel)
+FctERR NONNULL__ AMG88_Get_pixel_temp(AMG88_t * const pCpnt, float * temp, const uint8_t pixel)
 {
 	FctERR		err;
 	uint16_t	VAL;
@@ -66,7 +66,7 @@ FctERR NONNULL__ AMG88_Get_pixel_temp(AMG88_t * pCpnt, float * temp, const uint8
 	return err;
 }
 
-FctERR NONNULL__ AMG88_Get_pixels_temp(AMG88_t * pCpnt, float temp[64])
+FctERR NONNULL__ AMG88_Get_pixels_temp(AMG88_t * const pCpnt, float temp[64])
 {
 	FctERR	err;
 	uint8_t	raw[128];
@@ -84,7 +84,7 @@ FctERR NONNULL__ AMG88_Get_pixels_temp(AMG88_t * pCpnt, float temp[64])
 }
 
 
-FctERR NONNULL__ AMG88_Set_Interrupt_LVLH(AMG88_t * pCpnt, const float temp)
+FctERR NONNULL__ AMG88_Set_Interrupt_LVLH(AMG88_t * const pCpnt, const float temp)
 {
 	uint16_t	Temp;
 	uint8_t		LEVEL[2];
@@ -97,7 +97,7 @@ FctERR NONNULL__ AMG88_Set_Interrupt_LVLH(AMG88_t * pCpnt, const float temp)
 	return AMG88_Write(pCpnt->cfg.slave_inst, LEVEL, AMG88__INTHL, sizeof(LEVEL));
 }
 
-FctERR NONNULL__ AMG88_Set_Interrupt_LVLL(AMG88_t * pCpnt, const float temp)
+FctERR NONNULL__ AMG88_Set_Interrupt_LVLL(AMG88_t * const pCpnt, const float temp)
 {
 	uint16_t	Temp;
 	uint8_t		LEVEL[2];
@@ -110,7 +110,7 @@ FctERR NONNULL__ AMG88_Set_Interrupt_LVLL(AMG88_t * pCpnt, const float temp)
 	return AMG88_Write(pCpnt->cfg.slave_inst, LEVEL, AMG88__INTLL, sizeof(LEVEL));
 }
 
-FctERR NONNULL__ AMG88_Set_Interrupt_HYS(AMG88_t * pCpnt, const float temp)
+FctERR NONNULL__ AMG88_Set_Interrupt_HYS(AMG88_t * const pCpnt, const float temp)
 {
 	uint16_t	Temp;
 	uint8_t		LEVEL[2];
@@ -123,7 +123,7 @@ FctERR NONNULL__ AMG88_Set_Interrupt_HYS(AMG88_t * pCpnt, const float temp)
 	return AMG88_Write(pCpnt->cfg.slave_inst, LEVEL, AMG88__IHYSL, sizeof(LEVEL));
 }
 
-FctERR NONNULL__ AMG88_Set_Interrupt_Levels(AMG88_t * pCpnt, const float temp_LVLH, const float temp_LVLL, const float temp_HYS)
+FctERR NONNULL__ AMG88_Set_Interrupt_Levels(AMG88_t * const pCpnt, const float temp_LVLH, const float temp_LVLL, const float temp_HYS)
 {
 	uint16_t	Temp;
 	uint8_t		LEVEL[6];
@@ -140,6 +140,16 @@ FctERR NONNULL__ AMG88_Set_Interrupt_Levels(AMG88_t * pCpnt, const float temp_LV
 
 	return AMG88_Write(pCpnt->cfg.slave_inst, LEVEL, AMG88__INTHL, sizeof(LEVEL));
 }
+
+
+/****************************************************************/
+
+
+__WEAK FctERR NONNULL__ AMG88_INT_GPIO_Init(AMG88_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	return I2C_peripheral_GPIO_init(&pCpnt->cfg.INT_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+
+__WEAK FctERR NONNULL__ AMG88_INT_GPIO_Get(AMG88_t * const pCpnt, bool * const pState) {
+	return I2C_peripheral_GPIO_get(&pCpnt->cfg.INT_GPIO, pState); }
 
 
 /****************************************************************/

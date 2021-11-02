@@ -22,7 +22,7 @@
 #define VAL_CLR	0xFF	//!< Mass erase value for FM24C
 
 
-FctERR NONNULL__ FM24C_Mass_Erase(FM24C_t * pCpnt)
+FctERR NONNULL__ FM24C_Mass_Erase(FM24C_t * const pCpnt)
 {
 	FctERR	err;
 	uint8_t	bankData[FM24C_BANK_SIZE];
@@ -39,6 +39,16 @@ FctERR NONNULL__ FM24C_Mass_Erase(FM24C_t * pCpnt)
 
 	return err;
 }
+
+
+/****************************************************************/
+
+
+__WEAK FctERR NONNULL__ FM24C_WP_GPIO_Init(FM24C_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	return I2C_peripheral_GPIO_init(&pCpnt->cfg.WP_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+
+__WEAK FctERR NONNULL__ FM24C_WP_GPIO_Set(FM24C_t * const pCpnt, const bool state) {
+	return I2C_peripheral_GPIO_set(&pCpnt->cfg.WP_GPIO, state); }
 
 
 /****************************************************************/

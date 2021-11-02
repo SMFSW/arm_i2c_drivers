@@ -47,7 +47,7 @@ FctERR TCS3400_Init_Single(void) {
 /****************************************************************/
 
 
-FctERR NONNULL__ TCS3400_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ TCS3400_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(pSlave))			{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (addr > TCS3400__AICLEAR)			{ return ERROR_RANGE; }		// Unknown register
@@ -60,7 +60,7 @@ FctERR NONNULL__ TCS3400_Write(I2C_slave_t * pSlave, const uint8_t * data, const
 }
 
 
-FctERR NONNULL__ TCS3400_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ TCS3400_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(pSlave))			{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (addr > TCS3400__IR)					{ return ERROR_RANGE; }		// Unknown register
@@ -73,7 +73,7 @@ FctERR NONNULL__ TCS3400_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16
 }
 
 
-FctERR NONNULL__ TCS3400_Write_Word(I2C_slave_t * pSlave, const uint16_t * data, const uint16_t addr)
+FctERR NONNULL__ TCS3400_Write_Word(I2C_slave_t * const pSlave, const uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 
@@ -85,7 +85,7 @@ FctERR NONNULL__ TCS3400_Write_Word(I2C_slave_t * pSlave, const uint16_t * data,
 }
 
 
-FctERR NONNULL__ TCS3400_Read_Word(I2C_slave_t * pSlave, uint16_t * data, const uint16_t addr)
+FctERR NONNULL__ TCS3400_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 	FctERR	err;

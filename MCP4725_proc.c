@@ -12,13 +12,13 @@
 /****************************************************************/
 
 
-MCP4725_t MCP4725[I2C_MCP4725_NB];
+MCP4725_t MCP4725[I2C_MCP4725_NB] = { 0 };
 
 
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ MCP4725_Init_Sequence(MCP4725_t * pCpnt)
+__WEAK FctERR NONNULL__ MCP4725_Init_Sequence(MCP4725_t * const pCpnt)
 {
 	FctERR err = ERROR_OK;
 
@@ -33,7 +33,7 @@ __WEAK FctERR NONNULL__ MCP4725_Init_Sequence(MCP4725_t * pCpnt)
 /****************************************************************/
 
 
-FctERR NONNULL__ MCP4725_Set_Mode(MCP4725_t * pCpnt, const MCP4725_cmd mode)
+FctERR NONNULL__ MCP4725_Set_Mode(MCP4725_t * const pCpnt, const MCP4725_cmd mode)
 {
 	if (mode > MCP4725__WRITE_DAC_EEP)		{ return ERROR_VALUE; }
 
@@ -42,7 +42,7 @@ FctERR NONNULL__ MCP4725_Set_Mode(MCP4725_t * pCpnt, const MCP4725_cmd mode)
 }
 
 
-FctERR NONNULL__ MCP4725_Set_PowerDown(MCP4725_t * pCpnt, const MCP4725_pd pd)
+FctERR NONNULL__ MCP4725_Set_PowerDown(MCP4725_t * const pCpnt, const MCP4725_pd pd)
 {
 	if (pd > MCP4725__PWR_DOWN_500K)		{ return ERROR_VALUE; }
 
@@ -51,7 +51,7 @@ FctERR NONNULL__ MCP4725_Set_PowerDown(MCP4725_t * pCpnt, const MCP4725_pd pd)
 }
 
 
-FctERR NONNULL__ MCP4725_Set_VRef(MCP4725_t * pCpnt, float vref)
+FctERR NONNULL__ MCP4725_Set_VRef(MCP4725_t * const pCpnt, float vref)
 {
 	if ((vref < 2.7f) || (vref > 5.5f))		{ return ERROR_VALUE; }
 
@@ -60,7 +60,7 @@ FctERR NONNULL__ MCP4725_Set_VRef(MCP4725_t * pCpnt, float vref)
 }
 
 
-FctERR NONNULL__ MCP4725_Set_Val(MCP4725_t * pCpnt, const uint16_t val)
+FctERR NONNULL__ MCP4725_Set_Val(MCP4725_t * const pCpnt, const uint16_t val)
 {
 	FctERR err;
 
@@ -76,7 +76,7 @@ FctERR NONNULL__ MCP4725_Set_Val(MCP4725_t * pCpnt, const uint16_t val)
 	return ERROR_OK;
 }
 
-FctERR NONNULL__ MCP4725_Set_Volts(MCP4725_t * pCpnt, const float volts)
+FctERR NONNULL__ MCP4725_Set_Volts(MCP4725_t * const pCpnt, const float volts)
 {
 	uint16_t	VAL;
 	FctERR		err;

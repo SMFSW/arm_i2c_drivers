@@ -43,20 +43,21 @@ typedef enum PACK__ MCP9808_alert {
 ** \brief MCP9808 user interface struct
 **/
 typedef struct MCP9808_t {
-	float			Temperature;		//!< Current temperature
-	bool			TUpper;				//!< Upper alert reached
-	bool			TLower;				//!< Lower alert reached
-	bool			TCrit;				//!< Critical alert reached
-	bool			NewData;			//!< New data available
-	uint32_t		hLast;				//!< Tick from last data
+	float				Temperature;		//!< Current temperature
+	bool				TUpper;				//!< Upper alert reached
+	bool				TLower;				//!< Lower alert reached
+	bool				TCrit;				//!< Critical alert reached
+	bool				NewData;			//!< New data available
+	uint32_t			hLast;				//!< Tick from last data
 	struct {
-	I2C_slave_t *	slave_inst;			//!< Slave structure
-	MCP9808_res		Resolution;			//!< Resolution config
-	float			HighAlert;			//!< High alert config
-	float			LowAlert;			//!< Low alert config
-	float			CriticalAlert;		//!< Critical alert config
-	uint16_t		Manufacturer_Id;	//!< Manufacturer ID
-	uint16_t		Device_Id;			//!< Device ID
+	I2C_slave_t *		slave_inst;			//!< Slave structure
+	PeripheralGPIO_t	Alert_GPIO;			//!< Alert GPIO struct
+	MCP9808_res			Resolution;			//!< Resolution config
+	float				HighAlert;			//!< High alert config
+	float				LowAlert;			//!< Low alert config
+	float				CriticalAlert;		//!< Critical alert config
+	uint16_t			Manufacturer_Id;	//!< Manufacturer ID
+	uint16_t			Device_Id;			//!< Device ID
 	} cfg;
 } MCP9808_t;
 
@@ -75,7 +76,7 @@ extern MCP9808_t	MCP9808[I2C_MCP9808_NB];	//!< MCP9808 User structure
 ** \param[in] pCpnt - Pointer to MCP9808 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP9808_Init_Sequence(MCP9808_t * pCpnt);
+FctERR NONNULL__ MCP9808_Init_Sequence(MCP9808_t * const pCpnt);
 
 /*!\brief Set the high/low/crit Alert temperature
 ** \param[in] pCpnt - Pointer to MCP9808 component
@@ -83,7 +84,7 @@ FctERR NONNULL__ MCP9808_Init_Sequence(MCP9808_t * pCpnt);
 ** \param[in] alt - Alert type
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP9808_Set_AlertTemp(MCP9808_t * pCpnt, const float temp, const MCP9808_alert alt);
+FctERR NONNULL__ MCP9808_Set_AlertTemp(MCP9808_t * const pCpnt, const float temp, const MCP9808_alert alt);
 
 
 /*!\brief Get the high/low/crit Alert temperature
@@ -92,23 +93,32 @@ FctERR NONNULL__ MCP9808_Set_AlertTemp(MCP9808_t * pCpnt, const float temp, cons
 ** \param[in] alt - Alert type
 ** \return FctERR - error code
 **/
-FctERR NONNULLX__(1) MCP9808_Get_AlertTemp(MCP9808_t * pCpnt, float * temp, MCP9808_alert alt);
+FctERR NONNULLX__(1) MCP9808_Get_AlertTemp(MCP9808_t * const pCpnt, float * temp, MCP9808_alert alt);
 
 /*!\brief Get the temperature
 ** \param[in] pCpnt - Pointer to MCP9808 component
 ** \param[in,out] temp - pointer to temperature to read to (in Celsius degrees)
 ** \return FctERR - error code
 **/
-FctERR NONNULLX__(1) MCP9808_Get_Temperature(MCP9808_t * pCpnt, float * temp);
+FctERR NONNULLX__(1) MCP9808_Get_Temperature(MCP9808_t * const pCpnt, float * temp);
 
 
 /*!\brief Handler for MCP9808 peripheral
 ** \weak MCP9808 handler may be user implemented to suit custom needs
-** \note Should be called periodically to handle MCP9808 tasks
+** \note Should be called periodically to handle MCP9808 tasks (or by calling \ref MCP9808_handler_it instead)
 ** \param[in] pCpnt - Pointer to MCP9808 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP9808_handler(MCP9808_t * pCpnt);
+FctERR NONNULL__ MCP9808_handler(MCP9808_t * const pCpnt);
+
+/*!\brief Handler for MCP9808 peripheral GPIO interrupt
+** \note \ref MCP9808_Alert_GPIO_Init has to be called at init before using interrupt handler function
+** \weak MCP9808 GPIO interrupt handler may be user implemented to suit custom needs
+** \note May be called periodically to handle MCP9808 tasks through interrupts
+** \param[in] pCpnt - Pointer to MCP9808 component
+** \return FctERR - error code
+**/
+FctERR NONNULL__ MCP9808_handler_it(MCP9808_t * const pCpnt);
 
 
 /*!\brief Handler for all MCP9808 peripherals
@@ -117,6 +127,15 @@ FctERR NONNULL__ MCP9808_handler(MCP9808_t * pCpnt);
 __INLINE void INLINE__ MCP9808_handler_all(void) {
 	for (MCP9808_t * pCpnt = MCP9808 ; pCpnt < &MCP9808[I2C_MCP9808_NB] ; pCpnt++) {
 		MCP9808_handler(pCpnt); }
+}
+
+/*!\brief Handler for all MCP9808 peripherals GPIO interrupt
+** \note \ref MCP9808_Alert_GPIO_Init has to be called at init before using interrupt handler function
+** \note May be called periodically to handle all MCP9808 tasks
+**/
+__INLINE void INLINE__ MCP9808_handler_it_all(void) {
+	for (MCP9808_t * pCpnt = MCP9808 ; pCpnt < &MCP9808[I2C_MCP9808_NB] ; pCpnt++) {
+		MCP9808_handler_it(pCpnt); }
 }
 
 

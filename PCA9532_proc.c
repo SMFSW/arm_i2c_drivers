@@ -12,13 +12,13 @@
 /****************************************************************/
 
 
-PCA9532_t PCA9532[I2C_PCA9532_NB];
+PCA9532_t PCA9532[I2C_PCA9532_NB] = { 0 };
 
 
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ PCA9532_Init_Sequence(PCA9532_t * pCpnt)
+__WEAK FctERR NONNULL__ PCA9532_Init_Sequence(PCA9532_t * const pCpnt)
 {
 	uint8_t	Data[4];
 	FctERR	err;

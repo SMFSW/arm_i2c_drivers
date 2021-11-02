@@ -12,7 +12,7 @@
 /****************************************************************/
 
 
-APDS9930_t APDS9930[I2C_APDS9930_NB];
+APDS9930_t APDS9930[I2C_APDS9930_NB] = { 0 };
 
 const uint8_t APDS9930_ALS_gain_tab[4] = { 1, 8, 16, 120 };
 const uint8_t APDS9930_Prox_gain_tab[4] = { 1, 2, 4, 8 };
@@ -21,7 +21,7 @@ const uint8_t APDS9930_Prox_gain_tab[4] = { 1, 2, 4, 8 };
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ APDS9930_Init_Sequence(APDS9930_t * pCpnt)
+__WEAK FctERR NONNULL__ APDS9930_Init_Sequence(APDS9930_t * const pCpnt)
 {
 	uAPDS9930_REG__ENABLE	EN = { 0 };
 	FctERR					err = ERROR_OK;
@@ -86,7 +86,7 @@ __WEAK FctERR NONNULL__ APDS9930_Init_Sequence(APDS9930_t * pCpnt)
 /****************************************************************/
 
 
-void NONNULL__ APDS9930_Set_LPC(APDS9930_t * pCpnt)
+void NONNULL__ APDS9930_Set_LPC(APDS9930_t * const pCpnt)
 {
 	float gain = (float) APDS9930_ALS_gain_tab[pCpnt->cfg.ALS_Gain % APDS9930__ALS_GAIN_1ON6X];
 	if (pCpnt->cfg.ALS_Gain >= APDS9930__ALS_GAIN_1ON6X)	{ gain /= 8.0f; }
@@ -101,7 +101,7 @@ void NONNULL__ APDS9930_Set_LPC(APDS9930_t * pCpnt)
 ** \param[in] ir - Green value
 ** \return FctERR - error code
 **/
-static NONNULL__ FctERR APDS9930_calc(APDS9930_t * pCpnt, const uint16_t full, const uint16_t ir)
+static NONNULL__ FctERR APDS9930_calc(APDS9930_t * const pCpnt, const uint16_t full, const uint16_t ir)
 {
 	const float	B = 1.862f, C = 0.746f, D = 1.291f;
 	// SATURATION = 1024 * (256 - ATIME) if ATIME > 192 (<175ms)
@@ -131,7 +131,7 @@ static NONNULL__ FctERR APDS9930_calc(APDS9930_t * pCpnt, const uint16_t full, c
 }
 
 
-__WEAK FctERR NONNULL__ APDS9930_handler(APDS9930_t * pCpnt)
+__WEAK FctERR NONNULL__ APDS9930_handler(APDS9930_t * const pCpnt)
 {
 	uint8_t					DATA[7];
 	uAPDS9930_REG__STATUS *	ST = (uAPDS9930_REG__STATUS *) DATA;
@@ -175,6 +175,18 @@ __WEAK FctERR NONNULL__ APDS9930_handler(APDS9930_t * pCpnt)
 	else if (pCpnt->cfg.PIEN)					{ return APDS9930_SF_Clear_PROX_IT(pCpnt); }
 
 	return ERROR_OK;
+}
+
+
+__WEAK FctERR NONNULL__ APDS9930_handler_it(APDS9930_t * const pCpnt)
+{
+	FctERR	err;
+	bool	interrupt;
+
+	err = APDS9930_INT_GPIO_Get(pCpnt, &interrupt);
+	if ((!err) && interrupt)	{ err = APDS9930_handler(pCpnt); }
+
+	return err;
 }
 
 

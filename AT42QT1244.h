@@ -304,7 +304,7 @@ FctERR AT42QT1244_Init_Single(void);
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AT42QT1244_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ AT42QT1244_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for AT42QT1244
@@ -314,7 +314,7 @@ FctERR NONNULL__ AT42QT1244_Write(I2C_slave_t * pSlave, const uint8_t * data, co
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AT42QT1244_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ AT42QT1244_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /****************************************************************/

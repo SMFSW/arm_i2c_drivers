@@ -27,7 +27,12 @@ SOFTWARE.
 * I2C_eep_slave_timeout added, set to 500ms (for EEPROM/FRAM components type) to keep some margin for really long transactions
   * For bigger size components, in case timeout is reached, read/write transactions may be split in multiple calls (refreshing watchdog if in use).
   * Set a longer timeout by calling I2C_set_slave_timeout in init sequence is another way to address such a need
+* const pointer address qualifier added for pSlave & pCpnt parameters
+* CPNT_handler_it functions added when relevant for component
+* Peripheral structures declared as intialized data
+* I2C_peripheral: GPIO functions added + components update
 * ADS1115 & AT42QT1244: call to init_Delay_us added (following changes in HARMcksL library)
+* ADS1115: waiting for current conversion done by handler (not in ADS1115_Start_NextConversion) -> enables proper handling of interrupt pin instead of delay
 * FM24C: refactoring of FM24C_ReadWrite
 * PCA9956: added
 * PCA9624: WORD not written directly in PCA9624_Set_Mode_LEDs (to work no matter endian)

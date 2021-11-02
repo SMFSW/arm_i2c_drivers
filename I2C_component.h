@@ -60,7 +60,7 @@ typedef enum PACK__ I2C_reg_size {
 
 
 /*! \struct I2C_slave_t
-**  \brief ci2c slave config and control parameters
+**  \brief i2c slave config and control parameters
 **/
 typedef struct PACK__ I2C_slave_t {	// TODO: check if the struct really needs to be packed
 	/*! \struct cfg

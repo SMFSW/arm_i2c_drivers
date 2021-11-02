@@ -12,7 +12,7 @@
 /****************************************************************/
 
 
-TCS3472_t TCS3472[I2C_TCS3472_NB];
+TCS3472_t TCS3472[I2C_TCS3472_NB] = { 0 };
 
 const uint16_t TCS3472_gain_tab[4] = { 1, 4, 16, 60 };
 
@@ -20,7 +20,7 @@ const uint16_t TCS3472_gain_tab[4] = { 1, 4, 16, 60 };
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ TCS3472_Init_Sequence(TCS3472_t * pCpnt)
+__WEAK FctERR NONNULL__ TCS3472_Init_Sequence(TCS3472_t * const pCpnt)
 {
 	uTCS3472_REG__ENABLE	EN = { 0 };
 	FctERR					err = ERROR_OK;
@@ -73,7 +73,7 @@ __WEAK FctERR NONNULL__ TCS3472_Init_Sequence(TCS3472_t * pCpnt)
 ** \param[in] b - Blue value
 ** \return FctERR - error code
 **/
-static FctERR NONNULL__ TCS3472_calc(TCS3472_t * pCpnt, const uint16_t r, const uint16_t g, const uint16_t b)
+static FctERR NONNULL__ TCS3472_calc(TCS3472_t * const pCpnt, const uint16_t r, const uint16_t g, const uint16_t b)
 {
 	// SATURATION = 1024 * (256 - ATIME) if ATIME > 192 (<154ms)
 	uint16_t sat = (pCpnt->cfg.Integ_reg <= 192) ? 65535 : 1024 * (256 - pCpnt->cfg.Integ_reg);
@@ -98,7 +98,7 @@ static FctERR NONNULL__ TCS3472_calc(TCS3472_t * pCpnt, const uint16_t r, const 
 }
 
 
-__WEAK FctERR NONNULL__ TCS3472_handler(TCS3472_t * pCpnt)
+__WEAK FctERR NONNULL__ TCS3472_handler(TCS3472_t * const pCpnt)
 {
 	uint8_t					DATA[9];
 	uTCS3472_REG__STATUS *	ST = (uTCS3472_REG__STATUS *) DATA;
@@ -129,6 +129,18 @@ __WEAK FctERR NONNULL__ TCS3472_handler(TCS3472_t * pCpnt)
 	if (ST->Bits.AINT)	{ return TCS3472_SF_Clear_IT(pCpnt); }
 
 	return ERROR_OK;
+}
+
+
+__WEAK FctERR NONNULL__ TCS3472_handler_it(TCS3472_t * const pCpnt)
+{
+	FctERR	err;
+	bool	interrupt;
+
+	err = TCS3472_INT_GPIO_Get(pCpnt, &interrupt);
+	if ((!err) && interrupt)	{ err = TCS3472_handler(pCpnt); }
+
+	return err;
 }
 
 

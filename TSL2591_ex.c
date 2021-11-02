@@ -12,7 +12,7 @@
 /****************************************************************/
 
 
-FctERR NONNULL__ TSL2591_Set_PON(TSL2591_t * pCpnt, const bool en)
+FctERR NONNULL__ TSL2591_Set_PON(TSL2591_t * const pCpnt, const bool en)
 {
 	uTSL2591_REG__ENABLE	EN;
 	FctERR					err;
@@ -25,7 +25,7 @@ FctERR NONNULL__ TSL2591_Set_PON(TSL2591_t * pCpnt, const bool en)
 }
 
 
-FctERR NONNULL__ TSL2591_Set_AEN(TSL2591_t * pCpnt, const bool en)
+FctERR NONNULL__ TSL2591_Set_AEN(TSL2591_t * const pCpnt, const bool en)
 {
 	uTSL2591_REG__ENABLE	EN;
 	FctERR					err;
@@ -38,7 +38,7 @@ FctERR NONNULL__ TSL2591_Set_AEN(TSL2591_t * pCpnt, const bool en)
 }
 
 
-FctERR NONNULL__ TSL2591_Set_AIEN(TSL2591_t * pCpnt, const bool en)
+FctERR NONNULL__ TSL2591_Set_AIEN(TSL2591_t * const pCpnt, const bool en)
 {
 	uTSL2591_REG__ENABLE	EN;
 	FctERR					err;
@@ -55,7 +55,7 @@ FctERR NONNULL__ TSL2591_Set_AIEN(TSL2591_t * pCpnt, const bool en)
 }
 
 
-FctERR NONNULL__ TSL2591_Set_Gain(TSL2591_t * pCpnt, const TSL2591_gain gain)
+FctERR NONNULL__ TSL2591_Set_Gain(TSL2591_t * const pCpnt, const TSL2591_gain gain)
 {
 	uTSL2591_REG__CONFIG	CFG;
 	FctERR					err;
@@ -76,7 +76,7 @@ FctERR NONNULL__ TSL2591_Set_Gain(TSL2591_t * pCpnt, const TSL2591_gain gain)
 }
 
 
-FctERR NONNULL__ TSL2591_Set_Integration_Time(TSL2591_t * pCpnt, const TSL2591_integ integ)
+FctERR NONNULL__ TSL2591_Set_Integration_Time(TSL2591_t * const pCpnt, const TSL2591_integ integ)
 {
 	uTSL2591_REG__CONFIG	CFG;
 	FctERR					err;
@@ -95,6 +95,16 @@ FctERR NONNULL__ TSL2591_Set_Integration_Time(TSL2591_t * pCpnt, const TSL2591_i
 
 	return err;
 }
+
+
+/****************************************************************/
+
+
+__WEAK FctERR NONNULL__ TSL2591_INT_GPIO_Init(TSL2591_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	return I2C_peripheral_GPIO_init(&pCpnt->cfg.INT_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+
+__WEAK FctERR NONNULL__ TSL2591_INT_GPIO_Get(TSL2591_t * const pCpnt, bool * const pState) {
+	return I2C_peripheral_GPIO_get(&pCpnt->cfg.INT_GPIO, pState); }
 
 
 /****************************************************************/

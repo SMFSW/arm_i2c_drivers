@@ -121,6 +121,44 @@ __INLINE FctERR NONNULL_INLINE__ PCF8523_Get_Time_Raw(uint8_t * time) {
 FctERR NONNULL__ PCF8523_Check_Clock_Integrity(bool * integrity);
 
 
+/*******************/
+/*** GPIO access ***/
+/*******************/
+
+/*!\brief Interrupt 1 GPIO pin init for PCF8523
+** \weak PCF8523 Interrupt 1 GPIO pin init may be user implemented if needed
+** \param[in] GPIOx - INT1 port
+** \param[in] GPIO_Pin - INT1 pin
+** \param[in] GPIO_Active: INT1 pin active state
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ PCF8523_INT1_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+
+/*!\brief Interrupt 1 GPIO pin getter for PCF8523
+** \weak PCF8523 Interrupt 1 GPIO pin getter may be user implemented if needed
+** \param[in,out] pState - Pointer to INT1 pin state variable (0: inactive, 1: active)
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ PCF8523_INT1_GPIO_Get(bool * const pState);
+
+
+/*!\brief Interrupt 2 GPIO pin init for PCF8523
+** \weak PCF8523 Interrupt 2 GPIO pin init may be user implemented if needed
+** \param[in] GPIOx - INT2 port
+** \param[in] GPIO_Pin - INT2 pin
+** \param[in] GPIO_Active: INT2 pin active state
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ PCF8523_INT2_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+
+/*!\brief Interrupt 2 GPIO pin getter for PCF8523
+** \weak PCF8523 Interrupt 2 GPIO pin getter may be user implemented if needed
+** \param[in,out] pState - Pointer to INT2 pin state variable (0: inactive, 1: active)
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ PCF8523_INT2_GPIO_Get(bool * const pState);
+
+
 /****************************************************************/
 #endif
 

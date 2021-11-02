@@ -34,7 +34,7 @@
 ** \param[in] val - Raw DAC value for MCP4725 to write
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP4725_Write_Command(MCP4725_t * pCpnt, const uint16_t val);
+FctERR NONNULL__ MCP4725_Write_Command(MCP4725_t * const pCpnt, const uint16_t val);
 
 /*!\brief General call reset function for MCP4725
 ** \param[in] hi2c - pointer to general call I2C instance
@@ -55,14 +55,14 @@ __INLINE FctERR NONNULL_INLINE__ MCP4725_WakeUp(const I2C_HandleTypeDef * hi2c) 
 ** \param[in] val - pointer to DAC value to read to
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP4725_Read_DAC(MCP4725_t * pCpnt, uint16_t * val);
+FctERR NONNULL__ MCP4725_Read_DAC(MCP4725_t * const pCpnt, uint16_t * val);
 
 /*!\brief Read DAC state
 ** \param[in] pCpnt - Pointer to MCP4725 component
 ** \param[in] state - pointer to state to read to (0 Ready, 1 Busy)
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP4725_Read_State(MCP4725_t * pCpnt, bool * state);
+FctERR NONNULL__ MCP4725_Read_State(MCP4725_t * const pCpnt, bool * state);
 
 
 /****************************************************************/

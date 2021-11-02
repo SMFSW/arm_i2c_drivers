@@ -134,6 +134,16 @@ FctERR NONNULL__ PCA9624_ReadRegister(PCA9624_t * const pCpnt, const PCA9624_reg
 
 
 /****************************************************************/
+
+
+__WEAK FctERR NONNULL__ PCA9624_OE_GPIO_Init(PCA9624_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	return I2C_peripheral_GPIO_init(&pCpnt->cfg.OE_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+
+__WEAK FctERR NONNULL__ PCA9624_OE_GPIO_Set(PCA9624_t * const pCpnt, const bool state) {
+	return I2C_peripheral_GPIO_set(&pCpnt->cfg.OE_GPIO, state); }
+
+
+/****************************************************************/
 #endif
 #endif
 /****************************************************************/

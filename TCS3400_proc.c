@@ -12,7 +12,7 @@
 /****************************************************************/
 
 
-TCS3400_t TCS3400[I2C_TCS3400_NB];
+TCS3400_t TCS3400[I2C_TCS3400_NB] = { 0 };
 
 const uint16_t TCS3400_gain_tab[4] = { 1, 4, 16, 64 };
 
@@ -20,7 +20,7 @@ const uint16_t TCS3400_gain_tab[4] = { 1, 4, 16, 64 };
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ TCS3400_Init_Sequence(TCS3400_t * pCpnt)
+__WEAK FctERR NONNULL__ TCS3400_Init_Sequence(TCS3400_t * const pCpnt)
 {
 	uTCS3400_REG__ENABLE	EN = { 0 };
 	FctERR					err = ERROR_OK;
@@ -76,7 +76,7 @@ __WEAK FctERR NONNULL__ TCS3400_Init_Sequence(TCS3400_t * pCpnt)
 ** \param[in] b - Blue value
 ** \return FctERR - error code
 **/
-static FctERR NONNULL__ TCS3400_calc(TCS3400_t * pCpnt, const uint16_t r, const uint16_t g, const uint16_t b)
+static FctERR NONNULL__ TCS3400_calc(TCS3400_t * const pCpnt, const uint16_t r, const uint16_t g, const uint16_t b)
 {
 	// SATURATION = 1024 * (256 - ATIME) if ATIME > 192 (<178ms)
 	uint16_t sat = (pCpnt->cfg.Integ_reg <= 192) ? 65535 : 1024 * (256 - pCpnt->cfg.Integ_reg);
@@ -101,7 +101,7 @@ static FctERR NONNULL__ TCS3400_calc(TCS3400_t * pCpnt, const uint16_t r, const 
 }
 
 
-__WEAK FctERR NONNULL__ TCS3400_handler(TCS3400_t * pCpnt)
+__WEAK FctERR NONNULL__ TCS3400_handler(TCS3400_t * const pCpnt)
 {
 	uint8_t					DATA[9];
 	uTCS3400_REG__STATUS *	ST = (uTCS3400_REG__STATUS *) DATA;
@@ -132,6 +132,18 @@ __WEAK FctERR NONNULL__ TCS3400_handler(TCS3400_t * pCpnt)
 	if (ST->Bits.AINT)	{ return TCS3400_Clear_All_IT(pCpnt); }
 
 	return ERROR_OK;
+}
+
+
+__WEAK FctERR NONNULL__ TCS3400_handler_it(TCS3400_t * const pCpnt)
+{
+	FctERR	err;
+	bool	interrupt;
+
+	err = TCS3400_INT_GPIO_Get(pCpnt, &interrupt);
+	if ((!err) && interrupt)	{ err = TCS3400_handler(pCpnt); }
+
+	return err;
 }
 
 

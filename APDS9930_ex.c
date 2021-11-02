@@ -12,7 +12,7 @@
 /****************************************************************/
 
 
-FctERR NONNULL__ APDS9930_Set_PON(APDS9930_t * pCpnt, const bool en)
+FctERR NONNULL__ APDS9930_Set_PON(APDS9930_t * const pCpnt, const bool en)
 {
 	uAPDS9930_REG__ENABLE	EN;
 	FctERR					err;
@@ -25,7 +25,7 @@ FctERR NONNULL__ APDS9930_Set_PON(APDS9930_t * pCpnt, const bool en)
 }
 
 
-FctERR NONNULL__ APDS9930_Set_AEN(APDS9930_t * pCpnt, const bool en)
+FctERR NONNULL__ APDS9930_Set_AEN(APDS9930_t * const pCpnt, const bool en)
 {
 	uAPDS9930_REG__ENABLE	EN;
 	FctERR					err;
@@ -38,7 +38,7 @@ FctERR NONNULL__ APDS9930_Set_AEN(APDS9930_t * pCpnt, const bool en)
 }
 
 
-FctERR NONNULL__ APDS9930_Set_PEN(APDS9930_t * pCpnt, const bool en)
+FctERR NONNULL__ APDS9930_Set_PEN(APDS9930_t * const pCpnt, const bool en)
 {
 	uAPDS9930_REG__ENABLE	EN;
 	FctERR					err;
@@ -51,7 +51,7 @@ FctERR NONNULL__ APDS9930_Set_PEN(APDS9930_t * pCpnt, const bool en)
 }
 
 
-FctERR NONNULL__ APDS9930_Set_AIEN(APDS9930_t * pCpnt, const bool en)
+FctERR NONNULL__ APDS9930_Set_AIEN(APDS9930_t * const pCpnt, const bool en)
 {
 	uAPDS9930_REG__ENABLE	EN;
 	FctERR					err;
@@ -68,7 +68,7 @@ FctERR NONNULL__ APDS9930_Set_AIEN(APDS9930_t * pCpnt, const bool en)
 }
 
 
-FctERR NONNULL__ APDS9930_Set_PIEN(APDS9930_t * pCpnt, const bool en)
+FctERR NONNULL__ APDS9930_Set_PIEN(APDS9930_t * const pCpnt, const bool en)
 {
 	uAPDS9930_REG__ENABLE	EN;
 	FctERR					err;
@@ -85,7 +85,7 @@ FctERR NONNULL__ APDS9930_Set_PIEN(APDS9930_t * pCpnt, const bool en)
 }
 
 
-FctERR NONNULL__ APDS9930_Set_WEN(APDS9930_t * pCpnt, const bool en)
+FctERR NONNULL__ APDS9930_Set_WEN(APDS9930_t * const pCpnt, const bool en)
 {
 	uAPDS9930_REG__ENABLE	EN;
 	FctERR					err;
@@ -102,7 +102,7 @@ FctERR NONNULL__ APDS9930_Set_WEN(APDS9930_t * pCpnt, const bool en)
 }
 
 
-FctERR NONNULL__ APDS9930_Set_SAI(APDS9930_t * pCpnt, const bool en)
+FctERR NONNULL__ APDS9930_Set_SAI(APDS9930_t * const pCpnt, const bool en)
 {
 	uAPDS9930_REG__ENABLE	EN;
 	FctERR					err;
@@ -115,7 +115,7 @@ FctERR NONNULL__ APDS9930_Set_SAI(APDS9930_t * pCpnt, const bool en)
 }
 
 
-FctERR NONNULL__ APDS9930_Set_ALS_Gain(APDS9930_t * pCpnt, const APDS9930_als_gain_ex gain)
+FctERR NONNULL__ APDS9930_Set_ALS_Gain(APDS9930_t * const pCpnt, const APDS9930_als_gain_ex gain)
 {
 	uAPDS9930_REG__CONTROL	CTL;
 	uAPDS9930_REG__CONFIG	CFG;
@@ -144,7 +144,7 @@ FctERR NONNULL__ APDS9930_Set_ALS_Gain(APDS9930_t * pCpnt, const APDS9930_als_ga
 }
 
 
-FctERR NONNULL__ APDS9930_Set_Prox_Gain(APDS9930_t * pCpnt, const APDS9930_prox_gain gain)
+FctERR NONNULL__ APDS9930_Set_Prox_Gain(APDS9930_t * const pCpnt, const APDS9930_prox_gain gain)
 {
 	uAPDS9930_REG__CONTROL	CTL;
 	FctERR					err;
@@ -164,7 +164,7 @@ FctERR NONNULL__ APDS9930_Set_Prox_Gain(APDS9930_t * pCpnt, const APDS9930_prox_
 }
 
 
-FctERR NONNULL__ APDS9930_Set_Prox_Drive_Strength(APDS9930_t * pCpnt, const APDS9930_drive_strength_ex pdrive)
+FctERR NONNULL__ APDS9930_Set_Prox_Drive_Strength(APDS9930_t * const pCpnt, const APDS9930_drive_strength_ex pdrive)
 {
 	uAPDS9930_REG__CONTROL	CTL;
 	uAPDS9930_REG__CONFIG	CFG;
@@ -192,7 +192,7 @@ FctERR NONNULL__ APDS9930_Set_Prox_Drive_Strength(APDS9930_t * pCpnt, const APDS
 }
 
 
-FctERR NONNULL__ APDS9930_Set_ALS_Pesistence(APDS9930_t * pCpnt, const APDS9930_als_it_persist persist)
+FctERR NONNULL__ APDS9930_Set_ALS_Pesistence(APDS9930_t * const pCpnt, const APDS9930_als_it_persist persist)
 {
 	uAPDS9930_REG__PERSIST	PERS;
 	FctERR					err;
@@ -210,7 +210,7 @@ FctERR NONNULL__ APDS9930_Set_ALS_Pesistence(APDS9930_t * pCpnt, const APDS9930_
 }
 
 
-FctERR NONNULL__ APDS9930_Set_Prox_Pesistence(APDS9930_t * pCpnt, const APDS9930_prox_it_persist persist)
+FctERR NONNULL__ APDS9930_Set_Prox_Pesistence(APDS9930_t * const pCpnt, const APDS9930_prox_it_persist persist)
 {
 	uAPDS9930_REG__PERSIST	PERS;
 	FctERR					err;
@@ -228,7 +228,7 @@ FctERR NONNULL__ APDS9930_Set_Prox_Pesistence(APDS9930_t * pCpnt, const APDS9930
 }
 
 
-FctERR NONNULL__ APDS9930_Set_ALS_Integration_Time(APDS9930_t * pCpnt, const uint16_t integ)
+FctERR NONNULL__ APDS9930_Set_ALS_Integration_Time(APDS9930_t * const pCpnt, const uint16_t integ)
 {
 	uint8_t	ATIME;
 	FctERR	err;
@@ -249,7 +249,7 @@ FctERR NONNULL__ APDS9930_Set_ALS_Integration_Time(APDS9930_t * pCpnt, const uin
 }
 
 
-FctERR NONNULL__ APDS9930_Set_Prox_Integration_Time(APDS9930_t * pCpnt, const uint16_t integ)
+FctERR NONNULL__ APDS9930_Set_Prox_Integration_Time(APDS9930_t * const pCpnt, const uint16_t integ)
 {
 	uint8_t	ATIME;
 	FctERR	err;
@@ -268,7 +268,7 @@ FctERR NONNULL__ APDS9930_Set_Prox_Integration_Time(APDS9930_t * pCpnt, const ui
 }
 
 
-FctERR NONNULL__ APDS9930_Set_Wait_Time(APDS9930_t * pCpnt, const uint16_t wait)
+FctERR NONNULL__ APDS9930_Set_Wait_Time(APDS9930_t * const pCpnt, const uint16_t wait)
 {
 	uAPDS9930_REG__CONFIG	CFG;
 	uint8_t					WAIT;
@@ -303,6 +303,16 @@ FctERR NONNULL__ APDS9930_Set_Wait_Time(APDS9930_t * pCpnt, const uint16_t wait)
 
 	return err;
 }
+
+
+/****************************************************************/
+
+
+__WEAK FctERR NONNULL__ APDS9930_INT_GPIO_Init(APDS9930_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	return I2C_peripheral_GPIO_init(&pCpnt->cfg.INT_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+
+__WEAK FctERR NONNULL__ APDS9930_INT_GPIO_Get(APDS9930_t * const pCpnt, bool * const pState) {
+	return I2C_peripheral_GPIO_get(&pCpnt->cfg.INT_GPIO, pState); }
 
 
 /****************************************************************/

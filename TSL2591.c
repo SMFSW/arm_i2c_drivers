@@ -43,7 +43,7 @@ FctERR TSL2591_Init_Single(void) {
 /****************************************************************/
 
 
-FctERR NONNULL__ TSL2591_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ TSL2591_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	uTSL2591_CMD CMD;
 
@@ -62,7 +62,7 @@ FctERR NONNULL__ TSL2591_Write(I2C_slave_t * pSlave, const uint8_t * data, const
 }
 
 
-FctERR NONNULL__ TSL2591_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ TSL2591_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	uTSL2591_CMD CMD;
 
@@ -81,7 +81,7 @@ FctERR NONNULL__ TSL2591_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16
 }
 
 
-FctERR NONNULL__ TSL2591_Write_Word(I2C_slave_t * pSlave, const uint16_t * data, const uint16_t addr)
+FctERR NONNULL__ TSL2591_Write_Word(I2C_slave_t * const pSlave, const uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 
@@ -93,7 +93,7 @@ FctERR NONNULL__ TSL2591_Write_Word(I2C_slave_t * pSlave, const uint16_t * data,
 }
 
 
-FctERR NONNULL__ TSL2591_Read_Word(I2C_slave_t * pSlave, uint16_t * data, const uint16_t addr)
+FctERR NONNULL__ TSL2591_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 	FctERR	err;
@@ -108,7 +108,7 @@ FctERR NONNULL__ TSL2591_Read_Word(I2C_slave_t * pSlave, uint16_t * data, const 
 }
 
 
-FctERR NONNULL__ TSL2591_Write_Special(I2C_slave_t * pSlave, const TSL2591_spec_func func)
+FctERR NONNULL__ TSL2591_Write_Special(I2C_slave_t * const pSlave, const TSL2591_spec_func func)
 {
 	uTSL2591_CMD CMD;
 

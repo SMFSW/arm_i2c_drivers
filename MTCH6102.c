@@ -48,7 +48,7 @@ FctERR MTCH6102_Init_Single(void) {
 /****************************************************************/
 
 
-FctERR NONNULL__ MTCH6102_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ MTCH6102_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(pSlave))			{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (addr > MTCH__RAW_ADC_31)			{ return ERROR_RANGE; }		// Unknown register
@@ -65,7 +65,7 @@ FctERR NONNULL__ MTCH6102_Write(I2C_slave_t * pSlave, const uint8_t * data, cons
 }
 
 
-FctERR NONNULL__ MTCH6102_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ MTCH6102_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(pSlave))			{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (addr > MTCH__RAW_ADC_31)			{ return ERROR_RANGE; }		// Unknown register

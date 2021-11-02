@@ -44,7 +44,7 @@ FctERR PCA9532_Init_Single(void) {
 /****************************************************************/
 
 
-FctERR NONNULL__ PCA9532_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ PCA9532_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	const PCA95xx_reg_inc inc_mode = PCA9532[pSlave - PCA9532_hal].cfg.auto_inc;
 
@@ -60,7 +60,7 @@ FctERR NONNULL__ PCA9532_Write(I2C_slave_t * pSlave, const uint8_t * data, const
 }
 
 
-FctERR NONNULL__ PCA9532_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ PCA9532_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	const PCA95xx_reg_inc inc_mode = PCA9532[pSlave - PCA9532_hal].cfg.auto_inc;
 

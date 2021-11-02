@@ -44,7 +44,30 @@
 ** \param[in] pCpnt - Pointer to FM24C component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ FM24C_Mass_Erase(FM24C_t * pCpnt);
+FctERR NONNULL__ FM24C_Mass_Erase(FM24C_t * const pCpnt);
+
+
+/*******************/
+/*** GPIO access ***/
+/*******************/
+
+/*!\brief Write Protect GPIO pin init for FM24C
+** \weak FM24C Write Protect GPIO pin init may be user implemented if needed
+** \param[in] pCpnt - Pointer to FM24C component
+** \param[in] GPIOx - WP port
+** \param[in] GPIO_Pin - WP pin
+** \param[in] GPIO_Active: WP pin active state
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ FM24C_WP_GPIO_Init(FM24C_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+
+/*!\brief Write Protect GPIO pin getter for FM24C
+** \weak FM24C Write Protect GPIO pin getter may be user implemented if needed
+** \param[in] pCpnt - Pointer to FM24C component
+** \param[in,out] pState - Pointer to WP pin state variable (0: inactive, 1: active)
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ FM24C_WP_GPIO_Get(FM24C_t * const pCpnt, bool * const pState);
 
 
 /****************************************************************/

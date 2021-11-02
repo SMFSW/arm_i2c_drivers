@@ -41,6 +41,8 @@ typedef struct AT42QT1244_t {
 	uint32_t					keys;				//!< Keys results
 	struct {
 	I2C_slave_t *				slave_inst;			//!< Slave structure
+	PeripheralGPIO_t			CHANGE_GPIO;		//!< Change GPIO struct
+	PeripheralGPIO_t			RST_GPIO;			//!< Reset GPIO struct
 	} cfg;
 } AT42QT1244_t;
 
@@ -59,19 +61,19 @@ extern AT42QT1244_t AT42QT1244[I2C_AT42QT1244_NB];	//!< AT42QT1244 User structur
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AT42QT1244_Init_Sequence(AT42QT1244_t * pCpnt);
+FctERR NONNULL__ AT42QT1244_Init_Sequence(AT42QT1244_t * const pCpnt);
 
 
 /*!\brief Set last reset time for AT42QT1244 peripheral
 **/
-__INLINE void NONNULL_INLINE__ AT42QT1244_Set_Reset_Time(AT42QT1244_t * pCpnt) {
+__INLINE void NONNULL_INLINE__ AT42QT1244_Set_Reset_Time(AT42QT1244_t * const pCpnt) {
 	pCpnt->hPowerOn = HAL_GetTick(); }
 
 /*!\brief 100ms delay generator for AT42QT1244 peripheral
 ** \warning Delay is in blocking mode (only interrupts will run) and can take up to 100ms
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
 **/
-void NONNULL__ AT42QT1244_Delay_PowerOn(AT42QT1244_t * pCpnt);
+void NONNULL__ AT42QT1244_Delay_PowerOn(AT42QT1244_t * const pCpnt);
 
 
 /*!\brief 16bits CRC calculation for AT42QT1244
@@ -90,21 +92,21 @@ uint16_t AT42QT1244_crc16(uint16_t crc, const uint8_t data);
 ** \param[in,out] hcrc - Pointer to resulting CRC value
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * pCpnt, uint16_t * const hcrc);
+FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * const pCpnt, uint16_t * const hcrc);
 
 
 /*!\brief Low level calibration for AT42QT1244 peripheral
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AT42QT1244_Calibrate_Low_Level(AT42QT1244_t * pCpnt);
+FctERR NONNULL__ AT42QT1244_Calibrate_Low_Level(AT42QT1244_t * const pCpnt);
 
 
 /*!\brief All keys calibration for AT42QT1244 peripheral
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AT42QT1244_Calibrate_All_Keys(AT42QT1244_t * pCpnt);
+FctERR NONNULL__ AT42QT1244_Calibrate_All_Keys(AT42QT1244_t * const pCpnt);
 
 
 /*!\brief Key calibration for AT42QT1244 peripheral
@@ -112,17 +114,26 @@ FctERR NONNULL__ AT42QT1244_Calibrate_All_Keys(AT42QT1244_t * pCpnt);
 ** \param[in] Key - Key to calibrate
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AT42QT1244_Calibrate_Key(AT42QT1244_t * pCpnt, uint8_t Key);
+FctERR NONNULL__ AT42QT1244_Calibrate_Key(AT42QT1244_t * const pCpnt, uint8_t Key);
 
 
 /*!\brief Handler for AT42QT1244 peripheral
 ** \weak AT42QT1244 handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle AT42QT1244 tasks
-** \note Alternately may be called when event occurs on AT42QT1244 pin
+** \note Alternately may be called when event occurs on AT42QT1244 pin (or by calling \ref AT42QT1244_handler_it instead)
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AT42QT1244_handler(AT42QT1244_t * pCpnt);
+FctERR NONNULL__ AT42QT1244_handler(AT42QT1244_t * const pCpnt);
+
+/*!\brief Handler for AT42QT1244 peripheral GPIO interrupt
+** \note \ref AT42QT1244_INT_GPIO_Init has to be called at init before using interrupt handler function
+** \weak AT42QT1244 GPIO interrupt handler may be user implemented to suit custom needs
+** \note May be called periodically to handle AT42QT1244 tasks through interrupts
+** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \return FctERR - error code
+**/
+FctERR NONNULL__ AT42QT1244_handler_it(AT42QT1244_t * const pCpnt);
 
 
 /*!\brief Handler for all AT42QT1244 peripherals
@@ -131,6 +142,15 @@ FctERR NONNULL__ AT42QT1244_handler(AT42QT1244_t * pCpnt);
 __INLINE void INLINE__ AT42QT1244_handler_all(void) {
 	for (AT42QT1244_t * pCpnt = AT42QT1244 ; pCpnt < &AT42QT1244[I2C_AT42QT1244_NB] ; pCpnt++) {
 		AT42QT1244_handler(pCpnt); }
+}
+
+/*!\brief Handler for all AT42QT1244 peripherals GPIO interrupt
+** \note \ref AT42QT1244_INT_GPIO_Init has to be called at init before using interrupt handler function
+** \note May be called periodically to handle all AT42QT1244 tasks
+**/
+__INLINE void INLINE__ AT42QT1244_handler_it_all(void) {
+	for (AT42QT1244_t * pCpnt = AT42QT1244 ; pCpnt < &AT42QT1244[I2C_AT42QT1244_NB] ; pCpnt++) {
+		AT42QT1244_handler_it(pCpnt); }
 }
 
 

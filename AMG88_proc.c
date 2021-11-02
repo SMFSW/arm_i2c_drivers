@@ -12,13 +12,13 @@
 /****************************************************************/
 
 
-AMG88_t AMG88[I2C_AMG88_NB];
+AMG88_t AMG88[I2C_AMG88_NB] = { 0 };
 
 
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ AMG88_Init_Sequence(AMG88_t * pCpnt)
+__WEAK FctERR NONNULL__ AMG88_Init_Sequence(AMG88_t * const pCpnt)
 {
 	FctERR					err;
 	uAMG88_REG__INT_CONTROL	INT_CTRL = { 0 };
@@ -48,7 +48,7 @@ __WEAK FctERR NONNULL__ AMG88_Init_Sequence(AMG88_t * pCpnt)
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ AMG88_handler(AMG88_t * pCpnt)
+__WEAK FctERR NONNULL__ AMG88_handler(AMG88_t * const pCpnt)
 {
 	FctERR						err;
 	uAMG88_REG__STATUS_CLEAR	CLEAR = { 0x0E };
@@ -79,6 +79,18 @@ __WEAK FctERR NONNULL__ AMG88_handler(AMG88_t * pCpnt)
 	#endif
 
 	return AMG88_Write(pCpnt->cfg.slave_inst, &CLEAR.Byte, AMG88__SCLR, sizeof(pCpnt->Pixels));
+}
+
+
+__WEAK FctERR NONNULL__ AMG88_handler_it(AMG88_t * const pCpnt)
+{
+	FctERR	err;
+	bool	interrupt;
+
+	err = AMG88_INT_GPIO_Get(pCpnt, &interrupt);
+	if ((!err) && interrupt)	{ err = AMG88_handler(pCpnt); }
+
+	return err;
 }
 
 

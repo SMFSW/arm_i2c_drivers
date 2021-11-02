@@ -55,24 +55,26 @@ typedef struct MTCH6102_gesture {
 
 
 typedef struct MTCH6102_t {
-	MTCH6102_gest	touch;			//!< MTCH6102 decoded coordinates & gesture
-	int16_t			min_x;			//!< Minimum possible x value
-	int16_t			max_x;			//!< Maximum possible x value
-	int16_t			min_y;			//!< Minimum possible y value
-	int16_t			max_y;			//!< Maximum possible y value
+	MTCH6102_gest		touch;			//!< MTCH6102 decoded coordinates & gesture
+	int16_t				min_x;			//!< Minimum possible x value
+	int16_t				max_x;			//!< Maximum possible x value
+	int16_t				min_y;			//!< Minimum possible y value
+	int16_t				max_y;			//!< Maximum possible y value
 	struct {
-	I2C_slave_t *	slave_inst;		//!< Slave structure
-	uint8_t			nb_rx;			//!< Number of MTCH6102 Rx used
-	uint8_t			nb_tx;			//!< Number of MTCH6102 Tx used
-	uint16_t		max_rx;			//!< Maximum Rx grid value (grid delta)
-	uint16_t		max_tx;			//!< Maximum Tx grid value (grid delta)
-	uint8_t			FW_Major;		//!< MTCH6102 Major FW version
-	uint8_t			FW_Minor;		//!< MTCH6102 Minor FW version
-	uint16_t		APP_ID;			//!< MTCH6102 App Identifier
-	int16_t			Rotation;		//!< Referential rotation angle (in degrees, counter clockwise): only used when Centered set to true
-	bool			Centered	:1;	//!< Centering 0,0 point on the middle of the pad (allowing it's rotation afterwards using MTCH6102_rotate)
-	bool			RxDownwards	:1;	//!< Set to true if Rx lines are designed to go downwards (as per datasheet guidelines and demo board routing)
-	bool			TxDownwards	:1;	//!< Set to true if Tx lines are designed to go downwards (contrary to datasheet guidelines and demo board routing)
+	I2C_slave_t *		slave_inst;		//!< Slave structure
+	PeripheralGPIO_t	INT_GPIO;		//!< Interrupt GPIO struct
+	PeripheralGPIO_t	SYNC_GPIO;		//!< Synchro GPIO struct
+	uint8_t				nb_rx;			//!< Number of MTCH6102 Rx used
+	uint8_t				nb_tx;			//!< Number of MTCH6102 Tx used
+	uint16_t			max_rx;			//!< Maximum Rx grid value (grid delta)
+	uint16_t			max_tx;			//!< Maximum Tx grid value (grid delta)
+	uint8_t				FW_Major;		//!< MTCH6102 Major FW version
+	uint8_t				FW_Minor;		//!< MTCH6102 Minor FW version
+	uint16_t			APP_ID;			//!< MTCH6102 App Identifier
+	int16_t				Rotation;		//!< Referential rotation angle (in degrees, counter clockwise): only used when Centered set to true
+	bool				Centered	:1;	//!< Centering 0,0 point on the middle of the pad (allowing it's rotation afterwards using MTCH6102_rotate)
+	bool				RxDownwards	:1;	//!< Set to true if Rx lines are designed to go downwards (as per datasheet guidelines and demo board routing)
+	bool				TxDownwards	:1;	//!< Set to true if Tx lines are designed to go downwards (contrary to datasheet guidelines and demo board routing)
 	} cfg;
 } MTCH6102_t;
 
@@ -183,11 +185,20 @@ FctERR NONNULL__ MTCH6102_diag_to_str(char * const str, const MTCH6102_GESTURE_D
 /*!\brief Handler for MTCH6102 peripheral
 ** \weak MTCH6102 handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle MTCH6102 tasks
-** \note Alternately may be called when event occurs on MTCH6102 pin
+** \note Alternately may be called when event occurs on MTCH6102 pin (or by calling \ref MTCH6102_handler_it instead)
 ** \param[in] pCpnt - Pointer to MTCH6102 component
 ** \return FctERR - error code
 **/
 FctERR NONNULL__ MTCH6102_handler(MTCH6102_t * const pCpnt);
+
+/*!\brief Handler for MTCH6102 peripheral GPIO interrupt
+** \note \ref MTCH6102_INT_GPIO_Init has to be called at init before using interrupt handler function
+** \weak MTCH6102 GPIO interrupt handler may be user implemented to suit custom needs
+** \note May be called periodically to handle MTCH6102 tasks through interrupts
+** \param[in] pCpnt - Pointer to MTCH6102 component
+** \return FctERR - error code
+**/
+FctERR NONNULL__ MTCH6102_handler_it(MTCH6102_t * const pCpnt);
 
 
 /*!\brief Handler for all MTCH6102 peripherals
@@ -196,6 +207,15 @@ FctERR NONNULL__ MTCH6102_handler(MTCH6102_t * const pCpnt);
 __INLINE void INLINE__ MTCH6102_handler_all(void) {
 	for (MTCH6102_t * pCpnt = MTCH6102 ; pCpnt < &MTCH6102[I2C_MTCH6102_NB] ; pCpnt++) {
 		MTCH6102_handler(pCpnt); }
+}
+
+/*!\brief Handler for all MTCH6102 peripherals GPIO interrupt
+** \note \ref MTCH6102_INT_GPIO_Init has to be called at init before using interrupt handler function
+** \note May be called periodically to handle all MTCH6102 tasks
+**/
+__INLINE void INLINE__ MTCH6102_handler_it_all(void) {
+	for (MTCH6102_t * pCpnt = MTCH6102 ; pCpnt < &MTCH6102[I2C_MTCH6102_NB] ; pCpnt++) {
+		MTCH6102_handler_it(pCpnt); }
 }
 
 

@@ -12,7 +12,7 @@
 /****************************************************************/
 
 
-PCF8523_t PCF8523 = { { 0, 0, 0, 0}, { 0, 0, 0}, { &PCF8523_hal, 0, 0, false } };
+PCF8523_t PCF8523 = { { 0, 0, 0, 0}, { 0, 0, 0}, { &PCF8523_hal, { 0 }, { 0 }, 0, 0, false } };
 
 
 /****************************************************************/
@@ -211,6 +211,19 @@ __WEAK FctERR PCF8523_handler(void)
 	#endif
 
 	return ERROR_OK;
+}
+
+
+__WEAK FctERR NONNULL__ PCF8523_handler_it(void)
+{
+	FctERR	err;
+	bool	interrupt1, interrupt2;
+
+	err = PCF8523_INT1_GPIO_Get(&interrupt1);
+	err = PCF8523_INT2_GPIO_Get(&interrupt2);
+	if ((!err) && (interrupt1 || interrupt2))	{ err = PCF8523_handler(); }
+
+	return err;
 }
 
 

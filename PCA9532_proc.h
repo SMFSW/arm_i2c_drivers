@@ -35,6 +35,7 @@ typedef struct PCA9532_t {
 	uPCA9532_REG__LS	LS;				//!< LED selector registers
 	struct {
 	I2C_slave_t *		slave_inst;		//!< Slave structure
+	PeripheralGPIO_t	RST_GPIO;		//!< Reset GPIO struct
 	PCA95xx_reg_inc		auto_inc;		//!< Auto increment configuration
 	float				Freq0;			//!< Frequency set in PSC0 (in Hz)
 	float				Duty0;			//!< Duty Cycle set in PWM0 (in Hz)
@@ -58,7 +59,7 @@ extern PCA9532_t	PCA9532[I2C_PCA9532_NB];	//!< PCA9532 User structure
 ** \param[in] pCpnt - Pointer to PCA9532 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ PCA9532_Init_Sequence(PCA9532_t * pCpnt);
+FctERR NONNULL__ PCA9532_Init_Sequence(PCA9532_t * const pCpnt);
 
 /****************************************************************/
 #endif

@@ -129,7 +129,7 @@ FctERR NONNULL__ MCP4725_General_Call(const I2C_HandleTypeDef * hi2c, const uint
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP4725_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t nb);
+FctERR NONNULL__ MCP4725_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t nb);
 
 
 /*!\brief I2C Read function for MCP4725
@@ -138,7 +138,7 @@ FctERR NONNULL__ MCP4725_Write(I2C_slave_t * pSlave, const uint8_t * data, const
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP4725_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t nb);
+FctERR NONNULL__ MCP4725_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t nb);
 
 
 /****************************************************************/

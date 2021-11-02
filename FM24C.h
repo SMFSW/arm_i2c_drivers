@@ -58,8 +58,9 @@
 ** \brief FM24C user interface struct
 **/
 typedef struct FM24C_t {
-	struct PACK__ {
-	I2C_slave_t *	slave_inst;		//!< Slave structure
+	struct {
+	I2C_slave_t *		slave_inst;		//!< Slave structure
+	PeripheralGPIO_t	WP_GPIO;		//!< Write Protect GPIO struct
 	} cfg;
 } FM24C_t;
 
@@ -105,7 +106,7 @@ FctERR FM24C_Init_Single(void);
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ FM24C_Write_Banked(FM24C_t * pCpnt, const uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb);
+FctERR NONNULL__ FM24C_Write_Banked(FM24C_t * const pCpnt, const uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb);
 
 
 /*!\brief I2C Read function for FM24C
@@ -117,7 +118,7 @@ FctERR NONNULL__ FM24C_Write_Banked(FM24C_t * pCpnt, const uint8_t * data, const
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ FM24C_Read_Banked(FM24C_t * pCpnt, uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb);
+FctERR NONNULL__ FM24C_Read_Banked(FM24C_t * const pCpnt, uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb);
 
 
 /*!\brief I2C Read/Write function for FM24C
@@ -129,7 +130,7 @@ FctERR NONNULL__ FM24C_Read_Banked(FM24C_t * pCpnt, uint8_t * data, const uint16
 ** \param[in] wr - 0: Read / 1: Write
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ FM24C_ReadWrite(FM24C_t * pCpnt, uint8_t * data, const uint16_t addr, const uint16_t nb, const bool wr);
+FctERR NONNULL__ FM24C_ReadWrite(FM24C_t * const pCpnt, uint8_t * data, const uint16_t addr, const uint16_t nb, const bool wr);
 
 
 /*!\brief I2C Write function for FM24C
@@ -140,7 +141,7 @@ FctERR NONNULL__ FM24C_ReadWrite(FM24C_t * pCpnt, uint8_t * data, const uint16_t
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ FM24C_Write(FM24C_t * pCpnt, const uint8_t * data, const uint16_t addr, const uint16_t nb) {
+__INLINE FctERR NONNULL_INLINE__ FM24C_Write(FM24C_t * const pCpnt, const uint8_t * data, const uint16_t addr, const uint16_t nb) {
 	return FM24C_ReadWrite(pCpnt, (uint8_t *) data, addr, nb, true);
 }
 
@@ -153,7 +154,7 @@ __INLINE FctERR NONNULL_INLINE__ FM24C_Write(FM24C_t * pCpnt, const uint8_t * da
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ FM24C_Read(FM24C_t * pCpnt, uint8_t * data, const uint16_t addr, const uint16_t nb) {
+__INLINE FctERR NONNULL_INLINE__ FM24C_Read(FM24C_t * const pCpnt, uint8_t * data, const uint16_t addr, const uint16_t nb) {
 	return FM24C_ReadWrite(pCpnt, data, addr, nb, false);
 }
 

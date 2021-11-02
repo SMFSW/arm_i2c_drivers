@@ -84,7 +84,7 @@ typedef union uTCS3472_REG_MAP {
 ** \param[in] en - 0 Disable, 1 Enable
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3472_Write_En(TCS3472_t * pCpnt, const uint8_t en) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Write_En(TCS3472_t * const pCpnt, const uint8_t en) {
 	return TCS3472_Write(pCpnt->cfg.slave_inst, (uint8_t *) &en, TCS3472__ENABLE, 1); }
 
 /*!\brief Write TCS3472 Config register
@@ -92,7 +92,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_Write_En(TCS3472_t * pCpnt, const uint8
 ** \param[in] cfg - Configuration register value
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3472_Write_Cfg(TCS3472_t * pCpnt, const uint8_t cfg) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Write_Cfg(TCS3472_t * const pCpnt, const uint8_t cfg) {
 	return TCS3472_Write(pCpnt->cfg.slave_inst, (uint8_t *) &cfg, TCS3472__CONFIG, 1); }
 
 /*!\brief Write TCS3472 Control register
@@ -100,7 +100,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_Write_Cfg(TCS3472_t * pCpnt, const uint
 ** \param[in] ctl - Control register value
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3472_Write_Ctl(TCS3472_t * pCpnt, const uint8_t ctl) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Write_Ctl(TCS3472_t * const pCpnt, const uint8_t ctl) {
 	return TCS3472_Write(pCpnt->cfg.slave_inst, (uint8_t *) &ctl, TCS3472__CONTROL, 1); }
 
 
@@ -109,28 +109,28 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_Write_Ctl(TCS3472_t * pCpnt, const uint
 ** \param[in] en - 0 Disable, 1 Enable
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3472_Set_PON(TCS3472_t * pCpnt, const bool en);
+FctERR NONNULL__ TCS3472_Set_PON(TCS3472_t * const pCpnt, const bool en);
 
 /*!\brief Clear module Enable / Disable
 ** \param[in] pCpnt - Pointer to TCS3472 component
 ** \param[in] en - 0 Disable, 1 Enable
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3472_Set_AEN(TCS3472_t * pCpnt, const bool en);
+FctERR NONNULL__ TCS3472_Set_AEN(TCS3472_t * const pCpnt, const bool en);
 
 /*!\brief Clear interrupt module Enable / Disable
 ** \param[in] pCpnt - Pointer to TCS3472 component
 ** \param[in] en - 0 Disable, 1 Enable
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3472_Set_AIEN(TCS3472_t * pCpnt, const bool en);
+FctERR NONNULL__ TCS3472_Set_AIEN(TCS3472_t * const pCpnt, const bool en);
 
 /*!\brief WAIT module Enable / Disable
 ** \param[in] pCpnt - Pointer to TCS3472 component
 ** \param[in] en - 0 Disable, 1 Enable
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3472_Set_WEN(TCS3472_t * pCpnt, const bool en);
+FctERR NONNULL__ TCS3472_Set_WEN(TCS3472_t * const pCpnt, const bool en);
 
 
 /*!\brief Gain configuration
@@ -138,7 +138,7 @@ FctERR NONNULL__ TCS3472_Set_WEN(TCS3472_t * pCpnt, const bool en);
 ** \param[in] gain - Gain value
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3472_Set_Gain(TCS3472_t * pCpnt, const TCS3472_gain gain);
+FctERR NONNULL__ TCS3472_Set_Gain(TCS3472_t * const pCpnt, const TCS3472_gain gain);
 
 
 /*!\brief ALS Persistence configuration
@@ -146,7 +146,7 @@ FctERR NONNULL__ TCS3472_Set_Gain(TCS3472_t * pCpnt, const TCS3472_gain gain);
 ** \param[in] persist - Persistence value
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3472_Set_Pesistence(TCS3472_t * pCpnt, const TCS3472_it_persist persist) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Set_Pesistence(TCS3472_t * const pCpnt, const TCS3472_it_persist persist) {
 	uTCS3472_REG__PERSIST PERS = { .Bits.PERSIST = persist };
 	return TCS3472_Write(pCpnt->cfg.slave_inst, &PERS.Byte, TCS3472__PERSIST, 1); }
 
@@ -156,14 +156,14 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_Set_Pesistence(TCS3472_t * pCpnt, const
 ** \param[in] integ - Integration time value (from 3ms to 614ms)
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3472_Set_Integration_Time(TCS3472_t * pCpnt, const uint16_t integ);
+FctERR NONNULL__ TCS3472_Set_Integration_Time(TCS3472_t * const pCpnt, const uint16_t integ);
 
 /*!\brief Wait time configuration
 ** \param[in] pCpnt - Pointer to TCS3472 component
 ** \param[in] wait - Wait time value (from 3m to 7400ms)
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3472_Set_Wait_Time(TCS3472_t * pCpnt, const uint16_t wait);
+FctERR NONNULL__ TCS3472_Set_Wait_Time(TCS3472_t * const pCpnt, const uint16_t wait);
 
 
 /*!\brief ALS interrupt low threshold configuration
@@ -171,7 +171,7 @@ FctERR NONNULL__ TCS3472_Set_Wait_Time(TCS3472_t * pCpnt, const uint16_t wait);
 ** \param[in] thr - Low threshold value
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3472_Set_AILT(TCS3472_t * pCpnt, const uint16_t thr) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Set_AILT(TCS3472_t * const pCpnt, const uint16_t thr) {
 	return TCS3472_Write_Word(pCpnt->cfg.slave_inst, (uint16_t *) &thr, TCS3472__AILTL); }
 
 /*!\brief ALS interrupt high threshold configuration
@@ -179,7 +179,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_Set_AILT(TCS3472_t * pCpnt, const uint1
 ** \param[in] thr - High threshold value
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3472_Set_AIHT(TCS3472_t * pCpnt, const uint16_t thr) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Set_AIHT(TCS3472_t * const pCpnt, const uint16_t thr) {
 	return TCS3472_Write_Word(pCpnt->cfg.slave_inst, (uint16_t *) &thr, TCS3472__AIHTL); }
 
 /*!\brief ALS interrupt thresholds configuration
@@ -188,7 +188,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_Set_AIHT(TCS3472_t * pCpnt, const uint1
 ** \param[in] hthr - High threshold value
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3472_Set_AIT(TCS3472_t * pCpnt, const uint16_t lthr, const uint16_t hthr) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Set_AIT(TCS3472_t * const pCpnt, const uint16_t lthr, const uint16_t hthr) {
 	uint8_t DAT[4] = { LOBYTE(lthr), HIBYTE(lthr), LOBYTE(hthr), HIBYTE(hthr) };
 	return TCS3472_Write(pCpnt->cfg.slave_inst, DAT, TCS3472__AILTL, sizeof(DAT)); }
 
@@ -199,7 +199,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_Set_AIT(TCS3472_t * pCpnt, const uint16
 ** \param[in] pCpnt - Pointer to TCS3472 component
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3472_SF_Clear_IT(TCS3472_t * pCpnt) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_SF_Clear_IT(TCS3472_t * const pCpnt) {
 	return TCS3472_Write_Special(pCpnt->cfg.slave_inst, TCS3472__SF_CLR_IT); }
 
 
@@ -209,7 +209,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_SF_Clear_IT(TCS3472_t * pCpnt) {
 ** \param[in,out] id - pointer to chip ID result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_ChipID(TCS3472_t * pCpnt, uint8_t * id) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_ChipID(TCS3472_t * const pCpnt, uint8_t * id) {
 	return TCS3472_Read(pCpnt->cfg.slave_inst, id, TCS3472__ID, 1); }
 
 
@@ -218,7 +218,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_Get_ChipID(TCS3472_t * pCpnt, uint8_t *
 ** \param[in,out] tab - pointer to conversions tab result
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3472_Get_Channels(TCS3472_t * pCpnt, uint16_t tab[]);
+FctERR NONNULL__ TCS3472_Get_Channels(TCS3472_t * const pCpnt, uint16_t tab[]);
 
 /*!\brief Get Specific channel conversion
 ** \param[in] pCpnt - Pointer to TCS3472 component
@@ -226,7 +226,7 @@ FctERR NONNULL__ TCS3472_Get_Channels(TCS3472_t * pCpnt, uint16_t tab[]);
 ** \param[in] chan - Channel to get
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Channel(TCS3472_t * pCpnt, uint16_t * buf, const TCS3472_chan chan) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Channel(TCS3472_t * const pCpnt, uint16_t * buf, const TCS3472_chan chan) {
 	if (chan > TCS3472__CHAN_BLUE)	{ return ERROR_VALUE; }	// Unknown channel
 	return TCS3472_Read_Word(pCpnt->cfg.slave_inst, buf, TCS3472__CDATAL + (2 * chan)); }
 
@@ -235,7 +235,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Channel(TCS3472_t * pCpnt, uint16_t
 ** \param[in,out] clr - pointer to Clear conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Clear(TCS3472_t * pCpnt, uint16_t * clr) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Clear(TCS3472_t * const pCpnt, uint16_t * clr) {
 	return TCS3472_Read_Word(pCpnt->cfg.slave_inst, clr, TCS3472__CDATAL); }
 
 /*!\brief Get Red channel conversion
@@ -243,7 +243,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Clear(TCS3472_t * pCpnt, uint16_t *
 ** \param[in,out] r - pointer to Red conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Red(TCS3472_t * pCpnt, uint16_t * r) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Red(TCS3472_t * const pCpnt, uint16_t * r) {
 	return TCS3472_Read_Word(pCpnt->cfg.slave_inst, r, TCS3472__RDATAL); }
 
 /*!\brief Get Green channel conversion
@@ -251,7 +251,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Red(TCS3472_t * pCpnt, uint16_t * r
 ** \param[in,out] g - pointer to Green conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Green(TCS3472_t * pCpnt, uint16_t * g) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Green(TCS3472_t * const pCpnt, uint16_t * g) {
 	return TCS3472_Read_Word(pCpnt->cfg.slave_inst, g, TCS3472__GDATAL); }
 
 /*!\brief Get Blue channel conversion
@@ -259,8 +259,31 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Green(TCS3472_t * pCpnt, uint16_t *
 ** \param[in,out] b - pointer to Blue conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Blue(TCS3472_t * pCpnt, uint16_t * b) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Blue(TCS3472_t * const pCpnt, uint16_t * b) {
 	return TCS3472_Read_Word(pCpnt->cfg.slave_inst, b, TCS3472__BDATAL); }
+
+
+/*******************/
+/*** GPIO access ***/
+/*******************/
+
+/*!\brief Interrupt GPIO pin init for TCS3472
+** \weak TCS3472 Interrupt GPIO pin init may be user implemented if needed
+** \param[in] pCpnt - Pointer to TCS3472 component
+** \param[in] GPIOx - INT port
+** \param[in] GPIO_Pin - INT pin
+** \param[in] GPIO_Active: INT pin active state
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ TCS3472_INT_GPIO_Init(TCS3472_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+
+/*!\brief Interrupt GPIO pin getter for TCS3472
+** \weak TCS3472 Interrupt GPIO pin getter may be user implemented if needed
+** \param[in] pCpnt - Pointer to TCS3472 component
+** \param[in,out] pState - Pointer to INT pin state variable (0: inactive, 1: active)
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ TCS3472_INT_GPIO_Get(TCS3472_t * const pCpnt, bool * const pState);
 
 
 /****************************************************************/

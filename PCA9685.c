@@ -47,7 +47,7 @@ FctERR PCA9685_Init_Single(void) {
 /****************************************************************/
 
 
-FctERR NONNULL__ PCA9685_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ PCA9685_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (addr > PCA9685__TestMode)				{ return ERROR_RANGE; }		// Unknown register
@@ -60,7 +60,7 @@ FctERR NONNULL__ PCA9685_Write(I2C_slave_t * pSlave, const uint8_t * data, const
 }
 
 
-FctERR NONNULL__ PCA9685_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ PCA9685_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (addr > PCA9685__TestMode)				{ return ERROR_RANGE; }		// Unknown register

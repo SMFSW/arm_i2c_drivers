@@ -20,7 +20,7 @@
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ MB85RC256V_Init_Sequence(MB85RC256V_t * pCpnt)
+__WEAK FctERR NONNULL__ MB85RC256V_Init_Sequence(MB85RC256V_t * const pCpnt)
 {
 	FctERR err = ERROR_OK;
 
@@ -38,7 +38,7 @@ __WEAK FctERR NONNULL__ MB85RC256V_Init_Sequence(MB85RC256V_t * pCpnt)
 /****************************************************************/
 
 
-FctERR NONNULL__ MB85RC256V_Get_ID(MB85RC256V_t * pCpnt)
+FctERR NONNULL__ MB85RC256V_Get_ID(MB85RC256V_t * const pCpnt)
 {
 	uint8_t	ID[3];
 	FctERR	err;

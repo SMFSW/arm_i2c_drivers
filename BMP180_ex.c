@@ -15,7 +15,7 @@
 static uint8_t BMP180_OSS_time[4] = { 5, 8, 14, 26 };	//!< BMP180 Oversampling values with +1.5ms than given in datasheet
 
 
-FctERR NONNULL__ BMP180_Start_Conversion(BMP180_t * pCpnt, const BMP180_meas meas)
+FctERR NONNULL__ BMP180_Start_Conversion(BMP180_t * const pCpnt, const BMP180_meas meas)
 {
 	uBMP180_REG__MEAS_CTRL	CTRL = { 0 };
 	FctERR					err;
@@ -35,7 +35,7 @@ FctERR NONNULL__ BMP180_Start_Conversion(BMP180_t * pCpnt, const BMP180_meas mea
 }
 
 
-FctERR NONNULL__ BMP180_Get_Temperature_Raw(BMP180_t * pCpnt, int32_t * tp)
+FctERR NONNULL__ BMP180_Get_Temperature_Raw(BMP180_t * const pCpnt, int32_t * tp)
 {
 	uint16_t	RES;
 	FctERR		err;
@@ -53,7 +53,7 @@ FctERR NONNULL__ BMP180_Get_Temperature_Raw(BMP180_t * pCpnt, int32_t * tp)
 }
 
 
-FctERR NONNULL__ BMP180_Get_Pressure_Raw(BMP180_t * pCpnt, int32_t * pr)
+FctERR NONNULL__ BMP180_Get_Pressure_Raw(BMP180_t * const pCpnt, int32_t * pr)
 {
 	uint8_t		RES[3];
 	FctERR		err;

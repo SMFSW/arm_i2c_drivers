@@ -15,16 +15,19 @@
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_ADS1115)
+
+// HARMcksL libs
+#include "tick_utils.h"
 /****************************************************************/
 
 
-ADS1115_t ADS1115[I2C_ADS1115_NB];
+ADS1115_t ADS1115[I2C_ADS1115_NB] = { 0 };
 
 
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ ADS1115_Init_Sequence(ADS1115_t * pCpnt)
+__WEAK FctERR NONNULL__ ADS1115_Init_Sequence(ADS1115_t * const pCpnt)
 {
 	pCpnt->cfg.Lo_Thresh = 0x8000;		// - max Default value
 	pCpnt->cfg.Hi_Thresh = 0x7FFF;		// + max Default value
@@ -39,16 +42,25 @@ __WEAK FctERR NONNULL__ ADS1115_Init_Sequence(ADS1115_t * pCpnt)
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ ADS1115_handler(ADS1115_t * pCpnt)
+__WEAK FctERR NONNULL__ ADS1115_handler(ADS1115_t * const pCpnt)
 {
 	FctERR err;
 
-	//! \note In case of ADS1115__MODE_CONTINUOUS, conversion time need to be respected (thus ADS1115_get_conv_ms may be used to help ensure that)
+	/**!\note Conversion time need to be respected,
+	**	\ref ADS1115_handler_it may be used to handle GPIO pin interrupt, or
+	**	\ref ADS1115_get_conv_ms may be used to help ensure that without using interrupt pin.
+	**/
 
+	/**!\note If single shot is required, \ref ADS1115_Start_NextConversion can be called once at init, using \ref ADS1115_handler_it afterwards.
+	**	\ref ADS1115_handler shall be user implemented in this case, only to get converted value when interrupt pin triggers
+	**	(and eventually start another conversion with \ref ADS1115_Start_NextConversion).
+	**/
 	if (pCpnt->cfg.mode == ADS1115__MODE_SINGLE_SHOT)
 	{
 		err = ADS1115_Start_NextConversion(pCpnt);
 		if (err)	{ return err; }
+
+		Delay_us(ADS1115_Get_conv_us(pCpnt));
 	}
 
 	err = ADS1115_Get_Conversion(pCpnt);
@@ -66,6 +78,18 @@ __WEAK FctERR NONNULL__ ADS1115_handler(ADS1115_t * pCpnt)
 	{
 		err = ADS1115_Start_NextConversion(pCpnt);
 	}
+
+	return err;
+}
+
+
+__WEAK FctERR NONNULL__ ADS1115_handler_it(ADS1115_t * const pCpnt)
+{
+	FctERR	err;
+	bool	interrupt;
+
+	err = ADS1115_RDY_GPIO_Get(pCpnt, &interrupt);
+	if ((!err) && interrupt)	{ err = ADS1115_handler(pCpnt); }
 
 	return err;
 }

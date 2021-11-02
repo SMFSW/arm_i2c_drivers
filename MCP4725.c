@@ -51,7 +51,7 @@ FctERR NONNULL__ MCP4725_General_Call(const I2C_HandleTypeDef * hi2c, const uint
 }
 
 
-FctERR NONNULL__ MCP4725_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t nb)
+FctERR NONNULL__ MCP4725_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t nb)
 {
 	if (!I2C_is_enabled(pSlave))	{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (nb > 3)						{ return ERROR_RANGE; }		// More bytes than registers
@@ -63,7 +63,7 @@ FctERR NONNULL__ MCP4725_Write(I2C_slave_t * pSlave, const uint8_t * data, const
 }
 
 
-FctERR NONNULL__ MCP4725_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t nb)
+FctERR NONNULL__ MCP4725_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t nb)
 {
 	if (!I2C_is_enabled(pSlave))	{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (nb > 3)						{ return ERROR_RANGE; }		// More bytes than registers

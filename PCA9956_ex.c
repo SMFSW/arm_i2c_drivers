@@ -33,7 +33,7 @@ FctERR NONNULL__ PCA9956_Set_Auto_Increment(PCA9956_t * const pCpnt, const PCA96
 }
 
 
-FctERR NONNULL__ PCA9956_Set_Latch(PCA9956_t * pCpnt, const PCA96xx_latch latch)
+FctERR NONNULL__ PCA9956_Set_Latch(PCA9956_t * const pCpnt, const PCA96xx_latch latch)
 {
 	uPCA9956_REG__MODE2	MODE2;
 	FctERR				err;
@@ -177,7 +177,7 @@ FctERR NONNULL__ PCA9956_ReadEFLAGs(PCA9956_t * const pCpnt, uPCA9956_REG__EFLAG
 }
 
 
-FctERR NONNULL__ PCA9956_ReadRegister(PCA9956_t * pCpnt, const PCA9956_reg reg, uint8_t * val)
+FctERR NONNULL__ PCA9956_ReadRegister(PCA9956_t * const pCpnt, const PCA9956_reg reg, uint8_t * val)
 {
 	*val = 0;
 
@@ -185,6 +185,23 @@ FctERR NONNULL__ PCA9956_ReadRegister(PCA9956_t * pCpnt, const PCA9956_reg reg, 
 
 	return PCA9956_Read(pCpnt->cfg.slave_inst, val, reg, 1);
 }
+
+
+/****************************************************************/
+
+
+__WEAK FctERR NONNULL__ PCA9956_RST_GPIO_Init(PCA9956_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	return I2C_peripheral_GPIO_init(&pCpnt->cfg.RST_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+
+__WEAK FctERR NONNULL__ PCA9956_RST_GPIO_Set(PCA9956_t * const pCpnt, const bool state) {
+	return I2C_peripheral_GPIO_set(&pCpnt->cfg.RST_GPIO, state); }
+
+
+__WEAK FctERR NONNULL__ PCA9956_OE_GPIO_Init(PCA9956_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	return I2C_peripheral_GPIO_init(&pCpnt->cfg.OE_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+
+__WEAK FctERR NONNULL__ PCA9956_OE_GPIO_Set(PCA9956_t * const pCpnt, const bool state) {
+	return I2C_peripheral_GPIO_set(&pCpnt->cfg.OE_GPIO, state); }
 
 
 /****************************************************************/

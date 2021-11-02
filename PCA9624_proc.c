@@ -12,13 +12,13 @@
 /****************************************************************/
 
 
-PCA9624_t PCA9624[I2C_PCA9624_NB];
+PCA9624_t PCA9624[I2C_PCA9624_NB] = { 0 };
 
 
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ PCA9624_Init_Sequence(PCA9624_t * pCpnt)
+__WEAK FctERR NONNULL__ PCA9624_Init_Sequence(PCA9624_t * const pCpnt)
 {
 	FctERR		err;
 	uint8_t		DATA = 0x81U;

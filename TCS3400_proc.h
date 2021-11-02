@@ -42,30 +42,31 @@
 ** \brief TCS3400 user interface struct
 **/
 typedef struct TCS3400_t {
-	uint16_t		Red;				//!< Current Red conversion
-	uint16_t		Green;				//!< Current Green conversion
-	uint16_t		Blue;				//!< Current Blue conversion
-	uint16_t		Clear;				//!< Current Clear conversion
-	uint32_t		Lux;				//!< Current Illuminance (lux)
-	uint32_t		Temp;				//!< Current Color temperature (in Kelvin)
-	float			xy[2];				//!< Current CIE1931 chromacity coordinates
-	float			IR_Ratio;			//!< Current IR ratio (in percent)
-	float			Saturation_Ratio;	//!< Current Saturation ratio (in percent)
-	bool			SaturationRipple;	//!< Current Ripple saturation status (75% of saturation value)
-	bool			Saturation;			//!< Current Sensor saturation status
+	uint16_t			Red;				//!< Current Red conversion
+	uint16_t			Green;				//!< Current Green conversion
+	uint16_t			Blue;				//!< Current Blue conversion
+	uint16_t			Clear;				//!< Current Clear conversion
+	uint32_t			Lux;				//!< Current Illuminance (lux)
+	uint32_t			Temp;				//!< Current Color temperature (in Kelvin)
+	float				xy[2];				//!< Current CIE1931 chromacity coordinates
+	float				IR_Ratio;			//!< Current IR ratio (in percent)
+	float				Saturation_Ratio;	//!< Current Saturation ratio (in percent)
+	bool				SaturationRipple;	//!< Current Ripple saturation status (75% of saturation value)
+	bool				Saturation;			//!< Current Sensor saturation status
 	struct {
-	I2C_slave_t *	slave_inst;			//!< Slave structure
-	float			mat[3][3];			//!< RGB to XYZ matrix
-	TCS3400_gain	Gain;				//!< Sensor gain config
-	uint8_t			Integ_reg;			//!< Sensor integration time config (value written to register)
-	uint16_t		Integ;				//!< Sensor integration time config
-	uint16_t		Wait;				//!< Sensor wait time config
-	uint16_t		LowThreshold;		//!< Low Threshold config
-	uint16_t		HighThreshold;		//!< High Threshold config
-	bool			AIEN;				//!< Sensor ALS (Ambient Light Sensing) interrupts enabled config
-	bool			WEN;				//!< Wait between ALS conversions enabled config
-	uint8_t			Revision_ID;		//!< Revision ID
-	uint8_t			Device_ID;			//!< Chip ID
+	I2C_slave_t *		slave_inst;			//!< Slave structure
+	PeripheralGPIO_t	INT_GPIO;			//!< Interrupt GPIO struct
+	float				mat[3][3];			//!< RGB to XYZ matrix
+	TCS3400_gain		Gain;				//!< Sensor gain config
+	uint8_t				Integ_reg;			//!< Sensor integration time config (value written to register)
+	uint16_t			Integ;				//!< Sensor integration time config
+	uint16_t			Wait;				//!< Sensor wait time config
+	uint16_t			LowThreshold;		//!< Low Threshold config
+	uint16_t			HighThreshold;		//!< High Threshold config
+	bool				AIEN;				//!< Sensor ALS (Ambient Light Sensing) interrupts enabled config
+	bool				WEN;				//!< Wait between ALS conversions enabled config
+	uint8_t				Revision_ID;		//!< Revision ID
+	uint8_t				Device_ID;			//!< Chip ID
 	} cfg;
 } TCS3400_t;
 
@@ -84,30 +85,41 @@ extern TCS3400_t	TCS3400[I2C_TCS3400_NB];	//!< TCS34000 User structure
 ** \param[in] pCpnt - Pointer to TCS3400 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3400_Init_Sequence(TCS3400_t * pCpnt);
+FctERR NONNULL__ TCS3400_Init_Sequence(TCS3400_t * const pCpnt);
 
 /*!\brief Get current Color temperature (in Kelvin)
 ** \param[in] pCpnt - Pointer to TCS3400 component
 ** \return FctERR - error code
 **/
-__INLINE uint32_t NONNULL_INLINE__ TCS3400_Get_Temp(TCS3400_t * pCpnt) {
+__INLINE uint32_t NONNULL_INLINE__ TCS3400_Get_Temp(TCS3400_t * const pCpnt) {
 	return pCpnt->Temp; }
 
 /*!\brief Get current Illuminance (in lux)
 ** \param[in] pCpnt - Pointer to TCS3400 component
 ** \return FctERR - error code
 **/
-__INLINE uint32_t NONNULL_INLINE__ TCS3400_Get_Lux(TCS3400_t * pCpnt) {
+__INLINE uint32_t NONNULL_INLINE__ TCS3400_Get_Lux(TCS3400_t * const pCpnt) {
 	return pCpnt->Lux; }
+
 
 /*!\brief Handler for TCS3400 peripheral
 ** \weak TCS3400 handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle TCS3400 tasks
-** \note Alternately may be called when event occurs on TCS3400 pin
+** \note Alternately may be called when event occurs on TCS3400 pin (or by calling \ref TCS3400_handler_it instead)
 ** \param[in] pCpnt - Pointer to TCS3400 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3400_handler(TCS3400_t * pCpnt);
+FctERR NONNULL__ TCS3400_handler(TCS3400_t * const pCpnt);
+
+/*!\brief Handler for TCS3400 peripheral GPIO interrupt
+** \note \ref TCS3400_INT_GPIO_Init has to be called at init before using interrupt handler function
+** \weak TCS3400 GPIO interrupt handler may be user implemented to suit custom needs
+** \note May be called periodically to handle TCS3400 tasks through interrupts
+** \param[in] pCpnt - Pointer to TCS3400 component
+** \return FctERR - error code
+**/
+FctERR NONNULL__ TCS3400_handler_it(TCS3400_t * const pCpnt);
+
 
 /*!\brief Handler for all TCS3400 peripherals
 ** \note May be called periodically to handle all TCS3400 tasks
@@ -115,6 +127,15 @@ FctERR NONNULL__ TCS3400_handler(TCS3400_t * pCpnt);
 __INLINE void INLINE__ TCS3400_handler_all(void) {
 	for (TCS3400_t * pCpnt = TCS3400 ; pCpnt < &TCS3400[I2C_TCS3400_NB] ; pCpnt++) {
 		TCS3400_handler(pCpnt); }
+}
+
+/*!\brief Handler for all TCS3400 peripherals GPIO interrupt
+** \note \ref TCS3400_INT_GPIO_Init has to be called at init before using interrupt handler function
+** \note May be called periodically to handle all TCS3400 tasks
+**/
+__INLINE void INLINE__ TCS3400_handler_it_all(void) {
+	for (TCS3400_t * pCpnt = TCS3400 ; pCpnt < &TCS3400[I2C_TCS3400_NB] ; pCpnt++) {
+		TCS3400_handler_it(pCpnt); }
 }
 
 

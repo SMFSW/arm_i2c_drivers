@@ -33,10 +33,11 @@
 ** \brief AMG88 user interface struct
 **/
 typedef struct AMG88_t {
-	uint16_t		Pixels[8][8];		//!< Grid-EYE current raw temperature
-	uint16_t		Thermistor;			//!< Thermistor raw temperature
+	uint16_t			Pixels[8][8];		//!< Grid-EYE current raw temperature
+	uint16_t			Thermistor;			//!< Thermistor raw temperature
 	struct {
-	I2C_slave_t *	slave_inst;			//!< Slave structure
+	I2C_slave_t *		slave_inst;			//!< Slave structure
+	PeripheralGPIO_t	INT_GPIO;			//!< Interrupt GPIO struct
 	} cfg;
 } AMG88_t;
 
@@ -55,17 +56,26 @@ extern AMG88_t AMG88[I2C_AMG88_NB];		//!< AMG88 User structure
 ** \param[in] pCpnt - Pointer to AMG88 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AMG88_Init_Sequence(AMG88_t * pCpnt);
+FctERR NONNULL__ AMG88_Init_Sequence(AMG88_t * const pCpnt);
 
 
 /*!\brief Handler for AMG88 peripheral
 ** \weak AMG88 handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle AMG88 tasks
-** \note Alternately may be called when event occurs on AMG88 pin
+** \note Alternately may be called when event occurs on AMG88 pin (or by calling \ref AMG88_handler_it instead)
 ** \param[in] pCpnt - Pointer to AMG88 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AMG88_handler(AMG88_t * pCpnt);
+FctERR NONNULL__ AMG88_handler(AMG88_t * const pCpnt);
+
+/*!\brief Handler for AMG88 peripheral GPIO interrupt
+** \note \ref AMG88_INT_GPIO_Init has to be called at init before using interrupt handler function
+** \weak AMG88 GPIO interrupt handler may be user implemented to suit custom needs
+** \note May be called periodically to handle AMG88 tasks through interrupts
+** \param[in] pCpnt - Pointer to AMG88 component
+** \return FctERR - error code
+**/
+FctERR NONNULL__ AMG88_handler_it(AMG88_t * const pCpnt);
 
 
 /*!\brief Handler for all AMG88 peripherals
@@ -74,6 +84,15 @@ FctERR NONNULL__ AMG88_handler(AMG88_t * pCpnt);
 __INLINE void INLINE__ AMG88_handler_all(void) {
 	for (AMG88_t * pCpnt = AMG88 ; pCpnt < &AMG88[I2C_AMG88_NB] ; pCpnt++) {
 		AMG88_handler(pCpnt); }
+}
+
+/*!\brief Handler for all AMG88 peripherals GPIO interrupt
+** \note \ref AMG88_INT_GPIO_Init has to be called at init before using interrupt handler function
+** \note May be called periodically to handle all AMG88 tasks
+**/
+__INLINE void INLINE__ AMG88_handler_it_all(void) {
+	for (AMG88_t * pCpnt = AMG88 ; pCpnt < &AMG88[I2C_AMG88_NB] ; pCpnt++) {
+		AMG88_handler_it(pCpnt); }
 }
 
 

@@ -46,7 +46,7 @@ FctERR APDS9960_Init_Single(void) {
 /****************************************************************/
 
 
-FctERR NONNULL__ APDS9960_Write(I2C_slave_t * pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ APDS9960_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
 	if (addr > APDS9960__AICLEAR)				{ return ERROR_RANGE; }		// Unknown register
@@ -59,7 +59,7 @@ FctERR NONNULL__ APDS9960_Write(I2C_slave_t * pSlave, const uint8_t * data, cons
 }
 
 
-FctERR NONNULL__ APDS9960_Read(I2C_slave_t * pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ APDS9960_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
 	if ((addr + nb) > APDS9960__GFIFO_R + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
@@ -71,7 +71,7 @@ FctERR NONNULL__ APDS9960_Read(I2C_slave_t * pSlave, uint8_t * data, const uint1
 }
 
 
-FctERR NONNULL__ APDS9960_Write_Word(I2C_slave_t * pSlave, const uint16_t * data, const uint16_t addr)
+FctERR NONNULL__ APDS9960_Write_Word(I2C_slave_t * const pSlave, const uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 
@@ -83,7 +83,7 @@ FctERR NONNULL__ APDS9960_Write_Word(I2C_slave_t * pSlave, const uint16_t * data
 }
 
 
-FctERR NONNULL__ APDS9960_Read_Word(I2C_slave_t * pSlave, uint16_t * data, const uint16_t addr)
+FctERR NONNULL__ APDS9960_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, const uint16_t addr)
 {
 	uint8_t	WREG[2];
 	FctERR	err;
@@ -98,7 +98,7 @@ FctERR NONNULL__ APDS9960_Read_Word(I2C_slave_t * pSlave, uint16_t * data, const
 }
 
 
-FctERR NONNULL__ APDS9960_Write_Special(I2C_slave_t * pSlave, const APDS9960_spec_func func)
+FctERR NONNULL__ APDS9960_Write_Special(I2C_slave_t * const pSlave, const APDS9960_spec_func func)
 {
 	if (func > APDS9960__SF_AICLEAR)	{ return ERROR_VALUE; }		// Unknown special function
 

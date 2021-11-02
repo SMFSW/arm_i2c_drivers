@@ -81,7 +81,7 @@ typedef union uAT42QT_REG_MAP {
 ** \note \ref AT42QT__WRITE_SETUPS cannot be used in this function (does not make sense, as it's used to write whole setup in one transmission)
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AT42QT1244_Send_Command(AT42QT1244_t * pCpnt, const AT42QT_cmd cmd);
+FctERR NONNULL__ AT42QT1244_Send_Command(AT42QT1244_t * const pCpnt, const AT42QT_cmd cmd);
 
 /*!\brief Send setup parameters to AT42QT1244 peripheral
 ** \note No AT42QT1244 peripheral reset done after writing setups, should be customly implemented when needed
@@ -93,7 +93,7 @@ FctERR NONNULL__ AT42QT1244_Send_Command(AT42QT1244_t * pCpnt, const AT42QT_cmd 
 ** \param[in] nb - Number of setup values to send
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AT42QT1244_Send_Setup(AT42QT1244_t * pCpnt, uint16_t * const hcrc, const uint8_t * setup, const uint8_t addr, const uint8_t nb);
+FctERR NONNULL__ AT42QT1244_Send_Setup(AT42QT1244_t * const pCpnt, uint16_t * const hcrc, const uint8_t * setup, const uint8_t addr, const uint8_t nb);
 
 /*!\brief Key use setup for AT42QT1244 peripheral
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
@@ -102,7 +102,7 @@ FctERR NONNULL__ AT42QT1244_Send_Setup(AT42QT1244_t * pCpnt, uint16_t * const hc
 ** \param[in] use - Key enabled/disabled
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AT42QT1244_Setup_Keys(AT42QT1244_t * pCpnt, uint16_t * const hcrc, const uint32_t mask_keys, const bool use);
+FctERR NONNULL__ AT42QT1244_Setup_Keys(AT42QT1244_t * const pCpnt, uint16_t * const hcrc, const uint32_t mask_keys, const bool use);
 
 /*!\brief Frequency hopping mode setup for AT42QT1244 peripheral
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
@@ -110,7 +110,7 @@ FctERR NONNULL__ AT42QT1244_Setup_Keys(AT42QT1244_t * pCpnt, uint16_t * const hc
 ** \param[in] FHM - Frequency hopping mode parameters
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AT42QT1244_Setup_FHM(AT42QT1244_t * pCpnt, uint16_t * const hcrc, const AT42QT_FHM FHM);
+FctERR NONNULL__ AT42QT1244_Setup_FHM(AT42QT1244_t * const pCpnt, uint16_t * const hcrc, const AT42QT_FHM FHM);
 
 
 /*!\brief Reset command for AT42QT1244 peripheral
@@ -118,7 +118,7 @@ FctERR NONNULL__ AT42QT1244_Setup_FHM(AT42QT1244_t * pCpnt, uint16_t * const hcr
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AT42QT1244_Reset(AT42QT1244_t * pCpnt);
+FctERR NONNULL__ AT42QT1244_Reset(AT42QT1244_t * const pCpnt);
 
 
 /*!\brief Get keys detect status for AT42QT1244 peripheral
@@ -126,7 +126,7 @@ FctERR NONNULL__ AT42QT1244_Reset(AT42QT1244_t * pCpnt);
 ** \param[in] Keys - Pointer to keys result
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AT42QT1244_Get_Keys(AT42QT1244_t * pCpnt, uint32_t * Keys);
+FctERR NONNULL__ AT42QT1244_Get_Keys(AT42QT1244_t * const pCpnt, uint32_t * Keys);
 
 
 /*!\brief Get key data for AT42QT1244 peripheral
@@ -135,7 +135,7 @@ FctERR NONNULL__ AT42QT1244_Get_Keys(AT42QT1244_t * pCpnt, uint32_t * Keys);
 ** \param[in] Key_Num - Key to get datas
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ AT42QT1244_Get_Key_Data(AT42QT1244_t * pCpnt, uAT42QT_REG__KEY_DATA * Key_Data, const uint8_t Key_Num) {
+__INLINE FctERR NONNULL_INLINE__ AT42QT1244_Get_Key_Data(AT42QT1244_t * const pCpnt, uAT42QT_REG__KEY_DATA * Key_Data, const uint8_t Key_Num) {
 	return AT42QT1244_Read(pCpnt->cfg.slave_inst, (uint8_t *) Key_Data, AT42QT__DATA_KEY_1 + (Key_Num * sizeof(uAT42QT_REG__KEY_DATA)), sizeof(uAT42QT_REG__KEY_DATA)); }
 
 
@@ -144,7 +144,7 @@ __INLINE FctERR NONNULL_INLINE__ AT42QT1244_Get_Key_Data(AT42QT1244_t * pCpnt, u
 ** \param[in] st - Pointer to peripheral status result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ AT42QT1244_Get_Status(AT42QT1244_t * pCpnt, uAT42QT_REG__DEVICE_STATUS * st) {
+__INLINE FctERR NONNULL_INLINE__ AT42QT1244_Get_Status(AT42QT1244_t * const pCpnt, uAT42QT_REG__DEVICE_STATUS * st) {
 	return AT42QT1244_Read(pCpnt->cfg.slave_inst, (uint8_t *) st, AT42QT__DEVICE_STATUS, 1); }
 
 
@@ -152,7 +152,49 @@ __INLINE FctERR NONNULL_INLINE__ AT42QT1244_Get_Status(AT42QT1244_t * pCpnt, uAT
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
 ** \return Calibration status
 **/
-int NONNULL__ AT42QT1244_is_Calib_Pending(AT42QT1244_t * pCpnt);
+int NONNULL__ AT42QT1244_is_Calib_Pending(AT42QT1244_t * const pCpnt);
+
+
+/*******************/
+/*** GPIO access ***/
+/*******************/
+
+/*!\brief Change GPIO pin init for AT42QT1244
+** \weak AT42QT1244 Change GPIO pin init may be user implemented if needed
+** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \param[in] GPIOx - CHANGE port
+** \param[in] GPIO_Pin - CHANGE pin
+** \param[in] GPIO_Active: CHANGE pin active state
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ AT42QT1244_CHANGE_GPIO_Init(AT42QT1244_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+
+/*!\brief Change GPIO pin getter for AT42QT1244
+** \weak AT42QT1244 Change GPIO pin getter may be user implemented if needed
+** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \param[in,out] pState - Pointer to CHANGE pin state variable (0: inactive, 1: active)
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ AT42QT1244_CHANGE_GPIO_Get(AT42QT1244_t * const pCpnt, bool * const pState);
+
+
+/*!\brief Reset GPIO pin init for AT42QT1244
+** \weak AT42QT1244 Reset GPIO pin init may be user implemented if needed
+** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \param[in] GPIOx - RST port
+** \param[in] GPIO_Pin - RST pin
+** \param[in] GPIO_Active: RST pin active state
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ AT42QT1244_RST_GPIO_Init(AT42QT1244_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+
+/*!\brief Reset GPIO pin setter for AT42QT1244
+** \weak AT42QT1244 Reset GPIO pin setter may be user implemented if needed
+** \param[in] pCpnt - Pointer to AT42QT1244 component
+** \param[in] state - state to write on RST pin (0: inactive, 1: active)
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ AT42QT1244_RST_GPIO_Set(AT42QT1244_t * const pCpnt, const bool state);
 
 
 /****************************************************************/

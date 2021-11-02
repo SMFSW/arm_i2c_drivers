@@ -46,11 +46,12 @@
 // Section: Types
 // *****************************************************************************
 typedef struct MB85RC256V_t {
-	struct PACK__ {
-	I2C_slave_t *	slave_inst;			//!< Slave structure
-	uint16_t		Manufacture_ID;
-	uint8_t			Density;
-	uint8_t			Product_ID;
+	struct {
+	I2C_slave_t *		slave_inst;		//!< Slave structure
+	PeripheralGPIO_t	WP_GPIO;		//!< Write Protect GPIO struct
+	uint16_t			Manufacture_ID;	//!< Manufacturer ID
+	uint8_t				Density;		//!< Chip density
+	uint8_t				Product_ID;		//!< Product ID
 	} cfg;
 } MB85RC256V_t;
 
@@ -94,7 +95,7 @@ FctERR MB85RC256V_Init_Single(void);
 ** \param[in] nb - Number of bytes to write
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MB85RC256V_Write(MB85RC256V_t * pCpnt, const uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ MB85RC256V_Write(MB85RC256V_t * const pCpnt, const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for MB85RC256V
@@ -104,7 +105,7 @@ FctERR NONNULL__ MB85RC256V_Write(MB85RC256V_t * pCpnt, const uint8_t * data, co
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MB85RC256V_Read(MB85RC256V_t * pCpnt, uint8_t * data, const uint16_t addr, const uint16_t nb);
+FctERR NONNULL__ MB85RC256V_Read(MB85RC256V_t * const pCpnt, uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read ID function for MB85RC256V (reads 3 bytes)
@@ -112,7 +113,7 @@ FctERR NONNULL__ MB85RC256V_Read(MB85RC256V_t * pCpnt, uint8_t * data, const uin
 ** \param[in,out] data - pointer to read to
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MB85RC256V_Read_ID(MB85RC256V_t * pCpnt, uint8_t * data);
+FctERR NONNULL__ MB85RC256V_Read_ID(MB85RC256V_t * const pCpnt, uint8_t * data);
 
 
 /****************************************************************/

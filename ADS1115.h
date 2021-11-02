@@ -210,7 +210,7 @@ FctERR ADS1115_Init_Single(void);
 ** \param[in] addr - Address to write to
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ ADS1115_Write(I2C_slave_t * pSlave, const uint16_t * data, const uint16_t addr);
+FctERR NONNULL__ ADS1115_Write(I2C_slave_t * const pSlave, const uint16_t * data, const uint16_t addr);
 
 
 /*!\brief I2C Read function for ADS1115
@@ -219,7 +219,7 @@ FctERR NONNULL__ ADS1115_Write(I2C_slave_t * pSlave, const uint16_t * data, cons
 ** \param[in] addr - Address to read from
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ ADS1115_Read(I2C_slave_t * pSlave, uint16_t * data, const uint16_t addr);
+FctERR NONNULL__ ADS1115_Read(I2C_slave_t * const pSlave, uint16_t * data, const uint16_t addr);
 
 
 /****************************************************************/

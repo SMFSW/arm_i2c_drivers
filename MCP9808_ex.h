@@ -52,28 +52,28 @@ typedef union uMCP9808_REG_MAP {
 ** \param[in] cfg - Configuration value
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP9808_Write_Config(MCP9808_t * pCpnt, const uint16_t cfg);
+FctERR NONNULL__ MCP9808_Write_Config(MCP9808_t * const pCpnt, const uint16_t cfg);
 
 /*!\brief Write MCP9808 configuration
 ** \param[in] pCpnt - Pointer to MCP9808 component
 ** \param[in] shutdown - 0 Normal operation, 1 Shutdown
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP9808_Shutdown(MCP9808_t * pCpnt, const bool shutdown);
+FctERR NONNULL__ MCP9808_Shutdown(MCP9808_t * const pCpnt, const bool shutdown);
 
 /*!\brief Set MCP9808 alert hysteresis
 ** \param[in] pCpnt - Pointer to MCP9808 component
 ** \param[in] hys - Alert hysteresis
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP9808_Set_AlertHysteresis(MCP9808_t * pCpnt, const MCP9808_hyst hys);
+FctERR NONNULL__ MCP9808_Set_AlertHysteresis(MCP9808_t * const pCpnt, const MCP9808_hyst hys);
 
 /*!\brief Set MCP9808 alert type
 ** \param[in] pCpnt - Pointer to MCP9808 component
 ** \param[in] comparator - 0 ???, 1 Comparator
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP9808_Set_AlertType(MCP9808_t * pCpnt, const bool comparator);
+FctERR NONNULL__ MCP9808_Set_AlertType(MCP9808_t * const pCpnt, const bool comparator);
 
 /*!\brief Set MCP9808 alert enable
 ** \param[in] pCpnt - Pointer to MCP9808 component
@@ -81,7 +81,7 @@ FctERR NONNULL__ MCP9808_Set_AlertType(MCP9808_t * pCpnt, const bool comparator)
 ** \param[in] alt - 0 Low, 1 High
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP9808_Set_AlertOutput(MCP9808_t * pCpnt, const bool en, const bool alt);
+FctERR NONNULL__ MCP9808_Set_AlertOutput(MCP9808_t * const pCpnt, const bool en, const bool alt);
 
 /*!\brief Set MCP9808 alert lock
 ** \param[in] pCpnt - Pointer to MCP9808 component
@@ -89,14 +89,14 @@ FctERR NONNULL__ MCP9808_Set_AlertOutput(MCP9808_t * pCpnt, const bool en, const
 ** \param[in] lock - 0 Unlocked, 1 Locked
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP9808_Set_AlertLock(MCP9808_t * pCpnt, const MCP9808_alert alt, const bool lock);
+FctERR NONNULL__ MCP9808_Set_AlertLock(MCP9808_t * const pCpnt, const MCP9808_alert alt, const bool lock);
 
 /*!\brief Set MCP9808 Resolution
 ** \param[in] pCpnt - Pointer to MCP9808 component
 ** \param[in] res - Resolution for MCP9808
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP9808_Set_Resolution(MCP9808_t * pCpnt, const MCP9808_res res);
+FctERR NONNULL__ MCP9808_Set_Resolution(MCP9808_t * const pCpnt, const MCP9808_res res);
 
 
 /*!\brief Get MCP9808 Configuration
@@ -104,7 +104,7 @@ FctERR NONNULL__ MCP9808_Set_Resolution(MCP9808_t * pCpnt, const MCP9808_res res
 ** \param[in,out] cfg - pointer to Configuration value to read to
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ MCP9808_Read_Config(MCP9808_t * pCpnt, uint16_t * cfg) {
+__INLINE FctERR NONNULL_INLINE__ MCP9808_Read_Config(MCP9808_t * const pCpnt, uint16_t * cfg) {
 	return MCP9808_Read(pCpnt->cfg.slave_inst, cfg, MCP9808__CONFIGURATION, 1); }
 
 /*!\brief Get MCP9808 Configuration
@@ -112,7 +112,7 @@ __INLINE FctERR NONNULL_INLINE__ MCP9808_Read_Config(MCP9808_t * pCpnt, uint16_t
 ** \param[in,out] temp - pointer to Temperature value to read to
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ MCP9808_Get_Temperature_Raw(MCP9808_t * pCpnt, uint16_t * temp) {
+__INLINE FctERR NONNULL_INLINE__ MCP9808_Get_Temperature_Raw(MCP9808_t * const pCpnt, uint16_t * temp) {
 	return MCP9808_Read(pCpnt->cfg.slave_inst, temp, MCP9808__TEMPERATURE, 1); }
 
 /*!\brief Get MCP9808 Resolution
@@ -120,7 +120,7 @@ __INLINE FctERR NONNULL_INLINE__ MCP9808_Get_Temperature_Raw(MCP9808_t * pCpnt, 
 ** \param[in,out] res - pointer to Resolution to read to
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP9808_Get_Resolution(MCP9808_t * pCpnt, MCP9808_res * res);
+FctERR NONNULL__ MCP9808_Get_Resolution(MCP9808_t * const pCpnt, MCP9808_res * res);
 
 
 /*!\brief Get MCP9808 Manufacturer ID
@@ -128,7 +128,7 @@ FctERR NONNULL__ MCP9808_Get_Resolution(MCP9808_t * pCpnt, MCP9808_res * res);
 ** \param[in,out] id - pointer to Manufacturer ID result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ MCP9808_Get_ManufacturerID(MCP9808_t * pCpnt, uint16_t * id) {
+__INLINE FctERR NONNULL_INLINE__ MCP9808_Get_ManufacturerID(MCP9808_t * const pCpnt, uint16_t * id) {
 	return MCP9808_Read(pCpnt->cfg.slave_inst, id, MCP9808__MANUFACTURER_ID, 1); }
 
 /*!\brief Get MCP9808 chip ID
@@ -136,8 +136,31 @@ __INLINE FctERR NONNULL_INLINE__ MCP9808_Get_ManufacturerID(MCP9808_t * pCpnt, u
 ** \param[in,out] id - pointer to chip ID result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ MCP9808_Get_ChipID(MCP9808_t * pCpnt, uint16_t * id) {
+__INLINE FctERR NONNULL_INLINE__ MCP9808_Get_ChipID(MCP9808_t * const pCpnt, uint16_t * id) {
 	return MCP9808_Read(pCpnt->cfg.slave_inst, id, MCP9808__DEVICE_ID, 1); }
+
+
+/*******************/
+/*** GPIO access ***/
+/*******************/
+
+/*!\brief Alert GPIO pin init for MCP9808
+** \weak MCP9808 Alert GPIO pin init may be user implemented if needed
+** \param[in] pCpnt - Pointer to MCP9808 component
+** \param[in] GPIOx - Alert port
+** \param[in] GPIO_Pin - Alert pin
+** \param[in] GPIO_Active: Alert pin active state
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ MCP9808_Alert_GPIO_Init(MCP9808_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+
+/*!\brief Change GPIO pin getter for MCP9808
+** \weak MCP9808 Change GPIO pin getter may be user implemented if needed
+** \param[in] pCpnt - Pointer to MCP9808 component
+** \param[in,out] pState - Pointer to Alert pin state variable (0: inactive, 1: active)
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ MCP9808_Alert_GPIO_Get(MCP9808_t * const pCpnt, bool * const pState);
 
 
 /****************************************************************/
