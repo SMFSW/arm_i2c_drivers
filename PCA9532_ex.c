@@ -14,25 +14,21 @@
 
 FctERR NONNULL__ PCA9532_ReadRegister(PCA9532_t * const pCpnt, const PCA9532_reg reg, uint8_t * const val)
 {
-	*val = 0;
-
 	if (reg > PCA9532__LS3)	{ return ERROR_RANGE; }		// Unknown register
 
-	return PCA9532_Read(pCpnt->cfg.slave_inst, val, reg, 1);
+	return PCA9532_Read(pCpnt->cfg.slave_inst, val, reg, sizeof(uint8_t));
 }
 
 
 FctERR NONNULL__ PCA9532_Read_INPUT0(PCA9532_t * const pCpnt, uPCA9532_REG__INPUT0 * const pINPUT0)
 {
-	pINPUT0->Byte = 0;
-	return PCA9532_Read(pCpnt->cfg.slave_inst, &pINPUT0->Byte, PCA9532__INPUT0, 1);
+	return PCA9532_Read(pCpnt->cfg.slave_inst, &pINPUT0->Byte, PCA9532__INPUT0, sizeof(uint8_t));
 }
 
 
 FctERR NONNULL__ PCA9532_Read_INPUT1(PCA9532_t * const pCpnt, uPCA9532_REG__INPUT1 * const pINPUT1)
 {
-	pINPUT1->Byte = 0;
-	return PCA9532_Read(pCpnt->cfg.slave_inst, &pINPUT1->Byte, PCA9532__INPUT1, 1);
+	return PCA9532_Read(pCpnt->cfg.slave_inst, &pINPUT1->Byte, PCA9532__INPUT1, sizeof(uint8_t));
 }
 
 
@@ -44,10 +40,13 @@ FctERR NONNULL__ PCA9532_Set_Mode_LED(PCA9532_t * const pCpnt, const PCA9xxx_cha
 	const unsigned int offset = chan / 4;
 	const unsigned int shift = chan * 2;
 
-	const uint32_t mask = LSHIFT(0x3, shift), val = LSHIFT(mode, shift);
+	const uint32_t mask = LSHIFT(0x3, shift);
+	const uint32_t val = LSHIFT(mode, shift);
+
 	SET_BITS_VAL(pCpnt->LS.DWord, mask, val);
 
-	return PCA9532_Write(pCpnt->cfg.slave_inst, (uint8_t *) &pCpnt->LS + offset, PCA9532__LS0 + offset, 1);
+	const uint8_t LS = RSHIFT(pCpnt->LS.DWord, offset * 8);
+	return PCA9532_Write(pCpnt->cfg.slave_inst, &LS, PCA9532__LS0 + offset, sizeof(LS));
 }
 
 
@@ -56,7 +55,8 @@ FctERR NONNULL__ PCA9532_Set_Mode_LEDs(PCA9532_t * const pCpnt, const uint16_t c
 	if (!chans)						{ return ERROR_OK; }	// No channel selected
 	if (mode > PCA95xx__LED_PWM1)	{ return ERROR_VALUE; }	// Unknown control mode
 
-	uint32_t mask = 0, val = 0;
+	uint32_t	mask = 0, val = 0;
+	uint8_t		LS[4];
 
 	for (PCA9xxx_chan chan = PCA9xxx__PWM1 ; chan <= PCA9xxx__PWM16 ; chan++)
 	{
@@ -70,7 +70,9 @@ FctERR NONNULL__ PCA9532_Set_Mode_LEDs(PCA9532_t * const pCpnt, const uint16_t c
 
 	SET_BITS_VAL(pCpnt->LS.DWord, mask, val);
 
-	return PCA9532_Write(pCpnt->cfg.slave_inst, (uint8_t *) &pCpnt->LS, PCA9532__LS0, sizeof(pCpnt->LS));
+	for (unsigned int i = 0 ; i < sizeof(LS) ; i++)	{ LS[i] = RSHIFT(pCpnt->LS.DWord, i * 8); }
+
+	return PCA9532_Write(pCpnt->cfg.slave_inst, LS, PCA9532__LS0, sizeof(LS));
 }
 
 

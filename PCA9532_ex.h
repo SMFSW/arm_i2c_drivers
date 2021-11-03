@@ -95,7 +95,7 @@ __INLINE float PCA9532_Byte_To_Duty(const uint8_t duty) {
 	return ((float) duty / 2.56f); }
 
 
-/*!\brief Reads I2C register from PCA9532
+/*!\brief Read register from PCA9532
 ** \param[in] pCpnt - Pointer to PCA9532 component
 ** \param[in] reg - Register address to read from
 ** \param[in,out] val - Pointer to the data for receive
@@ -104,17 +104,17 @@ __INLINE float PCA9532_Byte_To_Duty(const uint8_t duty) {
 FctERR NONNULL__ PCA9532_ReadRegister(PCA9532_t * const pCpnt, const PCA9532_reg reg, uint8_t * const val);
 
 
-/*!\brief Reads LED0 to LED7 input register
+/*!\brief Read LED0 to LED7 input register
 ** \warning TODO: test if working in auto-increment mode
 ** \param[in] pCpnt - Pointer to PCA9532 component
-** \param[in] pINPUT0 - Pointer to INPUT0 output variable
+** \param[in,out] pINPUT0 - Pointer to INPUT0 output variable
 ** \return FctERR - ErrorCode
 **/
 FctERR NONNULL__ PCA9532_Read_INPUT0(PCA9532_t * const pCpnt, uPCA9532_REG__INPUT0 * const pINPUT0);
 
-/*!\brief Reads LED8 to LED15 input register
+/*!\brief Read LED8 to LED15 input register
 ** \param[in] pCpnt - Pointer to PCA9532 component
-** \param[in] pINPUT1 - Pointer to INPUT1 output variable
+** \param[in,out] pINPUT1 - Pointer to INPUT1 output variable
 ** \return FctERR - ErrorCode
 **/
 FctERR NONNULL__ PCA9532_Read_INPUT1(PCA9532_t * const pCpnt, uPCA9532_REG__INPUT1 * const pINPUT1);
@@ -138,7 +138,7 @@ FctERR NONNULL__ PCA9532_Set_Mode_LED(PCA9532_t * const pCpnt, const PCA9xxx_cha
 FctERR NONNULL__ PCA9532_Set_Mode_LEDs(PCA9532_t * const pCpnt, const uint16_t chans, const PCA95xx_ledsel mode);
 
 
-/*!\brief Sets PSCx frequency of PCA9532
+/*!\brief Set PSCx frequency of PCA9532
 ** \param[in,out] pCpnt - Pointer to PCA9532 component
 ** \param[in] freq - Frequency (in Hz)
 ** \param[in] index - false: PSC0 / true: PSC1
@@ -147,7 +147,7 @@ FctERR NONNULL__ PCA9532_Set_Mode_LEDs(PCA9532_t * const pCpnt, const uint16_t c
 FctERR NONNULL__ PCA9532_SetFrequency(PCA9532_t * const pCpnt, const float freq, const bool index);
 
 
-/*!\brief Sets PWMx duty cycle of PCA9532
+/*!\brief Set PWMx duty cycle of PCA9532
 ** \param[in,out] pCpnt - Pointer to PCA9532 component
 ** \param[in] duty - Duty Cycle (in %)
 ** \param[in] index - false: PWM0 / true: PWM1

@@ -56,10 +56,13 @@ FctERR NONNULL__ PCA9956_Set_Mode_LED(PCA9956_t * const pCpnt, const PCA9xxx_cha
 	const unsigned int offset = chan / 4;
 	const unsigned int shift = chan * 2;
 
-	const uint16_t mask = LSHIFT(0x3, shift), val = LSHIFT(mode, shift);
+	const uint16_t mask = LSHIFT(0x3, shift);
+	const uint16_t val = LSHIFT(mode, shift);
+
 	SET_BITS_VAL(pCpnt->LDR.LWord, mask, val);
 
-	return PCA9956_Write(pCpnt->cfg.slave_inst, (uint8_t *) &pCpnt->LDR + offset, PCA9956__LEDOUT0 + offset, 1);
+	const uint8_t LDR = RSHIFT64(pCpnt->LDR.LWord, offset * 8);
+	return PCA9956_Write(pCpnt->cfg.slave_inst, &LDR, PCA9956__LEDOUT0 + offset, sizeof(LDR));
 }
 
 
@@ -68,25 +71,24 @@ FctERR NONNULL__ PCA9956_Set_Mode_LEDs(PCA9956_t * const pCpnt, const uint32_t c
 	if (!chans)							{ return ERROR_OK; }	// Nothing to do
 	if (mode > PCA9xxx__GROUP_BRIGHT)	{ return ERROR_VALUE; }	// Unknown control mode
 
-	uint32_t mask = 0, val = 0;
+	uint64_t	mask = 0, val = 0;
+	uint8_t		LDR[6];
 
 	for (PCA9xxx_chan chan = PCA9xxx__PWM1 ; chan <= PCA9xxx__PWM24 ; chan++)
 	{
 		if (LSHIFT(1, chan) & chans)
 		{
 			const unsigned int shift = chan * 2;
-			mask |= LSHIFT(0x3, shift);
-			val |= LSHIFT(mode, shift);
+			mask |= LSHIFT64(0x3, shift);
+			val |= LSHIFT64(mode, shift);
 		}
 	}
 
 	SET_BITS_VAL(pCpnt->LDR.LWord, mask, val);
 
-	const uint8_t TMP[6] = {	RSHIFT64(pCpnt->LDR.LWord, 40), RSHIFT64(pCpnt->LDR.LWord, 32),
-								RSHIFT64(pCpnt->LDR.LWord, 24), RSHIFT64(pCpnt->LDR.LWord, 16),
-								RSHIFT64(pCpnt->LDR.LWord, 8), pCpnt->LDR.LWord };
+	for (unsigned int i = 0 ; i < sizeof(LDR) ; i++)	{ LDR[i] = RSHIFT64(pCpnt->LDR.LWord, i * 8); }
 
-	return PCA9956_Write(pCpnt->cfg.slave_inst, TMP, PCA9956__LEDOUT0, 6);
+	return PCA9956_Write(pCpnt->cfg.slave_inst, LDR, PCA9956__LEDOUT0, sizeof(LDR));
 }
 
 
@@ -125,13 +127,32 @@ FctERR NONNULL__ PCA9956_Set_Offset(PCA9956_t * const pCpnt, const PCA9956_offse
 }
 
 
-FctERR NONNULL__ PCA9956_ReadVal(PCA9956_t * const pCpnt, const PCA9xxx_chan chan, uint8_t * const duty)
+FctERR NONNULL__ PCA9956_ReadVals(PCA9956_t * const pCpnt, uint8_t pDuty[], const bool indexed, const PCA9xxx_chan start, const PCA9xxx_chan end)
 {
-	*duty = 0;
+	if (start > PCA9xxx__PWM24)	{ return ERROR_RANGE; }	// Unknown channel
+	if (end > PCA9xxx__PWM24)	{ return ERROR_RANGE; }	// Unknown channel
 
-	if (chan > PCA9xxx__PWM24)	{ return ERROR_RANGE; }	// Unknown channel
+	uint8_t * const pArray = pDuty + (indexed ? start : 0);
+	return PCA9956_Read(pCpnt->cfg.slave_inst, pArray, PCA9956__PWM0 + start, end - start + 1);
+}
 
-	return PCA9956_Read(pCpnt->cfg.slave_inst, duty, PCA9956__PWM0 + chan, 1);
+
+FctERR NONNULL__ PCA9956_ReadVal(PCA9956_t * const pCpnt, const PCA9xxx_chan chan, uint8_t * const pDuty)
+{
+	if ((chan > PCA9xxx__PWM24) && (chan != PCA9xxx__ALL))	{ return ERROR_RANGE; }	// Unknown channel
+
+	const uint8_t reg = (chan == PCA9xxx__ALL) ? PCA9956__PWMALL : PCA9956__PWM0 + chan;
+	return PCA9956_Read(pCpnt->cfg.slave_inst, pDuty, reg, sizeof(uint8_t));
+}
+
+
+FctERR NONNULL__ PCA9956_PutVals(PCA9956_t * const pCpnt, const uint8_t pDuty[], const bool indexed, const PCA9xxx_chan start, const PCA9xxx_chan end)
+{
+	if (start > PCA9xxx__PWM24)	{ return ERROR_RANGE; }	// Unknown channel
+	if (end > PCA9xxx__PWM24)	{ return ERROR_RANGE; }	// Unknown channel
+
+	const uint8_t * const pArray = pDuty + (indexed ? start : 0);
+	return PCA9956_Write(pCpnt->cfg.slave_inst, pArray, PCA9956__PWM0 + start, end - start + 1);
 }
 
 
@@ -166,12 +187,12 @@ FctERR NONNULL__ PCA9956_ClrVal(PCA9956_t * const pCpnt, const PCA9xxx_chan chan
 
 FctERR NONNULL__ PCA9956_ReadEFLAGs(PCA9956_t * const pCpnt, uPCA9956_REG__EFLAG * const eflags)
 {
-	uint8_t TMP[6];
-	FctERR err = PCA9956_Read(pCpnt->cfg.slave_inst, TMP, PCA9956__EFLAG0, 6);
+	uint8_t EFLAG[6];
+	FctERR err = PCA9956_Read(pCpnt->cfg.slave_inst, EFLAG, PCA9956__EFLAG0, 6);
 	if (err)	{ return err; }
 
-	eflags->LWord = LSHIFT64(TMP[5], 40) | LSHIFT64(TMP[4], 32) | LSHIFT64(TMP[3], 24) |
-					LSHIFT64(TMP[2], 16) | LSHIFT64(TMP[1], 8) | TMP[0];
+	eflags->LWord = 0;
+	for (unsigned int i = 0 ; i < sizeof(EFLAG) ; i++)	{ eflags->LWord |= LSHIFT64(EFLAG[i], i * 8); }
 
 	return ERROR_OK;
 }
@@ -179,11 +200,9 @@ FctERR NONNULL__ PCA9956_ReadEFLAGs(PCA9956_t * const pCpnt, uPCA9956_REG__EFLAG
 
 FctERR NONNULL__ PCA9956_ReadRegister(PCA9956_t * const pCpnt, const PCA9956_reg reg, uint8_t * val)
 {
-	*val = 0;
-
 	if (reg > PCA9956__EFLAG5)	{ return ERROR_RANGE; } // Unknown register
 
-	return PCA9956_Read(pCpnt->cfg.slave_inst, val, reg, 1);
+	return PCA9956_Read(pCpnt->cfg.slave_inst, val, reg, sizeof(uint8_t));
 }
 
 

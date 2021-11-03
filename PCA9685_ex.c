@@ -101,9 +101,7 @@ FctERR NONNULL__ PCA9685_Set_Frequency(PCA9685_t * const pCpnt, const uint16_t f
 FctERR NONNULL__ PCA9685_ReadVal(PCA9685_t * const pCpnt, const PCA9xxx_chan chan, uint16_t * duty)
 {
 	FctERR		err;
-	uint8_t		DATA[4];
-
-	*duty = 0;
+	uint8_t		DATA[4] = { 0 };
 
 	if (chan > PCA9xxx__PWM16)	{ return ERROR_RANGE; } // Unknown channel
 
@@ -126,10 +124,8 @@ FctERR NONNULL__ PCA9685_ReadVal(PCA9685_t * const pCpnt, const PCA9xxx_chan cha
 
 FctERR NONNULL__ PCA9685_ReadValByte(PCA9685_t * const pCpnt, const PCA9xxx_chan chan, uint8_t * duty)
 {
-	FctERR		err = ERROR_OK;
-	uint8_t		DATA[4];
-
-	*duty = 0;
+	FctERR		err;
+	uint8_t		DATA[4] = { 0 };
 
 	if (chan > PCA9xxx__PWM16)		{ return ERROR_RANGE; } // Unknown channel
 
@@ -211,13 +207,11 @@ FctERR NONNULL__ PCA9685_Reset_All(I2C_HandleTypeDef * hi2c)
 }
 
 
-FctERR NONNULL__ PCA9685_ReadRegister(PCA9685_t * const pCpnt, const PCA9685_reg reg, uint8_t * val)
+FctERR NONNULL__ PCA9685_ReadRegister(PCA9685_t * const pCpnt, const PCA9685_reg reg, uint8_t * const val)
 {
-	*val = 0;
-
 	if ((reg > PCA9685__LED15_OFF_H) && (reg < PCA9685__ALL_LED_ON_L))	{ return ERROR_RANGE; } // Unknown register
 
-	return PCA9685_Read(pCpnt->cfg.slave_inst, val, reg, 1);
+	return PCA9685_Read(pCpnt->cfg.slave_inst, val, reg, sizeof(uint8_t));
 }
 
 

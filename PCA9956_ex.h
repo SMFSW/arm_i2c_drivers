@@ -100,16 +100,102 @@ FctERR NONNULL__ PCA9956_Set_IREFs(PCA9956_t * const pCpnt, const uint32_t chans
 FctERR NONNULL__ PCA9956_Set_Offset(PCA9956_t * const pCpnt, const PCA9956_offset offset);
 
 
-/*!\brief Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8_t)
+/*!\brief Read PWM duty cycle array of values of a PCA9956
 ** \param[in] pCpnt - Pointer to PCA9956 component
-** \param[in] chan - channel number
-** \param[in,out] duty - Pointer to the DutyCycle data for receive coded on a uint8_t
+** \param[in,out] pDuty - Pointer to duty cycle values
+** \param[in] indexed - if set to true, pDuty start address will be indexed by the value of start parameter
+**						(thus pDuty always needs first channels cells even if not sent)
+** \param[in] start - starting channel number
+** \param[in] end - ending channel number
 ** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCA9956_ReadVal(PCA9956_t * const pCpnt, const PCA9xxx_chan chan, uint8_t * const duty);
+FctERR NONNULL__ PCA9956_ReadVals(PCA9956_t * const pCpnt, uint8_t pDuty[], const bool indexed, const PCA9xxx_chan start, const PCA9xxx_chan end);
 
 
-/*!\brief Computes and send I2C lighting values to apply to a particular channel for PCA9956
+/*!\brief Read PWM duty cycle array of values of a PCA9956
+** \param[in] pCpnt - Pointer to PCA9956 component
+** \param[in,out] pDuty - Pointer to duty cycle values
+** \param[in] start - starting channel number
+** \param[in] end - ending channel number
+** \return FctERR - ErrorCode
+**/
+__INLINE FctERR NONNULL_INLINE__ PCA9956_ReadVals_Array(PCA9956_t * const pCpnt, uint8_t pDuty[], const PCA9xxx_chan start, const PCA9xxx_chan end) {
+	return PCA9956_ReadVals(pCpnt, pDuty, false, start, end); }
+
+
+/*!\brief Read PWM duty cycle array of values of a PCA9956
+** \param[in] pCpnt - Pointer to PCA9956 component
+** \param[in,out] pDuty - Pointer to duty cycle values (pDuty start address will be indexed by the value of start parameter, thus needs first channels cells)
+** \param[in] start - starting channel number
+** \param[in] end - ending channel number
+** \return FctERR - ErrorCode
+**/
+__INLINE FctERR NONNULL_INLINE__ PCA9956_ReadVals_IndexedArray(PCA9956_t * const pCpnt, uint8_t pDuty[], const PCA9xxx_chan start, const PCA9xxx_chan end) {
+	return PCA9956_ReadVals(pCpnt, pDuty, true, start, end); }
+
+
+/*!\brief Read all PWM duty cycle array of values of a PCA9956 (for the 24 channels)
+** \param[in] pCpnt - Pointer to PCA9956 component
+** \param[in,out] pDuty - Pointer to duty cycle values (24 bytes)
+** \return FctERR - ErrorCode
+**/
+__INLINE FctERR NONNULL_INLINE__ PCA9956_ReadVals_All(PCA9956_t * const pCpnt, uint8_t pDuty[24]) {
+	return PCA9956_ReadVals(pCpnt, pDuty, false, PCA9xxx__PWM1, PCA9xxx__PWM24); }
+
+
+/*!\brief Read PWM duty cycle value of a PCA9956 channel
+** \param[in] pCpnt - Pointer to PCA9956 component
+** \param[in] chan - channel number
+** \param[in,out] pDuty - Pointer to duty cycle data
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ PCA9956_ReadVal(PCA9956_t * const pCpnt, const PCA9xxx_chan chan, uint8_t * const pDuty);
+
+
+/*!\brief Send PWM duty cycle array of values to apply on a PCA9956
+** \param[in] pCpnt - Pointer to PCA9956 component
+** \param[in] pDuty - Pointer to duty cycle values
+** \param[in] indexed - if set to true, pDuty start address will be indexed by the value of start parameter
+**						(thus pDuty always needs first channels cells even if not sent)
+** \param[in] start - starting channel number
+** \param[in] end - ending channel number
+** \return FctERR - ErrorCode
+**/
+FctERR NONNULL__ PCA9956_PutVals(PCA9956_t * const pCpnt, const uint8_t pDuty[], const bool indexed, const PCA9xxx_chan start, const PCA9xxx_chan end);
+
+
+/*!\brief Send PWM duty cycle array of values to apply on a PCA9956
+** \param[in] pCpnt - Pointer to PCA9956 component
+** \param[in] pDuty - Pointer to duty cycle values
+** \param[in] start - starting channel number
+** \param[in] end - ending channel number
+** \return FctERR - ErrorCode
+**/
+__INLINE FctERR NONNULL_INLINE__ PCA9956_PutVals_Array(PCA9956_t * const pCpnt, const uint8_t pDuty[], const PCA9xxx_chan start, const PCA9xxx_chan end) {
+	return PCA9956_PutVals(pCpnt, pDuty, false, start, end); }
+
+
+/*!\brief Send PWM duty cycle array of values to apply on a PCA9956
+** \param[in] pCpnt - Pointer to PCA9956 component
+** \param[in] pDuty - Pointer to duty cycle values (pDuty start address will be indexed by the value of start parameter, thus needs first channels cells)
+** \param[in] start - starting channel number
+** \param[in] end - ending channel number
+** \return FctERR - ErrorCode
+**/
+__INLINE FctERR NONNULL_INLINE__ PCA9956_PutVals_IndexedArray(PCA9956_t * const pCpnt, const uint8_t pDuty[], const PCA9xxx_chan start, const PCA9xxx_chan end) {
+	return PCA9956_PutVals(pCpnt, pDuty, true, start, end); }
+
+
+/*!\brief Send all PWM duty cycle array of values to apply on a PCA9956 (for the 24 channels)
+** \param[in] pCpnt - Pointer to PCA9956 component
+** \param[in] pDuty - Pointer to duty cycle values (24 bytes)
+** \return FctERR - ErrorCode
+**/
+__INLINE FctERR NONNULL_INLINE__ PCA9956_PutVals_All(PCA9956_t * const pCpnt, const uint8_t pDuty[24]) {
+	return PCA9956_PutVals(pCpnt, pDuty, false, PCA9xxx__PWM1, PCA9xxx__PWM24); }
+
+
+/*!\brief Send PWM duty cycle value to apply on a PCA9956 channel
 ** \param[in] pCpnt - Pointer to PCA9956 component
 ** \param[in] chan - channel number
 ** \param[in] duty - Duty cycle coded on a uint8_t
@@ -118,7 +204,7 @@ FctERR NONNULL__ PCA9956_ReadVal(PCA9956_t * const pCpnt, const PCA9xxx_chan cha
 FctERR NONNULL__ PCA9956_PutVal(PCA9956_t * const pCpnt, const PCA9xxx_chan chan, const uint8_t duty);
 
 
-/*!\brief Sends I2C PWM ON values to apply to a particular channel for PCA9956
+/*!\brief Send PWM Full ON value to apply on a PCA9956 channel
 ** \param[in] pCpnt - Pointer to PCA9956 component
 ** \param[in] chan - channel number
 ** \return FctERR - ErrorCode
@@ -126,7 +212,7 @@ FctERR NONNULL__ PCA9956_PutVal(PCA9956_t * const pCpnt, const PCA9xxx_chan chan
 FctERR NONNULL__ PCA9956_SetVal(PCA9956_t * const pCpnt, const PCA9xxx_chan chan);
 
 
-/*!\brief Sends I2C PWM OFF values to apply to a particular channel for PCA9956
+/*!\brief Send PWM Full OFF value to apply on a PCA9956 channel
 ** \param[in] pCpnt - Pointer to PCA9956 component
 ** \param[in] chan - channel number
 ** \return FctERR - ErrorCode
@@ -134,7 +220,7 @@ FctERR NONNULL__ PCA9956_SetVal(PCA9956_t * const pCpnt, const PCA9xxx_chan chan
 FctERR NONNULL__ PCA9956_ClrVal(PCA9956_t * const pCpnt, const PCA9xxx_chan chan);
 
 
-/*!\brief Reads I2C LEDs error flags
+/*!\brief Read LEDs error flags
 ** \param[in] pCpnt - Pointer to PCA9956 component
 ** \param[in,out] eflags - Pointer to the error flags data for receive
 ** \return FctERR - ErrorCode
@@ -142,7 +228,7 @@ FctERR NONNULL__ PCA9956_ClrVal(PCA9956_t * const pCpnt, const PCA9xxx_chan chan
 FctERR NONNULL__ PCA9956_ReadEFLAGs(PCA9956_t * const pCpnt, uPCA9956_REG__EFLAG * const eflags);
 
 
-/*!\brief Reads I2C register from PCA9956
+/*!\brief Read register from PCA9956
 ** \param[in] pCpnt - Pointer to PCA9956 component
 ** \param[in] reg - Register address to read from
 ** \param[in,out] val - Pointer to the data for receive

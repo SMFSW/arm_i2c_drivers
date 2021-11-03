@@ -95,7 +95,7 @@ FctERR NONNULL__ PCA9685_Set_Latch(PCA9685_t * const pCpnt, const PCA96xx_latch 
 FctERR NONNULL__ PCA9685_Set_Frequency(PCA9685_t * const pCpnt, const uint16_t freq);
 
 
-/*!\brief Reads I2C lighting values from a LED and Computes the corresponding duty cycle value (12b)
+/*!\brief Read I2C lighting values from a LED and Computes the corresponding duty cycle value (12b)
 ** \param[in] pCpnt - Pointer to PCA9685 component
 ** \param[in] chan - Channel number (1 to 16)
 ** \param[in,out] duty - Pointer to the DutyCycle data for receive coded on 12b
@@ -104,7 +104,7 @@ FctERR NONNULL__ PCA9685_Set_Frequency(PCA9685_t * const pCpnt, const uint16_t f
 FctERR NONNULL__ PCA9685_ReadVal(PCA9685_t * const pCpnt, const PCA9xxx_chan chan, uint16_t * duty);
 
 
-/*!\brief Reads I2C lighting values from a LED and Computes the corresponding duty cycle value (Byte)
+/*!\brief Read I2C lighting values from a LED and Computes the corresponding duty cycle value (Byte)
 ** \param[in] pCpnt - Pointer to PCA9685 component
 ** \param[in] chan - chan number (1 to 16)
 ** \param[in,out] duty - Pointer to the DutyCycle data for receive coded on a Byte
@@ -113,7 +113,7 @@ FctERR NONNULL__ PCA9685_ReadVal(PCA9685_t * const pCpnt, const PCA9xxx_chan cha
 FctERR NONNULL__ PCA9685_ReadValByte(PCA9685_t * const pCpnt, const PCA9xxx_chan chan, uint8_t * duty);
 
 
-/*!\brief Computes and send I2C lighting values to apply to a particular or all channels for PCA9685 (12b)
+/*!\brief Compute and send PWM lighting values to apply on a PCA9685 channel or all channels (12b)
 ** \param[in] pCpnt - Pointer to PCA9685 component
 ** \param[in] chan - Channel number (1 to 16 / PCA9685_ALLCALL can be used to address all channels at the same time)
 ** \param[in] duty - Duty cycle coded on 12b (0-4095)
@@ -122,7 +122,7 @@ FctERR NONNULL__ PCA9685_ReadValByte(PCA9685_t * const pCpnt, const PCA9xxx_chan
 **/
 FctERR NONNULL__ PCA9685_PutVal(PCA9685_t * const pCpnt, const PCA9xxx_chan chan, const uint16_t duty, const uint16_t delay);
 
-/*!\brief Computes and send I2C lighting values to apply to a particular or all channels for PCA9685 (Byte)
+/*!\brief Compute and send PWM lighting values to apply on a PCA9685 channel or all channels (Byte)
 ** \param[in] pCpnt - Pointer to PCA9685 component
 ** \param[in] chan - Channel number (1 to 16 / PCA9685_ALLCALL can be used to address all channels at the same time)
 ** \param[in] duty - Duty cycle coded on uint8_t (0-255)
@@ -132,7 +132,7 @@ FctERR NONNULL__ PCA9685_PutVal(PCA9685_t * const pCpnt, const PCA9xxx_chan chan
 __INLINE FctERR NONNULL_INLINE__ PCA9685_PutValByte(PCA9685_t * const pCpnt, const PCA9xxx_chan chan, const uint8_t duty, const uint8_t delay) {
 	return PCA9685_PutVal(pCpnt, chan, conv8upto16Bits(duty, 4), conv8upto16Bits(delay, 4)); }
 
-/*!\brief Computes and send I2C lighting values to apply to a particular or all channels for PCA9685 (Percent)
+/*!\brief Compute and send PWM lighting values to apply on a PCA9685 channel or all channels (Percent)
 ** \param[in] pCpnt - Pointer to PCA9685 component
 ** \param[in] chan - Channel number (1 to 16 / PCA9685_ALLCALL can be used to address all channels at the same time)
 ** \param[in] duty - Duty cycle coded on float (0.0-100.0%)
@@ -144,7 +144,7 @@ __INLINE FctERR NONNULL__ PCA9685_PutValPerc(PCA9685_t * const pCpnt, const PCA9
 	if ((delay < 0.0f) || (delay >= 100.0f))	{ return ERROR_RANGE; }
 	return PCA9685_PutVal(pCpnt, chan, (uint16_t) ((duty / 100.0f) * 4095), (uint16_t) ((delay / 100.0f) * 4095)); }
 
-/*!\brief Sends I2C lighting ON values to apply to a particular or all channels for PCA9685 (no delay)
+/*!\brief Compute and send PWM Full ON value to apply on a PCA9685 channel or all channels (no delay)
 ** \note No configured delay
 ** \param[in] pCpnt - Pointer to PCA9685 component
 ** \param[in] chan - Channel number (1 to 16 / PCA9685_ALLCALL can be used to address all channels at the same time)
@@ -153,7 +153,7 @@ __INLINE FctERR NONNULL__ PCA9685_PutValPerc(PCA9685_t * const pCpnt, const PCA9
 FctERR NONNULL__ PCA9685_SetVal(PCA9685_t * const pCpnt, const PCA9xxx_chan chan);
 
 
-/*!\brief Sends I2C PWm OFF values to apply to a particular or all channels for PCA9685 (no delay)
+/*!\brief Compute and send PWM Full OFF value to apply on a PCA9685 channel or all channels (no delay)
 ** \note No configured delay
 ** \param[in] pCpnt - Pointer to PCA9685 component
 ** \param[in] chan - Channel number (1 to 16 / PCA9685_ALLCALL can be used to address all channels at the same time)
@@ -176,13 +176,13 @@ FctERR NONNULL__ PCA9685_Reset(PCA9685_t * const pCpnt);
 FctERR NONNULL__ PCA9685_Reset_All(I2C_HandleTypeDef * hi2c);
 
 
-/*!\brief Reads I2C register from PCA9685
+/*!\brief Reads register from PCA9685
 ** \param[in] pCpnt - Pointer to PCA9685 component
 ** \param[in] reg - Register address to read from
 ** \param[in,out] val - Pointer to the data for receive
 ** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCA9685_ReadRegister(PCA9685_t * const pCpnt, const PCA9685_reg reg, uint8_t * val);
+FctERR NONNULL__ PCA9685_ReadRegister(PCA9685_t * const pCpnt, const PCA9685_reg reg, uint8_t * const val);
 
 
 /*******************/

@@ -12,7 +12,7 @@ branches:
 
 env:
   global:
-    - PRETTYNAME="ARM I2C drivers: ARM HAL toolbox (yet STM32 oriented)"
+    - PRETTYNAME="ARM I2C drivers: STM32 ARM HAL based I2C peripheral drivers"
     - GH_REPO_NAME: arm_i2c_drivers
     - GH_REPO_REF: github.com/SMFSW/arm_i2c_drivers.git
     - DOXYFILE: $TRAVIS_BUILD_DIR/Doxyfile.auto

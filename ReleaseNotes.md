@@ -35,7 +35,9 @@ SOFTWARE.
 * ADS1115: waiting for current conversion done by handler (not in ADS1115_Start_NextConversion) -> enables proper handling of interrupt pin instead of delay
 * FM24C: refactoring of FM24C_ReadWrite
 * PCA9956: added
-* PCA9624: WORD not written directly in PCA9624_Set_Mode_LEDs (to work no matter endian)
+* PCA9532, PCA9624, PCA9956: contents not written directly in PCA9xxx_Set_Mode_LED & PCA9xxx_Set_Mode_LEDs (to work no matter endian)
+* PCA9624, PCA9956: functions added to write/read array of duty cycle values (instead of only one channel at a time)
+* PCA9xxx: few changes for consistency between functions behaviors across all PCA9xxx peripherals
 * PCA9xxx & PCA9624 & PCA9685: typedefs changed and created for consistency across peripherals
 
 ## v1.0
