@@ -23,6 +23,7 @@ SOFTWARE.
 ## v1.1
 
 * Doxygen comments fixes for the whole library
+* Fix case in include names
 * I2C_slave_timeout set to 50ms instead of 20ms (in case of components with lots to read at low speed)
 * I2C_eep_slave_timeout added, set to 500ms (for EEPROM/FRAM components type) to keep some margin for really long transactions
   * For bigger size components, in case timeout is reached, read/write transactions may be split in multiple calls (refreshing watchdog if in use).
