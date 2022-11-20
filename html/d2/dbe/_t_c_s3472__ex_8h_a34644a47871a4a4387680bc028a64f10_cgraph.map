@@ -1,0 +1,12 @@
+<map id="TCS3472_Write_Ctl" name="TCS3472_Write_Ctl">
+<area shape="rect" id="node2" href="$df/dfb/_t_c_s3472_8c.html#a19fc8e0e8440863061f67b8a42f6484a" title="I2C Write function for TCS3472. " alt="" coords="572,87,688,113"/>
+<area shape="rect" id="node5" href="$d2/dbe/_t_c_s3472__ex_8h.html#aa71706fa7d6778752c6f9b394d7d949b" title="Oscillator Enable / Disable. " alt="" coords="194,36,337,63"/>
+<area shape="rect" id="node8" href="$d2/dbe/_t_c_s3472__ex_8h.html#a3bc44810fe5c4e529955995decfdd932" title="Clear module Enable / Disable. " alt="" coords="195,87,336,113"/>
+<area shape="rect" id="node9" href="$d2/dbe/_t_c_s3472__ex_8h.html#a48a839c3cc4af0c7f0778f48342d8768" title="Clear interrupt module Enable / Disable. " alt="" coords="193,137,337,164"/>
+<area shape="rect" id="node10" href="$d2/dbe/_t_c_s3472__ex_8h.html#a2e8eef87f506d78e096889f5d991aadc" title="WAIT module Enable / Disable. " alt="" coords="194,188,337,215"/>
+<area shape="rect" id="node11" href="$d2/dbe/_t_c_s3472__ex_8h.html#afc615e3b58e6039da4618834b633b462" title="Gain configuration. " alt="" coords="194,239,337,265"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="736,163,853,189"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="741,112,848,139"/>
+<area shape="rect" id="node6" href="$df/dfb/_t_c_s3472_8c.html#a2fa16091194ad1cb4f16db6d081f551f" title="I2C Read function for TCS3472. " alt="" coords="397,137,513,164"/>
+<area shape="rect" id="node7" href="$d2/dbe/_t_c_s3472__ex_8h.html#abf45e48afff6576c4aa8e54b2d069d2d" title="Write TCS3472 Enable register. " alt="" coords="385,87,524,113"/>
+</map>

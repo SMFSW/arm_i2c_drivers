@@ -1,0 +1,5 @@
+<map id="APDS9930_Read_Word" name="APDS9930_Read_Word">
+<area shape="rect" id="node2" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a69dc07664f4d68f73c72091d8e84c939" title="Get Full conversion (Channel 0) " alt="" coords="224,5,371,32"/>
+<area shape="rect" id="node3" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#af586c1ad9811a3d4612cc94615dce72c" title="Get IR conversion (Channel 1) " alt="" coords="228,56,367,83"/>
+<area shape="rect" id="node4" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a7b950cd7d52f371dd52f9114277e78ba" title="Get Proximity conversion. " alt="" coords="220,107,375,133"/>
+</map>

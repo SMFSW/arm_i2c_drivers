@@ -1,0 +1,8 @@
+<map id="TCS3400_handler_it" name="TCS3400_handler_it">
+<area shape="rect" id="node2" href="$db/d52/_t_c_s3400__ex_8c.html#aad7f5294306c1421ec7ed84a051749ba" title="Interrupt GPIO pin getter for TCS3400. " alt="" coords="201,5,375,32"/>
+<area shape="rect" id="node4" href="$dc/dd9/_t_c_s3400__proc_8c.html#a8808303dd2ea714a3516ba2c0ed2b395" title="Handler for TCS3400 peripheral. " alt="" coords="221,56,355,83"/>
+<area shape="rect" id="node3" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="423,5,601,32"/>
+<area shape="rect" id="node5" href="$d4/d1b/_t_c_s3400_8c.html#ac6b81ecacb0000ae8a9e4cd223b07ed2" title="I2C Read function for TCS3400. " alt="" coords="454,56,570,83"/>
+<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="649,31,767,57"/>
+<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="655,81,761,108"/>
+</map>

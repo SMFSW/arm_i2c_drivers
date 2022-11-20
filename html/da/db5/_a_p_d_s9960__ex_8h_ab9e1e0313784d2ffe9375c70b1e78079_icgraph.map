@@ -1,0 +1,10 @@
+<map id="APDS9960_Set_PEN" name="APDS9960_Set_PEN">
+<area shape="rect" id="node2" href="$da/db5/_a_p_d_s9960__ex_8h.html#a6d818c785f05953e3dcad1128c4e6d37" title="Write APDS9960 Control. " alt="" coords="205,56,363,83"/>
+<area shape="rect" id="node3" href="$da/db5/_a_p_d_s9960__ex_8h.html#a532418549581b4c573b761bde00f5c64" title="ALS Gain configuration. " alt="" coords="415,5,601,32"/>
+<area shape="rect" id="node8" href="$da/db5/_a_p_d_s9960__ex_8h.html#a0895fbd2b98074e3338d54c56a10b2e1" title="Proximity Gain configuration. " alt="" coords="413,56,603,83"/>
+<area shape="rect" id="node9" href="$da/db5/_a_p_d_s9960__ex_8h.html#ae4c20c99c3a8a9b81234a1d2984c290c" title="Proximity Drive configuration. " alt="" coords="411,107,605,149"/>
+<area shape="rect" id="node4" href="$da/db5/_a_p_d_s9960__ex_8h.html#a9e0a4dcaa7b5367cc1277a76ffe89a81" title="Proximity interrupt thresholds configuration. " alt="" coords="653,35,797,61"/>
+<area shape="rect" id="node5" href="$df/d17/_a_p_d_s9960__proc_8h.html#a6f90f8c748ac7c65463a1893d66ed20a" title="Initialization Sequence for APDS9960 peripheral. " alt="" coords="845,60,1032,87"/>
+<area shape="rect" id="node6" href="$d2/dbf/_a_p_d_s9960_8h.html#a7f169a78f245b023b72f92539c7a59c5" title="Initialization for APDS9960 peripheral. " alt="" coords="1080,60,1196,87"/>
+<area shape="rect" id="node7" href="$d2/dbf/_a_p_d_s9960_8h.html#a2234fed110d5973db4b9d30d2e5098fd" title="Initialization for APDS9960 peripheral. " alt="" coords="1244,60,1407,87"/>
+</map>

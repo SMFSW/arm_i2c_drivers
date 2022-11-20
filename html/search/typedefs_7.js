@@ -32,5 +32,6 @@ var searchData=
   ['pcf8523_5freg',['PCF8523_reg',['../dd/d42/_p_c_f8523_8h.html#a6b45038f37e71382ae3ff5be53a1bfd5',1,'PCF8523.h']]],
   ['pcf8523_5ft',['PCF8523_t',['../d4/d61/_p_c_f8523__proc_8h.html#a5f70ef3aa8c0a736dc9df2e22eedd7f1',1,'PCF8523_proc.h']]],
   ['pcf8523_5ftime',['PCF8523_time',['../d4/d61/_p_c_f8523__proc_8h.html#a6f6328dd90f4656709c8e15b9d3d565e',1,'PCF8523_proc.h']]],
-  ['pcf8523_5fweekdays',['PCF8523_weekdays',['../dd/d42/_p_c_f8523_8h.html#a39dfe2adeaecd23ee04457836a6d7c26',1,'PCF8523.h']]]
+  ['pcf8523_5fweekdays',['PCF8523_weekdays',['../dd/d42/_p_c_f8523_8h.html#a39dfe2adeaecd23ee04457836a6d7c26',1,'PCF8523.h']]],
+  ['peripheralgpio_5ft',['PeripheralGPIO_t',['../dc/d5d/_i2_c__peripheral_8h.html#a95c34b012f9023fc93e788ef1e7d51cd',1,'I2C_peripheral.h']]]
 ];

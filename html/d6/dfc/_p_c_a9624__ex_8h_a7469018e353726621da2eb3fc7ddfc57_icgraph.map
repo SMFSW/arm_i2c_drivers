@@ -1,0 +1,6 @@
+<map id="PCA9624_PutVals" name="PCA9624_PutVals">
+<area shape="rect" id="node2" href="$d6/dfc/_p_c_a9624__ex_8h.html#a908e779b4a0bfd968a674997d5fd659f" title="Read all PWM duty cycle array of values of a PCA9624 (for the 8 channels) " alt="" coords="217,5,384,32"/>
+<area shape="rect" id="node3" href="$d6/dfc/_p_c_a9624__ex_8h.html#a658dfd2d262b1fc795d162d343c5e71c" title="Send PWM duty cycle array of values to apply on a PCA9624. " alt="" coords="213,56,388,83"/>
+<area shape="rect" id="node4" href="$d6/dfc/_p_c_a9624__ex_8h.html#ad465d196a9a7db0e2f6f65d45d065adb" title="Send PWM duty cycle array of values to apply on a PCA9624. " alt="" coords="188,107,413,133"/>
+<area shape="rect" id="node5" href="$d6/dfc/_p_c_a9624__ex_8h.html#a93948697ac82a090f75a5d6879ca7f23" title="Send all PWM duty cycle array of values to apply on a PCA9624 (for the 8 channels) ..." alt="" coords="223,157,379,184"/>
+</map>

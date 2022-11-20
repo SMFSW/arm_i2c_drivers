@@ -1,6 +1,0 @@
-<map id="PCA9624_Init_Sequence" name="PCA9624_Init_Sequence">
-<area shape="rect" id="node2" href="$db/de1/_p_c_a9624_8c.html#af258a350b96879007a2f057fadf5c61e" title="I2C Write function for PCA9624. " alt="" coords="469,31,588,57"/>
-<area shape="rect" id="node5" href="$dd/d68/_p_c_a9624__ex_8c.html#addff2c3e81e7a4ba7e30fd32bd89967f" title="Set PCA9624 peripheral multiple LEDs mode. " alt="" coords="231,56,421,83"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="636,5,753,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="641,56,748,83"/>
-</map>

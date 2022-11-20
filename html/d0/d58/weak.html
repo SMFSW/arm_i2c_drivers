@@ -65,86 +65,200 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt><a class="anchor" id="_weak000002"></a>Global <a class="el" href="../../d4/d35/_a_d_s1115__proc_8h.html#a9c47baa9b025562935b7113d4f9e186a">ADS1115_handler</a>  (<a class="el" href="../../dd/da4/struct_a_d_s1115__t.html" title="ADS1115 user interface struct. ">ADS1115_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000004"></a>Global <a class="el" href="../../d4/d35/_a_d_s1115__proc_8h.html#a2a5488401e3392d27760b90ff5f31be2">ADS1115_handler</a>  (<a class="el" href="../../dd/da4/struct_a_d_s1115__t.html" title="ADS1115 user interface struct. ">ADS1115_t</a> *const pCpnt)</dt>
 <dd>ADS1115 handler may be user implemented to suit custom needs  </dd>
-<dt><a class="anchor" id="_weak000001"></a>Global <a class="el" href="../../d4/d35/_a_d_s1115__proc_8h.html#a6ff50eea6d7569e24d94154636fa2807">ADS1115_Init_Sequence</a>  (<a class="el" href="../../dd/da4/struct_a_d_s1115__t.html" title="ADS1115 user interface struct. ">ADS1115_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000005"></a>Global <a class="el" href="../../d4/d35/_a_d_s1115__proc_8h.html#a520e784a7c3122c8211c2b62d3fb7967">ADS1115_handler_it</a>  (<a class="el" href="../../dd/da4/struct_a_d_s1115__t.html" title="ADS1115 user interface struct. ">ADS1115_t</a> *const pCpnt)</dt>
+<dd>ADS1115 GPIO interrupt handler may be user implemented to suit custom needs  </dd>
+<dt><a class="anchor" id="_weak000003"></a>Global <a class="el" href="../../d4/d35/_a_d_s1115__proc_8h.html#a0ebd901d052a4725490bf5e7b4bb4d52">ADS1115_Init_Sequence</a>  (<a class="el" href="../../dd/da4/struct_a_d_s1115__t.html" title="ADS1115 user interface struct. ">ADS1115_t</a> *const pCpnt)</dt>
 <dd>ADS1115 Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000004"></a>Global <a class="el" href="../../da/de9/_a_m_g88__proc_8h.html#a6e3208d73334ee0b7e9eec32d42b8b7f">AMG88_handler</a>  (<a class="el" href="../../d9/d69/struct_a_m_g88__t.html" title="AMG88 user interface struct. ">AMG88_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000002"></a>Global <a class="el" href="../../d8/d4b/_a_d_s1115__ex_8h.html#a7ddf616c2c0ef262b2381f9ff844bb8f">ADS1115_RDY_GPIO_Get</a>  (<a class="el" href="../../dd/da4/struct_a_d_s1115__t.html" title="ADS1115 user interface struct. ">ADS1115_t</a> *const pCpnt, bool *const pState)</dt>
+<dd>ADS1115 Ready GPIO pin getter may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000001"></a>Global <a class="el" href="../../d8/d4b/_a_d_s1115__ex_8h.html#a5e1216d8aa877b457bfbc5ec36477cf8">ADS1115_RDY_GPIO_Init</a>  (<a class="el" href="../../dd/da4/struct_a_d_s1115__t.html" title="ADS1115 user interface struct. ">ADS1115_t</a> *const pCpnt, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</dt>
+<dd>ADS1115 Ready GPIO pin init may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000009"></a>Global <a class="el" href="../../da/de9/_a_m_g88__proc_8h.html#a62fe3d2635671c55964528913f803c61">AMG88_handler</a>  (<a class="el" href="../../d9/d69/struct_a_m_g88__t.html" title="AMG88 user interface struct. ">AMG88_t</a> *const pCpnt)</dt>
 <dd>AMG88 handler may be user implemented to suit custom needs  </dd>
-<dt><a class="anchor" id="_weak000003"></a>Global <a class="el" href="../../da/de9/_a_m_g88__proc_8h.html#a035f4984195a72572c12617c99796f6c">AMG88_Init_Sequence</a>  (<a class="el" href="../../d9/d69/struct_a_m_g88__t.html" title="AMG88 user interface struct. ">AMG88_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000010"></a>Global <a class="el" href="../../da/de9/_a_m_g88__proc_8h.html#af7796031f9fb1c4fb52f5262c1612ab9">AMG88_handler_it</a>  (<a class="el" href="../../d9/d69/struct_a_m_g88__t.html" title="AMG88 user interface struct. ">AMG88_t</a> *const pCpnt)</dt>
+<dd>AMG88 GPIO interrupt handler may be user implemented to suit custom needs  </dd>
+<dt><a class="anchor" id="_weak000008"></a>Global <a class="el" href="../../da/de9/_a_m_g88__proc_8h.html#a31fb1058c19c3675886ea9601f3a96ca">AMG88_Init_Sequence</a>  (<a class="el" href="../../d9/d69/struct_a_m_g88__t.html" title="AMG88 user interface struct. ">AMG88_t</a> *const pCpnt)</dt>
 <dd>AMG88 Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000006"></a>Global <a class="el" href="../../d1/d45/_a_p_d_s9930__proc_8h.html#a5fb700da5d891a42c098b079ed7cd603">APDS9930_handler</a>  (<a class="el" href="../../d6/def/struct_a_p_d_s9930__t.html" title="APDS9930 user interface struct. ">APDS9930_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000007"></a>Global <a class="el" href="../../dc/db3/_a_m_g88__ex_8h.html#aed4d6492b79034915e0036da7d077600">AMG88_INT_GPIO_Get</a>  (<a class="el" href="../../d9/d69/struct_a_m_g88__t.html" title="AMG88 user interface struct. ">AMG88_t</a> *const pCpnt, bool *const pState)</dt>
+<dd>AMG88 Interrupt GPIO pin getter may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000006"></a>Global <a class="el" href="../../dc/db3/_a_m_g88__ex_8h.html#a47e7dab1b924d54a1b7ac2fd0006022a">AMG88_INT_GPIO_Init</a>  (<a class="el" href="../../d9/d69/struct_a_m_g88__t.html" title="AMG88 user interface struct. ">AMG88_t</a> *const pCpnt, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</dt>
+<dd>AMG88 Interrupt GPIO pin init may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000014"></a>Global <a class="el" href="../../d1/d45/_a_p_d_s9930__proc_8h.html#abf60ae17b7b82c4c4d9c3d1fbf2b2126">APDS9930_handler</a>  (<a class="el" href="../../d6/def/struct_a_p_d_s9930__t.html" title="APDS9930 user interface struct. ">APDS9930_t</a> *const pCpnt)</dt>
 <dd>APDS9930 handler may be user implemented to suit custom needs  </dd>
-<dt><a class="anchor" id="_weak000005"></a>Global <a class="el" href="../../d1/d45/_a_p_d_s9930__proc_8h.html#a7ee1f6e6cff27c7f0f62c44d9606c598">APDS9930_Init_Sequence</a>  (<a class="el" href="../../d6/def/struct_a_p_d_s9930__t.html" title="APDS9930 user interface struct. ">APDS9930_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000015"></a>Global <a class="el" href="../../d1/d45/_a_p_d_s9930__proc_8h.html#a061d3c2eb22c619599e5dddb63ea8313">APDS9930_handler_it</a>  (<a class="el" href="../../d6/def/struct_a_p_d_s9930__t.html" title="APDS9930 user interface struct. ">APDS9930_t</a> *const pCpnt)</dt>
+<dd>APDS9930 GPIO interrupt handler may be user implemented to suit custom needs  </dd>
+<dt><a class="anchor" id="_weak000013"></a>Global <a class="el" href="../../d1/d45/_a_p_d_s9930__proc_8h.html#a4cc65eb7c3be6bf8bb36c7452e3ee209">APDS9930_Init_Sequence</a>  (<a class="el" href="../../d6/def/struct_a_p_d_s9930__t.html" title="APDS9930 user interface struct. ">APDS9930_t</a> *const pCpnt)</dt>
 <dd>APDS9930 Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000008"></a>Global <a class="el" href="../../df/d17/_a_p_d_s9960__proc_8h.html#acbd98fa25322d45e5be0fcbc5977d6d6">APDS9960_handler</a>  (<a class="el" href="../../dc/ded/struct_a_p_d_s9960__t.html" title="APDS9960 user interface struct. ">APDS9960_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000012"></a>Global <a class="el" href="../../d5/d4f/_a_p_d_s9930__ex_8h.html#a2c790408e8296047968fc48ae6fbd554">APDS9930_INT_GPIO_Get</a>  (<a class="el" href="../../d6/def/struct_a_p_d_s9930__t.html" title="APDS9930 user interface struct. ">APDS9930_t</a> *const pCpnt, bool *const pState)</dt>
+<dd>APDS9930 Interrupt GPIO pin getter may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000011"></a>Global <a class="el" href="../../d5/d4f/_a_p_d_s9930__ex_8h.html#ac51f268a781f3dec4577ac2a5daaf768">APDS9930_INT_GPIO_Init</a>  (<a class="el" href="../../d6/def/struct_a_p_d_s9930__t.html" title="APDS9930 user interface struct. ">APDS9930_t</a> *const pCpnt, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</dt>
+<dd>APDS9930 Interrupt GPIO pin init may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000019"></a>Global <a class="el" href="../../df/d17/_a_p_d_s9960__proc_8h.html#afb999a0fb29df82bc3861d15e232c777">APDS9960_handler</a>  (<a class="el" href="../../dc/ded/struct_a_p_d_s9960__t.html" title="APDS9960 user interface struct. ">APDS9960_t</a> *const pCpnt)</dt>
 <dd>APDS9960 handler may be user implemented to suit custom needs  </dd>
-<dt><a class="anchor" id="_weak000007"></a>Global <a class="el" href="../../df/d17/_a_p_d_s9960__proc_8h.html#a8b3e98f19115655eea22dfa81f4273e7">APDS9960_Init_Sequence</a>  (<a class="el" href="../../dc/ded/struct_a_p_d_s9960__t.html" title="APDS9960 user interface struct. ">APDS9960_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000020"></a>Global <a class="el" href="../../df/d17/_a_p_d_s9960__proc_8h.html#a87274cc64ac34debc21c82dc2582d6df">APDS9960_handler_it</a>  (<a class="el" href="../../dc/ded/struct_a_p_d_s9960__t.html" title="APDS9960 user interface struct. ">APDS9960_t</a> *const pCpnt)</dt>
+<dd>APDS9960 GPIO interrupt handler may be user implemented to suit custom needs  </dd>
+<dt><a class="anchor" id="_weak000018"></a>Global <a class="el" href="../../df/d17/_a_p_d_s9960__proc_8h.html#a6f90f8c748ac7c65463a1893d66ed20a">APDS9960_Init_Sequence</a>  (<a class="el" href="../../dc/ded/struct_a_p_d_s9960__t.html" title="APDS9960 user interface struct. ">APDS9960_t</a> *const pCpnt)</dt>
 <dd>APDS9960 Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000010"></a>Global <a class="el" href="../../d4/d47/_a_t42_q_t1244__proc_8h.html#a854b51ce8fcd7b0e31f6a5780e9ec254">AT42QT1244_handler</a>  (<a class="el" href="../../da/dbc/struct_a_t42_q_t1244__t.html" title="AT42QT1244 user interface struct. ">AT42QT1244_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000017"></a>Global <a class="el" href="../../da/db5/_a_p_d_s9960__ex_8h.html#a4692b37c8acbd4b54ab8619c43db3246">APDS9960_INT_GPIO_Get</a>  (<a class="el" href="../../dc/ded/struct_a_p_d_s9960__t.html" title="APDS9960 user interface struct. ">APDS9960_t</a> *const pCpnt, bool *const pState)</dt>
+<dd>APDS9960 Interrupt GPIO pin getter may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000016"></a>Global <a class="el" href="../../da/db5/_a_p_d_s9960__ex_8h.html#a260da54656ec611481165e163968673d">APDS9960_INT_GPIO_Init</a>  (<a class="el" href="../../dc/ded/struct_a_p_d_s9960__t.html" title="APDS9960 user interface struct. ">APDS9960_t</a> *const pCpnt, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</dt>
+<dd>APDS9960 Interrupt GPIO pin init may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000022"></a>Global <a class="el" href="../../df/de4/_a_t42_q_t1244__ex_8h.html#a93d10a2a64d12b0d01ae41d5aeb1b761">AT42QT1244_CHANGE_GPIO_Get</a>  (<a class="el" href="../../da/dbc/struct_a_t42_q_t1244__t.html" title="AT42QT1244 user interface struct. ">AT42QT1244_t</a> *const pCpnt, bool *const pState)</dt>
+<dd>AT42QT1244 Change GPIO pin getter may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000021"></a>Global <a class="el" href="../../df/de4/_a_t42_q_t1244__ex_8h.html#a6615c48892435edb33807e93416d1e11">AT42QT1244_CHANGE_GPIO_Init</a>  (<a class="el" href="../../da/dbc/struct_a_t42_q_t1244__t.html" title="AT42QT1244 user interface struct. ">AT42QT1244_t</a> *const pCpnt, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</dt>
+<dd>AT42QT1244 Change GPIO pin init may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000026"></a>Global <a class="el" href="../../d4/d47/_a_t42_q_t1244__proc_8h.html#aca10e0645e195176f9e582d27e7f480b">AT42QT1244_handler</a>  (<a class="el" href="../../da/dbc/struct_a_t42_q_t1244__t.html" title="AT42QT1244 user interface struct. ">AT42QT1244_t</a> *const pCpnt)</dt>
 <dd>AT42QT1244 handler may be user implemented to suit custom needs  </dd>
-<dt><a class="anchor" id="_weak000009"></a>Global <a class="el" href="../../d4/d47/_a_t42_q_t1244__proc_8h.html#aa696a20476ab84d81f25fef8bfb66bde">AT42QT1244_Init_Sequence</a>  (<a class="el" href="../../da/dbc/struct_a_t42_q_t1244__t.html" title="AT42QT1244 user interface struct. ">AT42QT1244_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000027"></a>Global <a class="el" href="../../d4/d47/_a_t42_q_t1244__proc_8h.html#afd1635edf97f1f5ed7157951b34b520f">AT42QT1244_handler_it</a>  (<a class="el" href="../../da/dbc/struct_a_t42_q_t1244__t.html" title="AT42QT1244 user interface struct. ">AT42QT1244_t</a> *const pCpnt)</dt>
+<dd>AT42QT1244 GPIO interrupt handler may be user implemented to suit custom needs  </dd>
+<dt><a class="anchor" id="_weak000025"></a>Global <a class="el" href="../../d4/d47/_a_t42_q_t1244__proc_8h.html#a8766f2a3280acd350544fa81b84f216c">AT42QT1244_Init_Sequence</a>  (<a class="el" href="../../da/dbc/struct_a_t42_q_t1244__t.html" title="AT42QT1244 user interface struct. ">AT42QT1244_t</a> *const pCpnt)</dt>
 <dd>AT42QT1244 Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000013"></a>Global <a class="el" href="../../dc/d50/_b_m_p180__proc_8h.html#a7446219370560398c8a2e936aad41be9">BMP180_handler</a>  (<a class="el" href="../../d6/db8/struct_b_m_p180__t.html" title="BMP180 user interface struct. ">BMP180_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000023"></a>Global <a class="el" href="../../df/de4/_a_t42_q_t1244__ex_8h.html#a7c5cbc9f3955b892061e478b295d194c">AT42QT1244_RST_GPIO_Init</a>  (<a class="el" href="../../da/dbc/struct_a_t42_q_t1244__t.html" title="AT42QT1244 user interface struct. ">AT42QT1244_t</a> *const pCpnt, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</dt>
+<dd>AT42QT1244 Reset GPIO pin init may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000024"></a>Global <a class="el" href="../../df/de4/_a_t42_q_t1244__ex_8h.html#a8d9f72959102f68e69346ae2ca10637f">AT42QT1244_RST_GPIO_Set</a>  (<a class="el" href="../../da/dbc/struct_a_t42_q_t1244__t.html" title="AT42QT1244 user interface struct. ">AT42QT1244_t</a> *const pCpnt, const bool state)</dt>
+<dd>AT42QT1244 Reset GPIO pin setter may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000030"></a>Global <a class="el" href="../../dc/d50/_b_m_p180__proc_8h.html#ae13c9eabdf3c4a900c6e01787ab2a807">BMP180_handler</a>  (<a class="el" href="../../d6/db8/struct_b_m_p180__t.html" title="BMP180 user interface struct. ">BMP180_t</a> *const pCpnt)</dt>
 <dd>BMP180 handler may be user implemented to suit custom needs  </dd>
-<dt><a class="anchor" id="_weak000012"></a>Global <a class="el" href="../../dc/d50/_b_m_p180__proc_8h.html#aaeda0bfd52c838d1e3a4a94818a57426">BMP180_Init_Sequence</a>  (<a class="el" href="../../d6/db8/struct_b_m_p180__t.html" title="BMP180 user interface struct. ">BMP180_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000029"></a>Global <a class="el" href="../../dc/d50/_b_m_p180__proc_8h.html#a2454150c1945e9c2356d9596a9242fe4">BMP180_Init_Sequence</a>  (<a class="el" href="../../d6/db8/struct_b_m_p180__t.html" title="BMP180 user interface struct. ">BMP180_t</a> *const pCpnt)</dt>
 <dd>BMP180 Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000011"></a>Global <a class="el" href="../../dc/d50/_b_m_p180__proc_8h.html#a11c8c83acfdb260e79f0a53c90c728b8">BMP180_Set_SeaLevel_Pressure</a>  (<a class="el" href="../../d6/db8/struct_b_m_p180__t.html" title="BMP180 user interface struct. ">BMP180_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000028"></a>Global <a class="el" href="../../dc/d50/_b_m_p180__proc_8h.html#ad0325266789e45d7af965f331c8f68cb">BMP180_Set_SeaLevel_Pressure</a>  (<a class="el" href="../../d6/db8/struct_b_m_p180__t.html" title="BMP180 user interface struct. ">BMP180_t</a> *const pCpnt)</dt>
 <dd>BMP180 Sea Level pressure setter may be user implemented  </dd>
-<dt><a class="anchor" id="_weak000014"></a>Global <a class="el" href="../../d5/d47/_d_r_v2605_l_8h.html#a3f9967699bd1bfb66cc38395ce928151">DRV2605L_Init</a>  (void)</dt>
+<dt><a class="anchor" id="_weak000032"></a>Global <a class="el" href="../../df/dbb/_d_r_v2605_l__ex_8h.html#a572725b83357c3e695799b38fd7ed7ce">DRV2605L_EN_GPIO_Init</a>  (GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</dt>
+<dd>DRV2605L Enable GPIO pin init may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000033"></a>Global <a class="el" href="../../df/dbb/_d_r_v2605_l__ex_8h.html#ab3f468584e3b1abe7160a11c1212b561">DRV2605L_EN_GPIO_Set</a>  (const bool state)</dt>
+<dd>DRV2605L Enable GPIO pin setter may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000031"></a>Global <a class="el" href="../../d5/d47/_d_r_v2605_l_8h.html#a3f9967699bd1bfb66cc38395ce928151">DRV2605L_Init</a>  (void)</dt>
 <dd>DRV2605L Base address may be changed if user implemented  </dd>
-<dt><a class="anchor" id="_weak000015"></a>Global <a class="el" href="../../d1/da7/_d_r_v2605_l__proc_8h.html#ad908d57c1a4cba53e09981a387145d87">DRV2605L_Init_Sequence</a>  (void)</dt>
+<dt><a class="anchor" id="_weak000036"></a>Global <a class="el" href="../../d1/da7/_d_r_v2605_l__proc_8h.html#ad908d57c1a4cba53e09981a387145d87">DRV2605L_Init_Sequence</a>  (void)</dt>
 <dd>DRV2605L Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000034"></a>Global <a class="el" href="../../d8/daa/shared___a_p_s_8h.html#a74c279e4d9a609d3f13f66342e7c731f">Get_SeaLevel_Pressure</a>  (void)</dt>
+<dt><a class="anchor" id="_weak000034"></a>Global <a class="el" href="../../df/dbb/_d_r_v2605_l__ex_8h.html#a98cbfb2755e67db5cfadb3d8ff72c3fe">DRV2605L_TRIG_GPIO_Init</a>  (GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</dt>
+<dd>DRV2605L Trigger GPIO pin init may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000035"></a>Global <a class="el" href="../../df/dbb/_d_r_v2605_l__ex_8h.html#ae20097ec48f5dd3f23d217a41c4ff09b">DRV2605L_TRIG_GPIO_Set</a>  (const bool state)</dt>
+<dd>DRV2605L Trigger GPIO pin setter may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000041"></a>Global <a class="el" href="../../de/d95/_f_m24_c__ex_8h.html#a12183f072467eea03b888c5d24388f0e">FM24C_WP_GPIO_Get</a>  (<a class="el" href="../../d6/d34/struct_f_m24_c__t.html" title="FM24C user interface struct. ">FM24C_t</a> *const pCpnt, bool *const pState)</dt>
+<dd>FM24C Write Protect GPIO pin getter may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000040"></a>Global <a class="el" href="../../de/d95/_f_m24_c__ex_8h.html#a5d88f7f42cce5e5398313cfe0e4934e7">FM24C_WP_GPIO_Init</a>  (<a class="el" href="../../d6/d34/struct_f_m24_c__t.html" title="FM24C user interface struct. ">FM24C_t</a> *const pCpnt, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</dt>
+<dd>FM24C Write Protect GPIO pin init may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000082"></a>Global <a class="el" href="../../d8/daa/shared___a_p_s_8h.html#a74c279e4d9a609d3f13f66342e7c731f">Get_SeaLevel_Pressure</a>  (void)</dt>
 <dd>Get_SeaLevel_Pressure is recommended to be user implemented (average value returned by weak implementation)  </dd>
-<dt><a class="anchor" id="_weak000018"></a>Global <a class="el" href="../../de/d15/_d_s___g_p_m_s__proc_8h.html#aff5733ad2e92d99197589a16dfb9138c">GPMS_handler</a>  (void)</dt>
+<dt><a class="anchor" id="_weak000039"></a>Global <a class="el" href="../../de/d15/_d_s___g_p_m_s__proc_8h.html#aff5733ad2e92d99197589a16dfb9138c">GPMS_handler</a>  (void)</dt>
 <dd>GPMS handler may be user implemented to suit custom needs  </dd>
-<dt><a class="anchor" id="_weak000016"></a>Global <a class="el" href="../../dd/d26/_d_s___g_p_m_s_8h.html#a69332b145b6a91ca7c8d067e6db7f1d3">GPMS_Init</a>  (void)</dt>
+<dt><a class="anchor" id="_weak000037"></a>Global <a class="el" href="../../dd/d26/_d_s___g_p_m_s_8h.html#a69332b145b6a91ca7c8d067e6db7f1d3">GPMS_Init</a>  (void)</dt>
 <dd>GPMS Base address may be changed if user implemented  </dd>
-<dt><a class="anchor" id="_weak000017"></a>Global <a class="el" href="../../de/d15/_d_s___g_p_m_s__proc_8h.html#ad640962df4bc97fc768c1a34ac38f872">GPMS_Init_Sequence</a>  (void)</dt>
+<dt><a class="anchor" id="_weak000038"></a>Global <a class="el" href="../../de/d15/_d_s___g_p_m_s__proc_8h.html#ad640962df4bc97fc768c1a34ac38f872">GPMS_Init_Sequence</a>  (void)</dt>
 <dd>GPMS Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000019"></a>Global <a class="el" href="../../da/dc5/_m_b85_r_c256_v__proc_8h.html#ae70ad3e715858c576a4f886a601a58f3">MB85RC256V_Init_Sequence</a>  (<a class="el" href="../../dc/dcf/struct_m_b85_r_c256_v__t.html">MB85RC256V_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000044"></a>Global <a class="el" href="../../da/dc5/_m_b85_r_c256_v__proc_8h.html#aa7a9dc1481a17a900490a1988c15de87">MB85RC256V_Init_Sequence</a>  (<a class="el" href="../../dc/dcf/struct_m_b85_r_c256_v__t.html">MB85RC256V_t</a> *const pCpnt)</dt>
 <dd>MB85RC256V Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000020"></a>Global <a class="el" href="../../d4/d96/_m_c_p4725__proc_8h.html#ab8f594f83eb124851ed6fc4acfe57b23">MCP4725_Init_Sequence</a>  (<a class="el" href="../../dc/d55/struct_m_c_p4725__t.html" title="MCP4725 user interface struct. ">MCP4725_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000043"></a>Global <a class="el" href="../../d5/d5f/_m_b85_r_c256_v__ex_8h.html#ad4392e34c0ec52cb793e71a1546d3389">MB85RC256V_WP_GPIO_Get</a>  (<a class="el" href="../../dc/dcf/struct_m_b85_r_c256_v__t.html">MB85RC256V_t</a> *const pCpnt, bool *const pState)</dt>
+<dd>MB85RC256V Write Protect GPIO pin getter may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000042"></a>Global <a class="el" href="../../d5/d5f/_m_b85_r_c256_v__ex_8h.html#af495e012827c3fabf23f464590729560">MB85RC256V_WP_GPIO_Init</a>  (<a class="el" href="../../dc/dcf/struct_m_b85_r_c256_v__t.html">MB85RC256V_t</a> *const pCpnt, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</dt>
+<dd>MB85RC256V Write Protect GPIO pin init may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000045"></a>Global <a class="el" href="../../d4/d96/_m_c_p4725__proc_8h.html#a4565885b804eb732717112b6934fdf70">MCP4725_Init_Sequence</a>  (<a class="el" href="../../dc/d55/struct_m_c_p4725__t.html" title="MCP4725 user interface struct. ">MCP4725_t</a> *const pCpnt)</dt>
 <dd>MCP4725 Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000022"></a>Global <a class="el" href="../../d6/d5e/_m_c_p9808__proc_8h.html#a64ebf7580e4e9e3974b8c020cb8b1051">MCP9808_handler</a>  (<a class="el" href="../../db/d83/struct_m_c_p9808__t.html" title="MCP9808 user interface struct. ">MCP9808_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000047"></a>Global <a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#abe7582c2f80cf5bf8ffb56d37272110e">MCP9808_Alert_GPIO_Get</a>  (<a class="el" href="../../db/d83/struct_m_c_p9808__t.html" title="MCP9808 user interface struct. ">MCP9808_t</a> *const pCpnt, bool *const pState)</dt>
+<dd>MCP9808 Change GPIO pin getter may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000046"></a>Global <a class="el" href="../../df/d2f/_m_c_p9808__ex_8h.html#af2c1405f1835f7a08978458d60b8d527">MCP9808_Alert_GPIO_Init</a>  (<a class="el" href="../../db/d83/struct_m_c_p9808__t.html" title="MCP9808 user interface struct. ">MCP9808_t</a> *const pCpnt, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</dt>
+<dd>MCP9808 Alert GPIO pin init may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000049"></a>Global <a class="el" href="../../d6/d5e/_m_c_p9808__proc_8h.html#a21a5213bef06c833d59b6053be862c6b">MCP9808_handler</a>  (<a class="el" href="../../db/d83/struct_m_c_p9808__t.html" title="MCP9808 user interface struct. ">MCP9808_t</a> *const pCpnt)</dt>
 <dd>MCP9808 handler may be user implemented to suit custom needs  </dd>
-<dt><a class="anchor" id="_weak000021"></a>Global <a class="el" href="../../d6/d5e/_m_c_p9808__proc_8h.html#ac1daf1ee55269479527921f21f0685ab">MCP9808_Init_Sequence</a>  (<a class="el" href="../../db/d83/struct_m_c_p9808__t.html" title="MCP9808 user interface struct. ">MCP9808_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000050"></a>Global <a class="el" href="../../d6/d5e/_m_c_p9808__proc_8h.html#a366a4d5c21eefda7d12af3bdcf800a11">MCP9808_handler_it</a>  (<a class="el" href="../../db/d83/struct_m_c_p9808__t.html" title="MCP9808 user interface struct. ">MCP9808_t</a> *const pCpnt)</dt>
+<dd>MCP9808 GPIO interrupt handler may be user implemented to suit custom needs  </dd>
+<dt><a class="anchor" id="_weak000048"></a>Global <a class="el" href="../../d6/d5e/_m_c_p9808__proc_8h.html#acdc3fcd27aee6d19c3e7fb7bf4762b47">MCP9808_Init_Sequence</a>  (<a class="el" href="../../db/d83/struct_m_c_p9808__t.html" title="MCP9808 user interface struct. ">MCP9808_t</a> *const pCpnt)</dt>
 <dd>MCP9808 handler may be user implemented to suit custom needs  </dd>
-<dt><a class="anchor" id="_weak000024"></a>Global <a class="el" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a342679a8eaa19001a2d661ca14c50139">MTCH6102_handler</a>  (<a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html">MTCH6102_t</a> *const pCpnt)</dt>
+<dt><a class="anchor" id="_weak000056"></a>Global <a class="el" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a342679a8eaa19001a2d661ca14c50139">MTCH6102_handler</a>  (<a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html">MTCH6102_t</a> *const pCpnt)</dt>
 <dd>MTCH6102 handler may be user implemented to suit custom needs  </dd>
-<dt><a class="anchor" id="_weak000023"></a>Global <a class="el" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a6cb756e62481a522d8fba783461ac9d4">MTCH6102_Init_Sequence</a>  (<a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html">MTCH6102_t</a> *const pCpnt)</dt>
+<dt><a class="anchor" id="_weak000057"></a>Global <a class="el" href="../../db/de8/_m_t_c_h6102__proc_8h.html#ac6e9878bc657bf9eedfe117c920ce6b4">MTCH6102_handler_it</a>  (<a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html">MTCH6102_t</a> *const pCpnt)</dt>
+<dd>MTCH6102 GPIO interrupt handler may be user implemented to suit custom needs  </dd>
+<dt><a class="anchor" id="_weak000055"></a>Global <a class="el" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a6cb756e62481a522d8fba783461ac9d4">MTCH6102_Init_Sequence</a>  (<a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html">MTCH6102_t</a> *const pCpnt)</dt>
 <dd>MTCH6102 Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000025"></a>Global <a class="el" href="../../de/da7/_p_c_a9532__proc_8h.html#ad95091b0082a87451c5873ea47a2c8bb">PCA9532_Init_Sequence</a>  (<a class="el" href="../../dd/d3d/struct_p_c_a9532__t.html" title="PCA9532 user interface struct. ">PCA9532_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000052"></a>Global <a class="el" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#ae6f4b02f3f49114cef624c0afb4b7f4e">MTCH6102_INT_GPIO_Get</a>  (<a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html">MTCH6102_t</a> *const pCpnt, bool *const pState)</dt>
+<dd>MTCH6102 Interrupt GPIO pin getter may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000051"></a>Global <a class="el" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a733a5846f9aa3999b273a4a40b1a5f3e">MTCH6102_INT_GPIO_Init</a>  (<a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html">MTCH6102_t</a> *const pCpnt, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</dt>
+<dd>MTCH6102 Interrupt GPIO pin init may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000054"></a>Global <a class="el" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a3747d7b925224b0079579c67e909ab50">MTCH6102_SYNC_GPIO_Get</a>  (<a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html">MTCH6102_t</a> *const pCpnt, bool *const pState)</dt>
+<dd>MTCH6102 Synchro GPIO pin getter may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000053"></a>Global <a class="el" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a1361a2cd7b079e8faa107b634dc0aa65">MTCH6102_SYNC_GPIO_Init</a>  (<a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html">MTCH6102_t</a> *const pCpnt, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</dt>
+<dd>MTCH6102 Synchro GPIO pin init may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000060"></a>Global <a class="el" href="../../de/da7/_p_c_a9532__proc_8h.html#a95ddc3ce36d7d60e26b08ce405ea2fc3">PCA9532_Init_Sequence</a>  (<a class="el" href="../../dd/d3d/struct_p_c_a9532__t.html" title="PCA9532 user interface struct. ">PCA9532_t</a> *const pCpnt)</dt>
 <dd>PCA9532 Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000026"></a>Global <a class="el" href="../../d0/de0/_p_c_a9624__proc_8h.html#a470de2e6ee5e496c5226c5422c2b8886">PCA9624_Init_Sequence</a>  (<a class="el" href="../../dc/df4/struct_p_c_a9624__t.html" title="PCA9624 user interface struct. ">PCA9624_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000058"></a>Global <a class="el" href="../../d8/df0/_p_c_a9532__ex_8h.html#a6d703493d85df1f08286da3738a2d41e">PCA9532_RST_GPIO_Init</a>  (<a class="el" href="../../dd/d3d/struct_p_c_a9532__t.html" title="PCA9532 user interface struct. ">PCA9532_t</a> *const pCpnt, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</dt>
+<dd>PCA9532 Reset GPIO pin init may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000059"></a>Global <a class="el" href="../../d8/df0/_p_c_a9532__ex_8h.html#aa8a564bad9889d38bcf23dc8a9d7d765">PCA9532_RST_GPIO_Set</a>  (<a class="el" href="../../dd/d3d/struct_p_c_a9532__t.html" title="PCA9532 user interface struct. ">PCA9532_t</a> *const pCpnt, const bool state)</dt>
+<dd>PCA9532 Reset GPIO pin setter may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000063"></a>Global <a class="el" href="../../d0/de0/_p_c_a9624__proc_8h.html#ae6462de81eb8420000a21390956d7aee">PCA9624_Init_Sequence</a>  (<a class="el" href="../../dc/df4/struct_p_c_a9624__t.html" title="PCA9624 user interface struct. ">PCA9624_t</a> *const pCpnt)</dt>
 <dd>PCA9624 Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000027"></a>Global <a class="el" href="../../d5/d22/_p_c_a9685__proc_8h.html#a6e9b5100a9232482cb86ed5b115ac8ad">PCA9685_Init_Sequence</a>  (<a class="el" href="../../d3/d48/struct_p_c_a9685__t.html" title="PCA9685 user interface struct. ">PCA9685_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000061"></a>Global <a class="el" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a96409f8047040eb25063ca731ef69d84">PCA9624_OE_GPIO_Init</a>  (<a class="el" href="../../dc/df4/struct_p_c_a9624__t.html" title="PCA9624 user interface struct. ">PCA9624_t</a> *const pCpnt, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</dt>
+<dd>PCA9624 Output Enable GPIO pin init may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000062"></a>Global <a class="el" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a1cb09b057cd1dc3d1541786ff8cbcf9b">PCA9624_OE_GPIO_Set</a>  (<a class="el" href="../../dc/df4/struct_p_c_a9624__t.html" title="PCA9624 user interface struct. ">PCA9624_t</a> *const pCpnt, const bool state)</dt>
+<dd>PCA9624 Output Enable GPIO pin setter may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000066"></a>Global <a class="el" href="../../d5/d22/_p_c_a9685__proc_8h.html#a7609b910642dc4a7bcec68f482028ed4">PCA9685_Init_Sequence</a>  (<a class="el" href="../../d3/d48/struct_p_c_a9685__t.html" title="PCA9685 user interface struct. ">PCA9685_t</a> *const pCpnt)</dt>
 <dd>PCA9685 Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000028"></a>Global <a class="el" href="../../df/d04/_p_c_a9956__proc_8h.html#a1c55c5f56740dc2447bc6e17724ab99b">PCA9956_Init_Sequence</a>  (<a class="el" href="../../df/d75/struct_p_c_a9956__t.html" title="PCA9956 user interface struct. ">PCA9956_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000064"></a>Global <a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#ae8ffcf950be577163b10d930b2a3ba9b">PCA9685_OE_GPIO_Init</a>  (<a class="el" href="../../d3/d48/struct_p_c_a9685__t.html" title="PCA9685 user interface struct. ">PCA9685_t</a> *const pCpnt, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</dt>
+<dd>PCA9685 Output Enable GPIO pin init may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000065"></a>Global <a class="el" href="../../d3/d57/_p_c_a9685__ex_8h.html#acb211bd528d2cdd158af88cbaf2455fc">PCA9685_OE_GPIO_Set</a>  (<a class="el" href="../../d3/d48/struct_p_c_a9685__t.html" title="PCA9685 user interface struct. ">PCA9685_t</a> *const pCpnt, const bool state)</dt>
+<dd>PCA9685 Output Enable GPIO pin setter may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000071"></a>Global <a class="el" href="../../df/d04/_p_c_a9956__proc_8h.html#a0cbd9081f3d6999611db262c3e3d6baf">PCA9956_Init_Sequence</a>  (<a class="el" href="../../df/d75/struct_p_c_a9956__t.html" title="PCA9956 user interface struct. ">PCA9956_t</a> *const pCpnt)</dt>
 <dd>PCA9956 Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000031"></a>Global <a class="el" href="../../d4/d61/_p_c_f8523__proc_8h.html#a0c61d7181df53ea43460c13575563e92">PCF8523_handler</a>  (void)</dt>
+<dt><a class="anchor" id="_weak000069"></a>Global <a class="el" href="../../dd/ddf/_p_c_a9956__ex_8h.html#a35e5abed701e1817148a233c9d7e673b">PCA9956_OE_GPIO_Init</a>  (<a class="el" href="../../df/d75/struct_p_c_a9956__t.html" title="PCA9956 user interface struct. ">PCA9956_t</a> *const pCpnt, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</dt>
+<dd>PCA9956 Output Enable GPIO pin init may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000070"></a>Global <a class="el" href="../../dd/ddf/_p_c_a9956__ex_8h.html#a62fb2f6017bb2c1e8256e619c69d9a9f">PCA9956_OE_GPIO_Set</a>  (<a class="el" href="../../df/d75/struct_p_c_a9956__t.html" title="PCA9956 user interface struct. ">PCA9956_t</a> *const pCpnt, const bool state)</dt>
+<dd>PCA9956 Output Enable GPIO pin setter may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000067"></a>Global <a class="el" href="../../dd/ddf/_p_c_a9956__ex_8h.html#af347eccfff4344b49fd6aa00956cd5b1">PCA9956_RST_GPIO_Init</a>  (<a class="el" href="../../df/d75/struct_p_c_a9956__t.html" title="PCA9956 user interface struct. ">PCA9956_t</a> *const pCpnt, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</dt>
+<dd>PCA9956 Reset GPIO pin init may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000068"></a>Global <a class="el" href="../../dd/ddf/_p_c_a9956__ex_8h.html#a7c381c9eb62fb60fa3e2ec8ae0260c50">PCA9956_RST_GPIO_Set</a>  (<a class="el" href="../../df/d75/struct_p_c_a9956__t.html" title="PCA9956 user interface struct. ">PCA9956_t</a> *const pCpnt, const bool state)</dt>
+<dd>PCA9956 Reset GPIO pin setter may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000078"></a>Global <a class="el" href="../../d4/d61/_p_c_f8523__proc_8h.html#a0c61d7181df53ea43460c13575563e92">PCF8523_handler</a>  (void)</dt>
 <dd>PCF8523 handler may be user implemented to suit custom needs  </dd>
-<dt><a class="anchor" id="_weak000029"></a>Global <a class="el" href="../../dd/d42/_p_c_f8523_8h.html#aa61e54475342c7382da01eb61e44da09">PCF8523_Init</a>  (void)</dt>
+<dt><a class="anchor" id="_weak000079"></a>Global <a class="el" href="../../d4/d61/_p_c_f8523__proc_8h.html#a519c4d20da41104d7ec672566ad70e36">PCF8523_handler_it</a>  (void)</dt>
+<dd>PCF8523 GPIO interrupt handler may be user implemented to suit custom needs  </dd>
+<dt><a class="anchor" id="_weak000072"></a>Global <a class="el" href="../../dd/d42/_p_c_f8523_8h.html#aa61e54475342c7382da01eb61e44da09">PCF8523_Init</a>  (void)</dt>
 <dd>PCF8523 Base address may be changed if user implemented  </dd>
-<dt><a class="anchor" id="_weak000030"></a>Global <a class="el" href="../../d4/d61/_p_c_f8523__proc_8h.html#a04365ddacd950492c16035fb554c3b72">PCF8523_Init_Sequence</a>  (void)</dt>
+<dt><a class="anchor" id="_weak000077"></a>Global <a class="el" href="../../d4/d61/_p_c_f8523__proc_8h.html#a04365ddacd950492c16035fb554c3b72">PCF8523_Init_Sequence</a>  (void)</dt>
 <dd>PCF8523 Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000033"></a>Global <a class="el" href="../../dc/d4b/_s11059__proc_8h.html#a05d21f3e722343cbf495d85bf63bc163">S11059_handler</a>  (<a class="el" href="../../d8/df6/struct_s11059__t.html" title="S11059 user interface struct. ">S11059_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000074"></a>Global <a class="el" href="../../d1/d30/_p_c_f8523__ex_8h.html#a9ea1402e7007951c1871925ebe86b9e7">PCF8523_INT1_GPIO_Get</a>  (bool *const pState)</dt>
+<dd>PCF8523 Interrupt 1 GPIO pin getter may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000073"></a>Global <a class="el" href="../../d1/d30/_p_c_f8523__ex_8h.html#aab0482f61dfb81dd3393d2b172f85eca">PCF8523_INT1_GPIO_Init</a>  (GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</dt>
+<dd>PCF8523 Interrupt 1 GPIO pin init may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000076"></a>Global <a class="el" href="../../d1/d30/_p_c_f8523__ex_8h.html#ae5d7a8cc7ee3d3d55f181a98ea75d451">PCF8523_INT2_GPIO_Get</a>  (bool *const pState)</dt>
+<dd>PCF8523 Interrupt 2 GPIO pin getter may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000075"></a>Global <a class="el" href="../../d1/d30/_p_c_f8523__ex_8h.html#af1c5ea8c59b47303429a66978e5c8864">PCF8523_INT2_GPIO_Init</a>  (GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</dt>
+<dd>PCF8523 Interrupt 2 GPIO pin init may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000081"></a>Global <a class="el" href="../../dc/d4b/_s11059__proc_8h.html#ab9513db9fe5366c3a493516be26d5fbe">S11059_handler</a>  (<a class="el" href="../../d8/df6/struct_s11059__t.html" title="S11059 user interface struct. ">S11059_t</a> *const pCpnt)</dt>
 <dd>S11059 handler may be user implemented to suit custom needs  </dd>
-<dt><a class="anchor" id="_weak000032"></a>Global <a class="el" href="../../dc/d4b/_s11059__proc_8h.html#a63d3bbbec413af54e3edd2dae0243d92">S11059_Init_Sequence</a>  (<a class="el" href="../../d8/df6/struct_s11059__t.html" title="S11059 user interface struct. ">S11059_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000080"></a>Global <a class="el" href="../../dc/d4b/_s11059__proc_8h.html#a29c8c4ee1e632a63916a634cbfa5e215">S11059_Init_Sequence</a>  (<a class="el" href="../../d8/df6/struct_s11059__t.html" title="S11059 user interface struct. ">S11059_t</a> *const pCpnt)</dt>
 <dd>S11059 Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000036"></a>Global <a class="el" href="../../d9/d14/_t_c_s3400__proc_8h.html#a5bdb9cbfd0626af529e9f6c3ff506e29">TCS3400_handler</a>  (<a class="el" href="../../d3/d18/struct_t_c_s3400__t.html" title="TCS3400 user interface struct. ">TCS3400_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000086"></a>Global <a class="el" href="../../d9/d14/_t_c_s3400__proc_8h.html#a8808303dd2ea714a3516ba2c0ed2b395">TCS3400_handler</a>  (<a class="el" href="../../d3/d18/struct_t_c_s3400__t.html" title="TCS3400 user interface struct. ">TCS3400_t</a> *const pCpnt)</dt>
 <dd>TCS3400 handler may be user implemented to suit custom needs  </dd>
-<dt><a class="anchor" id="_weak000035"></a>Global <a class="el" href="../../d9/d14/_t_c_s3400__proc_8h.html#a8fb5d620337b38aafea461ffa303894d">TCS3400_Init_Sequence</a>  (<a class="el" href="../../d3/d18/struct_t_c_s3400__t.html" title="TCS3400 user interface struct. ">TCS3400_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000087"></a>Global <a class="el" href="../../d9/d14/_t_c_s3400__proc_8h.html#acb5c223a54526bb6c991a244d86d7ecb">TCS3400_handler_it</a>  (<a class="el" href="../../d3/d18/struct_t_c_s3400__t.html" title="TCS3400 user interface struct. ">TCS3400_t</a> *const pCpnt)</dt>
+<dd>TCS3400 GPIO interrupt handler may be user implemented to suit custom needs  </dd>
+<dt><a class="anchor" id="_weak000085"></a>Global <a class="el" href="../../d9/d14/_t_c_s3400__proc_8h.html#a8a6888f4fcd6c3e24072035984dea5cb">TCS3400_Init_Sequence</a>  (<a class="el" href="../../d3/d18/struct_t_c_s3400__t.html" title="TCS3400 user interface struct. ">TCS3400_t</a> *const pCpnt)</dt>
 <dd>TCS3400 Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000038"></a>Global <a class="el" href="../../d6/d96/_t_c_s3472__proc_8h.html#a99572a1675914a37b3e51592a929cee1">TCS3472_handler</a>  (<a class="el" href="../../d8/d5b/struct_t_c_s3472__t.html" title="TCS3472 user interface struct. ">TCS3472_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000084"></a>Global <a class="el" href="../../de/d36/_t_c_s3400__ex_8h.html#aad7f5294306c1421ec7ed84a051749ba">TCS3400_INT_GPIO_Get</a>  (<a class="el" href="../../d3/d18/struct_t_c_s3400__t.html" title="TCS3400 user interface struct. ">TCS3400_t</a> *const pCpnt, bool *const pState)</dt>
+<dd>TCS3400 Interrupt GPIO pin getter may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000083"></a>Global <a class="el" href="../../de/d36/_t_c_s3400__ex_8h.html#aa4996079345a897dd3a7fb03f36395a7">TCS3400_INT_GPIO_Init</a>  (<a class="el" href="../../d3/d18/struct_t_c_s3400__t.html" title="TCS3400 user interface struct. ">TCS3400_t</a> *const pCpnt, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</dt>
+<dd>TCS3400 Interrupt GPIO pin init may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000091"></a>Global <a class="el" href="../../d6/d96/_t_c_s3472__proc_8h.html#a54a0b2c1f01815925219211bfe2b8bac">TCS3472_handler</a>  (<a class="el" href="../../d8/d5b/struct_t_c_s3472__t.html" title="TCS3472 user interface struct. ">TCS3472_t</a> *const pCpnt)</dt>
 <dd>TCS3472 handler may be user implemented to suit custom needs  </dd>
-<dt><a class="anchor" id="_weak000037"></a>Global <a class="el" href="../../d6/d96/_t_c_s3472__proc_8h.html#aa3932aaece6a7b7d1a711dfa32e3765d">TCS3472_Init_Sequence</a>  (<a class="el" href="../../d8/d5b/struct_t_c_s3472__t.html" title="TCS3472 user interface struct. ">TCS3472_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000092"></a>Global <a class="el" href="../../d6/d96/_t_c_s3472__proc_8h.html#abf8990e17a9cc0be48c1d013ffc6a551">TCS3472_handler_it</a>  (<a class="el" href="../../d8/d5b/struct_t_c_s3472__t.html" title="TCS3472 user interface struct. ">TCS3472_t</a> *const pCpnt)</dt>
+<dd>TCS3472 GPIO interrupt handler may be user implemented to suit custom needs  </dd>
+<dt><a class="anchor" id="_weak000090"></a>Global <a class="el" href="../../d6/d96/_t_c_s3472__proc_8h.html#aed0fb470889ebc72a3ebb8dbb1f3282b">TCS3472_Init_Sequence</a>  (<a class="el" href="../../d8/d5b/struct_t_c_s3472__t.html" title="TCS3472 user interface struct. ">TCS3472_t</a> *const pCpnt)</dt>
 <dd>TCS3472 Init sequence may be user implemented if custom initialization sequence needed  </dd>
-<dt><a class="anchor" id="_weak000040"></a>Global <a class="el" href="../../d7/d6e/_t_s_l2591__proc_8h.html#a603cc00f013d5d6c6696bfec7ed87b44">TSL2591_handler</a>  (<a class="el" href="../../d7/d5e/struct_t_s_l2591__t.html" title="TSL2591 user interface struct. ">TSL2591_t</a> *pCpnt)</dt>
+<dt><a class="anchor" id="_weak000089"></a>Global <a class="el" href="../../d2/dbe/_t_c_s3472__ex_8h.html#ab3aef251d4de4984627e67302b6eb7e7">TCS3472_INT_GPIO_Get</a>  (<a class="el" href="../../d8/d5b/struct_t_c_s3472__t.html" title="TCS3472 user interface struct. ">TCS3472_t</a> *const pCpnt, bool *const pState)</dt>
+<dd>TCS3472 Interrupt GPIO pin getter may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000088"></a>Global <a class="el" href="../../d2/dbe/_t_c_s3472__ex_8h.html#ab5ec97aa486481f1df6149ac9bc7f647">TCS3472_INT_GPIO_Init</a>  (<a class="el" href="../../d8/d5b/struct_t_c_s3472__t.html" title="TCS3472 user interface struct. ">TCS3472_t</a> *const pCpnt, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</dt>
+<dd>TCS3472 Interrupt GPIO pin init may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000096"></a>Global <a class="el" href="../../d7/d6e/_t_s_l2591__proc_8h.html#a63ff78c62bd01f18c84b4d4cd8541fd6">TSL2591_handler</a>  (<a class="el" href="../../d7/d5e/struct_t_s_l2591__t.html" title="TSL2591 user interface struct. ">TSL2591_t</a> *const pCpnt)</dt>
 <dd>TSL2591 handler may be user implemented to suit custom needs  </dd>
-<dt><a class="anchor" id="_weak000039"></a>Global <a class="el" href="../../d7/d6e/_t_s_l2591__proc_8h.html#a2041117e46b601378a1df06a4957cd4f">TSL2591_Init_Sequence</a>  (<a class="el" href="../../d7/d5e/struct_t_s_l2591__t.html" title="TSL2591 user interface struct. ">TSL2591_t</a> *pCpnt)</dt>
-<dd>TSL2591 Init sequence may be user implemented if custom initialization sequence needed </dd>
+<dt><a class="anchor" id="_weak000097"></a>Global <a class="el" href="../../d7/d6e/_t_s_l2591__proc_8h.html#a0dec9da426161dbc0d55404b64d3ae4d">TSL2591_handler_it</a>  (<a class="el" href="../../d7/d5e/struct_t_s_l2591__t.html" title="TSL2591 user interface struct. ">TSL2591_t</a> *const pCpnt)</dt>
+<dd>TSL2591 GPIO interrupt handler may be user implemented to suit custom needs  </dd>
+<dt><a class="anchor" id="_weak000095"></a>Global <a class="el" href="../../d7/d6e/_t_s_l2591__proc_8h.html#a5faab4b1d7b74b74edc2fdd8c4db4db4">TSL2591_Init_Sequence</a>  (<a class="el" href="../../d7/d5e/struct_t_s_l2591__t.html" title="TSL2591 user interface struct. ">TSL2591_t</a> *const pCpnt)</dt>
+<dd>TSL2591 Init sequence may be user implemented if custom initialization sequence needed  </dd>
+<dt><a class="anchor" id="_weak000094"></a>Global <a class="el" href="../../dc/d24/_t_s_l2591__ex_8h.html#ad4ecdc111eee86434a4e12753a58bed9">TSL2591_INT_GPIO_Get</a>  (<a class="el" href="../../d7/d5e/struct_t_s_l2591__t.html" title="TSL2591 user interface struct. ">TSL2591_t</a> *const pCpnt, bool *const pState)</dt>
+<dd>TSL2591 Interrupt GPIO pin getter may be user implemented if needed  </dd>
+<dt><a class="anchor" id="_weak000093"></a>Global <a class="el" href="../../dc/d24/_t_s_l2591__ex_8h.html#a2fd8a0442f003920328cc043fbd49d06">TSL2591_INT_GPIO_Init</a>  (<a class="el" href="../../d7/d5e/struct_t_s_l2591__t.html" title="TSL2591 user interface struct. ">TSL2591_t</a> *const pCpnt, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</dt>
+<dd>TSL2591 Interrupt GPIO pin init may be user implemented if needed </dd>
 </dl>
 </div></div><!-- contents -->
 <!-- start footer part -->

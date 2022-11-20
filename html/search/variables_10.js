@@ -5,6 +5,7 @@ var searchData=
   ['raw',['Raw',['../dc/d4b/unionu_a_t42_q_t___r_e_g_____k_e_y___d_a_t_a.html#a4035624f6071c3bd6832e6e83622bb96',1,'uAT42QT_REG__KEY_DATA']]],
   ['rdatah',['RDATAH',['../df/dd6/unionu_a_p_d_s9960___r_e_g___m_a_p.html#ab6229bc01fedc2228e332f1bd84bc29c',1,'uAPDS9960_REG_MAP::RDATAH()'],['../d9/d4e/unionu_t_c_s3472___r_e_g___m_a_p.html#a043760057fe56b8be42c1ef5402f4760',1,'uTCS3472_REG_MAP::RDATAH()']]],
   ['rdatal',['RDATAL',['../df/dd6/unionu_a_p_d_s9960___r_e_g___m_a_p.html#af035d85ff36c7266df7ae846ec4e1032',1,'uAPDS9960_REG_MAP::RDATAL()'],['../d9/d4e/unionu_t_c_s3472___r_e_g___m_a_p.html#a22f67cf550109aa67089668a9ad01615',1,'uTCS3472_REG_MAP::RDATAL()']]],
+  ['rdy_5fgpio',['RDY_GPIO',['../dd/da4/struct_a_d_s1115__t.html#ac778b22a546291a7b178f7c844b9cee1',1,'ADS1115_t']]],
   ['red',['Red',['../dc/ded/struct_a_p_d_s9960__t.html#ac70ab940e30bc8509d7257dd99ef95db',1,'APDS9960_t::Red()'],['../d8/df6/struct_s11059__t.html#a2d20f4a6f7d339f62459aa8bb48e0af0',1,'S11059_t::Red()'],['../d3/d18/struct_t_c_s3400__t.html#aed411d635d53190d0e7ff07bcbf0a08e',1,'TCS3400_t::Red()'],['../d8/d5b/struct_t_c_s3472__t.html#a6a1bc34e0fa1af4a9b6b578eac8db1ef',1,'TCS3472_t::Red()']]],
   ['red_5flsb',['Red_LSB',['../d3/d2f/unionu_s11059___r_e_g___m_a_p.html#a1ed9887db6ecb313006be9f8008d6a4f',1,'uS11059_REG_MAP']]],
   ['red_5fmsb',['Red_MSB',['../d3/d2f/unionu_s11059___r_e_g___m_a_p.html#a9bdf591fec4ed2fba9a65b1bf8c95f49',1,'uS11059_REG_MAP']]],
@@ -21,6 +22,7 @@ var searchData=
   ['rfu',['RFU',['../d1/d02/unionu_m_c_p9808___r_e_g___m_a_p.html#a78c1817f4d27e9c2ef4dd8b58321bc72',1,'uMCP9808_REG_MAP']]],
   ['rib',['RIB',['../d5/de7/unionu_a_t42_q_t___r_e_g_____s_e_t_u_p__244.html#a81a81be49a295661073a1941da5208a8',1,'uAT42QT_REG__SETUP_244']]],
   ['rotation',['Rotation',['../d5/d63/struct_m_t_c_h6102__t.html#a3990f54810c0048016ab11d73d23bb17',1,'MTCH6102_t']]],
+  ['rst_5fgpio',['RST_GPIO',['../da/dbc/struct_a_t42_q_t1244__t.html#afd3b0a9ee6c160ebb5d85f5d62788aa6',1,'AT42QT1244_t::RST_GPIO()'],['../dd/d3d/struct_p_c_a9532__t.html#ac10619c5dffe87a868fc4ff3dd8ec992',1,'PCA9532_t::RST_GPIO()'],['../df/d75/struct_p_c_a9956__t.html#a59a051df8a727e65b6baae5a67f14f00',1,'PCA9956_t::RST_GPIO()']]],
   ['rtp_5fformat',['RTP_Format',['../db/dac/struct_d_r_v2605_l__t.html#adf2cef199b6a4138fde4047c9fd0a32f',1,'DRV2605L_t']]],
   ['rtp_5finput',['RTP_Input',['../dc/da9/unionu_d_r_v___r_e_g___m_a_p.html#a161cd0cdf1559c8f0fad5fb4331d9850',1,'uDRV_REG_MAP']]],
   ['rxdownwards',['RxDownwards',['../d5/d63/struct_m_t_c_h6102__t.html#ad6ea8c39d452f0830a22e6f26ffb8aa6',1,'MTCH6102_t']]]

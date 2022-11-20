@@ -74,8 +74,9 @@ Collaboration diagram for PCF8523_t:</div>
 <div class="center"><img src="../../df/d85/struct_p_c_f8523__t__coll__graph.png" border="0" usemap="#_p_c_f8523__t_coll__map" alt="Collaboration graph"/></div>
 <map name="_p_c_f8523__t_coll__map" id="_p_c_f8523__t_coll__map">
 <area shape="rect" id="node2" href="../../d2/de7/struct_p_c_f8523__time.html" title="PCF8523 Time of day struct. " alt="" coords="5,5,120,32"/>
-<area shape="rect" id="node3" href="../../df/df6/struct_i2_c__slave__t.html" title="ci2c slave config and control parameters " alt="" coords="145,5,239,32"/>
+<area shape="rect" id="node3" href="../../df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters " alt="" coords="145,5,239,32"/>
 <area shape="rect" id="node4" href="../../d3/da8/struct_p_c_f8523__date.html" title="PCF8523 Date struct. " alt="" coords="264,5,379,32"/>
+<area shape="rect" id="node5" href="../../dc/d95/struct_peripheral_g_p_i_o__t.html" title="i2c peripheral GPIO pin parameters " alt="" coords="403,5,533,32"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -89,6 +90,12 @@ Data Fields</h2></td></tr>
 <tr class="memitem:accfc8f3c4c381f929bc96580f4a2321f"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;&#160;&#160;<a class="el" href="../../da/dd3/struct_p_c_f8523__t.html#a895b9b13cb187a35962b0f24bddc9d24">slave_inst</a></td></tr>
 <tr class="memdesc:accfc8f3c4c381f929bc96580f4a2321f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slave structure.  <a href="#accfc8f3c4c381f929bc96580f4a2321f">More...</a><br /></td></tr>
 <tr class="separator:accfc8f3c4c381f929bc96580f4a2321f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae39efa5a6297d794b3b4ad362e20dcd5"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="../../dc/d95/struct_peripheral_g_p_i_o__t.html">PeripheralGPIO_t</a>&#160;&#160;&#160;<a class="el" href="../../da/dd3/struct_p_c_f8523__t.html#a01bd8781ecfe1755cda876228df4d577">INT1_GPIO</a></td></tr>
+<tr class="memdesc:ae39efa5a6297d794b3b4ad362e20dcd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt 1 GPIO struct.  <a href="#ae39efa5a6297d794b3b4ad362e20dcd5">More...</a><br /></td></tr>
+<tr class="separator:ae39efa5a6297d794b3b4ad362e20dcd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24f551dbc079c3b2b45cab2df4968558"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="../../dc/d95/struct_peripheral_g_p_i_o__t.html">PeripheralGPIO_t</a>&#160;&#160;&#160;<a class="el" href="../../da/dd3/struct_p_c_f8523__t.html#a11fd7aa5ee0583271bf72abed7850bbc">INT2_GPIO</a></td></tr>
+<tr class="memdesc:a24f551dbc079c3b2b45cab2df4968558"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt 2 GPIO struct.  <a href="#a24f551dbc079c3b2b45cab2df4968558">More...</a><br /></td></tr>
+<tr class="separator:a24f551dbc079c3b2b45cab2df4968558"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d214ca1e02d5c5d0196a404f9f26971"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../da/dd3/struct_p_c_f8523__t.html#a0fa750d4cb4c9d683c1def9065afc973">Src_Clock_A</a></td></tr>
 <tr class="separator:a7d214ca1e02d5c5d0196a404f9f26971"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd390ef3b2d5d935188fce43afbe6692"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../da/dd3/struct_p_c_f8523__t.html#a653ce458999c017360a99b472b321471">Src_Clock_B</a></td></tr>
@@ -141,6 +148,38 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 
 <p>0: 24h; 1: 12h </p>
+
+</div>
+</div>
+<a id="a01bd8781ecfe1755cda876228df4d577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01bd8781ecfe1755cda876228df4d577">&#9670;&nbsp;</a></span>INT1_GPIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d95/struct_peripheral_g_p_i_o__t.html">PeripheralGPIO_t</a> PCF8523_t::INT1_GPIO</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Interrupt 1 GPIO struct. </p>
+
+</div>
+</div>
+<a id="a11fd7aa5ee0583271bf72abed7850bbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11fd7aa5ee0583271bf72abed7850bbc">&#9670;&nbsp;</a></span>INT2_GPIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d95/struct_peripheral_g_p_i_o__t.html">PeripheralGPIO_t</a> PCF8523_t::INT2_GPIO</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Interrupt 2 GPIO struct. </p>
 
 </div>
 </div>

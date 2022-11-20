@@ -76,6 +76,7 @@ $(function() {
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;sarmfsw.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d6/dd6/_i2_c__component_8h_source.html">I2C_component.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d5d/_i2_c__peripheral_8h_source.html">I2C_peripheral.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d1/d30/_p_c_f8523__ex_8h_source.html">PCF8523_ex.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d4/d61/_p_c_f8523__proc_8h_source.html">PCF8523_proc.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -83,9 +84,10 @@ Include dependency graph for PCF8523.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/dfc/_p_c_f8523_8h__incl.png" border="0" usemap="#_p_c_f8523_8h" alt=""/></div>
 <map name="_p_c_f8523_8h" id="_p_c_f8523_8h">
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="310,80,444,107"/>
-<area shape="rect" id="node6" href="../../d1/d30/_p_c_f8523__ex_8h.html" title="PCF8523 Driver extensions. " alt="" coords="24,80,136,107"/>
-<area shape="rect" id="node7" href="../../d4/d61/_p_c_f8523__proc_8h.html" title="PCF8523 Driver procedures. " alt="" coords="160,80,285,107"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="462,80,597,107"/>
+<area shape="rect" id="node6" href="../../dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="312,80,437,107"/>
+<area shape="rect" id="node7" href="../../d1/d30/_p_c_f8523__ex_8h.html" title="PCF8523 Driver extensions. " alt="" coords="27,80,139,107"/>
+<area shape="rect" id="node8" href="../../d4/d61/_p_c_f8523__proc_8h.html" title="PCF8523 Driver procedures. " alt="" coords="163,80,288,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -689,24 +691,30 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initialization for PCF8523 peripheral peripheral. </p>
-<dl class="weak"><dt><b><a class="el" href="../../d0/d58/weak.html#_weak000029">Weak Functions:</a></b></dt><dd>PCF8523 Base address may be changed if user implemented </dd></dl>
+<dl class="weak"><dt><b><a class="el" href="../../d0/d58/weak.html#_weak000072">Weak Functions:</a></b></dt><dd>PCF8523 Base address may be changed if user implemented </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d42/_p_c_f8523_8h_aa61e54475342c7382da01eb61e44da09_cgraph.png" border="0" usemap="#dd/d42/_p_c_f8523_8h_aa61e54475342c7382da01eb61e44da09_cgraph" alt=""/></div>
 <map name="dd/d42/_p_c_f8523_8h_aa61e54475342c7382da01eb61e44da09_cgraph" id="dd/d42/_p_c_f8523_8h_aa61e54475342c7382da01eb61e44da09_cgraph">
-<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="191,5,299,32"/>
-<area shape="rect" id="node3" href="../../d4/ded/_p_c_f8523__proc_8c.html#a04365ddacd950492c16035fb554c3b72" title="Initialization Sequence for PCF8523 peripheral. " alt="" coords="157,56,332,83"/>
-<area shape="rect" id="node12" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="185,107,304,133"/>
-<area shape="rect" id="node4" href="../../d4/ded/_p_c_f8523__proc_8c.html#a902d6eaca52b0245f92b1817ff01637a" title="PCF8523_Get_Date" alt="" coords="380,31,527,57"/>
-<area shape="rect" id="node9" href="../../d4/ded/_p_c_f8523__proc_8c.html#ad0d71f0e72ac7d36a8c735048b252b58" title="PCF8523_Get_Time" alt="" coords="380,81,527,108"/>
-<area shape="rect" id="node5" href="../../d1/d30/_p_c_f8523__ex_8h.html#ad3ec27d6dc57420cc5342d30d6164317" title="PCF8523_Get_Date_Raw" alt="" coords="801,31,980,57"/>
-<area shape="rect" id="node6" href="../../df/d5b/_p_c_f8523_8c.html#a58750b10a6bd6458855b5316af84fb5e" title="I2C Read function for PCF8523 peripheral. " alt="" coords="1028,81,1144,108"/>
-<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1192,56,1309,83"/>
-<area shape="rect" id="node8" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1197,107,1304,133"/>
-<area shape="rect" id="node10" href="../../d1/d30/_p_c_f8523__ex_8h.html#ae2c8370ad357db3869fd42d64d0320d3" title="PCF8523_Get_Time_Raw" alt="" coords="575,81,753,108"/>
-<area shape="rect" id="node11" href="../../d1/d30/_p_c_f8523__ex_8h.html#a2e5406b189e51d2f1929201d8ce73b99" title="PCF8523_Check_Clock\l_Integrity" alt="" coords="808,133,973,174"/>
+<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="191,9,299,36"/>
+<area shape="rect" id="node3" href="../../d4/ded/_p_c_f8523__proc_8c.html#a04365ddacd950492c16035fb554c3b72" title="Initialization Sequence for PCF8523 peripheral. " alt="" coords="157,60,332,87"/>
+<area shape="rect" id="node18" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="185,111,304,137"/>
+<area shape="rect" id="node4" href="../../d4/ded/_p_c_f8523__proc_8c.html#a902d6eaca52b0245f92b1817ff01637a" title="PCF8523_Get_Date" alt="" coords="380,20,527,47"/>
+<area shape="rect" id="node9" href="../../d4/ded/_p_c_f8523__proc_8c.html#ad0d71f0e72ac7d36a8c735048b252b58" title="PCF8523_Get_Time" alt="" coords="380,100,527,127"/>
+<area shape="rect" id="node5" href="../../d1/d30/_p_c_f8523__ex_8h.html#ad3ec27d6dc57420cc5342d30d6164317" title="PCF8523_Get_Date_Raw" alt="" coords="575,5,753,32"/>
+<area shape="rect" id="node6" href="../../df/d5b/_p_c_f8523_8c.html#a58750b10a6bd6458855b5316af84fb5e" title="I2C Read function for PCF8523 peripheral. " alt="" coords="1062,41,1178,68"/>
+<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1257,16,1375,43"/>
+<area shape="rect" id="node8" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1263,67,1369,93"/>
+<area shape="rect" id="node10" href="../../d1/d30/_p_c_f8523__ex_8h.html#ae2c8370ad357db3869fd42d64d0320d3" title="PCF8523_Get_Time_Raw" alt="" coords="575,159,753,185"/>
+<area shape="rect" id="node11" href="../../d1/d30/_p_c_f8523__ex_8h.html#a2e5406b189e51d2f1929201d8ce73b99" title="PCF8523_Check_Clock\l_Integrity" alt="" coords="809,93,975,134"/>
+<area shape="rect" id="node12" href="../../d1/d30/_p_c_f8523__ex_8h.html#aab0482f61dfb81dd3393d2b172f85eca" title="Interrupt 1 GPIO pin init for PCF8523. " alt="" coords="803,159,981,185"/>
+<area shape="rect" id="node14" href="../../d1/d30/_p_c_f8523__ex_8h.html#a9ea1402e7007951c1871925ebe86b9e7" title="Interrupt 1 GPIO pin getter for PCF8523. " alt="" coords="801,260,983,287"/>
+<area shape="rect" id="node16" href="../../d1/d30/_p_c_f8523__ex_8h.html#af1c5ea8c59b47303429a66978e5c8864" title="Interrupt 2 GPIO pin init for PCF8523. " alt="" coords="803,209,981,236"/>
+<area shape="rect" id="node17" href="../../d1/d30/_p_c_f8523__ex_8h.html#ae5d7a8cc7ee3d3d55f181a98ea75d451" title="Interrupt 2 GPIO pin getter for PCF8523. " alt="" coords="801,311,983,337"/>
+<area shape="rect" id="node13" href="../../d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="1031,197,1209,224"/>
+<area shape="rect" id="node15" href="../../d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="1031,273,1209,300"/>
 </map>
 </div>
 
@@ -771,13 +779,14 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node2" href="../../d1/d30/_p_c_f8523__ex_8h.html#ae82fc65ff3bb982a3a07ed43856fdfdd" title="PCF8523_Set_12_24" alt="" coords="182,13,335,39"/>
 <area shape="rect" id="node4" href="../../d1/d30/_p_c_f8523__ex_8h.html#a2e5406b189e51d2f1929201d8ce73b99" title="PCF8523_Check_Clock\l_Integrity" alt="" coords="176,115,341,156"/>
 <area shape="rect" id="node5" href="../../d1/d30/_p_c_f8523__ex_8h.html#ae2c8370ad357db3869fd42d64d0320d3" title="PCF8523_Get_Time_Raw" alt="" coords="404,122,583,149"/>
-<area shape="rect" id="node10" href="../../d1/d30/_p_c_f8523__ex_8h.html#ad3ec27d6dc57420cc5342d30d6164317" title="PCF8523_Get_Date_Raw" alt="" coords="169,181,348,207"/>
+<area shape="rect" id="node11" href="../../d1/d30/_p_c_f8523__ex_8h.html#ad3ec27d6dc57420cc5342d30d6164317" title="PCF8523_Get_Date_Raw" alt="" coords="169,181,348,207"/>
 <area shape="rect" id="node3" href="../../d1/d30/_p_c_f8523__ex_8h.html#a61666e0beb8690cff2a1e0529ad334a4" title="PCF8523_Disable_Weekday\l_Alarm" alt="" coords="396,5,591,47"/>
 <area shape="rect" id="node6" href="../../d4/d61/_p_c_f8523__proc_8h.html#ad0d71f0e72ac7d36a8c735048b252b58" title="PCF8523_Get_Time" alt="" coords="639,125,785,151"/>
 <area shape="rect" id="node7" href="../../d4/d61/_p_c_f8523__proc_8h.html#a04365ddacd950492c16035fb554c3b72" title="Initialization Sequence for PCF8523 peripheral. " alt="" coords="833,125,1008,151"/>
 <area shape="rect" id="node9" href="../../d4/d61/_p_c_f8523__proc_8h.html#a0c61d7181df53ea43460c13575563e92" title="Handler for PCF8523 peripheral. " alt="" coords="854,175,987,202"/>
-<area shape="rect" id="node8" href="../../dd/d42/_p_c_f8523_8h.html#aa61e54475342c7382da01eb61e44da09" title="Initialization for PCF8523 peripheral peripheral. " alt="" coords="1056,125,1160,151"/>
-<area shape="rect" id="node11" href="../../d4/d61/_p_c_f8523__proc_8h.html#a902d6eaca52b0245f92b1817ff01637a" title="PCF8523_Get_Date" alt="" coords="639,175,785,202"/>
+<area shape="rect" id="node8" href="../../dd/d42/_p_c_f8523_8h.html#aa61e54475342c7382da01eb61e44da09" title="Initialization for PCF8523 peripheral peripheral. " alt="" coords="1078,125,1182,151"/>
+<area shape="rect" id="node10" href="../../d4/d61/_p_c_f8523__proc_8h.html#a519c4d20da41104d7ec672566ad70e36" title="Handler for PCF8523 peripheral GPIO interrupt. " alt="" coords="1056,175,1204,202"/>
+<area shape="rect" id="node12" href="../../d4/d61/_p_c_f8523__proc_8h.html#a902d6eaca52b0245f92b1817ff01637a" title="PCF8523_Get_Date" alt="" coords="639,175,785,202"/>
 </map>
 </div>
 

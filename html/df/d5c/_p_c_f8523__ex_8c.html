@@ -75,10 +75,11 @@ Include dependency graph for PCF8523_ex.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d0/de1/_p_c_f8523__ex_8c__incl.png" border="0" usemap="#_p_c_f8523__ex_8c" alt=""/></div>
 <map name="_p_c_f8523__ex_8c" id="_p_c_f8523__ex_8c">
-<area shape="rect" id="node2" href="../../dd/d42/_p_c_f8523_8h.html" title="PCF8523 Driver. " alt="" coords="105,80,196,107"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="310,155,444,181"/>
-<area shape="rect" id="node7" href="../../d1/d30/_p_c_f8523__ex_8h.html" title="PCF8523 Driver extensions. " alt="" coords="24,155,136,181"/>
-<area shape="rect" id="node8" href="../../d4/d61/_p_c_f8523__proc_8h.html" title="PCF8523 Driver procedures. " alt="" coords="160,155,285,181"/>
+<area shape="rect" id="node2" href="../../dd/d42/_p_c_f8523_8h.html" title="PCF8523 Driver. " alt="" coords="180,80,271,107"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="462,155,597,181"/>
+<area shape="rect" id="node7" href="../../dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="312,155,437,181"/>
+<area shape="rect" id="node8" href="../../d1/d30/_p_c_f8523__ex_8h.html" title="PCF8523 Driver extensions. " alt="" coords="27,155,139,181"/>
+<area shape="rect" id="node9" href="../../d4/d61/_p_c_f8523__proc_8h.html" title="PCF8523 Driver procedures. " alt="" coords="163,155,288,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -99,6 +100,18 @@ Functions</h2></td></tr>
 <tr class="separator:a449349d321c7db0a033bc9dc1d886d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e5406b189e51d2f1929201d8ce73b99"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d5c/_p_c_f8523__ex_8c.html#a2e5406b189e51d2f1929201d8ce73b99">PCF8523_Check_Clock_Integrity</a> (bool *integrity)</td></tr>
 <tr class="separator:a2e5406b189e51d2f1929201d8ce73b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab0482f61dfb81dd3393d2b172f85eca"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d5c/_p_c_f8523__ex_8c.html#aab0482f61dfb81dd3393d2b172f85eca">PCF8523_INT1_GPIO_Init</a> (GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</td></tr>
+<tr class="memdesc:aab0482f61dfb81dd3393d2b172f85eca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt 1 GPIO pin init for PCF8523.  <a href="#aab0482f61dfb81dd3393d2b172f85eca">More...</a><br /></td></tr>
+<tr class="separator:aab0482f61dfb81dd3393d2b172f85eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ea1402e7007951c1871925ebe86b9e7"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d5c/_p_c_f8523__ex_8c.html#a9ea1402e7007951c1871925ebe86b9e7">PCF8523_INT1_GPIO_Get</a> (bool *const pState)</td></tr>
+<tr class="memdesc:a9ea1402e7007951c1871925ebe86b9e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt 1 GPIO pin getter for PCF8523.  <a href="#a9ea1402e7007951c1871925ebe86b9e7">More...</a><br /></td></tr>
+<tr class="separator:a9ea1402e7007951c1871925ebe86b9e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1c5ea8c59b47303429a66978e5c8864"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d5c/_p_c_f8523__ex_8c.html#af1c5ea8c59b47303429a66978e5c8864">PCF8523_INT2_GPIO_Init</a> (GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</td></tr>
+<tr class="memdesc:af1c5ea8c59b47303429a66978e5c8864"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt 2 GPIO pin init for PCF8523.  <a href="#af1c5ea8c59b47303429a66978e5c8864">More...</a><br /></td></tr>
+<tr class="separator:af1c5ea8c59b47303429a66978e5c8864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5d7a8cc7ee3d3d55f181a98ea75d451"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d5c/_p_c_f8523__ex_8c.html#ae5d7a8cc7ee3d3d55f181a98ea75d451">PCF8523_INT2_GPIO_Get</a> (bool *const pState)</td></tr>
+<tr class="memdesc:ae5d7a8cc7ee3d3d55f181a98ea75d451"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt 2 GPIO pin getter for PCF8523.  <a href="#ae5d7a8cc7ee3d3d55f181a98ea75d451">More...</a><br /></td></tr>
+<tr class="separator:ae5d7a8cc7ee3d3d55f181a98ea75d451"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>PCF8523 Driver extensions. </p>
@@ -140,7 +153,8 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node3" href="../../d4/d61/_p_c_f8523__proc_8h.html#ad0d71f0e72ac7d36a8c735048b252b58" title="PCF8523_Get_Time" alt="" coords="445,31,592,57"/>
 <area shape="rect" id="node4" href="../../d4/d61/_p_c_f8523__proc_8h.html#a04365ddacd950492c16035fb554c3b72" title="Initialization Sequence for PCF8523 peripheral. " alt="" coords="640,5,815,32"/>
 <area shape="rect" id="node6" href="../../d4/d61/_p_c_f8523__proc_8h.html#a0c61d7181df53ea43460c13575563e92" title="Handler for PCF8523 peripheral. " alt="" coords="661,56,794,83"/>
-<area shape="rect" id="node5" href="../../dd/d42/_p_c_f8523_8h.html#aa61e54475342c7382da01eb61e44da09" title="Initialization for PCF8523 peripheral peripheral. " alt="" coords="863,5,967,32"/>
+<area shape="rect" id="node5" href="../../dd/d42/_p_c_f8523_8h.html#aa61e54475342c7382da01eb61e44da09" title="Initialization for PCF8523 peripheral peripheral. " alt="" coords="885,5,989,32"/>
+<area shape="rect" id="node7" href="../../d4/d61/_p_c_f8523__proc_8h.html#a519c4d20da41104d7ec672566ad70e36" title="Handler for PCF8523 peripheral GPIO interrupt. " alt="" coords="863,56,1011,83"/>
 </map>
 </div>
 
@@ -330,6 +344,238 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="../../df/d5c/_p_c_f8523__ex_8c_a449349d321c7db0a033bc9dc1d886d75_icgraph.png" border="0" usemap="#df/d5c/_p_c_f8523__ex_8c_a449349d321c7db0a033bc9dc1d886d75_icgraph" alt=""/></div>
 <map name="df/d5c/_p_c_f8523__ex_8c_a449349d321c7db0a033bc9dc1d886d75_icgraph" id="df/d5c/_p_c_f8523__ex_8c_a449349d321c7db0a033bc9dc1d886d75_icgraph">
 <area shape="rect" id="node2" href="../../d1/d30/_p_c_f8523__ex_8h.html#a4255ff6bd0133cc37b2b34edbec2e2f5" title="PCF8523_Set_Time_Raw" alt="" coords="240,5,417,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9ea1402e7007951c1871925ebe86b9e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ea1402e7007951c1871925ebe86b9e7">&#9670;&nbsp;</a></span>PCF8523_INT1_GPIO_Get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR PCF8523_INT1_GPIO_Get </td>
+          <td>(</td>
+          <td class="paramtype">bool *const&#160;</td>
+          <td class="paramname"><em>pState</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Interrupt 1 GPIO pin getter for PCF8523. </p>
+<dl class="weak"><dt><b><a class="el" href="../../d0/d58/weak.html#_weak000074">Weak Functions:</a></b></dt><dd>PCF8523 Interrupt 1 GPIO pin getter may be user implemented if needed </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pState</td><td>- Pointer to INT1 pin state variable (0: inactive, 1: active) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d5c/_p_c_f8523__ex_8c_a9ea1402e7007951c1871925ebe86b9e7_cgraph.png" border="0" usemap="#df/d5c/_p_c_f8523__ex_8c_a9ea1402e7007951c1871925ebe86b9e7_cgraph" alt=""/></div>
+<map name="df/d5c/_p_c_f8523__ex_8c_a9ea1402e7007951c1871925ebe86b9e7_cgraph" id="df/d5c/_p_c_f8523__ex_8c_a9ea1402e7007951c1871925ebe86b9e7_cgraph">
+<area shape="rect" id="node2" href="../../d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="235,5,413,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d5c/_p_c_f8523__ex_8c_a9ea1402e7007951c1871925ebe86b9e7_icgraph.png" border="0" usemap="#df/d5c/_p_c_f8523__ex_8c_a9ea1402e7007951c1871925ebe86b9e7_icgraph" alt=""/></div>
+<map name="df/d5c/_p_c_f8523__ex_8c_a9ea1402e7007951c1871925ebe86b9e7_icgraph" id="df/d5c/_p_c_f8523__ex_8c_a9ea1402e7007951c1871925ebe86b9e7_icgraph">
+<area shape="rect" id="node2" href="../../d1/d30/_p_c_f8523__ex_8h.html#ae2c8370ad357db3869fd42d64d0320d3" title="PCF8523_Get_Time_Raw" alt="" coords="235,56,413,83"/>
+<area shape="rect" id="node7" href="../../d4/d61/_p_c_f8523__proc_8h.html#a519c4d20da41104d7ec672566ad70e36" title="Handler for PCF8523 peripheral GPIO interrupt. " alt="" coords="879,81,1027,108"/>
+<area shape="rect" id="node3" href="../../d4/d61/_p_c_f8523__proc_8h.html#ad0d71f0e72ac7d36a8c735048b252b58" title="PCF8523_Get_Time" alt="" coords="461,56,608,83"/>
+<area shape="rect" id="node4" href="../../d4/d61/_p_c_f8523__proc_8h.html#a04365ddacd950492c16035fb554c3b72" title="Initialization Sequence for PCF8523 peripheral. " alt="" coords="656,5,831,32"/>
+<area shape="rect" id="node6" href="../../d4/d61/_p_c_f8523__proc_8h.html#a0c61d7181df53ea43460c13575563e92" title="Handler for PCF8523 peripheral. " alt="" coords="677,56,810,83"/>
+<area shape="rect" id="node5" href="../../dd/d42/_p_c_f8523_8h.html#aa61e54475342c7382da01eb61e44da09" title="Initialization for PCF8523 peripheral peripheral. " alt="" coords="901,5,1005,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aab0482f61dfb81dd3393d2b172f85eca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab0482f61dfb81dd3393d2b172f85eca">&#9670;&nbsp;</a></span>PCF8523_INT1_GPIO_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR PCF8523_INT1_GPIO_Init </td>
+          <td>(</td>
+          <td class="paramtype">GPIO_TypeDef *const&#160;</td>
+          <td class="paramname"><em>GPIOx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>GPIO_Pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GPIO_PinState&#160;</td>
+          <td class="paramname"><em>GPIO_Active</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Interrupt 1 GPIO pin init for PCF8523. </p>
+<dl class="weak"><dt><b><a class="el" href="../../d0/d58/weak.html#_weak000073">Weak Functions:</a></b></dt><dd>PCF8523 Interrupt 1 GPIO pin init may be user implemented if needed </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">GPIOx</td><td>- INT1 port </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">GPIO_Pin</td><td>- INT1 pin </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">GPIO_Active</td><td>INT1 pin active state </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d5c/_p_c_f8523__ex_8c_aab0482f61dfb81dd3393d2b172f85eca_cgraph.png" border="0" usemap="#df/d5c/_p_c_f8523__ex_8c_aab0482f61dfb81dd3393d2b172f85eca_cgraph" alt=""/></div>
+<map name="df/d5c/_p_c_f8523__ex_8c_aab0482f61dfb81dd3393d2b172f85eca_cgraph" id="df/d5c/_p_c_f8523__ex_8c_aab0482f61dfb81dd3393d2b172f85eca_cgraph">
+<area shape="rect" id="node2" href="../../d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="231,5,408,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d5c/_p_c_f8523__ex_8c_aab0482f61dfb81dd3393d2b172f85eca_icgraph.png" border="0" usemap="#df/d5c/_p_c_f8523__ex_8c_aab0482f61dfb81dd3393d2b172f85eca_icgraph" alt=""/></div>
+<map name="df/d5c/_p_c_f8523__ex_8c_aab0482f61dfb81dd3393d2b172f85eca_icgraph" id="df/d5c/_p_c_f8523__ex_8c_aab0482f61dfb81dd3393d2b172f85eca_icgraph">
+<area shape="rect" id="node2" href="../../d1/d30/_p_c_f8523__ex_8h.html#ae2c8370ad357db3869fd42d64d0320d3" title="PCF8523_Get_Time_Raw" alt="" coords="231,31,409,57"/>
+<area shape="rect" id="node3" href="../../d4/d61/_p_c_f8523__proc_8h.html#ad0d71f0e72ac7d36a8c735048b252b58" title="PCF8523_Get_Time" alt="" coords="457,31,604,57"/>
+<area shape="rect" id="node4" href="../../d4/d61/_p_c_f8523__proc_8h.html#a04365ddacd950492c16035fb554c3b72" title="Initialization Sequence for PCF8523 peripheral. " alt="" coords="652,5,827,32"/>
+<area shape="rect" id="node6" href="../../d4/d61/_p_c_f8523__proc_8h.html#a0c61d7181df53ea43460c13575563e92" title="Handler for PCF8523 peripheral. " alt="" coords="673,56,806,83"/>
+<area shape="rect" id="node5" href="../../dd/d42/_p_c_f8523_8h.html#aa61e54475342c7382da01eb61e44da09" title="Initialization for PCF8523 peripheral peripheral. " alt="" coords="897,5,1001,32"/>
+<area shape="rect" id="node7" href="../../d4/d61/_p_c_f8523__proc_8h.html#a519c4d20da41104d7ec672566ad70e36" title="Handler for PCF8523 peripheral GPIO interrupt. " alt="" coords="875,56,1023,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae5d7a8cc7ee3d3d55f181a98ea75d451"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5d7a8cc7ee3d3d55f181a98ea75d451">&#9670;&nbsp;</a></span>PCF8523_INT2_GPIO_Get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR PCF8523_INT2_GPIO_Get </td>
+          <td>(</td>
+          <td class="paramtype">bool *const&#160;</td>
+          <td class="paramname"><em>pState</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Interrupt 2 GPIO pin getter for PCF8523. </p>
+<dl class="weak"><dt><b><a class="el" href="../../d0/d58/weak.html#_weak000076">Weak Functions:</a></b></dt><dd>PCF8523 Interrupt 2 GPIO pin getter may be user implemented if needed </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pState</td><td>- Pointer to INT2 pin state variable (0: inactive, 1: active) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d5c/_p_c_f8523__ex_8c_ae5d7a8cc7ee3d3d55f181a98ea75d451_cgraph.png" border="0" usemap="#df/d5c/_p_c_f8523__ex_8c_ae5d7a8cc7ee3d3d55f181a98ea75d451_cgraph" alt=""/></div>
+<map name="df/d5c/_p_c_f8523__ex_8c_ae5d7a8cc7ee3d3d55f181a98ea75d451_cgraph" id="df/d5c/_p_c_f8523__ex_8c_ae5d7a8cc7ee3d3d55f181a98ea75d451_cgraph">
+<area shape="rect" id="node2" href="../../d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="235,5,413,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d5c/_p_c_f8523__ex_8c_ae5d7a8cc7ee3d3d55f181a98ea75d451_icgraph.png" border="0" usemap="#df/d5c/_p_c_f8523__ex_8c_ae5d7a8cc7ee3d3d55f181a98ea75d451_icgraph" alt=""/></div>
+<map name="df/d5c/_p_c_f8523__ex_8c_ae5d7a8cc7ee3d3d55f181a98ea75d451_icgraph" id="df/d5c/_p_c_f8523__ex_8c_ae5d7a8cc7ee3d3d55f181a98ea75d451_icgraph">
+<area shape="rect" id="node2" href="../../d1/d30/_p_c_f8523__ex_8h.html#ae2c8370ad357db3869fd42d64d0320d3" title="PCF8523_Get_Time_Raw" alt="" coords="235,56,413,83"/>
+<area shape="rect" id="node7" href="../../d4/d61/_p_c_f8523__proc_8h.html#a519c4d20da41104d7ec672566ad70e36" title="Handler for PCF8523 peripheral GPIO interrupt. " alt="" coords="879,81,1027,108"/>
+<area shape="rect" id="node3" href="../../d4/d61/_p_c_f8523__proc_8h.html#ad0d71f0e72ac7d36a8c735048b252b58" title="PCF8523_Get_Time" alt="" coords="461,56,608,83"/>
+<area shape="rect" id="node4" href="../../d4/d61/_p_c_f8523__proc_8h.html#a04365ddacd950492c16035fb554c3b72" title="Initialization Sequence for PCF8523 peripheral. " alt="" coords="656,5,831,32"/>
+<area shape="rect" id="node6" href="../../d4/d61/_p_c_f8523__proc_8h.html#a0c61d7181df53ea43460c13575563e92" title="Handler for PCF8523 peripheral. " alt="" coords="677,56,810,83"/>
+<area shape="rect" id="node5" href="../../dd/d42/_p_c_f8523_8h.html#aa61e54475342c7382da01eb61e44da09" title="Initialization for PCF8523 peripheral peripheral. " alt="" coords="901,5,1005,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af1c5ea8c59b47303429a66978e5c8864"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1c5ea8c59b47303429a66978e5c8864">&#9670;&nbsp;</a></span>PCF8523_INT2_GPIO_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR PCF8523_INT2_GPIO_Init </td>
+          <td>(</td>
+          <td class="paramtype">GPIO_TypeDef *const&#160;</td>
+          <td class="paramname"><em>GPIOx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>GPIO_Pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GPIO_PinState&#160;</td>
+          <td class="paramname"><em>GPIO_Active</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Interrupt 2 GPIO pin init for PCF8523. </p>
+<dl class="weak"><dt><b><a class="el" href="../../d0/d58/weak.html#_weak000075">Weak Functions:</a></b></dt><dd>PCF8523 Interrupt 2 GPIO pin init may be user implemented if needed </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">GPIOx</td><td>- INT2 port </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">GPIO_Pin</td><td>- INT2 pin </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">GPIO_Active</td><td>INT2 pin active state </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d5c/_p_c_f8523__ex_8c_af1c5ea8c59b47303429a66978e5c8864_cgraph.png" border="0" usemap="#df/d5c/_p_c_f8523__ex_8c_af1c5ea8c59b47303429a66978e5c8864_cgraph" alt=""/></div>
+<map name="df/d5c/_p_c_f8523__ex_8c_af1c5ea8c59b47303429a66978e5c8864_cgraph" id="df/d5c/_p_c_f8523__ex_8c_af1c5ea8c59b47303429a66978e5c8864_cgraph">
+<area shape="rect" id="node2" href="../../d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="231,5,408,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d5c/_p_c_f8523__ex_8c_af1c5ea8c59b47303429a66978e5c8864_icgraph.png" border="0" usemap="#df/d5c/_p_c_f8523__ex_8c_af1c5ea8c59b47303429a66978e5c8864_icgraph" alt=""/></div>
+<map name="df/d5c/_p_c_f8523__ex_8c_af1c5ea8c59b47303429a66978e5c8864_icgraph" id="df/d5c/_p_c_f8523__ex_8c_af1c5ea8c59b47303429a66978e5c8864_icgraph">
+<area shape="rect" id="node2" href="../../d1/d30/_p_c_f8523__ex_8h.html#ae2c8370ad357db3869fd42d64d0320d3" title="PCF8523_Get_Time_Raw" alt="" coords="231,31,409,57"/>
+<area shape="rect" id="node3" href="../../d4/d61/_p_c_f8523__proc_8h.html#ad0d71f0e72ac7d36a8c735048b252b58" title="PCF8523_Get_Time" alt="" coords="457,31,604,57"/>
+<area shape="rect" id="node4" href="../../d4/d61/_p_c_f8523__proc_8h.html#a04365ddacd950492c16035fb554c3b72" title="Initialization Sequence for PCF8523 peripheral. " alt="" coords="652,5,827,32"/>
+<area shape="rect" id="node6" href="../../d4/d61/_p_c_f8523__proc_8h.html#a0c61d7181df53ea43460c13575563e92" title="Handler for PCF8523 peripheral. " alt="" coords="673,56,806,83"/>
+<area shape="rect" id="node5" href="../../dd/d42/_p_c_f8523_8h.html#aa61e54475342c7382da01eb61e44da09" title="Initialization for PCF8523 peripheral peripheral. " alt="" coords="897,5,1001,32"/>
+<area shape="rect" id="node7" href="../../d4/d61/_p_c_f8523__proc_8h.html#a519c4d20da41104d7ec672566ad70e36" title="Handler for PCF8523 peripheral GPIO interrupt. " alt="" coords="875,56,1023,83"/>
 </map>
 </div>
 

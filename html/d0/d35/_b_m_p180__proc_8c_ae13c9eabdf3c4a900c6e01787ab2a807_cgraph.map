@@ -1,0 +1,11 @@
+<map id="BMP180_handler" name="BMP180_handler">
+<area shape="rect" id="node2" href="$d0/d35/_b_m_p180__proc_8c.html#abff0623050520b3826558d5b2a13f796" title="Gets the compensated pressure level. " alt="" coords="183,56,349,83"/>
+<area shape="rect" id="node3" href="$db/d0e/_b_m_p180__ex_8c.html#a54d2903a86c9b42dcc4f8bc8f4b2baf7" title="Get Raw Temperature. " alt="" coords="397,81,621,108"/>
+<area shape="rect" id="node10" href="$db/d0e/_b_m_p180__ex_8c.html#a2bbc509d5c02c2629fc2adb4d0a05788" title="Get Raw Pressure. " alt="" coords="410,31,609,57"/>
+<area shape="rect" id="node4" href="$db/d0e/_b_m_p180__ex_8c.html#a7cacb36688796e7036bc64296f194621" title="Start BMP180 Temperature/Pressure conversion. " alt="" coords="669,56,860,83"/>
+<area shape="rect" id="node8" href="$d8/d11/_b_m_p180_8c.html#a96723b9fbe9d582ed3f4120471de5520" title="I2C Word Read function for BMP180. " alt="" coords="689,107,840,133"/>
+<area shape="rect" id="node5" href="$d8/d11/_b_m_p180_8c.html#a59805878eebcefe8d80c08bc90b5fb54" title="I2C Write function for BMP180. " alt="" coords="908,56,1020,83"/>
+<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1068,5,1185,32"/>
+<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1073,56,1180,83"/>
+<area shape="rect" id="node9" href="$d8/d11/_b_m_p180_8c.html#adce223c1add54df827a7a1457f2005ec" title="I2C Read function for BMP180. " alt="" coords="908,5,1020,32"/>
+</map>

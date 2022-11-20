@@ -1,7 +1,0 @@
-<map id="BMP180_Get_Temperature_Raw" name="BMP180_Get_Temperature_Raw">
-<area shape="rect" id="node2" href="$d8/dfb/_b_m_p180__ex_8h.html#af117431545dbbd23c1e495f35002e443" title="Reset BMP180 chip. " alt="" coords="315,5,431,32"/>
-<area shape="rect" id="node3" href="$dc/d50/_b_m_p180__proc_8h.html#a8111dfccecbfb16a41a0069a0755ed0c" title="Gets the compensated pressure level. " alt="" coords="290,56,457,83"/>
-<area shape="rect" id="node6" href="$dc/d50/_b_m_p180__proc_8h.html#a061b4b5aefbd8a7d0c5309a923e914ef" title="Get the temperature. " alt="" coords="277,107,469,133"/>
-<area shape="rect" id="node4" href="$dc/d50/_b_m_p180__proc_8h.html#a7446219370560398c8a2e936aad41be9" title="Handler for BMP180 peripheral. " alt="" coords="517,56,647,83"/>
-<area shape="rect" id="node5" href="$dc/d50/_b_m_p180__proc_8h.html#a6ea364017a9680fe0d48f50dd9f84ffd" title="Handler for all BMP180 peripherals. " alt="" coords="695,56,845,83"/>
-</map>

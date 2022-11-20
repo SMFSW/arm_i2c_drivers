@@ -1,0 +1,19 @@
+<map id="S11059_Read" name="S11059_Read">
+<area shape="rect" id="node2" href="$d1/d8f/_s11059_8h.html#a445b49a90ce780749d8cf6395d439b26" title="I2C Word Read (big endian) function for S11059. " alt="" coords="170,132,317,159"/>
+<area shape="rect" id="node8" href="$d9/da9/_s11059__ex_8h.html#a64b87185a7e664ad2e6b799f7cd1574d" title="ADC Operation / Reset. " alt="" coords="176,360,311,387"/>
+<area shape="rect" id="node10" href="$d9/da9/_s11059__ex_8h.html#ab04a5e3db9ed92fca1cfa2aa5bd3cb83" title="Set Standby / Operating mode. " alt="" coords="588,284,748,311"/>
+<area shape="rect" id="node11" href="$d9/da9/_s11059__ex_8h.html#ac5f3bc7d1315503e3ecc762735121e05" title="Set ADC gain. " alt="" coords="600,385,736,412"/>
+<area shape="rect" id="node12" href="$d9/da9/_s11059__ex_8h.html#ab24f9219e107a9649e6b6ec91393fdfb" title="Set integration mode &amp; prescaler. " alt="" coords="580,436,756,463"/>
+<area shape="rect" id="node16" href="$d9/da9/_s11059__ex_8h.html#a6d065fe56a7e73d33c62842d5cac2be4" title="Get Standby function monitor. " alt="" coords="163,309,324,336"/>
+<area shape="rect" id="node17" href="$dc/d4b/_s11059__proc_8h.html#ab9513db9fe5366c3a493516be26d5fbe" title="Handler for S11059 peripheral. " alt="" coords="180,512,307,539"/>
+<area shape="rect" id="node3" href="$d9/da9/_s11059__ex_8h.html#ad6cde29fac4ebcb48c3e1af0ed730ae5" title="Get Specific channel conversion. " alt="" coords="372,5,532,32"/>
+<area shape="rect" id="node4" href="$d9/da9/_s11059__ex_8h.html#a8e941832a76bf38a7a19d6f4f9f83cf0" title="Get Red channel conversion. " alt="" coords="387,56,517,83"/>
+<area shape="rect" id="node5" href="$d9/da9/_s11059__ex_8h.html#a1085abad1e2d6c1339e4a6f7d492bf42" title="Get Green channel conversion. " alt="" coords="379,107,525,133"/>
+<area shape="rect" id="node6" href="$d9/da9/_s11059__ex_8h.html#af21f48e800a2ccd78db8a3fe5a446636" title="Get Blue channel conversion. " alt="" coords="384,157,520,184"/>
+<area shape="rect" id="node7" href="$d9/da9/_s11059__ex_8h.html#a3ff8334f27d79682f9a3808993697202" title="Get Infra&#45;red channel conversion. " alt="" coords="393,208,511,235"/>
+<area shape="rect" id="node9" href="$d9/da9/_s11059__ex_8h.html#a8003a17567b88db07003a68b9145f5cd" title="Write S11059 Control register. " alt="" coords="385,360,519,387"/>
+<area shape="rect" id="node13" href="$dc/d4b/_s11059__proc_8h.html#a29c8c4ee1e632a63916a634cbfa5e215" title="Initialization Sequence for S11059 peripheral. " alt="" coords="584,335,752,361"/>
+<area shape="rect" id="node14" href="$d1/d8f/_s11059_8h.html#aaaa62f952fb19007b1c6592422c88221" title="Initialization for S11059 peripheral. " alt="" coords="804,335,901,361"/>
+<area shape="rect" id="node15" href="$d1/d8f/_s11059_8h.html#a54b2b645d23ab3654253ec5165873303" title="Initialization for S11059 peripheral. " alt="" coords="949,335,1092,361"/>
+<area shape="rect" id="node18" href="$dc/d4b/_s11059__proc_8h.html#af92ed5c8aa914c256a50a874b5536d2d" title="Handler for all S11059 peripherals. " alt="" coords="379,512,525,539"/>
+</map>

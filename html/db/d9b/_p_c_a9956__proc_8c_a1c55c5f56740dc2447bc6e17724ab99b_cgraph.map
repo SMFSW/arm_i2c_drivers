@@ -1,8 +1,0 @@
-<map id="PCA9956_Init_Sequence" name="PCA9956_Init_Sequence">
-<area shape="rect" id="node2" href="$df/d5e/_p_c_a9956_8c.html#a2d48a308053e3c821a70b67b0f3a2de9" title="I2C Write function for PCA9956. " alt="" coords="497,56,616,83"/>
-<area shape="rect" id="node5" href="$dd/d22/_p_c_a9956__ex_8c.html#a1c293d3b30faed552452a938635e5025" title="Set auto increment option for PCA9956 registers. " alt="" coords="231,107,449,133"/>
-<area shape="rect" id="node7" href="$dd/d22/_p_c_a9956__ex_8c.html#a9634dd720e3a109a32be37d7721181a4" title="Set PCA9956 peripheral multiple LEDs mode. " alt="" coords="245,5,435,32"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="664,56,781,83"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="669,107,776,133"/>
-<area shape="rect" id="node6" href="$df/d5e/_p_c_a9956_8c.html#aaab84cb94e5542d51b2d99463079d907" title="I2C Read function for PCA9956. " alt="" coords="497,107,616,133"/>
-</map>

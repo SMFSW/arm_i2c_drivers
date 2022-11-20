@@ -1,0 +1,5 @@
+<map id="MCP4725_Read_State" name="MCP4725_Read_State">
+<area shape="rect" id="node2" href="$d9/d93/_m_c_p4725_8c.html#a8b9ff4c06e4717e351a376418112f524" title="I2C Read function for MCP4725. " alt="" coords="216,31,336,57"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="384,5,501,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="389,56,496,83"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="MCP9808_handler" name="MCP9808_handler">
+<area shape="rect" id="node2" href="$d6/d5e/_m_c_p9808__proc_8h.html#a366a4d5c21eefda7d12af3bdcf800a11" title="Handler for MCP9808 peripheral GPIO interrupt. " alt="" coords="194,5,346,32"/>
+<area shape="rect" id="node4" href="$d6/d5e/_m_c_p9808__proc_8h.html#a80ec245d8846d77a209b2c1d67f436df" title="Handler for all MCP9808 peripherals. " alt="" coords="191,56,349,83"/>
+<area shape="rect" id="node3" href="$d6/d5e/_m_c_p9808__proc_8h.html#a07f88cc900aba5f4bb109f76f7c26a28" title="Handler for all MCP9808 peripherals GPIO interrupt. " alt="" coords="397,5,571,32"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="PCA9624_ReadVals" name="PCA9624_ReadVals">
+<area shape="rect" id="node2" href="$d6/dfc/_p_c_a9624__ex_8h.html#a4873de01aedd5ccef0320315cf6195be" title="Set MODE2 register. " alt="" coords="217,5,379,32"/>
+<area shape="rect" id="node3" href="$d6/dfc/_p_c_a9624__ex_8h.html#aea311d4d9235407ad34b209fd4903245" title="Read PWM duty cycle array of values of a PCA9624. " alt="" coords="205,56,391,83"/>
+<area shape="rect" id="node4" href="$d6/dfc/_p_c_a9624__ex_8h.html#ab80468102a0ccd9e0d8c2fb841d19b95" title="Read PWM duty cycle array of values of a PCA9624. " alt="" coords="197,107,399,149"/>
+<area shape="rect" id="node5" href="$d6/dfc/_p_c_a9624__ex_8h.html#a908e779b4a0bfd968a674997d5fd659f" title="Read all PWM duty cycle array of values of a PCA9624 (for the 8 channels) " alt="" coords="215,173,381,200"/>
+</map>

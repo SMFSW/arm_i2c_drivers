@@ -1,0 +1,9 @@
+<map id="PCA9532_Read" name="PCA9532_Read">
+<area shape="rect" id="node2" href="$d8/df0/_p_c_a9532__ex_8h.html#a50cdf8379e507736d03eb51e3bed2b01" title="Read register from PCA9532. " alt="" coords="173,5,342,32"/>
+<area shape="rect" id="node4" href="$de/da7/_p_c_a9532__proc_8h.html#a95ddc3ce36d7d60e26b08ce405ea2fc3" title="Initialization Sequence for PCA9532 peripheral. " alt="" coords="612,120,789,147"/>
+<area shape="rect" id="node7" href="$d8/df0/_p_c_a9532__ex_8h.html#a88684c24046ec8995a83af7b9e3bb9d6" title="Read LED0 to LED7 input register. " alt="" coords="172,56,343,83"/>
+<area shape="rect" id="node8" href="$d8/df0/_p_c_a9532__ex_8h.html#a8e553b1df9b3d53172626bf564340823" title="Read LED8 to LED15 input register. " alt="" coords="172,107,343,133"/>
+<area shape="rect" id="node3" href="$d8/df0/_p_c_a9532__ex_8h.html#a03b2ea671687b1a439c90bc4f946542b" title="Convert PWMx byte register to Duty Cycle (in %) " alt="" coords="391,81,564,108"/>
+<area shape="rect" id="node5" href="$d3/df9/_p_c_a9532_8h.html#a53117549a86481f7203371b537bc7084" title="Initialization for PCA9532 peripheral. " alt="" coords="837,120,944,147"/>
+<area shape="rect" id="node6" href="$d3/df9/_p_c_a9532_8h.html#ae3bc95cfa1ac91a201ac0543ced4bb03" title="Initialization for PCA9532 peripheral. " alt="" coords="992,120,1144,147"/>
+</map>

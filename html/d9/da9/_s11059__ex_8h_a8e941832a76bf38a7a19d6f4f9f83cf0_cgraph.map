@@ -1,0 +1,6 @@
+<map id="S11059_Get_Red" name="S11059_Get_Red">
+<area shape="rect" id="node2" href="$d2/dfe/_s11059_8c.html#a445b49a90ce780749d8cf6395d439b26" title="I2C Word Read (big endian) function for S11059. " alt="" coords="184,31,331,57"/>
+<area shape="rect" id="node3" href="$d2/dfe/_s11059_8c.html#a157781bb2500a88bc780ad45e0cc60c1" title="I2C Read function for S11059. " alt="" coords="379,31,488,57"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="536,5,653,32"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="541,56,648,83"/>
+</map>

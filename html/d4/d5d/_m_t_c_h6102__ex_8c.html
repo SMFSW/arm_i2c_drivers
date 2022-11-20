@@ -97,6 +97,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a411fa06e29c5cafb719e8735446df85d"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5d/_m_t_c_h6102__ex_8c.html#a411fa06e29c5cafb719e8735446df85d">MTCH6102_Set_Filter</a> (const <a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html">MTCH6102_t</a> *const pCpnt, const <a class="el" href="../../da/da9/_m_t_c_h6102_8h.html#ae4776fbb4b602b9f9b8b8ed7f63134b2">MTCH6102_FILTER_TYPE</a> type, const uint8_t strength, const bool baseline_filter)</td></tr>
 <tr class="memdesc:a411fa06e29c5cafb719e8735446df85d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MTCH6102 raw acquisition filter.  <a href="#a411fa06e29c5cafb719e8735446df85d">More...</a><br /></td></tr>
 <tr class="separator:a411fa06e29c5cafb719e8735446df85d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a733a5846f9aa3999b273a4a40b1a5f3e"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5d/_m_t_c_h6102__ex_8c.html#a733a5846f9aa3999b273a4a40b1a5f3e">MTCH6102_INT_GPIO_Init</a> (<a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html">MTCH6102_t</a> *const pCpnt, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</td></tr>
+<tr class="memdesc:a733a5846f9aa3999b273a4a40b1a5f3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt GPIO pin init for MTCH6102.  <a href="#a733a5846f9aa3999b273a4a40b1a5f3e">More...</a><br /></td></tr>
+<tr class="separator:a733a5846f9aa3999b273a4a40b1a5f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f4b02f3f49114cef624c0afb4b7f4e"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5d/_m_t_c_h6102__ex_8c.html#ae6f4b02f3f49114cef624c0afb4b7f4e">MTCH6102_INT_GPIO_Get</a> (<a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html">MTCH6102_t</a> *const pCpnt, bool *const pState)</td></tr>
+<tr class="memdesc:ae6f4b02f3f49114cef624c0afb4b7f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt GPIO pin getter for MTCH6102.  <a href="#ae6f4b02f3f49114cef624c0afb4b7f4e">More...</a><br /></td></tr>
+<tr class="separator:ae6f4b02f3f49114cef624c0afb4b7f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1361a2cd7b079e8faa107b634dc0aa65"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5d/_m_t_c_h6102__ex_8c.html#a1361a2cd7b079e8faa107b634dc0aa65">MTCH6102_SYNC_GPIO_Init</a> (<a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html">MTCH6102_t</a> *const pCpnt, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</td></tr>
+<tr class="memdesc:a1361a2cd7b079e8faa107b634dc0aa65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchro GPIO pin init for MTCH6102.  <a href="#a1361a2cd7b079e8faa107b634dc0aa65">More...</a><br /></td></tr>
+<tr class="separator:a1361a2cd7b079e8faa107b634dc0aa65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3747d7b925224b0079579c67e909ab50"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5d/_m_t_c_h6102__ex_8c.html#a3747d7b925224b0079579c67e909ab50">MTCH6102_SYNC_GPIO_Get</a> (<a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html">MTCH6102_t</a> *const pCpnt, bool *const pState)</td></tr>
+<tr class="memdesc:a3747d7b925224b0079579c67e909ab50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchro GPIO pin getter for MTCH6102.  <a href="#a3747d7b925224b0079579c67e909ab50">More...</a><br /></td></tr>
+<tr class="separator:a3747d7b925224b0079579c67e909ab50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>MTCH6102 Driver extensions. </p>
@@ -144,8 +156,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/d5d/_m_t_c_h6102__ex_8c_a4c1612bb1afca9818d54ff05c5fa4191_cgraph.png" border="0" usemap="#d4/d5d/_m_t_c_h6102__ex_8c_a4c1612bb1afca9818d54ff05c5fa4191_cgraph" alt=""/></div>
 <map name="d4/d5d/_m_t_c_h6102__ex_8c_a4c1612bb1afca9818d54ff05c5fa4191_cgraph" id="d4/d5d/_m_t_c_h6102__ex_8c_a4c1612bb1afca9818d54ff05c5fa4191_cgraph">
-<area shape="rect" id="node2" href="../../da/d78/_m_t_c_h6102_8c.html#a7d23a0da90fbc047e384e603c436be75" title="I2C Write function for MTCH6102. " alt="" coords="217,5,345,32"/>
-<area shape="rect" id="node4" href="../../da/d78/_m_t_c_h6102_8c.html#a2def4bf75a8f4418b4b79478b849d24d" title="I2C Read function for MTCH6102. " alt="" coords="217,56,345,83"/>
+<area shape="rect" id="node2" href="../../da/d78/_m_t_c_h6102_8c.html#aadac3361a556fe464ea0df2d9a8366ae" title="I2C Write function for MTCH6102. " alt="" coords="217,5,345,32"/>
+<area shape="rect" id="node4" href="../../da/d78/_m_t_c_h6102_8c.html#a5aa313bbfe74f756dd83101dbefea059" title="I2C Read function for MTCH6102. " alt="" coords="217,56,345,83"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="393,31,511,57"/>
 </map>
 </div>
@@ -211,7 +223,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/d5d/_m_t_c_h6102__ex_8c_a80d1f444381283a7bc2883f0ed086c9a_cgraph.png" border="0" usemap="#d4/d5d/_m_t_c_h6102__ex_8c_a80d1f444381283a7bc2883f0ed086c9a_cgraph" alt=""/></div>
 <map name="d4/d5d/_m_t_c_h6102__ex_8c_a80d1f444381283a7bc2883f0ed086c9a_cgraph" id="d4/d5d/_m_t_c_h6102__ex_8c_a80d1f444381283a7bc2883f0ed086c9a_cgraph">
-<area shape="rect" id="node2" href="../../da/d78/_m_t_c_h6102_8c.html#a2def4bf75a8f4418b4b79478b849d24d" title="I2C Read function for MTCH6102. " alt="" coords="220,13,348,39"/>
+<area shape="rect" id="node2" href="../../da/d78/_m_t_c_h6102_8c.html#a5aa313bbfe74f756dd83101dbefea059" title="I2C Read function for MTCH6102. " alt="" coords="220,13,348,39"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="396,13,513,39"/>
 </map>
 </div>
@@ -266,7 +278,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/d5d/_m_t_c_h6102__ex_8c_a1e8131729e0b592b9f75de9e1eabf978_cgraph.png" border="0" usemap="#d4/d5d/_m_t_c_h6102__ex_8c_a1e8131729e0b592b9f75de9e1eabf978_cgraph" alt=""/></div>
 <map name="d4/d5d/_m_t_c_h6102__ex_8c_a1e8131729e0b592b9f75de9e1eabf978_cgraph" id="d4/d5d/_m_t_c_h6102__ex_8c_a1e8131729e0b592b9f75de9e1eabf978_cgraph">
-<area shape="rect" id="node2" href="../../da/d78/_m_t_c_h6102_8c.html#a2def4bf75a8f4418b4b79478b849d24d" title="I2C Read function for MTCH6102. " alt="" coords="249,5,377,32"/>
+<area shape="rect" id="node2" href="../../da/d78/_m_t_c_h6102_8c.html#a5aa313bbfe74f756dd83101dbefea059" title="I2C Read function for MTCH6102. " alt="" coords="249,5,377,32"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="425,5,543,32"/>
 </map>
 </div>
@@ -276,6 +288,142 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="../../d4/d5d/_m_t_c_h6102__ex_8c_a1e8131729e0b592b9f75de9e1eabf978_icgraph.png" border="0" usemap="#d4/d5d/_m_t_c_h6102__ex_8c_a1e8131729e0b592b9f75de9e1eabf978_icgraph" alt=""/></div>
 <map name="d4/d5d/_m_t_c_h6102__ex_8c_a1e8131729e0b592b9f75de9e1eabf978_icgraph" id="d4/d5d/_m_t_c_h6102__ex_8c_a1e8131729e0b592b9f75de9e1eabf978_icgraph">
 <area shape="rect" id="node2" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a67250a81c6d4c2a0d099d4dc5649371c" title="Set MTCH6102 debounce period. " alt="" coords="249,5,440,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae6f4b02f3f49114cef624c0afb4b7f4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6f4b02f3f49114cef624c0afb4b7f4e">&#9670;&nbsp;</a></span>MTCH6102_INT_GPIO_Get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR MTCH6102_INT_GPIO_Get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html">MTCH6102_t</a> *const&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *const&#160;</td>
+          <td class="paramname"><em>pState</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Interrupt GPIO pin getter for MTCH6102. </p>
+<dl class="weak"><dt><b><a class="el" href="../../d0/d58/weak.html#_weak000052">Weak Functions:</a></b></dt><dd>MTCH6102 Interrupt GPIO pin getter may be user implemented if needed </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MTCH6102 component </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pState</td><td>- Pointer to INT pin state variable (0: inactive, 1: active) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d5d/_m_t_c_h6102__ex_8c_ae6f4b02f3f49114cef624c0afb4b7f4e_cgraph.png" border="0" usemap="#d4/d5d/_m_t_c_h6102__ex_8c_ae6f4b02f3f49114cef624c0afb4b7f4e_cgraph" alt=""/></div>
+<map name="d4/d5d/_m_t_c_h6102__ex_8c_ae6f4b02f3f49114cef624c0afb4b7f4e_cgraph" id="d4/d5d/_m_t_c_h6102__ex_8c_ae6f4b02f3f49114cef624c0afb4b7f4e_cgraph">
+<area shape="rect" id="node2" href="../../d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="239,5,417,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d5d/_m_t_c_h6102__ex_8c_ae6f4b02f3f49114cef624c0afb4b7f4e_icgraph.png" border="0" usemap="#d4/d5d/_m_t_c_h6102__ex_8c_ae6f4b02f3f49114cef624c0afb4b7f4e_icgraph" alt=""/></div>
+<map name="d4/d5d/_m_t_c_h6102__ex_8c_ae6f4b02f3f49114cef624c0afb4b7f4e_icgraph" id="d4/d5d/_m_t_c_h6102__ex_8c_ae6f4b02f3f49114cef624c0afb4b7f4e_icgraph">
+<area shape="rect" id="node2" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a6e4dca81f18906253bc5300c3a485b8e" title="Get MTCH6102 gesture data. " alt="" coords="239,56,396,83"/>
+<area shape="rect" id="node4" href="../../db/de8/_m_t_c_h6102__proc_8h.html#ac6e9878bc657bf9eedfe117c920ce6b4" title="Handler for MTCH6102 peripheral GPIO interrupt. " alt="" coords="641,5,801,32"/>
+<area shape="rect" id="node3" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a342679a8eaa19001a2d661ca14c50139" title="Handler for MTCH6102 peripheral. " alt="" coords="444,56,589,83"/>
+<area shape="rect" id="node5" href="../../db/de8/_m_t_c_h6102__proc_8h.html#ab50e4af94c662a975f33cc565f78bffa" title="Set MTCH6102 coordinates rotation. " alt="" coords="853,56,1032,83"/>
+<area shape="rect" id="node8" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a312bb1870758990998465cec43da89e5" title="Handler for all MTCH6102 peripherals. " alt="" coords="637,107,804,133"/>
+<area shape="rect" id="node7" href="../../db/de8/_m_t_c_h6102__proc_8h.html#aec03380608432ad9a44d2af18a40615a" title="Handler for all MTCH6102 peripherals GPIO interrupt. " alt="" coords="852,5,1033,32"/>
+<area shape="rect" id="node6" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a6cb756e62481a522d8fba783461ac9d4" title="Initialization Sequence for MTCH6102 peripheral. " alt="" coords="1081,56,1268,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a733a5846f9aa3999b273a4a40b1a5f3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a733a5846f9aa3999b273a4a40b1a5f3e">&#9670;&nbsp;</a></span>MTCH6102_INT_GPIO_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR MTCH6102_INT_GPIO_Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html">MTCH6102_t</a> *const&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GPIO_TypeDef *const&#160;</td>
+          <td class="paramname"><em>GPIOx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>GPIO_Pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GPIO_PinState&#160;</td>
+          <td class="paramname"><em>GPIO_Active</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Interrupt GPIO pin init for MTCH6102. </p>
+<dl class="weak"><dt><b><a class="el" href="../../d0/d58/weak.html#_weak000051">Weak Functions:</a></b></dt><dd>MTCH6102 Interrupt GPIO pin init may be user implemented if needed </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MTCH6102 component </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">GPIOx</td><td>- INT port </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">GPIO_Pin</td><td>- INT pin </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">GPIO_Active</td><td>INT pin active state </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d5d/_m_t_c_h6102__ex_8c_a733a5846f9aa3999b273a4a40b1a5f3e_cgraph.png" border="0" usemap="#d4/d5d/_m_t_c_h6102__ex_8c_a733a5846f9aa3999b273a4a40b1a5f3e_cgraph" alt=""/></div>
+<map name="d4/d5d/_m_t_c_h6102__ex_8c_a733a5846f9aa3999b273a4a40b1a5f3e_cgraph" id="d4/d5d/_m_t_c_h6102__ex_8c_a733a5846f9aa3999b273a4a40b1a5f3e_cgraph">
+<area shape="rect" id="node2" href="../../d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="235,5,412,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d5d/_m_t_c_h6102__ex_8c_a733a5846f9aa3999b273a4a40b1a5f3e_icgraph.png" border="0" usemap="#d4/d5d/_m_t_c_h6102__ex_8c_a733a5846f9aa3999b273a4a40b1a5f3e_icgraph" alt=""/></div>
+<map name="d4/d5d/_m_t_c_h6102__ex_8c_a733a5846f9aa3999b273a4a40b1a5f3e_icgraph" id="d4/d5d/_m_t_c_h6102__ex_8c_a733a5846f9aa3999b273a4a40b1a5f3e_icgraph">
+<area shape="rect" id="node2" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a6e4dca81f18906253bc5300c3a485b8e" title="Get MTCH6102 gesture data. " alt="" coords="235,56,392,83"/>
+<area shape="rect" id="node3" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a342679a8eaa19001a2d661ca14c50139" title="Handler for MTCH6102 peripheral. " alt="" coords="440,56,585,83"/>
+<area shape="rect" id="node4" href="../../db/de8/_m_t_c_h6102__proc_8h.html#ac6e9878bc657bf9eedfe117c920ce6b4" title="Handler for MTCH6102 peripheral GPIO interrupt. " alt="" coords="637,56,797,83"/>
+<area shape="rect" id="node5" href="../../db/de8/_m_t_c_h6102__proc_8h.html#ab50e4af94c662a975f33cc565f78bffa" title="Set MTCH6102 coordinates rotation. " alt="" coords="849,5,1028,32"/>
+<area shape="rect" id="node8" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a312bb1870758990998465cec43da89e5" title="Handler for all MTCH6102 peripherals. " alt="" coords="633,107,800,133"/>
+<area shape="rect" id="node7" href="../../db/de8/_m_t_c_h6102__proc_8h.html#aec03380608432ad9a44d2af18a40615a" title="Handler for all MTCH6102 peripherals GPIO interrupt. " alt="" coords="848,56,1029,83"/>
+<area shape="rect" id="node6" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a6cb756e62481a522d8fba783461ac9d4" title="Initialization Sequence for MTCH6102 peripheral. " alt="" coords="1077,5,1264,32"/>
 </map>
 </div>
 
@@ -335,11 +483,11 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/d5d/_m_t_c_h6102__ex_8c_a411fa06e29c5cafb719e8735446df85d_cgraph.png" border="0" usemap="#d4/d5d/_m_t_c_h6102__ex_8c_a411fa06e29c5cafb719e8735446df85d_cgraph" alt=""/></div>
 <map name="d4/d5d/_m_t_c_h6102__ex_8c_a411fa06e29c5cafb719e8735446df85d_cgraph" id="d4/d5d/_m_t_c_h6102__ex_8c_a411fa06e29c5cafb719e8735446df85d_cgraph">
-<area shape="rect" id="node2" href="../../da/d78/_m_t_c_h6102_8c.html#a7d23a0da90fbc047e384e603c436be75" title="I2C Write function for MTCH6102. " alt="" coords="652,5,780,32"/>
+<area shape="rect" id="node2" href="../../da/d78/_m_t_c_h6102_8c.html#aadac3361a556fe464ea0df2d9a8366ae" title="I2C Write function for MTCH6102. " alt="" coords="652,5,780,32"/>
 <area shape="rect" id="node4" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a0f9ba08c0ae08f4871e96da7288dc1b5" title="Configure MTCH6102controller (after parameters have been changed) " alt="" coords="209,53,392,94"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="828,31,945,57"/>
 <area shape="rect" id="node5" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a4c1612bb1afca9818d54ff05c5fa4191" title="Execute MTCH6102 command. " alt="" coords="440,56,604,83"/>
-<area shape="rect" id="node6" href="../../da/d78/_m_t_c_h6102_8c.html#a2def4bf75a8f4418b4b79478b849d24d" title="I2C Read function for MTCH6102. " alt="" coords="652,56,780,83"/>
+<area shape="rect" id="node6" href="../../da/d78/_m_t_c_h6102_8c.html#a5aa313bbfe74f756dd83101dbefea059" title="I2C Read function for MTCH6102. " alt="" coords="652,56,780,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -348,6 +496,142 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="../../d4/d5d/_m_t_c_h6102__ex_8c_a411fa06e29c5cafb719e8735446df85d_icgraph.png" border="0" usemap="#d4/d5d/_m_t_c_h6102__ex_8c_a411fa06e29c5cafb719e8735446df85d_icgraph" alt=""/></div>
 <map name="d4/d5d/_m_t_c_h6102__ex_8c_a411fa06e29c5cafb719e8735446df85d_icgraph" id="d4/d5d/_m_t_c_h6102__ex_8c_a411fa06e29c5cafb719e8735446df85d_icgraph">
 <area shape="rect" id="node2" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a67250a81c6d4c2a0d099d4dc5649371c" title="Set MTCH6102 debounce period. " alt="" coords="209,5,400,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3747d7b925224b0079579c67e909ab50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3747d7b925224b0079579c67e909ab50">&#9670;&nbsp;</a></span>MTCH6102_SYNC_GPIO_Get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR MTCH6102_SYNC_GPIO_Get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html">MTCH6102_t</a> *const&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *const&#160;</td>
+          <td class="paramname"><em>pState</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Synchro GPIO pin getter for MTCH6102. </p>
+<dl class="weak"><dt><b><a class="el" href="../../d0/d58/weak.html#_weak000054">Weak Functions:</a></b></dt><dd>MTCH6102 Synchro GPIO pin getter may be user implemented if needed </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MTCH6102 component </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pState</td><td>- Pointer to SYNC pin state variable (0: inactive, 1: active) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d5d/_m_t_c_h6102__ex_8c_a3747d7b925224b0079579c67e909ab50_cgraph.png" border="0" usemap="#d4/d5d/_m_t_c_h6102__ex_8c_a3747d7b925224b0079579c67e909ab50_cgraph" alt=""/></div>
+<map name="d4/d5d/_m_t_c_h6102__ex_8c_a3747d7b925224b0079579c67e909ab50_cgraph" id="d4/d5d/_m_t_c_h6102__ex_8c_a3747d7b925224b0079579c67e909ab50_cgraph">
+<area shape="rect" id="node2" href="../../d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="253,5,432,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d5d/_m_t_c_h6102__ex_8c_a3747d7b925224b0079579c67e909ab50_icgraph.png" border="0" usemap="#d4/d5d/_m_t_c_h6102__ex_8c_a3747d7b925224b0079579c67e909ab50_icgraph" alt=""/></div>
+<map name="d4/d5d/_m_t_c_h6102__ex_8c_a3747d7b925224b0079579c67e909ab50_icgraph" id="d4/d5d/_m_t_c_h6102__ex_8c_a3747d7b925224b0079579c67e909ab50_icgraph">
+<area shape="rect" id="node2" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a6e4dca81f18906253bc5300c3a485b8e" title="Get MTCH6102 gesture data. " alt="" coords="253,56,411,83"/>
+<area shape="rect" id="node3" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a342679a8eaa19001a2d661ca14c50139" title="Handler for MTCH6102 peripheral. " alt="" coords="459,56,604,83"/>
+<area shape="rect" id="node4" href="../../db/de8/_m_t_c_h6102__proc_8h.html#ac6e9878bc657bf9eedfe117c920ce6b4" title="Handler for MTCH6102 peripheral GPIO interrupt. " alt="" coords="655,56,815,83"/>
+<area shape="rect" id="node5" href="../../db/de8/_m_t_c_h6102__proc_8h.html#ab50e4af94c662a975f33cc565f78bffa" title="Set MTCH6102 coordinates rotation. " alt="" coords="868,5,1047,32"/>
+<area shape="rect" id="node8" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a312bb1870758990998465cec43da89e5" title="Handler for all MTCH6102 peripherals. " alt="" coords="652,107,819,133"/>
+<area shape="rect" id="node7" href="../../db/de8/_m_t_c_h6102__proc_8h.html#aec03380608432ad9a44d2af18a40615a" title="Handler for all MTCH6102 peripherals GPIO interrupt. " alt="" coords="867,56,1048,83"/>
+<area shape="rect" id="node6" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a6cb756e62481a522d8fba783461ac9d4" title="Initialization Sequence for MTCH6102 peripheral. " alt="" coords="1096,5,1283,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1361a2cd7b079e8faa107b634dc0aa65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1361a2cd7b079e8faa107b634dc0aa65">&#9670;&nbsp;</a></span>MTCH6102_SYNC_GPIO_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR MTCH6102_SYNC_GPIO_Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html">MTCH6102_t</a> *const&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GPIO_TypeDef *const&#160;</td>
+          <td class="paramname"><em>GPIOx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>GPIO_Pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GPIO_PinState&#160;</td>
+          <td class="paramname"><em>GPIO_Active</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Synchro GPIO pin init for MTCH6102. </p>
+<dl class="weak"><dt><b><a class="el" href="../../d0/d58/weak.html#_weak000053">Weak Functions:</a></b></dt><dd>MTCH6102 Synchro GPIO pin init may be user implemented if needed </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MTCH6102 component </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">GPIOx</td><td>- SYNC port </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">GPIO_Pin</td><td>- SYNC pin </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">GPIO_Active</td><td>SYNC pin active state </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d5d/_m_t_c_h6102__ex_8c_a1361a2cd7b079e8faa107b634dc0aa65_cgraph.png" border="0" usemap="#d4/d5d/_m_t_c_h6102__ex_8c_a1361a2cd7b079e8faa107b634dc0aa65_cgraph" alt=""/></div>
+<map name="d4/d5d/_m_t_c_h6102__ex_8c_a1361a2cd7b079e8faa107b634dc0aa65_cgraph" id="d4/d5d/_m_t_c_h6102__ex_8c_a1361a2cd7b079e8faa107b634dc0aa65_cgraph">
+<area shape="rect" id="node2" href="../../d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="249,5,427,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d5d/_m_t_c_h6102__ex_8c_a1361a2cd7b079e8faa107b634dc0aa65_icgraph.png" border="0" usemap="#d4/d5d/_m_t_c_h6102__ex_8c_a1361a2cd7b079e8faa107b634dc0aa65_icgraph" alt=""/></div>
+<map name="d4/d5d/_m_t_c_h6102__ex_8c_a1361a2cd7b079e8faa107b634dc0aa65_icgraph" id="d4/d5d/_m_t_c_h6102__ex_8c_a1361a2cd7b079e8faa107b634dc0aa65_icgraph">
+<area shape="rect" id="node2" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a6e4dca81f18906253bc5300c3a485b8e" title="Get MTCH6102 gesture data. " alt="" coords="249,56,407,83"/>
+<area shape="rect" id="node3" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a342679a8eaa19001a2d661ca14c50139" title="Handler for MTCH6102 peripheral. " alt="" coords="455,56,600,83"/>
+<area shape="rect" id="node4" href="../../db/de8/_m_t_c_h6102__proc_8h.html#ac6e9878bc657bf9eedfe117c920ce6b4" title="Handler for MTCH6102 peripheral GPIO interrupt. " alt="" coords="651,56,811,83"/>
+<area shape="rect" id="node5" href="../../db/de8/_m_t_c_h6102__proc_8h.html#ab50e4af94c662a975f33cc565f78bffa" title="Set MTCH6102 coordinates rotation. " alt="" coords="864,5,1043,32"/>
+<area shape="rect" id="node8" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a312bb1870758990998465cec43da89e5" title="Handler for all MTCH6102 peripherals. " alt="" coords="648,107,815,133"/>
+<area shape="rect" id="node7" href="../../db/de8/_m_t_c_h6102__proc_8h.html#aec03380608432ad9a44d2af18a40615a" title="Handler for all MTCH6102 peripherals GPIO interrupt. " alt="" coords="863,56,1044,83"/>
+<area shape="rect" id="node6" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a6cb756e62481a522d8fba783461ac9d4" title="Initialization Sequence for MTCH6102 peripheral. " alt="" coords="1092,5,1279,32"/>
 </map>
 </div>
 

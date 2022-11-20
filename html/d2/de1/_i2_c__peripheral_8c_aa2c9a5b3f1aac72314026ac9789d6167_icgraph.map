@@ -1,0 +1,51 @@
+<map id="I2C_peripheral_GPIO_init" name="I2C_peripheral_GPIO_init">
+<area shape="rect" id="node2" href="$d8/d4b/_a_d_s1115__ex_8h.html#a5e1216d8aa877b457bfbc5ec36477cf8" title="Ready GPIO pin init for ADS1115. " alt="" coords="257,31,434,57"/>
+<area shape="rect" id="node7" href="$dc/db3/_a_m_g88__ex_8h.html#a47e7dab1b924d54a1b7ac2fd0006022a" title="Interrupt GPIO pin init for AMG88. " alt="" coords="266,81,425,108"/>
+<area shape="rect" id="node10" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#ac51f268a781f3dec4577ac2a5daaf768" title="Interrupt GPIO pin init for APDS9930. " alt="" coords="255,132,436,159"/>
+<area shape="rect" id="node12" href="$da/db5/_a_p_d_s9960__ex_8h.html#a260da54656ec611481165e163968673d" title="Interrupt GPIO pin init for APDS9960. " alt="" coords="255,183,436,209"/>
+<area shape="rect" id="node14" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a6615c48892435edb33807e93416d1e11" title="Change GPIO pin init for AT42QT1244. " alt="" coords="231,233,460,260"/>
+<area shape="rect" id="node17" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a7c5cbc9f3955b892061e478b295d194c" title="Reset GPIO pin init for AT42QT1244. " alt="" coords="247,284,444,311"/>
+<area shape="rect" id="node18" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a572725b83357c3e695799b38fd7ed7ce" title="Enable GPIO pin init for DRV2605L. " alt="" coords="257,335,433,361"/>
+<area shape="rect" id="node21" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a98cbfb2755e67db5cfadb3d8ff72c3fe" title="Trigger GPIO pin init for DRV2605L. " alt="" coords="252,385,439,412"/>
+<area shape="rect" id="node22" href="$de/d95/_f_m24_c__ex_8h.html#a5d88f7f42cce5e5398313cfe0e4934e7" title="Write Protect GPIO pin init for FM24C. " alt="" coords="268,436,423,463"/>
+<area shape="rect" id="node23" href="$d5/d5f/_m_b85_r_c256_v__ex_8h.html#af495e012827c3fabf23f464590729560" title="Write Protect GPIO pin init for MB85RC256V. " alt="" coords="247,487,444,513"/>
+<area shape="rect" id="node24" href="$df/d2f/_m_c_p9808__ex_8h.html#af2c1405f1835f7a08978458d60b8d527" title="Alert GPIO pin init for MCP9808. " alt="" coords="254,537,437,564"/>
+<area shape="rect" id="node27" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a733a5846f9aa3999b273a4a40b1a5f3e" title="Interrupt GPIO pin init for MTCH6102. " alt="" coords="255,588,436,615"/>
+<area shape="rect" id="node30" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a1361a2cd7b079e8faa107b634dc0aa65" title="Synchro GPIO pin init for MTCH6102. " alt="" coords="247,639,443,665"/>
+<area shape="rect" id="node31" href="$d8/df0/_p_c_a9532__ex_8h.html#a6d703493d85df1f08286da3738a2d41e" title="Reset GPIO pin init for PCA9532. " alt="" coords="258,689,433,716"/>
+<area shape="rect" id="node34" href="$d6/dfc/_p_c_a9624__ex_8h.html#a96409f8047040eb25063ca731ef69d84" title="Output Enable GPIO pin init for PCA9624. " alt="" coords="261,740,430,767"/>
+<area shape="rect" id="node36" href="$d3/d57/_p_c_a9685__ex_8h.html#ae8ffcf950be577163b10d930b2a3ba9b" title="Output Enable GPIO pin init for PCA9685. " alt="" coords="261,791,430,817"/>
+<area shape="rect" id="node38" href="$dd/ddf/_p_c_a9956__ex_8h.html#af347eccfff4344b49fd6aa00956cd5b1" title="Reset GPIO pin init for PCA9956. " alt="" coords="258,841,433,868"/>
+<area shape="rect" id="node40" href="$dd/ddf/_p_c_a9956__ex_8h.html#a35e5abed701e1817148a233c9d7e673b" title="Output Enable GPIO pin init for PCA9956. " alt="" coords="261,892,430,919"/>
+<area shape="rect" id="node41" href="$d1/d30/_p_c_f8523__ex_8h.html#aab0482f61dfb81dd3393d2b172f85eca" title="Interrupt 1 GPIO pin init for PCF8523. " alt="" coords="257,943,434,969"/>
+<area shape="rect" id="node44" href="$d1/d30/_p_c_f8523__ex_8h.html#af1c5ea8c59b47303429a66978e5c8864" title="Interrupt 2 GPIO pin init for PCF8523. " alt="" coords="257,993,434,1020"/>
+<area shape="rect" id="node45" href="$de/d36/_t_c_s3400__ex_8h.html#aa4996079345a897dd3a7fb03f36395a7" title="Interrupt GPIO pin init for TCS3400. " alt="" coords="261,1044,430,1071"/>
+<area shape="rect" id="node47" href="$d2/dbe/_t_c_s3472__ex_8h.html#ab5ec97aa486481f1df6149ac9bc7f647" title="Interrupt GPIO pin init for TCS3472. " alt="" coords="261,1095,430,1121"/>
+<area shape="rect" id="node49" href="$dc/d24/_t_s_l2591__ex_8h.html#a2fd8a0442f003920328cc043fbd49d06" title="Interrupt GPIO pin init for TSL2591. " alt="" coords="261,1145,429,1172"/>
+<area shape="rect" id="node3" href="$d8/d4b/_a_d_s1115__ex_8h.html#a79e57b4463b2ac3b43b152ce61850ed2" title="Get ADS1115 raw channel value. " alt="" coords="508,31,691,57"/>
+<area shape="rect" id="node4" href="$d4/d35/_a_d_s1115__proc_8h.html#a2a5488401e3392d27760b90ff5f31be2" title="Handler for ADS1115 peripheral. " alt="" coords="762,31,899,57"/>
+<area shape="rect" id="node5" href="$d4/d35/_a_d_s1115__proc_8h.html#a520e784a7c3122c8211c2b62d3fb7967" title="Handler for ADS1115 peripheral GPIO interrupt. " alt="" coords="974,5,1126,32"/>
+<area shape="rect" id="node6" href="$d4/d35/_a_d_s1115__proc_8h.html#a3871b0c6703b8b4bb3915172dfd98072" title="Handler for all ADS1115 peripherals. " alt="" coords="971,56,1129,83"/>
+<area shape="rect" id="node8" href="$dc/db3/_a_m_g88__ex_8h.html#a6cf21b59c3b4cf75d9a82b881e84bacd" title="Get pixel raw value. " alt="" coords="516,81,683,108"/>
+<area shape="rect" id="node9" href="$dc/db3/_a_m_g88__ex_8h.html#a7b51a0bfe1a0a94cf2b4da3d89a56ccc" title="Get pixel temperature. " alt="" coords="743,81,918,108"/>
+<area shape="rect" id="node11" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a7b950cd7d52f371dd52f9114277e78ba" title="Get Proximity conversion. " alt="" coords="522,132,677,159"/>
+<area shape="rect" id="node13" href="$da/db5/_a_p_d_s9960__ex_8h.html#a2585bc41a9ad2772ac94c52b633e498a" title="Get Proximity conversion. " alt="" coords="522,183,677,209"/>
+<area shape="rect" id="node15" href="$df/de4/_a_t42_q_t1244__ex_8h.html#aad1c4acba1d21be3dfdbf7e4fc3410dc" title="Get status of AT42QT1244 peripheral. " alt="" coords="509,255,690,281"/>
+<area shape="rect" id="node16" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a348e43f2601e172063fd4e3c0623fed9" title="Get calibration status for AT42QT1244 peripheral. " alt="" coords="752,247,909,289"/>
+<area shape="rect" id="node19" href="$df/dbb/_d_r_v2605_l__ex_8h.html#aa6e8731941269bddb42633409b51d8fc" title="Get DRV260x chip ID. " alt="" coords="517,360,682,387"/>
+<area shape="rect" id="node20" href="$d1/da7/_d_r_v2605_l__proc_8h.html#ad908d57c1a4cba53e09981a387145d87" title="Initialization Sequence for DRV2605L peripheral. " alt="" coords="739,360,923,387"/>
+<area shape="rect" id="node25" href="$df/d2f/_m_c_p9808__ex_8h.html#a74f3a6383e7e33937954cd7ec8021383" title="Get MCP9808 chip ID. " alt="" coords="519,537,679,564"/>
+<area shape="rect" id="node26" href="$d6/d5e/_m_c_p9808__proc_8h.html#acdc3fcd27aee6d19c3e7fb7bf4762b47" title="Initialization Sequence of the MCP9808 peripheral. " alt="" coords="741,537,920,564"/>
+<area shape="rect" id="node28" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a6e4dca81f18906253bc5300c3a485b8e" title="Get MTCH6102 gesture data. " alt="" coords="521,613,678,640"/>
+<area shape="rect" id="node29" href="$db/de8/_m_t_c_h6102__proc_8h.html#a342679a8eaa19001a2d661ca14c50139" title="Handler for MTCH6102 peripheral. " alt="" coords="758,613,903,640"/>
+<area shape="rect" id="node32" href="$d8/df0/_p_c_a9532__ex_8h.html#a03b2ea671687b1a439c90bc4f946542b" title="Convert PWMx byte register to Duty Cycle (in %) " alt="" coords="513,689,686,716"/>
+<area shape="rect" id="node33" href="$de/da7/_p_c_a9532__proc_8h.html#a95ddc3ce36d7d60e26b08ce405ea2fc3" title="Initialization Sequence for PCA9532 peripheral. " alt="" coords="742,689,919,716"/>
+<area shape="rect" id="node35" href="$d6/dfc/_p_c_a9624__ex_8h.html#a93948697ac82a090f75a5d6879ca7f23" title="Send all PWM duty cycle array of values to apply on a PCA9624 (for the 8 channels) ..." alt="" coords="521,740,677,767"/>
+<area shape="rect" id="node37" href="$d3/d57/_p_c_a9685__ex_8h.html#a9c727d398bdfa3e4abd76a8fe551dadd" title="Compute and send PWM lighting values to apply on a PCA9685 channel or all channels (Percent) ..." alt="" coords="522,791,677,817"/>
+<area shape="rect" id="node39" href="$dd/ddf/_p_c_a9956__ex_8h.html#a69beb250a84a38e5b2321b8d98e32f8c" title="Send all PWM duty cycle array of values to apply on a PCA9956 (for the 24 channels) ..." alt="" coords="521,867,677,893"/>
+<area shape="rect" id="node42" href="$d1/d30/_p_c_f8523__ex_8h.html#ae2c8370ad357db3869fd42d64d0320d3" title="PCF8523_Get_Time_Raw" alt="" coords="510,968,689,995"/>
+<area shape="rect" id="node43" href="$d4/d61/_p_c_f8523__proc_8h.html#ad0d71f0e72ac7d36a8c735048b252b58" title="PCF8523_Get_Time" alt="" coords="757,968,904,995"/>
+<area shape="rect" id="node46" href="$de/d36/_t_c_s3400__ex_8h.html#ac88104d7503f91b6efe8af760e66f33a" title="Get Blue channel conversion. " alt="" coords="528,1044,671,1071"/>
+<area shape="rect" id="node48" href="$d2/dbe/_t_c_s3472__ex_8h.html#a2c09d6ed13ccf2dd2c99f261b3c9b88b" title="Get Blue channel conversion. " alt="" coords="528,1095,671,1121"/>
+<area shape="rect" id="node50" href="$dc/d24/_t_s_l2591__ex_8h.html#abf21a4fb079c7ef69f850275b23a4680" title="Get IR conversion (Channel 1) " alt="" coords="537,1145,662,1172"/>
+</map>

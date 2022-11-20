@@ -1,0 +1,6 @@
+<map id="TCS3472_Get_Red" name="TCS3472_Get_Red">
+<area shape="rect" id="node2" href="$df/dfb/_t_c_s3472_8c.html#aee95304e6567ef0983ff9a4390072305" title="I2C Word Read (low endian) function for TCS3472. " alt="" coords="192,31,347,57"/>
+<area shape="rect" id="node3" href="$df/dfb/_t_c_s3472_8c.html#a2fa16091194ad1cb4f16db6d081f551f" title="I2C Read function for TCS3472. " alt="" coords="395,31,511,57"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="559,5,676,32"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="564,56,671,83"/>
+</map>

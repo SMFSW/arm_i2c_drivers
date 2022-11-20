@@ -1,0 +1,6 @@
+<map id="AMG88_Set_Interrupt_LVLL" name="AMG88_Set_Interrupt_LVLL">
+<area shape="rect" id="node2" href="$de/d9d/_a_m_g88__ex_8c.html#adf51c67f115c69033cf280426b338c7c" title="Convert temperature to AMG88 temperature coded integer. " alt="" coords="248,5,415,47"/>
+<area shape="rect" id="node3" href="$df/d52/_a_m_g88_8c.html#a06e77708affb2165299376ea09d3e362" title="I2C Write function for AMG88. " alt="" coords="278,71,385,98"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="463,46,580,73"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="468,97,575,123"/>
+</map>

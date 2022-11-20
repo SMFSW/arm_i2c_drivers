@@ -1,6 +1,6 @@
 <map id="GPMS_t" name="GPMS_t">
 <area shape="rect" id="node2" href="$d7/dca/struct_g_p_m_s__coord.html" title="DS&#45;GPM.S coordinate struct. " alt="" coords="5,5,108,32"/>
-<area shape="rect" id="node3" href="$df/df6/struct_i2_c__slave__t.html" title="ci2c slave config and control parameters " alt="" coords="132,5,227,32"/>
+<area shape="rect" id="node3" href="$df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters " alt="" coords="132,5,227,32"/>
 <area shape="rect" id="node4" href="$dd/d02/struct_g_p_m_s__hour.html" title="DS&#45;GPM.S Time of day struct. " alt="" coords="251,5,347,32"/>
 <area shape="rect" id="node5" href="$d0/d70/struct_g_p_m_s__date.html" title="DS&#45;GPM.S Date struct. " alt="" coords="371,5,467,32"/>
 </map>

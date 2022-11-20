@@ -1,0 +1,5 @@
+<map id="MCP9808_handler_it" name="MCP9808_handler_it">
+<area shape="rect" id="node2" href="$df/d47/_m_c_p9808__ex_8c.html#abe7582c2f80cf5bf8ffb56d37272110e" title="Change GPIO pin getter for MCP9808. " alt="" coords="205,5,392,32"/>
+<area shape="rect" id="node4" href="$de/deb/_m_c_p9808__proc_8c.html#a21a5213bef06c833d59b6053be862c6b" title="Handler for MCP9808 peripheral. " alt="" coords="230,56,367,83"/>
+<area shape="rect" id="node3" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="440,5,619,32"/>
+</map>

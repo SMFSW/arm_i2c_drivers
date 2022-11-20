@@ -1,0 +1,6 @@
+<map id="APDS9930_INT_GPIO_Get" name="APDS9930_INT_GPIO_Get">
+<area shape="rect" id="node2" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a7b950cd7d52f371dd52f9114277e78ba" title="Get Proximity conversion. " alt="" coords="241,5,396,32"/>
+<area shape="rect" id="node3" href="$d1/d45/_a_p_d_s9930__proc_8h.html#a061d3c2eb22c619599e5dddb63ea8313" title="Handler for APDS9930 peripheral GPIO interrupt. " alt="" coords="239,56,399,83"/>
+<area shape="rect" id="node4" href="$d1/d45/_a_p_d_s9930__proc_8h.html#a7ccd203da3b8432134156f417d74ac30" title="Get current Illuminance (in lux) " alt="" coords="463,31,612,57"/>
+<area shape="rect" id="node5" href="$d1/d45/_a_p_d_s9930__proc_8h.html#a774db2cef9713661b6664aedabc25f9d" title="Handler for all APDS9930 peripherals GPIO interrupt. " alt="" coords="447,81,628,108"/>
+</map>

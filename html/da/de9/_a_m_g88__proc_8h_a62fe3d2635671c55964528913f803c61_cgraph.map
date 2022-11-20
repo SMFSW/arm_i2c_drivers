@@ -1,0 +1,9 @@
+<map id="AMG88_handler" name="AMG88_handler">
+<area shape="rect" id="node2" href="$df/d52/_a_m_g88_8c.html#a2cbcae049f8f7817a745ab684f05554e" title="I2C Word Read (low endian) function for AMG88. " alt="" coords="221,5,365,32"/>
+<area shape="rect" id="node3" href="$df/d52/_a_m_g88_8c.html#ade19de4334fdd1b3aa58c0b71b0979e5" title="I2C Read function for AMG88. " alt="" coords="457,56,564,83"/>
+<area shape="rect" id="node6" href="$de/d9d/_a_m_g88__ex_8c.html#a286bea01547b7dc3a67b573d1da4b6bb" title="Convert raw thermistor temperature to celsius degrees. " alt="" coords="176,157,409,184"/>
+<area shape="rect" id="node7" href="$de/d9d/_a_m_g88__ex_8c.html#ad4ddfc0af387e78a4ee3ca53585239e2" title="Convert raw pixel temperature to celsius degrees. " alt="" coords="196,208,389,235"/>
+<area shape="rect" id="node8" href="$df/d52/_a_m_g88_8c.html#a06e77708affb2165299376ea09d3e362" title="I2C Write function for AMG88. " alt="" coords="457,107,564,133"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="612,56,729,83"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="617,107,724,133"/>
+</map>

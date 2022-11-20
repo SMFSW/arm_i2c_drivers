@@ -1,6 +1,0 @@
-<map id="PCA9685_Set_Frequency" name="PCA9685_Set_Frequency">
-<area shape="rect" id="node2" href="$d3/d57/_p_c_a9685__ex_8h.html#a7bff35ee1bfc32f73492cb237f83f697" title="Convert Prescaler byte register to Frequency (in Hz) " alt="" coords="235,5,405,32"/>
-<area shape="rect" id="node3" href="$d5/d22/_p_c_a9685__proc_8h.html#a6e9b5100a9232482cb86ed5b115ac8ad" title="Initialization Sequence for PCA9685 peripheral. " alt="" coords="453,5,631,32"/>
-<area shape="rect" id="node4" href="$d4/deb/_p_c_a9685_8h.html#a7fa0e558a2f028f6261ca45db11d623a" title="Initialization for PCA9685 peripheral. " alt="" coords="679,5,785,32"/>
-<area shape="rect" id="node5" href="$d4/deb/_p_c_a9685_8h.html#a5446c995c445067011d256bc587b164e" title="Initialization for PCA9685 peripheral. " alt="" coords="833,5,985,32"/>
-</map>

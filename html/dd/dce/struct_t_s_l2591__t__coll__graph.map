@@ -1,3 +1,4 @@
 <map id="TSL2591_t" name="TSL2591_t">
-<area shape="rect" id="node2" href="$df/df6/struct_i2_c__slave__t.html" title="ci2c slave config and control parameters " alt="" coords="5,5,100,32"/>
+<area shape="rect" id="node2" href="$df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters " alt="" coords="5,5,100,32"/>
+<area shape="rect" id="node3" href="$dc/d95/struct_peripheral_g_p_i_o__t.html" title="i2c peripheral GPIO pin parameters " alt="" coords="124,5,253,32"/>
 </map>

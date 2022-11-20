@@ -1,0 +1,23 @@
+<map id="AT42QT1244_Calibrate_Freq_Hopping" name="AT42QT1244_Calibrate_Freq_Hopping">
+<area shape="rect" id="node2" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#accf45d5bd518dceb2fb6b388380cdb93" title="Low level calibration for AT42QT1244 peripheral. " alt="" coords="220,145,387,186"/>
+<area shape="rect" id="node3" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a348e43f2601e172063fd4e3c0623fed9" title="Get calibration status for AT42QT1244 peripheral. " alt="" coords="464,146,621,187"/>
+<area shape="rect" id="node5" href="$d3/dc4/_a_t42_q_t1244_8c.html#a59952a25c499177de6ff50933ffdbc47" title="I2C Read function for AT42QT1244. " alt="" coords="992,327,1132,353"/>
+<area shape="rect" id="node19" href="$df/d72/_a_t42_q_t1244__ex_8c.html#af23af7f48652e8c2a0b6b9c398aa2169" title="Frequency hopping mode setup for AT42QT1244 peripheral. " alt="" coords="451,327,634,353"/>
+<area shape="rect" id="node20" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a6de0127c5ef3b6930ef542632583dd6f" title="Send setup parameters to AT42QT1244 peripheral. " alt="" coords="705,377,891,404"/>
+<area shape="rect" id="node21" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#a1515d11446da81b7b28cc10efb69a897" title="All keys calibration for AT42QT1244 peripheral. " alt="" coords="220,210,387,251"/>
+<area shape="rect" id="node22" href="$df/de4/_a_t42_q_t1244__ex_8h.html#af0d9e2809f8df435c55e4cb4efabf6da" title="Get key data for AT42QT1244 peripheral. " alt="" coords="699,428,897,455"/>
+<area shape="rect" id="node17" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a01b7421cf8001017a584a7ab4b65d2b6" title="Send command to AT42QT1244 peripheral. " alt="" coords="435,217,651,244"/>
+<area shape="rect" id="node4" href="$df/de4/_a_t42_q_t1244__ex_8h.html#aad1c4acba1d21be3dfdbf7e4fc3410dc" title="Get status of AT42QT1244 peripheral. " alt="" coords="707,156,889,183"/>
+<area shape="rect" id="node9" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a348e43f2601e172063fd4e3c0623fed9" title="Get calibration status for AT42QT1244 peripheral. " alt="" coords="983,209,1141,250"/>
+<area shape="rect" id="node10" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a6615c48892435edb33807e93416d1e11" title="Change GPIO pin init for AT42QT1244. " alt="" coords="947,56,1177,83"/>
+<area shape="rect" id="node12" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a93d10a2a64d12b0d01ae41d5aeb1b761" title="Change GPIO pin getter for AT42QT1244. " alt="" coords="945,5,1179,32"/>
+<area shape="rect" id="node14" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a7c5cbc9f3955b892061e478b295d194c" title="Reset GPIO pin init for AT42QT1244. " alt="" coords="963,107,1161,133"/>
+<area shape="rect" id="node15" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a8d9f72959102f68e69346ae2ca10637f" title="Reset GPIO pin setter for AT42QT1244. " alt="" coords="962,157,1162,184"/>
+<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1257,276,1375,303"/>
+<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1263,327,1369,353"/>
+<area shape="rect" id="node8" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#ad2998daf6e9e01b5d72b96ac64a2f78e" title="16bits CRC calculation for AT42QT1244 " alt="" coords="1244,377,1388,404"/>
+<area shape="rect" id="node11" href="$d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="1227,81,1405,108"/>
+<area shape="rect" id="node13" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="1227,5,1405,32"/>
+<area shape="rect" id="node16" href="$d2/de1/_i2_c__peripheral_8c.html#a7accedd9eb463e3cd4eb401b07e36b2c" title="I2C peripheral GPIO pin setter. " alt="" coords="1227,157,1405,184"/>
+<area shape="rect" id="node18" href="$d3/dc4/_a_t42_q_t1244_8c.html#afc7b495087a57939c8c261820668a896" title="I2C Write function for AT42QT1244. " alt="" coords="992,276,1132,303"/>
+</map>

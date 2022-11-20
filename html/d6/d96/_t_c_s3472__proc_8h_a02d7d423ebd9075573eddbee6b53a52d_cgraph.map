@@ -1,0 +1,9 @@
+<map id="TCS3472_handler_it_all" name="TCS3472_handler_it_all">
+<area shape="rect" id="node2" href="$d6/d96/_t_c_s3472__proc_8h.html#abf8990e17a9cc0be48c1d013ffc6a551" title="Handler for TCS3472 peripheral GPIO interrupt. " alt="" coords="223,31,371,57"/>
+<area shape="rect" id="node3" href="$df/db1/_t_c_s3472__ex_8c.html#ab3aef251d4de4984627e67302b6eb7e7" title="Interrupt GPIO pin getter for TCS3472. " alt="" coords="419,5,592,32"/>
+<area shape="rect" id="node5" href="$d7/d71/_t_c_s3472__proc_8c.html#a54a0b2c1f01815925219211bfe2b8bac" title="Handler for TCS3472 peripheral. " alt="" coords="439,56,572,83"/>
+<area shape="rect" id="node4" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="640,5,819,32"/>
+<area shape="rect" id="node6" href="$df/dfb/_t_c_s3472_8c.html#a2fa16091194ad1cb4f16db6d081f551f" title="I2C Read function for TCS3472. " alt="" coords="671,56,787,83"/>
+<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="867,31,984,57"/>
+<area shape="rect" id="node8" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="872,81,979,108"/>
+</map>

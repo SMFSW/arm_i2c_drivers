@@ -1,0 +1,25 @@
+<map id="APDS9930_Set_Prox_Drive_Strength" name="APDS9930_Set_Prox_Drive_Strength">
+<area shape="rect" id="node2" href="$de/d85/_a_p_d_s9930_8c.html#ab221708c08ca472dea5b4570ffe773b1" title="I2C Read function for APDS9930. " alt="" coords="837,420,965,446"/>
+<area shape="rect" id="node5" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a75488102c1b9a73edfac06bba041e771" title="Write APDS9930 Config. " alt="" coords="823,638,979,665"/>
+<area shape="rect" id="node7" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#aaaec3a54f50e412457167507b6e090f4" title="Write APDS9930 Control. " alt="" coords="248,470,405,497"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1259,446,1376,473"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1264,517,1371,544"/>
+<area shape="rect" id="node6" href="$de/d85/_a_p_d_s9930_8c.html#af52285c4d97a77ae7c76d144748942cf" title="I2C Write function for APDS9930. " alt="" coords="1083,550,1211,577"/>
+<area shape="rect" id="node8" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a897fc2b1c7bfd0ff18d3a2d8a2758f40" title="Oscillator Enable / Disable. " alt="" coords="509,65,663,92"/>
+<area shape="rect" id="node10" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a31bb532aa12bbcb7ad3f6157c68d5ba3" title="ALS module Enable / Disable. " alt="" coords="509,116,663,142"/>
+<area shape="rect" id="node11" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a6954a8305b337f95200ebe58ff9588e4" title="Proximity module Enable / Disable. " alt="" coords="510,166,662,193"/>
+<area shape="rect" id="node12" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a8c8dee961e2ed0c87d3067f4450ff28d" title="ALS interrupt module Enable / Disable. " alt="" coords="508,217,664,244"/>
+<area shape="rect" id="node13" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#acb46dc230152de2dd5181784f20def9b" title="Proximity interrupt module Enable / Disable. " alt="" coords="509,268,663,294"/>
+<area shape="rect" id="node14" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a06ba70f222cf85b7ffe3610fef466204" title="WAIT module Enable / Disable. " alt="" coords="509,318,663,345"/>
+<area shape="rect" id="node15" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a2bf0ca4ce4318a851f9204de0498a233" title="Sleep After Interrupt Enable / Disable. " alt="" coords="513,369,659,396"/>
+<area shape="rect" id="node16" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a268851ca6a7c0b3686eb8565d76b23ff" title="ALS Gain configuration. " alt="" coords="493,689,679,716"/>
+<area shape="rect" id="node18" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a8ee5fa5594f132ba31d363288f47e9b0" title="Proximity Gain configuration. " alt="" coords="491,420,681,446"/>
+<area shape="rect" id="node19" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a8f7677347a2681e3a622a5ccfe3d6996" title="Proximity Drive configuration. " alt="" coords="489,572,683,614"/>
+<area shape="rect" id="node20" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#ae8b8848c4f5eafa6781ba22b3d331b37" title="ALS Persistence configuration. " alt="" coords="473,470,699,497"/>
+<area shape="rect" id="node21" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a2bf2eb5f46d136820b42b0edcc2b3e93" title="Proximity Persistence configuration. " alt="" coords="471,521,701,548"/>
+<area shape="rect" id="node22" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a7754c08d3ba80489c9e866c9b8a39589" title="ALS Integration time configuration. " alt="" coords="453,841,719,868"/>
+<area shape="rect" id="node23" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a242b7eee78e9eec77cd51abd280b4978" title="Proximity Integration time configuration. " alt="" coords="767,892,1035,918"/>
+<area shape="rect" id="node24" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#ad0423e25feee2f56d8c7fb7d0d86bfa9" title="Wait time configuration. " alt="" coords="491,638,681,665"/>
+<area shape="rect" id="node9" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a10d7da1c123c440244f64ddf78889181" title="Write APDS9930 Enable register. " alt="" coords="825,242,976,269"/>
+<area shape="rect" id="node17" href="$d9/d54/_a_p_d_s9930__proc_8c.html#a6c0ebc120429e4d59fb4a931bbf04628" title="Set proper LPC value (Lux per Count) " alt="" coords="825,790,976,817"/>
+</map>

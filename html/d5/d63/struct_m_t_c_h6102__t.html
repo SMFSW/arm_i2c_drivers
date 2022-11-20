@@ -73,8 +73,9 @@ Collaboration diagram for MTCH6102_t:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/de4/struct_m_t_c_h6102__t__coll__graph.png" border="0" usemap="#_m_t_c_h6102__t_coll__map" alt="Collaboration graph"/></div>
 <map name="_m_t_c_h6102__t_coll__map" id="_m_t_c_h6102__t_coll__map">
-<area shape="rect" id="node2" href="../../df/df6/struct_i2_c__slave__t.html" title="ci2c slave config and control parameters " alt="" coords="5,5,100,32"/>
-<area shape="rect" id="node3" href="../../df/d8e/struct_m_t_c_h6102__gesture.html" title="MTCH6102_gesture" alt="" coords="125,5,271,32"/>
+<area shape="rect" id="node2" href="../../df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters " alt="" coords="5,5,100,32"/>
+<area shape="rect" id="node3" href="../../dc/d95/struct_peripheral_g_p_i_o__t.html" title="i2c peripheral GPIO pin parameters " alt="" coords="124,5,253,32"/>
+<area shape="rect" id="node4" href="../../df/d8e/struct_m_t_c_h6102__gesture.html" title="MTCH6102_gesture" alt="" coords="278,5,425,32"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -99,6 +100,12 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a4f7b996a3d47efe7600bff10038abc1f"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *&#160;&#160;&#160;<a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html#a66e5928f9b63a5602e23e3da4eaba7c9">slave_inst</a></td></tr>
 <tr class="memdesc:a4f7b996a3d47efe7600bff10038abc1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slave structure.  <a href="#a4f7b996a3d47efe7600bff10038abc1f">More...</a><br /></td></tr>
 <tr class="separator:a4f7b996a3d47efe7600bff10038abc1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1f90e29d452923fc375b15269434793"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="../../dc/d95/struct_peripheral_g_p_i_o__t.html">PeripheralGPIO_t</a>&#160;&#160;&#160;<a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html#a195a5f63821358bce5e685242ffa99a1">INT_GPIO</a></td></tr>
+<tr class="memdesc:ad1f90e29d452923fc375b15269434793"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt GPIO struct.  <a href="#ad1f90e29d452923fc375b15269434793">More...</a><br /></td></tr>
+<tr class="separator:ad1f90e29d452923fc375b15269434793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a233390959a9c54a6d772df5b3bd6d1f3"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="../../dc/d95/struct_peripheral_g_p_i_o__t.html">PeripheralGPIO_t</a>&#160;&#160;&#160;<a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html#a21b58448f145bb98d6dca51808f9f7eb">SYNC_GPIO</a></td></tr>
+<tr class="memdesc:a233390959a9c54a6d772df5b3bd6d1f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchro GPIO struct.  <a href="#a233390959a9c54a6d772df5b3bd6d1f3">More...</a><br /></td></tr>
+<tr class="separator:a233390959a9c54a6d772df5b3bd6d1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b1a03389899bcf620551894c52da145"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="../../d5/d63/struct_m_t_c_h6102__t.html#aec9a8b96cbd7c98d8d037b2f4095a76d">nb_rx</a></td></tr>
 <tr class="memdesc:a8b1a03389899bcf620551894c52da145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of MTCH6102 Rx used.  <a href="#a8b1a03389899bcf620551894c52da145">More...</a><br /></td></tr>
 <tr class="separator:a8b1a03389899bcf620551894c52da145"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,6 +218,22 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 
 <p>MTCH6102 Minor FW version. </p>
+
+</div>
+</div>
+<a id="a195a5f63821358bce5e685242ffa99a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a195a5f63821358bce5e685242ffa99a1">&#9670;&nbsp;</a></span>INT_GPIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d95/struct_peripheral_g_p_i_o__t.html">PeripheralGPIO_t</a> MTCH6102_t::INT_GPIO</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Interrupt GPIO struct. </p>
 
 </div>
 </div>
@@ -387,6 +410,22 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Slave structure. </p>
+
+</div>
+</div>
+<a id="a21b58448f145bb98d6dca51808f9f7eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21b58448f145bb98d6dca51808f9f7eb">&#9670;&nbsp;</a></span>SYNC_GPIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d95/struct_peripheral_g_p_i_o__t.html">PeripheralGPIO_t</a> MTCH6102_t::SYNC_GPIO</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Synchro GPIO struct. </p>
 
 </div>
 </div>

@@ -1,0 +1,6 @@
+<map id="TCS3400_INT_GPIO_Get" name="TCS3400_INT_GPIO_Get">
+<area shape="rect" id="node2" href="$de/d36/_t_c_s3400__ex_8h.html#ac88104d7503f91b6efe8af760e66f33a" title="Get Blue channel conversion. " alt="" coords="229,5,372,32"/>
+<area shape="rect" id="node3" href="$d9/d14/_t_c_s3400__proc_8h.html#acb5c223a54526bb6c991a244d86d7ecb" title="Handler for TCS3400 peripheral GPIO interrupt. " alt="" coords="227,56,375,83"/>
+<area shape="rect" id="node4" href="$d9/d14/_t_c_s3400__proc_8h.html#aadec61f3b61c2c1ff08aa99dfa053285" title="Get current Illuminance (in lux) " alt="" coords="439,31,576,57"/>
+<area shape="rect" id="node5" href="$d9/d14/_t_c_s3400__proc_8h.html#a2b853b88da073d8f1e218486a16b8f42" title="Handler for all TCS3400 peripherals GPIO interrupt. " alt="" coords="423,81,592,108"/>
+</map>

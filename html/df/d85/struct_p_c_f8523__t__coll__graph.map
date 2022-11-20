@@ -1,5 +1,6 @@
 <map id="PCF8523_t" name="PCF8523_t">
 <area shape="rect" id="node2" href="$d2/de7/struct_p_c_f8523__time.html" title="PCF8523 Time of day struct. " alt="" coords="5,5,120,32"/>
-<area shape="rect" id="node3" href="$df/df6/struct_i2_c__slave__t.html" title="ci2c slave config and control parameters " alt="" coords="145,5,239,32"/>
+<area shape="rect" id="node3" href="$df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters " alt="" coords="145,5,239,32"/>
 <area shape="rect" id="node4" href="$d3/da8/struct_p_c_f8523__date.html" title="PCF8523 Date struct. " alt="" coords="264,5,379,32"/>
+<area shape="rect" id="node5" href="$dc/d95/struct_peripheral_g_p_i_o__t.html" title="i2c peripheral GPIO pin parameters " alt="" coords="403,5,533,32"/>
 </map>

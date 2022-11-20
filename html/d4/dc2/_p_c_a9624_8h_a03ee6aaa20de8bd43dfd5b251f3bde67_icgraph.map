@@ -1,0 +1,11 @@
+<map id="PCA9624_Read" name="PCA9624_Read">
+<area shape="rect" id="node2" href="$d6/dfc/_p_c_a9624__ex_8h.html#a4e93459e13da452b9181cdef1f710b15" title="Set latch type for PCA9624 peripheral. " alt="" coords="181,35,332,61"/>
+<area shape="rect" id="node4" href="$d6/dfc/_p_c_a9624__ex_8h.html#a26229b1c7f245cc88e09533d80ade29d" title="Read PWM duty cycle array of values of a PCA9624. " alt="" coords="185,115,329,141"/>
+<area shape="rect" id="node8" href="$d6/dfc/_p_c_a9624__ex_8h.html#af768a0d852aca5133ec20a30af64086f" title="Read PWM duty cycle value of a PCA9624 channel. " alt="" coords="188,167,325,193"/>
+<area shape="rect" id="node9" href="$d6/dfc/_p_c_a9624__ex_8h.html#aae7261dad2ba4c04c8fd49632795c9da" title="Reads register from PCA9624. " alt="" coords="172,221,341,248"/>
+<area shape="rect" id="node3" href="$d6/dfc/_p_c_a9624__ex_8h.html#a4873de01aedd5ccef0320315cf6195be" title="Set MODE2 register. " alt="" coords="409,5,571,32"/>
+<area shape="rect" id="node5" href="$d6/dfc/_p_c_a9624__ex_8h.html#aea311d4d9235407ad34b209fd4903245" title="Read PWM duty cycle array of values of a PCA9624. " alt="" coords="397,56,583,83"/>
+<area shape="rect" id="node6" href="$d6/dfc/_p_c_a9624__ex_8h.html#ab80468102a0ccd9e0d8c2fb841d19b95" title="Read PWM duty cycle array of values of a PCA9624. " alt="" coords="389,107,591,149"/>
+<area shape="rect" id="node7" href="$d6/dfc/_p_c_a9624__ex_8h.html#a908e779b4a0bfd968a674997d5fd659f" title="Read all PWM duty cycle array of values of a PCA9624 (for the 8 channels) " alt="" coords="407,173,573,200"/>
+<area shape="rect" id="node10" href="$d6/dfc/_p_c_a9624__ex_8h.html#a93948697ac82a090f75a5d6879ca7f23" title="Send all PWM duty cycle array of values to apply on a PCA9624 (for the 8 channels) ..." alt="" coords="412,224,568,251"/>
+</map>

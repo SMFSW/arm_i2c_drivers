@@ -1,0 +1,8 @@
+<map id="TCS3472_Set_Pesistence" name="TCS3472_Set_Pesistence">
+<area shape="rect" id="node2" href="$df/dfb/_t_c_s3472_8c.html#a19fc8e0e8440863061f67b8a42f6484a" title="I2C Write function for TCS3472. " alt="" coords="732,64,848,90"/>
+<area shape="rect" id="node5" href="$d2/dbe/_t_c_s3472__ex_8h.html#ab9336815f89fd68bb15b3572334e0fcb" title="Integration time configuration. " alt="" coords="463,38,684,65"/>
+<area shape="rect" id="node6" href="$d2/dbe/_t_c_s3472__ex_8h.html#a8f23adc9af56a58bc72277e8c08a0f2f" title="Wait time configuration. " alt="" coords="236,89,415,116"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="896,38,1013,65"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="901,89,1008,116"/>
+<area shape="rect" id="node7" href="$d2/dbe/_t_c_s3472__ex_8h.html#a9fdf74096436a356febbf1f4c3162857" title="Write TCS3472 Config register. " alt="" coords="501,140,645,166"/>
+</map>

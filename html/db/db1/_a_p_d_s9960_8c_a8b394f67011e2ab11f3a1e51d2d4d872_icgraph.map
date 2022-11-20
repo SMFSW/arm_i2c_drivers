@@ -1,0 +1,6 @@
+<map id="APDS9960_Read_Word" name="APDS9960_Read_Word">
+<area shape="rect" id="node2" href="$da/db5/_a_p_d_s9960__ex_8h.html#a862d94a14f7eeee839a88d3ae19edd52" title="Get Clear conversion. " alt="" coords="223,5,383,32"/>
+<area shape="rect" id="node3" href="$da/db5/_a_p_d_s9960__ex_8h.html#adbc1b3615d9d53307ffa6b780bda0d4e" title="Get Red conversion. " alt="" coords="228,56,379,83"/>
+<area shape="rect" id="node4" href="$da/db5/_a_p_d_s9960__ex_8h.html#a481b414e8dfab43790458f69dceb693a" title="Get Green conversion. " alt="" coords="220,107,387,133"/>
+<area shape="rect" id="node5" href="$da/db5/_a_p_d_s9960__ex_8h.html#a0e3ed7056298506e6e2aa4c0efe86ed4" title="Get Blue conversion. " alt="" coords="226,157,381,184"/>
+</map>

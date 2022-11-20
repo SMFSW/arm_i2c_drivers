@@ -1,19 +1,14 @@
 <map id="PCA9956_Set_MODE2" name="PCA9956_Set_MODE2">
-<area shape="rect" id="node2" href="$df/d5e/_p_c_a9956_8c.html#a2d48a308053e3c821a70b67b0f3a2de9" title="I2C Write function for PCA9956. " alt="" coords="483,309,601,336"/>
-<area shape="rect" id="node5" href="$dd/ddf/_p_c_a9956__ex_8h.html#a1c293d3b30faed552452a938635e5025" title="Set auto increment option for PCA9956 registers. " alt="" coords="216,461,435,488"/>
-<area shape="rect" id="node7" href="$dd/ddf/_p_c_a9956__ex_8h.html#a7f21a33493c7aa5605cedcd1b35b795d" title="Set latch type for PCA9956 peripheral. " alt="" coords="250,512,401,539"/>
-<area shape="rect" id="node8" href="$dd/ddf/_p_c_a9956__ex_8h.html#a4df68a6e77af12ddcbd443787a162f67" title="Set PCA9956 peripheral LED mode. " alt="" coords="234,360,417,387"/>
-<area shape="rect" id="node9" href="$dd/ddf/_p_c_a9956__ex_8h.html#a9634dd720e3a109a32be37d7721181a4" title="Set PCA9956 peripheral multiple LEDs mode. " alt="" coords="230,411,421,437"/>
+<area shape="rect" id="node2" href="$df/d5e/_p_c_a9956_8c.html#a631d23c191d905d40f272c8488d175b4" title="I2C Write function for PCA9956. " alt="" coords="483,233,601,260"/>
+<area shape="rect" id="node5" href="$dd/ddf/_p_c_a9956__ex_8h.html#a1c293d3b30faed552452a938635e5025" title="Set auto increment option for PCA9956 registers. " alt="" coords="216,360,435,387"/>
+<area shape="rect" id="node7" href="$dd/ddf/_p_c_a9956__ex_8h.html#aec9fb3f393f2ea363271223bb213cba7" title="Set latch type for PCA9956 peripheral. " alt="" coords="250,309,401,336"/>
+<area shape="rect" id="node8" href="$dd/ddf/_p_c_a9956__ex_8h.html#a4df68a6e77af12ddcbd443787a162f67" title="Set PCA9956 peripheral LED mode. " alt="" coords="234,208,417,235"/>
+<area shape="rect" id="node9" href="$dd/ddf/_p_c_a9956__ex_8h.html#a9634dd720e3a109a32be37d7721181a4" title="Set PCA9956 peripheral multiple LEDs mode. " alt="" coords="230,259,421,285"/>
 <area shape="rect" id="node10" href="$dd/ddf/_p_c_a9956__ex_8h.html#aea495515529a59b632b86612b77a61b4" title="Set PCA9956 output gain control value. " alt="" coords="254,5,397,32"/>
 <area shape="rect" id="node11" href="$dd/ddf/_p_c_a9956__ex_8h.html#a8cb4f5388815cb02e2b7ecb8c9c8e325" title="Set PCA9956 output gain control value. " alt="" coords="251,56,400,83"/>
 <area shape="rect" id="node12" href="$dd/ddf/_p_c_a9956__ex_8h.html#abc361384337269a4aa7edc0f32c0a84e" title="Set PCA9956 peripheral delay between channels. " alt="" coords="248,107,403,133"/>
-<area shape="rect" id="node13" href="$dd/ddf/_p_c_a9956__ex_8h.html#a817cee4219dfebd0469108badaa73294" title="Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8..." alt="" coords="257,563,394,589"/>
-<area shape="rect" id="node14" href="$dd/ddf/_p_c_a9956__ex_8h.html#ac2e9cecfe5fea806124ca1229658f7a3" title="Computes and send I2C lighting values to apply to a particular channel for PCA9956. " alt="" coords="262,157,389,184"/>
-<area shape="rect" id="node15" href="$dd/ddf/_p_c_a9956__ex_8h.html#a32b9dca37db78d2852cd94b0e97162ef" title="Sends I2C PWM ON values to apply to a particular channel for PCA9956. " alt="" coords="261,208,389,235"/>
-<area shape="rect" id="node16" href="$dd/ddf/_p_c_a9956__ex_8h.html#ae1e617a23120269e52293fac43d2ac63" title="Sends I2C PWM OFF values to apply to a particular channel for PCA9956. " alt="" coords="264,259,387,285"/>
-<area shape="rect" id="node17" href="$dd/ddf/_p_c_a9956__ex_8h.html#a617e11246f1d855ab91ce29e6007258d" title="Reads I2C LEDs error flags. " alt="" coords="242,613,409,640"/>
-<area shape="rect" id="node18" href="$dd/ddf/_p_c_a9956__ex_8h.html#a72082f17a461d30c7cc8c0d0fb95e5e4" title="Reads I2C register from PCA9956. " alt="" coords="241,664,410,691"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="649,348,767,375"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="655,436,761,463"/>
-<area shape="rect" id="node6" href="$df/d5e/_p_c_a9956_8c.html#aaab84cb94e5542d51b2d99463079d907" title="I2C Read function for PCA9956. " alt="" coords="483,512,601,539"/>
+<area shape="rect" id="node13" href="$dd/ddf/_p_c_a9956__ex_8h.html#a5721a6a50082521ad0f587b39c95dfea" title="Read PWM duty cycle array of values of a PCA9956. " alt="" coords="253,411,397,437"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="649,259,767,285"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="655,309,761,336"/>
+<area shape="rect" id="node6" href="$df/d5e/_p_c_a9956_8c.html#a45016e9d78da0bffbd4bceb1a3478b75" title="I2C Read function for PCA9956. " alt="" coords="483,309,601,336"/>
 </map>

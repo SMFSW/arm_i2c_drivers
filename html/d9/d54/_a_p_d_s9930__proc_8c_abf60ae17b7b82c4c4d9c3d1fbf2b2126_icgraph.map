@@ -1,0 +1,6 @@
+<map id="APDS9930_handler" name="APDS9930_handler">
+<area shape="rect" id="node2" href="$d1/d45/_a_p_d_s9930__proc_8h.html#a061d3c2eb22c619599e5dddb63ea8313" title="Handler for APDS9930 peripheral GPIO interrupt. " alt="" coords="202,56,362,83"/>
+<area shape="rect" id="node3" href="$d1/d45/_a_p_d_s9930__proc_8h.html#a7ccd203da3b8432134156f417d74ac30" title="Get current Illuminance (in lux) " alt="" coords="429,5,579,32"/>
+<area shape="rect" id="node5" href="$d1/d45/_a_p_d_s9930__proc_8h.html#a24390044b234a6f13916504006718885" title="Handler for all APDS9930 peripherals. " alt="" coords="199,107,365,133"/>
+<area shape="rect" id="node4" href="$d1/d45/_a_p_d_s9930__proc_8h.html#a774db2cef9713661b6664aedabc25f9d" title="Handler for all APDS9930 peripherals GPIO interrupt. " alt="" coords="413,56,595,83"/>
+</map>

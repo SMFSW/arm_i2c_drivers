@@ -1,0 +1,20 @@
+<map id="TSL2591_Read" name="TSL2591_Read">
+<area shape="rect" id="node2" href="$da/d96/_t_s_l2591_8h.html#ae6494558d15bcc3bb683c4145273a47e" title="I2C Word Read (low endian) function for TSL2591. " alt="" coords="201,31,355,57"/>
+<area shape="rect" id="node5" href="$dc/d24/_t_s_l2591__ex_8h.html#aaffe614ba69a297e0499e59bda20e77b" title="Oscillator Enable / Disable. " alt="" coords="207,81,349,108"/>
+<area shape="rect" id="node10" href="$dc/d24/_t_s_l2591__ex_8h.html#a0b43a8aaa34485d2e96e4c1afe552777" title="ALS module Enable / Disable. " alt="" coords="208,132,348,159"/>
+<area shape="rect" id="node11" href="$dc/d24/_t_s_l2591__ex_8h.html#a50498a2fcf394e236f2c17f271646245" title="ALS interrupt module Enable / Disable. " alt="" coords="207,183,349,209"/>
+<area shape="rect" id="node12" href="$dc/d24/_t_s_l2591__ex_8h.html#a43a60f5a8041bd651751a2a70c3432af" title="Gain configuration. " alt="" coords="207,233,349,260"/>
+<area shape="rect" id="node13" href="$dc/d24/_t_s_l2591__ex_8h.html#a0fc1edba0e94a1a51b9f974069a93fda" title="Integration time configuration. " alt="" coords="168,284,388,311"/>
+<area shape="rect" id="node14" href="$dc/d24/_t_s_l2591__ex_8h.html#aef165ca45c6d6620ae343c637d1f11a7" title="Get TSL2591 chip ID. " alt="" coords="436,271,591,297"/>
+<area shape="rect" id="node15" href="$d7/d6e/_t_s_l2591__proc_8h.html#a63ff78c62bd01f18c84b4d4cd8541fd6" title="Handler for TSL2591 peripheral. " alt="" coords="212,385,344,412"/>
+<area shape="rect" id="node3" href="$dc/d24/_t_s_l2591__ex_8h.html#ab2e6e90cfe5384429f7b1cd5391eb3b0" title="Get Full conversion (Channel 0) " alt="" coords="446,5,581,32"/>
+<area shape="rect" id="node4" href="$dc/d24/_t_s_l2591__ex_8h.html#abf21a4fb079c7ef69f850275b23a4680" title="Get IR conversion (Channel 1) " alt="" coords="451,56,576,83"/>
+<area shape="rect" id="node6" href="$dc/d24/_t_s_l2591__ex_8h.html#ab74880c2ecd88a5c1eb7ca2d3d7ef032" title="Write TSL2591 Config. " alt="" coords="442,195,585,221"/>
+<area shape="rect" id="node7" href="$d7/d6e/_t_s_l2591__proc_8h.html#a5faab4b1d7b74b74edc2fdd8c4db4db4" title="Initialization Sequence for TSL2591 peripheral. " alt="" coords="639,245,813,272"/>
+<area shape="rect" id="node8" href="$da/d96/_t_s_l2591_8h.html#a3e5d6c27f6e4ba0ad68acc6b29a18d27" title="Initialization for TSL2591 peripheral. " alt="" coords="861,245,964,272"/>
+<area shape="rect" id="node9" href="$da/d96/_t_s_l2591_8h.html#a340d5559e9623f12628e013d814ac718" title="Initialization for TSL2591 peripheral. " alt="" coords="1012,245,1161,272"/>
+<area shape="rect" id="node16" href="$d7/d6e/_t_s_l2591__proc_8h.html#a0dec9da426161dbc0d55404b64d3ae4d" title="Handler for TSL2591 peripheral GPIO interrupt. " alt="" coords="440,385,587,412"/>
+<area shape="rect" id="node17" href="$d7/d6e/_t_s_l2591__proc_8h.html#ab7787ab44686285eee3d6537f7c8f38e" title="Get current Illuminance (in lux) " alt="" coords="658,335,794,361"/>
+<area shape="rect" id="node19" href="$d7/d6e/_t_s_l2591__proc_8h.html#a5323f7c3f73bc9cd16ae6fb09368dd47" title="Handler for all TSL2591 peripherals. " alt="" coords="437,436,590,463"/>
+<area shape="rect" id="node18" href="$d7/d6e/_t_s_l2591__proc_8h.html#a42f832ede9cb295fb0ffcad8ff0e2bde" title="Handler for all TSL2591 peripherals GPIO interrupt. " alt="" coords="642,385,810,412"/>
+</map>

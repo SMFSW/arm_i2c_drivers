@@ -1,0 +1,17 @@
+<map id="PCA9624_PutVals_All" name="PCA9624_PutVals_All">
+<area shape="rect" id="node2" href="$d6/dfc/_p_c_a9624__ex_8h.html#a7469018e353726621da2eb3fc7ddfc57" title="Send PWM duty cycle array of values to apply on a PCA9624. " alt="" coords="228,157,363,184"/>
+<area shape="rect" id="node6" href="$d6/dfc/_p_c_a9624__ex_8h.html#a332fee8687a72949293000a1e120295e" title="Send PWM duty cycle value to apply on a PCA9624 channel. " alt="" coords="232,5,359,32"/>
+<area shape="rect" id="node7" href="$d6/dfc/_p_c_a9624__ex_8h.html#aa573ddd2d06a2a03d9c2213148cb988e" title="Send PWM Full ON value to apply on a PCA9624 channel. " alt="" coords="231,56,359,83"/>
+<area shape="rect" id="node8" href="$d6/dfc/_p_c_a9624__ex_8h.html#a3192c37b275d530307437efaa1d7dd1d" title="Send PWM Full OFF value to apply on a PCA9624 channel. " alt="" coords="234,107,357,133"/>
+<area shape="rect" id="node9" href="$d6/dfc/_p_c_a9624__ex_8h.html#aab4549b551141757f1b4152cdd63d8e8" title="Reset for PCA9624 peripheral. " alt="" coords="234,259,357,285"/>
+<area shape="rect" id="node10" href="$d6/dfc/_p_c_a9624__ex_8h.html#aec8212f311d739e4498507b8c9c249b8" title="General call reset function for PCA9624. " alt="" coords="223,309,367,336"/>
+<area shape="rect" id="node11" href="$d6/dfc/_p_c_a9624__ex_8h.html#aae7261dad2ba4c04c8fd49632795c9da" title="Reads register from PCA9624. " alt="" coords="211,208,380,235"/>
+<area shape="rect" id="node13" href="$d6/dfc/_p_c_a9624__ex_8h.html#a96409f8047040eb25063ca731ef69d84" title="Output Enable GPIO pin init for PCA9624. " alt="" coords="211,360,380,387"/>
+<area shape="rect" id="node15" href="$d6/dfc/_p_c_a9624__ex_8h.html#a1cb09b057cd1dc3d1541786ff8cbcf9b" title="Output Enable GPIO pin setter for PCA9624. " alt="" coords="209,411,381,437"/>
+<area shape="rect" id="node3" href="$db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624. " alt="" coords="459,107,578,133"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="656,107,773,133"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="661,157,768,184"/>
+<area shape="rect" id="node12" href="$db/de1/_p_c_a9624_8c.html#a03ee6aaa20de8bd43dfd5b251f3bde67" title="I2C Read function for PCA9624. " alt="" coords="459,157,578,184"/>
+<area shape="rect" id="node14" href="$d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="430,360,607,387"/>
+<area shape="rect" id="node16" href="$d2/de1/_i2_c__peripheral_8c.html#a7accedd9eb463e3cd4eb401b07e36b2c" title="I2C peripheral GPIO pin setter. " alt="" coords="429,411,608,437"/>
+</map>

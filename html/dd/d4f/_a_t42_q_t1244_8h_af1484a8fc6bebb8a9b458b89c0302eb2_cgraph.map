@@ -1,9 +1,9 @@
 <map id="AT42QT1244_Init" name="AT42QT1244_Init">
 <area shape="rect" id="node2" href="$d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="227,5,335,32"/>
-<area shape="rect" id="node3" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#aa696a20476ab84d81f25fef8bfb66bde" title="Initialization Sequence for AT42QT1244 peripheral. " alt="" coords="181,56,380,83"/>
+<area shape="rect" id="node3" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#a8766f2a3280acd350544fa81b84f216c" title="Initialization Sequence for AT42QT1244 peripheral. " alt="" coords="181,56,380,83"/>
 <area shape="rect" id="node9" href="$d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="221,107,340,133"/>
-<area shape="rect" id="node4" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#ab6c5dfd48e49c22a7380f92a9b093ed4" title="100ms delay generator for AT42QT1244 peripheral " alt="" coords="428,31,636,57"/>
-<area shape="rect" id="node5" href="$d3/dc4/_a_t42_q_t1244_8c.html#ab867525e9212e042aec44bc34932ae44" title="I2C Read function for AT42QT1244. " alt="" coords="462,81,602,108"/>
+<area shape="rect" id="node4" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#a4e9e9c7ef09016fe06741c0ab9ef5370" title="100ms delay generator for AT42QT1244 peripheral " alt="" coords="428,31,636,57"/>
+<area shape="rect" id="node5" href="$d3/dc4/_a_t42_q_t1244_8c.html#a59952a25c499177de6ff50933ffdbc47" title="I2C Read function for AT42QT1244. " alt="" coords="462,81,602,108"/>
 <area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="697,31,815,57"/>
 <area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="703,81,809,108"/>
 <area shape="rect" id="node8" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#ad2998daf6e9e01b5d72b96ac64a2f78e" title="16bits CRC calculation for AT42QT1244 " alt="" coords="684,132,828,159"/>

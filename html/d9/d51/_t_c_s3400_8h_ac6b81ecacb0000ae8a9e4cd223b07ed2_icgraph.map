@@ -1,0 +1,26 @@
+<map id="TCS3400_Read" name="TCS3400_Read">
+<area shape="rect" id="node2" href="$d9/d51/_t_c_s3400_8h.html#acc3bea23b7c5501757050b6b9b64a34c" title="I2C Word Read (low endian) function for TCS3400. " alt="" coords="179,107,334,133"/>
+<area shape="rect" id="node8" href="$de/d36/_t_c_s3400__ex_8h.html#abe93d1d3ca320f2d6c4a85e035fd61a8" title="Oscillator Enable / Disable. " alt="" coords="185,157,328,184"/>
+<area shape="rect" id="node10" href="$de/d36/_t_c_s3400__ex_8h.html#acac92b4a48cc37db6e03d64a20a628be" title="Clear module Enable / Disable. " alt="" coords="186,208,327,235"/>
+<area shape="rect" id="node11" href="$de/d36/_t_c_s3400__ex_8h.html#ad51ca80189f430834182c5ccdbab1e83" title="Clear interrupt module Enable / Disable. " alt="" coords="185,259,329,285"/>
+<area shape="rect" id="node12" href="$de/d36/_t_c_s3400__ex_8h.html#aa514e6a8a7538aa25f74e70f17f0858a" title="WAIT module Enable / Disable. " alt="" coords="185,309,328,336"/>
+<area shape="rect" id="node13" href="$de/d36/_t_c_s3400__ex_8h.html#abb8af383a0b2576ecd6126b66ff7c123" title="Sleep After Interrupt Enable / Disable. " alt="" coords="189,360,324,387"/>
+<area shape="rect" id="node14" href="$de/d36/_t_c_s3400__ex_8h.html#adab7b9b97e53d6533da716b6f51efef1" title="Gain configuration. " alt="" coords="185,411,328,437"/>
+<area shape="rect" id="node18" href="$de/d36/_t_c_s3400__ex_8h.html#a58fc53de16e4494f969bd2f51d6644a3" title="Get All channels conversions. " alt="" coords="169,461,344,488"/>
+<area shape="rect" id="node19" href="$de/d36/_t_c_s3400__ex_8h.html#a3b92d62f135d55aec12d2180b5fd73d2" title="Get TCS3400 Device ID. " alt="" coords="392,461,563,488"/>
+<area shape="rect" id="node20" href="$de/d36/_t_c_s3400__ex_8h.html#a6f6c0afff67926df89c04e18556413b4" title="Get TCS3400 Revision ID. " alt="" coords="402,512,553,539"/>
+<area shape="rect" id="node21" href="$d9/d14/_t_c_s3400__proc_8h.html#a8808303dd2ea714a3516ba2c0ed2b395" title="Handler for TCS3400 peripheral. " alt="" coords="190,613,323,640"/>
+<area shape="rect" id="node3" href="$de/d36/_t_c_s3400__ex_8h.html#a76cc3989fb001b7b3272a5740d186faf" title="Get Specific channel conversion. " alt="" coords="394,5,561,32"/>
+<area shape="rect" id="node4" href="$de/d36/_t_c_s3400__ex_8h.html#afa211854a6fed7777444f2f86f7e593b" title="Get Clear channel conversion. " alt="" coords="403,56,551,83"/>
+<area shape="rect" id="node5" href="$de/d36/_t_c_s3400__ex_8h.html#ab55eeaf203ecda2b5d64662a8c7c7fbe" title="Get Red channel conversion. " alt="" coords="408,107,547,133"/>
+<area shape="rect" id="node6" href="$de/d36/_t_c_s3400__ex_8h.html#a08f6b8d74acf3b8a9de37a8731866d3f" title="Get Green channel conversion. " alt="" coords="400,157,555,184"/>
+<area shape="rect" id="node7" href="$de/d36/_t_c_s3400__ex_8h.html#ac88104d7503f91b6efe8af760e66f33a" title="Get Blue channel conversion. " alt="" coords="406,208,549,235"/>
+<area shape="rect" id="node9" href="$de/d36/_t_c_s3400__ex_8h.html#a4c743f6263918dc403ce2e9193ce6468" title="Write TCS3400 Control register. " alt="" coords="407,284,547,311"/>
+<area shape="rect" id="node15" href="$d9/d14/_t_c_s3400__proc_8h.html#a8a6888f4fcd6c3e24072035984dea5cb" title="Initialization Sequence for TCS3400 peripheral. " alt="" coords="611,461,785,488"/>
+<area shape="rect" id="node16" href="$d9/d51/_t_c_s3400_8h.html#ab9ee131767fd0818271fd8d639c57b85" title="Initialization for TCS3400 peripheral. " alt="" coords="833,461,937,488"/>
+<area shape="rect" id="node17" href="$d9/d51/_t_c_s3400_8h.html#ae1122436ee0aa2cf81cec91006589ad6" title="Initialization for TCS3400 peripheral. " alt="" coords="985,461,1136,488"/>
+<area shape="rect" id="node22" href="$d9/d14/_t_c_s3400__proc_8h.html#acb5c223a54526bb6c991a244d86d7ecb" title="Handler for TCS3400 peripheral GPIO interrupt. " alt="" coords="403,613,551,640"/>
+<area shape="rect" id="node23" href="$d9/d14/_t_c_s3400__proc_8h.html#aadec61f3b61c2c1ff08aa99dfa053285" title="Get current Illuminance (in lux) " alt="" coords="629,563,767,589"/>
+<area shape="rect" id="node25" href="$d9/d14/_t_c_s3400__proc_8h.html#aac31caa61430cce94d643a15c4c6e026" title="Handler for all TCS3400 peripherals. " alt="" coords="400,664,555,691"/>
+<area shape="rect" id="node24" href="$d9/d14/_t_c_s3400__proc_8h.html#a2b853b88da073d8f1e218486a16b8f42" title="Handler for all TCS3400 peripherals GPIO interrupt. " alt="" coords="613,613,783,640"/>
+</map>

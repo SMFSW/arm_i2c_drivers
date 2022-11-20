@@ -1,6 +1,0 @@
-<map id="PCA9624_Read" name="PCA9624_Read">
-<area shape="rect" id="node2" href="$d6/dfc/_p_c_a9624__ex_8h.html#a4e93459e13da452b9181cdef1f710b15" title="Set latch type for PCA9624 peripheral. " alt="" coords="181,5,332,32"/>
-<area shape="rect" id="node4" href="$d6/dfc/_p_c_a9624__ex_8h.html#ae201dcbffd983939c2938a040a8bf87f" title="Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8..." alt="" coords="188,56,325,83"/>
-<area shape="rect" id="node5" href="$d6/dfc/_p_c_a9624__ex_8h.html#aae7261dad2ba4c04c8fd49632795c9da" title="Reads I2C register from PCA9624. " alt="" coords="172,107,341,133"/>
-<area shape="rect" id="node3" href="$d6/dfc/_p_c_a9624__ex_8h.html#a4873de01aedd5ccef0320315cf6195be" title="Set MODE2 register. " alt="" coords="389,56,552,83"/>
-</map>

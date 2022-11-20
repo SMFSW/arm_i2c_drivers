@@ -1,0 +1,8 @@
+<map id="PCF8523_INT1_GPIO_Get" name="PCF8523_INT1_GPIO_Get">
+<area shape="rect" id="node2" href="$d1/d30/_p_c_f8523__ex_8h.html#ae2c8370ad357db3869fd42d64d0320d3" title="PCF8523_Get_Time_Raw" alt="" coords="235,56,413,83"/>
+<area shape="rect" id="node7" href="$d4/d61/_p_c_f8523__proc_8h.html#a519c4d20da41104d7ec672566ad70e36" title="Handler for PCF8523 peripheral GPIO interrupt. " alt="" coords="879,81,1027,108"/>
+<area shape="rect" id="node3" href="$d4/d61/_p_c_f8523__proc_8h.html#ad0d71f0e72ac7d36a8c735048b252b58" title="PCF8523_Get_Time" alt="" coords="461,56,608,83"/>
+<area shape="rect" id="node4" href="$d4/d61/_p_c_f8523__proc_8h.html#a04365ddacd950492c16035fb554c3b72" title="Initialization Sequence for PCF8523 peripheral. " alt="" coords="656,5,831,32"/>
+<area shape="rect" id="node6" href="$d4/d61/_p_c_f8523__proc_8h.html#a0c61d7181df53ea43460c13575563e92" title="Handler for PCF8523 peripheral. " alt="" coords="677,56,810,83"/>
+<area shape="rect" id="node5" href="$dd/d42/_p_c_f8523_8h.html#aa61e54475342c7382da01eb61e44da09" title="Initialization for PCF8523 peripheral peripheral. " alt="" coords="901,5,1005,32"/>
+</map>

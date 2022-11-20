@@ -1,0 +1,10 @@
+<map id="TSL2591_Get_IR" name="TSL2591_Get_IR">
+<area shape="rect" id="node2" href="$d2/d68/_t_s_l2591_8c.html#ae6494558d15bcc3bb683c4145273a47e" title="I2C Word Read (low endian) function for TSL2591. " alt="" coords="188,31,341,57"/>
+<area shape="rect" id="node6" href="$dc/d24/_t_s_l2591__ex_8h.html#a2fd8a0442f003920328cc043fbd49d06" title="Interrupt GPIO pin init for TSL2591. " alt="" coords="181,81,349,108"/>
+<area shape="rect" id="node8" href="$dc/d24/_t_s_l2591__ex_8h.html#ad4ecdc111eee86434a4e12753a58bed9" title="Interrupt GPIO pin getter for TSL2591. " alt="" coords="179,132,351,159"/>
+<area shape="rect" id="node3" href="$d2/d68/_t_s_l2591_8c.html#a413df69cffa299813ff03f5bb6a0bc81" title="I2C Read function for TSL2591. " alt="" coords="431,31,545,57"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="625,5,743,32"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="631,56,737,83"/>
+<area shape="rect" id="node7" href="$d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="399,81,577,108"/>
+<area shape="rect" id="node9" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="399,132,577,159"/>
+</map>

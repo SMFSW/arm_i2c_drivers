@@ -1,6 +1,0 @@
-<map id="APDS9930_Set_Prox_Pesistence" name="APDS9930_Set_Prox_Pesistence">
-<area shape="rect" id="node2" href="$de/d85/_a_p_d_s9930_8c.html#a59da97413fd39d052529af47ad3565a2" title="I2C Read function for APDS9930. " alt="" coords="284,5,412,32"/>
-<area shape="rect" id="node5" href="$de/d85/_a_p_d_s9930_8c.html#a1ae7594cb2bd6a3a0bace217664a3205" title="I2C Write function for APDS9930. " alt="" coords="284,56,412,83"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="460,5,577,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="465,56,572,83"/>
-</map>

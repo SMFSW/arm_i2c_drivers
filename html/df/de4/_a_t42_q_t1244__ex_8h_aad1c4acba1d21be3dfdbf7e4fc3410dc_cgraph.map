@@ -1,0 +1,14 @@
+<map id="AT42QT1244_Get_Status" name="AT42QT1244_Get_Status">
+<area shape="rect" id="node2" href="$d3/dc4/_a_t42_q_t1244_8c.html#a59952a25c499177de6ff50933ffdbc47" title="I2C Read function for AT42QT1244. " alt="" coords="281,56,421,83"/>
+<area shape="rect" id="node6" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a348e43f2601e172063fd4e3c0623fed9" title="Get calibration status for AT42QT1244 peripheral. " alt="" coords="273,107,430,149"/>
+<area shape="rect" id="node7" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a6615c48892435edb33807e93416d1e11" title="Change GPIO pin init for AT42QT1244. " alt="" coords="237,173,466,200"/>
+<area shape="rect" id="node9" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a93d10a2a64d12b0d01ae41d5aeb1b761" title="Change GPIO pin getter for AT42QT1244. " alt="" coords="235,275,468,301"/>
+<area shape="rect" id="node11" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a7c5cbc9f3955b892061e478b295d194c" title="Reset GPIO pin init for AT42QT1244. " alt="" coords="253,224,450,251"/>
+<area shape="rect" id="node12" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a8d9f72959102f68e69346ae2ca10637f" title="Reset GPIO pin setter for AT42QT1244. " alt="" coords="251,325,451,352"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="547,5,664,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="552,56,659,83"/>
+<area shape="rect" id="node5" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#ad2998daf6e9e01b5d72b96ac64a2f78e" title="16bits CRC calculation for AT42QT1244 " alt="" coords="533,107,677,133"/>
+<area shape="rect" id="node8" href="$d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="517,199,694,225"/>
+<area shape="rect" id="node10" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="516,275,695,301"/>
+<area shape="rect" id="node13" href="$d2/de1/_i2_c__peripheral_8c.html#a7accedd9eb463e3cd4eb401b07e36b2c" title="I2C peripheral GPIO pin setter. " alt="" coords="516,325,695,352"/>
+</map>

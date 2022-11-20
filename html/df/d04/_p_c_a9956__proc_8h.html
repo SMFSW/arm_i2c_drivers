@@ -121,9 +121,12 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1c55c5f56740dc2447bc6e17724ab99b"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d04/_p_c_a9956__proc_8h.html#a1c55c5f56740dc2447bc6e17724ab99b">PCA9956_Init_Sequence</a> (<a class="el" href="../../df/d75/struct_p_c_a9956__t.html">PCA9956_t</a> *pCpnt)</td></tr>
-<tr class="memdesc:a1c55c5f56740dc2447bc6e17724ab99b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization Sequence for PCA9956 peripheral.  <a href="#a1c55c5f56740dc2447bc6e17724ab99b">More...</a><br /></td></tr>
-<tr class="separator:a1c55c5f56740dc2447bc6e17724ab99b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cbd9081f3d6999611db262c3e3d6baf"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d04/_p_c_a9956__proc_8h.html#a0cbd9081f3d6999611db262c3e3d6baf">PCA9956_Init_Sequence</a> (<a class="el" href="../../df/d75/struct_p_c_a9956__t.html">PCA9956_t</a> *const pCpnt)</td></tr>
+<tr class="memdesc:a0cbd9081f3d6999611db262c3e3d6baf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization Sequence for PCA9956 peripheral.  <a href="#a0cbd9081f3d6999611db262c3e3d6baf">More...</a><br /></td></tr>
+<tr class="separator:a0cbd9081f3d6999611db262c3e3d6baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36be6e86acc80fd877989e2e984fdcfb"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d04/_p_c_a9956__proc_8h.html#a36be6e86acc80fd877989e2e984fdcfb">PCA9956_calc_IREF</a> (uint8_t *const pIREF, const float Rext, const float current)</td></tr>
+<tr class="memdesc:a36be6e86acc80fd877989e2e984fdcfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute IREF for PCA9956 peripheral.  <a href="#a36be6e86acc80fd877989e2e984fdcfb">More...</a><br /></td></tr>
+<tr class="separator:a36be6e86acc80fd877989e2e984fdcfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -169,8 +172,53 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a1c55c5f56740dc2447bc6e17724ab99b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c55c5f56740dc2447bc6e17724ab99b">&#9670;&nbsp;</a></span>PCA9956_Init_Sequence()</h2>
+<a id="a36be6e86acc80fd877989e2e984fdcfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36be6e86acc80fd877989e2e984fdcfb">&#9670;&nbsp;</a></span>PCA9956_calc_IREF()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR PCA9956_calc_IREF </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *const&#160;</td>
+          <td class="paramname"><em>pIREF</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>Rext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>current</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute IREF for PCA9956 peripheral. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pIREF</td><td>- Pointer to IREF result </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Rext</td><td>- Rext value (in KOhm) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>- Target current (in mA) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode (in case of IREF value overflow) </dd></dl>
+
+</div>
+</div>
+<a id="a0cbd9081f3d6999611db262c3e3d6baf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cbd9081f3d6999611db262c3e3d6baf">&#9670;&nbsp;</a></span>PCA9956_Init_Sequence()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -178,7 +226,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">FctERR PCA9956_Init_Sequence </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../df/d75/struct_p_c_a9956__t.html">PCA9956_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../df/d75/struct_p_c_a9956__t.html">PCA9956_t</a> *const&#160;</td>
           <td class="paramname"><em>pCpnt</em></td><td>)</td>
           <td></td>
         </tr>
@@ -186,7 +234,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initialization Sequence for PCA9956 peripheral. </p>
-<dl class="weak"><dt><b><a class="el" href="../../d0/d58/weak.html#_weak000028">Weak Functions:</a></b></dt><dd>PCA9956 Init sequence may be user implemented if custom initialization sequence needed </dd></dl>
+<dl class="weak"><dt><b><a class="el" href="../../d0/d58/weak.html#_weak000071">Weak Functions:</a></b></dt><dd>PCA9956 Init sequence may be user implemented if custom initialization sequence needed </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to PCA9956 component </td></tr>
@@ -197,21 +245,23 @@ Variables</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d04/_p_c_a9956__proc_8h_a1c55c5f56740dc2447bc6e17724ab99b_cgraph.png" border="0" usemap="#df/d04/_p_c_a9956__proc_8h_a1c55c5f56740dc2447bc6e17724ab99b_cgraph" alt=""/></div>
-<map name="df/d04/_p_c_a9956__proc_8h_a1c55c5f56740dc2447bc6e17724ab99b_cgraph" id="df/d04/_p_c_a9956__proc_8h_a1c55c5f56740dc2447bc6e17724ab99b_cgraph">
-<area shape="rect" id="node2" href="../../df/d5e/_p_c_a9956_8c.html#a2d48a308053e3c821a70b67b0f3a2de9" title="I2C Write function for PCA9956. " alt="" coords="497,56,616,83"/>
-<area shape="rect" id="node5" href="../../dd/d22/_p_c_a9956__ex_8c.html#a1c293d3b30faed552452a938635e5025" title="Set auto increment option for PCA9956 registers. " alt="" coords="231,107,449,133"/>
+<div class="center"><img src="../../df/d04/_p_c_a9956__proc_8h_a0cbd9081f3d6999611db262c3e3d6baf_cgraph.png" border="0" usemap="#df/d04/_p_c_a9956__proc_8h_a0cbd9081f3d6999611db262c3e3d6baf_cgraph" alt=""/></div>
+<map name="df/d04/_p_c_a9956__proc_8h_a0cbd9081f3d6999611db262c3e3d6baf_cgraph" id="df/d04/_p_c_a9956__proc_8h_a0cbd9081f3d6999611db262c3e3d6baf_cgraph">
+<area shape="rect" id="node2" href="../../df/d5e/_p_c_a9956_8c.html#a631d23c191d905d40f272c8488d175b4" title="I2C Write function for PCA9956. " alt="" coords="497,132,616,159"/>
+<area shape="rect" id="node5" href="../../dd/d22/_p_c_a9956__ex_8c.html#a1c293d3b30faed552452a938635e5025" title="Set auto increment option for PCA9956 registers. " alt="" coords="231,208,449,235"/>
 <area shape="rect" id="node7" href="../../dd/d22/_p_c_a9956__ex_8c.html#a9634dd720e3a109a32be37d7721181a4" title="Set PCA9956 peripheral multiple LEDs mode. " alt="" coords="245,5,435,32"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="664,56,781,83"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="669,107,776,133"/>
-<area shape="rect" id="node6" href="../../df/d5e/_p_c_a9956_8c.html#aaab84cb94e5542d51b2d99463079d907" title="I2C Read function for PCA9956. " alt="" coords="497,107,616,133"/>
+<area shape="rect" id="node8" href="../../dd/d22/_p_c_a9956__ex_8c.html#aea495515529a59b632b86612b77a61b4" title="Set PCA9956 output gain control value. " alt="" coords="269,56,411,83"/>
+<area shape="rect" id="node9" href="../../dd/d22/_p_c_a9956__ex_8c.html#abc361384337269a4aa7edc0f32c0a84e" title="Set PCA9956 peripheral delay between channels. " alt="" coords="263,107,417,133"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="664,132,781,159"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="669,183,776,209"/>
+<area shape="rect" id="node6" href="../../df/d5e/_p_c_a9956_8c.html#a45016e9d78da0bffbd4bceb1a3478b75" title="I2C Read function for PCA9956. " alt="" coords="497,183,616,209"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d04/_p_c_a9956__proc_8h_a1c55c5f56740dc2447bc6e17724ab99b_icgraph.png" border="0" usemap="#df/d04/_p_c_a9956__proc_8h_a1c55c5f56740dc2447bc6e17724ab99b_icgraph" alt=""/></div>
-<map name="df/d04/_p_c_a9956__proc_8h_a1c55c5f56740dc2447bc6e17724ab99b_icgraph" id="df/d04/_p_c_a9956__proc_8h_a1c55c5f56740dc2447bc6e17724ab99b_icgraph">
+<div class="center"><img src="../../df/d04/_p_c_a9956__proc_8h_a0cbd9081f3d6999611db262c3e3d6baf_icgraph.png" border="0" usemap="#df/d04/_p_c_a9956__proc_8h_a0cbd9081f3d6999611db262c3e3d6baf_icgraph" alt=""/></div>
+<map name="df/d04/_p_c_a9956__proc_8h_a0cbd9081f3d6999611db262c3e3d6baf_icgraph" id="df/d04/_p_c_a9956__proc_8h_a0cbd9081f3d6999611db262c3e3d6baf_icgraph">
 <area shape="rect" id="node2" href="../../d4/d1d/_p_c_a9956_8h.html#a9ee46a2b824b7043c27b4178623d49b6" title="Initialization for PCA9956 peripheral. " alt="" coords="231,5,337,32"/>
 <area shape="rect" id="node3" href="../../d4/d1d/_p_c_a9956_8h.html#a0f59108faf0e099c5dcf21355152c2e1" title="Initialization for PCA9956 peripheral. " alt="" coords="385,5,537,32"/>
 </map>

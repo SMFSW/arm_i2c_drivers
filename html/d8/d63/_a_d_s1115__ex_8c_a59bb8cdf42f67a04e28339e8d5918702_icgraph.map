@@ -1,0 +1,7 @@
+<map id="ADS1115_Get_converted_value_mV" name="ADS1115_Get_converted_value_mV">
+<area shape="rect" id="node2" href="$d8/d4b/_a_d_s1115__ex_8h.html#a79e57b4463b2ac3b43b152ce61850ed2" title="Get ADS1115 raw channel value. " alt="" coords="236,5,419,32"/>
+<area shape="rect" id="node3" href="$d4/d35/_a_d_s1115__proc_8h.html#a2a5488401e3392d27760b90ff5f31be2" title="Handler for ADS1115 peripheral. " alt="" coords="467,31,604,57"/>
+<area shape="rect" id="node4" href="$d4/d35/_a_d_s1115__proc_8h.html#a520e784a7c3122c8211c2b62d3fb7967" title="Handler for ADS1115 peripheral GPIO interrupt. " alt="" coords="655,5,807,32"/>
+<area shape="rect" id="node6" href="$d4/d35/_a_d_s1115__proc_8h.html#a3871b0c6703b8b4bb3915172dfd98072" title="Handler for all ADS1115 peripherals. " alt="" coords="652,56,811,83"/>
+<area shape="rect" id="node5" href="$d4/d35/_a_d_s1115__proc_8h.html#afee391a510cb180305c75f06c455ec6e" title="Handler for all ADS1115 peripherals GPIO interrupt. " alt="" coords="859,5,1032,32"/>
+</map>

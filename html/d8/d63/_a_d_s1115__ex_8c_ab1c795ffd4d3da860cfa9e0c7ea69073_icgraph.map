@@ -1,6 +1,0 @@
-<map id="ADS1115_Start_Conversion" name="ADS1115_Start_Conversion">
-<area shape="rect" id="node2" href="$d8/d4b/_a_d_s1115__ex_8h.html#a0f93ee9c39fa94942d3063fef628d9dc" title="Start ADS1115 Next conversion. " alt="" coords="252,56,481,83"/>
-<area shape="rect" id="node3" href="$d8/d4b/_a_d_s1115__ex_8h.html#ae10c648127de72307a53d7b0e4d14856" title="Get ADS1115 high threshold. " alt="" coords="529,5,740,32"/>
-<area shape="rect" id="node4" href="$d4/d35/_a_d_s1115__proc_8h.html#a9c47baa9b025562935b7113d4f9e186a" title="Handler for ADS1115 peripheral. " alt="" coords="566,56,703,83"/>
-<area shape="rect" id="node5" href="$d4/d35/_a_d_s1115__proc_8h.html#a3871b0c6703b8b4bb3915172dfd98072" title="Handler for all ADS1115 peripherals. " alt="" coords="788,56,947,83"/>
-</map>

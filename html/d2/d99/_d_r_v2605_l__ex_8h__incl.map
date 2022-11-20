@@ -1,5 +1,6 @@
 <map id="DRV2605L_ex.h" name="DRV2605L_ex.h">
-<area shape="rect" id="node3" href="$d5/d47/_d_r_v2605_l_8h.html" title="DRV2605L Driver. " alt="" coords="53,80,151,107"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="193,155,328,181"/>
-<area shape="rect" id="node7" href="$d1/da7/_d_r_v2605_l__proc_8h.html" title="DRV2605L Driver procedures. " alt="" coords="35,155,169,181"/>
+<area shape="rect" id="node3" href="$d5/d47/_d_r_v2605_l_8h.html" title="DRV2605L Driver. " alt="" coords="47,80,146,107"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="339,155,473,181"/>
+<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="189,155,314,181"/>
+<area shape="rect" id="node8" href="$d1/da7/_d_r_v2605_l__proc_8h.html" title="DRV2605L Driver procedures. " alt="" coords="29,155,164,181"/>
 </map>

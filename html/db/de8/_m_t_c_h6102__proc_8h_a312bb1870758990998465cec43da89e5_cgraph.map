@@ -1,10 +1,16 @@
 <map id="MTCH6102_handler_all" name="MTCH6102_handler_all">
-<area shape="rect" id="node2" href="$db/de8/_m_t_c_h6102__proc_8h.html#a342679a8eaa19001a2d661ca14c50139" title="Handler for MTCH6102 peripheral. " alt="" coords="220,123,365,149"/>
-<area shape="rect" id="node3" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a6e4dca81f18906253bc5300c3a485b8e" title="Get MTCH6102 gesture data. " alt="" coords="430,5,587,32"/>
-<area shape="rect" id="node6" href="$d2/d60/_m_t_c_h6102__proc_8c.html#a6c8c05288ed1e532bb558523a8a6cbf1" title="Decode raw MTCH6102 datas to touch datas. " alt="" coords="415,57,602,98"/>
-<area shape="rect" id="node7" href="$d2/d60/_m_t_c_h6102__proc_8c.html#aa096140ed9f47e75ade274efb0f28f1d" title="Get gesture string from gesture data. " alt="" coords="413,123,604,149"/>
-<area shape="rect" id="node8" href="$d2/d60/_m_t_c_h6102__proc_8c.html#ac5fc1b84e793c77cff155d5f6de42db9" title="Get diagnostic string from diagnostic data. " alt="" coords="425,173,593,200"/>
-<area shape="rect" id="node9" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a7c5ed64610073758050d2708ddf217d9" title="Get MTCH6102 Raw sensor values data. " alt="" coords="433,224,585,251"/>
-<area shape="rect" id="node4" href="$da/d78/_m_t_c_h6102_8c.html#a2def4bf75a8f4418b4b79478b849d24d" title="I2C Read function for MTCH6102. " alt="" coords="652,115,780,141"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="828,115,945,141"/>
+<area shape="rect" id="node2" href="$db/de8/_m_t_c_h6102__proc_8h.html#a342679a8eaa19001a2d661ca14c50139" title="Handler for MTCH6102 peripheral. " alt="" coords="220,199,365,225"/>
+<area shape="rect" id="node3" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a6e4dca81f18906253bc5300c3a485b8e" title="Get MTCH6102 gesture data. " alt="" coords="430,81,587,108"/>
+<area shape="rect" id="node12" href="$d2/d60/_m_t_c_h6102__proc_8c.html#a6c8c05288ed1e532bb558523a8a6cbf1" title="Decode raw MTCH6102 datas to touch datas. " alt="" coords="415,133,602,174"/>
+<area shape="rect" id="node13" href="$d2/d60/_m_t_c_h6102__proc_8c.html#aa096140ed9f47e75ade274efb0f28f1d" title="Get gesture string from gesture data. " alt="" coords="413,199,604,225"/>
+<area shape="rect" id="node14" href="$d2/d60/_m_t_c_h6102__proc_8c.html#ac5fc1b84e793c77cff155d5f6de42db9" title="Get diagnostic string from diagnostic data. " alt="" coords="425,249,593,276"/>
+<area shape="rect" id="node15" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a7c5ed64610073758050d2708ddf217d9" title="Get MTCH6102 Raw sensor values data. " alt="" coords="433,300,585,327"/>
+<area shape="rect" id="node4" href="$da/d78/_m_t_c_h6102_8c.html#a5aa313bbfe74f756dd83101dbefea059" title="I2C Read function for MTCH6102. " alt="" coords="688,220,816,247"/>
+<area shape="rect" id="node6" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a733a5846f9aa3999b273a4a40b1a5f3e" title="Interrupt GPIO pin init for MTCH6102. " alt="" coords="661,107,843,133"/>
+<area shape="rect" id="node8" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#ae6f4b02f3f49114cef624c0afb4b7f4e" title="Interrupt GPIO pin getter for MTCH6102. " alt="" coords="659,56,845,83"/>
+<area shape="rect" id="node10" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a1361a2cd7b079e8faa107b634dc0aa65" title="Synchro GPIO pin init for MTCH6102. " alt="" coords="654,157,850,184"/>
+<area shape="rect" id="node11" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a3747d7b925224b0079579c67e909ab50" title="Synchro GPIO pin getter for MTCH6102. " alt="" coords="652,5,852,32"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="931,220,1048,247"/>
+<area shape="rect" id="node7" href="$d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="901,144,1078,171"/>
+<area shape="rect" id="node9" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="900,31,1079,57"/>
 </map>

@@ -92,9 +92,14 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a25ef8779884fcc6d109e178fdfee6415"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d72/_m_b85_r_c256_v__ex_8c.html#a25ef8779884fcc6d109e178fdfee6415">MB85RC256V_Mass_Erase</a> (<a class="el" href="../../dc/dcf/struct_m_b85_r_c256_v__t.html">MB85RC256V_t</a> *pCpnt)</td></tr>
-<tr class="memdesc:a25ef8779884fcc6d109e178fdfee6415"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mass erase of MB85RC256V.  <a href="#a25ef8779884fcc6d109e178fdfee6415">More...</a><br /></td></tr>
-<tr class="separator:a25ef8779884fcc6d109e178fdfee6415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ae4032aaa90f9dee81b41aa7b9600a9"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d72/_m_b85_r_c256_v__ex_8c.html#a5ae4032aaa90f9dee81b41aa7b9600a9">MB85RC256V_Mass_Erase</a> (<a class="el" href="../../dc/dcf/struct_m_b85_r_c256_v__t.html">MB85RC256V_t</a> *const pCpnt)</td></tr>
+<tr class="memdesc:a5ae4032aaa90f9dee81b41aa7b9600a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mass erase of MB85RC256V.  <a href="#a5ae4032aaa90f9dee81b41aa7b9600a9">More...</a><br /></td></tr>
+<tr class="separator:a5ae4032aaa90f9dee81b41aa7b9600a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af495e012827c3fabf23f464590729560"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d72/_m_b85_r_c256_v__ex_8c.html#af495e012827c3fabf23f464590729560">MB85RC256V_WP_GPIO_Init</a> (<a class="el" href="../../dc/dcf/struct_m_b85_r_c256_v__t.html">MB85RC256V_t</a> *const pCpnt, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</td></tr>
+<tr class="memdesc:af495e012827c3fabf23f464590729560"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write Protect GPIO pin init for MB85RC256V.  <a href="#af495e012827c3fabf23f464590729560">More...</a><br /></td></tr>
+<tr class="separator:af495e012827c3fabf23f464590729560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4124bac05a9bedfde394f78906ce651"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d72/_m_b85_r_c256_v__ex_8c.html#aa4124bac05a9bedfde394f78906ce651">MB85RC256V_WP_GPIO_Set</a> (<a class="el" href="../../dc/dcf/struct_m_b85_r_c256_v__t.html">MB85RC256V_t</a> *const pCpnt, const bool state)</td></tr>
+<tr class="separator:aa4124bac05a9bedfde394f78906ce651"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>MB85RC256V Driver extensions. </p>
@@ -102,7 +107,7 @@ Functions</h2></td></tr>
 <dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2021, SMFSW</dd></dl>
 <p>MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM </p><dl class="section note"><dt>Note</dt><dd>Compatibility (tested):<ul>
 <li>MB85RC256V</li>
-<li>FM24CL64B </li>
+<li>MB85RC256VL64B </li>
 </ul>
 </dd>
 <dd>
@@ -128,8 +133,8 @@ Compatibility:<ul>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a25ef8779884fcc6d109e178fdfee6415"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25ef8779884fcc6d109e178fdfee6415">&#9670;&nbsp;</a></span>MB85RC256V_Mass_Erase()</h2>
+<a id="a5ae4032aaa90f9dee81b41aa7b9600a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ae4032aaa90f9dee81b41aa7b9600a9">&#9670;&nbsp;</a></span>MB85RC256V_Mass_Erase()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -137,7 +142,7 @@ Compatibility:<ul>
         <tr>
           <td class="memname">FctERR MB85RC256V_Mass_Erase </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/dcf/struct_m_b85_r_c256_v__t.html">MB85RC256V_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dc/dcf/struct_m_b85_r_c256_v__t.html">MB85RC256V_t</a> *const&#160;</td>
           <td class="paramname"><em>pCpnt</em></td><td>)</td>
           <td></td>
         </tr>
@@ -155,11 +160,108 @@ Compatibility:<ul>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d0/d72/_m_b85_r_c256_v__ex_8c_a25ef8779884fcc6d109e178fdfee6415_cgraph.png" border="0" usemap="#d0/d72/_m_b85_r_c256_v__ex_8c_a25ef8779884fcc6d109e178fdfee6415_cgraph" alt=""/></div>
-<map name="d0/d72/_m_b85_r_c256_v__ex_8c_a25ef8779884fcc6d109e178fdfee6415_cgraph" id="d0/d72/_m_b85_r_c256_v__ex_8c_a25ef8779884fcc6d109e178fdfee6415_cgraph">
-<area shape="rect" id="node2" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a640bd37b33711d5c0b32bde7c603cabe" title="I2C Write function for MB85RC256V. " alt="" coords="244,31,389,57"/>
+<div class="center"><img src="../../d0/d72/_m_b85_r_c256_v__ex_8c_a5ae4032aaa90f9dee81b41aa7b9600a9_cgraph.png" border="0" usemap="#d0/d72/_m_b85_r_c256_v__ex_8c_a5ae4032aaa90f9dee81b41aa7b9600a9_cgraph" alt=""/></div>
+<map name="d0/d72/_m_b85_r_c256_v__ex_8c_a5ae4032aaa90f9dee81b41aa7b9600a9_cgraph" id="d0/d72/_m_b85_r_c256_v__ex_8c_a5ae4032aaa90f9dee81b41aa7b9600a9_cgraph">
+<area shape="rect" id="node2" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#aa4b73c717c5c32fb8bcc7b944f4785df" title="I2C Write function for MB85RC256V. " alt="" coords="244,31,389,57"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="437,5,555,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="443,56,549,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af495e012827c3fabf23f464590729560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af495e012827c3fabf23f464590729560">&#9670;&nbsp;</a></span>MB85RC256V_WP_GPIO_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR MB85RC256V_WP_GPIO_Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dcf/struct_m_b85_r_c256_v__t.html">MB85RC256V_t</a> *const&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GPIO_TypeDef *const&#160;</td>
+          <td class="paramname"><em>GPIOx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>GPIO_Pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GPIO_PinState&#160;</td>
+          <td class="paramname"><em>GPIO_Active</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write Protect GPIO pin init for MB85RC256V. </p>
+<dl class="weak"><dt><b><a class="el" href="../../d0/d58/weak.html#_weak000042">Weak Functions:</a></b></dt><dd>MB85RC256V Write Protect GPIO pin init may be user implemented if needed </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to MB85RC256V component </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">GPIOx</td><td>- WP port </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">GPIO_Pin</td><td>- WP pin </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">GPIO_Active</td><td>WP pin active state </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d72/_m_b85_r_c256_v__ex_8c_af495e012827c3fabf23f464590729560_cgraph.png" border="0" usemap="#d0/d72/_m_b85_r_c256_v__ex_8c_af495e012827c3fabf23f464590729560_cgraph" alt=""/></div>
+<map name="d0/d72/_m_b85_r_c256_v__ex_8c_af495e012827c3fabf23f464590729560_cgraph" id="d0/d72/_m_b85_r_c256_v__ex_8c_af495e012827c3fabf23f464590729560_cgraph">
+<area shape="rect" id="node2" href="../../d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="251,5,428,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa4124bac05a9bedfde394f78906ce651"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4124bac05a9bedfde394f78906ce651">&#9670;&nbsp;</a></span>MB85RC256V_WP_GPIO_Set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR MB85RC256V_WP_GPIO_Set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dcf/struct_m_b85_r_c256_v__t.html">MB85RC256V_t</a> *const&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d72/_m_b85_r_c256_v__ex_8c_aa4124bac05a9bedfde394f78906ce651_cgraph.png" border="0" usemap="#d0/d72/_m_b85_r_c256_v__ex_8c_aa4124bac05a9bedfde394f78906ce651_cgraph" alt=""/></div>
+<map name="d0/d72/_m_b85_r_c256_v__ex_8c_aa4124bac05a9bedfde394f78906ce651_cgraph" id="d0/d72/_m_b85_r_c256_v__ex_8c_aa4124bac05a9bedfde394f78906ce651_cgraph">
+<area shape="rect" id="node2" href="../../d2/de1/_i2_c__peripheral_8c.html#a7accedd9eb463e3cd4eb401b07e36b2c" title="I2C peripheral GPIO pin setter. " alt="" coords="253,5,432,32"/>
 </map>
 </div>
 

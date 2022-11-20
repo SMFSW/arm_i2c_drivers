@@ -1,0 +1,9 @@
+<map id="PCA9685_PutVal" name="PCA9685_PutVal">
+<area shape="rect" id="node2" href="$d3/d57/_p_c_a9685__ex_8h.html#ab5e242441ad3f53abd3d7a2cfa9a5681" title="Convert Prescaler byte register to Frequency (in Hz) " alt="" coords="180,5,351,32"/>
+<area shape="rect" id="node7" href="$d3/d57/_p_c_a9685__ex_8h.html#a88723c32fe259fd399bb1e32f804b605" title="Compute and send PWM lighting values to apply on a PCA9685 channel or all channels (Byte) ..." alt="" coords="187,56,343,83"/>
+<area shape="rect" id="node8" href="$d3/d57/_p_c_a9685__ex_8h.html#a9c727d398bdfa3e4abd76a8fe551dadd" title="Compute and send PWM lighting values to apply on a PCA9685 channel or all channels (Percent) ..." alt="" coords="188,107,343,133"/>
+<area shape="rect" id="node3" href="$d3/d57/_p_c_a9685__ex_8h.html#ad26eaf94e4dd2afb5b08f6e731c9024e" title="Set frequency for PCA9685 peripheral. " alt="" coords="399,5,580,32"/>
+<area shape="rect" id="node4" href="$d5/d22/_p_c_a9685__proc_8h.html#a7609b910642dc4a7bcec68f482028ed4" title="Initialization Sequence for PCA9685 peripheral. " alt="" coords="401,56,578,83"/>
+<area shape="rect" id="node5" href="$d4/deb/_p_c_a9685_8h.html#a7fa0e558a2f028f6261ca45db11d623a" title="Initialization for PCA9685 peripheral. " alt="" coords="628,56,735,83"/>
+<area shape="rect" id="node6" href="$d4/deb/_p_c_a9685_8h.html#a5446c995c445067011d256bc587b164e" title="Initialization for PCA9685 peripheral. " alt="" coords="783,56,935,83"/>
+</map>

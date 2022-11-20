@@ -1,0 +1,11 @@
+<map id="AT42QT1244_handler_it_all" name="AT42QT1244_handler_it_all">
+<area shape="rect" id="node2" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#afd1635edf97f1f5ed7157951b34b520f" title="Handler for AT42QT1244 peripheral GPIO interrupt. " alt="" coords="211,31,383,57"/>
+<area shape="rect" id="node3" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a93d10a2a64d12b0d01ae41d5aeb1b761" title="Change GPIO pin getter for AT42QT1244. " alt="" coords="431,5,664,32"/>
+<area shape="rect" id="node5" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#aca10e0645e195176f9e582d27e7f480b" title="Handler for AT42QT1244 peripheral. " alt="" coords="469,56,626,83"/>
+<area shape="rect" id="node4" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="712,5,891,32"/>
+<area shape="rect" id="node6" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a742d7d35c8bf29ff0a688b8bdef64275" title="Get keys detect status for AT42QT1244 peripheral. " alt="" coords="717,56,885,83"/>
+<area shape="rect" id="node7" href="$d3/dc4/_a_t42_q_t1244_8c.html#a59952a25c499177de6ff50933ffdbc47" title="I2C Read function for AT42QT1244. " alt="" coords="939,81,1079,108"/>
+<area shape="rect" id="node8" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1140,31,1257,57"/>
+<area shape="rect" id="node9" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1145,81,1252,108"/>
+<area shape="rect" id="node10" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#ad2998daf6e9e01b5d72b96ac64a2f78e" title="16bits CRC calculation for AT42QT1244 " alt="" coords="1127,132,1271,159"/>
+</map>

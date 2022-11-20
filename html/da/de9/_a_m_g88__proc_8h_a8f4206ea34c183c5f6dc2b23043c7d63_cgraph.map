@@ -1,0 +1,13 @@
+<map id="AMG88_handler_it_all" name="AMG88_handler_it_all">
+<area shape="rect" id="node2" href="$da/de9/_a_m_g88__proc_8h.html#af7796031f9fb1c4fb52f5262c1612ab9" title="Handler for AMG88 peripheral GPIO interrupt. " alt="" coords="212,81,351,108"/>
+<area shape="rect" id="node3" href="$de/d9d/_a_m_g88__ex_8c.html#aed4d6492b79034915e0036da7d077600" title="Interrupt GPIO pin getter for AMG88. " alt="" coords="399,31,561,57"/>
+<area shape="rect" id="node5" href="$d4/d51/_a_m_g88__proc_8c.html#a62fe3d2635671c55964528913f803c61" title="Handler for AMG88 peripheral. " alt="" coords="419,132,541,159"/>
+<area shape="rect" id="node4" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="637,5,815,32"/>
+<area shape="rect" id="node6" href="$df/d52/_a_m_g88_8c.html#a2cbcae049f8f7817a745ab684f05554e" title="I2C Word Read (low endian) function for AMG88. " alt="" coords="654,259,798,285"/>
+<area shape="rect" id="node7" href="$df/d52/_a_m_g88_8c.html#ade19de4334fdd1b3aa58c0b71b0979e5" title="I2C Read function for AMG88. " alt="" coords="891,208,997,235"/>
+<area shape="rect" id="node10" href="$de/d9d/_a_m_g88__ex_8c.html#a286bea01547b7dc3a67b573d1da4b6bb" title="Convert raw thermistor temperature to celsius degrees. " alt="" coords="609,107,843,133"/>
+<area shape="rect" id="node11" href="$de/d9d/_a_m_g88__ex_8c.html#ad4ddfc0af387e78a4ee3ca53585239e2" title="Convert raw pixel temperature to celsius degrees. " alt="" coords="629,157,823,184"/>
+<area shape="rect" id="node12" href="$df/d52/_a_m_g88_8c.html#a06e77708affb2165299376ea09d3e362" title="I2C Write function for AMG88. " alt="" coords="891,157,997,184"/>
+<area shape="rect" id="node8" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1045,157,1163,184"/>
+<area shape="rect" id="node9" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1051,208,1157,235"/>
+</map>

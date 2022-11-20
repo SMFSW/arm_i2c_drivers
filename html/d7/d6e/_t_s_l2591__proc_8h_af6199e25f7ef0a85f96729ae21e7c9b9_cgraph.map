@@ -1,6 +1,0 @@
-<map id="TSL2591_Get_Lux" name="TSL2591_Get_Lux">
-<area shape="rect" id="node2" href="$d7/d6e/_t_s_l2591__proc_8h.html#a603cc00f013d5d6c6696bfec7ed87b44" title="Handler for TSL2591 peripheral. " alt="" coords="189,31,321,57"/>
-<area shape="rect" id="node3" href="$d2/d68/_t_s_l2591_8c.html#aae82321862139e3bf12261885445e5a7" title="I2C Read function for TSL2591. " alt="" coords="369,31,484,57"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="532,5,649,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="537,56,644,83"/>
-</map>

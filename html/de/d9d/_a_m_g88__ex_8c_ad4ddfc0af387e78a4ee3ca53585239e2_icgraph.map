@@ -1,6 +1,8 @@
 <map id="AMG88_Convert_Pixel_Raw" name="AMG88_Convert_Pixel_Raw">
-<area shape="rect" id="node2" href="$dc/db3/_a_m_g88__ex_8h.html#a3915e7b4e19aa20cf336a04639b25336" title="Get pixel temperature. " alt="" coords="251,5,425,32"/>
-<area shape="rect" id="node3" href="$dc/db3/_a_m_g88__ex_8h.html#ab6e0a2bf6a8812dddb8fd7121cb9ed1f" title="Get all pixels temperature. " alt="" coords="247,56,429,83"/>
-<area shape="rect" id="node4" href="$da/de9/_a_m_g88__proc_8h.html#a6e3208d73334ee0b7e9eec32d42b8b7f" title="Handler for AMG88 peripheral. " alt="" coords="277,107,399,133"/>
-<area shape="rect" id="node5" href="$da/de9/_a_m_g88__proc_8h.html#ac190ef2a388b2d75815dbf33ff082d56" title="Handler for all AMG88 peripherals. " alt="" coords="477,107,621,133"/>
+<area shape="rect" id="node2" href="$dc/db3/_a_m_g88__ex_8h.html#a7b51a0bfe1a0a94cf2b4da3d89a56ccc" title="Get pixel temperature. " alt="" coords="251,5,425,32"/>
+<area shape="rect" id="node3" href="$dc/db3/_a_m_g88__ex_8h.html#a10e93934fd10c1d7881e07b0aba2c0f4" title="Get all pixels temperature. " alt="" coords="247,56,429,83"/>
+<area shape="rect" id="node4" href="$da/de9/_a_m_g88__proc_8h.html#a62fe3d2635671c55964528913f803c61" title="Handler for AMG88 peripheral. " alt="" coords="277,107,399,133"/>
+<area shape="rect" id="node5" href="$da/de9/_a_m_g88__proc_8h.html#af7796031f9fb1c4fb52f5262c1612ab9" title="Handler for AMG88 peripheral GPIO interrupt. " alt="" coords="480,81,619,108"/>
+<area shape="rect" id="node7" href="$da/de9/_a_m_g88__proc_8h.html#ac190ef2a388b2d75815dbf33ff082d56" title="Handler for all AMG88 peripherals. " alt="" coords="477,132,621,159"/>
+<area shape="rect" id="node6" href="$da/de9/_a_m_g88__proc_8h.html#a8f4206ea34c183c5f6dc2b23043c7d63" title="Handler for all AMG88 peripherals GPIO interrupt. " alt="" coords="669,81,828,108"/>
 </map>

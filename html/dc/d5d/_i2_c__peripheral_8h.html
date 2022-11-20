@@ -61,7 +61,10 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">I2C_peripheral.h File Reference</div>  </div>
 </div><!--header-->
@@ -87,21 +90,25 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="rect" id="node8" href="../../d8/d4e/_a_m_g88_8h.html" title="AMG88 Driver. " alt="" coords="963,80,1043,107"/>
 <area shape="rect" id="node14" href="../../d6/dd1/_a_p_d_s9930_8h.html" title="APDS9930 Driver. " alt="" coords="1641,80,1743,107"/>
 <area shape="rect" id="node20" href="../../d2/dbf/_a_p_d_s9960_8h.html" title="APDS9960 Driver. " alt="" coords="2383,80,2486,107"/>
-<area shape="rect" id="node26" href="../../dd/d4f/_a_t42_q_t1244_8h.html" title="AT42QT1244 Driver. " alt="" coords="3151,80,3265,107"/>
-<area shape="rect" id="node32" href="../../d3/d7d/_b_m_p180_8h.html" title="BMP180 Driver. " alt="" coords="3695,80,3782,107"/>
-<area shape="rect" id="node38" href="../../d5/d3b/_f_m24_c_8h.html" title="FM24C Driver. " alt="" coords="3807,80,3884,107"/>
-<area shape="rect" id="node39" href="../../d7/d3b/_m_b85_r_c256_v_8h.html" title="MB85RC256V Driver. " alt="" coords="3908,80,4025,107"/>
-<area shape="rect" id="node40" href="../../df/d9f/_m_c_p4725_8h.html" title="MCP4725 Driver. " alt="" coords="4050,80,4145,107"/>
-<area shape="rect" id="node41" href="../../d8/d57/_m_c_p9808_8h.html" title="MCP9808 Driver. " alt="" coords="4169,80,4263,107"/>
-<area shape="rect" id="node42" href="../../da/da9/_m_t_c_h6102_8h.html" title="MTCH6102 Driver. " alt="" coords="4287,80,4390,107"/>
-<area shape="rect" id="node43" href="../../d3/df9/_p_c_a9532_8h.html" title="PCA9532 Driver. " alt="" coords="4414,80,4506,107"/>
-<area shape="rect" id="node44" href="../../d4/dc2/_p_c_a9624_8h.html" title="PCA9624 Driver. " alt="" coords="4530,80,4622,107"/>
-<area shape="rect" id="node45" href="../../d4/deb/_p_c_a9685_8h.html" title="PCA9685 Driver. " alt="" coords="4646,80,4738,107"/>
-<area shape="rect" id="node46" href="../../d4/d1d/_p_c_a9956_8h.html" title="PCA9956 Driver. " alt="" coords="4762,80,4854,107"/>
-<area shape="rect" id="node47" href="../../d1/d8f/_s11059_8h.html" title="S11059 Driver. " alt="" coords="4879,80,4961,107"/>
-<area shape="rect" id="node48" href="../../d9/d51/_t_c_s3400_8h.html" title="TCS3400 Driver. " alt="" coords="4985,80,5076,107"/>
-<area shape="rect" id="node49" href="../../d8/ddc/_t_c_s3472_8h.html" title="TCS3472 Driver. " alt="" coords="5100,80,5191,107"/>
-<area shape="rect" id="node50" href="../../da/d96/_t_s_l2591_8h.html" title="TSL2591 Driver. " alt="" coords="5215,80,5305,107"/>
+<area shape="rect" id="node26" href="../../dd/d4f/_a_t42_q_t1244_8h.html" title="AT42QT1244 Driver. " alt="" coords="2984,80,3099,107"/>
+<area shape="rect" id="node32" href="../../d3/d7d/_b_m_p180_8h.html" title="BMP180 Driver. " alt="" coords="3123,80,3210,107"/>
+<area shape="rect" id="node34" href="../../d5/d47/_d_r_v2605_l_8h.html" title="DRV2605L Driver. " alt="" coords="3235,80,3333,107"/>
+<area shape="rect" id="node35" href="../../dd/d26/_d_s___g_p_m_s_8h.html" title="DS&#45;GPM.S Driver. " alt="" coords="3357,80,3456,107"/>
+<area shape="rect" id="node36" href="../../d5/d3b/_f_m24_c_8h.html" title="FM24C Driver. " alt="" coords="3480,80,3557,107"/>
+<area shape="rect" id="node37" href="../../d2/de1/_i2_c__peripheral_8c.html" title="I2C peripheral common. " alt="" coords="3581,80,3705,107"/>
+<area shape="rect" id="node38" href="../../d7/d3b/_m_b85_r_c256_v_8h.html" title="MB85RC256V Driver. " alt="" coords="3728,80,3845,107"/>
+<area shape="rect" id="node39" href="../../df/d9f/_m_c_p4725_8h.html" title="MCP4725 Driver. " alt="" coords="3870,80,3965,107"/>
+<area shape="rect" id="node40" href="../../d8/d57/_m_c_p9808_8h.html" title="MCP9808 Driver. " alt="" coords="3989,80,4083,107"/>
+<area shape="rect" id="node41" href="../../da/da9/_m_t_c_h6102_8h.html" title="MTCH6102 Driver. " alt="" coords="4107,80,4210,107"/>
+<area shape="rect" id="node42" href="../../d3/df9/_p_c_a9532_8h.html" title="PCA9532 Driver. " alt="" coords="4234,80,4326,107"/>
+<area shape="rect" id="node43" href="../../d4/dc2/_p_c_a9624_8h.html" title="PCA9624 Driver. " alt="" coords="4350,80,4442,107"/>
+<area shape="rect" id="node44" href="../../d4/deb/_p_c_a9685_8h.html" title="PCA9685 Driver. " alt="" coords="4466,80,4558,107"/>
+<area shape="rect" id="node45" href="../../d4/d1d/_p_c_a9956_8h.html" title="PCA9956 Driver. " alt="" coords="4582,80,4674,107"/>
+<area shape="rect" id="node46" href="../../dd/d42/_p_c_f8523_8h.html" title="PCF8523 Driver. " alt="" coords="4699,80,4789,107"/>
+<area shape="rect" id="node47" href="../../d1/d8f/_s11059_8h.html" title="S11059 Driver. " alt="" coords="4813,80,4896,107"/>
+<area shape="rect" id="node48" href="../../d9/d51/_t_c_s3400_8h.html" title="TCS3400 Driver. " alt="" coords="4920,80,5011,107"/>
+<area shape="rect" id="node49" href="../../d8/ddc/_t_c_s3472_8h.html" title="TCS3472 Driver. " alt="" coords="5035,80,5125,107"/>
+<area shape="rect" id="node50" href="../../da/d96/_t_s_l2591_8h.html" title="TSL2591 Driver. " alt="" coords="5150,80,5239,107"/>
 <area shape="rect" id="node3" href="../../db/de1/_a_d_s1115_8c.html" title="ADS1115 Driver. " alt="" coords="5,155,99,181"/>
 <area shape="rect" id="node4" href="../../d4/d35/_a_d_s1115__proc_8h.html" title="ADS1115 Driver procedures. " alt="" coords="123,155,253,181"/>
 <area shape="rect" id="node5" href="../../d8/d4b/_a_d_s1115__ex_8h.html" title="ADS1115 Driver extensions. " alt="" coords="277,155,393,181"/>
@@ -128,23 +135,42 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="rect" id="node30" href="../../df/d72/_a_t42_q_t1244__ex_8c.html" title="AT42QT1244 Driver extensions. " alt="" coords="3301,155,3435,181"/>
 <area shape="rect" id="node31" href="../../dd/de3/_a_t42_q_t1244__proc_8c.html" title="AT42QT1244 Driver procedures. " alt="" coords="3459,155,3607,181"/>
 <area shape="rect" id="node33" href="../../d8/d11/_b_m_p180_8c.html" title="BMP180 Driver. " alt="" coords="3632,155,3717,181"/>
-<area shape="rect" id="node34" href="../../dc/d50/_b_m_p180__proc_8h.html" title="BMP180 Driver procedures. " alt="" coords="3742,155,3863,181"/>
-<area shape="rect" id="node35" href="../../d8/dfb/_b_m_p180__ex_8h.html" title="BMP180 Driver extensions. " alt="" coords="3887,155,3995,181"/>
-<area shape="rect" id="node36" href="../../db/d0e/_b_m_p180__ex_8c.html" title="BMP180 Driver extensions. " alt="" coords="4020,155,4127,181"/>
-<area shape="rect" id="node37" href="../../d0/d35/_b_m_p180__proc_8c.html" title="BMP180 Driver procedures. " alt="" coords="4151,155,4271,181"/>
 </map>
 </div>
 </div>
 <p><a href="../../dc/d5d/_i2_c__peripheral_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d95/struct_peripheral_g_p_i_o__t.html">PeripheralGPIO_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">i2c peripheral GPIO pin parameters  <a href="../../dc/d95/struct_peripheral_g_p_i_o__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a453a66c20785a971d76ef22d16470962"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5d/_i2_c__peripheral_8h.html#a453a66c20785a971d76ef22d16470962">I2C_PERIPHERAL_SET_DEFAULTS</a>(name,  idx,  address)</td></tr>
-<tr class="memdesc:a453a66c20785a971d76ef22d16470962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to set working defaults for peripheral <b>name</b> with I2C address <b>address</b> on index <b>idx</b>.  <a href="#a453a66c20785a971d76ef22d16470962">More...</a><br /></td></tr>
-<tr class="separator:a453a66c20785a971d76ef22d16470962"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01d3cf06a893c49575e4fade50791d56"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5d/_i2_c__peripheral_8h.html#a01d3cf06a893c49575e4fade50791d56">IS_I2C_PERIPHERAL</a>(name,  idx)&#160;&#160;&#160;((idx) &lt; I2C_##name##_NB)</td></tr>
 <tr class="memdesc:a01d3cf06a893c49575e4fade50791d56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro for use with assert_param to check I2C <b>idx</b> is existing for <b>name</b> peripheral.  <a href="#a01d3cf06a893c49575e4fade50791d56">More...</a><br /></td></tr>
 <tr class="separator:a01d3cf06a893c49575e4fade50791d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a453a66c20785a971d76ef22d16470962"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5d/_i2_c__peripheral_8h.html#a453a66c20785a971d76ef22d16470962">I2C_PERIPHERAL_SET_DEFAULTS</a>(name,  idx,  address)</td></tr>
+<tr class="memdesc:a453a66c20785a971d76ef22d16470962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to set working defaults for peripheral <b>name</b> with I2C address <b>address</b> on index <b>idx</b>.  <a href="#a453a66c20785a971d76ef22d16470962">More...</a><br /></td></tr>
+<tr class="separator:a453a66c20785a971d76ef22d16470962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a95c34b012f9023fc93e788ef1e7d51cd"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../dc/d95/struct_peripheral_g_p_i_o__t.html">PeripheralGPIO_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5d/_i2_c__peripheral_8h.html#a95c34b012f9023fc93e788ef1e7d51cd">PeripheralGPIO_t</a></td></tr>
+<tr class="separator:a95c34b012f9023fc93e788ef1e7d51cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aa2c9a5b3f1aac72314026ac9789d6167"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5d/_i2_c__peripheral_8h.html#aa2c9a5b3f1aac72314026ac9789d6167">I2C_peripheral_GPIO_init</a> (<a class="el" href="../../dc/d95/struct_peripheral_g_p_i_o__t.html">PeripheralGPIO_t</a> *const pGPIO, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</td></tr>
+<tr class="memdesc:aa2c9a5b3f1aac72314026ac9789d6167"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C peripheral GPIO pin init.  <a href="#aa2c9a5b3f1aac72314026ac9789d6167">More...</a><br /></td></tr>
+<tr class="separator:aa2c9a5b3f1aac72314026ac9789d6167"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af81b16e7fcf1144a0c556af2a5359bb6"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5d/_i2_c__peripheral_8h.html#af81b16e7fcf1144a0c556af2a5359bb6">I2C_peripheral_GPIO_get</a> (const <a class="el" href="../../dc/d95/struct_peripheral_g_p_i_o__t.html">PeripheralGPIO_t</a> *const pGPIO, bool *const pState)</td></tr>
+<tr class="memdesc:af81b16e7fcf1144a0c556af2a5359bb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C peripheral GPIO pin getter.  <a href="#af81b16e7fcf1144a0c556af2a5359bb6">More...</a><br /></td></tr>
+<tr class="separator:af81b16e7fcf1144a0c556af2a5359bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7accedd9eb463e3cd4eb401b07e36b2c"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5d/_i2_c__peripheral_8h.html#a7accedd9eb463e3cd4eb401b07e36b2c">I2C_peripheral_GPIO_set</a> (const <a class="el" href="../../dc/d95/struct_peripheral_g_p_i_o__t.html">PeripheralGPIO_t</a> *const pGPIO, const bool state)</td></tr>
+<tr class="memdesc:a7accedd9eb463e3cd4eb401b07e36b2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C peripheral GPIO pin setter.  <a href="#a7accedd9eb463e3cd4eb401b07e36b2c">More...</a><br /></td></tr>
+<tr class="separator:a7accedd9eb463e3cd4eb401b07e36b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>I2C peripheral common. </p>
@@ -183,7 +209,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">memcpy(&amp;name##_hal[idx], &amp;name##_defaults, <span class="keyword">sizeof</span>(<a class="code" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a>));    \</div><div class="line">    name##_hal[idx].cfg.addr = <a class="code" href="../../d6/dd6/_i2_c__component_8h.html#ad5c7bd690e94d726dda8f5f183d85687">I2C_ADDR</a>(address);                       \</div><div class="line">    name[idx].cfg.slave_inst = &amp;name##_hal[idx];</div><div class="ttc" id="_i2_c__component_8h_html_ad5c7bd690e94d726dda8f5f183d85687"><div class="ttname"><a href="../../d6/dd6/_i2_c__component_8h.html#ad5c7bd690e94d726dda8f5f183d85687">I2C_ADDR</a></div><div class="ttdeci">#define I2C_ADDR(a)</div><div class="ttdoc">Macro to shift a 1 bit left to define 7b I2C address. </div><div class="ttdef"><b>Definition:</b> I2C_component.h:35</div></div>
-<div class="ttc" id="struct_i2_c__slave__t_html"><div class="ttname"><a href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a></div><div class="ttdoc">ci2c slave config and control parameters </div><div class="ttdef"><b>Definition:</b> I2C_component.h:65</div></div>
+<div class="ttc" id="struct_i2_c__slave__t_html"><div class="ttname"><a href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a></div><div class="ttdoc">i2c slave config and control parameters </div><div class="ttdef"><b>Definition:</b> I2C_component.h:65</div></div>
 </div><!-- fragment -->
 <p>Macro to set working defaults for peripheral <b>name</b> with I2C address <b>address</b> on index <b>idx</b>. </p>
 
@@ -216,6 +242,297 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Macro for use with assert_param to check I2C <b>idx</b> is existing for <b>name</b> peripheral. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a95c34b012f9023fc93e788ef1e7d51cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95c34b012f9023fc93e788ef1e7d51cd">&#9670;&nbsp;</a></span>PeripheralGPIO_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../dc/d95/struct_peripheral_g_p_i_o__t.html">PeripheralGPIO_t</a>  <a class="el" href="../../dc/d95/struct_peripheral_g_p_i_o__t.html">PeripheralGPIO_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="af81b16e7fcf1144a0c556af2a5359bb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af81b16e7fcf1144a0c556af2a5359bb6">&#9670;&nbsp;</a></span>I2C_peripheral_GPIO_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR I2C_peripheral_GPIO_get </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dc/d95/struct_peripheral_g_p_i_o__t.html">PeripheralGPIO_t</a> *const&#160;</td>
+          <td class="paramname"><em>pGPIO</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *const&#160;</td>
+          <td class="paramname"><em>pState</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C peripheral GPIO pin getter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pGPIO</td><td>- Pointer to GPIO structure instance </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pState</td><td>- Pointer to GPIO state variable (0: inactive, 1: active) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d5d/_i2_c__peripheral_8h_af81b16e7fcf1144a0c556af2a5359bb6_icgraph.png" border="0" usemap="#dc/d5d/_i2_c__peripheral_8h_af81b16e7fcf1144a0c556af2a5359bb6_icgraph" alt=""/></div>
+<map name="dc/d5d/_i2_c__peripheral_8h_af81b16e7fcf1144a0c556af2a5359bb6_icgraph" id="dc/d5d/_i2_c__peripheral_8h_af81b16e7fcf1144a0c556af2a5359bb6_icgraph">
+<area shape="rect" id="node2" href="../../d8/d4b/_a_d_s1115__ex_8h.html#a7ddf616c2c0ef262b2381f9ff844bb8f" title="Ready GPIO pin getter for ADS1115. " alt="" coords="258,31,439,57"/>
+<area shape="rect" id="node7" href="../../dc/db3/_a_m_g88__ex_8h.html#aed4d6492b79034915e0036da7d077600" title="Interrupt GPIO pin getter for AMG88. " alt="" coords="267,132,430,159"/>
+<area shape="rect" id="node12" href="../../d5/d4f/_a_p_d_s9930__ex_8h.html#a2c790408e8296047968fc48ae6fbd554" title="Interrupt GPIO pin getter for APDS9930. " alt="" coords="256,233,441,260"/>
+<area shape="rect" id="node17" href="../../da/db5/_a_p_d_s9960__ex_8h.html#a4692b37c8acbd4b54ab8619c43db3246" title="Interrupt GPIO pin getter for APDS9960. " alt="" coords="256,335,441,361"/>
+<area shape="rect" id="node21" href="../../df/de4/_a_t42_q_t1244__ex_8h.html#a93d10a2a64d12b0d01ae41d5aeb1b761" title="Change GPIO pin getter for AT42QT1244. " alt="" coords="232,448,465,475"/>
+<area shape="rect" id="node27" href="../../df/d2f/_m_c_p9808__ex_8h.html#abe7582c2f80cf5bf8ffb56d37272110e" title="Change GPIO pin getter for MCP9808. " alt="" coords="255,569,442,596"/>
+<area shape="rect" id="node32" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#ae6f4b02f3f49114cef624c0afb4b7f4e" title="Interrupt GPIO pin getter for MTCH6102. " alt="" coords="256,620,441,647"/>
+<area shape="rect" id="node37" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a3747d7b925224b0079579c67e909ab50" title="Synchro GPIO pin getter for MTCH6102. " alt="" coords="249,671,449,697"/>
+<area shape="rect" id="node38" href="../../d1/d30/_p_c_f8523__ex_8h.html#a9ea1402e7007951c1871925ebe86b9e7" title="Interrupt 1 GPIO pin getter for PCF8523. " alt="" coords="258,772,439,799"/>
+<area shape="rect" id="node41" href="../../d1/d30/_p_c_f8523__ex_8h.html#ae5d7a8cc7ee3d3d55f181a98ea75d451" title="Interrupt 2 GPIO pin getter for PCF8523. " alt="" coords="258,721,439,748"/>
+<area shape="rect" id="node42" href="../../de/d36/_t_c_s3400__ex_8h.html#aad7f5294306c1421ec7ed84a051749ba" title="Interrupt GPIO pin getter for TCS3400. " alt="" coords="262,823,435,849"/>
+<area shape="rect" id="node45" href="../../d2/dbe/_t_c_s3472__ex_8h.html#ab3aef251d4de4984627e67302b6eb7e7" title="Interrupt GPIO pin getter for TCS3472. " alt="" coords="262,924,435,951"/>
+<area shape="rect" id="node48" href="../../dc/d24/_t_s_l2591__ex_8h.html#ad4ecdc111eee86434a4e12753a58bed9" title="Interrupt GPIO pin getter for TSL2591. " alt="" coords="263,1025,435,1052"/>
+<area shape="rect" id="node3" href="../../d8/d4b/_a_d_s1115__ex_8h.html#a79e57b4463b2ac3b43b152ce61850ed2" title="Get ADS1115 raw channel value. " alt="" coords="513,31,696,57"/>
+<area shape="rect" id="node5" href="../../d4/d35/_a_d_s1115__proc_8h.html#a520e784a7c3122c8211c2b62d3fb7967" title="Handler for ADS1115 peripheral GPIO interrupt. " alt="" coords="1007,5,1159,32"/>
+<area shape="rect" id="node4" href="../../d4/d35/_a_d_s1115__proc_8h.html#a2a5488401e3392d27760b90ff5f31be2" title="Handler for ADS1115 peripheral. " alt="" coords="781,31,918,57"/>
+<area shape="rect" id="node6" href="../../d4/d35/_a_d_s1115__proc_8h.html#afee391a510cb180305c75f06c455ec6e" title="Handler for all ADS1115 peripherals GPIO interrupt. " alt="" coords="1213,5,1387,32"/>
+<area shape="rect" id="node8" href="../../dc/db3/_a_m_g88__ex_8h.html#a6cf21b59c3b4cf75d9a82b881e84bacd" title="Get pixel raw value. " alt="" coords="521,81,688,108"/>
+<area shape="rect" id="node10" href="../../da/de9/_a_m_g88__proc_8h.html#af7796031f9fb1c4fb52f5262c1612ab9" title="Handler for AMG88 peripheral GPIO interrupt. " alt="" coords="535,132,674,159"/>
+<area shape="rect" id="node9" href="../../dc/db3/_a_m_g88__ex_8h.html#a7b51a0bfe1a0a94cf2b4da3d89a56ccc" title="Get pixel temperature. " alt="" coords="762,81,937,108"/>
+<area shape="rect" id="node11" href="../../da/de9/_a_m_g88__proc_8h.html#a8f4206ea34c183c5f6dc2b23043c7d63" title="Handler for all AMG88 peripherals GPIO interrupt. " alt="" coords="770,132,929,159"/>
+<area shape="rect" id="node13" href="../../d5/d4f/_a_p_d_s9930__ex_8h.html#a7b950cd7d52f371dd52f9114277e78ba" title="Get Proximity conversion. " alt="" coords="527,183,682,209"/>
+<area shape="rect" id="node14" href="../../d1/d45/_a_p_d_s9930__proc_8h.html#a061d3c2eb22c619599e5dddb63ea8313" title="Handler for APDS9930 peripheral GPIO interrupt. " alt="" coords="525,233,685,260"/>
+<area shape="rect" id="node15" href="../../d1/d45/_a_p_d_s9930__proc_8h.html#a7ccd203da3b8432134156f417d74ac30" title="Get current Illuminance (in lux) " alt="" coords="775,183,924,209"/>
+<area shape="rect" id="node16" href="../../d1/d45/_a_p_d_s9930__proc_8h.html#a774db2cef9713661b6664aedabc25f9d" title="Handler for all APDS9930 peripherals GPIO interrupt. " alt="" coords="759,233,940,260"/>
+<area shape="rect" id="node18" href="../../da/db5/_a_p_d_s9960__ex_8h.html#a2585bc41a9ad2772ac94c52b633e498a" title="Get Proximity conversion. " alt="" coords="527,284,682,311"/>
+<area shape="rect" id="node19" href="../../df/d17/_a_p_d_s9960__proc_8h.html#a87274cc64ac34debc21c82dc2582d6df" title="Handler for APDS9960 peripheral GPIO interrupt. " alt="" coords="525,335,685,361"/>
+<area shape="rect" id="node20" href="../../df/d17/_a_p_d_s9960__proc_8h.html#a115196f922a8ed8661013aaa55f87eb4" title="Handler for all APDS9960 peripherals GPIO interrupt. " alt="" coords="759,284,940,311"/>
+<area shape="rect" id="node22" href="../../df/de4/_a_t42_q_t1244__ex_8h.html#aad1c4acba1d21be3dfdbf7e4fc3410dc" title="Get status of AT42QT1244 peripheral. " alt="" coords="514,385,695,412"/>
+<area shape="rect" id="node24" href="../../d4/d47/_a_t42_q_t1244__proc_8h.html#afd1635edf97f1f5ed7157951b34b520f" title="Handler for AT42QT1244 peripheral GPIO interrupt. " alt="" coords="519,448,691,475"/>
+<area shape="rect" id="node23" href="../../df/de4/_a_t42_q_t1244__ex_8h.html#a348e43f2601e172063fd4e3c0623fed9" title="Get calibration status for AT42QT1244 peripheral. " alt="" coords="771,335,928,377"/>
+<area shape="rect" id="node25" href="../../d4/d47/_a_t42_q_t1244__proc_8h.html#aef85f959c0275b2ac8c13ed688a19c70" title="Set last reset time for AT42QT1244 peripheral. " alt="" coords="744,401,955,428"/>
+<area shape="rect" id="node26" href="../../d4/d47/_a_t42_q_t1244__proc_8h.html#a7a6c58e9216381f8452d4682a9bf7999" title="Handler for all AT42QT1244 peripherals GPIO interrupt. " alt="" coords="771,453,928,494"/>
+<area shape="rect" id="node28" href="../../df/d2f/_m_c_p9808__ex_8h.html#a74f3a6383e7e33937954cd7ec8021383" title="Get MCP9808 chip ID. " alt="" coords="525,519,685,545"/>
+<area shape="rect" id="node30" href="../../d6/d5e/_m_c_p9808__proc_8h.html#a366a4d5c21eefda7d12af3bdcf800a11" title="Handler for MCP9808 peripheral GPIO interrupt. " alt="" coords="529,569,681,596"/>
+<area shape="rect" id="node29" href="../../d6/d5e/_m_c_p9808__proc_8h.html#acdc3fcd27aee6d19c3e7fb7bf4762b47" title="Initialization Sequence of the MCP9808 peripheral. " alt="" coords="760,519,939,545"/>
+<area shape="rect" id="node31" href="../../d6/d5e/_m_c_p9808__proc_8h.html#a07f88cc900aba5f4bb109f76f7c26a28" title="Handler for all MCP9808 peripherals GPIO interrupt. " alt="" coords="763,569,936,596"/>
+<area shape="rect" id="node33" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a6e4dca81f18906253bc5300c3a485b8e" title="Get MTCH6102 gesture data. " alt="" coords="526,671,683,697"/>
+<area shape="rect" id="node35" href="../../db/de8/_m_t_c_h6102__proc_8h.html#ac6e9878bc657bf9eedfe117c920ce6b4" title="Handler for MTCH6102 peripheral GPIO interrupt. " alt="" coords="1003,620,1163,647"/>
+<area shape="rect" id="node34" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a342679a8eaa19001a2d661ca14c50139" title="Handler for MTCH6102 peripheral. " alt="" coords="777,671,922,697"/>
+<area shape="rect" id="node36" href="../../db/de8/_m_t_c_h6102__proc_8h.html#ab50e4af94c662a975f33cc565f78bffa" title="Set MTCH6102 coordinates rotation. " alt="" coords="1211,645,1389,672"/>
+<area shape="rect" id="node39" href="../../d1/d30/_p_c_f8523__ex_8h.html#ae2c8370ad357db3869fd42d64d0320d3" title="PCF8523_Get_Time_Raw" alt="" coords="515,721,694,748"/>
+<area shape="rect" id="node40" href="../../d4/d61/_p_c_f8523__proc_8h.html#a519c4d20da41104d7ec672566ad70e36" title="Handler for PCF8523 peripheral GPIO interrupt. " alt="" coords="531,772,679,799"/>
+<area shape="rect" id="node43" href="../../de/d36/_t_c_s3400__ex_8h.html#ac88104d7503f91b6efe8af760e66f33a" title="Get Blue channel conversion. " alt="" coords="533,823,676,849"/>
+<area shape="rect" id="node44" href="../../d9/d14/_t_c_s3400__proc_8h.html#acb5c223a54526bb6c991a244d86d7ecb" title="Handler for TCS3400 peripheral GPIO interrupt. " alt="" coords="531,873,679,900"/>
+<area shape="rect" id="node46" href="../../d2/dbe/_t_c_s3472__ex_8h.html#a2c09d6ed13ccf2dd2c99f261b3c9b88b" title="Get Blue channel conversion. " alt="" coords="533,924,676,951"/>
+<area shape="rect" id="node47" href="../../d6/d96/_t_c_s3472__proc_8h.html#abf8990e17a9cc0be48c1d013ffc6a551" title="Handler for TCS3472 peripheral GPIO interrupt. " alt="" coords="531,975,679,1001"/>
+<area shape="rect" id="node49" href="../../dc/d24/_t_s_l2591__ex_8h.html#abf21a4fb079c7ef69f850275b23a4680" title="Get IR conversion (Channel 1) " alt="" coords="542,1025,667,1052"/>
+<area shape="rect" id="node50" href="../../d7/d6e/_t_s_l2591__proc_8h.html#a0dec9da426161dbc0d55404b64d3ae4d" title="Handler for TSL2591 peripheral GPIO interrupt. " alt="" coords="531,1076,678,1103"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa2c9a5b3f1aac72314026ac9789d6167"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2c9a5b3f1aac72314026ac9789d6167">&#9670;&nbsp;</a></span>I2C_peripheral_GPIO_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR I2C_peripheral_GPIO_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d95/struct_peripheral_g_p_i_o__t.html">PeripheralGPIO_t</a> *const&#160;</td>
+          <td class="paramname"><em>pGPIO</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GPIO_TypeDef *const&#160;</td>
+          <td class="paramname"><em>GPIOx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>GPIO_Pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GPIO_PinState&#160;</td>
+          <td class="paramname"><em>GPIO_Active</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C peripheral GPIO pin init. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pGPIO</td><td>- Pointer to GPIO structure instance </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">GPIOx</td><td>- GPIO port </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">GPIO_Pin</td><td>- GPIO pin </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">GPIO_Active</td><td>GPIO pin active state </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d5d/_i2_c__peripheral_8h_aa2c9a5b3f1aac72314026ac9789d6167_icgraph.png" border="0" usemap="#dc/d5d/_i2_c__peripheral_8h_aa2c9a5b3f1aac72314026ac9789d6167_icgraph" alt=""/></div>
+<map name="dc/d5d/_i2_c__peripheral_8h_aa2c9a5b3f1aac72314026ac9789d6167_icgraph" id="dc/d5d/_i2_c__peripheral_8h_aa2c9a5b3f1aac72314026ac9789d6167_icgraph">
+<area shape="rect" id="node2" href="../../d8/d4b/_a_d_s1115__ex_8h.html#a5e1216d8aa877b457bfbc5ec36477cf8" title="Ready GPIO pin init for ADS1115. " alt="" coords="257,31,434,57"/>
+<area shape="rect" id="node7" href="../../dc/db3/_a_m_g88__ex_8h.html#a47e7dab1b924d54a1b7ac2fd0006022a" title="Interrupt GPIO pin init for AMG88. " alt="" coords="266,81,425,108"/>
+<area shape="rect" id="node10" href="../../d5/d4f/_a_p_d_s9930__ex_8h.html#ac51f268a781f3dec4577ac2a5daaf768" title="Interrupt GPIO pin init for APDS9930. " alt="" coords="255,132,436,159"/>
+<area shape="rect" id="node12" href="../../da/db5/_a_p_d_s9960__ex_8h.html#a260da54656ec611481165e163968673d" title="Interrupt GPIO pin init for APDS9960. " alt="" coords="255,183,436,209"/>
+<area shape="rect" id="node14" href="../../df/de4/_a_t42_q_t1244__ex_8h.html#a6615c48892435edb33807e93416d1e11" title="Change GPIO pin init for AT42QT1244. " alt="" coords="231,233,460,260"/>
+<area shape="rect" id="node17" href="../../df/de4/_a_t42_q_t1244__ex_8h.html#a7c5cbc9f3955b892061e478b295d194c" title="Reset GPIO pin init for AT42QT1244. " alt="" coords="247,284,444,311"/>
+<area shape="rect" id="node18" href="../../df/dbb/_d_r_v2605_l__ex_8h.html#a572725b83357c3e695799b38fd7ed7ce" title="Enable GPIO pin init for DRV2605L. " alt="" coords="257,335,433,361"/>
+<area shape="rect" id="node21" href="../../df/dbb/_d_r_v2605_l__ex_8h.html#a98cbfb2755e67db5cfadb3d8ff72c3fe" title="Trigger GPIO pin init for DRV2605L. " alt="" coords="252,385,439,412"/>
+<area shape="rect" id="node22" href="../../de/d95/_f_m24_c__ex_8h.html#a5d88f7f42cce5e5398313cfe0e4934e7" title="Write Protect GPIO pin init for FM24C. " alt="" coords="268,436,423,463"/>
+<area shape="rect" id="node23" href="../../d5/d5f/_m_b85_r_c256_v__ex_8h.html#af495e012827c3fabf23f464590729560" title="Write Protect GPIO pin init for MB85RC256V. " alt="" coords="247,487,444,513"/>
+<area shape="rect" id="node24" href="../../df/d2f/_m_c_p9808__ex_8h.html#af2c1405f1835f7a08978458d60b8d527" title="Alert GPIO pin init for MCP9808. " alt="" coords="254,537,437,564"/>
+<area shape="rect" id="node27" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a733a5846f9aa3999b273a4a40b1a5f3e" title="Interrupt GPIO pin init for MTCH6102. " alt="" coords="255,588,436,615"/>
+<area shape="rect" id="node30" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a1361a2cd7b079e8faa107b634dc0aa65" title="Synchro GPIO pin init for MTCH6102. " alt="" coords="247,639,443,665"/>
+<area shape="rect" id="node31" href="../../d8/df0/_p_c_a9532__ex_8h.html#a6d703493d85df1f08286da3738a2d41e" title="Reset GPIO pin init for PCA9532. " alt="" coords="258,689,433,716"/>
+<area shape="rect" id="node34" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a96409f8047040eb25063ca731ef69d84" title="Output Enable GPIO pin init for PCA9624. " alt="" coords="261,740,430,767"/>
+<area shape="rect" id="node36" href="../../d3/d57/_p_c_a9685__ex_8h.html#ae8ffcf950be577163b10d930b2a3ba9b" title="Output Enable GPIO pin init for PCA9685. " alt="" coords="261,791,430,817"/>
+<area shape="rect" id="node38" href="../../dd/ddf/_p_c_a9956__ex_8h.html#af347eccfff4344b49fd6aa00956cd5b1" title="Reset GPIO pin init for PCA9956. " alt="" coords="258,841,433,868"/>
+<area shape="rect" id="node40" href="../../dd/ddf/_p_c_a9956__ex_8h.html#a35e5abed701e1817148a233c9d7e673b" title="Output Enable GPIO pin init for PCA9956. " alt="" coords="261,892,430,919"/>
+<area shape="rect" id="node41" href="../../d1/d30/_p_c_f8523__ex_8h.html#aab0482f61dfb81dd3393d2b172f85eca" title="Interrupt 1 GPIO pin init for PCF8523. " alt="" coords="257,943,434,969"/>
+<area shape="rect" id="node44" href="../../d1/d30/_p_c_f8523__ex_8h.html#af1c5ea8c59b47303429a66978e5c8864" title="Interrupt 2 GPIO pin init for PCF8523. " alt="" coords="257,993,434,1020"/>
+<area shape="rect" id="node45" href="../../de/d36/_t_c_s3400__ex_8h.html#aa4996079345a897dd3a7fb03f36395a7" title="Interrupt GPIO pin init for TCS3400. " alt="" coords="261,1044,430,1071"/>
+<area shape="rect" id="node47" href="../../d2/dbe/_t_c_s3472__ex_8h.html#ab5ec97aa486481f1df6149ac9bc7f647" title="Interrupt GPIO pin init for TCS3472. " alt="" coords="261,1095,430,1121"/>
+<area shape="rect" id="node49" href="../../dc/d24/_t_s_l2591__ex_8h.html#a2fd8a0442f003920328cc043fbd49d06" title="Interrupt GPIO pin init for TSL2591. " alt="" coords="261,1145,429,1172"/>
+<area shape="rect" id="node3" href="../../d8/d4b/_a_d_s1115__ex_8h.html#a79e57b4463b2ac3b43b152ce61850ed2" title="Get ADS1115 raw channel value. " alt="" coords="508,31,691,57"/>
+<area shape="rect" id="node4" href="../../d4/d35/_a_d_s1115__proc_8h.html#a2a5488401e3392d27760b90ff5f31be2" title="Handler for ADS1115 peripheral. " alt="" coords="762,31,899,57"/>
+<area shape="rect" id="node5" href="../../d4/d35/_a_d_s1115__proc_8h.html#a520e784a7c3122c8211c2b62d3fb7967" title="Handler for ADS1115 peripheral GPIO interrupt. " alt="" coords="974,5,1126,32"/>
+<area shape="rect" id="node6" href="../../d4/d35/_a_d_s1115__proc_8h.html#a3871b0c6703b8b4bb3915172dfd98072" title="Handler for all ADS1115 peripherals. " alt="" coords="971,56,1129,83"/>
+<area shape="rect" id="node8" href="../../dc/db3/_a_m_g88__ex_8h.html#a6cf21b59c3b4cf75d9a82b881e84bacd" title="Get pixel raw value. " alt="" coords="516,81,683,108"/>
+<area shape="rect" id="node9" href="../../dc/db3/_a_m_g88__ex_8h.html#a7b51a0bfe1a0a94cf2b4da3d89a56ccc" title="Get pixel temperature. " alt="" coords="743,81,918,108"/>
+<area shape="rect" id="node11" href="../../d5/d4f/_a_p_d_s9930__ex_8h.html#a7b950cd7d52f371dd52f9114277e78ba" title="Get Proximity conversion. " alt="" coords="522,132,677,159"/>
+<area shape="rect" id="node13" href="../../da/db5/_a_p_d_s9960__ex_8h.html#a2585bc41a9ad2772ac94c52b633e498a" title="Get Proximity conversion. " alt="" coords="522,183,677,209"/>
+<area shape="rect" id="node15" href="../../df/de4/_a_t42_q_t1244__ex_8h.html#aad1c4acba1d21be3dfdbf7e4fc3410dc" title="Get status of AT42QT1244 peripheral. " alt="" coords="509,255,690,281"/>
+<area shape="rect" id="node16" href="../../df/de4/_a_t42_q_t1244__ex_8h.html#a348e43f2601e172063fd4e3c0623fed9" title="Get calibration status for AT42QT1244 peripheral. " alt="" coords="752,247,909,289"/>
+<area shape="rect" id="node19" href="../../df/dbb/_d_r_v2605_l__ex_8h.html#aa6e8731941269bddb42633409b51d8fc" title="Get DRV260x chip ID. " alt="" coords="517,360,682,387"/>
+<area shape="rect" id="node20" href="../../d1/da7/_d_r_v2605_l__proc_8h.html#ad908d57c1a4cba53e09981a387145d87" title="Initialization Sequence for DRV2605L peripheral. " alt="" coords="739,360,923,387"/>
+<area shape="rect" id="node25" href="../../df/d2f/_m_c_p9808__ex_8h.html#a74f3a6383e7e33937954cd7ec8021383" title="Get MCP9808 chip ID. " alt="" coords="519,537,679,564"/>
+<area shape="rect" id="node26" href="../../d6/d5e/_m_c_p9808__proc_8h.html#acdc3fcd27aee6d19c3e7fb7bf4762b47" title="Initialization Sequence of the MCP9808 peripheral. " alt="" coords="741,537,920,564"/>
+<area shape="rect" id="node28" href="../../dc/d5e/_m_t_c_h6102__ex_8h.html#a6e4dca81f18906253bc5300c3a485b8e" title="Get MTCH6102 gesture data. " alt="" coords="521,613,678,640"/>
+<area shape="rect" id="node29" href="../../db/de8/_m_t_c_h6102__proc_8h.html#a342679a8eaa19001a2d661ca14c50139" title="Handler for MTCH6102 peripheral. " alt="" coords="758,613,903,640"/>
+<area shape="rect" id="node32" href="../../d8/df0/_p_c_a9532__ex_8h.html#a03b2ea671687b1a439c90bc4f946542b" title="Convert PWMx byte register to Duty Cycle (in %) " alt="" coords="513,689,686,716"/>
+<area shape="rect" id="node33" href="../../de/da7/_p_c_a9532__proc_8h.html#a95ddc3ce36d7d60e26b08ce405ea2fc3" title="Initialization Sequence for PCA9532 peripheral. " alt="" coords="742,689,919,716"/>
+<area shape="rect" id="node35" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a93948697ac82a090f75a5d6879ca7f23" title="Send all PWM duty cycle array of values to apply on a PCA9624 (for the 8 channels) ..." alt="" coords="521,740,677,767"/>
+<area shape="rect" id="node37" href="../../d3/d57/_p_c_a9685__ex_8h.html#a9c727d398bdfa3e4abd76a8fe551dadd" title="Compute and send PWM lighting values to apply on a PCA9685 channel or all channels (Percent) ..." alt="" coords="522,791,677,817"/>
+<area shape="rect" id="node39" href="../../dd/ddf/_p_c_a9956__ex_8h.html#a69beb250a84a38e5b2321b8d98e32f8c" title="Send all PWM duty cycle array of values to apply on a PCA9956 (for the 24 channels) ..." alt="" coords="521,867,677,893"/>
+<area shape="rect" id="node42" href="../../d1/d30/_p_c_f8523__ex_8h.html#ae2c8370ad357db3869fd42d64d0320d3" title="PCF8523_Get_Time_Raw" alt="" coords="510,968,689,995"/>
+<area shape="rect" id="node43" href="../../d4/d61/_p_c_f8523__proc_8h.html#ad0d71f0e72ac7d36a8c735048b252b58" title="PCF8523_Get_Time" alt="" coords="757,968,904,995"/>
+<area shape="rect" id="node46" href="../../de/d36/_t_c_s3400__ex_8h.html#ac88104d7503f91b6efe8af760e66f33a" title="Get Blue channel conversion. " alt="" coords="528,1044,671,1071"/>
+<area shape="rect" id="node48" href="../../d2/dbe/_t_c_s3472__ex_8h.html#a2c09d6ed13ccf2dd2c99f261b3c9b88b" title="Get Blue channel conversion. " alt="" coords="528,1095,671,1121"/>
+<area shape="rect" id="node50" href="../../dc/d24/_t_s_l2591__ex_8h.html#abf21a4fb079c7ef69f850275b23a4680" title="Get IR conversion (Channel 1) " alt="" coords="537,1145,662,1172"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7accedd9eb463e3cd4eb401b07e36b2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7accedd9eb463e3cd4eb401b07e36b2c">&#9670;&nbsp;</a></span>I2C_peripheral_GPIO_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR I2C_peripheral_GPIO_set </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dc/d95/struct_peripheral_g_p_i_o__t.html">PeripheralGPIO_t</a> *const&#160;</td>
+          <td class="paramname"><em>pGPIO</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C peripheral GPIO pin setter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pGPIO</td><td>- Pointer to GPIO structure instance </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">state</td><td>- state to write on GPIO (0: inactive, 1: active) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d5d/_i2_c__peripheral_8h_a7accedd9eb463e3cd4eb401b07e36b2c_icgraph.png" border="0" usemap="#dc/d5d/_i2_c__peripheral_8h_a7accedd9eb463e3cd4eb401b07e36b2c_icgraph" alt=""/></div>
+<map name="dc/d5d/_i2_c__peripheral_8h_a7accedd9eb463e3cd4eb401b07e36b2c_icgraph" id="dc/d5d/_i2_c__peripheral_8h_a7accedd9eb463e3cd4eb401b07e36b2c_icgraph">
+<area shape="rect" id="node2" href="../../df/de4/_a_t42_q_t1244__ex_8h.html#a8d9f72959102f68e69346ae2ca10637f" title="Reset GPIO pin setter for AT42QT1244. " alt="" coords="232,120,432,147"/>
+<area shape="rect" id="node11" href="../../df/dbb/_d_r_v2605_l__ex_8h.html#ab3f468584e3b1abe7160a11c1212b561" title="Enable GPIO pin setter for DRV2605L. " alt="" coords="243,179,421,205"/>
+<area shape="rect" id="node15" href="../../df/dbb/_d_r_v2605_l__ex_8h.html#ae20097ec48f5dd3f23d217a41c4ff09b" title="Trigger GPIO pin setter for DRV2605L. " alt="" coords="237,229,427,256"/>
+<area shape="rect" id="node16" href="../../d2/d07/_f_m24_c__ex_8c.html#a28ce9770680dec25df1c9b971dc1fd0a" title="FM24C_WP_GPIO_Set" alt="" coords="253,280,411,307"/>
+<area shape="rect" id="node17" href="../../d0/d72/_m_b85_r_c256_v__ex_8c.html#aa4124bac05a9bedfde394f78906ce651" title="MB85RC256V_WP_GPIO_Set" alt="" coords="232,331,432,357"/>
+<area shape="rect" id="node18" href="../../d8/df0/_p_c_a9532__ex_8h.html#aa8a564bad9889d38bcf23dc8a9d7d765" title="Reset GPIO pin setter for PCA9532. " alt="" coords="243,381,421,408"/>
+<area shape="rect" id="node23" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a1cb09b057cd1dc3d1541786ff8cbcf9b" title="Output Enable GPIO pin setter for PCA9624. " alt="" coords="246,432,418,459"/>
+<area shape="rect" id="node25" href="../../d3/d57/_p_c_a9685__ex_8h.html#acb211bd528d2cdd158af88cbaf2455fc" title="Output Enable GPIO pin setter for PCA9685. " alt="" coords="246,483,418,509"/>
+<area shape="rect" id="node27" href="../../dd/ddf/_p_c_a9956__ex_8h.html#a7c381c9eb62fb60fa3e2ec8ae0260c50" title="Reset GPIO pin setter for PCA9956. " alt="" coords="243,533,421,560"/>
+<area shape="rect" id="node29" href="../../dd/ddf/_p_c_a9956__ex_8h.html#a62fb2f6017bb2c1e8256e619c69d9a9f" title="Output Enable GPIO pin setter for PCA9956. " alt="" coords="246,584,418,611"/>
+<area shape="rect" id="node3" href="../../df/de4/_a_t42_q_t1244__ex_8h.html#aad1c4acba1d21be3dfdbf7e4fc3410dc" title="Get status of AT42QT1244 peripheral. " alt="" coords="480,119,661,145"/>
+<area shape="rect" id="node4" href="../../df/de4/_a_t42_q_t1244__ex_8h.html#a348e43f2601e172063fd4e3c0623fed9" title="Get calibration status for AT42QT1244 peripheral. " alt="" coords="723,111,880,153"/>
+<area shape="rect" id="node5" href="../../d4/d47/_a_t42_q_t1244__proc_8h.html#a41d9810490e829642bd150eba5c2f573" title="Frequencies calibration for AT42QT1244 peripheral. " alt="" coords="1170,111,1337,153"/>
+<area shape="rect" id="node8" href="../../d4/d47/_a_t42_q_t1244__proc_8h.html#accf45d5bd518dceb2fb6b388380cdb93" title="Low level calibration for AT42QT1244 peripheral. " alt="" coords="941,53,1108,94"/>
+<area shape="rect" id="node9" href="../../d4/d47/_a_t42_q_t1244__proc_8h.html#a1515d11446da81b7b28cc10efb69a897" title="All keys calibration for AT42QT1244 peripheral. " alt="" coords="941,170,1108,211"/>
+<area shape="rect" id="node10" href="../../d4/d47/_a_t42_q_t1244__proc_8h.html#a64ec9086c4e13d125eb3d574a57b4957" title="Key calibration for AT42QT1244 peripheral. " alt="" coords="1156,5,1351,32"/>
+<area shape="rect" id="node6" href="../../d4/d47/_a_t42_q_t1244__proc_8h.html#aef85f959c0275b2ac8c13ed688a19c70" title="Set last reset time for AT42QT1244 peripheral. " alt="" coords="1399,89,1609,116"/>
+<area shape="rect" id="node7" href="../../df/de4/_a_t42_q_t1244__ex_8h.html#a39d0faa5ff099e6099c5f98d4d55b671" title="Reset command for AT42QT1244 peripheral. " alt="" coords="1657,89,1801,116"/>
+<area shape="rect" id="node12" href="../../df/dbb/_d_r_v2605_l__ex_8h.html#aa6e8731941269bddb42633409b51d8fc" title="Get DRV260x chip ID. " alt="" coords="488,229,653,256"/>
+<area shape="rect" id="node13" href="../../d1/da7/_d_r_v2605_l__proc_8h.html#ad908d57c1a4cba53e09981a387145d87" title="Initialization Sequence for DRV2605L peripheral. " alt="" coords="709,233,893,260"/>
+<area shape="rect" id="node14" href="../../d5/d47/_d_r_v2605_l_8h.html#a3f9967699bd1bfb66cc38395ce928151" title="Initialization for DRV2605L peripheral. " alt="" coords="968,236,1081,263"/>
+<area shape="rect" id="node19" href="../../d8/df0/_p_c_a9532__ex_8h.html#a03b2ea671687b1a439c90bc4f946542b" title="Convert PWMx byte register to Duty Cycle (in %) " alt="" coords="484,381,657,408"/>
+<area shape="rect" id="node20" href="../../de/da7/_p_c_a9532__proc_8h.html#a95ddc3ce36d7d60e26b08ce405ea2fc3" title="Initialization Sequence for PCA9532 peripheral. " alt="" coords="713,381,890,408"/>
+<area shape="rect" id="node21" href="../../d3/df9/_p_c_a9532_8h.html#a53117549a86481f7203371b537bc7084" title="Initialization for PCA9532 peripheral. " alt="" coords="971,381,1078,408"/>
+<area shape="rect" id="node22" href="../../d3/df9/_p_c_a9532_8h.html#ae3bc95cfa1ac91a201ac0543ced4bb03" title="Initialization for PCA9532 peripheral. " alt="" coords="1177,381,1329,408"/>
+<area shape="rect" id="node24" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a93948697ac82a090f75a5d6879ca7f23" title="Send all PWM duty cycle array of values to apply on a PCA9624 (for the 8 channels) ..." alt="" coords="493,432,649,459"/>
+<area shape="rect" id="node26" href="../../d3/d57/_p_c_a9685__ex_8h.html#a9c727d398bdfa3e4abd76a8fe551dadd" title="Compute and send PWM lighting values to apply on a PCA9685 channel or all channels (Percent) ..." alt="" coords="493,483,648,509"/>
+<area shape="rect" id="node28" href="../../dd/ddf/_p_c_a9956__ex_8h.html#a69beb250a84a38e5b2321b8d98e32f8c" title="Send all PWM duty cycle array of values to apply on a PCA9956 (for the 24 channels) ..." alt="" coords="493,559,649,585"/>
+</map>
+</div>
 
 </div>
 </div>

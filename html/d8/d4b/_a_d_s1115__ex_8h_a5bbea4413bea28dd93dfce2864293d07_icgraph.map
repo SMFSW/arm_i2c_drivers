@@ -1,0 +1,7 @@
+<map id="ADS1115_Start_NextConversion" name="ADS1115_Start_NextConversion">
+<area shape="rect" id="node2" href="$d8/d4b/_a_d_s1115__ex_8h.html#a8d0fd1ae6f0af8b925b61a2a869e49c7" title="Get ADS1115 high threshold. " alt="" coords="283,5,493,32"/>
+<area shape="rect" id="node3" href="$d4/d35/_a_d_s1115__proc_8h.html#a2a5488401e3392d27760b90ff5f31be2" title="Handler for ADS1115 peripheral. " alt="" coords="319,56,457,83"/>
+<area shape="rect" id="node4" href="$d4/d35/_a_d_s1115__proc_8h.html#a520e784a7c3122c8211c2b62d3fb7967" title="Handler for ADS1115 peripheral GPIO interrupt. " alt="" coords="545,31,697,57"/>
+<area shape="rect" id="node6" href="$d4/d35/_a_d_s1115__proc_8h.html#a3871b0c6703b8b4bb3915172dfd98072" title="Handler for all ADS1115 peripherals. " alt="" coords="541,81,700,108"/>
+<area shape="rect" id="node5" href="$d4/d35/_a_d_s1115__proc_8h.html#afee391a510cb180305c75f06c455ec6e" title="Handler for all ADS1115 peripherals GPIO interrupt. " alt="" coords="748,31,921,57"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="TCS3472_INT_GPIO_Get" name="TCS3472_INT_GPIO_Get">
+<area shape="rect" id="node2" href="$d2/dbe/_t_c_s3472__ex_8h.html#a2c09d6ed13ccf2dd2c99f261b3c9b88b" title="Get Blue channel conversion. " alt="" coords="229,5,372,32"/>
+<area shape="rect" id="node3" href="$d6/d96/_t_c_s3472__proc_8h.html#abf8990e17a9cc0be48c1d013ffc6a551" title="Handler for TCS3472 peripheral GPIO interrupt. " alt="" coords="227,56,375,83"/>
+<area shape="rect" id="node4" href="$d6/d96/_t_c_s3472__proc_8h.html#a1f754548bca0ed2b46643cab4188506f" title="Get current Illuminance (in lux) " alt="" coords="439,31,576,57"/>
+<area shape="rect" id="node5" href="$d6/d96/_t_c_s3472__proc_8h.html#a02d7d423ebd9075573eddbee6b53a52d" title="Handler for all TCS3472 peripherals GPIO interrupt. " alt="" coords="423,81,592,108"/>
+</map>

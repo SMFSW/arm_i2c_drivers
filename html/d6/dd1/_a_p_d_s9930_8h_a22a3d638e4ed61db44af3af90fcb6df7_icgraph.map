@@ -1,6 +1,0 @@
-<map id="APDS9930_Write_Word" name="APDS9930_Write_Word">
-<area shape="rect" id="node2" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#ab88d56bbd9c97a31774620487f8b10e2" title="ALS interrupt low threshold configuration. " alt="" coords="222,5,373,32"/>
-<area shape="rect" id="node3" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#abb1968a3bb7d392107258d59c679e896" title="ALS interrupt high threshold configuration. " alt="" coords="220,56,375,83"/>
-<area shape="rect" id="node4" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a6877570bd5cd8e344a1ccac088264eda" title="Proximity interrupt Persist Low threshold filter configuration. " alt="" coords="223,107,372,133"/>
-<area shape="rect" id="node5" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#aaac17a15e1dfa1b38ede94ee651afd94" title="Proximity interrupt Persist High threshold filter configuration. " alt="" coords="220,157,375,184"/>
-</map>

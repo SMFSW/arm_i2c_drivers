@@ -1,4 +1,0 @@
-<map id="APDS9930_handler" name="APDS9930_handler">
-<area shape="rect" id="node2" href="$d1/d45/_a_p_d_s9930__proc_8h.html#a08c603f666e1dcd7ea5ccc4637c47b11" title="Get current Illuminance (in lux) " alt="" coords="207,5,357,32"/>
-<area shape="rect" id="node3" href="$d1/d45/_a_p_d_s9930__proc_8h.html#a24390044b234a6f13916504006718885" title="Handler for all APDS9930 peripherals. " alt="" coords="199,56,365,83"/>
-</map>

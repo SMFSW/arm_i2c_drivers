@@ -1,0 +1,9 @@
+<map id="MTCH6102_INT_GPIO_Init" name="MTCH6102_INT_GPIO_Init">
+<area shape="rect" id="node2" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a6e4dca81f18906253bc5300c3a485b8e" title="Get MTCH6102 gesture data. " alt="" coords="235,56,392,83"/>
+<area shape="rect" id="node3" href="$db/de8/_m_t_c_h6102__proc_8h.html#a342679a8eaa19001a2d661ca14c50139" title="Handler for MTCH6102 peripheral. " alt="" coords="440,56,585,83"/>
+<area shape="rect" id="node4" href="$db/de8/_m_t_c_h6102__proc_8h.html#ac6e9878bc657bf9eedfe117c920ce6b4" title="Handler for MTCH6102 peripheral GPIO interrupt. " alt="" coords="637,56,797,83"/>
+<area shape="rect" id="node5" href="$db/de8/_m_t_c_h6102__proc_8h.html#ab50e4af94c662a975f33cc565f78bffa" title="Set MTCH6102 coordinates rotation. " alt="" coords="849,5,1028,32"/>
+<area shape="rect" id="node8" href="$db/de8/_m_t_c_h6102__proc_8h.html#a312bb1870758990998465cec43da89e5" title="Handler for all MTCH6102 peripherals. " alt="" coords="633,107,800,133"/>
+<area shape="rect" id="node7" href="$db/de8/_m_t_c_h6102__proc_8h.html#aec03380608432ad9a44d2af18a40615a" title="Handler for all MTCH6102 peripherals GPIO interrupt. " alt="" coords="848,56,1029,83"/>
+<area shape="rect" id="node6" href="$db/de8/_m_t_c_h6102__proc_8h.html#a6cb756e62481a522d8fba783461ac9d4" title="Initialization Sequence for MTCH6102 peripheral. " alt="" coords="1077,5,1264,32"/>
+</map>

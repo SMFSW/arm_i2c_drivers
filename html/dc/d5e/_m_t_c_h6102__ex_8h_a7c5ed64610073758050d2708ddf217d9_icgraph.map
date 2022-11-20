@@ -1,6 +1,8 @@
 <map id="MTCH6102_Get_Raw" name="MTCH6102_Get_Raw">
-<area shape="rect" id="node2" href="$db/de8/_m_t_c_h6102__proc_8h.html#a342679a8eaa19001a2d661ca14c50139" title="Handler for MTCH6102 peripheral. " alt="" coords="205,31,351,57"/>
-<area shape="rect" id="node3" href="$db/de8/_m_t_c_h6102__proc_8h.html#ab50e4af94c662a975f33cc565f78bffa" title="Set MTCH6102 coordinates rotation. " alt="" coords="399,5,577,32"/>
-<area shape="rect" id="node5" href="$db/de8/_m_t_c_h6102__proc_8h.html#a312bb1870758990998465cec43da89e5" title="Handler for all MTCH6102 peripherals. " alt="" coords="405,56,571,83"/>
-<area shape="rect" id="node4" href="$db/de8/_m_t_c_h6102__proc_8h.html#a6cb756e62481a522d8fba783461ac9d4" title="Initialization Sequence for MTCH6102 peripheral. " alt="" coords="625,5,812,32"/>
+<area shape="rect" id="node2" href="$db/de8/_m_t_c_h6102__proc_8h.html#a342679a8eaa19001a2d661ca14c50139" title="Handler for MTCH6102 peripheral. " alt="" coords="205,56,351,83"/>
+<area shape="rect" id="node3" href="$db/de8/_m_t_c_h6102__proc_8h.html#ac6e9878bc657bf9eedfe117c920ce6b4" title="Handler for MTCH6102 peripheral GPIO interrupt. " alt="" coords="402,56,562,83"/>
+<area shape="rect" id="node4" href="$db/de8/_m_t_c_h6102__proc_8h.html#ab50e4af94c662a975f33cc565f78bffa" title="Set MTCH6102 coordinates rotation. " alt="" coords="615,5,793,32"/>
+<area shape="rect" id="node7" href="$db/de8/_m_t_c_h6102__proc_8h.html#a312bb1870758990998465cec43da89e5" title="Handler for all MTCH6102 peripherals. " alt="" coords="399,107,565,133"/>
+<area shape="rect" id="node6" href="$db/de8/_m_t_c_h6102__proc_8h.html#aec03380608432ad9a44d2af18a40615a" title="Handler for all MTCH6102 peripherals GPIO interrupt. " alt="" coords="613,56,795,83"/>
+<area shape="rect" id="node5" href="$db/de8/_m_t_c_h6102__proc_8h.html#a6cb756e62481a522d8fba783461ac9d4" title="Initialization Sequence for MTCH6102 peripheral. " alt="" coords="843,5,1029,32"/>
 </map>

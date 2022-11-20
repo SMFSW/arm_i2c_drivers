@@ -1,6 +1,0 @@
-<map id="MCP9808_Write_Config" name="MCP9808_Write_Config">
-<area shape="rect" id="node2" href="$df/d2f/_m_c_p9808__ex_8h.html#a243664417daaaf9820d279bdf21b9de9" title="Set MCP9808 alert hysteresis. " alt="" coords="220,5,435,32"/>
-<area shape="rect" id="node3" href="$df/d2f/_m_c_p9808__ex_8h.html#a56970bcbb7adf58d71d1551acc11ec74" title="Set MCP9808 alert type. " alt="" coords="239,56,415,83"/>
-<area shape="rect" id="node4" href="$df/d2f/_m_c_p9808__ex_8h.html#a0e573ffe5d32f0bf8e471204b36533ff" title="Set MCP9808 alert enable. " alt="" coords="231,107,423,133"/>
-<area shape="rect" id="node5" href="$df/d2f/_m_c_p9808__ex_8h.html#a5a21688b5557dd3fba082864bd6df838" title="Set MCP9808 alert lock. " alt="" coords="239,157,416,184"/>
-</map>

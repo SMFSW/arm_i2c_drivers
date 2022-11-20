@@ -16,6 +16,7 @@ var searchData=
   ['ch0datal',['CH0DATAL',['../d5/de8/unionu_a_p_d_s9930___r_e_g___m_a_p.html#a4f69acca7b4be91889632e571dc159c8',1,'uAPDS9930_REG_MAP']]],
   ['ch1datah',['CH1DATAH',['../d5/de8/unionu_a_p_d_s9930___r_e_g___m_a_p.html#aefacd614535ccb8d4834e825aef98c3e',1,'uAPDS9930_REG_MAP']]],
   ['ch1datal',['CH1DATAL',['../d5/de8/unionu_a_p_d_s9930___r_e_g___m_a_p.html#a6173d3d3d967ce558d59417df3cd5a73',1,'uAPDS9930_REG_MAP']]],
+  ['change_5fgpio',['CHANGE_GPIO',['../da/dbc/struct_a_t42_q_t1244__t.html#a8fa47c864197505572f9b2bbe8255021',1,'AT42QT1244_t']]],
   ['cie',['CIE',['../dd/dda/unionu_p_c_f8523___r_e_g_____c_t_r_l1.html#ae0edfa421036b859e8bb77d0192ade79',1,'uPCF8523_REG__CTRL1']]],
   ['clear',['Clear',['../dc/ded/struct_a_p_d_s9960__t.html#acd9a80c6e8d543c657ee839c21538d25',1,'APDS9960_t::Clear()'],['../d3/d18/struct_t_c_s3400__t.html#ad2c700a053fa0c49423075b9a7614536',1,'TCS3400_t::Clear()'],['../d8/d5b/struct_t_c_s3472__t.html#ad2464c58408fdbce0038b26f9afefe63',1,'TCS3472_t::Clear()']]],
   ['clicknhold',['ClickNHold',['../da/da9/_m_t_c_h6102_8h.html#a408d180aebb2549834272e44f2730308a4332b67d58d247be419bc43ac0e5e75e',1,'MTCH6102.h']]],

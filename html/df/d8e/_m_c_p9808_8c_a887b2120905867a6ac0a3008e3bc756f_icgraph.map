@@ -1,0 +1,18 @@
+<map id="MCP9808_Read" name="MCP9808_Read">
+<area shape="rect" id="node2" href="$df/d2f/_m_c_p9808__ex_8h.html#afe97057ed9eb29c7c3aee68e2b32d772" title="Get MCP9808 Resolution. " alt="" coords="190,19,374,45"/>
+<area shape="rect" id="node3" href="$df/d2f/_m_c_p9808__ex_8h.html#a21eb0466632ccc997f8304a06e8efa07" title="Get MCP9808 Configuration. " alt="" coords="439,5,671,32"/>
+<area shape="rect" id="node5" href="$df/d2f/_m_c_p9808__ex_8h.html#a3072a0c89b8b0600ee437c8aea5392e1" title="Get MCP9808 Configuration. " alt="" coords="199,157,365,184"/>
+<area shape="rect" id="node12" href="$df/d2f/_m_c_p9808__ex_8h.html#a98b9daae17aa1581ffcc8adc812c19fe" title="Get MCP9808 Manufacturer ID. " alt="" coords="173,208,391,235"/>
+<area shape="rect" id="node16" href="$df/d2f/_m_c_p9808__ex_8h.html#a74f3a6383e7e33937954cd7ec8021383" title="Get MCP9808 chip ID. " alt="" coords="202,259,362,285"/>
+<area shape="rect" id="node17" href="$d6/d5e/_m_c_p9808__proc_8h.html#aa41e5cef9ce0a263279ae621df539601" title="Get the high/low/crit Alert temperature. " alt="" coords="191,309,373,336"/>
+<area shape="rect" id="node4" href="$d6/d5e/_m_c_p9808__proc_8h.html#ad446802e702cb0e7e926b9f02d4cb069" title="Get the temperature. " alt="" coords="719,5,919,32"/>
+<area shape="rect" id="node6" href="$df/d2f/_m_c_p9808__ex_8h.html#a719e116d062eee249034714fe1acf1cc" title="Write MCP9808 configuration. " alt="" coords="479,56,631,83"/>
+<area shape="rect" id="node8" href="$df/d2f/_m_c_p9808__ex_8h.html#a9f92d8737d843cee1af9a14f0d6f3417" title="Set MCP9808 alert hysteresis. " alt="" coords="447,107,662,133"/>
+<area shape="rect" id="node9" href="$df/d2f/_m_c_p9808__ex_8h.html#aa1810352aafc728c4d708da97ec4faab" title="Set MCP9808 alert type. " alt="" coords="467,157,643,184"/>
+<area shape="rect" id="node10" href="$df/d2f/_m_c_p9808__ex_8h.html#ac6fe701c571bef6c89df381b6c80b9ee" title="Set MCP9808 alert enable. " alt="" coords="459,208,651,235"/>
+<area shape="rect" id="node11" href="$df/d2f/_m_c_p9808__ex_8h.html#a2ed5f4eabea394a30aee6d4323c97f34" title="Set MCP9808 alert lock. " alt="" coords="466,259,643,285"/>
+<area shape="rect" id="node7" href="$d6/d5e/_m_c_p9808__proc_8h.html#a6d1f43041e42560f4f907a8cb24aab26" title="Set the high/low/crit Alert temperature. " alt="" coords="727,56,910,83"/>
+<area shape="rect" id="node13" href="$d6/d5e/_m_c_p9808__proc_8h.html#acdc3fcd27aee6d19c3e7fb7bf4762b47" title="Initialization Sequence of the MCP9808 peripheral. " alt="" coords="465,309,644,336"/>
+<area shape="rect" id="node14" href="$d8/d57/_m_c_p9808_8h.html#a91d38f36234f03778c3146624f083067" title="Initialization of the MCP9808 peripheral. " alt="" coords="765,309,873,336"/>
+<area shape="rect" id="node15" href="$d8/d57/_m_c_p9808_8h.html#a9ffcff895e9844967086a52af6c82dd4" title="Initialization for MCP9808 peripheral. " alt="" coords="967,309,1121,336"/>
+</map>

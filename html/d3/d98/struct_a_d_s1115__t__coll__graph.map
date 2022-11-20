@@ -1,4 +1,5 @@
 <map id="ADS1115_t" name="ADS1115_t">
-<area shape="rect" id="node2" href="$df/df6/struct_i2_c__slave__t.html" title="ci2c slave config and control parameters " alt="" coords="5,5,100,32"/>
-<area shape="rect" id="node3" href="$d1/d47/unionu_a_d_s1115___r_e_g_____c_f_g.html" title="Union for Config register of ADS1115. " alt="" coords="125,5,287,32"/>
+<area shape="rect" id="node2" href="$df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters " alt="" coords="5,5,100,32"/>
+<area shape="rect" id="node3" href="$dc/d95/struct_peripheral_g_p_i_o__t.html" title="i2c peripheral GPIO pin parameters " alt="" coords="124,5,253,32"/>
+<area shape="rect" id="node4" href="$d1/d47/unionu_a_d_s1115___r_e_g_____c_f_g.html" title="Union for Config register of ADS1115. " alt="" coords="278,5,441,32"/>
 </map>

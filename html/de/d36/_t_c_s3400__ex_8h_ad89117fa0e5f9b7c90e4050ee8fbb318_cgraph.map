@@ -1,0 +1,8 @@
+<map id="TCS3400_Set_Pesistence" name="TCS3400_Set_Pesistence">
+<area shape="rect" id="node2" href="$d4/d1b/_t_c_s3400_8c.html#a74d4e0aa8eb8d69af81660a1ef13ed77" title="I2C Write function for TCS3400. " alt="" coords="732,64,848,90"/>
+<area shape="rect" id="node5" href="$de/d36/_t_c_s3400__ex_8h.html#a5d23fb5c086daa57c0ede1c61719e414" title="Integration time configuration. " alt="" coords="463,38,684,65"/>
+<area shape="rect" id="node6" href="$de/d36/_t_c_s3400__ex_8h.html#a2d2035e4deebdea64d859a33119a2936" title="Wait time configuration. " alt="" coords="236,89,415,116"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="896,38,1013,65"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="901,89,1008,116"/>
+<area shape="rect" id="node7" href="$de/d36/_t_c_s3400__ex_8h.html#af91db6d8e73b2326b6dec6cd4f0bf1c0" title="Write TCS3400 Config register. " alt="" coords="501,140,645,166"/>
+</map>

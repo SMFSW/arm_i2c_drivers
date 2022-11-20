@@ -1,0 +1,6 @@
+<map id="PCA9624_PutVals_IndexedArray" name="PCA9624_PutVals_IndexedArray">
+<area shape="rect" id="node2" href="$d6/dfc/_p_c_a9624__ex_8h.html#a7469018e353726621da2eb3fc7ddfc57" title="Send PWM duty cycle array of values to apply on a PCA9624. " alt="" coords="279,31,413,57"/>
+<area shape="rect" id="node3" href="$db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624. " alt="" coords="461,31,580,57"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="628,5,745,32"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="633,56,740,83"/>
+</map>

@@ -130,17 +130,41 @@ Functions</h2></td></tr>
 <tr class="memitem:addff2c3e81e7a4ba7e30fd32bd89967f"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/_p_c_a9624__ex_8h.html#addff2c3e81e7a4ba7e30fd32bd89967f">PCA9624_Set_Mode_LEDs</a> (<a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const pCpnt, const uint8_t chans, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#a778cff629d551e17871a8343a63826b2">PCA962x_ledout</a> mode)</td></tr>
 <tr class="memdesc:addff2c3e81e7a4ba7e30fd32bd89967f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set PCA9624 peripheral multiple LEDs mode.  <a href="#addff2c3e81e7a4ba7e30fd32bd89967f">More...</a><br /></td></tr>
 <tr class="separator:addff2c3e81e7a4ba7e30fd32bd89967f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae201dcbffd983939c2938a040a8bf87f"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/_p_c_a9624__ex_8h.html#ae201dcbffd983939c2938a040a8bf87f">PCA9624_ReadVal</a> (<a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const pCpnt, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> chan, uint8_t *const duty)</td></tr>
-<tr class="memdesc:ae201dcbffd983939c2938a040a8bf87f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8_t)  <a href="#ae201dcbffd983939c2938a040a8bf87f">More...</a><br /></td></tr>
-<tr class="separator:ae201dcbffd983939c2938a040a8bf87f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26229b1c7f245cc88e09533d80ade29d"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a26229b1c7f245cc88e09533d80ade29d">PCA9624_ReadVals</a> (<a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const pCpnt, uint8_t pDuty[], const bool indexed, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> start, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> end)</td></tr>
+<tr class="memdesc:a26229b1c7f245cc88e09533d80ade29d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read PWM duty cycle array of values of a PCA9624.  <a href="#a26229b1c7f245cc88e09533d80ade29d">More...</a><br /></td></tr>
+<tr class="separator:a26229b1c7f245cc88e09533d80ade29d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea311d4d9235407ad34b209fd4903245"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/_p_c_a9624__ex_8h.html#aea311d4d9235407ad34b209fd4903245">PCA9624_ReadVals_Array</a> (<a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const pCpnt, uint8_t pDuty[], const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> start, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> end)</td></tr>
+<tr class="memdesc:aea311d4d9235407ad34b209fd4903245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read PWM duty cycle array of values of a PCA9624.  <a href="#aea311d4d9235407ad34b209fd4903245">More...</a><br /></td></tr>
+<tr class="separator:aea311d4d9235407ad34b209fd4903245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab80468102a0ccd9e0d8c2fb841d19b95"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/_p_c_a9624__ex_8h.html#ab80468102a0ccd9e0d8c2fb841d19b95">PCA9624_ReadVals_IndexedArray</a> (<a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const pCpnt, uint8_t pDuty[], const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> start, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> end)</td></tr>
+<tr class="memdesc:ab80468102a0ccd9e0d8c2fb841d19b95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read PWM duty cycle array of values of a PCA9624.  <a href="#ab80468102a0ccd9e0d8c2fb841d19b95">More...</a><br /></td></tr>
+<tr class="separator:ab80468102a0ccd9e0d8c2fb841d19b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a908e779b4a0bfd968a674997d5fd659f"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a908e779b4a0bfd968a674997d5fd659f">PCA9624_ReadVals_All</a> (<a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const pCpnt, uint8_t pDuty[8])</td></tr>
+<tr class="memdesc:a908e779b4a0bfd968a674997d5fd659f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read all PWM duty cycle array of values of a PCA9624 (for the 8 channels)  <a href="#a908e779b4a0bfd968a674997d5fd659f">More...</a><br /></td></tr>
+<tr class="separator:a908e779b4a0bfd968a674997d5fd659f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af768a0d852aca5133ec20a30af64086f"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/_p_c_a9624__ex_8h.html#af768a0d852aca5133ec20a30af64086f">PCA9624_ReadVal</a> (<a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const pCpnt, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> chan, uint8_t *const pDuty)</td></tr>
+<tr class="memdesc:af768a0d852aca5133ec20a30af64086f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read PWM duty cycle value of a PCA9624 channel.  <a href="#af768a0d852aca5133ec20a30af64086f">More...</a><br /></td></tr>
+<tr class="separator:af768a0d852aca5133ec20a30af64086f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7469018e353726621da2eb3fc7ddfc57"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a7469018e353726621da2eb3fc7ddfc57">PCA9624_PutVals</a> (<a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const pCpnt, const uint8_t pDuty[], const bool indexed, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> start, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> end)</td></tr>
+<tr class="memdesc:a7469018e353726621da2eb3fc7ddfc57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send PWM duty cycle array of values to apply on a PCA9624.  <a href="#a7469018e353726621da2eb3fc7ddfc57">More...</a><br /></td></tr>
+<tr class="separator:a7469018e353726621da2eb3fc7ddfc57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a658dfd2d262b1fc795d162d343c5e71c"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a658dfd2d262b1fc795d162d343c5e71c">PCA9624_PutVals_Array</a> (<a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const pCpnt, const uint8_t pDuty[], const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> start, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> end)</td></tr>
+<tr class="memdesc:a658dfd2d262b1fc795d162d343c5e71c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send PWM duty cycle array of values to apply on a PCA9624.  <a href="#a658dfd2d262b1fc795d162d343c5e71c">More...</a><br /></td></tr>
+<tr class="separator:a658dfd2d262b1fc795d162d343c5e71c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad465d196a9a7db0e2f6f65d45d065adb"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/_p_c_a9624__ex_8h.html#ad465d196a9a7db0e2f6f65d45d065adb">PCA9624_PutVals_IndexedArray</a> (<a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const pCpnt, const uint8_t pDuty[], const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> start, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> end)</td></tr>
+<tr class="memdesc:ad465d196a9a7db0e2f6f65d45d065adb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send PWM duty cycle array of values to apply on a PCA9624.  <a href="#ad465d196a9a7db0e2f6f65d45d065adb">More...</a><br /></td></tr>
+<tr class="separator:ad465d196a9a7db0e2f6f65d45d065adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93948697ac82a090f75a5d6879ca7f23"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a93948697ac82a090f75a5d6879ca7f23">PCA9624_PutVals_All</a> (<a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const pCpnt, const uint8_t pDuty[8])</td></tr>
+<tr class="memdesc:a93948697ac82a090f75a5d6879ca7f23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send all PWM duty cycle array of values to apply on a PCA9624 (for the 8 channels)  <a href="#a93948697ac82a090f75a5d6879ca7f23">More...</a><br /></td></tr>
+<tr class="separator:a93948697ac82a090f75a5d6879ca7f23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a332fee8687a72949293000a1e120295e"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a332fee8687a72949293000a1e120295e">PCA9624_PutVal</a> (<a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const pCpnt, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> chan, const uint8_t duty)</td></tr>
-<tr class="memdesc:a332fee8687a72949293000a1e120295e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes and send I2C lighting values to apply to a particular channel for PCA9624.  <a href="#a332fee8687a72949293000a1e120295e">More...</a><br /></td></tr>
+<tr class="memdesc:a332fee8687a72949293000a1e120295e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send PWM duty cycle value to apply on a PCA9624 channel.  <a href="#a332fee8687a72949293000a1e120295e">More...</a><br /></td></tr>
 <tr class="separator:a332fee8687a72949293000a1e120295e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa573ddd2d06a2a03d9c2213148cb988e"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/_p_c_a9624__ex_8h.html#aa573ddd2d06a2a03d9c2213148cb988e">PCA9624_SetVal</a> (<a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const pCpnt, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> chan)</td></tr>
-<tr class="memdesc:aa573ddd2d06a2a03d9c2213148cb988e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends I2C PWM ON values to apply to a particular channel for PCA9624.  <a href="#aa573ddd2d06a2a03d9c2213148cb988e">More...</a><br /></td></tr>
+<tr class="memdesc:aa573ddd2d06a2a03d9c2213148cb988e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send PWM Full ON value to apply on a PCA9624 channel.  <a href="#aa573ddd2d06a2a03d9c2213148cb988e">More...</a><br /></td></tr>
 <tr class="separator:aa573ddd2d06a2a03d9c2213148cb988e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3192c37b275d530307437efaa1d7dd1d"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a3192c37b275d530307437efaa1d7dd1d">PCA9624_ClrVal</a> (<a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const pCpnt, const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a> chan)</td></tr>
-<tr class="memdesc:a3192c37b275d530307437efaa1d7dd1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends I2C PWM OFF values to apply to a particular channel for PCA9624.  <a href="#a3192c37b275d530307437efaa1d7dd1d">More...</a><br /></td></tr>
+<tr class="memdesc:a3192c37b275d530307437efaa1d7dd1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send PWM Full OFF value to apply on a PCA9624 channel.  <a href="#a3192c37b275d530307437efaa1d7dd1d">More...</a><br /></td></tr>
 <tr class="separator:a3192c37b275d530307437efaa1d7dd1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab4549b551141757f1b4152cdd63d8e8"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/_p_c_a9624__ex_8h.html#aab4549b551141757f1b4152cdd63d8e8">PCA9624_Reset</a> (<a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const pCpnt)</td></tr>
 <tr class="memdesc:aab4549b551141757f1b4152cdd63d8e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset for PCA9624 peripheral.  <a href="#aab4549b551141757f1b4152cdd63d8e8">More...</a><br /></td></tr>
@@ -149,8 +173,14 @@ Functions</h2></td></tr>
 <tr class="memdesc:aec8212f311d739e4498507b8c9c249b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">General call reset function for PCA9624.  <a href="#aec8212f311d739e4498507b8c9c249b8">More...</a><br /></td></tr>
 <tr class="separator:aec8212f311d739e4498507b8c9c249b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae7261dad2ba4c04c8fd49632795c9da"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/_p_c_a9624__ex_8h.html#aae7261dad2ba4c04c8fd49632795c9da">PCA9624_ReadRegister</a> (<a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const pCpnt, const <a class="el" href="../../d4/dc2/_p_c_a9624_8h.html#ad86bc15ea689ab7dbe417028fa365cfa">PCA9624_reg</a> reg, uint8_t *const val)</td></tr>
-<tr class="memdesc:aae7261dad2ba4c04c8fd49632795c9da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads I2C register from PCA9624.  <a href="#aae7261dad2ba4c04c8fd49632795c9da">More...</a><br /></td></tr>
+<tr class="memdesc:aae7261dad2ba4c04c8fd49632795c9da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads register from PCA9624.  <a href="#aae7261dad2ba4c04c8fd49632795c9da">More...</a><br /></td></tr>
 <tr class="separator:aae7261dad2ba4c04c8fd49632795c9da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96409f8047040eb25063ca731ef69d84"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a96409f8047040eb25063ca731ef69d84">PCA9624_OE_GPIO_Init</a> (<a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const pCpnt, GPIO_TypeDef *const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active)</td></tr>
+<tr class="memdesc:a96409f8047040eb25063ca731ef69d84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output Enable GPIO pin init for PCA9624.  <a href="#a96409f8047040eb25063ca731ef69d84">More...</a><br /></td></tr>
+<tr class="separator:a96409f8047040eb25063ca731ef69d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cb09b057cd1dc3d1541786ff8cbcf9b"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a1cb09b057cd1dc3d1541786ff8cbcf9b">PCA9624_OE_GPIO_Set</a> (<a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const pCpnt, const bool state)</td></tr>
+<tr class="memdesc:a1cb09b057cd1dc3d1541786ff8cbcf9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output Enable GPIO pin setter for PCA9624.  <a href="#a1cb09b057cd1dc3d1541786ff8cbcf9b">More...</a><br /></td></tr>
+<tr class="separator:a1cb09b057cd1dc3d1541786ff8cbcf9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>PCA9624 Driver extensions. </p>
@@ -199,7 +229,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sends I2C PWM OFF values to apply to a particular channel for PCA9624. </p>
+<p>Send PWM Full OFF value to apply on a PCA9624 channel. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to PCA9624 component </td></tr>
@@ -213,7 +243,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_a3192c37b275d530307437efaa1d7dd1d_cgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_a3192c37b275d530307437efaa1d7dd1d_cgraph" alt=""/></div>
 <map name="d6/dfc/_p_c_a9624__ex_8h_a3192c37b275d530307437efaa1d7dd1d_cgraph" id="d6/dfc/_p_c_a9624__ex_8h_a3192c37b275d530307437efaa1d7dd1d_cgraph">
-<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#af258a350b96879007a2f057fadf5c61e" title="I2C Write function for PCA9624. " alt="" coords="176,31,295,57"/>
+<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624. " alt="" coords="176,31,295,57"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="343,5,460,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="348,56,455,83"/>
 </map>
@@ -223,7 +253,131 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_a3192c37b275d530307437efaa1d7dd1d_icgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_a3192c37b275d530307437efaa1d7dd1d_icgraph" alt=""/></div>
 <map name="d6/dfc/_p_c_a9624__ex_8h_a3192c37b275d530307437efaa1d7dd1d_icgraph" id="d6/dfc/_p_c_a9624__ex_8h_a3192c37b275d530307437efaa1d7dd1d_icgraph">
-<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a4873de01aedd5ccef0320315cf6195be" title="Set MODE2 register. " alt="" coords="176,5,339,32"/>
+<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a93948697ac82a090f75a5d6879ca7f23" title="Send all PWM duty cycle array of values to apply on a PCA9624 (for the 8 channels) ..." alt="" coords="176,5,332,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a96409f8047040eb25063ca731ef69d84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96409f8047040eb25063ca731ef69d84">&#9670;&nbsp;</a></span>PCA9624_OE_GPIO_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR PCA9624_OE_GPIO_Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GPIO_TypeDef *const&#160;</td>
+          <td class="paramname"><em>GPIOx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>GPIO_Pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GPIO_PinState&#160;</td>
+          <td class="paramname"><em>GPIO_Active</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Output Enable GPIO pin init for PCA9624. </p>
+<dl class="weak"><dt><b><a class="el" href="../../d0/d58/weak.html#_weak000061">Weak Functions:</a></b></dt><dd>PCA9624 Output Enable GPIO pin init may be user implemented if needed </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to PCA9624 component </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">GPIOx</td><td>- OE port </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">GPIO_Pin</td><td>- OE pin </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">GPIO_Active</td><td>OE pin active state </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_a96409f8047040eb25063ca731ef69d84_cgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_a96409f8047040eb25063ca731ef69d84_cgraph" alt=""/></div>
+<map name="d6/dfc/_p_c_a9624__ex_8h_a96409f8047040eb25063ca731ef69d84_cgraph" id="d6/dfc/_p_c_a9624__ex_8h_a96409f8047040eb25063ca731ef69d84_cgraph">
+<area shape="rect" id="node2" href="../../d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="223,5,400,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_a96409f8047040eb25063ca731ef69d84_icgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_a96409f8047040eb25063ca731ef69d84_icgraph" alt=""/></div>
+<map name="d6/dfc/_p_c_a9624__ex_8h_a96409f8047040eb25063ca731ef69d84_icgraph" id="d6/dfc/_p_c_a9624__ex_8h_a96409f8047040eb25063ca731ef69d84_icgraph">
+<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a93948697ac82a090f75a5d6879ca7f23" title="Send all PWM duty cycle array of values to apply on a PCA9624 (for the 8 channels) ..." alt="" coords="223,5,379,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1cb09b057cd1dc3d1541786ff8cbcf9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cb09b057cd1dc3d1541786ff8cbcf9b">&#9670;&nbsp;</a></span>PCA9624_OE_GPIO_Set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR PCA9624_OE_GPIO_Set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Output Enable GPIO pin setter for PCA9624. </p>
+<dl class="weak"><dt><b><a class="el" href="../../d0/d58/weak.html#_weak000062">Weak Functions:</a></b></dt><dd>PCA9624 Output Enable GPIO pin setter may be user implemented if needed </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to PCA9624 component </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">state</td><td>- state to write on OE pin (0: inactive, 1: active) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_a1cb09b057cd1dc3d1541786ff8cbcf9b_cgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_a1cb09b057cd1dc3d1541786ff8cbcf9b_cgraph" alt=""/></div>
+<map name="d6/dfc/_p_c_a9624__ex_8h_a1cb09b057cd1dc3d1541786ff8cbcf9b_cgraph" id="d6/dfc/_p_c_a9624__ex_8h_a1cb09b057cd1dc3d1541786ff8cbcf9b_cgraph">
+<area shape="rect" id="node2" href="../../d2/de1/_i2_c__peripheral_8c.html#a7accedd9eb463e3cd4eb401b07e36b2c" title="I2C peripheral GPIO pin setter. " alt="" coords="225,5,404,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_a1cb09b057cd1dc3d1541786ff8cbcf9b_icgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_a1cb09b057cd1dc3d1541786ff8cbcf9b_icgraph" alt=""/></div>
+<map name="d6/dfc/_p_c_a9624__ex_8h_a1cb09b057cd1dc3d1541786ff8cbcf9b_icgraph" id="d6/dfc/_p_c_a9624__ex_8h_a1cb09b057cd1dc3d1541786ff8cbcf9b_icgraph">
+<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a93948697ac82a090f75a5d6879ca7f23" title="Send all PWM duty cycle array of values to apply on a PCA9624 (for the 8 channels) ..." alt="" coords="225,5,381,32"/>
 </map>
 </div>
 
@@ -261,12 +415,12 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Computes and send I2C lighting values to apply to a particular channel for PCA9624. </p>
+<p>Send PWM duty cycle value to apply on a PCA9624 channel. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to PCA9624 component </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">chan</td><td>- channel number </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">duty</td><td>- Duty cycle coded on a uint8_t </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">duty</td><td>- Duty cycle </td></tr>
   </table>
   </dd>
 </dl>
@@ -276,7 +430,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_a332fee8687a72949293000a1e120295e_cgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_a332fee8687a72949293000a1e120295e_cgraph" alt=""/></div>
 <map name="d6/dfc/_p_c_a9624__ex_8h_a332fee8687a72949293000a1e120295e_cgraph" id="d6/dfc/_p_c_a9624__ex_8h_a332fee8687a72949293000a1e120295e_cgraph">
-<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#af258a350b96879007a2f057fadf5c61e" title="I2C Write function for PCA9624. " alt="" coords="180,31,299,57"/>
+<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624. " alt="" coords="180,31,299,57"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="347,5,464,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="352,56,459,83"/>
 </map>
@@ -286,7 +440,297 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_a332fee8687a72949293000a1e120295e_icgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_a332fee8687a72949293000a1e120295e_icgraph" alt=""/></div>
 <map name="d6/dfc/_p_c_a9624__ex_8h_a332fee8687a72949293000a1e120295e_icgraph" id="d6/dfc/_p_c_a9624__ex_8h_a332fee8687a72949293000a1e120295e_icgraph">
-<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a4873de01aedd5ccef0320315cf6195be" title="Set MODE2 register. " alt="" coords="180,5,343,32"/>
+<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a93948697ac82a090f75a5d6879ca7f23" title="Send all PWM duty cycle array of values to apply on a PCA9624 (for the 8 channels) ..." alt="" coords="180,5,336,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7469018e353726621da2eb3fc7ddfc57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7469018e353726621da2eb3fc7ddfc57">&#9670;&nbsp;</a></span>PCA9624_PutVals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR PCA9624_PutVals </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>pDuty</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>indexed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a>&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a>&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Send PWM duty cycle array of values to apply on a PCA9624. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to PCA9624 component </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pDuty</td><td>- Pointer to duty cycle values </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">indexed</td><td>- if set to true, pDuty start address will be indexed by the value of start parameter (thus pDuty always needs first channels cells even if not sent) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start</td><td>- starting channel number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>- ending channel number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_a7469018e353726621da2eb3fc7ddfc57_cgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_a7469018e353726621da2eb3fc7ddfc57_cgraph" alt=""/></div>
+<map name="d6/dfc/_p_c_a9624__ex_8h_a7469018e353726621da2eb3fc7ddfc57_cgraph" id="d6/dfc/_p_c_a9624__ex_8h_a7469018e353726621da2eb3fc7ddfc57_cgraph">
+<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624. " alt="" coords="188,31,307,57"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="355,5,472,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="360,56,467,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_a7469018e353726621da2eb3fc7ddfc57_icgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_a7469018e353726621da2eb3fc7ddfc57_icgraph" alt=""/></div>
+<map name="d6/dfc/_p_c_a9624__ex_8h_a7469018e353726621da2eb3fc7ddfc57_icgraph" id="d6/dfc/_p_c_a9624__ex_8h_a7469018e353726621da2eb3fc7ddfc57_icgraph">
+<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a908e779b4a0bfd968a674997d5fd659f" title="Read all PWM duty cycle array of values of a PCA9624 (for the 8 channels) " alt="" coords="217,5,384,32"/>
+<area shape="rect" id="node3" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a658dfd2d262b1fc795d162d343c5e71c" title="Send PWM duty cycle array of values to apply on a PCA9624. " alt="" coords="213,56,388,83"/>
+<area shape="rect" id="node4" href="../../d6/dfc/_p_c_a9624__ex_8h.html#ad465d196a9a7db0e2f6f65d45d065adb" title="Send PWM duty cycle array of values to apply on a PCA9624. " alt="" coords="188,107,413,133"/>
+<area shape="rect" id="node5" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a93948697ac82a090f75a5d6879ca7f23" title="Send all PWM duty cycle array of values to apply on a PCA9624 (for the 8 channels) ..." alt="" coords="223,157,379,184"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a93948697ac82a090f75a5d6879ca7f23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93948697ac82a090f75a5d6879ca7f23">&#9670;&nbsp;</a></span>PCA9624_PutVals_All()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR PCA9624_PutVals_All </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>pDuty</em>[8]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Send all PWM duty cycle array of values to apply on a PCA9624 (for the 8 channels) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to PCA9624 component </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pDuty</td><td>- Pointer to duty cycle values (8 bytes) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_a93948697ac82a090f75a5d6879ca7f23_cgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_a93948697ac82a090f75a5d6879ca7f23_cgraph" alt=""/></div>
+<map name="d6/dfc/_p_c_a9624__ex_8h_a93948697ac82a090f75a5d6879ca7f23_cgraph" id="d6/dfc/_p_c_a9624__ex_8h_a93948697ac82a090f75a5d6879ca7f23_cgraph">
+<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a7469018e353726621da2eb3fc7ddfc57" title="Send PWM duty cycle array of values to apply on a PCA9624. " alt="" coords="228,157,363,184"/>
+<area shape="rect" id="node6" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a332fee8687a72949293000a1e120295e" title="Send PWM duty cycle value to apply on a PCA9624 channel. " alt="" coords="232,5,359,32"/>
+<area shape="rect" id="node7" href="../../d6/dfc/_p_c_a9624__ex_8h.html#aa573ddd2d06a2a03d9c2213148cb988e" title="Send PWM Full ON value to apply on a PCA9624 channel. " alt="" coords="231,56,359,83"/>
+<area shape="rect" id="node8" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a3192c37b275d530307437efaa1d7dd1d" title="Send PWM Full OFF value to apply on a PCA9624 channel. " alt="" coords="234,107,357,133"/>
+<area shape="rect" id="node9" href="../../d6/dfc/_p_c_a9624__ex_8h.html#aab4549b551141757f1b4152cdd63d8e8" title="Reset for PCA9624 peripheral. " alt="" coords="234,259,357,285"/>
+<area shape="rect" id="node10" href="../../d6/dfc/_p_c_a9624__ex_8h.html#aec8212f311d739e4498507b8c9c249b8" title="General call reset function for PCA9624. " alt="" coords="223,309,367,336"/>
+<area shape="rect" id="node11" href="../../d6/dfc/_p_c_a9624__ex_8h.html#aae7261dad2ba4c04c8fd49632795c9da" title="Reads register from PCA9624. " alt="" coords="211,208,380,235"/>
+<area shape="rect" id="node13" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a96409f8047040eb25063ca731ef69d84" title="Output Enable GPIO pin init for PCA9624. " alt="" coords="211,360,380,387"/>
+<area shape="rect" id="node15" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a1cb09b057cd1dc3d1541786ff8cbcf9b" title="Output Enable GPIO pin setter for PCA9624. " alt="" coords="209,411,381,437"/>
+<area shape="rect" id="node3" href="../../db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624. " alt="" coords="459,107,578,133"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="656,107,773,133"/>
+<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="661,157,768,184"/>
+<area shape="rect" id="node12" href="../../db/de1/_p_c_a9624_8c.html#a03ee6aaa20de8bd43dfd5b251f3bde67" title="I2C Read function for PCA9624. " alt="" coords="459,157,578,184"/>
+<area shape="rect" id="node14" href="../../d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="430,360,607,387"/>
+<area shape="rect" id="node16" href="../../d2/de1/_i2_c__peripheral_8c.html#a7accedd9eb463e3cd4eb401b07e36b2c" title="I2C peripheral GPIO pin setter. " alt="" coords="429,411,608,437"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a658dfd2d262b1fc795d162d343c5e71c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a658dfd2d262b1fc795d162d343c5e71c">&#9670;&nbsp;</a></span>PCA9624_PutVals_Array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR PCA9624_PutVals_Array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>pDuty</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a>&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a>&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Send PWM duty cycle array of values to apply on a PCA9624. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to PCA9624 component </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pDuty</td><td>- Pointer to duty cycle values </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start</td><td>- starting channel number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>- ending channel number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_a658dfd2d262b1fc795d162d343c5e71c_cgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_a658dfd2d262b1fc795d162d343c5e71c_cgraph" alt=""/></div>
+<map name="d6/dfc/_p_c_a9624__ex_8h_a658dfd2d262b1fc795d162d343c5e71c_cgraph" id="d6/dfc/_p_c_a9624__ex_8h_a658dfd2d262b1fc795d162d343c5e71c_cgraph">
+<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a7469018e353726621da2eb3fc7ddfc57" title="Send PWM duty cycle array of values to apply on a PCA9624. " alt="" coords="228,31,363,57"/>
+<area shape="rect" id="node3" href="../../db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624. " alt="" coords="411,31,529,57"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="577,5,695,32"/>
+<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="583,56,689,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad465d196a9a7db0e2f6f65d45d065adb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad465d196a9a7db0e2f6f65d45d065adb">&#9670;&nbsp;</a></span>PCA9624_PutVals_IndexedArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR PCA9624_PutVals_IndexedArray </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>pDuty</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a>&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a>&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Send PWM duty cycle array of values to apply on a PCA9624. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to PCA9624 component </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pDuty</td><td>- Pointer to duty cycle values (pDuty start address will be indexed by the value of start parameter, thus needs first channels cells) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start</td><td>- starting channel number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>- ending channel number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_ad465d196a9a7db0e2f6f65d45d065adb_cgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_ad465d196a9a7db0e2f6f65d45d065adb_cgraph" alt=""/></div>
+<map name="d6/dfc/_p_c_a9624__ex_8h_ad465d196a9a7db0e2f6f65d45d065adb_cgraph" id="d6/dfc/_p_c_a9624__ex_8h_ad465d196a9a7db0e2f6f65d45d065adb_cgraph">
+<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a7469018e353726621da2eb3fc7ddfc57" title="Send PWM duty cycle array of values to apply on a PCA9624. " alt="" coords="279,31,413,57"/>
+<area shape="rect" id="node3" href="../../db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624. " alt="" coords="461,31,580,57"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="628,5,745,32"/>
+<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="633,56,740,83"/>
 </map>
 </div>
 
@@ -324,7 +768,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Reads I2C register from PCA9624. </p>
+<p>Reads register from PCA9624. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to PCA9624 component </td></tr>
@@ -339,7 +783,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_aae7261dad2ba4c04c8fd49632795c9da_cgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_aae7261dad2ba4c04c8fd49632795c9da_cgraph" alt=""/></div>
 <map name="d6/dfc/_p_c_a9624__ex_8h_aae7261dad2ba4c04c8fd49632795c9da_cgraph" id="d6/dfc/_p_c_a9624__ex_8h_aae7261dad2ba4c04c8fd49632795c9da_cgraph">
-<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#ab2bfcbe0c7881bf98295a0cbaa441249" title="I2C Read function for PCA9624. " alt="" coords="223,31,341,57"/>
+<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#a03ee6aaa20de8bd43dfd5b251f3bde67" title="I2C Read function for PCA9624. " alt="" coords="223,31,341,57"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="389,5,507,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="395,56,501,83"/>
 </map>
@@ -349,14 +793,14 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_aae7261dad2ba4c04c8fd49632795c9da_icgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_aae7261dad2ba4c04c8fd49632795c9da_icgraph" alt=""/></div>
 <map name="d6/dfc/_p_c_a9624__ex_8h_aae7261dad2ba4c04c8fd49632795c9da_icgraph" id="d6/dfc/_p_c_a9624__ex_8h_aae7261dad2ba4c04c8fd49632795c9da_icgraph">
-<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a4873de01aedd5ccef0320315cf6195be" title="Set MODE2 register. " alt="" coords="223,5,385,32"/>
+<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a93948697ac82a090f75a5d6879ca7f23" title="Send all PWM duty cycle array of values to apply on a PCA9624 (for the 8 channels) ..." alt="" coords="223,5,379,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ae201dcbffd983939c2938a040a8bf87f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae201dcbffd983939c2938a040a8bf87f">&#9670;&nbsp;</a></span>PCA9624_ReadVal()</h2>
+<a id="af768a0d852aca5133ec20a30af64086f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af768a0d852aca5133ec20a30af64086f">&#9670;&nbsp;</a></span>PCA9624_ReadVal()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -377,7 +821,7 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint8_t *const&#160;</td>
-          <td class="paramname"><em>duty</em>&#160;</td>
+          <td class="paramname"><em>pDuty</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -387,12 +831,12 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8_t) </p>
+<p>Read PWM duty cycle value of a PCA9624 channel. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to PCA9624 component </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">chan</td><td>- channel number </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">duty</td><td>- Pointer to the DutyCycle data for receive coded on a uint8_t </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pDuty</td><td>- Pointer to duty cycle data </td></tr>
   </table>
   </dd>
 </dl>
@@ -400,9 +844,9 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_ae201dcbffd983939c2938a040a8bf87f_cgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_ae201dcbffd983939c2938a040a8bf87f_cgraph" alt=""/></div>
-<map name="d6/dfc/_p_c_a9624__ex_8h_ae201dcbffd983939c2938a040a8bf87f_cgraph" id="d6/dfc/_p_c_a9624__ex_8h_ae201dcbffd983939c2938a040a8bf87f_cgraph">
-<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#ab2bfcbe0c7881bf98295a0cbaa441249" title="I2C Read function for PCA9624. " alt="" coords="191,31,309,57"/>
+<div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_af768a0d852aca5133ec20a30af64086f_cgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_af768a0d852aca5133ec20a30af64086f_cgraph" alt=""/></div>
+<map name="d6/dfc/_p_c_a9624__ex_8h_af768a0d852aca5133ec20a30af64086f_cgraph" id="d6/dfc/_p_c_a9624__ex_8h_af768a0d852aca5133ec20a30af64086f_cgraph">
+<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#a03ee6aaa20de8bd43dfd5b251f3bde67" title="I2C Read function for PCA9624. " alt="" coords="191,31,309,57"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="357,5,475,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="363,56,469,83"/>
 </map>
@@ -410,9 +854,291 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_ae201dcbffd983939c2938a040a8bf87f_icgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_ae201dcbffd983939c2938a040a8bf87f_icgraph" alt=""/></div>
-<map name="d6/dfc/_p_c_a9624__ex_8h_ae201dcbffd983939c2938a040a8bf87f_icgraph" id="d6/dfc/_p_c_a9624__ex_8h_ae201dcbffd983939c2938a040a8bf87f_icgraph">
-<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a4873de01aedd5ccef0320315cf6195be" title="Set MODE2 register. " alt="" coords="191,5,353,32"/>
+<div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_af768a0d852aca5133ec20a30af64086f_icgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_af768a0d852aca5133ec20a30af64086f_icgraph" alt=""/></div>
+<map name="d6/dfc/_p_c_a9624__ex_8h_af768a0d852aca5133ec20a30af64086f_icgraph" id="d6/dfc/_p_c_a9624__ex_8h_af768a0d852aca5133ec20a30af64086f_icgraph">
+<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a908e779b4a0bfd968a674997d5fd659f" title="Read all PWM duty cycle array of values of a PCA9624 (for the 8 channels) " alt="" coords="191,5,357,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a26229b1c7f245cc88e09533d80ade29d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26229b1c7f245cc88e09533d80ade29d">&#9670;&nbsp;</a></span>PCA9624_ReadVals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR PCA9624_ReadVals </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>pDuty</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>indexed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a>&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a>&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read PWM duty cycle array of values of a PCA9624. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to PCA9624 component </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pDuty</td><td>- Pointer to duty cycle values </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">indexed</td><td>- if set to true, pDuty start address will be indexed by the value of start parameter (thus pDuty always needs first channels cells even if not sent) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start</td><td>- starting channel number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>- ending channel number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_a26229b1c7f245cc88e09533d80ade29d_cgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_a26229b1c7f245cc88e09533d80ade29d_cgraph" alt=""/></div>
+<map name="d6/dfc/_p_c_a9624__ex_8h_a26229b1c7f245cc88e09533d80ade29d_cgraph" id="d6/dfc/_p_c_a9624__ex_8h_a26229b1c7f245cc88e09533d80ade29d_cgraph">
+<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#a03ee6aaa20de8bd43dfd5b251f3bde67" title="I2C Read function for PCA9624. " alt="" coords="197,31,316,57"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="364,5,481,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="369,56,476,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_a26229b1c7f245cc88e09533d80ade29d_icgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_a26229b1c7f245cc88e09533d80ade29d_icgraph" alt=""/></div>
+<map name="d6/dfc/_p_c_a9624__ex_8h_a26229b1c7f245cc88e09533d80ade29d_icgraph" id="d6/dfc/_p_c_a9624__ex_8h_a26229b1c7f245cc88e09533d80ade29d_icgraph">
+<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a4873de01aedd5ccef0320315cf6195be" title="Set MODE2 register. " alt="" coords="217,5,379,32"/>
+<area shape="rect" id="node3" href="../../d6/dfc/_p_c_a9624__ex_8h.html#aea311d4d9235407ad34b209fd4903245" title="Read PWM duty cycle array of values of a PCA9624. " alt="" coords="205,56,391,83"/>
+<area shape="rect" id="node4" href="../../d6/dfc/_p_c_a9624__ex_8h.html#ab80468102a0ccd9e0d8c2fb841d19b95" title="Read PWM duty cycle array of values of a PCA9624. " alt="" coords="197,107,399,149"/>
+<area shape="rect" id="node5" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a908e779b4a0bfd968a674997d5fd659f" title="Read all PWM duty cycle array of values of a PCA9624 (for the 8 channels) " alt="" coords="215,173,381,200"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a908e779b4a0bfd968a674997d5fd659f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a908e779b4a0bfd968a674997d5fd659f">&#9670;&nbsp;</a></span>PCA9624_ReadVals_All()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR PCA9624_ReadVals_All </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>pDuty</em>[8]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read all PWM duty cycle array of values of a PCA9624 (for the 8 channels) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to PCA9624 component </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pDuty</td><td>- Pointer to duty cycle values (8 bytes) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_a908e779b4a0bfd968a674997d5fd659f_cgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_a908e779b4a0bfd968a674997d5fd659f_cgraph" alt=""/></div>
+<map name="d6/dfc/_p_c_a9624__ex_8h_a908e779b4a0bfd968a674997d5fd659f_cgraph" id="d6/dfc/_p_c_a9624__ex_8h_a908e779b4a0bfd968a674997d5fd659f_cgraph">
+<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a26229b1c7f245cc88e09533d80ade29d" title="Read PWM duty cycle array of values of a PCA9624. " alt="" coords="220,56,364,83"/>
+<area shape="rect" id="node6" href="../../d6/dfc/_p_c_a9624__ex_8h.html#af768a0d852aca5133ec20a30af64086f" title="Read PWM duty cycle value of a PCA9624 channel. " alt="" coords="223,5,361,32"/>
+<area shape="rect" id="node7" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a7469018e353726621da2eb3fc7ddfc57" title="Send PWM duty cycle array of values to apply on a PCA9624. " alt="" coords="225,107,359,133"/>
+<area shape="rect" id="node3" href="../../db/de1/_p_c_a9624_8c.html#a03ee6aaa20de8bd43dfd5b251f3bde67" title="I2C Read function for PCA9624. " alt="" coords="412,56,531,83"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="579,56,696,83"/>
+<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="584,107,691,133"/>
+<area shape="rect" id="node8" href="../../db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624. " alt="" coords="412,107,531,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aea311d4d9235407ad34b209fd4903245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea311d4d9235407ad34b209fd4903245">&#9670;&nbsp;</a></span>PCA9624_ReadVals_Array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR PCA9624_ReadVals_Array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>pDuty</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a>&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a>&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read PWM duty cycle array of values of a PCA9624. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to PCA9624 component </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pDuty</td><td>- Pointer to duty cycle values </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start</td><td>- starting channel number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>- ending channel number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_aea311d4d9235407ad34b209fd4903245_cgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_aea311d4d9235407ad34b209fd4903245_cgraph" alt=""/></div>
+<map name="d6/dfc/_p_c_a9624__ex_8h_aea311d4d9235407ad34b209fd4903245_cgraph" id="d6/dfc/_p_c_a9624__ex_8h_aea311d4d9235407ad34b209fd4903245_cgraph">
+<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a26229b1c7f245cc88e09533d80ade29d" title="Read PWM duty cycle array of values of a PCA9624. " alt="" coords="239,31,383,57"/>
+<area shape="rect" id="node3" href="../../db/de1/_p_c_a9624_8c.html#a03ee6aaa20de8bd43dfd5b251f3bde67" title="I2C Read function for PCA9624. " alt="" coords="431,31,549,57"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="597,5,715,32"/>
+<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="603,56,709,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab80468102a0ccd9e0d8c2fb841d19b95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab80468102a0ccd9e0d8c2fb841d19b95">&#9670;&nbsp;</a></span>PCA9624_ReadVals_IndexedArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FctERR PCA9624_ReadVals_IndexedArray </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/df4/struct_p_c_a9624__t.html">PCA9624_t</a> *const&#160;</td>
+          <td class="paramname"><em>pCpnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>pDuty</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a>&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/dee/_p_c_a9xxx_8h.html#aa2821ddc10652a8ef465e35cc40c01b2">PCA9xxx_chan</a>&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read PWM duty cycle array of values of a PCA9624. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to PCA9624 component </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pDuty</td><td>- Pointer to duty cycle values (pDuty start address will be indexed by the value of start parameter, thus needs first channels cells) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start</td><td>- starting channel number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>- ending channel number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FctERR - ErrorCode </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_ab80468102a0ccd9e0d8c2fb841d19b95_cgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_ab80468102a0ccd9e0d8c2fb841d19b95_cgraph" alt=""/></div>
+<map name="d6/dfc/_p_c_a9624__ex_8h_ab80468102a0ccd9e0d8c2fb841d19b95_cgraph" id="d6/dfc/_p_c_a9624__ex_8h_ab80468102a0ccd9e0d8c2fb841d19b95_cgraph">
+<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a26229b1c7f245cc88e09533d80ade29d" title="Read PWM duty cycle array of values of a PCA9624. " alt="" coords="255,31,399,57"/>
+<area shape="rect" id="node3" href="../../db/de1/_p_c_a9624_8c.html#a03ee6aaa20de8bd43dfd5b251f3bde67" title="I2C Read function for PCA9624. " alt="" coords="447,31,565,57"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="613,5,731,32"/>
+<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="619,56,725,83"/>
 </map>
 </div>
 
@@ -447,7 +1173,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_aab4549b551141757f1b4152cdd63d8e8_icgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_aab4549b551141757f1b4152cdd63d8e8_icgraph" alt=""/></div>
 <map name="d6/dfc/_p_c_a9624__ex_8h_aab4549b551141757f1b4152cdd63d8e8_icgraph" id="d6/dfc/_p_c_a9624__ex_8h_aab4549b551141757f1b4152cdd63d8e8_icgraph">
-<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a4873de01aedd5ccef0320315cf6195be" title="Set MODE2 register. " alt="" coords="176,5,339,32"/>
+<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a93948697ac82a090f75a5d6879ca7f23" title="Send all PWM duty cycle array of values to apply on a PCA9624 (for the 8 channels) ..." alt="" coords="176,5,332,32"/>
 </map>
 </div>
 
@@ -482,7 +1208,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_aec8212f311d739e4498507b8c9c249b8_icgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_aec8212f311d739e4498507b8c9c249b8_icgraph" alt=""/></div>
 <map name="d6/dfc/_p_c_a9624__ex_8h_aec8212f311d739e4498507b8c9c249b8_icgraph" id="d6/dfc/_p_c_a9624__ex_8h_aec8212f311d739e4498507b8c9c249b8_icgraph">
-<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a4873de01aedd5ccef0320315cf6195be" title="Set MODE2 register. " alt="" coords="197,5,360,32"/>
+<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a93948697ac82a090f75a5d6879ca7f23" title="Send all PWM duty cycle array of values to apply on a PCA9624 (for the 8 channels) ..." alt="" coords="197,5,353,32"/>
 </map>
 </div>
 
@@ -583,8 +1309,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_a4e93459e13da452b9181cdef1f710b15_cgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_a4e93459e13da452b9181cdef1f710b15_cgraph" alt=""/></div>
 <map name="d6/dfc/_p_c_a9624__ex_8h_a4e93459e13da452b9181cdef1f710b15_cgraph" id="d6/dfc/_p_c_a9624__ex_8h_a4e93459e13da452b9181cdef1f710b15_cgraph">
-<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#ab2bfcbe0c7881bf98295a0cbaa441249" title="I2C Read function for PCA9624. " alt="" coords="204,5,323,32"/>
-<area shape="rect" id="node5" href="../../db/de1/_p_c_a9624_8c.html#af258a350b96879007a2f057fadf5c61e" title="I2C Write function for PCA9624. " alt="" coords="204,56,323,83"/>
+<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#a03ee6aaa20de8bd43dfd5b251f3bde67" title="I2C Read function for PCA9624. " alt="" coords="204,5,323,32"/>
+<area shape="rect" id="node5" href="../../db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624. " alt="" coords="204,56,323,83"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="371,5,488,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="376,56,483,83"/>
 </map>
@@ -648,7 +1374,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_ab297dabae3a4fe712cba3a26f71a2f2a_cgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_ab297dabae3a4fe712cba3a26f71a2f2a_cgraph" alt=""/></div>
 <map name="d6/dfc/_p_c_a9624__ex_8h_ab297dabae3a4fe712cba3a26f71a2f2a_cgraph" id="d6/dfc/_p_c_a9624__ex_8h_ab297dabae3a4fe712cba3a26f71a2f2a_cgraph">
-<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#af258a350b96879007a2f057fadf5c61e" title="I2C Write function for PCA9624. " alt="" coords="216,31,335,57"/>
+<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624. " alt="" coords="216,31,335,57"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="383,5,500,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="388,56,495,83"/>
 </map>
@@ -704,20 +1430,14 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_a4873de01aedd5ccef0320315cf6195be_cgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_a4873de01aedd5ccef0320315cf6195be_cgraph" alt=""/></div>
 <map name="d6/dfc/_p_c_a9624__ex_8h_a4873de01aedd5ccef0320315cf6195be_cgraph" id="d6/dfc/_p_c_a9624__ex_8h_a4873de01aedd5ccef0320315cf6195be_cgraph">
-<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#af258a350b96879007a2f057fadf5c61e" title="I2C Write function for PCA9624. " alt="" coords="455,208,573,235"/>
-<area shape="rect" id="node5" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a4e93459e13da452b9181cdef1f710b15" title="Set latch type for PCA9624 peripheral. " alt="" coords="236,309,387,336"/>
-<area shape="rect" id="node7" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a764b234c30777556e73706229815172c" title="Set PCA9624 peripheral LED mode. " alt="" coords="220,208,403,235"/>
-<area shape="rect" id="node8" href="../../d6/dfc/_p_c_a9624__ex_8h.html#addff2c3e81e7a4ba7e30fd32bd89967f" title="Set PCA9624 peripheral multiple LEDs mode. " alt="" coords="216,259,407,285"/>
-<area shape="rect" id="node9" href="../../d6/dfc/_p_c_a9624__ex_8h.html#ae201dcbffd983939c2938a040a8bf87f" title="Reads I2C lighting values from a LED (4 bytes) and Computes the corresponding duty cycle value (uint8..." alt="" coords="243,411,380,437"/>
-<area shape="rect" id="node10" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a332fee8687a72949293000a1e120295e" title="Computes and send I2C lighting values to apply to a particular channel for PCA9624. " alt="" coords="248,5,375,32"/>
-<area shape="rect" id="node11" href="../../d6/dfc/_p_c_a9624__ex_8h.html#aa573ddd2d06a2a03d9c2213148cb988e" title="Sends I2C PWM ON values to apply to a particular channel for PCA9624. " alt="" coords="247,56,375,83"/>
-<area shape="rect" id="node12" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a3192c37b275d530307437efaa1d7dd1d" title="Sends I2C PWM OFF values to apply to a particular channel for PCA9624. " alt="" coords="250,107,373,133"/>
-<area shape="rect" id="node13" href="../../d6/dfc/_p_c_a9624__ex_8h.html#aab4549b551141757f1b4152cdd63d8e8" title="Reset for PCA9624 peripheral. " alt="" coords="250,461,373,488"/>
-<area shape="rect" id="node14" href="../../d6/dfc/_p_c_a9624__ex_8h.html#aec8212f311d739e4498507b8c9c249b8" title="General call reset function for PCA9624. " alt="" coords="239,512,383,539"/>
-<area shape="rect" id="node15" href="../../d6/dfc/_p_c_a9624__ex_8h.html#aae7261dad2ba4c04c8fd49632795c9da" title="Reads I2C register from PCA9624. " alt="" coords="227,360,396,387"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="621,221,739,248"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="627,284,733,311"/>
-<area shape="rect" id="node6" href="../../db/de1/_p_c_a9624_8c.html#ab2bfcbe0c7881bf98295a0cbaa441249" title="I2C Read function for PCA9624. " alt="" coords="455,309,573,336"/>
+<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624. " alt="" coords="455,86,573,113"/>
+<area shape="rect" id="node5" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a4e93459e13da452b9181cdef1f710b15" title="Set latch type for PCA9624 peripheral. " alt="" coords="236,137,387,164"/>
+<area shape="rect" id="node7" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a764b234c30777556e73706229815172c" title="Set PCA9624 peripheral LED mode. " alt="" coords="220,36,403,62"/>
+<area shape="rect" id="node8" href="../../d6/dfc/_p_c_a9624__ex_8h.html#addff2c3e81e7a4ba7e30fd32bd89967f" title="Set PCA9624 peripheral multiple LEDs mode. " alt="" coords="216,86,407,113"/>
+<area shape="rect" id="node9" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a26229b1c7f245cc88e09533d80ade29d" title="Read PWM duty cycle array of values of a PCA9624. " alt="" coords="239,188,383,214"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="621,86,739,113"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="627,137,733,164"/>
+<area shape="rect" id="node6" href="../../db/de1/_p_c_a9624_8c.html#a03ee6aaa20de8bd43dfd5b251f3bde67" title="I2C Read function for PCA9624. " alt="" coords="455,137,573,164"/>
 </map>
 </div>
 
@@ -770,7 +1490,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_a764b234c30777556e73706229815172c_cgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_a764b234c30777556e73706229815172c_cgraph" alt=""/></div>
 <map name="d6/dfc/_p_c_a9624__ex_8h_a764b234c30777556e73706229815172c_cgraph" id="d6/dfc/_p_c_a9624__ex_8h_a764b234c30777556e73706229815172c_cgraph">
-<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#af258a350b96879007a2f057fadf5c61e" title="I2C Write function for PCA9624. " alt="" coords="236,31,355,57"/>
+<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624. " alt="" coords="236,31,355,57"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="403,5,520,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="408,56,515,83"/>
 </map>
@@ -833,7 +1553,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_addff2c3e81e7a4ba7e30fd32bd89967f_cgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_addff2c3e81e7a4ba7e30fd32bd89967f_cgraph" alt=""/></div>
 <map name="d6/dfc/_p_c_a9624__ex_8h_addff2c3e81e7a4ba7e30fd32bd89967f_cgraph" id="d6/dfc/_p_c_a9624__ex_8h_addff2c3e81e7a4ba7e30fd32bd89967f_cgraph">
-<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#af258a350b96879007a2f057fadf5c61e" title="I2C Write function for PCA9624. " alt="" coords="244,31,363,57"/>
+<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624. " alt="" coords="244,31,363,57"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="411,5,528,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="416,56,523,83"/>
 </map>
@@ -844,7 +1564,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_addff2c3e81e7a4ba7e30fd32bd89967f_icgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_addff2c3e81e7a4ba7e30fd32bd89967f_icgraph" alt=""/></div>
 <map name="d6/dfc/_p_c_a9624__ex_8h_addff2c3e81e7a4ba7e30fd32bd89967f_icgraph" id="d6/dfc/_p_c_a9624__ex_8h_addff2c3e81e7a4ba7e30fd32bd89967f_icgraph">
 <area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a4873de01aedd5ccef0320315cf6195be" title="Set MODE2 register. " alt="" coords="251,5,414,32"/>
-<area shape="rect" id="node3" href="../../d0/de0/_p_c_a9624__proc_8h.html#a470de2e6ee5e496c5226c5422c2b8886" title="Initialization Sequence for PCA9624 peripheral. " alt="" coords="244,56,421,83"/>
+<area shape="rect" id="node3" href="../../d0/de0/_p_c_a9624__proc_8h.html#ae6462de81eb8420000a21390956d7aee" title="Initialization Sequence for PCA9624 peripheral. " alt="" coords="244,56,421,83"/>
 <area shape="rect" id="node4" href="../../d4/dc2/_p_c_a9624_8h.html#a533ea8e2a7967b9ae7588d9f028bc839" title="Initialization for PCA9624 peripheral. " alt="" coords="469,56,576,83"/>
 <area shape="rect" id="node5" href="../../d4/dc2/_p_c_a9624_8h.html#a9d2bfb0bec12fff1be494de387f015a2" title="Initialization for PCA9624 peripheral. " alt="" coords="624,56,776,83"/>
 </map>
@@ -878,7 +1598,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Sends I2C PWM ON values to apply to a particular channel for PCA9624. </p>
+<p>Send PWM Full ON value to apply on a PCA9624 channel. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to PCA9624 component </td></tr>
@@ -892,7 +1612,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_aa573ddd2d06a2a03d9c2213148cb988e_cgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_aa573ddd2d06a2a03d9c2213148cb988e_cgraph" alt=""/></div>
 <map name="d6/dfc/_p_c_a9624__ex_8h_aa573ddd2d06a2a03d9c2213148cb988e_cgraph" id="d6/dfc/_p_c_a9624__ex_8h_aa573ddd2d06a2a03d9c2213148cb988e_cgraph">
-<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#af258a350b96879007a2f057fadf5c61e" title="I2C Write function for PCA9624. " alt="" coords="181,31,300,57"/>
+<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624. " alt="" coords="181,31,300,57"/>
 <area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="348,5,465,32"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="353,56,460,83"/>
 </map>
@@ -902,7 +1622,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/dfc/_p_c_a9624__ex_8h_aa573ddd2d06a2a03d9c2213148cb988e_icgraph.png" border="0" usemap="#d6/dfc/_p_c_a9624__ex_8h_aa573ddd2d06a2a03d9c2213148cb988e_icgraph" alt=""/></div>
 <map name="d6/dfc/_p_c_a9624__ex_8h_aa573ddd2d06a2a03d9c2213148cb988e_icgraph" id="d6/dfc/_p_c_a9624__ex_8h_aa573ddd2d06a2a03d9c2213148cb988e_icgraph">
-<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a4873de01aedd5ccef0320315cf6195be" title="Set MODE2 register. " alt="" coords="181,5,344,32"/>
+<area shape="rect" id="node2" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a93948697ac82a090f75a5d6879ca7f23" title="Send all PWM duty cycle array of values to apply on a PCA9624 (for the 8 channels) ..." alt="" coords="181,5,337,32"/>
 </map>
 </div>
 

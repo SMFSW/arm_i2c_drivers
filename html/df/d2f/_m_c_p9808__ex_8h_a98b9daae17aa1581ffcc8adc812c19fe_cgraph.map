@@ -1,0 +1,5 @@
+<map id="MCP9808_Get_ManufacturerID" name="MCP9808_Get_ManufacturerID">
+<area shape="rect" id="node2" href="$df/d8e/_m_c_p9808_8c.html#a887b2120905867a6ac0a3008e3bc756f" title="I2C Read function for MCP9808. " alt="" coords="271,31,391,57"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="439,5,556,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="444,56,551,83"/>
+</map>

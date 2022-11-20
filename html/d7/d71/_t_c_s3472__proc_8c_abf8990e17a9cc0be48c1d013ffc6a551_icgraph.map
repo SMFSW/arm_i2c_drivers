@@ -1,0 +1,4 @@
+<map id="TCS3472_handler_it" name="TCS3472_handler_it">
+<area shape="rect" id="node2" href="$d6/d96/_t_c_s3472__proc_8h.html#a1f754548bca0ed2b46643cab4188506f" title="Get current Illuminance (in lux) " alt="" coords="217,5,355,32"/>
+<area shape="rect" id="node3" href="$d6/d96/_t_c_s3472__proc_8h.html#a02d7d423ebd9075573eddbee6b53a52d" title="Handler for all TCS3472 peripherals GPIO interrupt. " alt="" coords="201,56,371,83"/>
+</map>

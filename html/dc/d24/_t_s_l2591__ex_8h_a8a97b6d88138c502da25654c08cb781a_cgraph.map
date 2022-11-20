@@ -1,0 +1,6 @@
+<map id="TSL2591_Set_AILT" name="TSL2591_Set_AILT">
+<area shape="rect" id="node2" href="$d2/d68/_t_s_l2591_8c.html#a0a3290b94a67bb5d71605a33d176300b" title="I2C Word Write (low endian) function for TSL2591. " alt="" coords="191,31,344,57"/>
+<area shape="rect" id="node3" href="$d2/d68/_t_s_l2591_8c.html#a699af3f63ff4020758ff5773dbcd683c" title="I2C Write function for TSL2591. " alt="" coords="392,31,507,57"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="555,5,672,32"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="560,56,667,83"/>
+</map>

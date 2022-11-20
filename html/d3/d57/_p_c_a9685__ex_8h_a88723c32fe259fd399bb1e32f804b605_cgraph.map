@@ -1,0 +1,7 @@
+<map id="PCA9685_PutValByte" name="PCA9685_PutValByte">
+<area shape="rect" id="node2" href="$d3/d57/_p_c_a9685__ex_8h.html#a10038955f9929c958cc18a4deb89bc7e" title="Compute and send PWM lighting values to apply on a PCA9685 channel or all channels (12b) ..." alt="" coords="209,31,336,57"/>
+<area shape="rect" id="node3" href="$df/d1d/_p_c_a9685__ex_8c.html#a4a5535e36528946a5ffc3a526c83cc03" title="Computes values for PCA9685 registers (4bytes) following duty and delay. " alt="" coords="384,5,517,32"/>
+<area shape="rect" id="node4" href="$de/dca/_p_c_a9685_8c.html#ace763529df9b53eced87352d1d5de814" title="I2C Write function for PCA9685. " alt="" coords="391,56,510,83"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="565,31,683,57"/>
+<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="571,81,677,108"/>
+</map>

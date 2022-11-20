@@ -1,5 +1,0 @@
-<map id="TCS3472_Write_Word" name="TCS3472_Write_Word">
-<area shape="rect" id="node2" href="$df/dfb/_t_c_s3472_8c.html#a466c991d1a8eda55bef3e6efa6f25a75" title="I2C Write function for TCS3472. " alt="" coords="208,31,324,57"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="372,5,489,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="377,56,484,83"/>
-</map>

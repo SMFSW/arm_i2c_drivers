@@ -1,0 +1,4 @@
+<map id="TCS3400_handler_it" name="TCS3400_handler_it">
+<area shape="rect" id="node2" href="$d9/d14/_t_c_s3400__proc_8h.html#aadec61f3b61c2c1ff08aa99dfa053285" title="Get current Illuminance (in lux) " alt="" coords="217,5,355,32"/>
+<area shape="rect" id="node3" href="$d9/d14/_t_c_s3400__proc_8h.html#a2b853b88da073d8f1e218486a16b8f42" title="Handler for all TCS3400 peripherals GPIO interrupt. " alt="" coords="201,56,371,83"/>
+</map>

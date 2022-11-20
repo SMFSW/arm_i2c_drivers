@@ -1,7 +1,13 @@
 <map id="PCF8523_Get_Time" name="PCF8523_Get_Time">
-<area shape="rect" id="node2" href="$d1/d30/_p_c_f8523__ex_8h.html#ae2c8370ad357db3869fd42d64d0320d3" title="PCF8523_Get_Time_Raw" alt="" coords="200,31,379,57"/>
-<area shape="rect" id="node3" href="$df/d5b/_p_c_f8523_8c.html#a58750b10a6bd6458855b5316af84fb5e" title="I2C Read function for PCF8523 peripheral. " alt="" coords="640,31,756,57"/>
-<area shape="rect" id="node6" href="$d1/d30/_p_c_f8523__ex_8h.html#a2e5406b189e51d2f1929201d8ce73b99" title="PCF8523_Check_Clock\l_Integrity" alt="" coords="427,53,592,94"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="804,5,921,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="809,56,916,83"/>
+<area shape="rect" id="node2" href="$d1/d30/_p_c_f8523__ex_8h.html#ae2c8370ad357db3869fd42d64d0320d3" title="PCF8523_Get_Time_Raw" alt="" coords="200,144,379,171"/>
+<area shape="rect" id="node3" href="$df/d5b/_p_c_f8523_8c.html#a58750b10a6bd6458855b5316af84fb5e" title="I2C Read function for PCF8523 peripheral. " alt="" coords="687,31,803,57"/>
+<area shape="rect" id="node6" href="$d1/d30/_p_c_f8523__ex_8h.html#a2e5406b189e51d2f1929201d8ce73b99" title="PCF8523_Check_Clock\l_Integrity" alt="" coords="435,53,600,94"/>
+<area shape="rect" id="node7" href="$d1/d30/_p_c_f8523__ex_8h.html#aab0482f61dfb81dd3393d2b172f85eca" title="Interrupt 1 GPIO pin init for PCF8523. " alt="" coords="429,119,606,145"/>
+<area shape="rect" id="node9" href="$d1/d30/_p_c_f8523__ex_8h.html#a9ea1402e7007951c1871925ebe86b9e7" title="Interrupt 1 GPIO pin getter for PCF8523. " alt="" coords="427,220,608,247"/>
+<area shape="rect" id="node11" href="$d1/d30/_p_c_f8523__ex_8h.html#af1c5ea8c59b47303429a66978e5c8864" title="Interrupt 2 GPIO pin init for PCF8523. " alt="" coords="429,169,606,196"/>
+<area shape="rect" id="node12" href="$d1/d30/_p_c_f8523__ex_8h.html#ae5d7a8cc7ee3d3d55f181a98ea75d451" title="Interrupt 2 GPIO pin getter for PCF8523. " alt="" coords="427,271,608,297"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="883,5,1000,32"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="888,56,995,83"/>
+<area shape="rect" id="node8" href="$d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="657,157,834,184"/>
+<area shape="rect" id="node10" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="656,233,835,260"/>
 </map>

@@ -1,0 +1,10 @@
+<map id="AMG88_Read_Word" name="AMG88_Read_Word">
+<area shape="rect" id="node2" href="$dc/db3/_a_m_g88__ex_8h.html#ae90888cf25de6b4b7cd784e8622bbb61" title="Get thermistor raw value. " alt="" coords="197,5,404,32"/>
+<area shape="rect" id="node4" href="$dc/db3/_a_m_g88__ex_8h.html#a6cf21b59c3b4cf75d9a82b881e84bacd" title="Get pixel raw value. " alt="" coords="217,56,384,83"/>
+<area shape="rect" id="node6" href="$da/de9/_a_m_g88__proc_8h.html#a62fe3d2635671c55964528913f803c61" title="Handler for AMG88 peripheral. " alt="" coords="239,107,362,133"/>
+<area shape="rect" id="node3" href="$dc/db3/_a_m_g88__ex_8h.html#afd2d8f4ab1951ee9874d14d6b1bb8173" title="Get thermistor temperature. " alt="" coords="452,5,665,32"/>
+<area shape="rect" id="node5" href="$dc/db3/_a_m_g88__ex_8h.html#a7b51a0bfe1a0a94cf2b4da3d89a56ccc" title="Get pixel temperature. " alt="" coords="471,56,646,83"/>
+<area shape="rect" id="node7" href="$da/de9/_a_m_g88__proc_8h.html#af7796031f9fb1c4fb52f5262c1612ab9" title="Handler for AMG88 peripheral GPIO interrupt. " alt="" coords="489,107,628,133"/>
+<area shape="rect" id="node9" href="$da/de9/_a_m_g88__proc_8h.html#ac190ef2a388b2d75815dbf33ff082d56" title="Handler for all AMG88 peripherals. " alt="" coords="487,157,631,184"/>
+<area shape="rect" id="node8" href="$da/de9/_a_m_g88__proc_8h.html#a8f4206ea34c183c5f6dc2b23043c7d63" title="Handler for all AMG88 peripherals GPIO interrupt. " alt="" coords="713,107,872,133"/>
+</map>

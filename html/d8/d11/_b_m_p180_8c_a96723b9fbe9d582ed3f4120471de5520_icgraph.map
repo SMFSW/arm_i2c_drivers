@@ -1,0 +1,12 @@
+<map id="BMP180_Read_Word" name="BMP180_Read_Word">
+<area shape="rect" id="node2" href="$d8/dfb/_b_m_p180__ex_8h.html#a54d2903a86c9b42dcc4f8bc8f4b2baf7" title="Get Raw Temperature. " alt="" coords="204,69,428,96"/>
+<area shape="rect" id="node8" href="$dc/d50/_b_m_p180__proc_8h.html#a955e57221814f232da13fac727fc7205" title="Get calibration parameters from BMP180 peripheral. " alt="" coords="227,145,405,172"/>
+<area shape="rect" id="node3" href="$d8/dfb/_b_m_p180__ex_8h.html#a8aef0c3e448697eb722d6e816ccefe70" title="Reset BMP180 chip. " alt="" coords="514,5,630,32"/>
+<area shape="rect" id="node4" href="$dc/d50/_b_m_p180__proc_8h.html#abff0623050520b3826558d5b2a13f796" title="Gets the compensated pressure level. " alt="" coords="489,56,655,83"/>
+<area shape="rect" id="node7" href="$dc/d50/_b_m_p180__proc_8h.html#a2f7e6879bcfe66f5dc44a607d7ade2cf" title="Get the temperature. " alt="" coords="476,107,668,133"/>
+<area shape="rect" id="node5" href="$dc/d50/_b_m_p180__proc_8h.html#ae13c9eabdf3c4a900c6e01787ab2a807" title="Handler for BMP180 peripheral. " alt="" coords="716,56,845,83"/>
+<area shape="rect" id="node6" href="$dc/d50/_b_m_p180__proc_8h.html#a6ea364017a9680fe0d48f50dd9f84ffd" title="Handler for all BMP180 peripherals. " alt="" coords="893,56,1044,83"/>
+<area shape="rect" id="node9" href="$dc/d50/_b_m_p180__proc_8h.html#a2454150c1945e9c2356d9596a9242fe4" title="Initialization Sequence for BMP180 peripheral. " alt="" coords="487,157,657,184"/>
+<area shape="rect" id="node10" href="$d3/d7d/_b_m_p180_8h.html#aaa8cab987dc15d30ccdca4f903d43f4e" title="Initialization for BMP180 peripheral. " alt="" coords="731,157,831,184"/>
+<area shape="rect" id="node11" href="$d3/d7d/_b_m_p180_8h.html#a57f1d83e4dbe3e1f9a3ee9d85c016e94" title="Initialization for BMP180 peripheral. " alt="" coords="895,157,1042,184"/>
+</map>
