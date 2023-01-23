@@ -1,6 +1,6 @@
 /*!\file TCS3472.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief TCS3472 Driver
 ** \details TCS3472: Color light-to-digital converter with IR filter
 **/
@@ -24,7 +24,7 @@ I2C_slave_t TCS3472_hal[I2C_TCS3472_NB];
 /****************************************************************/
 
 
-FctERR NONNULL__ TCS3472_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress)
+FctERR NONNULL__ TCS3472_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress)
 {
 	FctERR err;
 

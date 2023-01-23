@@ -1,6 +1,6 @@
 /*!\file APDS9930.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief APDS9930 Driver
 ** \details APDS9930: Digital Proximity and Ambient Light Sensor
 **/
@@ -280,7 +280,7 @@ typedef union uAPDS9930_REG__STATUS {
 ** \param[in] devAddress - APDS9930 device address
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ APDS9930_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+FctERR NONNULL__ APDS9930_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress);
 
 /*!\brief Initialization for APDS9930 peripheral
 ** \warning In case multiple devices (defined by I2C_APDS9930_NB > 1), you shall use APDS9930_Init instead

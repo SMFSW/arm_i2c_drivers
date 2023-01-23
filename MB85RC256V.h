@@ -1,6 +1,6 @@
 /*!\file MB85RC256V.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief MB85RC256V Driver
 ** \details MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM
 ** \note	Compatibility (tested):
@@ -76,7 +76,7 @@ extern MB85RC256V_t	MB85RC256V[I2C_MB85RC256V_NB];		//!< MB85RC256V User structu
 ** \param[in] devAddress - MB85RC256V device address
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MB85RC256V_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+FctERR NONNULL__ MB85RC256V_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress);
 
 /*!\brief Initialization for MB85RC256V peripheral
 ** \warning In case multiple devices (defined by I2C_MB85RC256V_NB > 1), you shall use MB85RC256V_Init instead

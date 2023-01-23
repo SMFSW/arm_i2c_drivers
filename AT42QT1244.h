@@ -1,6 +1,6 @@
 /*!\file AT42QT1244.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief AT42QT1244 Driver
 ** \details AT42QT1244: 24-key QMatrix FMEA IEC/EN/UL60730 Touch Sensor
 **/
@@ -284,7 +284,7 @@ typedef union uAT42QT_REG__SETUP_248 {
 ** \param[in] devAddress - AT42QT1244 device address
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AT42QT1244_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+FctERR NONNULL__ AT42QT1244_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress);
 
 /*!\brief Initialization for AT42QT1244 peripheral
 ** \warning In case multiple devices (defined by I2C_AT42QT1244_NB > 1), you shall use AT42QT1244_Init instead

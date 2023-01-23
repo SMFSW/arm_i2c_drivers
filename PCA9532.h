@@ -1,6 +1,6 @@
 /*!\file PCA9532.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief PCA9532 Driver
 ** \details PCA9532: 16-bit I2C-bus LED dimmer
 **/
@@ -213,7 +213,7 @@ typedef union PACK__ uPCA9532_REG__LS {
 ** \param[in] devAddress - PCA9532 device address
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ PCA9532_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+FctERR NONNULL__ PCA9532_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress);
 
 /*!\brief Initialization for PCA9532 peripheral
 ** \warning In case multiple devices (defined by I2C_PCA9532_NB > 1), you shall use PCA9532_Init instead

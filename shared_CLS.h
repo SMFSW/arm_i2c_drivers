@@ -1,6 +1,6 @@
 /*!\file shared_CLS.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief Color Light Sensing shared
 **/
 /****************************************************************/

@@ -1,6 +1,6 @@
 /*!\file BMP180.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief BMP180 Driver
 ** \details BMP180: Digital pressure sensor
 **/
@@ -155,7 +155,7 @@ typedef union uBMP180_REG__MEAS_CTRL {
 ** \param[in] devAddress - BMP180 device address
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ BMP180_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+FctERR NONNULL__ BMP180_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress);
 
 /*!\brief Initialization for BMP180 peripheral
 ** \warning In case multiple devices (defined by I2C_BMP180_NB > 1), you shall use BMP180_Init instead

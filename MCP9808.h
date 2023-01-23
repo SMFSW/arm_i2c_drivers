@@ -1,6 +1,6 @@
 /*!\file MCP9808.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief MCP9808 Driver
 ** \details MCP9808: +/-0.5C Maximum Accuracy Digital Temperature Sensor
 **/
@@ -148,7 +148,7 @@ typedef union uMCP9808_REG__TEMP_AMB {
 ** \param[in] devAddress - MCP9808 device address
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP9808_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+FctERR NONNULL__ MCP9808_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress);
 
 /*!\brief Initialization for MCP9808 peripheral
 ** \warning In case multiple devices (defined by I2C_MCP9808_NB > 1), you shall use MCP9808_Init instead

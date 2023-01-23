@@ -1,6 +1,6 @@
 /*!\file APDS9960.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief APDS9960 Driver
 ** \details APDS9960: Digital Proximity, Ambient Light, RGB and Gesture Sensor
 **/
@@ -415,7 +415,7 @@ typedef union uAPDS9960_REG__GSTATUS {
 ** \param[in] devAddress - APDS9960 device address
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ APDS9960_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+FctERR NONNULL__ APDS9960_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress);
 
 /*!\brief Initialization for APDS9960 peripheral
 ** \warning In case multiple devices (defined by I2C_APDS9960_NB > 1), you shall use APDS9960_Init instead

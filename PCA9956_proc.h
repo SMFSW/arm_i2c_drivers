@@ -1,6 +1,6 @@
 /*!\file PCA9956_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief PCA9956 Driver procedures
 ** \details PCA9956: 24-channel Fm+ I2C-bus 57 mA/20 V constant current LED driver
 **/

@@ -1,6 +1,6 @@
 /*!\file MTCH6102.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief MTCH6102 Driver
 ** \details MTCH6102: Low-Power Projected Capacitive Touch Controller
 **/
@@ -395,7 +395,7 @@ typedef union {
 ** \param[in] devAddress - MTCH6102 device address
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MTCH6102_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+FctERR NONNULL__ MTCH6102_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress);
 
 /*!\brief Initialization for MTCH6102 peripheral
 ** \warning When MTCH6102 is powering up, you should wait around 100ms before you address the first transaction to it

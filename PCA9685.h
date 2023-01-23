@@ -1,6 +1,6 @@
 /*!\file PCA9685.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief PCA9685 Driver
 ** \details PCA9685: 16-channel, 12-bit PWM Fm+ I2C-bus LED controller
 **/
@@ -192,7 +192,7 @@ typedef union PACK__ uPCA9685_REG__DUTY {
 ** \param[in] devAddress - PCA9685 device address
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ PCA9685_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+FctERR NONNULL__ PCA9685_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress);
 
 /*!\brief Initialization for PCA9685 peripheral
 ** \warning In case multiple devices (defined by I2C_PCA9685_NB > 1), you shall use PCA9685_Init instead

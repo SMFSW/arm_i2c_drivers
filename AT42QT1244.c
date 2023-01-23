@@ -1,6 +1,6 @@
 /*!\file AT42QT1244.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief AT42QT1244 Driver
 ** \details AT42QT1244: 24-key QMatrix FMEA IEC/EN/UL60730 Touch Sensor
 **/
@@ -27,7 +27,7 @@ I2C_slave_t AT42QT1244_hal[I2C_AT42QT1244_NB];
 /****************************************************************/
 
 
-FctERR NONNULL__ AT42QT1244_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress)
+FctERR NONNULL__ AT42QT1244_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress)
 {
 	FctERR err;
 

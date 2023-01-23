@@ -1,6 +1,6 @@
 /*!\file MCP4725.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief MCP4725 Driver
 ** \details MCP4725: 12-Bit Digital-to-Analog Converter with EEPROM Memory
 **/
@@ -20,7 +20,7 @@ static const I2C_slave_t MCP4725_defaults = { { pNull, 0, I2C_slave_timeout, I2C
 /****************************************************************/
 
 
-FctERR NONNULL__ MCP4725_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress)
+FctERR NONNULL__ MCP4725_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress)
 {
 	FctERR err;
 
@@ -43,7 +43,7 @@ FctERR MCP4725_Init_Single(void) {
 /****************************************************************/
 
 
-FctERR NONNULL__ MCP4725_General_Call(const I2C_HandleTypeDef * hi2c, const uint8_t cmd)
+FctERR NONNULL__ MCP4725_General_Call(I2C_HandleTypeDef * const hi2c, const uint8_t cmd)
 {
 	if ((cmd != MCP4725__RESET) && (cmd != MCP4725__WAKEUP))	{ return ERROR_CMD; }	// Unknown command
 

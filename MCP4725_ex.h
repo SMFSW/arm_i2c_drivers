@@ -1,6 +1,6 @@
 /*!\file MCP4725_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief MCP4725 Driver extensions
 ** \details MCP4725: 12-Bit Digital-to-Analog Converter with EEPROM Memory
 **/
@@ -40,14 +40,14 @@ FctERR NONNULL__ MCP4725_Write_Command(MCP4725_t * const pCpnt, const uint16_t v
 ** \param[in] hi2c - pointer to general call I2C instance
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ MCP4725_Reset(const I2C_HandleTypeDef * hi2c) {
+__INLINE FctERR NONNULL_INLINE__ MCP4725_Reset(I2C_HandleTypeDef * const hi2c) {
 	return MCP4725_General_Call(hi2c, MCP4725__RESET); }
 
 /*!\brief General call wake up function for MCP4725
 ** \param[in] hi2c - pointer to general call I2C instance
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ MCP4725_WakeUp(const I2C_HandleTypeDef * hi2c) {
+__INLINE FctERR NONNULL_INLINE__ MCP4725_WakeUp(I2C_HandleTypeDef * const hi2c) {
 	return MCP4725_General_Call(hi2c, MCP4725__WAKEUP); }
 
 /*!\brief Read DAC value

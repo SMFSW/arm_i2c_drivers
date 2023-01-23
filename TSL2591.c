@@ -1,6 +1,6 @@
 /*!\file TSL2591.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief TSL2591 Driver
 ** \details TSL2591: Very-high sensitivity light-to-digital converter
 **/
@@ -20,7 +20,7 @@ I2C_slave_t TSL2591_hal[I2C_TSL2591_NB];
 /****************************************************************/
 
 
-FctERR NONNULL__ TSL2591_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress)
+FctERR NONNULL__ TSL2591_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress)
 {
 	FctERR err;
 

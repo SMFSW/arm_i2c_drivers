@@ -1,6 +1,6 @@
 /*!\file I2C_peripheral.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief I2C peripheral common
 **/
 /****************************************************************/
@@ -19,6 +19,12 @@
 
 
 #define IS_I2C_PERIPHERAL(name, idx)	((idx) < I2C_##name##_NB)	//!< Macro for use with assert_param to check I2C \b idx is existing for \b name peripheral
+
+#define IS_I2C_PERIPHERAL_ADDR(name, addr)	((I2C_PERIPHERAL_IDX(addr, name) >= 0) &&			\
+											(I2C_PERIPHERAL_IDX(addr, name) < I2C_##name##_NB))	//!< Macro for use with assert_param to check I2C peripheral \b addr is valid for \b name peripheral
+
+
+#define I2C_PERIPHERAL_IDX(name, addr)		((int32_t) (((name##_t *) addr) - name))			//!< Macro to get I2C peripheral index given \b addr for \b name peripheral
 
 
 /**********************************/

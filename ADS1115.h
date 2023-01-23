@@ -1,6 +1,6 @@
 /*!\file ADS1115.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief ADS1115 Driver
 ** \details ADS1115: Ultra-Small, Low-Power, 16-Bit Analog-to-Digital Converter with Internal Reference
 ** \note	Compatibility with:
@@ -191,7 +191,7 @@ typedef union uADS1115_REG__CFG {
 ** \param[in] devAddress - ADS1115 device address
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ ADS1115_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+FctERR NONNULL__ ADS1115_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress);
 
 /*!\brief Initialization for ADS1115 peripheral
 ** \warning In case multiple devices (defined by I2C_ADS1115_NB > 1), you shall use ADS1115_Init instead

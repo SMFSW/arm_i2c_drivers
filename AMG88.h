@@ -1,6 +1,6 @@
 /*!\file AMG88.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief AMG88 Driver
 ** \details AMG88: Infrared Array Sensor (Grid-EYE)
 **/
@@ -394,7 +394,7 @@ typedef union uAMG88_REG__INT {
 ** \param[in] devAddress - AMG88 device address
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ AMG88_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+FctERR NONNULL__ AMG88_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress);
 
 /*!\brief Initialization for AMG88 peripheral
 ** \warning In case multiple devices (defined by I2C_AMG88_NB > 1), you shall use AMG88_Init instead

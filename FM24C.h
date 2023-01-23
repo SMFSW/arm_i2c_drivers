@@ -1,6 +1,6 @@
 /*!\file FM24C.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief FM24C Driver
 ** \details FM24C16B: 16-Kbit (2K * 8) Serial I2C F-RAM
 **			FM24C04B: 4-Kbit (512 * 8) Serial I2C F-RAM
@@ -84,7 +84,7 @@ extern FM24C_t		FM24C[I2C_FM24C_NB];		//!< FM24C User structure
 ** \param[in] devAddress - FM24C device address
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ FM24C_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+FctERR NONNULL__ FM24C_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress);
 
 /*!\brief Initialization for FM24C peripheral
 ** \warning In case multiple devices (defined by I2C_FM24C_NB > 1), you shall use FM24C_Init instead

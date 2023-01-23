@@ -1,6 +1,6 @@
 /*!\file I2C_peripheral.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief I2C peripheral common
 **/
 /****************************************************************/

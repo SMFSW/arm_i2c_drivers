@@ -1,6 +1,6 @@
 /*!\file S11059.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief S11059 Driver
 ** \details S11059: I2C interface-compatible color sensor
 **/
@@ -136,7 +136,7 @@ typedef union uS11059_REG__CONTROL {
 ** \param[in] devAddress - S11059 device address
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ S11059_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+FctERR NONNULL__ S11059_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress);
 
 /*!\brief Initialization for S11059 peripheral
 ** \warning In case multiple devices (defined by I2C_S11059_NB > 1), you shall use S11059_Init instead

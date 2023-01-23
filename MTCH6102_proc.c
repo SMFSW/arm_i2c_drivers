@@ -1,6 +1,6 @@
 /*!\file MTCH6102_proc.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief MTCH6102 Driver procedures
 ** \details MTCH6102: Low-Power Projected Capacitive Touch Controller
 **/

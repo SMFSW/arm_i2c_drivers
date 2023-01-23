@@ -1,6 +1,6 @@
 /*!\file BMP180.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief BMP180 Driver
 ** \details BMP180: Digital pressure sensor
 **/
@@ -20,7 +20,7 @@ I2C_slave_t BMP180_hal[I2C_BMP180_NB];
 /****************************************************************/
 
 
-FctERR NONNULL__ BMP180_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress)
+FctERR NONNULL__ BMP180_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress)
 {
 	FctERR err;
 

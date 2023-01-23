@@ -1,6 +1,6 @@
 /*!\file MCP4725.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief MCP4725 Driver
 ** \details MCP4725: 12-Bit Digital-to-Analog Converter with EEPROM Memory
 **/
@@ -102,7 +102,7 @@ typedef union uMCP4725_REG__CMD {
 ** \param[in] devAddress - MCP4725 device address
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP4725_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+FctERR NONNULL__ MCP4725_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress);
 
 /*!\brief Initialization for MCP4725 peripheral
 ** \warning In case multiple devices (defined by I2C_MCP4725_NB > 1), you shall use MCP4725_Init instead
@@ -120,7 +120,7 @@ FctERR MCP4725_Init_Single(void);
 ** \param[in] cmd - Command to send
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP4725_General_Call(const I2C_HandleTypeDef * hi2c, const uint8_t cmd);
+FctERR NONNULL__ MCP4725_General_Call(I2C_HandleTypeDef * const hi2c, const uint8_t cmd);
 
 
 /*!\brief I2C Write function for MCP4725

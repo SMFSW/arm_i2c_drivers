@@ -1,6 +1,6 @@
 /*!\file PCA9624.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief PCA9624 Driver
 ** \details PCA9624: 8-bit Fm+ I2C-bus 100mA 40V LED driver
 **/
@@ -133,7 +133,7 @@ typedef union PACK__ uPCA9624_REG__LEDOUT {
 ** \param[in] devAddress - PCA9624 device address
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ PCA9624_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+FctERR NONNULL__ PCA9624_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress);
 
 /*!\brief Initialization for PCA9624 peripheral
 ** \warning In case multiple devices (defined by I2C_PCA9624_NB > 1), you shall use PCA9624_Init instead

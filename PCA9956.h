@@ -1,6 +1,6 @@
 /*!\file PCA9956.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief PCA9956 Driver
 ** \details PCA9956: 24-channel Fm+ I2C-bus 57 mA/20 V constant current LED driver
 **/
@@ -258,7 +258,7 @@ typedef union PACK__ uPCA9956_REG__EFLAG {
 ** \param[in] devAddress - PCA9956 device address
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ PCA9956_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+FctERR NONNULL__ PCA9956_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress);
 
 /*!\brief Initialization for PCA9956 peripheral
 ** \warning In case multiple devices (defined by I2C_PCA9956_NB > 1), you shall use PCA9956_Init instead

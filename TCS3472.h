@@ -1,6 +1,6 @@
 /*!\file TCS3472.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief TCS3472 Driver
 ** \details TCS3472: Color light-to-digital converter with IR filter
 **/
@@ -216,7 +216,7 @@ typedef union uTCS3472_REG__STATUS {
 ** \param[in] devAddress - TCS3472 device address
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3472_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+FctERR NONNULL__ TCS3472_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress);
 
 /*!\brief Initialization for TCS3472 peripheral
 ** \warning In case multiple devices (defined by I2C_TCS3472_NB > 1), you shall use TCS3472_Init instead

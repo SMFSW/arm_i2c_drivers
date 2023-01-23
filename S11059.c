@@ -1,6 +1,6 @@
 /*!\file S11059.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief S11059 Driver
 ** \details S11059: I2C interface-compatible color sensor
 **/
@@ -20,7 +20,7 @@ I2C_slave_t S11059_hal[I2C_S11059_NB];
 /****************************************************************/
 
 
-FctERR NONNULL__ S11059_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress)
+FctERR NONNULL__ S11059_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress)
 {
 	FctERR	err;
 

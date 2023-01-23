@@ -1,6 +1,6 @@
 /*!\file TCS3472_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief TCS3472 Driver extensions
 ** \details TCS3472: Color light-to-digital converter with IR filter
 **/

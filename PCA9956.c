@@ -1,6 +1,6 @@
 /*!\file PCA9956.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2021, SMFSW
+** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief PCA9956 Driver
 ** \details PCA9956: 24-channel Fm+ I2C-bus 57 mA/20 V constant current LED driver
 **/
@@ -24,7 +24,7 @@ I2C_slave_t PCA9956_hal[I2C_PCA9956_NB];
 /****************************************************************/
 
 
-FctERR NONNULL__ PCA9956_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress)
+FctERR NONNULL__ PCA9956_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress)
 {
 	FctERR err;
 
