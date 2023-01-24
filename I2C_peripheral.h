@@ -27,14 +27,18 @@
 #define I2C_PERIPHERAL_IDX(name, addr)		((int32_t) (((name##_t *) addr) - name))			//!< Macro to get I2C peripheral index given \b addr for \b name peripheral
 
 
-/**********************************/
-/*** Peripheral defaults setter ***/
-/**********************************/
+/***********************************/
+/*** Peripheral defaults setters ***/
+/***********************************/
 
-#define I2C_PERIPHERAL_SET_DEFAULTS(name, idx, address)					\
+#define I2C_PERIPHERAL_SET_DEFAULTS(name, idx)							\
 	memcpy(&name##_hal[idx], &name##_defaults, sizeof(I2C_slave_t));	\
-	name##_hal[idx].cfg.addr = I2C_ADDR(address);						\
-	name[idx].cfg.slave_inst = &name##_hal[idx];	//!< Macro to set working defaults for peripheral \b name with I2C address \b address on index \b idx
+	name[idx].cfg.slave_inst = &name##_hal[idx];	//!< Macro to set working defaults for peripheral \b name on index \b idx
+
+
+#define I2C_PERIPHERAL_SET_DEFAULTS_SINGLETON(name)				\
+	memcpy(&name##_hal, &name##_defaults, sizeof(I2C_slave_t));	\
+	name.cfg.slave_inst = &name##_hal;	//!< Macro to set working defaults for singleton peripheral \b name
 
 
 /******************************/

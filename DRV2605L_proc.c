@@ -12,7 +12,7 @@
 /****************************************************************/
 
 
-DRV2605L_t DRV2605L = { { &DRV2605_hal, { 0 }, { 0 }, DRV__MODE_INTERNAL_TRIGGER, DRV__ACT_ERM, DRV__OPEN_LOOP, DRV__IN_PWM, DRV__RTP_SIGNED, 0 } };
+DRV2605L_t DRV2605L = { 0 };
 
 
 /****************************************************************/
@@ -24,11 +24,17 @@ __WEAK FctERR DRV2605L_Init_Sequence(void)
 	uint8_t				EFFECT[3] = { DRV__EFF_TRANS_RAMP_DWN_LONG_SMOOTH_1, 0, 0 };
 	FctERR				err = ERROR_OK;
 
+	DRV2605L.cfg.Mode = DRV__MODE_INTERNAL_TRIGGER;
+	DRV2605L.cfg.ERM_LRA = DRV__ACT_ERM;
+	DRV2605L.cfg.Open_Loop = DRV__OPEN_LOOP;
+	DRV2605L.cfg.Input_Mode = DRV__IN_PWM;
+	DRV2605L.cfg.RTP_Format = DRV__RTP_SIGNED;
+
 	err = DRV2605L_Set_Standby(false);
-	if (err)										{ return err; }
+	if (err)										{ goto init_seq_ret; }
 
 	err = DRV2605L_Get_ChipID(&DRV2605L.cfg.Id);
-	if (err)										{ return err; }
+	if (err)										{ goto init_seq_ret; }
 	if (	(DRV2605L.cfg.Id != DRV2604_CHIP_ID)
 		&&	(DRV2605L.cfg.Id != DRV2604L_CHIP_ID)
 		&&	(DRV2605L.cfg.Id != DRV2605_CHIP_ID)
@@ -36,35 +42,36 @@ __WEAK FctERR DRV2605L_Init_Sequence(void)
 
 	// TODO: write library selection reg if using lib
 	err = DRV2605L_Write(EFFECT, DRV__WAVEFORM_SEQUENCER_1, 2);
-	if (err)										{ return err; }
+	if (err)										{ goto init_seq_ret; }
 
 	// Write no Overdrive time offset & Sustain Pos/Neg
 	err = DRV2605L_Set_OverdriveTimeOffset(0);
-	if (err)										{ return err; }
+	if (err)										{ goto init_seq_ret; }
 	err = DRV2605L_Set_SustainTimeOffset(0, false);
-	if (err)										{ return err; }
+	if (err)										{ goto init_seq_ret; }
 	err = DRV2605L_Set_SustainTimeOffset(0, true);
-	if (err)										{ return err; }
+	if (err)										{ goto init_seq_ret; }
 	err = DRV2605L_Set_BrakeTimeOffset(0);
-	if (err)										{ return err; }
+	if (err)										{ goto init_seq_ret; }
 
 	err = DRV2605L_Set_ATVInputLevel_Raw(0x64, true);
-	if (err)										{ return err; }
+	if (err)										{ goto init_seq_ret; }
 
 	CTL1.Byte = 0;
 	CTL1.Bits.STARTUP_BOOST = 1;
 	CTL1.Bits.DRIVE_TIME = 20;
 
 	err = DRV2605L_Write(&CTL1.Byte, DRV__CONTROL_1, 1);
-	if (err)	{ return err; }
+	if (err)										{ goto init_seq_ret; }
 
 	// TODO: write CTL1,2,3 for operating mode selection
 	err = DRV2605L_Set_ActType(DRV2605L.cfg.ERM_LRA);
-	if (err)										{ return err; }
+	if (err)										{ goto init_seq_ret; }
 	err = DRV2605L_Set_LoopMode(DRV2605L.cfg.Open_Loop);
-	if (err)										{ return err; }
+	if (err)										{ goto init_seq_ret; }
 
 	//MODE.Bits.STANDBY = 1;
+	init_seq_ret:
 	return DRV2605L_Set_OperatingMode(DRV2605L.cfg.Mode);
 }
 

@@ -21,7 +21,7 @@
 
 static const I2C_slave_t AT42QT1244_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
-I2C_slave_t AT42QT1244_hal[I2C_AT42QT1244_NB];
+static I2C_slave_t AT42QT1244_hal[I2C_AT42QT1244_NB];	//!< AT42QT1244 Slave structure
 
 
 /****************************************************************/
@@ -33,7 +33,7 @@ FctERR NONNULL__ AT42QT1244_Init(const uint8_t idx, I2C_HandleTypeDef * const hi
 
 	assert_param(IS_I2C_PERIPHERAL(AT42QT1244, idx));
 
-	I2C_PERIPHERAL_SET_DEFAULTS(AT42QT1244, idx, devAddress);
+	I2C_PERIPHERAL_SET_DEFAULTS(AT42QT1244, idx);
 
 	err = I2C_slave_init(&AT42QT1244_hal[idx], hi2c, devAddress, AT42QT1244_hal[idx].cfg.timeout);
 	if (!err)	{ err = AT42QT1244_Init_Sequence(&AT42QT1244[idx]); }

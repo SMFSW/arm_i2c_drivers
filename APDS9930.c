@@ -18,7 +18,7 @@
 
 static const I2C_slave_t APDS9930_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
-I2C_slave_t APDS9930_hal[I2C_APDS9930_NB];
+static I2C_slave_t APDS9930_hal[I2C_APDS9930_NB];	//!< APDS9930 Slave structure
 
 
 /****************************************************************/
@@ -30,7 +30,7 @@ FctERR NONNULL__ APDS9930_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c
 
 	assert_param(IS_I2C_PERIPHERAL(APDS9930, idx));
 
-	I2C_PERIPHERAL_SET_DEFAULTS(APDS9930, idx, devAddress);
+	I2C_PERIPHERAL_SET_DEFAULTS(APDS9930, idx);
 
 	err = I2C_slave_init(&APDS9930_hal[idx], hi2c, devAddress, APDS9930_hal[idx].cfg.timeout);
 	if (!err)	{ err = APDS9930_Init_Sequence(&APDS9930[idx]); }

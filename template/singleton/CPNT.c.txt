@@ -16,7 +16,9 @@
 /****************************************************************/
 
 
-I2C_slave_t $CPNT$_hal = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
+static const I2C_slave_t $CPNT$_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
+
+static I2C_slave_t $CPNT$_hal;	//!< $CPNT$ Slave structure
 
 
 /****************************************************************/
@@ -25,6 +27,8 @@ I2C_slave_t $CPNT$_hal = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, 
 __WEAK FctERR $CPNT$_Init(void)
 {
 	FctERR err;
+	
+	I2C_PERIPHERAL_SET_DEFAULTS_SINGLETON($CPNT$);
 
 	err = I2C_slave_init(&$CPNT$_hal, I2C_$CPNT$, $CPNT$_BASE_ADDR, $CPNT$_hal.cfg.timeout);
 	if (!err)	{ err = $CPNT$_Init_Sequence(); }

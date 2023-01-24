@@ -14,7 +14,7 @@
 
 static const I2C_slave_t MTCH6102_defaults  = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
-I2C_slave_t MTCH6102_hal[I2C_MTCH6102_NB];
+static I2C_slave_t MTCH6102_hal[I2C_MTCH6102_NB];	//!< MTCH6102 Slave structure
 
 static uint32_t MTCH6102_last_access[I2C_MTCH6102_NB];
 
@@ -29,7 +29,7 @@ FctERR NONNULL__ MTCH6102_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c
 
 	assert_param(IS_I2C_PERIPHERAL(MTCH6102, idx));
 
-	I2C_PERIPHERAL_SET_DEFAULTS(MTCH6102, idx, devAddress);
+	I2C_PERIPHERAL_SET_DEFAULTS(MTCH6102, idx);
 
 	MTCH6102_last_access[idx] = 0;
 

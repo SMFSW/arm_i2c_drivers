@@ -14,7 +14,7 @@
 
 static const I2C_slave_t S11059_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
-I2C_slave_t S11059_hal[I2C_S11059_NB];
+static I2C_slave_t S11059_hal[I2C_S11059_NB];	//!< S11059 Slave structure
 
 
 /****************************************************************/
@@ -26,7 +26,7 @@ FctERR NONNULL__ S11059_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, 
 
 	assert_param(IS_I2C_PERIPHERAL(S11059, idx));
 
-	I2C_PERIPHERAL_SET_DEFAULTS(S11059, idx, devAddress);
+	I2C_PERIPHERAL_SET_DEFAULTS(S11059, idx);
 
 	err = I2C_slave_init(&S11059_hal[idx], hi2c, devAddress, S11059_hal[idx].cfg.timeout);
 	if (!err)	{ err = S11059_Init_Sequence(&S11059[idx]); }

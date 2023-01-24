@@ -14,7 +14,7 @@
 
 static const I2C_slave_t BMP180_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_HS }, 0, HAL_OK, true, false };
 
-I2C_slave_t BMP180_hal[I2C_BMP180_NB];
+static I2C_slave_t BMP180_hal[I2C_BMP180_NB];	//!< BMP180 Slave structure
 
 
 /****************************************************************/
@@ -26,7 +26,7 @@ FctERR NONNULL__ BMP180_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, 
 
 	assert_param(IS_I2C_PERIPHERAL(BMP180, idx));
 
-	I2C_PERIPHERAL_SET_DEFAULTS(BMP180, idx, devAddress);
+	I2C_PERIPHERAL_SET_DEFAULTS(BMP180, idx);
 
 	err = I2C_slave_init(&BMP180_hal[idx], hi2c, devAddress, BMP180_hal[idx].cfg.timeout);
 	if (!err)	{ err = BMP180_Init_Sequence(&BMP180[idx]); }

@@ -18,7 +18,7 @@
 
 static const I2C_slave_t $CPNT$_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
-I2C_slave_t $CPNT$_hal[I2C_$CPNT$_NB];
+static I2C_slave_t $CPNT$_hal[I2C_$CPNT$_NB];	//!< $CPNT$ Slave structure
 
 
 /****************************************************************/
@@ -30,7 +30,7 @@ FctERR NONNULL__ $CPNT$_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, 
 
 	assert_param(IS_I2C_PERIPHERAL($CPNT$, idx));
 
-	I2C_PERIPHERAL_SET_DEFAULTS($CPNT$, idx, devAddress);
+	I2C_PERIPHERAL_SET_DEFAULTS($CPNT$, idx);
 
 	err = I2C_slave_init(&$CPNT$_hal[idx], hi2c, devAddress, $CPNT$_hal[idx].cfg.timeout);
 	if (!err)	{ err = $CPNT$_Init_Sequence(&$CPNT$[idx]); }

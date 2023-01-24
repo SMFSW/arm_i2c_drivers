@@ -12,7 +12,9 @@
 /****************************************************************/
 
 
-I2C_slave_t PCF8523_hal = { { pNull, I2C_ADDR(PCF8523_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FMP }, 0, HAL_OK, true, false };
+static const I2C_slave_t PCF8523_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FMP }, 0, HAL_OK, true, false };
+
+static I2C_slave_t PCF8523_hal;		//!< PCF8523 Slave structure
 
 
 /****************************************************************/
@@ -21,6 +23,8 @@ I2C_slave_t PCF8523_hal = { { pNull, I2C_ADDR(PCF8523_BASE_ADDR), I2C_slave_time
 __WEAK FctERR PCF8523_Init(void)
 {
 	FctERR err;
+
+	I2C_PERIPHERAL_SET_DEFAULTS_SINGLETON(PCF8523);
 
 	err = I2C_slave_init(&PCF8523_hal, I2C_PCF8523, PCF8523_BASE_ADDR, PCF8523_hal.cfg.timeout);
 	if (!err)	{ err = PCF8523_Init_Sequence(); }

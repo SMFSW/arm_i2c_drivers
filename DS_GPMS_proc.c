@@ -12,7 +12,7 @@
 /****************************************************************/
 
 
-GPMS_t GPMS = { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0.0f, '\0' }, { 0, 0.0f, '\0' }, 0, 0.0f, 0.0f, 0.0f, { &GPMS_hal, 'A' } };
+GPMS_t GPMS = { 0 };
 
 
 /****************************************************************/
@@ -23,7 +23,7 @@ __WEAK FctERR GPMS_Init_Sequence(void)
 	// TODO: remove init sequence if not used
 	FctERR err = ERROR_OK;
 
-	if (err)	{ return err; }
+	GPMS.cfg.Mode = GPMS__MODE_AUTONOMOUS;
 
 	return err;
 }

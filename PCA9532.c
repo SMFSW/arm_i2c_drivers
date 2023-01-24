@@ -14,7 +14,7 @@
 
 static const I2C_slave_t PCA9532_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FMP }, 0, HAL_OK, true, false };
 
-I2C_slave_t PCA9532_hal[I2C_PCA9532_NB];
+static I2C_slave_t PCA9532_hal[I2C_PCA9532_NB];	//!< PCA9532 Slave structure
 
 
 /****************************************************************/
@@ -26,7 +26,7 @@ FctERR NONNULL__ PCA9532_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 
 	assert_param(IS_I2C_PERIPHERAL(PCA9532, idx));
 
-	I2C_PERIPHERAL_SET_DEFAULTS(PCA9532, idx, devAddress);
+	I2C_PERIPHERAL_SET_DEFAULTS(PCA9532, idx);
 
 	err = I2C_slave_init(&PCA9532_hal[idx], hi2c, devAddress, PCA9532_hal[idx].cfg.timeout);
 	PCA9532_Set_Auto_Increment(&PCA9532[idx], PCA95xx__AUTO_INC_ALL);

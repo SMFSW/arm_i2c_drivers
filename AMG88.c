@@ -14,7 +14,7 @@
 
 static const I2C_slave_t AMG88_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
-I2C_slave_t AMG88_hal[I2C_AMG88_NB];
+static I2C_slave_t AMG88_hal[I2C_AMG88_NB];		//!< AMG88 Slave structure
 
 
 /****************************************************************/
@@ -26,7 +26,7 @@ FctERR NONNULL__ AMG88_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, c
 
 	assert_param(IS_I2C_PERIPHERAL(AMG88, idx));
 
-	I2C_PERIPHERAL_SET_DEFAULTS(AMG88, idx, devAddress);
+	I2C_PERIPHERAL_SET_DEFAULTS(AMG88, idx);
 
 	err = I2C_slave_init(&AMG88_hal[idx], hi2c, devAddress, AMG88_hal[idx].cfg.timeout);
 	if (!err)	{ err = AMG88_Init_Sequence(&AMG88[idx]); }

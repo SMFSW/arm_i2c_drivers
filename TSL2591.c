@@ -14,7 +14,7 @@
 
 static const I2C_slave_t TSL2591_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
-I2C_slave_t TSL2591_hal[I2C_TSL2591_NB];
+static I2C_slave_t TSL2591_hal[I2C_TSL2591_NB];		//!< TSL2591 Slave structure
 
 
 /****************************************************************/
@@ -26,7 +26,7 @@ FctERR NONNULL__ TSL2591_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 
 	assert_param(IS_I2C_PERIPHERAL(TSL2591, idx));
 
-	I2C_PERIPHERAL_SET_DEFAULTS(TSL2591, idx, devAddress);
+	I2C_PERIPHERAL_SET_DEFAULTS(TSL2591, idx);
 
 	err = I2C_slave_init(&TSL2591_hal[idx], hi2c, devAddress, TSL2591_hal[idx].cfg.timeout);
 	if (!err)	{ err = TSL2591_Init_Sequence(&TSL2591[idx]); }

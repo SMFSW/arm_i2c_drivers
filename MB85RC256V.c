@@ -23,7 +23,8 @@
 
 static const I2C_slave_t MB85RC256V_defaults = { { pNull, 0, I2C_eep_slave_timeout, I2C_MEMADD_SIZE_16BIT, I2C_FMP }, 0, HAL_OK, true, false };
 
-I2C_slave_t MB85RC256V_hal[I2C_MB85RC256V_NB];
+static I2C_slave_t MB85RC256V_hal[I2C_MB85RC256V_NB];	//!< MB85RC256V Slave structure
+
 MB85RC256V_t MB85RC256V[I2C_MB85RC256V_NB] = { 0 };
 
 
@@ -36,7 +37,7 @@ FctERR NONNULL__ MB85RC256V_Init(const uint8_t idx, I2C_HandleTypeDef * const hi
 
 	assert_param(IS_I2C_PERIPHERAL(MB85RC256V, idx));
 
-	I2C_PERIPHERAL_SET_DEFAULTS(MB85RC256V, idx, devAddress);
+	I2C_PERIPHERAL_SET_DEFAULTS(MB85RC256V, idx);
 
 	err = I2C_slave_init(&MB85RC256V_hal[idx], hi2c, devAddress, MB85RC256V_hal[idx].cfg.timeout);
 	if (!err)	{ err = MB85RC256V_Init_Sequence(&MB85RC256V[idx]); }

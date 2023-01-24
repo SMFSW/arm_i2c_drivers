@@ -28,7 +28,8 @@
 
 static const I2C_slave_t FM24C_defaults = { { pNull, 0, I2C_eep_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FMP }, 0, HAL_OK, true, false };
 
-I2C_slave_t FM24C_hal[I2C_FM24C_NB];
+static I2C_slave_t FM24C_hal[I2C_FM24C_NB];		//!< FM24C Slave structure
+
 FM24C_t FM24C[I2C_FM24C_NB] = { 0 };
 
 
@@ -41,7 +42,7 @@ FctERR NONNULL__ FM24C_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, c
 
 	assert_param(IS_I2C_PERIPHERAL(FM24C, idx));
 
-	I2C_PERIPHERAL_SET_DEFAULTS(FM24C, idx, devAddress);
+	I2C_PERIPHERAL_SET_DEFAULTS(FM24C, idx);
 
 	err = I2C_slave_init(&FM24C_hal[idx], hi2c, devAddress, FM24C_hal[idx].cfg.timeout);
 

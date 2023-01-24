@@ -18,7 +18,7 @@
 
 static const I2C_slave_t PCA9956_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FMP }, 0, HAL_OK, true, false };
 
-I2C_slave_t PCA9956_hal[I2C_PCA9956_NB];
+static I2C_slave_t PCA9956_hal[I2C_PCA9956_NB];		//!< PCA9956 Slave structure
 
 
 /****************************************************************/
@@ -30,7 +30,7 @@ FctERR NONNULL__ PCA9956_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 
 	assert_param(IS_I2C_PERIPHERAL(PCA9956, idx));
 
-	I2C_PERIPHERAL_SET_DEFAULTS(PCA9956, idx, devAddress);
+	I2C_PERIPHERAL_SET_DEFAULTS(PCA9956, idx);
 
 	err = I2C_slave_init(&PCA9956_hal[idx], hi2c, devAddress, PCA9956_hal[idx].cfg.timeout);
 	if (!err)	{ err = PCA9956_Init_Sequence(&PCA9956[idx]); }

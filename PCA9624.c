@@ -18,7 +18,7 @@
 
 static const I2C_slave_t PCA9624_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FMP }, 0, HAL_OK, true, false };
 
-I2C_slave_t PCA9624_hal[I2C_PCA9624_NB];
+static I2C_slave_t PCA9624_hal[I2C_PCA9624_NB];		//!< PCA9624 Slave structure
 
 
 /****************************************************************/
@@ -30,7 +30,7 @@ FctERR NONNULL__ PCA9624_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 
 	assert_param(IS_I2C_PERIPHERAL(PCA9624, idx));
 
-	I2C_PERIPHERAL_SET_DEFAULTS(PCA9624, idx, devAddress);
+	I2C_PERIPHERAL_SET_DEFAULTS(PCA9624, idx);
 
 	err = I2C_slave_init(&PCA9624_hal[idx], hi2c, devAddress, PCA9624_hal[idx].cfg.timeout);
 	PCA9624_Set_Auto_Increment(&PCA9624[idx], PCA9xxx__AUTO_INC_ALL);

@@ -18,7 +18,7 @@
 
 static const I2C_slave_t TCS3400_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
 
-I2C_slave_t TCS3400_hal[I2C_TCS3400_NB];
+static I2C_slave_t TCS3400_hal[I2C_TCS3400_NB];		//!< TCS3400 Slave structure
 
 
 /****************************************************************/
@@ -30,7 +30,7 @@ FctERR NONNULL__ TCS3400_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 
 	assert_param(IS_I2C_PERIPHERAL(TCS3400, idx));
 
-	I2C_PERIPHERAL_SET_DEFAULTS(TCS3400, idx, devAddress);
+	I2C_PERIPHERAL_SET_DEFAULTS(TCS3400, idx);
 
 	err = I2C_slave_init(&TCS3400_hal[idx], hi2c, devAddress, TCS3400_hal[idx].cfg.timeout);
 	if (!err)	{ err = TCS3400_Init_Sequence(&TCS3400[idx]); }

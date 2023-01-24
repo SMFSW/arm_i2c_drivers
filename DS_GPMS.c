@@ -12,7 +12,9 @@
 /****************************************************************/
 
 
-I2C_slave_t GPMS_hal = { { pNull, I2C_ADDR(GPMS_BASE_ADDR), I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
+static const I2C_slave_t GPMS_defaults = { { pNull, 0, I2C_slave_timeout, I2C_MEMADD_SIZE_8BIT, I2C_FM }, 0, HAL_OK, true, false };
+
+static I2C_slave_t GPMS_hal;	//!< GPMS Slave structure
 
 
 /****************************************************************/
@@ -21,6 +23,8 @@ I2C_slave_t GPMS_hal = { { pNull, I2C_ADDR(GPMS_BASE_ADDR), I2C_slave_timeout, I
 __WEAK FctERR GPMS_Init(void)
 {
 	FctERR err;
+
+	I2C_PERIPHERAL_SET_DEFAULTS_SINGLETON(GPMS);
 
 	err = I2C_slave_init(&GPMS_hal, I2C_GPMS, GPMS_BASE_ADDR, GPMS_hal.cfg.timeout);
 	if (!err)	{ err = GPMS_Init_Sequence(); }

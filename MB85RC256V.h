@@ -59,7 +59,6 @@ typedef struct MB85RC256V_t {
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern I2C_slave_t MB85RC256V_hal[I2C_MB85RC256V_NB];	//!< MB85RC256V Slave structure
 extern MB85RC256V_t	MB85RC256V[I2C_MB85RC256V_NB];		//!< MB85RC256V User structure
 
 
