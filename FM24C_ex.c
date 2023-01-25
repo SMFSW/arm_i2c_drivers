@@ -33,7 +33,7 @@ FctERR NONNULL__ FM24C_Mass_Erase(FM24C_t * const pCpnt)
 		#if defined(HAL_IWDG_MODULE_ENABLED)
 			HAL_IWDG_Refresh(&hiwdg);
 		#endif
-		err = FM24C_Write_Banked(pCpnt, bankData, 0, i, FM24C_BANK_SIZE);
+		err = FM24C_Write(pCpnt, bankData, i * FM24C_BANK_SIZE, FM24C_BANK_SIZE);
 		if (err) { break; }
 	}
 

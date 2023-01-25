@@ -40,6 +40,7 @@
 #define FM24C_BASE_ADDR		0x50				//!< FM24C Base address
 #endif
 
+#define EEP_PAGE_SIZE		0x10				//!< Page size (used for write procedures)
 
 #define	FM24C_BANK_SIZE		0x100				//!< FM24C bank size (in bytes)
 
@@ -68,7 +69,7 @@ typedef struct FM24C_t {
 // *****************************************************************************
 // Section: Datas
 // *****************************************************************************
-extern FM24C_t		FM24C[I2C_FM24C_NB];		//!< FM24C User structure
+extern FM24C_t FM24C[I2C_FM24C_NB];		//!< FM24C User structure
 
 // *****************************************************************************
 // Section: Interface Routines
@@ -99,50 +100,12 @@ FctERR FM24C_Init_Single(void);
 /*!\brief I2C Write function for FM24C
 **
 ** \param[in] pCpnt - Pointer to FM24C component
-** \param[in] data - pointer to write from
-** \param[in] addr - Address to write to
-** \param[in] bank - Bank to write
-** \param[in] nb - Number of bytes to write
-** \return FctERR - error code
-**/
-FctERR NONNULL__ FM24C_Write_Banked(FM24C_t * const pCpnt, const uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb);
-
-
-/*!\brief I2C Read function for FM24C
-**
-** \param[in] pCpnt - Pointer to FM24C component
-** \param[in,out] data - pointer to read to
-** \param[in] addr - Address to read from
-** \param[in] bank - Bank to read
-** \param[in] nb - Number of bytes to read
-** \return FctERR - error code
-**/
-FctERR NONNULL__ FM24C_Read_Banked(FM24C_t * const pCpnt, uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb);
-
-
-/*!\brief I2C Read/Write function for FM24C
-**
-** \param[in] pCpnt - Pointer to FM24C component
-** \param[in,out] data - pointer to read/write to/from
-** \param[in] addr - Address to read from
-** \param[in] nb - Number of bytes to read
-** \param[in] wr - 0: Read / 1: Write
-** \return FctERR - error code
-**/
-FctERR NONNULL__ FM24C_ReadWrite(FM24C_t * const pCpnt, uint8_t * data, const uint16_t addr, const uint16_t nb, const bool wr);
-
-
-/*!\brief I2C Write function for FM24C
-**
-** \param[in] pCpnt - Pointer to FM24C component
 ** \param[in,out] data - pointer to read/write to/from
 ** \param[in] addr - Address to read from
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ FM24C_Write(FM24C_t * const pCpnt, const uint8_t * data, const uint16_t addr, const uint16_t nb) {
-	return FM24C_ReadWrite(pCpnt, (uint8_t *) data, addr, nb, true);
-}
+FctERR NONNULL__ FM24C_Write(FM24C_t * const pCpnt, const uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /*!\brief I2C Read function for FM24C
@@ -153,9 +116,7 @@ __INLINE FctERR NONNULL_INLINE__ FM24C_Write(FM24C_t * const pCpnt, const uint8_
 ** \param[in] nb - Number of bytes to read
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ FM24C_Read(FM24C_t * const pCpnt, uint8_t * data, const uint16_t addr, const uint16_t nb) {
-	return FM24C_ReadWrite(pCpnt, data, addr, nb, false);
-}
+FctERR NONNULL__ FM24C_Read(FM24C_t * const pCpnt, uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
 /****************************************************************/

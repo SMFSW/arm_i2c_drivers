@@ -26,6 +26,7 @@ SOFTWARE.
 * Singleton components initialized as other components (const copy)
 * I2C address only written one (calling to slave init function), not set by I2C_PERIPHERAL_SET_DEFAULTS anymore
 * DRV2605L: few refactoring of DRV2605L_Init_Sequence
+* FM24C: R/W refactoring to allow operations on the whole chip, bank switching handled internally 
 * Doxygen comments fixes for the whole library
 * Fix case in include names
 * I2C_slave_timeout set to 50ms instead of 20ms (in case of components with lots to read at low speed)

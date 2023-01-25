@@ -58,7 +58,16 @@ FctERR FM24C_Init_Single(void) {
 /****************************************************************/
 
 
-FctERR NONNULL__ FM24C_Write_Banked(FM24C_t * const pCpnt, const uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb)
+/*!\brief I2C Write function for FM24C
+**
+** \param[in] pCpnt - Pointer to FM24C component
+** \param[in] data - pointer to write from
+** \param[in] addr - Address to write to
+** \param[in] bank - Bank to write
+** \param[in] nb - Number of bytes to write
+** \return FctERR - error code
+**/
+static FctERR NONNULL__ FM24C_Write_Banked(FM24C_t * const pCpnt, const uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb)
 {
 	I2C_slave_t * const pSlave = pCpnt->cfg.slave_inst;
 
@@ -76,7 +85,16 @@ FctERR NONNULL__ FM24C_Write_Banked(FM24C_t * const pCpnt, const uint8_t * data,
 }
 
 
-FctERR NONNULL__ FM24C_Read_Banked(FM24C_t * const pCpnt, uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb)
+/*!\brief I2C Read function for FM24C
+**
+** \param[in] pCpnt - Pointer to FM24C component
+** \param[in,out] data - pointer to read to
+** \param[in] addr - Address to read from
+** \param[in] bank - Bank to read
+** \param[in] nb - Number of bytes to read
+** \return FctERR - error code
+**/
+static FctERR NONNULL__ FM24C_Read_Banked(FM24C_t * const pCpnt, uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb)
 {
 	I2C_slave_t * const pSlave = pCpnt->cfg.slave_inst;
 
@@ -94,28 +112,68 @@ FctERR NONNULL__ FM24C_Read_Banked(FM24C_t * const pCpnt, uint8_t * data, const 
 }
 
 
-FctERR NONNULL__ FM24C_ReadWrite(FM24C_t * const pCpnt, uint8_t * data, const uint16_t addr, const uint16_t nb, const bool wr)
+/*!\brief I2C Read/Write function for FM24C
+**
+** \param[in] pCpnt - Pointer to FM24C component
+** \param[in,out] data - pointer to read/write to/from
+** \param[in] addr - Address to read from
+** \param[in] nb - Number of bytes to read
+** \param[in] wr - 0: Read / 1: Write
+** \return FctERR - error code
+**/
+static FctERR NONNULL__ FM24C_ReadWrite_Banked(FM24C_t * const pCpnt, uint8_t * const data, const uint16_t addr, const uint16_t nb, const bool wr)
 {
 	FctERR err = ERROR_OK;
 
-	if (nb > FM24C_BANK_SIZE * 2)	{ return ERROR_VALUE; }	// The function handle only one bank crossing
+	const div_t temp = div(addr, FM24C_BANK_SIZE);									// Divide address by bank size
 
-	const div_t		temp = div(addr, FM24C_BANK_SIZE);								// Divide address by bank size
-	const uint16_t	nbBank2 = max(0, (int16_t) (temp.rem + nb - FM24C_BANK_SIZE));	// Number of bytes for bank+1 (if bank crossing)
-	const uint16_t	nbBank1 = nb - nbBank2;											// Number of bytes for bank
-	const int		nbloop = nbBank2 ? 2 : 1;										// Number of for loop iterations
+	if (wr)		{ err = FM24C_Write_Banked(pCpnt, data, temp.rem, temp.quot, nb); }	// Write
+	if (!err)	{ err = FM24C_Read_Banked(pCpnt, data, temp.rem, temp.quot, nb); }	// Read in all cases (simple read or write)
 
-	for (int i = 0 ; i < nbloop ; i++)
+	return err;
+}
+
+
+FctERR NONNULL__ FM24C_Write(FM24C_t * const pCpnt, const uint8_t * data, const uint16_t addr, const uint16_t nb)
+{
+	FctERR		err = ERROR_OK;
+	size_t		data_len = nb;
+	uint16_t	address = addr;
+
+	while (data_len)
 	{
-		const uint16_t n = i ? nbBank2 : nbBank1;
-		const uint16_t subaddr = i ? 0 : temp.rem;
-		const uint16_t bank = temp.quot + i;
+		size_t nb_write = address % FM24C_BANK_SIZE;			// Compute unaligned address
+		nb_write = min(data_len, (FM24C_BANK_SIZE - nb_write));	// Bank size data length max, or remaining data length
 
-		if (wr)		{ err = FM24C_Write_Banked(pCpnt, &data[nbBank1 * i], subaddr, bank, n); }	// Write
-		if (err)	{ break; }																	// Break if error occurred
+		err = FM24C_ReadWrite_Banked(pCpnt, (uint8_t *) data, address, nb_write, true);
+		if (err)	{ break; }
 
-		err = FM24C_Read_Banked(pCpnt, &data[nbBank1 * i], subaddr, bank, n);					// Read in all cases (simple read or write)
-		if (err)	{ break; }																	// Break if error occurred
+		data_len -= nb_write;
+		address += nb_write;
+		data += nb_write;
+	}
+
+	return err;
+}
+
+
+FctERR NONNULL__ FM24C_Read(FM24C_t * const pCpnt, uint8_t * data, const uint16_t addr, const uint16_t nb)
+{
+	FctERR		err = ERROR_OK;
+	size_t		data_len = nb;
+	uint16_t	address = addr;
+
+	while (data_len)
+	{
+		size_t nb_read = address % FM24C_BANK_SIZE;				// Compute unaligned address
+		nb_read = min(data_len, (FM24C_BANK_SIZE - nb_read));	// Bank size data length max, or remaining data length
+
+		err = FM24C_ReadWrite_Banked(pCpnt, data, address, nb_read, false);
+		if (err)	{ break; }
+
+		data_len -= nb_read;
+		address += nb_read;
+		data += nb_read;
 	}
 
 	return err;
