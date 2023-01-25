@@ -7,6 +7,6 @@
 <area shape="rect" id="node10" href="$dd/d17/_d_s___g_p_m_s__proc_8c.html#ac73b4d437a50c19008305078e1a8c93d" title="GPMS_Get_Speed" alt="" coords="179,259,317,285"/>
 <area shape="rect" id="node11" href="$dd/d17/_d_s___g_p_m_s__proc_8c.html#a86d0f8b7d43d9bf0b3e729a50e9d7917" title="GPMS_Get_Altitude" alt="" coords="175,309,321,336"/>
 <area shape="rect" id="node3" href="$db/d9a/_d_s___g_p_m_s_8c.html#a7bf11fa937ff423f2756d47be54a8afe" title="I2C Read function for GPMS. " alt="" coords="376,157,475,184"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="523,132,640,159"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="528,183,635,209"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="523,132,640,159"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="528,183,635,209"/>
 </map>

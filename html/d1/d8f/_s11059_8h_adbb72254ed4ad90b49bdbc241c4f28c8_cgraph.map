@@ -1,5 +1,5 @@
 <map id="S11059_Write_Word" name="S11059_Write_Word">
 <area shape="rect" id="node2" href="$d2/dfe/_s11059_8c.html#ac27878d181c6f45293db7898dd724bda" title="I2C Write function for S11059. " alt="" coords="200,31,309,57"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="357,5,475,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="363,56,469,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="357,5,475,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="363,56,469,83"/>
 </map>

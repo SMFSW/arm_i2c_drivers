@@ -6,7 +6,7 @@
 <area shape="rect" id="node10" href="$d3/d57/_p_c_a9685__ex_8h.html#a2210a5afceb6d36d1efdee8acfea5dd4" title="Reads register from PCA9685. " alt="" coords="172,208,341,235"/>
 <area shape="rect" id="node3" href="$d3/d57/_p_c_a9685__ex_8h.html#ab5e242441ad3f53abd3d7a2cfa9a5681" title="Convert Prescaler byte register to Frequency (in Hz) " alt="" coords="389,81,560,108"/>
 <area shape="rect" id="node5" href="$d5/d22/_p_c_a9685__proc_8h.html#a7609b910642dc4a7bcec68f482028ed4" title="Initialization Sequence for PCA9685 peripheral. " alt="" coords="610,56,787,83"/>
-<area shape="rect" id="node6" href="$d4/deb/_p_c_a9685_8h.html#a7fa0e558a2f028f6261ca45db11d623a" title="Initialization for PCA9685 peripheral. " alt="" coords="837,56,944,83"/>
+<area shape="rect" id="node6" href="$d4/deb/_p_c_a9685_8h.html#a16df1839440a38ca08e2d5199f9784f0" title="Initialization for PCA9685 peripheral. " alt="" coords="837,56,944,83"/>
 <area shape="rect" id="node7" href="$d4/deb/_p_c_a9685_8h.html#a5446c995c445067011d256bc587b164e" title="Initialization for PCA9685 peripheral. " alt="" coords="992,56,1144,83"/>
 <area shape="rect" id="node11" href="$d3/d57/_p_c_a9685__ex_8h.html#a9c727d398bdfa3e4abd76a8fe551dadd" title="Compute and send PWM lighting values to apply on a PCA9685 channel or all channels (Percent) ..." alt="" coords="397,208,552,235"/>
 </map>

@@ -61,8 +61,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">PCA9624.c File Reference</div>  </div>
 </div><!--header-->
@@ -87,9 +86,9 @@ Include dependency graph for PCA9624.c:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a533ea8e2a7967b9ae7588d9f028bc839"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/de1/_p_c_a9624_8c.html#a533ea8e2a7967b9ae7588d9f028bc839">PCA9624_Init</a> (const uint8_t idx, const I2C_HandleTypeDef *hi2c, const uint16_t devAddress)</td></tr>
-<tr class="memdesc:a533ea8e2a7967b9ae7588d9f028bc839"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for PCA9624 peripheral.  <a href="#a533ea8e2a7967b9ae7588d9f028bc839">More...</a><br /></td></tr>
-<tr class="separator:a533ea8e2a7967b9ae7588d9f028bc839"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a213200bb403dec538479dc3796525498"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/de1/_p_c_a9624_8c.html#a213200bb403dec538479dc3796525498">PCA9624_Init</a> (const uint8_t idx, I2C_HandleTypeDef *const hi2c, const uint16_t devAddress)</td></tr>
+<tr class="memdesc:a213200bb403dec538479dc3796525498"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for PCA9624 peripheral.  <a href="#a213200bb403dec538479dc3796525498">More...</a><br /></td></tr>
+<tr class="separator:a213200bb403dec538479dc3796525498"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d2bfb0bec12fff1be494de387f015a2"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/de1/_p_c_a9624_8c.html#a9d2bfb0bec12fff1be494de387f015a2">PCA9624_Init_Single</a> (void)</td></tr>
 <tr class="memdesc:a9d2bfb0bec12fff1be494de387f015a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for PCA9624 peripheral.  <a href="#a9d2bfb0bec12fff1be494de387f015a2">More...</a><br /></td></tr>
 <tr class="separator:a9d2bfb0bec12fff1be494de387f015a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -99,21 +98,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a03ee6aaa20de8bd43dfd5b251f3bde67"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/de1/_p_c_a9624_8c.html#a03ee6aaa20de8bd43dfd5b251f3bde67">PCA9624_Read</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *const pSlave, uint8_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
 <tr class="memdesc:a03ee6aaa20de8bd43dfd5b251f3bde67"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Read function for PCA9624.  <a href="#a03ee6aaa20de8bd43dfd5b251f3bde67">More...</a><br /></td></tr>
 <tr class="separator:a03ee6aaa20de8bd43dfd5b251f3bde67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:ad496b0ec8e88f52f3b30e1a3ab420bad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/de1/_p_c_a9624_8c.html#ad496b0ec8e88f52f3b30e1a3ab420bad">PCA9624_hal</a> [<a class="el" href="../../d4/dc2/_p_c_a9624_8h.html#acc832ee3a5fcfbe4f1dc95cceb705e77">I2C_PCA9624_NB</a>]</td></tr>
-<tr class="memdesc:ad496b0ec8e88f52f3b30e1a3ab420bad"><td class="mdescLeft">&#160;</td><td class="mdescRight">PCA9624 Slave structure.  <a href="#ad496b0ec8e88f52f3b30e1a3ab420bad">More...</a><br /></td></tr>
-<tr class="separator:ad496b0ec8e88f52f3b30e1a3ab420bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>PCA9624 Driver. </p>
 <dl class="section author"><dt>Author</dt><dd>SMFSW </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2021, SMFSW</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2023, SMFSW</dd></dl>
 <p>PCA9624: 8-bit Fm+ I2C-bus 100mA 40V LED driver </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a533ea8e2a7967b9ae7588d9f028bc839"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a533ea8e2a7967b9ae7588d9f028bc839">&#9670;&nbsp;</a></span>PCA9624_Init()</h2>
+<a id="a213200bb403dec538479dc3796525498"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a213200bb403dec538479dc3796525498">&#9670;&nbsp;</a></span>PCA9624_Init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -127,7 +120,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const I2C_HandleTypeDef *&#160;</td>
+          <td class="paramtype">I2C_HandleTypeDef *const&#160;</td>
           <td class="paramname"><em>hi2c</em>, </td>
         </tr>
         <tr>
@@ -157,23 +150,21 @@ Variables</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../db/de1/_p_c_a9624_8c_a533ea8e2a7967b9ae7588d9f028bc839_cgraph.png" border="0" usemap="#db/de1/_p_c_a9624_8c_a533ea8e2a7967b9ae7588d9f028bc839_cgraph" alt=""/></div>
-<map name="db/de1/_p_c_a9624_8c_a533ea8e2a7967b9ae7588d9f028bc839_cgraph" id="db/de1/_p_c_a9624_8c_a533ea8e2a7967b9ae7588d9f028bc839_cgraph">
-<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="215,5,323,32"/>
+<div class="center"><img src="../../db/de1/_p_c_a9624_8c_a213200bb403dec538479dc3796525498_cgraph.png" border="0" usemap="#db/de1/_p_c_a9624_8c_a213200bb403dec538479dc3796525498_cgraph" alt=""/></div>
+<map name="db/de1/_p_c_a9624_8c_a213200bb403dec538479dc3796525498_cgraph" id="db/de1/_p_c_a9624_8c_a213200bb403dec538479dc3796525498_cgraph">
+<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization. " alt="" coords="215,5,323,32"/>
 <area shape="rect" id="node3" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a75515d3ead6adda321170420385fc604" title="Set auto increment option for PCA9624 registers. " alt="" coords="160,56,379,83"/>
 <area shape="rect" id="node4" href="../../df/df7/_p_c_a9624__proc_8c.html#ae6462de81eb8420000a21390956d7aee" title="Initialization Sequence for PCA9624 peripheral. " alt="" coords="181,107,358,133"/>
-<area shape="rect" id="node9" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="210,157,329,184"/>
+<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state. " alt="" coords="210,157,329,184"/>
 <area shape="rect" id="node5" href="../../db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624. " alt="" coords="665,107,784,133"/>
-<area shape="rect" id="node8" href="../../dd/d68/_p_c_a9624__ex_8c.html#addff2c3e81e7a4ba7e30fd32bd89967f" title="Set PCA9624 peripheral multiple LEDs mode. " alt="" coords="427,132,617,159"/>
-<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="832,81,949,108"/>
-<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="837,132,944,159"/>
+<area shape="rect" id="node6" href="../../dd/d68/_p_c_a9624__ex_8c.html#addff2c3e81e7a4ba7e30fd32bd89967f" title="Set PCA9624 peripheral multiple LEDs mode. " alt="" coords="427,132,617,159"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../db/de1/_p_c_a9624_8c_a533ea8e2a7967b9ae7588d9f028bc839_icgraph.png" border="0" usemap="#db/de1/_p_c_a9624_8c_a533ea8e2a7967b9ae7588d9f028bc839_icgraph" alt=""/></div>
-<map name="db/de1/_p_c_a9624_8c_a533ea8e2a7967b9ae7588d9f028bc839_icgraph" id="db/de1/_p_c_a9624_8c_a533ea8e2a7967b9ae7588d9f028bc839_icgraph">
+<div class="center"><img src="../../db/de1/_p_c_a9624_8c_a213200bb403dec538479dc3796525498_icgraph.png" border="0" usemap="#db/de1/_p_c_a9624_8c_a213200bb403dec538479dc3796525498_icgraph" alt=""/></div>
+<map name="db/de1/_p_c_a9624_8c_a213200bb403dec538479dc3796525498_icgraph" id="db/de1/_p_c_a9624_8c_a213200bb403dec538479dc3796525498_icgraph">
 <area shape="rect" id="node2" href="../../d4/dc2/_p_c_a9624_8h.html#a9d2bfb0bec12fff1be494de387f015a2" title="Initialization for PCA9624 peripheral. " alt="" coords="160,5,312,32"/>
 </map>
 </div>
@@ -204,15 +195,13 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../db/de1/_p_c_a9624_8c_a9d2bfb0bec12fff1be494de387f015a2_cgraph.png" border="0" usemap="#db/de1/_p_c_a9624_8c_a9d2bfb0bec12fff1be494de387f015a2_cgraph" alt=""/></div>
 <map name="db/de1/_p_c_a9624_8c_a9d2bfb0bec12fff1be494de387f015a2_cgraph" id="db/de1/_p_c_a9624_8c_a9d2bfb0bec12fff1be494de387f015a2_cgraph">
-<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#a533ea8e2a7967b9ae7588d9f028bc839" title="Initialization for PCA9624 peripheral. " alt="" coords="205,81,312,108"/>
-<area shape="rect" id="node3" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="415,5,523,32"/>
+<area shape="rect" id="node2" href="../../db/de1/_p_c_a9624_8c.html#a213200bb403dec538479dc3796525498" title="Initialization for PCA9624 peripheral. " alt="" coords="205,81,312,108"/>
+<area shape="rect" id="node3" href="../../d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization. " alt="" coords="415,5,523,32"/>
 <area shape="rect" id="node4" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a75515d3ead6adda321170420385fc604" title="Set auto increment option for PCA9624 registers. " alt="" coords="360,56,579,83"/>
 <area shape="rect" id="node5" href="../../df/df7/_p_c_a9624__proc_8c.html#ae6462de81eb8420000a21390956d7aee" title="Initialization Sequence for PCA9624 peripheral. " alt="" coords="381,107,558,133"/>
-<area shape="rect" id="node10" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="410,157,529,184"/>
+<area shape="rect" id="node8" href="../../d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state. " alt="" coords="410,157,529,184"/>
 <area shape="rect" id="node6" href="../../db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624. " alt="" coords="865,107,984,133"/>
-<area shape="rect" id="node9" href="../../dd/d68/_p_c_a9624__ex_8c.html#addff2c3e81e7a4ba7e30fd32bd89967f" title="Set PCA9624 peripheral multiple LEDs mode. " alt="" coords="627,132,817,159"/>
-<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1032,81,1149,108"/>
-<area shape="rect" id="node8" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1037,132,1144,159"/>
+<area shape="rect" id="node7" href="../../dd/d68/_p_c_a9624__ex_8c.html#addff2c3e81e7a4ba7e30fd32bd89967f" title="Set PCA9624 peripheral multiple LEDs mode. " alt="" coords="627,132,817,159"/>
 </map>
 </div>
 
@@ -267,15 +256,6 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../db/de1/_p_c_a9624_8c_a03ee6aaa20de8bd43dfd5b251f3bde67_cgraph.png" border="0" usemap="#db/de1/_p_c_a9624_8c_a03ee6aaa20de8bd43dfd5b251f3bde67_cgraph" alt=""/></div>
-<map name="db/de1/_p_c_a9624_8c_a03ee6aaa20de8bd43dfd5b251f3bde67_cgraph" id="db/de1/_p_c_a9624_8c_a03ee6aaa20de8bd43dfd5b251f3bde67_cgraph">
-<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="172,5,289,32"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="177,56,284,83"/>
-</map>
-</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -345,15 +325,6 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
 <div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../db/de1/_p_c_a9624_8c_a0c4d9ef078dc2b579c7388558a208157_cgraph.png" border="0" usemap="#db/de1/_p_c_a9624_8c_a0c4d9ef078dc2b579c7388558a208157_cgraph" alt=""/></div>
-<map name="db/de1/_p_c_a9624_8c_a0c4d9ef078dc2b579c7388558a208157_cgraph" id="db/de1/_p_c_a9624_8c_a0c4d9ef078dc2b579c7388558a208157_cgraph">
-<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="172,5,289,32"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="177,56,284,83"/>
-</map>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../db/de1/_p_c_a9624_8c_a0c4d9ef078dc2b579c7388558a208157_icgraph.png" border="0" usemap="#db/de1/_p_c_a9624_8c_a0c4d9ef078dc2b579c7388558a208157_icgraph" alt=""/></div>
@@ -368,7 +339,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node15" href="../../d6/dfc/_p_c_a9624__ex_8h.html#aa573ddd2d06a2a03d9c2213148cb988e" title="Send PWM Full ON value to apply on a PCA9624 channel. " alt="" coords="203,360,331,387"/>
 <area shape="rect" id="node16" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a3192c37b275d530307437efaa1d7dd1d" title="Send PWM Full OFF value to apply on a PCA9624 channel. " alt="" coords="206,411,329,437"/>
 <area shape="rect" id="node17" href="../../d6/dfc/_p_c_a9624__ex_8h.html#ab297dabae3a4fe712cba3a26f71a2f2a" title="Set MODE1 register. " alt="" coords="186,461,349,488"/>
-<area shape="rect" id="node7" href="../../d4/dc2/_p_c_a9624_8h.html#a533ea8e2a7967b9ae7588d9f028bc839" title="Initialization for PCA9624 peripheral. " alt="" coords="684,157,791,184"/>
+<area shape="rect" id="node7" href="../../d4/dc2/_p_c_a9624_8h.html#a213200bb403dec538479dc3796525498" title="Initialization for PCA9624 peripheral. " alt="" coords="684,157,791,184"/>
 <area shape="rect" id="node8" href="../../d4/dc2/_p_c_a9624_8h.html#a9d2bfb0bec12fff1be494de387f015a2" title="Initialization for PCA9624 peripheral. " alt="" coords="839,157,991,184"/>
 <area shape="rect" id="node10" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a908e779b4a0bfd968a674997d5fd659f" title="Read all PWM duty cycle array of values of a PCA9624 (for the 8 channels) " alt="" coords="440,208,607,235"/>
 <area shape="rect" id="node11" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a658dfd2d262b1fc795d162d343c5e71c" title="Send PWM duty cycle array of values to apply on a PCA9624. " alt="" coords="436,259,611,285"/>
@@ -376,23 +347,6 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node13" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a93948697ac82a090f75a5d6879ca7f23" title="Send all PWM duty cycle array of values to apply on a PCA9624 (for the 8 channels) ..." alt="" coords="445,360,601,387"/>
 </map>
 </div>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="ad496b0ec8e88f52f3b30e1a3ab420bad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad496b0ec8e88f52f3b30e1a3ab420bad">&#9670;&nbsp;</a></span>PCA9624_hal</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> PCA9624_hal[<a class="el" href="../../d4/dc2/_p_c_a9624_8h.html#acc832ee3a5fcfbe4f1dc95cceb705e77">I2C_PCA9624_NB</a>]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>PCA9624 Slave structure. </p>
 
 </div>
 </div>

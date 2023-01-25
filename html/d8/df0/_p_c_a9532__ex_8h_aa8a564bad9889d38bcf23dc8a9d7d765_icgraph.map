@@ -1,6 +1,6 @@
 <map id="PCA9532_RST_GPIO_Set" name="PCA9532_RST_GPIO_Set">
 <area shape="rect" id="node2" href="$d8/df0/_p_c_a9532__ex_8h.html#a03b2ea671687b1a439c90bc4f946542b" title="Convert PWMx byte register to Duty Cycle (in %) " alt="" coords="232,5,405,32"/>
 <area shape="rect" id="node3" href="$de/da7/_p_c_a9532__proc_8h.html#a95ddc3ce36d7d60e26b08ce405ea2fc3" title="Initialization Sequence for PCA9532 peripheral. " alt="" coords="453,5,631,32"/>
-<area shape="rect" id="node4" href="$d3/df9/_p_c_a9532_8h.html#a53117549a86481f7203371b537bc7084" title="Initialization for PCA9532 peripheral. " alt="" coords="679,5,785,32"/>
+<area shape="rect" id="node4" href="$d3/df9/_p_c_a9532_8h.html#ab2c83a49b54020805a88671f067bf6d6" title="Initialization for PCA9532 peripheral. " alt="" coords="679,5,785,32"/>
 <area shape="rect" id="node5" href="$d3/df9/_p_c_a9532_8h.html#ae3bc95cfa1ac91a201ac0543ced4bb03" title="Initialization for PCA9532 peripheral. " alt="" coords="833,5,985,32"/>
 </map>

@@ -4,6 +4,6 @@
 <area shape="rect" id="node5" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a0f9ba08c0ae08f4871e96da7288dc1b5" title="Configure MTCH6102controller (after parameters have been changed) " alt="" coords="213,107,396,149"/>
 <area shape="rect" id="node7" href="$da/d78/_m_t_c_h6102_8c.html#a5aa313bbfe74f756dd83101dbefea059" title="I2C Read function for MTCH6102. " alt="" coords="657,115,785,141"/>
 <area shape="rect" id="node8" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#afa22740ded5a6bb154614a7ea3ee4d5c" title="Write MTCH6102 parameters to non volatile storage. " alt="" coords="212,173,397,214"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="833,88,951,115"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="833,88,951,115"/>
 <area shape="rect" id="node6" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a4c1612bb1afca9818d54ff05c5fa4191" title="Execute MTCH6102 command. " alt="" coords="445,115,609,141"/>
 </map>

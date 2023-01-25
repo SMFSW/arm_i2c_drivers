@@ -1,18 +1,16 @@
 <map id="PCA9956_PutVals_All" name="PCA9956_PutVals_All">
-<area shape="rect" id="node2" href="$dd/ddf/_p_c_a9956__ex_8h.html#a50f5d7e9a073aa6af704ef69c8a4b1dc" title="Send PWM duty cycle array of values to apply on a PCA9956. " alt="" coords="231,107,366,133"/>
-<area shape="rect" id="node6" href="$dd/ddf/_p_c_a9956__ex_8h.html#ac2e9cecfe5fea806124ca1229658f7a3" title="Send PWM duty cycle value to apply on a PCA9956 channel. " alt="" coords="235,157,362,184"/>
-<area shape="rect" id="node7" href="$dd/ddf/_p_c_a9956__ex_8h.html#a32b9dca37db78d2852cd94b0e97162ef" title="Send PWM Full ON value to apply on a PCA9956 channel. " alt="" coords="235,5,363,32"/>
-<area shape="rect" id="node8" href="$dd/ddf/_p_c_a9956__ex_8h.html#ae1e617a23120269e52293fac43d2ac63" title="Send PWM Full OFF value to apply on a PCA9956 channel. " alt="" coords="237,56,360,83"/>
-<area shape="rect" id="node9" href="$dd/ddf/_p_c_a9956__ex_8h.html#a617e11246f1d855ab91ce29e6007258d" title="Read LEDs error flags. " alt="" coords="215,208,382,235"/>
-<area shape="rect" id="node11" href="$dd/ddf/_p_c_a9956__ex_8h.html#a5534c738990dbe8517f855f6dd80b2ad" title="Read register from PCA9956. " alt="" coords="214,259,383,285"/>
-<area shape="rect" id="node12" href="$dd/ddf/_p_c_a9956__ex_8h.html#af347eccfff4344b49fd6aa00956cd5b1" title="Reset GPIO pin init for PCA9956. " alt="" coords="211,309,386,336"/>
-<area shape="rect" id="node14" href="$dd/ddf/_p_c_a9956__ex_8h.html#a7c381c9eb62fb60fa3e2ec8ae0260c50" title="Reset GPIO pin setter for PCA9956. " alt="" coords="209,411,388,437"/>
-<area shape="rect" id="node16" href="$dd/ddf/_p_c_a9956__ex_8h.html#a35e5abed701e1817148a233c9d7e673b" title="Output Enable GPIO pin init for PCA9956. " alt="" coords="214,360,383,387"/>
-<area shape="rect" id="node17" href="$dd/ddf/_p_c_a9956__ex_8h.html#a62fb2f6017bb2c1e8256e619c69d9a9f" title="Output Enable GPIO pin setter for PCA9956. " alt="" coords="213,461,385,488"/>
-<area shape="rect" id="node3" href="$df/d5e/_p_c_a9956_8c.html#a631d23c191d905d40f272c8488d175b4" title="I2C Write function for PCA9956. " alt="" coords="466,120,585,147"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="663,127,780,153"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="668,189,775,216"/>
-<area shape="rect" id="node10" href="$df/d5e/_p_c_a9956_8c.html#a45016e9d78da0bffbd4bceb1a3478b75" title="I2C Read function for PCA9956. " alt="" coords="466,196,585,223"/>
-<area shape="rect" id="node13" href="$d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="437,348,614,375"/>
-<area shape="rect" id="node15" href="$d2/de1/_i2_c__peripheral_8c.html#a7accedd9eb463e3cd4eb401b07e36b2c" title="I2C peripheral GPIO pin setter. " alt="" coords="436,424,615,451"/>
+<area shape="rect" id="node2" href="$dd/ddf/_p_c_a9956__ex_8h.html#a50f5d7e9a073aa6af704ef69c8a4b1dc" title="Send PWM duty cycle array of values to apply on a PCA9956. " alt="" coords="231,5,366,32"/>
+<area shape="rect" id="node4" href="$dd/ddf/_p_c_a9956__ex_8h.html#ac2e9cecfe5fea806124ca1229658f7a3" title="Send PWM duty cycle value to apply on a PCA9956 channel. " alt="" coords="235,56,362,83"/>
+<area shape="rect" id="node5" href="$dd/ddf/_p_c_a9956__ex_8h.html#a32b9dca37db78d2852cd94b0e97162ef" title="Send PWM Full ON value to apply on a PCA9956 channel. " alt="" coords="235,107,363,133"/>
+<area shape="rect" id="node6" href="$dd/ddf/_p_c_a9956__ex_8h.html#ae1e617a23120269e52293fac43d2ac63" title="Send PWM Full OFF value to apply on a PCA9956 channel. " alt="" coords="237,157,360,184"/>
+<area shape="rect" id="node7" href="$dd/ddf/_p_c_a9956__ex_8h.html#a617e11246f1d855ab91ce29e6007258d" title="Read LEDs error flags. " alt="" coords="215,208,382,235"/>
+<area shape="rect" id="node9" href="$dd/ddf/_p_c_a9956__ex_8h.html#a5534c738990dbe8517f855f6dd80b2ad" title="Read register from PCA9956. " alt="" coords="214,259,383,285"/>
+<area shape="rect" id="node10" href="$dd/ddf/_p_c_a9956__ex_8h.html#af347eccfff4344b49fd6aa00956cd5b1" title="Reset GPIO pin init for PCA9956. " alt="" coords="211,309,386,336"/>
+<area shape="rect" id="node12" href="$dd/ddf/_p_c_a9956__ex_8h.html#a7c381c9eb62fb60fa3e2ec8ae0260c50" title="Reset GPIO pin setter for PCA9956. " alt="" coords="209,411,388,437"/>
+<area shape="rect" id="node14" href="$dd/ddf/_p_c_a9956__ex_8h.html#a35e5abed701e1817148a233c9d7e673b" title="Output Enable GPIO pin init for PCA9956. " alt="" coords="214,360,383,387"/>
+<area shape="rect" id="node15" href="$dd/ddf/_p_c_a9956__ex_8h.html#a62fb2f6017bb2c1e8256e619c69d9a9f" title="Output Enable GPIO pin setter for PCA9956. " alt="" coords="213,461,385,488"/>
+<area shape="rect" id="node3" href="$df/d5e/_p_c_a9956_8c.html#a631d23c191d905d40f272c8488d175b4" title="I2C Write function for PCA9956. " alt="" coords="466,81,585,108"/>
+<area shape="rect" id="node8" href="$df/d5e/_p_c_a9956_8c.html#a45016e9d78da0bffbd4bceb1a3478b75" title="I2C Read function for PCA9956. " alt="" coords="466,233,585,260"/>
+<area shape="rect" id="node11" href="$d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="437,348,614,375"/>
+<area shape="rect" id="node13" href="$d2/de1/_i2_c__peripheral_8c.html#a7accedd9eb463e3cd4eb401b07e36b2c" title="I2C peripheral GPIO pin setter. " alt="" coords="436,424,615,451"/>
 </map>

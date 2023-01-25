@@ -1,5 +1,5 @@
 <map id="AT42QT1244_Read" name="AT42QT1244_Read">
-<area shape="rect" id="node2" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="207,5,324,32"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="212,56,319,83"/>
+<area shape="rect" id="node2" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="207,5,324,32"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="212,56,319,83"/>
 <area shape="rect" id="node4" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#ad2998daf6e9e01b5d72b96ac64a2f78e" title="16bits CRC calculation for AT42QT1244 " alt="" coords="193,107,337,133"/>
 </map>

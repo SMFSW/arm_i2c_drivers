@@ -1,5 +1,5 @@
 <map id="PCA9685_SetVal" name="PCA9685_SetVal">
 <area shape="rect" id="node2" href="$de/dca/_p_c_a9685_8c.html#ace763529df9b53eced87352d1d5de814" title="I2C Write function for PCA9685. " alt="" coords="181,31,300,57"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="348,5,465,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="353,56,460,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="348,5,465,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="353,56,460,83"/>
 </map>

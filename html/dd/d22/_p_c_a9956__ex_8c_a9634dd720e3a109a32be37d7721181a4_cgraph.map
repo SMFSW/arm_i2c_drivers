@@ -1,5 +1,3 @@
 <map id="PCA9956_Set_Mode_LEDs" name="PCA9956_Set_Mode_LEDs">
-<area shape="rect" id="node2" href="$df/d5e/_p_c_a9956_8c.html#a631d23c191d905d40f272c8488d175b4" title="I2C Write function for PCA9956. " alt="" coords="244,31,363,57"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="411,5,528,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="416,56,523,83"/>
+<area shape="rect" id="node2" href="$df/d5e/_p_c_a9956_8c.html#a631d23c191d905d40f272c8488d175b4" title="I2C Write function for PCA9956. " alt="" coords="244,5,363,32"/>
 </map>

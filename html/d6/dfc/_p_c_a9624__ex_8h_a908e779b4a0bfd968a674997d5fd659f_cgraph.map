@@ -1,9 +1,7 @@
 <map id="PCA9624_ReadVals_All" name="PCA9624_ReadVals_All">
-<area shape="rect" id="node2" href="$d6/dfc/_p_c_a9624__ex_8h.html#a26229b1c7f245cc88e09533d80ade29d" title="Read PWM duty cycle array of values of a PCA9624. " alt="" coords="220,56,364,83"/>
-<area shape="rect" id="node6" href="$d6/dfc/_p_c_a9624__ex_8h.html#af768a0d852aca5133ec20a30af64086f" title="Read PWM duty cycle value of a PCA9624 channel. " alt="" coords="223,5,361,32"/>
-<area shape="rect" id="node7" href="$d6/dfc/_p_c_a9624__ex_8h.html#a7469018e353726621da2eb3fc7ddfc57" title="Send PWM duty cycle array of values to apply on a PCA9624. " alt="" coords="225,107,359,133"/>
-<area shape="rect" id="node3" href="$db/de1/_p_c_a9624_8c.html#a03ee6aaa20de8bd43dfd5b251f3bde67" title="I2C Read function for PCA9624. " alt="" coords="412,56,531,83"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="579,56,696,83"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="584,107,691,133"/>
-<area shape="rect" id="node8" href="$db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624. " alt="" coords="412,107,531,133"/>
+<area shape="rect" id="node2" href="$d6/dfc/_p_c_a9624__ex_8h.html#a26229b1c7f245cc88e09533d80ade29d" title="Read PWM duty cycle array of values of a PCA9624. " alt="" coords="220,5,364,32"/>
+<area shape="rect" id="node4" href="$d6/dfc/_p_c_a9624__ex_8h.html#af768a0d852aca5133ec20a30af64086f" title="Read PWM duty cycle value of a PCA9624 channel. " alt="" coords="223,56,361,83"/>
+<area shape="rect" id="node5" href="$d6/dfc/_p_c_a9624__ex_8h.html#a7469018e353726621da2eb3fc7ddfc57" title="Send PWM duty cycle array of values to apply on a PCA9624. " alt="" coords="225,107,359,133"/>
+<area shape="rect" id="node3" href="$db/de1/_p_c_a9624_8c.html#a03ee6aaa20de8bd43dfd5b251f3bde67" title="I2C Read function for PCA9624. " alt="" coords="412,31,531,57"/>
+<area shape="rect" id="node6" href="$db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624. " alt="" coords="412,107,531,133"/>
 </map>

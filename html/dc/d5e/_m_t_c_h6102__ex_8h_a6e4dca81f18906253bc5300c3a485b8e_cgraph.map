@@ -4,7 +4,7 @@
 <area shape="rect" id="node6" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#ae6f4b02f3f49114cef624c0afb4b7f4e" title="Interrupt GPIO pin getter for MTCH6102. " alt="" coords="218,157,403,184"/>
 <area shape="rect" id="node8" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a1361a2cd7b079e8faa107b634dc0aa65" title="Synchro GPIO pin init for MTCH6102. " alt="" coords="213,107,409,133"/>
 <area shape="rect" id="node9" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a3747d7b925224b0079579c67e909ab50" title="Synchro GPIO pin getter for MTCH6102. " alt="" coords="211,208,411,235"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="489,5,607,32"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="489,5,607,32"/>
 <area shape="rect" id="node5" href="$d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="459,95,637,121"/>
 <area shape="rect" id="node7" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="459,171,637,197"/>
 </map>

@@ -1,6 +1,6 @@
 <map id="APDS9960_Set_Prox_Pulse_Length" name="APDS9960_Set_Prox_Pulse_Length">
 <area shape="rect" id="node2" href="$db/db1/_a_p_d_s9960_8c.html#ae3a66d3faca052bed32148ad241084a5" title="I2C Read function for APDS9960. " alt="" coords="248,5,376,32"/>
 <area shape="rect" id="node5" href="$db/db1/_a_p_d_s9960_8c.html#a52b83fd89a1e886f3f1bb8b59a89b8ac" title="I2C Write function for APDS9960. " alt="" coords="248,56,376,83"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="424,5,541,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="429,56,536,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="424,5,541,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="429,56,536,83"/>
 </map>

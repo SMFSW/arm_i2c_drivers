@@ -1,6 +1,6 @@
 <map id="MCP9808_Alert_GPIO_Init" name="MCP9808_Alert_GPIO_Init">
 <area shape="rect" id="node2" href="$df/d2f/_m_c_p9808__ex_8h.html#a74f3a6383e7e33937954cd7ec8021383" title="Get MCP9808 chip ID. " alt="" coords="236,5,396,32"/>
 <area shape="rect" id="node3" href="$d6/d5e/_m_c_p9808__proc_8h.html#acdc3fcd27aee6d19c3e7fb7bf4762b47" title="Initialization Sequence of the MCP9808 peripheral. " alt="" coords="444,5,623,32"/>
-<area shape="rect" id="node4" href="$d8/d57/_m_c_p9808_8h.html#a91d38f36234f03778c3146624f083067" title="Initialization of the MCP9808 peripheral. " alt="" coords="671,5,779,32"/>
+<area shape="rect" id="node4" href="$d8/d57/_m_c_p9808_8h.html#a92276c5da93fdb59cc4d94ef92761841" title="Initialization of the MCP9808 peripheral. " alt="" coords="671,5,779,32"/>
 <area shape="rect" id="node5" href="$d8/d57/_m_c_p9808_8h.html#a9ffcff895e9844967086a52af6c82dd4" title="Initialization for MCP9808 peripheral. " alt="" coords="827,5,981,32"/>
 </map>

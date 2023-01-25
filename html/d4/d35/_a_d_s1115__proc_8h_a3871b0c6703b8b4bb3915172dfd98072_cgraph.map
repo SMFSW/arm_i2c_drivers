@@ -7,8 +7,8 @@
 <area shape="rect" id="node18" href="$d8/d63/_a_d_s1115__ex_8c.html#a59bb8cdf42f67a04e28339e8d5918702" title="Get ADS1115 raw channel value in mV. " alt="" coords="421,231,603,273"/>
 <area shape="rect" id="node4" href="$d8/d63/_a_d_s1115__ex_8c.html#aa2655b719d3bc141c24de2e90fa34633" title="Start ADS1115 conversion. " alt="" coords="675,5,873,32"/>
 <area shape="rect" id="node7" href="$db/de1/_a_d_s1115_8c.html#a92839395c4e5385fe67b8eaeb948de7c" title="I2C Read function for ADS1115. " alt="" coords="714,56,834,83"/>
-<area shape="rect" id="node8" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="952,31,1069,57"/>
-<area shape="rect" id="node9" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="957,81,1064,108"/>
+<area shape="rect" id="node8" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="952,31,1069,57"/>
+<area shape="rect" id="node9" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="957,81,1064,108"/>
 <area shape="rect" id="node11" href="$d8/d4b/_a_d_s1115__ex_8h.html#ad20504d5c0e8c93b73dc20300e6806fb" title="Get ADS1115 raw channel value in µV. " alt="" coords="683,107,865,149"/>
 <area shape="rect" id="node12" href="$d8/d4b/_a_d_s1115__ex_8h.html#a59bb8cdf42f67a04e28339e8d5918702" title="Get ADS1115 raw channel value in mV. " alt="" coords="683,173,865,214"/>
 <area shape="rect" id="node13" href="$d8/d4b/_a_d_s1115__ex_8h.html#a86643c274b5a593c93733e4337d01484" title="Get ADS1115 raw channel value in V. " alt="" coords="683,238,865,279"/>

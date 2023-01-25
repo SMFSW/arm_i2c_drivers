@@ -1,8 +1,8 @@
 <map id="APDS9930_Set_Prox_Gain" name="APDS9930_Set_Prox_Gain">
 <area shape="rect" id="node2" href="$de/d85/_a_p_d_s9930_8c.html#ab221708c08ca472dea5b4570ffe773b1" title="I2C Read function for APDS9930. " alt="" coords="833,367,961,394"/>
 <area shape="rect" id="node5" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#aaaec3a54f50e412457167507b6e090f4" title="Write APDS9930 Control. " alt="" coords="244,393,401,419"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1255,381,1372,407"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1260,443,1367,470"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="1255,381,1372,407"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="1260,443,1367,470"/>
 <area shape="rect" id="node6" href="$de/d85/_a_p_d_s9930_8c.html#af52285c4d97a77ae7c76d144748942cf" title="I2C Write function for APDS9930. " alt="" coords="1079,469,1207,495"/>
 <area shape="rect" id="node7" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a897fc2b1c7bfd0ff18d3a2d8a2758f40" title="Oscillator Enable / Disable. " alt="" coords="505,317,659,343"/>
 <area shape="rect" id="node9" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a31bb532aa12bbcb7ad3f6157c68d5ba3" title="ALS module Enable / Disable. " alt="" coords="505,367,659,394"/>

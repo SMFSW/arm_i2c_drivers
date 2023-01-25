@@ -1,10 +1,8 @@
 <map id="PCA9624_Set_MODE2" name="PCA9624_Set_MODE2">
-<area shape="rect" id="node2" href="$db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624. " alt="" coords="455,86,573,113"/>
-<area shape="rect" id="node5" href="$d6/dfc/_p_c_a9624__ex_8h.html#a4e93459e13da452b9181cdef1f710b15" title="Set latch type for PCA9624 peripheral. " alt="" coords="236,137,387,164"/>
-<area shape="rect" id="node7" href="$d6/dfc/_p_c_a9624__ex_8h.html#a764b234c30777556e73706229815172c" title="Set PCA9624 peripheral LED mode. " alt="" coords="220,36,403,62"/>
-<area shape="rect" id="node8" href="$d6/dfc/_p_c_a9624__ex_8h.html#addff2c3e81e7a4ba7e30fd32bd89967f" title="Set PCA9624 peripheral multiple LEDs mode. " alt="" coords="216,86,407,113"/>
-<area shape="rect" id="node9" href="$d6/dfc/_p_c_a9624__ex_8h.html#a26229b1c7f245cc88e09533d80ade29d" title="Read PWM duty cycle array of values of a PCA9624. " alt="" coords="239,188,383,214"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="621,86,739,113"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="627,137,733,164"/>
-<area shape="rect" id="node6" href="$db/de1/_p_c_a9624_8c.html#a03ee6aaa20de8bd43dfd5b251f3bde67" title="I2C Read function for PCA9624. " alt="" coords="455,137,573,164"/>
+<area shape="rect" id="node2" href="$db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624. " alt="" coords="455,58,573,85"/>
+<area shape="rect" id="node3" href="$d6/dfc/_p_c_a9624__ex_8h.html#a4e93459e13da452b9181cdef1f710b15" title="Set latch type for PCA9624 peripheral. " alt="" coords="236,134,387,161"/>
+<area shape="rect" id="node5" href="$d6/dfc/_p_c_a9624__ex_8h.html#a764b234c30777556e73706229815172c" title="Set PCA9624 peripheral LED mode. " alt="" coords="220,33,403,60"/>
+<area shape="rect" id="node6" href="$d6/dfc/_p_c_a9624__ex_8h.html#addff2c3e81e7a4ba7e30fd32bd89967f" title="Set PCA9624 peripheral multiple LEDs mode. " alt="" coords="216,84,407,110"/>
+<area shape="rect" id="node7" href="$d6/dfc/_p_c_a9624__ex_8h.html#a26229b1c7f245cc88e09533d80ade29d" title="Read PWM duty cycle array of values of a PCA9624. " alt="" coords="239,185,383,212"/>
+<area shape="rect" id="node4" href="$db/de1/_p_c_a9624_8c.html#a03ee6aaa20de8bd43dfd5b251f3bde67" title="I2C Read function for PCA9624. " alt="" coords="455,160,573,186"/>
 </map>

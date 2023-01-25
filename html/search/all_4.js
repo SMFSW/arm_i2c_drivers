@@ -36,7 +36,6 @@ var searchData=
   ['drv2604_5fchip_5fid',['DRV2604_CHIP_ID',['../d1/da7/_d_r_v2605_l__proc_8h.html#a343031d1f6c13b889486ecd8c6d02dee',1,'DRV2605L_proc.h']]],
   ['drv2604l_5fchip_5fid',['DRV2604L_CHIP_ID',['../d1/da7/_d_r_v2605_l__proc_8h.html#a37f2762b657fdbb5f128721a2128e00a',1,'DRV2605L_proc.h']]],
   ['drv2605_5fchip_5fid',['DRV2605_CHIP_ID',['../d1/da7/_d_r_v2605_l__proc_8h.html#a62912d212a31e1cdd9836ce44c32a977',1,'DRV2605L_proc.h']]],
-  ['drv2605_5fhal',['DRV2605_hal',['../dc/d9a/_d_r_v2605_l_8c.html#a54f89ce970c55493c2920cd6e5dcc597',1,'DRV2605_hal():&#160;DRV2605L.c'],['../d5/d47/_d_r_v2605_l_8h.html#a54f89ce970c55493c2920cd6e5dcc597',1,'DRV2605_hal():&#160;DRV2605L.c']]],
   ['drv2605l',['DRV2605L',['../df/dc7/_d_r_v2605_l__proc_8c.html#a2c56d539949d06479aac63eb96eda672',1,'DRV2605L():&#160;DRV2605L_proc.c'],['../d1/da7/_d_r_v2605_l__proc_8h.html#a2c56d539949d06479aac63eb96eda672',1,'DRV2605L():&#160;DRV2605L_proc.c']]],
   ['drv2605l_2ec',['DRV2605L.c',['../dc/d9a/_d_r_v2605_l_8c.html',1,'']]],
   ['drv2605l_2eh',['DRV2605L.h',['../d5/d47/_d_r_v2605_l_8h.html',1,'']]],

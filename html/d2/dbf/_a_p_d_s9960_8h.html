@@ -65,8 +65,7 @@ $(function() {
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">APDS9960.h File Reference</div>  </div>
 </div><!--header-->
@@ -378,9 +377,9 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7f169a78f245b023b72f92539c7a59c5"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dbf/_a_p_d_s9960_8h.html#a7f169a78f245b023b72f92539c7a59c5">APDS9960_Init</a> (const uint8_t idx, const I2C_HandleTypeDef *hi2c, const uint16_t devAddress)</td></tr>
-<tr class="memdesc:a7f169a78f245b023b72f92539c7a59c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for APDS9960 peripheral.  <a href="#a7f169a78f245b023b72f92539c7a59c5">More...</a><br /></td></tr>
-<tr class="separator:a7f169a78f245b023b72f92539c7a59c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a765a10873be3783397b1985f49a76d0a"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dbf/_a_p_d_s9960_8h.html#a765a10873be3783397b1985f49a76d0a">APDS9960_Init</a> (const uint8_t idx, I2C_HandleTypeDef *const hi2c, const uint16_t devAddress)</td></tr>
+<tr class="memdesc:a765a10873be3783397b1985f49a76d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for APDS9960 peripheral.  <a href="#a765a10873be3783397b1985f49a76d0a">More...</a><br /></td></tr>
+<tr class="separator:a765a10873be3783397b1985f49a76d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2234fed110d5973db4b9d30d2e5098fd"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dbf/_a_p_d_s9960_8h.html#a2234fed110d5973db4b9d30d2e5098fd">APDS9960_Init_Single</a> (void)</td></tr>
 <tr class="memdesc:a2234fed110d5973db4b9d30d2e5098fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for APDS9960 peripheral.  <a href="#a2234fed110d5973db4b9d30d2e5098fd">More...</a><br /></td></tr>
 <tr class="separator:a2234fed110d5973db4b9d30d2e5098fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -399,17 +398,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a4c742bdee878751bcf0fd6df2e076e1d"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dbf/_a_p_d_s9960_8h.html#a4c742bdee878751bcf0fd6df2e076e1d">APDS9960_Write_Special</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *const pSlave, const <a class="el" href="../../d2/dbf/_a_p_d_s9960_8h.html#a5f6fd4842e21e264bf9d8a70567f2d3c">APDS9960_spec_func</a> func)</td></tr>
 <tr class="memdesc:a4c742bdee878751bcf0fd6df2e076e1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Special function Write function for APDS9960.  <a href="#a4c742bdee878751bcf0fd6df2e076e1d">More...</a><br /></td></tr>
 <tr class="separator:a4c742bdee878751bcf0fd6df2e076e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a981ac2cd255eb6c3eb4b74617884a95c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dbf/_a_p_d_s9960_8h.html#a981ac2cd255eb6c3eb4b74617884a95c">APDS9960_hal</a> [<a class="el" href="../../d2/dbf/_a_p_d_s9960_8h.html#afbccbef822849101858a846b9e15f71c">I2C_APDS9960_NB</a>]</td></tr>
-<tr class="memdesc:a981ac2cd255eb6c3eb4b74617884a95c"><td class="mdescLeft">&#160;</td><td class="mdescRight">APDS9960 Slave structure.  <a href="#a981ac2cd255eb6c3eb4b74617884a95c">More...</a><br /></td></tr>
-<tr class="separator:a981ac2cd255eb6c3eb4b74617884a95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>APDS9960 Driver. </p>
 <dl class="section author"><dt>Author</dt><dd>SMFSW </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2021, SMFSW</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2023, SMFSW</dd></dl>
 <p>APDS9960: Digital Proximity, Ambient Light, RGB and Gesture Sensor </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="aebaa346d16e927ee770e4420f6f92898"></a>
@@ -1185,8 +1178,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a7f169a78f245b023b72f92539c7a59c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f169a78f245b023b72f92539c7a59c5">&#9670;&nbsp;</a></span>APDS9960_Init()</h2>
+<a id="a765a10873be3783397b1985f49a76d0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a765a10873be3783397b1985f49a76d0a">&#9670;&nbsp;</a></span>APDS9960_Init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1200,7 +1193,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const I2C_HandleTypeDef *&#160;</td>
+          <td class="paramtype">I2C_HandleTypeDef *const&#160;</td>
           <td class="paramname"><em>hi2c</em>, </td>
         </tr>
         <tr>
@@ -1230,11 +1223,11 @@ Variables</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d2/dbf/_a_p_d_s9960_8h_a7f169a78f245b023b72f92539c7a59c5_cgraph.png" border="0" usemap="#d2/dbf/_a_p_d_s9960_8h_a7f169a78f245b023b72f92539c7a59c5_cgraph" alt=""/></div>
-<map name="d2/dbf/_a_p_d_s9960_8h_a7f169a78f245b023b72f92539c7a59c5_cgraph" id="d2/dbf/_a_p_d_s9960_8h_a7f169a78f245b023b72f92539c7a59c5_cgraph">
-<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="209,701,317,728"/>
+<div class="center"><img src="../../d2/dbf/_a_p_d_s9960_8h_a765a10873be3783397b1985f49a76d0a_cgraph.png" border="0" usemap="#d2/dbf/_a_p_d_s9960_8h_a765a10873be3783397b1985f49a76d0a_cgraph" alt=""/></div>
+<map name="d2/dbf/_a_p_d_s9960_8h_a765a10873be3783397b1985f49a76d0a_cgraph" id="d2/dbf/_a_p_d_s9960_8h_a765a10873be3783397b1985f49a76d0a_cgraph">
+<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization. " alt="" coords="209,701,317,728"/>
 <area shape="rect" id="node3" href="../../dd/d2e/_a_p_d_s9960__proc_8c.html#a6f90f8c748ac7c65463a1893d66ed20a" title="Initialization Sequence for APDS9960 peripheral. " alt="" coords="169,752,356,778"/>
-<area shape="rect" id="node37" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="203,802,322,829"/>
+<area shape="rect" id="node37" href="../../d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state. " alt="" coords="203,802,322,829"/>
 <area shape="rect" id="node4" href="../../da/db5/_a_p_d_s9960__ex_8h.html#a81b3be53af5f052b585f7ae9bcb7dfcf" title="Get APDS9960 chip ID. " alt="" coords="963,592,1131,618"/>
 <area shape="rect" id="node8" href="../../da/db5/_a_p_d_s9960__ex_8h.html#a3d7529756184a33fd68ad38528cd228a" title="Write APDS9960 Enable register. " alt="" coords="1516,237,1667,264"/>
 <area shape="rect" id="node9" href="../../db/db1/_a_p_d_s9960_8c.html#a52b83fd89a1e886f3f1bb8b59a89b8ac" title="I2C Write function for APDS9960. " alt="" coords="1773,977,1901,1004"/>
@@ -1246,8 +1239,8 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node24" href="../../da/db5/_a_p_d_s9960__ex_8h.html#ae9965fa804cf198e799e62a0952dd815" title="ALS interrupt thresholds configuration. " alt="" coords="465,1382,611,1409"/>
 <area shape="rect" id="node25" href="../../da/db5/_a_p_d_s9960__ex_8h.html#a9e0a4dcaa7b5367cc1277a76ffe89a81" title="Proximity interrupt thresholds configuration. " alt="" coords="466,886,610,913"/>
 <area shape="rect" id="node5" href="../../db/db1/_a_p_d_s9960_8c.html#ae3a66d3faca052bed32148ad241084a5" title="I2C Read function for APDS9960. " alt="" coords="1527,617,1655,644"/>
-<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1949,760,2067,786"/>
-<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1955,888,2061,914"/>
+<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="1949,760,2067,786"/>
+<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="1955,888,2061,914"/>
 <area shape="rect" id="node11" href="../../da/db5/_a_p_d_s9960__ex_8h.html#a6d818c785f05953e3dcad1128c4e6d37" title="Write APDS9960 Control. " alt="" coords="968,364,1125,390"/>
 <area shape="rect" id="node12" href="../../da/db5/_a_p_d_s9960__ex_8h.html#ad3767ac54771a8d543206737a7939371" title="Oscillator Enable / Disable. " alt="" coords="1217,186,1371,213"/>
 <area shape="rect" id="node13" href="../../da/db5/_a_p_d_s9960__ex_8h.html#aaa25d881d2a5b6357eac929c6ac5a4d2" title="ALS module Enable / Disable. " alt="" coords="1217,237,1371,264"/>
@@ -1273,8 +1266,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d2/dbf/_a_p_d_s9960_8h_a7f169a78f245b023b72f92539c7a59c5_icgraph.png" border="0" usemap="#d2/dbf/_a_p_d_s9960_8h_a7f169a78f245b023b72f92539c7a59c5_icgraph" alt=""/></div>
-<map name="d2/dbf/_a_p_d_s9960_8h_a7f169a78f245b023b72f92539c7a59c5_icgraph" id="d2/dbf/_a_p_d_s9960_8h_a7f169a78f245b023b72f92539c7a59c5_icgraph">
+<div class="center"><img src="../../d2/dbf/_a_p_d_s9960_8h_a765a10873be3783397b1985f49a76d0a_icgraph.png" border="0" usemap="#d2/dbf/_a_p_d_s9960_8h_a765a10873be3783397b1985f49a76d0a_icgraph" alt=""/></div>
+<map name="d2/dbf/_a_p_d_s9960_8h_a765a10873be3783397b1985f49a76d0a_icgraph" id="d2/dbf/_a_p_d_s9960_8h_a765a10873be3783397b1985f49a76d0a_icgraph">
 <area shape="rect" id="node2" href="../../d2/dbf/_a_p_d_s9960_8h.html#a2234fed110d5973db4b9d30d2e5098fd" title="Initialization for APDS9960 peripheral. " alt="" coords="169,5,332,32"/>
 </map>
 </div>
@@ -1305,10 +1298,10 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/dbf/_a_p_d_s9960_8h_a2234fed110d5973db4b9d30d2e5098fd_cgraph.png" border="0" usemap="#d2/dbf/_a_p_d_s9960_8h_a2234fed110d5973db4b9d30d2e5098fd_cgraph" alt=""/></div>
 <map name="d2/dbf/_a_p_d_s9960_8h_a2234fed110d5973db4b9d30d2e5098fd_cgraph" id="d2/dbf/_a_p_d_s9960_8h_a2234fed110d5973db4b9d30d2e5098fd_cgraph">
-<area shape="rect" id="node2" href="../../db/db1/_a_p_d_s9960_8c.html#a7f169a78f245b023b72f92539c7a59c5" title="Initialization for APDS9960 peripheral. " alt="" coords="216,752,332,778"/>
-<area shape="rect" id="node3" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="419,701,527,728"/>
+<area shape="rect" id="node2" href="../../db/db1/_a_p_d_s9960_8c.html#a765a10873be3783397b1985f49a76d0a" title="Initialization for APDS9960 peripheral. " alt="" coords="216,752,332,778"/>
+<area shape="rect" id="node3" href="../../d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization. " alt="" coords="419,701,527,728"/>
 <area shape="rect" id="node4" href="../../dd/d2e/_a_p_d_s9960__proc_8c.html#a6f90f8c748ac7c65463a1893d66ed20a" title="Initialization Sequence for APDS9960 peripheral. " alt="" coords="380,752,567,778"/>
-<area shape="rect" id="node38" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="414,802,533,829"/>
+<area shape="rect" id="node38" href="../../d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state. " alt="" coords="414,802,533,829"/>
 <area shape="rect" id="node5" href="../../da/db5/_a_p_d_s9960__ex_8h.html#a81b3be53af5f052b585f7ae9bcb7dfcf" title="Get APDS9960 chip ID. " alt="" coords="1173,592,1341,618"/>
 <area shape="rect" id="node9" href="../../da/db5/_a_p_d_s9960__ex_8h.html#a3d7529756184a33fd68ad38528cd228a" title="Write APDS9960 Enable register. " alt="" coords="1727,237,1877,264"/>
 <area shape="rect" id="node10" href="../../db/db1/_a_p_d_s9960_8c.html#a52b83fd89a1e886f3f1bb8b59a89b8ac" title="I2C Write function for APDS9960. " alt="" coords="1984,977,2112,1004"/>
@@ -1320,8 +1313,8 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node25" href="../../da/db5/_a_p_d_s9960__ex_8h.html#ae9965fa804cf198e799e62a0952dd815" title="ALS interrupt thresholds configuration. " alt="" coords="676,1382,821,1409"/>
 <area shape="rect" id="node26" href="../../da/db5/_a_p_d_s9960__ex_8h.html#a9e0a4dcaa7b5367cc1277a76ffe89a81" title="Proximity interrupt thresholds configuration. " alt="" coords="677,886,821,913"/>
 <area shape="rect" id="node6" href="../../db/db1/_a_p_d_s9960_8c.html#ae3a66d3faca052bed32148ad241084a5" title="I2C Read function for APDS9960. " alt="" coords="1738,617,1866,644"/>
-<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="2160,760,2277,786"/>
-<area shape="rect" id="node8" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="2165,888,2272,914"/>
+<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="2160,760,2277,786"/>
+<area shape="rect" id="node8" href="../../d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="2165,888,2272,914"/>
 <area shape="rect" id="node12" href="../../da/db5/_a_p_d_s9960__ex_8h.html#a6d818c785f05953e3dcad1128c4e6d37" title="Write APDS9960 Control. " alt="" coords="1179,364,1336,390"/>
 <area shape="rect" id="node13" href="../../da/db5/_a_p_d_s9960__ex_8h.html#ad3767ac54771a8d543206737a7939371" title="Oscillator Enable / Disable. " alt="" coords="1427,186,1582,213"/>
 <area shape="rect" id="node14" href="../../da/db5/_a_p_d_s9960__ex_8h.html#aaa25d881d2a5b6357eac929c6ac5a4d2" title="ALS module Enable / Disable. " alt="" coords="1428,237,1581,264"/>
@@ -1401,8 +1394,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/dbf/_a_p_d_s9960_8h_ae3a66d3faca052bed32148ad241084a5_cgraph.png" border="0" usemap="#d2/dbf/_a_p_d_s9960_8h_ae3a66d3faca052bed32148ad241084a5_cgraph" alt=""/></div>
 <map name="d2/dbf/_a_p_d_s9960_8h_ae3a66d3faca052bed32148ad241084a5_cgraph" id="d2/dbf/_a_p_d_s9960_8h_ae3a66d3faca052bed32148ad241084a5_cgraph">
-<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="181,5,299,32"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="187,56,293,83"/>
+<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="181,5,299,32"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="187,56,293,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1436,7 +1429,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node8" href="../../da/db5/_a_p_d_s9960__ex_8h.html#a6d818c785f05953e3dcad1128c4e6d37" title="Write APDS9960 Control. " alt="" coords="415,487,572,513"/>
 <area shape="rect" id="node10" href="../../da/db5/_a_p_d_s9960__ex_8h.html#a9e0a4dcaa7b5367cc1277a76ffe89a81" title="Proximity interrupt thresholds configuration. " alt="" coords="929,699,1073,725"/>
 <area shape="rect" id="node11" href="../../df/d17/_a_p_d_s9960__proc_8h.html#a6f90f8c748ac7c65463a1893d66ed20a" title="Initialization Sequence for APDS9960 peripheral. " alt="" coords="1133,672,1320,699"/>
-<area shape="rect" id="node12" href="../../d2/dbf/_a_p_d_s9960_8h.html#a7f169a78f245b023b72f92539c7a59c5" title="Initialization for APDS9960 peripheral. " alt="" coords="1368,672,1484,699"/>
+<area shape="rect" id="node12" href="../../d2/dbf/_a_p_d_s9960_8h.html#a765a10873be3783397b1985f49a76d0a" title="Initialization for APDS9960 peripheral. " alt="" coords="1368,672,1484,699"/>
 <area shape="rect" id="node13" href="../../d2/dbf/_a_p_d_s9960_8h.html#a2234fed110d5973db4b9d30d2e5098fd" title="Initialization for APDS9960 peripheral. " alt="" coords="1532,672,1695,699"/>
 <area shape="rect" id="node30" href="../../df/d17/_a_p_d_s9960__proc_8h.html#a87274cc64ac34debc21c82dc2582d6df" title="Handler for APDS9960 peripheral GPIO interrupt. " alt="" coords="413,1044,573,1071"/>
 <area shape="rect" id="node32" href="../../df/d17/_a_p_d_s9960__proc_8h.html#afa04bc1a2bded2ddd64565252ac7c6b9" title="Handler for all APDS9960 peripherals. " alt="" coords="410,1095,577,1121"/>
@@ -1494,8 +1487,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../d2/dbf/_a_p_d_s9960_8h_a8b394f67011e2ab11f3a1e51d2d4d872_cgraph.png" border="0" usemap="#d2/dbf/_a_p_d_s9960_8h_a8b394f67011e2ab11f3a1e51d2d4d872_cgraph" alt=""/></div>
 <map name="d2/dbf/_a_p_d_s9960_8h_a8b394f67011e2ab11f3a1e51d2d4d872_cgraph" id="d2/dbf/_a_p_d_s9960_8h_a8b394f67011e2ab11f3a1e51d2d4d872_cgraph">
 <area shape="rect" id="node2" href="../../db/db1/_a_p_d_s9960_8c.html#ae3a66d3faca052bed32148ad241084a5" title="I2C Read function for APDS9960. " alt="" coords="220,31,348,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="396,5,513,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="401,56,508,83"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="396,5,513,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="401,56,508,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1566,8 +1559,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/dbf/_a_p_d_s9960_8h_a52b83fd89a1e886f3f1bb8b59a89b8ac_cgraph.png" border="0" usemap="#d2/dbf/_a_p_d_s9960_8h_a52b83fd89a1e886f3f1bb8b59a89b8ac_cgraph" alt=""/></div>
 <map name="d2/dbf/_a_p_d_s9960_8h_a52b83fd89a1e886f3f1bb8b59a89b8ac_cgraph" id="d2/dbf/_a_p_d_s9960_8h_a52b83fd89a1e886f3f1bb8b59a89b8ac_cgraph">
-<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="181,5,299,32"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="187,56,293,83"/>
+<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="181,5,299,32"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="187,56,293,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1593,7 +1586,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node3" href="../../da/db5/_a_p_d_s9960__ex_8h.html#a894fa923468bd4b4604955fb46b6c8d2" title="ALS interrupt low threshold configuration. " alt="" coords="403,5,553,32"/>
 <area shape="rect" id="node4" href="../../da/db5/_a_p_d_s9960__ex_8h.html#a1f231e4e8d6788d9b8ddeaa23e42442f" title="ALS interrupt high threshold configuration. " alt="" coords="401,56,555,83"/>
 <area shape="rect" id="node6" href="../../da/db5/_a_p_d_s9960__ex_8h.html#a9e0a4dcaa7b5367cc1277a76ffe89a81" title="Proximity interrupt thresholds configuration. " alt="" coords="1203,491,1347,517"/>
-<area shape="rect" id="node8" href="../../d2/dbf/_a_p_d_s9960_8h.html#a7f169a78f245b023b72f92539c7a59c5" title="Initialization for APDS9960 peripheral. " alt="" coords="1631,629,1747,656"/>
+<area shape="rect" id="node8" href="../../d2/dbf/_a_p_d_s9960_8h.html#a765a10873be3783397b1985f49a76d0a" title="Initialization for APDS9960 peripheral. " alt="" coords="1631,629,1747,656"/>
 <area shape="rect" id="node9" href="../../d2/dbf/_a_p_d_s9960_8h.html#a2234fed110d5973db4b9d30d2e5098fd" title="Initialization for APDS9960 peripheral. " alt="" coords="1795,629,1957,656"/>
 <area shape="rect" id="node16" href="../../da/db5/_a_p_d_s9960__ex_8h.html#ad3767ac54771a8d543206737a7939371" title="Oscillator Enable / Disable. " alt="" coords="401,664,555,691"/>
 <area shape="rect" id="node21" href="../../da/db5/_a_p_d_s9960__ex_8h.html#aaa25d881d2a5b6357eac929c6ac5a4d2" title="ALS module Enable / Disable. " alt="" coords="401,715,555,741"/>
@@ -1650,7 +1643,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/dbf/_a_p_d_s9960_8h_a4c742bdee878751bcf0fd6df2e076e1d_cgraph.png" border="0" usemap="#d2/dbf/_a_p_d_s9960_8h_a4c742bdee878751bcf0fd6df2e076e1d_cgraph" alt=""/></div>
 <map name="d2/dbf/_a_p_d_s9960_8h_a4c742bdee878751bcf0fd6df2e076e1d_cgraph" id="d2/dbf/_a_p_d_s9960_8h_a4c742bdee878751bcf0fd6df2e076e1d_cgraph">
-<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="235,5,341,32"/>
+<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="235,5,341,32"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1715,8 +1708,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../d2/dbf/_a_p_d_s9960_8h_aedcc2dc2f38a0ec3ec6805ddb108e209_cgraph.png" border="0" usemap="#d2/dbf/_a_p_d_s9960_8h_aedcc2dc2f38a0ec3ec6805ddb108e209_cgraph" alt=""/></div>
 <map name="d2/dbf/_a_p_d_s9960_8h_aedcc2dc2f38a0ec3ec6805ddb108e209_cgraph" id="d2/dbf/_a_p_d_s9960_8h_aedcc2dc2f38a0ec3ec6805ddb108e209_cgraph">
 <area shape="rect" id="node2" href="../../db/db1/_a_p_d_s9960_8c.html#a52b83fd89a1e886f3f1bb8b59a89b8ac" title="I2C Write function for APDS9960. " alt="" coords="220,31,348,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="396,5,513,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="401,56,508,83"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="396,5,513,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="401,56,508,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1728,23 +1721,6 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node3" href="../../da/db5/_a_p_d_s9960__ex_8h.html#a1f231e4e8d6788d9b8ddeaa23e42442f" title="ALS interrupt high threshold configuration. " alt="" coords="220,56,375,83"/>
 </map>
 </div>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a981ac2cd255eb6c3eb4b74617884a95c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a981ac2cd255eb6c3eb4b74617884a95c">&#9670;&nbsp;</a></span>APDS9960_hal</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> APDS9960_hal[<a class="el" href="../../d2/dbf/_a_p_d_s9960_8h.html#afbccbef822849101858a846b9e15f71c">I2C_APDS9960_NB</a>]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>APDS9960 Slave structure. </p>
 
 </div>
 </div>

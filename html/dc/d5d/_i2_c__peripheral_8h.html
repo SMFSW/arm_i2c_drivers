@@ -151,9 +151,18 @@ Macros</h2></td></tr>
 <tr class="memitem:a01d3cf06a893c49575e4fade50791d56"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5d/_i2_c__peripheral_8h.html#a01d3cf06a893c49575e4fade50791d56">IS_I2C_PERIPHERAL</a>(name,  idx)&#160;&#160;&#160;((idx) &lt; I2C_##name##_NB)</td></tr>
 <tr class="memdesc:a01d3cf06a893c49575e4fade50791d56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro for use with assert_param to check I2C <b>idx</b> is existing for <b>name</b> peripheral.  <a href="#a01d3cf06a893c49575e4fade50791d56">More...</a><br /></td></tr>
 <tr class="separator:a01d3cf06a893c49575e4fade50791d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a453a66c20785a971d76ef22d16470962"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5d/_i2_c__peripheral_8h.html#a453a66c20785a971d76ef22d16470962">I2C_PERIPHERAL_SET_DEFAULTS</a>(name,  idx,  address)</td></tr>
-<tr class="memdesc:a453a66c20785a971d76ef22d16470962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to set working defaults for peripheral <b>name</b> with I2C address <b>address</b> on index <b>idx</b>.  <a href="#a453a66c20785a971d76ef22d16470962">More...</a><br /></td></tr>
-<tr class="separator:a453a66c20785a971d76ef22d16470962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afacefce202ee3941ec77492decd7f078"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5d/_i2_c__peripheral_8h.html#afacefce202ee3941ec77492decd7f078">IS_I2C_PERIPHERAL_ADDR</a>(name,  addr)</td></tr>
+<tr class="memdesc:afacefce202ee3941ec77492decd7f078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro for use with assert_param to check I2C peripheral <b>addr</b> is valid for <b>name</b> peripheral.  <a href="#afacefce202ee3941ec77492decd7f078">More...</a><br /></td></tr>
+<tr class="separator:afacefce202ee3941ec77492decd7f078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70c768b476f3058ae905cb304012f0a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5d/_i2_c__peripheral_8h.html#a70c768b476f3058ae905cb304012f0a0">I2C_PERIPHERAL_IDX</a>(name,  addr)&#160;&#160;&#160;((int32_t) (((name##_t *) addr) - name))</td></tr>
+<tr class="memdesc:a70c768b476f3058ae905cb304012f0a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to get I2C peripheral index given <b>addr</b> for <b>name</b> peripheral.  <a href="#a70c768b476f3058ae905cb304012f0a0">More...</a><br /></td></tr>
+<tr class="separator:a70c768b476f3058ae905cb304012f0a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c5e84eba48b22748032a3f6c15ce611"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5d/_i2_c__peripheral_8h.html#a5c5e84eba48b22748032a3f6c15ce611">I2C_PERIPHERAL_SET_DEFAULTS</a>(name,  idx)</td></tr>
+<tr class="memdesc:a5c5e84eba48b22748032a3f6c15ce611"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to set working defaults for peripheral <b>name</b> on index <b>idx</b>.  <a href="#a5c5e84eba48b22748032a3f6c15ce611">More...</a><br /></td></tr>
+<tr class="separator:a5c5e84eba48b22748032a3f6c15ce611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96b61a75173191aba59c69ce54dabd43"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5d/_i2_c__peripheral_8h.html#a96b61a75173191aba59c69ce54dabd43">I2C_PERIPHERAL_SET_DEFAULTS_SINGLETON</a>(name)</td></tr>
+<tr class="memdesc:a96b61a75173191aba59c69ce54dabd43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to set working defaults for singleton peripheral <b>name</b>.  <a href="#a96b61a75173191aba59c69ce54dabd43">More...</a><br /></td></tr>
+<tr class="separator:a96b61a75173191aba59c69ce54dabd43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -175,10 +184,40 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>I2C peripheral common. </p>
 <dl class="section author"><dt>Author</dt><dd>SMFSW </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2021, SMFSW </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2023, SMFSW </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a453a66c20785a971d76ef22d16470962"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a453a66c20785a971d76ef22d16470962">&#9670;&nbsp;</a></span>I2C_PERIPHERAL_SET_DEFAULTS</h2>
+<a id="a70c768b476f3058ae905cb304012f0a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70c768b476f3058ae905cb304012f0a0">&#9670;&nbsp;</a></span>I2C_PERIPHERAL_IDX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_PERIPHERAL_IDX</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">addr&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((int32_t) (((name##_t *) addr) - name))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Macro to get I2C peripheral index given <b>addr</b> for <b>name</b> peripheral. </p>
+
+</div>
+</div>
+<a id="a5c5e84eba48b22748032a3f6c15ce611"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c5e84eba48b22748032a3f6c15ce611">&#9670;&nbsp;</a></span>I2C_PERIPHERAL_SET_DEFAULTS</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -193,13 +232,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">idx, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">address&#160;</td>
+          <td class="paramname">idx&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -208,10 +241,30 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">memcpy(&amp;name##_hal[idx], &amp;name##_defaults, <span class="keyword">sizeof</span>(<a class="code" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a>));    \</div><div class="line">    name##_hal[idx].cfg.addr = <a class="code" href="../../d6/dd6/_i2_c__component_8h.html#ad5c7bd690e94d726dda8f5f183d85687">I2C_ADDR</a>(address);                       \</div><div class="line">    name[idx].cfg.slave_inst = &amp;name##_hal[idx];</div><div class="ttc" id="_i2_c__component_8h_html_ad5c7bd690e94d726dda8f5f183d85687"><div class="ttname"><a href="../../d6/dd6/_i2_c__component_8h.html#ad5c7bd690e94d726dda8f5f183d85687">I2C_ADDR</a></div><div class="ttdeci">#define I2C_ADDR(a)</div><div class="ttdoc">Macro to shift a 1 bit left to define 7b I2C address. </div><div class="ttdef"><b>Definition:</b> I2C_component.h:35</div></div>
-<div class="ttc" id="struct_i2_c__slave__t_html"><div class="ttname"><a href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a></div><div class="ttdoc">i2c slave config and control parameters </div><div class="ttdef"><b>Definition:</b> I2C_component.h:65</div></div>
+<b>Value:</b><div class="fragment"><div class="line">memcpy(&amp;name##_hal[idx], &amp;name##_defaults, <span class="keyword">sizeof</span>(<a class="code" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a>));    \</div><div class="line">    name[idx].cfg.slave_inst = &amp;name##_hal[idx];</div><div class="ttc" id="struct_i2_c__slave__t_html"><div class="ttname"><a href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a></div><div class="ttdoc">i2c slave config and control parameters </div><div class="ttdef"><b>Definition:</b> I2C_component.h:65</div></div>
 </div><!-- fragment -->
-<p>Macro to set working defaults for peripheral <b>name</b> with I2C address <b>address</b> on index <b>idx</b>. </p>
+<p>Macro to set working defaults for peripheral <b>name</b> on index <b>idx</b>. </p>
+
+</div>
+</div>
+<a id="a96b61a75173191aba59c69ce54dabd43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96b61a75173191aba59c69ce54dabd43">&#9670;&nbsp;</a></span>I2C_PERIPHERAL_SET_DEFAULTS_SINGLETON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_PERIPHERAL_SET_DEFAULTS_SINGLETON</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">memcpy(&amp;name##_hal, &amp;name##_defaults, <span class="keyword">sizeof</span>(<a class="code" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a>)); \</div><div class="line">    name.cfg.slave_inst = &amp;name##_hal;</div><div class="ttc" id="struct_i2_c__slave__t_html"><div class="ttname"><a href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a></div><div class="ttdoc">i2c slave config and control parameters </div><div class="ttdef"><b>Definition:</b> I2C_component.h:65</div></div>
+</div><!-- fragment -->
+<p>Macro to set working defaults for singleton peripheral <b>name</b>. </p>
 
 </div>
 </div>
@@ -242,6 +295,37 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Macro for use with assert_param to check I2C <b>idx</b> is existing for <b>name</b> peripheral. </p>
+
+</div>
+</div>
+<a id="afacefce202ee3941ec77492decd7f078"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afacefce202ee3941ec77492decd7f078">&#9670;&nbsp;</a></span>IS_I2C_PERIPHERAL_ADDR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_I2C_PERIPHERAL_ADDR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">addr&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">((<a class="code" href="../../dc/d5d/_i2_c__peripheral_8h.html#a70c768b476f3058ae905cb304012f0a0">I2C_PERIPHERAL_IDX</a>(addr, name) &gt;= 0) &amp;&amp;           \</div><div class="line">                                            (<a class="code" href="../../dc/d5d/_i2_c__peripheral_8h.html#a70c768b476f3058ae905cb304012f0a0">I2C_PERIPHERAL_IDX</a>(addr, name) &lt; I2C_##name##_NB))</div><div class="ttc" id="_i2_c__peripheral_8h_html_a70c768b476f3058ae905cb304012f0a0"><div class="ttname"><a href="../../dc/d5d/_i2_c__peripheral_8h.html#a70c768b476f3058ae905cb304012f0a0">I2C_PERIPHERAL_IDX</a></div><div class="ttdeci">#define I2C_PERIPHERAL_IDX(name, addr)</div><div class="ttdoc">Macro to get I2C peripheral index given addr for name peripheral. </div><div class="ttdef"><b>Definition:</b> I2C_peripheral.h:28</div></div>
+</div><!-- fragment -->
+<p>Macro for use with assert_param to check I2C peripheral <b>addr</b> is valid for <b>name</b> peripheral. </p>
 
 </div>
 </div>
@@ -526,7 +610,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node14" href="../../d5/d47/_d_r_v2605_l_8h.html#a3f9967699bd1bfb66cc38395ce928151" title="Initialization for DRV2605L peripheral. " alt="" coords="968,236,1081,263"/>
 <area shape="rect" id="node19" href="../../d8/df0/_p_c_a9532__ex_8h.html#a03b2ea671687b1a439c90bc4f946542b" title="Convert PWMx byte register to Duty Cycle (in %) " alt="" coords="484,381,657,408"/>
 <area shape="rect" id="node20" href="../../de/da7/_p_c_a9532__proc_8h.html#a95ddc3ce36d7d60e26b08ce405ea2fc3" title="Initialization Sequence for PCA9532 peripheral. " alt="" coords="713,381,890,408"/>
-<area shape="rect" id="node21" href="../../d3/df9/_p_c_a9532_8h.html#a53117549a86481f7203371b537bc7084" title="Initialization for PCA9532 peripheral. " alt="" coords="971,381,1078,408"/>
+<area shape="rect" id="node21" href="../../d3/df9/_p_c_a9532_8h.html#ab2c83a49b54020805a88671f067bf6d6" title="Initialization for PCA9532 peripheral. " alt="" coords="971,381,1078,408"/>
 <area shape="rect" id="node22" href="../../d3/df9/_p_c_a9532_8h.html#ae3bc95cfa1ac91a201ac0543ced4bb03" title="Initialization for PCA9532 peripheral. " alt="" coords="1177,381,1329,408"/>
 <area shape="rect" id="node24" href="../../d6/dfc/_p_c_a9624__ex_8h.html#a93948697ac82a090f75a5d6879ca7f23" title="Send all PWM duty cycle array of values to apply on a PCA9624 (for the 8 channels) ..." alt="" coords="493,432,649,459"/>
 <area shape="rect" id="node26" href="../../d3/d57/_p_c_a9685__ex_8h.html#a9c727d398bdfa3e4abd76a8fe551dadd" title="Compute and send PWM lighting values to apply on a PCA9685 channel or all channels (Percent) ..." alt="" coords="493,483,648,509"/>

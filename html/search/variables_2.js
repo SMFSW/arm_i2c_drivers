@@ -15,7 +15,6 @@ var searchData=
   ['blue_5flsb',['Blue_LSB',['../d3/d2f/unionu_s11059___r_e_g___m_a_p.html#a23da5ab9bad78da8c0107a88ddbf099a',1,'uS11059_REG_MAP']]],
   ['blue_5fmsb',['Blue_MSB',['../d3/d2f/unionu_s11059___r_e_g___m_a_p.html#a8c8d67720eb1f69610b0fe101a9601b0',1,'uS11059_REG_MAP']]],
   ['bmp180',['BMP180',['../d0/d35/_b_m_p180__proc_8c.html#a162ba5dc5bf8fa464fac812365779bb0',1,'BMP180():&#160;BMP180_proc.c'],['../dc/d50/_b_m_p180__proc_8h.html#a162ba5dc5bf8fa464fac812365779bb0',1,'BMP180():&#160;BMP180_proc.c']]],
-  ['bmp180_5fhal',['BMP180_hal',['../d8/d11/_b_m_p180_8c.html#a4decbba59817a0af264790a303f32dcf',1,'BMP180_hal():&#160;BMP180.c'],['../d3/d7d/_b_m_p180_8h.html#a4decbba59817a0af264790a303f32dcf',1,'BMP180_hal():&#160;BMP180.c']]],
   ['bmp180_5foss_5ftime',['BMP180_OSS_time',['../d0/d35/_b_m_p180__proc_8c.html#aacf3d550c82275494054b0eb468b22a5',1,'BMP180_proc.c']]],
   ['brake_5fstabilizer',['BRAKE_STABILIZER',['../d0/d59/unionu_d_r_v___r_e_g_____c_o_n_t_r_o_l__2.html#a8ee38a91ac3a624f78be6e27decbf6de',1,'uDRV_REG__CONTROL_2']]],
   ['brt',['BRT',['../dc/da9/unionu_d_r_v___r_e_g___m_a_p.html#a457bd2262c54e9b4d214ec4052fd9945',1,'uDRV_REG_MAP']]],

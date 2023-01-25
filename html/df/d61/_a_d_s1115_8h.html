@@ -65,8 +65,7 @@ $(function() {
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ADS1115.h File Reference</div>  </div>
 </div><!--header-->
@@ -236,9 +235,9 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9b7a1bd3466487159a0b6975b115cd22"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d61/_a_d_s1115_8h.html#a9b7a1bd3466487159a0b6975b115cd22">ADS1115_Init</a> (const uint8_t idx, const I2C_HandleTypeDef *hi2c, const uint16_t devAddress)</td></tr>
-<tr class="memdesc:a9b7a1bd3466487159a0b6975b115cd22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for ADS1115 peripheral.  <a href="#a9b7a1bd3466487159a0b6975b115cd22">More...</a><br /></td></tr>
-<tr class="separator:a9b7a1bd3466487159a0b6975b115cd22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a053930191cd2ac98953aaeee766c7b6d"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d61/_a_d_s1115_8h.html#a053930191cd2ac98953aaeee766c7b6d">ADS1115_Init</a> (const uint8_t idx, I2C_HandleTypeDef *const hi2c, const uint16_t devAddress)</td></tr>
+<tr class="memdesc:a053930191cd2ac98953aaeee766c7b6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for ADS1115 peripheral.  <a href="#a053930191cd2ac98953aaeee766c7b6d">More...</a><br /></td></tr>
+<tr class="separator:a053930191cd2ac98953aaeee766c7b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca8481f4d0bcf062cde74d6947a0809d"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d61/_a_d_s1115_8h.html#aca8481f4d0bcf062cde74d6947a0809d">ADS1115_Init_Single</a> (void)</td></tr>
 <tr class="memdesc:aca8481f4d0bcf062cde74d6947a0809d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for ADS1115 peripheral.  <a href="#aca8481f4d0bcf062cde74d6947a0809d">More...</a><br /></td></tr>
 <tr class="separator:aca8481f4d0bcf062cde74d6947a0809d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -248,17 +247,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a92839395c4e5385fe67b8eaeb948de7c"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d61/_a_d_s1115_8h.html#a92839395c4e5385fe67b8eaeb948de7c">ADS1115_Read</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *const pSlave, uint16_t *data, const uint16_t addr)</td></tr>
 <tr class="memdesc:a92839395c4e5385fe67b8eaeb948de7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Read function for ADS1115.  <a href="#a92839395c4e5385fe67b8eaeb948de7c">More...</a><br /></td></tr>
 <tr class="separator:a92839395c4e5385fe67b8eaeb948de7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a0441c7fface07adf0e5ff9dd2862389a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d61/_a_d_s1115_8h.html#a0441c7fface07adf0e5ff9dd2862389a">ADS1115_hal</a> [<a class="el" href="../../df/d61/_a_d_s1115_8h.html#a7eaf7ec6a8d54d5e3d50988da3e71a3a">I2C_ADS1115_NB</a>]</td></tr>
-<tr class="memdesc:a0441c7fface07adf0e5ff9dd2862389a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADS1115 Slave structure.  <a href="#a0441c7fface07adf0e5ff9dd2862389a">More...</a><br /></td></tr>
-<tr class="separator:a0441c7fface07adf0e5ff9dd2862389a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>ADS1115 Driver. </p>
 <dl class="section author"><dt>Author</dt><dd>SMFSW </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2021, SMFSW</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2023, SMFSW</dd></dl>
 <p>ADS1115: Ultra-Small, Low-Power, 16-Bit Analog-to-Digital Converter with Internal Reference </p><dl class="section note"><dt>Note</dt><dd>Compatibility with:<ul>
 <li>ADS1113 (restrictions given in datasheet)</li>
 <li>ADS1114 (restrictions given in datasheet)</li>
@@ -754,8 +747,8 @@ Compatibility should be assured with:<ul>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a9b7a1bd3466487159a0b6975b115cd22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b7a1bd3466487159a0b6975b115cd22">&#9670;&nbsp;</a></span>ADS1115_Init()</h2>
+<a id="a053930191cd2ac98953aaeee766c7b6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a053930191cd2ac98953aaeee766c7b6d">&#9670;&nbsp;</a></span>ADS1115_Init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -769,7 +762,7 @@ Compatibility should be assured with:<ul>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const I2C_HandleTypeDef *&#160;</td>
+          <td class="paramtype">I2C_HandleTypeDef *const&#160;</td>
           <td class="paramname"><em>hi2c</em>, </td>
         </tr>
         <tr>
@@ -799,19 +792,19 @@ Compatibility should be assured with:<ul>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d61/_a_d_s1115_8h_a9b7a1bd3466487159a0b6975b115cd22_cgraph.png" border="0" usemap="#df/d61/_a_d_s1115_8h_a9b7a1bd3466487159a0b6975b115cd22_cgraph" alt=""/></div>
-<map name="df/d61/_a_d_s1115_8h_a9b7a1bd3466487159a0b6975b115cd22_cgraph" id="df/d61/_a_d_s1115_8h_a9b7a1bd3466487159a0b6975b115cd22_cgraph">
-<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="197,5,305,32"/>
+<div class="center"><img src="../../df/d61/_a_d_s1115_8h_a053930191cd2ac98953aaeee766c7b6d_cgraph.png" border="0" usemap="#df/d61/_a_d_s1115_8h_a053930191cd2ac98953aaeee766c7b6d_cgraph" alt=""/></div>
+<map name="df/d61/_a_d_s1115_8h_a053930191cd2ac98953aaeee766c7b6d_cgraph" id="df/d61/_a_d_s1115_8h_a053930191cd2ac98953aaeee766c7b6d_cgraph">
+<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization. " alt="" coords="197,5,305,32"/>
 <area shape="rect" id="node3" href="../../da/d08/_a_d_s1115__proc_8c.html#a0ebd901d052a4725490bf5e7b4bb4d52" title="Initialization Sequence for ADS1115 peripheral. " alt="" coords="161,56,340,83"/>
-<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="191,107,310,133"/>
+<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state. " alt="" coords="191,107,310,133"/>
 <area shape="rect" id="node4" href="../../d8/d63/_a_d_s1115__ex_8c.html#a0b1718b759148a587bb5c50c860af158" title="Set ADS1115 functional mode. " alt="" coords="388,56,559,83"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d61/_a_d_s1115_8h_a9b7a1bd3466487159a0b6975b115cd22_icgraph.png" border="0" usemap="#df/d61/_a_d_s1115_8h_a9b7a1bd3466487159a0b6975b115cd22_icgraph" alt=""/></div>
-<map name="df/d61/_a_d_s1115_8h_a9b7a1bd3466487159a0b6975b115cd22_icgraph" id="df/d61/_a_d_s1115_8h_a9b7a1bd3466487159a0b6975b115cd22_icgraph">
+<div class="center"><img src="../../df/d61/_a_d_s1115_8h_a053930191cd2ac98953aaeee766c7b6d_icgraph.png" border="0" usemap="#df/d61/_a_d_s1115_8h_a053930191cd2ac98953aaeee766c7b6d_icgraph" alt=""/></div>
+<map name="df/d61/_a_d_s1115_8h_a053930191cd2ac98953aaeee766c7b6d_icgraph" id="df/d61/_a_d_s1115_8h_a053930191cd2ac98953aaeee766c7b6d_icgraph">
 <area shape="rect" id="node2" href="../../df/d61/_a_d_s1115_8h.html#aca8481f4d0bcf062cde74d6947a0809d" title="Initialization for ADS1115 peripheral. " alt="" coords="161,5,316,32"/>
 </map>
 </div>
@@ -842,10 +835,10 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/d61/_a_d_s1115_8h_aca8481f4d0bcf062cde74d6947a0809d_cgraph.png" border="0" usemap="#df/d61/_a_d_s1115_8h_aca8481f4d0bcf062cde74d6947a0809d_cgraph" alt=""/></div>
 <map name="df/d61/_a_d_s1115_8h_aca8481f4d0bcf062cde74d6947a0809d_cgraph" id="df/d61/_a_d_s1115_8h_aca8481f4d0bcf062cde74d6947a0809d_cgraph">
-<area shape="rect" id="node2" href="../../db/de1/_a_d_s1115_8c.html#a9b7a1bd3466487159a0b6975b115cd22" title="Initialization for ADS1115 peripheral. " alt="" coords="208,56,316,83"/>
-<area shape="rect" id="node3" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="399,5,507,32"/>
+<area shape="rect" id="node2" href="../../db/de1/_a_d_s1115_8c.html#a053930191cd2ac98953aaeee766c7b6d" title="Initialization for ADS1115 peripheral. " alt="" coords="208,56,316,83"/>
+<area shape="rect" id="node3" href="../../d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization. " alt="" coords="399,5,507,32"/>
 <area shape="rect" id="node4" href="../../da/d08/_a_d_s1115__proc_8c.html#a0ebd901d052a4725490bf5e7b4bb4d52" title="Initialization Sequence for ADS1115 peripheral. " alt="" coords="364,56,543,83"/>
-<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="394,107,513,133"/>
+<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state. " alt="" coords="394,107,513,133"/>
 <area shape="rect" id="node5" href="../../d8/d63/_a_d_s1115__ex_8c.html#a0b1718b759148a587bb5c50c860af158" title="Set ADS1115 functional mode. " alt="" coords="591,56,761,83"/>
 </map>
 </div>
@@ -899,8 +892,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/d61/_a_d_s1115_8h_a92839395c4e5385fe67b8eaeb948de7c_cgraph.png" border="0" usemap="#df/d61/_a_d_s1115_8h_a92839395c4e5385fe67b8eaeb948de7c_cgraph" alt=""/></div>
 <map name="df/d61/_a_d_s1115_8h_a92839395c4e5385fe67b8eaeb948de7c_cgraph" id="df/d61/_a_d_s1115_8h_a92839395c4e5385fe67b8eaeb948de7c_cgraph">
-<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="173,5,291,32"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="179,56,285,83"/>
+<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="173,5,291,32"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="179,56,285,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -965,8 +958,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/d61/_a_d_s1115_8h_a322d178be687a2e02e2f1b0a06d3dbce_cgraph.png" border="0" usemap="#df/d61/_a_d_s1115_8h_a322d178be687a2e02e2f1b0a06d3dbce_cgraph" alt=""/></div>
 <map name="df/d61/_a_d_s1115_8h_a322d178be687a2e02e2f1b0a06d3dbce_cgraph" id="df/d61/_a_d_s1115_8h_a322d178be687a2e02e2f1b0a06d3dbce_cgraph">
-<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="173,5,291,32"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="179,56,285,83"/>
+<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="173,5,291,32"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="179,56,285,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -978,23 +971,6 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node3" href="../../d8/d4b/_a_d_s1115__ex_8h.html#a01122a43264a51828c83b487469b46e1" title="Set ADS1115 high threshold. " alt="" coords="173,56,383,83"/>
 </map>
 </div>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a0441c7fface07adf0e5ff9dd2862389a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0441c7fface07adf0e5ff9dd2862389a">&#9670;&nbsp;</a></span>ADS1115_hal</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> ADS1115_hal[<a class="el" href="../../df/d61/_a_d_s1115_8h.html#a7eaf7ec6a8d54d5e3d50988da3e71a3a">I2C_ADS1115_NB</a>]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>ADS1115 Slave structure. </p>
 
 </div>
 </div>

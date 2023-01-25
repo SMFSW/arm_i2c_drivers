@@ -9,7 +9,7 @@
 <area shape="rect" id="node15" href="$d6/dfc/_p_c_a9624__ex_8h.html#aa573ddd2d06a2a03d9c2213148cb988e" title="Send PWM Full ON value to apply on a PCA9624 channel. " alt="" coords="203,360,331,387"/>
 <area shape="rect" id="node16" href="$d6/dfc/_p_c_a9624__ex_8h.html#a3192c37b275d530307437efaa1d7dd1d" title="Send PWM Full OFF value to apply on a PCA9624 channel. " alt="" coords="206,411,329,437"/>
 <area shape="rect" id="node17" href="$d6/dfc/_p_c_a9624__ex_8h.html#ab297dabae3a4fe712cba3a26f71a2f2a" title="Set MODE1 register. " alt="" coords="186,461,349,488"/>
-<area shape="rect" id="node7" href="$d4/dc2/_p_c_a9624_8h.html#a533ea8e2a7967b9ae7588d9f028bc839" title="Initialization for PCA9624 peripheral. " alt="" coords="684,157,791,184"/>
+<area shape="rect" id="node7" href="$d4/dc2/_p_c_a9624_8h.html#a213200bb403dec538479dc3796525498" title="Initialization for PCA9624 peripheral. " alt="" coords="684,157,791,184"/>
 <area shape="rect" id="node8" href="$d4/dc2/_p_c_a9624_8h.html#a9d2bfb0bec12fff1be494de387f015a2" title="Initialization for PCA9624 peripheral. " alt="" coords="839,157,991,184"/>
 <area shape="rect" id="node10" href="$d6/dfc/_p_c_a9624__ex_8h.html#a908e779b4a0bfd968a674997d5fd659f" title="Read all PWM duty cycle array of values of a PCA9624 (for the 8 channels) " alt="" coords="440,208,607,235"/>
 <area shape="rect" id="node11" href="$d6/dfc/_p_c_a9624__ex_8h.html#a658dfd2d262b1fc795d162d343c5e71c" title="Send PWM duty cycle array of values to apply on a PCA9624. " alt="" coords="436,259,611,285"/>

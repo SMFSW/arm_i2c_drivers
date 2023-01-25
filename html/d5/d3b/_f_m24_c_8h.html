@@ -114,6 +114,9 @@ Macros</h2></td></tr>
 <tr class="memitem:af97c9d03f05bd8676bedc16e46496feb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3b/_f_m24_c_8h.html#af97c9d03f05bd8676bedc16e46496feb">FM24C_BASE_ADDR</a>&#160;&#160;&#160;0x50</td></tr>
 <tr class="memdesc:af97c9d03f05bd8676bedc16e46496feb"><td class="mdescLeft">&#160;</td><td class="mdescRight">FM24C Base address.  <a href="#af97c9d03f05bd8676bedc16e46496feb">More...</a><br /></td></tr>
 <tr class="separator:af97c9d03f05bd8676bedc16e46496feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7f7c62c9f44bc9c3c4f15b4aca328ee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3b/_f_m24_c_8h.html#ac7f7c62c9f44bc9c3c4f15b4aca328ee">EEP_PAGE_SIZE</a>&#160;&#160;&#160;0x10</td></tr>
+<tr class="memdesc:ac7f7c62c9f44bc9c3c4f15b4aca328ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Page size (used for write procedures)  <a href="#ac7f7c62c9f44bc9c3c4f15b4aca328ee">More...</a><br /></td></tr>
+<tr class="separator:ac7f7c62c9f44bc9c3c4f15b4aca328ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac219dc0fd138e8fad9df89364f27c454"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3b/_f_m24_c_8h.html#ac219dc0fd138e8fad9df89364f27c454">FM24C_BANK_SIZE</a>&#160;&#160;&#160;0x100</td></tr>
 <tr class="memdesc:ac219dc0fd138e8fad9df89364f27c454"><td class="mdescLeft">&#160;</td><td class="mdescRight">FM24C bank size (in bytes)  <a href="#ac219dc0fd138e8fad9df89364f27c454">More...</a><br /></td></tr>
 <tr class="separator:ac219dc0fd138e8fad9df89364f27c454"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,21 +137,12 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:abac07fa61e1edc61126e39d88bb01599"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3b/_f_m24_c_8h.html#abac07fa61e1edc61126e39d88bb01599">FM24C_Init</a> (const uint8_t idx, const I2C_HandleTypeDef *hi2c, const uint16_t devAddress)</td></tr>
-<tr class="memdesc:abac07fa61e1edc61126e39d88bb01599"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for FM24C peripheral.  <a href="#abac07fa61e1edc61126e39d88bb01599">More...</a><br /></td></tr>
-<tr class="separator:abac07fa61e1edc61126e39d88bb01599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4befe6ec6cea9e2aec48e2697e3ff093"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3b/_f_m24_c_8h.html#a4befe6ec6cea9e2aec48e2697e3ff093">FM24C_Init</a> (const uint8_t idx, I2C_HandleTypeDef *const hi2c, const uint16_t devAddress)</td></tr>
+<tr class="memdesc:a4befe6ec6cea9e2aec48e2697e3ff093"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for FM24C peripheral.  <a href="#a4befe6ec6cea9e2aec48e2697e3ff093">More...</a><br /></td></tr>
+<tr class="separator:a4befe6ec6cea9e2aec48e2697e3ff093"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06cd11a155dd8fe4d4cac44956e21cad"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3b/_f_m24_c_8h.html#a06cd11a155dd8fe4d4cac44956e21cad">FM24C_Init_Single</a> (void)</td></tr>
 <tr class="memdesc:a06cd11a155dd8fe4d4cac44956e21cad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for FM24C peripheral.  <a href="#a06cd11a155dd8fe4d4cac44956e21cad">More...</a><br /></td></tr>
 <tr class="separator:a06cd11a155dd8fe4d4cac44956e21cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa764dd111a5b8eacda9654a8ab0c3c77"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3b/_f_m24_c_8h.html#aa764dd111a5b8eacda9654a8ab0c3c77">FM24C_Write_Banked</a> (<a class="el" href="../../d6/d34/struct_f_m24_c__t.html">FM24C_t</a> *const pCpnt, const uint8_t *data, const uint16_t addr, const uint8_t bank, const uint16_t nb)</td></tr>
-<tr class="memdesc:aa764dd111a5b8eacda9654a8ab0c3c77"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Write function for FM24C.  <a href="#aa764dd111a5b8eacda9654a8ab0c3c77">More...</a><br /></td></tr>
-<tr class="separator:aa764dd111a5b8eacda9654a8ab0c3c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9647641b5bd0f8119073af9eb8c8010f"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3b/_f_m24_c_8h.html#a9647641b5bd0f8119073af9eb8c8010f">FM24C_Read_Banked</a> (<a class="el" href="../../d6/d34/struct_f_m24_c__t.html">FM24C_t</a> *const pCpnt, uint8_t *data, const uint16_t addr, const uint8_t bank, const uint16_t nb)</td></tr>
-<tr class="memdesc:a9647641b5bd0f8119073af9eb8c8010f"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Read function for FM24C.  <a href="#a9647641b5bd0f8119073af9eb8c8010f">More...</a><br /></td></tr>
-<tr class="separator:a9647641b5bd0f8119073af9eb8c8010f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9556efb892a9f16fda67e27d876c52cc"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3b/_f_m24_c_8h.html#a9556efb892a9f16fda67e27d876c52cc">FM24C_ReadWrite</a> (<a class="el" href="../../d6/d34/struct_f_m24_c__t.html">FM24C_t</a> *const pCpnt, uint8_t *data, const uint16_t addr, const uint16_t nb, const bool wr)</td></tr>
-<tr class="memdesc:a9556efb892a9f16fda67e27d876c52cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Read/Write function for FM24C.  <a href="#a9556efb892a9f16fda67e27d876c52cc">More...</a><br /></td></tr>
-<tr class="separator:a9556efb892a9f16fda67e27d876c52cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a964c9def6ccf63daa61888d4527e1276"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3b/_f_m24_c_8h.html#a964c9def6ccf63daa61888d4527e1276">FM24C_Write</a> (<a class="el" href="../../d6/d34/struct_f_m24_c__t.html">FM24C_t</a> *const pCpnt, const uint8_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
 <tr class="memdesc:a964c9def6ccf63daa61888d4527e1276"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Write function for FM24C.  <a href="#a964c9def6ccf63daa61888d4527e1276">More...</a><br /></td></tr>
 <tr class="separator:a964c9def6ccf63daa61888d4527e1276"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,9 +152,6 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ae5cce18ed58f5d2a271f774d31356e41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3b/_f_m24_c_8h.html#ae5cce18ed58f5d2a271f774d31356e41">FM24C_hal</a> [<a class="el" href="../../d5/d3b/_f_m24_c_8h.html#a63b8ce04d9666cfd0ffd0a16bcf4f659">I2C_FM24C_NB</a>]</td></tr>
-<tr class="memdesc:ae5cce18ed58f5d2a271f774d31356e41"><td class="mdescLeft">&#160;</td><td class="mdescRight">FM24C Slave structure.  <a href="#ae5cce18ed58f5d2a271f774d31356e41">More...</a><br /></td></tr>
-<tr class="separator:ae5cce18ed58f5d2a271f774d31356e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb11a875f6f323bba118500eb325dafd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d34/struct_f_m24_c__t.html">FM24C_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3b/_f_m24_c_8h.html#afb11a875f6f323bba118500eb325dafd">FM24C</a> [<a class="el" href="../../d5/d3b/_f_m24_c_8h.html#a63b8ce04d9666cfd0ffd0a16bcf4f659">I2C_FM24C_NB</a>]</td></tr>
 <tr class="memdesc:afb11a875f6f323bba118500eb325dafd"><td class="mdescLeft">&#160;</td><td class="mdescRight">FM24C User structure.  <a href="#afb11a875f6f323bba118500eb325dafd">More...</a><br /></td></tr>
 <tr class="separator:afb11a875f6f323bba118500eb325dafd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,7 +159,7 @@ Variables</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>FM24C Driver. </p>
 <dl class="section author"><dt>Author</dt><dd>SMFSW </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2021, SMFSW</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2023, SMFSW</dd></dl>
 <p>FM24C16B: 16-Kbit (2K * 8) Serial I2C F-RAM FM24C04B: 4-Kbit (512 * 8) Serial I2C F-RAM </p><dl class="section note"><dt>Note</dt><dd>Compatibility (tested):<ul>
 <li>FM24C16B</li>
 <li>FM24C04B</li>
@@ -181,6 +172,22 @@ Compatibility:<ul>
 </ul>
 </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ac7f7c62c9f44bc9c3c4f15b4aca328ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7f7c62c9f44bc9c3c4f15b4aca328ee">&#9670;&nbsp;</a></span>EEP_PAGE_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EEP_PAGE_SIZE&#160;&#160;&#160;0x10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Page size (used for write procedures) </p>
+
+</div>
+</div>
 <a id="aebe64463240aa09bed9cf5e488a43193"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aebe64463240aa09bed9cf5e488a43193">&#9670;&nbsp;</a></span>FM24C04B_SIZE</h2>
 
@@ -296,8 +303,8 @@ Compatibility:<ul>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="abac07fa61e1edc61126e39d88bb01599"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abac07fa61e1edc61126e39d88bb01599">&#9670;&nbsp;</a></span>FM24C_Init()</h2>
+<a id="a4befe6ec6cea9e2aec48e2697e3ff093"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4befe6ec6cea9e2aec48e2697e3ff093">&#9670;&nbsp;</a></span>FM24C_Init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -311,7 +318,7 @@ Compatibility:<ul>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const I2C_HandleTypeDef *&#160;</td>
+          <td class="paramtype">I2C_HandleTypeDef *const&#160;</td>
           <td class="paramname"><em>hi2c</em>, </td>
         </tr>
         <tr>
@@ -341,17 +348,17 @@ Compatibility:<ul>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d5/d3b/_f_m24_c_8h_abac07fa61e1edc61126e39d88bb01599_cgraph.png" border="0" usemap="#d5/d3b/_f_m24_c_8h_abac07fa61e1edc61126e39d88bb01599_cgraph" alt=""/></div>
-<map name="d5/d3b/_f_m24_c_8h_abac07fa61e1edc61126e39d88bb01599_cgraph" id="d5/d3b/_f_m24_c_8h_abac07fa61e1edc61126e39d88bb01599_cgraph">
-<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="149,5,257,32"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="144,56,263,83"/>
+<div class="center"><img src="../../d5/d3b/_f_m24_c_8h_a4befe6ec6cea9e2aec48e2697e3ff093_cgraph.png" border="0" usemap="#d5/d3b/_f_m24_c_8h_a4befe6ec6cea9e2aec48e2697e3ff093_cgraph" alt=""/></div>
+<map name="d5/d3b/_f_m24_c_8h_a4befe6ec6cea9e2aec48e2697e3ff093_cgraph" id="d5/d3b/_f_m24_c_8h_a4befe6ec6cea9e2aec48e2697e3ff093_cgraph">
+<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization. " alt="" coords="149,5,257,32"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state. " alt="" coords="144,56,263,83"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d5/d3b/_f_m24_c_8h_abac07fa61e1edc61126e39d88bb01599_icgraph.png" border="0" usemap="#d5/d3b/_f_m24_c_8h_abac07fa61e1edc61126e39d88bb01599_icgraph" alt=""/></div>
-<map name="d5/d3b/_f_m24_c_8h_abac07fa61e1edc61126e39d88bb01599_icgraph" id="d5/d3b/_f_m24_c_8h_abac07fa61e1edc61126e39d88bb01599_icgraph">
+<div class="center"><img src="../../d5/d3b/_f_m24_c_8h_a4befe6ec6cea9e2aec48e2697e3ff093_icgraph.png" border="0" usemap="#d5/d3b/_f_m24_c_8h_a4befe6ec6cea9e2aec48e2697e3ff093_icgraph" alt=""/></div>
+<map name="d5/d3b/_f_m24_c_8h_a4befe6ec6cea9e2aec48e2697e3ff093_icgraph" id="d5/d3b/_f_m24_c_8h_a4befe6ec6cea9e2aec48e2697e3ff093_icgraph">
 <area shape="rect" id="node2" href="../../d5/d3b/_f_m24_c_8h.html#a06cd11a155dd8fe4d4cac44956e21cad" title="Initialization for FM24C peripheral. " alt="" coords="144,5,281,32"/>
 </map>
 </div>
@@ -382,9 +389,9 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/d3b/_f_m24_c_8h_a06cd11a155dd8fe4d4cac44956e21cad_cgraph.png" border="0" usemap="#d5/d3b/_f_m24_c_8h_a06cd11a155dd8fe4d4cac44956e21cad_cgraph" alt=""/></div>
 <map name="d5/d3b/_f_m24_c_8h_a06cd11a155dd8fe4d4cac44956e21cad_cgraph" id="d5/d3b/_f_m24_c_8h_a06cd11a155dd8fe4d4cac44956e21cad_cgraph">
-<area shape="rect" id="node2" href="../../da/d47/_f_m24_c_8c.html#abac07fa61e1edc61126e39d88bb01599" title="Initialization for FM24C peripheral. " alt="" coords="191,31,281,57"/>
-<area shape="rect" id="node3" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="335,5,443,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="329,56,448,83"/>
+<area shape="rect" id="node2" href="../../da/d47/_f_m24_c_8c.html#a4befe6ec6cea9e2aec48e2697e3ff093" title="Initialization for FM24C peripheral. " alt="" coords="191,31,281,57"/>
+<area shape="rect" id="node3" href="../../d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization. " alt="" coords="335,5,443,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state. " alt="" coords="329,56,448,83"/>
 </map>
 </div>
 
@@ -395,9 +402,6 @@ Here is the call graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">FctERR FM24C_Read </td>
@@ -429,11 +433,6 @@ Here is the call graph for this function:</div>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>I2C Read function for FM24C. </p>
@@ -447,175 +446,6 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d5/d3b/_f_m24_c_8h_a2a09ae3186b1876f57b5a53cc3cda84a_cgraph.png" border="0" usemap="#d5/d3b/_f_m24_c_8h_a2a09ae3186b1876f57b5a53cc3cda84a_cgraph" alt=""/></div>
-<map name="d5/d3b/_f_m24_c_8h_a2a09ae3186b1876f57b5a53cc3cda84a_cgraph" id="d5/d3b/_f_m24_c_8h_a2a09ae3186b1876f57b5a53cc3cda84a_cgraph">
-<area shape="rect" id="node2" href="../../d5/d3b/_f_m24_c_8h.html#a9556efb892a9f16fda67e27d876c52cc" title="I2C Read/Write function for FM24C. " alt="" coords="156,31,291,57"/>
-<area shape="rect" id="node3" href="../../da/d47/_f_m24_c_8c.html#aa764dd111a5b8eacda9654a8ab0c3c77" title="I2C Write function for FM24C. " alt="" coords="339,5,497,32"/>
-<area shape="rect" id="node6" href="../../da/d47/_f_m24_c_8c.html#a9647641b5bd0f8119073af9eb8c8010f" title="I2C Read function for FM24C. " alt="" coords="339,56,497,83"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="545,5,663,32"/>
-<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="551,56,657,83"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a9647641b5bd0f8119073af9eb8c8010f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9647641b5bd0f8119073af9eb8c8010f">&#9670;&nbsp;</a></span>FM24C_Read_Banked()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">FctERR FM24C_Read_Banked </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d6/d34/struct_f_m24_c__t.html">FM24C_t</a> *const&#160;</td>
-          <td class="paramname"><em>pCpnt</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const uint16_t&#160;</td>
-          <td class="paramname"><em>addr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const uint8_t&#160;</td>
-          <td class="paramname"><em>bank</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const uint16_t&#160;</td>
-          <td class="paramname"><em>nb</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>I2C Read function for FM24C. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to FM24C component </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>- pointer to read to </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>- Address to read from </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">bank</td><td>- Bank to read </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">nb</td><td>- Number of bytes to read </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d5/d3b/_f_m24_c_8h_a9647641b5bd0f8119073af9eb8c8010f_cgraph.png" border="0" usemap="#d5/d3b/_f_m24_c_8h_a9647641b5bd0f8119073af9eb8c8010f_cgraph" alt=""/></div>
-<map name="d5/d3b/_f_m24_c_8h_a9647641b5bd0f8119073af9eb8c8010f_cgraph" id="d5/d3b/_f_m24_c_8h_a9647641b5bd0f8119073af9eb8c8010f_cgraph">
-<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="212,5,329,32"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="217,56,324,83"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d5/d3b/_f_m24_c_8h_a9647641b5bd0f8119073af9eb8c8010f_icgraph.png" border="0" usemap="#d5/d3b/_f_m24_c_8h_a9647641b5bd0f8119073af9eb8c8010f_icgraph" alt=""/></div>
-<map name="d5/d3b/_f_m24_c_8h_a9647641b5bd0f8119073af9eb8c8010f_icgraph" id="d5/d3b/_f_m24_c_8h_a9647641b5bd0f8119073af9eb8c8010f_icgraph">
-<area shape="rect" id="node2" href="../../d5/d3b/_f_m24_c_8h.html#a9556efb892a9f16fda67e27d876c52cc" title="I2C Read/Write function for FM24C. " alt="" coords="212,31,347,57"/>
-<area shape="rect" id="node3" href="../../d5/d3b/_f_m24_c_8h.html#a964c9def6ccf63daa61888d4527e1276" title="I2C Write function for FM24C. " alt="" coords="395,5,497,32"/>
-<area shape="rect" id="node4" href="../../d5/d3b/_f_m24_c_8h.html#a2a09ae3186b1876f57b5a53cc3cda84a" title="I2C Read function for FM24C. " alt="" coords="395,56,497,83"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a9556efb892a9f16fda67e27d876c52cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9556efb892a9f16fda67e27d876c52cc">&#9670;&nbsp;</a></span>FM24C_ReadWrite()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">FctERR FM24C_ReadWrite </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d6/d34/struct_f_m24_c__t.html">FM24C_t</a> *const&#160;</td>
-          <td class="paramname"><em>pCpnt</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const uint16_t&#160;</td>
-          <td class="paramname"><em>addr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const uint16_t&#160;</td>
-          <td class="paramname"><em>nb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>wr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>I2C Read/Write function for FM24C. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to FM24C component </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>- pointer to read/write to/from </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>- Address to read from </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">nb</td><td>- Number of bytes to read </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">wr</td><td>- 0: Read / 1: Write </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d5/d3b/_f_m24_c_8h_a9556efb892a9f16fda67e27d876c52cc_cgraph.png" border="0" usemap="#d5/d3b/_f_m24_c_8h_a9556efb892a9f16fda67e27d876c52cc_cgraph" alt=""/></div>
-<map name="d5/d3b/_f_m24_c_8h_a9556efb892a9f16fda67e27d876c52cc_cgraph" id="d5/d3b/_f_m24_c_8h_a9556efb892a9f16fda67e27d876c52cc_cgraph">
-<area shape="rect" id="node2" href="../../da/d47/_f_m24_c_8c.html#aa764dd111a5b8eacda9654a8ab0c3c77" title="I2C Write function for FM24C. " alt="" coords="188,5,347,32"/>
-<area shape="rect" id="node5" href="../../da/d47/_f_m24_c_8c.html#a9647641b5bd0f8119073af9eb8c8010f" title="I2C Read function for FM24C. " alt="" coords="188,56,347,83"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="395,5,512,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="400,56,507,83"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d5/d3b/_f_m24_c_8h_a9556efb892a9f16fda67e27d876c52cc_icgraph.png" border="0" usemap="#d5/d3b/_f_m24_c_8h_a9556efb892a9f16fda67e27d876c52cc_icgraph" alt=""/></div>
-<map name="d5/d3b/_f_m24_c_8h_a9556efb892a9f16fda67e27d876c52cc_icgraph" id="d5/d3b/_f_m24_c_8h_a9556efb892a9f16fda67e27d876c52cc_icgraph">
-<area shape="rect" id="node2" href="../../d5/d3b/_f_m24_c_8h.html#a964c9def6ccf63daa61888d4527e1276" title="I2C Write function for FM24C. " alt="" coords="188,5,291,32"/>
-<area shape="rect" id="node3" href="../../d5/d3b/_f_m24_c_8h.html#a2a09ae3186b1876f57b5a53cc3cda84a" title="I2C Read function for FM24C. " alt="" coords="188,56,291,83"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -624,9 +454,6 @@ Here is the caller graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">FctERR FM24C_Write </td>
@@ -658,11 +485,6 @@ Here is the caller graph for this function:</div>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>I2C Write function for FM24C. </p>
@@ -677,94 +499,11 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
 <div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d5/d3b/_f_m24_c_8h_a964c9def6ccf63daa61888d4527e1276_cgraph.png" border="0" usemap="#d5/d3b/_f_m24_c_8h_a964c9def6ccf63daa61888d4527e1276_cgraph" alt=""/></div>
-<map name="d5/d3b/_f_m24_c_8h_a964c9def6ccf63daa61888d4527e1276_cgraph" id="d5/d3b/_f_m24_c_8h_a964c9def6ccf63daa61888d4527e1276_cgraph">
-<area shape="rect" id="node2" href="../../d5/d3b/_f_m24_c_8h.html#a9556efb892a9f16fda67e27d876c52cc" title="I2C Read/Write function for FM24C. " alt="" coords="156,31,291,57"/>
-<area shape="rect" id="node3" href="../../da/d47/_f_m24_c_8c.html#aa764dd111a5b8eacda9654a8ab0c3c77" title="I2C Write function for FM24C. " alt="" coords="339,5,497,32"/>
-<area shape="rect" id="node6" href="../../da/d47/_f_m24_c_8c.html#a9647641b5bd0f8119073af9eb8c8010f" title="I2C Read function for FM24C. " alt="" coords="339,56,497,83"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="545,5,663,32"/>
-<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="551,56,657,83"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="aa764dd111a5b8eacda9654a8ab0c3c77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa764dd111a5b8eacda9654a8ab0c3c77">&#9670;&nbsp;</a></span>FM24C_Write_Banked()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">FctERR FM24C_Write_Banked </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d6/d34/struct_f_m24_c__t.html">FM24C_t</a> *const&#160;</td>
-          <td class="paramname"><em>pCpnt</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const uint8_t *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const uint16_t&#160;</td>
-          <td class="paramname"><em>addr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const uint8_t&#160;</td>
-          <td class="paramname"><em>bank</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const uint16_t&#160;</td>
-          <td class="paramname"><em>nb</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>I2C Write function for FM24C. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pCpnt</td><td>- Pointer to FM24C component </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>- pointer to write from </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>- Address to write to </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">bank</td><td>- Bank to write </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">nb</td><td>- Number of bytes to write </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d5/d3b/_f_m24_c_8h_aa764dd111a5b8eacda9654a8ab0c3c77_cgraph.png" border="0" usemap="#d5/d3b/_f_m24_c_8h_aa764dd111a5b8eacda9654a8ab0c3c77_cgraph" alt=""/></div>
-<map name="d5/d3b/_f_m24_c_8h_aa764dd111a5b8eacda9654a8ab0c3c77_cgraph" id="d5/d3b/_f_m24_c_8h_aa764dd111a5b8eacda9654a8ab0c3c77_cgraph">
-<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="212,5,329,32"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="217,56,324,83"/>
-</map>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d5/d3b/_f_m24_c_8h_aa764dd111a5b8eacda9654a8ab0c3c77_icgraph.png" border="0" usemap="#d5/d3b/_f_m24_c_8h_aa764dd111a5b8eacda9654a8ab0c3c77_icgraph" alt=""/></div>
-<map name="d5/d3b/_f_m24_c_8h_aa764dd111a5b8eacda9654a8ab0c3c77_icgraph" id="d5/d3b/_f_m24_c_8h_aa764dd111a5b8eacda9654a8ab0c3c77_icgraph">
-<area shape="rect" id="node2" href="../../d5/d3b/_f_m24_c_8h.html#a9556efb892a9f16fda67e27d876c52cc" title="I2C Read/Write function for FM24C. " alt="" coords="219,31,353,57"/>
-<area shape="rect" id="node5" href="../../de/d95/_f_m24_c__ex_8h.html#abc05b98b56337535279e76247c600721" title="Mass erase of FM24C. " alt="" coords="212,81,360,108"/>
-<area shape="rect" id="node3" href="../../d5/d3b/_f_m24_c_8h.html#a964c9def6ccf63daa61888d4527e1276" title="I2C Write function for FM24C. " alt="" coords="408,5,511,32"/>
-<area shape="rect" id="node4" href="../../d5/d3b/_f_m24_c_8h.html#a2a09ae3186b1876f57b5a53cc3cda84a" title="I2C Read function for FM24C. " alt="" coords="408,56,511,83"/>
+<div class="center"><img src="../../d5/d3b/_f_m24_c_8h_a964c9def6ccf63daa61888d4527e1276_icgraph.png" border="0" usemap="#d5/d3b/_f_m24_c_8h_a964c9def6ccf63daa61888d4527e1276_icgraph" alt=""/></div>
+<map name="d5/d3b/_f_m24_c_8h_a964c9def6ccf63daa61888d4527e1276_icgraph" id="d5/d3b/_f_m24_c_8h_a964c9def6ccf63daa61888d4527e1276_icgraph">
+<area shape="rect" id="node2" href="../../de/d95/_f_m24_c__ex_8h.html#abc05b98b56337535279e76247c600721" title="Mass erase of FM24C. " alt="" coords="156,5,304,32"/>
 </map>
 </div>
 
@@ -784,22 +523,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>FM24C User structure. </p>
-
-</div>
-</div>
-<a id="ae5cce18ed58f5d2a271f774d31356e41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5cce18ed58f5d2a271f774d31356e41">&#9670;&nbsp;</a></span>FM24C_hal</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> FM24C_hal[<a class="el" href="../../d5/d3b/_f_m24_c_8h.html#a63b8ce04d9666cfd0ffd0a16bcf4f659">I2C_FM24C_NB</a>]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>FM24C Slave structure. </p>
 
 </div>
 </div>

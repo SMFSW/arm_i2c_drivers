@@ -4,8 +4,8 @@
 <area shape="rect" id="node7" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ab3f468584e3b1abe7160a11c1212b561" title="Enable GPIO pin setter for DRV2605L. " alt="" coords="224,195,403,221"/>
 <area shape="rect" id="node9" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a98cbfb2755e67db5cfadb3d8ff72c3fe" title="Trigger GPIO pin init for DRV2605L. " alt="" coords="220,144,407,171"/>
 <area shape="rect" id="node10" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ae20097ec48f5dd3f23d217a41c4ff09b" title="Trigger GPIO pin setter for DRV2605L. " alt="" coords="219,245,408,272"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="487,5,604,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="492,56,599,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="487,5,604,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="492,56,599,83"/>
 <area shape="rect" id="node6" href="$d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="457,132,634,159"/>
 <area shape="rect" id="node8" href="$d2/de1/_i2_c__peripheral_8c.html#a7accedd9eb463e3cd4eb401b07e36b2c" title="I2C peripheral GPIO pin setter. " alt="" coords="456,220,635,247"/>
 </map>

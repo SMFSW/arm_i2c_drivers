@@ -5,8 +5,8 @@
 <area shape="rect" id="node7" href="$dc/db3/_a_m_g88__ex_8h.html#a47e7dab1b924d54a1b7ac2fd0006022a" title="Interrupt GPIO pin init for AMG88. " alt="" coords="471,81,630,108"/>
 <area shape="rect" id="node9" href="$dc/db3/_a_m_g88__ex_8h.html#aed4d6492b79034915e0036da7d077600" title="Interrupt GPIO pin getter for AMG88. " alt="" coords="469,132,632,159"/>
 <area shape="rect" id="node4" href="$df/d52/_a_m_g88_8c.html#ade19de4334fdd1b3aa58c0b71b0979e5" title="I2C Read function for AMG88. " alt="" coords="716,31,823,57"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="907,5,1024,32"/>
-<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="912,56,1019,83"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="907,5,1024,32"/>
+<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="912,56,1019,83"/>
 <area shape="rect" id="node8" href="$d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="681,81,858,108"/>
 <area shape="rect" id="node10" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="680,132,859,159"/>
 </map>

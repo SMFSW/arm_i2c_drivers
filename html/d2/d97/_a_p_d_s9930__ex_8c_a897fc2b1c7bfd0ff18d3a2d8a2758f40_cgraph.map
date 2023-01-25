@@ -1,7 +1,7 @@
 <map id="APDS9930_Set_PON" name="APDS9930_Set_PON">
 <area shape="rect" id="node2" href="$de/d85/_a_p_d_s9930_8c.html#ab221708c08ca472dea5b4570ffe773b1" title="I2C Read function for APDS9930. " alt="" coords="407,5,535,32"/>
 <area shape="rect" id="node5" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a10d7da1c123c440244f64ddf78889181" title="Write APDS9930 Enable register. " alt="" coords="208,56,359,83"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="583,5,700,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="588,56,695,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="583,5,700,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="588,56,695,83"/>
 <area shape="rect" id="node6" href="$de/d85/_a_p_d_s9930_8c.html#af52285c4d97a77ae7c76d144748942cf" title="I2C Write function for APDS9930. " alt="" coords="407,56,535,83"/>
 </map>

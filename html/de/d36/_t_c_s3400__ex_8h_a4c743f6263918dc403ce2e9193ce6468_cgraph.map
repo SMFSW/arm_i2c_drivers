@@ -6,8 +6,8 @@
 <area shape="rect" id="node10" href="$de/d36/_t_c_s3400__ex_8h.html#aa514e6a8a7538aa25f74e70f17f0858a" title="WAIT module Enable / Disable. " alt="" coords="194,37,337,63"/>
 <area shape="rect" id="node11" href="$de/d36/_t_c_s3400__ex_8h.html#abb8af383a0b2576ecd6126b66ff7c123" title="Sleep After Interrupt Enable / Disable. " alt="" coords="198,87,333,114"/>
 <area shape="rect" id="node12" href="$de/d36/_t_c_s3400__ex_8h.html#adab7b9b97e53d6533da716b6f51efef1" title="Gain configuration. " alt="" coords="194,290,337,317"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="736,214,853,241"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="741,163,848,190"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="736,214,853,241"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="741,163,848,190"/>
 <area shape="rect" id="node6" href="$d4/d1b/_t_c_s3400_8c.html#ac6b81ecacb0000ae8a9e4cd223b07ed2" title="I2C Read function for TCS3400. " alt="" coords="397,189,513,215"/>
 <area shape="rect" id="node7" href="$de/d36/_t_c_s3400__ex_8h.html#aee726872472aeaa93d4247cdeba5bfdb" title="Write TCS3400 Enable register. " alt="" coords="385,138,524,165"/>
 </map>

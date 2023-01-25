@@ -122,7 +122,7 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>MB85RC256V Driver extensions. </p>
 <dl class="section author"><dt>Author</dt><dd>SMFSW </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2021, SMFSW</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2023, SMFSW</dd></dl>
 <p>MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM </p><dl class="section note"><dt>Note</dt><dd>Compatibility (tested):<ul>
 <li>MB85RC256V</li>
 <li>MB85RC256VL64B </li>
@@ -171,7 +171,7 @@ Compatibility:<ul>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">__INLINE FctERR NONNULL_INLINE__ MB85RC256V_Get_##name(type * rd) { \</div><div class="line">                                                            return <a class="code" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a45e2dec1980be30a0f0593a9999e466e">MB85RC256V_Read</a>(cpnt, &amp;rd, addr, <span class="keyword">sizeof</span>(type)); }</div><div class="ttc" id="_m_b85_r_c256_v_8c_html_a45e2dec1980be30a0f0593a9999e466e"><div class="ttname"><a href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a45e2dec1980be30a0f0593a9999e466e">MB85RC256V_Read</a></div><div class="ttdeci">FctERR MB85RC256V_Read(MB85RC256V_t *const pCpnt, uint8_t *data, const uint16_t addr, const uint16_t nb)</div><div class="ttdoc">I2C Read function for MB85RC256V. </div><div class="ttdef"><b>Definition:</b> MB85RC256V.c:73</div></div>
+<b>Value:</b><div class="fragment"><div class="line">__INLINE FctERR NONNULL_INLINE__ MB85RC256V_Get_##name(type * rd) { \</div><div class="line">                                                            return <a class="code" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a45e2dec1980be30a0f0593a9999e466e">MB85RC256V_Read</a>(cpnt, &amp;rd, addr, <span class="keyword">sizeof</span>(type)); }</div><div class="ttc" id="_m_b85_r_c256_v_8c_html_a45e2dec1980be30a0f0593a9999e466e"><div class="ttname"><a href="../../d1/dc0/_m_b85_r_c256_v_8c.html#a45e2dec1980be30a0f0593a9999e466e">MB85RC256V_Read</a></div><div class="ttdeci">FctERR MB85RC256V_Read(MB85RC256V_t *const pCpnt, uint8_t *data, const uint16_t addr, const uint16_t nb)</div><div class="ttdoc">I2C Read function for MB85RC256V. </div><div class="ttdef"><b>Definition:</b> MB85RC256V.c:74</div></div>
 </div><!-- fragment -->
 <p>Macro to create function to read value(s) from MB85RC256V. </p>
 
@@ -214,7 +214,7 @@ Compatibility:<ul>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">__INLINE FctERR INLINE__ MB85RC256V_Set_##name(type wr) {   \</div><div class="line">                                                            return <a class="code" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#aa4b73c717c5c32fb8bcc7b944f4785df">MB85RC256V_Write</a>(cpnt, &amp;wr, addr, <span class="keyword">sizeof</span>(type)); }</div><div class="ttc" id="_m_b85_r_c256_v_8c_html_aa4b73c717c5c32fb8bcc7b944f4785df"><div class="ttname"><a href="../../d1/dc0/_m_b85_r_c256_v_8c.html#aa4b73c717c5c32fb8bcc7b944f4785df">MB85RC256V_Write</a></div><div class="ttdeci">FctERR MB85RC256V_Write(MB85RC256V_t *const pCpnt, const uint8_t *data, const uint16_t addr, const uint16_t nb)</div><div class="ttdoc">I2C Write function for MB85RC256V. </div><div class="ttdef"><b>Definition:</b> MB85RC256V.c:56</div></div>
+<b>Value:</b><div class="fragment"><div class="line">__INLINE FctERR INLINE__ MB85RC256V_Set_##name(type wr) {   \</div><div class="line">                                                            return <a class="code" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#aa4b73c717c5c32fb8bcc7b944f4785df">MB85RC256V_Write</a>(cpnt, &amp;wr, addr, <span class="keyword">sizeof</span>(type)); }</div><div class="ttc" id="_m_b85_r_c256_v_8c_html_aa4b73c717c5c32fb8bcc7b944f4785df"><div class="ttname"><a href="../../d1/dc0/_m_b85_r_c256_v_8c.html#aa4b73c717c5c32fb8bcc7b944f4785df">MB85RC256V_Write</a></div><div class="ttdeci">FctERR MB85RC256V_Write(MB85RC256V_t *const pCpnt, const uint8_t *data, const uint16_t addr, const uint16_t nb)</div><div class="ttdoc">I2C Write function for MB85RC256V. </div><div class="ttdef"><b>Definition:</b> MB85RC256V.c:57</div></div>
 </div><!-- fragment -->
 <p>Macro to create function to write value(s) to MB85RC256V. </p>
 
@@ -251,8 +251,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../d5/d5f/_m_b85_r_c256_v__ex_8h_a5ae4032aaa90f9dee81b41aa7b9600a9_cgraph.png" border="0" usemap="#d5/d5f/_m_b85_r_c256_v__ex_8h_a5ae4032aaa90f9dee81b41aa7b9600a9_cgraph" alt=""/></div>
 <map name="d5/d5f/_m_b85_r_c256_v__ex_8h_a5ae4032aaa90f9dee81b41aa7b9600a9_cgraph" id="d5/d5f/_m_b85_r_c256_v__ex_8h_a5ae4032aaa90f9dee81b41aa7b9600a9_cgraph">
 <area shape="rect" id="node2" href="../../d1/dc0/_m_b85_r_c256_v_8c.html#aa4b73c717c5c32fb8bcc7b944f4785df" title="I2C Write function for MB85RC256V. " alt="" coords="244,31,389,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="437,5,555,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="443,56,549,83"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="437,5,555,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="443,56,549,83"/>
 </map>
 </div>
 

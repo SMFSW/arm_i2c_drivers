@@ -1,10 +1,10 @@
 <map id="MB85RC256V_Init_Single" name="MB85RC256V_Init_Single">
-<area shape="rect" id="node2" href="$d1/dc0/_m_b85_r_c256_v_8c.html#ae2724446e33528e0d0e3990a66c52efd" title="Initialization for MB85RC256V peripheral. " alt="" coords="232,56,365,83"/>
-<area shape="rect" id="node3" href="$d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="461,5,569,32"/>
+<area shape="rect" id="node2" href="$d1/dc0/_m_b85_r_c256_v_8c.html#a0ea92ad40bc67305e67d995eb3f383ac" title="Initialization for MB85RC256V peripheral. " alt="" coords="232,56,365,83"/>
+<area shape="rect" id="node3" href="$d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization. " alt="" coords="461,5,569,32"/>
 <area shape="rect" id="node4" href="$d4/dc8/_m_b85_r_c256_v__proc_8c.html#aa7a9dc1481a17a900490a1988c15de87" title="Initialization Sequence for MB85RC256V peripheral. " alt="" coords="413,56,617,83"/>
-<area shape="rect" id="node9" href="$d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="456,107,575,133"/>
+<area shape="rect" id="node9" href="$d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state. " alt="" coords="456,107,575,133"/>
 <area shape="rect" id="node5" href="$d4/dc8/_m_b85_r_c256_v__proc_8c.html#af5ab7c1d250910339ab1b0dffc370685" title="Get ID from MB85RC256V peripheral. " alt="" coords="665,56,823,83"/>
 <area shape="rect" id="node6" href="$d1/dc0/_m_b85_r_c256_v_8c.html#ad893e53858a93eb183c082ef60bc7071" title="I2C Read ID function for MB85RC256V (reads 3 bytes) " alt="" coords="871,56,1036,83"/>
-<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1084,31,1201,57"/>
-<area shape="rect" id="node8" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1089,81,1196,108"/>
+<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="1084,31,1201,57"/>
+<area shape="rect" id="node8" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="1089,81,1196,108"/>
 </map>

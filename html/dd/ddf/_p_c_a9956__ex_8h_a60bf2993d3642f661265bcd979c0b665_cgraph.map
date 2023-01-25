@@ -1,6 +1,4 @@
 <map id="PCA9956_PutVals_Array" name="PCA9956_PutVals_Array">
-<area shape="rect" id="node2" href="$dd/ddf/_p_c_a9956__ex_8h.html#a50f5d7e9a073aa6af704ef69c8a4b1dc" title="Send PWM duty cycle array of values to apply on a PCA9956. " alt="" coords="228,31,363,57"/>
-<area shape="rect" id="node3" href="$df/d5e/_p_c_a9956_8c.html#a631d23c191d905d40f272c8488d175b4" title="I2C Write function for PCA9956. " alt="" coords="411,31,529,57"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="577,5,695,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="583,56,689,83"/>
+<area shape="rect" id="node2" href="$dd/ddf/_p_c_a9956__ex_8h.html#a50f5d7e9a073aa6af704ef69c8a4b1dc" title="Send PWM duty cycle array of values to apply on a PCA9956. " alt="" coords="228,5,363,32"/>
+<area shape="rect" id="node3" href="$df/d5e/_p_c_a9956_8c.html#a631d23c191d905d40f272c8488d175b4" title="I2C Write function for PCA9956. " alt="" coords="411,5,529,32"/>
 </map>

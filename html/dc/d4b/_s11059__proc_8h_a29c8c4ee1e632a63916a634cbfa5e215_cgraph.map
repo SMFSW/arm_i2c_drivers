@@ -8,8 +8,8 @@
 <area shape="rect" id="node10" href="$d9/da9/_s11059__ex_8h.html#ab24f9219e107a9649e6b6ec91393fdfb" title="Set integration mode &amp; prescaler. " alt="" coords="512,317,688,344"/>
 <area shape="rect" id="node11" href="$d9/da9/_s11059__ex_8h.html#aeecbde878f611148371d328c7fb8cdf6" title="Set S11059 integration multiplier (used when integration mode set to Manual) " alt="" coords="512,48,688,90"/>
 <area shape="rect" id="node13" href="$d9/da9/_s11059__ex_8h.html#a6d065fe56a7e73d33c62842d5cac2be4" title="Get Standby function monitor. " alt="" coords="519,114,681,141"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1088,136,1205,162"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1093,85,1200,112"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="1088,136,1205,162"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="1093,85,1200,112"/>
 <area shape="rect" id="node7" href="$d2/dfe/_s11059_8c.html#a157781bb2500a88bc780ad45e0cc60c1" title="I2C Read function for S11059. " alt="" coords="755,165,864,192"/>
 <area shape="rect" id="node12" href="$d2/dfe/_s11059_8c.html#adbb72254ed4ad90b49bdbc241c4f28c8" title="I2C Word Write (big endian) function for S11059. " alt="" coords="736,57,883,84"/>
 </map>

@@ -3,8 +3,8 @@
 <area shape="rect" id="node6" href="$d0/d35/_b_m_p180__proc_8c.html#ad0325266789e45d7af965f331c8f68cb" title="Setter of Sea Level pressure for BMP180 peripheral. " alt="" coords="229,53,397,94"/>
 <area shape="rect" id="node8" href="$d0/d35/_b_m_p180__proc_8c.html#a955e57221814f232da13fac727fc7205" title="Get calibration parameters from BMP180 peripheral. " alt="" coords="224,119,403,145"/>
 <area shape="rect" id="node3" href="$d8/d11/_b_m_p180_8c.html#adce223c1add54df827a7a1457f2005ec" title="I2C Read function for BMP180. " alt="" coords="672,59,784,85"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="832,33,949,60"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="837,84,944,111"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="832,33,949,60"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="837,84,944,111"/>
 <area shape="rect" id="node7" href="$da/d3c/shared___a_p_s_8c.html#a74c279e4d9a609d3f13f66342e7c731f" title="Sea Level pressure getter (in hPa / mbar) " alt="" coords="451,60,624,87"/>
 <area shape="rect" id="node9" href="$d8/d11/_b_m_p180_8c.html#a96723b9fbe9d582ed3f4120471de5520" title="I2C Word Read function for BMP180. " alt="" coords="462,115,613,141"/>
 </map>

@@ -1,6 +1,6 @@
 <map id="TCS3472_Get_ChipID" name="TCS3472_Get_ChipID">
 <area shape="rect" id="node2" href="$df/dfb/_t_c_s3472_8c.html#a2fa16091194ad1cb4f16db6d081f551f" title="I2C Read function for TCS3472. " alt="" coords="432,31,548,57"/>
 <area shape="rect" id="node5" href="$d2/dbe/_t_c_s3472__ex_8h.html#a03ecb46bfa38320576ad43c57a3edcaa" title="Get All channels conversions. " alt="" coords="209,56,384,83"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="596,5,713,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="601,56,708,83"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="596,5,713,32"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="601,56,708,83"/>
 </map>

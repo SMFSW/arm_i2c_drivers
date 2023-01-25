@@ -1,6 +1,6 @@
 <map id="PCA9532_SetFrequency" name="PCA9532_SetFrequency">
 <area shape="rect" id="node2" href="$d8/df0/_p_c_a9532__ex_8h.html#a03b2ea671687b1a439c90bc4f946542b" title="Convert PWMx byte register to Duty Cycle (in %) " alt="" coords="228,5,401,32"/>
 <area shape="rect" id="node3" href="$de/da7/_p_c_a9532__proc_8h.html#a95ddc3ce36d7d60e26b08ce405ea2fc3" title="Initialization Sequence for PCA9532 peripheral. " alt="" coords="449,5,627,32"/>
-<area shape="rect" id="node4" href="$d3/df9/_p_c_a9532_8h.html#a53117549a86481f7203371b537bc7084" title="Initialization for PCA9532 peripheral. " alt="" coords="675,5,781,32"/>
+<area shape="rect" id="node4" href="$d3/df9/_p_c_a9532_8h.html#ab2c83a49b54020805a88671f067bf6d6" title="Initialization for PCA9532 peripheral. " alt="" coords="675,5,781,32"/>
 <area shape="rect" id="node5" href="$d3/df9/_p_c_a9532_8h.html#ae3bc95cfa1ac91a201ac0543ced4bb03" title="Initialization for PCA9532 peripheral. " alt="" coords="829,5,981,32"/>
 </map>

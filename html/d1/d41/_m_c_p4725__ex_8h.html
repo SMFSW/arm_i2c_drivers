@@ -112,12 +112,12 @@ Functions</h2></td></tr>
 <tr class="memitem:aab6a6cc4fd1092188c5562a82572ac0f"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d41/_m_c_p4725__ex_8h.html#aab6a6cc4fd1092188c5562a82572ac0f">MCP4725_Write_Command</a> (<a class="el" href="../../dc/d55/struct_m_c_p4725__t.html">MCP4725_t</a> *const pCpnt, const uint16_t val)</td></tr>
 <tr class="memdesc:aab6a6cc4fd1092188c5562a82572ac0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write Command to MCP4725 peripheral.  <a href="#aab6a6cc4fd1092188c5562a82572ac0f">More...</a><br /></td></tr>
 <tr class="separator:aab6a6cc4fd1092188c5562a82572ac0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4374a3e2cadb1c7c50359641470a454"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d41/_m_c_p4725__ex_8h.html#ac4374a3e2cadb1c7c50359641470a454">MCP4725_Reset</a> (const I2C_HandleTypeDef *hi2c)</td></tr>
-<tr class="memdesc:ac4374a3e2cadb1c7c50359641470a454"><td class="mdescLeft">&#160;</td><td class="mdescRight">General call reset function for MCP4725.  <a href="#ac4374a3e2cadb1c7c50359641470a454">More...</a><br /></td></tr>
-<tr class="separator:ac4374a3e2cadb1c7c50359641470a454"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa435e2d08b5e8eae6205ddab89294e86"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d41/_m_c_p4725__ex_8h.html#aa435e2d08b5e8eae6205ddab89294e86">MCP4725_WakeUp</a> (const I2C_HandleTypeDef *hi2c)</td></tr>
-<tr class="memdesc:aa435e2d08b5e8eae6205ddab89294e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">General call wake up function for MCP4725.  <a href="#aa435e2d08b5e8eae6205ddab89294e86">More...</a><br /></td></tr>
-<tr class="separator:aa435e2d08b5e8eae6205ddab89294e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe915ac9d10191a12daf2fe23c0eca65"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d41/_m_c_p4725__ex_8h.html#afe915ac9d10191a12daf2fe23c0eca65">MCP4725_Reset</a> (I2C_HandleTypeDef *const hi2c)</td></tr>
+<tr class="memdesc:afe915ac9d10191a12daf2fe23c0eca65"><td class="mdescLeft">&#160;</td><td class="mdescRight">General call reset function for MCP4725.  <a href="#afe915ac9d10191a12daf2fe23c0eca65">More...</a><br /></td></tr>
+<tr class="separator:afe915ac9d10191a12daf2fe23c0eca65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed2506e32813e3a59b074862bb90a623"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d41/_m_c_p4725__ex_8h.html#aed2506e32813e3a59b074862bb90a623">MCP4725_WakeUp</a> (I2C_HandleTypeDef *const hi2c)</td></tr>
+<tr class="memdesc:aed2506e32813e3a59b074862bb90a623"><td class="mdescLeft">&#160;</td><td class="mdescRight">General call wake up function for MCP4725.  <a href="#aed2506e32813e3a59b074862bb90a623">More...</a><br /></td></tr>
+<tr class="separator:aed2506e32813e3a59b074862bb90a623"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad08b9ee7dee66c0677f4794ccb8157f1"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d41/_m_c_p4725__ex_8h.html#ad08b9ee7dee66c0677f4794ccb8157f1">MCP4725_Read_DAC</a> (<a class="el" href="../../dc/d55/struct_m_c_p4725__t.html">MCP4725_t</a> *const pCpnt, uint16_t *val)</td></tr>
 <tr class="memdesc:ad08b9ee7dee66c0677f4794ccb8157f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read DAC value.  <a href="#ad08b9ee7dee66c0677f4794ccb8157f1">More...</a><br /></td></tr>
 <tr class="separator:ad08b9ee7dee66c0677f4794ccb8157f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,7 +128,7 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>MCP4725 Driver extensions. </p>
 <dl class="section author"><dt>Author</dt><dd>SMFSW </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2021, SMFSW</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2023, SMFSW</dd></dl>
 <p>MCP4725: 12-Bit Digital-to-Analog Converter with EEPROM Memory </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="aa7f6cfdace734f85134a9fa68d707596"></a>
@@ -205,8 +205,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../d1/d41/_m_c_p4725__ex_8h_ad08b9ee7dee66c0677f4794ccb8157f1_cgraph.png" border="0" usemap="#d1/d41/_m_c_p4725__ex_8h_ad08b9ee7dee66c0677f4794ccb8157f1_cgraph" alt=""/></div>
 <map name="d1/d41/_m_c_p4725__ex_8h_ad08b9ee7dee66c0677f4794ccb8157f1_cgraph" id="d1/d41/_m_c_p4725__ex_8h_ad08b9ee7dee66c0677f4794ccb8157f1_cgraph">
 <area shape="rect" id="node2" href="../../d9/d93/_m_c_p4725_8c.html#a8b9ff4c06e4717e351a376418112f524" title="I2C Read function for MCP4725. " alt="" coords="208,31,328,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="376,5,493,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="381,56,488,83"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="376,5,493,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="381,56,488,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -214,7 +214,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/d41/_m_c_p4725__ex_8h_ad08b9ee7dee66c0677f4794ccb8157f1_icgraph.png" border="0" usemap="#d1/d41/_m_c_p4725__ex_8h_ad08b9ee7dee66c0677f4794ccb8157f1_icgraph" alt=""/></div>
 <map name="d1/d41/_m_c_p4725__ex_8h_ad08b9ee7dee66c0677f4794ccb8157f1_icgraph" id="d1/d41/_m_c_p4725__ex_8h_ad08b9ee7dee66c0677f4794ccb8157f1_icgraph">
-<area shape="rect" id="node2" href="../../d1/d41/_m_c_p4725__ex_8h.html#aa435e2d08b5e8eae6205ddab89294e86" title="General call wake up function for MCP4725. " alt="" coords="208,5,348,32"/>
+<area shape="rect" id="node2" href="../../d1/d41/_m_c_p4725__ex_8h.html#aed2506e32813e3a59b074862bb90a623" title="General call wake up function for MCP4725. " alt="" coords="208,5,348,32"/>
 </map>
 </div>
 
@@ -261,8 +261,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../d1/d41/_m_c_p4725__ex_8h_a10bb9cfbc6c8cc660d102b7fea8b50cf_cgraph.png" border="0" usemap="#d1/d41/_m_c_p4725__ex_8h_a10bb9cfbc6c8cc660d102b7fea8b50cf_cgraph" alt=""/></div>
 <map name="d1/d41/_m_c_p4725__ex_8h_a10bb9cfbc6c8cc660d102b7fea8b50cf_cgraph" id="d1/d41/_m_c_p4725__ex_8h_a10bb9cfbc6c8cc660d102b7fea8b50cf_cgraph">
 <area shape="rect" id="node2" href="../../d9/d93/_m_c_p4725_8c.html#a8b9ff4c06e4717e351a376418112f524" title="I2C Read function for MCP4725. " alt="" coords="216,31,336,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="384,5,501,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="389,56,496,83"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="384,5,501,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="389,56,496,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -270,14 +270,14 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/d41/_m_c_p4725__ex_8h_a10bb9cfbc6c8cc660d102b7fea8b50cf_icgraph.png" border="0" usemap="#d1/d41/_m_c_p4725__ex_8h_a10bb9cfbc6c8cc660d102b7fea8b50cf_icgraph" alt=""/></div>
 <map name="d1/d41/_m_c_p4725__ex_8h_a10bb9cfbc6c8cc660d102b7fea8b50cf_icgraph" id="d1/d41/_m_c_p4725__ex_8h_a10bb9cfbc6c8cc660d102b7fea8b50cf_icgraph">
-<area shape="rect" id="node2" href="../../d1/d41/_m_c_p4725__ex_8h.html#aa435e2d08b5e8eae6205ddab89294e86" title="General call wake up function for MCP4725. " alt="" coords="216,5,356,32"/>
+<area shape="rect" id="node2" href="../../d1/d41/_m_c_p4725__ex_8h.html#aed2506e32813e3a59b074862bb90a623" title="General call wake up function for MCP4725. " alt="" coords="216,5,356,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ac4374a3e2cadb1c7c50359641470a454"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4374a3e2cadb1c7c50359641470a454">&#9670;&nbsp;</a></span>MCP4725_Reset()</h2>
+<a id="afe915ac9d10191a12daf2fe23c0eca65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe915ac9d10191a12daf2fe23c0eca65">&#9670;&nbsp;</a></span>MCP4725_Reset()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -288,7 +288,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">FctERR MCP4725_Reset </td>
           <td>(</td>
-          <td class="paramtype">const I2C_HandleTypeDef *&#160;</td>
+          <td class="paramtype">I2C_HandleTypeDef *const&#160;</td>
           <td class="paramname"><em>hi2c</em></td><td>)</td>
           <td></td>
         </tr>
@@ -311,16 +311,16 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d1/d41/_m_c_p4725__ex_8h_ac4374a3e2cadb1c7c50359641470a454_cgraph.png" border="0" usemap="#d1/d41/_m_c_p4725__ex_8h_ac4374a3e2cadb1c7c50359641470a454_cgraph" alt=""/></div>
-<map name="d1/d41/_m_c_p4725__ex_8h_ac4374a3e2cadb1c7c50359641470a454_cgraph" id="d1/d41/_m_c_p4725__ex_8h_ac4374a3e2cadb1c7c50359641470a454_cgraph">
-<area shape="rect" id="node2" href="../../d9/d93/_m_c_p4725_8c.html#a3d108eba1e911f8deb5d4c18281afe14" title="I2C general call for MCP4725. " alt="" coords="177,5,347,32"/>
+<div class="center"><img src="../../d1/d41/_m_c_p4725__ex_8h_afe915ac9d10191a12daf2fe23c0eca65_cgraph.png" border="0" usemap="#d1/d41/_m_c_p4725__ex_8h_afe915ac9d10191a12daf2fe23c0eca65_cgraph" alt=""/></div>
+<map name="d1/d41/_m_c_p4725__ex_8h_afe915ac9d10191a12daf2fe23c0eca65_cgraph" id="d1/d41/_m_c_p4725__ex_8h_afe915ac9d10191a12daf2fe23c0eca65_cgraph">
+<area shape="rect" id="node2" href="../../d9/d93/_m_c_p4725_8c.html#a360ce22071738038f3da2cd7c2efa362" title="I2C general call for MCP4725. " alt="" coords="177,5,347,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="aa435e2d08b5e8eae6205ddab89294e86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa435e2d08b5e8eae6205ddab89294e86">&#9670;&nbsp;</a></span>MCP4725_WakeUp()</h2>
+<a id="aed2506e32813e3a59b074862bb90a623"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed2506e32813e3a59b074862bb90a623">&#9670;&nbsp;</a></span>MCP4725_WakeUp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -331,7 +331,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">FctERR MCP4725_WakeUp </td>
           <td>(</td>
-          <td class="paramtype">const I2C_HandleTypeDef *&#160;</td>
+          <td class="paramtype">I2C_HandleTypeDef *const&#160;</td>
           <td class="paramname"><em>hi2c</em></td><td>)</td>
           <td></td>
         </tr>
@@ -354,14 +354,14 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d1/d41/_m_c_p4725__ex_8h_aa435e2d08b5e8eae6205ddab89294e86_cgraph.png" border="0" usemap="#d1/d41/_m_c_p4725__ex_8h_aa435e2d08b5e8eae6205ddab89294e86_cgraph" alt=""/></div>
-<map name="d1/d41/_m_c_p4725__ex_8h_aa435e2d08b5e8eae6205ddab89294e86_cgraph" id="d1/d41/_m_c_p4725__ex_8h_aa435e2d08b5e8eae6205ddab89294e86_cgraph">
-<area shape="rect" id="node2" href="../../d9/d93/_m_c_p4725_8c.html#a3d108eba1e911f8deb5d4c18281afe14" title="I2C general call for MCP4725. " alt="" coords="193,5,363,32"/>
+<div class="center"><img src="../../d1/d41/_m_c_p4725__ex_8h_aed2506e32813e3a59b074862bb90a623_cgraph.png" border="0" usemap="#d1/d41/_m_c_p4725__ex_8h_aed2506e32813e3a59b074862bb90a623_cgraph" alt=""/></div>
+<map name="d1/d41/_m_c_p4725__ex_8h_aed2506e32813e3a59b074862bb90a623_cgraph" id="d1/d41/_m_c_p4725__ex_8h_aed2506e32813e3a59b074862bb90a623_cgraph">
+<area shape="rect" id="node2" href="../../d9/d93/_m_c_p4725_8c.html#a360ce22071738038f3da2cd7c2efa362" title="I2C general call for MCP4725. " alt="" coords="193,5,363,32"/>
 <area shape="rect" id="node3" href="../../d1/d41/_m_c_p4725__ex_8h.html#ad08b9ee7dee66c0677f4794ccb8157f1" title="Read DAC value. " alt="" coords="201,56,355,83"/>
 <area shape="rect" id="node7" href="../../d1/d41/_m_c_p4725__ex_8h.html#a10bb9cfbc6c8cc660d102b7fea8b50cf" title="Read DAC state. " alt="" coords="197,107,359,133"/>
 <area shape="rect" id="node4" href="../../d9/d93/_m_c_p4725_8c.html#a8b9ff4c06e4717e351a376418112f524" title="I2C Read function for MCP4725. " alt="" coords="411,81,531,108"/>
-<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="579,56,696,83"/>
-<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="584,107,691,133"/>
+<area shape="rect" id="node5" href="../../d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="579,56,696,83"/>
+<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="584,107,691,133"/>
 </map>
 </div>
 
@@ -408,8 +408,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../d1/d41/_m_c_p4725__ex_8h_aab6a6cc4fd1092188c5562a82572ac0f_cgraph.png" border="0" usemap="#d1/d41/_m_c_p4725__ex_8h_aab6a6cc4fd1092188c5562a82572ac0f_cgraph" alt=""/></div>
 <map name="d1/d41/_m_c_p4725__ex_8h_aab6a6cc4fd1092188c5562a82572ac0f_cgraph" id="d1/d41/_m_c_p4725__ex_8h_aab6a6cc4fd1092188c5562a82572ac0f_cgraph">
 <area shape="rect" id="node2" href="../../d9/d93/_m_c_p4725_8c.html#a9234b6dc64a61523a3434bff8df4e84b" title="I2C Write function for MCP4725. " alt="" coords="248,31,368,57"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="416,5,533,32"/>
-<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="421,56,528,83"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="416,5,533,32"/>
+<area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="421,56,528,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -421,7 +421,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node6" href="../../d4/d96/_m_c_p4725__proc_8h.html#a4195b7c7e50326cdfcdf6fdb1875d6d7" title="Write Raw DAC value to MCP4725 peripheral. " alt="" coords="275,56,412,83"/>
 <area shape="rect" id="node7" href="../../d4/d96/_m_c_p4725__proc_8h.html#aabbca585ecc6254b614961874e3865d3" title="Write DAC value (in Volts) to MCP4725 peripheral. " alt="" coords="269,107,418,133"/>
 <area shape="rect" id="node3" href="../../d4/d96/_m_c_p4725__proc_8h.html#a4565885b804eb732717112b6934fdf70" title="Initialization Sequence of the MCP4725 peripheral. " alt="" coords="487,5,665,32"/>
-<area shape="rect" id="node4" href="../../df/d9f/_m_c_p4725_8h.html#ab24067337586b0acaf2eacc6838f622d" title="Initialization of the MCP4725 peripheral. " alt="" coords="713,5,821,32"/>
+<area shape="rect" id="node4" href="../../df/d9f/_m_c_p4725_8h.html#aefb50ae89fcaf6fa0eed22e9607d28b4" title="Initialization of the MCP4725 peripheral. " alt="" coords="713,5,821,32"/>
 <area shape="rect" id="node5" href="../../df/d9f/_m_c_p4725_8h.html#ac1f4cff11c62b1283266a24d8c601bd4" title="Initialization for MCP4725 peripheral. " alt="" coords="869,5,1024,32"/>
 </map>
 </div>

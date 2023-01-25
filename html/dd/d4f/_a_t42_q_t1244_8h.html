@@ -65,8 +65,7 @@ $(function() {
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">AT42QT1244.h File Reference</div>  </div>
 </div><!--header-->
@@ -416,9 +415,9 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af1484a8fc6bebb8a9b458b89c0302eb2"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d4f/_a_t42_q_t1244_8h.html#af1484a8fc6bebb8a9b458b89c0302eb2">AT42QT1244_Init</a> (const uint8_t idx, const I2C_HandleTypeDef *hi2c, const uint16_t devAddress)</td></tr>
-<tr class="memdesc:af1484a8fc6bebb8a9b458b89c0302eb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for AT42QT1244 peripheral.  <a href="#af1484a8fc6bebb8a9b458b89c0302eb2">More...</a><br /></td></tr>
-<tr class="separator:af1484a8fc6bebb8a9b458b89c0302eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bc2277728576e7c12b20400144d1de0"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d4f/_a_t42_q_t1244_8h.html#a2bc2277728576e7c12b20400144d1de0">AT42QT1244_Init</a> (const uint8_t idx, I2C_HandleTypeDef *const hi2c, const uint16_t devAddress)</td></tr>
+<tr class="memdesc:a2bc2277728576e7c12b20400144d1de0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for AT42QT1244 peripheral.  <a href="#a2bc2277728576e7c12b20400144d1de0">More...</a><br /></td></tr>
+<tr class="separator:a2bc2277728576e7c12b20400144d1de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8060fa17608cb27da6c09ddbc7086107"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d4f/_a_t42_q_t1244_8h.html#a8060fa17608cb27da6c09ddbc7086107">AT42QT1244_Init_Single</a> (void)</td></tr>
 <tr class="memdesc:a8060fa17608cb27da6c09ddbc7086107"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for AT42QT1244 peripheral.  <a href="#a8060fa17608cb27da6c09ddbc7086107">More...</a><br /></td></tr>
 <tr class="separator:a8060fa17608cb27da6c09ddbc7086107"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -428,17 +427,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a59952a25c499177de6ff50933ffdbc47"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d4f/_a_t42_q_t1244_8h.html#a59952a25c499177de6ff50933ffdbc47">AT42QT1244_Read</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *const pSlave, uint8_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
 <tr class="memdesc:a59952a25c499177de6ff50933ffdbc47"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Read function for AT42QT1244.  <a href="#a59952a25c499177de6ff50933ffdbc47">More...</a><br /></td></tr>
 <tr class="separator:a59952a25c499177de6ff50933ffdbc47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:aba6b9727228c10bcd0e6168dc2d332ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d4f/_a_t42_q_t1244_8h.html#aba6b9727228c10bcd0e6168dc2d332ae">AT42QT1244_hal</a> [<a class="el" href="../../dd/d4f/_a_t42_q_t1244_8h.html#ab0e5929d2695975bd80246897b8562fa">I2C_AT42QT1244_NB</a>]</td></tr>
-<tr class="memdesc:aba6b9727228c10bcd0e6168dc2d332ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">AT42QT1244 Slave structure.  <a href="#aba6b9727228c10bcd0e6168dc2d332ae">More...</a><br /></td></tr>
-<tr class="separator:aba6b9727228c10bcd0e6168dc2d332ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>AT42QT1244 Driver. </p>
 <dl class="section author"><dt>Author</dt><dd>SMFSW </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2021, SMFSW</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2023, SMFSW</dd></dl>
 <p>AT42QT1244: 24-key QMatrix FMEA IEC/EN/UL60730 Touch Sensor </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ad253e5529a2f90f8c9870834910e40df"></a>
@@ -1013,8 +1006,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="af1484a8fc6bebb8a9b458b89c0302eb2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1484a8fc6bebb8a9b458b89c0302eb2">&#9670;&nbsp;</a></span>AT42QT1244_Init()</h2>
+<a id="a2bc2277728576e7c12b20400144d1de0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bc2277728576e7c12b20400144d1de0">&#9670;&nbsp;</a></span>AT42QT1244_Init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1028,7 +1021,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const I2C_HandleTypeDef *&#160;</td>
+          <td class="paramtype">I2C_HandleTypeDef *const&#160;</td>
           <td class="paramname"><em>hi2c</em>, </td>
         </tr>
         <tr>
@@ -1058,23 +1051,23 @@ Variables</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../dd/d4f/_a_t42_q_t1244_8h_af1484a8fc6bebb8a9b458b89c0302eb2_cgraph.png" border="0" usemap="#dd/d4f/_a_t42_q_t1244_8h_af1484a8fc6bebb8a9b458b89c0302eb2_cgraph" alt=""/></div>
-<map name="dd/d4f/_a_t42_q_t1244_8h_af1484a8fc6bebb8a9b458b89c0302eb2_cgraph" id="dd/d4f/_a_t42_q_t1244_8h_af1484a8fc6bebb8a9b458b89c0302eb2_cgraph">
-<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="227,5,335,32"/>
+<div class="center"><img src="../../dd/d4f/_a_t42_q_t1244_8h_a2bc2277728576e7c12b20400144d1de0_cgraph.png" border="0" usemap="#dd/d4f/_a_t42_q_t1244_8h_a2bc2277728576e7c12b20400144d1de0_cgraph" alt=""/></div>
+<map name="dd/d4f/_a_t42_q_t1244_8h_a2bc2277728576e7c12b20400144d1de0_cgraph" id="dd/d4f/_a_t42_q_t1244_8h_a2bc2277728576e7c12b20400144d1de0_cgraph">
+<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization. " alt="" coords="227,5,335,32"/>
 <area shape="rect" id="node3" href="../../dd/de3/_a_t42_q_t1244__proc_8c.html#a8766f2a3280acd350544fa81b84f216c" title="Initialization Sequence for AT42QT1244 peripheral. " alt="" coords="181,56,380,83"/>
-<area shape="rect" id="node9" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="221,107,340,133"/>
+<area shape="rect" id="node9" href="../../d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state. " alt="" coords="221,107,340,133"/>
 <area shape="rect" id="node4" href="../../dd/de3/_a_t42_q_t1244__proc_8c.html#a4e9e9c7ef09016fe06741c0ab9ef5370" title="100ms delay generator for AT42QT1244 peripheral " alt="" coords="428,31,636,57"/>
 <area shape="rect" id="node5" href="../../d3/dc4/_a_t42_q_t1244_8c.html#a59952a25c499177de6ff50933ffdbc47" title="I2C Read function for AT42QT1244. " alt="" coords="462,81,602,108"/>
-<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="697,31,815,57"/>
-<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="703,81,809,108"/>
+<area shape="rect" id="node6" href="../../d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="697,31,815,57"/>
+<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="703,81,809,108"/>
 <area shape="rect" id="node8" href="../../dd/de3/_a_t42_q_t1244__proc_8c.html#ad2998daf6e9e01b5d72b96ac64a2f78e" title="16bits CRC calculation for AT42QT1244 " alt="" coords="684,132,828,159"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../dd/d4f/_a_t42_q_t1244_8h_af1484a8fc6bebb8a9b458b89c0302eb2_icgraph.png" border="0" usemap="#dd/d4f/_a_t42_q_t1244_8h_af1484a8fc6bebb8a9b458b89c0302eb2_icgraph" alt=""/></div>
-<map name="dd/d4f/_a_t42_q_t1244_8h_af1484a8fc6bebb8a9b458b89c0302eb2_icgraph" id="dd/d4f/_a_t42_q_t1244_8h_af1484a8fc6bebb8a9b458b89c0302eb2_icgraph">
+<div class="center"><img src="../../dd/d4f/_a_t42_q_t1244_8h_a2bc2277728576e7c12b20400144d1de0_icgraph.png" border="0" usemap="#dd/d4f/_a_t42_q_t1244_8h_a2bc2277728576e7c12b20400144d1de0_icgraph" alt=""/></div>
+<map name="dd/d4f/_a_t42_q_t1244_8h_a2bc2277728576e7c12b20400144d1de0_icgraph" id="dd/d4f/_a_t42_q_t1244_8h_a2bc2277728576e7c12b20400144d1de0_icgraph">
 <area shape="rect" id="node2" href="../../dd/d4f/_a_t42_q_t1244_8h.html#a8060fa17608cb27da6c09ddbc7086107" title="Initialization for AT42QT1244 peripheral. " alt="" coords="181,5,356,32"/>
 </map>
 </div>
@@ -1105,14 +1098,14 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d4f/_a_t42_q_t1244_8h_a8060fa17608cb27da6c09ddbc7086107_cgraph.png" border="0" usemap="#dd/d4f/_a_t42_q_t1244_8h_a8060fa17608cb27da6c09ddbc7086107_cgraph" alt=""/></div>
 <map name="dd/d4f/_a_t42_q_t1244_8h_a8060fa17608cb27da6c09ddbc7086107_cgraph" id="dd/d4f/_a_t42_q_t1244_8h_a8060fa17608cb27da6c09ddbc7086107_cgraph">
-<area shape="rect" id="node2" href="../../d3/dc4/_a_t42_q_t1244_8c.html#af1484a8fc6bebb8a9b458b89c0302eb2" title="Initialization for AT42QT1244 peripheral. " alt="" coords="228,56,356,83"/>
-<area shape="rect" id="node3" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="449,5,557,32"/>
+<area shape="rect" id="node2" href="../../d3/dc4/_a_t42_q_t1244_8c.html#a2bc2277728576e7c12b20400144d1de0" title="Initialization for AT42QT1244 peripheral. " alt="" coords="228,56,356,83"/>
+<area shape="rect" id="node3" href="../../d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization. " alt="" coords="449,5,557,32"/>
 <area shape="rect" id="node4" href="../../dd/de3/_a_t42_q_t1244__proc_8c.html#a8766f2a3280acd350544fa81b84f216c" title="Initialization Sequence for AT42QT1244 peripheral. " alt="" coords="404,56,603,83"/>
-<area shape="rect" id="node10" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="444,107,563,133"/>
+<area shape="rect" id="node10" href="../../d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state. " alt="" coords="444,107,563,133"/>
 <area shape="rect" id="node5" href="../../dd/de3/_a_t42_q_t1244__proc_8c.html#a4e9e9c7ef09016fe06741c0ab9ef5370" title="100ms delay generator for AT42QT1244 peripheral " alt="" coords="651,31,859,57"/>
 <area shape="rect" id="node6" href="../../d3/dc4/_a_t42_q_t1244_8c.html#a59952a25c499177de6ff50933ffdbc47" title="I2C Read function for AT42QT1244. " alt="" coords="685,81,825,108"/>
-<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="920,31,1037,57"/>
-<area shape="rect" id="node8" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="925,81,1032,108"/>
+<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="920,31,1037,57"/>
+<area shape="rect" id="node8" href="../../d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="925,81,1032,108"/>
 <area shape="rect" id="node9" href="../../dd/de3/_a_t42_q_t1244__proc_8c.html#ad2998daf6e9e01b5d72b96ac64a2f78e" title="16bits CRC calculation for AT42QT1244 " alt="" coords="907,132,1051,159"/>
 </map>
 </div>
@@ -1173,8 +1166,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d4f/_a_t42_q_t1244_8h_a59952a25c499177de6ff50933ffdbc47_cgraph.png" border="0" usemap="#dd/d4f/_a_t42_q_t1244_8h_a59952a25c499177de6ff50933ffdbc47_cgraph" alt=""/></div>
 <map name="dd/d4f/_a_t42_q_t1244_8h_a59952a25c499177de6ff50933ffdbc47_cgraph" id="dd/d4f/_a_t42_q_t1244_8h_a59952a25c499177de6ff50933ffdbc47_cgraph">
-<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="207,5,324,32"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="212,56,319,83"/>
+<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="207,5,324,32"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="212,56,319,83"/>
 <area shape="rect" id="node4" href="../../dd/de3/_a_t42_q_t1244__proc_8c.html#ad2998daf6e9e01b5d72b96ac64a2f78e" title="16bits CRC calculation for AT42QT1244 " alt="" coords="193,107,337,133"/>
 </map>
 </div>
@@ -1201,7 +1194,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node16" href="../../d4/d47/_a_t42_q_t1244__proc_8h.html#accf45d5bd518dceb2fb6b388380cdb93" title="Low level calibration for AT42QT1244 peripheral. " alt="" coords="677,274,843,315"/>
 <area shape="rect" id="node17" href="../../d4/d47/_a_t42_q_t1244__proc_8h.html#a1515d11446da81b7b28cc10efb69a897" title="All keys calibration for AT42QT1244 peripheral. " alt="" coords="677,339,843,381"/>
 <area shape="rect" id="node18" href="../../d4/d47/_a_t42_q_t1244__proc_8h.html#a64ec9086c4e13d125eb3d574a57b4957" title="Key calibration for AT42QT1244 peripheral. " alt="" coords="897,403,1092,429"/>
-<area shape="rect" id="node20" href="../../dd/d4f/_a_t42_q_t1244_8h.html#af1484a8fc6bebb8a9b458b89c0302eb2" title="Initialization for AT42QT1244 peripheral. " alt="" coords="467,557,595,584"/>
+<area shape="rect" id="node20" href="../../dd/d4f/_a_t42_q_t1244_8h.html#a2bc2277728576e7c12b20400144d1de0" title="Initialization for AT42QT1244 peripheral. " alt="" coords="467,557,595,584"/>
 <area shape="rect" id="node21" href="../../dd/d4f/_a_t42_q_t1244_8h.html#a8060fa17608cb27da6c09ddbc7086107" title="Initialization for AT42QT1244 peripheral. " alt="" coords="673,608,847,635"/>
 </map>
 </div>
@@ -1262,8 +1255,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d4f/_a_t42_q_t1244_8h_afc7b495087a57939c8c261820668a896_cgraph.png" border="0" usemap="#dd/d4f/_a_t42_q_t1244_8h_afc7b495087a57939c8c261820668a896_cgraph" alt=""/></div>
 <map name="dd/d4f/_a_t42_q_t1244_8h_afc7b495087a57939c8c261820668a896_cgraph" id="dd/d4f/_a_t42_q_t1244_8h_afc7b495087a57939c8c261820668a896_cgraph">
-<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="193,5,311,32"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="199,56,305,83"/>
+<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="193,5,311,32"/>
+<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="199,56,305,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1283,23 +1276,6 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node11" href="../../df/de4/_a_t42_q_t1244__ex_8h.html#af23af7f48652e8c2a0b6b9c398aa2169" title="Frequency hopping mode setup for AT42QT1244 peripheral. " alt="" coords="457,107,640,133"/>
 </map>
 </div>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="aba6b9727228c10bcd0e6168dc2d332ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba6b9727228c10bcd0e6168dc2d332ae">&#9670;&nbsp;</a></span>AT42QT1244_hal</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> AT42QT1244_hal[<a class="el" href="../../dd/d4f/_a_t42_q_t1244_8h.html#ab0e5929d2695975bd80246897b8562fa">I2C_AT42QT1244_NB</a>]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>AT42QT1244 Slave structure. </p>
 
 </div>
 </div>

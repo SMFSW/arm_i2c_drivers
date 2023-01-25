@@ -29,7 +29,6 @@ var searchData=
   ['dom_5funits',['DOM_Units',['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#ab8a31099e7e05bc4992c1de0123af424',1,'uGPMS_RD_REG_MAP']]],
   ['dr',['DR',['../d1/d47/unionu_a_d_s1115___r_e_g_____c_f_g.html#aca1fcfb5e20c500c9778ecb1beb96911',1,'uADS1115_REG__CFG']]],
   ['drive_5ftime',['DRIVE_TIME',['../d2/d16/unionu_d_r_v___r_e_g_____c_o_n_t_r_o_l__1.html#afab3349592cc740fbfa4bcb99a8f2686',1,'uDRV_REG__CONTROL_1']]],
-  ['drv2605_5fhal',['DRV2605_hal',['../dc/d9a/_d_r_v2605_l_8c.html#a54f89ce970c55493c2920cd6e5dcc597',1,'DRV2605_hal():&#160;DRV2605L.c'],['../d5/d47/_d_r_v2605_l_8h.html#a54f89ce970c55493c2920cd6e5dcc597',1,'DRV2605_hal():&#160;DRV2605L.c']]],
   ['drv2605l',['DRV2605L',['../df/dc7/_d_r_v2605_l__proc_8c.html#a2c56d539949d06479aac63eb96eda672',1,'DRV2605L():&#160;DRV2605L_proc.c'],['../d1/da7/_d_r_v2605_l__proc_8h.html#a2c56d539949d06479aac63eb96eda672',1,'DRV2605L():&#160;DRV2605L_proc.c']]],
   ['duty0',['Duty0',['../dd/d3d/struct_p_c_a9532__t.html#ab9ef2276e2d73fe3c9d4ba13b59d80e6',1,'PCA9532_t']]],
   ['duty1',['Duty1',['../dd/d3d/struct_p_c_a9532__t.html#a6a254bd8b420b3b5971f60428be41b3f',1,'PCA9532_t']]],

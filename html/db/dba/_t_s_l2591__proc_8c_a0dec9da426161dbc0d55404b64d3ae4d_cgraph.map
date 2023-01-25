@@ -3,6 +3,6 @@
 <area shape="rect" id="node4" href="$db/dba/_t_s_l2591__proc_8c.html#a63ff78c62bd01f18c84b4d4cd8541fd6" title="Handler for TSL2591 peripheral. " alt="" coords="220,56,352,83"/>
 <area shape="rect" id="node3" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="420,5,599,32"/>
 <area shape="rect" id="node5" href="$d2/d68/_t_s_l2591_8c.html#a413df69cffa299813ff03f5bb6a0bc81" title="I2C Read function for TSL2591. " alt="" coords="452,56,567,83"/>
-<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="647,31,764,57"/>
-<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="652,81,759,108"/>
+<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="647,31,764,57"/>
+<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="652,81,759,108"/>
 </map>

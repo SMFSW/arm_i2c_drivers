@@ -1,6 +1,6 @@
 <map id="AMG88_Set_Interrupt_Levels" name="AMG88_Set_Interrupt_Levels">
 <area shape="rect" id="node2" href="$de/d9d/_a_m_g88__ex_8c.html#adf51c67f115c69033cf280426b338c7c" title="Convert temperature to AMG88 temperature coded integer. " alt="" coords="212,5,379,47"/>
 <area shape="rect" id="node3" href="$df/d52/_a_m_g88_8c.html#a06e77708affb2165299376ea09d3e362" title="I2C Write function for AMG88. " alt="" coords="242,71,349,98"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="427,46,544,73"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="432,97,539,123"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="427,46,544,73"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="432,97,539,123"/>
 </map>

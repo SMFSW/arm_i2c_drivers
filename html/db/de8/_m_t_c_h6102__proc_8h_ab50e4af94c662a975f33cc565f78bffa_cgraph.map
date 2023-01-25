@@ -10,7 +10,7 @@
 <area shape="rect" id="node8" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#afe36967c5c7c9a53aa27814679792f12" title="Set MTCH6102 gesture decoding. " alt="" coords="516,144,677,170"/>
 <area shape="rect" id="node9" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#aa980af8cabdefa2a588cb6109e696006" title="Execute MTCH6102 manufacturing test. " alt="" coords="487,93,707,120"/>
 <area shape="rect" id="node6" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a4c1612bb1afca9818d54ff05c5fa4191" title="Execute MTCH6102 command. " alt="" coords="768,93,932,120"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1272,118,1389,145"/>
+<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="1272,118,1389,145"/>
 <area shape="rect" id="node7" href="$da/d78/_m_t_c_h6102_8c.html#aadac3361a556fe464ea0df2d9a8366ae" title="I2C Write function for MTCH6102. " alt="" coords="1029,144,1157,170"/>
 <area shape="rect" id="node14" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a6e4dca81f18906253bc5300c3a485b8e" title="Get MTCH6102 gesture data. " alt="" coords="771,413,929,440"/>
 <area shape="rect" id="node21" href="$d2/d60/_m_t_c_h6102__proc_8c.html#a6c8c05288ed1e532bb558523a8a6cbf1" title="Decode raw MTCH6102 datas to touch datas. " alt="" coords="757,347,943,388"/>

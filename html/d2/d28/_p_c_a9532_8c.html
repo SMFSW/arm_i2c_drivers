@@ -61,8 +61,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">PCA9532.c File Reference</div>  </div>
 </div><!--header-->
@@ -87,9 +86,9 @@ Include dependency graph for PCA9532.c:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a53117549a86481f7203371b537bc7084"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d28/_p_c_a9532_8c.html#a53117549a86481f7203371b537bc7084">PCA9532_Init</a> (const uint8_t idx, const I2C_HandleTypeDef *hi2c, const uint16_t devAddress)</td></tr>
-<tr class="memdesc:a53117549a86481f7203371b537bc7084"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for PCA9532 peripheral.  <a href="#a53117549a86481f7203371b537bc7084">More...</a><br /></td></tr>
-<tr class="separator:a53117549a86481f7203371b537bc7084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2c83a49b54020805a88671f067bf6d6"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d28/_p_c_a9532_8c.html#ab2c83a49b54020805a88671f067bf6d6">PCA9532_Init</a> (const uint8_t idx, I2C_HandleTypeDef *const hi2c, const uint16_t devAddress)</td></tr>
+<tr class="memdesc:ab2c83a49b54020805a88671f067bf6d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for PCA9532 peripheral.  <a href="#ab2c83a49b54020805a88671f067bf6d6">More...</a><br /></td></tr>
+<tr class="separator:ab2c83a49b54020805a88671f067bf6d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3bc95cfa1ac91a201ac0543ced4bb03"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d28/_p_c_a9532_8c.html#ae3bc95cfa1ac91a201ac0543ced4bb03">PCA9532_Init_Single</a> (void)</td></tr>
 <tr class="memdesc:ae3bc95cfa1ac91a201ac0543ced4bb03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization for PCA9532 peripheral.  <a href="#ae3bc95cfa1ac91a201ac0543ced4bb03">More...</a><br /></td></tr>
 <tr class="separator:ae3bc95cfa1ac91a201ac0543ced4bb03"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -99,21 +98,15 @@ Functions</h2></td></tr>
 <tr class="memitem:aab6120b7948634c78e6c2e6f79b602b3"><td class="memItemLeft" align="right" valign="top">FctERR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d28/_p_c_a9532_8c.html#aab6120b7948634c78e6c2e6f79b602b3">PCA9532_Read</a> (<a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> *const pSlave, uint8_t *data, const uint16_t addr, const uint16_t nb)</td></tr>
 <tr class="memdesc:aab6120b7948634c78e6c2e6f79b602b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Read function for PCA9532.  <a href="#aab6120b7948634c78e6c2e6f79b602b3">More...</a><br /></td></tr>
 <tr class="separator:aab6120b7948634c78e6c2e6f79b602b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a0e67949005367831d22c0f68eddcd7a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d28/_p_c_a9532_8c.html#a0e67949005367831d22c0f68eddcd7a2">PCA9532_hal</a> [<a class="el" href="../../d3/df9/_p_c_a9532_8h.html#a131244581cd8c77d741f7563ddf67293">I2C_PCA9532_NB</a>]</td></tr>
-<tr class="memdesc:a0e67949005367831d22c0f68eddcd7a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">PCA9532 Slave structure.  <a href="#a0e67949005367831d22c0f68eddcd7a2">More...</a><br /></td></tr>
-<tr class="separator:a0e67949005367831d22c0f68eddcd7a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>PCA9532 Driver. </p>
 <dl class="section author"><dt>Author</dt><dd>SMFSW </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2021, SMFSW</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2023, SMFSW</dd></dl>
 <p>PCA9532: 16-bit I2C-bus LED dimmer </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a53117549a86481f7203371b537bc7084"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53117549a86481f7203371b537bc7084">&#9670;&nbsp;</a></span>PCA9532_Init()</h2>
+<a id="ab2c83a49b54020805a88671f067bf6d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2c83a49b54020805a88671f067bf6d6">&#9670;&nbsp;</a></span>PCA9532_Init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -127,7 +120,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const I2C_HandleTypeDef *&#160;</td>
+          <td class="paramtype">I2C_HandleTypeDef *const&#160;</td>
           <td class="paramname"><em>hi2c</em>, </td>
         </tr>
         <tr>
@@ -157,39 +150,37 @@ Variables</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d2/d28/_p_c_a9532_8c_a53117549a86481f7203371b537bc7084_cgraph.png" border="0" usemap="#d2/d28/_p_c_a9532_8c_a53117549a86481f7203371b537bc7084_cgraph" alt=""/></div>
-<map name="d2/d28/_p_c_a9532_8c_a53117549a86481f7203371b537bc7084_cgraph" id="d2/d28/_p_c_a9532_8c_a53117549a86481f7203371b537bc7084_cgraph">
-<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="215,144,323,171"/>
-<area shape="rect" id="node3" href="../../d8/df0/_p_c_a9532__ex_8h.html#ae6d466e3f5efaf3e95f4b181fc443ee0" title="Set auto increment option for PCA9532 registers. " alt="" coords="160,195,379,222"/>
-<area shape="rect" id="node4" href="../../de/dea/_p_c_a9532__proc_8c.html#a95ddc3ce36d7d60e26b08ce405ea2fc3" title="Initialization Sequence for PCA9532 peripheral. " alt="" coords="181,246,358,272"/>
-<area shape="rect" id="node25" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="210,296,329,323"/>
-<area shape="rect" id="node5" href="../../d8/df0/_p_c_a9532__ex_8h.html#acc2166ca303c21d35c08ab2e0fbc124a" title="Convert Frequency to PWMx byte register. " alt="" coords="904,18,1111,44"/>
-<area shape="rect" id="node6" href="../../d2/d28/_p_c_a9532_8c.html#aeaa1cbcbef5392b3acc5826a383f6e7d" title="I2C Write function for PCA9532. " alt="" coords="948,284,1067,311"/>
-<area shape="rect" id="node9" href="../../d2/d28/_p_c_a9532_8c.html#aab6120b7948634c78e6c2e6f79b602b3" title="I2C Read function for PCA9532. " alt="" coords="948,502,1067,528"/>
-<area shape="rect" id="node10" href="../../d8/df0/_p_c_a9532__ex_8h.html#a4d4279a2e53756ade743737952972edf" title="Convert PSCx byte register to Frequency (in Hz) " alt="" coords="922,411,1093,438"/>
-<area shape="rect" id="node11" href="../../d8/df0/_p_c_a9532__ex_8h.html#a03b2ea671687b1a439c90bc4f946542b" title="Convert PWMx byte register to Duty Cycle (in %) " alt="" coords="435,347,609,374"/>
-<area shape="rect" id="node24" href="../../d6/daa/_p_c_a9532__ex_8c.html#af98d17c6c32cf92bdc78af54bc665b98" title="Set PCA9532 peripheral multiple LEDs mode. " alt="" coords="427,119,617,146"/>
-<area shape="rect" id="node7" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1159,319,1276,346"/>
-<area shape="rect" id="node8" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1164,458,1271,484"/>
-<area shape="rect" id="node12" href="../../d8/df0/_p_c_a9532__ex_8h.html#a50cdf8379e507736d03eb51e3bed2b01" title="Read register from PCA9532. " alt="" coords="676,524,845,551"/>
-<area shape="rect" id="node13" href="../../d8/df0/_p_c_a9532__ex_8h.html#a88684c24046ec8995a83af7b9e3bb9d6" title="Read LED0 to LED7 input register. " alt="" coords="675,575,846,602"/>
-<area shape="rect" id="node14" href="../../d8/df0/_p_c_a9532__ex_8h.html#a8e553b1df9b3d53172626bf564340823" title="Read LED8 to LED15 input register. " alt="" coords="675,423,846,450"/>
-<area shape="rect" id="node15" href="../../d8/df0/_p_c_a9532__ex_8h.html#a6e617ceb33f37a3fa04f0382106eaec5" title="Set PCA9532 peripheral LED mode. " alt="" coords="669,220,852,247"/>
-<area shape="rect" id="node16" href="../../d8/df0/_p_c_a9532__ex_8h.html#af98d17c6c32cf92bdc78af54bc665b98" title="Set PCA9532 peripheral multiple LEDs mode. " alt="" coords="665,271,856,298"/>
-<area shape="rect" id="node17" href="../../d8/df0/_p_c_a9532__ex_8h.html#a3068b304ee4fdf03975f14e69ea3207c" title="Set PSCx frequency of PCA9532. " alt="" coords="673,372,848,399"/>
-<area shape="rect" id="node19" href="../../d8/df0/_p_c_a9532__ex_8h.html#a125d6303517af2bdef5b0f0e435f639d" title="Set PWMx duty cycle of PCA9532. " alt="" coords="691,322,830,348"/>
-<area shape="rect" id="node20" href="../../d8/df0/_p_c_a9532__ex_8h.html#a6d703493d85df1f08286da3738a2d41e" title="Reset GPIO pin init for PCA9532. " alt="" coords="673,626,848,652"/>
-<area shape="rect" id="node22" href="../../d8/df0/_p_c_a9532__ex_8h.html#aa8a564bad9889d38bcf23dc8a9d7d765" title="Reset GPIO pin setter for PCA9532. " alt="" coords="671,68,850,95"/>
-<area shape="rect" id="node18" href="../../d8/df0/_p_c_a9532__ex_8h.html#a9990f2ec0568dbd5cc91b3690aaea28a" title="Convert Frequency to PSCx byte register. " alt="" coords="922,360,1093,387"/>
-<area shape="rect" id="node21" href="../../d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="919,626,1096,652"/>
-<area shape="rect" id="node23" href="../../d2/de1/_i2_c__peripheral_8c.html#a7accedd9eb463e3cd4eb401b07e36b2c" title="I2C peripheral GPIO pin setter. " alt="" coords="918,68,1097,95"/>
+<div class="center"><img src="../../d2/d28/_p_c_a9532_8c_ab2c83a49b54020805a88671f067bf6d6_cgraph.png" border="0" usemap="#d2/d28/_p_c_a9532_8c_ab2c83a49b54020805a88671f067bf6d6_cgraph" alt=""/></div>
+<map name="d2/d28/_p_c_a9532_8c_ab2c83a49b54020805a88671f067bf6d6_cgraph" id="d2/d28/_p_c_a9532_8c_ab2c83a49b54020805a88671f067bf6d6_cgraph">
+<area shape="rect" id="node2" href="../../d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization. " alt="" coords="215,108,323,134"/>
+<area shape="rect" id="node3" href="../../d8/df0/_p_c_a9532__ex_8h.html#ae6d466e3f5efaf3e95f4b181fc443ee0" title="Set auto increment option for PCA9532 registers. " alt="" coords="160,158,379,185"/>
+<area shape="rect" id="node4" href="../../de/dea/_p_c_a9532__proc_8c.html#a95ddc3ce36d7d60e26b08ce405ea2fc3" title="Initialization Sequence for PCA9532 peripheral. " alt="" coords="181,209,358,236"/>
+<area shape="rect" id="node23" href="../../d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state. " alt="" coords="210,260,329,286"/>
+<area shape="rect" id="node5" href="../../d8/df0/_p_c_a9532__ex_8h.html#acc2166ca303c21d35c08ab2e0fbc124a" title="Convert Frequency to PWMx byte register. " alt="" coords="904,6,1111,33"/>
+<area shape="rect" id="node6" href="../../d2/d28/_p_c_a9532_8c.html#aeaa1cbcbef5392b3acc5826a383f6e7d" title="I2C Write function for PCA9532. " alt="" coords="948,209,1067,236"/>
+<area shape="rect" id="node7" href="../../d2/d28/_p_c_a9532_8c.html#aab6120b7948634c78e6c2e6f79b602b3" title="I2C Read function for PCA9532. " alt="" coords="948,564,1067,590"/>
+<area shape="rect" id="node8" href="../../d8/df0/_p_c_a9532__ex_8h.html#a4d4279a2e53756ade743737952972edf" title="Convert PSCx byte register to Frequency (in Hz) " alt="" coords="922,82,1093,109"/>
+<area shape="rect" id="node9" href="../../d8/df0/_p_c_a9532__ex_8h.html#a03b2ea671687b1a439c90bc4f946542b" title="Convert PWMx byte register to Duty Cycle (in %) " alt="" coords="435,361,609,388"/>
+<area shape="rect" id="node22" href="../../d6/daa/_p_c_a9532__ex_8c.html#af98d17c6c32cf92bdc78af54bc665b98" title="Set PCA9532 peripheral multiple LEDs mode. " alt="" coords="427,234,617,261"/>
+<area shape="rect" id="node10" href="../../d8/df0/_p_c_a9532__ex_8h.html#a50cdf8379e507736d03eb51e3bed2b01" title="Read register from PCA9532. " alt="" coords="676,589,845,616"/>
+<area shape="rect" id="node11" href="../../d8/df0/_p_c_a9532__ex_8h.html#a88684c24046ec8995a83af7b9e3bb9d6" title="Read LED0 to LED7 input register. " alt="" coords="675,488,846,514"/>
+<area shape="rect" id="node12" href="../../d8/df0/_p_c_a9532__ex_8h.html#a8e553b1df9b3d53172626bf564340823" title="Read LED8 to LED15 input register. " alt="" coords="675,538,846,565"/>
+<area shape="rect" id="node13" href="../../d8/df0/_p_c_a9532__ex_8h.html#a6e617ceb33f37a3fa04f0382106eaec5" title="Set PCA9532 peripheral LED mode. " alt="" coords="669,336,852,362"/>
+<area shape="rect" id="node14" href="../../d8/df0/_p_c_a9532__ex_8h.html#af98d17c6c32cf92bdc78af54bc665b98" title="Set PCA9532 peripheral multiple LEDs mode. " alt="" coords="665,285,856,312"/>
+<area shape="rect" id="node15" href="../../d8/df0/_p_c_a9532__ex_8h.html#a3068b304ee4fdf03975f14e69ea3207c" title="Set PSCx frequency of PCA9532. " alt="" coords="673,133,848,160"/>
+<area shape="rect" id="node17" href="../../d8/df0/_p_c_a9532__ex_8h.html#a125d6303517af2bdef5b0f0e435f639d" title="Set PWMx duty cycle of PCA9532. " alt="" coords="691,82,830,109"/>
+<area shape="rect" id="node18" href="../../d8/df0/_p_c_a9532__ex_8h.html#a6d703493d85df1f08286da3738a2d41e" title="Reset GPIO pin init for PCA9532. " alt="" coords="673,386,848,413"/>
+<area shape="rect" id="node20" href="../../d8/df0/_p_c_a9532__ex_8h.html#aa8a564bad9889d38bcf23dc8a9d7d765" title="Reset GPIO pin setter for PCA9532. " alt="" coords="671,437,850,464"/>
+<area shape="rect" id="node16" href="../../d8/df0/_p_c_a9532__ex_8h.html#a9990f2ec0568dbd5cc91b3690aaea28a" title="Convert Frequency to PSCx byte register. " alt="" coords="922,133,1093,160"/>
+<area shape="rect" id="node19" href="../../d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="919,386,1096,413"/>
+<area shape="rect" id="node21" href="../../d2/de1/_i2_c__peripheral_8c.html#a7accedd9eb463e3cd4eb401b07e36b2c" title="I2C peripheral GPIO pin setter. " alt="" coords="918,437,1097,464"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d2/d28/_p_c_a9532_8c_a53117549a86481f7203371b537bc7084_icgraph.png" border="0" usemap="#d2/d28/_p_c_a9532_8c_a53117549a86481f7203371b537bc7084_icgraph" alt=""/></div>
-<map name="d2/d28/_p_c_a9532_8c_a53117549a86481f7203371b537bc7084_icgraph" id="d2/d28/_p_c_a9532_8c_a53117549a86481f7203371b537bc7084_icgraph">
+<div class="center"><img src="../../d2/d28/_p_c_a9532_8c_ab2c83a49b54020805a88671f067bf6d6_icgraph.png" border="0" usemap="#d2/d28/_p_c_a9532_8c_ab2c83a49b54020805a88671f067bf6d6_icgraph" alt=""/></div>
+<map name="d2/d28/_p_c_a9532_8c_ab2c83a49b54020805a88671f067bf6d6_icgraph" id="d2/d28/_p_c_a9532_8c_ab2c83a49b54020805a88671f067bf6d6_icgraph">
 <area shape="rect" id="node2" href="../../d3/df9/_p_c_a9532_8h.html#ae3bc95cfa1ac91a201ac0543ced4bb03" title="Initialization for PCA9532 peripheral. " alt="" coords="160,5,312,32"/>
 </map>
 </div>
@@ -220,31 +211,29 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d28/_p_c_a9532_8c_ae3bc95cfa1ac91a201ac0543ced4bb03_cgraph.png" border="0" usemap="#d2/d28/_p_c_a9532_8c_ae3bc95cfa1ac91a201ac0543ced4bb03_cgraph" alt=""/></div>
 <map name="d2/d28/_p_c_a9532_8c_ae3bc95cfa1ac91a201ac0543ced4bb03_cgraph" id="d2/d28/_p_c_a9532_8c_ae3bc95cfa1ac91a201ac0543ced4bb03_cgraph">
-<area shape="rect" id="node2" href="../../d2/d28/_p_c_a9532_8c.html#a53117549a86481f7203371b537bc7084" title="Initialization for PCA9532 peripheral. " alt="" coords="205,220,312,247"/>
-<area shape="rect" id="node3" href="../../d7/d97/_i2_c__component_8c.html#a85ccd7dd0756f8bbd9c6ee5caba804b3" title="I2C Slave device initialization. " alt="" coords="415,144,523,171"/>
-<area shape="rect" id="node4" href="../../d8/df0/_p_c_a9532__ex_8h.html#ae6d466e3f5efaf3e95f4b181fc443ee0" title="Set auto increment option for PCA9532 registers. " alt="" coords="360,195,579,222"/>
-<area shape="rect" id="node5" href="../../de/dea/_p_c_a9532__proc_8c.html#a95ddc3ce36d7d60e26b08ce405ea2fc3" title="Initialization Sequence for PCA9532 peripheral. " alt="" coords="381,246,558,272"/>
-<area shape="rect" id="node26" href="../../d6/dd6/_i2_c__component_8h.html#a90f8c21c43066d39afaebd13b149c95c" title="Set I2C Slave device disabled/enabled state. " alt="" coords="410,296,529,323"/>
-<area shape="rect" id="node6" href="../../d8/df0/_p_c_a9532__ex_8h.html#acc2166ca303c21d35c08ab2e0fbc124a" title="Convert Frequency to PWMx byte register. " alt="" coords="1104,18,1311,44"/>
-<area shape="rect" id="node7" href="../../d2/d28/_p_c_a9532_8c.html#aeaa1cbcbef5392b3acc5826a383f6e7d" title="I2C Write function for PCA9532. " alt="" coords="1148,284,1267,311"/>
-<area shape="rect" id="node10" href="../../d2/d28/_p_c_a9532_8c.html#aab6120b7948634c78e6c2e6f79b602b3" title="I2C Read function for PCA9532. " alt="" coords="1148,502,1267,528"/>
-<area shape="rect" id="node11" href="../../d8/df0/_p_c_a9532__ex_8h.html#a4d4279a2e53756ade743737952972edf" title="Convert PSCx byte register to Frequency (in Hz) " alt="" coords="1122,411,1293,438"/>
-<area shape="rect" id="node12" href="../../d8/df0/_p_c_a9532__ex_8h.html#a03b2ea671687b1a439c90bc4f946542b" title="Convert PWMx byte register to Duty Cycle (in %) " alt="" coords="635,347,809,374"/>
-<area shape="rect" id="node25" href="../../d6/daa/_p_c_a9532__ex_8c.html#af98d17c6c32cf92bdc78af54bc665b98" title="Set PCA9532 peripheral multiple LEDs mode. " alt="" coords="627,119,817,146"/>
-<area shape="rect" id="node8" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="1359,319,1476,346"/>
-<area shape="rect" id="node9" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="1364,458,1471,484"/>
-<area shape="rect" id="node13" href="../../d8/df0/_p_c_a9532__ex_8h.html#a50cdf8379e507736d03eb51e3bed2b01" title="Read register from PCA9532. " alt="" coords="876,524,1045,551"/>
-<area shape="rect" id="node14" href="../../d8/df0/_p_c_a9532__ex_8h.html#a88684c24046ec8995a83af7b9e3bb9d6" title="Read LED0 to LED7 input register. " alt="" coords="875,575,1046,602"/>
-<area shape="rect" id="node15" href="../../d8/df0/_p_c_a9532__ex_8h.html#a8e553b1df9b3d53172626bf564340823" title="Read LED8 to LED15 input register. " alt="" coords="875,423,1046,450"/>
-<area shape="rect" id="node16" href="../../d8/df0/_p_c_a9532__ex_8h.html#a6e617ceb33f37a3fa04f0382106eaec5" title="Set PCA9532 peripheral LED mode. " alt="" coords="869,220,1052,247"/>
-<area shape="rect" id="node17" href="../../d8/df0/_p_c_a9532__ex_8h.html#af98d17c6c32cf92bdc78af54bc665b98" title="Set PCA9532 peripheral multiple LEDs mode. " alt="" coords="865,271,1056,298"/>
-<area shape="rect" id="node18" href="../../d8/df0/_p_c_a9532__ex_8h.html#a3068b304ee4fdf03975f14e69ea3207c" title="Set PSCx frequency of PCA9532. " alt="" coords="873,372,1048,399"/>
-<area shape="rect" id="node20" href="../../d8/df0/_p_c_a9532__ex_8h.html#a125d6303517af2bdef5b0f0e435f639d" title="Set PWMx duty cycle of PCA9532. " alt="" coords="891,322,1030,348"/>
-<area shape="rect" id="node21" href="../../d8/df0/_p_c_a9532__ex_8h.html#a6d703493d85df1f08286da3738a2d41e" title="Reset GPIO pin init for PCA9532. " alt="" coords="873,626,1048,652"/>
-<area shape="rect" id="node23" href="../../d8/df0/_p_c_a9532__ex_8h.html#aa8a564bad9889d38bcf23dc8a9d7d765" title="Reset GPIO pin setter for PCA9532. " alt="" coords="871,68,1050,95"/>
-<area shape="rect" id="node19" href="../../d8/df0/_p_c_a9532__ex_8h.html#a9990f2ec0568dbd5cc91b3690aaea28a" title="Convert Frequency to PSCx byte register. " alt="" coords="1122,360,1293,387"/>
-<area shape="rect" id="node22" href="../../d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="1119,626,1296,652"/>
-<area shape="rect" id="node24" href="../../d2/de1/_i2_c__peripheral_8c.html#a7accedd9eb463e3cd4eb401b07e36b2c" title="I2C peripheral GPIO pin setter. " alt="" coords="1118,68,1297,95"/>
+<area shape="rect" id="node2" href="../../d2/d28/_p_c_a9532_8c.html#ab2c83a49b54020805a88671f067bf6d6" title="Initialization for PCA9532 peripheral. " alt="" coords="205,184,312,210"/>
+<area shape="rect" id="node3" href="../../d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization. " alt="" coords="415,108,523,134"/>
+<area shape="rect" id="node4" href="../../d8/df0/_p_c_a9532__ex_8h.html#ae6d466e3f5efaf3e95f4b181fc443ee0" title="Set auto increment option for PCA9532 registers. " alt="" coords="360,158,579,185"/>
+<area shape="rect" id="node5" href="../../de/dea/_p_c_a9532__proc_8c.html#a95ddc3ce36d7d60e26b08ce405ea2fc3" title="Initialization Sequence for PCA9532 peripheral. " alt="" coords="381,209,558,236"/>
+<area shape="rect" id="node24" href="../../d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state. " alt="" coords="410,260,529,286"/>
+<area shape="rect" id="node6" href="../../d8/df0/_p_c_a9532__ex_8h.html#acc2166ca303c21d35c08ab2e0fbc124a" title="Convert Frequency to PWMx byte register. " alt="" coords="1104,6,1311,33"/>
+<area shape="rect" id="node7" href="../../d2/d28/_p_c_a9532_8c.html#aeaa1cbcbef5392b3acc5826a383f6e7d" title="I2C Write function for PCA9532. " alt="" coords="1148,209,1267,236"/>
+<area shape="rect" id="node8" href="../../d2/d28/_p_c_a9532_8c.html#aab6120b7948634c78e6c2e6f79b602b3" title="I2C Read function for PCA9532. " alt="" coords="1148,564,1267,590"/>
+<area shape="rect" id="node9" href="../../d8/df0/_p_c_a9532__ex_8h.html#a4d4279a2e53756ade743737952972edf" title="Convert PSCx byte register to Frequency (in Hz) " alt="" coords="1122,82,1293,109"/>
+<area shape="rect" id="node10" href="../../d8/df0/_p_c_a9532__ex_8h.html#a03b2ea671687b1a439c90bc4f946542b" title="Convert PWMx byte register to Duty Cycle (in %) " alt="" coords="635,361,809,388"/>
+<area shape="rect" id="node23" href="../../d6/daa/_p_c_a9532__ex_8c.html#af98d17c6c32cf92bdc78af54bc665b98" title="Set PCA9532 peripheral multiple LEDs mode. " alt="" coords="627,234,817,261"/>
+<area shape="rect" id="node11" href="../../d8/df0/_p_c_a9532__ex_8h.html#a50cdf8379e507736d03eb51e3bed2b01" title="Read register from PCA9532. " alt="" coords="876,589,1045,616"/>
+<area shape="rect" id="node12" href="../../d8/df0/_p_c_a9532__ex_8h.html#a88684c24046ec8995a83af7b9e3bb9d6" title="Read LED0 to LED7 input register. " alt="" coords="875,488,1046,514"/>
+<area shape="rect" id="node13" href="../../d8/df0/_p_c_a9532__ex_8h.html#a8e553b1df9b3d53172626bf564340823" title="Read LED8 to LED15 input register. " alt="" coords="875,538,1046,565"/>
+<area shape="rect" id="node14" href="../../d8/df0/_p_c_a9532__ex_8h.html#a6e617ceb33f37a3fa04f0382106eaec5" title="Set PCA9532 peripheral LED mode. " alt="" coords="869,336,1052,362"/>
+<area shape="rect" id="node15" href="../../d8/df0/_p_c_a9532__ex_8h.html#af98d17c6c32cf92bdc78af54bc665b98" title="Set PCA9532 peripheral multiple LEDs mode. " alt="" coords="865,285,1056,312"/>
+<area shape="rect" id="node16" href="../../d8/df0/_p_c_a9532__ex_8h.html#a3068b304ee4fdf03975f14e69ea3207c" title="Set PSCx frequency of PCA9532. " alt="" coords="873,133,1048,160"/>
+<area shape="rect" id="node18" href="../../d8/df0/_p_c_a9532__ex_8h.html#a125d6303517af2bdef5b0f0e435f639d" title="Set PWMx duty cycle of PCA9532. " alt="" coords="891,82,1030,109"/>
+<area shape="rect" id="node19" href="../../d8/df0/_p_c_a9532__ex_8h.html#a6d703493d85df1f08286da3738a2d41e" title="Reset GPIO pin init for PCA9532. " alt="" coords="873,386,1048,413"/>
+<area shape="rect" id="node21" href="../../d8/df0/_p_c_a9532__ex_8h.html#aa8a564bad9889d38bcf23dc8a9d7d765" title="Reset GPIO pin setter for PCA9532. " alt="" coords="871,437,1050,464"/>
+<area shape="rect" id="node17" href="../../d8/df0/_p_c_a9532__ex_8h.html#a9990f2ec0568dbd5cc91b3690aaea28a" title="Convert Frequency to PSCx byte register. " alt="" coords="1122,133,1293,160"/>
+<area shape="rect" id="node20" href="../../d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="1119,386,1296,413"/>
+<area shape="rect" id="node22" href="../../d2/de1/_i2_c__peripheral_8c.html#a7accedd9eb463e3cd4eb401b07e36b2c" title="I2C peripheral GPIO pin setter. " alt="" coords="1118,437,1297,464"/>
 </map>
 </div>
 
@@ -301,15 +290,6 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
 <div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d2/d28/_p_c_a9532_8c_aab6120b7948634c78e6c2e6f79b602b3_cgraph.png" border="0" usemap="#d2/d28/_p_c_a9532_8c_aab6120b7948634c78e6c2e6f79b602b3_cgraph" alt=""/></div>
-<map name="d2/d28/_p_c_a9532_8c_aab6120b7948634c78e6c2e6f79b602b3_cgraph" id="d2/d28/_p_c_a9532_8c_aab6120b7948634c78e6c2e6f79b602b3_cgraph">
-<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="172,5,289,32"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="177,56,284,83"/>
-</map>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d28/_p_c_a9532_8c_aab6120b7948634c78e6c2e6f79b602b3_icgraph.png" border="0" usemap="#d2/d28/_p_c_a9532_8c_aab6120b7948634c78e6c2e6f79b602b3_icgraph" alt=""/></div>
@@ -319,7 +299,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node7" href="../../d8/df0/_p_c_a9532__ex_8h.html#a88684c24046ec8995a83af7b9e3bb9d6" title="Read LED0 to LED7 input register. " alt="" coords="172,56,343,83"/>
 <area shape="rect" id="node8" href="../../d8/df0/_p_c_a9532__ex_8h.html#a8e553b1df9b3d53172626bf564340823" title="Read LED8 to LED15 input register. " alt="" coords="172,107,343,133"/>
 <area shape="rect" id="node3" href="../../d8/df0/_p_c_a9532__ex_8h.html#a03b2ea671687b1a439c90bc4f946542b" title="Convert PWMx byte register to Duty Cycle (in %) " alt="" coords="391,81,564,108"/>
-<area shape="rect" id="node5" href="../../d3/df9/_p_c_a9532_8h.html#a53117549a86481f7203371b537bc7084" title="Initialization for PCA9532 peripheral. " alt="" coords="837,120,944,147"/>
+<area shape="rect" id="node5" href="../../d3/df9/_p_c_a9532_8h.html#ab2c83a49b54020805a88671f067bf6d6" title="Initialization for PCA9532 peripheral. " alt="" coords="837,120,944,147"/>
 <area shape="rect" id="node6" href="../../d3/df9/_p_c_a9532_8h.html#ae3bc95cfa1ac91a201ac0543ced4bb03" title="Initialization for PCA9532 peripheral. " alt="" coords="992,120,1144,147"/>
 </map>
 </div>
@@ -376,15 +356,6 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>FctERR - error code </dd></dl>
 <div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d2/d28/_p_c_a9532_8c_aeaa1cbcbef5392b3acc5826a383f6e7d_cgraph.png" border="0" usemap="#d2/d28/_p_c_a9532_8c_aeaa1cbcbef5392b3acc5826a383f6e7d_cgraph" alt=""/></div>
-<map name="d2/d28/_p_c_a9532_8c_aeaa1cbcbef5392b3acc5826a383f6e7d_cgraph" id="d2/d28/_p_c_a9532_8c_aeaa1cbcbef5392b3acc5826a383f6e7d_cgraph">
-<area shape="rect" id="node2" href="../../d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="172,5,289,32"/>
-<area shape="rect" id="node3" href="../../d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="177,56,284,83"/>
-</map>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d28/_p_c_a9532_8c_aeaa1cbcbef5392b3acc5826a383f6e7d_icgraph.png" border="0" usemap="#d2/d28/_p_c_a9532_8c_aeaa1cbcbef5392b3acc5826a383f6e7d_icgraph" alt=""/></div>
@@ -395,27 +366,10 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node8" href="../../d8/df0/_p_c_a9532__ex_8h.html#a3068b304ee4fdf03975f14e69ea3207c" title="Set PSCx frequency of PCA9532. " alt="" coords="180,5,355,32"/>
 <area shape="rect" id="node9" href="../../d8/df0/_p_c_a9532__ex_8h.html#a125d6303517af2bdef5b0f0e435f639d" title="Set PWMx duty cycle of PCA9532. " alt="" coords="198,56,337,83"/>
 <area shape="rect" id="node3" href="../../d8/df0/_p_c_a9532__ex_8h.html#a03b2ea671687b1a439c90bc4f946542b" title="Convert PWMx byte register to Duty Cycle (in %) " alt="" coords="411,107,584,133"/>
-<area shape="rect" id="node5" href="../../d3/df9/_p_c_a9532_8h.html#a53117549a86481f7203371b537bc7084" title="Initialization for PCA9532 peripheral. " alt="" coords="857,157,964,184"/>
+<area shape="rect" id="node5" href="../../d3/df9/_p_c_a9532_8h.html#ab2c83a49b54020805a88671f067bf6d6" title="Initialization for PCA9532 peripheral. " alt="" coords="857,157,964,184"/>
 <area shape="rect" id="node6" href="../../d3/df9/_p_c_a9532_8h.html#ae3bc95cfa1ac91a201ac0543ced4bb03" title="Initialization for PCA9532 peripheral. " alt="" coords="1012,157,1164,184"/>
 </map>
 </div>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a0e67949005367831d22c0f68eddcd7a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e67949005367831d22c0f68eddcd7a2">&#9670;&nbsp;</a></span>PCA9532_hal</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../df/df6/struct_i2_c__slave__t.html">I2C_slave_t</a> PCA9532_hal[<a class="el" href="../../d3/df9/_p_c_a9532_8h.html#a131244581cd8c77d741f7563ddf67293">I2C_PCA9532_NB</a>]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>PCA9532 Slave structure. </p>
 
 </div>
 </div>

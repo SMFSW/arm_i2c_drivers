@@ -3,7 +3,7 @@
 <area shape="rect" id="node5" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a83361b9e2ad5346cc4424ca483e7940f" title="Set RTP format. " alt="" coords="203,30,425,57"/>
 <area shape="rect" id="node7" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a07f91af90d32d2530485d5f0085eeab6" title="Set Audio To Vibe Peak time. " alt="" coords="209,81,419,107"/>
 <area shape="rect" id="node8" href="$df/dbb/_d_r_v2605_l__ex_8h.html#af6f3993f1576399e0e20b53df8caab58" title="Set Audio To Vibe Low pass filter. " alt="" coords="199,131,429,158"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a94200f647d83e4b42b5c3d9cdb31fa0b" title="Get I2C Slave device enabled state. " alt="" coords="651,30,768,57"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a1700226397c6e3cd291802c365e3aed9" title="Set I2C Slave bus/device business. " alt="" coords="656,81,763,107"/>
+<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="651,30,768,57"/>
+<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="656,81,763,107"/>
 <area shape="rect" id="node6" href="$dc/d9a/_d_r_v2605_l_8c.html#aadfce835666394b45a320f79fc631e52" title="I2C Read function for DRV2605L. " alt="" coords="477,81,603,107"/>
 </map>
