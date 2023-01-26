@@ -123,60 +123,41 @@ static FctERR NONNULL__ FM24C_Read_Banked(FM24C_t * const pCpnt, uint8_t * data,
 **/
 static FctERR NONNULL__ FM24C_ReadWrite_Banked(FM24C_t * const pCpnt, uint8_t * const data, const uint16_t addr, const uint16_t nb, const bool wr)
 {
-	FctERR err = ERROR_OK;
-
-	const div_t temp = div(addr, FM24C_BANK_SIZE);									// Divide address by bank size
-
-	if (wr)		{ err = FM24C_Write_Banked(pCpnt, data, temp.rem, temp.quot, nb); }	// Write
-	if (!err)	{ err = FM24C_Read_Banked(pCpnt, data, temp.rem, temp.quot, nb); }	// Read in all cases (simple read or write)
-
-	return err;
-}
-
-
-FctERR NONNULL__ FM24C_Write(FM24C_t * const pCpnt, const uint8_t * data, const uint16_t addr, const uint16_t nb)
-{
-	FctERR		err = ERROR_OK;
-	size_t		data_len = nb;
-	uint16_t	address = addr;
+	FctERR			err = ERROR_OK;
+	const size_t	page_size = wr ? EEP_PAGE_SIZE : FM24C_BANK_SIZE;	// When writing, EEPROM type page size is inferior to bank size
+	size_t			data_len = nb;
+	uint16_t		address = addr;
+	uint8_t *		pData = data;
 
 	while (data_len)
 	{
-		size_t nb_write = address % FM24C_BANK_SIZE;			// Compute unaligned address
-		nb_write = min(data_len, (FM24C_BANK_SIZE - nb_write));	// Bank size data length max, or remaining data length
+		size_t nb_rw = address % page_size;					// Compute possible page/bank crossing access
+		nb_rw = min(data_len, (page_size - nb_rw));			// Choose between page/bank size data length max, or remaining data page/bank length
+		const div_t temp = div(address, FM24C_BANK_SIZE);	// Divide address by bank size (bank switching handling)
 
-		err = FM24C_ReadWrite_Banked(pCpnt, (uint8_t *) data, address, nb_write, true);
+		if (wr)	{ err = FM24C_Write_Banked(pCpnt, pData, temp.rem, temp.quot, nb_rw); }	// Write
+		else	{ err = FM24C_Read_Banked(pCpnt, pData, temp.rem, temp.quot, nb_rw); }	// Read
+		//if (!err)	{ err = FM24C_Read_Banked(pCpnt, pData, temp.rem, temp.quot, nb_rw); }	// Read in all cases (simple read or write)
 		if (err)	{ break; }
 
-		data_len -= nb_write;
-		address += nb_write;
-		data += nb_write;
+		data_len -= nb_rw;
+		address += nb_rw;
+		pData += nb_rw;
 	}
 
 	return err;
 }
 
 
-FctERR NONNULL__ FM24C_Read(FM24C_t * const pCpnt, uint8_t * data, const uint16_t addr, const uint16_t nb)
+FctERR NONNULL__ FM24C_Write(FM24C_t * const pCpnt, const uint8_t * const data, const uint16_t addr, const uint16_t nb)
 {
-	FctERR		err = ERROR_OK;
-	size_t		data_len = nb;
-	uint16_t	address = addr;
+	return FM24C_ReadWrite_Banked(pCpnt, (uint8_t * const) data, addr, nb, true);
+}
 
-	while (data_len)
-	{
-		size_t nb_read = address % FM24C_BANK_SIZE;				// Compute unaligned address
-		nb_read = min(data_len, (FM24C_BANK_SIZE - nb_read));	// Bank size data length max, or remaining data length
 
-		err = FM24C_ReadWrite_Banked(pCpnt, data, address, nb_read, false);
-		if (err)	{ break; }
-
-		data_len -= nb_read;
-		address += nb_read;
-		data += nb_read;
-	}
-
-	return err;
+FctERR NONNULL__ FM24C_Read(FM24C_t * const pCpnt, uint8_t * const data, const uint16_t addr, const uint16_t nb)
+{
+	return FM24C_ReadWrite_Banked(pCpnt, data, addr, nb, false);
 }
 
 
