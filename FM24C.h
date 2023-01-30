@@ -1,15 +1,17 @@
 /*!\file FM24C.h
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2023, SMFSW
-** \brief FM24C Driver
+** \brief FRAM / EEPROM Driver (bank switching at I2C address level protocol)
+** \note The driver handles writing specificities for EEPROM type components
+** \note The driver is fully compatible with FRAM type components
+** \note When EEPROM / FRAM compatibility is not needed, FM24C_WRITE_SIZE can be set to FM24C_BANK_SIZE for more efficiency
 ** \details FM24C16B: 16-Kbit (2K * 8) Serial I2C F-RAM
 **			FM24C04B: 4-Kbit (512 * 8) Serial I2C F-RAM
+**			...
 ** \note	Compatibility (tested):
 **				- FM24C16B
 **				- FM24C04B
 **				- BR24T04FVM
-** \note	Compatibility:
-**				- other components using same i2c protocol may be compatible
 **/
 /****************************************************************/
 #ifndef __FM24C_H__
@@ -40,17 +42,23 @@
 #define FM24C_BASE_ADDR		0x50				//!< FM24C Base address
 #endif
 
-#define EEP_PAGE_SIZE		0x10				//!< Page size (used for write procedures)
-
 #define	FM24C_BANK_SIZE		0x100				//!< FM24C bank size (in bytes)
 
 #define	FM24C04B_SIZE		0x100				//!< FM24C04B size (in bytes)
 #define	FM24C16B_SIZE		0x800				//!< FM24C size (in bytes)
 
+#define EEP_WRITE_SIZE		0x10				//!< Write buffer size (used for write procedures)
+
 #ifndef FM24C_SIZE
-//! \note FM24C_SIZE defaults to FM24C16B size, but can be defined level to FM24C04B_SIZE (for example)
+//! \note FM24C_SIZE defaults to FM24C16B size, but can be defined to FM24C04B_SIZE (for example)
 #define FM24C_SIZE			FM24C16B_SIZE		//!< FM24C size
 #endif
+
+#ifndef FM24C_WRITE_SIZE
+//! \note FM24C_WRITE_SIZE defaults to EEP_WRITE_SIZE, but can be defined to FM24C_BANK_SIZE (in case of FRAM, no use of EEPROM write buffer)
+#define FM24C_WRITE_SIZE	EEP_WRITE_SIZE		//!< EEPROM type page size used for compatibility with both EEPROM/FRAM ships
+#endif
+
 
 // *****************************************************************************
 // Section: Types
@@ -61,6 +69,7 @@
 typedef struct FM24C_t {
 	struct {
 	I2C_slave_t *		slave_inst;		//!< Slave structure
+	size_t				write_size;		//!< Useful for EEPROM writes (FRAM not restricted, can be changed to FM24C_BANK_SIZE)
 	PeripheralGPIO_t	WP_GPIO;		//!< Write Protect GPIO struct
 	} cfg;
 } FM24C_t;

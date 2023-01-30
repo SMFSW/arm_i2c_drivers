@@ -29,6 +29,32 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 
 ## Supported devices
 
+### EEPROM / FRAM:
+
+- **FM24C**: 4/16-Kbit (512/2K * 8) Serial I2C F-RAM
+  - **STATUS**: WORKING
+  - Fully compatible between EEPROM / FRAM type components with bank switching protocol
+  - Use FM24C for I2C addresses banked components (with 8b internal address):
+    - Tested on:
+      - FM24C16B
+      - FM24C04B
+      - BR24T04FVM
+      - ...
+  - Transaction timeout set to 500ms:
+    - There shouldn't be any timeout reached for these components, otherwise refer to MB85RC256V comment
+
+- **MB85RC256V**: 256-Kbit (32K * 8) I2C Memory FRAM
+  - **STATUS**: WORKING
+  - Use MB85RC256V for 16b internal addresses components:
+    - Tested on:
+      - MB85RC256V
+      - FM24CL64B
+  - Transaction timeout set to 500ms:
+    - For bigger size components, in case timeout is reached, read/write transactions may be split in multiple calls (refreshing watchdog if in use).
+    - Set a longer timeout by calling I2C_set_slave_timeout in init sequence is another way to address such a need
+
+### OTHER:
+
 - **ADS1115**: Ultra-Small, Low-Power, 16-Bit Analog-to-Digital Converter with Internal Reference
   - **STATUS**: WORKING
 
@@ -53,31 +79,11 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 - **DS-GPM.S**: 99 Channel Positioning System (GPS + GLONASS) Shield
   - **STATUS**: WORKING
 
-- **FM24C**: 4/16-Kbit (512/2K * 8) Serial I2C F-RAM
-  - **STATUS**: WORKING
-  - Use FM24C for I2C addresses banked components (with 8b internal address):
-    - Tested on:
-      - FM24C16B
-      - FM24C04B
-      - BR24T04FVM
-  - Transaction timeout set to 500ms:
-    - There shouldn't be any timeout reached for these components, otherwise refer to MB85RC256V comment
-
 - **L3GD20H**: MEMS motion sensor, three-axis digital output gyroscope
   - **STATUS**: CODING IN PROGRESS / NO TESTS YET
 
 - **LSM303DLHC**: Ultra compact high performance e-compass 3D accelerometer and 3D magnetometer module
   - **STATUS**: CODING IN PROGRESS / NO TESTS YET
-
-- **MB85RC256V**: 256-Kbit (32K * 8) I2C Memory FRAM
-  - **STATUS**: WORKING
-  - Use MB85RC256V for 16b internal addresses components:
-    - Tested on:
-      - MB85RC256V
-      - FM24CL64B
-  - Transaction timeout set to 500ms:
-    - For bigger size components, in case timeout is reached, read/write transactions may be split in multiple calls (refreshing watchdog if in use).
-    - Set a longer timeout by calling I2C_set_slave_timeout in init sequence is another way to address such a need
 
 - **MCP4725**: 12-Bit Digital-to-Analog Converter with EEPROM Memory
   - **STATUS**: WORKING
@@ -124,7 +130,6 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 
 ## Following peripherals (?)
 
-- EEPROM/FRAM (few others if needed?)
 - Capacitive (MPR121)
 - OLED
 - Clock Generator (SI5351 with help of [etherkit](https://github.com/etherkit/Si5351Arduino))

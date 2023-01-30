@@ -1,15 +1,17 @@
 /*!\file FM24C_ex.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2023, SMFSW
-** \brief FM24C Driver extensions
+** \brief FRAM / EEPROM Driver (bank switching at I2C address level protocol) extensions
+** \note The driver handles writing specificities for EEPROM type components
+** \note The driver is fully compatible with FRAM type components
+** \note When EEPROM / FRAM compatibility is not needed, FM24C_WRITE_SIZE can be set to FM24C_BANK_SIZE for more efficiency
 ** \details FM24C16B: 16-Kbit (2K * 8) Serial I2C F-RAM
 **			FM24C04B: 4-Kbit (512 * 8) Serial I2C F-RAM
 ** \note	Compatibility (tested):
 **				- FM24C16B
 **				- FM24C04B
 **				- BR24T04FVM
-** \note	Compatibility:
-**				- other components using same i2c protocol may be compatible
+**				...
 **/
 /****************************************************************/
 #include "FM24C.h"
@@ -24,16 +26,16 @@
 
 FctERR NONNULL__ FM24C_Mass_Erase(FM24C_t * const pCpnt)
 {
-	FctERR	err;
-	uint8_t	bankData[FM24C_BANK_SIZE];
-	memset(&bankData, VAL_CLR, sizeof(bankData));
+	FctERR	err = ERROR_OK;
+	uint8_t	array[FM24C_BANK_SIZE];
+	memset(array, VAL_CLR, sizeof(array));
 
-	for (int i = 0 ; i < (FM24C_SIZE / FM24C_BANK_SIZE) ; i++)
+	for (int i = 0 ; i < (FM24C_SIZE / sizeof(array)) ; i++)
 	{
 		#if defined(HAL_IWDG_MODULE_ENABLED)
 			HAL_IWDG_Refresh(&hiwdg);
 		#endif
-		err = FM24C_Write(pCpnt, bankData, i * FM24C_BANK_SIZE, FM24C_BANK_SIZE);
+		err = FM24C_Write(pCpnt, array, i * sizeof(array), sizeof(array));
 		if (err) { break; }
 	}
 

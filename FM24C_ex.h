@@ -1,15 +1,17 @@
 /*!\file FM24C_ex.h
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2023, SMFSW
-** \brief FM24C Driver extensions
+** \brief FRAM / EEPROM Driver (bank switching at I2C address level protocol) extensions
+** \note The driver handles writing specificities for EEPROM type components
+** \note The driver is fully compatible with FRAM type components
+** \note When EEPROM / FRAM compatibility is not needed, FM24C_WRITE_SIZE can be set to FM24C_BANK_SIZE for more efficiency
 ** \details FM24C16B: 16-Kbit (2K * 8) Serial I2C F-RAM
 **			FM24C04B: 4-Kbit (512 * 8) Serial I2C F-RAM
 ** \note	Compatibility (tested):
 **				- FM24C16B
 **				- FM24C04B
 **				- BR24T04FVM
-** \note	Compatibility:
-**				- other components using same i2c protocol may be compatible
+**				...
 **/
 /****************************************************************/
 #ifndef __FM24C_EX_H__

@@ -22,11 +22,12 @@ SOFTWARE.
 
 ## v1.1
 
+* FM24C: compatibility between FRAM / EEPROM without adaptation
+* FM24C: R/W refactoring to allow operations on the whole chip, bank switching handled internally
 * Every components _hal structures are now hidden to user
 * Singleton components initialized as other components (const copy)
 * I2C address only written one (calling to slave init function), not set by I2C_PERIPHERAL_SET_DEFAULTS anymore
 * DRV2605L: few refactoring of DRV2605L_Init_Sequence
-* FM24C: R/W refactoring to allow operations on the whole chip, bank switching handled internally 
 * Doxygen comments fixes for the whole library
 * Fix case in include names
 * I2C_slave_timeout set to 50ms instead of 20ms (in case of components with lots to read at low speed)
@@ -39,7 +40,6 @@ SOFTWARE.
 * I2C_peripheral: GPIO functions added + components update
 * ADS1115 & AT42QT1244: call to init_Delay_us added (following changes in HARMcksL library)
 * ADS1115: waiting for current conversion done by handler (not in ADS1115_Start_NextConversion) -> enables proper handling of interrupt pin instead of delay
-* FM24C: refactoring of FM24C_ReadWrite
 * PCA9956: added
 * PCA9532, PCA9624, PCA9956: contents not written directly in PCA9xxx_Set_Mode_LED & PCA9xxx_Set_Mode_LEDs (to work no matter endian)
 * PCA9624, PCA9956: functions added to write/read array of duty cycle values (instead of only one channel at a time)

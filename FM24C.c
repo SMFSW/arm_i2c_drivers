@@ -1,15 +1,17 @@
 /*!\file FM24C.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2023, SMFSW
-** \brief FM24C Driver
+** \brief FRAM / EEPROM Driver (bank switching at I2C address level protocol)
+** \note The driver handles writing specificities for EEPROM type components
+** \note The driver is fully compatible with FRAM type components
+** \note When EEPROM / FRAM compatibility is not needed, FM24C_WRITE_SIZE can be set to FM24C_BANK_SIZE for more efficiency
 ** \details FM24C16B: 16-Kbit (2K * 8) Serial I2C F-RAM
 **			FM24C04B: 4-Kbit (512 * 8) Serial I2C F-RAM
+**			...
 ** \note	Compatibility (tested):
 **				- FM24C16B
 **				- FM24C04B
 **				- BR24T04FVM
-** \note	Compatibility:
-**				- other components using same i2c protocol may be compatible
 **/
 /****************************************************************/
 #include "FM24C.h"
@@ -32,6 +34,8 @@ static I2C_slave_t FM24C_hal[I2C_FM24C_NB];		//!< FM24C Slave structure
 
 FM24C_t FM24C[I2C_FM24C_NB] = { 0 };
 
+#define MAX_RETRIES		0xFFFFFFFFU				//!< Maximum number retries
+
 
 /****************************************************************/
 
@@ -43,6 +47,8 @@ FctERR NONNULL__ FM24C_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, c
 	assert_param(IS_I2C_PERIPHERAL(FM24C, idx));
 
 	I2C_PERIPHERAL_SET_DEFAULTS(FM24C, idx);
+
+	FM24C[idx].cfg.write_size = FM24C_WRITE_SIZE;	// Write buffer size (typically 16 for EEPROM, no restriction for FRAM)
 
 	err = I2C_slave_init(&FM24C_hal[idx], hi2c, devAddress, FM24C_hal[idx].cfg.timeout);
 
@@ -58,7 +64,7 @@ FctERR FM24C_Init_Single(void) {
 /****************************************************************/
 
 
-/*!\brief I2C Write function for FM24C
+/*!\brief I2C Bank Write function for FM24C
 **
 ** \param[in] pCpnt - Pointer to FM24C component
 ** \param[in] data - pointer to write from
@@ -69,23 +75,28 @@ FctERR FM24C_Init_Single(void) {
 **/
 static FctERR NONNULL__ FM24C_Write_Banked(FM24C_t * const pCpnt, const uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb)
 {
+	// Proper bank/address handling done by FM24C_ReadWrite_Banked, thus checks are not needed (function being static)
+	//if (bank >= (FM24C_SIZE / FM24C_BANK_SIZE))	{ return ERROR_RANGE; }		// Unknown bank
+	//if (addr >= FM24C_BANK_SIZE)					{ return ERROR_RANGE; }		// Unknown address
+	//if ((addr + nb) > FM24C_BANK_SIZE)			{ return ERROR_OVERFLOW; }	// Bank overflow
+
 	I2C_slave_t * const pSlave = pCpnt->cfg.slave_inst;
-
-	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (bank >= (FM24C_SIZE / FM24C_BANK_SIZE))	{ return ERROR_RANGE; }		// Unknown bank
-	if (addr >= FM24C_BANK_SIZE)				{ return ERROR_RANGE; }		// Unknown address
-	if ((addr + nb) > FM24C_BANK_SIZE)			{ return ERROR_OVERFLOW; }	// Bank overflow
-
-	uint16_t i2c_addr = pSlave->cfg.addr + (bank << 1);
+	const uint16_t i2c_addr = pSlave->cfg.addr + (bank << 1);
 
 	I2C_set_busy(pSlave, true);
-	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, i2c_addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
+
+	pSlave->status = HAL_I2C_IsDeviceReady(pSlave->cfg.bus_inst, i2c_addr, MAX_RETRIES, 10);	// Max retries with a timeout of 10ms
+	if (pSlave->status == HAL_OK)
+	{
+		pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, i2c_addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
+	}
+
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }
 
 
-/*!\brief I2C Read function for FM24C
+/*!\brief I2C Bank Read function for FM24C
 **
 ** \param[in] pCpnt - Pointer to FM24C component
 ** \param[in,out] data - pointer to read to
@@ -96,17 +107,22 @@ static FctERR NONNULL__ FM24C_Write_Banked(FM24C_t * const pCpnt, const uint8_t 
 **/
 static FctERR NONNULL__ FM24C_Read_Banked(FM24C_t * const pCpnt, uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb)
 {
+	// Proper bank/address handling done by FM24C_ReadWrite_Banked, thus checks are not needed (function being static)
+	//if (bank >= (FM24C_SIZE / FM24C_BANK_SIZE))	{ return ERROR_RANGE; }		// Unknown bank
+	//if (addr >= FM24C_BANK_SIZE)					{ return ERROR_RANGE; }		// Unknown address
+	//if ((addr + nb) > FM24C_BANK_SIZE)			{ return ERROR_OVERFLOW; }	// Bank overflow
+
 	I2C_slave_t * const pSlave = pCpnt->cfg.slave_inst;
-
-	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (bank >= (FM24C_SIZE / FM24C_BANK_SIZE))	{ return ERROR_RANGE; }		// Unknown bank
-	if (addr >= FM24C_BANK_SIZE)				{ return ERROR_RANGE; }		// Unknown address
-	if ((addr + nb) > FM24C_BANK_SIZE)			{ return ERROR_OVERFLOW; }	// Bank overflow
-
-	uint16_t i2c_addr = pSlave->cfg.addr + (bank << 1);
+	const uint16_t i2c_addr = pSlave->cfg.addr + (bank << 1);
 
 	I2C_set_busy(pSlave, true);
-	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, i2c_addr, addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
+
+	pSlave->status = HAL_I2C_IsDeviceReady(pSlave->cfg.bus_inst, i2c_addr, MAX_RETRIES, 10);	// Max retries with a timeout of 10ms
+	if (pSlave->status == HAL_OK)
+	{
+		pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, i2c_addr, addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
+	}
+
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }
@@ -123,8 +139,11 @@ static FctERR NONNULL__ FM24C_Read_Banked(FM24C_t * const pCpnt, uint8_t * data,
 **/
 static FctERR NONNULL__ FM24C_ReadWrite_Banked(FM24C_t * const pCpnt, uint8_t * const data, const uint16_t addr, const uint16_t nb, const bool wr)
 {
+	if (!I2C_is_enabled(pCpnt->cfg.slave_inst))	{ return ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > FM24C_SIZE)				{ return ERROR_OVERFLOW; }	// More bytes than registers
+
 	FctERR			err = ERROR_OK;
-	const size_t	page_size = wr ? EEP_PAGE_SIZE : FM24C_BANK_SIZE;	// When writing, EEPROM type page size is inferior to bank size
+	const size_t	page_size = wr ? pCpnt->cfg.write_size : FM24C_BANK_SIZE;	// When writing, EEPROM type page size is inferior to bank size
 	size_t			data_len = nb;
 	uint16_t		address = addr;
 	uint8_t *		pData = data;
@@ -135,9 +154,8 @@ static FctERR NONNULL__ FM24C_ReadWrite_Banked(FM24C_t * const pCpnt, uint8_t * 
 		nb_rw = min(data_len, (page_size - nb_rw));			// Choose between page/bank size data length max, or remaining data page/bank length
 		const div_t temp = div(address, FM24C_BANK_SIZE);	// Divide address by bank size (bank switching handling)
 
-		if (wr)	{ err = FM24C_Write_Banked(pCpnt, pData, temp.rem, temp.quot, nb_rw); }	// Write
-		else	{ err = FM24C_Read_Banked(pCpnt, pData, temp.rem, temp.quot, nb_rw); }	// Read
-		//if (!err)	{ err = FM24C_Read_Banked(pCpnt, pData, temp.rem, temp.quot, nb_rw); }	// Read in all cases (simple read or write)
+		if (wr)		{ err = FM24C_Write_Banked(pCpnt, pData, temp.rem, temp.quot, nb_rw); }		// Write
+		else		{ err = FM24C_Read_Banked(pCpnt, pData, temp.rem, temp.quot, nb_rw); }		// Read
 		if (err)	{ break; }
 
 		data_len -= nb_rw;
