@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>FM24C Driver extensions.  
+<p>FRAM / EEPROM Driver (bank switching at I2C address level protocol) extensions.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;sarmfsw.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d3b/_f_m24_c_8h_source.html">FM24C.h</a>&quot;</code><br />
@@ -77,7 +77,7 @@ Include dependency graph for FM24C_ex.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/d8a/_f_m24_c__ex_8h__incl.png" border="0" usemap="#_f_m24_c__ex_8h" alt=""/></div>
 <map name="_f_m24_c__ex_8h" id="_f_m24_c__ex_8h">
-<area shape="rect" id="node3" href="../../d5/d3b/_f_m24_c_8h.html" title="FM24C Driver. " alt="" coords="226,80,303,107"/>
+<area shape="rect" id="node3" href="../../d5/d3b/_f_m24_c_8h.html" title="FRAM / EEPROM Driver (bank switching at I2C address level protocol) " alt="" coords="226,80,303,107"/>
 <area shape="rect" id="node4" href="../../d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="5,155,140,181"/>
 <area shape="rect" id="node7" href="../../dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="165,155,290,181"/>
 </map>
@@ -87,9 +87,9 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/d86/_f_m24_c__ex_8h__dep__incl.png" border="0" usemap="#_f_m24_c__ex_8hdep" alt=""/></div>
 <map name="_f_m24_c__ex_8hdep" id="_f_m24_c__ex_8hdep">
-<area shape="rect" id="node2" href="../../d5/d3b/_f_m24_c_8h.html" title="FM24C Driver. " alt="" coords="61,80,138,107"/>
-<area shape="rect" id="node3" href="../../da/d47/_f_m24_c_8c.html" title="FM24C Driver. " alt="" coords="5,155,81,181"/>
-<area shape="rect" id="node4" href="../../d2/d07/_f_m24_c__ex_8c.html" title="FM24C Driver extensions. " alt="" coords="106,155,205,181"/>
+<area shape="rect" id="node2" href="../../d5/d3b/_f_m24_c_8h.html" title="FRAM / EEPROM Driver (bank switching at I2C address level protocol) " alt="" coords="61,80,138,107"/>
+<area shape="rect" id="node3" href="../../da/d47/_f_m24_c_8c.html" title="FRAM / EEPROM Driver (bank switching at I2C address level protocol) " alt="" coords="5,155,81,181"/>
+<area shape="rect" id="node4" href="../../d2/d07/_f_m24_c__ex_8c.html" title="FRAM / EEPROM Driver (bank switching at I2C address level protocol) extensions. " alt="" coords="106,155,205,181"/>
 </map>
 </div>
 </div>
@@ -117,18 +117,18 @@ Functions</h2></td></tr>
 <tr class="separator:a12183f072467eea03b888c5d24388f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>FM24C Driver extensions. </p>
+<div class="textblock"><p>FRAM / EEPROM Driver (bank switching at I2C address level protocol) extensions. </p>
 <dl class="section author"><dt>Author</dt><dd>SMFSW </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2023, SMFSW</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>MIT (c) 2017-2023, SMFSW </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The driver handles writing specificities for EEPROM type components </dd>
+<dd>
+The driver is fully compatible with FRAM type components </dd>
+<dd>
+When EEPROM / FRAM compatibility is not needed, FM24C_WRITE_SIZE can be set to FM24C_BANK_SIZE for more efficiency</dd></dl>
 <p>FM24C16B: 16-Kbit (2K * 8) Serial I2C F-RAM FM24C04B: 4-Kbit (512 * 8) Serial I2C F-RAM </p><dl class="section note"><dt>Note</dt><dd>Compatibility (tested):<ul>
 <li>FM24C16B</li>
 <li>FM24C04B</li>
-<li>BR24T04FVM </li>
-</ul>
-</dd>
-<dd>
-Compatibility:<ul>
-<li>other components using same i2c protocol may be compatible </li>
+<li>BR24T04FVM ... </li>
 </ul>
 </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -169,7 +169,7 @@ Compatibility:<ul>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">__INLINE FctERR NONNULL_INLINE__ FM24C_Get_##name(type * rd) {  \</div><div class="line">                                                        return <a class="code" href="../../da/d47/_f_m24_c_8c.html#a2a09ae3186b1876f57b5a53cc3cda84a">FM24C_Read</a>(cpnt, &amp;rd, addr, <span class="keyword">sizeof</span>(type)); }</div><div class="ttc" id="_f_m24_c_8c_html_a2a09ae3186b1876f57b5a53cc3cda84a"><div class="ttname"><a href="../../da/d47/_f_m24_c_8c.html#a2a09ae3186b1876f57b5a53cc3cda84a">FM24C_Read</a></div><div class="ttdeci">FctERR FM24C_Read(FM24C_t *const pCpnt, uint8_t *data, const uint16_t addr, const uint16_t nb)</div><div class="ttdoc">I2C Read function for FM24C. </div><div class="ttdef"><b>Definition:</b> FM24C.c:160</div></div>
+<b>Value:</b><div class="fragment"><div class="line">__INLINE FctERR NONNULL_INLINE__ FM24C_Get_##name(type * rd) {  \</div><div class="line">                                                        return <a class="code" href="../../da/d47/_f_m24_c_8c.html#a50b611400e2ac1c6acd987c6f075635f">FM24C_Read</a>(cpnt, &amp;rd, addr, <span class="keyword">sizeof</span>(type)); }</div><div class="ttc" id="_f_m24_c_8c_html_a50b611400e2ac1c6acd987c6f075635f"><div class="ttname"><a href="../../da/d47/_f_m24_c_8c.html#a50b611400e2ac1c6acd987c6f075635f">FM24C_Read</a></div><div class="ttdeci">FctERR FM24C_Read(FM24C_t *const pCpnt, uint8_t *const data, const uint16_t addr, const uint16_t nb)</div><div class="ttdoc">I2C Read function for FM24C. </div><div class="ttdef"><b>Definition:</b> FM24C.c:176</div></div>
 </div><!-- fragment -->
 <p>Macro to create function to read value(s) from FM24C. </p>
 
@@ -212,7 +212,7 @@ Compatibility:<ul>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">__INLINE FctERR INLINE__ FM24C_Set_##name(type wr) {    \</div><div class="line">                                                        return <a class="code" href="../../da/d47/_f_m24_c_8c.html#a964c9def6ccf63daa61888d4527e1276">FM24C_Write</a>(cpnt, &amp;wr, addr, <span class="keyword">sizeof</span>(type)); }</div><div class="ttc" id="_f_m24_c_8c_html_a964c9def6ccf63daa61888d4527e1276"><div class="ttname"><a href="../../da/d47/_f_m24_c_8c.html#a964c9def6ccf63daa61888d4527e1276">FM24C_Write</a></div><div class="ttdeci">FctERR FM24C_Write(FM24C_t *const pCpnt, const uint8_t *data, const uint16_t addr, const uint16_t nb)</div><div class="ttdoc">I2C Write function for FM24C. </div><div class="ttdef"><b>Definition:</b> FM24C.c:137</div></div>
+<b>Value:</b><div class="fragment"><div class="line">__INLINE FctERR INLINE__ FM24C_Set_##name(type wr) {    \</div><div class="line">                                                        return <a class="code" href="../../da/d47/_f_m24_c_8c.html#a30b17e5c265806fffc95c906476903e4">FM24C_Write</a>(cpnt, &amp;wr, addr, <span class="keyword">sizeof</span>(type)); }</div><div class="ttc" id="_f_m24_c_8c_html_a30b17e5c265806fffc95c906476903e4"><div class="ttname"><a href="../../da/d47/_f_m24_c_8c.html#a30b17e5c265806fffc95c906476903e4">FM24C_Write</a></div><div class="ttdeci">FctERR FM24C_Write(FM24C_t *const pCpnt, const uint8_t *const data, const uint16_t addr, const uint16_t nb)</div><div class="ttdoc">I2C Write function for FM24C. </div><div class="ttdef"><b>Definition:</b> FM24C.c:170</div></div>
 </div><!-- fragment -->
 <p>Macro to create function to write value(s) to FM24C. </p>
 
@@ -248,7 +248,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/d95/_f_m24_c__ex_8h_abc05b98b56337535279e76247c600721_cgraph.png" border="0" usemap="#de/d95/_f_m24_c__ex_8h_abc05b98b56337535279e76247c600721_cgraph" alt=""/></div>
 <map name="de/d95/_f_m24_c__ex_8h_abc05b98b56337535279e76247c600721_cgraph" id="de/d95/_f_m24_c__ex_8h_abc05b98b56337535279e76247c600721_cgraph">
-<area shape="rect" id="node2" href="../../da/d47/_f_m24_c_8c.html#a964c9def6ccf63daa61888d4527e1276" title="I2C Write function for FM24C. " alt="" coords="201,5,304,32"/>
+<area shape="rect" id="node2" href="../../da/d47/_f_m24_c_8c.html#a30b17e5c265806fffc95c906476903e4" title="I2C Write function for FM24C. " alt="" coords="201,5,304,32"/>
 </map>
 </div>
 

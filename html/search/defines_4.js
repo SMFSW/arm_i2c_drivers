@@ -6,5 +6,6 @@ var searchData=
   ['fm24c_5fbase_5faddr',['FM24C_BASE_ADDR',['../d5/d3b/_f_m24_c_8h.html#af97c9d03f05bd8676bedc16e46496feb',1,'FM24C.h']]],
   ['fm24c_5fread_5ftype',['FM24C_Read_Type',['../de/d95/_f_m24_c__ex_8h.html#aedc3bc0b32ded949000a171ba11a9971',1,'FM24C_ex.h']]],
   ['fm24c_5fsize',['FM24C_SIZE',['../d5/d3b/_f_m24_c_8h.html#a9e70eb1638d0e8632255c84f3f4053ea',1,'FM24C.h']]],
+  ['fm24c_5fwrite_5fsize',['FM24C_WRITE_SIZE',['../d5/d3b/_f_m24_c_8h.html#a39e206d09950230c0e4162448fe2e4e9',1,'FM24C.h']]],
   ['fm24c_5fwrite_5ftype',['FM24C_Write_Type',['../de/d95/_f_m24_c__ex_8h.html#a734828e3b1416be9d5579bc9340d68d7',1,'FM24C_ex.h']]]
 ];

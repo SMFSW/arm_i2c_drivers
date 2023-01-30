@@ -1,5 +1,5 @@
 <map id="FM24C.h" name="FM24C.h">
 <area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="294,80,429,107"/>
 <area shape="rect" id="node6" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="144,80,270,107"/>
-<area shape="rect" id="node7" href="$de/d95/_f_m24_c__ex_8h.html" title="FM24C Driver extensions. " alt="" coords="22,80,120,107"/>
+<area shape="rect" id="node7" href="$de/d95/_f_m24_c__ex_8h.html" title="FRAM / EEPROM Driver (bank switching at I2C address level protocol) extensions. " alt="" coords="22,80,120,107"/>
 </map>

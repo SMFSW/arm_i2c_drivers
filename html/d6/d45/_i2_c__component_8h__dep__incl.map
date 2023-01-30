@@ -11,7 +11,7 @@
 <area shape="rect" id="node34" href="$d8/daa/shared___a_p_s_8h.html" title="Ambient Pressure Sensing shared. " alt="" coords="2873,80,2983,107"/>
 <area shape="rect" id="node35" href="$d5/d47/_d_r_v2605_l_8h.html" title="DRV2605L Driver. " alt="" coords="3008,80,3107,107"/>
 <area shape="rect" id="node36" href="$dd/d26/_d_s___g_p_m_s_8h.html" title="DS&#45;GPM.S Driver. " alt="" coords="3131,80,3229,107"/>
-<area shape="rect" id="node37" href="$d5/d3b/_f_m24_c_8h.html" title="FM24C Driver. " alt="" coords="3253,80,3331,107"/>
+<area shape="rect" id="node37" href="$d5/d3b/_f_m24_c_8h.html" title="FRAM / EEPROM Driver (bank switching at I2C address level protocol) " alt="" coords="3253,80,3331,107"/>
 <area shape="rect" id="node38" href="$d7/d97/_i2_c__component_8c.html" title="Base I2C component. " alt="" coords="3355,80,3488,107"/>
 <area shape="rect" id="node39" href="$d7/d3b/_m_b85_r_c256_v_8h.html" title="MB85RC256V Driver. " alt="" coords="3512,80,3629,107"/>
 <area shape="rect" id="node40" href="$df/d9f/_m_c_p4725_8h.html" title="MCP4725 Driver. " alt="" coords="3654,80,3749,107"/>

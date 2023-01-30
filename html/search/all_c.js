@@ -8,6 +8,7 @@ var searchData=
   ['manufacturer_5fid',['Manufacturer_Id',['../db/d83/struct_m_c_p9808__t.html#aef516a46849903efb6b3ab2c3d5818eb',1,'MCP9808_t']]],
   ['manufacturerid',['ManufacturerID',['../d1/d02/unionu_m_c_p9808___r_e_g___m_a_p.html#a4451e059c30652213bd45144e1eea6f6',1,'uMCP9808_REG_MAP']]],
   ['mat',['mat',['../dc/ded/struct_a_p_d_s9960__t.html#a7a450e4def0ef4dd35ac2621a51524a2',1,'APDS9960_t::mat()'],['../d3/d18/struct_t_c_s3400__t.html#a21024cd0e3215ed723127cfe3ce4a2cc',1,'TCS3400_t::mat()'],['../d8/d5b/struct_t_c_s3472__t.html#a5fdd82870a8ee1f5b79e6e40c4a485af',1,'TCS3472_t::mat()']]],
+  ['max_5fretries',['MAX_RETRIES',['../da/d47/_f_m24_c_8c.html#aecf13b8dc783db2202ca5c34fe117fc3',1,'FM24C.c']]],
   ['max_5frx',['max_rx',['../d5/d63/struct_m_t_c_h6102__t.html#a6416515e8c2d2f9545ddabb4df151cb0',1,'MTCH6102_t']]],
   ['max_5fspeed',['max_speed',['../df/df6/struct_i2_c__slave__t.html#a9ab30e72c7008e324fb7f31730101ff7',1,'I2C_slave_t']]],
   ['max_5ftx',['max_tx',['../d5/d63/struct_m_t_c_h6102__t.html#ab13cde0f3d9a05f0f1a5ec6f1c333092',1,'MTCH6102_t']]],
