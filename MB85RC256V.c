@@ -1,23 +1,17 @@
 /*!\file MB85RC256V.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2023, SMFSW
-** \brief MB85RC256V Driver
+** \brief MB85RC256V FRAM Driver
 ** \details MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM
 ** \note	Compatibility (tested):
 **				- MB85RC256V
 **				- FM24CL64B
-** \note	Compatibility:
-**				- other components using same i2c protocol may be compatible
 **/
 /****************************************************************/
 #include "MB85RC256V.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_MB85RC256V)
-/****************************************************************/
-#if defined(I2C_FM24C)
-#warning "MB85RC256V -> Defined along with FM24CxxB: use with caution, might have same I2C addresses if on same I2C bus!!!"
-#endif
 /****************************************************************/
 
 
@@ -59,13 +53,10 @@ FctERR NONNULL__ MB85RC256V_Write(MB85RC256V_t * const pCpnt, const uint8_t * da
 	I2C_slave_t * const pSlave = pCpnt->cfg.slave_inst;
 
 	if (!I2C_is_enabled(pSlave))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (addr >= MB85RC256V_SIZE)		{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > MB85RC256V_SIZE)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
-
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
-
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }
@@ -76,7 +67,6 @@ FctERR NONNULL__ MB85RC256V_Read(MB85RC256V_t * const pCpnt, uint8_t * data, con
 	I2C_slave_t * const pSlave = pCpnt->cfg.slave_inst;
 
 	if (!I2C_is_enabled(pSlave))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (addr >= MB85RC256V_SIZE)		{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > MB85RC256V_SIZE)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);

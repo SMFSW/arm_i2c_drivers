@@ -31,20 +31,27 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 
 ### EEPROM / FRAM:
 
+- **I2CMEM**: Any EEPROM / FRAM
+  - **STATUS**: WORKING
+  - Use I2CMEM when compatibility between EEPROM/FRAM is needed
+  - In case FRAM is only useful, you may use FM24C or MB85RC256V
+  - Transaction timeout set to 500ms:
+    - There shouldn't be any timeout reached for these components, otherwise refer to MB85RC256V comment
+
 - **FM24C**: 4/16-Kbit (512/2K * 8) Serial I2C F-RAM
   - **STATUS**: WORKING
-  - Fully compatible between EEPROM / FRAM type components with bank switching protocol
+  - I2C_Drivers legacy FRAM component
   - Use FM24C for I2C addresses banked components (with 8b internal address):
     - Tested on:
       - FM24C16B
       - FM24C04B
       - BR24T04FVM
-      - ...
   - Transaction timeout set to 500ms:
     - There shouldn't be any timeout reached for these components, otherwise refer to MB85RC256V comment
 
 - **MB85RC256V**: 256-Kbit (32K * 8) I2C Memory FRAM
   - **STATUS**: WORKING
+  - I2C_Drivers legacy FRAM component
   - Use MB85RC256V for 16b internal addresses components:
     - Tested on:
       - MB85RC256V

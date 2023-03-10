@@ -1,13 +1,11 @@
 /*!\file MB85RC256V_ex.c
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2023, SMFSW
-** \brief MB85RC256V Driver extensions
+** \brief MB85RC256V FRAM Driver extensions
 ** \details MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM
 ** \note	Compatibility (tested):
 **				- MB85RC256V
 **				- MB85RC256VL64B
-** \note	Compatibility:
-**				- other components using same i2c protocol may be compatible
 **/
 /****************************************************************/
 #include "MB85RC256V.h"
@@ -17,14 +15,11 @@
 /****************************************************************/
 
 
-#define VAL_CLR	0xFF	//!< Mass erase value for MB85RC256V
-
-
 FctERR NONNULL__ MB85RC256V_Mass_Erase(MB85RC256V_t * const pCpnt)
 {
 	FctERR	err = ERROR_OK;
-	uint8_t	bankData[32];
-	memset(&bankData, VAL_CLR, sizeof(bankData));
+	uint8_t	bankData[256];
+	memset(&bankData, MB85RC256V_CLR_VAL, sizeof(bankData));
 
 	for (int i = 0 ; i < (MB85RC256V_SIZE / sizeof(bankData)) ; i++)
 	{

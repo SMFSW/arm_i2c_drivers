@@ -2222,6 +2222,7 @@ PREDEFINED             = DOXY=1 \
                          I2C_DRV2605L=&hi2c \
                          I2C_FM24C=&hi2c \
                          I2C_GPMS=&hi2c \
+                         I2C_I2CMEM=&hi2c \
                          I2C_L3GD20H=&hi2c \
                          I2C_LSM303DLHC=&hi2c \
                          I2C_MB85RC256V=&hi2c \

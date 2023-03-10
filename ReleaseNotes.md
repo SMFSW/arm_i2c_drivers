@@ -22,7 +22,8 @@ SOFTWARE.
 
 ## v1.1
 
-* FM24C: compatibility between FRAM / EEPROM without adaptation
+* I2CMEM: EEPROM/FRAM Memories component added (compatible between EEPROM/FRAM, any protocol)
+* MB85RC256V & FM24C: Few refactoring & reset to legacy use (only FRAM)
 * FM24C: R/W refactoring to allow operations on the whole chip, bank switching handled internally
 * Every components _hal structures are now hidden to user
 * Singleton components initialized as other components (const copy)

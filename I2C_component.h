@@ -62,7 +62,7 @@ typedef enum PACK__ I2C_reg_size {
 /*! \struct I2C_slave_t
 **  \brief i2c slave config and control parameters
 **/
-typedef struct PACK__ I2C_slave_t {	// TODO: check if the struct really needs to be packed
+typedef struct I2C_slave_t {
 	/*! \struct cfg
 	**  \brief I2C slave parameters
 	**/
@@ -70,8 +70,8 @@ typedef struct PACK__ I2C_slave_t {	// TODO: check if the struct really needs to
 		I2C_HandleTypeDef *	bus_inst;	//!< Slave I2C bus instance
 		uint16_t			addr;		//!< Slave address
 		uint32_t			timeout;	//!< Slave transaction timeout
-		const I2C_reg_size	mem_size;	//!< Slave internal registers size
-		const I2C_speed		max_speed;	//!< Maximal speed allowed by the component
+		I2C_reg_size		mem_size;	//!< Slave internal registers size
+		I2C_speed			max_speed;	//!< Maximal speed allowed by the component
 	} cfg;
 	uint16_t				addr;		//!< Current internal register address (not used yet)
 	HAL_StatusTypeDef		status;		//!< Status of the last transaction

@@ -1,13 +1,11 @@
 /*!\file MB85RC256V_ex.h
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2023, SMFSW
-** \brief MB85RC256V Driver extensions
+** \brief MB85RC256V FRAM Driver extensions
 ** \details MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM
 ** \note	Compatibility (tested):
 **				- MB85RC256V
 **				- MB85RC256VL64B
-** \note	Compatibility:
-**				- other components using same i2c protocol may be compatible
 **/
 /****************************************************************/
 #ifndef __MB85RC256V_EX_H__
@@ -22,6 +20,12 @@
 
 #if defined(HAL_I2C_MODULE_ENABLED)
 /****************************************************************/
+
+#ifndef MB85RC256V_CLR_VAL
+//! \note MB85RC256V_CLR_VAL can be set to any value if needed, defaults to 0xFF
+#define MB85RC256V_CLR_VAL		0xFF	//!< Mass erase value for MB85RC256V
+#endif
+
 
 #define MB85RC256V_Read_Type(cpnt, name, type, addr)	__INLINE FctERR NONNULL_INLINE__ MB85RC256V_Get_##name(type * rd) {	\
 															return MB85RC256V_Read(cpnt, &rd, addr, sizeof(type)); }	//!< Macro to create function to read value(s) from MB85RC256V

@@ -1,13 +1,11 @@
 /*!\file MB85RC256V.h
 ** \author SMFSW
 ** \copyright MIT (c) 2017-2023, SMFSW
-** \brief MB85RC256V Driver
+** \brief MB85RC256V FRAM Driver
 ** \details MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM
 ** \note	Compatibility (tested):
 **				- MB85RC256V
 **				- FM24CL64B
-** \note	Compatibility:
-**				- other components using same i2c protocol may be compatible
 **/
 /****************************************************************/
 #ifndef __MB85RC256V_H__
@@ -49,10 +47,10 @@ typedef struct MB85RC256V_t {
 	struct {
 	I2C_slave_t *		slave_inst;		//!< Slave structure
 	PeripheralGPIO_t	WP_GPIO;		//!< Write Protect GPIO struct
+	} cfg;
 	uint16_t			Manufacture_ID;	//!< Manufacturer ID
 	uint8_t				Density;		//!< Chip density
 	uint8_t				Product_ID;		//!< Product ID
-	} cfg;
 } MB85RC256V_t;
 
 
