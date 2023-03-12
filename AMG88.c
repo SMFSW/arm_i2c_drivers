@@ -45,7 +45,6 @@ FctERR AMG88_Init_Single(void) {
 FctERR NONNULL__ AMG88_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(pSlave))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (addr > AMG88__IHYSH)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > AMG88__IHYSH + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
@@ -58,7 +57,6 @@ FctERR NONNULL__ AMG88_Write(I2C_slave_t * const pSlave, const uint8_t * data, c
 FctERR NONNULL__ AMG88_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(pSlave))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (addr > AMG88__T64H)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > AMG88__T64H + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
@@ -72,7 +70,7 @@ FctERR NONNULL__ AMG88_Write_Word(I2C_slave_t * const pSlave, const uint16_t * d
 {
 	uint8_t	WREG[2];
 
-	if (addr > AMG88__IHYSL)	{ return ERROR_RANGE; }		// Unknown register
+	if (addr % sizeof(uint16_t))	{ return ERROR_FRAMING; }		// Unaligned word access
 
 	WREG[0] = LOBYTE(*data);
 	WREG[1] = HIBYTE(*data);
@@ -85,7 +83,7 @@ FctERR NONNULL__ AMG88_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, co
 	uint8_t	WREG[2];
 	FctERR	err;
 
-	if (addr > AMG88__T64L)		{ return ERROR_RANGE; }		// Unknown register
+	if (addr % sizeof(uint16_t))	{ return ERROR_FRAMING; }		// Unaligned word access
 
 	err = AMG88_Read(pSlave, WREG, addr, 2);
 	if (err)	{ return err; }

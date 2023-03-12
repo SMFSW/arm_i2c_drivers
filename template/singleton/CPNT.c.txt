@@ -45,7 +45,6 @@ __WEAK FctERR $CPNT$_Init(void)
 FctERR NONNULL__ $CPNT$_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&$CPNT$_hal))	{ return ERROR_DISABLED; }	// Peripheral disabled
-	//if (addr > )						{ return ERROR_RANGE; }		// Unknown register
 	//if ((addr + nb) > last_reg + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&$CPNT$_hal, true);
@@ -58,13 +57,39 @@ FctERR NONNULL__ $CPNT$_Write(const uint8_t * data, const uint16_t addr, const u
 FctERR NONNULL__ $CPNT$_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&$CPNT$_hal))	{ return ERROR_DISABLED; }	// Peripheral disabled
-	//if (addr > )						{ return ERROR_RANGE; }		// Unknown register
 	//if ((addr + nb) > last_reg + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&$CPNT$_hal, true);
 	$CPNT$_hal.status = HAL_I2C_Mem_Read($CPNT$_hal.cfg.bus_inst, $CPNT$_hal.cfg.addr, addr, $CPNT$_hal.cfg.mem_size, data, nb, $CPNT$_hal.cfg.timeout);
 	I2C_set_busy(&$CPNT$_hal, false);
 	return HALERRtoFCTERR($CPNT$_hal.status);
+}
+
+
+FctERR NONNULL__ $CPNT$_Write_Word(const uint16_t * data, const uint16_t addr)
+{
+	uint8_t	WREG[2];
+
+	if (addr % sizeof(uint16_t))	{ return ERROR_FRAMING; }		// Unaligned word access
+
+	WREG[0] = LOBYTE(*data);
+	WREG[1] = HIBYTE(*data);
+	return $CPNT$_Write(WREG, addr, 2);
+}
+
+
+FctERR NONNULL__ $CPNT$_Read_Word(uint16_t * data, const uint16_t addr)
+{
+	uint8_t	WREG[2];
+	FctERR	err;
+
+	if (addr % sizeof(uint16_t))	{ return ERROR_FRAMING; }		// Unaligned word access
+
+	err = $CPNT$_Read(WREG, addr, 2);
+	if (err)	{ return err; }
+
+	*data = MAKEWORD(WREG[0], WREG[1]);
+	return ERROR_OK;
 }
 
 

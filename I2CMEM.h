@@ -3,7 +3,7 @@
 ** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief FRAM / EEPROM Driver
 ** \note Fully compatible between EEPROM / FRAM type components
-** \note When EEPROM compatibility is not needed, I2CMEM_WRITE_SIZE can be set to I2CMEM_BANK_SIZE for more efficiency
+** \note When EEPROM compatibility is not needed, buf_size at init can be set to \ref I2CMEM_WBUF_NONE for more efficiency
 **/
 /****************************************************************/
 #ifndef __I2CMEM_H__
@@ -31,12 +31,12 @@
 // *****************************************************************************
 #ifndef I2CMEM_BASE_ADDR
 //! \note Define I2CMEM_BASE_ADDR to change default device base address
-#define I2CMEM_BASE_ADDR		0x50					//!< I2CMEM Base address
+#define I2CMEM_BASE_ADDR		0x50		//!< I2CMEM Base address
 #endif
 
-#define	I2CMEM_BANK_SIZE		0x100					//!< I2CMEM bank size (in bytes)
+#define	I2CMEM_BANK_SIZE		0x100		//!< I2CMEM bank size (in bytes)
 
-#define	I2CMEM16K_SIZE			0x800					//!< I2CMEM 16Kb size (in bytes)
+#define	I2CMEM16K_SIZE			0x800		//!< I2CMEM 16Kb size (in bytes)
 
 
 // *****************************************************************************
@@ -49,8 +49,7 @@ typedef struct I2CMEM_t {
 	struct {
 	I2C_slave_t *		slave_inst;		//!< Slave structure
 	size_t				chip_size;		//!< Memory range (number of bytes)
-	size_t				write_size;		//!< Useful for EEPROM writes (FRAM not restricted, can be changed to I2CMEM_BANK_SIZE)
-//	I2C_reg_size		addr_size;		//!< I2C address register size
+	size_t				buf_size;		//!< Useful for EEPROM writes (FRAM not restricted, can be changed to I2CMEM_BANK_SIZE)
 	PeripheralGPIO_t	WP_GPIO;		//!< Write Protect GPIO struct
 	} cfg;
 } I2CMEM_t;
@@ -73,18 +72,18 @@ extern I2CMEM_t I2CMEM[I2C_I2CMEM_NB];		//!< I2CMEM User structure
 ** \param[in] hi2c - pointer to I2CMEM I2C instance
 ** \param[in] devAddress - I2CMEM device address
 ** \param[in] size - I2CMEM device size
-** \param[in] wr_size - I2CMEM device write buffer size
+** \param[in] buf_size - I2CMEM device write buffer size (typically \ref I2CMEM_WBUF_NONE for FRAM component)
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ I2CMEM_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress, const size_t size, const size_t wr_size);
+FctERR NONNULL__ I2CMEM_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress, const size_t size, const size_t buf_size);
 
 /*!\brief Initialization for I2CMEM peripheral
 ** \warning In case multiple devices (defined by I2C_I2CMEM_NB > 1), you shall use I2CMEM_Init instead
 ** \param[in] size - I2CMEM device size
-** \param[in] wr_size - I2CMEM device write buffer size
+** \param[in] buf_size - I2CMEM device write buffer size (typically \ref I2CMEM_WBUF_NONE for FRAM component)
 ** \return FctERR - error code
 **/
-FctERR I2CMEM_Init_Single(const size_t size, const size_t wr_size);
+FctERR I2CMEM_Init_Single(const size_t size, const size_t buf_size);
 
 
 /************************/

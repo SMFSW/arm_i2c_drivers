@@ -102,6 +102,24 @@ FctERR NONNULL__ $CPNT$_Write(const uint8_t * data, const uint16_t addr, const u
 FctERR NONNULL__ $CPNT$_Read(uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
+/*!\brief I2C Word Write (little endian) function for $CPNT$
+** \param[in,out] pSlave - Pointer to I2C slave instance
+** \param[in] data - pointer to write from
+** \param[in] addr - Address to write to
+** \return FctERR - error code
+**/
+FctERR NONNULL__ $CPNT$_Write_Word(const uint16_t * data, const uint16_t addr);
+
+
+/*!\brief I2C Word Read (little endian) function for $CPNT$
+** \param[in,out] pSlave - Pointer to I2C slave instance
+** \param[in,out] data - pointer to read to
+** \param[in] addr - Address to read from
+** \return FctERR - error code
+**/
+FctERR NONNULL__ $CPNT$_Read_Word(uint16_t * data, const uint16_t addr);
+
+
 /****************************************************************/
 #include "$CPNT$_proc.h"	// Include procedures
 #include "$CPNT$_ex.h"		// Include extensions

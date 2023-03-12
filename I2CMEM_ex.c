@@ -3,7 +3,7 @@
 ** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief FRAM / EEPROM Driver extensions
 ** \note Fully compatible between EEPROM / FRAM type components
-** \note When EEPROM compatibility is not needed, I2CMEM_WRITE_SIZE can be set to I2CMEM_BANK_SIZE for more efficiency
+** \note When EEPROM compatibility is not needed, buf_size at init can be set to \ref I2CMEM_WBUF_NONE for more efficiency
 **/
 /****************************************************************/
 #include "I2CMEM.h"

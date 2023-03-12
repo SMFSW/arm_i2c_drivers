@@ -48,7 +48,6 @@ FctERR NONNULL__ MCP9808_Write(I2C_slave_t * const pSlave, const uint16_t * data
 	uint8_t DATA[2];
 
 	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (addr > MCP9808__RESOLUTION)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > MCP9808__RESOLUTION + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
@@ -81,7 +80,6 @@ FctERR NONNULL__ MCP9808_Read(I2C_slave_t * const pSlave, uint16_t * data, const
 	uint8_t DATA[2];
 
 	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (addr > MCP9808__RESOLUTION)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > MCP9808__RESOLUTION + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);

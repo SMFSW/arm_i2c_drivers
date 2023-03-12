@@ -48,7 +48,6 @@ FctERR NONNULL__ TSL2591_Write(I2C_slave_t * const pSlave, const uint8_t * data,
 	uTSL2591_CMD CMD;
 
 	if (!I2C_is_enabled(pSlave))			{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (addr > TSL2591__PERSIST)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > TSL2591__PERSIST + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	CMD.Bits.CMD = 1;
@@ -67,7 +66,6 @@ FctERR NONNULL__ TSL2591_Read(I2C_slave_t * const pSlave, uint8_t * data, const 
 	uTSL2591_CMD CMD;
 
 	if (!I2C_is_enabled(pSlave))			{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (addr > TSL2591__C1DATAH)			{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > TSL2591__C1DATAH + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	CMD.Bits.CMD = 1;
@@ -85,7 +83,7 @@ FctERR NONNULL__ TSL2591_Write_Word(I2C_slave_t * const pSlave, const uint16_t *
 {
 	uint8_t	WREG[2];
 
-	if (addr > TSL2591__PERSIST)		{ return ERROR_RANGE; }		// Unknown register
+	if (addr % sizeof(uint16_t))	{ return ERROR_FRAMING; }		// Unaligned word access
 
 	WREG[0] = LOBYTE(*data);
 	WREG[1] = HIBYTE(*data);
@@ -98,7 +96,7 @@ FctERR NONNULL__ TSL2591_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, 
 	uint8_t	WREG[2];
 	FctERR	err;
 
-	if (addr > TSL2591__C1DATAH)		{ return ERROR_RANGE; }		// Unknown register
+	if (addr % sizeof(uint16_t))	{ return ERROR_FRAMING; }		// Unaligned word access
 
 	err = TSL2591_Read(pSlave, WREG, addr, 2);
 	if (err)	{ return err; }

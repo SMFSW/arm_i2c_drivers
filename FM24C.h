@@ -40,8 +40,8 @@
 
 #define	FM24C_BANK_SIZE			0x100					//!< FM24C bank size (in bytes)
 
-#define	FM24C04B_SIZE			0x100					//!< FM24C04B size (in bytes)
-#define	FM24C16B_SIZE			0x800					//!< FM24C size (in bytes)
+#define	FM24C04B_SIZE			0x200					//!< FM24C04 size (in bytes)
+#define	FM24C16B_SIZE			0x800					//!< FM24C16 size (in bytes)
 
 #ifndef FM24C_SIZE
 //! \note FM24C_SIZE defaults to FM24C16B size, but can be defined to FM24C04B_SIZE (for example)

@@ -3,7 +3,7 @@
 ** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief FRAM / EEPROM Driver extensions
 ** \note Fully compatible between EEPROM / FRAM type components
-** \note When EEPROM compatibility is not needed, I2CMEM_WRITE_SIZE can be set to I2CMEM_BANK_SIZE for more efficiency
+** \note When EEPROM compatibility is not needed, buf_size at init can be set to \ref I2CMEM_WBUF_NONE for more efficiency
 **/
 /****************************************************************/
 #ifndef __I2CMEM_EX_H__
@@ -31,31 +31,44 @@
 #define I2CMEM_Write_Type(cpnt, name, type, addr)	__INLINE FctERR INLINE__ I2CMEM_Set_##name(type wr) {	\
 														return I2CMEM_Write(cpnt, &wr, addr, sizeof(type)); }	//!< Macro to create function to write value(s) to I2CMEM
 
-#define I2CMEM_1K		0x0080	//!< 1Kb size
-#define I2CMEM_2K		0x0100	//!< 2Kb size
-#define I2CMEM_4K		0x0200	//!< 4Kb size
-#define I2CMEM_8K		0x0400	//!< 8Kb size
-#define I2CMEM_16K		0x0800	//!< 16Kb size
-#define I2CMEM_32K		0x1000	//!< 32Kb size
-#define I2CMEM_64K		0x2000	//!< 64Kb size
-#define I2CMEM_128K		0x4000	//!< 128Kb size
-#define I2CMEM_256K		0x8000	//!< 256Kb size
+#define I2CMEM_1K			0x0080	//!< 1Kb size
+#define I2CMEM_2K			0x0100	//!< 2Kb size
+#define I2CMEM_4K			0x0200	//!< 4Kb size
+#define I2CMEM_8K			0x0400	//!< 8Kb size
+#define I2CMEM_16K			0x0800	//!< 16Kb size
+#define I2CMEM_32K			0x1000	//!< 32Kb size
+#define I2CMEM_64K			0x2000	//!< 64Kb size
+#define I2CMEM_128K			0x4000	//!< 128Kb size
+#define I2CMEM_256K			0x8000	//!< 256Kb size
 
-#define I2CMEM_WBUF_8	8		//!< 8B buffer
-#define I2CMEM_WBUF_16	16		//!< 16B buffer
-#define I2CMEM_WBUF_32	32		//!< 32B buffer
-#define I2CMEM_WBUF_64	64		//!< 64B buffer
+#define I2CMEM_WBUF_NONE	0		//!< No buffer
+#define I2CMEM_WBUF_8		8		//!< 8B buffer
+#define I2CMEM_WBUF_16		16		//!< 16B buffer
+#define I2CMEM_WBUF_32		32		//!< 32B buffer
+#define I2CMEM_WBUF_64		64		//!< 64B buffer
 
 
 /*** Known device aliases ***/
-#define _24xx64_Init(idx, hi2c, devAddress)		I2CMEM_Init(idx, hi2c, devAddress, I2CMEM_64K, I2CMEM_WBUF_32)	//!< 24xx64 Init alias
-#define _24xx64_Init_Single()					I2CMEM_Init_Single(I2CMEM_64K, I2CMEM_WBUF_32)					//!< 24xx64 Single Init alias
+#define _24xx64_Init(idx, hi2c, devAddress)		I2CMEM_Init(idx, hi2c, devAddress, I2CMEM_64K, I2CMEM_WBUF_32)		//!< EEPROM 24xx64 Init alias
+#define _24xx64_Init_Single()					I2CMEM_Init_Single(I2CMEM_64K, I2CMEM_WBUF_32)						//!< EEPROM 24xx64 Single Init alias
 
-#define _24xx32_Init(idx, hi2c, devAddress)		I2CMEM_Init(idx, hi2c, devAddress, I2CMEM_32K, I2CMEM_WBUF_64)	//!< 24xx32 Init alias
-#define _24xx32_Init_Single()					I2CMEM_Init_Single(I2CMEM_32K, I2CMEM_WBUF_64)					//!< 24xx32 Single Init alias
+#define _24xx32_Init(idx, hi2c, devAddress)		I2CMEM_Init(idx, hi2c, devAddress, I2CMEM_32K, I2CMEM_WBUF_64)		//!< EEPROM 24xx32 Init alias
+#define _24xx32_Init_Single()					I2CMEM_Init_Single(I2CMEM_32K, I2CMEM_WBUF_64)						//!< EEPROM 24xx32 Single Init alias
 
-#define _M24C16_Init(idx, hi2c, devAddress)		I2CMEM_Init(idx, hi2c, devAddress, I2CMEM_16K, I2CMEM_WBUF_16)	//!< M24C16 Init alias
-#define _M24C16_Init_Single()					I2CMEM_Init_Single(I2CMEM_16K, I2CMEM_WBUF_16)					//!< M24C16 Single Init alias
+#define _FM24C04_Init(idx, hi2c, devAddress)	I2CMEM_Init(idx, hi2c, devAddress, I2CMEM_4K, I2CMEM_WBUF_NONE)		//!< FRAM FM24C04 Init alias
+#define _FM24C04_Init_Single()					I2CMEM_Init_Single(I2CMEM_4K, I2CMEM_WBUF_NONE)						//!< FRAM FM24C04 Single Init alias
+
+#define _FM24C16_Init(idx, hi2c, devAddress)	I2CMEM_Init(idx, hi2c, devAddress, I2CMEM_16K, I2CMEM_WBUF_NONE)	//!< FRAM FM24C16 Init alias
+#define _FM24C16_Init_Single()					I2CMEM_Init_Single(I2CMEM_16K, I2CMEM_WBUF_NONE)					//!< FRAM FM24C16 Single Init alias
+
+#define _FM24C64_Init(idx, hi2c, devAddress)	I2CMEM_Init(idx, hi2c, devAddress, I2CMEM_64K, I2CMEM_WBUF_NONE)	//!< FRAM FM24C64 Init alias
+#define _FM24C64_Init_Single()					I2CMEM_Init_Single(I2CMEM_64K, I2CMEM_WBUF_NONE)					//!< FRAM FM24C64 Single Init alias
+
+#define _M24C16_Init(idx, hi2c, devAddress)		I2CMEM_Init(idx, hi2c, devAddress, I2CMEM_16K, I2CMEM_WBUF_16)		//!< EEPROM M24C16 Init alias
+#define _M24C16_Init_Single()					I2CMEM_Init_Single(I2CMEM_16K, I2CMEM_WBUF_16)						//!< EEPROM M24C16 Single Init alias
+
+#define _MB85RC256_Init(idx, hi2c, devAddress)	I2CMEM_Init(idx, hi2c, devAddress, I2CMEM_256K, I2CMEM_WBUF_NONE)	//!< FRAM MB85RC256 Init alias
+#define _MB85C256_Init_Single()					I2CMEM_Init_Single(I2CMEM_256K, I2CMEM_WBUF_NONE)					//!< FRAM MB85RC256 Single Init alias
 
 
 // *****************************************************************************

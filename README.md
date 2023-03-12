@@ -16,7 +16,9 @@ ARM I2C Drivers for various components
 - define `I2C_$CPNT$_NB` with number of devices to enable multiple devices
 - define `$CPNT$_BASE_ADDR` with base device address if in the need to override default address defined in header
 - use `$CPNT$_Init(idx, hi2c, devAddress)` for every device with its index, proper instance and I2C address
+  - I2CMEM type is generic and needs 2 more parameters: storage size and write buffer size (can be set to 0 for FRAM)
 - use `$CPNT$_Init_Single()` once in case of single device using defaults
+  - I2CMEM type is generic and needs 2 parameters: storage size and write buffer size (can be set to 0 for FRAM)
 - start using `$CPNT$_funcs()`
 
 - if you find warning messages annoying, you could define `NO_WARN_I2C_DRIVERS` (underscores between words) in compiler options to hide warning messages
@@ -34,7 +36,8 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 - **I2CMEM**: Any EEPROM / FRAM
   - **STATUS**: WORKING
   - Use I2CMEM when compatibility between EEPROM/FRAM is needed
-  - In case FRAM is only useful, you may use FM24C or MB85RC256V
+  - Check [I2CMEM_ex.h](I2CMEM_ex.h) for a few components init aliases
+  - In case FRAM is only useful, you may use legacy FM24C or MB85RC256V components, or set buf_size to I2CMEM_WBUF_NONE at init
   - Transaction timeout set to 500ms:
     - There shouldn't be any timeout reached for these components, otherwise refer to MB85RC256V comment
 

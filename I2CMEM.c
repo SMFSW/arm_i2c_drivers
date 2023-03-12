@@ -3,7 +3,7 @@
 ** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief FRAM / EEPROM Driver
 ** \note Fully compatible between EEPROM / FRAM type components
-** \note When EEPROM compatibility is not needed, I2CMEM_WRITE_SIZE can be set to I2CMEM_BANK_SIZE for more efficiency
+** \note When EEPROM compatibility is not needed, buf_size at init can be set to \ref I2CMEM_WBUF_NONE for more efficiency
 **/
 /****************************************************************/
 #include "I2CMEM.h"
@@ -25,7 +25,7 @@ I2CMEM_t I2CMEM[I2C_I2CMEM_NB] = { 0 };
 /****************************************************************/
 
 
-FctERR NONNULL__ I2CMEM_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress, const size_t size, const size_t wr_size)
+FctERR NONNULL__ I2CMEM_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress, const size_t size, const size_t buf_size)
 {
 	FctERR err;
 
@@ -33,11 +33,10 @@ FctERR NONNULL__ I2CMEM_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, 
 
 	I2C_PERIPHERAL_SET_DEFAULTS(I2CMEM, idx);
 
-	I2CMEM_hal[idx].cfg.mem_size = (size > I2CMEM16K_SIZE) ? I2C_MEMADD_SIZE_16BIT : I2C_MEMADD_SIZE_8BIT;
+	I2CMEM_hal[idx].cfg.mem_size = (size > I2CMEM16K_SIZE) ? I2C_16B_REG : I2C_8B_REG;
 
 	I2CMEM[idx].cfg.chip_size = size;						// Chip size
-	I2CMEM[idx].cfg.write_size = wr_size ? wr_size : size;	// Write buffer size (typically 16 to 64 for EEPROM, no restriction for FRAM)
-	//I2CMEM[idx].cfg.addr_size = (size > I2CMEM16B_SIZE) ? I2C_MEMADD_SIZE_16BIT : I2C_MEMADD_SIZE_8BIT;
+	I2CMEM[idx].cfg.buf_size = buf_size ? buf_size : size;	// Write buffer size (typically 16 to 64 for EEPROM, no restriction for FRAM)
 
 	err = I2C_slave_init(&I2CMEM_hal[idx], hi2c, devAddress, I2CMEM_hal[idx].cfg.timeout);
 
@@ -46,8 +45,8 @@ FctERR NONNULL__ I2CMEM_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, 
 	return ERROR_OK;
 }
 
-FctERR I2CMEM_Init_Single(const size_t size, const size_t wr_size) {
-	return I2CMEM_Init(0, I2C_I2CMEM, I2CMEM_BASE_ADDR, size, wr_size); }
+FctERR I2CMEM_Init_Single(const size_t size, const size_t buf_size) {
+	return I2CMEM_Init(0, I2C_I2CMEM, I2CMEM_BASE_ADDR, size, buf_size); }
 
 
 /****************************************************************/
@@ -141,7 +140,7 @@ static FctERR NONNULL__ I2CMEM_ReadWrite_Pages(I2CMEM_t * const pCpnt, uint8_t *
 	uint8_t *	pData = data;
 	size_t		page_size;
 
-	if (wr)															{ page_size = pCpnt->cfg.write_size; }
+	if (wr)															{ page_size = pCpnt->cfg.buf_size; }
 	else if (pCpnt->cfg.slave_inst->cfg.mem_size == I2C_16B_REG)	{ page_size = pCpnt->cfg.chip_size; }
 	else															{ page_size = I2CMEM_BANK_SIZE; }
 

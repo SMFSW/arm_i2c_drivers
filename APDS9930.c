@@ -52,7 +52,6 @@ FctERR NONNULL__ APDS9930_Write(I2C_slave_t * const pSlave, const uint8_t * data
 	uAPDS9930_CMD CMD;
 
 	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (addr > APDS9930__POFFSET)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > APDS9930__POFFSET + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	CMD.Bits.CMD = 1;
@@ -71,7 +70,6 @@ FctERR NONNULL__ APDS9930_Read(I2C_slave_t * const pSlave, uint8_t * data, const
 	uAPDS9930_CMD CMD;
 
 	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (addr > APDS9930__POFFSET)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > APDS9930__POFFSET + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	CMD.Bits.CMD = 1;
@@ -89,7 +87,7 @@ FctERR NONNULL__ APDS9930_Write_Word(I2C_slave_t * const pSlave, const uint16_t 
 {
 	uint8_t	WREG[2];
 
-	if (addr > APDS9930__PDATAL)		{ return ERROR_RANGE; }		// Unknown register
+	if (addr % sizeof(uint16_t))	{ return ERROR_FRAMING; }		// Unaligned word access
 
 	WREG[0] = LOBYTE(*data);
 	WREG[1] = HIBYTE(*data);
@@ -102,7 +100,7 @@ FctERR NONNULL__ APDS9930_Read_Word(I2C_slave_t * const pSlave, uint16_t * data,
 	uint8_t	WREG[2];
 	FctERR	err;
 
-	if (addr > APDS9930__PDATAL)		{ return ERROR_RANGE; }		// Unknown register
+	if (addr % sizeof(uint16_t))	{ return ERROR_FRAMING; }		// Unaligned word access
 
 	err = APDS9930_Read(pSlave, WREG, addr, 2);
 	if (err)	{ return err; }

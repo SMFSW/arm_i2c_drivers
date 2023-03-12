@@ -49,7 +49,6 @@ FctERR NONNULL__ PCA9532_Write(I2C_slave_t * const pSlave, const uint8_t * data,
 	const PCA95xx_reg_inc inc_mode = PCA9532[pSlave - PCA9532_hal].cfg.auto_inc;
 
 	if (!I2C_is_enabled(pSlave))							{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (addr > PCA9532__LS3)								{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > PCA9532__LS3 + 1)						{ return ERROR_OVERFLOW; }	// More bytes than registers
 	if ((nb > 1) && (inc_mode == PCA95xx__AUTO_INC_NONE))	{ return ERROR_NOTAVAIL; }	// Writing more than 1 byte not available in no auto-increment mode
 
@@ -65,7 +64,6 @@ FctERR NONNULL__ PCA9532_Read(I2C_slave_t * const pSlave, uint8_t * data, const 
 	const PCA95xx_reg_inc inc_mode = PCA9532[pSlave - PCA9532_hal].cfg.auto_inc;
 
 	if (!I2C_is_enabled(pSlave))							{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (addr > PCA9532__LS3)								{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > PCA9532__LS3 + 1)						{ return ERROR_OVERFLOW; }	// More bytes than registers
 	if ((nb > 1) && (inc_mode == PCA95xx__AUTO_INC_NONE))	{ return ERROR_NOTAVAIL; }	// Writing more than 1 byte not available in no auto-increment mode
 

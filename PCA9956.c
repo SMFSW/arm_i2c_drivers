@@ -52,7 +52,6 @@ FctERR NONNULL__ PCA9956_Write(I2C_slave_t * const pSlave, const uint8_t * data,
 	const PCA962x_reg_inc inc_mode = PCA9956[pSlave - PCA9956_hal].cfg.auto_inc & 0x80;
 
 	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (addr > PCA9956__IREFALL)				{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > PCA9956__IREFALL + 1)		{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
@@ -67,7 +66,6 @@ FctERR NONNULL__ PCA9956_Read(I2C_slave_t * const pSlave, uint8_t * data, const 
 	const PCA962x_reg_inc inc_mode = PCA9956[pSlave - PCA9956_hal].cfg.auto_inc & 0x80;
 
 	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (addr > PCA9956__EFLAG5)					{ return ERROR_RANGE; }		// Unknown register
 	if ((addr + nb) > PCA9956__EFLAG5 + 1)		{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);

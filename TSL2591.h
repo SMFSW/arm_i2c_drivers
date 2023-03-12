@@ -242,7 +242,7 @@ FctERR NONNULL__ TSL2591_Write(I2C_slave_t * const pSlave, const uint8_t * data,
 FctERR NONNULL__ TSL2591_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb);
 
 
-/*!\brief I2C Word Write (low endian) function for TSL2591
+/*!\brief I2C Word Write (little endian) function for TSL2591
 ** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in] data - pointer to write from
 ** \param[in] addr - Address to write to
@@ -251,7 +251,7 @@ FctERR NONNULL__ TSL2591_Read(I2C_slave_t * const pSlave, uint8_t * data, const 
 FctERR NONNULL__ TSL2591_Write_Word(I2C_slave_t * const pSlave, const uint16_t * data, const uint16_t addr);
 
 
-/*!\brief I2C Word Read (low endian) function for TSL2591
+/*!\brief I2C Word Read (little endian) function for TSL2591
 ** \param[in,out] pSlave - Pointer to I2C slave instance
 ** \param[in,out] data - pointer to read to
 ** \param[in] addr - Address to read from
