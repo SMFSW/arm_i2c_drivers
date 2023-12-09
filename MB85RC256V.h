@@ -3,7 +3,8 @@
 ** \copyright MIT (c) 2017-2023, SMFSW
 ** \brief MB85RC256V FRAM Driver
 ** \details MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM
-** \note	Compatibility (tested):
+** \note Legacy component: consider switching to I2CMEM component for new designs
+** \note Compatibility (tested):
 **				- MB85RC256V
 **				- FM24CL64B
 **/

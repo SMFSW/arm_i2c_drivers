@@ -41,7 +41,7 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 
 - **FM24C**: 4/16-Kbit (512/2K * 8) Serial I2C F-RAM
   - **STATUS**: WORKING
-  - I2C_Drivers legacy FRAM component
+  - I2C_Drivers legacy FRAM component, consider switching to I2CMEM for new designs
   - Use FM24C for I2C addresses banked components (with 8b internal address):
     - Tested on:
       - FM24C16B
@@ -52,7 +52,7 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 
 - **MB85RC256V**: 256-Kbit (32K * 8) I2C Memory FRAM
   - **STATUS**: WORKING
-  - I2C_Drivers legacy FRAM component
+  - I2C_Drivers legacy FRAM component, consider switching to I2CMEM for new designs
   - Use MB85RC256V for 16b internal addresses components:
     - Tested on:
       - MB85RC256V

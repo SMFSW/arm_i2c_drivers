@@ -4,7 +4,8 @@
 ** \brief FM24C FRAM Driver (bank switching at I2C address level protocol)
 ** \details FM24C16B: 16-Kbit (2K * 8) Serial I2C F-RAM
 **			FM24C04B: 4-Kbit (512 * 8) Serial I2C F-RAM
-** \note	Compatibility (tested):
+** \note Legacy component: consider switching to I2CMEM component for new designs
+** \note Compatibility (tested):
 **				- FM24C16B
 **				- FM24C04B
 **				- BR24T04FVM
