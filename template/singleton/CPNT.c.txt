@@ -94,8 +94,6 @@ FctERR NONNULL__ $CPNT$_Read_Word(uint16_t * data, const uint16_t addr)
 
 
 /****************************************************************/
-#elif !defined(NO_WARN_I2C_DRIVERS)
-#warning "You have to define I2C_$CPNT$ for component to be enabled!"
 #endif
 #endif
 /****************************************************************/

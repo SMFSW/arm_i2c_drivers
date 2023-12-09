@@ -79,8 +79,6 @@ FctERR NONNULL__ PCA9624_Read(I2C_slave_t * const pSlave, uint8_t * data, const 
 
 
 /****************************************************************/
-#elif !defined(NO_WARN_I2C_DRIVERS)
-#warning "You have to define I2C_PCA9624 for component to be enabled!"
 #endif
 #endif
 /****************************************************************/

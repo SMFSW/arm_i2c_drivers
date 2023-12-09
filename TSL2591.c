@@ -127,8 +127,6 @@ FctERR NONNULL__ TSL2591_Write_Special(I2C_slave_t * const pSlave, const TSL2591
 
 
 /****************************************************************/
-#elif !defined(NO_WARN_I2C_DRIVERS)
-#warning "You have to define I2C_TSL2591 for component to be enabled!"
 #endif
 #endif
 /****************************************************************/

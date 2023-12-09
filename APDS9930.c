@@ -130,8 +130,6 @@ FctERR NONNULL__ APDS9930_Write_Special(I2C_slave_t * const pSlave, const APDS99
 
 
 /****************************************************************/
-#elif !defined(NO_WARN_I2C_DRIVERS)
-#warning "You have to define I2C_APDS9930 for component to be enabled!"
 #endif
 #endif
 /****************************************************************/

@@ -89,8 +89,6 @@ FctERR NONNULL__ MB85RC256V_Read_ID(MB85RC256V_t * const pCpnt, uint8_t * data)
 }
 
 /****************************************************************/
-#elif !defined(NO_WARN_I2C_DRIVERS)
-#warning "You have to define I2C_MB85RC256V for component to be enabled!"
 #endif
 #endif
 /****************************************************************/

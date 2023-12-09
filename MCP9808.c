@@ -107,8 +107,6 @@ FctERR NONNULL__ MCP9808_Read(I2C_slave_t * const pSlave, uint16_t * data, const
 
 
 /****************************************************************/
-#elif !defined(NO_WARN_I2C_DRIVERS)
-#warning "You have to define I2C_MCP9808 for component to be enabled!"
 #endif
 #endif
 /****************************************************************/

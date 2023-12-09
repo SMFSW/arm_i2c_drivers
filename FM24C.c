@@ -143,8 +143,6 @@ FctERR NONNULL__ FM24C_Read(FM24C_t * const pCpnt, uint8_t * const data, const u
 
 
 /****************************************************************/
-#elif !defined(NO_WARN_I2C_DRIVERS)
-#warning "You have to define I2C_FM24C for component to be enabled!"
 #endif
 #endif
 /****************************************************************/

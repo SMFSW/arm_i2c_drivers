@@ -63,8 +63,6 @@ FctERR NONNULL__ PCF8523_Read(uint8_t * data, const uint16_t addr, const uint16_
 
 
 /****************************************************************/
-#elif !defined(NO_WARN_I2C_DRIVERS)
-#warning "You have to define I2C_PCF8523 for component to be enabled!"
 #endif
 #endif
 /****************************************************************/

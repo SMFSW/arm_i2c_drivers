@@ -175,8 +175,6 @@ FctERR NONNULL__ I2CMEM_Read(I2CMEM_t * const pCpnt, uint8_t * const data, const
 
 
 /****************************************************************/
-#elif !defined(NO_WARN_I2C_DRIVERS)
-#warning "You have to define I2C_I2CMEM for component to be enabled!"
 #endif
 #endif
 /****************************************************************/

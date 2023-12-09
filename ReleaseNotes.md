@@ -22,6 +22,7 @@ SOFTWARE.
 
 ## v1.1
 
+* Removal of annoying messages when components are not enabled 
 * Check for address alignment in r/w word functions
 * No more check of r/w memory address (implicitly included in overflow check)
 * I2CMEM: EEPROM/FRAM Memories component added (compatible between EEPROM/FRAM, any protocol)

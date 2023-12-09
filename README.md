@@ -21,8 +21,6 @@ ARM I2C Drivers for various components
   - I2CMEM type is generic and needs 2 parameters: storage size and write buffer size (can be set to 0 for FRAM)
 - start using `$CPNT$_funcs()`
 
-- if you find warning messages annoying, you could define `NO_WARN_I2C_DRIVERS` (underscores between words) in compiler options to hide warning messages
-
 ## Remarks
 
 - define `VERBOSE` in compiler options to printf infos from component handlers

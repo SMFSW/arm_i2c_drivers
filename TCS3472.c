@@ -128,8 +128,6 @@ FctERR NONNULL__ TCS3472_Write_Special(I2C_slave_t * const pSlave, const TCS3472
 
 
 /****************************************************************/
-#elif !defined(NO_WARN_I2C_DRIVERS)
-#warning "You have to define I2C_TCS3472 for component to be enabled!"
 #endif
 #endif
 /****************************************************************/
