@@ -23,7 +23,7 @@ FctERR NONNULL__ FM24C_Mass_Erase(FM24C_t * const pCpnt)
 	uint8_t	array[FM24C_BANK_SIZE];
 	memset(array, FM24C_CLR_VAL, sizeof(array));
 
-	for (int i = 0 ; i < (FM24C_SIZE / sizeof(array)) ; i++)
+	for (uintCPU_t i = 0 ; i < (FM24C_SIZE / sizeof(array)) ; i++)
 	{
 		#if defined(HAL_IWDG_MODULE_ENABLED)
 			HAL_IWDG_Refresh(&hiwdg);

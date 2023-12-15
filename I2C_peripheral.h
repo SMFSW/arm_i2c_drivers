@@ -18,9 +18,9 @@
 /****************************************************************/
 
 
-#define IS_I2C_PERIPHERAL(name, idx)	((idx) < I2C_##name##_NB)	//!< Macro for use with assert_param to check I2C \b idx is existing for \b name peripheral
+#define IS_I2C_PERIPHERAL(name, idx)		((idx) < I2C_##name##_NB)							//!< Macro for use with assert_param to check I2C \b idx is existing for \b name peripheral
 
-#define IS_I2C_PERIPHERAL_ADDR(name, addr)	((I2C_PERIPHERAL_IDX(addr, name) >= 0) &&			\
+#define IS_I2C_PERIPHERAL_ADDR(name, addr)	((I2C_PERIPHERAL_IDX(addr, name) >= 0) && \
 											(I2C_PERIPHERAL_IDX(addr, name) < I2C_##name##_NB))	//!< Macro for use with assert_param to check I2C peripheral \b addr is valid for \b name peripheral
 
 
@@ -38,7 +38,7 @@
 
 #define I2C_PERIPHERAL_SET_DEFAULTS_SINGLETON(name)				\
 	memcpy(&name##_hal, &name##_defaults, sizeof(I2C_slave_t));	\
-	name.cfg.slave_inst = &name##_hal;	//!< Macro to set working defaults for singleton peripheral \b name
+	name.cfg.slave_inst = &name##_hal;				//!< Macro to set working defaults for singleton peripheral \b name
 
 
 /******************************/

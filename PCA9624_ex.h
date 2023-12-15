@@ -37,8 +37,8 @@ typedef union uPCA9624_REG_MAP {
 		uint8_t					PWM7;
 		uint8_t					GRPPWM;
 		uint8_t					GRPFREQ;
-		uPCA9624_REG__LEDOUT0	LEDOUT0;
-		uPCA9624_REG__LEDOUT1	LEDOUT1;
+		uPCA962x_REG__LEDOUT0	LEDOUT0;
+		uPCA962x_REG__LEDOUT1	LEDOUT1;
 		uint8_t					SUBADR1;
 		uint8_t					SUBADR2;
 		uint8_t					SUBADR3;

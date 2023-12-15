@@ -88,7 +88,9 @@ typedef union PACK__ uPCA9624_REG__MODE1 {
 typedef union PACK__ uPCA9624_REG__MODE2 {
 	uint8_t Byte;
 	struct PACK__ {
-		uint8_t 				:3;
+		uint8_t			Res0_1	:1;		//!< Reserved bit 0: reads 1
+		uint8_t			Res1_0	:1;		//!< Reserved bit 1: reads 0
+		uint8_t			Res2_1	:1;		//!< Reserved bit 2: reads 1
 		PCA96xx_latch	OCH		:1;		//!< 0: update on STOP, 1: update on ACK
 		uint8_t			INVRT	:1;		//!< Reserved, Write must always be a logic 0
 		PCA962x_dim		DMBLNK	:1;		//!< 0: Dimming, 1: Blinking

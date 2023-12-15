@@ -62,7 +62,7 @@ FctERR NONNULL__ PCA9956_Set_Latch(PCA9956_t * const pCpnt, const PCA96xx_latch 
 ** \param[in] mode - channel mode (on/off/dimming/blinking)
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ PCA9956_Set_Mode_LED(PCA9956_t * const pCpnt, const PCA9xxx_chan chan, const PCA9956_ledout mode);
+FctERR NONNULL__ PCA9956_Set_Mode_LED(PCA9956_t * const pCpnt, const PCA9xxx_chan chan, const PCA995x_ledout mode);
 
 
 /*!\brief Set PCA9956 peripheral multiple LEDs mode
@@ -71,7 +71,7 @@ FctERR NONNULL__ PCA9956_Set_Mode_LED(PCA9956_t * const pCpnt, const PCA9xxx_cha
 ** \param[in] mode - channel mode (on/off/dimming/blinking)
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ PCA9956_Set_Mode_LEDs(PCA9956_t * const pCpnt, const uint32_t chans, const PCA9956_ledout mode);
+FctERR NONNULL__ PCA9956_Set_Mode_LEDs(PCA9956_t * const pCpnt, const uint32_t chans, const PCA995x_ledout mode);
 
 
 /*!\brief Set PCA9956 output gain control value

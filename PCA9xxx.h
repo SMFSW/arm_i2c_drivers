@@ -21,12 +21,7 @@
 // Section: Constants
 // *****************************************************************************
 // PCA9xxx general addresses
-#define	PCA96xx_GENERAL_CALL_ADDR			0x00		//!< PCA96xx General CALL Address
-#define	PCA96xx_DEFAULT_ALL_CALL_ADDR		(0xE0 >> 1)	//!< PCA96xx ALL CALL Address (for all channels)
-#define	PCA96xx_DEFAULT_SUB1_CALL_ADDR		(0xE2 >> 1)	//!< PCA96xx SUB1 CALL Address
-#define	PCA96xx_DEFAULT_SUB2_CALL_ADDR		(0xE4 >> 1)	//!< PCA96xx SUB2 CALL Address
-#define	PCA96xx_DEFAULT_SUB3_CALL_ADDR		(0xE8 >> 1)	//!< PCA96xx SUB3 CALL Address
-#define	PCA9956_DEFAULT_SUBX_CALL_ADDR		(0xEE >> 1)	//!< PCA9956 SUBx CALL Address
+#define	PCA9xxx_DEFAULT_ALL_CALL_ADDR		(0xE0 >> 1)		//!< PCA9xxx ALL CALL Address (for all channels)
 
 
 // *****************************************************************************
@@ -77,7 +72,7 @@ typedef enum PACK__ PCA9xxx_latch {
 } PCA9xxx_latch;
 
 typedef PCA9xxx_latch		PCA96xx_latch;	//!< Latch type enum for PCA96xx
-typedef PCA9xxx_latch		PCA9956_latch;	//!< Latch type enum for PCA9956
+typedef PCA9xxx_latch		PCA99xx_latch;	//!< Latch type enum for PCA99xx
 
 
 /*********************/
@@ -104,7 +99,7 @@ typedef enum PACK__ PCA9xxx_reg_inc {
 } PCA9xxx_reg_inc;
 
 typedef PCA9xxx_reg_inc		PCA962x_reg_inc;	//!< Registers increment options enum of PCA962x
-typedef PCA9xxx_reg_inc		PCA9956_reg_inc;	//!< Registers increment options enum of PCA9965
+typedef PCA9xxx_reg_inc		PCA995x_reg_inc;	//!< Registers increment options enum of PCA995x
 
 /*!\enum PCA95xx_ledsel
 ** \brief enum for PCA95xx output drive
@@ -125,7 +120,7 @@ typedef enum PACK__ PCA9xxx_dim {
 } PCA9xxx_dim;
 
 typedef PCA9xxx_dim		PCA962x_dim;	//!< enum for PCA962x dimming type
-typedef PCA9xxx_dim		PCA9956_dim;	//!< enum for PCA9965 dimming type
+typedef PCA9xxx_dim		PCA995x_dim;	//!< enum for PCA995x dimming type
 
 
 /*!\enum PCA9xxx_ledout
@@ -139,7 +134,7 @@ typedef enum PACK__ PCA9xxx_ledout {
 } PCA9xxx_ledout;
 
 typedef PCA9xxx_ledout		PCA962x_ledout;	//!< enum for PCA962x output drive
-typedef PCA9xxx_ledout		PCA9956_ledout;	//!< enum for PCA9965 output drive
+typedef PCA9xxx_ledout		PCA995x_ledout;	//!< enum for PCA995x output drive
 
 
 /*!\union uPCA9xxx_REG__LEDOUTx
@@ -155,8 +150,8 @@ typedef union PACK__ uPCA9xxx_REG__LEDOUTx {
 	} Bits;
 } uPCA9xxx_REG__LEDOUTx;
 
-typedef uPCA9xxx_REG__LEDOUTx		uPCA9624_REG__LEDOUTx;	//!< Union for LEDOUTx register of PCA9624
-typedef uPCA9xxx_REG__LEDOUTx		uPCA9956_REG__LEDOUTx;	//!< Union for LEDOUTx register of PCA9956
+typedef uPCA9xxx_REG__LEDOUTx		uPCA962x_REG__LEDOUTx;	//!< Union for LEDOUTx register of PCA962x
+typedef uPCA9xxx_REG__LEDOUTx		uPCA995x_REG__LEDOUTx;	//!< Union for LEDOUTx register of PCA995x
 
 
 /*!\union uPCA9xxx_REG__LEDOUT0
@@ -172,8 +167,8 @@ typedef union PACK__ uPCA9xxx_REG__LEDOUT0 {
 	} Bits;
 } uPCA9xxx_REG__LEDOUT0;
 
-typedef uPCA9xxx_REG__LEDOUT0		uPCA9624_REG__LEDOUT0;	//!< Union for LEDOUT0 register of PCA9624
-typedef uPCA9xxx_REG__LEDOUT0		uPCA9956_REG__LEDOUT0;	//!< Union for LEDOUT0 register of PCA9956
+typedef uPCA9xxx_REG__LEDOUT0		uPCA962x_REG__LEDOUT0;	//!< Union for LEDOUT0 register of PCA962x
+typedef uPCA9xxx_REG__LEDOUT0		uPCA995x_REG__LEDOUT0;	//!< Union for LEDOUT0 register of PCA995x
 
 
 /*!\union uPCA9xxx_REG__LEDOUT1
@@ -189,8 +184,8 @@ typedef union PACK__ uPCA9xxx_REG__LEDOUT1 {
 	} Bits;
 } uPCA9xxx_REG__LEDOUT1;
 
-typedef uPCA9xxx_REG__LEDOUT1		uPCA9624_REG__LEDOUT1;	//!< Union for LEDOUT1 register of PCA9624
-typedef uPCA9xxx_REG__LEDOUT1		uPCA9956_REG__LEDOUT1;	//!< Union for LEDOUT1 register of PCA9956
+typedef uPCA9xxx_REG__LEDOUT1		uPCA962x_REG__LEDOUT1;	//!< Union for LEDOUT1 register of PCA962x
+typedef uPCA9xxx_REG__LEDOUT1		uPCA995x_REG__LEDOUT1;	//!< Union for LEDOUT1 register of PCA995x
 
 
 /*!\union uPCA9xxx_REG__LEDOUT2
@@ -206,7 +201,8 @@ typedef union PACK__ uPCA9xxx_REG__LEDOUT2 {
 	} Bits;
 } uPCA9xxx_REG__LEDOUT2;
 
-typedef uPCA9xxx_REG__LEDOUT2		uPCA9956_REG__LEDOUT2;	//!< Union for LEDOUT2 register of PCA9956
+typedef uPCA9xxx_REG__LEDOUT2		uPCA962x_REG__LEDOUT2;	//!< Union for LEDOUT2 register of PCA962x
+typedef uPCA9xxx_REG__LEDOUT2		uPCA995x_REG__LEDOUT2;	//!< Union for LEDOUT2 register of PCA995x
 
 
 /*!\union uPCA9xxx_REG__LEDOUT3
@@ -222,7 +218,8 @@ typedef union PACK__ uPCA9xxx_REG__LEDOUT3 {
 	} Bits;
 } uPCA9xxx_REG__LEDOUT3;
 
-typedef uPCA9xxx_REG__LEDOUT3		uPCA9956_REG__LEDOUT3;	//!< Union for LEDOUT3 register of PCA9956
+typedef uPCA9xxx_REG__LEDOUT3		uPCA962x_REG__LEDOUT3;	//!< Union for LEDOUT3 register of PCA962x
+typedef uPCA9xxx_REG__LEDOUT3		uPCA995x_REG__LEDOUT3;	//!< Union for LEDOUT3 register of PCA995x
 
 
 /*!\union uPCA9xxx_REG__LEDOUT4
@@ -238,7 +235,7 @@ typedef union PACK__ uPCA9xxx_REG__LEDOUT4 {
 	} Bits;
 } uPCA9xxx_REG__LEDOUT4;
 
-typedef uPCA9xxx_REG__LEDOUT4		uPCA9956_REG__LEDOUT4;	//!< Union for LEDOUT4 register of PCA9956
+typedef uPCA9xxx_REG__LEDOUT4		uPCA995x_REG__LEDOUT4;	//!< Union for LEDOUT4 register of PCA995x
 
 
 /*!\union uPCA9xxx_REG__LEDOUT5
@@ -254,7 +251,7 @@ typedef union PACK__ uPCA9xxx_REG__LEDOUT5 {
 	} Bits;
 } uPCA9xxx_REG__LEDOUT5;
 
-typedef uPCA9xxx_REG__LEDOUT5		uPCA9956_REG__LEDOUT5;	//!< Union for LEDOUT5 register of PCA9956
+typedef uPCA9xxx_REG__LEDOUT5		uPCA995x_REG__LEDOUT5;	//!< Union for LEDOUT5 register of PCA995x
 
 
 /*!\enum PCA9xxx_eflag
@@ -283,7 +280,7 @@ typedef union PACK__ uPCA9xxx_REG__EFLAGx {
 	} Bits;
 } uPCA9xxx_REG__EFLAGx;
 
-typedef uPCA9xxx_REG__EFLAGx		uPCA9xxx_REG__EFLAGx;	//!< Union for EFLAGx register of PCA9956
+typedef uPCA9xxx_REG__EFLAGx		uPCA995x_REG__EFLAGx;	//!< Union for EFLAGx register of PCA995x
 
 
 /*!\union uPCA9xxx_REG__EFLAG0
@@ -299,7 +296,7 @@ typedef union PACK__ uPCA9xxx_REG__EFLAG0 {
 	} Bits;
 } uPCA9xxx_REG__EFLAG0;
 
-typedef uPCA9xxx_REG__EFLAG0		uPCA9xxx_REG__EFLAG0;	//!< Union for EFLAG0 register of PCA9956
+typedef uPCA9xxx_REG__EFLAG0		uPCA995x_REG__EFLAG0;	//!< Union for EFLAG0 register of PCA995x
 
 
 /*!\union uPCA9xxx_REG__EFLAG1
@@ -315,8 +312,7 @@ typedef union PACK__ uPCA9xxx_REG__EFLAG1 {
 	} Bits;
 } uPCA9xxx_REG__EFLAG1;
 
-typedef uPCA9xxx_REG__EFLAG1		uPCA9624_REG__EFLAG1;	//!< Union for EFLAG1 register of PCA9624
-typedef uPCA9xxx_REG__EFLAG1		uPCA9xxx_REG__EFLAG1;	//!< Union for EFLAG1 register of PCA9956
+typedef uPCA9xxx_REG__EFLAG1		uPCA995x_REG__EFLAG1;	//!< Union for EFLAG1 register of PCA995x
 
 
 /*!\union uPCA9xxx_REG__EFLAG2
@@ -327,12 +323,12 @@ typedef union PACK__ uPCA9xxx_REG__EFLAG2 {
 	struct PACK__ {
 		PCA9xxx_eflag ERR8		:2;		//!< LED8 error status
 		PCA9xxx_eflag ERR9		:2;		//!< LED9 error status
-		PCA9xxx_eflag ERR10	:2;		//!< LED10 error status
-		PCA9xxx_eflag ERR11	:2;		//!< LED11 error status
+		PCA9xxx_eflag ERR10		:2;		//!< LED10 error status
+		PCA9xxx_eflag ERR11		:2;		//!< LED11 error status
 	} Bits;
 } uPCA9xxx_REG__EFLAG2;
 
-typedef uPCA9xxx_REG__EFLAG2		uPCA9xxx_REG__EFLAG2;	//!< Union for EFLAG2 register of PCA9956
+typedef uPCA9xxx_REG__EFLAG2		uPCA995x_REG__EFLAG2;	//!< Union for EFLAG2 register of PCA995x
 
 
 /*!\union uPCA9xxx_REG__EFLAG3
@@ -341,14 +337,14 @@ typedef uPCA9xxx_REG__EFLAG2		uPCA9xxx_REG__EFLAG2;	//!< Union for EFLAG2 regist
 typedef union PACK__ uPCA9xxx_REG__EFLAG3 {
 	uint8_t Byte;
 	struct PACK__ {
-		PCA9xxx_eflag ERR12	:2;		//!< LED12 error status
-		PCA9xxx_eflag ERR13	:2;		//!< LED13 error status
-		PCA9xxx_eflag ERR14	:2;		//!< LED14 error status
-		PCA9xxx_eflag ERR15	:2;		//!< LED15 error status
+		PCA9xxx_eflag ERR12		:2;		//!< LED12 error status
+		PCA9xxx_eflag ERR13		:2;		//!< LED13 error status
+		PCA9xxx_eflag ERR14		:2;		//!< LED14 error status
+		PCA9xxx_eflag ERR15		:2;		//!< LED15 error status
 	} Bits;
 } uPCA9xxx_REG__EFLAG3;
 
-typedef uPCA9xxx_REG__EFLAG3		uPCA9xxx_REG__EFLAG3;	//!< Union for EFLAG3 register of PCA9956
+typedef uPCA9xxx_REG__EFLAG3		uPCA995x_REG__EFLAG3;	//!< Union for EFLAG3 register of PCA995x
 
 
 /*!\union uPCA9xxx_REG__EFLAG4
@@ -357,14 +353,14 @@ typedef uPCA9xxx_REG__EFLAG3		uPCA9xxx_REG__EFLAG3;	//!< Union for EFLAG3 regist
 typedef union PACK__ uPCA9xxx_REG__EFLAG4 {
 	uint8_t Byte;
 	struct PACK__ {
-		PCA9xxx_eflag ERR16	:2;		//!< LED16 error status
-		PCA9xxx_eflag ERR17	:2;		//!< LED17 error status
-		PCA9xxx_eflag ERR18	:2;		//!< LED18 error status
-		PCA9xxx_eflag ERR19	:2;		//!< LED19 error status
+		PCA9xxx_eflag ERR16		:2;		//!< LED16 error status
+		PCA9xxx_eflag ERR17		:2;		//!< LED17 error status
+		PCA9xxx_eflag ERR18		:2;		//!< LED18 error status
+		PCA9xxx_eflag ERR19		:2;		//!< LED19 error status
 	} Bits;
 } uPCA9xxx_REG__EFLAG4;
 
-typedef uPCA9xxx_REG__EFLAG4		uPCA9xxx_REG__EFLAG4;	//!< Union for EFLAG4 register of PCA9956
+typedef uPCA9xxx_REG__EFLAG4		uPCA995x_REG__EFLAG4;	//!< Union for EFLAG4 register of PCA995x
 
 
 /*!\union uPCA9xxx_REG__EFLAG5
@@ -373,14 +369,14 @@ typedef uPCA9xxx_REG__EFLAG4		uPCA9xxx_REG__EFLAG4;	//!< Union for EFLAG4 regist
 typedef union PACK__ uPCA9xxx_REG__EFLAG5 {
 	uint8_t Byte;
 	struct PACK__ {
-		PCA9xxx_eflag ERR20	:2;		//!< LED20 error status
-		PCA9xxx_eflag ERR21	:2;		//!< LED21 error status
-		PCA9xxx_eflag ERR22	:2;		//!< LED22 error status
-		PCA9xxx_eflag ERR23	:2;		//!< LED23 error status
+		PCA9xxx_eflag ERR20		:2;		//!< LED20 error status
+		PCA9xxx_eflag ERR21		:2;		//!< LED21 error status
+		PCA9xxx_eflag ERR22		:2;		//!< LED22 error status
+		PCA9xxx_eflag ERR23		:2;		//!< LED23 error status
 	} Bits;
 } uPCA9xxx_REG__EFLAG5;
 
-typedef uPCA9xxx_REG__EFLAG5		uPCA9xxx_REG__EFLAG5;	//!< Union for EFLAG5 register of PCA9956
+typedef uPCA9xxx_REG__EFLAG5		uPCA995x_REG__EFLAG5;	//!< Union for EFLAG5 register of PCA995x
 
 
 /****************************************************************/

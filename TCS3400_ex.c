@@ -166,7 +166,7 @@ FctERR NONNULL__ TCS3400_Get_Channels(TCS3400_t * const pCpnt, uint16_t buf[])
 	uint8_t	TMP[2];
 	FctERR	err;
 
-	for (int i = 0 ; i < 4 ; i++)
+	for (uintCPU_t i = 0 ; i < 4 ; i++)
 	{
 		err = TCS3400_Read(pCpnt->cfg.slave_inst, TMP, TCS3400__CDATAL + (2 * i), 2);
 		if (err)	{ return err; }

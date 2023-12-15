@@ -19,7 +19,7 @@ FctERR NONNULL__ I2CMEM_Mass_Erase(I2CMEM_t * const pCpnt)
 	uint8_t	array[I2CMEM_BANK_SIZE];
 	memset(array, I2CMEM_CLR_VAL, sizeof(array));
 
-	for (int i = 0 ; i < (pCpnt->cfg.chip_size / sizeof(array)) ; i++)
+	for (uintCPU_t i = 0 ; i < (pCpnt->cfg.chip_size / sizeof(array)) ; i++)
 	{
 		#if defined(HAL_IWDG_MODULE_ENABLED)
 			HAL_IWDG_Refresh(&hiwdg);

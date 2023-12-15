@@ -209,10 +209,10 @@ FctERR NONNULL__ MTCH6102_Set_Compensation(MTCH6102_t * const pCpnt)
 	err = MTCH6102_Read(pCpnt->cfg.slave_inst, SENS_VAL, MTCH__SENSOR_VALUE_RX0, nb);
 	if (err)	{ return err; }
 
-	for (unsigned int i = 0 ; i < nb ; i++)	{ average += SENS_VAL[i]; }
+	for (uintCPU_t i = 0 ; i < nb ; i++)	{ average += SENS_VAL[i]; }
 	average /= nb;
 
-	for (unsigned int i = 0 ; i < nb ; i++)
+	for (uintCPU_t i = 0 ; i < nb ; i++)
 	{
 		const float temp = (float) SENS_VAL[i] / average;
 		SENS_VAL[i] = (uint8_t) ((temp == 1.0) ? 0 : (temp * 64));	// Compensation set to 0 if median is equal to sensor value for faster computing on the channel
@@ -245,7 +245,7 @@ FctERR NONNULL__ MTCH6102_Get_MFG_Results(MTCH6102_t * const pCpnt, uint32_t * c
 	err = MTCH6102_Read(pCpnt->cfg.slave_inst, RES, MTCH__RAW_ADC_00, sizeof(RES));
 	if (err)	{ return err; }
 
-	for (unsigned int i = 0 ; i < 15 ; i++)
+	for (uintCPU_t i = 0 ; i < 15 ; i++)
 	{
 		if (i <= 2)
 		{
@@ -389,7 +389,7 @@ __WEAK FctERR NONNULL__ MTCH6102_handler(MTCH6102_t * const pCpnt)
 			if (err)	{ return err; }
 
 			printf("Sensor Values: ");
-			for (int i = 0; i < sizeof(SensValues) ; i++)	{ printf("%04d ", SensValues.sensor[i]); }
+			for (uintCPU_t i = 0; i < sizeof(SensValues) ; i++)	{ printf("%04d ", SensValues.sensor[i]); }
 			printf("\r\n");
 		}
 	#endif

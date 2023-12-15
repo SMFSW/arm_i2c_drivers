@@ -48,13 +48,13 @@ FctERR NONNULL__ PCA9956_Set_Latch(PCA9956_t * const pCpnt, const PCA96xx_latch 
 }
 
 
-FctERR NONNULL__ PCA9956_Set_Mode_LED(PCA9956_t * const pCpnt, const PCA9xxx_chan chan, const PCA9956_ledout mode)
+FctERR NONNULL__ PCA9956_Set_Mode_LED(PCA9956_t * const pCpnt, const PCA9xxx_chan chan, const PCA995x_ledout mode)
 {
 	if (chan > PCA9xxx__PWM24)			{ return ERROR_RANGE; }	// Unknown channel
 	if (mode > PCA9xxx__GROUP_BRIGHT)	{ return ERROR_VALUE; }	// Unknown control mode
 
-	const unsigned int offset = chan / 4;
-	const unsigned int shift = chan * 2;
+	const uintCPU_t offset = chan / 4;
+	const uintCPU_t shift = chan * 2;
 
 	const uint16_t mask = LSHIFT(0x3, shift);
 	const uint16_t val = LSHIFT(mode, shift);
@@ -66,7 +66,7 @@ FctERR NONNULL__ PCA9956_Set_Mode_LED(PCA9956_t * const pCpnt, const PCA9xxx_cha
 }
 
 
-FctERR NONNULL__ PCA9956_Set_Mode_LEDs(PCA9956_t * const pCpnt, const uint32_t chans, const PCA9956_ledout mode)
+FctERR NONNULL__ PCA9956_Set_Mode_LEDs(PCA9956_t * const pCpnt, const uint32_t chans, const PCA995x_ledout mode)
 {
 	if (!chans)							{ return ERROR_OK; }	// Nothing to do
 	if (mode > PCA9xxx__GROUP_BRIGHT)	{ return ERROR_VALUE; }	// Unknown control mode
@@ -78,7 +78,7 @@ FctERR NONNULL__ PCA9956_Set_Mode_LEDs(PCA9956_t * const pCpnt, const uint32_t c
 	{
 		if (LSHIFT(1, chan) & chans)
 		{
-			const unsigned int shift = chan * 2;
+			const uintCPU_t shift = chan * 2;
 			mask |= LSHIFT64(0x3, shift);
 			val |= LSHIFT64(mode, shift);
 		}
@@ -86,7 +86,7 @@ FctERR NONNULL__ PCA9956_Set_Mode_LEDs(PCA9956_t * const pCpnt, const uint32_t c
 
 	SET_BITS_VAL(pCpnt->LDR.LWord, mask, val);
 
-	for (unsigned int i = 0 ; i < sizeof(LDR) ; i++)	{ LDR[i] = RSHIFT64(pCpnt->LDR.LWord, i * 8); }
+	for (uintCPU_t i = 0 ; i < sizeof(LDR) ; i++)	{ LDR[i] = RSHIFT64(pCpnt->LDR.LWord, i * 8); }
 
 	return PCA9956_Write(pCpnt->cfg.slave_inst, LDR, PCA9956__LEDOUT0, sizeof(LDR));
 }
@@ -188,11 +188,11 @@ FctERR NONNULL__ PCA9956_ClrVal(PCA9956_t * const pCpnt, const PCA9xxx_chan chan
 FctERR NONNULL__ PCA9956_ReadEFLAGs(PCA9956_t * const pCpnt, uPCA9956_REG__EFLAG * const eflags)
 {
 	uint8_t EFLAG[6];
-	FctERR err = PCA9956_Read(pCpnt->cfg.slave_inst, EFLAG, PCA9956__EFLAG0, 6);
+	FctERR err = PCA9956_Read(pCpnt->cfg.slave_inst, EFLAG, PCA9956__EFLAG0, sizeof(EFLAG));
 	if (err)	{ return err; }
 
 	eflags->LWord = 0;
-	for (unsigned int i = 0 ; i < sizeof(EFLAG) ; i++)	{ eflags->LWord |= LSHIFT64(EFLAG[i], i * 8); }
+	for (uintCPU_t i = 0 ; i < sizeof(EFLAG) ; i++)	{ eflags->LWord |= LSHIFT64(EFLAG[i], i * 8); }
 
 	return ERROR_OK;
 }

@@ -87,7 +87,7 @@ FctERR NONNULL__ BMP180_Get_Calibration(BMP180_t * const pCpnt, BMP180_calib * p
 	int16_t *	addr = (int16_t *) pCalib;
 	FctERR		err = ERROR_OK;
 
-	for (int i = 0 ; i < SZ_OBJ(BMP180_calib, int16_t) ; i++)
+	for (uintCPU_t i = 0 ; i < SZ_OBJ(BMP180_calib, int16_t) ; i++)
 	{
 		err = BMP180_Read_Word(pCpnt->cfg.slave_inst, (uint16_t *) addr++, BMP180__CALIB_AC1_MSB + (i * 2));
 		if (err)	{ return err; }

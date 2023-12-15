@@ -159,10 +159,12 @@ typedef union PACK__ uPCA9956_REG__MODE1 {
 typedef union PACK__ uPCA9956_REG__MODE2 {
 	uint8_t Byte;
 	struct PACK__ {
-		uint8_t 					:3;
-		PCA9956_latch	OCH			:1;		//!< 0: update on STOP, 1: update on ACK
+		uint8_t			Res0_1		:1;		//!< Reserved bit 0: reads 1
+		uint8_t			Res1_0		:1;		//!< Reserved bit 1: reads 0
+		uint8_t			Res2_1		:1;		//!< Reserved bit 2: reads 1
+		PCA99xx_latch	OCH			:1;		//!< 0: update on STOP, 1: update on ACK
 		uint8_t 		CLRERR		:1;		//!< Write 1 to clear all error status bits in EFLAGn register and ERROR (bit 6)
-		PCA9956_dim		DMBLNK		:1;		//!< 0: Dimming, 1: Blinking
+		PCA995x_dim		DMBLNK		:1;		//!< 0: Dimming, 1: Blinking
 		uint8_t			ERROR		:1;		//!< 0: no error, 1: any open or short-circuit detected in error flag registers (EFLAGn)
 		uint8_t			OVERTEMP	:1;		//!< 0: OK, 1: overtemperature condition
 	} Bits;
@@ -175,30 +177,30 @@ typedef union PACK__ uPCA9956_REG__MODE2 {
 typedef union PACK__ uPCA9956_REG__LEDOUT {
 	uint64_t LWord;
 	struct PACK__ {
-		PCA9956_ledout LDR0		:2;		//!< LED0 output state control
-		PCA9956_ledout LDR1		:2;		//!< LED1 output state control
-		PCA9956_ledout LDR2		:2;		//!< LED2 output state control
-		PCA9956_ledout LDR3		:2;		//!< LED3 output state control
-		PCA9956_ledout LDR4		:2;		//!< LED4 output state control
-		PCA9956_ledout LDR5		:2;		//!< LED5 output state control
-		PCA9956_ledout LDR6		:2;		//!< LED6 output state control
-		PCA9956_ledout LDR7		:2;		//!< LED7 output state control
-		PCA9956_ledout LDR8		:2;		//!< LED8 output state control
-		PCA9956_ledout LDR9		:2;		//!< LED9 output state control
-		PCA9956_ledout LDR10	:2;		//!< LED10 output state control
-		PCA9956_ledout LDR11	:2;		//!< LED11 output state control
-		PCA9956_ledout LDR12	:2;		//!< LED12 output state control
-		PCA9956_ledout LDR13	:2;		//!< LED13 output state control
-		PCA9956_ledout LDR14	:2;		//!< LED14 output state control
-		PCA9956_ledout LDR15	:2;		//!< LED15 output state control
-		PCA9956_ledout LDR16	:2;		//!< LED16 output state control
-		PCA9956_ledout LDR17	:2;		//!< LED17 output state control
-		PCA9956_ledout LDR18	:2;		//!< LED18 output state control
-		PCA9956_ledout LDR19	:2;		//!< LED19 output state control
-		PCA9956_ledout LDR20	:2;		//!< LED20 output state control
-		PCA9956_ledout LDR21	:2;		//!< LED21 output state control
-		PCA9956_ledout LDR22	:2;		//!< LED22 output state control
-		PCA9956_ledout LDR23	:2;		//!< LED23 output state control
+		PCA995x_ledout LDR0		:2;		//!< LED0 output state control
+		PCA995x_ledout LDR1		:2;		//!< LED1 output state control
+		PCA995x_ledout LDR2		:2;		//!< LED2 output state control
+		PCA995x_ledout LDR3		:2;		//!< LED3 output state control
+		PCA995x_ledout LDR4		:2;		//!< LED4 output state control
+		PCA995x_ledout LDR5		:2;		//!< LED5 output state control
+		PCA995x_ledout LDR6		:2;		//!< LED6 output state control
+		PCA995x_ledout LDR7		:2;		//!< LED7 output state control
+		PCA995x_ledout LDR8		:2;		//!< LED8 output state control
+		PCA995x_ledout LDR9		:2;		//!< LED9 output state control
+		PCA995x_ledout LDR10	:2;		//!< LED10 output state control
+		PCA995x_ledout LDR11	:2;		//!< LED11 output state control
+		PCA995x_ledout LDR12	:2;		//!< LED12 output state control
+		PCA995x_ledout LDR13	:2;		//!< LED13 output state control
+		PCA995x_ledout LDR14	:2;		//!< LED14 output state control
+		PCA995x_ledout LDR15	:2;		//!< LED15 output state control
+		PCA995x_ledout LDR16	:2;		//!< LED16 output state control
+		PCA995x_ledout LDR17	:2;		//!< LED17 output state control
+		PCA995x_ledout LDR18	:2;		//!< LED18 output state control
+		PCA995x_ledout LDR19	:2;		//!< LED19 output state control
+		PCA995x_ledout LDR20	:2;		//!< LED20 output state control
+		PCA995x_ledout LDR21	:2;		//!< LED21 output state control
+		PCA995x_ledout LDR22	:2;		//!< LED22 output state control
+		PCA995x_ledout LDR23	:2;		//!< LED23 output state control
 		uint64_t				:16;
 	} Bits;
 } uPCA9956_REG__LEDOUT;

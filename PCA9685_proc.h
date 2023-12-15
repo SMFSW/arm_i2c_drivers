@@ -22,11 +22,16 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define PCA9685_DEF_FREQ		500			//!< Default frequency to affect to PCA9685 register (range from 24Hz to 1526Hz)
+#define PCA9685_DEF_FREQ		500							//!< Default frequency to affect to PCA9685 register (range from 24Hz to 1526Hz)
 
-#define PCA9685_MAX_CLOCK_FREQ	50000000UL	//!< PCA9685 Maximum external clock frequency
+#define PCA9685_MAX_CLOCK_FREQ	50000000UL					//!< PCA9685 Maximum external clock frequency
 
-#define	PCA9685_NB_CHANNELS		16			//!< PCA9685 Number of channels
+#define	PCA9685_NB_CHANNELS		16							//!< PCA9685 Number of channels
+
+
+#define	PCA9685_DEFAULT_SUB1_CALL_ADDR		(0xE2 >> 1)		//!< PCA9685 SUB1 CALL Address
+#define	PCA9685_DEFAULT_SUB2_CALL_ADDR		(0xE4 >> 1)		//!< PCA9685 SUB2 CALL Address
+#define	PCA9685_DEFAULT_SUB3_CALL_ADDR		(0xE8 >> 1)		//!< PCA9685 SUB3 CALL Address
 
 
 // *****************************************************************************

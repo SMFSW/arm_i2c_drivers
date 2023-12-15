@@ -21,7 +21,7 @@ FctERR NONNULL__ MB85RC256V_Mass_Erase(MB85RC256V_t * const pCpnt)
 	uint8_t	bankData[256];
 	memset(&bankData, MB85RC256V_CLR_VAL, sizeof(bankData));
 
-	for (int i = 0 ; i < (MB85RC256V_SIZE / sizeof(bankData)) ; i++)
+	for (uintCPU_t i = 0 ; i < (MB85RC256V_SIZE / sizeof(bankData)) ; i++)
 	{
 		#if defined(HAL_IWDG_MODULE_ENABLED)
 			HAL_IWDG_Refresh(&hiwdg);

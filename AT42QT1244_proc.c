@@ -21,7 +21,7 @@ AT42QT1244_t AT42QT1244[I2C_AT42QT1244_NB] = { 0 };
 uint16_t AT42QT1244_crc16(uint16_t crc, const uint8_t data)
 {
 	crc ^= (uint16_t) LSHIFT(data, 8);
-	for (unsigned int i = 0 ; i < 8 ; i++)
+	for (uintCPU_t i = 0 ; i < 8 ; i++)
 	{
 		if (crc & 0x8000)	{ crc = (crc << 1) ^ 0x1021; }
 		else				{ crc <<= 1; }
@@ -81,7 +81,7 @@ void NONNULL__ AT42QT1244_Delay_PowerOn(AT42QT1244_t * const pCpnt)
 	const int32_t	PON_time = 100;		// Power on time with initialization given in datasheet (95ms rounded to 100)
 	const int32_t	loops = max(0, (int32_t) (PON_time - (HAL_GetTick() - pCpnt->hPowerOn))) / loop_delay;
 
-	for (int i = 0 ; i < loops ; i++)
+	for (uintCPU_t i = 0 ; i < loops ; i++)
 	{
 		#if defined(HAL_IWDG_MODULE_ENABLED)
 			HAL_IWDG_Refresh(&hiwdg);
@@ -94,7 +94,7 @@ void NONNULL__ AT42QT1244_Delay_PowerOn(AT42QT1244_t * const pCpnt)
 FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * const pCpnt, uint16_t * const hcrc)
 {
 	FctERR		err;
-	int			calib = 1, i, j;
+	intCPU_t	calib = 1, i, j;
 	uint8_t		Freqs[3], CFO[2][24];
 	uint16_t	Refs[3][24], crc;
 

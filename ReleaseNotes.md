@@ -22,6 +22,8 @@ SOFTWARE.
 
 ## v1.1
 
+* PCA9952: added (compatible with PCA9955)
+* PCA9xxx: all PCA9xxx refactored to share common definitions
 * Removal of annoying messages when components are not enabled 
 * Check for address alignment in r/w word functions
 * No more check of r/w memory address (implicitly included in overflow check)

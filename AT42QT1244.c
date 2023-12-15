@@ -100,8 +100,8 @@ FctERR NONNULL__ AT42QT1244_Read(I2C_slave_t * const pSlave, uint8_t * data, con
 	{
 		// Checksum calculation
 		uint16_t crc = AT42QT1244_crc16(0, RSHIFT(pSlave->cfg.addr, 1));
-		for (unsigned int i = 0 ; i < sizeof(preamble) ; i++)	{ crc = AT42QT1244_crc16(crc, preamble[i]); }
-		for (unsigned int i = 0 ; i < nb ; i++)					{ crc = AT42QT1244_crc16(crc, read[i]); }
+		for (uintCPU_t i = 0 ; i < sizeof(preamble) ; i++)	{ crc = AT42QT1244_crc16(crc, preamble[i]); }
+		for (uintCPU_t i = 0 ; i < nb ; i++)					{ crc = AT42QT1244_crc16(crc, read[i]); }
 
 		// Copy to destination if crc is ok
 		if (crc == MAKEWORD(read[nb], read[nb + 1]))			{ memcpy(data, read, nb); }

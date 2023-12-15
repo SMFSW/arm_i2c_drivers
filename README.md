@@ -24,6 +24,7 @@ ARM I2C Drivers for various components
 ## Remarks
 
 - define `VERBOSE` in compiler options to printf infos from component handlers
+- define `NO_WARN_I2C_DRIVERS` at project level to disable possible warning messages when multiple devices declared which may have same address
 - Components with a xxx_proc file can access `I2C_slave` instance through `CPNT->cfg.slave_inst`.
 Please keep in mind some components are somewhat custom and needs to be accesses through `CPNT->cfg.slave_inst_xxx` instead if needed.
 
@@ -109,6 +110,9 @@ Please keep in mind some components are somewhat custom and needs to be accesses
   - **STATUS**: WORKING
 
 - **PCA9685**: 16-channel, 12-bit PWM Fm+ I2C-bus LED controller
+  - **STATUS**: WORKING
+
+- **PCA9952**: 16-channel Fm+ I2C-bus 57 mA constant current LED driver (compatible with PCA9955)
   - **STATUS**: WORKING
 
 - **PCA9956**: 24-channel Fm+ I2C-bus 57 mA/20 V constant current LED driver

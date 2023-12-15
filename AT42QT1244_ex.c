@@ -41,7 +41,7 @@ FctERR NONNULL__ AT42QT1244_Send_Setup(AT42QT1244_t * const pCpnt, uint16_t * co
 		memcpy(&SETUP[addr - AT42QT__SETUP_KEYS_THRESHOLD_0] + 1, setup, Nb);
 
 		// Compute CRC excluding COMMAND & CRC registers
-		for (unsigned int i = 1 ; i < sizeof(SETUP) - 2 ; i++)	{ *hcrc = AT42QT1244_crc16(*hcrc, SETUP[i]); }
+		for (uintCPU_t i = 1 ; i < sizeof(SETUP) - 2 ; i++)	{ *hcrc = AT42QT1244_crc16(*hcrc, SETUP[i]); }
 		SETUP[sizeof(SETUP) - 2] = LOBYTE(*hcrc);
 		SETUP[sizeof(SETUP) - 1] = HIBYTE(*hcrc);
 
@@ -61,7 +61,7 @@ FctERR NONNULL__ AT42QT1244_Setup_Keys(AT42QT1244_t * const pCpnt, uint16_t * co
 	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, &TMP[0].Byte, AT42QT__SETUP_KEYS_MODE_0, sizeof(TMP));	// 165 is the NDIL register of the 1st key
 	if (err)	{ return err; }
 
-	for (unsigned int i = 0, j = 1 ; i < AT42QT1244_MAX_KEYS ; i++, j <<= 1)
+	for (uintCPU_t i = 0, j = 1 ; i < AT42QT1244_MAX_KEYS ; i++, j <<= 1)
 	{
 		if (!(mask_keys & j))	{ continue; }	// Skip key if not in the mask
 
@@ -111,7 +111,7 @@ FctERR NONNULL__ AT42QT1244_Get_Keys(AT42QT1244_t * const pCpnt, uint32_t * Keys
 }
 
 
-int NONNULL__ AT42QT1244_is_Calib_Pending(AT42QT1244_t * const pCpnt)
+intCPU_t NONNULL__ AT42QT1244_is_Calib_Pending(AT42QT1244_t * const pCpnt)
 {
 	uAT42QT_REG__DEVICE_STATUS ST;
 	FctERR err = AT42QT1244_Get_Status(pCpnt, &ST);

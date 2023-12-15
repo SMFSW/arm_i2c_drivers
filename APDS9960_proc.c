@@ -158,7 +158,7 @@ __WEAK FctERR NONNULL__ APDS9960_handler(APDS9960_t * const pCpnt)
 		if (GST->Bits.GVALID)
 		{
 			// Read FIFO datas (GDATA[0] holding number of FIFO items)
-			for (unsigned int i = 0 ; i < GDATA[0] ; i++)
+			for (uintCPU_t i = 0 ; i < GDATA[0] ; i++)
 			{
 				err = APDS9960_Read(pCpnt->cfg.slave_inst, GDATAS, APDS9960__GFIFO_U, sizeof(GDATAS));
 				if (err)	{ return err; }

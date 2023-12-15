@@ -32,8 +32,8 @@ FctERR NONNULL__ PCA9624_Set_Mode_LED(PCA9624_t * const pCpnt, const PCA9xxx_cha
 	if (chan > PCA9xxx__PWM8)			{ return ERROR_RANGE; }	// Unknown channel
 	if (mode > PCA9xxx__GROUP_BRIGHT)	{ return ERROR_VALUE; }	// Unknown control mode
 
-	const unsigned int offset = chan / 4;
-	const unsigned int shift = chan * 2;
+	const uintCPU_t offset = chan / 4;
+	const uintCPU_t shift = chan * 2;
 
 	const uint16_t mask = LSHIFT(0x3, shift);
 	const uint16_t val = LSHIFT(mode, shift);
@@ -57,7 +57,7 @@ FctERR NONNULL__ PCA9624_Set_Mode_LEDs(PCA9624_t * const pCpnt, const uint8_t ch
 	{
 		if (LSHIFT(1, chan) & chans)
 		{
-			const unsigned int shift = chan * 2;
+			const uintCPU_t shift = chan * 2;
 			mask |= LSHIFT(0x3, shift);
 			val |= LSHIFT(mode, shift);
 		}
@@ -65,7 +65,7 @@ FctERR NONNULL__ PCA9624_Set_Mode_LEDs(PCA9624_t * const pCpnt, const uint8_t ch
 
 	SET_BITS_VAL(pCpnt->LDR.Word, mask, val);
 
-	for (unsigned int i = 0 ; i < sizeof(LDR) ; i++)	{ LDR[i] = RSHIFT(pCpnt->LDR.Word, i * 8); }
+	for (uintCPU_t i = 0 ; i < sizeof(LDR) ; i++)	{ LDR[i] = RSHIFT(pCpnt->LDR.Word, i * 8); }
 
 	return PCA9624_Write(pCpnt->cfg.slave_inst, LDR, PCA9624__LEDOUT0, sizeof(LDR));
 }
@@ -142,7 +142,7 @@ FctERR NONNULL__ PCA9624_Reset_All(const I2C_HandleTypeDef * const hi2c)
 {
 	uint8_t DATA = 0x06;
 
-	return HALERRtoFCTERR(HAL_I2C_Master_Transmit((I2C_HandleTypeDef *) hi2c, PCA96xx_GENERAL_CALL_ADDR, &DATA, sizeof(DATA), I2C_slave_timeout));
+	return HALERRtoFCTERR(HAL_I2C_Master_Transmit((I2C_HandleTypeDef *) hi2c, I2C_ADDR_General_Call, &DATA, sizeof(DATA), I2C_slave_timeout));
 }
 
 

@@ -37,8 +37,8 @@ FctERR NONNULL__ PCA9532_Set_Mode_LED(PCA9532_t * const pCpnt, const PCA9xxx_cha
 	if (chan > PCA9xxx__PWM16)		{ return ERROR_RANGE; }	// Unknown channel
 	if (mode > PCA95xx__LED_PWM1)	{ return ERROR_VALUE; }	// Unknown control mode
 
-	const unsigned int offset = chan / 4;
-	const unsigned int shift = chan * 2;
+	const uintCPU_t offset = chan / 4;
+	const uintCPU_t shift = chan * 2;
 
 	const uint32_t mask = LSHIFT(0x3, shift);
 	const uint32_t val = LSHIFT(mode, shift);
@@ -62,7 +62,7 @@ FctERR NONNULL__ PCA9532_Set_Mode_LEDs(PCA9532_t * const pCpnt, const uint16_t c
 	{
 		if (LSHIFT(1, chan) & chans)
 		{
-			const unsigned int shift = chan * 2;
+			const uintCPU_t shift = chan * 2;
 			mask |= LSHIFT(0x3, shift);
 			val |= LSHIFT(mode, shift);
 		}
@@ -70,7 +70,7 @@ FctERR NONNULL__ PCA9532_Set_Mode_LEDs(PCA9532_t * const pCpnt, const uint16_t c
 
 	SET_BITS_VAL(pCpnt->LS.DWord, mask, val);
 
-	for (unsigned int i = 0 ; i < sizeof(LS) ; i++)	{ LS[i] = RSHIFT(pCpnt->LS.DWord, i * 8); }
+	for (uintCPU_t i = 0 ; i < sizeof(LS) ; i++)	{ LS[i] = RSHIFT(pCpnt->LS.DWord, i * 8); }
 
 	return PCA9532_Write(pCpnt->cfg.slave_inst, LS, PCA9532__LS0, sizeof(LS));
 }

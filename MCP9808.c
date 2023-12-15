@@ -60,7 +60,7 @@ FctERR NONNULL__ MCP9808_Write(I2C_slave_t * const pSlave, const uint16_t * data
 	}
 	else
 	{
-		for (int i = 0; i < nb ; i++)
+		for (uintCPU_t i = 0; i < nb ; i++)
 		{
 			DATA[0] = HIBYTE(data[i]);
 			DATA[1] = LOBYTE(data[i]);
@@ -92,7 +92,7 @@ FctERR NONNULL__ MCP9808_Read(I2C_slave_t * const pSlave, uint16_t * data, const
 	}
 	else
 	{
-		for (int i = 0; i < nb ; i++)
+		for (uintCPU_t i = 0; i < nb ; i++)
 		{
 			pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, DATA, 2, pSlave->cfg.timeout);
 			if (pSlave->status != HAL_OK)	{ break; }

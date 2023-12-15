@@ -152,7 +152,7 @@ __INLINE FctERR NONNULL_INLINE__ AT42QT1244_Get_Status(AT42QT1244_t * const pCpn
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
 ** \return Calibration status
 **/
-int NONNULL__ AT42QT1244_is_Calib_Pending(AT42QT1244_t * const pCpnt);
+intCPU_t NONNULL__ AT42QT1244_is_Calib_Pending(AT42QT1244_t * const pCpnt);
 
 
 /*******************/

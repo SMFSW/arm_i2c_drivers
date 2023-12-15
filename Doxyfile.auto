@@ -2232,6 +2232,7 @@ PREDEFINED             = DOXY=1 \
                          I2C_PCA9532=&hi2c \
                          I2C_PCA9624=&hi2c \
                          I2C_PCA9685=&hi2c \
+                         I2C_PCA9952=&hi2c \
                          I2C_PCA9956=&hi2c \
                          I2C_PCF8523=&hi2c \
                          I2C_S11059=&hi2c \

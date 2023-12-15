@@ -74,7 +74,7 @@ FctERR NONNULL__ AMG88_Get_pixels_temp(AMG88_t * const pCpnt, float temp[64])
 	err = AMG88_Read(pCpnt->cfg.slave_inst, raw, AMG88__T01L, sizeof(raw));
 	if (err)	{ return err; }
 
-	for (unsigned int i = 0 ; i < sizeof(raw) / 2 ; i++)
+	for (uintCPU_t i = 0 ; i < sizeof(raw) / 2 ; i++)
 	{
 		uint16_t val = MAKEWORD(raw[i * 2], raw[(i * 2) + 1]);
 		temp[i] = AMG88_Convert_Pixel_Raw(val);

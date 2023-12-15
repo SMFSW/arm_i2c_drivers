@@ -10,7 +10,7 @@
 #if defined(HAL_I2C_MODULE_ENABLED)
 #if defined(I2C_TCS3472)
 /****************************************************************/
-#if defined(I2C_TCS3400)
+#if defined(I2C_TCS3400) && !defined(NO_WARN_I2C_DRIVERS)
 #warning "TCS3472 -> Multiple TCS34xx types: use with caution, might have same I2C addresses if on same I2C bus!!!"
 #endif
 /****************************************************************/

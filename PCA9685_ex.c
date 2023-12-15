@@ -203,7 +203,7 @@ FctERR NONNULL__ PCA9685_Reset_All(I2C_HandleTypeDef * hi2c)
 {
 	uint8_t DATA = 0x06;
 
-	return HALERRtoFCTERR(HAL_I2C_Master_Transmit(hi2c, PCA96xx_GENERAL_CALL_ADDR, &DATA, 1, I2C_slave_timeout));
+	return HALERRtoFCTERR(HAL_I2C_Master_Transmit(hi2c, I2C_ADDR_General_Call, &DATA, 1, I2C_slave_timeout));
 }
 
 
