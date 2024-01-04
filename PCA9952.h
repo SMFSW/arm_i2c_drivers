@@ -1,6 +1,6 @@
 /*!\file PCA9952.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2023, SMFSW
+** \copyright MIT (c) 2017-2024, SMFSW
 ** \brief PCA9952 Driver
 ** \details PCA9952: 16-channel Fm+ I2C-bus 57 mA constant current LED driver
 **/
@@ -32,7 +32,7 @@
 // *****************************************************************************
 #ifndef PCA9952_BASE_ADDR
 //! \note Define PCA9952_BASE_ADDR to change default device base address
-#define	PCA9952_BASE_ADDR		0x01		//!< PCA9952 Base Address
+#define	PCA9952_BASE_ADDR		0x60		//!< PCA9952 Base Address
 #endif
 
 

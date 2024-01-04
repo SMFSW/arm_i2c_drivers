@@ -1,6 +1,6 @@
 /*!\file FM24C_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2023, SMFSW
+** \copyright MIT (c) 2017-2024, SMFSW
 ** \brief FM24C FRAM Driver (bank switching at I2C address level protocol) extensions
 ** \details FM24C16B: 16-Kbit (2K * 8) Serial I2C F-RAM
 **			FM24C04B: 4-Kbit (512 * 8) Serial I2C F-RAM

@@ -1,6 +1,6 @@
 /*!\file I2CMEM_ex.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2023, SMFSW
+** \copyright MIT (c) 2017-2024, SMFSW
 ** \brief FRAM / EEPROM Driver extensions
 ** \note Fully compatible between EEPROM / FRAM type components
 ** \note When EEPROM compatibility is not needed, buf_size at init can be set to \ref I2CMEM_WBUF_NONE for more efficiency

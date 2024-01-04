@@ -1,6 +1,6 @@
 /*!\file MCP9808_proc.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2023, SMFSW
+** \copyright MIT (c) 2017-2024, SMFSW
 ** \brief MCP9808 Driver procedures
 ** \details MCP9808: +/-0.5C Maximum Accuracy Digital Temperature Sensor
 **/
