@@ -69,7 +69,7 @@ static FctERR NONNULL__ I2CMEM_Write_Page(I2CMEM_t * const pCpnt, const uint8_t 
 
 	if (pSlave->cfg.mem_size == I2C_8B_REG)
 	{
-		i2c_addr += RSHIFT(addr, 8);
+		i2c_addr += (RSHIFT(addr, 7) & 0x0E);
 		mem_addr &= 0xFF;
 	}
 
@@ -103,7 +103,7 @@ static FctERR NONNULL__ I2CMEM_Read_Page(I2CMEM_t * const pCpnt, uint8_t * data,
 
 	if (pSlave->cfg.mem_size == I2C_8B_REG)
 	{
-		i2c_addr += RSHIFT(addr, 8);
+		i2c_addr += (RSHIFT(addr, 7) & 0x0E);
 		mem_addr &= 0xFF;
 	}
 
