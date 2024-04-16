@@ -1,0 +1,24 @@
+<map id="L3GD20H_ex.h" name="L3GD20H_ex.h">
+<area shape="rect" id="Node000001" title="L3GD20H Driver extensions." alt="" coords="34,5,145,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="49,229,130,256"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,34,55,55,35,81,18,116,11,155,8,168,11,180,28,202,51,220,47,224,24,206,6,182,3,168,6,154,13,115,30,79,51,52,73,30"/>
+<area shape="rect" id="Node000003" href="$da/d81/_l3_g_d20_h_8h.html" title="L3GD20H Driver." alt="" coords="45,80,135,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="85,33,84,65,78,65,80,32"/>
+<area shape="poly" id="edge14_Node000003_Node000001" title=" " alt="" coords="94,79,96,47,101,47,99,80"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="67,109,46,123,28,140,17,160,16,170,19,180,34,202,55,219,51,223,30,205,14,182,11,170,12,158,24,137,43,119,64,105"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="316,155,440,181"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="136,103,314,148,313,153,135,109"/>
+<area shape="rect" id="Node000007" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="176,155,292,181"/>
+<area shape="poly" id="edge8_Node000003_Node000007" title=" " alt="" coords="116,105,197,145,194,150,114,110"/>
+<area shape="rect" id="Node000008" href="$da/d6b/_l3_g_d20_h__proc_8h.html" title="L3GD20H Driver procedures." alt="" coords="29,155,151,181"/>
+<area shape="poly" id="edge11_Node000003_Node000008" title=" " alt="" coords="85,107,84,140,78,140,80,107"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="328,184,146,230,145,225,327,179"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="227,229,291,256"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="359,184,293,224,291,219,356,180"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="341,229,414,256"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="380,182,380,214,375,214,375,182"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="210,184,129,225,127,220,208,179"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="241,181,252,214,247,216,236,183"/>
+<area shape="poly" id="edge12_Node000008_Node000002" title=" " alt="" coords="92,182,92,214,87,214,87,182"/>
+<area shape="poly" id="edge13_Node000008_Node000003" title=" " alt="" coords="94,154,96,122,101,122,99,154"/>
+</map>

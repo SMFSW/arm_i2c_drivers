@@ -1,0 +1,15 @@
+<map id="L3GD20H_Init" name="L3GD20H_Init">
+<area shape="rect" id="Node000001" title="Initialization for L3GD20H peripheral." alt="" coords="5,56,110,83"/>
+<area shape="rect" id="Node000002" href="$d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state." alt="" coords="186,5,299,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,53,177,34,178,39,110,58"/>
+<area shape="rect" id="Node000003" href="$d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization." alt="" coords="190,56,295,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="110,67,175,67,175,72,110,72"/>
+<area shape="rect" id="Node000004" href="$d5/d09/_l3_g_d20_h__proc_8c.html#af3f4ecf98be12c5f3484456b84e272d4" title="Initialization Sequence for L3GD20H peripheral." alt="" coords="158,107,327,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="110,81,178,100,177,105,108,86"/>
+<area shape="rect" id="Node000005" href="$d3/d38/_l3_g_d20_h_8c.html#afdd21e54b40a924c25c375d7deb483f1" title="I2C Read function for L3GD20H." alt="" coords="375,107,492,133"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="328,117,360,117,360,123,328,123"/>
+<area shape="rect" id="Node000006" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="540,81,652,108"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="492,108,525,103,526,108,493,113"/>
+<area shape="rect" id="Node000007" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="545,132,647,159"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="493,127,531,132,530,138,492,132"/>
+</map>

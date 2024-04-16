@@ -1,5 +1,9 @@
 <map id="AT42QT1244_Read" name="AT42QT1244_Read">
-<area shape="rect" id="node2" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="207,5,324,32"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="212,56,319,83"/>
-<area shape="rect" id="node4" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#ad2998daf6e9e01b5d72b96ac64a2f78e" title="16bits CRC calculation for AT42QT1244 " alt="" coords="193,107,337,133"/>
+<area shape="rect" id="Node000001" title="I2C Read function for AT42QT1244." alt="" coords="5,56,141,83"/>
+<area shape="rect" id="Node000002" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#ad2998daf6e9e01b5d72b96ac64a2f78e" title="16bits CRC calculation for AT42QT1244" alt="" coords="189,5,325,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,53,191,34,192,39,125,58"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="201,56,313,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="141,67,186,67,186,72,141,72"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="206,107,308,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="125,81,192,100,191,105,124,86"/>
 </map>

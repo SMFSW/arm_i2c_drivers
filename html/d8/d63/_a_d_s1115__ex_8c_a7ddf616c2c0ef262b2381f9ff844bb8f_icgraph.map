@@ -1,7 +1,7 @@
 <map id="ADS1115_RDY_GPIO_Get" name="ADS1115_RDY_GPIO_Get">
-<area shape="rect" id="node2" href="$d8/d4b/_a_d_s1115__ex_8h.html#a79e57b4463b2ac3b43b152ce61850ed2" title="Get ADS1115 raw channel value. " alt="" coords="235,5,417,32"/>
-<area shape="rect" id="node4" href="$d4/d35/_a_d_s1115__proc_8h.html#a520e784a7c3122c8211c2b62d3fb7967" title="Handler for ADS1115 peripheral GPIO interrupt. " alt="" coords="654,56,806,83"/>
-<area shape="rect" id="node3" href="$d4/d35/_a_d_s1115__proc_8h.html#a2a5488401e3392d27760b90ff5f31be2" title="Handler for ADS1115 peripheral. " alt="" coords="465,5,603,32"/>
-<area shape="rect" id="node6" href="$d4/d35/_a_d_s1115__proc_8h.html#a3871b0c6703b8b4bb3915172dfd98072" title="Handler for all ADS1115 peripherals. " alt="" coords="651,5,809,32"/>
-<area shape="rect" id="node5" href="$d4/d35/_a_d_s1115__proc_8h.html#afee391a510cb180305c75f06c455ec6e" title="Handler for all ADS1115 peripherals GPIO interrupt. " alt="" coords="857,56,1031,83"/>
+<area shape="rect" id="Node000001" title="Ready GPIO pin getter for ADS1115." alt="" coords="398,5,577,32"/>
+<area shape="rect" id="Node000002" href="$da/d08/_a_d_s1115__proc_8c.html#a520e784a7c3122c8211c2b62d3fb7967" title="Handler for ADS1115 peripheral GPIO interrupt." alt="" coords="212,5,350,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="383,21,351,21,351,16,383,16"/>
+<area shape="rect" id="Node000003" href="$d4/d35/_a_d_s1115__proc_8h.html#afee391a510cb180305c75f06c455ec6e" title="Handler for all ADS1115 peripherals GPIO interrupt." alt="" coords="5,5,164,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="197,21,164,21,164,16,197,16"/>
 </map>

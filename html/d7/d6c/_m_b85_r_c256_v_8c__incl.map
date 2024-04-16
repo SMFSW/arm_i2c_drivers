@@ -1,7 +1,26 @@
 <map id="MB85RC256V.c" name="MB85RC256V.c">
-<area shape="rect" id="node2" href="$d7/d3b/_m_b85_r_c256_v_8h.html" title="MB85RC256V Driver. " alt="" coords="219,80,337,107"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="523,155,657,181"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="373,155,498,181"/>
-<area shape="rect" id="node8" href="$da/dc5/_m_b85_r_c256_v__proc_8h.html" title="MB85RC256V Driver procedures. " alt="" coords="29,155,183,181"/>
-<area shape="rect" id="node9" href="$d5/d5f/_m_b85_r_c256_v__ex_8h.html" title="MB85RC256V Driver extensions. " alt="" coords="207,155,349,181"/>
+<area shape="rect" id="Node000001" title="MB85RC256V FRAM Driver." alt="" coords="212,5,327,32"/>
+<area shape="rect" id="Node000002" href="$d7/d3b/_m_b85_r_c256_v_8h.html" title="MB85RC256V FRAM Driver." alt="" coords="212,80,327,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="272,33,272,65,267,65,267,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="229,229,310,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="212,103,99,122,49,137,30,146,19,156,8,178,9,187,14,195,33,209,62,220,138,233,214,238,214,243,137,238,61,225,30,214,10,198,4,189,3,178,14,153,27,142,47,132,97,116,211,98"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="502,155,627,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="322,105,499,148,498,153,321,110"/>
+<area shape="rect" id="Node000007" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="362,155,479,181"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="297,105,382,145,380,150,295,110"/>
+<area shape="rect" id="Node000008" href="$da/dc5/_m_b85_r_c256_v__proc_8h.html" title="MB85RC256V FRAM Driver procedures." alt="" coords="29,155,177,181"/>
+<area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="235,110,140,150,137,145,233,105"/>
+<area shape="rect" id="Node000009" href="$d5/d5f/_m_b85_r_c256_v__ex_8h.html" title="MB85RC256V FRAM Driver extensions." alt="" coords="201,155,338,181"/>
+<area shape="poly" id="edge13_Node000002_Node000009" title=" " alt="" coords="265,107,264,140,258,140,260,107"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="513,185,326,230,324,225,512,179"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="414,229,478,256"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="545,184,480,224,477,219,542,180"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="528,229,601,256"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="567,182,567,214,562,214,562,182"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="395,184,310,225,308,220,393,179"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="427,181,439,214,434,216,422,183"/>
+<area shape="poly" id="edge12_Node000008_Node000002" title=" " alt="" coords="138,152,233,111,236,116,140,156"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="133,179,228,220,226,225,131,184"/>
+<area shape="poly" id="edge15_Node000009_Node000002" title=" " alt="" coords="274,154,276,122,281,122,279,154"/>
+<area shape="poly" id="edge14_Node000009_Node000003" title=" " alt="" coords="272,182,272,214,267,214,267,182"/>
 </map>

@@ -1,3 +1,5 @@
 <map id="S11059_t" name="S11059_t">
-<area shape="rect" id="node2" href="$df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters " alt="" coords="5,5,100,32"/>
+<area shape="rect" id="Node000001" title="S11059 user interface struct." alt="" coords="13,96,89,123"/>
+<area shape="rect" id="Node000002" href="$df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters" alt="" coords="5,5,97,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,47,54,95,48,95,48,47"/>
 </map>

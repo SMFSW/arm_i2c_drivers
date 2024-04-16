@@ -1,3 +1,13 @@
 <map id="MCP9808_Get_Temperature_Raw" name="MCP9808_Get_Temperature_Raw">
-<area shape="rect" id="node2" href="$d6/d5e/_m_c_p9808__proc_8h.html#ad446802e702cb0e7e926b9f02d4cb069" title="Get the temperature. " alt="" coords="285,5,485,32"/>
+<area shape="rect" id="Node000001" title="Get MCP9808 Configuration." alt="" coords="823,31,1043,57"/>
+<area shape="rect" id="Node000002" href="$de/deb/_m_c_p9808__proc_8c.html#ad446802e702cb0e7e926b9f02d4cb069" title="Get the temperature." alt="" coords="588,31,775,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="808,47,775,47,775,41,808,41"/>
+<area shape="rect" id="Node000003" href="$de/deb/_m_c_p9808__proc_8c.html#a21a5213bef06c833d59b6053be862c6b" title="Handler for MCP9808 peripheral." alt="" coords="412,31,540,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="573,47,541,47,541,41,573,41"/>
+<area shape="rect" id="Node000004" href="$d6/d5e/_m_c_p9808__proc_8h.html#a80ec245d8846d77a209b2c1d67f436df" title="Handler for all MCP9808 peripherals." alt="" coords="216,5,364,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="397,36,364,31,365,26,398,31"/>
+<area shape="rect" id="Node000005" href="$de/deb/_m_c_p9808__proc_8c.html#a366a4d5c21eefda7d12af3bdcf800a11" title="Handler for MCP9808 peripheral GPIO interrupt." alt="" coords="219,56,361,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="398,57,362,62,361,57,397,52"/>
+<area shape="rect" id="Node000006" href="$d6/d5e/_m_c_p9808__proc_8h.html#a07f88cc900aba5f4bb109f76f7c26a28" title="Handler for all MCP9808 peripherals GPIO interrupt." alt="" coords="5,56,168,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="204,72,168,72,168,67,204,67"/>
 </map>

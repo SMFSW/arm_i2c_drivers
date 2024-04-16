@@ -1,6 +1,15 @@
 <map id="MTCH6102_Configuration_Request" name="MTCH6102_Configuration_Request">
-<area shape="rect" id="node2" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a4c1612bb1afca9818d54ff05c5fa4191" title="Execute MTCH6102 command. " alt="" coords="236,31,400,57"/>
-<area shape="rect" id="node3" href="$da/d78/_m_t_c_h6102_8c.html#aadac3361a556fe464ea0df2d9a8366ae" title="I2C Write function for MTCH6102. " alt="" coords="448,5,576,32"/>
-<area shape="rect" id="node5" href="$da/d78/_m_t_c_h6102_8c.html#a5aa313bbfe74f756dd83101dbefea059" title="I2C Read function for MTCH6102. " alt="" coords="448,56,576,83"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="624,31,741,57"/>
+<area shape="rect" id="Node000001" title="Configure MTCH6102controller (after parameters have been changed)" alt="" coords="5,23,178,65"/>
+<area shape="rect" id="Node000002" href="$d4/d5d/_m_t_c_h6102__ex_8c.html#a4c1612bb1afca9818d54ff05c5fa4191" title="Execute MTCH6102 command." alt="" coords="226,31,381,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,41,210,41,210,47,178,47"/>
+<area shape="rect" id="Node000003" href="$da/d78/_m_t_c_h6102_8c.html#a5aa313bbfe74f756dd83101dbefea059" title="I2C Read function for MTCH6102." alt="" coords="429,5,555,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="381,31,414,26,414,32,382,36"/>
+<area shape="rect" id="Node000006" href="$da/d78/_m_t_c_h6102_8c.html#aadac3361a556fe464ea0df2d9a8366ae" title="I2C Write function for MTCH6102." alt="" coords="430,56,555,83"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="382,52,415,56,414,62,381,57"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="603,5,715,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="556,16,588,16,588,21,556,21"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="608,56,710,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="540,30,599,49,598,54,538,35"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="538,53,598,34,599,39,540,58"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="555,67,593,67,593,72,555,72"/>
 </map>

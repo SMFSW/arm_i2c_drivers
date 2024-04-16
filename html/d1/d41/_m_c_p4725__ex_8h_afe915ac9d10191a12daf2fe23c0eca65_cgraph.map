@@ -1,3 +1,5 @@
 <map id="MCP4725_Reset" name="MCP4725_Reset">
-<area shape="rect" id="node2" href="$d9/d93/_m_c_p4725_8c.html#a360ce22071738038f3da2cd7c2efa362" title="I2C general call for MCP4725. " alt="" coords="177,5,347,32"/>
+<area shape="rect" id="Node000001" title="General call reset function for MCP4725." alt="" coords="5,5,127,32"/>
+<area shape="rect" id="Node000002" href="$d9/d93/_m_c_p4725_8c.html#a360ce22071738038f3da2cd7c2efa362" title="I2C general call for MCP4725." alt="" coords="175,5,336,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,16,160,16,160,21,127,21"/>
 </map>

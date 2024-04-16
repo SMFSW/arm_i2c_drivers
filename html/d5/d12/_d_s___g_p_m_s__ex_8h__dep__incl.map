@@ -1,7 +1,15 @@
 <map id="DS_GPMS_ex.h" name="DS_GPMS_ex.h">
-<area shape="rect" id="node2" href="$dd/d26/_d_s___g_p_m_s_8h.html" title="DS&#45;GPM.S Driver. " alt="" coords="145,80,243,107"/>
-<area shape="rect" id="node3" href="$db/d9a/_d_s___g_p_m_s_8c.html" title="DS&#45;GPM.S Driver. " alt="" coords="5,155,103,181"/>
-<area shape="rect" id="node4" href="$de/d15/_d_s___g_p_m_s__proc_8h.html" title="DS&#45;GPM.S Driver procedures. " alt="" coords="127,155,261,181"/>
-<area shape="rect" id="node5" href="$df/df0/_d_s___g_p_m_s__ex_8c.html" title="DS&#45;GPM.S Driver extensions. " alt="" coords="285,155,404,181"/>
-<area shape="rect" id="node6" href="$dd/d17/_d_s___g_p_m_s__proc_8c.html" title="DS&#45;GPM.S Driver procedures. " alt="" coords="428,155,560,181"/>
+<area shape="rect" id="Node000001" title="DS&#45;GPM.S Driver extensions." alt="" coords="275,5,393,32"/>
+<area shape="rect" id="Node000002" href="$dd/d26/_d_s___g_p_m_s_8h.html" title="DS&#45;GPM.S Driver." alt="" coords="285,80,383,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="328,47,330,79,324,80,323,47"/>
+<area shape="poly" id="edge4_Node000002_Node000001" title=" " alt="" coords="340,65,338,33,344,32,345,65"/>
+<area shape="rect" id="Node000003" href="$db/d9a/_d_s___g_p_m_s_8c.html" title="DS&#45;GPM.S Driver." alt="" coords="5,155,103,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="272,113,104,157,102,151,271,108"/>
+<area shape="rect" id="Node000004" href="$df/df0/_d_s___g_p_m_s__ex_8c.html" title="DS&#45;GPM.S Driver extensions." alt="" coords="127,155,245,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="296,116,213,156,211,152,294,111"/>
+<area shape="rect" id="Node000005" href="$dd/d17/_d_s___g_p_m_s__proc_8c.html" title="DS&#45;GPM.S Driver procedures." alt="" coords="269,155,399,181"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="337,122,337,154,331,154,331,122"/>
+<area shape="rect" id="Node000006" href="$de/d15/_d_s___g_p_m_s__proc_8h.html" title="DS&#45;GPM.S Driver procedures." alt="" coords="423,155,552,181"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="368,111,454,152,452,156,365,116"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="454,150,367,110,369,105,456,145"/>
 </map>

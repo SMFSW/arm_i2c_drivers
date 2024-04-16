@@ -1,6 +1,13 @@
 <map id="MTCH6102_Set_Mode" name="MTCH6102_Set_Mode">
-<area shape="rect" id="node2" href="$db/de8/_m_t_c_h6102__proc_8h.html#a15eac00544e71163632f5a2625a3b888" title="Configure MTCH6102 parameters needing configure step. " alt="" coords="479,5,638,32"/>
-<area shape="rect" id="node4" href="$db/de8/_m_t_c_h6102__proc_8h.html#a7669cc66b66883d092cea28bcb21d68b" title="Get manufacturing test results. " alt="" coords="215,56,421,83"/>
-<area shape="rect" id="node3" href="$db/de8/_m_t_c_h6102__proc_8h.html#a6cb756e62481a522d8fba783461ac9d4" title="Initialization Sequence for MTCH6102 peripheral. " alt="" coords="696,31,883,57"/>
-<area shape="rect" id="node5" href="$db/de8/_m_t_c_h6102__proc_8h.html#ab50e4af94c662a975f33cc565f78bffa" title="Set MTCH6102 coordinates rotation. " alt="" coords="469,56,648,83"/>
+<area shape="rect" id="Node000001" title="Set MTCH6102 gesture decoding." alt="" coords="850,31,1004,57"/>
+<area shape="rect" id="Node000002" href="$d2/d60/_m_t_c_h6102__proc_8c.html#a15eac00544e71163632f5a2625a3b888" title="Configure MTCH6102 parameters needing configure step." alt="" coords="624,5,775,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="835,36,775,30,776,24,836,31"/>
+<area shape="rect" id="Node000006" href="$d2/d60/_m_t_c_h6102__proc_8c.html#a7669cc66b66883d092cea28bcb21d68b" title="Get manufacturing test results." alt="" coords="597,56,802,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="835,57,803,61,802,55,835,52"/>
+<area shape="rect" id="Node000003" href="$d2/d60/_m_t_c_h6102__proc_8c.html#a6cb756e62481a522d8fba783461ac9d4" title="Initialization Sequence for MTCH6102 peripheral." alt="" coords="371,5,549,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="609,21,550,21,550,16,609,16"/>
+<area shape="rect" id="Node000004" href="$da/d78/_m_t_c_h6102_8c.html#abf6d89f4579cd7a0ed9439be4b4b748c" title="Initialization for MTCH6102 peripheral." alt="" coords="210,5,323,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="356,21,323,21,323,16,356,16"/>
+<area shape="rect" id="Node000005" href="$da/d78/_m_t_c_h6102_8c.html#a390a418649fc2fd61e2f6d9fde260d56" title="Initialization for MTCH6102 peripheral." alt="" coords="5,5,162,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="195,21,162,21,162,16,195,16"/>
 </map>

@@ -1,0 +1,9 @@
+<map id="PCA9952_PutVals" name="PCA9952_PutVals">
+<area shape="rect" id="Node000001" title="Send PWM duty cycle array of values to apply on a PCA9952." alt="" coords="267,56,396,83"/>
+<area shape="rect" id="Node000002" href="$d5/df0/_p_c_a9952__ex_8h.html#aa45c824114a8154208e9013b74e09f3f" title="Send all PWM duty cycle array of values to apply on a PCA9952 (for the 24 channels)" alt="" coords="36,5,188,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="255,55,172,35,174,30,257,49"/>
+<area shape="rect" id="Node000003" href="$d5/df0/_p_c_a9952__ex_8h.html#aa6f23b2b1f9b091d988702b5ba831646" title="Send PWM duty cycle array of values to apply on a PCA9952." alt="" coords="28,56,196,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="252,72,196,72,196,67,252,67"/>
+<area shape="rect" id="Node000004" href="$d5/df0/_p_c_a9952__ex_8h.html#aa0e13dce5d374b9c3b596d9a48b0afd5" title="Send PWM duty cycle array of values to apply on a PCA9952." alt="" coords="5,107,219,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="257,89,174,109,172,103,255,84"/>
+</map>

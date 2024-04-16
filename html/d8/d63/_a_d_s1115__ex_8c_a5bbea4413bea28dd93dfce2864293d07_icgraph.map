@@ -1,7 +1,11 @@
 <map id="ADS1115_Start_NextConversion" name="ADS1115_Start_NextConversion">
-<area shape="rect" id="node2" href="$d8/d4b/_a_d_s1115__ex_8h.html#a8d0fd1ae6f0af8b925b61a2a869e49c7" title="Get ADS1115 high threshold. " alt="" coords="283,5,493,32"/>
-<area shape="rect" id="node3" href="$d4/d35/_a_d_s1115__proc_8h.html#a2a5488401e3392d27760b90ff5f31be2" title="Handler for ADS1115 peripheral. " alt="" coords="319,56,457,83"/>
-<area shape="rect" id="node4" href="$d4/d35/_a_d_s1115__proc_8h.html#a520e784a7c3122c8211c2b62d3fb7967" title="Handler for ADS1115 peripheral GPIO interrupt. " alt="" coords="545,31,697,57"/>
-<area shape="rect" id="node6" href="$d4/d35/_a_d_s1115__proc_8h.html#a3871b0c6703b8b4bb3915172dfd98072" title="Handler for all ADS1115 peripherals. " alt="" coords="541,81,700,108"/>
-<area shape="rect" id="node5" href="$d4/d35/_a_d_s1115__proc_8h.html#afee391a510cb180305c75f06c455ec6e" title="Handler for all ADS1115 peripherals GPIO interrupt. " alt="" coords="748,31,921,57"/>
+<area shape="rect" id="Node000001" title="Start ADS1115 Next conversion." alt="" coords="576,31,788,57"/>
+<area shape="rect" id="Node000002" href="$da/d08/_a_d_s1115__proc_8c.html#a2a5488401e3392d27760b90ff5f31be2" title="Handler for ADS1115 peripheral." alt="" coords="404,31,528,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="562,47,529,47,529,41,562,41"/>
+<area shape="rect" id="Node000003" href="$d4/d35/_a_d_s1115__proc_8h.html#a3871b0c6703b8b4bb3915172dfd98072" title="Handler for all ADS1115 peripherals." alt="" coords="212,5,356,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="389,36,356,31,356,26,390,31"/>
+<area shape="rect" id="Node000004" href="$da/d08/_a_d_s1115__proc_8c.html#a520e784a7c3122c8211c2b62d3fb7967" title="Handler for ADS1115 peripheral GPIO interrupt." alt="" coords="215,56,353,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="390,57,354,62,353,57,389,52"/>
+<area shape="rect" id="Node000005" href="$d4/d35/_a_d_s1115__proc_8h.html#afee391a510cb180305c75f06c455ec6e" title="Handler for all ADS1115 peripherals GPIO interrupt." alt="" coords="5,56,164,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="200,72,164,72,164,67,200,67"/>
 </map>

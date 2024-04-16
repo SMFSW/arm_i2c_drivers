@@ -1,8 +1,13 @@
 <map id="TSL2591_Set_CPL" name="TSL2591_Set_CPL">
-<area shape="rect" id="node2" href="$dc/d24/_t_s_l2591__ex_8h.html#a43a60f5a8041bd651751a2a70c3432af" title="Gain configuration. " alt="" coords="229,5,372,32"/>
-<area shape="rect" id="node4" href="$d7/d6e/_t_s_l2591__proc_8h.html#a5faab4b1d7b74b74edc2fdd8c4db4db4" title="Initialization Sequence for TSL2591 peripheral. " alt="" coords="649,81,824,108"/>
-<area shape="rect" id="node7" href="$dc/d24/_t_s_l2591__ex_8h.html#a0fc1edba0e94a1a51b9f974069a93fda" title="Integration time configuration. " alt="" coords="191,56,411,83"/>
-<area shape="rect" id="node3" href="$dc/d24/_t_s_l2591__ex_8h.html#ab74880c2ecd88a5c1eb7ca2d3d7ef032" title="Write TSL2591 Config. " alt="" coords="459,56,601,83"/>
-<area shape="rect" id="node5" href="$da/d96/_t_s_l2591_8h.html#ac65422b0b784bbaddce0317515cb16be" title="Initialization for TSL2591 peripheral. " alt="" coords="872,81,975,108"/>
-<area shape="rect" id="node6" href="$da/d96/_t_s_l2591_8h.html#a340d5559e9623f12628e013d814ac718" title="Initialization for TSL2591 peripheral. " alt="" coords="1023,81,1172,108"/>
+<area shape="rect" id="Node000001" title="Set proper CPL value (Counts per kiloLux)" alt="" coords="593,56,727,83"/>
+<area shape="rect" id="Node000002" href="$db/dba/_t_s_l2591__proc_8c.html#a5faab4b1d7b74b74edc2fdd8c4db4db4" title="Initialization Sequence for TSL2591 peripheral." alt="" coords="362,5,525,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="585,55,503,35,504,30,586,49"/>
+<area shape="rect" id="Node000005" href="$d0/d23/_t_s_l2591__ex_8c.html#a43a60f5a8041bd651751a2a70c3432af" title="Gain configuration." alt="" coords="376,56,510,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="579,72,511,72,511,67,579,67"/>
+<area shape="rect" id="Node000006" href="$d0/d23/_t_s_l2591__ex_8c.html#a0fc1edba0e94a1a51b9f974069a93fda" title="Integration time configuration." alt="" coords="341,107,545,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="586,89,504,109,503,103,585,84"/>
+<area shape="rect" id="Node000003" href="$d2/d68/_t_s_l2591_8c.html#ac65422b0b784bbaddce0317515cb16be" title="Initialization for TSL2591 peripheral." alt="" coords="195,5,293,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="347,21,293,21,293,16,347,16"/>
+<area shape="rect" id="Node000004" href="$d2/d68/_t_s_l2591_8c.html#a340d5559e9623f12628e013d814ac718" title="Initialization for TSL2591 peripheral." alt="" coords="5,5,147,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="180,21,147,21,147,16,180,16"/>
 </map>

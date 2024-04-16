@@ -1,3 +1,5 @@
 <map id="BMP180_Set_SeaLevel_Pressure" name="BMP180_Set_SeaLevel_Pressure">
-<area shape="rect" id="node2" href="$da/d3c/shared___a_p_s_8c.html#a74c279e4d9a609d3f13f66342e7c731f" title="Sea Level pressure getter (in hPa / mbar) " alt="" coords="221,13,395,39"/>
+<area shape="rect" id="Node000001" title="Setter of Sea Level pressure for BMP180 peripheral." alt="" coords="5,5,165,48"/>
+<area shape="rect" id="Node000002" href="$da/d3c/shared___a_p_s_8c.html#a74c279e4d9a609d3f13f66342e7c731f" title="Sea Level pressure getter (in hPa / mbar)" alt="" coords="213,13,375,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,24,198,24,198,29,165,29"/>
 </map>

@@ -1,11 +1,31 @@
 <map id="PCA9956_Init" name="PCA9956_Init">
-<area shape="rect" id="node2" href="$d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization. " alt="" coords="195,43,303,70"/>
-<area shape="rect" id="node3" href="$db/d9b/_p_c_a9956__proc_8c.html#a0cbd9081f3d6999611db262c3e3d6baf" title="Initialization Sequence for PCA9956 peripheral. " alt="" coords="160,94,337,121"/>
-<area shape="rect" id="node10" href="$d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state. " alt="" coords="189,145,308,171"/>
-<area shape="rect" id="node4" href="$df/d5e/_p_c_a9956_8c.html#a631d23c191d905d40f272c8488d175b4" title="I2C Write function for PCA9956. " alt="" coords="652,94,771,121"/>
-<area shape="rect" id="node5" href="$dd/d22/_p_c_a9956__ex_8c.html#a1c293d3b30faed552452a938635e5025" title="Set auto increment option for PCA9956 registers. " alt="" coords="385,195,604,222"/>
-<area shape="rect" id="node7" href="$dd/d22/_p_c_a9956__ex_8c.html#a9634dd720e3a109a32be37d7721181a4" title="Set PCA9956 peripheral multiple LEDs mode. " alt="" coords="399,43,590,70"/>
-<area shape="rect" id="node8" href="$dd/d22/_p_c_a9956__ex_8c.html#aea495515529a59b632b86612b77a61b4" title="Set PCA9956 output gain control value. " alt="" coords="423,94,566,121"/>
-<area shape="rect" id="node9" href="$dd/d22/_p_c_a9956__ex_8c.html#abc361384337269a4aa7edc0f32c0a84e" title="Set PCA9956 peripheral delay between channels. " alt="" coords="417,145,572,171"/>
-<area shape="rect" id="node6" href="$df/d5e/_p_c_a9956_8c.html#a45016e9d78da0bffbd4bceb1a3478b75" title="I2C Read function for PCA9956. " alt="" coords="652,195,771,222"/>
+<area shape="rect" id="Node000001" title="Initialization for PCA9956 peripheral." alt="" coords="5,56,108,83"/>
+<area shape="rect" id="Node000002" href="$d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state." alt="" coords="183,5,296,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,53,174,34,175,39,108,58"/>
+<area shape="rect" id="Node000003" href="$d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization." alt="" coords="187,56,292,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="108,67,172,67,172,72,108,72"/>
+<area shape="rect" id="Node000004" href="$db/d9b/_p_c_a9956__proc_8c.html#a0cbd9081f3d6999611db262c3e3d6baf" title="Initialization Sequence for PCA9956 peripheral." alt="" coords="156,107,323,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="108,81,175,100,174,105,107,86"/>
+<area shape="rect" id="Node000005" href="$dd/d22/_p_c_a9956__ex_8c.html#a1c293d3b30faed552452a938635e5025" title="Set auto increment option for PCA9956 registers." alt="" coords="371,5,574,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="298,104,322,92,336,80,345,68,354,54,370,42,382,36,384,40,372,46,358,58,349,71,340,84,324,97,301,108"/>
+<area shape="rect" id="Node000009" href="$df/d5e/_p_c_a9956_8c.html#a631d23c191d905d40f272c8488d175b4" title="I2C Write function for PCA9956." alt="" coords="623,81,737,108"/>
+<area shape="poly" id="edge17_Node000004_Node000009" title=" " alt="" coords="259,132,308,165,339,181,372,193,428,208,474,215,519,211,573,194,600,179,623,160,659,119,663,122,627,164,603,183,575,198,520,216,474,220,427,213,370,199,337,186,305,170,256,136"/>
+<area shape="rect" id="Node000010" href="$dd/d22/_p_c_a9956__ex_8c.html#aea495515529a59b632b86612b77a61b4" title="Set PCA9956 output gain control value." alt="" coords="402,56,544,83"/>
+<area shape="poly" id="edge11_Node000004_Node000010" title=" " alt="" coords="304,103,393,84,395,89,305,109"/>
+<area shape="rect" id="Node000011" href="$dd/d22/_p_c_a9956__ex_8c.html#a876eb5685fc1057c47dec6005c3e5069" title="Set PCA9956 peripheral multiple LEDs mode." alt="" coords="381,107,564,133"/>
+<area shape="poly" id="edge13_Node000004_Node000011" title=" " alt="" coords="323,117,366,117,366,123,323,123"/>
+<area shape="rect" id="Node000012" href="$dd/d22/_p_c_a9956__ex_8c.html#abc361384337269a4aa7edc0f32c0a84e" title="Set PCA9956 peripheral delay between channels." alt="" coords="400,157,546,184"/>
+<area shape="poly" id="edge15_Node000004_Node000012" title=" " alt="" coords="305,131,395,151,393,156,304,137"/>
+<area shape="rect" id="Node000006" href="$df/d5e/_p_c_a9956_8c.html#a45016e9d78da0bffbd4bceb1a3478b75" title="I2C Read function for PCA9956." alt="" coords="622,31,738,57"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="575,28,608,33,608,38,574,34"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="540,30,575,42,600,54,624,67,635,72,633,77,621,72,597,58,573,46,538,35"/>
+<area shape="rect" id="Node000007" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="786,31,897,57"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="738,41,771,41,771,47,738,47"/>
+<area shape="rect" id="Node000008" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="790,81,893,108"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="726,55,784,74,782,79,724,61"/>
+<area shape="poly" id="edge9_Node000009_Node000007" title=" " alt="" coords="724,78,782,60,784,65,726,83"/>
+<area shape="poly" id="edge10_Node000009_Node000008" title=" " alt="" coords="738,92,775,92,775,97,738,97"/>
+<area shape="poly" id="edge12_Node000010_Node000009" title=" " alt="" coords="545,75,608,83,607,89,544,81"/>
+<area shape="poly" id="edge14_Node000011_Node000009" title=" " alt="" coords="565,106,608,101,609,106,565,111"/>
+<area shape="poly" id="edge16_Node000012_Node000009" title=" " alt="" coords="536,154,573,143,640,113,642,118,575,148,538,159"/>
 </map>

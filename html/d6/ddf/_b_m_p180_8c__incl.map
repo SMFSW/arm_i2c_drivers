@@ -1,8 +1,30 @@
 <map id="BMP180.c" name="BMP180.c">
-<area shape="rect" id="node2" href="$d3/d7d/_b_m_p180_8h.html" title="BMP180 Driver. " alt="" coords="245,80,331,107"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="155,304,290,331"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="5,304,131,331"/>
-<area shape="rect" id="node8" href="$dc/d50/_b_m_p180__proc_8h.html" title="BMP180 Driver procedures. " alt="" coords="227,155,349,181"/>
-<area shape="rect" id="node10" href="$d8/dfb/_b_m_p180__ex_8h.html" title="BMP180 Driver extensions. " alt="" coords="373,155,481,181"/>
-<area shape="rect" id="node9" href="$d8/daa/shared___a_p_s_8h.html" title="Ambient Pressure Sensing shared. " alt="" coords="230,229,341,256"/>
+<area shape="rect" id="Node000001" title="BMP180 Driver." alt="" coords="228,5,310,32"/>
+<area shape="rect" id="Node000002" href="$d3/d7d/_b_m_p180_8h.html" title="BMP180 Driver." alt="" coords="228,80,310,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="272,33,272,65,266,65,266,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="292,379,374,405"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="311,91,350,95,393,104,435,123,453,136,468,153,482,183,483,214,474,245,457,275,410,330,363,371,360,367,406,326,452,272,469,243,478,213,477,184,464,156,449,140,432,127,392,109,349,100,310,97"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="145,304,270,331"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="247,109,222,129,202,156,192,190,191,226,195,260,202,289,197,290,190,261,186,226,187,189,197,153,218,125,244,105"/>
+<area shape="rect" id="Node000007" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="5,304,122,331"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="250,109,219,130,188,157,126,229,81,293,77,290,122,225,184,153,216,126,247,105"/>
+<area shape="rect" id="Node000008" href="$dc/d50/_b_m_p180__proc_8h.html" title="BMP180 Driver procedures." alt="" coords="212,155,326,181"/>
+<area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="264,107,263,140,257,140,259,107"/>
+<area shape="rect" id="Node000010" href="$d8/dfb/_b_m_p180__ex_8h.html" title="BMP180 Driver extensions." alt="" coords="351,155,454,181"/>
+<area shape="poly" id="edge16_Node000002_Node000010" title=" " alt="" coords="286,105,360,145,357,150,284,110"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="231,329,300,369,297,373,228,334"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="57,379,121,405"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="188,333,123,373,120,368,185,329"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="171,379,244,405"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="210,331,210,364,205,364,205,331"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="111,329,279,373,277,379,110,334"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="70,330,82,364,77,365,65,332"/>
+<area shape="poly" id="edge12_Node000008_Node000002" title=" " alt="" coords="273,154,275,122,280,122,278,154"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="290,180,314,200,334,228,344,264,347,301,341,364,336,364,342,301,339,265,329,230,310,204,287,184"/>
+<area shape="rect" id="Node000009" href="$d8/daa/shared___a_p_s_8h.html" title="Ambient Pressure Sensing shared." alt="" coords="215,229,320,256"/>
+<area shape="poly" id="edge13_Node000008_Node000009" title=" " alt="" coords="271,182,271,215,265,214,266,182"/>
+<area shape="poly" id="edge14_Node000009_Node000003" title=" " alt="" coords="276,255,324,364,319,366,271,258"/>
+<area shape="poly" id="edge15_Node000009_Node000004" title=" " alt="" coords="259,258,229,294,225,291,255,255"/>
+<area shape="poly" id="edge18_Node000010_Node000002" title=" " alt="" coords="385,156,311,116,313,111,387,152"/>
+<area shape="poly" id="edge17_Node000010_Node000003" title=" " alt="" coords="403,182,390,247,366,332,350,367,345,365,361,330,385,246,398,181"/>
 </map>

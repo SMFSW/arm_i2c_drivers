@@ -1,6 +1,9 @@
 <map id="APDS9960_Set_Prox_Drive_Strength" name="APDS9960_Set_Prox_Drive_Strength">
-<area shape="rect" id="node2" href="$da/db5/_a_p_d_s9960__ex_8h.html#a9e0a4dcaa7b5367cc1277a76ffe89a81" title="Proximity interrupt thresholds configuration. " alt="" coords="248,5,392,32"/>
-<area shape="rect" id="node3" href="$df/d17/_a_p_d_s9960__proc_8h.html#a6f90f8c748ac7c65463a1893d66ed20a" title="Initialization Sequence for APDS9960 peripheral. " alt="" coords="440,31,627,57"/>
-<area shape="rect" id="node4" href="$d2/dbf/_a_p_d_s9960_8h.html#a765a10873be3783397b1985f49a76d0a" title="Initialization for APDS9960 peripheral. " alt="" coords="675,31,791,57"/>
-<area shape="rect" id="node5" href="$d2/dbf/_a_p_d_s9960_8h.html#a2234fed110d5973db4b9d30d2e5098fd" title="Initialization for APDS9960 peripheral. " alt="" coords="839,31,1001,57"/>
+<area shape="rect" id="Node000001" title="Proximity Drive configuration." alt="" coords="591,5,777,48"/>
+<area shape="rect" id="Node000002" href="$dd/d2e/_a_p_d_s9960__proc_8c.html#a6f90f8c748ac7c65463a1893d66ed20a" title="Initialization Sequence for APDS9960 peripheral." alt="" coords="367,13,543,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="576,29,544,29,544,24,576,24"/>
+<area shape="rect" id="Node000003" href="$db/db1/_a_p_d_s9960_8c.html#a765a10873be3783397b1985f49a76d0a" title="Initialization for APDS9960 peripheral." alt="" coords="208,13,319,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="352,29,319,29,319,24,352,24"/>
+<area shape="rect" id="Node000004" href="$db/db1/_a_p_d_s9960_8c.html#a2234fed110d5973db4b9d30d2e5098fd" title="Initialization for APDS9960 peripheral." alt="" coords="5,13,160,40"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="193,29,160,29,160,24,193,24"/>
 </map>

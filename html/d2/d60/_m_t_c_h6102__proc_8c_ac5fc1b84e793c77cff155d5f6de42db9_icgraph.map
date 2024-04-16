@@ -1,8 +1,11 @@
 <map id="MTCH6102_diag_to_str" name="MTCH6102_diag_to_str">
-<area shape="rect" id="node2" href="$db/de8/_m_t_c_h6102__proc_8h.html#a342679a8eaa19001a2d661ca14c50139" title="Handler for MTCH6102 peripheral. " alt="" coords="221,56,367,83"/>
-<area shape="rect" id="node4" href="$db/de8/_m_t_c_h6102__proc_8h.html#ab50e4af94c662a975f33cc565f78bffa" title="Set MTCH6102 coordinates rotation. " alt="" coords="631,31,809,57"/>
-<area shape="rect" id="node3" href="$db/de8/_m_t_c_h6102__proc_8h.html#ac6e9878bc657bf9eedfe117c920ce6b4" title="Handler for MTCH6102 peripheral GPIO interrupt. " alt="" coords="418,81,578,108"/>
-<area shape="rect" id="node7" href="$db/de8/_m_t_c_h6102__proc_8h.html#a312bb1870758990998465cec43da89e5" title="Handler for all MTCH6102 peripherals. " alt="" coords="415,132,581,159"/>
-<area shape="rect" id="node6" href="$db/de8/_m_t_c_h6102__proc_8h.html#aec03380608432ad9a44d2af18a40615a" title="Handler for all MTCH6102 peripherals GPIO interrupt. " alt="" coords="629,81,811,108"/>
-<area shape="rect" id="node5" href="$db/de8/_m_t_c_h6102__proc_8h.html#a6cb756e62481a522d8fba783461ac9d4" title="Initialization Sequence for MTCH6102 peripheral. " alt="" coords="859,31,1045,57"/>
+<area shape="rect" id="Node000001" title="Get diagnostic string from diagnostic data." alt="" coords="615,31,775,57"/>
+<area shape="rect" id="Node000002" href="$d2/d60/_m_t_c_h6102__proc_8c.html#a342679a8eaa19001a2d661ca14c50139" title="Handler for MTCH6102 peripheral." alt="" coords="430,31,567,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="600,47,568,47,568,41,600,41"/>
+<area shape="rect" id="Node000003" href="$db/de8/_m_t_c_h6102__proc_8h.html#a312bb1870758990998465cec43da89e5" title="Handler for all MTCH6102 peripherals." alt="" coords="225,5,382,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="415,36,382,32,383,26,415,31"/>
+<area shape="rect" id="Node000004" href="$d2/d60/_m_t_c_h6102__proc_8c.html#ac6e9878bc657bf9eedfe117c920ce6b4" title="Handler for MTCH6102 peripheral GPIO interrupt." alt="" coords="228,56,379,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="415,57,380,62,379,57,415,52"/>
+<area shape="rect" id="Node000005" href="$db/de8/_m_t_c_h6102__proc_8h.html#aec03380608432ad9a44d2af18a40615a" title="Handler for all MTCH6102 peripherals GPIO interrupt." alt="" coords="5,56,177,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="213,72,177,72,177,67,213,67"/>
 </map>

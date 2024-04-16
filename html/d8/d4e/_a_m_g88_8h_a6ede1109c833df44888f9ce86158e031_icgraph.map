@@ -1,3 +1,5 @@
 <map id="AMG88_Init" name="AMG88_Init">
-<area shape="rect" id="node2" href="$d8/d4e/_a_m_g88_8h.html#ab22f18773c85421d2b743e415ed14fa7" title="Initialization for AMG88 peripheral. " alt="" coords="148,5,288,32"/>
+<area shape="rect" id="Node000001" title="Initialization for AMG88 peripheral." alt="" coords="187,5,277,32"/>
+<area shape="rect" id="Node000002" href="$df/d52/_a_m_g88_8c.html#ab22f18773c85421d2b743e415ed14fa7" title="Initialization for AMG88 peripheral." alt="" coords="5,5,139,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,21,139,21,139,16,172,16"/>
 </map>

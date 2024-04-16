@@ -1,5 +1,9 @@
 <map id="AMG88_Read_Word" name="AMG88_Read_Word">
-<area shape="rect" id="node2" href="$df/d52/_a_m_g88_8c.html#ade19de4334fdd1b3aa58c0b71b0979e5" title="I2C Read function for AMG88. " alt="" coords="197,31,304,57"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="352,5,469,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="357,56,464,83"/>
+<area shape="rect" id="Node000001" title="I2C Word Read (little endian) function for AMG88." alt="" coords="5,31,146,57"/>
+<area shape="rect" id="Node000002" href="$df/d52/_a_m_g88_8c.html#ade19de4334fdd1b3aa58c0b71b0979e5" title="I2C Read function for AMG88." alt="" coords="194,31,297,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,41,179,41,179,47,146,47"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="345,5,456,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="297,33,330,28,331,33,298,38"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="350,56,452,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="298,50,335,56,334,61,297,55"/>
 </map>

@@ -1,10 +1,9 @@
 <map id="MTCH6102_Set_Debounce" name="MTCH6102_Set_Debounce">
-<area shape="rect" id="node2" href="$da/d78/_m_t_c_h6102_8c.html#aadac3361a556fe464ea0df2d9a8366ae" title="I2C Write function for MTCH6102. " alt="" coords="923,151,1051,177"/>
-<area shape="rect" id="node4" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a80d1f444381283a7bc2883f0ed086c9a" title="Get MTCH6102 Active period. " alt="" coords="456,49,623,90"/>
-<area shape="rect" id="node6" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a1e8131729e0b592b9f75de9e1eabf978" title="Get MTCH6102 Idle period. " alt="" coords="679,5,875,32"/>
-<area shape="rect" id="node7" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a411fa06e29c5cafb719e8735446df85d" title="Set MTCH6102 raw acquisition filter. " alt="" coords="244,121,400,148"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="1099,124,1216,151"/>
-<area shape="rect" id="node5" href="$da/d78/_m_t_c_h6102_8c.html#a5aa313bbfe74f756dd83101dbefea059" title="I2C Read function for MTCH6102. " alt="" coords="923,96,1051,123"/>
-<area shape="rect" id="node8" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a0f9ba08c0ae08f4871e96da7288dc1b5" title="Configure MTCH6102controller (after parameters have been changed) " alt="" coords="448,114,631,155"/>
-<area shape="rect" id="node9" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a4c1612bb1afca9818d54ff05c5fa4191" title="Execute MTCH6102 command. " alt="" coords="695,121,859,148"/>
+<area shape="rect" id="Node000001" title="Set MTCH6102 debounce period." alt="" coords="5,31,187,57"/>
+<area shape="rect" id="Node000002" href="$da/d78/_m_t_c_h6102_8c.html#aadac3361a556fe464ea0df2d9a8366ae" title="I2C Write function for MTCH6102." alt="" coords="235,31,360,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,41,220,41,220,47,187,47"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="408,5,519,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="360,32,393,27,393,32,361,37"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="413,56,515,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="361,51,398,57,398,62,360,56"/>
 </map>

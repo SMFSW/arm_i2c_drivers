@@ -1,3 +1,5 @@
 <map id="PCF8523_handler" name="PCF8523_handler">
-<area shape="rect" id="node2" href="$d4/d61/_p_c_f8523__proc_8h.html#a519c4d20da41104d7ec672566ad70e36" title="Handler for PCF8523 peripheral GPIO interrupt. " alt="" coords="187,5,335,32"/>
+<area shape="rect" id="Node000001" title="Handler for PCF8523 peripheral." alt="" coords="193,5,318,32"/>
+<area shape="rect" id="Node000002" href="$d4/ded/_p_c_f8523__proc_8c.html#a519c4d20da41104d7ec672566ad70e36" title="Handler for PCF8523 peripheral GPIO interrupt." alt="" coords="5,5,145,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,21,145,21,145,16,178,16"/>
 </map>

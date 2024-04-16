@@ -1,6 +1,7 @@
 <map id="AMG88_INT_GPIO_Get" name="AMG88_INT_GPIO_Get">
-<area shape="rect" id="node2" href="$dc/db3/_a_m_g88__ex_8h.html#a6cf21b59c3b4cf75d9a82b881e84bacd" title="Get pixel raw value. " alt="" coords="216,5,383,32"/>
-<area shape="rect" id="node4" href="$da/de9/_a_m_g88__proc_8h.html#af7796031f9fb1c4fb52f5262c1612ab9" title="Handler for AMG88 peripheral GPIO interrupt. " alt="" coords="230,56,369,83"/>
-<area shape="rect" id="node3" href="$dc/db3/_a_m_g88__ex_8h.html#a7b51a0bfe1a0a94cf2b4da3d89a56ccc" title="Get pixel temperature. " alt="" coords="431,5,605,32"/>
-<area shape="rect" id="node5" href="$da/de9/_a_m_g88__proc_8h.html#a8f4206ea34c183c5f6dc2b23043c7d63" title="Handler for all AMG88 peripherals GPIO interrupt. " alt="" coords="439,56,597,83"/>
+<area shape="rect" id="Node000001" title="Interrupt GPIO pin getter for AMG88." alt="" coords="378,5,540,32"/>
+<area shape="rect" id="Node000002" href="$d4/d51/_a_m_g88__proc_8c.html#af7796031f9fb1c4fb52f5262c1612ab9" title="Handler for AMG88 peripheral GPIO interrupt." alt="" coords="202,5,330,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="363,21,331,21,331,16,363,16"/>
+<area shape="rect" id="Node000003" href="$da/de9/_a_m_g88__proc_8h.html#a8f4206ea34c183c5f6dc2b23043c7d63" title="Handler for all AMG88 peripherals GPIO interrupt." alt="" coords="5,5,154,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="187,21,154,21,154,16,187,16"/>
 </map>

@@ -1,3 +1,5 @@
 <map id="MCP9808_Init" name="MCP9808_Init">
-<area shape="rect" id="node2" href="$d8/d57/_m_c_p9808_8h.html#a9ffcff895e9844967086a52af6c82dd4" title="Initialization for MCP9808 peripheral. " alt="" coords="161,5,316,32"/>
+<area shape="rect" id="Node000001" title="Initialization of the MCP9808 peripheral." alt="" coords="201,5,305,32"/>
+<area shape="rect" id="Node000002" href="$df/d8e/_m_c_p9808_8c.html#a9ffcff895e9844967086a52af6c82dd4" title="Initialization for MCP9808 peripheral." alt="" coords="5,5,153,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,21,153,21,153,16,186,16"/>
 </map>

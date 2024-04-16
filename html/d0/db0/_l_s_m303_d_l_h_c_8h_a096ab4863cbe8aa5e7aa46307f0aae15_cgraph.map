@@ -1,0 +1,11 @@
+<map id="LSM303DLHC_Init_Single" name="LSM303DLHC_Init_Single">
+<area shape="rect" id="Node000001" title="Initialization for LSM303DLHC peripheral." alt="" coords="5,56,180,83"/>
+<area shape="rect" id="Node000002" href="$d5/d82/_l_s_m303_d_l_h_c_8c.html#ab2988987c3887b63c686e2319f1e75ca" title="Initialization for LSM303DLHC peripheral." alt="" coords="228,56,359,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,67,213,67,213,72,180,72"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state." alt="" coords="449,5,561,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="352,53,434,33,435,38,353,58"/>
+<area shape="rect" id="Node000004" href="$d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization." alt="" coords="453,56,557,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="359,67,438,67,438,72,359,72"/>
+<area shape="rect" id="Node000005" href="$db/d9f/_l_s_m303_d_l_h_c__proc_8c.html#ab1f5bede9a30faa31e06139c7d51a719" title="Initialization Sequence for LSM303DLHC peripheral." alt="" coords="407,107,603,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="353,81,433,100,432,105,352,86"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="L3GD20H_INT_GPIO_Get" name="L3GD20H_INT_GPIO_Get">
+<area shape="rect" id="Node000001" title="Interrupt GPIO pin getter for L3GD20H." alt="" coords="406,5,582,32"/>
+<area shape="rect" id="Node000002" href="$d5/d09/_l3_g_d20_h__proc_8c.html#a151c4e28850965015ba00066c00a1ba9" title="Handler for L3GD20H peripheral GPIO interrupt." alt="" coords="216,5,358,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="391,21,359,21,359,16,391,16"/>
+<area shape="rect" id="Node000003" href="$da/d6b/_l3_g_d20_h__proc_8h.html#a7ceadeb417abf9254f53e336f4548ead" title="Handler for all L3GD20H peripherals GPIO interrupt." alt="" coords="5,5,168,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="201,21,168,21,168,16,201,16"/>
+</map>

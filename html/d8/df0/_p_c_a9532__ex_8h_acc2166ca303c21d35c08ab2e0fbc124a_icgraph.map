@@ -1,7 +1,11 @@
 <map id="PCA9532_DutyCycle_To_Byte" name="PCA9532_DutyCycle_To_Byte">
-<area shape="rect" id="node2" href="$d8/df0/_p_c_a9532__ex_8h.html#a125d6303517af2bdef5b0f0e435f639d" title="Set PWMx duty cycle of PCA9532. " alt="" coords="260,5,399,32"/>
-<area shape="rect" id="node4" href="$de/da7/_p_c_a9532__proc_8h.html#a95ddc3ce36d7d60e26b08ce405ea2fc3" title="Initialization Sequence for PCA9532 peripheral. " alt="" coords="668,31,845,57"/>
-<area shape="rect" id="node3" href="$d8/df0/_p_c_a9532__ex_8h.html#a03b2ea671687b1a439c90bc4f946542b" title="Convert PWMx byte register to Duty Cycle (in %) " alt="" coords="447,5,620,32"/>
-<area shape="rect" id="node5" href="$d3/df9/_p_c_a9532_8h.html#ab2c83a49b54020805a88671f067bf6d6" title="Initialization for PCA9532 peripheral. " alt="" coords="893,31,1000,57"/>
-<area shape="rect" id="node6" href="$d3/df9/_p_c_a9532_8h.html#ae3bc95cfa1ac91a201ac0543ced4bb03" title="Initialization for PCA9532 peripheral. " alt="" coords="1048,31,1200,57"/>
+<area shape="rect" id="Node000001" title="Convert Frequency to PWMx byte register." alt="" coords="564,31,766,57"/>
+<area shape="rect" id="Node000002" href="$de/dea/_p_c_a9532__proc_8c.html#a95ddc3ce36d7d60e26b08ce405ea2fc3" title="Initialization Sequence for PCA9532 peripheral." alt="" coords="349,5,516,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="549,34,516,30,517,25,550,29"/>
+<area shape="rect" id="Node000005" href="$d6/daa/_p_c_a9532__ex_8c.html#a125d6303517af2bdef5b0f0e435f639d" title="Set PWMx duty cycle of PCA9532." alt="" coords="367,56,499,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="550,59,500,65,499,59,549,54"/>
+<area shape="rect" id="Node000003" href="$d2/d28/_p_c_a9532_8c.html#ab2c83a49b54020805a88671f067bf6d6" title="Initialization for PCA9532 peripheral." alt="" coords="199,5,301,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="334,21,301,21,301,16,334,16"/>
+<area shape="rect" id="Node000004" href="$d2/d28/_p_c_a9532_8c.html#ae3bc95cfa1ac91a201ac0543ced4bb03" title="Initialization for PCA9532 peripheral." alt="" coords="5,5,151,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="184,21,151,21,151,16,184,16"/>
 </map>

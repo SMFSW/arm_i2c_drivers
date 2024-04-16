@@ -1,4 +1,7 @@
 <map id="DRV2605L_t" name="DRV2605L_t">
-<area shape="rect" id="node2" href="$df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters " alt="" coords="5,5,100,32"/>
-<area shape="rect" id="node3" href="$dc/d95/struct_peripheral_g_p_i_o__t.html" title="i2c peripheral GPIO pin parameters " alt="" coords="124,5,253,32"/>
+<area shape="rect" id="Node000001" title="DRV2605L user interface struct." alt="" coords="69,112,164,139"/>
+<area shape="rect" id="Node000002" href="$df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters" alt="" coords="5,5,97,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,44,93,87,109,110,105,113,88,89,63,46"/>
+<area shape="rect" id="Node000003" href="$dc/d95/struct_peripheral_g_p_i_o__t.html" title="i2c peripheral GPIO pin parameters" alt="" coords="121,5,245,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="177,47,156,90,134,113,130,110,151,86,172,45"/>
 </map>

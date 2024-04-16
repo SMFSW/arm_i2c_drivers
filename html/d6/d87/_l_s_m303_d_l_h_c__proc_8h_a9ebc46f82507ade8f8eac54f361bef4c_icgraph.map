@@ -1,0 +1,9 @@
+<map id="LSM303DLHC_LA_handler" name="LSM303DLHC_LA_handler">
+<area shape="rect" id="Node000001" title="Handler for LSM303DLHC peripheral (Linear Acceleration)" alt="" coords="449,31,627,57"/>
+<area shape="rect" id="Node000002" href="$d6/d87/_l_s_m303_d_l_h_c__proc_8h.html#a0b0689fba03f5a0bf5406db4b4107b50" title="Handler for all LSM303DLHC peripherals." alt="" coords="217,5,393,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="434,35,393,31,393,26,435,30"/>
+<area shape="rect" id="Node000003" href="$db/d9f/_l_s_m303_d_l_h_c__proc_8c.html#a6118e1bac9b617b471d9342fd57f0729" title="Handler for LSM303DLHC peripheral (Linear Acceleration) GPIO interrupt." alt="" coords="209,56,401,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="435,58,402,62,401,56,434,53"/>
+<area shape="rect" id="Node000004" href="$d6/d87/_l_s_m303_d_l_h_c__proc_8h.html#a3948429eaf4134478cfb9f18dd9536bf" title="Handler for all LSM303DLHC peripherals GPIO interrupt." alt="" coords="5,48,161,91"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="194,72,161,72,161,67,194,67"/>
+</map>

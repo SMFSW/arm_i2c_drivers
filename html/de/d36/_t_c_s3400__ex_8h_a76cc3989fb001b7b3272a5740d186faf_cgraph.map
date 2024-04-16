@@ -1,6 +1,11 @@
 <map id="TCS3400_Get_Channel" name="TCS3400_Get_Channel">
-<area shape="rect" id="node2" href="$d4/d1b/_t_c_s3400_8c.html#acc3bea23b7c5501757050b6b9b64a34c" title="I2C Word Read (low endian) function for TCS3400. " alt="" coords="220,31,375,57"/>
-<area shape="rect" id="node3" href="$d4/d1b/_t_c_s3400_8c.html#ac6b81ecacb0000ae8a9e4cd223b07ed2" title="I2C Read function for TCS3400. " alt="" coords="423,31,539,57"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="587,5,704,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="592,56,699,83"/>
+<area shape="rect" id="Node000001" title="Get Specific channel conversion." alt="" coords="5,31,165,57"/>
+<area shape="rect" id="Node000002" href="$d4/d1b/_t_c_s3400_8c.html#acc3bea23b7c5501757050b6b9b64a34c" title="I2C Word Read (little endian) function for TCS3400." alt="" coords="213,31,364,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,41,198,41,198,47,165,47"/>
+<area shape="rect" id="Node000003" href="$d4/d1b/_t_c_s3400_8c.html#ac6b81ecacb0000ae8a9e4cd223b07ed2" title="I2C Read function for TCS3400." alt="" coords="412,31,526,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="364,41,397,41,397,47,364,47"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="574,5,686,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="526,32,559,27,560,32,527,38"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="579,56,681,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="527,50,565,56,564,62,526,56"/>
 </map>

@@ -1,6 +1,9 @@
 <map id="TCS3472_handler" name="TCS3472_handler">
-<area shape="rect" id="node2" href="$d6/d96/_t_c_s3472__proc_8h.html#abf8990e17a9cc0be48c1d013ffc6a551" title="Handler for TCS3472 peripheral GPIO interrupt. " alt="" coords="190,56,338,83"/>
-<area shape="rect" id="node3" href="$d6/d96/_t_c_s3472__proc_8h.html#a1f754548bca0ed2b46643cab4188506f" title="Get current Illuminance (in lux) " alt="" coords="405,5,543,32"/>
-<area shape="rect" id="node5" href="$d6/d96/_t_c_s3472__proc_8h.html#a30d0f7d5618c2ff746f1408dcd55e8f1" title="Handler for all TCS3472 peripherals. " alt="" coords="187,107,341,133"/>
-<area shape="rect" id="node4" href="$d6/d96/_t_c_s3472__proc_8h.html#a02d7d423ebd9075573eddbee6b53a52d" title="Handler for all TCS3472 peripherals GPIO interrupt. " alt="" coords="389,56,559,83"/>
+<area shape="rect" id="Node000001" title="Handler for TCS3472 peripheral." alt="" coords="406,31,531,57"/>
+<area shape="rect" id="Node000002" href="$d6/d96/_t_c_s3472__proc_8h.html#a30d0f7d5618c2ff746f1408dcd55e8f1" title="Handler for all TCS3472 peripherals." alt="" coords="213,5,358,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="391,36,358,31,359,26,392,31"/>
+<area shape="rect" id="Node000003" href="$d7/d71/_t_c_s3472__proc_8c.html#abf8990e17a9cc0be48c1d013ffc6a551" title="Handler for TCS3472 peripheral GPIO interrupt." alt="" coords="216,56,355,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="392,57,356,62,355,57,391,52"/>
+<area shape="rect" id="Node000004" href="$d6/d96/_t_c_s3472__proc_8h.html#a02d7d423ebd9075573eddbee6b53a52d" title="Handler for all TCS3472 peripherals GPIO interrupt." alt="" coords="5,56,165,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="201,72,165,72,165,67,201,67"/>
 </map>

@@ -1,3 +1,5 @@
 <map id="PCF8523_Init_Sequence" name="PCF8523_Init_Sequence">
-<area shape="rect" id="node2" href="$dd/d42/_p_c_f8523_8h.html#aa61e54475342c7382da01eb61e44da09" title="Initialization for PCF8523 peripheral peripheral. " alt="" coords="228,5,332,32"/>
+<area shape="rect" id="Node000001" title="Initialization Sequence for PCF8523 peripheral." alt="" coords="155,5,321,32"/>
+<area shape="rect" id="Node000002" href="$df/d5b/_p_c_f8523_8c.html#aa61e54475342c7382da01eb61e44da09" title="Initialization for PCF8523 peripheral peripheral." alt="" coords="5,5,107,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,21,107,21,107,16,140,16"/>
 </map>

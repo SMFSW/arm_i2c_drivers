@@ -1,7 +1,15 @@
 <map id="AT42QT1244.h" name="AT42QT1244.h">
-<area shape="rect" id="node2" href="$d3/dc4/_a_t42_q_t1244_8c.html" title="AT42QT1244 Driver. " alt="" coords="5,80,119,107"/>
-<area shape="rect" id="node3" href="$d4/d47/_a_t42_q_t1244__proc_8h.html" title="AT42QT1244 Driver procedures. " alt="" coords="143,80,293,107"/>
-<area shape="rect" id="node4" href="$df/de4/_a_t42_q_t1244__ex_8h.html" title="AT42QT1244 Driver extensions. " alt="" coords="317,80,453,107"/>
-<area shape="rect" id="node5" href="$df/d72/_a_t42_q_t1244__ex_8c.html" title="AT42QT1244 Driver extensions. " alt="" coords="477,80,612,107"/>
-<area shape="rect" id="node6" href="$dd/de3/_a_t42_q_t1244__proc_8c.html" title="AT42QT1244 Driver procedures. " alt="" coords="636,80,784,107"/>
+<area shape="rect" id="Node000001" title="AT42QT1244 Driver." alt="" coords="301,5,410,32"/>
+<area shape="rect" id="Node000002" href="$d3/dc4/_a_t42_q_t1244_8c.html" title="AT42QT1244 Driver." alt="" coords="5,80,114,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="290,39,112,82,111,77,289,33"/>
+<area shape="rect" id="Node000003" href="$df/d72/_a_t42_q_t1244__ex_8c.html" title="AT42QT1244 Driver extensions." alt="" coords="138,80,267,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="317,41,230,82,228,77,315,36"/>
+<area shape="rect" id="Node000004" href="$df/de4/_a_t42_q_t1244__ex_8h.html" title="AT42QT1244 Driver extensions." alt="" coords="291,80,420,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="349,47,351,79,346,80,344,47"/>
+<area shape="rect" id="Node000005" href="$dd/de3/_a_t42_q_t1244__proc_8c.html" title="AT42QT1244 Driver procedures." alt="" coords="444,80,584,107"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="397,36,487,77,485,82,395,41"/>
+<area shape="rect" id="Node000006" href="$d4/d47/_a_t42_q_t1244__proc_8h.html" title="AT42QT1244 Driver procedures." alt="" coords="608,80,748,107"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="420,33,615,77,614,82,419,39"/>
+<area shape="poly" id="edge4_Node000004_Node000001" title=" " alt="" coords="362,65,360,33,365,32,367,65"/>
+<area shape="poly" id="edge7_Node000006_Node000001" title=" " alt="" coords="614,79,410,33,411,28,615,74"/>
 </map>

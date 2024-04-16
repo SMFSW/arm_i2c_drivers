@@ -1,6 +1,11 @@
 <map id="APDS9960_Set_PILT" name="APDS9960_Set_PILT">
-<area shape="rect" id="node2" href="$da/db5/_a_p_d_s9960__ex_8h.html#a9e0a4dcaa7b5367cc1277a76ffe89a81" title="Proximity interrupt thresholds configuration. " alt="" coords="203,5,347,32"/>
-<area shape="rect" id="node3" href="$df/d17/_a_p_d_s9960__proc_8h.html#a6f90f8c748ac7c65463a1893d66ed20a" title="Initialization Sequence for APDS9960 peripheral. " alt="" coords="395,5,581,32"/>
-<area shape="rect" id="node4" href="$d2/dbf/_a_p_d_s9960_8h.html#a765a10873be3783397b1985f49a76d0a" title="Initialization for APDS9960 peripheral. " alt="" coords="629,5,745,32"/>
-<area shape="rect" id="node5" href="$d2/dbf/_a_p_d_s9960_8h.html#a2234fed110d5973db4b9d30d2e5098fd" title="Initialization for APDS9960 peripheral. " alt="" coords="793,5,956,32"/>
+<area shape="rect" id="Node000001" title="Proximity interrupt low threshold configuration." alt="" coords="781,5,928,32"/>
+<area shape="rect" id="Node000002" href="$da/db5/_a_p_d_s9960__ex_8h.html#a9e0a4dcaa7b5367cc1277a76ffe89a81" title="Proximity interrupt thresholds configuration." alt="" coords="591,5,733,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="766,21,733,21,733,16,766,16"/>
+<area shape="rect" id="Node000003" href="$dd/d2e/_a_p_d_s9960__proc_8c.html#a6f90f8c748ac7c65463a1893d66ed20a" title="Initialization Sequence for APDS9960 peripheral." alt="" coords="367,5,543,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="577,21,544,21,544,16,577,16"/>
+<area shape="rect" id="Node000004" href="$db/db1/_a_p_d_s9960_8c.html#a765a10873be3783397b1985f49a76d0a" title="Initialization for APDS9960 peripheral." alt="" coords="208,5,319,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="352,21,319,21,319,16,352,16"/>
+<area shape="rect" id="Node000005" href="$db/db1/_a_p_d_s9960_8c.html#a2234fed110d5973db4b9d30d2e5098fd" title="Initialization for APDS9960 peripheral." alt="" coords="5,5,160,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="193,21,160,21,160,16,193,16"/>
 </map>

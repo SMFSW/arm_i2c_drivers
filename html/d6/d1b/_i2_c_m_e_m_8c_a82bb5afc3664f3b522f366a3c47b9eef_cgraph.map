@@ -1,0 +1,7 @@
+<map id="I2CMEM_Init" name="I2CMEM_Init">
+<area shape="rect" id="Node000001" title="Initialization for I2CMEM peripheral." alt="" coords="5,31,104,57"/>
+<area shape="rect" id="Node000002" href="$d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state." alt="" coords="152,5,264,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,33,136,28,137,33,104,39"/>
+<area shape="rect" id="Node000003" href="$d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization." alt="" coords="156,56,260,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="104,49,141,56,140,61,103,55"/>
+</map>

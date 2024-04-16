@@ -1,0 +1,7 @@
+<map id="LSM303DLHC_t" name="LSM303DLHC_t">
+<area shape="rect" id="Node000001" title=" " alt="" coords="58,128,175,155"/>
+<area shape="rect" id="Node000002" href="$df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters" alt="" coords="5,5,97,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,46,59,75,70,103,81,115,94,125,91,130,77,119,65,105,53,76,49,47"/>
+<area shape="rect" id="Node000003" href="$dc/d95/struct_peripheral_g_p_i_o__t.html" title="i2c peripheral GPIO pin parameters" alt="" coords="121,5,245,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,47,170,76,156,105,135,129,131,126,151,103,165,74,175,45"/>
+</map>

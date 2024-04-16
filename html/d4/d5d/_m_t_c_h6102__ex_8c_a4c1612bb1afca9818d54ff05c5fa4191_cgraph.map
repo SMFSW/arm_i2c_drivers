@@ -1,5 +1,13 @@
 <map id="MTCH6102_Command" name="MTCH6102_Command">
-<area shape="rect" id="node2" href="$da/d78/_m_t_c_h6102_8c.html#aadac3361a556fe464ea0df2d9a8366ae" title="I2C Write function for MTCH6102. " alt="" coords="217,5,345,32"/>
-<area shape="rect" id="node4" href="$da/d78/_m_t_c_h6102_8c.html#a5aa313bbfe74f756dd83101dbefea059" title="I2C Read function for MTCH6102. " alt="" coords="217,56,345,83"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="393,31,511,57"/>
+<area shape="rect" id="Node000001" title="Execute MTCH6102 command." alt="" coords="5,31,161,57"/>
+<area shape="rect" id="Node000002" href="$da/d78/_m_t_c_h6102_8c.html#a5aa313bbfe74f756dd83101dbefea059" title="I2C Read function for MTCH6102." alt="" coords="209,5,335,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,31,193,26,194,32,161,36"/>
+<area shape="rect" id="Node000005" href="$da/d78/_m_t_c_h6102_8c.html#aadac3361a556fe464ea0df2d9a8366ae" title="I2C Write function for MTCH6102." alt="" coords="209,56,335,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="161,52,195,56,194,62,161,57"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="383,5,494,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="335,16,368,16,368,21,335,21"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="388,56,490,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="319,30,379,49,377,54,318,35"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="318,53,377,34,379,39,319,58"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="335,67,373,67,373,72,335,72"/>
 </map>

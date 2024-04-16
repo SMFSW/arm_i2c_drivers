@@ -1,8 +1,32 @@
 <map id="APDS9960.h" name="APDS9960.h">
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="155,229,290,256"/>
-<area shape="rect" id="node6" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="5,229,131,256"/>
-<area shape="rect" id="node7" href="$df/d17/_a_p_d_s9960__proc_8h.html" title="APDS9960 Driver procedures. " alt="" coords="218,80,355,107"/>
-<area shape="rect" id="node10" href="$da/db5/_a_p_d_s9960__ex_8h.html" title="APDS9960 Driver extensions. " alt="" coords="379,80,503,107"/>
-<area shape="rect" id="node8" href="$db/d70/shared___a_l_s_8h.html" title="Ambient Light Sensing shared. " alt="" coords="291,155,402,181"/>
-<area shape="rect" id="node9" href="$df/ded/shared___c_l_s_8h.html" title="Color Light Sensing shared. " alt="" coords="157,155,267,181"/>
+<area shape="rect" id="Node000001" title="APDS9960 Driver." alt="" coords="230,5,327,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="318,304,399,331"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="328,24,427,44,471,59,498,78,523,99,533,108,539,121,537,139,526,166,466,258,440,282,411,300,408,295,437,278,461,254,521,164,532,138,534,122,529,111,519,103,495,82,469,64,425,49,327,29"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="145,229,270,256"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="257,35,228,54,195,81,164,116,142,156,139,168,142,180,156,201,175,219,172,222,152,205,137,182,134,168,137,154,160,113,191,78,225,50,254,30"/>
+<area shape="rect" id="Node000006" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="5,229,122,256"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="245,35,205,54,167,82,137,115,112,151,77,217,72,214,107,148,133,111,163,78,203,50,243,30"/>
+<area shape="rect" id="Node000007" href="$df/d17/_a_p_d_s9960__proc_8h.html" title="APDS9960 Driver procedures." alt="" coords="214,80,343,107"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="274,33,272,65,267,65,268,32"/>
+<area shape="rect" id="Node000010" href="$da/db5/_a_p_d_s9960__ex_8h.html" title="APDS9960 Driver extensions." alt="" coords="367,80,485,107"/>
+<area shape="poly" id="edge18_Node000001_Node000010" title=" " alt="" coords="298,30,381,71,379,76,296,35"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="235,254,320,295,317,299,233,259"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="57,304,121,331"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="188,259,123,298,120,294,185,254"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="171,304,244,331"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="210,257,210,289,205,289,205,257"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="116,254,304,300,302,305,115,259"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="70,256,82,289,77,291,65,257"/>
+<area shape="poly" id="edge11_Node000007_Node000001" title=" " alt="" coords="282,79,284,47,290,47,288,80"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="330,105,367,123,384,137,398,153,406,171,409,190,405,227,392,263,377,293,372,290,387,261,400,226,403,190,400,172,393,156,381,140,365,128,328,110"/>
+<area shape="rect" id="Node000008" href="$db/d70/shared___a_l_s_8h.html" title="Ambient Light Sensing shared." alt="" coords="280,155,383,181"/>
+<area shape="poly" id="edge12_Node000007_Node000008" title=" " alt="" coords="290,106,316,141,312,144,285,109"/>
+<area shape="rect" id="Node000009" href="$df/ded/shared___c_l_s_8h.html" title="Color Light Sensing shared." alt="" coords="151,155,256,181"/>
+<area shape="poly" id="edge15_Node000007_Node000009" title=" " alt="" coords="267,109,229,146,225,142,263,105"/>
+<area shape="poly" id="edge13_Node000008_Node000002" title=" " alt="" coords="336,181,356,289,351,290,331,182"/>
+<area shape="poly" id="edge14_Node000008_Node000003" title=" " alt="" coords="311,184,243,224,240,219,309,180"/>
+<area shape="poly" id="edge16_Node000009_Node000002" title=" " alt="" coords="223,180,284,227,342,290,338,294,280,231,220,184"/>
+<area shape="poly" id="edge17_Node000009_Node000003" title=" " alt="" coords="207,182,209,214,203,215,202,182"/>
+<area shape="poly" id="edge20_Node000010_Node000001" title=" " alt="" coords="406,82,323,41,325,36,408,77"/>
+<area shape="poly" id="edge19_Node000010_Node000002" title=" " alt="" coords="434,106,443,135,452,173,453,216,449,237,442,257,424,281,401,299,397,294,420,277,437,255,444,236,448,215,446,174,438,136,429,108"/>
 </map>

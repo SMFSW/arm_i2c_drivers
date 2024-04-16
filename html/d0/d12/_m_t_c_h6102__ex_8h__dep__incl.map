@@ -1,7 +1,15 @@
 <map id="MTCH6102_ex.h" name="MTCH6102_ex.h">
-<area shape="rect" id="node2" href="$da/da9/_m_t_c_h6102_8h.html" title="MTCH6102 Driver. " alt="" coords="149,80,251,107"/>
-<area shape="rect" id="node3" href="$da/d78/_m_t_c_h6102_8c.html" title="MTCH6102 Driver. " alt="" coords="5,155,107,181"/>
-<area shape="rect" id="node4" href="$db/de8/_m_t_c_h6102__proc_8h.html" title="MTCH6102 Driver procedures. " alt="" coords="131,155,269,181"/>
-<area shape="rect" id="node5" href="$d4/d5d/_m_t_c_h6102__ex_8c.html" title="MTCH6102 Driver extensions. " alt="" coords="293,155,416,181"/>
-<area shape="rect" id="node6" href="$d2/d60/_m_t_c_h6102__proc_8c.html" title="MTCH6102 Driver procedures. " alt="" coords="440,155,576,181"/>
+<area shape="rect" id="Node000001" title="MTCH6102 Driver extensions." alt="" coords="278,5,398,32"/>
+<area shape="rect" id="Node000002" href="$da/da9/_m_t_c_h6102_8h.html" title="MTCH6102 Driver." alt="" coords="288,80,387,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="332,47,333,79,328,80,326,47"/>
+<area shape="poly" id="edge4_Node000002_Node000001" title=" " alt="" coords="344,65,342,33,347,32,349,65"/>
+<area shape="rect" id="Node000003" href="$da/d78/_m_t_c_h6102_8c.html" title="MTCH6102 Driver." alt="" coords="5,155,105,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="275,113,105,157,104,151,274,108"/>
+<area shape="rect" id="Node000004" href="$d4/d5d/_m_t_c_h6102__ex_8c.html" title="MTCH6102 Driver extensions." alt="" coords="128,155,249,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="300,116,216,156,213,152,297,111"/>
+<area shape="rect" id="Node000005" href="$d2/d60/_m_t_c_h6102__proc_8c.html" title="MTCH6102 Driver procedures." alt="" coords="272,155,403,181"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="340,122,340,154,335,154,335,122"/>
+<area shape="rect" id="Node000006" href="$db/de8/_m_t_c_h6102__proc_8h.html" title="MTCH6102 Driver procedures." alt="" coords="428,155,559,181"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="372,111,460,152,458,156,370,116"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="459,150,371,110,373,105,461,145"/>
 </map>

@@ -1,0 +1,33 @@
+<map id="PCA9952_Init_Single" name="PCA9952_Init_Single">
+<area shape="rect" id="Node000001" title="Initialization for PCA9952 peripheral." alt="" coords="5,56,151,83"/>
+<area shape="rect" id="Node000002" href="$d7/d57/_p_c_a9952_8c.html#a7432af42ee4ca470b3e0d85030a4d3a1" title="Initialization for PCA9952 peripheral." alt="" coords="199,56,301,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,67,184,67,184,72,151,72"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state." alt="" coords="377,5,489,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="300,53,367,34,368,39,302,58"/>
+<area shape="rect" id="Node000004" href="$d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization." alt="" coords="381,56,485,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="301,67,366,67,366,72,301,72"/>
+<area shape="rect" id="Node000005" href="$d1/d37/_p_c_a9952__proc_8c.html#a0232bb3ce801c25e1fa5669a55a715b9" title="Initialization Sequence for PCA9952 peripheral." alt="" coords="349,107,516,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="302,81,368,100,367,105,300,86"/>
+<area shape="rect" id="Node000006" href="$d9/dba/_p_c_a9952__ex_8c.html#a3f5c0fffee076d506e95588fed3c9037" title="Set auto increment option for PCA9952 registers." alt="" coords="564,5,768,32"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="492,104,515,92,529,80,538,68,547,54,563,42,575,36,577,40,566,46,551,58,542,71,533,84,518,97,494,108"/>
+<area shape="rect" id="Node000010" href="$d7/d57/_p_c_a9952_8c.html#a8a01a9b794d1a486cd4194448fdc422d" title="I2C Write function for PCA9952." alt="" coords="816,81,931,108"/>
+<area shape="poly" id="edge18_Node000005_Node000010" title=" " alt="" coords="452,132,501,165,532,181,565,193,622,208,667,215,712,211,767,194,793,179,817,160,853,119,857,122,820,164,796,183,769,198,713,216,667,220,621,213,564,199,530,186,498,170,449,136"/>
+<area shape="rect" id="Node000011" href="$d9/dba/_p_c_a9952__ex_8c.html#ae86d7d7eacb48bcaa3505f191207bf4e" title="Set PCA9952 output gain control value." alt="" coords="595,56,737,83"/>
+<area shape="poly" id="edge12_Node000005_Node000011" title=" " alt="" coords="497,103,587,84,588,89,498,109"/>
+<area shape="rect" id="Node000012" href="$d9/dba/_p_c_a9952__ex_8c.html#a2861fbd7efaf311c3fe3c5d7f93bb01b" title="Set PCA9952 peripheral multiple LEDs mode." alt="" coords="574,107,758,133"/>
+<area shape="poly" id="edge14_Node000005_Node000012" title=" " alt="" coords="517,117,560,117,560,123,517,123"/>
+<area shape="rect" id="Node000013" href="$d9/dba/_p_c_a9952__ex_8c.html#ad7177253d1e3a35a9117ed8056b8ab37" title="Set PCA9952 peripheral delay between channels." alt="" coords="593,157,739,184"/>
+<area shape="poly" id="edge16_Node000005_Node000013" title=" " alt="" coords="498,131,588,151,587,156,497,137"/>
+<area shape="rect" id="Node000007" href="$d7/d57/_p_c_a9952_8c.html#a29f39228200d96faea3b5e63d7f030bb" title="I2C Read function for PCA9952." alt="" coords="816,31,931,57"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="768,28,802,33,801,38,768,34"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="733,30,769,42,793,54,817,67,828,72,826,77,814,72,791,58,767,46,731,35"/>
+<area shape="rect" id="Node000008" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="979,31,1090,57"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="932,41,964,41,964,47,932,47"/>
+<area shape="rect" id="Node000009" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="984,81,1086,108"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="919,55,977,74,975,79,918,61"/>
+<area shape="poly" id="edge10_Node000010_Node000008" title=" " alt="" coords="918,78,975,60,977,65,919,83"/>
+<area shape="poly" id="edge11_Node000010_Node000009" title=" " alt="" coords="931,92,969,92,969,97,931,97"/>
+<area shape="poly" id="edge13_Node000011_Node000010" title=" " alt="" coords="738,75,801,83,801,89,737,81"/>
+<area shape="poly" id="edge15_Node000012_Node000010" title=" " alt="" coords="758,106,801,101,802,106,759,111"/>
+<area shape="poly" id="edge17_Node000013_Node000010" title=" " alt="" coords="730,154,767,143,833,113,835,118,769,148,731,159"/>
+</map>

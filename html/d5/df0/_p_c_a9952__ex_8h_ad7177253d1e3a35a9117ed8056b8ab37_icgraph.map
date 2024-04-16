@@ -1,0 +1,9 @@
+<map id="PCA9952_Set_Offset" name="PCA9952_Set_Offset">
+<area shape="rect" id="Node000001" title="Set PCA9952 peripheral delay between channels." alt="" coords="564,5,711,32"/>
+<area shape="rect" id="Node000002" href="$d1/d37/_p_c_a9952__proc_8c.html#a0232bb3ce801c25e1fa5669a55a715b9" title="Initialization Sequence for PCA9952 peripheral." alt="" coords="349,5,516,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="549,21,517,21,517,16,549,16"/>
+<area shape="rect" id="Node000003" href="$d7/d57/_p_c_a9952_8c.html#a7432af42ee4ca470b3e0d85030a4d3a1" title="Initialization for PCA9952 peripheral." alt="" coords="199,5,301,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="334,21,301,21,301,16,334,16"/>
+<area shape="rect" id="Node000004" href="$d7/d57/_p_c_a9952_8c.html#a9029066c6058af48ebf88edd87047400" title="Initialization for PCA9952 peripheral." alt="" coords="5,5,151,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="184,21,151,21,151,16,184,16"/>
+</map>

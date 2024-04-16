@@ -1,5 +1,10 @@
 <map id="FM24C.h" name="FM24C.h">
-<area shape="rect" id="node2" href="$da/d47/_f_m24_c_8c.html" title="FRAM / EEPROM Driver (bank switching at I2C address level protocol) " alt="" coords="5,80,81,107"/>
-<area shape="rect" id="node3" href="$de/d95/_f_m24_c__ex_8h.html" title="FRAM / EEPROM Driver (bank switching at I2C address level protocol) extensions. " alt="" coords="106,80,205,107"/>
-<area shape="rect" id="node4" href="$d2/d07/_f_m24_c__ex_8c.html" title="FRAM / EEPROM Driver (bank switching at I2C address level protocol) extensions. " alt="" coords="229,80,327,107"/>
+<area shape="rect" id="Node000001" title="FM24C FRAM Driver (bank switching at I2C address level protocol)" alt="" coords="175,5,250,32"/>
+<area shape="rect" id="Node000002" href="$da/d47/_f_m24_c_8c.html" title="FM24C FRAM Driver (bank switching at I2C address level protocol)" alt="" coords="5,80,81,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,41,74,82,72,77,169,36"/>
+<area shape="rect" id="Node000003" href="$d2/d07/_f_m24_c__ex_8c.html" title="FM24C FRAM Driver (bank switching at I2C address level protocol) extensions." alt="" coords="104,80,201,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="195,45,165,81,161,78,191,42"/>
+<area shape="rect" id="Node000004" href="$de/d95/_f_m24_c__ex_8h.html" title="FM24C FRAM Driver (bank switching at I2C address level protocol) extensions." alt="" coords="224,80,321,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="226,43,257,78,253,81,222,46"/>
+<area shape="poly" id="edge4_Node000004_Node000001" title=" " alt="" coords="259,70,228,34,232,31,263,66"/>
 </map>

@@ -1,0 +1,10 @@
+<map id="I2CMEM.h" name="I2CMEM.h">
+<area shape="rect" id="Node000001" title="FRAM / EEPROM Driver." alt="" coords="188,5,272,32"/>
+<area shape="rect" id="Node000002" href="$d6/d1b/_i2_c_m_e_m_8c.html" title="FRAM / EEPROM Driver." alt="" coords="5,80,90,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,40,81,82,79,77,184,35"/>
+<area shape="rect" id="Node000003" href="$dd/de5/_i2_c_m_e_m__ex_8c.html" title="FRAM / EEPROM Driver extensions." alt="" coords="114,80,219,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="211,45,179,81,175,78,208,41"/>
+<area shape="rect" id="Node000004" href="$d6/d4b/_i2_c_m_e_m__ex_8h.html" title="FRAM / EEPROM Driver extensions." alt="" coords="243,80,348,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="245,42,279,78,275,81,241,46"/>
+<area shape="poly" id="edge4_Node000004_Node000001" title=" " alt="" coords="280,70,247,34,251,31,284,66"/>
+</map>

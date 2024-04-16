@@ -1,3 +1,5 @@
 <map id="AT42QT1244_Init" name="AT42QT1244_Init">
-<area shape="rect" id="node2" href="$dd/d4f/_a_t42_q_t1244_8h.html#a8060fa17608cb27da6c09ddbc7086107" title="Initialization for AT42QT1244 peripheral. " alt="" coords="181,5,356,32"/>
+<area shape="rect" id="Node000001" title="Initialization for AT42QT1244 peripheral." alt="" coords="219,5,341,32"/>
+<area shape="rect" id="Node000002" href="$d3/dc4/_a_t42_q_t1244_8c.html#a8060fa17608cb27da6c09ddbc7086107" title="Initialization for AT42QT1244 peripheral." alt="" coords="5,5,171,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,21,171,21,171,16,204,16"/>
 </map>

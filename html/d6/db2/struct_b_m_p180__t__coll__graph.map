@@ -1,4 +1,7 @@
 <map id="BMP180_t" name="BMP180_t">
-<area shape="rect" id="node2" href="$df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters " alt="" coords="5,5,100,32"/>
-<area shape="rect" id="node3" href="$d4/d3c/struct_b_m_p180__calibration.html" title="BMP180 calibration parameters structure. " alt="" coords="125,5,271,32"/>
+<area shape="rect" id="Node000001" title="BMP180 user interface struct." alt="" coords="79,96,162,123"/>
+<area shape="rect" id="Node000002" href="$df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters" alt="" coords="5,5,97,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="72,42,113,94,108,97,68,45"/>
+<area shape="rect" id="Node000003" href="$d4/d3c/struct_b_m_p180__calibration.html" title="BMP180 calibration parameters structure." alt="" coords="121,5,258,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,47,162,74,139,97,135,93,158,70,175,44"/>
 </map>

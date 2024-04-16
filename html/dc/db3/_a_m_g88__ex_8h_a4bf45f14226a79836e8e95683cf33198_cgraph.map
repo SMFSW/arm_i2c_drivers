@@ -1,6 +1,11 @@
 <map id="AMG88_Set_Interrupt_Levels" name="AMG88_Set_Interrupt_Levels">
-<area shape="rect" id="node2" href="$de/d9d/_a_m_g88__ex_8c.html#adf51c67f115c69033cf280426b338c7c" title="Convert temperature to AMG88 temperature coded integer. " alt="" coords="212,5,379,47"/>
-<area shape="rect" id="node3" href="$df/d52/_a_m_g88_8c.html#a06e77708affb2165299376ea09d3e362" title="I2C Write function for AMG88. " alt="" coords="242,71,349,98"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="427,46,544,73"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="432,97,539,123"/>
+<area shape="rect" id="Node000001" title="Set AMG88 Interrupt levels." alt="" coords="5,35,153,77"/>
+<area shape="rect" id="Node000002" href="$de/d9d/_a_m_g88__ex_8c.html#adf51c67f115c69033cf280426b338c7c" title="Convert temperature to AMG88 temperature coded integer." alt="" coords="201,5,358,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,43,185,38,186,43,153,48"/>
+<area shape="rect" id="Node000003" href="$df/d52/_a_m_g88_8c.html#a06e77708affb2165299376ea09d3e362" title="I2C Write function for AMG88." alt="" coords="228,72,331,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="153,64,214,73,213,78,152,69"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="406,47,517,73"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="330,76,391,67,392,72,331,81"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="411,97,513,124"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="331,90,396,99,395,104,330,95"/>
 </map>

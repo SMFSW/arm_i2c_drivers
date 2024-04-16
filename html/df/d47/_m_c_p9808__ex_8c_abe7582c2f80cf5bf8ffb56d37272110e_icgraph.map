@@ -1,8 +1,7 @@
 <map id="MCP9808_Alert_GPIO_Get" name="MCP9808_Alert_GPIO_Get">
-<area shape="rect" id="node2" href="$df/d2f/_m_c_p9808__ex_8h.html#a74f3a6383e7e33937954cd7ec8021383" title="Get MCP9808 chip ID. " alt="" coords="240,5,400,32"/>
-<area shape="rect" id="node6" href="$d6/d5e/_m_c_p9808__proc_8h.html#a366a4d5c21eefda7d12af3bdcf800a11" title="Handler for MCP9808 peripheral GPIO interrupt. " alt="" coords="244,56,396,83"/>
-<area shape="rect" id="node3" href="$d6/d5e/_m_c_p9808__proc_8h.html#acdc3fcd27aee6d19c3e7fb7bf4762b47" title="Initialization Sequence of the MCP9808 peripheral. " alt="" coords="448,5,627,32"/>
-<area shape="rect" id="node4" href="$d8/d57/_m_c_p9808_8h.html#a92276c5da93fdb59cc4d94ef92761841" title="Initialization of the MCP9808 peripheral. " alt="" coords="675,5,783,32"/>
-<area shape="rect" id="node5" href="$d8/d57/_m_c_p9808_8h.html#a9ffcff895e9844967086a52af6c82dd4" title="Initialization for MCP9808 peripheral. " alt="" coords="831,5,985,32"/>
-<area shape="rect" id="node7" href="$d6/d5e/_m_c_p9808__proc_8h.html#a07f88cc900aba5f4bb109f76f7c26a28" title="Handler for all MCP9808 peripherals GPIO interrupt. " alt="" coords="451,56,624,83"/>
+<area shape="rect" id="Node000001" title="Change GPIO pin getter for MCP9808." alt="" coords="406,5,587,32"/>
+<area shape="rect" id="Node000002" href="$de/deb/_m_c_p9808__proc_8c.html#a366a4d5c21eefda7d12af3bdcf800a11" title="Handler for MCP9808 peripheral GPIO interrupt." alt="" coords="216,5,358,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="391,21,359,21,359,16,391,16"/>
+<area shape="rect" id="Node000003" href="$d6/d5e/_m_c_p9808__proc_8h.html#a07f88cc900aba5f4bb109f76f7c26a28" title="Handler for all MCP9808 peripherals GPIO interrupt." alt="" coords="5,5,168,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="201,21,168,21,168,16,201,16"/>
 </map>

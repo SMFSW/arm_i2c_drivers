@@ -1,3 +1,5 @@
 <map id="TSL2591_Init" name="TSL2591_Init">
-<area shape="rect" id="node2" href="$da/d96/_t_s_l2591_8h.html#a340d5559e9623f12628e013d814ac718" title="Initialization for TSL2591 peripheral. " alt="" coords="156,5,305,32"/>
+<area shape="rect" id="Node000001" title="Initialization for TSL2591 peripheral." alt="" coords="195,5,293,32"/>
+<area shape="rect" id="Node000002" href="$d2/d68/_t_s_l2591_8c.html#a340d5559e9623f12628e013d814ac718" title="Initialization for TSL2591 peripheral." alt="" coords="5,5,147,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,21,147,21,147,16,180,16"/>
 </map>

@@ -1,12 +1,23 @@
 <map id="S11059_Write" name="S11059_Write">
-<area shape="rect" id="node2" href="$d1/d8f/_s11059_8h.html#adbb72254ed4ad90b49bdbc241c4f28c8" title="I2C Word Write (big endian) function for S11059. " alt="" coords="163,81,309,108"/>
-<area shape="rect" id="node4" href="$d9/da9/_s11059__ex_8h.html#a8003a17567b88db07003a68b9145f5cd" title="Write S11059 Control register. " alt="" coords="581,107,715,133"/>
-<area shape="rect" id="node3" href="$d9/da9/_s11059__ex_8h.html#aeecbde878f611148371d328c7fb8cdf6" title="Set S11059 integration multiplier (used when integration mode set to Manual) " alt="" coords="357,70,533,111"/>
-<area shape="rect" id="node5" href="$d9/da9/_s11059__ex_8h.html#a64b87185a7e664ad2e6b799f7cd1574d" title="ADC Operation / Reset. " alt="" coords="783,5,918,32"/>
-<area shape="rect" id="node6" href="$d9/da9/_s11059__ex_8h.html#ab04a5e3db9ed92fca1cfa2aa5bd3cb83" title="Set Standby / Operating mode. " alt="" coords="771,56,931,83"/>
-<area shape="rect" id="node7" href="$d9/da9/_s11059__ex_8h.html#ac5f3bc7d1315503e3ecc762735121e05" title="Set ADC gain. " alt="" coords="783,107,919,133"/>
-<area shape="rect" id="node8" href="$d9/da9/_s11059__ex_8h.html#ab24f9219e107a9649e6b6ec91393fdfb" title="Set integration mode &amp; prescaler. " alt="" coords="763,157,939,184"/>
-<area shape="rect" id="node9" href="$dc/d4b/_s11059__proc_8h.html#a29c8c4ee1e632a63916a634cbfa5e215" title="Initialization Sequence for S11059 peripheral. " alt="" coords="767,208,935,235"/>
-<area shape="rect" id="node10" href="$d1/d8f/_s11059_8h.html#a6d95664385bf6acabd91137538c7d947" title="Initialization for S11059 peripheral. " alt="" coords="987,208,1084,235"/>
-<area shape="rect" id="node11" href="$d1/d8f/_s11059_8h.html#a54b2b645d23ab3654253ec5165873303" title="Initialization for S11059 peripheral. " alt="" coords="1132,208,1275,235"/>
+<area shape="rect" id="Node000001" title="I2C Write function for S11059." alt="" coords="717,187,818,213"/>
+<area shape="rect" id="Node000002" href="$d9/da9/_s11059__ex_8h.html#a8003a17567b88db07003a68b9145f5cd" title="Write S11059 Control register." alt="" coords="537,132,662,159"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="710,184,642,162,644,157,711,179"/>
+<area shape="rect" id="Node000010" href="$d2/dfe/_s11059_8c.html#adbb72254ed4ad90b49bdbc241c4f28c8" title="I2C Word Write (big endian) function for S11059." alt="" coords="530,212,669,239"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="703,212,670,217,669,212,702,207"/>
+<area shape="rect" id="Node000003" href="$dd/dd8/_s11059__proc_8c.html#a29c8c4ee1e632a63916a634cbfa5e215" title="Initialization Sequence for S11059 peripheral." alt="" coords="326,5,480,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="575,123,533,84,481,46,456,35,458,30,484,42,537,80,578,119"/>
+<area shape="rect" id="Node000006" href="$d3/d3c/_s11059__ex_8c.html#a64b87185a7e664ad2e6b799f7cd1574d" title="ADC Operation / Reset." alt="" coords="339,56,466,83"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="555,128,481,97,449,86,451,81,483,92,557,123"/>
+<area shape="rect" id="Node000007" href="$d3/d3c/_s11059__ex_8c.html#ac5f3bc7d1315503e3ecc762735121e05" title="Set ADC gain." alt="" coords="340,107,465,133"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="522,138,465,131,466,125,522,133"/>
+<area shape="rect" id="Node000008" href="$d3/d3c/_s11059__ex_8c.html#ab24f9219e107a9649e6b6ec91393fdfb" title="Set integration mode &amp; prescaler." alt="" coords="323,157,482,184"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="522,158,483,163,482,158,522,153"/>
+<area shape="rect" id="Node000009" href="$d3/d3c/_s11059__ex_8c.html#ab04a5e3db9ed92fca1cfa2aa5bd3cb83" title="Set Standby / Operating mode." alt="" coords="330,208,476,235"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="557,168,483,198,451,210,449,205,481,194,555,163"/>
+<area shape="rect" id="Node000004" href="$d2/dfe/_s11059_8c.html#a6d95664385bf6acabd91137538c7d947" title="Initialization for S11059 peripheral." alt="" coords="186,5,275,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="311,21,276,21,276,16,311,16"/>
+<area shape="rect" id="Node000005" href="$d2/dfe/_s11059_8c.html#a54b2b645d23ab3654253ec5165873303" title="Initialization for S11059 peripheral." alt="" coords="5,5,138,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="171,21,138,21,138,16,171,16"/>
+<area shape="rect" id="Node000011" href="$d3/d3c/_s11059__ex_8c.html#aeecbde878f611148371d328c7fb8cdf6" title="Set S11059 integration multiplier (used when integration mode set to Manual)" alt="" coords="323,259,482,301"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="536,246,483,261,481,255,534,241"/>
 </map>

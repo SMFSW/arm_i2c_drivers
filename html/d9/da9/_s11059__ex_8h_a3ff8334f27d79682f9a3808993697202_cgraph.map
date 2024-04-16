@@ -1,6 +1,11 @@
 <map id="S11059_Get_IR" name="S11059_Get_IR">
-<area shape="rect" id="node2" href="$d2/dfe/_s11059_8c.html#a445b49a90ce780749d8cf6395d439b26" title="I2C Word Read (big endian) function for S11059. " alt="" coords="172,31,319,57"/>
-<area shape="rect" id="node3" href="$d2/dfe/_s11059_8c.html#a157781bb2500a88bc780ad45e0cc60c1" title="I2C Read function for S11059. " alt="" coords="367,31,476,57"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="524,5,641,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="529,56,636,83"/>
+<area shape="rect" id="Node000001" title="Get Infra&#45;red channel conversion." alt="" coords="5,31,119,57"/>
+<area shape="rect" id="Node000002" href="$d2/dfe/_s11059_8c.html#a445b49a90ce780749d8cf6395d439b26" title="I2C Word Read (big endian) function for S11059." alt="" coords="167,31,306,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,41,152,41,152,47,119,47"/>
+<area shape="rect" id="Node000003" href="$d2/dfe/_s11059_8c.html#a157781bb2500a88bc780ad45e0cc60c1" title="I2C Read function for S11059." alt="" coords="354,31,456,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="306,41,339,41,339,47,306,47"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="504,5,616,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="456,33,489,28,490,33,457,38"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="509,56,611,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="457,50,495,56,494,61,456,55"/>
 </map>

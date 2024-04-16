@@ -1,5 +1,9 @@
 <map id="TCS3472_Set_AIT" name="TCS3472_Set_AIT">
-<area shape="rect" id="node2" href="$df/dfb/_t_c_s3472_8c.html#a19fc8e0e8440863061f67b8a42f6484a" title="I2C Write function for TCS3472. " alt="" coords="187,31,303,57"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="351,5,468,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="356,56,463,83"/>
+<area shape="rect" id="Node000001" title="ALS interrupt thresholds configuration." alt="" coords="5,31,137,57"/>
+<area shape="rect" id="Node000002" href="$df/dfb/_t_c_s3472_8c.html#a19fc8e0e8440863061f67b8a42f6484a" title="I2C Write function for TCS3472." alt="" coords="185,31,298,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,41,170,41,170,47,137,47"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="346,5,457,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="298,32,331,27,332,32,299,38"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="351,56,453,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="299,50,336,56,335,62,298,56"/>
 </map>

@@ -1,7 +1,26 @@
 <map id="AMG88_proc.c" name="AMG88_proc.c">
-<area shape="rect" id="node2" href="$d8/d4e/_a_m_g88_8h.html" title="AMG88 Driver. " alt="" coords="177,80,257,107"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="443,155,578,181"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="293,155,418,181"/>
-<area shape="rect" id="node8" href="$da/de9/_a_m_g88__proc_8h.html" title="AMG88 Driver procedures. " alt="" coords="26,155,141,181"/>
-<area shape="rect" id="node9" href="$dc/db3/_a_m_g88__ex_8h.html" title="AMG88 Driver extensions. " alt="" coords="166,155,268,181"/>
+<area shape="rect" id="Node000001" title="AMG88 Driver procedures." alt="" coords="153,5,261,32"/>
+<area shape="rect" id="Node000002" href="$d8/d4e/_a_m_g88_8h.html" title="AMG88 Driver." alt="" coords="169,80,245,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,33,210,65,205,65,205,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="167,229,248,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="169,97,131,100,88,110,48,127,31,140,16,156,9,173,12,187,24,199,43,210,96,225,152,234,151,239,95,230,41,215,21,204,7,190,3,173,12,153,27,136,45,123,87,104,130,95,168,91"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="420,155,544,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="247,102,420,148,419,153,245,107"/>
+<area shape="rect" id="Node000007" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="280,155,396,181"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="231,105,304,145,301,149,229,110"/>
+<area shape="rect" id="Node000008" href="$da/de9/_a_m_g88__proc_8h.html" title="AMG88 Driver procedures." alt="" coords="26,155,135,181"/>
+<area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="180,110,110,149,107,144,177,105"/>
+<area shape="rect" id="Node000009" href="$dc/db3/_a_m_g88__ex_8h.html" title="AMG88 Driver extensions." alt="" coords="159,155,256,181"/>
+<area shape="poly" id="edge13_Node000002_Node000009" title=" " alt="" coords="203,107,201,140,196,140,198,107"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="435,184,263,229,262,224,433,179"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="331,229,395,256"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="463,184,398,224,395,219,460,180"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="445,229,519,256"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="485,182,485,214,479,214,479,182"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="316,184,244,224,242,219,314,180"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="345,181,357,214,352,216,340,183"/>
+<area shape="poly" id="edge12_Node000008_Node000002" title=" " alt="" coords="109,152,179,113,181,117,111,156"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="104,180,174,219,171,224,101,184"/>
+<area shape="poly" id="edge15_Node000009_Node000002" title=" " alt="" coords="212,154,213,122,219,122,217,154"/>
+<area shape="poly" id="edge14_Node000009_Node000003" title=" " alt="" coords="210,182,210,214,205,214,205,182"/>
 </map>

@@ -1,6 +1,11 @@
 <map id="S11059_handler_all" name="S11059_handler_all">
-<area shape="rect" id="node2" href="$dc/d4b/_s11059__proc_8h.html#ab9513db9fe5366c3a493516be26d5fbe" title="Handler for S11059 peripheral. " alt="" coords="200,31,327,57"/>
-<area shape="rect" id="node3" href="$d2/dfe/_s11059_8c.html#a157781bb2500a88bc780ad45e0cc60c1" title="I2C Read function for S11059. " alt="" coords="375,31,484,57"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="532,5,649,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="537,56,644,83"/>
+<area shape="rect" id="Node000001" title="Handler for all S11059 peripherals." alt="" coords="5,31,139,57"/>
+<area shape="rect" id="Node000002" href="$dd/dd8/_s11059__proc_8c.html#ab9513db9fe5366c3a493516be26d5fbe" title="Handler for S11059 peripheral." alt="" coords="187,31,300,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,41,172,41,172,47,139,47"/>
+<area shape="rect" id="Node000003" href="$d2/dfe/_s11059_8c.html#a157781bb2500a88bc780ad45e0cc60c1" title="I2C Read function for S11059." alt="" coords="348,31,450,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="300,41,333,41,333,47,300,47"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="498,5,610,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="450,33,483,28,484,33,451,38"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="503,56,605,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="451,50,489,56,488,61,450,55"/>
 </map>

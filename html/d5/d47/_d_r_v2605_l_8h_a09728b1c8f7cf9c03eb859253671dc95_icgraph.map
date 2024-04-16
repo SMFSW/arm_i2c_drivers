@@ -1,31 +1,71 @@
 <map id="DRV2605L_Write" name="DRV2605L_Write">
-<area shape="rect" id="node2" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ae077456061ec8aa83035368678d33654" title="Set haptic actuator type. " alt="" coords="215,77,387,104"/>
-<area shape="rect" id="node3" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a5334e1c18245d1a1b4185d8c2da08d1a" title="Reset DRV260x chip. " alt="" coords="511,26,641,53"/>
-<area shape="rect" id="node6" href="$d1/da7/_d_r_v2605_l__proc_8h.html#ad908d57c1a4cba53e09981a387145d87" title="Initialization Sequence for DRV2605L peripheral. " alt="" coords="484,448,668,474"/>
-<area shape="rect" id="node8" href="$df/dbb/_d_r_v2605_l__ex_8h.html#abf22c146b060501dd9a022263ededa76" title="Set haptic operating mode. " alt="" coords="190,549,411,576"/>
-<area shape="rect" id="node9" href="$d1/da7/_d_r_v2605_l__proc_8h.html#aab005330aca4063527b650aeab03a301" title="Auto&#45;calibration procedure for DRV2605L peripheral. " alt="" coords="495,768,657,794"/>
-<area shape="rect" id="node10" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a284e6d245bd1879cf59834b84c434793" title="Set haptic device to standby. " alt="" coords="213,280,389,306"/>
-<area shape="rect" id="node11" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a3c924bb51da5067ac916ba1c6678fefa" title="Set haptic device input pin type. " alt="" coords="205,128,396,154"/>
-<area shape="rect" id="node12" href="$df/dbb/_d_r_v2605_l__ex_8h.html#acba66feb5b11b174e4029d3308a14220" title="Set haptic device input pin type. " alt="" coords="206,330,395,357"/>
-<area shape="rect" id="node13" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ac7319437af09cbd69e6104a1b1c35073" title="Set haptic device library. " alt="" coords="217,178,384,205"/>
-<area shape="rect" id="node14" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a6ab0bb89259e2f35c3ae881211f3af52" title="Set haptic device channel in the waveform sequencer. " alt="" coords="207,229,394,256"/>
-<area shape="rect" id="node15" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a83361b9e2ad5346cc4424ca483e7940f" title="Set RTP format. " alt="" coords="189,920,412,946"/>
-<area shape="rect" id="node16" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a2b0869d2d9f5ec04b57b10b192ad6eea" title="Set RTP input level. " alt="" coords="503,945,649,972"/>
-<area shape="rect" id="node17" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a07f91af90d32d2530485d5f0085eeab6" title="Set Audio To Vibe Peak time. " alt="" coords="196,970,405,997"/>
-<area shape="rect" id="node18" href="$df/dbb/_d_r_v2605_l__ex_8h.html#af6f3993f1576399e0e20b53df8caab58" title="Set Audio To Vibe Low pass filter. " alt="" coords="185,1021,416,1048"/>
-<area shape="rect" id="node19" href="$df/dbb/_d_r_v2605_l__ex_8h.html#aaa6fd3329d4a4cbe93e361b888cc31a7" title="Set haptic LRA Open loop period. " alt="" coords="195,1123,406,1164"/>
-<area shape="rect" id="node20" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a3fe01d5372aa856db4768cdd7fdd6661" title="Set haptic LRA Open loop period. " alt="" coords="471,1094,681,1135"/>
-<area shape="rect" id="node21" href="$df/dbb/_d_r_v2605_l__ex_8h.html#aeb46a2d56309f38154e816b215b6802f" title="Start/Stop haptic pattern. " alt="" coords="239,818,362,845"/>
-<area shape="rect" id="node22" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a94a466ad0cbb01c70f2dbec292a97cf7" title="Set Overdrive time offset. " alt="" coords="193,600,408,642"/>
-<area shape="rect" id="node23" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a1b162870b3bfd04fc5e4622cbcc905c2" title="Set Sustain time offset. " alt="" coords="199,382,402,423"/>
-<area shape="rect" id="node24" href="$df/dbb/_d_r_v2605_l__ex_8h.html#af96c583c518f85195ce745af4d5bfb73" title="Set Brake time offset. " alt="" coords="186,448,415,474"/>
-<area shape="rect" id="node25" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a02a06feb2b72f30bbb49e6391255eb47" title="Set Audio To Vibe min/max input level. " alt="" coords="179,666,423,693"/>
-<area shape="rect" id="node27" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ad497075c2cc578c54b61034bfd3476dd" title="Set Audio To Vibe min/max output drive. " alt="" coords="729,692,985,718"/>
-<area shape="rect" id="node29" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ae800afbf2b6a8186453cb9c9e723fdc8" title="Set haptic Rated voltage. " alt="" coords="197,1189,405,1216"/>
-<area shape="rect" id="node30" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ac0dabcaea55aaa3cdba3990b8c81a6fc" title="Set haptic Overdrive Clamp. " alt="" coords="209,1240,393,1266"/>
-<area shape="rect" id="node4" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a9d1d77c79f12545a20b44a54350a6e9e" title="Set haptic actuator type to ERM. " alt="" coords="501,77,651,104"/>
-<area shape="rect" id="node5" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a56db30b67a0a8057a7b3acbf0e27b0d4" title="Set haptic device actuator type to LRA. " alt="" coords="503,229,649,256"/>
-<area shape="rect" id="node7" href="$d5/d47/_d_r_v2605_l_8h.html#a3f9967699bd1bfb66cc38395ce928151" title="Initialization for DRV2605L peripheral. " alt="" coords="801,448,914,474"/>
-<area shape="rect" id="node26" href="$df/dbb/_d_r_v2605_l__ex_8h.html#af42b31b6f3c17d2f818c3e3fe437286d" title="Set Audio To Vibe min/max input voltage. " alt="" coords="471,666,681,693"/>
-<area shape="rect" id="node28" href="$df/dbb/_d_r_v2605_l__ex_8h.html#aa837dc2c94a1648e3a216d0fa5de0fb4" title="Set Audio To Vibe min/max Drive. " alt="" coords="1033,684,1213,726"/>
+<area shape="rect" id="Node000001" title="I2C Write function for DRV2605L." alt="" coords="707,626,829,652"/>
+<area shape="rect" id="Node000002" href="$df/dc7/_d_r_v2605_l__proc_8c.html#aab005330aca4063527b650aeab03a301" title="Auto&#45;calibration procedure for DRV2605L peripheral." alt="" coords="186,62,341,88"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="763,611,758,489,742,318,728,232,710,154,687,92,673,69,658,52,615,26,566,12,515,8,463,13,413,23,367,36,295,64,293,59,365,31,412,17,463,7,515,3,567,7,617,21,661,48,677,65,691,89,715,153,734,231,747,318,763,489,769,611"/>
+<area shape="rect" id="Node000003" href="$df/dc7/_d_r_v2605_l__proc_8c.html#ad908d57c1a4cba53e09981a387145d87" title="Initialization Sequence for DRV2605L peripheral." alt="" coords="176,315,351,342"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="761,611,748,527,727,418,713,365,696,317,678,279,658,254,635,240,611,230,560,221,506,225,452,237,401,256,355,277,287,317,284,312,352,273,399,251,451,232,505,219,560,216,613,225,638,236,661,250,682,276,701,315,718,363,732,417,753,526,766,611"/>
+<area shape="rect" id="Node000005" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a5334e1c18245d1a1b4185d8c2da08d1a" title="Reset DRV260x chip." alt="" coords="473,600,599,627"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="692,634,599,623,600,618,693,628"/>
+<area shape="rect" id="Node000006" href="$da/d07/_d_r_v2605_l__ex_8c.html#ae077456061ec8aa83035368678d33654" title="Set haptic actuator type." alt="" coords="453,163,619,190"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="761,611,748,520,726,400,696,285,678,240,657,210,639,197,618,187,620,183,642,192,661,207,682,238,701,283,732,399,753,519,766,610"/>
+<area shape="rect" id="Node000009" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a02a06feb2b72f30bbb49e6391255eb47" title="Set Audio To Vibe min/max input level." alt="" coords="417,550,654,576"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="728,621,658,591,617,580,619,574,660,586,730,616"/>
+<area shape="rect" id="Node000011" href="$da/d07/_d_r_v2605_l__ex_8c.html#af6f3993f1576399e0e20b53df8caab58" title="Set Audio To Vibe Low pass filter." alt="" coords="423,651,649,678"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="693,650,650,655,649,649,692,645"/>
+<area shape="rect" id="Node000012" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ad497075c2cc578c54b61034bfd3476dd" title="Set Audio To Vibe min/max output drive." alt="" coords="412,702,659,728"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="730,662,660,692,619,704,617,699,658,687,728,657"/>
+<area shape="rect" id="Node000014" href="$da/d07/_d_r_v2605_l__ex_8c.html#a07f91af90d32d2530485d5f0085eeab6" title="Set Audio To Vibe Peak time." alt="" coords="435,752,637,779"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="749,666,711,706,687,726,661,743,632,754,630,749,658,738,684,722,708,702,746,662"/>
+<area shape="rect" id="Node000015" href="$df/dbb/_d_r_v2605_l__ex_8h.html#af96c583c518f85195ce745af4d5bfb73" title="Set Brake time offset." alt="" coords="428,264,644,291"/>
+<area shape="poly" id="edge16_Node000001_Node000015" title=" " alt="" coords="764,611,759,548,744,464,731,421,712,378,688,339,658,305,641,294,644,289,661,301,692,336,717,376,736,419,749,463,765,547,769,611"/>
+<area shape="rect" id="Node000016" href="$da/d07/_d_r_v2605_l__ex_8c.html#a3c924bb51da5067ac916ba1c6678fefa" title="Set haptic device input pin type." alt="" coords="446,803,625,830"/>
+<area shape="poly" id="edge18_Node000001_Node000016" title=" " alt="" coords="758,667,721,731,694,765,661,793,627,809,625,804,658,789,690,761,717,728,753,665"/>
+<area shape="rect" id="Node000017" href="$da/d07/_d_r_v2605_l__ex_8c.html#ac7319437af09cbd69e6104a1b1c35073" title="Set haptic device library." alt="" coords="457,854,614,880"/>
+<area shape="poly" id="edge19_Node000001_Node000017" title=" " alt="" coords="763,668,750,708,730,756,700,804,682,825,661,844,639,856,615,864,614,859,637,851,658,840,678,822,696,800,725,753,745,706,758,666"/>
+<area shape="rect" id="Node000018" href="$da/d07/_d_r_v2605_l__ex_8c.html#acba66feb5b11b174e4029d3308a14220" title="Set haptic device input pin type." alt="" coords="447,315,625,342"/>
+<area shape="poly" id="edge20_Node000001_Node000018" title=" " alt="" coords="762,611,754,556,737,487,723,451,706,416,684,383,658,356,642,345,624,338,626,333,644,341,661,352,688,380,711,413,728,448,742,485,760,555,767,610"/>
+<area shape="rect" id="Node000019" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a3fe01d5372aa856db4768cdd7fdd6661" title="Set haptic LRA Open loop period." alt="" coords="434,904,637,947"/>
+<area shape="poly" id="edge22_Node000001_Node000019" title=" " alt="" coords="765,668,755,717,736,778,706,841,685,869,661,894,639,909,636,904,658,890,681,866,701,838,731,776,750,715,760,667"/>
+<area shape="rect" id="Node000020" href="$da/d07/_d_r_v2605_l__ex_8c.html#aaa6fd3329d4a4cbe93e361b888cc31a7" title="Set haptic LRA Open loop period." alt="" coords="434,971,637,1014"/>
+<area shape="poly" id="edge23_Node000001_Node000020" title=" " alt="" coords="768,668,762,729,746,807,732,849,714,890,690,928,661,961,639,976,636,972,658,957,686,925,709,887,727,847,740,806,757,728,763,667"/>
+<area shape="rect" id="Node000021" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ac0dabcaea55aaa3cdba3990b8c81a6fc" title="Set haptic Overdrive Clamp." alt="" coords="448,1038,624,1064"/>
+<area shape="poly" id="edge24_Node000001_Node000021" title=" " alt="" coords="765,668,752,751,729,859,699,961,681,1001,661,1028,644,1040,625,1048,623,1043,642,1035,657,1024,676,998,694,959,724,857,746,750,760,667"/>
+<area shape="rect" id="Node000022" href="$da/d07/_d_r_v2605_l__ex_8c.html#abf22c146b060501dd9a022263ededa76" title="Set haptic operating mode." alt="" coords="433,112,639,139"/>
+<area shape="poly" id="edge25_Node000001_Node000022" title=" " alt="" coords="762,612,751,510,731,371,717,302,700,238,680,187,657,153,638,139,641,135,661,149,685,185,705,237,722,300,736,370,757,509,767,611"/>
+<area shape="rect" id="Node000023" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a94a466ad0cbb01c70f2dbec292a97cf7" title="Set Overdrive time offset." alt="" coords="434,366,637,408"/>
+<area shape="poly" id="edge28_Node000001_Node000023" title=" " alt="" coords="758,612,746,570,726,519,697,467,679,443,658,423,636,409,639,404,661,418,683,439,702,464,731,516,751,568,763,611"/>
+<area shape="rect" id="Node000024" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ae800afbf2b6a8186453cb9c9e723fdc8" title="Set haptic Rated voltage." alt="" coords="438,1088,634,1115"/>
+<area shape="poly" id="edge30_Node000001_Node000024" title=" " alt="" coords="766,667,754,760,733,883,719,945,702,1001,683,1047,661,1078,636,1095,633,1090,657,1075,678,1045,697,999,714,944,728,882,749,759,761,666"/>
+<area shape="rect" id="Node000025" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a2b0869d2d9f5ec04b57b10b192ad6eea" title="Set RTP input level." alt="" coords="464,1139,608,1166"/>
+<area shape="poly" id="edge31_Node000001_Node000025" title=" " alt="" coords="767,667,757,769,736,908,722,978,705,1041,685,1094,661,1129,637,1145,609,1154,608,1149,635,1140,657,1125,680,1091,700,1040,717,977,731,907,751,769,762,667"/>
+<area shape="rect" id="Node000026" href="$da/d07/_d_r_v2605_l__ex_8c.html#a83361b9e2ad5346cc4424ca483e7940f" title="Set RTP format." alt="" coords="429,1190,642,1216"/>
+<area shape="poly" id="edge32_Node000001_Node000026" title=" " alt="" coords="768,667,759,779,740,933,726,1011,708,1082,687,1140,661,1180,644,1192,641,1188,657,1176,682,1138,703,1080,721,1010,735,932,753,778,762,667"/>
+<area shape="rect" id="Node000027" href="$da/d07/_d_r_v2605_l__ex_8c.html#a284e6d245bd1879cf59834b84c434793" title="Set haptic device to standby." alt="" coords="453,432,619,459"/>
+<area shape="poly" id="edge33_Node000001_Node000027" title=" " alt="" coords="755,613,740,580,719,542,692,504,658,473,639,463,618,456,620,451,641,458,661,469,696,501,724,539,745,578,760,611"/>
+<area shape="rect" id="Node000028" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a1b162870b3bfd04fc5e4622cbcc905c2" title="Set Sustain time offset." alt="" coords="440,483,631,526"/>
+<area shape="poly" id="edge35_Node000001_Node000028" title=" " alt="" coords="745,616,707,577,658,540,631,528,633,523,661,535,711,573,749,613"/>
+<area shape="rect" id="Node000029" href="$da/d07/_d_r_v2605_l__ex_8c.html#a6ab0bb89259e2f35c3ae881211f3af52" title="Set haptic device channel in the waveform sequencer." alt="" coords="447,1240,624,1267"/>
+<area shape="poly" id="edge37_Node000001_Node000029" title=" " alt="" coords="768,667,761,788,743,957,729,1043,711,1122,689,1186,676,1211,661,1230,645,1243,626,1251,623,1247,642,1238,657,1227,671,1208,684,1184,706,1120,724,1042,738,956,756,788,763,667"/>
+<area shape="rect" id="Node000030" href="$df/dbb/_d_r_v2605_l__ex_8h.html#aeb46a2d56309f38154e816b215b6802f" title="Start/Stop haptic pattern." alt="" coords="477,62,594,88"/>
+<area shape="poly" id="edge38_Node000001_Node000030" title=" " alt="" coords="762,611,753,500,735,346,721,269,703,198,682,141,657,102,644,92,628,84,594,77,595,71,630,79,647,87,661,99,687,138,708,196,726,267,740,345,759,499,768,611"/>
+<area shape="rect" id="Node000004" href="$dc/d9a/_d_r_v2605_l_8c.html#a3f9967699bd1bfb66cc38395ce928151" title="Initialization for DRV2605L peripheral." alt="" coords="5,315,115,342"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="161,331,115,331,115,326,161,326"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="448,197,413,211,372,236,334,265,279,317,276,313,331,261,369,231,411,206,446,192"/>
+<area shape="rect" id="Node000007" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a9d1d77c79f12545a20b44a54350a6e9e" title="Set haptic actuator type to ERM." alt="" coords="189,138,338,164"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="437,170,338,161,338,155,438,165"/>
+<area shape="rect" id="Node000008" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a56db30b67a0a8057a7b3acbf0e27b0d4" title="Set haptic device actuator type to LRA." alt="" coords="191,188,336,215"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="438,188,336,198,336,192,437,183"/>
+<area shape="poly" id="edge10_Node000009_Node000003" title=" " alt="" coords="420,545,411,540,383,518,357,493,316,437,286,383,268,344,273,341,290,381,320,434,361,489,386,514,413,536,422,541"/>
+<area shape="rect" id="Node000010" href="$da/d07/_d_r_v2605_l__ex_8c.html#af42b31b6f3c17d2f818c3e3fe437286d" title="Set Audio To Vibe min/max input voltage." alt="" coords="163,550,364,576"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="402,566,365,566,365,560,402,560"/>
+<area shape="rect" id="Node000013" href="$da/d07/_d_r_v2605_l__ex_8c.html#aa837dc2c94a1648e3a216d0fa5de0fb4" title="Set Audio To Vibe min/max Drive." alt="" coords="176,694,351,736"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="397,718,351,718,351,712,397,712"/>
+<area shape="poly" id="edge17_Node000015_Node000003" title=" " alt="" coords="446,297,339,317,338,312,445,292"/>
+<area shape="poly" id="edge21_Node000018_Node000003" title=" " alt="" coords="431,331,351,331,351,326,431,326"/>
+<area shape="poly" id="edge26_Node000022_Node000002" title=" " alt="" coords="445,112,338,92,339,86,446,107"/>
+<area shape="poly" id="edge27_Node000022_Node000003" title=" " alt="" coords="422,148,414,153,396,170,387,187,380,206,366,229,322,278,282,316,278,313,318,275,362,226,375,204,383,185,392,167,410,149,419,144"/>
+<area shape="poly" id="edge29_Node000023_Node000003" title=" " alt="" coords="419,365,328,345,330,340,420,360"/>
+<area shape="poly" id="edge34_Node000027_Node000003" title=" " alt="" coords="437,432,411,423,373,405,337,384,281,344,284,340,339,379,375,400,413,418,439,427"/>
+<area shape="poly" id="edge36_Node000028_Node000003" title=" " alt="" coords="425,481,411,473,366,442,327,406,273,344,277,340,331,402,370,438,413,469,427,476"/>
+<area shape="poly" id="edge39_Node000030_Node000002" title=" " alt="" coords="462,78,341,78,341,72,462,72"/>
 </map>

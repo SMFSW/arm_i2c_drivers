@@ -1,8 +1,11 @@
 <map id="DRV2605L_Set_ATVDrive_Percent" name="DRV2605L_Set_ATVDrive_Percent">
-<area shape="rect" id="node2" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ad497075c2cc578c54b61034bfd3476dd" title="Set Audio To Vibe min/max output drive. " alt="" coords="233,31,489,57"/>
-<area shape="rect" id="node3" href="$dc/d9a/_d_r_v2605_l_8c.html#a09728b1c8f7cf9c03eb859253671dc95" title="I2C Write function for DRV2605L. " alt="" coords="1088,31,1213,57"/>
-<area shape="rect" id="node6" href="$df/dbb/_d_r_v2605_l__ex_8h.html#af42b31b6f3c17d2f818c3e3fe437286d" title="Set Audio To Vibe min/max input voltage. " alt="" coords="537,56,748,83"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="1261,5,1379,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="1267,56,1373,83"/>
-<area shape="rect" id="node7" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a02a06feb2b72f30bbb49e6391255eb47" title="Set Audio To Vibe min/max input level. " alt="" coords="796,56,1040,83"/>
+<area shape="rect" id="Node000001" title="Set Audio To Vibe min/max Drive." alt="" coords="5,23,180,65"/>
+<area shape="rect" id="Node000002" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ad497075c2cc578c54b61034bfd3476dd" title="Set Audio To Vibe min/max output drive." alt="" coords="228,31,475,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,41,213,41,213,47,180,47"/>
+<area shape="rect" id="Node000003" href="$dc/d9a/_d_r_v2605_l_8c.html#a09728b1c8f7cf9c03eb859253671dc95" title="I2C Write function for DRV2605L." alt="" coords="523,31,644,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="476,41,508,41,508,47,476,47"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="692,5,804,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="644,32,677,27,678,32,645,37"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="697,56,799,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="645,51,682,57,682,62,644,56"/>
 </map>

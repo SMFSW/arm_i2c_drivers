@@ -1,0 +1,7 @@
+<map id="L3GD20H_t" name="L3GD20H_t">
+<area shape="rect" id="Node000001" title=" " alt="" coords="71,144,162,171"/>
+<area shape="rect" id="Node000002" href="$df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters" alt="" coords="5,5,97,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,45,75,81,93,119,109,142,104,145,88,121,70,83,57,47"/>
+<area shape="rect" id="Node000003" href="$dc/d95/struct_peripheral_g_p_i_o__t.html" title="i2c peripheral GPIO pin parameters" alt="" coords="121,5,245,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,47,173,84,156,121,135,145,131,142,151,119,167,82,176,46"/>
+</map>

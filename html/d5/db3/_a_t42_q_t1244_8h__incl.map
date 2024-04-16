@@ -1,6 +1,24 @@
 <map id="AT42QT1244.h" name="AT42QT1244.h">
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="512,80,646,107"/>
-<area shape="rect" id="node6" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="362,80,487,107"/>
-<area shape="rect" id="node7" href="$d4/d47/_a_t42_q_t1244__proc_8h.html" title="AT42QT1244 Driver procedures. " alt="" coords="28,80,178,107"/>
-<area shape="rect" id="node8" href="$df/de4/_a_t42_q_t1244__ex_8h.html" title="AT42QT1244 Driver extensions. " alt="" coords="202,80,338,107"/>
+<area shape="rect" id="Node000001" title="AT42QT1244 Driver." alt="" coords="203,5,312,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="217,155,298,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="203,28,95,48,47,63,30,72,18,82,9,102,14,119,31,132,58,143,130,157,202,163,202,168,129,162,57,148,28,137,9,122,3,102,14,78,27,67,45,58,93,42,202,23"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="486,80,610,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="309,30,484,73,483,79,308,35"/>
+<area shape="rect" id="Node000006" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="346,80,462,107"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="284,30,367,71,364,75,282,35"/>
+<area shape="rect" id="Node000007" href="$d4/d47/_a_t42_q_t1244__proc_8h.html" title="AT42QT1244 Driver procedures." alt="" coords="29,80,169,107"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="224,35,134,75,131,71,222,30"/>
+<area shape="rect" id="Node000008" href="$df/de4/_a_t42_q_t1244__ex_8h.html" title="AT42QT1244 Driver extensions." alt="" coords="193,80,322,107"/>
+<area shape="poly" id="edge12_Node000001_Node000008" title=" " alt="" coords="253,33,251,65,246,65,248,32"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="498,110,313,156,312,150,497,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="397,155,462,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="529,109,464,149,461,144,526,105"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="511,155,585,181"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="551,107,551,140,545,140,545,107"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="380,110,297,150,295,145,377,105"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="411,106,423,140,418,141,406,108"/>
+<area shape="poly" id="edge11_Node000007_Node000001" title=" " alt="" coords="133,77,223,36,225,41,135,82"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="128,105,218,146,215,151,125,110"/>
+<area shape="poly" id="edge14_Node000008_Node000001" title=" " alt="" coords="262,79,264,47,269,47,267,80"/>
+<area shape="poly" id="edge13_Node000008_Node000002" title=" " alt="" coords="260,107,260,140,255,140,255,107"/>
 </map>

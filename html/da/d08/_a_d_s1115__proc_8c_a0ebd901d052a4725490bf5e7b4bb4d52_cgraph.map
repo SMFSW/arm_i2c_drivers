@@ -1,3 +1,5 @@
 <map id="ADS1115_Init_Sequence" name="ADS1115_Init_Sequence">
-<area shape="rect" id="node2" href="$d8/d63/_a_d_s1115__ex_8c.html#a0b1718b759148a587bb5c50c860af158" title="Set ADS1115 functional mode. " alt="" coords="232,5,403,32"/>
+<area shape="rect" id="Node000001" title="Initialization Sequence for ADS1115 peripheral." alt="" coords="5,5,171,32"/>
+<area shape="rect" id="Node000002" href="$d8/d63/_a_d_s1115__ex_8c.html#a0b1718b759148a587bb5c50c860af158" title="Set ADS1115 functional mode." alt="" coords="219,5,378,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,16,204,16,204,21,171,21"/>
 </map>

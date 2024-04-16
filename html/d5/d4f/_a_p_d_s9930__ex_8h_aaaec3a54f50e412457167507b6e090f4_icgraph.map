@@ -1,8 +1,17 @@
 <map id="APDS9930_Write_Ctrl" name="APDS9930_Write_Ctrl">
-<area shape="rect" id="node2" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a268851ca6a7c0b3686eb8565d76b23ff" title="ALS Gain configuration. " alt="" coords="215,5,401,32"/>
-<area shape="rect" id="node6" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a8ee5fa5594f132ba31d363288f47e9b0" title="Proximity Gain configuration. " alt="" coords="213,56,403,83"/>
-<area shape="rect" id="node7" href="$d5/d4f/_a_p_d_s9930__ex_8h.html#a8f7677347a2681e3a622a5ccfe3d6996" title="Proximity Drive configuration. " alt="" coords="211,107,405,149"/>
-<area shape="rect" id="node3" href="$d1/d45/_a_p_d_s9930__proc_8h.html#a4cc65eb7c3be6bf8bb36c7452e3ee209" title="Initialization Sequence for APDS9930 peripheral. " alt="" coords="453,56,640,83"/>
-<area shape="rect" id="node4" href="$d6/dd1/_a_p_d_s9930_8h.html#aae753672da9f281e69583c0dc1e202f9" title="Initialization for APDS9930 peripheral. " alt="" coords="688,56,804,83"/>
-<area shape="rect" id="node5" href="$d6/dd1/_a_p_d_s9930_8h.html#a3db18cf0df8a0184fb7ac2a8c2429dab" title="Initialization for APDS9930 peripheral. " alt="" coords="852,56,1015,83"/>
+<area shape="rect" id="Node000001" title="Write APDS9930 Control." alt="" coords="825,64,976,91"/>
+<area shape="rect" id="Node000002" href="$d2/d97/_a_p_d_s9930__ex_8c.html#a268851ca6a7c0b3686eb8565d76b23ff" title="ALS Gain configuration." alt="" coords="594,5,774,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="834,62,735,35,737,30,835,57"/>
+<area shape="rect" id="Node000006" href="$d2/d97/_a_p_d_s9930__ex_8c.html#a8f7677347a2681e3a622a5ccfe3d6996" title="Proximity Drive configuration." alt="" coords="591,56,777,99"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="810,80,777,80,777,75,810,75"/>
+<area shape="rect" id="Node000007" href="$d2/d97/_a_p_d_s9930__ex_8c.html#a8ee5fa5594f132ba31d363288f47e9b0" title="Proximity Gain configuration." alt="" coords="593,123,775,149"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="835,98,737,125,735,120,834,93"/>
+<area shape="rect" id="Node000003" href="$d9/d54/_a_p_d_s9930__proc_8c.html#a4cc65eb7c3be6bf8bb36c7452e3ee209" title="Initialization Sequence for APDS9930 peripheral." alt="" coords="367,64,543,91"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="616,39,511,66,509,61,614,34"/>
+<area shape="rect" id="Node000004" href="$de/d85/_a_p_d_s9930_8c.html#aae753672da9f281e69583c0dc1e202f9" title="Initialization for APDS9930 peripheral." alt="" coords="208,64,319,91"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="352,80,319,80,319,75,352,75"/>
+<area shape="rect" id="Node000005" href="$de/d85/_a_p_d_s9930_8c.html#a3db18cf0df8a0184fb7ac2a8c2429dab" title="Initialization for APDS9930 peripheral." alt="" coords="5,64,160,91"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="193,80,160,80,160,75,193,75"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="576,80,544,80,544,75,576,75"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="614,121,509,94,511,89,616,116"/>
 </map>

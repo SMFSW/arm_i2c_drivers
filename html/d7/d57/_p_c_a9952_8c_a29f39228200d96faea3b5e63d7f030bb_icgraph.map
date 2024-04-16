@@ -1,0 +1,27 @@
+<map id="PCA9952_Read" name="PCA9952_Read">
+<area shape="rect" id="Node000001" title="I2C Read function for PCA9952." alt="" coords="842,132,957,159"/>
+<area shape="rect" id="Node000002" href="$d9/dba/_p_c_a9952__ex_8c.html#ad6061b22082ce1fbcce478c7b8e432d3" title="Read LEDs error flags." alt="" coords="609,5,775,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="877,122,840,83,817,63,792,46,766,35,768,30,795,42,821,59,844,79,881,119"/>
+<area shape="rect" id="Node000003" href="$d9/dba/_p_c_a9952__ex_8c.html#ac4c0ceb2810ad52acadfad975675c228" title="Read register from PCA9952." alt="" coords="610,56,774,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="859,127,793,97,756,86,757,81,795,92,861,122"/>
+<area shape="rect" id="Node000004" href="$d9/dba/_p_c_a9952__ex_8c.html#a6fe98fa058d9b1273766cfeb3e9fd8a3" title="Read PWM duty cycle value of a PCA9952 channel." alt="" coords="625,107,759,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="827,139,759,131,759,125,828,134"/>
+<area shape="rect" id="Node000005" href="$d9/dba/_p_c_a9952__ex_8c.html#af543a1d758c97b75764c5992b65c4d6c" title="Read PWM duty cycle array of values of a PCA9952." alt="" coords="622,157,762,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="828,157,763,165,762,159,827,151"/>
+<area shape="rect" id="Node000009" href="$d9/dba/_p_c_a9952__ex_8c.html#a3f5c0fffee076d506e95588fed3c9037" title="Set auto increment option for PCA9952 registers." alt="" coords="590,208,794,235"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="861,168,795,198,757,210,756,205,793,194,859,164"/>
+<area shape="rect" id="Node000013" href="$d9/dba/_p_c_a9952__ex_8c.html#a9a58d9720e5faf70239cd23543693c7f" title="Set latch type for PCA9952 peripheral." alt="" coords="620,259,764,285"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="881,172,844,212,821,232,795,249,765,262,763,257,792,244,817,228,840,208,877,168"/>
+<area shape="rect" id="Node000006" href="$d5/df0/_p_c_a9952__ex_8h.html#a0980e8ca19cf4b5ed88575f3abc1890c" title="Read all PWM duty cycle array of values of a PCA9952 (for the 24 channels)" alt="" coords="365,77,527,104"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="609,155,589,148,565,133,541,118,509,107,511,102,543,114,568,128,591,143,611,150"/>
+<area shape="rect" id="Node000007" href="$d5/df0/_p_c_a9952__ex_8h.html#ad7955c58b6cd7af9e1e823d25225a8e2" title="Read PWM duty cycle array of values of a PCA9952." alt="" coords="357,128,535,155"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="607,163,535,155,535,149,608,158"/>
+<area shape="rect" id="Node000008" href="$d5/df0/_p_c_a9952__ex_8h.html#a5d787ba9eac4c4fc011951719297266d" title="Read PWM duty cycle array of values of a PCA9952." alt="" coords="349,179,542,221"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="608,183,543,191,542,186,607,178"/>
+<area shape="rect" id="Node000010" href="$d1/d37/_p_c_a9952__proc_8c.html#a0232bb3ce801c25e1fa5669a55a715b9" title="Initialization Sequence for PCA9952 peripheral." alt="" coords="362,245,529,272"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="586,240,530,249,530,243,585,235"/>
+<area shape="rect" id="Node000011" href="$d7/d57/_p_c_a9952_8c.html#a7432af42ee4ca470b3e0d85030a4d3a1" title="Initialization for PCA9952 peripheral." alt="" coords="199,245,301,272"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="347,261,302,261,302,256,347,256"/>
+<area shape="rect" id="Node000012" href="$d7/d57/_p_c_a9952_8c.html#a9029066c6058af48ebf88edd87047400" title="Initialization for PCA9952 peripheral." alt="" coords="5,245,151,272"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="184,261,151,261,151,256,184,256"/>
+</map>

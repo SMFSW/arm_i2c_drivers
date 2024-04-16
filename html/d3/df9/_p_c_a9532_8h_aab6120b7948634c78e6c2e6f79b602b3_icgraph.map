@@ -1,9 +1,15 @@
 <map id="PCA9532_Read" name="PCA9532_Read">
-<area shape="rect" id="node2" href="$d8/df0/_p_c_a9532__ex_8h.html#a50cdf8379e507736d03eb51e3bed2b01" title="Read register from PCA9532. " alt="" coords="173,5,342,32"/>
-<area shape="rect" id="node4" href="$de/da7/_p_c_a9532__proc_8h.html#a95ddc3ce36d7d60e26b08ce405ea2fc3" title="Initialization Sequence for PCA9532 peripheral. " alt="" coords="612,120,789,147"/>
-<area shape="rect" id="node7" href="$d8/df0/_p_c_a9532__ex_8h.html#a88684c24046ec8995a83af7b9e3bb9d6" title="Read LED0 to LED7 input register. " alt="" coords="172,56,343,83"/>
-<area shape="rect" id="node8" href="$d8/df0/_p_c_a9532__ex_8h.html#a8e553b1df9b3d53172626bf564340823" title="Read LED8 to LED15 input register. " alt="" coords="172,107,343,133"/>
-<area shape="rect" id="node3" href="$d8/df0/_p_c_a9532__ex_8h.html#a03b2ea671687b1a439c90bc4f946542b" title="Convert PWMx byte register to Duty Cycle (in %) " alt="" coords="391,81,564,108"/>
-<area shape="rect" id="node5" href="$d3/df9/_p_c_a9532_8h.html#ab2c83a49b54020805a88671f067bf6d6" title="Initialization for PCA9532 peripheral. " alt="" coords="837,120,944,147"/>
-<area shape="rect" id="node6" href="$d3/df9/_p_c_a9532_8h.html#ae3bc95cfa1ac91a201ac0543ced4bb03" title="Initialization for PCA9532 peripheral. " alt="" coords="992,120,1144,147"/>
+<area shape="rect" id="Node000001" title="I2C Read function for PCA9532." alt="" coords="567,81,683,108"/>
+<area shape="rect" id="Node000002" href="$de/dea/_p_c_a9532__proc_8c.html#a95ddc3ce36d7d60e26b08ce405ea2fc3" title="Initialization Sequence for PCA9532 peripheral." alt="" coords="351,5,518,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="584,77,518,46,486,35,487,30,520,42,587,72"/>
+<area shape="rect" id="Node000005" href="$d6/daa/_p_c_a9532__ex_8c.html#a88684c24046ec8995a83af7b9e3bb9d6" title="Read LED0 to LED7 input register." alt="" coords="349,56,519,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="552,88,519,83,520,78,553,82"/>
+<area shape="rect" id="Node000006" href="$d6/daa/_p_c_a9532__ex_8c.html#a8e553b1df9b3d53172626bf564340823" title="Read LED8 to LED15 input register." alt="" coords="349,107,519,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="553,107,520,111,519,106,552,102"/>
+<area shape="rect" id="Node000007" href="$d6/daa/_p_c_a9532__ex_8c.html#a50cdf8379e507736d03eb51e3bed2b01" title="Read register from PCA9532." alt="" coords="352,157,516,184"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="587,117,520,148,487,159,486,154,518,143,584,113"/>
+<area shape="rect" id="Node000003" href="$d2/d28/_p_c_a9532_8c.html#ab2c83a49b54020805a88671f067bf6d6" title="Initialization for PCA9532 peripheral." alt="" coords="199,5,301,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="335,21,301,21,301,16,335,16"/>
+<area shape="rect" id="Node000004" href="$d2/d28/_p_c_a9532_8c.html#ae3bc95cfa1ac91a201ac0543ced4bb03" title="Initialization for PCA9532 peripheral." alt="" coords="5,5,151,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="184,21,151,21,151,16,184,16"/>
 </map>

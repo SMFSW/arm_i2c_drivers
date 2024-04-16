@@ -1,6 +1,11 @@
 <map id="GPMS_t" name="GPMS_t">
-<area shape="rect" id="node2" href="$d7/dca/struct_g_p_m_s__coord.html" title="DS&#45;GPM.S coordinate struct. " alt="" coords="5,5,108,32"/>
-<area shape="rect" id="node3" href="$df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters " alt="" coords="132,5,227,32"/>
-<area shape="rect" id="node4" href="$dd/d02/struct_g_p_m_s__hour.html" title="DS&#45;GPM.S Time of day struct. " alt="" coords="251,5,347,32"/>
-<area shape="rect" id="node5" href="$d0/d70/struct_g_p_m_s__date.html" title="DS&#45;GPM.S Date struct. " alt="" coords="371,5,467,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="192,112,263,139"/>
+<area shape="rect" id="Node000002" href="$d0/d70/struct_g_p_m_s__date.html" title="DS&#45;GPM.S Date struct." alt="" coords="5,5,98,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,39,153,86,199,109,197,114,150,90,79,43"/>
+<area shape="rect" id="Node000003" href="$dd/d02/struct_g_p_m_s__hour.html" title="DS&#45;GPM.S Time of day struct." alt="" coords="121,5,214,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,43,223,110,218,113,179,46"/>
+<area shape="rect" id="Node000004" href="$d7/dca/struct_g_p_m_s__coord.html" title="DS&#45;GPM.S coordinate struct." alt="" coords="238,5,337,32"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="276,46,237,113,232,110,271,43"/>
+<area shape="rect" id="Node000005" href="$df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters" alt="" coords="362,5,453,32"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="387,45,360,68,329,90,296,106,264,117,263,112,294,101,326,86,357,64,383,41"/>
 </map>

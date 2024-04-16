@@ -1,7 +1,9 @@
 <map id="DRV2605L_Reset" name="DRV2605L_Reset">
-<area shape="rect" id="node2" href="$dc/d9a/_d_r_v2605_l_8c.html#a09728b1c8f7cf9c03eb859253671dc95" title="I2C Write function for DRV2605L. " alt="" coords="403,5,528,32"/>
-<area shape="rect" id="node5" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ae077456061ec8aa83035368678d33654" title="Set haptic actuator type. " alt="" coords="183,56,355,83"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="576,5,693,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="581,56,688,83"/>
-<area shape="rect" id="node6" href="$dc/d9a/_d_r_v2605_l_8c.html#aadfce835666394b45a320f79fc631e52" title="I2C Read function for DRV2605L. " alt="" coords="403,56,528,83"/>
+<area shape="rect" id="Node000001" title="Reset DRV260x chip." alt="" coords="5,31,132,57"/>
+<area shape="rect" id="Node000002" href="$dc/d9a/_d_r_v2605_l_8c.html#a09728b1c8f7cf9c03eb859253671dc95" title="I2C Write function for DRV2605L." alt="" coords="180,31,301,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,41,165,41,165,47,132,47"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="349,5,460,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="301,32,334,27,335,32,302,37"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="354,56,456,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="302,51,339,57,338,62,301,56"/>
 </map>

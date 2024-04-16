@@ -1,5 +1,9 @@
 <map id="MCP4725_Write_Command" name="MCP4725_Write_Command">
-<area shape="rect" id="node2" href="$d9/d93/_m_c_p4725_8c.html#a9234b6dc64a61523a3434bff8df4e84b" title="I2C Write function for MCP4725. " alt="" coords="248,31,368,57"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="416,5,533,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="421,56,528,83"/>
+<area shape="rect" id="Node000001" title="Write Command to MCP4725 peripheral." alt="" coords="5,31,189,57"/>
+<area shape="rect" id="Node000002" href="$d9/d93/_m_c_p4725_8c.html#a9234b6dc64a61523a3434bff8df4e84b" title="I2C Write function for MCP4725." alt="" coords="237,31,353,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,41,222,41,222,47,189,47"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="401,5,512,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="353,32,386,27,387,32,354,37"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="406,56,508,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="354,51,392,56,391,62,353,56"/>
 </map>

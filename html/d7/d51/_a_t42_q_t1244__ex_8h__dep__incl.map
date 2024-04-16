@@ -1,7 +1,15 @@
 <map id="AT42QT1244_ex.h" name="AT42QT1244_ex.h">
-<area shape="rect" id="node2" href="$dd/d4f/_a_t42_q_t1244_8h.html" title="AT42QT1244 Driver. " alt="" coords="161,80,275,107"/>
-<area shape="rect" id="node3" href="$d3/dc4/_a_t42_q_t1244_8c.html" title="AT42QT1244 Driver. " alt="" coords="5,155,119,181"/>
-<area shape="rect" id="node4" href="$d4/d47/_a_t42_q_t1244__proc_8h.html" title="AT42QT1244 Driver procedures. " alt="" coords="143,155,293,181"/>
-<area shape="rect" id="node5" href="$df/d72/_a_t42_q_t1244__ex_8c.html" title="AT42QT1244 Driver extensions. " alt="" coords="317,155,452,181"/>
-<area shape="rect" id="node6" href="$dd/de3/_a_t42_q_t1244__proc_8c.html" title="AT42QT1244 Driver procedures. " alt="" coords="476,155,624,181"/>
+<area shape="rect" id="Node000001" title="AT42QT1244 Driver extensions." alt="" coords="296,5,426,32"/>
+<area shape="rect" id="Node000002" href="$dd/d4f/_a_t42_q_t1244_8h.html" title="AT42QT1244 Driver." alt="" coords="307,80,415,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="355,47,357,79,351,80,349,47"/>
+<area shape="poly" id="edge4_Node000002_Node000001" title=" " alt="" coords="367,65,365,33,371,32,372,65"/>
+<area shape="rect" id="Node000003" href="$d3/dc4/_a_t42_q_t1244_8c.html" title="AT42QT1244 Driver." alt="" coords="5,155,114,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="294,113,113,157,112,151,293,108"/>
+<area shape="rect" id="Node000004" href="$df/d72/_a_t42_q_t1244__ex_8c.html" title="AT42QT1244 Driver extensions." alt="" coords="138,155,267,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="321,116,231,156,229,152,319,111"/>
+<area shape="rect" id="Node000005" href="$dd/de3/_a_t42_q_t1244__proc_8c.html" title="AT42QT1244 Driver procedures." alt="" coords="291,155,431,181"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="364,122,364,154,358,154,358,122"/>
+<area shape="rect" id="Node000006" href="$d4/d47/_a_t42_q_t1244__proc_8h.html" title="AT42QT1244 Driver procedures." alt="" coords="455,155,595,181"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="396,111,490,152,488,156,394,116"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="489,150,395,110,397,105,491,145"/>
 </map>

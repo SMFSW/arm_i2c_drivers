@@ -1,12 +1,26 @@
 <map id="AMG88_handler_it" name="AMG88_handler_it">
-<area shape="rect" id="node2" href="$de/d9d/_a_m_g88__ex_8c.html#aed4d6492b79034915e0036da7d077600" title="Interrupt GPIO pin getter for AMG88. " alt="" coords="192,31,355,57"/>
-<area shape="rect" id="node4" href="$d4/d51/_a_m_g88__proc_8c.html#a62fe3d2635671c55964528913f803c61" title="Handler for AMG88 peripheral. " alt="" coords="212,132,335,159"/>
-<area shape="rect" id="node3" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="430,5,609,32"/>
-<area shape="rect" id="node5" href="$df/d52/_a_m_g88_8c.html#a2cbcae049f8f7817a745ab684f05554e" title="I2C Word Read (low endian) function for AMG88. " alt="" coords="447,259,591,285"/>
-<area shape="rect" id="node6" href="$df/d52/_a_m_g88_8c.html#ade19de4334fdd1b3aa58c0b71b0979e5" title="I2C Read function for AMG88. " alt="" coords="684,208,791,235"/>
-<area shape="rect" id="node9" href="$de/d9d/_a_m_g88__ex_8c.html#a286bea01547b7dc3a67b573d1da4b6bb" title="Convert raw thermistor temperature to celsius degrees. " alt="" coords="403,107,636,133"/>
-<area shape="rect" id="node10" href="$de/d9d/_a_m_g88__ex_8c.html#ad4ddfc0af387e78a4ee3ca53585239e2" title="Convert raw pixel temperature to celsius degrees. " alt="" coords="423,157,616,184"/>
-<area shape="rect" id="node11" href="$df/d52/_a_m_g88_8c.html#a06e77708affb2165299376ea09d3e362" title="I2C Write function for AMG88. " alt="" coords="684,157,791,184"/>
-<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="839,157,956,184"/>
-<area shape="rect" id="node8" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="844,208,951,235"/>
+<area shape="rect" id="Node000001" title="Handler for AMG88 peripheral GPIO interrupt." alt="" coords="5,183,134,209"/>
+<area shape="rect" id="Node000002" href="$d4/d51/_a_m_g88__proc_8c.html#a62fe3d2635671c55964528913f803c61" title="Handler for AMG88 peripheral." alt="" coords="206,132,320,159"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,179,195,160,196,165,124,185"/>
+<area shape="rect" id="Node000010" href="$de/d9d/_a_m_g88__ex_8c.html#aed4d6492b79034915e0036da7d077600" title="Interrupt GPIO pin getter for AMG88." alt="" coords="182,208,344,235"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="135,202,167,206,167,211,134,207"/>
+<area shape="rect" id="Node000003" href="$de/d9d/_a_m_g88__ex_8c.html#ad4ddfc0af387e78a4ee3ca53585239e2" title="Convert raw pixel temperature to celsius degrees." alt="" coords="409,157,597,184"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="321,149,394,157,393,162,320,154"/>
+<area shape="rect" id="Node000004" href="$de/d9d/_a_m_g88__ex_8c.html#a286bea01547b7dc3a67b573d1da4b6bb" title="Convert raw thermistor temperature to celsius degrees." alt="" coords="392,208,613,235"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="296,157,393,193,421,201,419,206,391,199,294,162"/>
+<area shape="rect" id="Node000005" href="$df/d52/_a_m_g88_8c.html#ade19de4334fdd1b3aa58c0b71b0979e5" title="I2C Read function for AMG88." alt="" coords="661,56,765,83"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="291,129,337,109,391,92,459,80,527,72,646,66,647,72,528,77,460,85,393,97,339,114,293,134"/>
+<area shape="rect" id="Node000008" href="$df/d52/_a_m_g88_8c.html#a2cbcae049f8f7817a745ab684f05554e" title="I2C Word Read (little endian) function for AMG88." alt="" coords="433,107,573,133"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="320,137,417,126,418,132,321,142"/>
+<area shape="rect" id="Node000009" href="$df/d52/_a_m_g88_8c.html#a06e77708affb2165299376ea09d3e362" title="I2C Write function for AMG88." alt="" coords="662,5,764,32"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="279,129,327,95,358,76,391,62,458,42,526,29,647,17,647,23,527,34,459,47,393,66,361,81,330,99,282,134"/>
+<area shape="rect" id="Node000006" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="813,5,924,32"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="756,53,811,35,812,40,757,58"/>
+<area shape="rect" id="Node000007" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="817,56,920,83"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="765,67,803,67,803,72,765,72"/>
+<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="561,103,646,83,648,88,562,109"/>
+<area shape="poly" id="edge10_Node000009_Node000006" title=" " alt="" coords="765,16,798,16,798,21,765,21"/>
+<area shape="poly" id="edge11_Node000009_Node000007" title=" " alt="" coords="757,30,812,48,811,53,756,35"/>
+<area shape="rect" id="Node000011" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter." alt="" coords="418,259,588,285"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="330,233,423,252,422,258,329,238"/>
 </map>

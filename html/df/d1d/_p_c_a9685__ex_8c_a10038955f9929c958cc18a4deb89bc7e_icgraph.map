@@ -1,9 +1,7 @@
 <map id="PCA9685_PutVal" name="PCA9685_PutVal">
-<area shape="rect" id="node2" href="$d3/d57/_p_c_a9685__ex_8h.html#ab5e242441ad3f53abd3d7a2cfa9a5681" title="Convert Prescaler byte register to Frequency (in Hz) " alt="" coords="180,5,351,32"/>
-<area shape="rect" id="node7" href="$d3/d57/_p_c_a9685__ex_8h.html#a88723c32fe259fd399bb1e32f804b605" title="Compute and send PWM lighting values to apply on a PCA9685 channel or all channels (Byte) ..." alt="" coords="187,56,343,83"/>
-<area shape="rect" id="node8" href="$d3/d57/_p_c_a9685__ex_8h.html#a9c727d398bdfa3e4abd76a8fe551dadd" title="Compute and send PWM lighting values to apply on a PCA9685 channel or all channels (Percent) ..." alt="" coords="188,107,343,133"/>
-<area shape="rect" id="node3" href="$d3/d57/_p_c_a9685__ex_8h.html#ad26eaf94e4dd2afb5b08f6e731c9024e" title="Set frequency for PCA9685 peripheral. " alt="" coords="399,5,580,32"/>
-<area shape="rect" id="node4" href="$d5/d22/_p_c_a9685__proc_8h.html#a7609b910642dc4a7bcec68f482028ed4" title="Initialization Sequence for PCA9685 peripheral. " alt="" coords="401,56,578,83"/>
-<area shape="rect" id="node5" href="$d4/deb/_p_c_a9685_8h.html#a16df1839440a38ca08e2d5199f9784f0" title="Initialization for PCA9685 peripheral. " alt="" coords="628,56,735,83"/>
-<area shape="rect" id="node6" href="$d4/deb/_p_c_a9685_8h.html#a5446c995c445067011d256bc587b164e" title="Initialization for PCA9685 peripheral. " alt="" coords="783,56,935,83"/>
+<area shape="rect" id="Node000001" title="Compute and send PWM lighting values to apply on a PCA9685 channel or all channels (12b)" alt="" coords="203,31,325,57"/>
+<area shape="rect" id="Node000002" href="$d3/d57/_p_c_a9685__ex_8h.html#a88723c32fe259fd399bb1e32f804b605" title="Compute and send PWM lighting values to apply on a PCA9685 channel or all channels (Byte)" alt="" coords="5,5,155,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,36,155,32,156,26,188,31"/>
+<area shape="rect" id="Node000003" href="$d3/d57/_p_c_a9685__ex_8h.html#a9c727d398bdfa3e4abd76a8fe551dadd" title="Compute and send PWM lighting values to apply on a PCA9685 channel or all channels (Percent)" alt="" coords="5,56,155,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="188,57,156,62,155,56,187,52"/>
 </map>

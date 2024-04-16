@@ -1,0 +1,5 @@
+<map id="I2CMEM_Init" name="I2CMEM_Init">
+<area shape="rect" id="Node000001" title="Initialization for I2CMEM peripheral." alt="" coords="195,5,293,32"/>
+<area shape="rect" id="Node000002" href="$d6/d1b/_i2_c_m_e_m_8c.html#a86efacbb4a3a224e1cd0142d97394805" title="Initialization for I2CMEM peripheral." alt="" coords="5,5,147,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,21,147,21,147,16,180,16"/>
+</map>

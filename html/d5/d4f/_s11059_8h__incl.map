@@ -1,6 +1,24 @@
 <map id="S11059.h" name="S11059.h">
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="450,80,585,107"/>
-<area shape="rect" id="node6" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="300,80,425,107"/>
-<area shape="rect" id="node7" href="$dc/d4b/_s11059__proc_8h.html" title="S11059 Driver procedures. " alt="" coords="27,80,146,107"/>
-<area shape="rect" id="node8" href="$d9/da9/_s11059__ex_8h.html" title="S11059 Driver extensions. " alt="" coords="170,80,275,107"/>
+<area shape="rect" id="Node000001" title="S11059 Driver." alt="" coords="167,5,242,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="164,155,245,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,22,129,26,87,35,47,53,30,66,16,81,9,98,12,112,23,124,42,134,94,150,149,159,148,164,93,155,40,139,20,128,7,115,3,98,12,79,27,62,45,48,85,30,128,21,166,17"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="417,80,541,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="243,27,418,73,416,78,242,33"/>
+<area shape="rect" id="Node000006" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="277,80,393,107"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="229,30,301,70,298,75,226,35"/>
+<area shape="rect" id="Node000007" href="$dc/d4b/_s11059__proc_8h.html" title="S11059 Driver procedures." alt="" coords="26,80,133,107"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="177,35,108,74,105,69,174,30"/>
+<area shape="rect" id="Node000008" href="$d9/da9/_s11059__ex_8h.html" title="S11059 Driver extensions." alt="" coords="156,80,253,107"/>
+<area shape="poly" id="edge12_Node000001_Node000008" title=" " alt="" coords="200,33,198,65,193,65,195,32"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="432,110,260,155,259,150,431,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="328,155,393,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="460,109,395,149,392,144,457,105"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="443,155,516,181"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="482,107,482,140,477,140,477,107"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="314,110,241,149,239,145,311,105"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="342,106,354,140,349,141,337,108"/>
+<area shape="poly" id="edge11_Node000007_Node000001" title=" " alt="" coords="107,77,176,38,179,43,110,82"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="102,105,172,145,169,149,100,110"/>
+<area shape="poly" id="edge14_Node000008_Node000001" title=" " alt="" coords="209,79,211,47,216,47,214,80"/>
+<area shape="poly" id="edge13_Node000008_Node000002" title=" " alt="" coords="207,107,207,140,202,140,202,107"/>
 </map>

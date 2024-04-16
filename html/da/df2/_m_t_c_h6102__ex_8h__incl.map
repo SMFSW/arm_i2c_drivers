@@ -1,6 +1,24 @@
 <map id="MTCH6102_ex.h" name="MTCH6102_ex.h">
-<area shape="rect" id="node3" href="$da/da9/_m_t_c_h6102_8h.html" title="MTCH6102 Driver. " alt="" coords="47,80,149,107"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="341,155,476,181"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="191,155,317,181"/>
-<area shape="rect" id="node8" href="$db/de8/_m_t_c_h6102__proc_8h.html" title="MTCH6102 Driver procedures. " alt="" coords="29,155,167,181"/>
+<area shape="rect" id="Node000001" title="MTCH6102 Driver extensions." alt="" coords="34,5,154,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="53,229,135,256"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,35,56,55,35,81,18,116,11,155,8,168,11,180,29,203,52,220,49,224,25,206,6,182,3,168,6,154,13,115,30,79,52,51,75,31"/>
+<area shape="rect" id="Node000003" href="$da/da9/_m_t_c_h6102_8h.html" title="MTCH6102 Driver." alt="" coords="44,80,144,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="89,33,88,65,82,65,84,32"/>
+<area shape="poly" id="edge14_Node000003_Node000001" title=" " alt="" coords="98,79,100,47,105,47,104,80"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="69,110,48,123,28,140,17,160,16,170,19,180,35,202,57,219,53,223,31,206,14,183,11,170,12,158,24,137,44,119,67,105"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="324,155,448,181"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="145,104,321,148,320,153,143,110"/>
+<area shape="rect" id="Node000007" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="184,155,300,181"/>
+<area shape="poly" id="edge8_Node000003_Node000007" title=" " alt="" coords="121,105,204,145,202,150,118,110"/>
+<area shape="rect" id="Node000008" href="$db/de8/_m_t_c_h6102__proc_8h.html" title="MTCH6102 Driver procedures." alt="" coords="28,155,160,181"/>
+<area shape="poly" id="edge11_Node000003_Node000008" title=" " alt="" coords="89,107,88,140,82,140,84,107"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="335,185,150,230,148,225,334,179"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="235,229,299,256"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="367,184,302,224,299,219,364,180"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="349,229,423,256"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="389,182,389,214,383,214,383,182"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="217,184,134,225,132,220,215,179"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="249,181,261,214,255,216,244,183"/>
+<area shape="poly" id="edge12_Node000008_Node000002" title=" " alt="" coords="97,182,97,214,91,214,91,182"/>
+<area shape="poly" id="edge13_Node000008_Node000003" title=" " alt="" coords="98,154,100,122,105,122,104,154"/>
 </map>

@@ -1,3 +1,11 @@
 <map id="I2C_component.c" name="I2C_component.c">
-<area shape="rect" id="node2" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="76,80,211,107"/>
+<area shape="rect" id="Node000001" title="Base I2C component." alt="" coords="73,5,197,32"/>
+<area shape="rect" id="Node000002" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="73,80,197,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,33,138,65,132,65,132,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,70,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="119,109,67,148,64,144,116,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="94,155,176,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="138,107,138,140,132,140,132,107"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="200,155,273,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="154,105,208,143,205,148,151,109"/>
 </map>

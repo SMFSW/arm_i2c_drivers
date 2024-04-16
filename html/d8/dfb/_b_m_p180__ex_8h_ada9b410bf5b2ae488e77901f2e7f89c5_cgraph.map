@@ -1,5 +1,9 @@
 <map id="BMP180_Get_ChipID" name="BMP180_Get_ChipID">
-<area shape="rect" id="node2" href="$d8/d11/_b_m_p180_8c.html#adce223c1add54df827a7a1457f2005ec" title="I2C Read function for BMP180. " alt="" coords="205,31,317,57"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="365,5,483,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="371,56,477,83"/>
+<area shape="rect" id="Node000001" title="Get BMP180 chip ID." alt="" coords="5,31,153,57"/>
+<area shape="rect" id="Node000002" href="$d8/d11/_b_m_p180_8c.html#adce223c1add54df827a7a1457f2005ec" title="I2C Read function for BMP180." alt="" coords="201,31,310,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,41,186,41,186,47,153,47"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="358,5,469,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="310,33,343,27,344,33,311,38"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="363,56,465,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="311,50,348,56,347,61,310,55"/>
 </map>

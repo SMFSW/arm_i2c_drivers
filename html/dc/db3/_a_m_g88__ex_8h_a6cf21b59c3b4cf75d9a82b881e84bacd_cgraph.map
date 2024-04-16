@@ -1,10 +1,11 @@
 <map id="AMG88_Get_Pixel_Raw" name="AMG88_Get_Pixel_Raw">
-<area shape="rect" id="node2" href="$df/d52/_a_m_g88_8c.html#a2cbcae049f8f7817a745ab684f05554e" title="I2C Word Read (low endian) function for AMG88. " alt="" coords="229,31,373,57"/>
-<area shape="rect" id="node6" href="$dc/db3/_a_m_g88__ex_8h.html#a47e7dab1b924d54a1b7ac2fd0006022a" title="Interrupt GPIO pin init for AMG88. " alt="" coords="222,81,381,108"/>
-<area shape="rect" id="node8" href="$dc/db3/_a_m_g88__ex_8h.html#aed4d6492b79034915e0036da7d077600" title="Interrupt GPIO pin getter for AMG88. " alt="" coords="220,132,383,159"/>
-<area shape="rect" id="node3" href="$df/d52/_a_m_g88_8c.html#ade19de4334fdd1b3aa58c0b71b0979e5" title="I2C Read function for AMG88. " alt="" coords="467,31,573,57"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="657,5,775,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="663,56,769,83"/>
-<area shape="rect" id="node7" href="$d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="431,81,609,108"/>
-<area shape="rect" id="node9" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="431,132,609,159"/>
+<area shape="rect" id="Node000001" title="Get pixel raw value." alt="" coords="5,31,169,57"/>
+<area shape="rect" id="Node000002" href="$df/d52/_a_m_g88_8c.html#a2cbcae049f8f7817a745ab684f05554e" title="I2C Word Read (little endian) function for AMG88." alt="" coords="217,31,357,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,41,202,41,202,47,169,47"/>
+<area shape="rect" id="Node000003" href="$df/d52/_a_m_g88_8c.html#ade19de4334fdd1b3aa58c0b71b0979e5" title="I2C Read function for AMG88." alt="" coords="405,31,508,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="358,41,390,41,390,47,358,47"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="556,5,668,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="508,33,541,28,542,33,509,38"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="561,56,663,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="509,50,547,56,546,61,508,55"/>
 </map>

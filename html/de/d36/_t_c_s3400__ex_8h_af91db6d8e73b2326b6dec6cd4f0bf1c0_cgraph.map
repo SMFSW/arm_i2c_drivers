@@ -1,5 +1,9 @@
 <map id="TCS3400_Write_Cfg" name="TCS3400_Write_Cfg">
-<area shape="rect" id="node2" href="$d4/d1b/_t_c_s3400_8c.html#a74d4e0aa8eb8d69af81660a1ef13ed77" title="I2C Write function for TCS3400. " alt="" coords="197,31,313,57"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="361,5,479,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="367,56,473,83"/>
+<area shape="rect" id="Node000001" title="Write TCS3400 Config register." alt="" coords="5,31,147,57"/>
+<area shape="rect" id="Node000002" href="$d4/d1b/_t_c_s3400_8c.html#a74d4e0aa8eb8d69af81660a1ef13ed77" title="I2C Write function for TCS3400." alt="" coords="195,31,308,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,41,180,41,180,47,147,47"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="356,5,467,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="308,32,341,27,342,32,309,38"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="361,56,463,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="309,50,346,56,345,62,308,56"/>
 </map>

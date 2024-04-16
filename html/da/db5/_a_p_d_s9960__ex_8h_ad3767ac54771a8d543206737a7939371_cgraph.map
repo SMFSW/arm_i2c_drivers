@@ -1,7 +1,15 @@
 <map id="APDS9960_Set_PON" name="APDS9960_Set_PON">
-<area shape="rect" id="node2" href="$db/db1/_a_p_d_s9960_8c.html#ae3a66d3faca052bed32148ad241084a5" title="I2C Read function for APDS9960. " alt="" coords="407,5,535,32"/>
-<area shape="rect" id="node5" href="$da/db5/_a_p_d_s9960__ex_8h.html#a3d7529756184a33fd68ad38528cd228a" title="Write APDS9960 Enable register. " alt="" coords="208,56,359,83"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="583,5,700,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="588,56,695,83"/>
-<area shape="rect" id="node6" href="$db/db1/_a_p_d_s9960_8c.html#a52b83fd89a1e886f3f1bb8b59a89b8ac" title="I2C Write function for APDS9960. " alt="" coords="407,56,535,83"/>
+<area shape="rect" id="Node000001" title="Oscillator Enable / Disable." alt="" coords="5,31,155,57"/>
+<area shape="rect" id="Node000002" href="$db/db1/_a_p_d_s9960_8c.html#ae3a66d3faca052bed32148ad241084a5" title="I2C Read function for APDS9960." alt="" coords="397,5,521,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,36,382,21,382,26,155,42"/>
+<area shape="rect" id="Node000005" href="$da/db5/_a_p_d_s9960__ex_8h.html#a3d7529756184a33fd68ad38528cd228a" title="Write APDS9960 Enable register." alt="" coords="203,56,349,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="155,51,188,55,188,61,155,56"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="569,5,681,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="522,16,554,16,554,21,522,21"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="574,56,676,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="506,30,566,49,564,54,505,35"/>
+<area shape="rect" id="Node000006" href="$db/db1/_a_p_d_s9960_8c.html#a52b83fd89a1e886f3f1bb8b59a89b8ac" title="I2C Write function for APDS9960." alt="" coords="398,56,521,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="350,67,382,67,382,72,350,72"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="505,53,564,34,566,39,506,58"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="521,67,559,67,559,72,521,72"/>
 </map>

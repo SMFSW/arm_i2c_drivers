@@ -1,0 +1,11 @@
+<map id="PCA9952_ReadVals_All" name="PCA9952_ReadVals_All">
+<area shape="rect" id="Node000001" title="Read all PWM duty cycle array of values of a PCA9952 (for the 24 channels)" alt="" coords="5,31,168,57"/>
+<area shape="rect" id="Node000002" href="$d9/dba/_p_c_a9952__ex_8c.html#af543a1d758c97b75764c5992b65c4d6c" title="Read PWM duty cycle array of values of a PCA9952." alt="" coords="216,31,356,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,41,201,41,201,47,168,47"/>
+<area shape="rect" id="Node000003" href="$d7/d57/_p_c_a9952_8c.html#a29f39228200d96faea3b5e63d7f030bb" title="I2C Read function for PCA9952." alt="" coords="404,31,519,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="357,41,389,41,389,47,357,47"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="567,5,679,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="519,32,552,27,553,32,520,38"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="572,56,674,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="520,50,558,56,557,62,519,56"/>
+</map>

@@ -1,7 +1,28 @@
 <map id="APDS9930.h" name="APDS9930.h">
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="155,229,290,256"/>
-<area shape="rect" id="node6" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="5,229,131,256"/>
-<area shape="rect" id="node7" href="$d1/d45/_a_p_d_s9930__proc_8h.html" title="APDS9930 Driver procedures. " alt="" coords="206,80,343,107"/>
-<area shape="rect" id="node9" href="$d5/d4f/_a_p_d_s9930__ex_8h.html" title="APDS9930 Driver extensions. " alt="" coords="367,80,491,107"/>
-<area shape="rect" id="node8" href="$db/d70/shared___a_l_s_8h.html" title="Ambient Light Sensing shared. " alt="" coords="219,155,330,181"/>
+<area shape="rect" id="Node000001" title="APDS9930 Driver." alt="" coords="212,5,310,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="292,304,374,331"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="310,24,409,44,454,59,482,78,496,108,496,140,486,171,467,201,443,230,416,256,365,297,362,293,412,252,439,226,462,198,481,169,491,139,491,110,477,82,451,64,408,49,309,29"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="145,229,270,256"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="236,35,208,54,186,81,177,115,178,152,187,186,197,215,192,217,181,187,173,152,172,115,181,79,204,50,233,30"/>
+<area shape="rect" id="Node000006" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="5,229,122,256"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="238,35,205,55,172,82,142,116,116,152,78,217,74,215,112,150,138,112,168,78,202,51,235,30"/>
+<area shape="rect" id="Node000007" href="$d1/d45/_a_p_d_s9930__proc_8h.html" title="APDS9930 Driver procedures." alt="" coords="196,80,326,107"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="256,33,255,65,249,65,251,32"/>
+<area shape="rect" id="Node000009" href="$d5/d4f/_a_p_d_s9930__ex_8h.html" title="APDS9930 Driver extensions." alt="" coords="350,80,468,107"/>
+<area shape="poly" id="edge15_Node000001_Node000009" title=" " alt="" coords="281,30,364,71,361,76,278,35"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="231,254,300,294,297,299,228,259"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="57,304,121,331"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="188,259,123,298,120,294,185,254"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="171,304,244,331"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="210,257,210,289,205,289,205,257"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="111,254,279,299,277,304,110,259"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="70,256,82,289,77,291,65,257"/>
+<area shape="poly" id="edge11_Node000007_Node000001" title=" " alt="" coords="265,79,267,47,272,47,270,80"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="283,105,307,126,327,153,339,189,343,226,340,289,335,289,338,226,333,190,322,156,303,129,279,109"/>
+<area shape="rect" id="Node000008" href="$db/d70/shared___a_l_s_8h.html" title="Ambient Light Sensing shared." alt="" coords="209,155,313,181"/>
+<area shape="poly" id="edge12_Node000007_Node000008" title=" " alt="" coords="264,107,264,140,258,140,258,107"/>
+<area shape="poly" id="edge13_Node000008_Node000002" title=" " alt="" coords="269,181,323,289,318,292,265,183"/>
+<area shape="poly" id="edge14_Node000008_Node000003" title=" " alt="" coords="254,183,227,219,223,216,249,180"/>
+<area shape="poly" id="edge17_Node000009_Node000001" title=" " alt="" coords="389,82,306,41,308,36,391,77"/>
+<area shape="poly" id="edge16_Node000009_Node000002" title=" " alt="" coords="408,108,390,172,362,257,347,292,342,290,357,255,385,170,403,106"/>
 </map>

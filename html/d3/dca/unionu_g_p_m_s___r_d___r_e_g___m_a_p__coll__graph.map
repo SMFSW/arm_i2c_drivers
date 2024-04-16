@@ -1,3 +1,5 @@
 <map id="uGPMS_RD_REG_MAP" name="uGPMS_RD_REG_MAP">
-<area shape="rect" id="node2" href="$de/d7b/unionu_g_p_m_s___r_e_g_____s_t_a_t_u_s.html" title="Union for STATUS register of DS&#45;GPM.S. " alt="" coords="5,5,169,32"/>
+<area shape="rect" id="Node000001" title="Union of DS&#45;GPM.S readable registry map." alt="" coords="6,96,173,123"/>
+<area shape="rect" id="Node000002" href="$de/d7b/unionu_g_p_m_s___r_e_g_____s_t_a_t_u_s.html" title="Union for STATUS register of DS&#45;GPM.S." alt="" coords="5,5,174,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,47,92,95,87,95,87,47"/>
 </map>

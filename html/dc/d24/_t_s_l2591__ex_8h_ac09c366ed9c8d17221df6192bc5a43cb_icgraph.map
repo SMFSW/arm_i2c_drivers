@@ -1,5 +1,9 @@
 <map id="TSL2591_Set_AIT" name="TSL2591_Set_AIT">
-<area shape="rect" id="node2" href="$d7/d6e/_t_s_l2591__proc_8h.html#a5faab4b1d7b74b74edc2fdd8c4db4db4" title="Initialization Sequence for TSL2591 peripheral. " alt="" coords="185,5,360,32"/>
-<area shape="rect" id="node3" href="$da/d96/_t_s_l2591_8h.html#ac65422b0b784bbaddce0317515cb16be" title="Initialization for TSL2591 peripheral. " alt="" coords="408,5,511,32"/>
-<area shape="rect" id="node4" href="$da/d96/_t_s_l2591_8h.html#a340d5559e9623f12628e013d814ac718" title="Initialization for TSL2591 peripheral. " alt="" coords="559,5,708,32"/>
+<area shape="rect" id="Node000001" title="ALS interrupt thresholds configuration." alt="" coords="552,5,681,32"/>
+<area shape="rect" id="Node000002" href="$db/dba/_t_s_l2591__proc_8c.html#a5faab4b1d7b74b74edc2fdd8c4db4db4" title="Initialization Sequence for TSL2591 peripheral." alt="" coords="341,5,504,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="538,21,505,21,505,16,538,16"/>
+<area shape="rect" id="Node000003" href="$d2/d68/_t_s_l2591_8c.html#ac65422b0b784bbaddce0317515cb16be" title="Initialization for TSL2591 peripheral." alt="" coords="195,5,293,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="326,21,293,21,293,16,326,16"/>
+<area shape="rect" id="Node000004" href="$d2/d68/_t_s_l2591_8c.html#a340d5559e9623f12628e013d814ac718" title="Initialization for TSL2591 peripheral." alt="" coords="5,5,147,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="180,21,147,21,147,16,180,16"/>
 </map>

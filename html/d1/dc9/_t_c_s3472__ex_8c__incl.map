@@ -1,8 +1,30 @@
 <map id="TCS3472_ex.c" name="TCS3472_ex.c">
-<area shape="rect" id="node2" href="$d8/ddc/_t_c_s3472_8h.html" title="TCS3472 Driver. " alt="" coords="240,80,331,107"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="155,304,290,331"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="5,304,131,331"/>
-<area shape="rect" id="node8" href="$d6/d96/_t_c_s3472__proc_8h.html" title="TCS3472 Driver procedures. " alt="" coords="223,155,348,181"/>
-<area shape="rect" id="node10" href="$d2/dbe/_t_c_s3472__ex_8h.html" title="TCS3472 Driver extensions. " alt="" coords="372,155,484,181"/>
-<area shape="rect" id="node9" href="$df/ded/shared___c_l_s_8h.html" title="Color Light Sensing shared. " alt="" coords="230,229,341,256"/>
+<area shape="rect" id="Node000001" title="TCS3472 Driver extensions." alt="" coords="216,5,324,32"/>
+<area shape="rect" id="Node000002" href="$d8/ddc/_t_c_s3472_8h.html" title="TCS3472 Driver." alt="" coords="227,80,314,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="273,33,273,65,268,65,268,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="292,379,374,405"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="315,99,408,119,450,134,476,153,490,183,491,214,481,245,463,276,439,304,414,330,364,371,361,367,410,326,435,301,458,272,476,243,486,213,485,184,472,156,447,139,406,124,314,104"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="145,304,270,331"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="247,109,221,129,201,156,191,190,190,226,194,260,201,289,196,290,189,261,184,226,186,189,196,153,218,125,244,105"/>
+<area shape="rect" id="Node000007" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="5,304,122,331"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="250,110,219,130,187,157,154,191,125,228,81,293,76,290,121,225,150,188,183,153,216,126,247,105"/>
+<area shape="rect" id="Node000008" href="$d6/d96/_t_c_s3472__proc_8h.html" title="TCS3472 Driver procedures." alt="" coords="211,155,330,181"/>
+<area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="266,107,264,140,259,140,260,107"/>
+<area shape="rect" id="Node000010" href="$d2/dbe/_t_c_s3472__ex_8h.html" title="TCS3472 Driver extensions." alt="" coords="353,155,462,181"/>
+<area shape="poly" id="edge16_Node000002_Node000010" title=" " alt="" coords="288,105,365,145,362,150,286,110"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="231,329,300,369,297,373,228,334"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="57,379,121,405"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="188,333,123,373,120,368,185,329"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="171,379,244,405"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="210,331,210,364,205,364,205,331"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="111,329,279,373,277,379,110,334"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="70,330,82,364,77,365,65,332"/>
+<area shape="poly" id="edge12_Node000008_Node000002" title=" " alt="" coords="274,154,276,122,282,122,280,154"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="292,180,316,200,335,228,345,264,348,301,342,364,336,364,343,301,340,265,330,230,312,204,288,184"/>
+<area shape="rect" id="Node000009" href="$df/ded/shared___c_l_s_8h.html" title="Color Light Sensing shared." alt="" coords="217,229,321,256"/>
+<area shape="poly" id="edge13_Node000008_Node000009" title=" " alt="" coords="273,182,272,215,267,214,267,182"/>
+<area shape="poly" id="edge14_Node000009_Node000003" title=" " alt="" coords="277,255,324,364,319,366,272,258"/>
+<area shape="poly" id="edge15_Node000009_Node000004" title=" " alt="" coords="260,258,230,294,225,291,256,255"/>
+<area shape="poly" id="edge18_Node000010_Node000002" title=" " alt="" coords="389,156,313,116,315,111,392,152"/>
+<area shape="poly" id="edge17_Node000010_Node000003" title=" " alt="" coords="408,182,393,247,366,332,349,367,345,365,361,330,387,246,402,181"/>
 </map>

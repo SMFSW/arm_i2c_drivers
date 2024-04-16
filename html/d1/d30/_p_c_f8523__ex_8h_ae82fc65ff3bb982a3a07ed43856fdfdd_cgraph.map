@@ -1,6 +1,13 @@
 <map id="PCF8523_Set_12_24" name="PCF8523_Set_12_24">
-<area shape="rect" id="node2" href="$df/d5b/_p_c_f8523_8c.html#a58750b10a6bd6458855b5316af84fb5e" title="I2C Read function for PCF8523 peripheral. " alt="" coords="207,5,323,32"/>
-<area shape="rect" id="node5" href="$df/d5b/_p_c_f8523_8c.html#aac1b57b44dce68814b0cbe6cee5374d2" title="I2C Write function for PCF8523 peripheral. " alt="" coords="207,56,323,83"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="371,5,488,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="376,56,483,83"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,151,57"/>
+<area shape="rect" id="Node000002" href="$df/d5b/_p_c_f8523_8c.html#a58750b10a6bd6458855b5316af84fb5e" title="I2C Read function for PCF8523 peripheral." alt="" coords="199,5,313,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,31,183,26,184,32,151,36"/>
+<area shape="rect" id="Node000005" href="$df/d5b/_p_c_f8523_8c.html#aac1b57b44dce68814b0cbe6cee5374d2" title="I2C Write function for PCF8523 peripheral." alt="" coords="199,56,313,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="151,52,185,57,184,62,151,57"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="361,5,472,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="313,16,346,16,346,21,313,21"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="366,56,468,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="302,30,359,49,358,54,300,35"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="300,53,358,34,359,39,302,58"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="313,67,351,67,351,72,313,72"/>
 </map>

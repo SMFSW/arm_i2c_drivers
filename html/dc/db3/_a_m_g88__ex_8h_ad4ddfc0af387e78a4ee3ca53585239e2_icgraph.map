@@ -1,8 +1,15 @@
 <map id="AMG88_Convert_Pixel_Raw" name="AMG88_Convert_Pixel_Raw">
-<area shape="rect" id="node2" href="$dc/db3/_a_m_g88__ex_8h.html#a7b51a0bfe1a0a94cf2b4da3d89a56ccc" title="Get pixel temperature. " alt="" coords="251,5,425,32"/>
-<area shape="rect" id="node3" href="$dc/db3/_a_m_g88__ex_8h.html#a10e93934fd10c1d7881e07b0aba2c0f4" title="Get all pixels temperature. " alt="" coords="247,56,429,83"/>
-<area shape="rect" id="node4" href="$da/de9/_a_m_g88__proc_8h.html#a62fe3d2635671c55964528913f803c61" title="Handler for AMG88 peripheral. " alt="" coords="277,107,399,133"/>
-<area shape="rect" id="node5" href="$da/de9/_a_m_g88__proc_8h.html#af7796031f9fb1c4fb52f5262c1612ab9" title="Handler for AMG88 peripheral GPIO interrupt. " alt="" coords="480,81,619,108"/>
-<area shape="rect" id="node7" href="$da/de9/_a_m_g88__proc_8h.html#ac190ef2a388b2d75815dbf33ff082d56" title="Handler for all AMG88 peripherals. " alt="" coords="477,132,621,159"/>
-<area shape="rect" id="node6" href="$da/de9/_a_m_g88__proc_8h.html#a8f4206ea34c183c5f6dc2b23043c7d63" title="Handler for all AMG88 peripherals GPIO interrupt. " alt="" coords="669,81,828,108"/>
+<area shape="rect" id="Node000001" title="Convert raw pixel temperature to celsius degrees." alt="" coords="602,56,791,83"/>
+<area shape="rect" id="Node000002" href="$de/d9d/_a_m_g88__ex_8c.html#a7b51a0bfe1a0a94cf2b4da3d89a56ccc" title="Get pixel temperature." alt="" coords="388,5,551,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="619,55,532,35,533,30,620,50"/>
+<area shape="rect" id="Node000003" href="$de/d9d/_a_m_g88__ex_8c.html#a10e93934fd10c1d7881e07b0aba2c0f4" title="Get all pixels temperature." alt="" coords="384,56,554,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="588,72,555,72,555,67,588,67"/>
+<area shape="rect" id="Node000004" href="$d4/d51/_a_m_g88__proc_8c.html#a62fe3d2635671c55964528913f803c61" title="Handler for AMG88 peripheral." alt="" coords="412,107,526,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="620,89,527,110,526,105,619,84"/>
+<area shape="rect" id="Node000005" href="$da/de9/_a_m_g88__proc_8h.html#ac190ef2a388b2d75815dbf33ff082d56" title="Handler for all AMG88 peripherals." alt="" coords="202,81,336,108"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="397,114,336,106,337,101,398,108"/>
+<area shape="rect" id="Node000006" href="$d4/d51/_a_m_g88__proc_8c.html#af7796031f9fb1c4fb52f5262c1612ab9" title="Handler for AMG88 peripheral GPIO interrupt." alt="" coords="205,132,333,159"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="398,132,334,140,333,135,397,126"/>
+<area shape="rect" id="Node000007" href="$da/de9/_a_m_g88__proc_8h.html#a8f4206ea34c183c5f6dc2b23043c7d63" title="Handler for all AMG88 peripherals GPIO interrupt." alt="" coords="5,132,154,159"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="190,148,154,148,154,143,190,143"/>
 </map>

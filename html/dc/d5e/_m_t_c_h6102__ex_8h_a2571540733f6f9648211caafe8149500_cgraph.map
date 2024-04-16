@@ -1,4 +1,9 @@
 <map id="MTCH6102_Set_Base_Filter" name="MTCH6102_Set_Base_Filter">
-<area shape="rect" id="node2" href="$da/d78/_m_t_c_h6102_8c.html#aadac3361a556fe464ea0df2d9a8366ae" title="I2C Write function for MTCH6102. " alt="" coords="248,5,376,32"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="424,5,541,32"/>
+<area shape="rect" id="Node000001" title="Set MTCH6102 baseline filter thresholds." alt="" coords="5,31,194,57"/>
+<area shape="rect" id="Node000002" href="$da/d78/_m_t_c_h6102_8c.html#aadac3361a556fe464ea0df2d9a8366ae" title="I2C Write function for MTCH6102." alt="" coords="242,31,367,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,41,227,41,227,47,194,47"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="415,5,526,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="367,32,400,27,400,32,368,37"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="420,56,522,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="368,51,405,57,405,62,367,56"/>
 </map>

@@ -1,6 +1,18 @@
 <map id="ADS1115_Get_raw_value" name="ADS1115_Get_raw_value">
-<area shape="rect" id="node2" href="$d4/d35/_a_d_s1115__proc_8h.html#a2a5488401e3392d27760b90ff5f31be2" title="Handler for ADS1115 peripheral. " alt="" coords="236,31,373,57"/>
-<area shape="rect" id="node3" href="$d4/d35/_a_d_s1115__proc_8h.html#a520e784a7c3122c8211c2b62d3fb7967" title="Handler for ADS1115 peripheral GPIO interrupt. " alt="" coords="425,5,577,32"/>
-<area shape="rect" id="node5" href="$d4/d35/_a_d_s1115__proc_8h.html#a3871b0c6703b8b4bb3915172dfd98072" title="Handler for all ADS1115 peripherals. " alt="" coords="421,56,580,83"/>
-<area shape="rect" id="node4" href="$d4/d35/_a_d_s1115__proc_8h.html#afee391a510cb180305c75f06c455ec6e" title="Handler for all ADS1115 peripherals GPIO interrupt. " alt="" coords="628,5,801,32"/>
+<area shape="rect" id="Node000001" title="Get ADS1115 raw channel value." alt="" coords="792,101,961,128"/>
+<area shape="rect" id="Node000002" href="$d8/d63/_a_d_s1115__ex_8c.html#a59bb8cdf42f67a04e28339e8d5918702" title="Get ADS1115 raw channel value in mV." alt="" coords="576,5,744,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="827,98,714,51,716,46,829,93"/>
+<area shape="rect" id="Node000003" href="$da/d08/_a_d_s1115__proc_8c.html#a2a5488401e3392d27760b90ff5f31be2" title="Handler for ADS1115 peripheral." alt="" coords="404,43,528,69"/>
+<area shape="poly" id="edge8_Node000001_Node000003" title=" " alt="" coords="777,103,528,67,529,62,777,98"/>
+<area shape="rect" id="Node000007" href="$d8/d63/_a_d_s1115__ex_8c.html#ad20504d5c0e8c93b73dc20300e6806fb" title="Get ADS1115 raw channel value in µV." alt="" coords="576,123,744,165"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="777,131,745,135,744,130,777,125"/>
+<area shape="rect" id="Node000008" href="$d8/d63/_a_d_s1115__ex_8c.html#a86643c274b5a593c93733e4337d01484" title="Get ADS1115 raw channel value in V." alt="" coords="576,189,744,232"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="835,137,745,180,718,191,716,186,743,175,833,133"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="562,44,529,49,528,44,561,39"/>
+<area shape="rect" id="Node000004" href="$d4/d35/_a_d_s1115__proc_8h.html#a3871b0c6703b8b4bb3915172dfd98072" title="Handler for all ADS1115 peripherals." alt="" coords="212,17,356,44"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="389,48,356,43,356,38,390,43"/>
+<area shape="rect" id="Node000005" href="$da/d08/_a_d_s1115__proc_8c.html#a520e784a7c3122c8211c2b62d3fb7967" title="Handler for ADS1115 peripheral GPIO interrupt." alt="" coords="215,68,353,95"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="390,69,354,74,353,69,389,64"/>
+<area shape="rect" id="Node000006" href="$d4/d35/_a_d_s1115__proc_8h.html#afee391a510cb180305c75f06c455ec6e" title="Handler for all ADS1115 peripherals GPIO interrupt." alt="" coords="5,68,164,95"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="200,84,164,84,164,79,200,79"/>
 </map>

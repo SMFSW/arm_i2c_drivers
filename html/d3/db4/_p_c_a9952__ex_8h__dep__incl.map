@@ -1,0 +1,15 @@
+<map id="PCA9952_ex.h" name="PCA9952_ex.h">
+<area shape="rect" id="Node000001" title="PCA9952 Driver extensions." alt="" coords="256,5,366,32"/>
+<area shape="rect" id="Node000002" href="$d8/d5d/_p_c_a9952_8h.html" title="PCA9952 Driver." alt="" coords="267,80,355,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="305,47,307,79,301,80,299,47"/>
+<area shape="poly" id="edge4_Node000002_Node000001" title=" " alt="" coords="317,65,315,33,321,32,322,65"/>
+<area shape="rect" id="Node000003" href="$d7/d57/_p_c_a9952_8c.html" title="PCA9952 Driver." alt="" coords="5,155,94,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="254,113,95,157,93,152,252,108"/>
+<area shape="rect" id="Node000004" href="$d9/dba/_p_c_a9952__ex_8c.html" title="PCA9952 Driver extensions." alt="" coords="118,155,227,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="275,116,198,156,195,152,273,111"/>
+<area shape="rect" id="Node000005" href="$d1/d37/_p_c_a9952__proc_8c.html" title="PCA9952 Driver procedures." alt="" coords="251,155,371,181"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="314,122,314,154,308,154,308,122"/>
+<area shape="rect" id="Node000006" href="$d0/db3/_p_c_a9952__proc_8h.html" title="PCA9952 Driver procedures." alt="" coords="395,155,515,181"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="343,112,424,152,421,156,340,116"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="423,150,342,110,344,105,425,145"/>
+</map>

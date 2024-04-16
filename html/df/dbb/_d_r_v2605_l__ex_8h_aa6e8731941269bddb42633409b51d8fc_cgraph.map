@@ -1,11 +1,9 @@
 <map id="DRV2605L_Get_ChipID" name="DRV2605L_Get_ChipID">
-<area shape="rect" id="node2" href="$dc/d9a/_d_r_v2605_l_8c.html#aadfce835666394b45a320f79fc631e52" title="I2C Read function for DRV2605L. " alt="" coords="251,43,376,69"/>
-<area shape="rect" id="node5" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a572725b83357c3e695799b38fd7ed7ce" title="Enable GPIO pin init for DRV2605L. " alt="" coords="225,93,401,120"/>
-<area shape="rect" id="node7" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ab3f468584e3b1abe7160a11c1212b561" title="Enable GPIO pin setter for DRV2605L. " alt="" coords="224,195,403,221"/>
-<area shape="rect" id="node9" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a98cbfb2755e67db5cfadb3d8ff72c3fe" title="Trigger GPIO pin init for DRV2605L. " alt="" coords="220,144,407,171"/>
-<area shape="rect" id="node10" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ae20097ec48f5dd3f23d217a41c4ff09b" title="Trigger GPIO pin setter for DRV2605L. " alt="" coords="219,245,408,272"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="487,5,604,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="492,56,599,83"/>
-<area shape="rect" id="node6" href="$d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="457,132,634,159"/>
-<area shape="rect" id="node8" href="$d2/de1/_i2_c__peripheral_8c.html#a7accedd9eb463e3cd4eb401b07e36b2c" title="I2C peripheral GPIO pin setter. " alt="" coords="456,220,635,247"/>
+<area shape="rect" id="Node000001" title="Get DRV260x chip ID." alt="" coords="5,31,166,57"/>
+<area shape="rect" id="Node000002" href="$dc/d9a/_d_r_v2605_l_8c.html#aadfce835666394b45a320f79fc631e52" title="I2C Read function for DRV2605L." alt="" coords="214,31,336,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,41,199,41,199,47,166,47"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="384,5,495,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="336,32,369,27,370,32,337,37"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="389,56,491,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="337,51,374,57,373,62,336,56"/>
 </map>

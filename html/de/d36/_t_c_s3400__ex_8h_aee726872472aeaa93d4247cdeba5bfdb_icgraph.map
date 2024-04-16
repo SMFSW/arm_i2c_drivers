@@ -1,11 +1,19 @@
 <map id="TCS3400_Write_En" name="TCS3400_Write_En">
-<area shape="rect" id="node2" href="$de/d36/_t_c_s3400__ex_8h.html#abe93d1d3ca320f2d6c4a85e035fd61a8" title="Oscillator Enable / Disable. " alt="" coords="208,5,351,32"/>
-<area shape="rect" id="node4" href="$de/d36/_t_c_s3400__ex_8h.html#acac92b4a48cc37db6e03d64a20a628be" title="Clear module Enable / Disable. " alt="" coords="209,56,350,83"/>
-<area shape="rect" id="node5" href="$de/d36/_t_c_s3400__ex_8h.html#ad51ca80189f430834182c5ccdbab1e83" title="Clear interrupt module Enable / Disable. " alt="" coords="207,107,351,133"/>
-<area shape="rect" id="node6" href="$de/d36/_t_c_s3400__ex_8h.html#aa514e6a8a7538aa25f74e70f17f0858a" title="WAIT module Enable / Disable. " alt="" coords="208,157,351,184"/>
-<area shape="rect" id="node7" href="$de/d36/_t_c_s3400__ex_8h.html#abb8af383a0b2576ecd6126b66ff7c123" title="Sleep After Interrupt Enable / Disable. " alt="" coords="212,208,347,235"/>
-<area shape="rect" id="node8" href="$d9/d14/_t_c_s3400__proc_8h.html#a8a6888f4fcd6c3e24072035984dea5cb" title="Initialization Sequence for TCS3400 peripheral. " alt="" coords="192,259,367,285"/>
-<area shape="rect" id="node3" href="$de/d36/_t_c_s3400__ex_8h.html#a4c743f6263918dc403ce2e9193ce6468" title="Write TCS3400 Control register. " alt="" coords="415,107,555,133"/>
-<area shape="rect" id="node9" href="$d9/d51/_t_c_s3400_8h.html#a92c41f9da5ab14d7666b80cae88067f6" title="Initialization for TCS3400 peripheral. " alt="" coords="433,259,537,285"/>
-<area shape="rect" id="node10" href="$d9/d51/_t_c_s3400_8h.html#ae1122436ee0aa2cf81cec91006589ad6" title="Initialization for TCS3400 peripheral. " alt="" coords="603,259,753,285"/>
+<area shape="rect" id="Node000001" title="Write TCS3400 Enable register." alt="" coords="561,132,698,159"/>
+<area shape="rect" id="Node000002" href="$dc/dd9/_t_c_s3400__proc_8c.html#a8a6888f4fcd6c3e24072035984dea5cb" title="Initialization Sequence for TCS3400 peripheral." alt="" coords="347,5,513,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="605,123,564,84,512,46,487,35,489,30,515,42,567,80,609,119"/>
+<area shape="rect" id="Node000005" href="$db/d52/_t_c_s3400__ex_8c.html#acac92b4a48cc37db6e03d64a20a628be" title="Clear module Enable / Disable." alt="" coords="361,56,499,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="585,128,512,97,479,86,481,81,514,92,587,123"/>
+<area shape="rect" id="Node000006" href="$db/d52/_t_c_s3400__ex_8c.html#ad51ca80189f430834182c5ccdbab1e83" title="Clear interrupt module Enable / Disable." alt="" coords="359,107,501,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="547,138,501,132,502,126,547,132"/>
+<area shape="rect" id="Node000007" href="$db/d52/_t_c_s3400__ex_8c.html#abe93d1d3ca320f2d6c4a85e035fd61a8" title="Oscillator Enable / Disable." alt="" coords="361,157,500,184"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="547,158,501,164,500,159,546,153"/>
+<area shape="rect" id="Node000008" href="$db/d52/_t_c_s3400__ex_8c.html#abb8af383a0b2576ecd6126b66ff7c123" title="Sleep After Interrupt Enable / Disable." alt="" coords="364,208,496,235"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="587,168,514,198,481,210,479,205,512,194,585,163"/>
+<area shape="rect" id="Node000009" href="$db/d52/_t_c_s3400__ex_8c.html#aa514e6a8a7538aa25f74e70f17f0858a" title="WAIT module Enable / Disable." alt="" coords="359,259,501,285"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="609,171,567,211,515,249,489,260,487,256,512,244,564,207,605,167"/>
+<area shape="rect" id="Node000003" href="$d4/d1b/_t_c_s3400_8c.html#a92c41f9da5ab14d7666b80cae88067f6" title="Initialization for TCS3400 peripheral." alt="" coords="198,5,299,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="332,21,299,21,299,16,332,16"/>
+<area shape="rect" id="Node000004" href="$d4/d1b/_t_c_s3400_8c.html#ae1122436ee0aa2cf81cec91006589ad6" title="Initialization for TCS3400 peripheral." alt="" coords="5,5,150,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="183,21,150,21,150,16,183,16"/>
 </map>

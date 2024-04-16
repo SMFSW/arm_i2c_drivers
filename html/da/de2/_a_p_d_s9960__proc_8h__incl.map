@@ -1,8 +1,32 @@
 <map id="APDS9960_proc.h" name="APDS9960_proc.h">
-<area shape="rect" id="node3" href="$d2/dbf/_a_p_d_s9960_8h.html" title="APDS9960 Driver. " alt="" coords="103,80,205,107"/>
-<area shape="rect" id="node9" href="$db/d70/shared___a_l_s_8h.html" title="Ambient Light Sensing shared. " alt="" coords="281,80,392,107"/>
-<area shape="rect" id="node10" href="$df/ded/shared___c_l_s_8h.html" title="Color Light Sensing shared. " alt="" coords="416,80,527,107"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="389,155,524,181"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="189,155,314,181"/>
-<area shape="rect" id="node8" href="$da/db5/_a_p_d_s9960__ex_8h.html" title="APDS9960 Driver extensions. " alt="" coords="40,155,164,181"/>
+<area shape="rect" id="Node000001" title="APDS9960 Driver procedures." alt="" coords="76,5,205,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="198,229,280,256"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,35,78,62,36,98,20,118,10,139,9,160,18,180,44,197,86,212,184,232,183,237,85,217,42,202,14,183,4,161,5,138,15,116,32,94,75,57,116,30"/>
+<area shape="rect" id="Node000003" href="$d2/dbf/_a_p_d_s9960_8h.html" title="APDS9960 Driver." alt="" coords="92,80,189,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="136,33,134,65,129,65,131,32"/>
+<area shape="rect" id="Node000009" href="$db/d70/shared___a_l_s_8h.html" title="Ambient Light Sensing shared." alt="" coords="269,80,372,107"/>
+<area shape="poly" id="edge15_Node000001_Node000009" title=" " alt="" coords="173,30,276,71,274,76,171,35"/>
+<area shape="rect" id="Node000010" href="$df/ded/shared___c_l_s_8h.html" title="Color Light Sensing shared." alt="" coords="396,80,501,107"/>
+<area shape="poly" id="edge18_Node000001_Node000010" title=" " alt="" coords="195,30,383,74,381,79,194,35"/>
+<area shape="poly" id="edge11_Node000003_Node000001" title=" " alt="" coords="145,79,146,47,152,47,150,80"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="100,110,68,123,40,140,30,149,25,159,24,169,29,180,53,196,92,211,184,231,183,236,90,216,50,201,25,183,19,170,19,157,26,146,36,135,65,118,98,105"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="373,155,497,181"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="190,104,370,148,369,153,189,109"/>
+<area shape="rect" id="Node000007" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="181,155,297,181"/>
+<area shape="poly" id="edge8_Node000003_Node000007" title=" " alt="" coords="159,105,212,144,209,148,156,109"/>
+<area shape="rect" id="Node000008" href="$da/db5/_a_p_d_s9960__ex_8h.html" title="APDS9960 Driver extensions." alt="" coords="39,155,157,181"/>
+<area shape="poly" id="edge12_Node000003_Node000008" title=" " alt="" coords="128,109,106,143,102,140,124,106"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="402,184,288,226,286,221,400,179"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="307,229,371,256"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="420,184,368,223,365,218,417,180"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="398,229,472,256"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="438,182,438,214,432,214,432,182"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="242,182,242,214,236,214,236,182"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="258,180,311,218,308,222,255,184"/>
+<area shape="poly" id="edge13_Node000008_Node000002" title=" " alt="" coords="124,179,202,220,200,224,121,184"/>
+<area shape="poly" id="edge14_Node000008_Node000003" title=" " alt="" coords="110,153,132,119,136,122,114,156"/>
+<area shape="poly" id="edge16_Node000009_Node000002" title=" " alt="" coords="324,107,324,142,320,163,312,183,295,205,275,223,271,219,291,201,307,180,315,162,318,142,319,107"/>
+<area shape="poly" id="edge17_Node000009_Node000004" title=" " alt="" coords="342,105,404,144,401,149,339,109"/>
+<area shape="poly" id="edge19_Node000010_Node000002" title=" " alt="" coords="470,105,490,120,508,140,518,161,517,172,511,183,295,232,293,227,508,179,512,171,513,162,504,143,486,124,467,109"/>
+<area shape="poly" id="edge20_Node000010_Node000004" title=" " alt="" coords="449,108,443,141,437,140,443,107"/>
 </map>

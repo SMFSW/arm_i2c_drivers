@@ -1,0 +1,20 @@
+<map id="I2CMEM_ex.h" name="I2CMEM_ex.h">
+<area shape="rect" id="Node000001" title="FRAM / EEPROM Driver extensions." alt="" coords="192,5,298,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="254,229,335,256"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="263,30,284,51,302,79,311,115,313,152,304,215,299,215,308,152,306,116,297,81,280,55,259,34"/>
+<area shape="rect" id="Node000003" href="$d2/d53/_i2_c_m_e_m_8h.html" title="FRAM / EEPROM Driver." alt="" coords="203,80,287,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="240,33,239,65,233,65,235,32"/>
+<area shape="poly" id="edge11_Node000003_Node000001" title=" " alt="" coords="249,79,251,47,256,47,254,80"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="257,106,272,127,285,154,293,185,296,215,291,215,287,186,280,156,267,130,253,109"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="5,155,130,181"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="215,110,113,151,111,146,213,105"/>
+<area shape="rect" id="Node000007" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="153,155,270,181"/>
+<area shape="poly" id="edge8_Node000003_Node000007" title=" " alt="" coords="241,108,226,142,221,140,237,106"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="108,179,241,222,240,227,106,184"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="153,229,217,256"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="89,180,154,219,151,224,87,184"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="31,229,104,256"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="70,182,70,214,65,214,65,182"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="228,180,271,217,267,221,224,184"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="209,183,197,216,192,214,204,181"/>
+</map>

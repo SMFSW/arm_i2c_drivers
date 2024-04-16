@@ -1,4 +1,7 @@
 <map id="AT42QT1244_Init_Sequence" name="AT42QT1244_Init_Sequence">
-<area shape="rect" id="node2" href="$dd/d4f/_a_t42_q_t1244_8h.html#a2bc2277728576e7c12b20400144d1de0" title="Initialization for AT42QT1244 peripheral. " alt="" coords="252,5,380,32"/>
-<area shape="rect" id="node3" href="$dd/d4f/_a_t42_q_t1244_8h.html#a8060fa17608cb27da6c09ddbc7086107" title="Initialization for AT42QT1244 peripheral. " alt="" coords="428,5,603,32"/>
+<area shape="rect" id="Node000001" title="Initialization Sequence for AT42QT1244 peripheral." alt="" coords="389,5,576,32"/>
+<area shape="rect" id="Node000002" href="$d3/dc4/_a_t42_q_t1244_8c.html#a2bc2277728576e7c12b20400144d1de0" title="Initialization for AT42QT1244 peripheral." alt="" coords="219,5,341,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="374,21,341,21,341,16,374,16"/>
+<area shape="rect" id="Node000003" href="$d3/dc4/_a_t42_q_t1244_8c.html#a8060fa17608cb27da6c09ddbc7086107" title="Initialization for AT42QT1244 peripheral." alt="" coords="5,5,171,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="204,21,171,21,171,16,204,16"/>
 </map>

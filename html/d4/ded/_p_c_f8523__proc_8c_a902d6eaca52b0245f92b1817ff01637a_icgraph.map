@@ -1,6 +1,11 @@
 <map id="PCF8523_Get_Date" name="PCF8523_Get_Date">
-<area shape="rect" id="node2" href="$d4/d61/_p_c_f8523__proc_8h.html#a04365ddacd950492c16035fb554c3b72" title="Initialization Sequence for PCF8523 peripheral. " alt="" coords="200,5,375,32"/>
-<area shape="rect" id="node4" href="$d4/d61/_p_c_f8523__proc_8h.html#a0c61d7181df53ea43460c13575563e92" title="Handler for PCF8523 peripheral. " alt="" coords="221,56,354,83"/>
-<area shape="rect" id="node3" href="$dd/d42/_p_c_f8523_8h.html#aa61e54475342c7382da01eb61e44da09" title="Initialization for PCF8523 peripheral peripheral. " alt="" coords="445,5,549,32"/>
-<area shape="rect" id="node5" href="$d4/d61/_p_c_f8523__proc_8h.html#a519c4d20da41104d7ec672566ad70e36" title="Handler for PCF8523 peripheral GPIO interrupt. " alt="" coords="423,56,571,83"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="407,31,546,57"/>
+<area shape="rect" id="Node000002" href="$d4/ded/_p_c_f8523__proc_8c.html#a0c61d7181df53ea43460c13575563e92" title="Handler for PCF8523 peripheral." alt="" coords="213,5,339,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="392,36,338,29,339,24,393,31"/>
+<area shape="rect" id="Node000004" href="$d4/ded/_p_c_f8523__proc_8c.html#a04365ddacd950492c16035fb554c3b72" title="Initialization Sequence for PCF8523 peripheral." alt="" coords="193,56,359,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="392,57,360,61,359,56,392,52"/>
+<area shape="rect" id="Node000003" href="$d4/ded/_p_c_f8523__proc_8c.html#a519c4d20da41104d7ec672566ad70e36" title="Handler for PCF8523 peripheral GPIO interrupt." alt="" coords="5,5,145,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="198,21,145,21,145,16,198,16"/>
+<area shape="rect" id="Node000005" href="$df/d5b/_p_c_f8523_8c.html#aa61e54475342c7382da01eb61e44da09" title="Initialization for PCF8523 peripheral peripheral." alt="" coords="24,56,126,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="178,72,126,72,126,67,178,67"/>
 </map>

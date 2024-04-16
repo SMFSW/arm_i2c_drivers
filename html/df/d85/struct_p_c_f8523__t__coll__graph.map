@@ -1,6 +1,11 @@
 <map id="PCF8523_t" name="PCF8523_t">
-<area shape="rect" id="node2" href="$d2/de7/struct_p_c_f8523__time.html" title="PCF8523 Time of day struct. " alt="" coords="5,5,120,32"/>
-<area shape="rect" id="node3" href="$df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters " alt="" coords="145,5,239,32"/>
-<area shape="rect" id="node4" href="$d3/da8/struct_p_c_f8523__date.html" title="PCF8523 Date struct. " alt="" coords="264,5,379,32"/>
-<area shape="rect" id="node5" href="$dc/d95/struct_peripheral_g_p_i_o__t.html" title="i2c peripheral GPIO pin parameters " alt="" coords="403,5,533,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="209,112,297,139"/>
+<area shape="rect" id="Node000002" href="$d3/da8/struct_p_c_f8523__date.html" title="PCF8523 Date struct." alt="" coords="5,5,114,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,38,181,86,227,109,225,114,179,90,92,42"/>
+<area shape="rect" id="Node000003" href="$d2/de7/struct_p_c_f8523__time.html" title="PCF8523 Time of day struct." alt="" coords="137,5,246,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="208,43,248,110,243,113,204,46"/>
+<area shape="rect" id="Node000004" href="$df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters" alt="" coords="270,5,361,32"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="303,46,263,113,258,110,298,43"/>
+<area shape="rect" id="Node000005" href="$dc/d95/struct_peripheral_g_p_i_o__t.html" title="i2c peripheral GPIO pin parameters" alt="" coords="386,5,509,32"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="425,45,396,68,362,90,330,105,298,116,296,111,328,100,360,86,393,64,422,40"/>
 </map>

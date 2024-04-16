@@ -1,5 +1,9 @@
 <map id="AT42QT1244_t" name="AT42QT1244_t">
-<area shape="rect" id="node2" href="$df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters " alt="" coords="5,13,100,39"/>
-<area shape="rect" id="node3" href="$d4/d1f/unionu_a_t42_q_t___r_e_g_____d_e_v_i_c_e___s_t_a_t_u_s.html" title="uAT42QT_REG__DEVICE\l_STATUS" alt="" coords="124,5,296,47"/>
-<area shape="rect" id="node4" href="$dc/d95/struct_peripheral_g_p_i_o__t.html" title="i2c peripheral GPIO pin parameters " alt="" coords="320,13,449,39"/>
+<area shape="rect" id="Node000001" title="AT42QT1244 user interface struct." alt="" coords="199,128,307,155"/>
+<area shape="rect" id="Node000002" href="$d4/d1f/unionu_a_t42_q_t___r_e_g_____d_e_v_i_c_e___s_t_a_t_u_s.html" title=" " alt="" coords="5,5,183,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,55,237,125,234,130,133,59"/>
+<area shape="rect" id="Node000003" href="$df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters" alt="" coords="207,13,298,40"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="255,55,255,128,250,128,250,55"/>
+<area shape="rect" id="Node000004" href="$dc/d95/struct_peripheral_g_p_i_o__t.html" title="i2c peripheral GPIO pin parameters" alt="" coords="323,13,446,40"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="370,54,349,80,322,106,284,130,281,125,319,102,345,77,366,51"/>
 </map>

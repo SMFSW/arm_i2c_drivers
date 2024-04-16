@@ -1,3 +1,5 @@
 <map id="AMG88_Get_Thermistor_Raw" name="AMG88_Get_Thermistor_Raw">
-<area shape="rect" id="node2" href="$dc/db3/_a_m_g88__ex_8h.html#afd2d8f4ab1951ee9874d14d6b1bb8173" title="Get thermistor temperature. " alt="" coords="260,5,473,32"/>
+<area shape="rect" id="Node000001" title="Get thermistor raw value." alt="" coords="248,5,444,32"/>
+<area shape="rect" id="Node000002" href="$de/d9d/_a_m_g88__ex_8c.html#afd2d8f4ab1951ee9874d14d6b1bb8173" title="Get thermistor temperature." alt="" coords="5,5,200,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="233,21,200,21,200,16,233,16"/>
 </map>

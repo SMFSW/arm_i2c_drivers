@@ -1,6 +1,17 @@
 <map id="TCS3400_handler_all" name="TCS3400_handler_all">
-<area shape="rect" id="node2" href="$d9/d14/_t_c_s3400__proc_8h.html#a8808303dd2ea714a3516ba2c0ed2b395" title="Handler for TCS3400 peripheral. " alt="" coords="208,31,341,57"/>
-<area shape="rect" id="node3" href="$d4/d1b/_t_c_s3400_8c.html#ac6b81ecacb0000ae8a9e4cd223b07ed2" title="I2C Read function for TCS3400. " alt="" coords="389,31,505,57"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="553,5,671,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="559,56,665,83"/>
+<area shape="rect" id="Node000001" title="Handler for all TCS3400 peripherals." alt="" coords="5,31,151,57"/>
+<area shape="rect" id="Node000002" href="$dc/dd9/_t_c_s3400__proc_8c.html#a8808303dd2ea714a3516ba2c0ed2b395" title="Handler for TCS3400 peripheral." alt="" coords="199,31,324,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,41,184,41,184,47,151,47"/>
+<area shape="rect" id="Node000003" href="$de/d36/_t_c_s3400__ex_8h.html#a44c82418965a3b25753564a101b34840" title="Clear All pending interruptions." alt="" coords="372,5,527,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="324,33,357,28,358,34,325,38"/>
+<area shape="rect" id="Node000007" href="$d4/d1b/_t_c_s3400_8c.html#ac6b81ecacb0000ae8a9e4cd223b07ed2" title="I2C Read function for TCS3400." alt="" coords="575,56,690,83"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="325,46,560,62,560,67,324,51"/>
+<area shape="rect" id="Node000004" href="$d4/d1b/_t_c_s3400_8c.html#a74d4e0aa8eb8d69af81660a1ef13ed77" title="I2C Write function for TCS3400." alt="" coords="576,5,689,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="528,16,561,16,561,21,528,21"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="738,5,849,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="690,16,723,16,723,21,690,21"/>
+<area shape="rect" id="Node000006" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="742,56,845,83"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="678,30,736,49,734,54,677,35"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="677,53,734,34,736,39,678,58"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="690,67,727,67,727,72,690,72"/>
 </map>

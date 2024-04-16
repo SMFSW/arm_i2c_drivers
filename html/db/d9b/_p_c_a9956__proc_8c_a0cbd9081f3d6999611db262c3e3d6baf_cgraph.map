@@ -1,8 +1,25 @@
 <map id="PCA9956_Init_Sequence" name="PCA9956_Init_Sequence">
-<area shape="rect" id="node2" href="$df/d5e/_p_c_a9956_8c.html#a631d23c191d905d40f272c8488d175b4" title="I2C Write function for PCA9956. " alt="" coords="497,89,616,115"/>
-<area shape="rect" id="node3" href="$dd/d22/_p_c_a9956__ex_8c.html#a1c293d3b30faed552452a938635e5025" title="Set auto increment option for PCA9956 registers. " alt="" coords="231,190,449,217"/>
-<area shape="rect" id="node5" href="$dd/d22/_p_c_a9956__ex_8c.html#a9634dd720e3a109a32be37d7721181a4" title="Set PCA9956 peripheral multiple LEDs mode. " alt="" coords="245,38,435,65"/>
-<area shape="rect" id="node6" href="$dd/d22/_p_c_a9956__ex_8c.html#aea495515529a59b632b86612b77a61b4" title="Set PCA9956 output gain control value. " alt="" coords="269,89,411,115"/>
-<area shape="rect" id="node7" href="$dd/d22/_p_c_a9956__ex_8c.html#abc361384337269a4aa7edc0f32c0a84e" title="Set PCA9956 peripheral delay between channels. " alt="" coords="263,139,417,166"/>
-<area shape="rect" id="node4" href="$df/d5e/_p_c_a9956_8c.html#a45016e9d78da0bffbd4bceb1a3478b75" title="I2C Read function for PCA9956. " alt="" coords="497,190,616,217"/>
+<area shape="rect" id="Node000001" title="Initialization Sequence for PCA9956 peripheral." alt="" coords="5,107,173,133"/>
+<area shape="rect" id="Node000002" href="$dd/d22/_p_c_a9956__ex_8c.html#a1c293d3b30faed552452a938635e5025" title="Set auto increment option for PCA9956 registers." alt="" coords="221,5,424,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,104,158,73,220,42,240,34,242,39,222,46,160,77,112,108"/>
+<area shape="rect" id="Node000006" href="$df/d5e/_p_c_a9956_8c.html#a631d23c191d905d40f272c8488d175b4" title="I2C Write function for PCA9956." alt="" coords="473,81,587,108"/>
+<area shape="poly" id="edge14_Node000001_Node000006" title=" " alt="" coords="109,132,157,165,188,181,221,193,278,208,324,215,369,211,423,194,449,179,473,160,509,119,513,122,477,164,452,183,425,198,370,216,324,220,277,213,220,199,186,186,155,170,106,136"/>
+<area shape="rect" id="Node000007" href="$dd/d22/_p_c_a9956__ex_8c.html#aea495515529a59b632b86612b77a61b4" title="Set PCA9956 output gain control value." alt="" coords="251,56,394,83"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="153,103,243,84,244,89,155,109"/>
+<area shape="rect" id="Node000008" href="$dd/d22/_p_c_a9956__ex_8c.html#a876eb5685fc1057c47dec6005c3e5069" title="Set PCA9956 peripheral multiple LEDs mode." alt="" coords="231,107,414,133"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="173,117,216,117,216,123,173,123"/>
+<area shape="rect" id="Node000009" href="$dd/d22/_p_c_a9956__ex_8c.html#abc361384337269a4aa7edc0f32c0a84e" title="Set PCA9956 peripheral delay between channels." alt="" coords="249,157,396,184"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="155,131,244,151,243,156,153,137"/>
+<area shape="rect" id="Node000003" href="$df/d5e/_p_c_a9956_8c.html#a45016e9d78da0bffbd4bceb1a3478b75" title="I2C Read function for PCA9956." alt="" coords="472,31,587,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="425,28,458,33,457,38,424,34"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="389,30,425,42,450,54,473,67,485,72,482,77,471,72,447,58,423,46,388,35"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="635,31,747,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="588,41,620,41,620,47,588,47"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="640,81,742,108"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="576,55,633,74,632,79,574,61"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="574,78,632,60,633,65,576,83"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="587,92,625,92,625,97,587,97"/>
+<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="394,75,458,83,457,89,394,81"/>
+<area shape="poly" id="edge11_Node000008_Node000006" title=" " alt="" coords="414,106,458,101,458,106,415,111"/>
+<area shape="poly" id="edge13_Node000009_Node000006" title=" " alt="" coords="386,154,423,143,490,113,492,118,425,148,388,159"/>
 </map>

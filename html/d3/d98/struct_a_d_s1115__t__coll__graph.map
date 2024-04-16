@@ -1,5 +1,9 @@
 <map id="ADS1115_t" name="ADS1115_t">
-<area shape="rect" id="node2" href="$df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters " alt="" coords="5,5,100,32"/>
-<area shape="rect" id="node3" href="$dc/d95/struct_peripheral_g_p_i_o__t.html" title="i2c peripheral GPIO pin parameters " alt="" coords="124,5,253,32"/>
-<area shape="rect" id="node4" href="$d1/d47/unionu_a_d_s1115___r_e_g_____c_f_g.html" title="Union for Config register of ADS1115. " alt="" coords="278,5,441,32"/>
+<area shape="rect" id="Node000001" title="ADS1115 user interface struct." alt="" coords="140,96,226,123"/>
+<area shape="rect" id="Node000002" href="$df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters" alt="" coords="5,5,97,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,40,116,70,158,93,155,98,113,74,74,44"/>
+<area shape="rect" id="Node000003" href="$dc/d95/struct_peripheral_g_p_i_o__t.html" title="i2c peripheral GPIO pin parameters" alt="" coords="121,5,245,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="186,47,186,95,180,95,180,47"/>
+<area shape="rect" id="Node000004" href="$d1/d47/unionu_a_d_s1115___r_e_g_____c_f_g.html" title="Union for Config register of ADS1115." alt="" coords="268,5,429,32"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="318,42,263,74,214,98,211,93,260,70,315,38"/>
 </map>

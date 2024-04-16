@@ -1,3 +1,5 @@
 <map id="DRV2605L_Vibe" name="DRV2605L_Vibe">
-<area shape="rect" id="node2" href="$d1/da7/_d_r_v2605_l__proc_8h.html#aab005330aca4063527b650aeab03a301" title="Auto&#45;calibration procedure for DRV2605L peripheral. " alt="" coords="176,5,339,32"/>
+<area shape="rect" id="Node000001" title="Start/Stop haptic pattern." alt="" coords="209,5,326,32"/>
+<area shape="rect" id="Node000002" href="$df/dc7/_d_r_v2605_l__proc_8c.html#aab005330aca4063527b650aeab03a301" title="Auto&#45;calibration procedure for DRV2605L peripheral." alt="" coords="5,5,161,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,21,161,21,161,16,194,16"/>
 </map>

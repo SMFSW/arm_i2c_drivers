@@ -1,3 +1,5 @@
 <map id="PCA9532_Init" name="PCA9532_Init">
-<area shape="rect" id="node2" href="$d3/df9/_p_c_a9532_8h.html#ae3bc95cfa1ac91a201ac0543ced4bb03" title="Initialization for PCA9532 peripheral. " alt="" coords="160,5,312,32"/>
+<area shape="rect" id="Node000001" title="Initialization for PCA9532 peripheral." alt="" coords="199,5,301,32"/>
+<area shape="rect" id="Node000002" href="$d2/d28/_p_c_a9532_8c.html#ae3bc95cfa1ac91a201ac0543ced4bb03" title="Initialization for PCA9532 peripheral." alt="" coords="5,5,151,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,21,151,21,151,16,184,16"/>
 </map>

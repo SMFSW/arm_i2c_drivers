@@ -1,0 +1,7 @@
+<map id="LSM303DLHC_handler_all" name="LSM303DLHC_handler_all">
+<area shape="rect" id="Node000001" title="Handler for all LSM303DLHC peripherals." alt="" coords="5,31,181,57"/>
+<area shape="rect" id="Node000002" href="$db/d9f/_l_s_m303_d_l_h_c__proc_8c.html#a9ebc46f82507ade8f8eac54f361bef4c" title="Handler for LSM303DLHC peripheral (Linear Acceleration)" alt="" coords="230,5,409,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,32,215,28,215,33,181,37"/>
+<area shape="rect" id="Node000003" href="$db/d9f/_l_s_m303_d_l_h_c__proc_8c.html#ae37fbccbccab914eb44a3be7c4dbf843" title="Handler for LSM303DLHC peripheral (Magnetic Field)" alt="" coords="229,56,410,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="181,51,214,55,213,60,181,56"/>
+</map>

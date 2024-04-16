@@ -1,0 +1,11 @@
+<map id="APDS9960_SF_Clear_ALS_PROX_IT" name="APDS9960_SF_Clear_ALS_PROX_IT">
+<area shape="rect" id="Node000001" title="Clear pending ALS &amp; Proximity interruptions." alt="" coords="609,23,790,65"/>
+<area shape="rect" id="Node000002" href="$dd/d2e/_a_p_d_s9960__proc_8c.html#afb999a0fb29df82bc3861d15e232c777" title="Handler for APDS9960 peripheral." alt="" coords="426,31,561,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="595,47,561,47,561,41,595,41"/>
+<area shape="rect" id="Node000003" href="$df/d17/_a_p_d_s9960__proc_8h.html#afa04bc1a2bded2ddd64565252ac7c6b9" title="Handler for all APDS9960 peripherals." alt="" coords="223,5,378,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="411,36,378,32,379,26,412,31"/>
+<area shape="rect" id="Node000004" href="$dd/d2e/_a_p_d_s9960__proc_8c.html#a87274cc64ac34debc21c82dc2582d6df" title="Handler for APDS9960 peripheral GPIO interrupt." alt="" coords="226,56,375,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="412,57,375,62,375,57,411,52"/>
+<area shape="rect" id="Node000005" href="$df/d17/_a_p_d_s9960__proc_8h.html#a115196f922a8ed8661013aaa55f87eb4" title="Handler for all APDS9960 peripherals GPIO interrupt." alt="" coords="5,56,175,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="211,72,175,72,175,67,211,67"/>
+</map>

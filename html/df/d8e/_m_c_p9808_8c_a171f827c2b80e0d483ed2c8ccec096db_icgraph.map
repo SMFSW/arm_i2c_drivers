@@ -1,13 +1,26 @@
 <map id="MCP9808_Write" name="MCP9808_Write">
-<area shape="rect" id="node2" href="$df/d2f/_m_c_p9808__ex_8h.html#ab9328efd5d7ac1e75848bcb9c0844971" title="Write MCP9808 configuration. " alt="" coords="181,107,348,133"/>
-<area shape="rect" id="node7" href="$df/d2f/_m_c_p9808__ex_8h.html#a719e116d062eee249034714fe1acf1cc" title="Write MCP9808 configuration. " alt="" coords="189,157,341,184"/>
-<area shape="rect" id="node8" href="$d6/d5e/_m_c_p9808__proc_8h.html#a6d1f43041e42560f4f907a8cb24aab26" title="Set the high/low/crit Alert temperature. " alt="" coords="420,208,603,235"/>
-<area shape="rect" id="node9" href="$df/d2f/_m_c_p9808__ex_8h.html#a04e9bbcad253b27bbb9e10390e34c302" title="Set MCP9808 Resolution. " alt="" coords="173,259,356,285"/>
-<area shape="rect" id="node3" href="$df/d2f/_m_c_p9808__ex_8h.html#a9f92d8737d843cee1af9a14f0d6f3417" title="Set MCP9808 alert hysteresis. " alt="" coords="404,5,619,32"/>
-<area shape="rect" id="node4" href="$df/d2f/_m_c_p9808__ex_8h.html#aa1810352aafc728c4d708da97ec4faab" title="Set MCP9808 alert type. " alt="" coords="423,56,599,83"/>
-<area shape="rect" id="node5" href="$df/d2f/_m_c_p9808__ex_8h.html#ac6fe701c571bef6c89df381b6c80b9ee" title="Set MCP9808 alert enable. " alt="" coords="415,107,607,133"/>
-<area shape="rect" id="node6" href="$df/d2f/_m_c_p9808__ex_8h.html#a2ed5f4eabea394a30aee6d4323c97f34" title="Set MCP9808 alert lock. " alt="" coords="423,157,600,184"/>
-<area shape="rect" id="node10" href="$d6/d5e/_m_c_p9808__proc_8h.html#acdc3fcd27aee6d19c3e7fb7bf4762b47" title="Initialization Sequence of the MCP9808 peripheral. " alt="" coords="422,259,601,285"/>
-<area shape="rect" id="node11" href="$d8/d57/_m_c_p9808_8h.html#a92276c5da93fdb59cc4d94ef92761841" title="Initialization of the MCP9808 peripheral. " alt="" coords="667,259,775,285"/>
-<area shape="rect" id="node12" href="$d8/d57/_m_c_p9808_8h.html#a9ffcff895e9844967086a52af6c82dd4" title="Initialization for MCP9808 peripheral. " alt="" coords="823,259,977,285"/>
+<area shape="rect" id="Node000001" title="I2C Write function for MCP9808." alt="" coords="828,68,944,95"/>
+<area shape="rect" id="Node000002" href="$de/deb/_m_c_p9808__proc_8c.html#a6d1f43041e42560f4f907a8cb24aab26" title="Set the high/low/crit Alert temperature." alt="" coords="369,5,541,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="849,63,816,46,779,33,718,22,656,16,541,15,542,10,656,11,719,17,780,28,818,41,851,58"/>
+<area shape="rect" id="Node000003" href="$df/d47/_m_c_p9808__ex_8c.html#a04e9bbcad253b27bbb9e10390e34c302" title="Set MCP9808 Resolution." alt="" coords="604,93,780,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="813,93,780,98,780,93,812,88"/>
+<area shape="rect" id="Node000007" href="$df/d47/_m_c_p9808__ex_8c.html#a719e116d062eee249034714fe1acf1cc" title="Write MCP9808 configuration." alt="" coords="620,43,764,69"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="813,74,764,68,765,63,813,69"/>
+<area shape="rect" id="Node000008" href="$df/d47/_m_c_p9808__ex_8c.html#ab9328efd5d7ac1e75848bcb9c0844971" title="Write MCP9808 configuration." alt="" coords="611,169,773,196"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="847,104,720,171,718,167,845,99"/>
+<area shape="rect" id="Node000004" href="$de/deb/_m_c_p9808__proc_8c.html#acdc3fcd27aee6d19c3e7fb7bf4762b47" title="Initialization Sequence of the MCP9808 peripheral." alt="" coords="370,68,539,95"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="589,98,539,93,540,88,590,93"/>
+<area shape="rect" id="Node000005" href="$df/d8e/_m_c_p9808_8c.html#a92276c5da93fdb59cc4d94ef92761841" title="Initialization of the MCP9808 peripheral." alt="" coords="201,68,305,95"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="355,84,306,84,306,79,355,79"/>
+<area shape="rect" id="Node000006" href="$df/d8e/_m_c_p9808_8c.html#a9ffcff895e9844967086a52af6c82dd4" title="Initialization for MCP9808 peripheral." alt="" coords="5,68,153,95"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="186,84,153,84,153,79,186,79"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="605,45,541,35,542,30,606,40"/>
+<area shape="rect" id="Node000009" href="$df/d47/_m_c_p9808__ex_8c.html#a9f92d8737d843cee1af9a14f0d6f3417" title="Set MCP9808 alert hysteresis." alt="" coords="353,119,556,145"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="611,168,520,149,521,143,612,163"/>
+<area shape="rect" id="Node000010" href="$df/d47/_m_c_p9808__ex_8c.html#a2ed5f4eabea394a30aee6d4323c97f34" title="Set MCP9808 alert lock." alt="" coords="371,169,539,196"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="597,185,539,185,539,180,597,180"/>
+<area shape="rect" id="Node000011" href="$df/d47/_m_c_p9808__ex_8c.html#ac6fe701c571bef6c89df381b6c80b9ee" title="Set MCP9808 alert enable." alt="" coords="365,220,544,247"/>
+<area shape="poly" id="edge11_Node000008_Node000011" title=" " alt="" coords="612,202,521,222,520,217,611,197"/>
+<area shape="rect" id="Node000012" href="$df/d47/_m_c_p9808__ex_8c.html#aa1810352aafc728c4d708da97ec4faab" title="Set MCP9808 alert type." alt="" coords="371,271,539,297"/>
+<area shape="poly" id="edge12_Node000008_Node000012" title=" " alt="" coords="659,207,612,235,557,261,522,273,521,268,555,256,610,230,656,202"/>
 </map>

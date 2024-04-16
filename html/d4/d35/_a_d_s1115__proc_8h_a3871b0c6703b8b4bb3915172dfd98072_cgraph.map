@@ -1,19 +1,24 @@
 <map id="ADS1115_handler_all" name="ADS1115_handler_all">
-<area shape="rect" id="node2" href="$d4/d35/_a_d_s1115__proc_8h.html#a2a5488401e3392d27760b90ff5f31be2" title="Handler for ADS1115 peripheral. " alt="" coords="212,119,349,145"/>
-<area shape="rect" id="node3" href="$d8/d63/_a_d_s1115__ex_8c.html#a5bbea4413bea28dd93dfce2864293d07" title="Start ADS1115 Next conversion. " alt="" coords="397,12,627,39"/>
-<area shape="rect" id="node5" href="$d8/d63/_a_d_s1115__ex_8c.html#aea826fb9b4c07301a47026d8cad8fa6f" title="Get conversion time for ADS1115 component (µs) " alt="" coords="427,68,597,95"/>
-<area shape="rect" id="node6" href="$d8/d63/_a_d_s1115__ex_8c.html#a567d50bfd5265901dc9132ccb666bd2c" title="Get ADS1115 conversion. " alt="" coords="417,119,607,145"/>
-<area shape="rect" id="node10" href="$d8/d4b/_a_d_s1115__ex_8h.html#a79e57b4463b2ac3b43b152ce61850ed2" title="Get ADS1115 raw channel value. " alt="" coords="421,180,603,207"/>
-<area shape="rect" id="node18" href="$d8/d63/_a_d_s1115__ex_8c.html#a59bb8cdf42f67a04e28339e8d5918702" title="Get ADS1115 raw channel value in mV. " alt="" coords="421,231,603,273"/>
-<area shape="rect" id="node4" href="$d8/d63/_a_d_s1115__ex_8c.html#aa2655b719d3bc141c24de2e90fa34633" title="Start ADS1115 conversion. " alt="" coords="675,5,873,32"/>
-<area shape="rect" id="node7" href="$db/de1/_a_d_s1115_8c.html#a92839395c4e5385fe67b8eaeb948de7c" title="I2C Read function for ADS1115. " alt="" coords="714,56,834,83"/>
-<area shape="rect" id="node8" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="952,31,1069,57"/>
-<area shape="rect" id="node9" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="957,81,1064,108"/>
-<area shape="rect" id="node11" href="$d8/d4b/_a_d_s1115__ex_8h.html#ad20504d5c0e8c93b73dc20300e6806fb" title="Get ADS1115 raw channel value in µV. " alt="" coords="683,107,865,149"/>
-<area shape="rect" id="node12" href="$d8/d4b/_a_d_s1115__ex_8h.html#a59bb8cdf42f67a04e28339e8d5918702" title="Get ADS1115 raw channel value in mV. " alt="" coords="683,173,865,214"/>
-<area shape="rect" id="node13" href="$d8/d4b/_a_d_s1115__ex_8h.html#a86643c274b5a593c93733e4337d01484" title="Get ADS1115 raw channel value in V. " alt="" coords="683,238,865,279"/>
-<area shape="rect" id="node14" href="$d8/d4b/_a_d_s1115__ex_8h.html#a5e1216d8aa877b457bfbc5ec36477cf8" title="Ready GPIO pin init for ADS1115. " alt="" coords="685,304,863,331"/>
-<area shape="rect" id="node16" href="$d8/d4b/_a_d_s1115__ex_8h.html#a7ddf616c2c0ef262b2381f9ff844bb8f" title="Ready GPIO pin getter for ADS1115. " alt="" coords="683,355,865,381"/>
-<area shape="rect" id="node15" href="$d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="922,304,1099,331"/>
-<area shape="rect" id="node17" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="921,355,1100,381"/>
+<area shape="rect" id="Node000001" title="Handler for all ADS1115 peripherals." alt="" coords="5,115,150,141"/>
+<area shape="rect" id="Node000002" href="$da/d08/_a_d_s1115__proc_8c.html#a2a5488401e3392d27760b90ff5f31be2" title="Handler for ADS1115 peripheral." alt="" coords="198,115,322,141"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,125,183,125,183,131,150,131"/>
+<area shape="rect" id="Node000003" href="$d8/d63/_a_d_s1115__ex_8c.html#aea826fb9b4c07301a47026d8cad8fa6f" title="Get conversion time for ADS1115 component (µs)" alt="" coords="396,5,555,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="273,112,314,77,369,42,386,35,388,40,371,46,317,81,276,116"/>
+<area shape="rect" id="Node000004" href="$d8/d63/_a_d_s1115__ex_8c.html#a567d50bfd5265901dc9132ccb666bd2c" title="Get ADS1115 conversion." alt="" coords="388,56,564,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="304,112,369,92,399,84,401,89,371,97,305,117"/>
+<area shape="rect" id="Node000008" href="$d8/d63/_a_d_s1115__ex_8c.html#a59bb8cdf42f67a04e28339e8d5918702" title="Get ADS1115 raw channel value in mV." alt="" coords="392,107,559,149"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="322,125,377,125,377,131,322,131"/>
+<area shape="rect" id="Node000009" href="$d8/d4b/_a_d_s1115__ex_8h.html#a79e57b4463b2ac3b43b152ce61850ed2" title="Get ADS1115 raw channel value." alt="" coords="636,144,806,171"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="298,139,333,150,370,159,435,166,501,168,621,164,621,169,501,173,435,171,370,164,331,156,296,144"/>
+<area shape="rect" id="Node000010" href="$d8/d63/_a_d_s1115__ex_8c.html#a5bbea4413bea28dd93dfce2864293d07" title="Start ADS1115 Next conversion." alt="" coords="370,224,581,251"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="279,140,319,171,371,203,404,216,402,221,369,208,316,176,275,144"/>
+<area shape="rect" id="Node000005" href="$db/de1/_a_d_s1115_8c.html#a92839395c4e5385fe67b8eaeb948de7c" title="I2C Read function for ADS1115." alt="" coords="664,56,778,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="564,67,649,67,649,72,564,72"/>
+<area shape="rect" id="Node000006" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="861,31,972,57"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="778,59,845,50,846,56,778,65"/>
+<area shape="rect" id="Node000007" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="865,81,968,108"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="778,74,851,84,850,89,778,79"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="560,135,622,143,622,148,560,141"/>
+<area shape="rect" id="Node000011" href="$d8/d63/_a_d_s1115__ex_8c.html#aa2655b719d3bc141c24de2e90fa34633" title="Start ADS1115 conversion." alt="" coords="629,224,813,251"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="582,235,614,235,614,240,582,240"/>
 </map>

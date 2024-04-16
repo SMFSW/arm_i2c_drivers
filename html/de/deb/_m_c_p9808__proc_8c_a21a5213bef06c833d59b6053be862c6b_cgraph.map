@@ -1,0 +1,13 @@
+<map id="MCP9808_handler" name="MCP9808_handler">
+<area shape="rect" id="Node000001" title="Handler for MCP9808 peripheral." alt="" coords="5,31,134,57"/>
+<area shape="rect" id="Node000002" href="$de/deb/_m_c_p9808__proc_8c.html#ad446802e702cb0e7e926b9f02d4cb069" title="Get the temperature." alt="" coords="182,31,368,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,41,166,41,166,47,134,47"/>
+<area shape="rect" id="Node000003" href="$df/d2f/_m_c_p9808__ex_8h.html#a21eb0466632ccc997f8304a06e8efa07" title="Get MCP9808 Configuration." alt="" coords="416,31,636,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="368,41,401,41,401,47,368,47"/>
+<area shape="rect" id="Node000004" href="$df/d8e/_m_c_p9808_8c.html#a887b2120905867a6ac0a3008e3bc756f" title="I2C Read function for MCP9808." alt="" coords="684,31,802,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="636,41,669,41,669,47,636,47"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="850,5,961,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="802,32,834,27,835,32,802,37"/>
+<area shape="rect" id="Node000006" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="854,56,957,83"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="802,51,840,56,839,62,802,56"/>
+</map>

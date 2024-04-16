@@ -1,0 +1,20 @@
+<map id="I2CMEM.h" name="I2CMEM.h">
+<area shape="rect" id="Node000001" title="FRAM / EEPROM Driver." alt="" coords="33,5,117,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="78,155,160,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,35,36,49,18,67,9,86,9,96,12,105,35,130,66,148,63,152,32,135,8,108,3,97,4,85,14,64,32,45,52,30"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="292,80,416,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="118,28,292,73,290,78,117,34"/>
+<area shape="rect" id="Node000006" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="152,80,268,107"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="100,30,175,70,172,75,97,35"/>
+<area shape="rect" id="Node000007" href="$d6/d4b/_i2_c_m_e_m__ex_8h.html" title="FRAM / EEPROM Driver extensions." alt="" coords="22,80,128,107"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="71,33,69,65,64,65,65,32"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="314,110,175,152,173,147,312,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="203,155,267,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="335,109,269,149,267,144,332,105"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="317,155,390,181"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="356,107,356,140,351,140,351,107"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="196,109,148,148,144,143,192,105"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="217,106,228,140,223,141,212,108"/>
+<area shape="poly" id="edge11_Node000007_Node000001" title=" " alt="" coords="79,79,81,47,87,47,85,80"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="85,106,106,141,102,143,81,109"/>
+</map>

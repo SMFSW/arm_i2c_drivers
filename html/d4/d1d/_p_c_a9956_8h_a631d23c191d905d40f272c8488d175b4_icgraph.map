@@ -1,22 +1,45 @@
 <map id="PCA9956_Write" name="PCA9956_Write">
-<area shape="rect" id="node2" href="$dd/ddf/_p_c_a9956__ex_8h.html#a1c293d3b30faed552452a938635e5025" title="Set auto increment option for PCA9956 registers. " alt="" coords="172,208,391,235"/>
-<area shape="rect" id="node3" href="$dd/ddf/_p_c_a9956__ex_8h.html#a1f23873e665562e66821beeb83bc510c" title="Set MODE2 register. " alt="" coords="470,183,633,209"/>
-<area shape="rect" id="node4" href="$df/d04/_p_c_a9956__proc_8h.html#a0cbd9081f3d6999611db262c3e3d6baf" title="Initialization Sequence for PCA9956 peripheral. " alt="" coords="463,309,640,336"/>
-<area shape="rect" id="node7" href="$dd/ddf/_p_c_a9956__ex_8h.html#aec9fb3f393f2ea363271223bb213cba7" title="Set latch type for PCA9956 peripheral. " alt="" coords="206,157,357,184"/>
-<area shape="rect" id="node8" href="$dd/ddf/_p_c_a9956__ex_8h.html#a4df68a6e77af12ddcbd443787a162f67" title="Set PCA9956 peripheral LED mode. " alt="" coords="190,5,373,32"/>
-<area shape="rect" id="node9" href="$dd/ddf/_p_c_a9956__ex_8h.html#a9634dd720e3a109a32be37d7721181a4" title="Set PCA9956 peripheral multiple LEDs mode. " alt="" coords="186,259,377,285"/>
-<area shape="rect" id="node10" href="$dd/ddf/_p_c_a9956__ex_8h.html#aea495515529a59b632b86612b77a61b4" title="Set PCA9956 output gain control value. " alt="" coords="210,309,353,336"/>
-<area shape="rect" id="node11" href="$dd/ddf/_p_c_a9956__ex_8h.html#a8cb4f5388815cb02e2b7ecb8c9c8e325" title="Set PCA9956 output gain control value. " alt="" coords="207,56,356,83"/>
-<area shape="rect" id="node12" href="$dd/ddf/_p_c_a9956__ex_8h.html#abc361384337269a4aa7edc0f32c0a84e" title="Set PCA9956 peripheral delay between channels. " alt="" coords="204,360,359,387"/>
-<area shape="rect" id="node13" href="$dd/ddf/_p_c_a9956__ex_8h.html#a50f5d7e9a073aa6af704ef69c8a4b1dc" title="Send PWM duty cycle array of values to apply on a PCA9956. " alt="" coords="214,461,349,488"/>
-<area shape="rect" id="node18" href="$dd/ddf/_p_c_a9956__ex_8h.html#ac2e9cecfe5fea806124ca1229658f7a3" title="Send PWM duty cycle value to apply on a PCA9956 channel. " alt="" coords="218,512,345,539"/>
-<area shape="rect" id="node19" href="$dd/ddf/_p_c_a9956__ex_8h.html#a32b9dca37db78d2852cd94b0e97162ef" title="Send PWM Full ON value to apply on a PCA9956 channel. " alt="" coords="217,563,345,589"/>
-<area shape="rect" id="node20" href="$dd/ddf/_p_c_a9956__ex_8h.html#ae1e617a23120269e52293fac43d2ac63" title="Send PWM Full OFF value to apply on a PCA9956 channel. " alt="" coords="220,613,343,640"/>
-<area shape="rect" id="node21" href="$dd/ddf/_p_c_a9956__ex_8h.html#af639264a812f8ff48183ebf586c826bd" title="Set MODE1 register. " alt="" coords="200,664,363,691"/>
-<area shape="rect" id="node5" href="$d4/d1d/_p_c_a9956_8h.html#ae0160c553cc5fa06c787dce4181a7cf9" title="Initialization for PCA9956 peripheral. " alt="" coords="712,309,819,336"/>
-<area shape="rect" id="node6" href="$d4/d1d/_p_c_a9956_8h.html#a0f59108faf0e099c5dcf21355152c2e1" title="Initialization for PCA9956 peripheral. " alt="" coords="867,309,1019,336"/>
-<area shape="rect" id="node14" href="$dd/ddf/_p_c_a9956__ex_8h.html#a2903c3e77782d2e4e15d2a072e86f17e" title="Read all PWM duty cycle array of values of a PCA9956 (for the 24 channels) " alt="" coords="468,411,635,437"/>
-<area shape="rect" id="node15" href="$dd/ddf/_p_c_a9956__ex_8h.html#a60bf2993d3642f661265bcd979c0b665" title="Send PWM duty cycle array of values to apply on a PCA9956. " alt="" coords="464,461,639,488"/>
-<area shape="rect" id="node16" href="$dd/ddf/_p_c_a9956__ex_8h.html#a53a53678bc76023d63cc934f9e653567" title="Send PWM duty cycle array of values to apply on a PCA9956. " alt="" coords="439,512,664,539"/>
-<area shape="rect" id="node17" href="$dd/ddf/_p_c_a9956__ex_8h.html#a69beb250a84a38e5b2321b8d98e32f8c" title="Send all PWM duty cycle array of values to apply on a PCA9956 (for the 24 channels) ..." alt="" coords="473,563,629,589"/>
+<area shape="rect" id="Node000001" title="I2C Write function for PCA9956." alt="" coords="862,335,976,361"/>
+<area shape="rect" id="Node000002" href="$dd/d22/_p_c_a9956__ex_8c.html#ae1e617a23120269e52293fac43d2ac63" title="Send PWM Full OFF value to apply on a PCA9956 channel." alt="" coords="652,5,772,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="914,320,908,262,891,188,878,149,861,111,839,76,812,46,793,34,771,26,773,21,796,29,815,42,843,73,866,109,883,147,897,187,913,261,919,319"/>
+<area shape="rect" id="Node000003" href="$db/d9b/_p_c_a9956__proc_8c.html#a0cbd9081f3d6999611db262c3e3d6baf" title="Initialization Sequence for PCA9956 peripheral." alt="" coords="372,208,539,235"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="915,377,905,418,886,467,857,515,837,536,815,553,761,580,736,587,712,589,687,587,662,580,609,553,569,520,536,479,510,433,490,386,466,297,456,236,461,235,471,296,495,384,515,431,541,476,573,516,612,548,664,575,688,582,712,584,735,582,759,575,812,548,834,532,852,512,881,465,899,416,910,375"/>
+<area shape="rect" id="Node000006" href="$dd/d22/_p_c_a9956__ex_8c.html#ac2e9cecfe5fea806124ca1229658f7a3" title="Send PWM duty cycle value to apply on a PCA9956 channel." alt="" coords="651,107,773,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="909,321,896,281,877,234,849,187,812,147,793,136,773,129,774,124,796,131,815,143,853,184,882,232,901,280,914,319"/>
+<area shape="rect" id="Node000007" href="$dd/d22/_p_c_a9956__ex_8c.html#a50f5d7e9a073aa6af704ef69c8a4b1dc" title="Send PWM duty cycle array of values to apply on a PCA9956." alt="" coords="647,613,777,640"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="916,376,906,424,887,483,858,544,839,572,815,597,798,609,778,618,776,613,795,604,812,593,834,568,853,541,882,481,901,422,911,375"/>
+<area shape="rect" id="Node000011" href="$dd/d22/_p_c_a9956__ex_8c.html#a1c293d3b30faed552452a938635e5025" title="Set auto increment option for PCA9956 registers." alt="" coords="610,56,814,83"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="912,321,902,272,885,211,855,149,835,121,812,97,795,85,797,81,815,93,840,118,860,147,890,209,908,271,917,320"/>
+<area shape="rect" id="Node000012" href="$dd/d22/_p_c_a9956__ex_8c.html#aea495515529a59b632b86612b77a61b4" title="Set PCA9956 output gain control value." alt="" coords="641,157,783,184"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="904,322,869,259,843,226,812,198,782,184,785,179,815,194,847,222,874,256,909,320"/>
+<area shape="rect" id="Node000013" href="$dd/d22/_p_c_a9956__ex_8c.html#a8cb4f5388815cb02e2b7ecb8c9c8e325" title="Set PCA9956 output gain control value." alt="" coords="637,309,787,336"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="846,342,787,334,787,329,847,337"/>
+<area shape="rect" id="Node000014" href="$dd/d22/_p_c_a9956__ex_8c.html#aec9fb3f393f2ea363271223bb213cba7" title="Set latch type for PCA9956 peripheral." alt="" coords="640,360,784,387"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="847,359,784,367,784,362,846,354"/>
+<area shape="rect" id="Node000015" href="$dd/ddf/_p_c_a9956__ex_8h.html#af639264a812f8ff48183ebf586c826bd" title="Set MODE1 register." alt="" coords="633,411,791,437"/>
+<area shape="poly" id="edge16_Node000001_Node000015" title=" " alt="" coords="881,371,815,401,778,413,776,407,813,396,879,366"/>
+<area shape="rect" id="Node000016" href="$dd/ddf/_p_c_a9956__ex_8h.html#a1f23873e665562e66821beeb83bc510c" title="Set MODE2 register." alt="" coords="633,461,791,488"/>
+<area shape="poly" id="edge17_Node000001_Node000016" title=" " alt="" coords="901,375,864,414,840,435,815,452,788,463,786,458,812,447,837,430,860,411,897,371"/>
+<area shape="rect" id="Node000017" href="$dd/d22/_p_c_a9956__ex_8c.html#a944ed34b491a180d86e406e643cd17ec" title="Set PCA9956 peripheral LED mode." alt="" coords="624,512,800,539"/>
+<area shape="poly" id="edge18_Node000001_Node000017" title=" " alt="" coords="909,376,874,440,847,474,815,502,793,514,791,509,812,498,843,470,869,437,904,374"/>
+<area shape="rect" id="Node000018" href="$dd/d22/_p_c_a9956__ex_8c.html#a876eb5685fc1057c47dec6005c3e5069" title="Set PCA9956 peripheral multiple LEDs mode." alt="" coords="620,208,804,235"/>
+<area shape="poly" id="edge19_Node000001_Node000018" title=" " alt="" coords="897,325,860,285,837,266,812,249,786,238,788,233,815,244,840,261,864,282,901,321"/>
+<area shape="rect" id="Node000019" href="$dd/d22/_p_c_a9956__ex_8c.html#abc361384337269a4aa7edc0f32c0a84e" title="Set PCA9956 peripheral delay between channels." alt="" coords="639,259,785,285"/>
+<area shape="poly" id="edge21_Node000001_Node000019" title=" " alt="" coords="879,330,813,300,776,289,778,283,815,295,881,325"/>
+<area shape="rect" id="Node000020" href="$dd/d22/_p_c_a9956__ex_8c.html#a32b9dca37db78d2852cd94b0e97162ef" title="Send PWM Full ON value to apply on a PCA9956 channel." alt="" coords="651,664,773,691"/>
+<area shape="poly" id="edge23_Node000001_Node000020" title=" " alt="" coords="919,377,913,435,897,509,883,549,866,587,843,623,815,654,796,667,774,675,772,670,794,662,812,650,839,620,861,585,878,547,891,508,908,434,914,376"/>
+<area shape="rect" id="Node000004" href="$df/d5e/_p_c_a9956_8c.html#ae0160c553cc5fa06c787dce4181a7cf9" title="Initialization for PCA9956 peripheral." alt="" coords="199,208,301,235"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="357,224,302,224,302,219,357,219"/>
+<area shape="rect" id="Node000005" href="$df/d5e/_p_c_a9956_8c.html#a0f59108faf0e099c5dcf21355152c2e1" title="Initialization for PCA9956 peripheral." alt="" coords="5,208,151,235"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="184,224,151,224,151,219,184,219"/>
+<area shape="rect" id="Node000008" href="$dd/ddf/_p_c_a9956__ex_8h.html#a69beb250a84a38e5b2321b8d98e32f8c" title="Send all PWM duty cycle array of values to apply on a PCA9956 (for the 24 channels)" alt="" coords="380,613,531,640"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="633,629,532,629,532,624,633,624"/>
+<area shape="rect" id="Node000009" href="$dd/ddf/_p_c_a9956__ex_8h.html#a60bf2993d3642f661265bcd979c0b665" title="Send PWM duty cycle array of values to apply on a PCA9956." alt="" coords="372,664,539,691"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="634,645,527,666,526,661,633,640"/>
+<area shape="rect" id="Node000010" href="$dd/ddf/_p_c_a9956__ex_8h.html#a53a53678bc76023d63cc934f9e653567" title="Send PWM duty cycle array of values to apply on a PCA9956." alt="" coords="349,563,562,589"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="633,614,526,593,527,587,634,609"/>
+<area shape="poly" id="edge11_Node000011_Node000003" title=" " alt="" coords="626,90,612,97,568,124,529,155,471,209,468,206,525,151,565,119,609,92,624,86"/>
+<area shape="poly" id="edge13_Node000012_Node000003" title=" " alt="" coords="627,190,527,210,526,205,626,185"/>
+<area shape="poly" id="edge20_Node000018_Node000003" title=" " alt="" coords="606,224,540,224,540,219,606,219"/>
+<area shape="poly" id="edge22_Node000019_Node000003" title=" " alt="" coords="626,258,526,238,527,233,627,253"/>
 </map>

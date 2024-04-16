@@ -1,3 +1,5 @@
 <map id="ADS1115_Start_NextConversion" name="ADS1115_Start_NextConversion">
-<area shape="rect" id="node2" href="$d8/d63/_a_d_s1115__ex_8c.html#aa2655b719d3bc141c24de2e90fa34633" title="Start ADS1115 conversion. " alt="" coords="283,5,481,32"/>
+<area shape="rect" id="Node000001" title="Start ADS1115 Next conversion." alt="" coords="5,5,217,32"/>
+<area shape="rect" id="Node000002" href="$d8/d63/_a_d_s1115__ex_8c.html#aa2655b719d3bc141c24de2e90fa34633" title="Start ADS1115 conversion." alt="" coords="265,5,448,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,16,249,16,249,21,217,21"/>
 </map>

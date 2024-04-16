@@ -1,6 +1,11 @@
 <map id="APDS9960_Get_Blue" name="APDS9960_Get_Blue">
-<area shape="rect" id="node2" href="$db/db1/_a_p_d_s9960_8c.html#a8b394f67011e2ab11f3a1e51d2d4d872" title="I2C Word Read (low endian) function for APDS9960. " alt="" coords="208,31,375,57"/>
-<area shape="rect" id="node3" href="$db/db1/_a_p_d_s9960_8c.html#ae3a66d3faca052bed32148ad241084a5" title="I2C Read function for APDS9960. " alt="" coords="423,31,551,57"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="599,5,716,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="604,56,711,83"/>
+<area shape="rect" id="Node000001" title="Get Blue conversion." alt="" coords="5,31,153,57"/>
+<area shape="rect" id="Node000002" href="$db/db1/_a_p_d_s9960_8c.html#a8b394f67011e2ab11f3a1e51d2d4d872" title="I2C Word Read (little endian) function for APDS9960." alt="" coords="201,31,362,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,41,186,41,186,47,153,47"/>
+<area shape="rect" id="Node000003" href="$db/db1/_a_p_d_s9960_8c.html#ae3a66d3faca052bed32148ad241084a5" title="I2C Read function for APDS9960." alt="" coords="410,31,534,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="362,41,395,41,395,47,362,47"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="582,5,694,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="534,32,567,27,568,32,535,37"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="587,56,689,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="535,51,573,57,572,62,534,56"/>
 </map>

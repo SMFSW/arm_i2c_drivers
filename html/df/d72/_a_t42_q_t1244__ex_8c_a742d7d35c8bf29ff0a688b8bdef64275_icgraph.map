@@ -1,8 +1,11 @@
 <map id="AT42QT1244_Get_Keys" name="AT42QT1244_Get_Keys">
-<area shape="rect" id="node2" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#aca10e0645e195176f9e582d27e7f480b" title="Handler for AT42QT1244 peripheral. " alt="" coords="221,56,379,83"/>
-<area shape="rect" id="node3" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#afd1635edf97f1f5ed7157951b34b520f" title="Handler for AT42QT1244 peripheral GPIO interrupt. " alt="" coords="430,56,602,83"/>
-<area shape="rect" id="node4" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#aef85f959c0275b2ac8c13ed688a19c70" title="Set last reset time for AT42QT1244 peripheral. " alt="" coords="653,5,864,32"/>
-<area shape="rect" id="node7" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#aa73f0198407c13924543df4bc8c55a5a" title="Handler for all AT42QT1244 peripherals. " alt="" coords="427,107,605,133"/>
-<area shape="rect" id="node6" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a7a6c58e9216381f8452d4682a9bf7999" title="Handler for all AT42QT1244 peripherals GPIO interrupt. " alt="" coords="680,57,837,98"/>
-<area shape="rect" id="node5" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a39d0faa5ff099e6099c5f98d4d55b671" title="Reset command for AT42QT1244 peripheral. " alt="" coords="912,5,1056,32"/>
+<area shape="rect" id="Node000001" title="Get keys detect status for AT42QT1244 peripheral." alt="" coords="608,31,771,57"/>
+<area shape="rect" id="Node000002" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#aca10e0645e195176f9e582d27e7f480b" title="Handler for AT42QT1244 peripheral." alt="" coords="414,31,560,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="594,47,561,47,561,41,594,41"/>
+<area shape="rect" id="Node000003" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#aa73f0198407c13924543df4bc8c55a5a" title="Handler for all AT42QT1244 peripherals." alt="" coords="200,5,366,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="399,36,366,32,367,26,399,30"/>
+<area shape="rect" id="Node000004" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#afd1635edf97f1f5ed7157951b34b520f" title="Handler for AT42QT1244 peripheral GPIO interrupt." alt="" coords="203,56,363,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="400,58,364,62,363,57,399,52"/>
+<area shape="rect" id="Node000005" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a7a6c58e9216381f8452d4682a9bf7999" title="Handler for all AT42QT1244 peripherals GPIO interrupt." alt="" coords="5,48,152,91"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="188,72,152,72,152,67,188,67"/>
 </map>

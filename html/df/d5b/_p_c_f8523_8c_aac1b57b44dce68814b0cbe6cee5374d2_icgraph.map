@@ -1,15 +1,33 @@
 <map id="PCF8523_Write" name="PCF8523_Write">
-<area shape="rect" id="node2" href="$d1/d30/_p_c_f8523__ex_8h.html#a22bf958bd5bdafef5ca6c7a18d2540e8" title="PCF8523_Enable_Minute\l_Alarm" alt="" coords="175,5,354,47"/>
-<area shape="rect" id="node3" href="$d1/d30/_p_c_f8523__ex_8h.html#a61666e0beb8690cff2a1e0529ad334a4" title="PCF8523_Disable_Weekday\l_Alarm" alt="" coords="408,156,603,197"/>
-<area shape="rect" id="node4" href="$d1/d30/_p_c_f8523__ex_8h.html#aa5f64c8ec415f723467d661a66578b99" title="PCF8523_Enable_Hour\l_Alarm" alt="" coords="181,123,348,164"/>
-<area shape="rect" id="node5" href="$d1/d30/_p_c_f8523__ex_8h.html#a674ff4e5da391b2296eda08f9718f4db" title="PCF8523_Enable_Day\l_Alarm" alt="" coords="185,188,345,229"/>
-<area shape="rect" id="node6" href="$d1/d30/_p_c_f8523__ex_8h.html#aae652e8aecd7fd4f0ae4617597ded765" title="PCF8523_Enable_Weekday\l_Alarm" alt="" coords="169,253,360,295"/>
-<area shape="rect" id="node7" href="$d1/d30/_p_c_f8523__ex_8h.html#ae82fc65ff3bb982a3a07ed43856fdfdd" title="PCF8523_Set_12_24" alt="" coords="188,319,341,346"/>
-<area shape="rect" id="node8" href="$d1/d30/_p_c_f8523__ex_8h.html#aa447d2a5c409ea947fe97db1cbfe2143" title="PCF8523_Reset" alt="" coords="205,370,325,397"/>
-<area shape="rect" id="node9" href="$d1/d30/_p_c_f8523__ex_8h.html#affd6f441d5e366bb90ab8e164acd6824" title="PCF8523_Disable_Alarm" alt="" coords="176,421,353,447"/>
-<area shape="rect" id="node10" href="$d1/d30/_p_c_f8523__ex_8h.html#a010d5bc5b1aa53fb103e1e3e381bd103" title="PCF8523_Disable_Minute\l_Alarm" alt="" coords="173,472,356,513"/>
-<area shape="rect" id="node11" href="$d1/d30/_p_c_f8523__ex_8h.html#af366fcdd7b4b5a193c83e7468b721c82" title="PCF8523_Disable_Hour\l_Alarm" alt="" coords="179,537,350,579"/>
-<area shape="rect" id="node12" href="$d1/d30/_p_c_f8523__ex_8h.html#a1118d2dfc387e8a7dbda67e632f6fdfc" title="PCF8523_Disable_Day\l_Alarm" alt="" coords="183,603,347,644"/>
-<area shape="rect" id="node13" href="$d1/d30/_p_c_f8523__ex_8h.html#a6fb5d9f9ef29a6e991dda2ea3336b484" title="PCF8523_Set_Date_Raw" alt="" coords="176,669,353,695"/>
-<area shape="rect" id="node14" href="$d1/d30/_p_c_f8523__ex_8h.html#a4255ff6bd0133cc37b2b34edbec2e2f5" title="PCF8523_Set_Time_Raw" alt="" coords="176,719,353,746"/>
+<area shape="rect" id="Node000001" title="I2C Write function for PCF8523 peripheral." alt="" coords="429,397,542,424"/>
+<area shape="rect" id="Node000002" href="$d1/d30/_p_c_f8523__ex_8h.html#affd6f441d5e366bb90ab8e164acd6824" title=" " alt="" coords="203,5,371,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="482,383,480,314,466,224,453,175,435,128,411,84,379,46,364,35,367,30,383,42,415,81,440,126,459,174,472,223,485,314,488,382"/>
+<area shape="rect" id="Node000003" href="$d1/d30/_p_c_f8523__ex_8h.html#a1118d2dfc387e8a7dbda67e632f6fdfc" title=" " alt="" coords="208,56,366,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="480,383,473,327,456,255,443,216,426,179,405,144,379,113,365,101,368,97,383,109,409,141,431,176,448,214,461,253,478,326,485,383"/>
+<area shape="rect" id="Node000004" href="$d1/d30/_p_c_f8523__ex_8h.html#af366fcdd7b4b5a193c83e7468b721c82" title=" " alt="" coords="206,123,368,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="477,383,466,339,447,284,418,228,400,202,379,179,364,168,367,164,383,175,404,199,423,225,452,282,471,337,482,382"/>
+<area shape="rect" id="Node000005" href="$d1/d30/_p_c_f8523__ex_8h.html#a010d5bc5b1aa53fb103e1e3e381bd103" title=" " alt="" coords="200,189,374,232"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="472,385,437,316,411,278,379,246,362,235,365,230,383,242,415,275,442,313,477,382"/>
+<area shape="rect" id="Node000006" href="$d1/d30/_p_c_f8523__ex_8h.html#a61666e0beb8690cff2a1e0529ad334a4" title=" " alt="" coords="193,256,381,299"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="462,388,426,350,380,313,358,302,360,297,382,308,430,346,466,384"/>
+<area shape="rect" id="Node000007" href="$df/d5c/_p_c_f8523__ex_8c.html#a674ff4e5da391b2296eda08f9718f4db" title=" " alt="" coords="210,323,364,365"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="429,395,352,368,354,363,430,389"/>
+<area shape="rect" id="Node000008" href="$df/d5c/_p_c_f8523__ex_8c.html#aa5f64c8ec415f723467d661a66578b99" title=" " alt="" coords="208,389,366,432"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="414,413,366,413,366,408,414,408"/>
+<area shape="rect" id="Node000009" href="$df/d5c/_p_c_f8523__ex_8c.html#a22bf958bd5bdafef5ca6c7a18d2540e8" title=" " alt="" coords="202,456,372,499"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="430,432,354,458,352,453,429,427"/>
+<area shape="rect" id="Node000010" href="$df/d5c/_p_c_f8523__ex_8c.html#aae652e8aecd7fd4f0ae4617597ded765" title=" " alt="" coords="195,523,379,565"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="466,437,430,476,382,513,360,524,358,520,380,508,426,472,462,433"/>
+<area shape="rect" id="Node000011" href="$d1/d30/_p_c_f8523__ex_8h.html#aa447d2a5c409ea947fe97db1cbfe2143" title=" " alt="" coords="228,589,346,616"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="477,439,463,471,443,509,416,547,383,580,347,596,345,592,379,575,412,544,438,507,458,469,472,437"/>
+<area shape="rect" id="Node000012" href="$df/d5c/_p_c_f8523__ex_8c.html#ae82fc65ff3bb982a3a07ed43856fdfdd" title=" " alt="" coords="214,640,360,667"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="481,439,470,482,451,533,422,585,404,609,383,630,361,643,358,638,379,626,400,606,418,582,446,531,465,480,476,438"/>
+<area shape="rect" id="Node000013" href="$d1/d30/_p_c_f8523__ex_8h.html#a6fb5d9f9ef29a6e991dda2ea3336b484" title=" " alt="" coords="201,691,373,717"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="484,439,476,490,458,556,428,623,408,654,383,681,365,692,362,688,379,677,404,650,424,620,453,554,471,489,479,438"/>
+<area shape="rect" id="Node000015" href="$d1/d30/_p_c_f8523__ex_8h.html#a4255ff6bd0133cc37b2b34edbec2e2f5" title=" " alt="" coords="200,741,374,768"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="486,439,481,500,465,578,452,620,434,660,412,698,383,731,366,743,363,739,379,727,407,695,430,658,447,618,460,577,476,499,481,439"/>
+<area shape="rect" id="Node000014" href="$d4/ded/_p_c_f8523__proc_8c.html#a3168e3124e89c3ed960ceb7db67a8023" title=" " alt="" coords="6,691,144,717"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="186,707,145,707,145,701,186,701"/>
+<area shape="rect" id="Node000016" href="$d4/ded/_p_c_f8523__proc_8c.html#a241e6814633f617d7e2fd4bd0375e219" title=" " alt="" coords="5,741,145,768"/>
+<area shape="poly" id="edge15_Node000015_Node000016" title=" " alt="" coords="186,757,145,757,145,752,186,752"/>
 </map>

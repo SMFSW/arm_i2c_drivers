@@ -1,3 +1,5 @@
 <map id="ADS1115_Init" name="ADS1115_Init">
-<area shape="rect" id="node2" href="$df/d61/_a_d_s1115_8h.html#aca8481f4d0bcf062cde74d6947a0809d" title="Initialization for ADS1115 peripheral. " alt="" coords="161,5,316,32"/>
+<area shape="rect" id="Node000001" title="Initialization for ADS1115 peripheral." alt="" coords="197,5,297,32"/>
+<area shape="rect" id="Node000002" href="$db/de1/_a_d_s1115_8c.html#aca8481f4d0bcf062cde74d6947a0809d" title="Initialization for ADS1115 peripheral." alt="" coords="5,5,149,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,21,149,21,149,16,182,16"/>
 </map>

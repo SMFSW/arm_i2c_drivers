@@ -1,5 +1,9 @@
 <map id="PCA9685_SetVal" name="PCA9685_SetVal">
-<area shape="rect" id="node2" href="$de/dca/_p_c_a9685_8c.html#ace763529df9b53eced87352d1d5de814" title="I2C Write function for PCA9685. " alt="" coords="181,31,300,57"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="348,5,465,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="353,56,460,83"/>
+<area shape="rect" id="Node000001" title="Compute and send PWM Full ON value to apply on a PCA9685 channel or all channels (no delay)" alt="" coords="5,31,128,57"/>
+<area shape="rect" id="Node000002" href="$de/dca/_p_c_a9685_8c.html#ace763529df9b53eced87352d1d5de814" title="I2C Write function for PCA9685." alt="" coords="176,31,290,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,41,161,41,161,47,128,47"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="338,5,449,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="290,32,323,27,324,32,291,38"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="343,56,445,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="291,50,328,56,327,62,290,56"/>
 </map>

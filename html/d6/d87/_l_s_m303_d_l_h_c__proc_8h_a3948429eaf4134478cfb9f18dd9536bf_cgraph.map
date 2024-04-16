@@ -1,0 +1,21 @@
+<map id="LSM303DLHC_handler_it_all" name="LSM303DLHC_handler_it_all">
+<area shape="rect" id="Node000001" title="Handler for all LSM303DLHC peripherals GPIO interrupt." alt="" coords="5,124,161,167"/>
+<area shape="rect" id="Node000002" href="$db/d9f/_l_s_m303_d_l_h_c__proc_8c.html#a6118e1bac9b617b471d9342fd57f0729" title="Handler for LSM303DLHC peripheral (Linear Acceleration) GPIO interrupt." alt="" coords="210,81,403,108"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,125,229,109,231,115,161,130"/>
+<area shape="rect" id="Node000007" href="$db/d9f/_l_s_m303_d_l_h_c__proc_8c.html#a4174026c1e19ca803af20d8506a9dfea" title="Handler for LSM303DLHC peripheral (Magnetic Field) GPIO interrupt." alt="" coords="209,157,404,184"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="161,151,194,155,194,161,161,157"/>
+<area shape="rect" id="Node000003" href="$de/de9/_l_s_m303_d_l_h_c__ex_8c.html#a0d143fd70707130949a594a4ed10b7d9" title="LA Interrupt 1 GPIO pin getter for LSM303DLHC." alt="" coords="457,5,667,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="343,78,451,41,481,33,482,39,453,47,344,83"/>
+<area shape="rect" id="Node000005" href="$de/de9/_l_s_m303_d_l_h_c__ex_8c.html#ad514f3f7efaf0a2046a8d29cfb53d8d8" title="LA Interrupt 2 GPIO pin getter for LSM303DLHC." alt="" coords="457,56,667,83"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="403,82,442,79,443,84,403,88"/>
+<area shape="rect" id="Node000006" href="$db/d9f/_l_s_m303_d_l_h_c__proc_8c.html#a9ebc46f82507ade8f8eac54f361bef4c" title="Handler for LSM303DLHC peripheral (Linear Acceleration)" alt="" coords="473,107,651,133"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="403,102,458,107,458,112,403,107"/>
+<area shape="rect" id="Node000004" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter." alt="" coords="720,56,891,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="630,30,724,50,723,55,629,35"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="668,67,705,67,705,72,668,72"/>
+<area shape="rect" id="Node000008" href="$de/de9/_l_s_m303_d_l_h_c__ex_8c.html#ab05b0fbbda97fb992ced4c09fa13a7e4" title="MF Data Ready GPIO pin getter for LSM303DLHC." alt="" coords="452,157,672,184"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="404,168,437,168,437,173,404,173"/>
+<area shape="rect" id="Node000009" href="$db/d9f/_l_s_m303_d_l_h_c__proc_8c.html#ae37fbccbccab914eb44a3be7c4dbf843" title="Handler for LSM303DLHC peripheral (Magnetic Field)" alt="" coords="472,208,653,235"/>
+<area shape="poly" id="edge10_Node000007_Node000009" title=" " alt="" coords="378,182,478,202,477,207,377,187"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="636,154,671,143,725,117,771,89,774,93,728,122,673,148,638,159"/>
+</map>

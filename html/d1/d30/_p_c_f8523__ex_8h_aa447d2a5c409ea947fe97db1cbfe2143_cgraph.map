@@ -1,5 +1,9 @@
 <map id="PCF8523_Reset" name="PCF8523_Reset">
-<area shape="rect" id="node2" href="$df/d5b/_p_c_f8523_8c.html#aac1b57b44dce68814b0cbe6cee5374d2" title="I2C Write function for PCF8523 peripheral. " alt="" coords="173,31,289,57"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="337,5,455,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="343,56,449,83"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,124,57"/>
+<area shape="rect" id="Node000002" href="$df/d5b/_p_c_f8523_8c.html#aac1b57b44dce68814b0cbe6cee5374d2" title="I2C Write function for PCF8523 peripheral." alt="" coords="172,31,285,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,41,156,41,156,47,124,47"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="333,5,444,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="285,32,318,27,319,32,286,38"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="338,56,440,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="286,50,323,56,322,62,285,56"/>
 </map>

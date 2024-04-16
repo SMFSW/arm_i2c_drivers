@@ -1,9 +1,0 @@
-<map id="ADS1115_Get_raw_value" name="ADS1115_Get_raw_value">
-<area shape="rect" id="node2" href="$d8/d4b/_a_d_s1115__ex_8h.html#ad20504d5c0e8c93b73dc20300e6806fb" title="Get ADS1115 raw channel value in µV. " alt="" coords="236,5,419,47"/>
-<area shape="rect" id="node3" href="$d8/d4b/_a_d_s1115__ex_8h.html#a59bb8cdf42f67a04e28339e8d5918702" title="Get ADS1115 raw channel value in mV. " alt="" coords="236,71,419,112"/>
-<area shape="rect" id="node4" href="$d8/d4b/_a_d_s1115__ex_8h.html#a86643c274b5a593c93733e4337d01484" title="Get ADS1115 raw channel value in V. " alt="" coords="236,136,419,177"/>
-<area shape="rect" id="node5" href="$d8/d4b/_a_d_s1115__ex_8h.html#a5e1216d8aa877b457bfbc5ec36477cf8" title="Ready GPIO pin init for ADS1115. " alt="" coords="239,202,416,229"/>
-<area shape="rect" id="node7" href="$d8/d4b/_a_d_s1115__ex_8h.html#a7ddf616c2c0ef262b2381f9ff844bb8f" title="Ready GPIO pin getter for ADS1115. " alt="" coords="237,253,418,279"/>
-<area shape="rect" id="node6" href="$d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="467,202,645,229"/>
-<area shape="rect" id="node8" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="467,253,645,279"/>
-</map>

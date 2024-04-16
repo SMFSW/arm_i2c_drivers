@@ -1,7 +1,15 @@
 <map id="AMG88_ex.h" name="AMG88_ex.h">
-<area shape="rect" id="node2" href="$d8/d4e/_a_m_g88_8h.html" title="AMG88 Driver. " alt="" coords="126,80,206,107"/>
-<area shape="rect" id="node3" href="$df/d52/_a_m_g88_8c.html" title="AMG88 Driver. " alt="" coords="5,155,84,181"/>
-<area shape="rect" id="node4" href="$da/de9/_a_m_g88__proc_8h.html" title="AMG88 Driver procedures. " alt="" coords="109,155,223,181"/>
-<area shape="rect" id="node5" href="$de/d9d/_a_m_g88__ex_8c.html" title="AMG88 Driver extensions. " alt="" coords="247,155,349,181"/>
-<area shape="rect" id="node6" href="$d4/d51/_a_m_g88__proc_8c.html" title="AMG88 Driver procedures. " alt="" coords="373,155,487,181"/>
+<area shape="rect" id="Node000001" title="AMG88 Driver extensions." alt="" coords="232,5,330,32"/>
+<area shape="rect" id="Node000002" href="$d8/d4e/_a_m_g88_8h.html" title="AMG88 Driver." alt="" coords="243,80,319,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="275,47,277,79,271,80,269,47"/>
+<area shape="poly" id="edge4_Node000002_Node000001" title=" " alt="" coords="287,65,285,33,291,32,292,65"/>
+<area shape="rect" id="Node000003" href="$df/d52/_a_m_g88_8c.html" title="AMG88 Driver." alt="" coords="5,155,82,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="229,113,83,157,81,152,228,108"/>
+<area shape="rect" id="Node000004" href="$de/d9d/_a_m_g88__ex_8c.html" title="AMG88 Driver extensions." alt="" coords="106,155,203,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="248,117,178,156,175,152,245,112"/>
+<area shape="rect" id="Node000005" href="$d4/d51/_a_m_g88__proc_8c.html" title="AMG88 Driver procedures." alt="" coords="227,155,335,181"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="284,122,284,154,278,154,278,122"/>
+<area shape="rect" id="Node000006" href="$da/de9/_a_m_g88__proc_8h.html" title="AMG88 Driver procedures." alt="" coords="359,155,467,181"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="310,112,384,152,381,156,308,117"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="383,149,310,110,312,105,386,144"/>
 </map>

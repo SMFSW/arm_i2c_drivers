@@ -1,5 +1,9 @@
 <map id="APDS9930_Set_AIT" name="APDS9930_Set_AIT">
-<area shape="rect" id="node2" href="$de/d85/_a_p_d_s9930_8c.html#af52285c4d97a77ae7c76d144748942cf" title="I2C Write function for APDS9930. " alt="" coords="199,31,327,57"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="375,5,492,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="380,56,487,83"/>
+<area shape="rect" id="Node000001" title="ALS interrupt thresholds configuration." alt="" coords="5,31,147,57"/>
+<area shape="rect" id="Node000002" href="$de/d85/_a_p_d_s9930_8c.html#af52285c4d97a77ae7c76d144748942cf" title="I2C Write function for APDS9930." alt="" coords="195,31,318,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,41,180,41,180,47,147,47"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="366,5,477,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="318,32,351,27,352,32,319,37"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="371,56,473,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="319,51,356,57,356,62,318,56"/>
 </map>

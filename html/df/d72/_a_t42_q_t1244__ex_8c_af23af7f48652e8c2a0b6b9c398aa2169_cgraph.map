@@ -1,8 +1,19 @@
 <map id="AT42QT1244_Setup_FHM" name="AT42QT1244_Setup_FHM">
-<area shape="rect" id="node2" href="$d3/dc4/_a_t42_q_t1244_8c.html#a59952a25c499177de6ff50933ffdbc47" title="I2C Read function for AT42QT1244. " alt="" coords="471,56,611,83"/>
-<area shape="rect" id="node6" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a6de0127c5ef3b6930ef542632583dd6f" title="Send setup parameters to AT42QT1244 peripheral. " alt="" coords="236,81,423,108"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="672,5,789,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="677,56,784,83"/>
-<area shape="rect" id="node5" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#ad2998daf6e9e01b5d72b96ac64a2f78e" title="16bits CRC calculation for AT42QT1244 " alt="" coords="659,107,803,133"/>
-<area shape="rect" id="node7" href="$d3/dc4/_a_t42_q_t1244_8c.html#afc7b495087a57939c8c261820668a896" title="I2C Write function for AT42QT1244. " alt="" coords="471,5,611,32"/>
+<area shape="rect" id="Node000001" title="Frequency hopping mode setup for AT42QT1244 peripheral." alt="" coords="5,56,180,83"/>
+<area shape="rect" id="Node000002" href="$d3/dc4/_a_t42_q_t1244_8c.html#a59952a25c499177de6ff50933ffdbc47" title="I2C Read function for AT42QT1244." alt="" coords="451,56,586,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,67,436,67,436,72,180,72"/>
+<area shape="rect" id="Node000006" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a6de0127c5ef3b6930ef542632583dd6f" title="Send setup parameters to AT42QT1244 peripheral." alt="" coords="228,81,403,108"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="181,77,213,80,213,86,180,82"/>
+<area shape="rect" id="Node000003" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#ad2998daf6e9e01b5d72b96ac64a2f78e" title="16bits CRC calculation for AT42QT1244" alt="" coords="634,5,771,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="569,53,637,34,638,39,571,58"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="647,56,758,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="587,67,632,67,632,72,587,72"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="651,107,754,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="571,81,638,100,637,105,569,86"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="403,81,436,77,437,82,404,86"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="345,78,394,59,450,41,537,26,620,19,620,24,538,32,452,47,396,64,347,83"/>
+<area shape="rect" id="Node000007" href="$d3/dc4/_a_t42_q_t1244_8c.html#afc7b495087a57939c8c261820668a896" title="I2C Write function for AT42QT1244." alt="" coords="452,107,586,133"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="404,103,437,107,436,112,403,108"/>
+<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="569,103,637,85,638,90,571,109"/>
+<area shape="poly" id="edge10_Node000007_Node000005" title=" " alt="" coords="586,117,637,117,637,123,586,123"/>
 </map>

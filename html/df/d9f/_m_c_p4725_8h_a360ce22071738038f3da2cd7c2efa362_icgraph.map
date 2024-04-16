@@ -1,4 +1,7 @@
 <map id="MCP4725_General_Call" name="MCP4725_General_Call">
-<area shape="rect" id="node2" href="$d1/d41/_m_c_p4725__ex_8h.html#afe915ac9d10191a12daf2fe23c0eca65" title="General call reset function for MCP4725. " alt="" coords="231,5,355,32"/>
-<area shape="rect" id="node3" href="$d1/d41/_m_c_p4725__ex_8h.html#aed2506e32813e3a59b074862bb90a623" title="General call wake up function for MCP4725. " alt="" coords="223,56,363,83"/>
+<area shape="rect" id="Node000001" title="I2C general call for MCP4725." alt="" coords="190,31,351,57"/>
+<area shape="rect" id="Node000002" href="$d1/d41/_m_c_p4725__ex_8h.html#afe915ac9d10191a12daf2fe23c0eca65" title="General call reset function for MCP4725." alt="" coords="13,5,134,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,34,134,29,135,24,175,29"/>
+<area shape="rect" id="Node000003" href="$d1/d41/_m_c_p4725__ex_8h.html#aed2506e32813e3a59b074862bb90a623" title="General call wake up function for MCP4725." alt="" coords="5,56,142,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="175,59,142,63,142,58,175,54"/>
 </map>

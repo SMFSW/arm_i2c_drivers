@@ -1,7 +1,15 @@
 <map id="APDS9960_ex.h" name="APDS9960_ex.h">
-<area shape="rect" id="node2" href="$d2/dbf/_a_p_d_s9960_8h.html" title="APDS9960 Driver. " alt="" coords="149,80,251,107"/>
-<area shape="rect" id="node3" href="$db/db1/_a_p_d_s9960_8c.html" title="APDS9960 Driver. " alt="" coords="5,155,107,181"/>
-<area shape="rect" id="node4" href="$df/d17/_a_p_d_s9960__proc_8h.html" title="APDS9960 Driver procedures. " alt="" coords="131,155,269,181"/>
-<area shape="rect" id="node5" href="$df/d4f/_a_p_d_s9960__ex_8c.html" title="APDS9960 Driver extensions. " alt="" coords="293,155,416,181"/>
-<area shape="rect" id="node6" href="$dd/d2e/_a_p_d_s9960__proc_8c.html" title="APDS9960 Driver procedures. " alt="" coords="440,155,576,181"/>
+<area shape="rect" id="Node000001" title="APDS9960 Driver extensions." alt="" coords="275,5,393,32"/>
+<area shape="rect" id="Node000002" href="$d2/dbf/_a_p_d_s9960_8h.html" title="APDS9960 Driver." alt="" coords="285,80,383,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="328,47,330,79,324,80,323,47"/>
+<area shape="poly" id="edge4_Node000002_Node000001" title=" " alt="" coords="340,65,338,33,344,32,345,65"/>
+<area shape="rect" id="Node000003" href="$db/db1/_a_p_d_s9960_8c.html" title="APDS9960 Driver." alt="" coords="5,155,103,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="272,113,104,157,102,151,271,108"/>
+<area shape="rect" id="Node000004" href="$df/d4f/_a_p_d_s9960__ex_8c.html" title="APDS9960 Driver extensions." alt="" coords="127,155,245,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="296,116,213,156,211,152,294,111"/>
+<area shape="rect" id="Node000005" href="$dd/d2e/_a_p_d_s9960__proc_8c.html" title="APDS9960 Driver procedures." alt="" coords="269,155,399,181"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="337,122,337,154,331,154,331,122"/>
+<area shape="rect" id="Node000006" href="$df/d17/_a_p_d_s9960__proc_8h.html" title="APDS9960 Driver procedures." alt="" coords="423,155,552,181"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="368,111,454,152,452,156,365,116"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="454,150,367,110,369,105,456,145"/>
 </map>

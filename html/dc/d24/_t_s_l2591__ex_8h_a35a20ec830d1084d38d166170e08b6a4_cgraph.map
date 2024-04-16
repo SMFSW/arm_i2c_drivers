@@ -1,4 +1,7 @@
 <map id="TSL2591_SF_Clear_IT" name="TSL2591_SF_Clear_IT">
-<area shape="rect" id="node2" href="$d2/d68/_t_s_l2591_8c.html#a63c2d929fff2e1472781ad74be184f80" title="I2C Special function Write function for TSL2591. " alt="" coords="211,5,379,32"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="427,5,533,32"/>
+<area shape="rect" id="Node000001" title="Clear pending ALS interruption." alt="" coords="5,5,160,32"/>
+<area shape="rect" id="Node000002" href="$d2/d68/_t_s_l2591_8c.html#a63c2d929fff2e1472781ad74be184f80" title="I2C Special function Write function for TSL2591." alt="" coords="208,5,368,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,16,193,16,193,21,160,21"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="416,5,518,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="368,16,401,16,401,21,368,21"/>
 </map>

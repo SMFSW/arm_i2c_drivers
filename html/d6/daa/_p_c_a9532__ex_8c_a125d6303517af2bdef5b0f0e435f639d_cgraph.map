@@ -1,5 +1,13 @@
 <map id="PCA9532_SetDuty" name="PCA9532_SetDuty">
-<area shape="rect" id="node2" href="$d8/df0/_p_c_a9532__ex_8h.html#acc2166ca303c21d35c08ab2e0fbc124a" title="Convert Frequency to PWMx byte register. " alt="" coords="192,5,399,32"/>
-<area shape="rect" id="node3" href="$d2/d28/_p_c_a9532_8c.html#aeaa1cbcbef5392b3acc5826a383f6e7d" title="I2C Write function for PCA9532. " alt="" coords="236,56,355,83"/>
-<area shape="rect" id="node4" href="$d8/df0/_p_c_a9532__ex_8h.html#a4d4279a2e53756ade743737952972edf" title="Convert PSCx byte register to Frequency (in Hz) " alt="" coords="210,107,381,133"/>
+<area shape="rect" id="Node000001" title="Set PWMx duty cycle of PCA9532." alt="" coords="5,56,138,83"/>
+<area shape="rect" id="Node000002" href="$d8/df0/_p_c_a9532__ex_8h.html#a4d4279a2e53756ade743737952972edf" title="Convert PSCx byte register to Frequency (in Hz)" alt="" coords="204,5,369,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,53,212,33,213,39,132,58"/>
+<area shape="rect" id="Node000003" href="$d8/df0/_p_c_a9532__ex_8h.html#acc2166ca303c21d35c08ab2e0fbc124a" title="Convert Frequency to PWMx byte register." alt="" coords="186,56,387,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="138,67,171,67,171,72,138,72"/>
+<area shape="rect" id="Node000004" href="$d2/d28/_p_c_a9532_8c.html#aeaa1cbcbef5392b3acc5826a383f6e7d" title="I2C Write function for PCA9532." alt="" coords="229,107,344,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="132,81,215,101,214,106,131,86"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="435,81,546,108"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="344,110,420,101,421,106,344,116"/>
+<area shape="rect" id="Node000006" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="440,132,542,159"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="344,124,425,135,424,140,344,130"/>
 </map>

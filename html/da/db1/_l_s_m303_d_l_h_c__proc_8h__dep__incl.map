@@ -1,0 +1,15 @@
+<map id="LSM303DLHC_proc.h" name="LSM303DLHC_proc.h">
+<area shape="rect" id="Node000001" title="LSM303DLHC Driver procedures." alt="" coords="304,5,453,32"/>
+<area shape="rect" id="Node000002" href="$d0/db0/_l_s_m303_d_l_h_c_8h.html" title="LSM303DLHC Driver." alt="" coords="320,80,437,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="373,47,374,79,369,80,367,47"/>
+<area shape="poly" id="edge7_Node000002_Node000001" title=" " alt="" coords="385,65,383,33,388,32,390,65"/>
+<area shape="rect" id="Node000003" href="$d5/d82/_l_s_m303_d_l_h_c_8c.html" title="LSM303DLHC Driver." alt="" coords="5,155,123,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="310,113,120,157,119,151,309,108"/>
+<area shape="rect" id="Node000004" href="$de/de9/_l_s_m303_d_l_h_c__ex_8c.html" title="LSM303DLHC Driver extensions." alt="" coords="147,155,285,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="338,115,246,156,243,152,336,111"/>
+<area shape="rect" id="Node000005" href="$d1/d0d/_l_s_m303_d_l_h_c__ex_8h.html" title="LSM303DLHC Driver extensions." alt="" coords="310,155,448,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="373,122,374,154,369,154,367,122"/>
+<area shape="rect" id="Node000006" href="$db/d9f/_l_s_m303_d_l_h_c__proc_8c.html" title="LSM303DLHC Driver procedures." alt="" coords="472,155,621,181"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="422,111,518,152,516,156,420,115"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="385,140,383,107,388,107,390,140"/>
+</map>

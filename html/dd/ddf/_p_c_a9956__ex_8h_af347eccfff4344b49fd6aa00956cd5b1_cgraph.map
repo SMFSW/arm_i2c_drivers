@@ -1,3 +1,5 @@
 <map id="PCA9956_RST_GPIO_Init" name="PCA9956_RST_GPIO_Init">
-<area shape="rect" id="node2" href="$d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="228,5,405,32"/>
+<area shape="rect" id="Node000001" title="Reset GPIO pin init for PCA9956." alt="" coords="5,5,182,32"/>
+<area shape="rect" id="Node000002" href="$d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init." alt="" coords="230,5,399,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,16,215,16,215,21,182,21"/>
 </map>

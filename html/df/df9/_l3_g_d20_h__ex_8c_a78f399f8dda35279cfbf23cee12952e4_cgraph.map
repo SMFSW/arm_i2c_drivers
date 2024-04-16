@@ -1,0 +1,5 @@
+<map id="L3GD20H_DRDY_GPIO_Get" name="L3GD20H_DRDY_GPIO_Get">
+<area shape="rect" id="Node000001" title="Data ready / FIFO interrupt GPIO pin getter for L3GD20H." alt="" coords="5,5,199,32"/>
+<area shape="rect" id="Node000002" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter." alt="" coords="247,5,417,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,16,232,16,232,21,199,21"/>
+</map>

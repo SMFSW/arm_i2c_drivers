@@ -1,0 +1,5 @@
+<map id="I2CMEM_WP_GPIO_Init" name="I2CMEM_WP_GPIO_Init">
+<area shape="rect" id="Node000001" title="Write Protect GPIO pin init for I2CMEM." alt="" coords="5,5,173,32"/>
+<area shape="rect" id="Node000002" href="$d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init." alt="" coords="221,5,390,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,16,206,16,206,21,173,21"/>
+</map>

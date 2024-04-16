@@ -1,3 +1,12 @@
 <map id="shared_APS.h" name="shared_APS.h">
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="85,80,220,107"/>
+<area shape="rect" id="Node000001" title="Ambient Pressure Sensing shared." alt="" coords="41,5,147,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,155,87,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,33,73,81,55,141,50,139,67,79,86,31"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="83,80,207,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="105,31,130,66,125,69,101,34"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="129,109,76,148,73,144,126,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="111,155,176,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="147,107,146,140,141,140,142,107"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="200,155,273,181"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="162,105,211,143,208,148,159,109"/>
 </map>

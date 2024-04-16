@@ -1,0 +1,5 @@
+<map id="ADS1115_Get_converted_value_mV" name="ADS1115_Get_converted_value_mV">
+<area shape="rect" id="Node000001" title="Get ADS1115 raw channel value in mV." alt="" coords="5,5,173,48"/>
+<area shape="rect" id="Node000002" href="$d8/d4b/_a_d_s1115__ex_8h.html#a79e57b4463b2ac3b43b152ce61850ed2" title="Get ADS1115 raw channel value." alt="" coords="221,13,390,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,24,206,24,206,29,173,29"/>
+</map>

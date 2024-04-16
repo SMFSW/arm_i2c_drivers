@@ -1,4 +1,7 @@
 <map id="FM24C_Init" name="FM24C_Init">
-<area shape="rect" id="node2" href="$d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization. " alt="" coords="149,5,257,32"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state. " alt="" coords="144,56,263,83"/>
+<area shape="rect" id="Node000001" title="Initialization for FM24C peripheral." alt="" coords="5,31,95,57"/>
+<area shape="rect" id="Node000002" href="$d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state." alt="" coords="143,5,255,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,34,128,28,129,33,96,39"/>
+<area shape="rect" id="Node000003" href="$d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization." alt="" coords="147,56,251,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="96,49,133,55,132,61,95,54"/>
 </map>

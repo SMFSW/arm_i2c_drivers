@@ -1,6 +1,11 @@
 <map id="MTCH6102_raw_gesture" name="MTCH6102_raw_gesture">
-<area shape="rect" id="node2" href="$de/da6/unionu_m_t_c_h___r_e_g_____t_o_u_c_h_s_t_a_t_e.html" title="uMTCH_REG__TOUCHSTATE" alt="" coords="5,5,203,32"/>
-<area shape="rect" id="node3" href="$d1/d99/unionu_m_t_c_h___r_e_g_____t_o_u_c_h_l_s_b.html" title="uMTCH_REG__TOUCHLSB" alt="" coords="227,5,411,32"/>
-<area shape="rect" id="node4" href="$de/d9b/unionu_m_t_c_h___r_e_g_____t_o_u_c_h_x.html" title="uMTCH_REG__TOUCHX" alt="" coords="435,5,602,32"/>
-<area shape="rect" id="node5" href="$db/d45/unionu_m_t_c_h___r_e_g_____t_o_u_c_h_y.html" title="uMTCH_REG__TOUCHY" alt="" coords="626,5,793,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="339,96,505,123"/>
+<area shape="rect" id="Node000002" href="$de/da6/unionu_m_t_c_h___r_e_g_____t_o_u_c_h_s_t_a_t_e.html" title=" " alt="" coords="5,5,212,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,34,286,69,373,93,372,98,284,75,163,39"/>
+<area shape="rect" id="Node000003" href="$de/d9b/unionu_m_t_c_h___r_e_g_____t_o_u_c_h_x.html" title=" " alt="" coords="236,5,410,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="350,40,409,93,406,97,346,44"/>
+<area shape="rect" id="Node000004" href="$db/d45/unionu_m_t_c_h___r_e_g_____t_o_u_c_h_y.html" title=" " alt="" coords="435,5,609,32"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="498,44,438,97,434,93,495,40"/>
+<area shape="rect" id="Node000005" href="$d1/d99/unionu_m_t_c_h___r_e_g_____t_o_u_c_h_l_s_b.html" title=" " alt="" coords="633,5,824,32"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="671,39,466,98,465,93,670,34"/>
 </map>

@@ -1,4 +1,13 @@
 <map id="PCA9624_Set_Latch" name="PCA9624_Set_Latch">
-<area shape="rect" id="node2" href="$db/de1/_p_c_a9624_8c.html#a03ee6aaa20de8bd43dfd5b251f3bde67" title="I2C Read function for PCA9624. " alt="" coords="204,5,323,32"/>
-<area shape="rect" id="node3" href="$db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624. " alt="" coords="204,56,323,83"/>
+<area shape="rect" id="Node000001" title="Set latch type for PCA9624 peripheral." alt="" coords="5,31,149,57"/>
+<area shape="rect" id="Node000002" href="$db/de1/_p_c_a9624_8c.html#a03ee6aaa20de8bd43dfd5b251f3bde67" title="I2C Read function for PCA9624." alt="" coords="197,5,312,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,31,181,26,182,32,149,36"/>
+<area shape="rect" id="Node000005" href="$db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624." alt="" coords="197,56,312,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="149,52,183,56,182,62,148,57"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="360,5,471,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="313,16,345,16,345,21,313,21"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="365,56,467,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="300,30,358,49,356,54,299,35"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="299,53,356,34,358,39,300,58"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="312,67,350,67,350,72,312,72"/>
 </map>

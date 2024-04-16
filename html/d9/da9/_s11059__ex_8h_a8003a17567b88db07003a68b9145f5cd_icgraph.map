@@ -1,9 +1,17 @@
 <map id="S11059_Write_Ctl" name="S11059_Write_Ctl">
-<area shape="rect" id="node2" href="$d9/da9/_s11059__ex_8h.html#a64b87185a7e664ad2e6b799f7cd1574d" title="ADC Operation / Reset. " alt="" coords="207,5,342,32"/>
-<area shape="rect" id="node3" href="$d9/da9/_s11059__ex_8h.html#ab04a5e3db9ed92fca1cfa2aa5bd3cb83" title="Set Standby / Operating mode. " alt="" coords="195,56,355,83"/>
-<area shape="rect" id="node4" href="$d9/da9/_s11059__ex_8h.html#ac5f3bc7d1315503e3ecc762735121e05" title="Set ADC gain. " alt="" coords="207,107,343,133"/>
-<area shape="rect" id="node5" href="$d9/da9/_s11059__ex_8h.html#ab24f9219e107a9649e6b6ec91393fdfb" title="Set integration mode &amp; prescaler. " alt="" coords="187,157,363,184"/>
-<area shape="rect" id="node6" href="$dc/d4b/_s11059__proc_8h.html#a29c8c4ee1e632a63916a634cbfa5e215" title="Initialization Sequence for S11059 peripheral. " alt="" coords="191,208,359,235"/>
-<area shape="rect" id="node7" href="$d1/d8f/_s11059_8h.html#a6d95664385bf6acabd91137538c7d947" title="Initialization for S11059 peripheral. " alt="" coords="411,208,508,235"/>
-<area shape="rect" id="node8" href="$d1/d8f/_s11059_8h.html#a54b2b645d23ab3654253ec5165873303" title="Initialization for S11059 peripheral. " alt="" coords="556,208,699,235"/>
+<area shape="rect" id="Node000001" title="Write S11059 Control register." alt="" coords="530,107,656,133"/>
+<area shape="rect" id="Node000002" href="$dd/dd8/_s11059__proc_8c.html#a29c8c4ee1e632a63916a634cbfa5e215" title="Initialization Sequence for S11059 peripheral." alt="" coords="326,5,480,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="562,99,525,72,481,46,454,35,456,30,484,42,528,68,565,95"/>
+<area shape="rect" id="Node000005" href="$d3/d3c/_s11059__ex_8c.html#a64b87185a7e664ad2e6b799f7cd1574d" title="ADC Operation / Reset." alt="" coords="339,56,466,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="525,105,455,86,456,81,527,100"/>
+<area shape="rect" id="Node000006" href="$d3/d3c/_s11059__ex_8c.html#ac5f3bc7d1315503e3ecc762735121e05" title="Set ADC gain." alt="" coords="340,107,465,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="515,123,466,123,466,117,515,117"/>
+<area shape="rect" id="Node000007" href="$d3/d3c/_s11059__ex_8c.html#ab24f9219e107a9649e6b6ec91393fdfb" title="Set integration mode &amp; prescaler." alt="" coords="323,157,482,184"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="527,140,456,159,455,154,525,135"/>
+<area shape="rect" id="Node000008" href="$d3/d3c/_s11059__ex_8c.html#ab04a5e3db9ed92fca1cfa2aa5bd3cb83" title="Set Standby / Operating mode." alt="" coords="330,208,476,235"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="565,145,528,172,484,198,456,210,454,205,481,194,525,168,562,141"/>
+<area shape="rect" id="Node000003" href="$d2/dfe/_s11059_8c.html#a6d95664385bf6acabd91137538c7d947" title="Initialization for S11059 peripheral." alt="" coords="186,5,275,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="311,21,276,21,276,16,311,16"/>
+<area shape="rect" id="Node000004" href="$d2/dfe/_s11059_8c.html#a54b2b645d23ab3654253ec5165873303" title="Initialization for S11059 peripheral." alt="" coords="5,5,138,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="171,21,138,21,138,16,171,16"/>
 </map>

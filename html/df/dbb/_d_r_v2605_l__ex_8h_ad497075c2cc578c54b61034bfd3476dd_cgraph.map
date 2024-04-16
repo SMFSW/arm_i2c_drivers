@@ -1,8 +1,9 @@
 <map id="DRV2605L_Set_ATVOutputDrive_Raw" name="DRV2605L_Set_ATVOutputDrive_Raw">
-<area shape="rect" id="node2" href="$dc/d9a/_d_r_v2605_l_8c.html#a09728b1c8f7cf9c03eb859253671dc95" title="I2C Write function for DRV2605L. " alt="" coords="860,31,985,57"/>
-<area shape="rect" id="node5" href="$df/dbb/_d_r_v2605_l__ex_8h.html#af42b31b6f3c17d2f818c3e3fe437286d" title="Set Audio To Vibe min/max input voltage. " alt="" coords="309,56,520,83"/>
-<area shape="rect" id="node7" href="$df/dbb/_d_r_v2605_l__ex_8h.html#aa837dc2c94a1648e3a216d0fa5de0fb4" title="Set Audio To Vibe min/max Drive. " alt="" coords="325,107,505,149"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="1033,5,1151,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="1039,56,1145,83"/>
-<area shape="rect" id="node6" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a02a06feb2b72f30bbb49e6391255eb47" title="Set Audio To Vibe min/max input level. " alt="" coords="568,56,812,83"/>
+<area shape="rect" id="Node000001" title="Set Audio To Vibe min/max output drive." alt="" coords="5,31,253,57"/>
+<area shape="rect" id="Node000002" href="$dc/d9a/_d_r_v2605_l_8c.html#a09728b1c8f7cf9c03eb859253671dc95" title="I2C Write function for DRV2605L." alt="" coords="301,31,422,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="253,41,286,41,286,47,253,47"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="470,5,581,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="422,32,455,27,456,32,423,37"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="475,56,577,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="423,51,460,57,459,62,422,56"/>
 </map>

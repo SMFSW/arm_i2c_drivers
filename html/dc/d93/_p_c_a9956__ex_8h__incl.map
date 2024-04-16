@@ -1,7 +1,27 @@
 <map id="PCA9956_ex.h" name="PCA9956_ex.h">
-<area shape="rect" id="node3" href="$d4/d1d/_p_c_a9956_8h.html" title="PCA9956 Driver. " alt="" coords="164,80,256,107"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="448,155,583,181"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="298,155,423,181"/>
-<area shape="rect" id="node8" href="$d3/dee/_p_c_a9xxx_8h.html" title="PCA9xxx shared declarations. " alt="" coords="33,155,123,181"/>
-<area shape="rect" id="node9" href="$df/d04/_p_c_a9956__proc_8h.html" title="PCA9956 Driver procedures. " alt="" coords="147,155,273,181"/>
+<area shape="rect" id="Node000001" title="PCA9956 Driver extensions." alt="" coords="150,5,259,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="100,229,181,256"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,35,130,53,86,79,44,113,27,133,12,156,8,168,10,179,26,199,53,214,86,226,85,231,51,219,22,203,5,181,3,168,7,154,22,130,40,109,83,74,128,48,168,30"/>
+<area shape="rect" id="Node000003" href="$d4/d1d/_p_c_a9956_8h.html" title="PCA9956 Driver." alt="" coords="160,80,249,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="200,33,198,65,193,65,195,32"/>
+<area shape="poly" id="edge16_Node000003_Node000001" title=" " alt="" coords="209,79,211,47,216,47,214,80"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="160,98,125,102,87,112,51,130,23,156,18,167,18,176,31,195,56,210,87,223,85,228,54,215,27,198,13,178,12,166,18,153,48,125,85,107,124,97,160,93"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="429,155,553,181"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="250,103,428,148,426,153,249,109"/>
+<area shape="rect" id="Node000007" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="289,155,405,181"/>
+<area shape="poly" id="edge8_Node000003_Node000007" title=" " alt="" coords="231,105,310,145,308,150,228,110"/>
+<area shape="rect" id="Node000008" href="$d3/dee/_p_c_a9xxx_8h.html" title="PCA9xxx shared declarations." alt="" coords="32,155,121,181"/>
+<area shape="poly" id="edge11_Node000003_Node000008" title=" " alt="" coords="184,110,113,149,110,145,181,105"/>
+<area shape="rect" id="Node000009" href="$df/d04/_p_c_a9956__proc_8h.html" title="PCA9956 Driver procedures." alt="" coords="144,155,265,181"/>
+<area shape="poly" id="edge13_Node000003_Node000009" title=" " alt="" coords="200,107,198,140,193,140,195,107"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="430,185,196,233,195,227,429,179"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="340,229,405,256"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="472,184,407,224,404,219,469,180"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="455,229,528,256"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="494,182,494,214,489,214,489,182"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="312,184,191,226,190,221,310,179"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="354,181,366,214,361,216,349,183"/>
+<area shape="poly" id="edge12_Node000008_Node000002" title=" " alt="" coords="90,180,122,216,118,220,86,184"/>
+<area shape="poly" id="edge14_Node000009_Node000002" title=" " alt="" coords="195,184,163,220,159,216,191,180"/>
+<area shape="poly" id="edge15_Node000009_Node000003" title=" " alt="" coords="209,154,211,122,216,122,214,154"/>
 </map>

@@ -1,4 +1,7 @@
 <map id="GPMS_Read" name="GPMS_Read">
-<area shape="rect" id="node2" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="152,5,269,32"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="157,56,264,83"/>
+<area shape="rect" id="Node000001" title="I2C Read function for GPMS." alt="" coords="5,31,104,57"/>
+<area shape="rect" id="Node000002" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="152,5,263,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,33,137,28,138,33,105,38"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="156,56,259,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="105,50,142,56,141,61,104,55"/>
 </map>

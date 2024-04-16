@@ -1,6 +1,24 @@
 <map id="PCF8523_ex.h" name="PCF8523_ex.h">
-<area shape="rect" id="node3" href="$dd/d42/_p_c_f8523_8h.html" title="PCF8523 Driver. " alt="" coords="46,80,137,107"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="328,155,463,181"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="178,155,303,181"/>
-<area shape="rect" id="node8" href="$d4/d61/_p_c_f8523__proc_8h.html" title="PCF8523 Driver procedures. " alt="" coords="29,155,154,181"/>
+<area shape="rect" id="Node000001" title="PCF8523 Driver extensions." alt="" coords="34,5,143,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="48,229,129,256"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,34,54,55,35,81,18,117,11,155,8,168,11,180,27,202,49,219,46,223,24,206,6,182,3,168,6,154,13,115,30,79,50,52,72,31"/>
+<area shape="rect" id="Node000003" href="$dd/d42/_p_c_f8523_8h.html" title="PCF8523 Driver." alt="" coords="45,80,132,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="84,33,82,65,77,65,79,32"/>
+<area shape="poly" id="edge11_Node000003_Node000001" title=" " alt="" coords="93,79,95,47,100,47,98,80"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="66,109,40,129,19,156,16,173,23,190,37,205,54,219,51,223,34,209,19,193,11,174,14,154,36,125,63,105"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="312,155,436,181"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="133,103,311,148,309,153,132,108"/>
+<area shape="rect" id="Node000007" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="172,155,288,181"/>
+<area shape="poly" id="edge8_Node000003_Node000007" title=" " alt="" coords="114,105,193,145,191,150,112,110"/>
+<area shape="rect" id="Node000008" href="$d4/d61/_p_c_f8523__proc_8h.html" title="PCF8523 Driver procedures." alt="" coords="29,155,148,181"/>
+<area shape="poly" id="edge12_Node000003_Node000008" title=" " alt="" coords="84,107,82,140,77,140,79,107"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="325,184,144,230,143,225,323,179"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="223,229,287,256"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="354,184,289,224,287,219,352,180"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="337,229,410,256"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="376,182,376,214,371,214,371,182"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="206,184,128,224,125,220,204,179"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="237,181,248,214,243,216,232,183"/>
+<area shape="poly" id="edge13_Node000008_Node000002" title=" " alt="" coords="91,182,91,214,86,214,86,182"/>
+<area shape="poly" id="edge14_Node000008_Node000003" title=" " alt="" coords="93,154,95,122,100,122,98,154"/>
 </map>

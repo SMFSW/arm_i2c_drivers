@@ -1,8 +1,20 @@
 <map id="PCA9624_Init" name="PCA9624_Init">
-<area shape="rect" id="node2" href="$d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization. " alt="" coords="215,5,323,32"/>
-<area shape="rect" id="node3" href="$d6/dfc/_p_c_a9624__ex_8h.html#a75515d3ead6adda321170420385fc604" title="Set auto increment option for PCA9624 registers. " alt="" coords="160,56,379,83"/>
-<area shape="rect" id="node4" href="$df/df7/_p_c_a9624__proc_8c.html#ae6462de81eb8420000a21390956d7aee" title="Initialization Sequence for PCA9624 peripheral. " alt="" coords="181,107,358,133"/>
-<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state. " alt="" coords="210,157,329,184"/>
-<area shape="rect" id="node5" href="$db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624. " alt="" coords="665,107,784,133"/>
-<area shape="rect" id="node6" href="$dd/d68/_p_c_a9624__ex_8c.html#addff2c3e81e7a4ba7e30fd32bd89967f" title="Set PCA9624 peripheral multiple LEDs mode. " alt="" coords="427,132,617,159"/>
+<area shape="rect" id="Node000001" title="Initialization for PCA9624 peripheral." alt="" coords="5,81,108,108"/>
+<area shape="rect" id="Node000002" href="$d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state." alt="" coords="201,5,314,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,78,114,60,155,42,186,31,187,37,157,46,117,64,82,83"/>
+<area shape="rect" id="Node000003" href="$d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization." alt="" coords="205,56,310,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="108,86,190,75,190,80,108,91"/>
+<area shape="rect" id="Node000004" href="$df/df7/_p_c_a9624__proc_8c.html#ae6462de81eb8420000a21390956d7aee" title="Initialization Sequence for PCA9624 peripheral." alt="" coords="174,107,341,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="108,98,159,105,159,110,108,104"/>
+<area shape="rect" id="Node000009" href="$d6/dfc/_p_c_a9624__ex_8h.html#a75515d3ead6adda321170420385fc604" title="Set auto increment option for PCA9624 registers." alt="" coords="156,157,359,184"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="82,106,117,125,157,143,179,150,177,155,155,148,114,130,80,111"/>
+<area shape="rect" id="Node000005" href="$dd/d68/_p_c_a9624__ex_8c.html#addff2c3e81e7a4ba7e30fd32bd89967f" title="Set PCA9624 peripheral multiple LEDs mode." alt="" coords="407,81,590,108"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="341,109,392,103,393,108,342,114"/>
+<area shape="rect" id="Node000006" href="$db/de1/_p_c_a9624_8c.html#a0c4d9ef078dc2b579c7388558a208157" title="I2C Write function for PCA9624." alt="" coords="638,107,753,133"/>
+<area shape="poly" id="edge8_Node000004_Node000006" title=" " alt="" coords="342,117,624,117,624,123,342,123"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="591,104,624,108,623,113,590,109"/>
+<area shape="rect" id="Node000007" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="801,81,912,108"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="753,108,785,103,786,108,753,114"/>
+<area shape="rect" id="Node000008" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="805,132,908,159"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="753,126,791,132,790,138,753,132"/>
 </map>

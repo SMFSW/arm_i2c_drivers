@@ -1,5 +1,9 @@
 <map id="MCP9808_Set_Resolution" name="MCP9808_Set_Resolution">
-<area shape="rect" id="node2" href="$d6/d5e/_m_c_p9808__proc_8h.html#acdc3fcd27aee6d19c3e7fb7bf4762b47" title="Initialization Sequence of the MCP9808 peripheral. " alt="" coords="236,5,415,32"/>
-<area shape="rect" id="node3" href="$d8/d57/_m_c_p9808_8h.html#a92276c5da93fdb59cc4d94ef92761841" title="Initialization of the MCP9808 peripheral. " alt="" coords="463,5,571,32"/>
-<area shape="rect" id="node4" href="$d8/d57/_m_c_p9808_8h.html#a9ffcff895e9844967086a52af6c82dd4" title="Initialization for MCP9808 peripheral. " alt="" coords="619,5,773,32"/>
+<area shape="rect" id="Node000001" title="Set MCP9808 Resolution." alt="" coords="570,5,746,32"/>
+<area shape="rect" id="Node000002" href="$de/deb/_m_c_p9808__proc_8c.html#acdc3fcd27aee6d19c3e7fb7bf4762b47" title="Initialization Sequence of the MCP9808 peripheral." alt="" coords="353,5,522,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="556,21,523,21,523,16,556,16"/>
+<area shape="rect" id="Node000003" href="$df/d8e/_m_c_p9808_8c.html#a92276c5da93fdb59cc4d94ef92761841" title="Initialization of the MCP9808 peripheral." alt="" coords="201,5,305,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="338,21,306,21,306,16,338,16"/>
+<area shape="rect" id="Node000004" href="$df/d8e/_m_c_p9808_8c.html#a9ffcff895e9844967086a52af6c82dd4" title="Initialization for MCP9808 peripheral." alt="" coords="5,5,153,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="186,21,153,21,153,16,186,16"/>
 </map>

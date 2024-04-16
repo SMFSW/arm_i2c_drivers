@@ -1,6 +1,11 @@
 <map id="AMG88_Get_Thermistor_Raw" name="AMG88_Get_Thermistor_Raw">
-<area shape="rect" id="node2" href="$df/d52/_a_m_g88_8c.html#a2cbcae049f8f7817a745ab684f05554e" title="I2C Word Read (low endian) function for AMG88. " alt="" coords="260,31,404,57"/>
-<area shape="rect" id="node3" href="$df/d52/_a_m_g88_8c.html#ade19de4334fdd1b3aa58c0b71b0979e5" title="I2C Read function for AMG88. " alt="" coords="452,31,559,57"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="607,5,724,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="612,56,719,83"/>
+<area shape="rect" id="Node000001" title="Get thermistor raw value." alt="" coords="5,31,202,57"/>
+<area shape="rect" id="Node000002" href="$df/d52/_a_m_g88_8c.html#a2cbcae049f8f7817a745ab684f05554e" title="I2C Word Read (little endian) function for AMG88." alt="" coords="250,31,390,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,41,235,41,235,47,202,47"/>
+<area shape="rect" id="Node000003" href="$df/d52/_a_m_g88_8c.html#ade19de4334fdd1b3aa58c0b71b0979e5" title="I2C Read function for AMG88." alt="" coords="438,31,541,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="391,41,423,41,423,47,391,47"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="589,5,701,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="541,33,574,28,575,33,542,38"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="594,56,696,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="542,50,580,56,579,61,541,55"/>
 </map>

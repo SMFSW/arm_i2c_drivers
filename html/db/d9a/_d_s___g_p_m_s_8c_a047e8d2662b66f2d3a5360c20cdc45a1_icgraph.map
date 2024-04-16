@@ -1,3 +1,5 @@
 <map id="GPMS_Write" name="GPMS_Write">
-<area shape="rect" id="node2" href="$da/d4d/_d_s___g_p_m_s__ex_8h.html#a63fe15b97087e1e450a3a803a2f59a48" title="GPMS_Set_Mode" alt="" coords="152,5,283,32"/>
+<area shape="rect" id="Node000001" title="I2C Write function for GPMS." alt="" coords="180,5,277,32"/>
+<area shape="rect" id="Node000002" href="$da/d4d/_d_s___g_p_m_s__ex_8h.html#a63fe15b97087e1e450a3a803a2f59a48" title=" " alt="" coords="5,5,132,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,21,132,21,132,16,165,16"/>
 </map>

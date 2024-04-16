@@ -1,11 +1,17 @@
 <map id="PCA9624_Read" name="PCA9624_Read">
-<area shape="rect" id="node2" href="$d6/dfc/_p_c_a9624__ex_8h.html#a4e93459e13da452b9181cdef1f710b15" title="Set latch type for PCA9624 peripheral. " alt="" coords="181,35,332,61"/>
-<area shape="rect" id="node4" href="$d6/dfc/_p_c_a9624__ex_8h.html#a26229b1c7f245cc88e09533d80ade29d" title="Read PWM duty cycle array of values of a PCA9624. " alt="" coords="185,115,329,141"/>
-<area shape="rect" id="node8" href="$d6/dfc/_p_c_a9624__ex_8h.html#af768a0d852aca5133ec20a30af64086f" title="Read PWM duty cycle value of a PCA9624 channel. " alt="" coords="188,167,325,193"/>
-<area shape="rect" id="node9" href="$d6/dfc/_p_c_a9624__ex_8h.html#aae7261dad2ba4c04c8fd49632795c9da" title="Reads register from PCA9624. " alt="" coords="172,221,341,248"/>
-<area shape="rect" id="node3" href="$d6/dfc/_p_c_a9624__ex_8h.html#a4873de01aedd5ccef0320315cf6195be" title="Set MODE2 register. " alt="" coords="409,5,571,32"/>
-<area shape="rect" id="node5" href="$d6/dfc/_p_c_a9624__ex_8h.html#aea311d4d9235407ad34b209fd4903245" title="Read PWM duty cycle array of values of a PCA9624. " alt="" coords="397,56,583,83"/>
-<area shape="rect" id="node6" href="$d6/dfc/_p_c_a9624__ex_8h.html#ab80468102a0ccd9e0d8c2fb841d19b95" title="Read PWM duty cycle array of values of a PCA9624. " alt="" coords="389,107,591,149"/>
-<area shape="rect" id="node7" href="$d6/dfc/_p_c_a9624__ex_8h.html#a908e779b4a0bfd968a674997d5fd659f" title="Read all PWM duty cycle array of values of a PCA9624 (for the 8 channels) " alt="" coords="407,173,573,200"/>
-<area shape="rect" id="node10" href="$d6/dfc/_p_c_a9624__ex_8h.html#a93948697ac82a090f75a5d6879ca7f23" title="Send all PWM duty cycle array of values to apply on a PCA9624 (for the 8 channels) ..." alt="" coords="412,224,568,251"/>
+<area shape="rect" id="Node000001" title="I2C Read function for PCA9624." alt="" coords="459,81,574,108"/>
+<area shape="rect" id="Node000002" href="$dd/d68/_p_c_a9624__ex_8c.html#aae7261dad2ba4c04c8fd49632795c9da" title="Reads register from PCA9624." alt="" coords="247,5,411,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="476,77,410,46,378,35,380,30,412,42,478,72"/>
+<area shape="rect" id="Node000003" href="$dd/d68/_p_c_a9624__ex_8c.html#af768a0d852aca5133ec20a30af64086f" title="Read PWM duty cycle value of a PCA9624 channel." alt="" coords="262,56,396,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="444,88,396,81,396,76,445,82"/>
+<area shape="rect" id="Node000004" href="$dd/d68/_p_c_a9624__ex_8c.html#a26229b1c7f245cc88e09533d80ade29d" title="Read PWM duty cycle array of values of a PCA9624." alt="" coords="259,107,399,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="445,107,400,113,399,108,444,102"/>
+<area shape="rect" id="Node000008" href="$dd/d68/_p_c_a9624__ex_8c.html#a4e93459e13da452b9181cdef1f710b15" title="Set latch type for PCA9624 peripheral." alt="" coords="257,157,401,184"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="478,117,412,148,380,159,378,154,410,143,476,113"/>
+<area shape="rect" id="Node000005" href="$d6/dfc/_p_c_a9624__ex_8h.html#a908e779b4a0bfd968a674997d5fd659f" title="Read all PWM duty cycle array of values of a PCA9624 (for the 8 channels)" alt="" coords="21,56,183,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="251,105,164,86,166,81,252,100"/>
+<area shape="rect" id="Node000006" href="$d6/dfc/_p_c_a9624__ex_8h.html#aea311d4d9235407ad34b209fd4903245" title="Read PWM duty cycle array of values of a PCA9624." alt="" coords="13,107,191,133"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="244,123,192,123,192,117,244,117"/>
+<area shape="rect" id="Node000007" href="$d6/dfc/_p_c_a9624__ex_8h.html#ab80468102a0ccd9e0d8c2fb841d19b95" title="Read PWM duty cycle array of values of a PCA9624." alt="" coords="5,157,199,200"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="261,140,188,159,187,154,260,135"/>
 </map>

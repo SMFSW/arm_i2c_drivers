@@ -1,6 +1,11 @@
 <map id="APDS9960_Set_AIHT" name="APDS9960_Set_AIHT">
-<area shape="rect" id="node2" href="$db/db1/_a_p_d_s9960_8c.html#aedcc2dc2f38a0ec3ec6805ddb108e209" title="I2C Word Write (low endian) function for APDS9960. " alt="" coords="208,31,375,57"/>
-<area shape="rect" id="node3" href="$db/db1/_a_p_d_s9960_8c.html#a52b83fd89a1e886f3f1bb8b59a89b8ac" title="I2C Write function for APDS9960. " alt="" coords="423,31,551,57"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="599,5,716,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="604,56,711,83"/>
+<area shape="rect" id="Node000001" title="ALS interrupt high threshold configuration." alt="" coords="5,31,157,57"/>
+<area shape="rect" id="Node000002" href="$db/db1/_a_p_d_s9960_8c.html#aedcc2dc2f38a0ec3ec6805ddb108e209" title="I2C Word Write (little endian) function for APDS9960." alt="" coords="205,31,365,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,41,190,41,190,47,157,47"/>
+<area shape="rect" id="Node000003" href="$db/db1/_a_p_d_s9960_8c.html#a52b83fd89a1e886f3f1bb8b59a89b8ac" title="I2C Write function for APDS9960." alt="" coords="413,31,536,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="366,41,398,41,398,47,366,47"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="584,5,696,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="536,32,569,27,570,32,537,37"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="589,56,691,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="537,51,575,57,574,62,536,56"/>
 </map>

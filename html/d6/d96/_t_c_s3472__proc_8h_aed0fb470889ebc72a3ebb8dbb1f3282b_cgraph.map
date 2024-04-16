@@ -1,14 +1,33 @@
 <map id="TCS3472_Init_Sequence" name="TCS3472_Init_Sequence">
-<area shape="rect" id="node2" href="$d2/dbe/_t_c_s3472__ex_8h.html#a608741c4052ecec4a2ce54a8ca7bc553" title="Get TCS3472 chip ID. " alt="" coords="261,34,417,60"/>
-<area shape="rect" id="node7" href="$d2/dbe/_t_c_s3472__ex_8h.html#abf45e48afff6576c4aa8e54b2d069d2d" title="Write TCS3472 Enable register. " alt="" coords="515,338,654,364"/>
-<area shape="rect" id="node9" href="$df/db1/_t_c_s3472__ex_8c.html#afc615e3b58e6039da4618834b633b462" title="Gain configuration. " alt="" coords="513,84,656,111"/>
-<area shape="rect" id="node10" href="$df/db1/_t_c_s3472__ex_8c.html#ab9336815f89fd68bb15b3572334e0fcb" title="Integration time configuration. " alt="" coords="228,135,449,162"/>
-<area shape="rect" id="node11" href="$df/db1/_t_c_s3472__ex_8c.html#a8f23adc9af56a58bc72277e8c08a0f2f" title="Wait time configuration. " alt="" coords="249,186,428,212"/>
-<area shape="rect" id="node13" href="$d2/dbe/_t_c_s3472__ex_8h.html#ab7c9c4763cef80f6b098c3774137c066" title="ALS interrupt thresholds configuration. " alt="" coords="272,262,405,288"/>
-<area shape="rect" id="node3" href="$df/dfb/_t_c_s3472_8c.html#a2fa16091194ad1cb4f16db6d081f551f" title="I2C Read function for TCS3472. " alt="" coords="720,84,836,111"/>
-<area shape="rect" id="node6" href="$d2/dbe/_t_c_s3472__ex_8h.html#a03ecb46bfa38320576ad43c57a3edcaa" title="Get All channels conversions. " alt="" coords="497,34,672,60"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="884,91,1001,118"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="889,154,996,180"/>
-<area shape="rect" id="node8" href="$df/dfb/_t_c_s3472_8c.html#a19fc8e0e8440863061f67b8a42f6484a" title="I2C Write function for TCS3472. " alt="" coords="720,179,836,206"/>
-<area shape="rect" id="node12" href="$d2/dbe/_t_c_s3472__ex_8h.html#a9fdf74096436a356febbf1f4c3162857" title="Write TCS3472 Config register. " alt="" coords="513,236,657,263"/>
+<area shape="rect" id="Node000001" title="Initialization Sequence for TCS3472 peripheral." alt="" coords="5,169,172,196"/>
+<area shape="rect" id="Node000002" href="$d2/dbe/_t_c_s3472__ex_8h.html#a608741c4052ecec4a2ce54a8ca7bc553" title="Get TCS3472 chip ID." alt="" coords="247,5,400,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,167,149,117,182,87,218,60,267,36,269,40,221,65,185,91,152,120,104,171"/>
+<area shape="rect" id="Node000006" href="$d2/dbe/_t_c_s3472__ex_8h.html#ab7c9c4763cef80f6b098c3774137c066" title="ALS interrupt thresholds configuration." alt="" coords="258,195,389,221"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="172,189,244,197,243,202,171,194"/>
+<area shape="rect" id="Node000008" href="$df/db1/_t_c_s3472__ex_8c.html#afc615e3b58e6039da4618834b633b462" title="Gain configuration." alt="" coords="477,43,614,69"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="121,166,219,129,346,95,462,69,463,74,347,100,220,135,123,171"/>
+<area shape="rect" id="Node000009" href="$df/db1/_t_c_s3472__ex_8c.html#ab9336815f89fd68bb15b3572334e0fcb" title="Integration time configuration." alt="" coords="220,245,427,272"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="123,194,221,231,247,238,245,244,219,236,121,199"/>
+<area shape="rect" id="Node000010" href="$df/db1/_t_c_s3472__ex_8c.html#a8f23adc9af56a58bc72277e8c08a0f2f" title="Wait time configuration." alt="" coords="237,144,410,171"/>
+<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="171,171,222,166,223,171,172,176"/>
+<area shape="rect" id="Node000012" href="$d2/dbe/_t_c_s3472__ex_8h.html#abf45e48afff6576c4aa8e54b2d069d2d" title="Write TCS3472 Enable register." alt="" coords="478,296,614,323"/>
+<area shape="poly" id="edge18_Node000001_Node000012" title=" " alt="" coords="104,195,152,240,185,263,221,282,282,300,346,310,408,313,463,313,463,318,407,319,345,315,281,305,219,286,182,268,149,244,100,199"/>
+<area shape="rect" id="Node000003" href="$df/dfb/_t_c_s3472_8c.html#a2fa16091194ad1cb4f16db6d081f551f" title="I2C Read function for TCS3472." alt="" coords="664,47,779,73"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="400,14,503,17,617,28,666,39,665,45,616,33,503,22,400,20"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="827,53,938,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="779,60,812,61,811,66,779,65"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="831,116,934,143"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="756,71,837,107,835,112,753,76"/>
+<area shape="rect" id="Node000007" href="$df/dfb/_t_c_s3472_8c.html#a19fc8e0e8440863061f67b8a42f6484a" title="I2C Write function for TCS3472." alt="" coords="665,141,778,168"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="389,203,496,196,616,180,661,170,662,175,617,185,496,201,390,208"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="747,138,842,85,845,90,749,143"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="778,143,816,137,817,142,779,148"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="615,55,650,56,650,61,615,60"/>
+<area shape="poly" id="edge11_Node000008_Node000007" title=" " alt="" coords="581,68,618,86,690,131,687,135,615,90,578,72"/>
+<area shape="poly" id="edge13_Node000009_Node000007" title=" " alt="" coords="427,244,520,228,615,203,683,173,685,178,617,208,521,233,428,249"/>
+<area shape="poly" id="edge15_Node000010_Node000007" title=" " alt="" coords="392,141,475,129,546,125,617,129,653,135,652,140,616,135,546,130,475,135,393,146"/>
+<area shape="rect" id="Node000011" href="$d2/dbe/_t_c_s3472__ex_8h.html#a9fdf74096436a356febbf1f4c3162857" title="Write TCS3472 Config register." alt="" coords="475,144,616,171"/>
+<area shape="poly" id="edge16_Node000010_Node000011" title=" " alt="" coords="410,155,460,155,460,160,410,160"/>
+<area shape="poly" id="edge17_Node000011_Node000007" title=" " alt="" coords="617,154,650,153,650,158,617,159"/>
+<area shape="poly" id="edge19_Node000012_Node000007" title=" " alt="" coords="584,293,615,275,641,252,664,227,701,179,706,182,669,230,644,256,618,280,586,298"/>
 </map>

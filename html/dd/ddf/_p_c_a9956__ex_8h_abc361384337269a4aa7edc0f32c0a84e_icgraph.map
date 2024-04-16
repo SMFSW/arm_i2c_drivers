@@ -1,6 +1,9 @@
 <map id="PCA9956_Set_Offset" name="PCA9956_Set_Offset">
-<area shape="rect" id="node2" href="$dd/ddf/_p_c_a9956__ex_8h.html#a1f23873e665562e66821beeb83bc510c" title="Set MODE2 register. " alt="" coords="215,5,378,32"/>
-<area shape="rect" id="node3" href="$df/d04/_p_c_a9956__proc_8h.html#a0cbd9081f3d6999611db262c3e3d6baf" title="Initialization Sequence for PCA9956 peripheral. " alt="" coords="208,56,385,83"/>
-<area shape="rect" id="node4" href="$d4/d1d/_p_c_a9956_8h.html#ae0160c553cc5fa06c787dce4181a7cf9" title="Initialization for PCA9956 peripheral. " alt="" coords="433,56,540,83"/>
-<area shape="rect" id="node5" href="$d4/d1d/_p_c_a9956_8h.html#a0f59108faf0e099c5dcf21355152c2e1" title="Initialization for PCA9956 peripheral. " alt="" coords="588,56,740,83"/>
+<area shape="rect" id="Node000001" title="Set PCA9956 peripheral delay between channels." alt="" coords="564,5,711,32"/>
+<area shape="rect" id="Node000002" href="$db/d9b/_p_c_a9956__proc_8c.html#a0cbd9081f3d6999611db262c3e3d6baf" title="Initialization Sequence for PCA9956 peripheral." alt="" coords="349,5,516,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="549,21,517,21,517,16,549,16"/>
+<area shape="rect" id="Node000003" href="$df/d5e/_p_c_a9956_8c.html#ae0160c553cc5fa06c787dce4181a7cf9" title="Initialization for PCA9956 peripheral." alt="" coords="199,5,301,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="334,21,301,21,301,16,334,16"/>
+<area shape="rect" id="Node000004" href="$df/d5e/_p_c_a9956_8c.html#a0f59108faf0e099c5dcf21355152c2e1" title="Initialization for PCA9956 peripheral." alt="" coords="5,5,151,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="184,21,151,21,151,16,184,16"/>
 </map>

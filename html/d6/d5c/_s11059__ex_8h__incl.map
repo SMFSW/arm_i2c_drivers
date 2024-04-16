@@ -1,6 +1,24 @@
 <map id="S11059_ex.h" name="S11059_ex.h">
-<area shape="rect" id="node3" href="$d1/d8f/_s11059_8h.html" title="S11059 Driver. " alt="" coords="47,80,130,107"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="322,155,457,181"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="172,155,298,181"/>
-<area shape="rect" id="node8" href="$dc/d4b/_s11059__proc_8h.html" title="S11059 Driver procedures. " alt="" coords="29,155,148,181"/>
+<area shape="rect" id="Node000001" title="S11059 Driver extensions." alt="" coords="33,5,130,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="41,229,122,256"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,34,52,55,35,81,19,117,11,155,8,168,11,180,26,202,47,219,43,223,22,205,6,182,3,168,6,154,14,115,30,79,48,52,67,31"/>
+<area shape="rect" id="Node000003" href="$d1/d8f/_s11059_8h.html" title="S11059 Driver." alt="" coords="44,80,119,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="77,33,76,65,70,65,72,32"/>
+<area shape="poly" id="edge14_Node000003_Node000001" title=" " alt="" coords="86,79,88,47,93,47,91,80"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="63,109,38,129,19,156,16,173,23,189,35,205,51,218,47,222,31,209,18,192,11,173,14,154,34,125,59,105"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="299,155,424,181"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="120,102,299,148,298,153,119,107"/>
+<area shape="rect" id="Node000007" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="159,155,276,181"/>
+<area shape="poly" id="edge8_Node000003_Node000007" title=" " alt="" coords="107,105,182,145,180,150,104,110"/>
+<area shape="rect" id="Node000008" href="$dc/d4b/_s11059__proc_8h.html" title="S11059 Driver procedures." alt="" coords="28,155,135,181"/>
+<area shape="poly" id="edge11_Node000003_Node000008" title=" " alt="" coords="77,107,76,140,70,140,72,107"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="314,184,137,230,136,225,312,179"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="211,229,275,256"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="342,184,277,224,275,219,340,180"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="325,229,398,256"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="364,182,364,214,359,214,359,182"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="195,184,120,224,117,220,193,180"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="225,181,236,214,231,216,220,183"/>
+<area shape="poly" id="edge12_Node000008_Node000002" title=" " alt="" coords="84,182,84,214,79,214,79,182"/>
+<area shape="poly" id="edge13_Node000008_Node000003" title=" " alt="" coords="86,154,88,122,93,122,91,154"/>
 </map>

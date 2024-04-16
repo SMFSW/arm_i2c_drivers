@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['defbitfullonoff',['DefBitFullOnOff',['../d3/d57/_p_c_a9685__ex_8h.html#a142ef3c71fa8edbe0d582332e5136e41',1,'PCA9685_ex.h']]],
-  ['drv2604_5fchip_5fid',['DRV2604_CHIP_ID',['../d1/da7/_d_r_v2605_l__proc_8h.html#a343031d1f6c13b889486ecd8c6d02dee',1,'DRV2605L_proc.h']]],
-  ['drv2604l_5fchip_5fid',['DRV2604L_CHIP_ID',['../d1/da7/_d_r_v2605_l__proc_8h.html#a37f2762b657fdbb5f128721a2128e00a',1,'DRV2605L_proc.h']]],
-  ['drv2605_5fchip_5fid',['DRV2605_CHIP_ID',['../d1/da7/_d_r_v2605_l__proc_8h.html#a62912d212a31e1cdd9836ce44c32a977',1,'DRV2605L_proc.h']]],
-  ['drv2605l_5fbase_5faddr',['DRV2605L_BASE_ADDR',['../d5/d47/_d_r_v2605_l_8h.html#ae7250a5ec83fe1b7ea4427611c5917f7',1,'DRV2605L.h']]],
-  ['drv2605l_5fchip_5fid',['DRV2605L_CHIP_ID',['../d1/da7/_d_r_v2605_l__proc_8h.html#a8e3dfb01f2ab71dd297e5b2e7c011684',1,'DRV2605L_proc.h']]]
+  ['bmp180_5fbase_5faddr_0',['BMP180_BASE_ADDR',['../d3/d7d/_b_m_p180_8h.html#ac1b9de358c1a95e4fdf0c2d6f7a1961b',1,'BMP180.h']]],
+  ['bmp180_5fchip_5fid_1',['BMP180_CHIP_ID',['../dc/d50/_b_m_p180__proc_8h.html#a839c3017c3d9e5e24cad644f9179ba30',1,'BMP180_proc.h']]],
+  ['bmp180_5freset_5fval_2',['BMP180_RESET_VAL',['../d8/dfb/_b_m_p180__ex_8h.html#a0c0c5a658a13b8c7244f1c6bc025fca0',1,'BMP180_ex.h']]]
 ];

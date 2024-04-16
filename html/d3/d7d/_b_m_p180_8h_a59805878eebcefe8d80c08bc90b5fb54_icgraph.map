@@ -1,10 +1,20 @@
 <map id="BMP180_Write" name="BMP180_Write">
-<area shape="rect" id="node2" href="$d8/dfb/_b_m_p180__ex_8h.html#a7cacb36688796e7036bc64296f194621" title="Start BMP180 Temperature/Pressure conversion. " alt="" coords="165,31,356,57"/>
-<area shape="rect" id="node4" href="$d8/dfb/_b_m_p180__ex_8h.html#a8aef0c3e448697eb722d6e816ccefe70" title="Reset BMP180 chip. " alt="" coords="714,5,830,32"/>
-<area shape="rect" id="node3" href="$d8/dfb/_b_m_p180__ex_8h.html#a54d2903a86c9b42dcc4f8bc8f4b2baf7" title="Get Raw Temperature. " alt="" coords="404,81,628,108"/>
-<area shape="rect" id="node9" href="$d8/dfb/_b_m_p180__ex_8h.html#a2bbc509d5c02c2629fc2adb4d0a05788" title="Get Raw Pressure. " alt="" coords="417,31,615,57"/>
-<area shape="rect" id="node5" href="$dc/d50/_b_m_p180__proc_8h.html#abff0623050520b3826558d5b2a13f796" title="Gets the compensated pressure level. " alt="" coords="689,56,855,83"/>
-<area shape="rect" id="node8" href="$dc/d50/_b_m_p180__proc_8h.html#a2f7e6879bcfe66f5dc44a607d7ade2cf" title="Get the temperature. " alt="" coords="676,107,868,133"/>
-<area shape="rect" id="node6" href="$dc/d50/_b_m_p180__proc_8h.html#ae13c9eabdf3c4a900c6e01787ab2a807" title="Handler for BMP180 peripheral. " alt="" coords="916,56,1045,83"/>
-<area shape="rect" id="node7" href="$dc/d50/_b_m_p180__proc_8h.html#a6ea364017a9680fe0d48f50dd9f84ffd" title="Handler for all BMP180 peripherals. " alt="" coords="1093,56,1244,83"/>
+<area shape="rect" id="Node000001" title="I2C Write function for BMP180." alt="" coords="1076,31,1184,57"/>
+<area shape="rect" id="Node000002" href="$d8/dfb/_b_m_p180__ex_8h.html#a8aef0c3e448697eb722d6e816ccefe70" title="Reset BMP180 chip." alt="" coords="882,5,995,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1061,38,995,29,995,23,1062,32"/>
+<area shape="rect" id="Node000003" href="$db/d0e/_b_m_p180__ex_8c.html#a7cacb36688796e7036bc64296f194621" title="Start BMP180 Temperature/Pressure conversion." alt="" coords="849,56,1028,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1061,56,1029,60,1028,55,1061,50"/>
+<area shape="rect" id="Node000004" href="$db/d0e/_b_m_p180__ex_8c.html#a2bbc509d5c02c2629fc2adb4d0a05788" title="Get Raw Pressure." alt="" coords="598,31,791,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="833,61,791,57,792,51,834,56"/>
+<area shape="rect" id="Node000008" href="$db/d0e/_b_m_p180__ex_8c.html#a54d2903a86c9b42dcc4f8bc8f4b2baf7" title="Get Raw Temperature." alt="" coords="588,81,801,108"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="834,83,801,86,801,81,833,78"/>
+<area shape="rect" id="Node000005" href="$d0/d35/_b_m_p180__proc_8c.html#abff0623050520b3826558d5b2a13f796" title="Gets the compensated pressure level." alt="" coords="372,31,530,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="584,47,531,47,531,41,584,41"/>
+<area shape="rect" id="Node000006" href="$d0/d35/_b_m_p180__proc_8c.html#ae13c9eabdf3c4a900c6e01787ab2a807" title="Handler for BMP180 peripheral." alt="" coords="194,31,314,57"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="357,47,315,47,315,41,357,41"/>
+<area shape="rect" id="Node000007" href="$dc/d50/_b_m_p180__proc_8h.html#a6ea364017a9680fe0d48f50dd9f84ffd" title="Handler for all BMP180 peripherals." alt="" coords="5,31,146,57"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="179,47,146,47,146,41,179,41"/>
+<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="612,80,518,61,519,55,613,75"/>
+<area shape="rect" id="Node000009" href="$d0/d35/_b_m_p180__proc_8c.html#a2f7e6879bcfe66f5dc44a607d7ade2cf" title="Get the temperature." alt="" coords="362,81,540,108"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="574,97,541,97,541,92,574,92"/>
 </map>

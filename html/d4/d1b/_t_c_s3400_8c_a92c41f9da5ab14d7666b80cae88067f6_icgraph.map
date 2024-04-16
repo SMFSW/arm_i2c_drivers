@@ -1,3 +1,5 @@
 <map id="TCS3400_Init" name="TCS3400_Init">
-<area shape="rect" id="node2" href="$d9/d51/_t_c_s3400_8h.html#ae1122436ee0aa2cf81cec91006589ad6" title="Initialization for TCS3400 peripheral. " alt="" coords="157,5,308,32"/>
+<area shape="rect" id="Node000001" title="Initialization for TCS3400 peripheral." alt="" coords="198,5,299,32"/>
+<area shape="rect" id="Node000002" href="$d4/d1b/_t_c_s3400_8c.html#ae1122436ee0aa2cf81cec91006589ad6" title="Initialization for TCS3400 peripheral." alt="" coords="5,5,150,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,21,150,21,150,16,183,16"/>
 </map>

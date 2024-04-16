@@ -1,21 +1,43 @@
 <map id="DRV2605L_Init_Sequence" name="DRV2605L_Init_Sequence">
-<area shape="rect" id="node2" href="$da/d07/_d_r_v2605_l__ex_8c.html#a284e6d245bd1879cf59834b84c434793" title="Set haptic device to standby. " alt="" coords="271,5,447,32"/>
-<area shape="rect" id="node6" href="$dc/d9a/_d_r_v2605_l_8c.html#a09728b1c8f7cf9c03eb859253671dc95" title="I2C Write function for DRV2605L. " alt="" coords="561,183,687,209"/>
-<area shape="rect" id="node7" href="$df/dbb/_d_r_v2605_l__ex_8h.html#aa6e8731941269bddb42633409b51d8fc" title="Get DRV260x chip ID. " alt="" coords="277,492,442,519"/>
-<area shape="rect" id="node14" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a94a466ad0cbb01c70f2dbec292a97cf7" title="Set Overdrive time offset. " alt="" coords="252,259,467,301"/>
-<area shape="rect" id="node15" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a1b162870b3bfd04fc5e4622cbcc905c2" title="Set Sustain time offset. " alt="" coords="258,325,461,366"/>
-<area shape="rect" id="node16" href="$df/dbb/_d_r_v2605_l__ex_8h.html#af96c583c518f85195ce745af4d5bfb73" title="Set Brake time offset. " alt="" coords="245,391,474,417"/>
-<area shape="rect" id="node17" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a02a06feb2b72f30bbb49e6391255eb47" title="Set Audio To Vibe min/max input level. " alt="" coords="237,441,481,468"/>
-<area shape="rect" id="node18" href="$da/d07/_d_r_v2605_l__ex_8c.html#ae077456061ec8aa83035368678d33654" title="Set haptic actuator type. " alt="" coords="273,56,445,83"/>
-<area shape="rect" id="node19" href="$da/d07/_d_r_v2605_l__ex_8c.html#acba66feb5b11b174e4029d3308a14220" title="Set haptic device input pin type. " alt="" coords="265,107,454,133"/>
-<area shape="rect" id="node20" href="$da/d07/_d_r_v2605_l__ex_8c.html#abf22c146b060501dd9a022263ededa76" title="Set haptic operating mode. " alt="" coords="249,157,470,184"/>
-<area shape="rect" id="node3" href="$dc/d9a/_d_r_v2605_l_8c.html#aadfce835666394b45a320f79fc631e52" title="I2C Read function for DRV2605L. " alt="" coords="561,132,687,159"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="797,132,915,159"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="803,183,909,209"/>
-<area shape="rect" id="node8" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a572725b83357c3e695799b38fd7ed7ce" title="Enable GPIO pin init for DRV2605L. " alt="" coords="536,517,712,544"/>
-<area shape="rect" id="node10" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ab3f468584e3b1abe7160a11c1212b561" title="Enable GPIO pin setter for DRV2605L. " alt="" coords="535,416,713,443"/>
-<area shape="rect" id="node12" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a98cbfb2755e67db5cfadb3d8ff72c3fe" title="Trigger GPIO pin init for DRV2605L. " alt="" coords="531,568,717,595"/>
-<area shape="rect" id="node13" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ae20097ec48f5dd3f23d217a41c4ff09b" title="Trigger GPIO pin setter for DRV2605L. " alt="" coords="529,467,719,493"/>
-<area shape="rect" id="node9" href="$d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="767,543,945,569"/>
-<area shape="rect" id="node11" href="$d2/de1/_i2_c__peripheral_8c.html#a7accedd9eb463e3cd4eb401b07e36b2c" title="I2C peripheral GPIO pin setter. " alt="" coords="767,441,945,468"/>
+<area shape="rect" id="Node000001" title="Initialization Sequence for DRV2605L peripheral." alt="" coords="5,233,180,260"/>
+<area shape="rect" id="Node000002" href="$df/dbb/_d_r_v2605_l__ex_8h.html#aa6e8731941269bddb42633409b51d8fc" title="Get DRV260x chip ID." alt="" coords="266,5,427,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,232,112,194,139,142,177,88,200,63,226,42,251,29,253,34,229,46,204,67,181,91,143,145,117,196,101,234"/>
+<area shape="rect" id="Node000006" href="$da/d07/_d_r_v2605_l__ex_8c.html#ae077456061ec8aa83035368678d33654" title="Set haptic actuator type." alt="" coords="263,56,430,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="100,231,147,164,183,125,226,92,248,82,250,87,229,97,187,129,151,167,104,234"/>
+<area shape="rect" id="Node000007" href="$dc/d9a/_d_r_v2605_l_8c.html#a09728b1c8f7cf9c03eb859253671dc95" title="I2C Write function for DRV2605L." alt="" coords="514,208,635,235"/>
+<area shape="poly" id="edge27_Node000001_Node000007" title=" " alt="" coords="180,250,314,252,390,250,465,244,510,236,511,241,465,249,390,255,314,258,180,255"/>
+<area shape="rect" id="Node000008" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a02a06feb2b72f30bbb49e6391255eb47" title="Set Audio To Vibe min/max input level." alt="" coords="228,309,465,336"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="135,258,228,288,278,302,277,307,227,293,133,263"/>
+<area shape="rect" id="Node000009" href="$df/dbb/_d_r_v2605_l__ex_8h.html#af96c583c518f85195ce745af4d5bfb73" title="Set Brake time offset." alt="" coords="238,360,455,387"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="109,259,160,302,193,326,229,346,247,353,245,358,227,350,190,330,156,306,106,263"/>
+<area shape="rect" id="Node000010" href="$da/d07/_d_r_v2605_l__ex_8c.html#acba66feb5b11b174e4029d3308a14220" title="Set haptic device input pin type." alt="" coords="257,107,436,133"/>
+<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="106,231,156,187,190,163,227,143,245,136,247,141,229,148,193,168,160,191,109,235"/>
+<area shape="rect" id="Node000011" href="$da/d07/_d_r_v2605_l__ex_8c.html#abf22c146b060501dd9a022263ededa76" title="Set haptic operating mode." alt="" coords="243,157,450,184"/>
+<area shape="poly" id="edge17_Node000001_Node000011" title=" " alt="" coords="125,230,227,193,258,185,259,190,228,199,127,235"/>
+<area shape="rect" id="Node000012" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a94a466ad0cbb01c70f2dbec292a97cf7" title="Set Overdrive time offset." alt="" coords="245,411,448,453"/>
+<area shape="poly" id="edge20_Node000001_Node000012" title=" " alt="" coords="104,259,152,325,187,364,229,396,238,402,236,406,226,401,184,367,147,328,100,262"/>
+<area shape="rect" id="Node000013" href="$da/d07/_d_r_v2605_l__ex_8c.html#a284e6d245bd1879cf59834b84c434793" title="Set haptic device to standby." alt="" coords="263,208,430,235"/>
+<area shape="poly" id="edge22_Node000001_Node000013" title=" " alt="" coords="180,235,248,228,248,234,181,241"/>
+<area shape="rect" id="Node000014" href="$df/dbb/_d_r_v2605_l__ex_8h.html#a1b162870b3bfd04fc5e4622cbcc905c2" title="Set Sustain time offset." alt="" coords="251,477,442,520"/>
+<area shape="poly" id="edge25_Node000001_Node000014" title=" " alt="" coords="101,259,116,300,142,355,180,413,203,440,229,463,239,470,236,474,226,467,199,444,176,417,138,358,111,302,96,261"/>
+<area shape="rect" id="Node000003" href="$dc/d9a/_d_r_v2605_l_8c.html#aadfce835666394b45a320f79fc631e52" title="I2C Read function for DRV2605L." alt="" coords="513,157,635,184"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="428,26,466,42,496,64,522,91,560,143,556,146,518,94,493,68,464,46,426,31"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="683,157,795,184"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="636,168,669,168,669,173,636,173"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="688,208,790,235"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="621,182,680,201,679,206,619,187"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="431,80,466,92,511,117,548,145,545,150,508,122,464,97,429,85"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="431,74,449,82,467,93,479,105,486,118,493,143,498,169,504,182,515,194,519,198,515,202,511,198,500,184,493,171,488,145,481,120,475,108,463,97,447,87,429,79"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="619,205,679,186,680,191,621,210"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="635,219,673,219,673,224,635,224"/>
+<area shape="poly" id="edge11_Node000008_Node000007" title=" " alt="" coords="412,306,464,288,506,266,542,241,545,246,509,270,466,293,414,311"/>
+<area shape="poly" id="edge13_Node000009_Node000007" title=" " alt="" coords="439,357,464,346,493,324,518,298,556,246,560,249,522,301,496,328,466,350,441,362"/>
+<area shape="poly" id="edge15_Node000010_Node000003" title=" " alt="" coords="414,131,466,143,501,151,499,156,464,148,413,137"/>
+<area shape="poly" id="edge16_Node000010_Node000007" title=" " alt="" coords="437,130,466,143,482,155,492,168,501,181,515,194,522,199,520,203,511,198,497,185,487,171,478,159,464,148,435,135"/>
+<area shape="poly" id="edge18_Node000011_Node000003" title=" " alt="" coords="450,168,498,168,498,173,450,173"/>
+<area shape="poly" id="edge19_Node000011_Node000007" title=" " alt="" coords="414,182,466,193,501,201,499,207,464,199,413,187"/>
+<area shape="poly" id="edge21_Node000012_Node000007" title=" " alt="" coords="445,408,463,397,498,363,526,323,547,282,561,248,566,250,551,285,530,325,502,366,467,401,448,412"/>
+<area shape="poly" id="edge23_Node000013_Node000003" title=" " alt="" coords="413,205,464,193,499,185,501,191,466,199,414,210"/>
+<area shape="poly" id="edge24_Node000013_Node000007" title=" " alt="" coords="430,219,499,219,499,224,430,224"/>
+<area shape="poly" id="edge26_Node000014_Node000007" title=" " alt="" coords="441,478,463,463,486,440,506,413,536,353,555,295,566,248,571,250,560,297,541,355,510,416,490,443,467,467,444,482"/>
 </map>

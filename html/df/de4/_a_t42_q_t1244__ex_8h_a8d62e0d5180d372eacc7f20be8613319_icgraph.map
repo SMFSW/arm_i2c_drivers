@@ -1,7 +1,10 @@
 <map id="AT42QT1244_Send_Setup" name="AT42QT1244_Send_Setup">
-<area shape="rect" id="node2" href="$df/de4/_a_t42_q_t1244__ex_8h.html#aa2b39e1fe6a1c17e61c69adfa01c7687" title="Key use setup for AT42QT1244 peripheral. " alt="" coords="240,5,423,32"/>
-<area shape="rect" id="node3" href="$df/de4/_a_t42_q_t1244__ex_8h.html#af23af7f48652e8c2a0b6b9c398aa2169" title="Frequency hopping mode setup for AT42QT1244 peripheral. " alt="" coords="240,56,423,83"/>
-<area shape="rect" id="node4" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a41d9810490e829642bd150eba5c2f573" title="Frequencies calibration for AT42QT1244 peripheral. " alt="" coords="471,74,637,115"/>
-<area shape="rect" id="node5" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#aef85f959c0275b2ac8c13ed688a19c70" title="Set last reset time for AT42QT1244 peripheral. " alt="" coords="685,81,896,108"/>
-<area shape="rect" id="node6" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a39d0faa5ff099e6099c5f98d4d55b671" title="Reset command for AT42QT1244 peripheral. " alt="" coords="944,81,1088,108"/>
+<area shape="rect" id="Node000001" title="Send setup parameters to AT42QT1244 peripheral." alt="" coords="433,39,608,65"/>
+<area shape="rect" id="Node000002" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#a41d9810490e829642bd150eba5c2f573" title="Frequencies calibration for AT42QT1244 peripheral." alt="" coords="5,5,162,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="444,38,385,29,268,24,162,25,162,20,268,19,385,24,445,33"/>
+<area shape="rect" id="Node000003" href="$df/d72/_a_t42_q_t1244__ex_8c.html#af23af7f48652e8c2a0b6b9c398aa2169" title="Frequency hopping mode setup for AT42QT1244 peripheral." alt="" coords="210,39,385,65"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="418,55,385,55,385,49,418,49"/>
+<area shape="rect" id="Node000004" href="$df/d72/_a_t42_q_t1244__ex_8c.html#aa2b39e1fe6a1c17e61c69adfa01c7687" title="Key use setup for AT42QT1244 peripheral." alt="" coords="210,89,385,116"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="445,72,360,91,359,86,444,67"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="195,43,162,39,162,33,195,37"/>
 </map>

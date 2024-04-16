@@ -1,7 +1,15 @@
 <map id="DRV2605L_Set_ERM" name="DRV2605L_Set_ERM">
-<area shape="rect" id="node2" href="$df/dbb/_d_r_v2605_l__ex_8h.html#ae077456061ec8aa83035368678d33654" title="Set haptic actuator type. " alt="" coords="204,31,376,57"/>
-<area shape="rect" id="node3" href="$dc/d9a/_d_r_v2605_l_8c.html#aadfce835666394b45a320f79fc631e52" title="I2C Read function for DRV2605L. " alt="" coords="424,5,549,32"/>
-<area shape="rect" id="node6" href="$dc/d9a/_d_r_v2605_l_8c.html#a09728b1c8f7cf9c03eb859253671dc95" title="I2C Write function for DRV2605L. " alt="" coords="424,56,549,83"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="597,5,715,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="603,56,709,83"/>
+<area shape="rect" id="Node000001" title="Set haptic actuator type to ERM." alt="" coords="5,31,154,57"/>
+<area shape="rect" id="Node000002" href="$da/d07/_d_r_v2605_l__ex_8c.html#ae077456061ec8aa83035368678d33654" title="Set haptic actuator type." alt="" coords="202,31,368,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,41,187,41,187,47,154,47"/>
+<area shape="rect" id="Node000003" href="$dc/d9a/_d_r_v2605_l_8c.html#aadfce835666394b45a320f79fc631e52" title="I2C Read function for DRV2605L." alt="" coords="416,5,538,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="368,30,401,26,401,31,369,36"/>
+<area shape="rect" id="Node000006" href="$dc/d9a/_d_r_v2605_l_8c.html#a09728b1c8f7cf9c03eb859253671dc95" title="I2C Write function for DRV2605L." alt="" coords="417,56,538,83"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="369,52,402,57,401,62,368,58"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="586,5,698,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="539,16,572,16,572,21,539,21"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="591,56,693,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="524,30,583,49,582,54,522,35"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="522,53,582,34,583,39,524,58"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="538,67,576,67,576,72,538,72"/>
 </map>

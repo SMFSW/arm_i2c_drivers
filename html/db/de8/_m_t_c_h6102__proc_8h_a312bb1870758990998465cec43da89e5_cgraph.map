@@ -1,16 +1,22 @@
 <map id="MTCH6102_handler_all" name="MTCH6102_handler_all">
-<area shape="rect" id="node2" href="$db/de8/_m_t_c_h6102__proc_8h.html#a342679a8eaa19001a2d661ca14c50139" title="Handler for MTCH6102 peripheral. " alt="" coords="220,199,365,225"/>
-<area shape="rect" id="node3" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a6e4dca81f18906253bc5300c3a485b8e" title="Get MTCH6102 gesture data. " alt="" coords="430,81,587,108"/>
-<area shape="rect" id="node12" href="$d2/d60/_m_t_c_h6102__proc_8c.html#a6c8c05288ed1e532bb558523a8a6cbf1" title="Decode raw MTCH6102 datas to touch datas. " alt="" coords="415,133,602,174"/>
-<area shape="rect" id="node13" href="$d2/d60/_m_t_c_h6102__proc_8c.html#aa096140ed9f47e75ade274efb0f28f1d" title="Get gesture string from gesture data. " alt="" coords="413,199,604,225"/>
-<area shape="rect" id="node14" href="$d2/d60/_m_t_c_h6102__proc_8c.html#ac5fc1b84e793c77cff155d5f6de42db9" title="Get diagnostic string from diagnostic data. " alt="" coords="425,249,593,276"/>
-<area shape="rect" id="node15" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a7c5ed64610073758050d2708ddf217d9" title="Get MTCH6102 Raw sensor values data. " alt="" coords="433,300,585,327"/>
-<area shape="rect" id="node4" href="$da/d78/_m_t_c_h6102_8c.html#a5aa313bbfe74f756dd83101dbefea059" title="I2C Read function for MTCH6102. " alt="" coords="688,220,816,247"/>
-<area shape="rect" id="node6" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a733a5846f9aa3999b273a4a40b1a5f3e" title="Interrupt GPIO pin init for MTCH6102. " alt="" coords="661,107,843,133"/>
-<area shape="rect" id="node8" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#ae6f4b02f3f49114cef624c0afb4b7f4e" title="Interrupt GPIO pin getter for MTCH6102. " alt="" coords="659,56,845,83"/>
-<area shape="rect" id="node10" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a1361a2cd7b079e8faa107b634dc0aa65" title="Synchro GPIO pin init for MTCH6102. " alt="" coords="654,157,850,184"/>
-<area shape="rect" id="node11" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a3747d7b925224b0079579c67e909ab50" title="Synchro GPIO pin getter for MTCH6102. " alt="" coords="652,5,852,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="931,220,1048,247"/>
-<area shape="rect" id="node7" href="$d2/de1/_i2_c__peripheral_8c.html#aa2c9a5b3f1aac72314026ac9789d6167" title="I2C peripheral GPIO pin init. " alt="" coords="901,144,1078,171"/>
-<area shape="rect" id="node9" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="900,31,1079,57"/>
+<area shape="rect" id="Node000001" title="Handler for all MTCH6102 peripherals." alt="" coords="5,123,163,149"/>
+<area shape="rect" id="Node000002" href="$d2/d60/_m_t_c_h6102__proc_8c.html#a342679a8eaa19001a2d661ca14c50139" title="Handler for MTCH6102 peripheral." alt="" coords="211,123,348,149"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,133,196,133,196,139,163,139"/>
+<area shape="rect" id="Node000003" href="$d2/d60/_m_t_c_h6102__proc_8c.html#a6c8c05288ed1e532bb558523a8a6cbf1" title="Decode raw MTCH6102 datas to touch datas." alt="" coords="397,5,573,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="298,120,341,90,395,58,407,52,409,57,397,62,344,94,301,124"/>
+<area shape="rect" id="Node000004" href="$d2/d60/_m_t_c_h6102__proc_8c.html#ac5fc1b84e793c77cff155d5f6de42db9" title="Get diagnostic string from diagnostic data." alt="" coords="406,72,565,99"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="336,119,413,100,415,105,337,125"/>
+<area shape="rect" id="Node000005" href="$d2/d60/_m_t_c_h6102__proc_8c.html#aa096140ed9f47e75ade274efb0f28f1d" title="Get gesture string from gesture data." alt="" coords="396,123,574,149"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="348,133,381,133,381,139,348,139"/>
+<area shape="rect" id="Node000006" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a6e4dca81f18906253bc5300c3a485b8e" title="Get MTCH6102 gesture data." alt="" coords="410,173,561,200"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="337,147,415,167,413,172,336,153"/>
+<area shape="rect" id="Node000010" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a7c5ed64610073758050d2708ddf217d9" title="Get MTCH6102 Raw sensor values data." alt="" coords="410,224,560,251"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="300,148,343,179,397,210,414,216,412,221,395,214,340,183,296,152"/>
+<area shape="rect" id="Node000007" href="$da/d78/_m_t_c_h6102_8c.html#a5aa313bbfe74f756dd83101dbefea059" title="I2C Read function for MTCH6102." alt="" coords="622,199,749,225"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="562,194,608,200,607,205,561,199"/>
+<area shape="rect" id="Node000008" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="797,173,908,200"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="748,200,782,195,783,200,749,205"/>
+<area shape="rect" id="Node000009" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="801,224,904,251"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="749,219,787,225,786,230,748,224"/>
+<area shape="poly" id="edge10_Node000010_Node000007" title=" " alt="" coords="560,225,607,219,608,224,561,230"/>
 </map>

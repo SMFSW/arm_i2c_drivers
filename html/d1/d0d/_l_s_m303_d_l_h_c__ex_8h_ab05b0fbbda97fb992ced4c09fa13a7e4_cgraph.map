@@ -1,0 +1,5 @@
+<map id="LSM303DLHC_DRDY_GPIO_Get" name="LSM303DLHC_DRDY_GPIO_Get">
+<area shape="rect" id="Node000001" title="MF Data Ready GPIO pin getter for LSM303DLHC." alt="" coords="5,5,226,32"/>
+<area shape="rect" id="Node000002" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter." alt="" coords="274,5,444,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,16,259,16,259,21,226,21"/>
+</map>

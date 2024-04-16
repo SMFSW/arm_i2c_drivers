@@ -1,9 +1,19 @@
 <map id="shared_APS.h" name="shared_APS.h">
-<area shape="rect" id="node2" href="$dc/d50/_b_m_p180__proc_8h.html" title="BMP180 Driver procedures. " alt="" coords="109,80,230,107"/>
-<area shape="rect" id="node8" href="$da/d3c/shared___a_p_s_8c.html" title="Ambient Pressure Sensing shared. " alt="" coords="254,80,365,107"/>
-<area shape="rect" id="node3" href="$d3/d7d/_b_m_p180_8h.html" title="BMP180 Driver. " alt="" coords="126,155,213,181"/>
-<area shape="rect" id="node4" href="$d8/d11/_b_m_p180_8c.html" title="BMP180 Driver. " alt="" coords="5,229,91,256"/>
-<area shape="rect" id="node5" href="$d8/dfb/_b_m_p180__ex_8h.html" title="BMP180 Driver extensions. " alt="" coords="115,229,223,256"/>
-<area shape="rect" id="node6" href="$db/d0e/_b_m_p180__ex_8c.html" title="BMP180 Driver extensions. " alt="" coords="248,229,355,256"/>
-<area shape="rect" id="node7" href="$d0/d35/_b_m_p180__proc_8c.html" title="BMP180 Driver procedures. " alt="" coords="379,229,499,256"/>
+<area shape="rect" id="Node000001" title="Ambient Pressure Sensing shared." alt="" coords="306,5,411,32"/>
+<area shape="rect" id="Node000002" href="$dc/d50/_b_m_p180__proc_8h.html" title="BMP180 Driver procedures." alt="" coords="235,80,349,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="339,45,305,81,301,78,335,41"/>
+<area shape="rect" id="Node000008" href="$da/d3c/shared___a_p_s_8c.html" title="Ambient Pressure Sensing shared." alt="" coords="373,80,478,107"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="382,41,416,78,412,81,378,45"/>
+<area shape="rect" id="Node000003" href="$d3/d7d/_b_m_p180_8h.html" title="BMP180 Driver." alt="" coords="251,155,333,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="286,122,288,154,282,154,280,122"/>
+<area shape="poly" id="edge8_Node000003_Node000002" title=" " alt="" coords="298,140,296,107,302,107,303,140"/>
+<area shape="rect" id="Node000004" href="$d8/d11/_b_m_p180_8c.html" title="BMP180 Driver." alt="" coords="5,229,88,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="237,188,89,232,88,227,236,183"/>
+<area shape="rect" id="Node000005" href="$db/d0e/_b_m_p180__ex_8c.html" title="BMP180 Driver extensions." alt="" coords="112,229,216,256"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="258,191,188,231,185,226,256,187"/>
+<area shape="rect" id="Node000006" href="$d8/dfb/_b_m_p180__ex_8h.html" title="BMP180 Driver extensions." alt="" coords="240,229,344,256"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="286,196,288,229,282,229,280,197"/>
+<area shape="rect" id="Node000007" href="$d0/d35/_b_m_p180__proc_8c.html" title="BMP180 Driver procedures." alt="" coords="368,229,482,256"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="329,186,403,226,400,231,326,191"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="298,215,296,182,302,182,303,214"/>
 </map>

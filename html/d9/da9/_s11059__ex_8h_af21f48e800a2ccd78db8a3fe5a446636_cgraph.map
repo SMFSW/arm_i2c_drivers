@@ -1,6 +1,11 @@
 <map id="S11059_Get_Blue" name="S11059_Get_Blue">
-<area shape="rect" id="node2" href="$d2/dfe/_s11059_8c.html#a445b49a90ce780749d8cf6395d439b26" title="I2C Word Read (big endian) function for S11059. " alt="" coords="189,31,336,57"/>
-<area shape="rect" id="node3" href="$d2/dfe/_s11059_8c.html#a157781bb2500a88bc780ad45e0cc60c1" title="I2C Read function for S11059. " alt="" coords="384,31,493,57"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="541,5,659,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="547,56,653,83"/>
+<area shape="rect" id="Node000001" title="Get Blue channel conversion." alt="" coords="5,31,131,57"/>
+<area shape="rect" id="Node000002" href="$d2/dfe/_s11059_8c.html#a445b49a90ce780749d8cf6395d439b26" title="I2C Word Read (big endian) function for S11059." alt="" coords="179,31,318,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,41,164,41,164,47,131,47"/>
+<area shape="rect" id="Node000003" href="$d2/dfe/_s11059_8c.html#a157781bb2500a88bc780ad45e0cc60c1" title="I2C Read function for S11059." alt="" coords="366,31,468,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="318,41,351,41,351,47,318,47"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="516,5,628,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="468,33,501,28,502,33,469,38"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="521,56,623,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="469,50,507,56,506,61,468,55"/>
 </map>

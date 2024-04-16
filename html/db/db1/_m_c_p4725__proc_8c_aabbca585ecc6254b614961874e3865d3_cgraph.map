@@ -1,6 +1,11 @@
 <map id="MCP4725_Set_Volts" name="MCP4725_Set_Volts">
-<area shape="rect" id="node2" href="$dc/d03/_m_c_p4725__ex_8c.html#aab6a6cc4fd1092188c5562a82572ac0f" title="Write Command to MCP4725 peripheral. " alt="" coords="203,31,397,57"/>
-<area shape="rect" id="node3" href="$d9/d93/_m_c_p4725_8c.html#a9234b6dc64a61523a3434bff8df4e84b" title="I2C Write function for MCP4725. " alt="" coords="445,31,565,57"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="613,5,731,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="619,56,725,83"/>
+<area shape="rect" id="Node000001" title="Write DAC value (in Volts) to MCP4725 peripheral." alt="" coords="5,31,148,57"/>
+<area shape="rect" id="Node000002" href="$dc/d03/_m_c_p4725__ex_8c.html#aab6a6cc4fd1092188c5562a82572ac0f" title="Write Command to MCP4725 peripheral." alt="" coords="196,31,379,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,41,181,41,181,47,148,47"/>
+<area shape="rect" id="Node000003" href="$d9/d93/_m_c_p4725_8c.html#a9234b6dc64a61523a3434bff8df4e84b" title="I2C Write function for MCP4725." alt="" coords="427,31,543,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="379,41,412,41,412,47,379,47"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="591,5,703,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="544,32,576,27,577,32,544,37"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="596,56,698,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="544,51,582,56,581,62,544,56"/>
 </map>

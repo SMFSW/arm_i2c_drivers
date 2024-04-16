@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cfg',['cfg',['../d4/d61/structcfg.html',1,'']]]
+  ['cfg_0',['cfg',['../d4/d61/structcfg.html',1,'']]]
 ];

@@ -1,18 +1,42 @@
 <map id="TCS3400_Init" name="TCS3400_Init">
-<area shape="rect" id="node2" href="$d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization. " alt="" coords="191,157,299,184"/>
-<area shape="rect" id="node3" href="$dc/dd9/_t_c_s3400__proc_8c.html#a8a6888f4fcd6c3e24072035984dea5cb" title="Initialization Sequence for TCS3400 peripheral. " alt="" coords="157,208,332,235"/>
-<area shape="rect" id="node17" href="$d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state. " alt="" coords="185,259,304,285"/>
-<area shape="rect" id="node4" href="$de/d36/_t_c_s3400__ex_8h.html#a6f6c0afff67926df89c04e18556413b4" title="Get TCS3400 Revision ID. " alt="" coords="661,5,812,32"/>
-<area shape="rect" id="node8" href="$de/d36/_t_c_s3400__ex_8h.html#a3b92d62f135d55aec12d2180b5fd73d2" title="Get TCS3400 Device ID. " alt="" coords="405,107,576,133"/>
-<area shape="rect" id="node10" href="$de/d36/_t_c_s3400__ex_8h.html#aee726872472aeaa93d4247cdeba5bfdb" title="Write TCS3400 Enable register. " alt="" coords="667,360,806,387"/>
-<area shape="rect" id="node12" href="$db/d52/_t_c_s3400__ex_8c.html#adab7b9b97e53d6533da716b6f51efef1" title="Gain configuration. " alt="" coords="665,157,808,184"/>
-<area shape="rect" id="node13" href="$db/d52/_t_c_s3400__ex_8c.html#a5d23fb5c086daa57c0ede1c61719e414" title="Integration time configuration. " alt="" coords="380,411,601,437"/>
-<area shape="rect" id="node14" href="$db/d52/_t_c_s3400__ex_8c.html#a2d2035e4deebdea64d859a33119a2936" title="Wait time configuration. " alt="" coords="401,259,580,285"/>
-<area shape="rect" id="node16" href="$de/d36/_t_c_s3400__ex_8h.html#aa869f5da95c15259e7e6fe2ad76d1820" title="ALS interrupt thresholds configuration. " alt="" coords="424,208,557,235"/>
-<area shape="rect" id="node5" href="$d4/d1b/_t_c_s3400_8c.html#ac6b81ecacb0000ae8a9e4cd223b07ed2" title="I2C Read function for TCS3400. " alt="" coords="872,132,988,159"/>
-<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="1036,164,1153,191"/>
-<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="1041,227,1148,253"/>
-<area shape="rect" id="node9" href="$de/d36/_t_c_s3400__ex_8h.html#a58fc53de16e4494f969bd2f51d6644a3" title="Get All channels conversions. " alt="" coords="649,56,824,83"/>
-<area shape="rect" id="node11" href="$d4/d1b/_t_c_s3400_8c.html#a74d4e0aa8eb8d69af81660a1ef13ed77" title="I2C Write function for TCS3400. " alt="" coords="872,252,988,279"/>
-<area shape="rect" id="node15" href="$de/d36/_t_c_s3400__ex_8h.html#af91db6d8e73b2326b6dec6cd4f0bf1c0" title="Write TCS3400 Config register. " alt="" coords="665,309,809,336"/>
+<area shape="rect" id="Node000001" title="Initialization for TCS3400 peripheral." alt="" coords="5,107,107,133"/>
+<area shape="rect" id="Node000002" href="$d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state." alt="" coords="182,56,294,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,103,173,85,174,90,107,109"/>
+<area shape="rect" id="Node000003" href="$d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization." alt="" coords="186,107,290,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="107,117,171,117,171,123,107,123"/>
+<area shape="rect" id="Node000004" href="$dc/dd9/_t_c_s3400__proc_8c.html#a8a6888f4fcd6c3e24072035984dea5cb" title="Initialization Sequence for TCS3400 peripheral." alt="" coords="155,157,321,184"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="107,131,174,150,173,155,106,137"/>
+<area shape="rect" id="Node000005" href="$de/d36/_t_c_s3400__ex_8h.html#a3b92d62f135d55aec12d2180b5fd73d2" title="Get TCS3400 Device ID." alt="" coords="372,56,538,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="296,154,320,143,334,131,343,118,352,105,368,92,378,87,381,91,370,97,356,109,347,121,338,135,322,148,298,159"/>
+<area shape="rect" id="Node000009" href="$de/d36/_t_c_s3400__ex_8h.html#a6f6c0afff67926df89c04e18556413b4" title="Get TCS3400 Revision ID." alt="" coords="381,5,530,32"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="302,154,319,143,330,131,337,119,342,94,348,68,355,55,367,42,373,37,376,42,371,46,360,58,353,70,348,95,342,121,334,134,323,147,305,159"/>
+<area shape="rect" id="Node000010" href="$de/d36/_t_c_s3400__ex_8h.html#aa869f5da95c15259e7e6fe2ad76d1820" title="ALS interrupt thresholds configuration." alt="" coords="627,157,759,184"/>
+<area shape="poly" id="edge10_Node000004_Node000010" title=" " alt="" coords="322,168,613,168,613,173,322,173"/>
+<area shape="rect" id="Node000012" href="$db/d52/_t_c_s3400__ex_8c.html#adab7b9b97e53d6533da716b6f51efef1" title="Gain configuration." alt="" coords="387,107,524,133"/>
+<area shape="poly" id="edge14_Node000004_Node000012" title=" " alt="" coords="298,154,380,135,381,140,299,159"/>
+<area shape="rect" id="Node000013" href="$db/d52/_t_c_s3400__ex_8c.html#a5d23fb5c086daa57c0ede1c61719e414" title="Integration time configuration." alt="" coords="589,208,797,235"/>
+<area shape="poly" id="edge17_Node000004_Node000013" title=" " alt="" coords="322,177,574,206,574,211,321,183"/>
+<area shape="rect" id="Node000014" href="$db/d52/_t_c_s3400__ex_8c.html#a2d2035e4deebdea64d859a33119a2936" title="Wait time configuration." alt="" coords="369,259,541,285"/>
+<area shape="poly" id="edge19_Node000004_Node000014" title=" " alt="" coords="264,182,370,238,401,251,399,255,368,242,262,187"/>
+<area shape="rect" id="Node000016" href="$de/d36/_t_c_s3400__ex_8h.html#aee726872472aeaa93d4247cdeba5bfdb" title="Write TCS3400 Enable register." alt="" coords="625,360,761,387"/>
+<area shape="poly" id="edge23_Node000004_Node000016" title=" " alt="" coords="251,183,298,238,332,269,370,295,430,322,493,342,555,355,610,364,609,369,554,360,492,347,428,327,368,300,329,273,295,242,247,186"/>
+<area shape="rect" id="Node000006" href="$d4/d1b/_t_c_s3400_8c.html#ac6b81ecacb0000ae8a9e4cd223b07ed2" title="I2C Read function for TCS3400." alt="" coords="636,56,750,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="539,67,621,67,621,72,539,72"/>
+<area shape="rect" id="Node000007" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="1006,157,1117,184"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="746,81,997,150,996,156,744,86"/>
+<area shape="rect" id="Node000008" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="1011,95,1113,121"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="751,73,996,99,996,104,750,78"/>
+<area shape="poly" id="edge9_Node000009_Node000006" title=" " alt="" coords="522,30,622,52,621,57,521,35"/>
+<area shape="rect" id="Node000011" href="$d4/d1b/_t_c_s3400_8c.html#a74d4e0aa8eb8d69af81660a1ef13ed77" title="I2C Write function for TCS3400." alt="" coords="845,183,958,209"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="759,176,830,185,830,190,759,181"/>
+<area shape="poly" id="edge12_Node000011_Node000007" title=" " alt="" coords="958,184,991,179,992,184,959,190"/>
+<area shape="poly" id="edge13_Node000011_Node000008" title=" " alt="" coords="926,180,1021,127,1024,131,929,184"/>
+<area shape="poly" id="edge15_Node000012_Node000006" title=" " alt="" coords="521,103,621,82,622,87,522,109"/>
+<area shape="poly" id="edge16_Node000012_Node000011" title=" " alt="" coords="524,115,652,119,725,128,797,143,834,156,867,173,864,177,832,161,796,148,725,133,652,124,524,120"/>
+<area shape="poly" id="edge18_Node000013_Node000011" title=" " alt="" coords="797,206,830,202,830,207,797,211"/>
+<area shape="poly" id="edge20_Node000014_Node000011" title=" " alt="" coords="497,283,557,300,633,312,674,315,716,313,757,307,796,295,822,280,845,261,881,220,885,223,849,265,825,285,798,300,758,312,716,319,674,320,632,318,556,305,495,289"/>
+<area shape="rect" id="Node000015" href="$de/d36/_t_c_s3400__ex_8h.html#af91db6d8e73b2326b6dec6cd4f0bf1c0" title="Write TCS3400 Config register." alt="" coords="622,259,764,285"/>
+<area shape="poly" id="edge21_Node000014_Node000015" title=" " alt="" coords="541,269,607,269,607,275,541,275"/>
+<area shape="poly" id="edge22_Node000015_Node000011" title=" " alt="" coords="759,256,796,244,862,214,864,219,798,249,760,261"/>
+<area shape="poly" id="edge24_Node000016_Node000011" title=" " alt="" coords="759,357,795,339,825,312,850,281,885,221,890,224,854,284,829,316,798,344,762,362"/>
 </map>

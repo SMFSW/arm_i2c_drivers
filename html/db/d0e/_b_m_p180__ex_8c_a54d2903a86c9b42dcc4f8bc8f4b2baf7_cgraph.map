@@ -1,8 +1,17 @@
 <map id="BMP180_Get_Temperature_Raw" name="BMP180_Get_Temperature_Raw">
-<area shape="rect" id="node2" href="$db/d0e/_b_m_p180__ex_8c.html#a7cacb36688796e7036bc64296f194621" title="Start BMP180 Temperature/Pressure conversion. " alt="" coords="277,5,468,32"/>
-<area shape="rect" id="node6" href="$d8/d11/_b_m_p180_8c.html#a96723b9fbe9d582ed3f4120471de5520" title="I2C Word Read function for BMP180. " alt="" coords="297,56,448,83"/>
-<area shape="rect" id="node3" href="$d8/d11/_b_m_p180_8c.html#a59805878eebcefe8d80c08bc90b5fb54" title="I2C Write function for BMP180. " alt="" coords="516,5,628,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="676,5,793,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="681,56,788,83"/>
-<area shape="rect" id="node7" href="$d8/d11/_b_m_p180_8c.html#adce223c1add54df827a7a1457f2005ec" title="I2C Read function for BMP180. " alt="" coords="516,56,628,83"/>
+<area shape="rect" id="Node000001" title="Get Raw Temperature." alt="" coords="5,31,218,57"/>
+<area shape="rect" id="Node000002" href="$d8/d11/_b_m_p180_8c.html#a96723b9fbe9d582ed3f4120471de5520" title="I2C Word Read function for BMP180." alt="" coords="282,5,429,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,30,267,25,268,30,219,36"/>
+<area shape="rect" id="Node000006" href="$db/d0e/_b_m_p180__ex_8c.html#a7cacb36688796e7036bc64296f194621" title="Start BMP180 Temperature/Pressure conversion." alt="" coords="266,56,445,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="219,52,251,56,251,61,218,58"/>
+<area shape="rect" id="Node000003" href="$d8/d11/_b_m_p180_8c.html#adce223c1add54df827a7a1457f2005ec" title="I2C Read function for BMP180." alt="" coords="493,5,602,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="429,16,478,16,478,21,429,21"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="650,5,762,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="603,16,636,16,636,21,603,21"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="655,56,757,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="593,30,649,48,647,53,591,35"/>
+<area shape="rect" id="Node000007" href="$d8/d11/_b_m_p180_8c.html#a59805878eebcefe8d80c08bc90b5fb54" title="I2C Write function for BMP180." alt="" coords="494,56,602,83"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="445,67,479,67,479,72,445,72"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="591,53,647,35,649,40,593,58"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="602,67,640,67,640,72,602,72"/>
 </map>

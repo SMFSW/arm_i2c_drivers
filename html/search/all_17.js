@@ -1,9 +1,19 @@
 var searchData=
 [
-  ['year',['Year',['../d0/d70/struct_g_p_m_s__date.html#a362e37a13b8fccc03b793bddf7cabf82',1,'GPMS_date::Year()'],['../d3/da8/struct_p_c_f8523__date.html#a080d32d87e9a4feec097c8dc1fd71d91',1,'PCF8523_date::Year()']]],
-  ['years',['Years',['../dd/d7c/unionu_p_c_f8523___r_e_g___m_a_p.html#a4651497b1182ccf04c88e7c5fbaff7dd',1,'uPCF8523_REG_MAP']]],
-  ['years_5fhundreds',['Years_Hundreds',['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#ac0bb3163cfc2ed0783cce59e97bc9ca5',1,'uGPMS_RD_REG_MAP']]],
-  ['years_5ftens',['Years_Tens',['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#a7398f095eb1b6a1bcccad28f303d3f98',1,'uGPMS_RD_REG_MAP']]],
-  ['years_5fthousands',['Years_Thousands',['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#add0ba62ba0b0e06905daa019a57367f7',1,'uGPMS_RD_REG_MAP']]],
-  ['years_5funits',['Years_Units',['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#a34d1ff068f4ee11e7d8b993bab7b10b8',1,'uGPMS_RD_REG_MAP']]]
+  ['y_0',['Y',['../dc/dc2/unionu_l_s_m303_d_l_h_c___r_e_g_____a_c_c___c_l_i_c_k___s_r_c.html#a498b4259903178257e66fa70b60b2384',1,'uLSM303DLHC_REG__ACC_CLICK_SRC']]],
+  ['yd_1',['YD',['../d1/d48/unionu_l_s_m303_d_l_h_c___r_e_g_____a_c_c___c_l_i_c_k___c_f_g.html#acb1c087ae94eac99575a370a8e08798e',1,'uLSM303DLHC_REG__ACC_CLICK_CFG']]],
+  ['yda_2',['YDA',['../d0/ded/unionu_l3_g_d20_h___r_e_g_____s_t_a_t_u_s.html#a9e157ef2489a4713a116e0585e0b5708',1,'uL3GD20H_REG__STATUS::YDA'],['../d1/d63/unionu_l_s_m303_d_l_h_c___r_e_g_____a_c_c___s_t_a_t_u_s.html#a345ae210a66d2d468a24fb0d6082bc1b',1,'uLSM303DLHC_REG__ACC_STATUS::YDA']]],
+  ['year_3',['Year',['../d0/d70/struct_g_p_m_s__date.html#a362e37a13b8fccc03b793bddf7cabf82',1,'GPMS_date::Year'],['../d3/da8/struct_p_c_f8523__date.html#a080d32d87e9a4feec097c8dc1fd71d91',1,'PCF8523_date::Year']]],
+  ['years_4',['Years',['../dd/d7c/unionu_p_c_f8523___r_e_g___m_a_p.html#a4651497b1182ccf04c88e7c5fbaff7dd',1,'uPCF8523_REG_MAP']]],
+  ['years_5fhundreds_5',['Years_Hundreds',['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#ac0bb3163cfc2ed0783cce59e97bc9ca5',1,'uGPMS_RD_REG_MAP']]],
+  ['years_5ftens_6',['Years_Tens',['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#a7398f095eb1b6a1bcccad28f303d3f98',1,'uGPMS_RD_REG_MAP']]],
+  ['years_5fthousands_7',['Years_Thousands',['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#add0ba62ba0b0e06905daa019a57367f7',1,'uGPMS_RD_REG_MAP']]],
+  ['years_5funits_8',['Years_Units',['../d9/dbe/unionu_g_p_m_s___r_d___r_e_g___m_a_p.html#a34d1ff068f4ee11e7d8b993bab7b10b8',1,'uGPMS_RD_REG_MAP']]],
+  ['yen_9',['Yen',['../d0/dbb/unionu_l3_g_d20_h___r_e_g_____c_t_r_l1.html#a6f5353c08d6a208d0ec5cc5fe5360e62',1,'uL3GD20H_REG__CTRL1::Yen'],['../de/dc0/unionu_l_s_m303_d_l_h_c___r_e_g_____c_t_r_l1.html#aa57367620a31b88efcec14313baa4c18',1,'uLSM303DLHC_REG__CTRL1::Yen']]],
+  ['yh_10',['YH',['../d8/d4d/unionu_l3_g_d20_h___r_e_g_____i_g___s_r_c.html#a80332b97920beb506cf06a0e635493c8',1,'uL3GD20H_REG__IG_SRC::YH'],['../dd/da0/unionu_l_s_m303_d_l_h_c___r_e_g_____a_c_c___i_n_t___s_r_c.html#a290c1b05444ef401df13e4e93779d60e',1,'uLSM303DLHC_REG__ACC_INT_SRC::YH']]],
+  ['yhie_11',['YHIE',['../d2/d20/unionu_l3_g_d20_h___r_e_g_____i_g___c_f_g.html#af08cdbe9150a61ab232779a7bfe2a358',1,'uL3GD20H_REG__IG_CFG::YHIE'],['../d5/d68/unionu_l_s_m303_d_l_h_c___r_e_g_____a_c_c___i_n_t___c_f_g.html#aa9ebd5d74bf6d3ed99618242d5d885d4',1,'uLSM303DLHC_REG__ACC_INT_CFG::YHIE']]],
+  ['yl_12',['YL',['../d8/d4d/unionu_l3_g_d20_h___r_e_g_____i_g___s_r_c.html#a9ab9f662aa1478bb5a1c8a3a850ea68a',1,'uL3GD20H_REG__IG_SRC::YL'],['../dd/da0/unionu_l_s_m303_d_l_h_c___r_e_g_____a_c_c___i_n_t___s_r_c.html#a8974dfcd8a84a2fd67b323f95bda230c',1,'uLSM303DLHC_REG__ACC_INT_SRC::YL']]],
+  ['ylie_13',['YLIE',['../d2/d20/unionu_l3_g_d20_h___r_e_g_____i_g___c_f_g.html#ac7a882fa9f2f4f0c127b3c8f30adf521',1,'uL3GD20H_REG__IG_CFG::YLIE'],['../d5/d68/unionu_l_s_m303_d_l_h_c___r_e_g_____a_c_c___i_n_t___c_f_g.html#aa365c77c87a381d5d887d48649d8b852',1,'uLSM303DLHC_REG__ACC_INT_CFG::YLIE']]],
+  ['yor_14',['YOR',['../d0/ded/unionu_l3_g_d20_h___r_e_g_____s_t_a_t_u_s.html#ac950d83eff9625fa8d0997062cdd642f',1,'uL3GD20H_REG__STATUS::YOR'],['../d1/d63/unionu_l_s_m303_d_l_h_c___r_e_g_____a_c_c___s_t_a_t_u_s.html#ab3d67b6b16ab6e37deea242d6c1d30cc',1,'uLSM303DLHC_REG__ACC_STATUS::YOR']]],
+  ['ys_15',['YS',['../d1/d48/unionu_l_s_m303_d_l_h_c___r_e_g_____a_c_c___c_l_i_c_k___c_f_g.html#a8e1b86dc6ccdce45ecc4dfc1d16c8a70',1,'uLSM303DLHC_REG__ACC_CLICK_CFG']]]
 ];

@@ -1,7 +1,15 @@
 <map id="PCA9685.h" name="PCA9685.h">
-<area shape="rect" id="node2" href="$de/dca/_p_c_a9685_8c.html" title="PCA9685 Driver. " alt="" coords="5,80,96,107"/>
-<area shape="rect" id="node3" href="$d5/d22/_p_c_a9685__proc_8h.html" title="PCA9685 Driver procedures. " alt="" coords="121,80,247,107"/>
-<area shape="rect" id="node4" href="$d3/d57/_p_c_a9685__ex_8h.html" title="PCA9685 Driver extensions. " alt="" coords="272,80,387,107"/>
-<area shape="rect" id="node5" href="$df/d1d/_p_c_a9685__ex_8c.html" title="PCA9685 Driver extensions. " alt="" coords="411,80,525,107"/>
-<area shape="rect" id="node6" href="$d4/d97/_p_c_a9685__proc_8c.html" title="PCA9685 Driver procedures. " alt="" coords="549,80,675,107"/>
+<area shape="rect" id="Node000001" title="PCA9685 Driver." alt="" coords="261,5,350,32"/>
+<area shape="rect" id="Node000002" href="$de/dca/_p_c_a9685_8c.html" title="PCA9685 Driver." alt="" coords="5,80,94,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="248,39,95,82,93,77,246,34"/>
+<area shape="rect" id="Node000003" href="$df/d1d/_p_c_a9685__ex_8c.html" title="PCA9685 Driver extensions." alt="" coords="118,80,227,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="271,42,197,82,194,77,269,37"/>
+<area shape="rect" id="Node000004" href="$d3/d57/_p_c_a9685__ex_8h.html" title="PCA9685 Driver extensions." alt="" coords="251,80,360,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="299,47,301,79,296,80,294,47"/>
+<area shape="rect" id="Node000005" href="$d4/d97/_p_c_a9685__proc_8c.html" title="PCA9685 Driver procedures." alt="" coords="384,80,504,107"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="344,37,421,77,419,82,341,42"/>
+<area shape="rect" id="Node000006" href="$d5/d22/_p_c_a9685__proc_8h.html" title="PCA9685 Driver procedures." alt="" coords="528,80,648,107"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="362,34,532,77,531,82,361,39"/>
+<area shape="poly" id="edge4_Node000004_Node000001" title=" " alt="" coords="312,65,310,33,315,32,317,65"/>
+<area shape="poly" id="edge7_Node000006_Node000001" title=" " alt="" coords="531,78,349,32,351,27,532,73"/>
 </map>

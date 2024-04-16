@@ -1,7 +1,26 @@
 <map id="DS_GPMS_ex.c" name="DS_GPMS_ex.c">
-<area shape="rect" id="node2" href="$dd/d26/_d_s___g_p_m_s_8h.html" title="DS&#45;GPM.S Driver. " alt="" coords="189,80,287,107"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="479,155,613,181"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="329,155,454,181"/>
-<area shape="rect" id="node8" href="$da/d4d/_d_s___g_p_m_s__ex_8h.html" title="DS&#45;GPM.S Driver extensions. " alt="" coords="27,155,147,181"/>
-<area shape="rect" id="node9" href="$de/d15/_d_s___g_p_m_s__proc_8h.html" title="DS&#45;GPM.S Driver procedures. " alt="" coords="171,155,305,181"/>
+<area shape="rect" id="Node000001" title="DS&#45;GPM.S Driver extensions." alt="" coords="175,5,293,32"/>
+<area shape="rect" id="Node000002" href="$dd/d26/_d_s___g_p_m_s_8h.html" title="DS&#45;GPM.S Driver." alt="" coords="185,80,282,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,33,236,65,231,65,231,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="193,229,274,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="185,104,87,124,43,139,17,156,9,175,13,190,28,203,51,214,113,229,178,236,178,241,113,234,49,219,25,208,8,193,3,175,13,153,41,134,85,119,184,99"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="462,155,587,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="284,104,460,148,459,153,282,109"/>
+<area shape="rect" id="Node000007" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="322,155,439,181"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="260,105,343,145,341,150,258,110"/>
+<area shape="rect" id="Node000008" href="$da/d4d/_d_s___g_p_m_s__ex_8h.html" title="DS&#45;GPM.S Driver extensions." alt="" coords="27,155,145,181"/>
+<area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="202,110,119,150,116,145,200,105"/>
+<area shape="rect" id="Node000009" href="$de/d15/_d_s___g_p_m_s__proc_8h.html" title="DS&#45;GPM.S Driver procedures." alt="" coords="169,155,298,181"/>
+<area shape="poly" id="edge13_Node000002_Node000009" title=" " alt="" coords="229,107,228,140,222,140,224,107"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="474,185,289,230,288,225,473,179"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="374,229,438,256"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="505,184,440,224,437,219,502,180"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="488,229,561,256"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="527,182,527,214,522,214,522,182"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="356,184,274,225,271,220,354,179"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="387,181,399,214,394,216,382,183"/>
+<area shape="poly" id="edge12_Node000008_Node000002" title=" " alt="" coords="118,152,201,112,203,116,120,156"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="113,179,196,220,194,225,110,184"/>
+<area shape="poly" id="edge15_Node000009_Node000002" title=" " alt="" coords="238,154,240,122,245,122,243,154"/>
+<area shape="poly" id="edge14_Node000009_Node000003" title=" " alt="" coords="236,182,236,214,231,214,231,182"/>
 </map>

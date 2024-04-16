@@ -1,6 +1,9 @@
 <map id="PCA9624_Set_Mode_LEDs" name="PCA9624_Set_Mode_LEDs">
-<area shape="rect" id="node2" href="$d6/dfc/_p_c_a9624__ex_8h.html#a4873de01aedd5ccef0320315cf6195be" title="Set MODE2 register. " alt="" coords="251,5,414,32"/>
-<area shape="rect" id="node3" href="$d0/de0/_p_c_a9624__proc_8h.html#ae6462de81eb8420000a21390956d7aee" title="Initialization Sequence for PCA9624 peripheral. " alt="" coords="244,56,421,83"/>
-<area shape="rect" id="node4" href="$d4/dc2/_p_c_a9624_8h.html#a213200bb403dec538479dc3796525498" title="Initialization for PCA9624 peripheral. " alt="" coords="469,56,576,83"/>
-<area shape="rect" id="node5" href="$d4/dc2/_p_c_a9624_8h.html#a9d2bfb0bec12fff1be494de387f015a2" title="Initialization for PCA9624 peripheral. " alt="" coords="624,56,776,83"/>
+<area shape="rect" id="Node000001" title="Set PCA9624 peripheral multiple LEDs mode." alt="" coords="564,5,748,32"/>
+<area shape="rect" id="Node000002" href="$df/df7/_p_c_a9624__proc_8c.html#ae6462de81eb8420000a21390956d7aee" title="Initialization Sequence for PCA9624 peripheral." alt="" coords="349,5,516,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="550,21,517,21,517,16,550,16"/>
+<area shape="rect" id="Node000003" href="$db/de1/_p_c_a9624_8c.html#a213200bb403dec538479dc3796525498" title="Initialization for PCA9624 peripheral." alt="" coords="199,5,301,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="334,21,301,21,301,16,334,16"/>
+<area shape="rect" id="Node000004" href="$db/de1/_p_c_a9624_8c.html#a9d2bfb0bec12fff1be494de387f015a2" title="Initialization for PCA9624 peripheral." alt="" coords="5,5,151,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="184,21,151,21,151,16,184,16"/>
 </map>

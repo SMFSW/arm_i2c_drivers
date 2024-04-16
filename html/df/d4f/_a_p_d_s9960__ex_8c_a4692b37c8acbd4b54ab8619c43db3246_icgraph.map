@@ -1,5 +1,7 @@
 <map id="APDS9960_INT_GPIO_Get" name="APDS9960_INT_GPIO_Get">
-<area shape="rect" id="node2" href="$da/db5/_a_p_d_s9960__ex_8h.html#a2585bc41a9ad2772ac94c52b633e498a" title="Get Proximity conversion. " alt="" coords="241,5,396,32"/>
-<area shape="rect" id="node3" href="$df/d17/_a_p_d_s9960__proc_8h.html#a87274cc64ac34debc21c82dc2582d6df" title="Handler for APDS9960 peripheral GPIO interrupt. " alt="" coords="239,56,399,83"/>
-<area shape="rect" id="node4" href="$df/d17/_a_p_d_s9960__proc_8h.html#a115196f922a8ed8661013aaa55f87eb4" title="Handler for all APDS9960 peripherals GPIO interrupt. " alt="" coords="447,56,628,83"/>
+<area shape="rect" id="Node000001" title="Interrupt GPIO pin getter for APDS9960." alt="" coords="420,5,603,32"/>
+<area shape="rect" id="Node000002" href="$dd/d2e/_a_p_d_s9960__proc_8c.html#a87274cc64ac34debc21c82dc2582d6df" title="Handler for APDS9960 peripheral GPIO interrupt." alt="" coords="223,5,372,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="405,21,372,21,372,16,405,16"/>
+<area shape="rect" id="Node000003" href="$df/d17/_a_p_d_s9960__proc_8h.html#a115196f922a8ed8661013aaa55f87eb4" title="Handler for all APDS9960 peripherals GPIO interrupt." alt="" coords="5,5,175,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="208,21,175,21,175,16,208,16"/>
 </map>

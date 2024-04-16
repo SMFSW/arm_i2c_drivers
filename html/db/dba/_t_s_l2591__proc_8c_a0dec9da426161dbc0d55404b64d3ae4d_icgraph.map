@@ -1,4 +1,5 @@
 <map id="TSL2591_handler_it" name="TSL2591_handler_it">
-<area shape="rect" id="node2" href="$d7/d6e/_t_s_l2591__proc_8h.html#ab7787ab44686285eee3d6537f7c8f38e" title="Get current Illuminance (in lux) " alt="" coords="216,5,352,32"/>
-<area shape="rect" id="node3" href="$d7/d6e/_t_s_l2591__proc_8h.html#a42f832ede9cb295fb0ffcad8ff0e2bde" title="Handler for all TSL2591 peripherals GPIO interrupt. " alt="" coords="200,56,368,83"/>
+<area shape="rect" id="Node000001" title="Handler for TSL2591 peripheral GPIO interrupt." alt="" coords="210,5,346,32"/>
+<area shape="rect" id="Node000002" href="$d7/d6e/_t_s_l2591__proc_8h.html#a42f832ede9cb295fb0ffcad8ff0e2bde" title="Handler for all TSL2591 peripherals GPIO interrupt." alt="" coords="5,5,162,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,21,162,21,162,16,195,16"/>
 </map>

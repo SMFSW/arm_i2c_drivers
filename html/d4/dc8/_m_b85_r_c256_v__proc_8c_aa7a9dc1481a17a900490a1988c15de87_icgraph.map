@@ -1,4 +1,7 @@
 <map id="MB85RC256V_Init_Sequence" name="MB85RC256V_Init_Sequence">
-<area shape="rect" id="node2" href="$d7/d3b/_m_b85_r_c256_v_8h.html#a0ea92ad40bc67305e67d995eb3f383ac" title="Initialization for MB85RC256V peripheral. " alt="" coords="257,5,391,32"/>
-<area shape="rect" id="node3" href="$d7/d3b/_m_b85_r_c256_v_8h.html#a7d60789413410e0b1183068d4b467543" title="Initialization for MB85RC256V peripheral. " alt="" coords="439,5,617,32"/>
+<area shape="rect" id="Node000001" title="Initialization Sequence for MB85RC256V peripheral." alt="" coords="405,5,600,32"/>
+<area shape="rect" id="Node000002" href="$d1/dc0/_m_b85_r_c256_v_8c.html#a0ea92ad40bc67305e67d995eb3f383ac" title="Initialization for MB85RC256V peripheral." alt="" coords="227,5,357,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="390,21,358,21,358,16,390,16"/>
+<area shape="rect" id="Node000003" href="$d1/dc0/_m_b85_r_c256_v_8c.html#a7d60789413410e0b1183068d4b467543" title="Initialization for MB85RC256V peripheral." alt="" coords="5,5,179,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="212,21,179,21,179,16,212,16"/>
 </map>

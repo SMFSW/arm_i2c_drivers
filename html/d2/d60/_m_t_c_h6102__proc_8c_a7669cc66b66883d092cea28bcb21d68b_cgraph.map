@@ -1,9 +1,24 @@
 <map id="MTCH6102_Get_MFG_Results" name="MTCH6102_Get_MFG_Results">
-<area shape="rect" id="node2" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#abb52a0e1c7def9de5736acc3d5a7d60f" title="Get MTCH6102 gesture decoding. " alt="" coords="289,34,451,61"/>
-<area shape="rect" id="node3" href="$da/d78/_m_t_c_h6102_8c.html#a5aa313bbfe74f756dd83101dbefea059" title="I2C Read function for MTCH6102. " alt="" coords="740,34,868,61"/>
-<area shape="rect" id="node7" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#afe36967c5c7c9a53aa27814679792f12" title="Set MTCH6102 gesture decoding. " alt="" coords="529,136,691,162"/>
-<area shape="rect" id="node8" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#aa980af8cabdefa2a588cb6109e696006" title="Execute MTCH6102 manufacturing test. " alt="" coords="260,85,480,112"/>
-<area shape="rect" id="node5" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#a4c1612bb1afca9818d54ff05c5fa4191" title="Execute MTCH6102 command. " alt="" coords="528,85,692,112"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="916,60,1033,86"/>
-<area shape="rect" id="node6" href="$da/d78/_m_t_c_h6102_8c.html#aadac3361a556fe464ea0df2d9a8366ae" title="I2C Write function for MTCH6102. " alt="" coords="740,85,868,112"/>
+<area shape="rect" id="Node000001" title="Get manufacturing test results." alt="" coords="5,53,210,80"/>
+<area shape="rect" id="Node000002" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#abb52a0e1c7def9de5736acc3d5a7d60f" title="Get MTCH6102 gesture decoding." alt="" coords="515,28,670,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,59,500,44,500,49,210,64"/>
+<area shape="rect" id="Node000003" href="$da/d78/_m_t_c_h6102_8c.html#a5aa313bbfe74f756dd83101dbefea059" title="I2C Read function for MTCH6102." alt="" coords="718,28,845,55"/>
+<area shape="poly" id="edge11_Node000001_Node000003" title=" " alt="" coords="164,50,257,32,373,15,464,5,555,4,671,13,717,22,716,27,670,19,554,9,464,11,374,21,258,37,165,55"/>
+<area shape="rect" id="Node000006" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#aa980af8cabdefa2a588cb6109e696006" title="Execute MTCH6102 manufacturing test." alt="" coords="258,79,467,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="211,74,243,78,243,83,210,80"/>
+<area shape="rect" id="Node000009" href="$dc/d5e/_m_t_c_h6102__ex_8h.html#afe36967c5c7c9a53aa27814679792f12" title="Set MTCH6102 gesture decoding." alt="" coords="285,129,440,156"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="147,78,258,115,287,123,285,128,257,120,146,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="671,39,703,39,703,44,671,44"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="893,28,1004,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="845,39,878,39,878,44,845,44"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="897,79,1000,105"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="829,53,889,71,887,76,827,58"/>
+<area shape="rect" id="Node000007" href="$d4/d5d/_m_t_c_h6102__ex_8c.html#a4c1612bb1afca9818d54ff05c5fa4191" title="Execute MTCH6102 command." alt="" coords="515,79,670,105"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="468,89,500,89,500,95,468,95"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="645,76,714,57,716,62,646,81"/>
+<area shape="rect" id="Node000008" href="$da/d78/_m_t_c_h6102_8c.html#aadac3361a556fe464ea0df2d9a8366ae" title="I2C Write function for MTCH6102." alt="" coords="719,79,844,105"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="671,89,704,89,704,95,671,95"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="827,76,887,57,889,62,829,81"/>
+<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="844,89,882,89,882,95,844,95"/>
+<area shape="poly" id="edge13_Node000009_Node000008" title=" " alt="" coords="439,137,549,129,670,115,712,107,713,112,671,120,549,134,440,142"/>
 </map>

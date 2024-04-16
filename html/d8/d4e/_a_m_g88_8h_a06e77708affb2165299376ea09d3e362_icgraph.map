@@ -1,18 +1,38 @@
 <map id="AMG88_Write" name="AMG88_Write">
-<area shape="rect" id="node2" href="$d8/d4e/_a_m_g88_8h.html#a2db635c1f40fd316ae22c2f2d6fcfe1b" title="I2C Word Write (low endian) function for AMG88. " alt="" coords="187,5,331,32"/>
-<area shape="rect" id="node3" href="$dc/db3/_a_m_g88__ex_8h.html#a01c26a49f2d898d3bcb10a56aab3f4ac" title="Set AMG88 Interrupt Level upper limit. " alt="" coords="160,56,359,83"/>
-<area shape="rect" id="node4" href="$dc/db3/_a_m_g88__ex_8h.html#a0f8d2a8fadaeff07cd2e21ab967f3443" title="Set AMG88 Moving Average. " alt="" coords="427,157,551,184"/>
-<area shape="rect" id="node5" href="$dc/db3/_a_m_g88__ex_8h.html#a66d62a4c9b5b42059b9460b1b1af3c10" title="Set AMG88 Interrupt Level lower limit. " alt="" coords="162,157,357,184"/>
-<area shape="rect" id="node6" href="$dc/db3/_a_m_g88__ex_8h.html#a3e9b0699993ceff416edea73b568e72c" title="Set AMG88 Interrupt Hysteresis level. " alt="" coords="163,208,355,235"/>
-<area shape="rect" id="node7" href="$dc/db3/_a_m_g88__ex_8h.html#a4bf45f14226a79836e8e95683cf33198" title="Set AMG88 Interrupt levels. " alt="" coords="180,259,339,301"/>
-<area shape="rect" id="node8" href="$dc/db3/_a_m_g88__ex_8h.html#a5d44e4dfaec763032c2613543d073570" title="AMG88 reset. " alt="" coords="204,325,315,352"/>
-<area shape="rect" id="node9" href="$da/de9/_a_m_g88__proc_8h.html#a31fb1058c19c3675886ea9601f3a96ca" title="Initialization Sequence for AMG88 peripheral. " alt="" coords="407,401,572,428"/>
-<area shape="rect" id="node12" href="$dc/db3/_a_m_g88__ex_8h.html#a280013bef11e90a8264cc555edb526a9" title="AMG88 Set mode. " alt="" coords="190,427,329,453"/>
-<area shape="rect" id="node13" href="$dc/db3/_a_m_g88__ex_8h.html#acde21be2ea98775e5ea367e28821db2e" title="Set AMG88 Frame Per Seconds multiplier. " alt="" coords="195,477,323,504"/>
-<area shape="rect" id="node14" href="$da/de9/_a_m_g88__proc_8h.html#a62fe3d2635671c55964528913f803c61" title="Handler for AMG88 peripheral. " alt="" coords="198,528,321,555"/>
-<area shape="rect" id="node10" href="$d8/d4e/_a_m_g88_8h.html#a6ede1109c833df44888f9ce86158e031" title="Initialization for AMG88 peripheral. " alt="" coords="652,401,747,428"/>
-<area shape="rect" id="node11" href="$d8/d4e/_a_m_g88_8h.html#ab22f18773c85421d2b743e415ed14fa7" title="Initialization for AMG88 peripheral. " alt="" coords="827,401,967,428"/>
-<area shape="rect" id="node15" href="$da/de9/_a_m_g88__proc_8h.html#af7796031f9fb1c4fb52f5262c1612ab9" title="Handler for AMG88 peripheral GPIO interrupt. " alt="" coords="420,503,559,529"/>
-<area shape="rect" id="node17" href="$da/de9/_a_m_g88__proc_8h.html#ac190ef2a388b2d75815dbf33ff082d56" title="Handler for all AMG88 peripherals. " alt="" coords="417,553,561,580"/>
-<area shape="rect" id="node16" href="$da/de9/_a_m_g88__proc_8h.html#a8f4206ea34c183c5f6dc2b23043c7d63" title="Handler for all AMG88 peripherals GPIO interrupt. " alt="" coords="620,503,779,529"/>
+<area shape="rect" id="Node000001" title="I2C Write function for AMG88." alt="" coords="821,292,923,319"/>
+<area shape="rect" id="Node000002" href="$d4/d51/_a_m_g88__proc_8c.html#a62fe3d2635671c55964528913f803c61" title="Handler for AMG88 peripheral." alt="" coords="622,31,737,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="864,278,854,235,836,181,809,126,791,100,771,78,755,66,736,58,738,53,757,62,774,74,796,97,813,123,841,179,859,233,869,277"/>
+<area shape="rect" id="Node000006" href="$d4/d51/_a_m_g88__proc_8c.html#a31fb1058c19c3675886ea9601f3a96ca" title="Initialization Sequence for AMG88 peripheral." alt="" coords="383,157,538,184"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="863,278,852,241,834,197,808,155,791,137,771,122,735,107,696,100,655,101,615,108,542,133,487,159,485,154,540,128,614,103,655,96,696,95,736,102,774,118,794,133,812,152,839,194,857,239,868,277"/>
+<area shape="rect" id="Node000009" href="$dc/db3/_a_m_g88__ex_8h.html#a5d44e4dfaec763032c2613543d073570" title="AMG88 reset." alt="" coords="626,132,733,159"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="856,280,822,225,799,197,771,173,732,156,735,151,774,168,803,193,827,222,860,277"/>
+<area shape="rect" id="Node000010" href="$dc/db3/_a_m_g88__ex_8h.html#acde21be2ea98775e5ea367e28821db2e" title="Set AMG88 Frame Per Seconds multiplier." alt="" coords="617,183,742,209"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="847,284,813,252,771,224,742,211,744,207,774,219,817,248,851,280"/>
+<area shape="rect" id="Node000011" href="$de/d9d/_a_m_g88__ex_8c.html#a3e9b0699993ceff416edea73b568e72c" title="Set AMG88 Interrupt Hysteresis level." alt="" coords="588,233,771,260"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="817,289,772,275,733,263,734,258,773,269,819,284"/>
+<area shape="rect" id="Node000012" href="$de/d9d/_a_m_g88__ex_8c.html#a4bf45f14226a79836e8e95683cf33198" title="Set AMG88 Interrupt levels." alt="" coords="606,284,753,327"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="806,308,754,308,754,303,806,303"/>
+<area shape="rect" id="Node000013" href="$de/d9d/_a_m_g88__ex_8c.html#a01c26a49f2d898d3bcb10a56aab3f4ac" title="Set AMG88 Interrupt Level upper limit." alt="" coords="586,351,773,377"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="819,326,773,341,734,353,733,348,772,336,817,321"/>
+<area shape="rect" id="Node000014" href="$de/d9d/_a_m_g88__ex_8c.html#a66d62a4c9b5b42059b9460b1b1af3c10" title="Set AMG88 Interrupt Level lower limit." alt="" coords="588,401,771,428"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="851,331,817,362,774,392,746,403,744,398,771,387,813,358,847,327"/>
+<area shape="rect" id="Node000015" href="$dc/db3/_a_m_g88__ex_8h.html#a0f8d2a8fadaeff07cd2e21ab967f3443" title="Set AMG88 Moving Average." alt="" coords="620,452,739,479"/>
+<area shape="poly" id="edge16_Node000001_Node000015" title=" " alt="" coords="860,334,827,389,803,418,774,442,741,458,739,453,771,438,799,414,822,386,856,331"/>
+<area shape="rect" id="Node000016" href="$dc/db3/_a_m_g88__ex_8h.html#a280013bef11e90a8264cc555edb526a9" title="AMG88 Set mode." alt="" coords="614,503,745,529"/>
+<area shape="poly" id="edge17_Node000001_Node000016" title=" " alt="" coords="866,333,854,370,835,413,809,456,774,493,747,508,745,503,771,489,805,453,831,410,849,368,861,332"/>
+<area shape="rect" id="Node000017" href="$df/d52/_a_m_g88_8c.html#a2db635c1f40fd316ae22c2f2d6fcfe1b" title="I2C Word Write (little endian) function for AMG88." alt="" coords="610,553,749,580"/>
+<area shape="poly" id="edge19_Node000001_Node000017" title=" " alt="" coords="870,333,860,379,843,436,815,493,797,520,774,543,751,558,748,553,771,539,793,517,811,491,838,434,855,378,864,332"/>
+<area shape="rect" id="Node000003" href="$da/de9/_a_m_g88__proc_8h.html#ac190ef2a388b2d75815dbf33ff082d56" title="Handler for all AMG88 peripherals." alt="" coords="394,5,528,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="607,38,528,29,529,24,608,33"/>
+<area shape="rect" id="Node000004" href="$d4/d51/_a_m_g88__proc_8c.html#af7796031f9fb1c4fb52f5262c1612ab9" title="Handler for AMG88 peripheral GPIO interrupt." alt="" coords="397,56,525,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="608,55,526,65,525,59,607,50"/>
+<area shape="rect" id="Node000005" href="$da/de9/_a_m_g88__proc_8h.html#a8f4206ea34c183c5f6dc2b23043c7d63" title="Handler for all AMG88 peripherals GPIO interrupt." alt="" coords="187,56,335,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="382,72,335,72,335,67,382,67"/>
+<area shape="rect" id="Node000007" href="$df/d52/_a_m_g88_8c.html#a6ede1109c833df44888f9ce86158e031" title="Initialization for AMG88 peripheral." alt="" coords="216,157,306,184"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="368,173,307,173,307,168,368,168"/>
+<area shape="rect" id="Node000008" href="$df/d52/_a_m_g88_8c.html#ab22f18773c85421d2b743e415ed14fa7" title="Initialization for AMG88 peripheral." alt="" coords="5,157,139,184"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="201,173,139,173,139,168,201,168"/>
+<area shape="poly" id="edge9_Node000009_Node000006" title=" " alt="" coords="611,156,539,164,539,159,610,151"/>
+<area shape="poly" id="edge11_Node000010_Node000006" title=" " alt="" coords="601,190,539,182,539,177,602,184"/>
+<area shape="poly" id="edge18_Node000016_Node000006" title=" " alt="" coords="599,503,585,493,552,456,525,415,504,370,488,325,468,242,460,185,466,184,473,241,493,323,509,368,530,412,556,453,588,489,602,498"/>
 </map>

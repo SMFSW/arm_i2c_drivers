@@ -1,7 +1,27 @@
 <map id="PCA9685.h" name="PCA9685.h">
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="611,80,745,107"/>
-<area shape="rect" id="node6" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="461,80,586,107"/>
-<area shape="rect" id="node7" href="$d3/dee/_p_c_a9xxx_8h.html" title="PCA9xxx shared declarations. " alt="" coords="347,80,436,107"/>
-<area shape="rect" id="node8" href="$d5/d22/_p_c_a9685__proc_8h.html" title="PCA9685 Driver procedures. " alt="" coords="5,80,132,107"/>
-<area shape="rect" id="node9" href="$d3/d57/_p_c_a9685__ex_8h.html" title="PCA9685 Driver extensions. " alt="" coords="157,80,271,107"/>
+<area shape="rect" id="Node000001" title="PCA9685 Driver." alt="" coords="205,5,294,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="297,155,378,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="259,31,325,140,320,143,255,34"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="586,80,710,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="295,25,572,75,571,81,294,31"/>
+<area shape="rect" id="Node000006" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="446,80,562,107"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="295,30,446,73,445,78,293,35"/>
+<area shape="rect" id="Node000007" href="$d3/dee/_p_c_a9xxx_8h.html" title="PCA9xxx shared declarations." alt="" coords="333,80,422,107"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="273,30,344,70,341,75,270,35"/>
+<area shape="rect" id="Node000008" href="$d5/d22/_p_c_a9685__proc_8h.html" title="PCA9685 Driver procedures." alt="" coords="5,80,126,107"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="211,35,105,76,103,71,209,30"/>
+<area shape="rect" id="Node000009" href="$d3/d57/_p_c_a9685__ex_8h.html" title="PCA9685 Driver extensions." alt="" coords="150,80,259,107"/>
+<area shape="poly" id="edge14_Node000001_Node000009" title=" " alt="" coords="237,34,214,68,209,65,232,31"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="594,110,393,157,392,151,593,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="497,155,562,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="629,109,564,149,561,144,626,105"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="612,155,685,181"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="651,107,651,140,646,140,646,107"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="476,110,381,151,379,146,474,105"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="511,106,523,140,518,141,506,108"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="373,109,354,143,349,140,368,106"/>
+<area shape="poly" id="edge13_Node000008_Node000001" title=" " alt="" coords="104,77,210,36,212,41,106,82"/>
+<area shape="poly" id="edge12_Node000008_Node000002" title=" " alt="" coords="114,105,283,150,282,155,112,110"/>
+<area shape="poly" id="edge16_Node000009_Node000001" title=" " alt="" coords="217,78,240,44,244,47,221,81"/>
+<area shape="poly" id="edge15_Node000009_Node000002" title=" " alt="" coords="229,105,303,145,301,150,226,110"/>
 </map>

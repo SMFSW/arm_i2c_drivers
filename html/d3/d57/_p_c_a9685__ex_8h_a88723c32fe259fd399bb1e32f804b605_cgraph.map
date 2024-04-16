@@ -1,7 +1,13 @@
 <map id="PCA9685_PutValByte" name="PCA9685_PutValByte">
-<area shape="rect" id="node2" href="$d3/d57/_p_c_a9685__ex_8h.html#a10038955f9929c958cc18a4deb89bc7e" title="Compute and send PWM lighting values to apply on a PCA9685 channel or all channels (12b) ..." alt="" coords="209,31,336,57"/>
-<area shape="rect" id="node3" href="$df/d1d/_p_c_a9685__ex_8c.html#a4a5535e36528946a5ffc3a526c83cc03" title="Computes values for PCA9685 registers (4bytes) following duty and delay. " alt="" coords="384,5,517,32"/>
-<area shape="rect" id="node4" href="$de/dca/_p_c_a9685_8c.html#ace763529df9b53eced87352d1d5de814" title="I2C Write function for PCA9685. " alt="" coords="391,56,510,83"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="565,31,683,57"/>
-<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="571,81,677,108"/>
+<area shape="rect" id="Node000001" title="Compute and send PWM lighting values to apply on a PCA9685 channel or all channels (Byte)" alt="" coords="5,31,155,57"/>
+<area shape="rect" id="Node000002" href="$df/d1d/_p_c_a9685__ex_8c.html#a10038955f9929c958cc18a4deb89bc7e" title="Compute and send PWM lighting values to apply on a PCA9685 channel or all channels (12b)" alt="" coords="203,31,325,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,41,188,41,188,47,155,47"/>
+<area shape="rect" id="Node000003" href="$df/d1d/_p_c_a9685__ex_8c.html#a4a5535e36528946a5ffc3a526c83cc03" title="Computes values for PCA9685 registers (4bytes) following duty and delay." alt="" coords="373,5,502,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="325,32,358,28,359,33,326,38"/>
+<area shape="rect" id="Node000004" href="$de/dca/_p_c_a9685_8c.html#ace763529df9b53eced87352d1d5de814" title="I2C Write function for PCA9685." alt="" coords="381,56,495,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="326,50,366,56,365,62,325,56"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="550,31,662,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="495,58,535,52,536,57,495,63"/>
+<area shape="rect" id="Node000006" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="555,81,657,108"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="495,75,540,82,539,87,495,81"/>
 </map>

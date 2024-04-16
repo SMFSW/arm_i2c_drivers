@@ -1,7 +1,11 @@
 <map id="TCS3400_Write_Cfg" name="TCS3400_Write_Cfg">
-<area shape="rect" id="node2" href="$de/d36/_t_c_s3400__ex_8h.html#a2d2035e4deebdea64d859a33119a2936" title="Wait time configuration. " alt="" coords="197,31,376,57"/>
-<area shape="rect" id="node3" href="$de/d36/_t_c_s3400__ex_8h.html#ad89117fa0e5f9b7c90e4050ee8fbb318" title="ALS Persistence configuration. " alt="" coords="424,5,607,32"/>
-<area shape="rect" id="node4" href="$d9/d14/_t_c_s3400__proc_8h.html#a8a6888f4fcd6c3e24072035984dea5cb" title="Initialization Sequence for TCS3400 peripheral. " alt="" coords="428,56,603,83"/>
-<area shape="rect" id="node5" href="$d9/d51/_t_c_s3400_8h.html#a92c41f9da5ab14d7666b80cae88067f6" title="Initialization for TCS3400 peripheral. " alt="" coords="655,56,759,83"/>
-<area shape="rect" id="node6" href="$d9/d51/_t_c_s3400_8h.html#ae1122436ee0aa2cf81cec91006589ad6" title="Initialization for TCS3400 peripheral. " alt="" coords="807,56,957,83"/>
+<area shape="rect" id="Node000001" title="Write TCS3400 Config register." alt="" coords="782,5,923,32"/>
+<area shape="rect" id="Node000002" href="$db/d52/_t_c_s3400__ex_8c.html#a2d2035e4deebdea64d859a33119a2936" title="Wait time configuration." alt="" coords="561,5,734,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="767,21,734,21,734,16,767,16"/>
+<area shape="rect" id="Node000003" href="$dc/dd9/_t_c_s3400__proc_8c.html#a8a6888f4fcd6c3e24072035984dea5cb" title="Initialization Sequence for TCS3400 peripheral." alt="" coords="347,5,513,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="546,21,514,21,514,16,546,16"/>
+<area shape="rect" id="Node000004" href="$d4/d1b/_t_c_s3400_8c.html#a92c41f9da5ab14d7666b80cae88067f6" title="Initialization for TCS3400 peripheral." alt="" coords="198,5,299,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="332,21,299,21,299,16,332,16"/>
+<area shape="rect" id="Node000005" href="$d4/d1b/_t_c_s3400_8c.html#ae1122436ee0aa2cf81cec91006589ad6" title="Initialization for TCS3400 peripheral." alt="" coords="5,5,150,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="183,21,150,21,150,16,183,16"/>
 </map>

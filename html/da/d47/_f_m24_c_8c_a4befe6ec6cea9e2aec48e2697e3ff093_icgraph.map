@@ -1,3 +1,5 @@
 <map id="FM24C_Init" name="FM24C_Init">
-<area shape="rect" id="node2" href="$d5/d3b/_f_m24_c_8h.html#a06cd11a155dd8fe4d4cac44956e21cad" title="Initialization for FM24C peripheral. " alt="" coords="144,5,281,32"/>
+<area shape="rect" id="Node000001" title="Initialization for FM24C peripheral." alt="" coords="186,5,275,32"/>
+<area shape="rect" id="Node000002" href="$da/d47/_f_m24_c_8c.html#a06cd11a155dd8fe4d4cac44956e21cad" title="Initialization for FM24C peripheral." alt="" coords="5,5,138,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,21,138,21,138,16,171,16"/>
 </map>

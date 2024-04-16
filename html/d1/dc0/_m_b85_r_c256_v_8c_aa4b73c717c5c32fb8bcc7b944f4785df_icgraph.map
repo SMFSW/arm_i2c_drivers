@@ -1,3 +1,5 @@
 <map id="MB85RC256V_Write" name="MB85RC256V_Write">
-<area shape="rect" id="node2" href="$d5/d5f/_m_b85_r_c256_v__ex_8h.html#a5ae4032aaa90f9dee81b41aa7b9600a9" title="Mass erase of MB85RC256V. " alt="" coords="199,5,389,32"/>
+<area shape="rect" id="Node000001" title="I2C Write function for MB85RC256V." alt="" coords="239,5,381,32"/>
+<area shape="rect" id="Node000002" href="$d0/d72/_m_b85_r_c256_v__ex_8c.html#a5ae4032aaa90f9dee81b41aa7b9600a9" title="Mass erase of MB85RC256V." alt="" coords="5,5,191,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,21,191,21,191,16,224,16"/>
 </map>

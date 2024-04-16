@@ -1,8 +1,26 @@
 <map id="APDS9960_handler_it" name="APDS9960_handler_it">
-<area shape="rect" id="node2" href="$df/d4f/_a_p_d_s9960__ex_8c.html#a4692b37c8acbd4b54ab8619c43db3246" title="Interrupt GPIO pin getter for APDS9960. " alt="" coords="213,5,399,32"/>
-<area shape="rect" id="node4" href="$dd/d2e/_a_p_d_s9960__proc_8c.html#afb999a0fb29df82bc3861d15e232c777" title="Handler for APDS9960 peripheral. " alt="" coords="233,56,379,83"/>
-<area shape="rect" id="node3" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="447,5,625,32"/>
-<area shape="rect" id="node5" href="$db/db1/_a_p_d_s9960_8c.html#ae3a66d3faca052bed32148ad241084a5" title="I2C Read function for APDS9960. " alt="" coords="472,56,600,83"/>
-<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="673,31,791,57"/>
-<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="679,81,785,108"/>
+<area shape="rect" id="Node000001" title="Handler for APDS9960 peripheral GPIO interrupt." alt="" coords="5,169,155,196"/>
+<area shape="rect" id="Node000002" href="$dd/d2e/_a_p_d_s9960__proc_8c.html#afb999a0fb29df82bc3861d15e232c777" title="Handler for APDS9960 peripheral." alt="" coords="227,115,362,141"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,166,225,143,226,148,136,171"/>
+<area shape="rect" id="Node000010" href="$df/d4f/_a_p_d_s9960__ex_8c.html#a4692b37c8acbd4b54ab8619c43db3246" title="Interrupt GPIO pin getter for APDS9960." alt="" coords="203,195,386,221"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="155,189,188,193,187,198,154,194"/>
+<area shape="rect" id="Node000003" href="$db/db1/_a_p_d_s9960_8c.html#ae3a66d3faca052bed32148ad241084a5" title="I2C Read function for APDS9960." alt="" coords="478,5,602,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="313,112,365,77,433,42,462,31,464,36,435,46,368,81,316,116"/>
+<area shape="rect" id="Node000006" href="$da/db5/_a_p_d_s9960__ex_8h.html#aadd9779f714acfb956148350686e752c" title="Clear pending ALS interruption." alt="" coords="441,56,640,83"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="353,112,467,84,468,89,354,117"/>
+<area shape="rect" id="Node000008" href="$da/db5/_a_p_d_s9960__ex_8h.html#a019e760a08f3e5d1f796278972dfd1b0" title="Clear pending ALS &amp; Proximity interruptions." alt="" coords="450,107,630,149"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="362,125,435,125,435,131,362,131"/>
+<area shape="rect" id="Node000009" href="$da/db5/_a_p_d_s9960__ex_8h.html#ac6f34dfb6b0aa3ede06c8329095df273" title="Clear pending Proximity interruption." alt="" coords="434,173,646,200"/>
+<area shape="poly" id="edge10_Node000002_Node000009" title=" " alt="" coords="354,139,468,167,467,172,353,144"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="725,5,837,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="603,16,710,16,710,21,603,21"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="916,87,1018,113"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="603,28,902,85,901,90,602,33"/>
+<area shape="rect" id="Node000007" href="$db/db1/_a_p_d_s9960_8c.html#a4c742bdee878751bcf0fd6df2e076e1d" title="I2C Special function Write function for APDS9960." alt="" coords="694,112,868,139"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="602,81,707,106,706,111,600,86"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="868,111,901,106,901,112,868,116"/>
+<area shape="poly" id="edge9_Node000008_Node000007" title=" " alt="" coords="631,124,679,124,679,129,631,130"/>
+<area shape="poly" id="edge11_Node000009_Node000007" title=" " alt="" coords="600,170,646,159,715,141,716,146,647,164,601,175"/>
+<area shape="rect" id="Node000011" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter." alt="" coords="455,224,625,251"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="387,216,441,223,440,228,386,222"/>
 </map>

@@ -1,12 +1,26 @@
 <map id="AMG88_Init_Single" name="AMG88_Init_Single">
-<area shape="rect" id="node2" href="$df/d52/_a_m_g88_8c.html#a6ede1109c833df44888f9ce86158e031" title="Initialization for AMG88 peripheral. " alt="" coords="193,81,288,108"/>
-<area shape="rect" id="node3" href="$d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization. " alt="" coords="365,31,473,57"/>
-<area shape="rect" id="node4" href="$d4/d51/_a_m_g88__proc_8c.html#a31fb1058c19c3675886ea9601f3a96ca" title="Initialization Sequence for AMG88 peripheral. " alt="" coords="336,81,501,108"/>
-<area shape="rect" id="node11" href="$d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state. " alt="" coords="359,132,478,159"/>
-<area shape="rect" id="node5" href="$dc/db3/_a_m_g88__ex_8h.html#a280013bef11e90a8264cc555edb526a9" title="AMG88 Set mode. " alt="" coords="549,5,688,32"/>
-<area shape="rect" id="node6" href="$df/d52/_a_m_g88_8c.html#a06e77708affb2165299376ea09d3e362" title="I2C Write function for AMG88. " alt="" coords="736,81,843,108"/>
-<area shape="rect" id="node9" href="$dc/db3/_a_m_g88__ex_8h.html#a5d44e4dfaec763032c2613543d073570" title="AMG88 reset. " alt="" coords="563,107,674,133"/>
-<area shape="rect" id="node10" href="$dc/db3/_a_m_g88__ex_8h.html#acde21be2ea98775e5ea367e28821db2e" title="Set AMG88 Frame Per Seconds multiplier. " alt="" coords="555,157,683,184"/>
-<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="891,56,1008,83"/>
-<area shape="rect" id="node8" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="896,107,1003,133"/>
+<area shape="rect" id="Node000001" title="Initialization for AMG88 peripheral." alt="" coords="5,132,139,159"/>
+<area shape="rect" id="Node000002" href="$df/d52/_a_m_g88_8c.html#a6ede1109c833df44888f9ce86158e031" title="Initialization for AMG88 peripheral." alt="" coords="187,132,277,159"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,143,171,143,171,148,139,148"/>
+<area shape="rect" id="Node000003" href="$d4/d51/_a_m_g88__proc_8c.html#a31fb1058c19c3675886ea9601f3a96ca" title="Initialization Sequence for AMG88 peripheral." alt="" coords="325,81,480,108"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="277,129,341,110,342,115,278,135"/>
+<area shape="rect" id="Node000010" href="$d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state." alt="" coords="347,132,459,159"/>
+<area shape="poly" id="edge12_Node000002_Node000010" title=" " alt="" coords="277,143,332,143,332,148,277,148"/>
+<area shape="rect" id="Node000011" href="$d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization." alt="" coords="351,183,455,209"/>
+<area shape="poly" id="edge13_Node000002_Node000011" title=" " alt="" coords="278,156,342,175,341,181,277,161"/>
+<area shape="rect" id="Node000004" href="$dc/db3/_a_m_g88__ex_8h.html#a5d44e4dfaec763032c2613543d073570" title="AMG88 reset." alt="" coords="540,5,648,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="438,78,544,35,546,40,440,83"/>
+<area shape="rect" id="Node000005" href="$df/d52/_a_m_g88_8c.html#a06e77708affb2165299376ea09d3e362" title="I2C Write function for AMG88." alt="" coords="708,81,810,108"/>
+<area shape="poly" id="edge11_Node000003_Node000005" title=" " alt="" coords="481,92,693,92,693,97,481,97"/>
+<area shape="rect" id="Node000008" href="$dc/db3/_a_m_g88__ex_8h.html#acde21be2ea98775e5ea367e28821db2e" title="Set AMG88 Frame Per Seconds multiplier." alt="" coords="531,107,657,133"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="481,102,517,107,516,112,480,108"/>
+<area shape="rect" id="Node000009" href="$dc/db3/_a_m_g88__ex_8h.html#a280013bef11e90a8264cc555edb526a9" title="AMG88 Set mode." alt="" coords="528,157,660,184"/>
+<area shape="poly" id="edge9_Node000003_Node000009" title=" " alt="" coords="451,106,481,118,529,143,543,149,541,154,527,148,479,122,449,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="626,30,716,72,714,77,624,35"/>
+<area shape="rect" id="Node000006" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="858,56,969,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="810,84,843,78,844,83,811,89"/>
+<area shape="rect" id="Node000007" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="863,107,965,133"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="811,100,848,107,847,112,810,106"/>
+<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="657,108,693,102,694,107,658,113"/>
+<area shape="poly" id="edge10_Node000009_Node000005" title=" " alt="" coords="632,154,659,143,718,113,721,118,661,148,634,159"/>
 </map>

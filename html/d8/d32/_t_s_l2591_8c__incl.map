@@ -1,7 +1,26 @@
 <map id="TSL2591.c" name="TSL2591.c">
-<area shape="rect" id="node2" href="$da/d96/_t_s_l2591_8h.html" title="TSL2591 Driver. " alt="" coords="186,80,276,107"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="461,155,596,181"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="311,155,436,181"/>
-<area shape="rect" id="node8" href="$d7/d6e/_t_s_l2591__proc_8h.html" title="TSL2591 Driver procedures. " alt="" coords="28,155,152,181"/>
-<area shape="rect" id="node9" href="$dc/d24/_t_s_l2591__ex_8h.html" title="TSL2591 Driver extensions. " alt="" coords="176,155,286,181"/>
+<area shape="rect" id="Node000001" title="TSL2591 Driver." alt="" coords="178,5,262,32"/>
+<area shape="rect" id="Node000002" href="$da/d96/_t_s_l2591_8h.html" title="TSL2591 Driver." alt="" coords="178,80,262,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="223,33,223,65,217,65,217,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="179,229,261,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="178,104,83,124,42,139,17,156,9,174,12,189,26,201,47,212,105,227,165,235,164,240,104,232,45,217,23,206,8,191,3,174,12,153,39,134,82,119,176,98"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="436,155,561,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="263,103,436,148,435,153,261,108"/>
+<area shape="rect" id="Node000007" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="296,155,413,181"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="245,105,319,145,317,150,242,110"/>
+<area shape="rect" id="Node000008" href="$d7/d6e/_t_s_l2591__proc_8h.html" title="TSL2591 Driver procedures." alt="" coords="27,155,143,181"/>
+<area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="191,110,116,149,113,144,188,105"/>
+<area shape="rect" id="Node000009" href="$dc/d24/_t_s_l2591__ex_8h.html" title="TSL2591 Driver extensions." alt="" coords="167,155,273,181"/>
+<area shape="poly" id="edge13_Node000002_Node000009" title=" " alt="" coords="215,107,214,140,208,140,210,107"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="451,184,275,230,274,225,449,179"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="348,229,412,256"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="479,184,414,224,411,219,476,180"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="462,229,535,256"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="501,182,501,214,496,214,496,182"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="332,184,258,224,255,220,330,180"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="361,181,373,214,368,216,356,183"/>
+<area shape="poly" id="edge12_Node000008_Node000002" title=" " alt="" coords="115,152,190,112,192,117,117,156"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="110,180,185,220,182,224,107,184"/>
+<area shape="poly" id="edge15_Node000009_Node000002" title=" " alt="" coords="224,154,226,122,231,122,229,154"/>
+<area shape="poly" id="edge14_Node000009_Node000003" title=" " alt="" coords="223,182,223,214,217,214,217,182"/>
 </map>

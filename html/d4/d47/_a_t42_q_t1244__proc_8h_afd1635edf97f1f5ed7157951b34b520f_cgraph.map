@@ -1,10 +1,20 @@
 <map id="AT42QT1244_handler_it" name="AT42QT1244_handler_it">
-<area shape="rect" id="node2" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a93d10a2a64d12b0d01ae41d5aeb1b761" title="Change GPIO pin getter for AT42QT1244. " alt="" coords="225,5,459,32"/>
-<area shape="rect" id="node4" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#aca10e0645e195176f9e582d27e7f480b" title="Handler for AT42QT1244 peripheral. " alt="" coords="263,56,421,83"/>
-<area shape="rect" id="node3" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="507,5,685,32"/>
-<area shape="rect" id="node5" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a742d7d35c8bf29ff0a688b8bdef64275" title="Get keys detect status for AT42QT1244 peripheral. " alt="" coords="512,56,680,83"/>
-<area shape="rect" id="node6" href="$d3/dc4/_a_t42_q_t1244_8c.html#a59952a25c499177de6ff50933ffdbc47" title="I2C Read function for AT42QT1244. " alt="" coords="733,81,873,108"/>
-<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="935,31,1052,57"/>
-<area shape="rect" id="node8" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="940,81,1047,108"/>
-<area shape="rect" id="node9" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#ad2998daf6e9e01b5d72b96ac64a2f78e" title="16bits CRC calculation for AT42QT1244 " alt="" coords="921,132,1065,159"/>
+<area shape="rect" id="Node000001" title="Handler for AT42QT1244 peripheral GPIO interrupt." alt="" coords="5,31,166,57"/>
+<area shape="rect" id="Node000002" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a93d10a2a64d12b0d01ae41d5aeb1b761" title="Change GPIO pin getter for AT42QT1244." alt="" coords="214,5,444,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,33,198,30,199,35,167,38"/>
+<area shape="rect" id="Node000004" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#aca10e0645e195176f9e582d27e7f480b" title="Handler for AT42QT1244 peripheral." alt="" coords="256,56,402,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="167,50,241,58,240,63,166,55"/>
+<area shape="rect" id="Node000003" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter." alt="" coords="492,5,662,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="444,16,477,16,477,21,444,21"/>
+<area shape="rect" id="Node000005" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a742d7d35c8bf29ff0a688b8bdef64275" title="Get keys detect status for AT42QT1244 peripheral." alt="" coords="496,56,658,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="403,67,481,67,481,72,403,72"/>
+<area shape="rect" id="Node000006" href="$d3/dc4/_a_t42_q_t1244_8c.html#a59952a25c499177de6ff50933ffdbc47" title="I2C Read function for AT42QT1244." alt="" coords="710,81,846,108"/>
+<area shape="poly" id="edge9_Node000004_Node000006" title=" " alt="" coords="403,80,492,92,598,96,695,95,695,101,598,102,492,97,402,86"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="659,77,695,82,695,87,658,82"/>
+<area shape="rect" id="Node000007" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#ad2998daf6e9e01b5d72b96ac64a2f78e" title="16bits CRC calculation for AT42QT1244" alt="" coords="894,31,1030,57"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="829,78,896,59,897,64,830,83"/>
+<area shape="rect" id="Node000008" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="906,81,1018,108"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="846,92,891,92,891,97,846,97"/>
+<area shape="rect" id="Node000009" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="911,132,1013,159"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="830,106,897,125,896,130,829,111"/>
 </map>

@@ -1,6 +1,16 @@
 <map id="TSL2591_handler_all" name="TSL2591_handler_all">
-<area shape="rect" id="node2" href="$d7/d6e/_t_s_l2591__proc_8h.html#a63ff78c62bd01f18c84b4d4cd8541fd6" title="Handler for TSL2591 peripheral. " alt="" coords="207,31,339,57"/>
-<area shape="rect" id="node3" href="$d2/d68/_t_s_l2591_8c.html#a413df69cffa299813ff03f5bb6a0bc81" title="I2C Read function for TSL2591. " alt="" coords="387,31,501,57"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="549,5,667,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="555,56,661,83"/>
+<area shape="rect" id="Node000001" title="Handler for all TSL2591 peripherals." alt="" coords="5,81,148,108"/>
+<area shape="rect" id="Node000002" href="$db/dba/_t_s_l2591__proc_8c.html#a63ff78c62bd01f18c84b4d4cd8541fd6" title="Handler for TSL2591 peripheral." alt="" coords="196,81,318,108"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,92,181,92,181,97,148,97"/>
+<area shape="rect" id="Node000003" href="$d2/d68/_t_s_l2591_8c.html#a413df69cffa299813ff03f5bb6a0bc81" title="I2C Read function for TSL2591." alt="" coords="388,56,499,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="318,84,373,76,373,81,319,89"/>
+<area shape="rect" id="Node000006" href="$dc/d24/_t_s_l2591__ex_8h.html#a35a20ec830d1084d38d166170e08b6a4" title="Clear pending ALS interruption." alt="" coords="366,107,520,133"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="319,100,351,105,351,110,318,106"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="593,5,704,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="499,53,578,33,579,38,500,58"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="777,81,879,108"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="499,70,762,88,761,93,499,76"/>
+<area shape="rect" id="Node000007" href="$d2/d68/_t_s_l2591_8c.html#a63c2d929fff2e1472781ad74be184f80" title="I2C Special function Write function for TSL2591." alt="" coords="568,107,729,133"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="521,117,554,117,554,123,521,123"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="728,106,762,101,762,107,729,111"/>
 </map>

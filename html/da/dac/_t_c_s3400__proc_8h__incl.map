@@ -1,7 +1,28 @@
 <map id="TCS3400_proc.h" name="TCS3400_proc.h">
-<area shape="rect" id="node3" href="$d9/d51/_t_c_s3400_8h.html" title="TCS3400 Driver. " alt="" coords="132,80,223,107"/>
-<area shape="rect" id="node9" href="$df/ded/shared___c_l_s_8h.html" title="Color Light Sensing shared. " alt="" coords="322,80,433,107"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="416,155,550,181"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="215,155,340,181"/>
-<area shape="rect" id="node8" href="$de/d36/_t_c_s3400__ex_8h.html" title="TCS3400 Driver extensions. " alt="" coords="28,155,140,181"/>
+<area shape="rect" id="Node000001" title="TCS3400 Driver procedures." alt="" coords="116,5,235,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="183,229,264,256"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,35,95,60,44,96,24,116,12,137,9,158,19,180,41,196,79,210,168,230,167,235,78,215,39,201,14,183,4,159,6,135,20,112,40,91,93,56,144,30"/>
+<area shape="rect" id="Node000003" href="$d9/d51/_t_c_s3400_8h.html" title="TCS3400 Driver." alt="" coords="132,80,219,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="171,33,169,65,164,65,166,32"/>
+<area shape="rect" id="Node000009" href="$df/ded/shared___c_l_s_8h.html" title="Color Light Sensing shared." alt="" coords="315,80,419,107"/>
+<area shape="poly" id="edge15_Node000001_Node000009" title=" " alt="" coords="210,30,321,72,319,77,208,35"/>
+<area shape="poly" id="edge11_Node000003_Node000001" title=" " alt="" coords="180,79,181,47,187,47,185,80"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="181,106,203,180,215,215,210,217,198,182,176,108"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="405,155,529,181"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="220,103,403,148,402,153,218,108"/>
+<area shape="rect" id="Node000007" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="213,155,329,181"/>
+<area shape="poly" id="edge8_Node000003_Node000007" title=" " alt="" coords="194,105,245,144,242,148,190,109"/>
+<area shape="rect" id="Node000008" href="$de/d36/_t_c_s3400__ex_8h.html" title="TCS3400 Driver extensions." alt="" coords="29,155,137,181"/>
+<area shape="poly" id="edge12_Node000003_Node000008" title=" " alt="" coords="154,109,105,147,101,143,151,105"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="425,184,279,228,277,223,424,179"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="315,229,379,256"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="448,184,382,224,379,219,445,180"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="431,229,504,256"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="470,182,470,214,465,214,465,182"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="265,183,242,218,237,215,261,180"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="286,180,325,217,322,221,283,184"/>
+<area shape="poly" id="edge13_Node000008_Node000002" title=" " alt="" coords="109,180,187,220,184,224,106,184"/>
+<area shape="poly" id="edge14_Node000008_Node000003" title=" " alt="" coords="105,152,154,115,157,119,108,156"/>
+<area shape="poly" id="edge16_Node000009_Node000002" title=" " alt="" coords="369,108,363,144,356,164,344,183,313,209,279,227,276,222,310,205,340,180,351,162,358,142,364,107"/>
+<area shape="poly" id="edge17_Node000009_Node000004" title=" " alt="" coords="386,105,439,143,436,148,383,109"/>
 </map>

@@ -1,5 +1,9 @@
 <map id="APDS9960_Set_ADC_Integration_Time" name="APDS9960_Set_ADC_Integration_Time">
-<area shape="rect" id="node2" href="$db/db1/_a_p_d_s9960_8c.html#a52b83fd89a1e886f3f1bb8b59a89b8ac" title="I2C Write function for APDS9960. " alt="" coords="321,31,449,57"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="497,5,615,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="503,56,609,83"/>
+<area shape="rect" id="Node000001" title="ADC Integration time configuration." alt="" coords="5,31,259,57"/>
+<area shape="rect" id="Node000002" href="$db/db1/_a_p_d_s9960_8c.html#a52b83fd89a1e886f3f1bb8b59a89b8ac" title="I2C Write function for APDS9960." alt="" coords="307,31,430,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="259,41,292,41,292,47,259,47"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="478,5,589,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="430,32,463,27,464,32,431,37"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="483,56,585,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="431,51,468,57,468,62,430,56"/>
 </map>

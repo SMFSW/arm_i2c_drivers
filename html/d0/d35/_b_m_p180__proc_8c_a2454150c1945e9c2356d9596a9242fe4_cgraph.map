@@ -1,10 +1,20 @@
 <map id="BMP180_Init_Sequence" name="BMP180_Init_Sequence">
-<area shape="rect" id="node2" href="$d8/dfb/_b_m_p180__ex_8h.html#ada9b410bf5b2ae488e77901f2e7f89c5" title="Get BMP180 chip ID. " alt="" coords="461,5,613,32"/>
-<area shape="rect" id="node6" href="$d0/d35/_b_m_p180__proc_8c.html#ad0325266789e45d7af965f331c8f68cb" title="Setter of Sea Level pressure for BMP180 peripheral. " alt="" coords="229,53,397,94"/>
-<area shape="rect" id="node8" href="$d0/d35/_b_m_p180__proc_8c.html#a955e57221814f232da13fac727fc7205" title="Get calibration parameters from BMP180 peripheral. " alt="" coords="224,119,403,145"/>
-<area shape="rect" id="node3" href="$d8/d11/_b_m_p180_8c.html#adce223c1add54df827a7a1457f2005ec" title="I2C Read function for BMP180. " alt="" coords="672,59,784,85"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="832,33,949,60"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="837,84,944,111"/>
-<area shape="rect" id="node7" href="$da/d3c/shared___a_p_s_8c.html#a74c279e4d9a609d3f13f66342e7c731f" title="Sea Level pressure getter (in hPa / mbar) " alt="" coords="451,60,624,87"/>
-<area shape="rect" id="node9" href="$d8/d11/_b_m_p180_8c.html#a96723b9fbe9d582ed3f4120471de5520" title="I2C Word Read function for BMP180. " alt="" coords="462,115,613,141"/>
+<area shape="rect" id="Node000001" title="Initialization Sequence for BMP180 peripheral." alt="" coords="5,56,167,83"/>
+<area shape="rect" id="Node000002" href="$d0/d35/_b_m_p180__proc_8c.html#a955e57221814f232da13fac727fc7205" title="Get calibration parameters from BMP180 peripheral." alt="" coords="215,5,383,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,53,225,33,226,39,146,58"/>
+<area shape="rect" id="Node000007" href="$d8/dfb/_b_m_p180__ex_8h.html#ada9b410bf5b2ae488e77901f2e7f89c5" title="Get BMP180 chip ID." alt="" coords="439,56,586,83"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="167,67,423,67,423,72,167,72"/>
+<area shape="rect" id="Node000008" href="$d0/d35/_b_m_p180__proc_8c.html#ad0325266789e45d7af965f331c8f68cb" title="Setter of Sea Level pressure for BMP180 peripheral." alt="" coords="219,107,379,149"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="138,81,206,100,205,105,136,86"/>
+<area shape="rect" id="Node000003" href="$d8/d11/_b_m_p180_8c.html#a96723b9fbe9d582ed3f4120471de5520" title="I2C Word Read function for BMP180." alt="" coords="439,5,585,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="383,16,424,16,424,21,383,21"/>
+<area shape="rect" id="Node000004" href="$d8/d11/_b_m_p180_8c.html#adce223c1add54df827a7a1457f2005ec" title="I2C Read function for BMP180." alt="" coords="641,31,751,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="586,26,627,32,627,37,585,31"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="799,5,910,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="750,33,784,27,784,33,751,38"/>
+<area shape="rect" id="Node000006" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="803,56,906,83"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="751,50,789,56,788,61,750,55"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="586,57,626,51,627,56,587,62"/>
+<area shape="rect" id="Node000009" href="$da/d3c/shared___a_p_s_8c.html#a74c279e4d9a609d3f13f66342e7c731f" title="Sea Level pressure getter (in hPa / mbar)" alt="" coords="431,115,593,141"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="379,125,416,125,416,131,379,131"/>
 </map>

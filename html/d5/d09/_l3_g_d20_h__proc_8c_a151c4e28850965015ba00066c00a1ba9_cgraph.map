@@ -1,0 +1,9 @@
+<map id="L3GD20H_handler_it" name="L3GD20H_handler_it">
+<area shape="rect" id="Node000001" title="Handler for L3GD20H peripheral GPIO interrupt." alt="" coords="5,31,148,57"/>
+<area shape="rect" id="Node000002" href="$d5/d09/_l3_g_d20_h__proc_8c.html#a2b9f8da5adc90f62fa340ab7931b679a" title="Handler for L3GD20H peripheral." alt="" coords="220,5,348,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,33,204,26,205,31,149,38"/>
+<area shape="rect" id="Node000003" href="$df/df9/_l3_g_d20_h__ex_8c.html#a604e0ef75a4ee21ee6212a63445cc862" title="Interrupt GPIO pin getter for L3GD20H." alt="" coords="196,56,372,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="149,50,181,54,181,59,148,55"/>
+<area shape="rect" id="Node000004" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter." alt="" coords="420,56,590,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="372,67,405,67,405,72,372,72"/>
+</map>

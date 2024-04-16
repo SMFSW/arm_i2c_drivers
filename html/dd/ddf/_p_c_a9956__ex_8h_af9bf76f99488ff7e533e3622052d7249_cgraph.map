@@ -1,3 +1,9 @@
 <map id="PCA9956_ReadVal" name="PCA9956_ReadVal">
-<area shape="rect" id="node2" href="$df/d5e/_p_c_a9956_8c.html#a45016e9d78da0bffbd4bceb1a3478b75" title="I2C Read function for PCA9956. " alt="" coords="191,5,309,32"/>
+<area shape="rect" id="Node000001" title="Read PWM duty cycle value of a PCA9956 channel." alt="" coords="5,31,139,57"/>
+<area shape="rect" id="Node000002" href="$df/d5e/_p_c_a9956_8c.html#a45016e9d78da0bffbd4bceb1a3478b75" title="I2C Read function for PCA9956." alt="" coords="187,31,302,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,41,172,41,172,47,139,47"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="350,5,461,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="302,32,335,27,336,32,303,38"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="355,56,457,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="303,50,340,56,340,62,302,56"/>
 </map>

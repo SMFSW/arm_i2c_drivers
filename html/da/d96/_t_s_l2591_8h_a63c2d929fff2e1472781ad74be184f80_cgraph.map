@@ -1,3 +1,5 @@
 <map id="TSL2591_Write_Special" name="TSL2591_Write_Special">
-<area shape="rect" id="node2" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="221,5,328,32"/>
+<area shape="rect" id="Node000001" title="I2C Special function Write function for TSL2591." alt="" coords="5,5,166,32"/>
+<area shape="rect" id="Node000002" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="214,5,316,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,16,199,16,199,21,166,21"/>
 </map>

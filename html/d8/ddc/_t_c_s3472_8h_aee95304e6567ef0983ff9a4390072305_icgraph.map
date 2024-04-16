@@ -1,7 +1,13 @@
 <map id="TCS3472_Read_Word" name="TCS3472_Read_Word">
-<area shape="rect" id="node2" href="$d2/dbe/_t_c_s3472__ex_8h.html#a5857305328de05a3b30c713ba548e3a1" title="Get Specific channel conversion. " alt="" coords="208,5,375,32"/>
-<area shape="rect" id="node3" href="$d2/dbe/_t_c_s3472__ex_8h.html#ac715995e9feae1f4d73913422167e69f" title="Get Clear channel conversion. " alt="" coords="217,56,365,83"/>
-<area shape="rect" id="node4" href="$d2/dbe/_t_c_s3472__ex_8h.html#a39f1e4bc3ea7cf9faf6200221b701991" title="Get Red channel conversion. " alt="" coords="222,107,361,133"/>
-<area shape="rect" id="node5" href="$d2/dbe/_t_c_s3472__ex_8h.html#ad5e88826cadda9bbbe09b7b3b090dd77" title="Get Green channel conversion. " alt="" coords="214,157,369,184"/>
-<area shape="rect" id="node6" href="$d2/dbe/_t_c_s3472__ex_8h.html#a2c09d6ed13ccf2dd2c99f261b3c9b88b" title="Get Blue channel conversion. " alt="" coords="220,208,363,235"/>
+<area shape="rect" id="Node000001" title="I2C Word Read (little endian) function for TCS3472." alt="" coords="213,107,364,133"/>
+<area shape="rect" id="Node000002" href="$d2/dbe/_t_c_s3472__ex_8h.html#a2c09d6ed13ccf2dd2c99f261b3c9b88b" title="Get Blue channel conversion." alt="" coords="16,5,154,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="255,100,212,73,164,46,135,35,136,30,166,42,215,68,258,96"/>
+<area shape="rect" id="Node000003" href="$d2/dbe/_t_c_s3472__ex_8h.html#a5857305328de05a3b30c713ba548e3a1" title="Get Specific channel conversion." alt="" coords="5,56,165,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="217,105,141,86,142,81,218,100"/>
+<area shape="rect" id="Node000004" href="$d2/dbe/_t_c_s3472__ex_8h.html#ac715995e9feae1f4d73913422167e69f" title="Get Clear channel conversion." alt="" coords="14,107,156,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="198,123,156,123,156,117,198,117"/>
+<area shape="rect" id="Node000005" href="$d2/dbe/_t_c_s3472__ex_8h.html#ad5e88826cadda9bbbe09b7b3b090dd77" title="Get Green channel conversion." alt="" coords="12,157,158,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="218,140,142,159,141,154,217,135"/>
+<area shape="rect" id="Node000006" href="$d2/dbe/_t_c_s3472__ex_8h.html#a39f1e4bc3ea7cf9faf6200221b701991" title="Get Red channel conversion." alt="" coords="17,208,153,235"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="258,144,215,172,166,198,136,210,135,205,164,194,212,167,255,140"/>
 </map>

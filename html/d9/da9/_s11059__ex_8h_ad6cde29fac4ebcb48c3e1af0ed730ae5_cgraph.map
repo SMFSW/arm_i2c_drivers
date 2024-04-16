@@ -1,6 +1,11 @@
 <map id="S11059_Get_Channel" name="S11059_Get_Channel">
-<area shape="rect" id="node2" href="$d2/dfe/_s11059_8c.html#a445b49a90ce780749d8cf6395d439b26" title="I2C Word Read (big endian) function for S11059. " alt="" coords="213,31,360,57"/>
-<area shape="rect" id="node3" href="$d2/dfe/_s11059_8c.html#a157781bb2500a88bc780ad45e0cc60c1" title="I2C Read function for S11059. " alt="" coords="408,31,517,57"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="565,5,683,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="571,56,677,83"/>
+<area shape="rect" id="Node000001" title="Get Specific channel conversion." alt="" coords="5,31,153,57"/>
+<area shape="rect" id="Node000002" href="$d2/dfe/_s11059_8c.html#a445b49a90ce780749d8cf6395d439b26" title="I2C Word Read (big endian) function for S11059." alt="" coords="201,31,340,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,41,186,41,186,47,153,47"/>
+<area shape="rect" id="Node000003" href="$d2/dfe/_s11059_8c.html#a157781bb2500a88bc780ad45e0cc60c1" title="I2C Read function for S11059." alt="" coords="388,31,490,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="340,41,373,41,373,47,340,47"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="538,5,650,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="490,33,523,28,524,33,491,38"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="543,56,645,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="491,50,529,56,528,61,490,55"/>
 </map>

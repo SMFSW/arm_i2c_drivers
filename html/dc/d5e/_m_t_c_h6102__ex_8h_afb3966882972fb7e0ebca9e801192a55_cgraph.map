@@ -1,4 +1,9 @@
 <map id="MTCH6102_Set_Idle_Period" name="MTCH6102_Set_Idle_Period">
-<area shape="rect" id="node2" href="$da/d78/_m_t_c_h6102_8c.html#aadac3361a556fe464ea0df2d9a8366ae" title="I2C Write function for MTCH6102. " alt="" coords="248,5,376,32"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="424,5,541,32"/>
+<area shape="rect" id="Node000001" title="Set MTCH6102 idle period." alt="" coords="5,31,193,57"/>
+<area shape="rect" id="Node000002" href="$da/d78/_m_t_c_h6102_8c.html#aadac3361a556fe464ea0df2d9a8366ae" title="I2C Write function for MTCH6102." alt="" coords="241,31,366,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,41,226,41,226,47,193,47"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="414,5,525,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="366,32,399,27,399,32,367,37"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="419,56,521,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="367,51,404,57,404,62,366,56"/>
 </map>

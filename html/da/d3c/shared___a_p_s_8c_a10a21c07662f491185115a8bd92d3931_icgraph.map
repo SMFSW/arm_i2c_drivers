@@ -1,0 +1,9 @@
+<map id="Atmospheric_Pressure_To_Altitude" name="Atmospheric_Pressure_To_Altitude">
+<area shape="rect" id="Node000001" title="Calculates the altitude (in meters) using international barometric formula from the specified atmosph..." alt="" coords="568,5,722,48"/>
+<area shape="rect" id="Node000002" href="$d0/d35/_b_m_p180__proc_8c.html#abff0623050520b3826558d5b2a13f796" title="Gets the compensated pressure level." alt="" coords="362,13,520,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="554,29,521,29,521,24,554,24"/>
+<area shape="rect" id="Node000003" href="$d0/d35/_b_m_p180__proc_8c.html#ae13c9eabdf3c4a900c6e01787ab2a807" title="Handler for BMP180 peripheral." alt="" coords="194,13,314,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="347,29,315,29,315,24,347,24"/>
+<area shape="rect" id="Node000004" href="$dc/d50/_b_m_p180__proc_8h.html#a6ea364017a9680fe0d48f50dd9f84ffd" title="Handler for all BMP180 peripherals." alt="" coords="5,13,146,40"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="179,29,146,29,146,24,179,24"/>
+</map>

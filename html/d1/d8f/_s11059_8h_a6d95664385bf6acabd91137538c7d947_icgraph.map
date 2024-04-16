@@ -1,3 +1,5 @@
 <map id="S11059_Init" name="S11059_Init">
-<area shape="rect" id="node2" href="$d1/d8f/_s11059_8h.html#a54b2b645d23ab3654253ec5165873303" title="Initialization for S11059 peripheral. " alt="" coords="151,5,293,32"/>
+<area shape="rect" id="Node000001" title="Initialization for S11059 peripheral." alt="" coords="186,5,275,32"/>
+<area shape="rect" id="Node000002" href="$d2/dfe/_s11059_8c.html#a54b2b645d23ab3654253ec5165873303" title="Initialization for S11059 peripheral." alt="" coords="5,5,138,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,21,138,21,138,16,171,16"/>
 </map>

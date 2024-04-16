@@ -1,3 +1,5 @@
 <map id="PCA9624_Init" name="PCA9624_Init">
-<area shape="rect" id="node2" href="$d4/dc2/_p_c_a9624_8h.html#a9d2bfb0bec12fff1be494de387f015a2" title="Initialization for PCA9624 peripheral. " alt="" coords="160,5,312,32"/>
+<area shape="rect" id="Node000001" title="Initialization for PCA9624 peripheral." alt="" coords="199,5,301,32"/>
+<area shape="rect" id="Node000002" href="$db/de1/_p_c_a9624_8c.html#a9d2bfb0bec12fff1be494de387f015a2" title="Initialization for PCA9624 peripheral." alt="" coords="5,5,151,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,21,151,21,151,16,184,16"/>
 </map>

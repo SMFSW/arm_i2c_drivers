@@ -1,3 +1,5 @@
 <map id="BMP180_Init" name="BMP180_Init">
-<area shape="rect" id="node2" href="$d3/d7d/_b_m_p180_8h.html#a57f1d83e4dbe3e1f9a3ee9d85c016e94" title="Initialization for BMP180 peripheral. " alt="" coords="153,5,300,32"/>
+<area shape="rect" id="Node000001" title="Initialization for BMP180 peripheral." alt="" coords="193,5,289,32"/>
+<area shape="rect" id="Node000002" href="$d8/d11/_b_m_p180_8c.html#a57f1d83e4dbe3e1f9a3ee9d85c016e94" title="Initialization for BMP180 peripheral." alt="" coords="5,5,145,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,21,145,21,145,16,178,16"/>
 </map>

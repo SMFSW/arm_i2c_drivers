@@ -1,7 +1,13 @@
 <map id="PCF8523_Get_Time_Raw" name="PCF8523_Get_Time_Raw">
-<area shape="rect" id="node2" href="$d4/d61/_p_c_f8523__proc_8h.html#ad0d71f0e72ac7d36a8c735048b252b58" title="PCF8523_Get_Time" alt="" coords="232,31,379,57"/>
-<area shape="rect" id="node3" href="$d4/d61/_p_c_f8523__proc_8h.html#a04365ddacd950492c16035fb554c3b72" title="Initialization Sequence for PCF8523 peripheral. " alt="" coords="427,5,601,32"/>
-<area shape="rect" id="node5" href="$d4/d61/_p_c_f8523__proc_8h.html#a0c61d7181df53ea43460c13575563e92" title="Handler for PCF8523 peripheral. " alt="" coords="447,56,581,83"/>
-<area shape="rect" id="node4" href="$dd/d42/_p_c_f8523_8h.html#aa61e54475342c7382da01eb61e44da09" title="Initialization for PCF8523 peripheral peripheral. " alt="" coords="671,5,775,32"/>
-<area shape="rect" id="node6" href="$d4/d61/_p_c_f8523__proc_8h.html#a519c4d20da41104d7ec672566ad70e36" title="Handler for PCF8523 peripheral GPIO interrupt. " alt="" coords="649,56,797,83"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="595,31,770,57"/>
+<area shape="rect" id="Node000002" href="$d4/ded/_p_c_f8523__proc_8c.html#ad0d71f0e72ac7d36a8c735048b252b58" title=" " alt="" coords="407,31,547,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="581,47,547,47,547,41,581,41"/>
+<area shape="rect" id="Node000003" href="$d4/ded/_p_c_f8523__proc_8c.html#a0c61d7181df53ea43460c13575563e92" title="Handler for PCF8523 peripheral." alt="" coords="213,5,339,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="392,36,339,29,339,24,393,31"/>
+<area shape="rect" id="Node000005" href="$d4/ded/_p_c_f8523__proc_8c.html#a04365ddacd950492c16035fb554c3b72" title="Initialization Sequence for PCF8523 peripheral." alt="" coords="193,56,359,83"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="392,57,360,61,359,56,392,52"/>
+<area shape="rect" id="Node000004" href="$d4/ded/_p_c_f8523__proc_8c.html#a519c4d20da41104d7ec672566ad70e36" title="Handler for PCF8523 peripheral GPIO interrupt." alt="" coords="5,5,145,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="198,21,145,21,145,16,198,16"/>
+<area shape="rect" id="Node000006" href="$df/d5b/_p_c_f8523_8c.html#aa61e54475342c7382da01eb61e44da09" title="Initialization for PCF8523 peripheral peripheral." alt="" coords="24,56,126,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="178,72,126,72,126,67,178,67"/>
 </map>

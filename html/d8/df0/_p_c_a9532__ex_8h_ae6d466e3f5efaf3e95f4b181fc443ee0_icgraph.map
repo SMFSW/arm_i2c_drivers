@@ -1,4 +1,7 @@
 <map id="PCA9532_Set_Auto_Increment" name="PCA9532_Set_Auto_Increment">
-<area shape="rect" id="node2" href="$d3/df9/_p_c_a9532_8h.html#ab2c83a49b54020805a88671f067bf6d6" title="Initialization for PCA9532 peripheral. " alt="" coords="272,5,379,32"/>
-<area shape="rect" id="node3" href="$d3/df9/_p_c_a9532_8h.html#ae3bc95cfa1ac91a201ac0543ced4bb03" title="Initialization for PCA9532 peripheral. " alt="" coords="427,5,579,32"/>
+<area shape="rect" id="Node000001" title="Set auto increment option for PCA9532 registers." alt="" coords="349,5,552,32"/>
+<area shape="rect" id="Node000002" href="$d2/d28/_p_c_a9532_8c.html#ab2c83a49b54020805a88671f067bf6d6" title="Initialization for PCA9532 peripheral." alt="" coords="199,5,301,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="334,21,301,21,301,16,334,16"/>
+<area shape="rect" id="Node000003" href="$d2/d28/_p_c_a9532_8c.html#ae3bc95cfa1ac91a201ac0543ced4bb03" title="Initialization for PCA9532 peripheral." alt="" coords="5,5,151,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="184,21,151,21,151,16,184,16"/>
 </map>

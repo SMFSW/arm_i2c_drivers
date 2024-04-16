@@ -1,7 +1,15 @@
 <map id="TSL2591_Set_Integration_Time" name="TSL2591_Set_Integration_Time">
-<area shape="rect" id="node2" href="$d2/d68/_t_s_l2591_8c.html#a413df69cffa299813ff03f5bb6a0bc81" title="I2C Read function for TSL2591. " alt="" coords="285,56,399,83"/>
-<area shape="rect" id="node5" href="$d2/d68/_t_s_l2591_8c.html#a699af3f63ff4020758ff5773dbcd683c" title="I2C Write function for TSL2591. " alt="" coords="285,5,399,32"/>
-<area shape="rect" id="node6" href="$db/dba/_t_s_l2591__proc_8c.html#a1c6ae788bcf2dcea13e90f0759382b32" title="Set proper CPL value (Counts per kiloLux) " alt="" coords="273,107,411,133"/>
-<area shape="rect" id="node3" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="459,5,576,32"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="464,56,571,83"/>
+<area shape="rect" id="Node000001" title="Integration time configuration." alt="" coords="5,56,210,83"/>
+<area shape="rect" id="Node000002" href="$d2/d68/_t_s_l2591_8c.html#a413df69cffa299813ff03f5bb6a0bc81" title="I2C Read function for TSL2591." alt="" coords="269,56,380,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,67,254,67,254,72,210,72"/>
+<area shape="rect" id="Node000005" href="$db/dba/_t_s_l2591__proc_8c.html#a1c6ae788bcf2dcea13e90f0759382b32" title="Set proper CPL value (Counts per kiloLux)" alt="" coords="258,107,391,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="169,81,251,100,249,105,167,86"/>
+<area shape="rect" id="Node000006" href="$d2/d68/_t_s_l2591_8c.html#a699af3f63ff4020758ff5773dbcd683c" title="I2C Write function for TSL2591." alt="" coords="269,5,380,32"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="167,53,254,32,255,37,169,58"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="439,5,550,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="371,53,433,34,434,39,373,58"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="444,56,546,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="381,67,429,67,429,72,381,72"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="380,16,424,16,424,21,380,21"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="373,30,434,49,433,54,371,35"/>
 </map>

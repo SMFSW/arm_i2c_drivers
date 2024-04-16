@@ -1,6 +1,24 @@
 <map id="ADS1115_ex.h" name="ADS1115_ex.h">
-<area shape="rect" id="node3" href="$df/d61/_a_d_s1115_8h.html" title="ADS1115 Driver. " alt="" coords="47,80,141,107"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="333,155,468,181"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="183,155,309,181"/>
-<area shape="rect" id="node8" href="$d4/d35/_a_d_s1115__proc_8h.html" title="ADS1115 Driver procedures. " alt="" coords="29,155,159,181"/>
+<area shape="rect" id="Node000001" title="ADS1115 Driver extensions." alt="" coords="33,5,141,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="46,229,128,256"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,34,54,55,35,81,18,117,11,155,8,168,11,180,27,202,49,219,46,223,23,206,6,182,3,168,6,154,13,115,30,79,50,52,71,31"/>
+<area shape="rect" id="Node000003" href="$df/d61/_a_d_s1115_8h.html" title="ADS1115 Driver." alt="" coords="44,80,130,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="83,33,81,65,76,65,77,32"/>
+<area shape="poly" id="edge14_Node000003_Node000001" title=" " alt="" coords="91,79,93,47,98,47,97,80"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="65,109,45,123,27,141,17,160,16,170,19,180,34,202,54,219,50,223,30,205,14,182,11,170,12,159,23,137,42,119,62,105"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="310,155,435,181"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="131,103,309,148,308,153,130,108"/>
+<area shape="rect" id="Node000007" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="170,155,287,181"/>
+<area shape="poly" id="edge8_Node000003_Node000007" title=" " alt="" coords="113,105,192,145,189,150,110,110"/>
+<area shape="rect" id="Node000008" href="$d4/d35/_a_d_s1115__proc_8h.html" title="ADS1115 Driver procedures." alt="" coords="28,155,146,181"/>
+<area shape="poly" id="edge11_Node000003_Node000008" title=" " alt="" coords="83,107,81,140,76,140,77,107"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="323,184,143,230,142,225,322,179"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="222,229,286,256"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="353,184,288,224,285,219,350,180"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="336,229,409,256"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="375,182,375,214,370,214,370,182"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="205,184,126,224,124,220,203,179"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="235,181,247,214,242,216,230,183"/>
+<area shape="poly" id="edge12_Node000008_Node000002" title=" " alt="" coords="90,182,90,214,84,214,84,182"/>
+<area shape="poly" id="edge13_Node000008_Node000003" title=" " alt="" coords="91,154,93,122,98,122,97,154"/>
 </map>

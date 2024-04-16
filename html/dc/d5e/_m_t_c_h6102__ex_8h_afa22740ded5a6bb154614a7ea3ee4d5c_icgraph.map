@@ -1,4 +1,11 @@
 <map id="MTCH6102_Store_To_Non_Volatile" name="MTCH6102_Store_To_Non_Volatile">
-<area shape="rect" id="node2" href="$db/de8/_m_t_c_h6102__proc_8h.html#a15eac00544e71163632f5a2625a3b888" title="Configure MTCH6102 parameters needing configure step. " alt="" coords="239,13,397,39"/>
-<area shape="rect" id="node3" href="$db/de8/_m_t_c_h6102__proc_8h.html#a6cb756e62481a522d8fba783461ac9d4" title="Initialization Sequence for MTCH6102 peripheral. " alt="" coords="445,13,632,39"/>
+<area shape="rect" id="Node000001" title="Write MTCH6102 parameters to non volatile storage." alt="" coords="797,5,975,48"/>
+<area shape="rect" id="Node000002" href="$d2/d60/_m_t_c_h6102__proc_8c.html#a15eac00544e71163632f5a2625a3b888" title="Configure MTCH6102 parameters needing configure step." alt="" coords="597,13,749,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="782,29,749,29,749,24,782,24"/>
+<area shape="rect" id="Node000003" href="$d2/d60/_m_t_c_h6102__proc_8c.html#a6cb756e62481a522d8fba783461ac9d4" title="Initialization Sequence for MTCH6102 peripheral." alt="" coords="371,13,549,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="582,29,550,29,550,24,582,24"/>
+<area shape="rect" id="Node000004" href="$da/d78/_m_t_c_h6102_8c.html#abf6d89f4579cd7a0ed9439be4b4b748c" title="Initialization for MTCH6102 peripheral." alt="" coords="210,13,323,40"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="356,29,323,29,323,24,356,24"/>
+<area shape="rect" id="Node000005" href="$da/d78/_m_t_c_h6102_8c.html#a390a418649fc2fd61e2f6d9fde260d56" title="Initialization for MTCH6102 peripheral." alt="" coords="5,13,162,40"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="195,29,162,29,162,24,195,24"/>
 </map>

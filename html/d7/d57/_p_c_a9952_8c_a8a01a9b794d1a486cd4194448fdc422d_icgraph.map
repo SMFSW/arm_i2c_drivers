@@ -1,0 +1,45 @@
+<map id="PCA9952_Write" name="PCA9952_Write">
+<area shape="rect" id="Node000001" title="I2C Write function for PCA9952." alt="" coords="862,335,976,361"/>
+<area shape="rect" id="Node000002" href="$d9/dba/_p_c_a9952__ex_8c.html#ab1fbfc8f75ed662a179d45d780577fbf" title="Send PWM Full OFF value to apply on a PCA9952 channel." alt="" coords="652,5,772,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="914,320,908,262,891,188,878,149,861,111,839,76,812,46,793,34,771,26,773,21,796,29,815,42,843,73,866,109,883,147,897,187,913,261,919,319"/>
+<area shape="rect" id="Node000003" href="$d1/d37/_p_c_a9952__proc_8c.html#a0232bb3ce801c25e1fa5669a55a715b9" title="Initialization Sequence for PCA9952 peripheral." alt="" coords="372,208,539,235"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="915,377,905,418,886,467,857,515,837,536,815,553,761,580,736,587,712,589,687,587,662,580,609,553,569,520,536,479,510,433,490,386,466,297,456,236,461,235,471,296,495,384,515,431,541,476,573,516,612,548,664,575,688,582,712,584,735,582,759,575,812,548,834,532,852,512,881,465,899,416,910,375"/>
+<area shape="rect" id="Node000006" href="$d9/dba/_p_c_a9952__ex_8c.html#a56454d8619ae3c00fa53cdd8381b4417" title="Send PWM duty cycle value to apply on a PCA9952 channel." alt="" coords="651,107,773,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="909,321,896,281,877,234,849,187,812,147,793,136,773,129,774,124,796,131,815,143,853,184,882,232,901,280,914,319"/>
+<area shape="rect" id="Node000007" href="$d9/dba/_p_c_a9952__ex_8c.html#a96c8d5318bc952223e3e025f77b43968" title="Send PWM duty cycle array of values to apply on a PCA9952." alt="" coords="647,613,777,640"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="916,376,906,424,887,483,858,544,839,572,815,597,798,609,778,618,776,613,795,604,812,593,834,568,853,541,882,481,901,422,911,375"/>
+<area shape="rect" id="Node000011" href="$d9/dba/_p_c_a9952__ex_8c.html#a3f5c0fffee076d506e95588fed3c9037" title="Set auto increment option for PCA9952 registers." alt="" coords="610,56,814,83"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="912,321,902,272,885,211,855,149,835,121,812,97,795,85,797,81,815,93,840,118,860,147,890,209,908,271,917,320"/>
+<area shape="rect" id="Node000012" href="$d9/dba/_p_c_a9952__ex_8c.html#ae86d7d7eacb48bcaa3505f191207bf4e" title="Set PCA9952 output gain control value." alt="" coords="641,157,783,184"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="904,322,869,259,843,226,812,198,782,184,785,179,815,194,847,222,874,256,909,320"/>
+<area shape="rect" id="Node000013" href="$d9/dba/_p_c_a9952__ex_8c.html#a2487e3e1153c8d35e0b6a7204672184f" title="Set PCA9952 output gain control value." alt="" coords="637,309,787,336"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="846,342,787,334,787,329,847,337"/>
+<area shape="rect" id="Node000014" href="$d9/dba/_p_c_a9952__ex_8c.html#a9a58d9720e5faf70239cd23543693c7f" title="Set latch type for PCA9952 peripheral." alt="" coords="640,360,784,387"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="847,359,784,367,784,362,846,354"/>
+<area shape="rect" id="Node000015" href="$d5/df0/_p_c_a9952__ex_8h.html#a50966ed3d95844d8e0b36d5999de38a5" title="Set MODE1 register." alt="" coords="633,411,791,437"/>
+<area shape="poly" id="edge16_Node000001_Node000015" title=" " alt="" coords="881,371,815,401,778,413,776,407,813,396,879,366"/>
+<area shape="rect" id="Node000016" href="$d5/df0/_p_c_a9952__ex_8h.html#a02adff1d606e70c21d7277f877ca79fc" title="Set MODE2 register." alt="" coords="633,461,791,488"/>
+<area shape="poly" id="edge17_Node000001_Node000016" title=" " alt="" coords="901,375,864,414,840,435,815,452,788,463,786,458,812,447,837,430,860,411,897,371"/>
+<area shape="rect" id="Node000017" href="$d9/dba/_p_c_a9952__ex_8c.html#a06fff8e9421c32d7f30c0d935051717e" title="Set PCA9952 peripheral LED mode." alt="" coords="624,512,800,539"/>
+<area shape="poly" id="edge18_Node000001_Node000017" title=" " alt="" coords="909,376,874,440,847,474,815,502,793,514,791,509,812,498,843,470,869,437,904,374"/>
+<area shape="rect" id="Node000018" href="$d9/dba/_p_c_a9952__ex_8c.html#a2861fbd7efaf311c3fe3c5d7f93bb01b" title="Set PCA9952 peripheral multiple LEDs mode." alt="" coords="620,208,804,235"/>
+<area shape="poly" id="edge19_Node000001_Node000018" title=" " alt="" coords="897,325,860,285,837,266,812,249,786,238,788,233,815,244,840,261,864,282,901,321"/>
+<area shape="rect" id="Node000019" href="$d9/dba/_p_c_a9952__ex_8c.html#ad7177253d1e3a35a9117ed8056b8ab37" title="Set PCA9952 peripheral delay between channels." alt="" coords="639,259,785,285"/>
+<area shape="poly" id="edge21_Node000001_Node000019" title=" " alt="" coords="879,330,813,300,776,289,778,283,815,295,881,325"/>
+<area shape="rect" id="Node000020" href="$d9/dba/_p_c_a9952__ex_8c.html#a33d2a1f2770abc74ecaf7a2c22d12117" title="Send PWM Full ON value to apply on a PCA9952 channel." alt="" coords="651,664,773,691"/>
+<area shape="poly" id="edge23_Node000001_Node000020" title=" " alt="" coords="919,377,913,435,897,509,883,549,866,587,843,623,815,654,796,667,774,675,772,670,794,662,812,650,839,620,861,585,878,547,891,508,908,434,914,376"/>
+<area shape="rect" id="Node000004" href="$d7/d57/_p_c_a9952_8c.html#a7432af42ee4ca470b3e0d85030a4d3a1" title="Initialization for PCA9952 peripheral." alt="" coords="199,208,301,235"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="357,224,302,224,302,219,357,219"/>
+<area shape="rect" id="Node000005" href="$d7/d57/_p_c_a9952_8c.html#a9029066c6058af48ebf88edd87047400" title="Initialization for PCA9952 peripheral." alt="" coords="5,208,151,235"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="184,224,151,224,151,219,184,219"/>
+<area shape="rect" id="Node000008" href="$d5/df0/_p_c_a9952__ex_8h.html#aa45c824114a8154208e9013b74e09f3f" title="Send all PWM duty cycle array of values to apply on a PCA9952 (for the 24 channels)" alt="" coords="380,613,531,640"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="633,629,532,629,532,624,633,624"/>
+<area shape="rect" id="Node000009" href="$d5/df0/_p_c_a9952__ex_8h.html#aa6f23b2b1f9b091d988702b5ba831646" title="Send PWM duty cycle array of values to apply on a PCA9952." alt="" coords="372,664,539,691"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="634,645,527,666,526,661,633,640"/>
+<area shape="rect" id="Node000010" href="$d5/df0/_p_c_a9952__ex_8h.html#aa0e13dce5d374b9c3b596d9a48b0afd5" title="Send PWM duty cycle array of values to apply on a PCA9952." alt="" coords="349,563,562,589"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="633,614,526,593,527,587,634,609"/>
+<area shape="poly" id="edge11_Node000011_Node000003" title=" " alt="" coords="626,90,612,97,568,124,529,155,471,209,468,206,525,151,565,119,609,92,624,86"/>
+<area shape="poly" id="edge13_Node000012_Node000003" title=" " alt="" coords="627,190,527,210,526,205,626,185"/>
+<area shape="poly" id="edge20_Node000018_Node000003" title=" " alt="" coords="606,224,540,224,540,219,606,219"/>
+<area shape="poly" id="edge22_Node000019_Node000003" title=" " alt="" coords="626,258,526,238,527,233,627,253"/>
+</map>

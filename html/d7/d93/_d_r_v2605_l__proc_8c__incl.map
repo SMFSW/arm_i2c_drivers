@@ -1,7 +1,26 @@
 <map id="DRV2605L_proc.c" name="DRV2605L_proc.c">
-<area shape="rect" id="node2" href="$d5/d47/_d_r_v2605_l_8h.html" title="DRV2605L Driver. " alt="" coords="191,80,290,107"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="483,155,617,181"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="333,155,458,181"/>
-<area shape="rect" id="node8" href="$df/dbb/_d_r_v2605_l__ex_8h.html" title="DRV2605L_ex.h" alt="" coords="28,155,149,181"/>
-<area shape="rect" id="node9" href="$d1/da7/_d_r_v2605_l__proc_8h.html" title="DRV2605L Driver procedures. " alt="" coords="173,155,308,181"/>
+<area shape="rect" id="Node000001" title="DRV2605L Driver procedures." alt="" coords="167,5,295,32"/>
+<area shape="rect" id="Node000002" href="$d5/d47/_d_r_v2605_l_8h.html" title="DRV2605L Driver." alt="" coords="183,80,279,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="234,33,234,65,228,65,228,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="190,229,272,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="184,104,86,124,43,139,17,156,9,175,13,190,27,203,50,214,112,228,176,236,176,241,111,234,49,219,24,207,8,193,3,175,13,153,41,134,84,119,182,99"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="458,155,582,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="279,104,456,148,455,153,278,109"/>
+<area shape="rect" id="Node000007" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="318,155,434,181"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="257,105,339,145,337,150,255,110"/>
+<area shape="rect" id="Node000008" href="$df/dbb/_d_r_v2605_l__ex_8h.html" title=" " alt="" coords="27,155,144,181"/>
+<area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="200,110,118,150,116,145,197,105"/>
+<area shape="rect" id="Node000009" href="$d1/da7/_d_r_v2605_l__proc_8h.html" title="DRV2605L Driver procedures." alt="" coords="167,155,295,181"/>
+<area shape="poly" id="edge13_Node000002_Node000009" title=" " alt="" coords="227,107,225,140,220,140,221,107"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="471,184,287,230,285,225,469,179"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="369,229,434,256"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="501,184,436,224,433,219,498,180"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="484,229,557,256"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="523,182,523,214,518,214,518,182"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="352,184,271,225,268,220,350,179"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="383,181,395,214,390,216,378,183"/>
+<area shape="poly" id="edge12_Node000008_Node000002" title=" " alt="" coords="117,152,199,112,201,116,119,156"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="112,179,194,220,191,225,110,184"/>
+<area shape="poly" id="edge15_Node000009_Node000002" title=" " alt="" coords="235,154,237,122,242,122,241,154"/>
+<area shape="poly" id="edge14_Node000009_Node000003" title=" " alt="" coords="234,182,234,214,228,214,228,182"/>
 </map>

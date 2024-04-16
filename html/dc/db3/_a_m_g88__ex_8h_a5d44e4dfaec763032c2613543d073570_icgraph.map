@@ -1,5 +1,9 @@
 <map id="AMG88_Reset" name="AMG88_Reset">
-<area shape="rect" id="node2" href="$da/de9/_a_m_g88__proc_8h.html#a31fb1058c19c3675886ea9601f3a96ca" title="Initialization Sequence for AMG88 peripheral. " alt="" coords="164,5,329,32"/>
-<area shape="rect" id="node3" href="$d8/d4e/_a_m_g88_8h.html#a6ede1109c833df44888f9ce86158e031" title="Initialization for AMG88 peripheral. " alt="" coords="377,5,472,32"/>
-<area shape="rect" id="node4" href="$d8/d4e/_a_m_g88_8h.html#ab22f18773c85421d2b743e415ed14fa7" title="Initialization for AMG88 peripheral. " alt="" coords="520,5,660,32"/>
+<area shape="rect" id="Node000001" title="AMG88 reset." alt="" coords="528,5,636,32"/>
+<area shape="rect" id="Node000002" href="$d4/d51/_a_m_g88__proc_8c.html#a31fb1058c19c3675886ea9601f3a96ca" title="Initialization Sequence for AMG88 peripheral." alt="" coords="325,5,480,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="514,21,481,21,481,16,514,16"/>
+<area shape="rect" id="Node000003" href="$df/d52/_a_m_g88_8c.html#a6ede1109c833df44888f9ce86158e031" title="Initialization for AMG88 peripheral." alt="" coords="187,5,277,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="310,21,278,21,278,16,310,16"/>
+<area shape="rect" id="Node000004" href="$df/d52/_a_m_g88_8c.html#ab22f18773c85421d2b743e415ed14fa7" title="Initialization for AMG88 peripheral." alt="" coords="5,5,139,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="172,21,139,21,139,16,172,16"/>
 </map>

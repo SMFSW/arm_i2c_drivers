@@ -1,5 +1,9 @@
 <map id="PCA9624_t" name="PCA9624_t">
-<area shape="rect" id="node2" href="$df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters " alt="" coords="5,5,100,32"/>
-<area shape="rect" id="node3" href="$dc/d95/struct_peripheral_g_p_i_o__t.html" title="i2c peripheral GPIO pin parameters " alt="" coords="124,5,253,32"/>
-<area shape="rect" id="node4" href="$de/d0a/unionu_p_c_a9624___r_e_g_____l_e_d_o_u_t.html" title="Union for LEDOUT registers of PCA9624. " alt="" coords="278,5,465,32"/>
+<area shape="rect" id="Node000001" title="PCA9624 user interface struct." alt="" coords="219,96,308,123"/>
+<area shape="rect" id="Node000002" href="$de/d0a/unionu_p_c_a9624___r_e_g_____l_e_d_o_u_t.html" title="Union for LEDOUT registers of PCA9624." alt="" coords="5,5,194,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,37,241,93,239,98,134,42"/>
+<area shape="rect" id="Node000003" href="$df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters" alt="" coords="218,5,309,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="266,47,266,95,261,95,261,47"/>
+<area shape="rect" id="Node000004" href="$dc/d95/struct_peripheral_g_p_i_o__t.html" title="i2c peripheral GPIO pin parameters" alt="" coords="334,5,457,32"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="373,44,333,74,291,98,289,93,330,70,369,40"/>
 </map>

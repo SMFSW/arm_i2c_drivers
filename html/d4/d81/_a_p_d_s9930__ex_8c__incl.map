@@ -1,8 +1,30 @@
 <map id="APDS9930_ex.c" name="APDS9930_ex.c">
-<area shape="rect" id="node2" href="$d6/dd1/_a_p_d_s9930_8h.html" title="APDS9930 Driver. " alt="" coords="223,80,326,107"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="155,304,290,331"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="5,304,131,331"/>
-<area shape="rect" id="node8" href="$d1/d45/_a_p_d_s9930__proc_8h.html" title="APDS9930 Driver procedures. " alt="" coords="206,155,343,181"/>
-<area shape="rect" id="node10" href="$d5/d4f/_a_p_d_s9930__ex_8h.html" title="APDS9930 Driver extensions. " alt="" coords="367,155,491,181"/>
-<area shape="rect" id="node9" href="$db/d70/shared___a_l_s_8h.html" title="Ambient Light Sensing shared. " alt="" coords="219,229,330,256"/>
+<area shape="rect" id="Node000001" title="APDS9930 Driver extensions." alt="" coords="202,5,320,32"/>
+<area shape="rect" id="Node000002" href="$d6/dd1/_a_p_d_s9930_8h.html" title="APDS9930 Driver." alt="" coords="212,80,310,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="264,33,264,65,258,65,258,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="292,379,374,405"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="310,99,409,119,454,134,482,153,496,183,496,214,486,246,467,276,443,305,416,331,365,372,362,368,412,327,439,301,462,273,481,243,491,213,491,184,477,156,451,139,408,124,309,104"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="145,304,270,331"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="236,109,208,129,186,156,177,190,178,226,187,261,197,289,192,291,181,262,173,227,172,190,181,153,204,125,233,105"/>
+<area shape="rect" id="Node000007" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="5,304,122,331"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="238,109,205,130,172,157,142,190,116,227,78,292,74,289,112,224,138,187,168,153,202,125,235,105"/>
+<area shape="rect" id="Node000008" href="$d1/d45/_a_p_d_s9930__proc_8h.html" title="APDS9930 Driver procedures." alt="" coords="196,155,326,181"/>
+<area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="256,107,255,140,249,140,251,107"/>
+<area shape="rect" id="Node000010" href="$d5/d4f/_a_p_d_s9930__ex_8h.html" title="APDS9930 Driver extensions." alt="" coords="350,155,468,181"/>
+<area shape="poly" id="edge16_Node000002_Node000010" title=" " alt="" coords="281,105,364,146,361,150,278,110"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="231,329,300,369,297,373,228,334"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="57,379,121,405"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="188,333,123,373,120,368,185,329"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="171,379,244,405"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="210,331,210,364,205,364,205,331"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="111,329,279,373,277,379,110,334"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="70,330,82,364,77,365,65,332"/>
+<area shape="poly" id="edge12_Node000008_Node000002" title=" " alt="" coords="265,154,267,122,272,122,270,154"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="283,180,307,200,327,228,339,264,343,301,340,364,335,364,338,301,333,265,322,231,303,204,279,184"/>
+<area shape="rect" id="Node000009" href="$db/d70/shared___a_l_s_8h.html" title="Ambient Light Sensing shared." alt="" coords="209,229,313,256"/>
+<area shape="poly" id="edge13_Node000008_Node000009" title=" " alt="" coords="264,182,264,214,258,214,258,182"/>
+<area shape="poly" id="edge14_Node000009_Node000003" title=" " alt="" coords="269,255,323,364,318,366,265,258"/>
+<area shape="poly" id="edge15_Node000009_Node000004" title=" " alt="" coords="254,258,227,294,223,291,249,255"/>
+<area shape="poly" id="edge18_Node000010_Node000002" title=" " alt="" coords="389,156,306,116,308,111,391,152"/>
+<area shape="poly" id="edge17_Node000010_Node000003" title=" " alt="" coords="408,182,390,247,362,332,347,366,342,364,357,330,385,245,403,181"/>
 </map>

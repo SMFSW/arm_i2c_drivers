@@ -1,0 +1,9 @@
+<map id="L3GD20H_handler" name="L3GD20H_handler">
+<area shape="rect" id="Node000001" title="Handler for L3GD20H peripheral." alt="" coords="412,31,540,57"/>
+<area shape="rect" id="Node000002" href="$da/d6b/_l3_g_d20_h__proc_8h.html#a4cfe42f3af2bcb91104fd3ad64383e3c" title="Handler for all L3GD20H peripherals." alt="" coords="216,5,364,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="397,36,364,31,365,26,398,31"/>
+<area shape="rect" id="Node000003" href="$d5/d09/_l3_g_d20_h__proc_8c.html#a151c4e28850965015ba00066c00a1ba9" title="Handler for L3GD20H peripheral GPIO interrupt." alt="" coords="219,56,361,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="398,57,362,62,361,57,397,52"/>
+<area shape="rect" id="Node000004" href="$da/d6b/_l3_g_d20_h__proc_8h.html#a7ceadeb417abf9254f53e336f4548ead" title="Handler for all L3GD20H peripherals GPIO interrupt." alt="" coords="5,56,168,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="204,72,168,72,168,67,204,67"/>
+</map>

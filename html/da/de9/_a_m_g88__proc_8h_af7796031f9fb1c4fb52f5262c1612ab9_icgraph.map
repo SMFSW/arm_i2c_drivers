@@ -1,3 +1,5 @@
 <map id="AMG88_handler_it" name="AMG88_handler_it">
-<area shape="rect" id="node2" href="$da/de9/_a_m_g88__proc_8h.html#a8f4206ea34c183c5f6dc2b23043c7d63" title="Handler for all AMG88 peripherals GPIO interrupt. " alt="" coords="192,5,351,32"/>
+<area shape="rect" id="Node000001" title="Handler for AMG88 peripheral GPIO interrupt." alt="" coords="202,5,330,32"/>
+<area shape="rect" id="Node000002" href="$da/de9/_a_m_g88__proc_8h.html#a8f4206ea34c183c5f6dc2b23043c7d63" title="Handler for all AMG88 peripherals GPIO interrupt." alt="" coords="5,5,154,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,21,154,21,154,16,187,16"/>
 </map>

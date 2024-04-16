@@ -1,5 +1,20 @@
 <map id="FM24C_ex.h" name="FM24C_ex.h">
-<area shape="rect" id="node3" href="$d5/d3b/_f_m24_c_8h.html" title="FRAM / EEPROM Driver (bank switching at I2C address level protocol) " alt="" coords="226,80,303,107"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component. " alt="" coords="5,155,140,181"/>
-<area shape="rect" id="node7" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common. " alt="" coords="165,155,290,181"/>
+<area shape="rect" id="Node000001" title="FM24C FRAM Driver (bank switching at I2C address level protocol) extensions." alt="" coords="199,5,296,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="254,229,335,256"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="263,30,283,52,299,79,309,115,311,152,303,215,298,215,306,152,303,116,294,81,278,55,259,34"/>
+<area shape="rect" id="Node000003" href="$d5/d3b/_f_m24_c_8h.html" title="FM24C FRAM Driver (bank switching at I2C address level protocol)" alt="" coords="210,80,285,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="243,33,241,65,236,65,238,32"/>
+<area shape="poly" id="edge11_Node000003_Node000001" title=" " alt="" coords="252,79,254,47,259,47,257,80"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="259,106,273,128,285,154,292,185,296,215,291,215,287,186,280,156,268,130,254,109"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="5,155,130,181"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="217,110,114,151,112,146,215,105"/>
+<area shape="rect" id="Node000007" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="153,155,270,181"/>
+<area shape="poly" id="edge8_Node000003_Node000007" title=" " alt="" coords="244,108,227,143,222,140,239,106"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="108,179,241,222,240,227,106,184"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="153,229,217,256"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="89,180,154,219,151,224,87,184"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="31,229,104,256"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="70,182,70,214,65,214,65,182"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="228,180,271,217,267,221,224,184"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="209,183,197,216,192,214,204,181"/>
 </map>

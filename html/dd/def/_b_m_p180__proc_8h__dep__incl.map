@@ -1,7 +1,15 @@
 <map id="BMP180_proc.h" name="BMP180_proc.h">
-<area shape="rect" id="node2" href="$d3/d7d/_b_m_p180_8h.html" title="BMP180 Driver. " alt="" coords="126,80,213,107"/>
-<area shape="rect" id="node3" href="$d8/d11/_b_m_p180_8c.html" title="BMP180 Driver. " alt="" coords="5,155,91,181"/>
-<area shape="rect" id="node4" href="$d8/dfb/_b_m_p180__ex_8h.html" title="BMP180 Driver extensions. " alt="" coords="115,155,223,181"/>
-<area shape="rect" id="node5" href="$db/d0e/_b_m_p180__ex_8c.html" title="BMP180 Driver extensions. " alt="" coords="248,155,355,181"/>
-<area shape="rect" id="node6" href="$d0/d35/_b_m_p180__proc_8c.html" title="BMP180 Driver procedures. " alt="" coords="379,155,499,181"/>
+<area shape="rect" id="Node000001" title="BMP180 Driver procedures." alt="" coords="235,5,349,32"/>
+<area shape="rect" id="Node000002" href="$d3/d7d/_b_m_p180_8h.html" title="BMP180 Driver." alt="" coords="251,80,333,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="286,47,288,79,282,80,280,47"/>
+<area shape="poly" id="edge7_Node000002_Node000001" title=" " alt="" coords="298,65,296,33,302,32,303,65"/>
+<area shape="rect" id="Node000003" href="$d8/d11/_b_m_p180_8c.html" title="BMP180 Driver." alt="" coords="5,155,88,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="237,114,89,157,88,152,236,108"/>
+<area shape="rect" id="Node000004" href="$db/d0e/_b_m_p180__ex_8c.html" title="BMP180 Driver extensions." alt="" coords="112,155,216,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="258,117,188,156,185,152,256,112"/>
+<area shape="rect" id="Node000005" href="$d8/dfb/_b_m_p180__ex_8h.html" title="BMP180 Driver extensions." alt="" coords="240,155,344,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="286,122,288,154,282,154,280,122"/>
+<area shape="rect" id="Node000006" href="$d0/d35/_b_m_p180__proc_8c.html" title="BMP180 Driver procedures." alt="" coords="368,155,482,181"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="329,112,403,152,400,156,326,116"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="298,140,296,107,302,107,303,140"/>
 </map>

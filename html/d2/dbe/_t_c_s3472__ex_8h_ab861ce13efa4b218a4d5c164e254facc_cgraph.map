@@ -1,6 +1,11 @@
 <map id="TCS3472_Set_AIHT" name="TCS3472_Set_AIHT">
-<area shape="rect" id="node2" href="$df/dfb/_t_c_s3472_8c.html#a45e0d44ad62ecabedf1d83607a861a5d" title="I2C Word Write (low endian) function for TCS3472. " alt="" coords="196,31,351,57"/>
-<area shape="rect" id="node3" href="$df/dfb/_t_c_s3472_8c.html#a19fc8e0e8440863061f67b8a42f6484a" title="I2C Write function for TCS3472. " alt="" coords="399,31,515,57"/>
-<area shape="rect" id="node4" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="563,5,680,32"/>
-<area shape="rect" id="node5" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="568,56,675,83"/>
+<area shape="rect" id="Node000001" title="ALS interrupt high threshold configuration." alt="" coords="5,31,147,57"/>
+<area shape="rect" id="Node000002" href="$df/dfb/_t_c_s3472_8c.html#a45e0d44ad62ecabedf1d83607a861a5d" title="I2C Word Write (little endian) function for TCS3472." alt="" coords="195,31,345,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,41,180,41,180,47,147,47"/>
+<area shape="rect" id="Node000003" href="$df/dfb/_t_c_s3472_8c.html#a19fc8e0e8440863061f67b8a42f6484a" title="I2C Write function for TCS3472." alt="" coords="393,31,506,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="345,41,378,41,378,47,345,47"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="554,5,666,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="506,32,539,27,540,32,507,38"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="559,56,661,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="507,50,544,56,544,62,506,56"/>
 </map>

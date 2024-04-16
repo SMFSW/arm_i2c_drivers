@@ -1,5 +1,9 @@
 <map id="APDS9930_Set_AIT" name="APDS9930_Set_AIT">
-<area shape="rect" id="node2" href="$d1/d45/_a_p_d_s9930__proc_8h.html#a4cc65eb7c3be6bf8bb36c7452e3ee209" title="Initialization Sequence for APDS9930 peripheral. " alt="" coords="199,5,385,32"/>
-<area shape="rect" id="node3" href="$d6/dd1/_a_p_d_s9930_8h.html#aae753672da9f281e69583c0dc1e202f9" title="Initialization for APDS9930 peripheral. " alt="" coords="433,5,549,32"/>
-<area shape="rect" id="node4" href="$d6/dd1/_a_p_d_s9930_8h.html#a3db18cf0df8a0184fb7ac2a8c2429dab" title="Initialization for APDS9930 peripheral. " alt="" coords="597,5,760,32"/>
+<area shape="rect" id="Node000001" title="ALS interrupt thresholds configuration." alt="" coords="591,5,733,32"/>
+<area shape="rect" id="Node000002" href="$d9/d54/_a_p_d_s9930__proc_8c.html#a4cc65eb7c3be6bf8bb36c7452e3ee209" title="Initialization Sequence for APDS9930 peripheral." alt="" coords="367,5,543,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="577,21,544,21,544,16,577,16"/>
+<area shape="rect" id="Node000003" href="$de/d85/_a_p_d_s9930_8c.html#aae753672da9f281e69583c0dc1e202f9" title="Initialization for APDS9930 peripheral." alt="" coords="208,5,319,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="352,21,319,21,319,16,352,16"/>
+<area shape="rect" id="Node000004" href="$de/d85/_a_p_d_s9930_8c.html#a3db18cf0df8a0184fb7ac2a8c2429dab" title="Initialization for APDS9930 peripheral." alt="" coords="5,5,160,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="193,21,160,21,160,16,193,16"/>
 </map>

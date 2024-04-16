@@ -1,7 +1,15 @@
 <map id="MB85RC256V.h" name="MB85RC256V.h">
-<area shape="rect" id="node2" href="$d1/dc0/_m_b85_r_c256_v_8c.html" title="MB85RC256V Driver. " alt="" coords="5,80,121,107"/>
-<area shape="rect" id="node3" href="$da/dc5/_m_b85_r_c256_v__proc_8h.html" title="MB85RC256V Driver procedures. " alt="" coords="146,80,301,107"/>
-<area shape="rect" id="node4" href="$d5/d5f/_m_b85_r_c256_v__ex_8h.html" title="MB85RC256V Driver extensions. " alt="" coords="325,80,466,107"/>
-<area shape="rect" id="node5" href="$d0/d72/_m_b85_r_c256_v__ex_8c.html" title="MB85RC256V Driver extensions. " alt="" coords="491,80,631,107"/>
-<area shape="rect" id="node6" href="$d4/dc8/_m_b85_r_c256_v__proc_8c.html" title="MB85RC256V Driver procedures. " alt="" coords="655,80,808,107"/>
+<area shape="rect" id="Node000001" title="MB85RC256V FRAM Driver." alt="" coords="317,5,433,32"/>
+<area shape="rect" id="Node000002" href="$d1/dc0/_m_b85_r_c256_v_8c.html" title="MB85RC256V FRAM Driver." alt="" coords="5,80,121,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="307,39,118,82,117,77,305,33"/>
+<area shape="rect" id="Node000003" href="$d0/d72/_m_b85_r_c256_v__ex_8c.html" title="MB85RC256V FRAM Driver extensions." alt="" coords="145,80,282,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="335,41,243,82,241,77,333,36"/>
+<area shape="rect" id="Node000004" href="$d5/d5f/_m_b85_r_c256_v__ex_8h.html" title="MB85RC256V FRAM Driver extensions." alt="" coords="306,80,444,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="369,47,371,79,365,80,364,47"/>
+<area shape="rect" id="Node000005" href="$d4/dc8/_m_b85_r_c256_v__proc_8c.html" title="MB85RC256V FRAM Driver procedures." alt="" coords="468,80,616,107"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="418,36,513,77,511,82,416,41"/>
+<area shape="rect" id="Node000006" href="$da/dc5/_m_b85_r_c256_v__proc_8h.html" title="MB85RC256V FRAM Driver procedures." alt="" coords="640,80,788,107"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="442,33,648,77,647,82,441,38"/>
+<area shape="poly" id="edge4_Node000004_Node000001" title=" " alt="" coords="381,65,379,33,385,32,386,65"/>
+<area shape="poly" id="edge7_Node000006_Node000001" title=" " alt="" coords="647,79,433,34,434,28,648,74"/>
 </map>

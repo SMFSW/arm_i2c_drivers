@@ -1,3 +1,5 @@
 <map id="S11059_handler" name="S11059_handler">
-<area shape="rect" id="node2" href="$dc/d4b/_s11059__proc_8h.html#af92ed5c8aa914c256a50a874b5536d2d" title="Handler for all S11059 peripherals. " alt="" coords="180,5,327,32"/>
+<area shape="rect" id="Node000001" title="Handler for S11059 peripheral." alt="" coords="187,5,300,32"/>
+<area shape="rect" id="Node000002" href="$dc/d4b/_s11059__proc_8h.html#af92ed5c8aa914c256a50a874b5536d2d" title="Handler for all S11059 peripherals." alt="" coords="5,5,139,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,21,139,21,139,16,172,16"/>
 </map>

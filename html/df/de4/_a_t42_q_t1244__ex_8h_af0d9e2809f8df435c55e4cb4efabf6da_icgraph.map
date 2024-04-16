@@ -1,5 +1,5 @@
 <map id="AT42QT1244_Get_Key_Data" name="AT42QT1244_Get_Key_Data">
-<area shape="rect" id="node2" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a41d9810490e829642bd150eba5c2f573" title="Frequencies calibration for AT42QT1244 peripheral. " alt="" coords="252,5,419,47"/>
-<area shape="rect" id="node3" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#aef85f959c0275b2ac8c13ed688a19c70" title="Set last reset time for AT42QT1244 peripheral. " alt="" coords="467,13,677,39"/>
-<area shape="rect" id="node4" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a39d0faa5ff099e6099c5f98d4d55b671" title="Reset command for AT42QT1244 peripheral. " alt="" coords="725,13,869,39"/>
+<area shape="rect" id="Node000001" title="Get key data for AT42QT1244 peripheral." alt="" coords="210,13,400,40"/>
+<area shape="rect" id="Node000002" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#a41d9810490e829642bd150eba5c2f573" title="Frequencies calibration for AT42QT1244 peripheral." alt="" coords="5,5,162,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,29,162,29,162,24,195,24"/>
 </map>

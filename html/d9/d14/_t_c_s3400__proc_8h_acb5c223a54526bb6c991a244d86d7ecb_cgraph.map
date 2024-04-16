@@ -1,8 +1,21 @@
 <map id="TCS3400_handler_it" name="TCS3400_handler_it">
-<area shape="rect" id="node2" href="$db/d52/_t_c_s3400__ex_8c.html#aad7f5294306c1421ec7ed84a051749ba" title="Interrupt GPIO pin getter for TCS3400. " alt="" coords="201,5,375,32"/>
-<area shape="rect" id="node4" href="$dc/dd9/_t_c_s3400__proc_8c.html#a8808303dd2ea714a3516ba2c0ed2b395" title="Handler for TCS3400 peripheral. " alt="" coords="221,56,355,83"/>
-<area shape="rect" id="node3" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter. " alt="" coords="423,5,601,32"/>
-<area shape="rect" id="node5" href="$d4/d1b/_t_c_s3400_8c.html#ac6b81ecacb0000ae8a9e4cd223b07ed2" title="I2C Read function for TCS3400. " alt="" coords="454,56,570,83"/>
-<area shape="rect" id="node6" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state. " alt="" coords="649,31,767,57"/>
-<area shape="rect" id="node7" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business. " alt="" coords="655,81,761,108"/>
+<area shape="rect" id="Node000001" title="Handler for TCS3400 peripheral GPIO interrupt." alt="" coords="5,81,145,108"/>
+<area shape="rect" id="Node000002" href="$dc/dd9/_t_c_s3400__proc_8c.html#a8808303dd2ea714a3516ba2c0ed2b395" title="Handler for TCS3400 peripheral." alt="" coords="217,56,342,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,83,202,76,203,82,146,89"/>
+<area shape="rect" id="Node000008" href="$db/d52/_t_c_s3400__ex_8c.html#aad7f5294306c1421ec7ed84a051749ba" title="Interrupt GPIO pin getter for TCS3400." alt="" coords="193,107,366,133"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="146,101,178,105,178,110,145,106"/>
+<area shape="rect" id="Node000003" href="$de/d36/_t_c_s3400__ex_8h.html#a44c82418965a3b25753564a101b34840" title="Clear All pending interruptions." alt="" coords="422,56,577,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="342,67,407,67,407,72,342,72"/>
+<area shape="rect" id="Node000007" href="$d4/d1b/_t_c_s3400_8c.html#ac6b81ecacb0000ae8a9e4cd223b07ed2" title="I2C Read function for TCS3400." alt="" coords="632,5,747,32"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="342,54,414,41,521,29,617,21,618,26,521,34,414,47,343,59"/>
+<area shape="rect" id="Node000004" href="$d4/d1b/_t_c_s3400_8c.html#a74d4e0aa8eb8d69af81660a1ef13ed77" title="I2C Write function for TCS3400." alt="" coords="633,56,746,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="577,67,618,67,618,72,577,72"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="795,5,906,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="734,53,791,34,793,39,735,58"/>
+<area shape="rect" id="Node000006" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="799,56,902,83"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="747,67,785,67,785,72,747,72"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="747,16,779,16,779,21,747,21"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="735,30,793,49,791,54,734,35"/>
+<area shape="rect" id="Node000009" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter." alt="" coords="414,107,584,133"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="366,117,399,117,399,123,366,123"/>
 </map>

@@ -1,0 +1,9 @@
+<map id="PCA9952_ReadVals" name="PCA9952_ReadVals">
+<area shape="rect" id="Node000001" title="Read PWM duty cycle array of values of a PCA9952." alt="" coords="247,56,387,83"/>
+<area shape="rect" id="Node000002" href="$d5/df0/_p_c_a9952__ex_8h.html#a0980e8ca19cf4b5ed88575f3abc1890c" title="Read all PWM duty cycle array of values of a PCA9952 (for the 24 channels)" alt="" coords="21,5,183,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="242,55,161,35,162,30,244,49"/>
+<area shape="rect" id="Node000003" href="$d5/df0/_p_c_a9952__ex_8h.html#ad7955c58b6cd7af9e1e823d25225a8e2" title="Read PWM duty cycle array of values of a PCA9952." alt="" coords="13,56,191,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="231,72,192,72,192,67,231,67"/>
+<area shape="rect" id="Node000004" href="$d5/df0/_p_c_a9952__ex_8h.html#a5d787ba9eac4c4fc011951719297266d" title="Read PWM duty cycle array of values of a PCA9952." alt="" coords="5,107,199,149"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="252,90,183,109,182,103,251,84"/>
+</map>

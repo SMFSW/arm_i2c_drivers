@@ -1,0 +1,13 @@
+<map id="AT42QT1244_is_Calib_Pending" name="AT42QT1244_is_Calib_Pending">
+<area shape="rect" id="Node000001" title="Get calibration status for AT42QT1244 peripheral." alt="" coords="5,48,157,91"/>
+<area shape="rect" id="Node000002" href="$df/de4/_a_t42_q_t1244__ex_8h.html#aad1c4acba1d21be3dfdbf7e4fc3410dc" title="Get status of AT42QT1244 peripheral." alt="" coords="205,56,375,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,67,190,67,190,72,157,72"/>
+<area shape="rect" id="Node000003" href="$d3/dc4/_a_t42_q_t1244_8c.html#a59952a25c499177de6ff50933ffdbc47" title="I2C Read function for AT42QT1244." alt="" coords="423,56,558,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="375,67,408,67,408,72,375,72"/>
+<area shape="rect" id="Node000004" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#ad2998daf6e9e01b5d72b96ac64a2f78e" title="16bits CRC calculation for AT42QT1244" alt="" coords="606,5,743,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="541,53,609,34,610,39,543,58"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="619,56,730,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="559,67,604,67,604,72,559,72"/>
+<area shape="rect" id="Node000006" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="623,107,726,133"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="543,81,610,100,609,105,541,86"/>
+</map>

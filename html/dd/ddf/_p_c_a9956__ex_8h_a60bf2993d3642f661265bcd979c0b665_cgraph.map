@@ -1,4 +1,11 @@
 <map id="PCA9956_PutVals_Array" name="PCA9956_PutVals_Array">
-<area shape="rect" id="node2" href="$dd/ddf/_p_c_a9956__ex_8h.html#a50f5d7e9a073aa6af704ef69c8a4b1dc" title="Send PWM duty cycle array of values to apply on a PCA9956. " alt="" coords="228,5,363,32"/>
-<area shape="rect" id="node3" href="$df/d5e/_p_c_a9956_8c.html#a631d23c191d905d40f272c8488d175b4" title="I2C Write function for PCA9956. " alt="" coords="411,5,529,32"/>
+<area shape="rect" id="Node000001" title="Send PWM duty cycle array of values to apply on a PCA9956." alt="" coords="5,31,173,57"/>
+<area shape="rect" id="Node000002" href="$dd/d22/_p_c_a9956__ex_8c.html#a50f5d7e9a073aa6af704ef69c8a4b1dc" title="Send PWM duty cycle array of values to apply on a PCA9956." alt="" coords="221,31,350,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,41,206,41,206,47,173,47"/>
+<area shape="rect" id="Node000003" href="$df/d5e/_p_c_a9956_8c.html#a631d23c191d905d40f272c8488d175b4" title="I2C Write function for PCA9956." alt="" coords="398,31,512,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="350,41,383,41,383,47,350,47"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="560,5,672,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="512,32,545,27,546,32,513,38"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="565,56,667,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="513,50,551,56,550,62,512,56"/>
 </map>

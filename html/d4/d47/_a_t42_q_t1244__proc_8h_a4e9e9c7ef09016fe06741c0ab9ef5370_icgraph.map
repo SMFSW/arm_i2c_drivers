@@ -1,7 +1,11 @@
 <map id="AT42QT1244_Delay_PowerOn" name="AT42QT1244_Delay_PowerOn">
-<area shape="rect" id="node2" href="$df/de4/_a_t42_q_t1244__ex_8h.html#a39d0faa5ff099e6099c5f98d4d55b671" title="Reset command for AT42QT1244 peripheral. " alt="" coords="520,5,664,32"/>
-<area shape="rect" id="node3" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a8766f2a3280acd350544fa81b84f216c" title="Initialization Sequence for AT42QT1244 peripheral. " alt="" coords="267,81,466,108"/>
-<area shape="rect" id="node6" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#aef85f959c0275b2ac8c13ed688a19c70" title="Set last reset time for AT42QT1244 peripheral. " alt="" coords="261,31,472,57"/>
-<area shape="rect" id="node4" href="$dd/d4f/_a_t42_q_t1244_8h.html#a2bc2277728576e7c12b20400144d1de0" title="Initialization for AT42QT1244 peripheral. " alt="" coords="528,81,656,108"/>
-<area shape="rect" id="node5" href="$dd/d4f/_a_t42_q_t1244_8h.html#a8060fa17608cb27da6c09ddbc7086107" title="Initialization for AT42QT1244 peripheral. " alt="" coords="712,81,887,108"/>
+<area shape="rect" id="Node000001" title="100ms delay generator for AT42QT1244 peripheral" alt="" coords="624,31,824,57"/>
+<area shape="rect" id="Node000002" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#a8766f2a3280acd350544fa81b84f216c" title="Initialization Sequence for AT42QT1244 peripheral." alt="" coords="389,5,576,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="609,35,577,31,577,26,610,29"/>
+<area shape="rect" id="Node000005" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a39d0faa5ff099e6099c5f98d4d55b671" title="Reset command for AT42QT1244 peripheral." alt="" coords="413,56,552,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="610,59,553,65,553,59,610,53"/>
+<area shape="rect" id="Node000003" href="$d3/dc4/_a_t42_q_t1244_8c.html#a2bc2277728576e7c12b20400144d1de0" title="Initialization for AT42QT1244 peripheral." alt="" coords="219,5,341,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="374,21,341,21,341,16,374,16"/>
+<area shape="rect" id="Node000004" href="$d3/dc4/_a_t42_q_t1244_8c.html#a8060fa17608cb27da6c09ddbc7086107" title="Initialization for AT42QT1244 peripheral." alt="" coords="5,5,171,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="204,21,171,21,171,16,204,16"/>
 </map>
