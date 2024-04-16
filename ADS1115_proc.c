@@ -48,7 +48,7 @@ __WEAK FctERR NONNULL__ ADS1115_handler(ADS1115_t * const pCpnt)
 
 	/**!\note Conversion time need to be respected,
 	**	\ref ADS1115_handler_it may be used to handle GPIO pin interrupt, or
-	**	\ref ADS1115_get_conv_ms may be used to help ensure that without using interrupt pin.
+	**	\ref ADS1115_Get_conv_ms may be used to help ensure that without using interrupt pin.
 	**/
 
 	/**!\note If single shot is required, \ref ADS1115_Start_NextConversion can be called once at init, using \ref ADS1115_handler_it afterwards.

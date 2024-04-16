@@ -100,7 +100,6 @@ FctERR PCF8523_handler(void);
 ** \note \ref PCF8523_INT1_GPIO_Init / \ref PCF8523_INT2_GPIO_Init have to be called at init before using interrupt handler function
 ** \weak PCF8523 GPIO interrupt handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle PCF8523 tasks through interrupts
-** \param[in] pCpnt - Pointer to PCF8523 component
 ** \return FctERR - error code
 **/
 FctERR PCF8523_handler_it(void);

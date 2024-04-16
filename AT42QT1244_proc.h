@@ -127,7 +127,7 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Key(AT42QT1244_t * const pCpnt, uint8_t Ke
 FctERR NONNULL__ AT42QT1244_handler(AT42QT1244_t * const pCpnt);
 
 /*!\brief Handler for AT42QT1244 peripheral GPIO interrupt
-** \note \ref AT42QT1244_INT_GPIO_Init has to be called at init before using interrupt handler function
+** \note \ref AT42QT1244_CHANGE_GPIO_Init has to be called at init before using interrupt handler function
 ** \weak AT42QT1244 GPIO interrupt handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle AT42QT1244 tasks through interrupts
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
@@ -145,7 +145,7 @@ __INLINE void INLINE__ AT42QT1244_handler_all(void) {
 }
 
 /*!\brief Handler for all AT42QT1244 peripherals GPIO interrupt
-** \note \ref AT42QT1244_INT_GPIO_Init has to be called at init before using interrupt handler function
+** \note \ref AT42QT1244_CHANGE_GPIO_Init has to be called at init before using interrupt handler function
 ** \note May be called periodically to handle all AT42QT1244 tasks
 **/
 __INLINE void INLINE__ AT42QT1244_handler_it_all(void) {
