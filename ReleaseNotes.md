@@ -22,6 +22,7 @@ SOFTWARE.
 
 ## v1.1
 
+* I2CMEM: fix I2CMEM_WP_GPIO_Set prototype (prototype was declared as a getter, not setter)
 * PCA9952: base address fix
 * PCA9952: added (compatible with PCA9955)
 * PCA9xxx: all PCA9xxx refactored to share common definitions

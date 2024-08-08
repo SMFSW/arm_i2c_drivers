@@ -99,13 +99,13 @@ FctERR NONNULL__ I2CMEM_Mass_Erase(I2CMEM_t * const pCpnt);
 **/
 FctERR NONNULL__ I2CMEM_WP_GPIO_Init(I2CMEM_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
-/*!\brief Write Protect GPIO pin getter for I2CMEM
-** \weak I2CMEM Write Protect GPIO pin getter may be user implemented if needed
+/*!\brief Write Protect GPIO pin setter for I2CMEM
+** \weak I2CMEM Write Protect GPIO pin setter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to I2CMEM component
-** \param[in,out] pState - Pointer to WP pin state variable (0: inactive, 1: active)
+** \param[in] state - state to write on WP pin (0: inactive, 1: active)
 ** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ I2CMEM_WP_GPIO_Get(I2CMEM_t * const pCpnt, bool * const pState);
+FctERR NONNULL__ I2CMEM_WP_GPIO_Set(I2CMEM_t * const pCpnt, const bool state);
 
 
 /****************************************************************/

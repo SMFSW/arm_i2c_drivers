@@ -84,7 +84,7 @@ typedef union u$CPNT$_REG__REG1 {
 ** \param[in] devAddress - $CPNT$ device address
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ $CPNT$_Init(const uint8_t idx, const I2C_HandleTypeDef * hi2c, const uint16_t devAddress);
+FctERR NONNULL__ $CPNT$_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress);
 
 /*!\brief Initialization for $CPNT$ peripheral
 ** \warning In case multiple devices (defined by I2C_$CPNT$_NB > 1), you shall use $CPNT$_Init instead
