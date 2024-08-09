@@ -33,7 +33,7 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 ### EEPROM / FRAM:
 
 - **I2CMEM**: Any EEPROM / FRAM
-  - **STATUS**: WORKING
+  - **STATUS**: DONE
   - Use I2CMEM when compatibility between EEPROM/FRAM is needed
   - Check [I2CMEM_ex.h](I2CMEM_ex.h) for a few components init aliases
   - In case FRAM is only useful, you may use legacy FM24C or MB85RC256V components, or set buf_size to I2CMEM_WBUF_NONE at init
@@ -41,7 +41,7 @@ Please keep in mind some components are somewhat custom and needs to be accesses
     - There shouldn't be any timeout reached for these components, otherwise refer to MB85RC256V comment
 
 - **FM24C**: 4/16-Kbit (512/2K * 8) Serial I2C F-RAM
-  - **STATUS**: WORKING
+  - **STATUS**: DONE
   - I2C_Drivers legacy FRAM component, consider switching to I2CMEM for new designs
   - Use FM24C for I2C addresses banked components (with 8b internal address):
     - Tested on:
@@ -52,7 +52,7 @@ Please keep in mind some components are somewhat custom and needs to be accesses
     - There shouldn't be any timeout reached for these components, otherwise refer to MB85RC256V comment
 
 - **MB85RC256V**: 256-Kbit (32K * 8) I2C Memory FRAM
-  - **STATUS**: WORKING
+  - **STATUS**: DONE
   - I2C_Drivers legacy FRAM component, consider switching to I2CMEM for new designs
   - Use MB85RC256V for 16b internal addresses components:
     - Tested on:
@@ -65,73 +65,70 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 ### OTHER:
 
 - **ADS1115**: Ultra-Small, Low-Power, 16-Bit Analog-to-Digital Converter with Internal Reference
-  - **STATUS**: WORKING
+  - **STATUS**: DONE
 
 - **AMG88**: Infrared Array Sensor (Grid-EYE)
-  - **STATUS**: WORKING (TODO: recognition)
+  - **STATUS**: DONE (TODO: recognition)
 
 - **APDS9930**: Digital Proximity and Ambient Light Sensor
-  - **STATUS**: WORKING
+  - **STATUS**: DONE
 
 - **APDS9960**: Digital Proximity, Ambient Light, RGB and Gesture Sensor
-  - **STATUS**: WORKING, (TODO: GESTURES TO TEST/SWITCH, DISABLED YET)
+  - **STATUS**: DONE (TODO: GESTURES TO TEST/SWITCH, DISABLED YET)
 
 - **AT42QT1244**: 24-key QMatrix FMEA IEC/EN/UL60730 Touch Sensor
-  - **STATUS**: WORKING
+  - **STATUS**: DONE
 
 - **BMP180**: Digital pressure sensor
-  - **STATUS**: WORKING
+  - **STATUS**: DONE
 
 - **DRV2605L**: 2 to 5.2V Haptic Driver for LRA and ERM With Effect Library and Smart-Loop Architecture
-  - **STATUS**: WORKING
+  - **STATUS**: DONE
 
 - **DS-GPM.S**: 99 Channel Positioning System (GPS + GLONASS) Shield
-  - **STATUS**: WORKING
-
-- **L3GD20H**: MEMS motion sensor, three-axis digital output gyroscope
-  - **STATUS**: CODING IN PROGRESS / NO TESTS YET
-
-- **LSM303DLHC**: Ultra compact high performance e-compass 3D accelerometer and 3D magnetometer module
-  - **STATUS**: CODING IN PROGRESS / NO TESTS YET
+  - **STATUS**: DONE
 
 - **MCP4725**: 12-Bit Digital-to-Analog Converter with EEPROM Memory
-  - **STATUS**: WORKING
+  - **STATUS**: DONE
 
 - **MCP9808**: +/-0.5C Maximum Accuracy Digital Temperature Sensor
-  - **STATUS**: WORKING
+  - **STATUS**: DONE
 
 - **MTCH6102**: Low-Power Projected Capacitive Touch Controller
-  - **STATUS**: WORKING
+  - **STATUS**: DONE
+
+- **NCA9595**: Low-voltage 16-bit I²C and SMBus I/O expander
+  - **STATUS**: DONE
 
 - **PCA9532**: 16-bit I2C-bus LED dimmer
-  - **STATUS**: WORKING
+  - **STATUS**: DONE
 
 - **PCA9624**: 8-bit Fm+ I2C-bus 100mA 40V LED driver
-  - **STATUS**: WORKING
+  - **STATUS**: DONE
 
 - **PCA9685**: 16-channel, 12-bit PWM Fm+ I2C-bus LED controller
-  - **STATUS**: WORKING
+  - **STATUS**: DONE
 
 - **PCA9952**: 16-channel Fm+ I2C-bus 57 mA constant current LED driver (compatible with PCA9955)
-  - **STATUS**: WORKING
+  - **STATUS**: DONE
 
 - **PCA9956**: 24-channel Fm+ I2C-bus 57 mA/20 V constant current LED driver
-  - **STATUS**: WORKING
+  - **STATUS**: DONE
 
 - **PCF8523**: Real-Time Clock (RTC) and calendar
-  - **STATUS**: _WORKING (TODO: handle clkout and alarms)
+  - **STATUS**: DONE (TODO: handle clkout and alarms)
 
 - **S11059**: I2C interface-compatible color sensor
-  - **STATUS**: WORKING
+  - **STATUS**: DONE
 
 - **TCS3400**: Color light-to-digital converter
-  - **STATUS**: WORKING (TODO: auto-integration & persistence in the works)
+  - **STATUS**: DONE (TODO: auto-integration & persistence in the works)
 
 - **TCS3472**: Color light-to-digital converter with IR filter
-  - **STATUS**: WORKING (TODO: auto-integration & persistence in the works)
+  - **STATUS**: DONE (TODO: auto-integration & persistence in the works)
 
 - **TSL2591**: Very-high sensitivity light-to-digital converter
-  - **STATUS**: WORKING (TODO: auto-integration & persistence in the works)
+  - **STATUS**: DONE (TODO: auto-integration & persistence in the works)
 
 ## Multiple component type on single project (singleton components excluded)
 
