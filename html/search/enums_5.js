@@ -1,14 +1,21 @@
 var searchData=
 [
-  ['l3gd20h_5ffifo_5fmode_0',['L3GD20H_fifo_mode',['../da/d81/_l3_g_d20_h_8h.html#aad503e6d222441eb720ebfb1efe34b6f',1,'L3GD20H.h']]],
-  ['l3gd20h_5fhpm_1',['L3GD20H_hpm',['../da/d81/_l3_g_d20_h_8h.html#a3b868f93f48f68f4e318a679d78ed738',1,'L3GD20H.h']]],
-  ['l3gd20h_5freg_5fmap_2',['L3GD20H_reg_map',['../da/d81/_l3_g_d20_h_8h.html#a68e1c615097bb82a5477c32e916949c1',1,'L3GD20H.h']]],
-  ['l3gd20h_5fself_5ftest_3',['L3GD20H_self_test',['../da/d81/_l3_g_d20_h_8h.html#a92bbce385a6dd2b719a2b94ff801f910',1,'L3GD20H.h']]],
-  ['lsm303dlhc_5facc_5ffifo_5fmode_4',['LSM303DLHC_ACC_fifo_mode',['../d0/db0/_l_s_m303_d_l_h_c_8h.html#ad9a98bd1e29e64d1051f1cbaed15797e',1,'LSM303DLHC.h']]],
-  ['lsm303dlhc_5facc_5fhpm_5',['LSM303DLHC_ACC_hpm',['../d0/db0/_l_s_m303_d_l_h_c_8h.html#a58c179ed55b0137b611d79d79d5e1405',1,'LSM303DLHC.h']]],
-  ['lsm303dlhc_5facc_5fodr_6',['LSM303DLHC_ACC_odr',['../d0/db0/_l_s_m303_d_l_h_c_8h.html#a2fdb7ba336b4c3533120744656a91c10',1,'LSM303DLHC.h']]],
-  ['lsm303dlhc_5flinear_5facceleration_5freg_5fmap_7',['LSM303DLHC_linear_acceleration_reg_map',['../d0/db0/_l_s_m303_d_l_h_c_8h.html#afb74a8996f1f8042c9ec5e114ab1b10c',1,'LSM303DLHC.h']]],
-  ['lsm303dlhc_5fmagnetic_5ffield_5freg_5fmap_8',['LSM303DLHC_magnetic_field_reg_map',['../d0/db0/_l_s_m303_d_l_h_c_8h.html#af01ab5ace3e7278171ed718c0bcfa44f',1,'LSM303DLHC.h']]],
-  ['lsm303dlhc_5fmf_5fmd_9',['LSM303DLHC_MF_md',['../d0/db0/_l_s_m303_d_l_h_c_8h.html#a77ee4aabbb1be5b3c0eaf0197b45ace7',1,'LSM303DLHC.h']]],
-  ['lsm303dlhc_5ftype_10',['LSM303DLHC_type',['../d0/db0/_l_s_m303_d_l_h_c_8h.html#a31a94a71089441b62f917de44951a7ae',1,'LSM303DLHC.h']]]
+  ['mcp4725_5fcmd_0',['MCP4725_cmd',['../df/d9f/_m_c_p4725_8h.html#af34ea0d00cc2f26dff0d96540f447e93',1,'MCP4725.h']]],
+  ['mcp4725_5fpd_1',['MCP4725_pd',['../df/d9f/_m_c_p4725_8h.html#adbd7261328dd0a213d5d6f4353aaaf52',1,'MCP4725.h']]],
+  ['mcp9808_5falert_2',['MCP9808_alert',['../d6/d5e/_m_c_p9808__proc_8h.html#ab5f623656adf0683301ba47a8fcf3d4f',1,'MCP9808_proc.h']]],
+  ['mcp9808_5fhyst_3',['MCP9808_hyst',['../d8/d57/_m_c_p9808_8h.html#a28f884cabea67edc507c0e5491d7c61e',1,'MCP9808.h']]],
+  ['mcp9808_5freg_5fmap_4',['MCP9808_reg_map',['../d8/d57/_m_c_p9808_8h.html#a6ac40263ca86dcdab9f06a80f8fa63dd',1,'MCP9808.h']]],
+  ['mcp9808_5fres_5',['MCP9808_res',['../d8/d57/_m_c_p9808_8h.html#a523ec7d6d20cf01f2bce43570a8e99ca',1,'MCP9808.h']]],
+  ['mtch6102_5facquisition_5faddr_5fmap_6',['MTCH6102_acquisition_addr_map',['../da/da9/_m_t_c_h6102_8h.html#a4127b0eeb5611e7091cf69adb6bf7abb',1,'MTCH6102.h']]],
+  ['mtch6102_5fch_7',['MTCH6102_CH',['../da/da9/_m_t_c_h6102_8h.html#a17e53deb39fad5ba3ace8293ce674b63',1,'MTCH6102.h']]],
+  ['mtch6102_5fcommand_8',['MTCH6102_COMMAND',['../dc/d5e/_m_t_c_h6102__ex_8h.html#af4febf547034a62054041b26d651a06c',1,'MTCH6102_ex.h']]],
+  ['mtch6102_5fcompensation_5faddr_5fmap_9',['MTCH6102_compensation_addr_map',['../da/da9/_m_t_c_h6102_8h.html#a9c136f51aebb2ec8727e35bf1b9398d2',1,'MTCH6102.h']]],
+  ['mtch6102_5fcore_5faddr_5fmap_10',['MTCH6102_core_addr_map',['../da/da9/_m_t_c_h6102_8h.html#a6391441d29f4add12bd311d675dde114',1,'MTCH6102.h']]],
+  ['mtch6102_5ffilter_5ftype_11',['MTCH6102_FILTER_TYPE',['../da/da9/_m_t_c_h6102_8h.html#ae4776fbb4b602b9f9b8b8ed7f63134b2',1,'MTCH6102.h']]],
+  ['mtch6102_5fgesture_5fdiagnostic_12',['MTCH6102_GESTURE_DIAGNOSTIC',['../da/da9/_m_t_c_h6102_8h.html#a5cfcc24d4821ee013af1a9a802b33994',1,'MTCH6102.h']]],
+  ['mtch6102_5fgesture_5fstate_13',['MTCH6102_GESTURE_STATE',['../da/da9/_m_t_c_h6102_8h.html#a408d180aebb2549834272e44f2730308',1,'MTCH6102.h']]],
+  ['mtch6102_5fmode_14',['MTCH6102_MODE',['../da/da9/_m_t_c_h6102_8h.html#a1fbd84c418d57e261abb68d66112603d',1,'MTCH6102.h']]],
+  ['mtch6102_5freg_5fmap_15',['MTCH6102_reg_map',['../da/da9/_m_t_c_h6102_8h.html#a2d748397f31d41e896d40e93c80b703b',1,'MTCH6102.h']]],
+  ['mtch6102_5ftouch_5faddr_5fmap_16',['MTCH6102_touch_addr_map',['../da/da9/_m_t_c_h6102_8h.html#a9155033bd841c8354e34805f457d657e',1,'MTCH6102.h']]],
+  ['mtch6102_5ftype_17',['MTCH6102_TYPE',['../da/da9/_m_t_c_h6102_8h.html#a986dfd1d09e1ee3057d7892c8d6b1a62',1,'MTCH6102.h']]]
 ];

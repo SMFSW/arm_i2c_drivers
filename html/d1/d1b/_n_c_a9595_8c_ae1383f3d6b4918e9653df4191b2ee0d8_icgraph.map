@@ -1,0 +1,17 @@
+<map id="NCA9595_Read_Word" name="NCA9595_Read_Word">
+<area shape="rect" id="Node000001" title="I2C Read function for NCA9595." alt="" coords="838,43,991,69"/>
+<area shape="rect" id="Node000002" href="$d6/de0/_n_c_a9595__ex_8c.html#ac68d9d8ff2bd6c0eb5a2c440b4f23a34" title="Read Inputs for NCA9595 peripheral." alt="" coords="624,16,783,43"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="822,47,783,42,784,37,823,42"/>
+<area shape="rect" id="Node000004" href="$d3/d01/_n_c_a9595__ex_8h.html#ac30b942dec0a76cb4eb2de01770705e6" title="Read Register of NCA9595 peripheral." alt="" coords="617,68,790,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="823,70,790,74,790,68,823,64"/>
+<area shape="rect" id="Node000003" href="$d3/d01/_n_c_a9595__ex_8h.html#af6cbc0561c0e6710d2c041aeb635beeb" title="Read Inputs for NCA9595 peripheral (using union)" alt="" coords="410,5,569,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="609,31,570,30,570,25,609,25"/>
+<area shape="rect" id="Node000005" href="$df/d4e/_n_c_a9595__proc_8c.html#a10a10d187329a0f6aa7570ac693ad1fc" title="Handler for NCA9595 peripheral." alt="" coords="426,72,553,99"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="602,86,554,87,554,81,602,81"/>
+<area shape="rect" id="Node000006" href="$da/dc5/_n_c_a9595__proc_8h.html#a0be1504b90f8fabf5e4a9f532295b1c4" title="Handler for all NCA9595 peripherals." alt="" coords="215,47,362,73"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="411,78,362,72,363,67,411,73"/>
+<area shape="rect" id="Node000007" href="$df/d4e/_n_c_a9595__proc_8c.html#a6dcc9f3dc4fcb4f77ccb1f4980412da8" title="Handler for NCA9595 peripheral GPIO interrupt." alt="" coords="218,97,359,124"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="412,98,360,104,359,99,411,93"/>
+<area shape="rect" id="Node000008" href="$da/dc5/_n_c_a9595__proc_8h.html#aef71c3e96bb654ff91e8494c227f1ae1" title="Handler for all NCA9595 peripherals GPIO interrupt." alt="" coords="5,97,167,124"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="203,113,167,113,167,108,203,108"/>
+</map>

@@ -1,0 +1,24 @@
+<map id="NCA9595.h" name="NCA9595.h">
+<area shape="rect" id="Node000001" title="NCA9595 Driver." alt="" coords="184,5,273,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="188,155,269,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,29,86,49,43,64,17,82,9,100,13,115,27,128,50,139,110,153,173,161,173,166,109,159,48,144,24,132,8,118,3,100,13,78,41,59,85,44,183,24"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="447,80,572,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="274,29,447,73,446,78,273,34"/>
+<area shape="rect" id="Node000006" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="307,80,424,107"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="253,30,330,70,327,75,251,35"/>
+<area shape="rect" id="Node000007" href="$da/dc5/_n_c_a9595__proc_8h.html" title="NCA9595 Driver procedures." alt="" coords="28,80,149,107"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="198,35,119,75,117,70,196,30"/>
+<area shape="rect" id="Node000008" href="$d3/d01/_n_c_a9595__ex_8h.html" title="NCA9595 Driver extensions." alt="" coords="173,80,283,107"/>
+<area shape="poly" id="edge12_Node000001_Node000008" title=" " alt="" coords="224,33,222,65,217,65,219,32"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="461,110,284,155,283,150,460,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="359,155,423,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="490,109,425,149,422,144,487,105"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="473,155,546,181"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="512,107,512,140,507,140,507,107"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="343,110,266,150,264,145,340,105"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="372,106,384,140,379,141,367,108"/>
+<area shape="poly" id="edge11_Node000007_Node000001" title=" " alt="" coords="119,77,197,37,200,42,121,82"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="114,105,192,145,189,150,111,110"/>
+<area shape="poly" id="edge14_Node000008_Node000001" title=" " alt="" coords="233,79,234,47,240,47,238,80"/>
+<area shape="poly" id="edge13_Node000008_Node000002" title=" " alt="" coords="231,107,231,140,226,140,226,107"/>
+</map>

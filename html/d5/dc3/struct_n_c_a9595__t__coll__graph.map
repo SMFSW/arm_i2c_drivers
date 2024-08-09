@@ -1,0 +1,13 @@
+<map id="NCA9595_t" name="NCA9595_t">
+<area shape="rect" id="Node000001" title="NCA9595 user interface struct." alt="" coords="367,96,457,123"/>
+<area shape="rect" id="Node000002" href="$d8/de7/unionu_n_c_a9595___r_e_g_____i_n.html" title="Union for Input register pair of NCA9595." alt="" coords="5,5,155,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,36,216,69,296,88,367,100,367,105,295,93,215,75,120,41"/>
+<area shape="rect" id="Node000003" href="$d9/df3/unionu_n_c_a9595___r_e_g_____o_u_t.html" title="Union for Output register pair of NCA9595." alt="" coords="178,5,342,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="284,40,322,70,373,93,370,98,319,74,281,45"/>
+<area shape="rect" id="Node000004" href="$df/df6/struct_i2_c__slave__t.html" title="i2c slave config and control parameters" alt="" coords="366,5,458,32"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="415,47,415,95,409,95,409,47"/>
+<area shape="rect" id="Node000005" href="$dc/d95/struct_peripheral_g_p_i_o__t.html" title="i2c peripheral GPIO pin parameters" alt="" coords="482,5,606,32"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="521,44,481,74,440,98,437,93,479,70,518,40"/>
+<area shape="rect" id="Node000006" href="$d7/d5d/unionu_n_c_a9595___r_e_g_____c_f_g.html" title="Union for Config register pair of NCA9595." alt="" coords="630,5,794,32"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="670,40,574,75,458,102,457,97,573,69,668,35"/>
+</map>

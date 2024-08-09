@@ -1,0 +1,24 @@
+<map id="NCA9595_ex.h" name="NCA9595_ex.h">
+<area shape="rect" id="Node000001" title="NCA9595 Driver extensions." alt="" coords="35,5,145,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="49,229,130,256"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,34,55,55,35,81,18,116,11,155,8,168,11,180,28,202,51,220,47,224,24,206,6,182,3,168,6,154,13,115,30,79,51,52,73,30"/>
+<area shape="rect" id="Node000003" href="$d7/d81/_n_c_a9595_8h.html" title="NCA9595 Driver." alt="" coords="45,80,134,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="85,33,84,65,78,65,80,32"/>
+<area shape="poly" id="edge14_Node000003_Node000001" title=" " alt="" coords="94,79,96,47,101,47,99,80"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="67,109,46,123,28,140,17,160,16,170,19,180,34,202,55,219,51,223,30,205,14,182,11,170,12,158,24,137,43,119,64,105"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html" title="Base I2C component." alt="" coords="314,155,439,181"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="135,103,313,148,312,153,134,109"/>
+<area shape="rect" id="Node000007" href="$dc/d5d/_i2_c__peripheral_8h.html" title="I2C peripheral common." alt="" coords="174,155,291,181"/>
+<area shape="poly" id="edge8_Node000003_Node000007" title=" " alt="" coords="116,105,196,145,193,150,113,110"/>
+<area shape="rect" id="Node000008" href="$da/dc5/_n_c_a9595__proc_8h.html" title="NCA9595 Driver procedures." alt="" coords="29,155,150,181"/>
+<area shape="poly" id="edge11_Node000003_Node000008" title=" " alt="" coords="85,107,84,140,78,140,80,107"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="327,184,146,230,144,225,326,179"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="226,229,290,256"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="357,184,292,224,289,219,354,180"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="340,229,413,256"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="379,182,379,214,374,214,374,182"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="209,184,129,225,126,220,206,179"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="239,181,251,214,246,216,234,183"/>
+<area shape="poly" id="edge12_Node000008_Node000002" title=" " alt="" coords="92,182,92,214,87,214,87,182"/>
+<area shape="poly" id="edge13_Node000008_Node000003" title=" " alt="" coords="94,154,96,122,101,122,99,154"/>
+</map>

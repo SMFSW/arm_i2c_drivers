@@ -1,21 +1,8 @@
 var searchData=
 [
-  ['mcp4725_5fcmd_0',['MCP4725_cmd',['../df/d9f/_m_c_p4725_8h.html#af34ea0d00cc2f26dff0d96540f447e93',1,'MCP4725.h']]],
-  ['mcp4725_5fpd_1',['MCP4725_pd',['../df/d9f/_m_c_p4725_8h.html#adbd7261328dd0a213d5d6f4353aaaf52',1,'MCP4725.h']]],
-  ['mcp9808_5falert_2',['MCP9808_alert',['../d6/d5e/_m_c_p9808__proc_8h.html#ab5f623656adf0683301ba47a8fcf3d4f',1,'MCP9808_proc.h']]],
-  ['mcp9808_5fhyst_3',['MCP9808_hyst',['../d8/d57/_m_c_p9808_8h.html#a28f884cabea67edc507c0e5491d7c61e',1,'MCP9808.h']]],
-  ['mcp9808_5freg_5fmap_4',['MCP9808_reg_map',['../d8/d57/_m_c_p9808_8h.html#a6ac40263ca86dcdab9f06a80f8fa63dd',1,'MCP9808.h']]],
-  ['mcp9808_5fres_5',['MCP9808_res',['../d8/d57/_m_c_p9808_8h.html#a523ec7d6d20cf01f2bce43570a8e99ca',1,'MCP9808.h']]],
-  ['mtch6102_5facquisition_5faddr_5fmap_6',['MTCH6102_acquisition_addr_map',['../da/da9/_m_t_c_h6102_8h.html#a4127b0eeb5611e7091cf69adb6bf7abb',1,'MTCH6102.h']]],
-  ['mtch6102_5fch_7',['MTCH6102_CH',['../da/da9/_m_t_c_h6102_8h.html#a17e53deb39fad5ba3ace8293ce674b63',1,'MTCH6102.h']]],
-  ['mtch6102_5fcommand_8',['MTCH6102_COMMAND',['../dc/d5e/_m_t_c_h6102__ex_8h.html#af4febf547034a62054041b26d651a06c',1,'MTCH6102_ex.h']]],
-  ['mtch6102_5fcompensation_5faddr_5fmap_9',['MTCH6102_compensation_addr_map',['../da/da9/_m_t_c_h6102_8h.html#a9c136f51aebb2ec8727e35bf1b9398d2',1,'MTCH6102.h']]],
-  ['mtch6102_5fcore_5faddr_5fmap_10',['MTCH6102_core_addr_map',['../da/da9/_m_t_c_h6102_8h.html#a6391441d29f4add12bd311d675dde114',1,'MTCH6102.h']]],
-  ['mtch6102_5ffilter_5ftype_11',['MTCH6102_FILTER_TYPE',['../da/da9/_m_t_c_h6102_8h.html#ae4776fbb4b602b9f9b8b8ed7f63134b2',1,'MTCH6102.h']]],
-  ['mtch6102_5fgesture_5fdiagnostic_12',['MTCH6102_GESTURE_DIAGNOSTIC',['../da/da9/_m_t_c_h6102_8h.html#a5cfcc24d4821ee013af1a9a802b33994',1,'MTCH6102.h']]],
-  ['mtch6102_5fgesture_5fstate_13',['MTCH6102_GESTURE_STATE',['../da/da9/_m_t_c_h6102_8h.html#a408d180aebb2549834272e44f2730308',1,'MTCH6102.h']]],
-  ['mtch6102_5fmode_14',['MTCH6102_MODE',['../da/da9/_m_t_c_h6102_8h.html#a1fbd84c418d57e261abb68d66112603d',1,'MTCH6102.h']]],
-  ['mtch6102_5freg_5fmap_15',['MTCH6102_reg_map',['../da/da9/_m_t_c_h6102_8h.html#a2d748397f31d41e896d40e93c80b703b',1,'MTCH6102.h']]],
-  ['mtch6102_5ftouch_5faddr_5fmap_16',['MTCH6102_touch_addr_map',['../da/da9/_m_t_c_h6102_8h.html#a9155033bd841c8354e34805f457d657e',1,'MTCH6102.h']]],
-  ['mtch6102_5ftype_17',['MTCH6102_TYPE',['../da/da9/_m_t_c_h6102_8h.html#a986dfd1d09e1ee3057d7892c8d6b1a62',1,'MTCH6102.h']]]
+  ['nca9595_5fcfg_0',['NCA9595_Cfg',['../d7/d81/_n_c_a9595_8h.html#a36c2c9708f300e99f2d789f44a9f31e9',1,'NCA9595.h']]],
+  ['nca9595_5fpolarity_1',['NCA9595_Polarity',['../d7/d81/_n_c_a9595_8h.html#a27e4ab2d97d4fb2f878a3cfa6e1365e3',1,'NCA9595.h']]],
+  ['nca9595_5fpullup_2',['NCA9595_PullUp',['../d7/d81/_n_c_a9595_8h.html#a44cc0080a2bd1932c7e114e5baa59ac0',1,'NCA9595.h']]],
+  ['nca9595_5freg_5fmap_3',['NCA9595_reg_map',['../d7/d81/_n_c_a9595_8h.html#a12e402b5878b2314d0503037bf24292f',1,'NCA9595.h']]],
+  ['nca9595_5fwreg_5fmap_4',['NCA9595_wreg_map',['../d7/d81/_n_c_a9595_8h.html#a3781b27f6eef8643d2b3f16050565e58',1,'NCA9595.h']]]
 ];

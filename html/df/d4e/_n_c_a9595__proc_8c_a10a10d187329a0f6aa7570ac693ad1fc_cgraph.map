@@ -1,0 +1,17 @@
+<map id="NCA9595_handler" name="NCA9595_handler">
+<area shape="rect" id="Node000001" title="Handler for NCA9595 peripheral." alt="" coords="5,31,133,57"/>
+<area shape="rect" id="Node000002" href="$d3/d01/_n_c_a9595__ex_8h.html#ac30b942dec0a76cb4eb2de01770705e6" title="Read Register of NCA9595 peripheral." alt="" coords="181,5,353,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,33,165,29,166,34,134,38"/>
+<area shape="rect" id="Node000006" href="$d6/de0/_n_c_a9595__ex_8c.html#a7bf7200bbe1982887f7108d3717cf84e" title="Write Outputs for NCA9595 peripheral." alt="" coords="183,56,351,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="134,50,168,54,167,59,133,55"/>
+<area shape="rect" id="Node000003" href="$d1/d1b/_n_c_a9595_8c.html#ae1383f3d6b4918e9653df4191b2ee0d8" title="I2C Read function for NCA9595." alt="" coords="401,5,554,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="353,16,386,16,386,21,353,21"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="602,5,714,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="555,16,588,16,588,21,555,21"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="607,56,709,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="529,30,595,49,593,54,527,35"/>
+<area shape="rect" id="Node000007" href="$d1/d1b/_n_c_a9595_8c.html#ae066ade4c32079187bd25316096ea8dc" title="I2C Write function for NCA9595." alt="" coords="402,56,554,83"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="352,67,386,67,386,72,352,72"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="527,53,593,34,595,39,529,58"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="554,67,592,67,592,72,554,72"/>
+</map>

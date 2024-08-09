@@ -1,0 +1,13 @@
+<map id="NCA9595_Write_Outputs" name="NCA9595_Write_Outputs">
+<area shape="rect" id="Node000001" title="Write Outputs for NCA9595 peripheral." alt="" coords="626,60,795,87"/>
+<area shape="rect" id="Node000002" href="$df/d4e/_n_c_a9595__proc_8c.html#a10a10d187329a0f6aa7570ac693ad1fc" title="Handler for NCA9595 peripheral." alt="" coords="431,31,558,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="611,63,558,55,559,50,612,57"/>
+<area shape="rect" id="Node000006" href="$d3/d01/_n_c_a9595__ex_8h.html#aa00a0636bf55b1947e7ab3a79f92a2ae" title="Write Outputs for NCA9595 peripheral (using union)" alt="" coords="410,81,578,124"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="612,89,579,94,578,89,611,84"/>
+<area shape="rect" id="Node000003" href="$da/dc5/_n_c_a9595__proc_8h.html#a0be1504b90f8fabf5e4a9f532295b1c4" title="Handler for all NCA9595 peripherals." alt="" coords="215,5,362,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="415,37,362,30,363,25,416,32"/>
+<area shape="rect" id="Node000004" href="$df/d4e/_n_c_a9595__proc_8c.html#a6dcc9f3dc4fcb4f77ccb1f4980412da8" title="Handler for NCA9595 peripheral GPIO interrupt." alt="" coords="218,56,359,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="416,56,360,63,359,58,415,51"/>
+<area shape="rect" id="Node000005" href="$da/dc5/_n_c_a9595__proc_8h.html#aef71c3e96bb654ff91e8494c227f1ae1" title="Handler for all NCA9595 peripherals GPIO interrupt." alt="" coords="5,56,167,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="203,72,167,72,167,67,203,67"/>
+</map>

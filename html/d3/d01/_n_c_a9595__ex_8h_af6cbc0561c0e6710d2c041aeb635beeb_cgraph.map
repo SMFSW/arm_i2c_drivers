@@ -1,0 +1,11 @@
+<map id="NCA9595_Read_Inputs_Union" name="NCA9595_Read_Inputs_Union">
+<area shape="rect" id="Node000001" title="Read Inputs for NCA9595 peripheral (using union)" alt="" coords="5,23,165,65"/>
+<area shape="rect" id="Node000002" href="$d6/de0/_n_c_a9595__ex_8c.html#ac68d9d8ff2bd6c0eb5a2c440b4f23a34" title="Read Inputs for NCA9595 peripheral." alt="" coords="213,31,372,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,41,198,41,198,47,165,47"/>
+<area shape="rect" id="Node000003" href="$d1/d1b/_n_c_a9595_8c.html#ae1383f3d6b4918e9653df4191b2ee0d8" title="I2C Read function for NCA9595." alt="" coords="420,31,573,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="372,41,406,41,406,47,372,47"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="621,5,733,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="573,31,606,26,607,31,574,36"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="626,56,728,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="574,52,611,57,611,63,573,57"/>
+</map>

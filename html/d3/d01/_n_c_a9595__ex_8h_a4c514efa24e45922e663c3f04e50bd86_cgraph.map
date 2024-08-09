@@ -1,0 +1,11 @@
+<map id="NCA9595_Set_Polarity_Union" name="NCA9595_Set_Polarity_Union">
+<area shape="rect" id="Node000001" title="Set Inputs polarity for NCA9595 peripheral (using union)" alt="" coords="5,23,162,65"/>
+<area shape="rect" id="Node000002" href="$d6/de0/_n_c_a9595__ex_8c.html#a7944ce03a2e981d8503179ca883eed8d" title="Set Inputs polarity for NCA9595 peripheral." alt="" coords="210,31,366,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,41,195,41,195,47,162,47"/>
+<area shape="rect" id="Node000003" href="$d1/d1b/_n_c_a9595_8c.html#ae066ade4c32079187bd25316096ea8dc" title="I2C Write function for NCA9595." alt="" coords="414,31,566,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="366,41,399,41,399,47,366,47"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="614,5,726,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="566,31,599,26,600,31,567,36"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="619,56,721,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="567,52,604,57,604,63,566,57"/>
+</map>

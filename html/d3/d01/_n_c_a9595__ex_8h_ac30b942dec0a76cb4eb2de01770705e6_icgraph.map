@@ -1,0 +1,11 @@
+<map id="NCA9595_Read_Register" name="NCA9595_Read_Register">
+<area shape="rect" id="Node000001" title="Read Register of NCA9595 peripheral." alt="" coords="585,31,758,57"/>
+<area shape="rect" id="Node000002" href="$df/d4e/_n_c_a9595__proc_8c.html#a10a10d187329a0f6aa7570ac693ad1fc" title="Handler for NCA9595 peripheral." alt="" coords="410,31,537,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="571,47,537,47,537,41,571,41"/>
+<area shape="rect" id="Node000003" href="$da/dc5/_n_c_a9595__proc_8h.html#a0be1504b90f8fabf5e4a9f532295b1c4" title="Handler for all NCA9595 peripherals." alt="" coords="215,5,362,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="395,36,362,31,362,26,396,31"/>
+<area shape="rect" id="Node000004" href="$df/d4e/_n_c_a9595__proc_8c.html#a6dcc9f3dc4fcb4f77ccb1f4980412da8" title="Handler for NCA9595 peripheral GPIO interrupt." alt="" coords="218,56,359,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="396,57,360,62,359,57,395,52"/>
+<area shape="rect" id="Node000005" href="$da/dc5/_n_c_a9595__proc_8h.html#aef71c3e96bb654ff91e8494c227f1ae1" title="Handler for all NCA9595 peripherals GPIO interrupt." alt="" coords="5,56,167,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="203,72,167,72,167,67,203,67"/>
+</map>

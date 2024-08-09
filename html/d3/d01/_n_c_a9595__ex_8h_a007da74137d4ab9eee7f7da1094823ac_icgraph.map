@@ -1,0 +1,7 @@
+<map id="NCA9595_INT_GPIO_Get" name="NCA9595_INT_GPIO_Get">
+<area shape="rect" id="Node000001" title="Interrupt GPIO pin getter for ADS1115." alt="" coords="404,5,579,32"/>
+<area shape="rect" id="Node000002" href="$df/d4e/_n_c_a9595__proc_8c.html#a6dcc9f3dc4fcb4f77ccb1f4980412da8" title="Handler for NCA9595 peripheral GPIO interrupt." alt="" coords="215,5,356,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="389,21,356,21,356,16,389,16"/>
+<area shape="rect" id="Node000003" href="$da/dc5/_n_c_a9595__proc_8h.html#aef71c3e96bb654ff91e8494c227f1ae1" title="Handler for all NCA9595 peripherals GPIO interrupt." alt="" coords="5,5,167,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="200,21,167,21,167,16,200,16"/>
+</map>
