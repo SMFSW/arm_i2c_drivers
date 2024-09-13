@@ -49,11 +49,14 @@
 
 
 /*** Known device aliases ***/
+#define _24xx32_Init(idx, hi2c, devAddress)		I2CMEM_Init(idx, hi2c, devAddress, I2CMEM_32K, I2CMEM_WBUF_32)		//!< EEPROM 24xx32 Init alias
+#define _24xx32_Init_Single()					I2CMEM_Init_Single(I2CMEM_32K, I2CMEM_WBUF_32)						//!< EEPROM 24xx32 Single Init alias
+
 #define _24xx64_Init(idx, hi2c, devAddress)		I2CMEM_Init(idx, hi2c, devAddress, I2CMEM_64K, I2CMEM_WBUF_32)		//!< EEPROM 24xx64 Init alias
 #define _24xx64_Init_Single()					I2CMEM_Init_Single(I2CMEM_64K, I2CMEM_WBUF_32)						//!< EEPROM 24xx64 Single Init alias
 
-#define _24xx32_Init(idx, hi2c, devAddress)		I2CMEM_Init(idx, hi2c, devAddress, I2CMEM_32K, I2CMEM_WBUF_64)		//!< EEPROM 24xx32 Init alias
-#define _24xx32_Init_Single()					I2CMEM_Init_Single(I2CMEM_32K, I2CMEM_WBUF_64)						//!< EEPROM 24xx32 Single Init alias
+#define _24xx128_Init(idx, hi2c, devAddress)	I2CMEM_Init(idx, hi2c, devAddress, I2CMEM_128K, I2CMEM_WBUF_64)		//!< EEPROM 24xx128 Init alias
+#define _24xx128_Init_Single()					I2CMEM_Init_Single(I2CMEM_128K, I2CMEM_WBUF_64)						//!< EEPROM 24xx128 Single Init alias
 
 #define _FM24C04_Init(idx, hi2c, devAddress)	I2CMEM_Init(idx, hi2c, devAddress, I2CMEM_4K, I2CMEM_WBUF_NONE)		//!< FRAM FM24C04 Init alias
 #define _FM24C04_Init_Single()					I2CMEM_Init_Single(I2CMEM_4K, I2CMEM_WBUF_NONE)						//!< FRAM FM24C04 Single Init alias

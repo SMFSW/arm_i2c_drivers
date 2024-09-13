@@ -23,7 +23,11 @@ SOFTWARE.
 ## v1.1
 
 * NCA9595: added
+* I2CMEM: fix use of STM HAL_I2C_IsDeviceReady (fix for eeprom devices) 
+* I2CMEM: components aliases update and fix
+* I2CMEM: I2CMEM_Mass_Erase change to select between page or buffer size transaction following device type
 * I2CMEM: fix I2CMEM_WP_GPIO_Set prototype (prototype was declared as a getter, not setter)
+* I2CMEM: fix 8bit registry size adressing (for component <= 16Kb)
 * PCA9952: base address fix
 * PCA9952: added (compatible with PCA9955)
 * PCA9xxx: all PCA9xxx refactored to share common definitions
@@ -31,7 +35,6 @@ SOFTWARE.
 * Check for address alignment in r/w word functions
 * No more check of r/w memory address (implicitly included in overflow check)
 * I2CMEM: EEPROM/FRAM Memories component added (compatible between EEPROM/FRAM, any protocol)
-* I2CMEM: fix 8bit registry size adressing (for component <= 16Kb)
 * MB85RC256V & FM24C: Few refactoring & reset to legacy use (only FRAM)
 * FM24C: R/W refactoring to allow operations on the whole chip, bank switching handled internally
 * Every components _hal structures are now hidden to user

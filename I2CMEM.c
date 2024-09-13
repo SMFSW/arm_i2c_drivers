@@ -19,8 +19,6 @@ static I2C_slave_t I2CMEM_hal[I2C_I2CMEM_NB];		//!< I2CMEM Slave structure
 
 I2CMEM_t I2CMEM[I2C_I2CMEM_NB] = { 0 };
 
-#define MAX_RETRIES		0xFFFFFFFFU				//!< Maximum number retries
-
 
 /****************************************************************/
 
@@ -33,7 +31,7 @@ FctERR NONNULL__ I2CMEM_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, 
 
 	I2C_PERIPHERAL_SET_DEFAULTS(I2CMEM, idx);
 
-	I2CMEM_hal[idx].cfg.mem_size = (size > I2CMEM16K_SIZE) ? I2C_16B_REG : I2C_8B_REG;
+	I2CMEM_hal[idx].cfg.mem_size = (size > 0x800) ? I2C_16B_REG : I2C_8B_REG;	// 8b register size for up to 2048 bytes, 16b otherwise
 
 	I2CMEM[idx].cfg.chip_size = size;						// Chip size
 	I2CMEM[idx].cfg.buf_size = buf_size ? buf_size : size;	// Write buffer size (typically 16 to 64 for EEPROM, no restriction for FRAM)
@@ -50,6 +48,32 @@ FctERR I2CMEM_Init_Single(const size_t size, const size_t buf_size) {
 
 
 /****************************************************************/
+
+/*!\brief I2C Test if device is ready for I2CMEM
+** \note Useful for EEPROM devices which have non-transparent write time to device (tests for 10ms max if device is ready)
+**
+** \param[in,out] hi2c - Pointer to I2C_HandleTypeDef structure
+** \param[in] slave_addr - I2C slave address to check
+** \return HAL_StatusTypeDef - HAL status
+**/
+static HAL_StatusTypeDef I2CMEM_IsDeviceReady(I2C_HandleTypeDef * hi2c, const uint8_t slave_addr)
+{
+	HAL_StatusTypeDef status;
+	const uint32_t tickstart = HALTicks();
+
+	do
+	{
+		status = HAL_I2C_IsDeviceReady(hi2c, slave_addr, 0xFFFFFFFFU, 2);	// Max retries and 2ms timeout (in case device is not connected)
+
+		if (status == HAL_OK)
+		{
+			break;
+		}
+	}
+	while (TPSINF_MS(tickstart, 10));	// 10ms timeout (test for write completion of eeprom area, around 5ms)
+
+	return status;
+}
 
 
 /*!\brief I2C Bank Write function for I2CMEM
@@ -75,7 +99,7 @@ static FctERR NONNULL__ I2CMEM_Write_Page(I2CMEM_t * const pCpnt, const uint8_t 
 
 	I2C_set_busy(pSlave, true);
 
-	pSlave->status = HAL_I2C_IsDeviceReady(pSlave->cfg.bus_inst, i2c_addr, MAX_RETRIES, 10);	// Max retries with a timeout of 10ms
+	pSlave->status = I2CMEM_IsDeviceReady(pSlave->cfg.bus_inst, i2c_addr);
 	if (pSlave->status == HAL_OK)
 	{
 		pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, i2c_addr, mem_addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
@@ -109,7 +133,7 @@ static FctERR NONNULL__ I2CMEM_Read_Page(I2CMEM_t * const pCpnt, uint8_t * data,
 
 	I2C_set_busy(pSlave, true);
 
-	pSlave->status = HAL_I2C_IsDeviceReady(pSlave->cfg.bus_inst, i2c_addr, MAX_RETRIES, 10);	// Max retries with a timeout of 10ms
+	pSlave->status = I2CMEM_IsDeviceReady(pSlave->cfg.bus_inst, i2c_addr);
 	if (pSlave->status == HAL_OK)
 	{
 		pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, i2c_addr, mem_addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);

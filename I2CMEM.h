@@ -34,9 +34,7 @@
 #define I2CMEM_BASE_ADDR		0x50		//!< I2CMEM Base address
 #endif
 
-#define	I2CMEM_BANK_SIZE		0x100		//!< I2CMEM bank size (in bytes)
-
-#define	I2CMEM16K_SIZE			0x800		//!< I2CMEM 16Kb size (in bytes)
+#define	I2CMEM_BANK_SIZE		0x100		//!< I2CMEM bank size (in bytes) for <=16Kb devices
 
 
 // *****************************************************************************

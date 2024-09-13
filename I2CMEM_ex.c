@@ -19,12 +19,15 @@ FctERR NONNULL__ I2CMEM_Mass_Erase(I2CMEM_t * const pCpnt)
 	uint8_t	array[I2CMEM_BANK_SIZE];
 	memset(array, I2CMEM_CLR_VAL, sizeof(array));
 
-	for (uintCPU_t i = 0 ; i < (pCpnt->cfg.chip_size / sizeof(array)) ; i++)
+	// Choose between bank size and buffer size for iterations (FRAM vs EEPROM)
+	const size_t wr_size = (pCpnt->cfg.buf_size == I2CMEM_WBUF_NONE) ? I2CMEM_BANK_SIZE : pCpnt->cfg.buf_size;
+
+	for (uintCPU_t i = 0 ; i < (pCpnt->cfg.chip_size / wr_size) ; i++)
 	{
 		#if defined(HAL_IWDG_MODULE_ENABLED)
 			HAL_IWDG_Refresh(&hiwdg);
 		#endif
-		err = I2CMEM_Write(pCpnt, array, i * sizeof(array), sizeof(array));
+		err = I2CMEM_Write(pCpnt, array, i * wr_size, wr_size);
 		if (err) { break; }
 	}
 
