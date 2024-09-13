@@ -9,7 +9,7 @@ var searchData=
   ['manufacturerid_6',['ManufacturerID',['../d1/d02/unionu_m_c_p9808___r_e_g___m_a_p.html#a4451e059c30652213bd45144e1eea6f6',1,'uMCP9808_REG_MAP']]],
   ['master_20alt_20build_20status_20a_7',['ARM I2C drivers &lt;a href=&quot;https://app.travis-ci.com/SMFSW/arm_i2c_drivers&quot; &gt;&lt;img src=&quot;https://app.travis-ci.com/SMFSW/arm_i2c_drivers.svg?branch=master&quot; alt=&quot;Build Status&quot;/&gt;&lt;/a&gt;',['../index.html',1,'']]],
   ['mat_8',['mat',['../dc/ded/struct_a_p_d_s9960__t.html#a7a450e4def0ef4dd35ac2621a51524a2',1,'APDS9960_t::mat'],['../d3/d18/struct_t_c_s3400__t.html#a21024cd0e3215ed723127cfe3ce4a2cc',1,'TCS3400_t::mat'],['../d8/d5b/struct_t_c_s3472__t.html#a5fdd82870a8ee1f5b79e6e40c4a485af',1,'TCS3472_t::mat']]],
-  ['max_5fretries_9',['MAX_RETRIES',['../da/d47/_f_m24_c_8c.html#aecf13b8dc783db2202ca5c34fe117fc3',1,'MAX_RETRIES:&#160;FM24C.c'],['../d6/d1b/_i2_c_m_e_m_8c.html#aecf13b8dc783db2202ca5c34fe117fc3',1,'MAX_RETRIES:&#160;I2CMEM.c']]],
+  ['max_5fretries_9',['MAX_RETRIES',['../da/d47/_f_m24_c_8c.html#aecf13b8dc783db2202ca5c34fe117fc3',1,'FM24C.c']]],
   ['max_5frx_10',['max_rx',['../d5/d63/struct_m_t_c_h6102__t.html#a6416515e8c2d2f9545ddabb4df151cb0',1,'MTCH6102_t']]],
   ['max_5fspeed_11',['max_speed',['../df/df6/struct_i2_c__slave__t.html#aa7eba0e5eb6f7be8cef3ada286534bf4',1,'I2C_slave_t']]],
   ['max_5ftx_12',['max_tx',['../d5/d63/struct_m_t_c_h6102__t.html#ab13cde0f3d9a05f0f1a5ec6f1c333092',1,'MTCH6102_t']]],
