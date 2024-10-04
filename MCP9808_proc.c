@@ -17,8 +17,8 @@
 
 MCP9808_t MCP9808[I2C_MCP9808_NB] = { 0 };
 
-static uint8_t MCP9808_conv_time[4] = { 30, 65, 130, 250 };						//!< Conversion times for MCP9808
-static float MCP9808_resolution_steps[4] = { 0.5f, 0.25f, 0.125f, 0.0625f };	//!< Resolution steps for MCP9808
+static const uint8_t MCP9808_conv_time[4] = { 30, 65, 130, 250 };					//!< Conversion times for MCP9808
+static const float MCP9808_resolution_steps[4] = { 0.5f, 0.25f, 0.125f, 0.0625f };	//!< Resolution steps for MCP9808
 
 
 /****************************************************************/
@@ -139,11 +139,10 @@ __WEAK FctERR NONNULL__ MCP9808_handler(MCP9808_t * const pCpnt)
 {
 	FctERR	err = ERROR_NOTAVAIL;	// In case no new data available
 
-	if (TPSSUP_MS(pCpnt->hLast, MCP9808_conv_time[pCpnt->cfg.Resolution]))	{ pCpnt->NewData = true; }
+	if ((!pCpnt->NewData) && TPSSUP_MS(pCpnt->hLast, MCP9808_conv_time[pCpnt->cfg.Resolution]))	{ pCpnt->NewData = true; }
 
 	if (pCpnt->NewData)
 	{
-
 		err = MCP9808_Get_Temperature(pCpnt, 0);
 		if (err)	{ return err; }
 
@@ -166,7 +165,11 @@ __WEAK FctERR NONNULL__ MCP9808_handler_it(MCP9808_t * const pCpnt)
 	bool	interrupt;
 
 	err = MCP9808_Alert_GPIO_Get(pCpnt, &interrupt);
-	if ((!err) && interrupt)	{ err = MCP9808_handler(pCpnt); }
+	if ((!err) && interrupt)
+	{
+		pCpnt->NewData = true;
+		err = MCP9808_handler(pCpnt);
+	}
 
 	return err;
 }
