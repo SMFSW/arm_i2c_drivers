@@ -2432,6 +2432,7 @@ PREDEFINED             = DOXY=1 \
                          I2C_S11059=&hi2c \
                          I2C_TCS3400=&hi2c \
                          I2C_TCS3472=&hi2c \
+                         I2C_TMP1075=&hi2c \
                          I2C_TSL2591=&hi2c \
                          __INLINE=inline \
                          "__STATIC_INLINE=static inline" \

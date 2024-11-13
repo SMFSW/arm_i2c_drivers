@@ -22,6 +22,7 @@ SOFTWARE.
 
 ## v1.1
 
+* TMP1075: added
 * NCA9595: added
 * I2CMEM: fix use of STM HAL_I2C_IsDeviceReady (fix for eeprom devices) 
 * I2CMEM: components aliases update and fix

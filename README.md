@@ -127,6 +127,9 @@ Please keep in mind some components are somewhat custom and needs to be accesses
 - **TCS3472**: Color light-to-digital converter with IR filter
   - **STATUS**: DONE (TODO: auto-integration & persistence in the works)
 
+- **TMP1075**: Temperature Sensor With I2C and SMBus Interface in Industry Standard LM75 Form Factor and Pinout
+  - **STATUS**: In progress
+
 - **TSL2591**: Very-high sensitivity light-to-digital converter
   - **STATUS**: DONE (TODO: auto-integration & persistence in the works)
 
