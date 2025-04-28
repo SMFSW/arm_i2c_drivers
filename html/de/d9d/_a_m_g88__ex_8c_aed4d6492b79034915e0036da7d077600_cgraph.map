@@ -1,5 +1,0 @@
-<map id="AMG88_INT_GPIO_Get" name="AMG88_INT_GPIO_Get">
-<area shape="rect" id="Node000001" title="Interrupt GPIO pin getter for AMG88." alt="" coords="5,5,168,32"/>
-<area shape="rect" id="Node000002" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter." alt="" coords="216,5,386,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,16,201,16,201,21,168,21"/>
-</map>

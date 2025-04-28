@@ -2,9 +2,9 @@
 <area shape="rect" id="Node000001" title="Handler for PCF8523 peripheral GPIO interrupt." alt="" coords="5,81,145,108"/>
 <area shape="rect" id="Node000002" href="$d4/ded/_p_c_f8523__proc_8c.html#a0c61d7181df53ea43460c13575563e92" title="Handler for PCF8523 peripheral." alt="" coords="220,31,346,57"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,78,210,59,212,64,134,83"/>
-<area shape="rect" id="Node000010" href="$df/d5c/_p_c_f8523__ex_8c.html#a9ea1402e7007951c1871925ebe86b9e7" title="Interrupt 1 GPIO pin getter for PCF8523." alt="" coords="193,81,373,108"/>
+<area shape="rect" id="Node000010" href="$df/d5c/_p_c_f8523__ex_8c.html#ab3f31d0bc1e3015a5b0da85ef33b6d8d" title="Interrupt 1 GPIO pin getter for PCF8523." alt="" coords="193,81,373,108"/>
 <area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="145,92,178,92,178,97,145,97"/>
-<area shape="rect" id="Node000012" href="$df/d5c/_p_c_f8523__ex_8c.html#ae5d7a8cc7ee3d3d55f181a98ea75d451" title="Interrupt 2 GPIO pin getter for PCF8523." alt="" coords="193,132,373,159"/>
+<area shape="rect" id="Node000012" href="$df/d5c/_p_c_f8523__ex_8c.html#afbe322665374102b1b12725f5c0dfb8d" title="Interrupt 2 GPIO pin getter for PCF8523." alt="" coords="193,132,373,159"/>
 <area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="134,106,212,125,210,130,132,111"/>
 <area shape="rect" id="Node000003" href="$d4/ded/_p_c_f8523__proc_8c.html#a902d6eaca52b0245f92b1817ff01637a" title=" " alt="" coords="437,5,576,32"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="345,34,421,26,422,31,346,40"/>
@@ -16,12 +16,12 @@
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="814,28,847,32,846,37,813,33"/>
 <area shape="rect" id="Node000006" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="1024,5,1135,32"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="976,32,1009,27,1010,32,977,38"/>
-<area shape="rect" id="Node000007" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="1029,56,1131,83"/>
+<area shape="rect" id="Node000007" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="1029,56,1131,83"/>
 <area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="977,50,1014,56,1013,62,976,56"/>
 <area shape="rect" id="Node000009" href="$d1/d30/_p_c_f8523__ex_8h.html#ae2c8370ad357db3869fd42d64d0320d3" title=" " alt="" coords="639,56,814,83"/>
 <area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="577,67,624,67,624,72,577,72"/>
 <area shape="poly" id="edge9_Node000009_Node000005" title=" " alt="" coords="813,55,846,51,847,56,814,60"/>
-<area shape="rect" id="Node000011" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter." alt="" coords="421,119,591,145"/>
+<area shape="rect" id="Node000011" href="$d2/de1/_i2_c__peripheral_8c.html#a2d6c3bfd88f0d7700d7b2bb8b6f97c29" title="I2C peripheral GPIO pin getter." alt="" coords="421,119,591,145"/>
 <area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="367,106,408,113,407,118,366,111"/>
 <area shape="poly" id="edge13_Node000012_Node000011" title=" " alt="" coords="373,137,406,135,406,141,373,143"/>
 </map>

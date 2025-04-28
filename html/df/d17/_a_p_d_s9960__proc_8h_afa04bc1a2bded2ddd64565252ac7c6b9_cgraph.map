@@ -12,7 +12,7 @@
 <area shape="poly" id="edge10_Node000002_Node000009" title=" " alt="" coords="300,110,342,135,393,159,415,166,413,171,391,164,340,140,297,115"/>
 <area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="683,5,795,32"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="561,16,668,16,668,21,561,21"/>
-<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="874,87,976,113"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="874,87,976,113"/>
 <area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="561,28,860,85,859,90,560,33"/>
 <area shape="rect" id="Node000007" href="$db/db1/_a_p_d_s9960_8c.html#a4c742bdee878751bcf0fd6df2e076e1d" title="I2C Special function Write function for APDS9960." alt="" coords="652,112,826,139"/>
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="560,81,665,106,664,111,558,86"/>

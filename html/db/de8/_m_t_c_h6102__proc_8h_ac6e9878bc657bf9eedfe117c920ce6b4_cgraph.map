@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title="Handler for MTCH6102 peripheral GPIO interrupt." alt="" coords="5,199,157,225"/>
 <area shape="rect" id="Node000002" href="$d2/d60/_m_t_c_h6102__proc_8c.html#a342679a8eaa19001a2d661ca14c50139" title="Handler for MTCH6102 peripheral." alt="" coords="229,148,366,175"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,195,223,176,224,181,142,201"/>
-<area shape="rect" id="Node000011" href="$d4/d5d/_m_t_c_h6102__ex_8c.html#ae6f4b02f3f49114cef624c0afb4b7f4e" title="Interrupt GPIO pin getter for MTCH6102." alt="" coords="205,224,390,251"/>
+<area shape="rect" id="Node000011" href="$d4/d5d/_m_t_c_h6102__ex_8c.html#a090b67a1c002dbf27745aa5765ddc816" title="Interrupt GPIO pin getter for MTCH6102." alt="" coords="205,224,390,251"/>
 <area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="157,218,190,222,189,227,157,224"/>
 <area shape="rect" id="Node000003" href="$d2/d60/_m_t_c_h6102__proc_8c.html#a6c8c05288ed1e532bb558523a8a6cbf1" title="Decode raw MTCH6102 datas to touch datas." alt="" coords="439,5,615,48"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="313,146,366,104,437,58,448,52,450,57,439,62,369,108,316,150"/>
@@ -18,9 +18,9 @@
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="604,194,650,200,649,205,603,199"/>
 <area shape="rect" id="Node000008" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="839,173,950,200"/>
 <area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="790,200,824,195,825,200,791,205"/>
-<area shape="rect" id="Node000009" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="843,224,946,251"/>
+<area shape="rect" id="Node000009" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="843,224,946,251"/>
 <area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="791,219,829,225,828,230,790,224"/>
 <area shape="poly" id="edge10_Node000010_Node000007" title=" " alt="" coords="602,225,649,219,650,224,603,230"/>
-<area shape="rect" id="Node000012" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter." alt="" coords="442,275,612,301"/>
+<area shape="rect" id="Node000012" href="$d2/de1/_i2_c__peripheral_8c.html#a2d6c3bfd88f0d7700d7b2bb8b6f97c29" title="I2C peripheral GPIO pin getter." alt="" coords="442,275,612,301"/>
 <area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="362,249,450,268,449,274,361,254"/>
 </map>

@@ -15,7 +15,7 @@
 <area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="389,30,425,42,450,54,473,67,485,72,482,77,471,72,447,58,423,46,388,35"/>
 <area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="635,31,747,57"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="588,41,620,41,620,47,588,47"/>
-<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="640,81,742,108"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="640,81,742,108"/>
 <area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="576,55,633,74,632,79,574,61"/>
 <area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="574,78,632,60,633,65,576,83"/>
 <area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="587,92,625,92,625,97,587,97"/>

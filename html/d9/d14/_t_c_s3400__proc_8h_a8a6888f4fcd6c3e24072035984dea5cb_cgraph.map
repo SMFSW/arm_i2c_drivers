@@ -18,7 +18,7 @@
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="389,67,472,67,472,72,389,72"/>
 <area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="857,157,968,184"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="596,81,848,150,847,156,595,86"/>
-<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="861,95,964,121"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="861,95,964,121"/>
 <area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="602,73,847,99,847,104,601,78"/>
 <area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="373,30,472,52,471,57,371,35"/>
 <area shape="rect" id="Node000008" href="$d4/d1b/_t_c_s3400_8c.html#a74d4e0aa8eb8d69af81660a1ef13ed77" title="I2C Write function for TCS3400." alt="" coords="695,183,809,209"/>

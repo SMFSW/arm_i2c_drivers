@@ -1,0 +1,9 @@
+<map id="TMP1075_Read_Config" name="TMP1075_Read_Config">
+<area shape="rect" id="Node000001" title="Get TMP1075 Configuration." alt="" coords="5,31,166,57"/>
+<area shape="rect" id="Node000002" href="$dc/de8/_t_m_p1075_8c.html#afce0618a72e7e0685f5ee4ea26ced774" title="I2C Read function for TMP1075." alt="" coords="214,31,363,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,41,198,41,198,47,166,47"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="411,5,522,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="363,31,396,26,397,31,364,36"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="416,56,518,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="364,52,401,57,400,63,363,57"/>
+</map>

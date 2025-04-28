@@ -14,7 +14,7 @@
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="367,27,400,31,399,37,366,32"/>
 <area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="573,31,685,57"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="526,41,559,41,559,47,526,47"/>
-<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="578,81,680,108"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="578,81,680,108"/>
 <area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="515,55,572,74,570,79,513,61"/>
 <area shape="rect" id="Node000007" href="$d2/d68/_t_s_l2591_8c.html#a699af3f63ff4020758ff5773dbcd683c" title="I2C Write function for TSL2591." alt="" coords="415,81,525,108"/>
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="356,76,400,82,400,87,356,81"/>

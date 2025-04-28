@@ -1,8 +1,8 @@
 <map id="MB85RC256V_Init" name="MB85RC256V_Init">
 <area shape="rect" id="Node000001" title="Initialization for MB85RC256V peripheral." alt="" coords="5,56,136,83"/>
-<area shape="rect" id="Node000002" href="$d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state." alt="" coords="225,5,338,32"/>
+<area shape="rect" id="Node000002" href="$d6/dd6/_i2_c__component_8h.html#ac9ab24744488fa13554e3cf162d5cd54" title="Set I2C Slave device disabled/enabled state." alt="" coords="225,5,338,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,53,210,33,211,38,130,58"/>
-<area shape="rect" id="Node000003" href="$d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization." alt="" coords="229,56,334,83"/>
+<area shape="rect" id="Node000003" href="$d7/d97/_i2_c__component_8c.html#ab96b16a3fe13866cbe4b1da8ff7f5b8c" title="I2C Slave device initialization." alt="" coords="229,56,334,83"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="136,67,214,67,214,72,136,72"/>
 <area shape="rect" id="Node000004" href="$d4/dc8/_m_b85_r_c256_v__proc_8c.html#aa7a9dc1481a17a900490a1988c15de87" title="Initialization Sequence for MB85RC256V peripheral." alt="" coords="184,107,379,133"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="130,81,209,100,208,105,129,86"/>

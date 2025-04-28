@@ -1,44 +1,47 @@
 <map id="MCP9808_Read" name="MCP9808_Read">
-<area shape="rect" id="Node000001" title="I2C Read function for MCP9808." alt="" coords="1152,132,1269,159"/>
-<area shape="rect" id="Node000002" href="$de/deb/_m_c_p9808__proc_8c.html#aa41e5cef9ce0a263279ae621df539601" title="Get the high/low/crit Alert temperature." alt="" coords="907,5,1081,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1188,122,1151,83,1128,63,1103,46,1076,35,1078,30,1105,42,1131,59,1155,79,1192,119"/>
-<area shape="rect" id="Node000003" href="$df/d2f/_m_c_p9808__ex_8h.html#a74f3a6383e7e33937954cd7ec8021383" title="Get MCP9808 chip ID." alt="" coords="916,56,1072,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1171,127,1103,97,1065,86,1066,81,1105,92,1173,122"/>
-<area shape="rect" id="Node000007" href="$df/d2f/_m_c_p9808__ex_8h.html#a98b9daae17aa1581ffcc8adc812c19fe" title="Get MCP9808 Manufacturer ID." alt="" coords="892,107,1096,133"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1137,139,1096,135,1097,129,1137,134"/>
-<area shape="rect" id="Node000008" href="$df/d47/_m_c_p9808__ex_8c.html#afe97057ed9eb29c7c3aee68e2b32d772" title="Get MCP9808 Resolution." alt="" coords="906,157,1082,184"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="1137,157,1083,163,1082,158,1137,151"/>
-<area shape="rect" id="Node000009" href="$df/d2f/_m_c_p9808__ex_8h.html#a21eb0466632ccc997f8304a06e8efa07" title="Get MCP9808 Configuration." alt="" coords="884,208,1104,235"/>
-<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="1173,168,1105,199,1066,210,1065,205,1103,193,1171,163"/>
-<area shape="rect" id="Node000015" href="$df/d2f/_m_c_p9808__ex_8h.html#a3072a0c89b8b0600ee437c8aea5392e1" title="Get MCP9808 Configuration." alt="" coords="913,271,1075,297"/>
-<area shape="poly" id="edge15_Node000001_Node000015" title=" " alt="" coords="1191,172,1154,211,1105,249,1052,272,1050,268,1103,244,1150,207,1187,168"/>
-<area shape="rect" id="Node000004" href="$de/deb/_m_c_p9808__proc_8c.html#acdc3fcd27aee6d19c3e7fb7bf4762b47" title="Initialization Sequence of the MCP9808 peripheral." alt="" coords="649,75,819,101"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="901,79,819,85,819,79,901,73"/>
-<area shape="rect" id="Node000005" href="$df/d8e/_m_c_p9808_8c.html#a92276c5da93fdb59cc4d94ef92761841" title="Initialization of the MCP9808 peripheral." alt="" coords="446,75,550,101"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="635,91,551,91,551,85,635,85"/>
-<area shape="rect" id="Node000006" href="$df/d8e/_m_c_p9808_8c.html#a9ffcff895e9844967086a52af6c82dd4" title="Initialization for MCP9808 peripheral." alt="" coords="216,75,364,101"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="431,91,364,91,364,85,431,85"/>
-<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="877,108,819,101,819,96,877,103"/>
-<area shape="rect" id="Node000010" href="$de/deb/_m_c_p9808__proc_8c.html#ad446802e702cb0e7e926b9f02d4cb069" title="Get the temperature." alt="" coords="641,144,827,171"/>
-<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="916,207,883,199,835,185,791,174,792,169,836,180,884,193,917,202"/>
-<area shape="rect" id="Node000011" href="$de/deb/_m_c_p9808__proc_8c.html#a21a5213bef06c833d59b6053be862c6b" title="Handler for MCP9808 peripheral." alt="" coords="434,144,562,171"/>
-<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="626,160,563,160,563,155,626,155"/>
-<area shape="rect" id="Node000012" href="$d6/d5e/_m_c_p9808__proc_8h.html#a80ec245d8846d77a209b2c1d67f436df" title="Handler for all MCP9808 peripherals." alt="" coords="216,135,364,161"/>
-<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="419,156,364,154,365,149,419,151"/>
-<area shape="rect" id="Node000013" href="$de/deb/_m_c_p9808__proc_8c.html#a366a4d5c21eefda7d12af3bdcf800a11" title="Handler for MCP9808 peripheral GPIO interrupt." alt="" coords="219,185,361,212"/>
-<area shape="poly" id="edge13_Node000011_Node000013" title=" " alt="" coords="420,176,361,187,360,182,419,170"/>
-<area shape="rect" id="Node000014" href="$d6/d5e/_m_c_p9808__proc_8h.html#a07f88cc900aba5f4bb109f76f7c26a28" title="Handler for all MCP9808 peripherals GPIO interrupt." alt="" coords="5,185,168,212"/>
-<area shape="poly" id="edge14_Node000013_Node000014" title=" " alt="" coords="204,201,168,201,168,196,204,196"/>
-<area shape="rect" id="Node000016" href="$df/d47/_m_c_p9808__ex_8c.html#a9f92d8737d843cee1af9a14f0d6f3417" title="Set MCP9808 alert hysteresis." alt="" coords="632,195,836,221"/>
-<area shape="poly" id="edge16_Node000015_Node000016" title=" " alt="" coords="938,268,835,236,793,225,794,219,836,231,939,263"/>
-<area shape="rect" id="Node000017" href="$df/d47/_m_c_p9808__ex_8c.html#a2ed5f4eabea394a30aee6d4323c97f34" title="Set MCP9808 alert lock." alt="" coords="650,245,818,272"/>
-<area shape="poly" id="edge17_Node000015_Node000017" title=" " alt="" coords="897,277,818,270,819,264,898,272"/>
-<area shape="rect" id="Node000018" href="$df/d47/_m_c_p9808__ex_8c.html#ac6fe701c571bef6c89df381b6c80b9ee" title="Set MCP9808 alert enable." alt="" coords="644,296,824,323"/>
-<area shape="poly" id="edge18_Node000015_Node000018" title=" " alt="" coords="898,296,824,303,824,298,898,291"/>
-<area shape="rect" id="Node000019" href="$df/d47/_m_c_p9808__ex_8c.html#aa1810352aafc728c4d708da97ec4faab" title="Set MCP9808 alert type." alt="" coords="650,347,818,373"/>
-<area shape="poly" id="edge19_Node000015_Node000019" title=" " alt="" coords="939,305,836,337,794,349,793,343,835,332,938,300"/>
-<area shape="rect" id="Node000020" href="$df/d47/_m_c_p9808__ex_8c.html#a719e116d062eee249034714fe1acf1cc" title="Write MCP9808 configuration." alt="" coords="662,397,806,424"/>
-<area shape="poly" id="edge20_Node000015_Node000020" title=" " alt="" coords="965,309,908,349,837,388,804,399,802,394,835,383,905,344,962,304"/>
-<area shape="rect" id="Node000021" href="$de/deb/_m_c_p9808__proc_8c.html#a6d1f43041e42560f4f907a8cb24aab26" title="Set the high/low/crit Alert temperature." alt="" coords="412,397,584,424"/>
-<area shape="poly" id="edge21_Node000020_Node000021" title=" " alt="" coords="647,413,585,413,585,408,647,408"/>
+<area shape="rect" id="Node000001" title="I2C Read function for MCP9808." alt="" coords="1152,156,1269,183"/>
+<area shape="rect" id="Node000002" href="$de/deb/_m_c_p9808__proc_8c.html#aa41e5cef9ce0a263279ae621df539601" title="Get the high/low/crit Alert temperature." alt="" coords="907,29,1081,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1188,146,1151,107,1128,87,1103,70,1076,59,1078,54,1105,66,1131,83,1155,103,1192,143"/>
+<area shape="rect" id="Node000003" href="$df/d2f/_m_c_p9808__ex_8h.html#a74f3a6383e7e33937954cd7ec8021383" title="Get MCP9808 chip ID." alt="" coords="916,80,1072,107"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="1171,151,1103,121,1065,110,1066,105,1105,116,1173,146"/>
+<area shape="rect" id="Node000007" href="$df/d2f/_m_c_p9808__ex_8h.html#a98b9daae17aa1581ffcc8adc812c19fe" title="Get MCP9808 Manufacturer ID." alt="" coords="892,131,1096,157"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="1137,163,1096,159,1097,153,1137,158"/>
+<area shape="rect" id="Node000008" href="$df/d47/_m_c_p9808__ex_8c.html#afe97057ed9eb29c7c3aee68e2b32d772" title="Get MCP9808 Resolution." alt="" coords="906,181,1082,208"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="1137,181,1083,187,1082,182,1137,175"/>
+<area shape="rect" id="Node000009" href="$df/d2f/_m_c_p9808__ex_8h.html#a21eb0466632ccc997f8304a06e8efa07" title="Get MCP9808 Configuration." alt="" coords="884,232,1104,259"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="1173,192,1105,223,1066,234,1065,229,1103,217,1171,187"/>
+<area shape="rect" id="Node000015" href="$df/d2f/_m_c_p9808__ex_8h.html#a3072a0c89b8b0600ee437c8aea5392e1" title="Get MCP9808 Configuration." alt="" coords="913,295,1075,321"/>
+<area shape="poly" id="edge18_Node000001_Node000015" title=" " alt="" coords="1191,196,1154,235,1105,273,1052,296,1050,292,1103,268,1150,231,1187,192"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="1032,17,1019,11,994,8,971,10,959,15,956,20,962,27,957,30,951,21,955,11,970,5,994,3,1021,5,1034,13"/>
+<area shape="rect" id="Node000004" href="$de/deb/_m_c_p9808__proc_8c.html#acdc3fcd27aee6d19c3e7fb7bf4762b47" title="Initialization Sequence of the MCP9808 peripheral." alt="" coords="649,99,819,125"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="901,103,819,109,819,103,901,97"/>
+<area shape="rect" id="Node000005" href="$df/d8e/_m_c_p9808_8c.html#a92276c5da93fdb59cc4d94ef92761841" title="Initialization of the MCP9808 peripheral." alt="" coords="446,99,550,125"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="635,115,551,115,551,109,635,109"/>
+<area shape="rect" id="Node000006" href="$df/d8e/_m_c_p9808_8c.html#a9ffcff895e9844967086a52af6c82dd4" title="Initialization for MCP9808 peripheral." alt="" coords="216,99,364,125"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="431,115,364,115,364,109,431,109"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="877,132,819,125,819,120,877,127"/>
+<area shape="rect" id="Node000010" href="$de/deb/_m_c_p9808__proc_8c.html#ad446802e702cb0e7e926b9f02d4cb069" title="Get the temperature." alt="" coords="641,188,827,215"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="896,232,816,218,817,213,897,226"/>
+<area shape="poly" id="edge12_Node000010_Node000010" title=" " alt="" coords="776,176,762,169,734,167,709,169,696,173,693,179,699,186,694,189,687,179,692,169,708,163,734,161,764,164,778,172"/>
+<area shape="rect" id="Node000011" href="$de/deb/_m_c_p9808__proc_8c.html#a21a5213bef06c833d59b6053be862c6b" title="Handler for MCP9808 peripheral." alt="" coords="434,188,562,215"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="626,204,563,204,563,199,626,199"/>
+<area shape="rect" id="Node000012" href="$d6/d5e/_m_c_p9808__proc_8h.html#a80ec245d8846d77a209b2c1d67f436df" title="Handler for all MCP9808 peripherals." alt="" coords="216,179,364,205"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="419,200,364,198,365,193,419,195"/>
+<area shape="rect" id="Node000013" href="$de/deb/_m_c_p9808__proc_8c.html#a366a4d5c21eefda7d12af3bdcf800a11" title="Handler for MCP9808 peripheral GPIO interrupt." alt="" coords="219,229,361,256"/>
+<area shape="poly" id="edge16_Node000011_Node000013" title=" " alt="" coords="420,220,361,231,360,226,419,214"/>
+<area shape="poly" id="edge15_Node000012_Node000012" title=" " alt="" coords="325,167,314,160,290,157,269,159,257,164,254,169,260,177,255,180,249,170,253,160,267,154,290,152,315,155,328,162"/>
+<area shape="rect" id="Node000014" href="$d6/d5e/_m_c_p9808__proc_8h.html#a07f88cc900aba5f4bb109f76f7c26a28" title="Handler for all MCP9808 peripherals GPIO interrupt." alt="" coords="5,229,168,256"/>
+<area shape="poly" id="edge17_Node000013_Node000014" title=" " alt="" coords="204,245,168,245,168,240,204,240"/>
+<area shape="rect" id="Node000016" href="$df/d47/_m_c_p9808__ex_8c.html#a9f92d8737d843cee1af9a14f0d6f3417" title="Set MCP9808 alert hysteresis." alt="" coords="632,239,836,265"/>
+<area shape="poly" id="edge19_Node000015_Node000016" title=" " alt="" coords="913,294,799,269,800,263,915,288"/>
+<area shape="rect" id="Node000017" href="$df/d47/_m_c_p9808__ex_8c.html#a2ed5f4eabea394a30aee6d4323c97f34" title="Set MCP9808 alert lock." alt="" coords="650,289,818,316"/>
+<area shape="poly" id="edge20_Node000015_Node000017" title=" " alt="" coords="898,309,819,307,819,302,898,303"/>
+<area shape="rect" id="Node000018" href="$df/d47/_m_c_p9808__ex_8c.html#ac6fe701c571bef6c89df381b6c80b9ee" title="Set MCP9808 alert enable." alt="" coords="644,340,824,367"/>
+<area shape="poly" id="edge21_Node000015_Node000018" title=" " alt="" coords="899,327,815,342,814,337,899,322"/>
+<area shape="rect" id="Node000019" href="$df/d47/_m_c_p9808__ex_8c.html#aa1810352aafc728c4d708da97ec4faab" title="Set MCP9808 alert type." alt="" coords="650,391,818,417"/>
+<area shape="poly" id="edge22_Node000015_Node000019" title=" " alt="" coords="954,331,899,356,837,381,799,393,797,387,835,376,897,351,952,326"/>
+<area shape="rect" id="Node000020" href="$df/d47/_m_c_p9808__ex_8c.html#a719e116d062eee249034714fe1acf1cc" title="Write MCP9808 configuration." alt="" coords="662,441,806,468"/>
+<area shape="poly" id="edge23_Node000015_Node000020" title=" " alt="" coords="970,334,912,383,876,410,837,432,807,443,805,438,835,427,873,405,909,379,967,330"/>
+<area shape="rect" id="Node000021" href="$de/deb/_m_c_p9808__proc_8c.html#a6d1f43041e42560f4f907a8cb24aab26" title="Set the high/low/crit Alert temperature." alt="" coords="412,441,584,468"/>
+<area shape="poly" id="edge24_Node000020_Node000021" title=" " alt="" coords="647,457,585,457,585,452,647,452"/>
 </map>

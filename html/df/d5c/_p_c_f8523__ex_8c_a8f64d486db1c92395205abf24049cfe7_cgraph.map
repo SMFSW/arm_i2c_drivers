@@ -1,0 +1,5 @@
+<map id="PCF8523_INT2_GPIO_Init" name="PCF8523_INT2_GPIO_Init">
+<area shape="rect" id="Node000001" title="Interrupt 2 GPIO pin init for PCF8523." alt="" coords="5,5,183,32"/>
+<area shape="rect" id="Node000002" href="$d2/de1/_i2_c__peripheral_8c.html#a9802a0637548ab6cf5a7d5fb3366a3fb" title="I2C peripheral GPIO pin init." alt="" coords="231,5,400,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,16,216,16,216,21,183,21"/>
+</map>

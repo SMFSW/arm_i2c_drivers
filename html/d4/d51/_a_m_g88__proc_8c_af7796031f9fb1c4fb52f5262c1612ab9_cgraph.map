@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title="Handler for AMG88 peripheral GPIO interrupt." alt="" coords="5,183,134,209"/>
 <area shape="rect" id="Node000002" href="$d4/d51/_a_m_g88__proc_8c.html#a62fe3d2635671c55964528913f803c61" title="Handler for AMG88 peripheral." alt="" coords="206,132,320,159"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,179,195,160,196,165,124,185"/>
-<area shape="rect" id="Node000010" href="$de/d9d/_a_m_g88__ex_8c.html#aed4d6492b79034915e0036da7d077600" title="Interrupt GPIO pin getter for AMG88." alt="" coords="182,208,344,235"/>
+<area shape="rect" id="Node000010" href="$de/d9d/_a_m_g88__ex_8c.html#a34e447f049a6088f3f33c37e3c506307" title="Interrupt GPIO pin getter for AMG88." alt="" coords="182,208,344,235"/>
 <area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="135,202,167,206,167,211,134,207"/>
 <area shape="rect" id="Node000003" href="$de/d9d/_a_m_g88__ex_8c.html#ad4ddfc0af387e78a4ee3ca53585239e2" title="Convert raw pixel temperature to celsius degrees." alt="" coords="409,157,597,184"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="321,149,394,157,393,162,320,154"/>
@@ -16,11 +16,11 @@
 <area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="279,129,327,95,358,76,391,62,458,42,526,29,647,17,647,23,527,34,459,47,393,66,361,81,330,99,282,134"/>
 <area shape="rect" id="Node000006" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="813,5,924,32"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="756,53,811,35,812,40,757,58"/>
-<area shape="rect" id="Node000007" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="817,56,920,83"/>
+<area shape="rect" id="Node000007" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="817,56,920,83"/>
 <area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="765,67,803,67,803,72,765,72"/>
 <area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="561,103,646,83,648,88,562,109"/>
 <area shape="poly" id="edge10_Node000009_Node000006" title=" " alt="" coords="765,16,798,16,798,21,765,21"/>
 <area shape="poly" id="edge11_Node000009_Node000007" title=" " alt="" coords="757,30,812,48,811,53,756,35"/>
-<area shape="rect" id="Node000011" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter." alt="" coords="418,259,588,285"/>
+<area shape="rect" id="Node000011" href="$d2/de1/_i2_c__peripheral_8c.html#a2d6c3bfd88f0d7700d7b2bb8b6f97c29" title="I2C peripheral GPIO pin getter." alt="" coords="418,259,588,285"/>
 <area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="330,233,423,252,422,258,329,238"/>
 </map>

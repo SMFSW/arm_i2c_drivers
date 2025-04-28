@@ -146,10 +146,12 @@ var searchData=
   ['utcs3472_5freg_5f_5fpersist_143',['uTCS3472_REG__PERSIST',['../d4/d75/unionu_t_c_s3472___r_e_g_____p_e_r_s_i_s_t.html',1,'']]],
   ['utcs3472_5freg_5f_5fstatus_144',['uTCS3472_REG__STATUS',['../de/da6/unionu_t_c_s3472___r_e_g_____s_t_a_t_u_s.html',1,'']]],
   ['utcs3472_5freg_5fmap_145',['uTCS3472_REG_MAP',['../d9/d4e/unionu_t_c_s3472___r_e_g___m_a_p.html',1,'']]],
-  ['utsl2591_5fcmd_146',['uTSL2591_CMD',['../d0/db0/unionu_t_s_l2591___c_m_d.html',1,'']]],
-  ['utsl2591_5freg_5f_5fconfig_147',['uTSL2591_REG__CONFIG',['../d6/d41/unionu_t_s_l2591___r_e_g_____c_o_n_f_i_g.html',1,'']]],
-  ['utsl2591_5freg_5f_5fenable_148',['uTSL2591_REG__ENABLE',['../d4/de4/unionu_t_s_l2591___r_e_g_____e_n_a_b_l_e.html',1,'']]],
-  ['utsl2591_5freg_5f_5fpersist_149',['uTSL2591_REG__PERSIST',['../d9/d1f/unionu_t_s_l2591___r_e_g_____p_e_r_s_i_s_t.html',1,'']]],
-  ['utsl2591_5freg_5f_5fstatus_150',['uTSL2591_REG__STATUS',['../db/d68/unionu_t_s_l2591___r_e_g_____s_t_a_t_u_s.html',1,'']]],
-  ['utsl2591_5freg_5fmap_151',['uTSL2591_REG_MAP',['../d9/d38/unionu_t_s_l2591___r_e_g___m_a_p.html',1,'']]]
+  ['utmp1075_5freg_5f_5fcfgr_146',['uTMP1075_REG__CFGR',['../de/db7/unionu_t_m_p1075___r_e_g_____c_f_g_r.html',1,'']]],
+  ['utmp1075_5freg_5f_5fcfgr_5fword_147',['uTMP1075_REG__CFGR_WORD',['../d2/da0/unionu_t_m_p1075___r_e_g_____c_f_g_r___w_o_r_d.html',1,'']]],
+  ['utsl2591_5fcmd_148',['uTSL2591_CMD',['../d0/db0/unionu_t_s_l2591___c_m_d.html',1,'']]],
+  ['utsl2591_5freg_5f_5fconfig_149',['uTSL2591_REG__CONFIG',['../d6/d41/unionu_t_s_l2591___r_e_g_____c_o_n_f_i_g.html',1,'']]],
+  ['utsl2591_5freg_5f_5fenable_150',['uTSL2591_REG__ENABLE',['../d4/de4/unionu_t_s_l2591___r_e_g_____e_n_a_b_l_e.html',1,'']]],
+  ['utsl2591_5freg_5f_5fpersist_151',['uTSL2591_REG__PERSIST',['../d9/d1f/unionu_t_s_l2591___r_e_g_____p_e_r_s_i_s_t.html',1,'']]],
+  ['utsl2591_5freg_5f_5fstatus_152',['uTSL2591_REG__STATUS',['../db/d68/unionu_t_s_l2591___r_e_g_____s_t_a_t_u_s.html',1,'']]],
+  ['utsl2591_5freg_5fmap_153',['uTSL2591_REG_MAP',['../d9/d38/unionu_t_s_l2591___r_e_g___m_a_p.html',1,'']]]
 ];

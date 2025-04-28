@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title="Handler for ADS1115 peripheral GPIO interrupt." alt="" coords="5,195,144,221"/>
 <area shape="rect" id="Node000002" href="$da/d08/_a_d_s1115__proc_8c.html#a2a5488401e3392d27760b90ff5f31be2" title="Handler for ADS1115 peripheral." alt="" coords="219,144,344,171"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,191,209,172,210,177,133,197"/>
-<area shape="rect" id="Node000012" href="$d8/d63/_a_d_s1115__ex_8c.html#a7ddf616c2c0ef262b2381f9ff844bb8f" title="Ready GPIO pin getter for ADS1115." alt="" coords="192,220,371,247"/>
+<area shape="rect" id="Node000012" href="$d8/d63/_a_d_s1115__ex_8c.html#a0f59ef5df888cf79b9ac42eeb30ce0fc" title="Ready GPIO pin getter for ADS1115." alt="" coords="192,220,371,247"/>
 <area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="144,214,177,218,177,223,143,219"/>
 <area shape="rect" id="Node000003" href="$d8/d63/_a_d_s1115__ex_8c.html#aea826fb9b4c07301a47026d8cad8fa6f" title="Get conversion time for ADS1115 component (µs)" alt="" coords="445,5,604,32"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="293,142,344,93,379,65,418,42,433,35,435,40,420,46,382,69,348,97,297,145"/>
@@ -18,11 +18,11 @@
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="613,67,698,67,698,72,613,72"/>
 <area shape="rect" id="Node000006" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="910,31,1021,57"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="827,59,894,50,895,56,827,65"/>
-<area shape="rect" id="Node000007" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="914,81,1017,108"/>
+<area shape="rect" id="Node000007" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="914,81,1017,108"/>
 <area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="827,74,900,84,899,89,827,79"/>
 <area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="609,135,671,143,671,148,609,141"/>
 <area shape="rect" id="Node000011" href="$d8/d63/_a_d_s1115__ex_8c.html#aa2655b719d3bc141c24de2e90fa34633" title="Start ADS1115 conversion." alt="" coords="678,224,862,251"/>
 <area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="631,235,663,235,663,240,631,240"/>
-<area shape="rect" id="Node000013" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter." alt="" coords="440,275,610,301"/>
+<area shape="rect" id="Node000013" href="$d2/de1/_i2_c__peripheral_8c.html#a2d6c3bfd88f0d7700d7b2bb8b6f97c29" title="I2C peripheral GPIO pin getter." alt="" coords="440,275,610,301"/>
 <area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="345,245,449,268,448,274,343,250"/>
 </map>

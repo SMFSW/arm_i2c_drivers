@@ -1,9 +1,7 @@
 <map id="I2CMEM_Init_Single" name="I2CMEM_Init_Single">
-<area shape="rect" id="Node000001" title="Initialization for I2CMEM peripheral." alt="" coords="5,31,147,57"/>
-<area shape="rect" id="Node000002" href="$d6/d1b/_i2_c_m_e_m_8c.html#a82bb5afc3664f3b522f366a3c47b9eef" title="Initialization for I2CMEM peripheral." alt="" coords="195,31,293,57"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,41,179,41,179,47,147,47"/>
-<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state." alt="" coords="341,5,453,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="293,33,326,28,326,33,294,39"/>
-<area shape="rect" id="Node000004" href="$d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization." alt="" coords="345,56,449,83"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="294,49,331,56,330,61,293,55"/>
+<area shape="rect" id="Node000001" title="Initialization for I2CMEM peripheral." alt="" coords="5,5,147,32"/>
+<area shape="rect" id="Node000002" href="$d6/d1b/_i2_c_m_e_m_8c.html#a82bb5afc3664f3b522f366a3c47b9eef" title="Initialization for I2CMEM peripheral." alt="" coords="195,5,293,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,16,179,16,179,21,147,21"/>
+<area shape="rect" id="Node000003" href="$d7/d97/_i2_c__component_8c.html#ab96b16a3fe13866cbe4b1da8ff7f5b8c" title="I2C Slave device initialization." alt="" coords="341,5,445,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="294,16,326,16,326,21,294,21"/>
 </map>

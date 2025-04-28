@@ -1,21 +1,24 @@
 <map id="BMP180_Read_Word" name="BMP180_Read_Word">
-<area shape="rect" id="Node000001" title="I2C Word Read function for BMP180." alt="" coords="849,31,995,57"/>
-<area shape="rect" id="Node000002" href="$d0/d35/_b_m_p180__proc_8c.html#a955e57221814f232da13fac727fc7205" title="Get calibration parameters from BMP180 peripheral." alt="" coords="610,5,779,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="834,37,779,31,779,25,834,32"/>
-<area shape="rect" id="Node000006" href="$db/d0e/_b_m_p180__ex_8c.html#a54d2903a86c9b42dcc4f8bc8f4b2baf7" title="Get Raw Temperature." alt="" coords="588,56,801,83"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="834,56,801,60,801,55,834,51"/>
+<area shape="rect" id="Node000001" title="I2C Word Read function for BMP180." alt="" coords="849,55,995,81"/>
+<area shape="rect" id="Node000002" href="$d0/d35/_b_m_p180__proc_8c.html#a955e57221814f232da13fac727fc7205" title="Get calibration parameters from BMP180 peripheral." alt="" coords="610,17,779,44"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="834,56,779,47,779,42,834,51"/>
+<area shape="rect" id="Node000006" href="$db/d0e/_b_m_p180__ex_8c.html#a54d2903a86c9b42dcc4f8bc8f4b2baf7" title="Get Raw Temperature." alt="" coords="588,80,801,107"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="834,80,801,84,801,79,834,75"/>
 <area shape="rect" id="Node000003" href="$d0/d35/_b_m_p180__proc_8c.html#a2454150c1945e9c2356d9596a9242fe4" title="Initialization Sequence for BMP180 peripheral." alt="" coords="371,5,532,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="595,21,532,21,532,16,595,16"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="595,28,532,25,532,20,595,23"/>
 <area shape="rect" id="Node000004" href="$d8/d11/_b_m_p180_8c.html#aa3573167a9a91df44817b6f18f8ec831" title="Initialization for BMP180 peripheral." alt="" coords="206,5,302,32"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="356,21,302,21,302,16,356,16"/>
 <area shape="rect" id="Node000005" href="$d8/d11/_b_m_p180_8c.html#a57f1d83e4dbe3e1f9a3ee9d85c016e94" title="Initialization for BMP180 peripheral." alt="" coords="6,5,145,32"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="191,21,145,21,145,16,191,16"/>
-<area shape="rect" id="Node000007" href="$d0/d35/_b_m_p180__proc_8c.html#abff0623050520b3826558d5b2a13f796" title="Gets the compensated pressure level." alt="" coords="372,56,530,83"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="573,72,531,72,531,67,573,67"/>
-<area shape="rect" id="Node000010" href="$d0/d35/_b_m_p180__proc_8c.html#a2f7e6879bcfe66f5dc44a607d7ade2cf" title="Get the temperature." alt="" coords="362,107,540,133"/>
-<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="613,89,519,109,518,103,612,84"/>
-<area shape="rect" id="Node000008" href="$d0/d35/_b_m_p180__proc_8c.html#ae13c9eabdf3c4a900c6e01787ab2a807" title="Handler for BMP180 peripheral." alt="" coords="194,56,314,83"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="357,72,315,72,315,67,357,67"/>
-<area shape="rect" id="Node000009" href="$dc/d50/_b_m_p180__proc_8h.html#a6ea364017a9680fe0d48f50dd9f84ffd" title="Handler for all BMP180 peripherals." alt="" coords="5,56,146,83"/>
-<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="179,72,146,72,146,67,179,67"/>
+<area shape="rect" id="Node000007" href="$d0/d35/_b_m_p180__proc_8c.html#abff0623050520b3826558d5b2a13f796" title="Gets the compensated pressure level." alt="" coords="372,80,530,107"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="573,96,531,96,531,91,573,91"/>
+<area shape="rect" id="Node000010" href="$d0/d35/_b_m_p180__proc_8c.html#a2f7e6879bcfe66f5dc44a607d7ade2cf" title="Get the temperature." alt="" coords="362,155,540,181"/>
+<area shape="poly" id="edge11_Node000006_Node000010" title=" " alt="" coords="635,114,498,157,497,152,634,109"/>
+<area shape="poly" id="edge7_Node000007_Node000007" title=" " alt="" coords="485,68,474,61,451,59,431,61,419,65,417,71,422,78,418,81,412,71,416,62,429,55,451,53,476,56,488,63"/>
+<area shape="rect" id="Node000008" href="$d0/d35/_b_m_p180__proc_8c.html#ae13c9eabdf3c4a900c6e01787ab2a807" title="Handler for BMP180 peripheral." alt="" coords="194,80,314,107"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="357,96,315,96,315,91,357,91"/>
+<area shape="rect" id="Node000009" href="$dc/d50/_b_m_p180__proc_8h.html#a6ea364017a9680fe0d48f50dd9f84ffd" title="Handler for all BMP180 peripherals." alt="" coords="5,80,146,107"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="179,96,146,96,146,91,179,91"/>
+<area shape="poly" id="edge10_Node000009_Node000009" title=" " alt="" coords="106,68,96,61,75,59,57,61,47,65,45,71,49,78,45,81,39,71,43,62,56,55,76,53,98,56,109,63"/>
+<area shape="poly" id="edge12_Node000010_Node000010" title=" " alt="" coords="485,143,474,136,451,133,431,135,419,140,417,145,422,153,418,156,412,146,416,136,429,130,451,128,476,131,488,138"/>
 </map>

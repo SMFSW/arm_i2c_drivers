@@ -2,9 +2,9 @@
 <area shape="rect" id="Node000001" title="Initialization for NCA9595 peripheral." alt="" coords="5,56,152,83"/>
 <area shape="rect" id="Node000002" href="$d1/d1b/_n_c_a9595_8c.html#abf391eb9854fc9e6a772c5ec380fb05f" title="Initialization for NCA9595 peripheral." alt="" coords="200,56,303,83"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,67,185,67,185,72,152,72"/>
-<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state." alt="" coords="379,5,491,32"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#ac9ab24744488fa13554e3cf162d5cd54" title="Set I2C Slave device disabled/enabled state." alt="" coords="379,5,491,32"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="302,53,369,34,371,39,303,58"/>
-<area shape="rect" id="Node000004" href="$d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization." alt="" coords="383,56,487,83"/>
+<area shape="rect" id="Node000004" href="$d7/d97/_i2_c__component_8c.html#ab96b16a3fe13866cbe4b1da8ff7f5b8c" title="I2C Slave device initialization." alt="" coords="383,56,487,83"/>
 <area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="304,67,368,67,368,72,304,72"/>
 <area shape="rect" id="Node000005" href="$df/d4e/_n_c_a9595__proc_8c.html#a226ff7466fede313342dd1f6d260ef53" title="Initialization Sequence for NCA9595 peripheral." alt="" coords="351,107,519,133"/>
 <area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="303,81,371,100,369,105,302,86"/>

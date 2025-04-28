@@ -1,0 +1,24 @@
+<map id="TMP1075_Read_Byte" name="TMP1075_Read_Byte">
+<area shape="rect" id="Node000001" title="I2C Read function for TMP1075." alt="" coords="1042,132,1191,159"/>
+<area shape="rect" id="Node000002" href="$dd/d52/_t_m_p1075__ex_8h.html#ab9c48a8764cfbafc6968822cd1ab4185" title="Get TMP1075 Configuration." alt="" coords="834,132,994,159"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1027,148,995,148,995,143,1027,143"/>
+<area shape="rect" id="Node000003" href="$d1/dce/_t_m_p1075__ex_8c.html#a5f8dda011dd9bee30454374aae2261c3" title="Set TMP1075 alert mode (comparator/interrupt)" alt="" coords="590,5,760,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="888,124,842,84,814,63,785,46,754,35,756,30,787,42,817,59,846,79,891,120"/>
+<area shape="rect" id="Node000007" href="$d1/dce/_t_m_p1075__ex_8c.html#ab6b9d625bc4adf6aa82fc58ca92907fc" title="Set TMP1075 alert number of faults trigger." alt="" coords="579,56,771,83"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="867,128,785,97,743,86,745,81,786,92,869,123"/>
+<area shape="rect" id="Node000008" href="$d1/dce/_t_m_p1075__ex_8c.html#a96dbec9ea00296784c2cc5f72000ad49" title="Set TMP1075 alert polarity." alt="" coords="584,107,766,133"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="819,138,767,132,767,127,819,133"/>
+<area shape="rect" id="Node000009" href="$d1/dce/_t_m_p1075__ex_8c.html#a7d72e6bcb145e24fea17c487532a1221" title="Set TMP1075 conversion mode (manual/auto)" alt="" coords="570,157,780,184"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="819,158,780,162,780,157,819,153"/>
+<area shape="rect" id="Node000010" href="$d1/dce/_t_m_p1075__ex_8c.html#af3624d3ea10ab306c8d358792f46c72a" title="Set TMP1075 automatic conversion rate." alt="" coords="572,208,778,235"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="869,167,786,199,745,210,743,205,785,193,867,162"/>
+<area shape="rect" id="Node000011" href="$d1/dce/_t_m_p1075__ex_8c.html#a67df6e4c905db1e1040790eea6e5a840" title="Start TMP1075 single conversion." alt="" coords="564,259,786,285"/>
+<area shape="poly" id="edge11_Node000002_Node000011" title=" " alt="" coords="891,171,846,211,817,232,787,249,756,261,754,256,785,244,814,227,842,207,888,167"/>
+<area shape="rect" id="Node000004" href="$da/d07/_t_m_p1075__proc_8c.html#ab3388b23d8288635144a76be8e6095d4" title="Initialization Sequence for TMP1075 peripheral." alt="" coords="349,107,516,133"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="587,39,565,46,504,77,455,108,452,104,501,73,563,42,585,34"/>
+<area shape="rect" id="Node000005" href="$dc/de8/_t_m_p1075_8c.html#a0a2fc41b1545ca2d624634e0da27a9ff" title="Initialization for TMP1075 peripheral." alt="" coords="199,107,301,133"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="334,123,301,123,301,117,334,117"/>
+<area shape="rect" id="Node000006" href="$dc/de8/_t_m_p1075_8c.html#ab194ee1b1a3bbfe30160361874328c1f" title="Initialization for TMP1075 peripheral." alt="" coords="5,107,151,133"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="184,123,151,123,151,117,184,117"/>
+<area shape="poly" id="edge10_Node000010_Node000004" title=" " alt="" coords="585,206,563,198,501,167,452,136,455,132,504,163,565,194,587,201"/>
+</map>

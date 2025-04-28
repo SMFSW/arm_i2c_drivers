@@ -2,6 +2,6 @@
 <area shape="rect" id="Node000001" title="I2C Read function for AMG88." alt="" coords="5,31,109,57"/>
 <area shape="rect" id="Node000002" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="157,5,268,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,33,141,28,142,33,110,38"/>
-<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="161,56,264,83"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="161,56,264,83"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="110,50,147,56,146,61,109,55"/>
 </map>

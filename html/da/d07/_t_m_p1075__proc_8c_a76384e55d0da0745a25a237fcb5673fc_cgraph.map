@@ -1,0 +1,9 @@
+<map id="TMP1075_Set_LimitTemp" name="TMP1075_Set_LimitTemp">
+<area shape="rect" id="Node000001" title="Set the low/high limit temperature." alt="" coords="5,31,177,57"/>
+<area shape="rect" id="Node000002" href="$dc/de8/_t_m_p1075_8c.html#a447899233fa0f2e3a800b93fe5f0ca46" title="I2C Word Write (little endian) function for TMP1075." alt="" coords="225,31,376,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,41,210,41,210,47,177,47"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="424,5,535,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="376,31,409,26,410,31,377,36"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="429,56,531,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="377,52,414,57,413,63,376,57"/>
+</map>

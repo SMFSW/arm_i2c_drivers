@@ -1,0 +1,59 @@
+<map id="I2C_peripheral_GPIO_init" name="I2C_peripheral_GPIO_init">
+<area shape="rect" id="Node000001" title="I2C peripheral GPIO pin init." alt="" coords="281,689,450,716"/>
+<area shape="rect" id="Node000002" href="$d8/d63/_a_d_s1115__ex_8c.html#a4bb8ab1c4f20187c3ac25e373ea423d8" title="Ready GPIO pin init for ADS1115." alt="" coords="31,5,207,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="360,675,349,541,326,352,309,255,287,166,261,94,247,66,231,46,206,30,209,25,234,42,251,64,266,92,292,165,314,253,331,351,354,541,365,674"/>
+<area shape="rect" id="Node000003" href="$de/d9d/_a_m_g88__ex_8c.html#acce833fa716a19cd1c42355b5f1eb366" title="Interrupt GPIO pin init for AMG88." alt="" coords="39,56,199,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="359,675,347,551,323,376,305,287,284,206,259,140,246,115,231,97,216,85,198,77,200,73,218,81,235,93,250,112,264,138,289,205,311,286,328,375,352,550,365,674"/>
+<area shape="rect" id="Node000004" href="$d2/d97/_a_p_d_s9930__ex_8c.html#a8013e2e435745be8c579e08de66db553" title="Interrupt GPIO pin init for APDS9930." alt="" coords="29,107,209,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="359,675,345,560,319,401,302,320,281,247,258,187,244,164,231,147,208,132,211,128,234,143,249,161,262,185,286,245,307,319,325,400,350,560,364,675"/>
+<area shape="rect" id="Node000005" href="$df/d4f/_a_p_d_s9960__ex_8c.html#a4be488a3036356c1ae78be52da33b800" title="Interrupt GPIO pin init for APDS9960." alt="" coords="29,157,209,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="358,675,343,569,316,425,298,353,278,287,256,233,231,198,208,183,211,179,235,194,260,231,283,285,303,351,321,424,348,568,363,674"/>
+<area shape="rect" id="Node000006" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a1c68b8de8c3ec9f84f1661f04099307a" title="Change GPIO pin init for AT42QT1244." alt="" coords="5,208,233,235"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="362,675,360,591,354,536,344,476,328,414,304,353,272,297,231,249,215,237,218,233,234,245,277,294,309,351,333,412,349,475,359,535,365,591,368,675"/>
+<area shape="rect" id="Node000007" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a672d20191b39e18b306ad28261fe87f6" title="Reset GPIO pin init for AT42QT1244." alt="" coords="21,259,217,285"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="361,675,356,599,337,497,321,443,298,391,268,342,231,299,214,288,217,284,234,295,273,338,303,388,326,442,342,496,361,599,366,674"/>
+<area shape="rect" id="Node000008" href="$da/d07/_d_r_v2605_l__ex_8c.html#a76fdd4da9f7eab4d5385db659653bd51" title="Enable GPIO pin init for DRV2605L." alt="" coords="31,309,207,336"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="360,675,351,608,330,520,314,473,292,428,265,386,231,350,206,335,208,330,234,346,269,383,297,425,319,471,336,518,356,607,365,674"/>
+<area shape="rect" id="Node000009" href="$da/d07/_d_r_v2605_l__ex_8c.html#ab3de76d73cb8afd5436518d678333e51" title="Trigger GPIO pin init for DRV2605L." alt="" coords="25,360,213,387"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="358,675,346,617,324,542,307,503,286,466,261,431,231,401,212,389,215,385,234,397,265,427,291,463,312,501,329,541,352,616,363,674"/>
+<area shape="rect" id="Node000010" href="$d2/d07/_f_m24_c__ex_8c.html#aa32b446c12851036cb5e464d33244b98" title="Write Protect GPIO pin init for FM24C." alt="" coords="40,411,198,437"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="355,676,341,626,316,565,280,503,257,475,231,452,197,435,200,430,234,447,261,472,284,500,321,563,346,625,360,674"/>
+<area shape="rect" id="Node000011" href="$dd/de5/_i2_c_m_e_m__ex_8c.html#a54fc5dedc268fd0fc6e192440e1df812" title="Write Protect GPIO pin init for I2CMEM." alt="" coords="35,461,203,488"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="352,677,335,637,309,589,274,542,231,502,202,488,204,483,234,498,278,538,313,586,339,635,357,674"/>
+<area shape="rect" id="Node000012" href="$d0/d72/_m_b85_r_c256_v__ex_8c.html#a57d00f32d1708fe8f72039b6a7c632fc" title="Write Protect GPIO pin init for MB85RC256V." alt="" coords="19,512,219,539"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="347,678,300,614,268,581,231,553,207,542,209,537,234,548,272,577,304,611,351,675"/>
+<area shape="rect" id="Node000013" href="$df/d47/_m_c_p9808__ex_8c.html#ae4dd90616bf52d087f457301016769ab" title="Alert GPIO pin init for MCP9808." alt="" coords="30,563,208,589"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="338,681,291,641,262,621,232,604,201,592,202,587,234,599,265,616,294,637,342,677"/>
+<area shape="rect" id="Node000014" href="$d4/d5d/_m_t_c_h6102__ex_8c.html#abc5e060657ab47f58c624d1dd288d28a" title="Interrupt GPIO pin init for MTCH6102." alt="" coords="28,613,210,640"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="318,686,232,655,189,643,190,638,233,649,319,681"/>
+<area shape="rect" id="Node000015" href="$d4/d5d/_m_t_c_h6102__ex_8c.html#a455ff549663354a5050d07dc025d0090" title="Synchro GPIO pin init for MTCH6102." alt="" coords="20,664,218,691"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="266,695,218,690,219,685,266,690"/>
+<area shape="rect" id="Node000016" href="$d6/de0/_n_c_a9595__ex_8c.html#a6bf184a3bb97c5c651a4269f600f586d" title="Interrupt GPIO pin init for NCA9595." alt="" coords="33,715,205,741"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="266,716,206,722,205,716,266,710"/>
+<area shape="rect" id="Node000017" href="$d6/daa/_p_c_a9532__ex_8c.html#a50d1b206c2e5fc77bf3c140f0930a2f7" title="Reset GPIO pin init for PCA9532." alt="" coords="31,765,207,792"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="319,725,233,756,190,767,189,762,232,751,318,720"/>
+<area shape="rect" id="Node000018" href="$dd/d68/_p_c_a9624__ex_8c.html#a6cc4addde91d66f943a93790d3f13741" title="Output Enable GPIO pin init for PCA9624." alt="" coords="35,816,203,843"/>
+<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="342,729,294,769,265,789,234,806,202,818,201,813,232,802,262,785,291,765,338,725"/>
+<area shape="rect" id="Node000019" href="$df/d1d/_p_c_a9685__ex_8c.html#ab6f95007e03ad57762d68a2ac5259824" title="Output Enable GPIO pin init for PCA9685." alt="" coords="35,867,203,893"/>
+<area shape="poly" id="edge18_Node000001_Node000019" title=" " alt="" coords="351,730,304,795,272,829,234,857,205,870,203,865,231,852,268,825,300,791,347,727"/>
+<area shape="rect" id="Node000020" href="$d9/dba/_p_c_a9952__ex_8c.html#a6659be66abd10c1cb385e26c94500fde" title="Output Enable GPIO pin init for PCA9952." alt="" coords="35,917,203,944"/>
+<area shape="poly" id="edge19_Node000001_Node000020" title=" " alt="" coords="357,731,339,771,313,819,278,867,234,908,205,922,203,917,231,903,274,864,309,816,335,768,352,729"/>
+<area shape="rect" id="Node000021" href="$d9/dba/_p_c_a9952__ex_8c.html#a402844da3d5d3046ce9794864e4d7174" title="Reset GPIO pin init for PCA9952." alt="" coords="31,968,207,995"/>
+<area shape="poly" id="edge20_Node000001_Node000021" title=" " alt="" coords="360,731,346,781,321,842,284,905,261,934,234,958,209,972,207,967,231,954,257,930,280,902,316,840,341,779,355,730"/>
+<area shape="rect" id="Node000022" href="$dd/d22/_p_c_a9956__ex_8c.html#a18d95f4c806df424c60c3ef3647eabd7" title="Output Enable GPIO pin init for PCA9956." alt="" coords="35,1019,203,1045"/>
+<area shape="poly" id="edge21_Node000001_Node000022" title=" " alt="" coords="363,731,352,789,329,865,312,904,291,943,265,978,234,1009,205,1025,202,1020,231,1005,261,975,286,940,307,902,324,863,346,788,358,730"/>
+<area shape="rect" id="Node000023" href="$dd/d22/_p_c_a9956__ex_8c.html#af1545c21bf66bfd4dda8ce105d77bfd1" title="Reset GPIO pin init for PCA9956." alt="" coords="31,1069,207,1096"/>
+<area shape="poly" id="edge22_Node000001_Node000023" title=" " alt="" coords="365,731,356,799,336,887,319,934,297,980,269,1023,234,1059,209,1075,206,1070,231,1055,265,1019,292,978,314,932,330,886,351,798,360,731"/>
+<area shape="rect" id="Node000024" href="$df/d5c/_p_c_f8523__ex_8c.html#a36f537145b68a2b1adb960820e3f3b9f" title="Interrupt 1 GPIO pin init for PCF8523." alt="" coords="30,1120,208,1147"/>
+<area shape="poly" id="edge23_Node000001_Node000024" title=" " alt="" coords="366,731,361,807,342,909,326,964,303,1017,273,1067,234,1110,210,1125,207,1121,231,1106,268,1064,298,1015,321,962,337,908,356,806,361,731"/>
+<area shape="rect" id="Node000025" href="$df/d5c/_p_c_f8523__ex_8c.html#a8f64d486db1c92395205abf24049cfe7" title="Interrupt 2 GPIO pin init for PCF8523." alt="" coords="30,1171,208,1197"/>
+<area shape="poly" id="edge24_Node000001_Node000025" title=" " alt="" coords="368,731,365,815,359,870,349,931,333,993,309,1054,277,1111,234,1161,209,1177,206,1172,231,1157,272,1108,304,1052,328,991,344,929,354,869,360,814,362,730"/>
+<area shape="rect" id="Node000026" href="$db/d52/_t_c_s3400__ex_8c.html#a0901184c4942e31258fa04fb619190aa" title="Interrupt GPIO pin init for TCS3400." alt="" coords="34,1221,204,1248"/>
+<area shape="poly" id="edge25_Node000001_Node000026" title=" " alt="" coords="363,731,348,837,321,981,303,1054,283,1120,260,1174,234,1211,206,1229,203,1224,231,1207,256,1172,278,1118,298,1053,316,980,343,836,358,731"/>
+<area shape="rect" id="Node000027" href="$df/db1/_t_c_s3472__ex_8c.html#a10646d67401c8d56fdbfc330a607e820" title="Interrupt GPIO pin init for TCS3472." alt="" coords="34,1272,204,1299"/>
+<area shape="poly" id="edge26_Node000001_Node000027" title=" " alt="" coords="364,731,350,846,325,1005,307,1086,286,1160,262,1221,249,1244,234,1262,206,1280,203,1275,231,1258,244,1241,258,1218,281,1158,302,1085,319,1004,345,845,359,730"/>
+<area shape="rect" id="Node000028" href="$d1/dce/_t_m_p1075__ex_8c.html#a7f44367e91f316b0fe598fd0c582508a" title="Interrupt GPIO pin init for TMP1075." alt="" coords="33,1323,205,1349"/>
+<area shape="poly" id="edge27_Node000001_Node000028" title=" " alt="" coords="365,731,352,855,328,1030,311,1119,289,1201,264,1267,250,1293,234,1313,206,1330,204,1326,231,1309,246,1290,259,1265,284,1199,305,1118,323,1029,347,855,359,731"/>
+<area shape="rect" id="Node000029" href="$d0/d23/_t_s_l2591__ex_8c.html#a1f6323c8b4fa49b940fff3827af9cf37" title="Interrupt GPIO pin init for TSL2591." alt="" coords="35,1373,203,1400"/>
+<area shape="poly" id="edge28_Node000001_Node000029" title=" " alt="" coords="365,731,354,865,331,1055,314,1152,292,1241,266,1313,251,1342,235,1363,220,1374,204,1382,202,1377,217,1370,231,1359,247,1339,261,1311,287,1239,309,1151,326,1054,349,864,360,731"/>
+</map>

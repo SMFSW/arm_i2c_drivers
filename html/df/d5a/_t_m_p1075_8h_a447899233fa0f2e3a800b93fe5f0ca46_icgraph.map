@@ -1,0 +1,5 @@
+<map id="TMP1075_Write_Word" name="TMP1075_Write_Word">
+<area shape="rect" id="Node000001" title="I2C Word Write (little endian) function for TMP1075." alt="" coords="225,5,376,32"/>
+<area shape="rect" id="Node000002" href="$da/d07/_t_m_p1075__proc_8c.html#a76384e55d0da0745a25a237fcb5673fc" title="Set the low/high limit temperature." alt="" coords="5,5,177,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,21,177,21,177,16,210,16"/>
+</map>

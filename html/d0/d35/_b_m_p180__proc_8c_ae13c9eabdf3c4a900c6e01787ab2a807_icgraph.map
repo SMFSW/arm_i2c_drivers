@@ -1,5 +1,6 @@
 <map id="BMP180_handler" name="BMP180_handler">
-<area shape="rect" id="Node000001" title="Handler for BMP180 peripheral." alt="" coords="194,5,314,32"/>
-<area shape="rect" id="Node000002" href="$dc/d50/_b_m_p180__proc_8h.html#a6ea364017a9680fe0d48f50dd9f84ffd" title="Handler for all BMP180 peripherals." alt="" coords="5,5,146,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,21,146,21,146,16,179,16"/>
+<area shape="rect" id="Node000001" title="Handler for BMP180 peripheral." alt="" coords="194,29,314,56"/>
+<area shape="rect" id="Node000002" href="$dc/d50/_b_m_p180__proc_8h.html#a6ea364017a9680fe0d48f50dd9f84ffd" title="Handler for all BMP180 peripherals." alt="" coords="5,29,146,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,45,146,45,146,40,179,40"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="106,17,96,11,75,8,57,10,47,15,45,20,49,28,45,30,39,21,43,11,56,5,76,3,98,6,109,13"/>
 </map>

@@ -1,0 +1,5 @@
+<map id="MTCH6102_SYNC_GPIO_Get" name="MTCH6102_SYNC_GPIO_Get">
+<area shape="rect" id="Node000001" title="Synchro GPIO pin getter for MTCH6102." alt="" coords="5,5,207,32"/>
+<area shape="rect" id="Node000002" href="$d2/de1/_i2_c__peripheral_8c.html#a2d6c3bfd88f0d7700d7b2bb8b6f97c29" title="I2C peripheral GPIO pin getter." alt="" coords="255,5,425,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,16,240,16,240,21,207,21"/>
+</map>

@@ -14,7 +14,7 @@
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="372,67,457,67,457,72,372,72"/>
 <area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="668,31,780,57"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="585,59,653,50,654,56,586,65"/>
-<area shape="rect" id="Node000006" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="673,81,775,108"/>
+<area shape="rect" id="Node000006" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="673,81,775,108"/>
 <area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="586,74,658,84,658,89,585,79"/>
 <area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="368,135,430,143,429,148,367,141"/>
 <area shape="rect" id="Node000010" href="$d8/d63/_a_d_s1115__ex_8c.html#aa2655b719d3bc141c24de2e90fa34633" title="Start ADS1115 conversion." alt="" coords="437,224,620,251"/>

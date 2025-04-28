@@ -1,0 +1,22 @@
+<map id="TMP1075_handler_it_all" name="TMP1075_handler_it_all">
+<area shape="rect" id="Node000001" title="Handler for all TMP1075 peripherals GPIO interrupt." alt="" coords="5,56,166,83"/>
+<area shape="rect" id="Node000002" href="$da/d07/_t_m_p1075__proc_8c.html#aeb93ad431ffabcf1af6da9c8a4529ff2" title="Handler for TMP1075 peripheral GPIO interrupt." alt="" coords="214,56,354,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,67,199,67,199,72,166,72"/>
+<area shape="rect" id="Node000003" href="$da/d07/_t_m_p1075__proc_8c.html#a6b927794c8600f35785ce9bb7253d3e5" title="Handler for TMP1075 peripheral." alt="" coords="426,31,552,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="354,58,411,51,412,56,355,63"/>
+<area shape="rect" id="Node000009" href="$d1/dce/_t_m_p1075__ex_8c.html#ab44c16cfd851cd7a8b32b8f14d00a8d4" title="Interrupt GPIO pin getter for ADS1115." alt="" coords="402,81,576,108"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="355,75,387,79,387,85,354,81"/>
+<area shape="rect" id="Node000004" href="$da/d07/_t_m_p1075__proc_8c.html#afd874982683c79516613e75066f850eb" title="Get the temperature." alt="" coords="624,31,809,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="552,41,610,41,610,47,552,47"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="678,32,671,22,676,12,691,6,717,4,745,7,759,14,757,19,744,12,716,9,693,11,680,16,677,21,683,29"/>
+<area shape="rect" id="Node000005" href="$d1/dce/_t_m_p1075__ex_8c.html#a5730922bbf887bbb35cf9fdc77979604" title="Get TMP1075 Raw temperature." alt="" coords="857,31,1075,57"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="809,41,842,41,842,47,809,47"/>
+<area shape="rect" id="Node000006" href="$dc/de8/_t_m_p1075_8c.html#a824e40fc4b270082af1dfa73c3bfb654" title="I2C Word Read (little endian) function for TMP1075." alt="" coords="1123,31,1275,57"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="1075,41,1108,41,1108,47,1075,47"/>
+<area shape="rect" id="Node000007" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="1323,5,1435,32"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="1275,31,1308,26,1309,31,1276,36"/>
+<area shape="rect" id="Node000008" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="1328,56,1430,83"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="1276,52,1313,57,1313,63,1275,57"/>
+<area shape="rect" id="Node000010" href="$d2/de1/_i2_c__peripheral_8c.html#a2d6c3bfd88f0d7700d7b2bb8b6f97c29" title="I2C peripheral GPIO pin getter." alt="" coords="631,81,802,108"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="577,92,617,92,617,97,577,97"/>
+</map>

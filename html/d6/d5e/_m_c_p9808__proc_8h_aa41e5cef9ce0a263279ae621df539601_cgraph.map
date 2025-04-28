@@ -1,9 +1,10 @@
 <map id="MCP9808_Get_AlertTemp" name="MCP9808_Get_AlertTemp">
 <area shape="rect" id="Node000001" title="Get the high/low/crit Alert temperature." alt="" coords="5,31,179,57"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="59,32,53,22,57,12,70,6,92,4,116,7,128,14,125,19,114,12,92,9,72,11,61,16,58,21,64,29"/>
 <area shape="rect" id="Node000002" href="$df/d8e/_m_c_p9808_8c.html#a887b2120905867a6ac0a3008e3bc756f" title="I2C Read function for MCP9808." alt="" coords="227,31,344,57"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,41,212,41,212,47,179,47"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="179,41,212,41,212,47,179,47"/>
 <area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="392,5,503,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="344,32,377,27,378,32,345,37"/>
-<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="397,56,499,83"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="345,51,382,56,381,62,344,56"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="344,32,377,27,378,32,345,37"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="397,56,499,83"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="345,51,382,56,381,62,344,56"/>
 </map>

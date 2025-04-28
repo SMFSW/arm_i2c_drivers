@@ -1,0 +1,9 @@
+<map id="TMP1075_Set_AlertMode" name="TMP1075_Set_AlertMode">
+<area shape="rect" id="Node000001" title="Set TMP1075 alert mode (comparator/interrupt)" alt="" coords="564,5,735,32"/>
+<area shape="rect" id="Node000002" href="$da/d07/_t_m_p1075__proc_8c.html#ab3388b23d8288635144a76be8e6095d4" title="Initialization Sequence for TMP1075 peripheral." alt="" coords="349,5,516,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="550,21,517,21,517,16,550,16"/>
+<area shape="rect" id="Node000003" href="$dc/de8/_t_m_p1075_8c.html#a0a2fc41b1545ca2d624634e0da27a9ff" title="Initialization for TMP1075 peripheral." alt="" coords="199,5,301,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="334,21,301,21,301,16,334,16"/>
+<area shape="rect" id="Node000004" href="$dc/de8/_t_m_p1075_8c.html#ab194ee1b1a3bbfe30160361874328c1f" title="Initialization for TMP1075 peripheral." alt="" coords="5,5,151,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="184,21,151,21,151,16,184,16"/>
+</map>

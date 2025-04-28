@@ -1,0 +1,84 @@
+<map id="I2C_peripheral_GPIO_get" name="I2C_peripheral_GPIO_get">
+<area shape="rect" id="Node000001" title="I2C peripheral GPIO pin getter." alt="" coords="711,360,882,387"/>
+<area shape="rect" id="Node000002" href="$d8/d63/_a_d_s1115__ex_8c.html#a0f59ef5df888cf79b9ac42eeb30ce0fc" title="Ready GPIO pin getter for ADS1115." alt="" coords="459,5,638,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="790,345,780,283,758,201,741,159,720,117,694,79,662,46,637,31,640,27,665,42,698,76,724,114,746,156,763,200,785,282,795,345"/>
+<area shape="rect" id="Node000005" href="$de/d9d/_a_m_g88__ex_8c.html#a34e447f049a6088f3f33c37e3c506307" title="Interrupt GPIO pin getter for AMG88." alt="" coords="467,56,629,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="788,346,775,292,751,224,734,189,714,155,690,124,662,97,628,80,631,75,665,92,694,120,718,152,739,187,756,222,780,291,793,345"/>
+<area shape="rect" id="Node000008" href="$d2/d97/_a_p_d_s9930__ex_8c.html#ad98607091ad2cd5fb860e19f2f5c74f6" title="Interrupt GPIO pin getter for APDS9930." alt="" coords="457,107,640,133"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="785,346,769,302,743,248,708,193,686,169,662,148,639,135,641,130,665,143,690,165,712,190,748,245,774,300,790,345"/>
+<area shape="rect" id="Node000011" href="$df/d4f/_a_p_d_s9960__ex_8c.html#abb7afd37e90875321930d52461e1f9b8" title="Interrupt GPIO pin getter for APDS9960." alt="" coords="457,157,640,184"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="781,348,762,313,736,272,702,232,662,198,639,187,641,182,665,194,706,228,740,269,767,311,785,346"/>
+<area shape="rect" id="Node000014" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a040c6bf51a0180573d1a19ce20ea086c" title="Change GPIO pin getter for AT42QT1244." alt="" coords="433,208,663,235"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="774,350,727,298,696,271,662,249,635,238,637,233,665,244,699,267,731,294,778,346"/>
+<area shape="rect" id="Node000017" href="$df/d47/_m_c_p9808__ex_8c.html#a96e8a9c9784c48f94aa4be01f2b6ded9" title="Change GPIO pin getter for MCP9808." alt="" coords="458,259,639,285"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="762,354,716,326,662,300,626,288,628,283,664,295,719,321,765,349"/>
+<area shape="rect" id="Node000020" href="$d4/d5d/_m_t_c_h6102__ex_8c.html#a090b67a1c002dbf27745aa5765ddc816" title="Interrupt GPIO pin getter for MTCH6102." alt="" coords="456,309,641,336"/>
+<area shape="poly" id="edge19_Node000001_Node000020" title=" " alt="" coords="713,359,617,339,618,334,714,354"/>
+<area shape="rect" id="Node000023" href="$d4/d5d/_m_t_c_h6102__ex_8c.html#a18d0942a9e9efc6b8b1d42aa67d2a607" title="Synchro GPIO pin getter for MTCH6102." alt="" coords="448,360,649,387"/>
+<area shape="poly" id="edge22_Node000001_Node000023" title=" " alt="" coords="696,376,649,376,649,371,696,371"/>
+<area shape="rect" id="Node000024" href="$d6/de0/_n_c_a9595__ex_8c.html#a64a4840b707771935bd4eb5eef8517d4" title="Interrupt GPIO pin getter for ADS1115." alt="" coords="461,411,636,437"/>
+<area shape="poly" id="edge23_Node000001_Node000024" title=" " alt="" coords="714,393,618,413,617,407,713,388"/>
+<area shape="rect" id="Node000027" href="$df/d5c/_p_c_f8523__ex_8c.html#ab3f31d0bc1e3015a5b0da85ef33b6d8d" title="Interrupt 1 GPIO pin getter for PCF8523." alt="" coords="458,461,638,488"/>
+<area shape="poly" id="edge26_Node000001_Node000027" title=" " alt="" coords="765,398,719,426,664,452,628,463,626,458,662,447,716,421,762,393"/>
+<area shape="rect" id="Node000029" href="$df/d5c/_p_c_f8523__ex_8c.html#afbe322665374102b1b12725f5c0dfb8d" title="Interrupt 2 GPIO pin getter for PCF8523." alt="" coords="458,512,638,539"/>
+<area shape="poly" id="edge28_Node000001_Node000029" title=" " alt="" coords="778,400,731,453,699,480,665,502,637,514,635,509,662,498,696,475,727,449,774,397"/>
+<area shape="rect" id="Node000030" href="$db/d52/_t_c_s3400__ex_8c.html#a0ec4015d52d30575668c28c74d8d95d0" title="Interrupt GPIO pin getter for TCS3400." alt="" coords="462,563,635,589"/>
+<area shape="poly" id="edge30_Node000001_Node000030" title=" " alt="" coords="785,401,767,436,740,477,706,519,665,553,636,567,634,562,662,548,702,515,736,474,762,433,781,399"/>
+<area shape="rect" id="Node000033" href="$df/db1/_t_c_s3472__ex_8c.html#aa4f023591102c6acdf751dbd8f70e6ce" title="Interrupt GPIO pin getter for TCS3472." alt="" coords="462,613,635,640"/>
+<area shape="poly" id="edge33_Node000001_Node000033" title=" " alt="" coords="790,402,774,447,748,502,712,557,690,582,665,604,636,618,634,614,662,599,686,578,708,554,743,499,769,445,785,400"/>
+<area shape="rect" id="Node000036" href="$d1/dce/_t_m_p1075__ex_8c.html#ab44c16cfd851cd7a8b32b8f14d00a8d4" title="Interrupt GPIO pin getter for ADS1115." alt="" coords="461,664,635,691"/>
+<area shape="poly" id="edge36_Node000001_Node000036" title=" " alt="" coords="793,402,780,456,756,524,739,560,718,595,694,627,665,654,637,670,634,665,662,650,690,623,714,592,734,558,751,522,775,454,788,401"/>
+<area shape="rect" id="Node000039" href="$d0/d23/_t_s_l2591__ex_8c.html#a289f6557b993ac515dc33cd7162d4222" title="Interrupt GPIO pin getter for TSL2591." alt="" coords="463,715,633,741"/>
+<area shape="poly" id="edge39_Node000001_Node000039" title=" " alt="" coords="795,402,785,465,763,547,746,590,724,632,698,671,665,705,635,722,632,717,662,701,694,668,720,630,741,588,758,545,780,464,790,401"/>
+<area shape="rect" id="Node000003" href="$da/d08/_a_d_s1115__proc_8c.html#a520e784a7c3122c8211c2b62d3fb7967" title="Handler for ADS1115 peripheral GPIO interrupt." alt="" coords="236,5,374,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="444,21,374,21,374,16,444,16"/>
+<area shape="rect" id="Node000004" href="$d4/d35/_a_d_s1115__proc_8h.html#afee391a510cb180305c75f06c455ec6e" title="Handler for all ADS1115 peripherals GPIO interrupt." alt="" coords="12,5,170,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="221,21,170,21,170,16,221,16"/>
+<area shape="rect" id="Node000006" href="$d4/d51/_a_m_g88__proc_8c.html#af7796031f9fb1c4fb52f5262c1612ab9" title="Handler for AMG88 peripheral GPIO interrupt." alt="" coords="241,56,369,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="452,72,369,72,369,67,452,67"/>
+<area shape="rect" id="Node000007" href="$da/de9/_a_m_g88__proc_8h.html#a8f4206ea34c183c5f6dc2b23043c7d63" title="Handler for all AMG88 peripherals GPIO interrupt." alt="" coords="17,56,165,83"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="225,72,166,72,166,67,225,67"/>
+<area shape="rect" id="Node000009" href="$d9/d54/_a_p_d_s9930__proc_8c.html#a061d3c2eb22c619599e5dddb63ea8313" title="Handler for APDS9930 peripheral GPIO interrupt." alt="" coords="230,107,380,133"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="442,123,380,123,380,117,442,117"/>
+<area shape="rect" id="Node000010" href="$d1/d45/_a_p_d_s9930__proc_8h.html#a774db2cef9713661b6664aedabc25f9d" title="Handler for all APDS9930 peripherals GPIO interrupt." alt="" coords="6,107,176,133"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="215,123,176,123,176,117,215,117"/>
+<area shape="rect" id="Node000012" href="$dd/d2e/_a_p_d_s9960__proc_8c.html#a87274cc64ac34debc21c82dc2582d6df" title="Handler for APDS9960 peripheral GPIO interrupt." alt="" coords="230,157,380,184"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="442,173,380,173,380,168,442,168"/>
+<area shape="rect" id="Node000013" href="$df/d17/_a_p_d_s9960__proc_8h.html#a115196f922a8ed8661013aaa55f87eb4" title="Handler for all APDS9960 peripherals GPIO interrupt." alt="" coords="6,157,176,184"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="215,173,176,173,176,168,215,168"/>
+<area shape="rect" id="Node000015" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#afd1635edf97f1f5ed7157951b34b520f" title="Handler for AT42QT1244 peripheral GPIO interrupt." alt="" coords="225,208,385,235"/>
+<area shape="poly" id="edge14_Node000014_Node000015" title=" " alt="" coords="418,224,386,224,386,219,418,219"/>
+<area shape="rect" id="Node000016" href="$d4/d47/_a_t42_q_t1244__proc_8h.html#a7a6c58e9216381f8452d4682a9bf7999" title="Handler for all AT42QT1244 peripherals GPIO interrupt." alt="" coords="18,208,164,251"/>
+<area shape="poly" id="edge15_Node000015_Node000016" title=" " alt="" coords="210,228,165,229,165,224,210,222"/>
+<area shape="rect" id="Node000018" href="$de/deb/_m_c_p9808__proc_8c.html#a366a4d5c21eefda7d12af3bdcf800a11" title="Handler for MCP9808 peripheral GPIO interrupt." alt="" coords="234,263,376,289"/>
+<area shape="poly" id="edge17_Node000017_Node000018" title=" " alt="" coords="442,276,377,277,376,272,442,271"/>
+<area shape="rect" id="Node000019" href="$d6/d5e/_m_c_p9808__proc_8h.html#a07f88cc900aba5f4bb109f76f7c26a28" title="Handler for all MCP9808 peripherals GPIO interrupt." alt="" coords="10,275,172,301"/>
+<area shape="poly" id="edge18_Node000018_Node000019" title=" " alt="" coords="219,283,173,286,172,281,219,278"/>
+<area shape="rect" id="Node000021" href="$d2/d60/_m_t_c_h6102__proc_8c.html#ac6e9878bc657bf9eedfe117c920ce6b4" title="Handler for MTCH6102 peripheral GPIO interrupt." alt="" coords="229,317,381,344"/>
+<area shape="poly" id="edge20_Node000020_Node000021" title=" " alt="" coords="441,329,381,331,381,326,441,324"/>
+<area shape="rect" id="Node000022" href="$db/de8/_m_t_c_h6102__proc_8h.html#aec03380608432ad9a44d2af18a40615a" title="Handler for all MTCH6102 peripherals GPIO interrupt." alt="" coords="5,325,177,352"/>
+<area shape="poly" id="edge21_Node000021_Node000022" title=" " alt="" coords="215,337,177,338,177,333,215,331"/>
+<area shape="rect" id="Node000025" href="$df/d4e/_n_c_a9595__proc_8c.html#a6dcc9f3dc4fcb4f77ccb1f4980412da8" title="Handler for NCA9595 peripheral GPIO interrupt." alt="" coords="234,411,376,437"/>
+<area shape="poly" id="edge24_Node000024_Node000025" title=" " alt="" coords="446,427,376,427,376,421,446,421"/>
+<area shape="rect" id="Node000026" href="$da/dc5/_n_c_a9595__proc_8h.html#aef71c3e96bb654ff91e8494c227f1ae1" title="Handler for all NCA9595 peripherals GPIO interrupt." alt="" coords="10,411,172,437"/>
+<area shape="poly" id="edge25_Node000025_Node000026" title=" " alt="" coords="219,427,172,427,172,421,219,421"/>
+<area shape="rect" id="Node000028" href="$d4/ded/_p_c_f8523__proc_8c.html#a519c4d20da41104d7ec672566ad70e36" title="Handler for PCF8523 peripheral GPIO interrupt." alt="" coords="235,487,375,513"/>
+<area shape="poly" id="edge27_Node000027_Node000028" title=" " alt="" coords="444,488,375,495,375,490,443,483"/>
+<area shape="poly" id="edge29_Node000029_Node000028" title=" " alt="" coords="443,517,375,510,375,505,444,512"/>
+<area shape="rect" id="Node000031" href="$dc/dd9/_t_c_s3400__proc_8c.html#acb5c223a54526bb6c991a244d86d7ecb" title="Handler for TCS3400 peripheral GPIO interrupt." alt="" coords="235,563,375,589"/>
+<area shape="poly" id="edge31_Node000030_Node000031" title=" " alt="" coords="447,579,375,579,375,573,447,573"/>
+<area shape="rect" id="Node000032" href="$d9/d14/_t_c_s3400__proc_8h.html#a2b853b88da073d8f1e218486a16b8f42" title="Handler for all TCS3400 peripherals GPIO interrupt." alt="" coords="11,563,171,589"/>
+<area shape="poly" id="edge32_Node000031_Node000032" title=" " alt="" coords="220,579,171,579,171,573,220,573"/>
+<area shape="rect" id="Node000034" href="$d7/d71/_t_c_s3472__proc_8c.html#abf8990e17a9cc0be48c1d013ffc6a551" title="Handler for TCS3472 peripheral GPIO interrupt." alt="" coords="235,613,375,640"/>
+<area shape="poly" id="edge34_Node000033_Node000034" title=" " alt="" coords="447,629,375,629,375,624,447,624"/>
+<area shape="rect" id="Node000035" href="$d6/d96/_t_c_s3472__proc_8h.html#a02d7d423ebd9075573eddbee6b53a52d" title="Handler for all TCS3472 peripherals GPIO interrupt." alt="" coords="11,613,171,640"/>
+<area shape="poly" id="edge35_Node000034_Node000035" title=" " alt="" coords="220,629,171,629,171,624,220,624"/>
+<area shape="rect" id="Node000037" href="$da/d07/_t_m_p1075__proc_8c.html#aeb93ad431ffabcf1af6da9c8a4529ff2" title="Handler for TMP1075 peripheral GPIO interrupt." alt="" coords="235,664,375,691"/>
+<area shape="poly" id="edge37_Node000036_Node000037" title=" " alt="" coords="446,680,376,680,376,675,446,675"/>
+<area shape="rect" id="Node000038" href="$db/da7/_t_m_p1075__proc_8h.html#a2e0cb211caa13b149091c904d5180453" title="Handler for all TMP1075 peripherals GPIO interrupt." alt="" coords="11,664,171,691"/>
+<area shape="poly" id="edge38_Node000037_Node000038" title=" " alt="" coords="220,680,172,680,172,675,220,675"/>
+<area shape="rect" id="Node000040" href="$db/dba/_t_s_l2591__proc_8c.html#a0dec9da426161dbc0d55404b64d3ae4d" title="Handler for TSL2591 peripheral GPIO interrupt." alt="" coords="237,715,373,741"/>
+<area shape="poly" id="edge40_Node000039_Node000040" title=" " alt="" coords="448,731,374,731,374,725,448,725"/>
+<area shape="rect" id="Node000041" href="$d7/d6e/_t_s_l2591__proc_8h.html#a42f832ede9cb295fb0ffcad8ff0e2bde" title="Handler for all TSL2591 peripherals GPIO interrupt." alt="" coords="13,715,169,741"/>
+<area shape="poly" id="edge41_Node000040_Node000041" title=" " alt="" coords="222,731,170,731,170,725,222,725"/>
+</map>

@@ -24,9 +24,13 @@ var searchData=
   ['tcs3472_5fgreen_5fcount_21',['TCS3472_GREEN_COUNT',['../d6/d96/_t_c_s3472__proc_8h.html#adc741ee2068722bf5d32fd1b1b3a5d72',1,'TCS3472_proc.h']]],
   ['tcs3472_5fir_5fcount_22',['TCS3472_IR_COUNT',['../d6/d96/_t_c_s3472__proc_8h.html#a86f62103be1e1eaa8ecc45c7f91246ce',1,'TCS3472_proc.h']]],
   ['tcs3472_5fred_5fcount_23',['TCS3472_RED_COUNT',['../d6/d96/_t_c_s3472__proc_8h.html#ae6a6507134ad2bb16fd77403a007e2a8',1,'TCS3472_proc.h']]],
-  ['tsl2591_5fbase_5faddr_24',['TSL2591_BASE_ADDR',['../da/d96/_t_s_l2591_8h.html#a8679f20fc3755c195e9d5b1191e5881f',1,'TSL2591.h']]],
-  ['tsl2591_5fch0_5fcounts_25',['TSL2591_CH0_COUNTS',['../d7/d6e/_t_s_l2591__proc_8h.html#a0b5966e4644214bb7c7ed3a8852ef0ff',1,'TSL2591_proc.h']]],
-  ['tsl2591_5fch1_5fcounts_26',['TSL2591_CH1_COUNTS',['../d7/d6e/_t_s_l2591__proc_8h.html#aba32b7706995d03b94746fa6d5412ad7',1,'TSL2591_proc.h']]],
-  ['tsl2591_5fchip_5fid_27',['TSL2591_CHIP_ID',['../d7/d6e/_t_s_l2591__proc_8h.html#ace6333b3ba8fdcab2ac9ff354fca0b85',1,'TSL2591_proc.h']]],
-  ['tsl2591_5fdevice_5ffactor_28',['TSL2591_DEVICE_FACTOR',['../d7/d6e/_t_s_l2591__proc_8h.html#a252208050ace8f18164cba2d674b56d7',1,'TSL2591_proc.h']]]
+  ['tmp1075_5faddr_24',['TMP1075_ADDR',['../df/d5a/_t_m_p1075_8h.html#a32bfff02a40d5909c7b811822825d467',1,'TMP1075.h']]],
+  ['tmp1075_5fbase_5faddr_25',['TMP1075_BASE_ADDR',['../df/d5a/_t_m_p1075_8h.html#a5002dacb74781bf4bd10c6f63ca42c4e',1,'TMP1075.h']]],
+  ['tmp1075_5fcfgr_5f7_5f0_26',['TMP1075_CFGR_7_0',['../db/da7/_t_m_p1075__proc_8h.html#afe3ccca7f4a81dccd664bdf50b708f64',1,'TMP1075_proc.h']]],
+  ['tmp1075n_5fchip_5fid_27',['TMP1075N_CHIP_ID',['../db/da7/_t_m_p1075__proc_8h.html#ab1b2de7a630351ce5cd9396106d258e3',1,'TMP1075_proc.h']]],
+  ['tsl2591_5fbase_5faddr_28',['TSL2591_BASE_ADDR',['../da/d96/_t_s_l2591_8h.html#a8679f20fc3755c195e9d5b1191e5881f',1,'TSL2591.h']]],
+  ['tsl2591_5fch0_5fcounts_29',['TSL2591_CH0_COUNTS',['../d7/d6e/_t_s_l2591__proc_8h.html#a0b5966e4644214bb7c7ed3a8852ef0ff',1,'TSL2591_proc.h']]],
+  ['tsl2591_5fch1_5fcounts_30',['TSL2591_CH1_COUNTS',['../d7/d6e/_t_s_l2591__proc_8h.html#aba32b7706995d03b94746fa6d5412ad7',1,'TSL2591_proc.h']]],
+  ['tsl2591_5fchip_5fid_31',['TSL2591_CHIP_ID',['../d7/d6e/_t_s_l2591__proc_8h.html#ace6333b3ba8fdcab2ac9ff354fca0b85',1,'TSL2591_proc.h']]],
+  ['tsl2591_5fdevice_5ffactor_32',['TSL2591_DEVICE_FACTOR',['../d7/d6e/_t_s_l2591__proc_8h.html#a252208050ace8f18164cba2d674b56d7',1,'TSL2591_proc.h']]]
 ];

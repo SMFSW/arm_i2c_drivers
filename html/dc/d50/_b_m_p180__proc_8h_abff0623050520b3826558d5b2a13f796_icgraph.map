@@ -1,7 +1,9 @@
 <map id="BMP180_Get_Pressure" name="BMP180_Get_Pressure">
-<area shape="rect" id="Node000001" title="Gets the compensated pressure level." alt="" coords="362,5,520,32"/>
-<area shape="rect" id="Node000002" href="$d0/d35/_b_m_p180__proc_8c.html#ae13c9eabdf3c4a900c6e01787ab2a807" title="Handler for BMP180 peripheral." alt="" coords="194,5,314,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="347,21,315,21,315,16,347,16"/>
-<area shape="rect" id="Node000003" href="$dc/d50/_b_m_p180__proc_8h.html#a6ea364017a9680fe0d48f50dd9f84ffd" title="Handler for all BMP180 peripherals." alt="" coords="5,5,146,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="179,21,146,21,146,16,179,16"/>
+<area shape="rect" id="Node000001" title="Gets the compensated pressure level." alt="" coords="362,29,520,56"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="474,17,463,11,441,8,422,10,411,15,409,20,414,27,409,30,403,21,407,11,420,5,441,3,465,6,476,13"/>
+<area shape="rect" id="Node000002" href="$d0/d35/_b_m_p180__proc_8c.html#ae13c9eabdf3c4a900c6e01787ab2a807" title="Handler for BMP180 peripheral." alt="" coords="194,29,314,56"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="347,45,315,45,315,40,347,40"/>
+<area shape="rect" id="Node000003" href="$dc/d50/_b_m_p180__proc_8h.html#a6ea364017a9680fe0d48f50dd9f84ffd" title="Handler for all BMP180 peripherals." alt="" coords="5,29,146,56"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="179,45,146,45,146,40,179,40"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="106,17,96,11,75,8,57,10,47,15,45,20,49,28,45,30,39,21,43,11,56,5,76,3,98,6,109,13"/>
 </map>

@@ -1,10 +1,10 @@
 <map id="AT42QT1244_handler_it" name="AT42QT1244_handler_it">
 <area shape="rect" id="Node000001" title="Handler for AT42QT1244 peripheral GPIO interrupt." alt="" coords="5,31,166,57"/>
-<area shape="rect" id="Node000002" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a93d10a2a64d12b0d01ae41d5aeb1b761" title="Change GPIO pin getter for AT42QT1244." alt="" coords="214,5,444,32"/>
+<area shape="rect" id="Node000002" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a040c6bf51a0180573d1a19ce20ea086c" title="Change GPIO pin getter for AT42QT1244." alt="" coords="214,5,444,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,33,198,30,199,35,167,38"/>
 <area shape="rect" id="Node000004" href="$dd/de3/_a_t42_q_t1244__proc_8c.html#aca10e0645e195176f9e582d27e7f480b" title="Handler for AT42QT1244 peripheral." alt="" coords="256,56,402,83"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="167,50,241,58,240,63,166,55"/>
-<area shape="rect" id="Node000003" href="$d2/de1/_i2_c__peripheral_8c.html#af81b16e7fcf1144a0c556af2a5359bb6" title="I2C peripheral GPIO pin getter." alt="" coords="492,5,662,32"/>
+<area shape="rect" id="Node000003" href="$d2/de1/_i2_c__peripheral_8c.html#a2d6c3bfd88f0d7700d7b2bb8b6f97c29" title="I2C peripheral GPIO pin getter." alt="" coords="492,5,662,32"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="444,16,477,16,477,21,444,21"/>
 <area shape="rect" id="Node000005" href="$df/d72/_a_t42_q_t1244__ex_8c.html#a742d7d35c8bf29ff0a688b8bdef64275" title="Get keys detect status for AT42QT1244 peripheral." alt="" coords="496,56,658,83"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="403,67,481,67,481,72,403,72"/>
@@ -15,6 +15,6 @@
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="829,78,896,59,897,64,830,83"/>
 <area shape="rect" id="Node000008" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="906,81,1018,108"/>
 <area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="846,92,891,92,891,97,846,97"/>
-<area shape="rect" id="Node000009" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="911,132,1013,159"/>
+<area shape="rect" id="Node000009" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="911,132,1013,159"/>
 <area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="830,106,897,125,896,130,829,111"/>
 </map>

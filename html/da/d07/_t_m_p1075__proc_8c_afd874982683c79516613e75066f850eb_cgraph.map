@@ -1,0 +1,12 @@
+<map id="TMP1075_Get_Temperature" name="TMP1075_Get_Temperature">
+<area shape="rect" id="Node000001" title="Get the temperature." alt="" coords="5,31,190,57"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="56,32,48,22,53,12,70,6,98,4,129,7,144,14,142,19,127,12,97,9,71,11,57,16,53,21,60,29"/>
+<area shape="rect" id="Node000002" href="$d1/dce/_t_m_p1075__ex_8c.html#a5730922bbf887bbb35cf9fdc77979604" title="Get TMP1075 Raw temperature." alt="" coords="238,31,456,57"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="190,41,223,41,223,47,190,47"/>
+<area shape="rect" id="Node000003" href="$dc/de8/_t_m_p1075_8c.html#a824e40fc4b270082af1dfa73c3bfb654" title="I2C Word Read (little endian) function for TMP1075." alt="" coords="504,31,656,57"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="456,41,489,41,489,47,456,47"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="704,5,816,32"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="656,31,689,26,690,31,657,36"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="709,56,811,83"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="657,52,694,57,694,63,656,57"/>
+</map>

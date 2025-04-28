@@ -158,10 +158,12 @@ var searchData=
   ['utcs3472_5freg_5f_5fpersist_155',['uTCS3472_REG__PERSIST',['../d8/ddc/_t_c_s3472_8h.html#a0a0238aad9e08bd6d233a05dcce0f432',1,'TCS3472.h']]],
   ['utcs3472_5freg_5f_5fstatus_156',['uTCS3472_REG__STATUS',['../d8/ddc/_t_c_s3472_8h.html#ab5b770a8998b5d3d1c0e38ebfcc9aa5c',1,'TCS3472.h']]],
   ['utcs3472_5freg_5fmap_157',['uTCS3472_REG_MAP',['../d2/dbe/_t_c_s3472__ex_8h.html#aaf0bc4a58ea54799990e21d396f3cd1d',1,'TCS3472_ex.h']]],
-  ['utsl2591_5fcmd_158',['uTSL2591_CMD',['../da/d96/_t_s_l2591_8h.html#addb79c0a3e974e3eee86f39900d98ebb',1,'TSL2591.h']]],
-  ['utsl2591_5freg_5f_5fconfig_159',['uTSL2591_REG__CONFIG',['../da/d96/_t_s_l2591_8h.html#ad78278bb4f2e84fec0470020bc4ca3a3',1,'TSL2591.h']]],
-  ['utsl2591_5freg_5f_5fenable_160',['uTSL2591_REG__ENABLE',['../da/d96/_t_s_l2591_8h.html#a2eccca2a2d5edcce39683f78f18fdca5',1,'TSL2591.h']]],
-  ['utsl2591_5freg_5f_5fpersist_161',['uTSL2591_REG__PERSIST',['../da/d96/_t_s_l2591_8h.html#afa0a9683a2185537460d20fba691601c',1,'TSL2591.h']]],
-  ['utsl2591_5freg_5f_5fstatus_162',['uTSL2591_REG__STATUS',['../da/d96/_t_s_l2591_8h.html#a3602798f6ec4584bead27e8e7492ec0c',1,'TSL2591.h']]],
-  ['utsl2591_5freg_5fmap_163',['uTSL2591_REG_MAP',['../dc/d24/_t_s_l2591__ex_8h.html#a108b31d674d0604a158c7448a07aa501',1,'TSL2591_ex.h']]]
+  ['utmp1075_5freg_5f_5fcfgr_158',['uTMP1075_REG__CFGR',['../df/d5a/_t_m_p1075_8h.html#ae0e2cf60c5f3f0324ab78a3b1fd81561',1,'TMP1075.h']]],
+  ['utmp1075_5freg_5f_5fcfgr_5fword_159',['uTMP1075_REG__CFGR_WORD',['../df/d5a/_t_m_p1075_8h.html#a62788ab057daba0e9edd970c5fe274a1',1,'TMP1075.h']]],
+  ['utsl2591_5fcmd_160',['uTSL2591_CMD',['../da/d96/_t_s_l2591_8h.html#addb79c0a3e974e3eee86f39900d98ebb',1,'TSL2591.h']]],
+  ['utsl2591_5freg_5f_5fconfig_161',['uTSL2591_REG__CONFIG',['../da/d96/_t_s_l2591_8h.html#ad78278bb4f2e84fec0470020bc4ca3a3',1,'TSL2591.h']]],
+  ['utsl2591_5freg_5f_5fenable_162',['uTSL2591_REG__ENABLE',['../da/d96/_t_s_l2591_8h.html#a2eccca2a2d5edcce39683f78f18fdca5',1,'TSL2591.h']]],
+  ['utsl2591_5freg_5f_5fpersist_163',['uTSL2591_REG__PERSIST',['../da/d96/_t_s_l2591_8h.html#afa0a9683a2185537460d20fba691601c',1,'TSL2591.h']]],
+  ['utsl2591_5freg_5f_5fstatus_164',['uTSL2591_REG__STATUS',['../da/d96/_t_s_l2591_8h.html#a3602798f6ec4584bead27e8e7492ec0c',1,'TSL2591.h']]],
+  ['utsl2591_5freg_5fmap_165',['uTSL2591_REG_MAP',['../dc/d24/_t_s_l2591__ex_8h.html#a108b31d674d0604a158c7448a07aa501',1,'TSL2591_ex.h']]]
 ];

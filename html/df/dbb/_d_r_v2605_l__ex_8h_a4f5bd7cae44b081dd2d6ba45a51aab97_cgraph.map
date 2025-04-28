@@ -1,0 +1,5 @@
+<map id="DRV2605L_EN_GPIO_Set" name="DRV2605L_EN_GPIO_Set">
+<area shape="rect" id="Node000001" title="Enable GPIO pin setter for DRV2605L." alt="" coords="5,5,183,32"/>
+<area shape="rect" id="Node000002" href="$d2/de1/_i2_c__peripheral_8c.html#a4323d1eafeec1e949d6ab148d8bacde7" title="I2C peripheral GPIO pin setter." alt="" coords="231,5,401,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,16,216,16,216,21,183,21"/>
+</map>

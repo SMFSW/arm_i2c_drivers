@@ -1,8 +1,8 @@
 <map id="TCS3472_Init" name="TCS3472_Init">
 <area shape="rect" id="Node000001" title="Initialization for TCS3472 peripheral." alt="" coords="5,119,107,145"/>
-<area shape="rect" id="Node000002" href="$d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state." alt="" coords="182,68,294,95"/>
+<area shape="rect" id="Node000002" href="$d6/dd6/_i2_c__component_8h.html#ac9ab24744488fa13554e3cf162d5cd54" title="Set I2C Slave device disabled/enabled state." alt="" coords="182,68,294,95"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,115,173,97,174,102,107,121"/>
-<area shape="rect" id="Node000003" href="$d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization." alt="" coords="186,119,290,145"/>
+<area shape="rect" id="Node000003" href="$d7/d97/_i2_c__component_8c.html#ab96b16a3fe13866cbe4b1da8ff7f5b8c" title="I2C Slave device initialization." alt="" coords="186,119,290,145"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="107,129,171,129,171,135,107,135"/>
 <area shape="rect" id="Node000004" href="$d7/d71/_t_c_s3472__proc_8c.html#aed0fb470889ebc72a3ebb8dbb1f3282b" title="Initialization Sequence for TCS3472 peripheral." alt="" coords="155,169,321,196"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="107,143,174,162,173,167,106,149"/>
@@ -22,7 +22,7 @@
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="549,14,653,17,766,28,815,39,814,45,765,33,652,22,549,20"/>
 <area shape="rect" id="Node000007" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="976,53,1087,80"/>
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="928,60,961,61,961,66,928,65"/>
-<area shape="rect" id="Node000008" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="981,116,1083,143"/>
+<area shape="rect" id="Node000008" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="981,116,1083,143"/>
 <area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="905,71,986,107,984,112,903,76"/>
 <area shape="rect" id="Node000010" href="$df/dfb/_t_c_s3472_8c.html#a19fc8e0e8440863061f67b8a42f6484a" title="I2C Write function for TCS3472." alt="" coords="814,141,928,168"/>
 <area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="539,203,645,196,765,180,811,170,812,175,766,185,646,201,539,208"/>

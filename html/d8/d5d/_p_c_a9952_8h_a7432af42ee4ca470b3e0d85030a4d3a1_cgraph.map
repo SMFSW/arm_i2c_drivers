@@ -1,8 +1,8 @@
 <map id="PCA9952_Init" name="PCA9952_Init">
 <area shape="rect" id="Node000001" title="Initialization for PCA9952 peripheral." alt="" coords="5,56,108,83"/>
-<area shape="rect" id="Node000002" href="$d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state." alt="" coords="183,5,296,32"/>
+<area shape="rect" id="Node000002" href="$d6/dd6/_i2_c__component_8h.html#ac9ab24744488fa13554e3cf162d5cd54" title="Set I2C Slave device disabled/enabled state." alt="" coords="183,5,296,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,53,174,34,175,39,108,58"/>
-<area shape="rect" id="Node000003" href="$d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization." alt="" coords="187,56,292,83"/>
+<area shape="rect" id="Node000003" href="$d7/d97/_i2_c__component_8c.html#ab96b16a3fe13866cbe4b1da8ff7f5b8c" title="I2C Slave device initialization." alt="" coords="187,56,292,83"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="108,67,172,67,172,72,108,72"/>
 <area shape="rect" id="Node000004" href="$d1/d37/_p_c_a9952__proc_8c.html#a0232bb3ce801c25e1fa5669a55a715b9" title="Initialization Sequence for PCA9952 peripheral." alt="" coords="156,107,323,133"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="108,81,175,100,174,105,107,86"/>
@@ -21,7 +21,7 @@
 <area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="540,30,575,42,600,54,624,67,635,72,633,77,621,72,597,58,573,46,538,35"/>
 <area shape="rect" id="Node000007" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="786,31,897,57"/>
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="738,41,771,41,771,47,738,47"/>
-<area shape="rect" id="Node000008" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="790,81,893,108"/>
+<area shape="rect" id="Node000008" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="790,81,893,108"/>
 <area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="726,55,784,74,782,79,724,61"/>
 <area shape="poly" id="edge9_Node000009_Node000007" title=" " alt="" coords="724,78,782,60,784,65,726,83"/>
 <area shape="poly" id="edge10_Node000009_Node000008" title=" " alt="" coords="738,92,775,92,775,97,738,97"/>

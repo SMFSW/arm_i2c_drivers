@@ -1,5 +1,5 @@
 <map id="APDS9930_Write_Special" name="APDS9930_Write_Special">
 <area shape="rect" id="Node000001" title="I2C Special function Write function for APDS9930." alt="" coords="5,5,179,32"/>
-<area shape="rect" id="Node000002" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="227,5,329,32"/>
+<area shape="rect" id="Node000002" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="227,5,329,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,16,212,16,212,21,179,21"/>
 </map>

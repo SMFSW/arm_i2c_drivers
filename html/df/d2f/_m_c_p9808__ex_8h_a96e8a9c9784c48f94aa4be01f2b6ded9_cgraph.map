@@ -1,0 +1,5 @@
+<map id="MCP9808_Alert_GPIO_Get" name="MCP9808_Alert_GPIO_Get">
+<area shape="rect" id="Node000001" title="Change GPIO pin getter for MCP9808." alt="" coords="5,5,187,32"/>
+<area shape="rect" id="Node000002" href="$d2/de1/_i2_c__peripheral_8c.html#a2d6c3bfd88f0d7700d7b2bb8b6f97c29" title="I2C peripheral GPIO pin getter." alt="" coords="235,5,405,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,16,220,16,220,21,187,21"/>
+</map>

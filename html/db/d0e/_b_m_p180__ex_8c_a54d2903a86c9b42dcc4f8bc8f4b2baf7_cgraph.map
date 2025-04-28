@@ -8,7 +8,7 @@
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="429,16,478,16,478,21,429,21"/>
 <area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="650,5,762,32"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="603,16,636,16,636,21,603,21"/>
-<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="655,56,757,83"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="655,56,757,83"/>
 <area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="593,30,649,48,647,53,591,35"/>
 <area shape="rect" id="Node000007" href="$d8/d11/_b_m_p180_8c.html#a59805878eebcefe8d80c08bc90b5fb54" title="I2C Write function for BMP180." alt="" coords="494,56,602,83"/>
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="445,67,479,67,479,72,445,72"/>

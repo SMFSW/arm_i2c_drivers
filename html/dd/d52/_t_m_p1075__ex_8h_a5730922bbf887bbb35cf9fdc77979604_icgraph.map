@@ -1,0 +1,15 @@
+<map id="TMP1075_Get_Temperature_Raw" name="TMP1075_Get_Temperature_Raw">
+<area shape="rect" id="Node000001" title="Get TMP1075 Raw temperature." alt="" coords="815,55,1033,81"/>
+<area shape="rect" id="Node000002" href="$da/d07/_t_m_p1075__proc_8c.html#afd874982683c79516613e75066f850eb" title="Get the temperature." alt="" coords="582,55,767,81"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="800,71,767,71,767,65,800,65"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="710,43,698,36,674,33,653,35,642,40,639,45,644,53,640,56,634,46,638,36,652,30,675,28,700,31,712,38"/>
+<area shape="rect" id="Node000003" href="$da/d07/_t_m_p1075__proc_8c.html#a6b927794c8600f35785ce9bb7253d3e5" title="Handler for TMP1075 peripheral." alt="" coords="408,55,534,81"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="568,71,535,71,535,65,568,65"/>
+<area shape="rect" id="Node000004" href="$db/da7/_t_m_p1075__proc_8h.html#ad1ac6c9414a3de433c6f0a65e5bddd67" title="Handler for all TMP1075 peripherals." alt="" coords="214,29,360,56"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="393,60,360,55,361,50,394,55"/>
+<area shape="rect" id="Node000005" href="$da/d07/_t_m_p1075__proc_8c.html#aeb93ad431ffabcf1af6da9c8a4529ff2" title="Handler for TMP1075 peripheral GPIO interrupt." alt="" coords="217,80,357,107"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="394,81,358,86,357,81,393,76"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="319,17,308,11,287,8,268,10,257,15,255,20,260,27,255,30,250,21,254,11,266,5,287,3,310,6,321,13"/>
+<area shape="rect" id="Node000006" href="$db/da7/_t_m_p1075__proc_8h.html#a2e0cb211caa13b149091c904d5180453" title="Handler for all TMP1075 peripherals GPIO interrupt." alt="" coords="5,80,166,107"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="201,96,166,96,166,91,201,91"/>
+</map>

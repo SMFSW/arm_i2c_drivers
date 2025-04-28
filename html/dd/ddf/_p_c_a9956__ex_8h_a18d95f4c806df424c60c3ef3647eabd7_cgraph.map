@@ -1,0 +1,5 @@
+<map id="PCA9956_OE_GPIO_Init" name="PCA9956_OE_GPIO_Init">
+<area shape="rect" id="Node000001" title="Output Enable GPIO pin init for PCA9956." alt="" coords="5,5,174,32"/>
+<area shape="rect" id="Node000002" href="$d2/de1/_i2_c__peripheral_8c.html#a9802a0637548ab6cf5a7d5fb3366a3fb" title="I2C peripheral GPIO pin init." alt="" coords="222,5,391,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,16,207,16,207,21,174,21"/>
+</map>

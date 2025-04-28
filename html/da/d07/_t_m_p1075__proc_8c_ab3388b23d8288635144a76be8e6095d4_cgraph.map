@@ -1,0 +1,30 @@
+<map id="TMP1075_Init_Sequence" name="TMP1075_Init_Sequence">
+<area shape="rect" id="Node000001" title="Initialization Sequence for TMP1075 peripheral." alt="" coords="5,58,173,85"/>
+<area shape="rect" id="Node000002" href="$dc/de8/_t_m_p1075_8c.html#a824e40fc4b270082af1dfa73c3bfb654" title="I2C Word Read (little endian) function for TMP1075." alt="" coords="682,33,835,59"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,55,164,34,220,18,280,9,342,5,464,5,577,14,671,27,670,32,577,19,464,10,342,10,281,15,221,23,166,39,118,60"/>
+<area shape="rect" id="Node000005" href="$d1/dce/_t_m_p1075__ex_8c.html#a5f8dda011dd9bee30454374aae2261c3" title="Set TMP1075 alert mode (comparator/interrupt)" alt="" coords="238,83,409,110"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="174,78,223,83,223,88,173,83"/>
+<area shape="rect" id="Node000010" href="$d1/dce/_t_m_p1075__ex_8c.html#af3624d3ea10ab306c8d358792f46c72a" title="Set TMP1075 automatic conversion rate." alt="" coords="221,134,426,161"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="124,83,222,119,248,127,246,132,220,124,122,88"/>
+<area shape="rect" id="Node000011" href="$dd/d52/_t_m_p1075__ex_8h.html#acc5251f44574a20bef561022da249a0c" title="Get TMP1075N chip ID." alt="" coords="242,33,405,59"/>
+<area shape="poly" id="edge16_Node000001_Node000011" title=" " alt="" coords="173,60,227,54,227,59,174,65"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="883,58,994,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="835,54,868,59,867,64,835,59"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="887,109,990,135"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="806,57,836,69,884,94,895,99,892,104,881,99,834,74,804,62"/>
+<area shape="rect" id="Node000006" href="$dd/d52/_t_m_p1075__ex_8h.html#ab9c48a8764cfbafc6968822cd1ab4185" title="Get TMP1075 Configuration." alt="" coords="474,83,634,110"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="409,94,459,94,459,99,409,99"/>
+<area shape="rect" id="Node000008" href="$dd/d52/_t_m_p1075__ex_8h.html#a12c4818f7a9469545c8643b48120951b" title="Set TMP1075 Configuration." alt="" coords="475,134,634,161"/>
+<area shape="poly" id="edge9_Node000005_Node000008" title=" " alt="" coords="388,108,476,128,475,133,387,113"/>
+<area shape="rect" id="Node000007" href="$dc/de8/_t_m_p1075_8c.html#afce0618a72e7e0685f5ee4ea26ced774" title="I2C Read function for TMP1075." alt="" coords="684,83,833,110"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="635,94,669,94,669,99,635,99"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="833,83,867,79,868,84,834,89"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="834,105,873,110,872,115,833,110"/>
+<area shape="rect" id="Node000009" href="$dc/de8/_t_m_p1075_8c.html#af1a623a47deb48a6471a30d02d47c2af" title="I2C Write function for TMP1075." alt="" coords="684,134,833,161"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="634,145,669,145,669,150,634,150"/>
+<area shape="poly" id="edge11_Node000009_Node000003" title=" " alt="" coords="804,131,834,120,881,94,892,89,895,94,884,99,836,124,806,136"/>
+<area shape="poly" id="edge12_Node000009_Node000004" title=" " alt="" coords="833,134,872,129,873,134,833,139"/>
+<area shape="poly" id="edge14_Node000010_Node000006" title=" " alt="" coords="387,131,475,111,476,116,388,136"/>
+<area shape="poly" id="edge15_Node000010_Node000008" title=" " alt="" coords="426,145,460,145,460,150,426,150"/>
+<area shape="poly" id="edge17_Node000011_Node000002" title=" " alt="" coords="406,43,667,43,667,49,406,49"/>
+</map>

@@ -1,0 +1,17 @@
+<map id="TMP1075_handler_all" name="TMP1075_handler_all">
+<area shape="rect" id="Node000001" title="Handler for all TMP1075 peripherals." alt="" coords="5,31,152,57"/>
+<area shape="poly" id="edge8_Node000001_Node000001" title=" " alt="" coords="47,32,41,22,45,12,58,6,79,4,102,7,113,14,110,19,100,12,78,9,59,11,49,16,47,21,51,29"/>
+<area shape="rect" id="Node000002" href="$da/d07/_t_m_p1075__proc_8c.html#a6b927794c8600f35785ce9bb7253d3e5" title="Handler for TMP1075 peripheral." alt="" coords="200,31,326,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,41,185,41,185,47,152,47"/>
+<area shape="rect" id="Node000003" href="$da/d07/_t_m_p1075__proc_8c.html#afd874982683c79516613e75066f850eb" title="Get the temperature." alt="" coords="374,31,558,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="327,41,359,41,359,47,327,47"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="432,32,425,22,430,12,444,6,466,4,491,7,504,14,502,19,490,12,466,9,445,11,433,16,431,21,436,29"/>
+<area shape="rect" id="Node000004" href="$d1/dce/_t_m_p1075__ex_8c.html#a5730922bbf887bbb35cf9fdc77979604" title="Get TMP1075 Raw temperature." alt="" coords="606,31,825,57"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="559,41,591,41,591,47,559,47"/>
+<area shape="rect" id="Node000005" href="$dc/de8/_t_m_p1075_8c.html#a824e40fc4b270082af1dfa73c3bfb654" title="I2C Word Read (little endian) function for TMP1075." alt="" coords="873,31,1025,57"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="825,41,858,41,858,47,825,47"/>
+<area shape="rect" id="Node000006" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="1073,5,1184,32"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="1025,31,1058,26,1059,31,1026,36"/>
+<area shape="rect" id="Node000007" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="1078,56,1180,83"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="1026,52,1063,57,1062,63,1025,57"/>
+</map>

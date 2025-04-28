@@ -12,7 +12,7 @@
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="797,52,862,34,863,39,798,57"/>
 <area shape="rect" id="Node000006" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="873,107,985,133"/>
 <area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="796,79,866,99,864,105,794,84"/>
-<area shape="rect" id="Node000007" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="878,56,980,83"/>
+<area shape="rect" id="Node000007" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="878,56,980,83"/>
 <area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="813,66,863,66,863,72,813,71"/>
 <area shape="rect" id="Node000009" href="$d3/dc4/_a_t42_q_t1244_8c.html#afc7b495087a57939c8c261820668a896" title="I2C Write function for AT42QT1244." alt="" coords="678,107,812,133"/>
 <area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="411,121,663,118,663,124,411,127"/>

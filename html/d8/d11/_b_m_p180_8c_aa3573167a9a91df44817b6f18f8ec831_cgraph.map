@@ -2,9 +2,9 @@
 <area shape="rect" id="Node000001" title="Initialization for BMP180 peripheral." alt="" coords="5,107,102,133"/>
 <area shape="rect" id="Node000002" href="$d0/d35/_b_m_p180__proc_8c.html#a2454150c1945e9c2356d9596a9242fe4" title="Initialization Sequence for BMP180 peripheral." alt="" coords="150,56,311,83"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,104,167,85,168,90,103,109"/>
-<area shape="rect" id="Node000011" href="$d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state." alt="" coords="174,107,287,133"/>
+<area shape="rect" id="Node000011" href="$d6/dd6/_i2_c__component_8h.html#ac9ab24744488fa13554e3cf162d5cd54" title="Set I2C Slave device disabled/enabled state." alt="" coords="174,107,287,133"/>
 <area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="102,117,159,117,159,123,102,123"/>
-<area shape="rect" id="Node000012" href="$d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization." alt="" coords="178,157,283,184"/>
+<area shape="rect" id="Node000012" href="$d7/d97/_i2_c__component_8c.html#ab96b16a3fe13866cbe4b1da8ff7f5b8c" title="I2C Slave device initialization." alt="" coords="178,157,283,184"/>
 <area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="103,131,168,150,167,155,101,136"/>
 <area shape="rect" id="Node000003" href="$d0/d35/_b_m_p180__proc_8c.html#a955e57221814f232da13fac727fc7205" title="Get calibration parameters from BMP180 peripheral." alt="" coords="359,5,527,32"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="289,53,369,33,370,39,290,58"/>
@@ -18,7 +18,7 @@
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="730,26,772,32,771,37,730,31"/>
 <area shape="rect" id="Node000006" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="943,5,1054,32"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="895,33,928,27,929,33,896,38"/>
-<area shape="rect" id="Node000007" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="948,56,1050,83"/>
+<area shape="rect" id="Node000007" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="948,56,1050,83"/>
 <area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="896,50,933,56,932,61,895,55"/>
 <area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="730,57,770,51,771,56,731,62"/>
 <area shape="rect" id="Node000010" href="$da/d3c/shared___a_p_s_8c.html#a74c279e4d9a609d3f13f66342e7c731f" title="Sea Level pressure getter (in hPa / mbar)" alt="" coords="575,115,738,141"/>

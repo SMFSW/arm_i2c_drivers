@@ -1,15 +1,17 @@
 <map id="MCP9808_handler_all" name="MCP9808_handler_all">
 <area shape="rect" id="Node000001" title="Handler for all MCP9808 peripherals." alt="" coords="5,31,154,57"/>
+<area shape="poly" id="edge8_Node000001_Node000001" title=" " alt="" coords="48,32,42,22,46,12,59,6,80,4,103,7,115,14,112,19,101,12,79,9,60,11,50,16,47,21,52,29"/>
 <area shape="rect" id="Node000002" href="$de/deb/_m_c_p9808__proc_8c.html#a21a5213bef06c833d59b6053be862c6b" title="Handler for MCP9808 peripheral." alt="" coords="202,31,330,57"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,41,187,41,187,47,154,47"/>
 <area shape="rect" id="Node000003" href="$de/deb/_m_c_p9808__proc_8c.html#ad446802e702cb0e7e926b9f02d4cb069" title="Get the temperature." alt="" coords="378,31,564,57"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="330,41,363,41,363,47,330,47"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="436,32,430,22,434,12,448,6,471,4,497,7,509,14,507,19,495,12,471,9,450,11,438,16,435,21,441,29"/>
 <area shape="rect" id="Node000004" href="$df/d2f/_m_c_p9808__ex_8h.html#a21eb0466632ccc997f8304a06e8efa07" title="Get MCP9808 Configuration." alt="" coords="612,31,833,57"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="565,41,597,41,597,47,565,47"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="565,41,597,41,597,47,565,47"/>
 <area shape="rect" id="Node000005" href="$df/d8e/_m_c_p9808_8c.html#a887b2120905867a6ac0a3008e3bc756f" title="I2C Read function for MCP9808." alt="" coords="881,31,998,57"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="833,41,866,41,866,47,833,47"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="833,41,866,41,866,47,833,47"/>
 <area shape="rect" id="Node000006" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="1046,5,1157,32"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="998,32,1031,27,1032,32,999,37"/>
-<area shape="rect" id="Node000007" href="$d6/dd6/_i2_c__component_8h.html#adea657f95aabab9c9b25bb37266df219" title="Set I2C Slave bus/device business." alt="" coords="1051,56,1153,83"/>
-<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="999,51,1036,56,1035,62,998,56"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="998,32,1031,27,1032,32,999,37"/>
+<area shape="rect" id="Node000007" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="1051,56,1153,83"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="999,51,1036,56,1035,62,998,56"/>
 </map>

@@ -1,0 +1,7 @@
+<map id="TMP1075_INT_GPIO_Get" name="TMP1075_INT_GPIO_Get">
+<area shape="rect" id="Node000001" title="Interrupt GPIO pin getter for ADS1115." alt="" coords="402,5,576,32"/>
+<area shape="rect" id="Node000002" href="$da/d07/_t_m_p1075__proc_8c.html#aeb93ad431ffabcf1af6da9c8a4529ff2" title="Handler for TMP1075 peripheral GPIO interrupt." alt="" coords="214,5,354,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="388,21,354,21,354,16,388,16"/>
+<area shape="rect" id="Node000003" href="$db/da7/_t_m_p1075__proc_8h.html#a2e0cb211caa13b149091c904d5180453" title="Handler for all TMP1075 peripherals GPIO interrupt." alt="" coords="5,5,166,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="199,21,166,21,166,16,199,16"/>
+</map>

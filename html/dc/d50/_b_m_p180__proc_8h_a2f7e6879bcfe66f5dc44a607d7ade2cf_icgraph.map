@@ -1,0 +1,4 @@
+<map id="BMP180_Get_Temperature" name="BMP180_Get_Temperature">
+<area shape="rect" id="Node000001" title="Get the temperature." alt="" coords="5,29,184,56"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="125,17,115,11,94,8,76,10,66,15,64,20,68,28,64,30,58,21,62,11,75,5,95,3,117,6,128,13"/>
+</map>

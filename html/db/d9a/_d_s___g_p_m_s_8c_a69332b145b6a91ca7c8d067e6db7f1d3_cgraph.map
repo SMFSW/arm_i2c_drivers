@@ -2,8 +2,8 @@
 <area shape="rect" id="Node000001" title="Initialization for GPMS peripheral." alt="" coords="5,56,91,83"/>
 <area shape="rect" id="Node000002" href="$dd/d17/_d_s___g_p_m_s__proc_8c.html#ad640962df4bc97fc768c1a34ac38f872" title="Initialization Sequence for GPMS peripheral." alt="" coords="139,5,289,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,54,153,34,154,40,92,59"/>
-<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#ad03c21bd52d388a20a62b1ecde8af4a4" title="Set I2C Slave device disabled/enabled state." alt="" coords="158,56,270,83"/>
+<area shape="rect" id="Node000003" href="$d6/dd6/_i2_c__component_8h.html#ac9ab24744488fa13554e3cf162d5cd54" title="Set I2C Slave device disabled/enabled state." alt="" coords="158,56,270,83"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="91,67,143,67,143,72,91,72"/>
-<area shape="rect" id="Node000004" href="$d7/d97/_i2_c__component_8c.html#a7f02889d169a1724da2791a955220afe" title="I2C Slave device initialization." alt="" coords="162,107,266,133"/>
+<area shape="rect" id="Node000004" href="$d7/d97/_i2_c__component_8c.html#ab96b16a3fe13866cbe4b1da8ff7f5b8c" title="I2C Slave device initialization." alt="" coords="162,107,266,133"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="92,80,154,99,153,104,90,85"/>
 </map>

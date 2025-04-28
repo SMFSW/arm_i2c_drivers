@@ -1,0 +1,17 @@
+<map id="TMP1075_Set_ConversionMode" name="TMP1075_Set_ConversionMode">
+<area shape="rect" id="Node000001" title="Set TMP1075 conversion mode (manual/auto)" alt="" coords="5,31,215,57"/>
+<area shape="rect" id="Node000002" href="$dd/d52/_t_m_p1075__ex_8h.html#ab9c48a8764cfbafc6968822cd1ab4185" title="Get TMP1075 Configuration." alt="" coords="263,5,423,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,30,247,26,248,32,216,35"/>
+<area shape="rect" id="Node000006" href="$dd/d52/_t_m_p1075__ex_8h.html#a12c4818f7a9469545c8643b48120951b" title="Set TMP1075 Configuration." alt="" coords="263,56,423,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="216,53,249,56,248,62,215,58"/>
+<area shape="rect" id="Node000003" href="$dc/de8/_t_m_p1075_8c.html#afce0618a72e7e0685f5ee4ea26ced774" title="I2C Read function for TMP1075." alt="" coords="471,5,620,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="423,16,456,16,456,21,423,21"/>
+<area shape="rect" id="Node000004" href="$d6/dd6/_i2_c__component_8h.html#a070a0994cc91582c0c775c5202448e00" title="Get I2C Slave device enabled state." alt="" coords="668,5,780,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="621,16,654,16,654,21,621,21"/>
+<area shape="rect" id="Node000005" href="$d6/dd6/_i2_c__component_8h.html#ae2294194c5ec5acca8cf37b01e9a628a" title="Set I2C Slave bus/device business." alt="" coords="673,56,775,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="596,30,661,49,660,54,595,35"/>
+<area shape="rect" id="Node000007" href="$dc/de8/_t_m_p1075_8c.html#af1a623a47deb48a6471a30d02d47c2af" title="I2C Write function for TMP1075." alt="" coords="472,56,620,83"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="423,67,457,67,457,72,423,72"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="595,53,660,34,661,39,596,58"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="620,67,658,67,658,72,620,72"/>
+</map>
