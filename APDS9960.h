@@ -1,12 +1,12 @@
 /*!\file APDS9960.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief APDS9960 Driver
 ** \details APDS9960: Digital Proximity, Ambient Light, RGB and Gesture Sensor
 **/
 /****************************************************************/
-#ifndef __APDS9960_H__
-	#define __APDS9960_H__
+#ifndef APDS9960_H__
+	#define APDS9960_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -478,5 +478,5 @@ FctERR NONNULL__ APDS9960_Write_Special(I2C_slave_t * const pSlave, const APDS99
 	}
 #endif
 
-#endif /* __APDS9960_H__ */
+#endif /* APDS9960_H__ */
 /****************************************************************/

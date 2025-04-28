@@ -1,6 +1,6 @@
 /*!\file I2CMEM.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief FRAM / EEPROM Driver
 ** \note Fully compatible between EEPROM / FRAM type components
 ** \note When EEPROM compatibility is not needed, buf_size at init can be set to \ref I2CMEM_WBUF_NONE for more efficiency
@@ -25,8 +25,6 @@ I2CMEM_t I2CMEM[I2C_I2CMEM_NB] = { 0 };
 
 FctERR NONNULL__ I2CMEM_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress, const size_t size, const size_t buf_size)
 {
-	FctERR err;
-
 	assert_param(IS_I2C_PERIPHERAL(I2CMEM, idx));
 
 	I2C_PERIPHERAL_SET_DEFAULTS(I2CMEM, idx);
@@ -36,9 +34,7 @@ FctERR NONNULL__ I2CMEM_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, 
 	I2CMEM[idx].cfg.chip_size = size;						// Chip size
 	I2CMEM[idx].cfg.buf_size = buf_size ? buf_size : size;	// Write buffer size (typically 16 to 64 for EEPROM, no restriction for FRAM)
 
-	err = I2C_slave_init(&I2CMEM_hal[idx], hi2c, devAddress, I2CMEM_hal[idx].cfg.timeout);
-
-	if (err)	{ I2C_set_enable(&I2CMEM_hal[idx], false); }
+	I2C_slave_init(&I2CMEM_hal[idx], hi2c, devAddress, I2CMEM_hal[idx].cfg.timeout);
 
 	return ERROR_OK;
 }

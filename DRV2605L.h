@@ -1,12 +1,12 @@
 /*!\file DRV2605L.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief DRV2605L Driver
 ** \details DRV2605L: 2 to 5.2V Haptic Driver for LRA and ERM With Effect Library and Smart-Loop Architecture
 **/
 /****************************************************************/
-#ifndef __DRV2605L_H__
-	#define __DRV2605L_H__
+#ifndef DRV2605L_H__
+	#define DRV2605L_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -504,5 +504,5 @@ FctERR NONNULL__ DRV2605L_Read(uint8_t * data, const uint16_t addr, const uint16
 	}
 #endif
 
-#endif /* __DRV2605L_H__ */
+#endif /* DRV2605L_H__ */
 /****************************************************************/

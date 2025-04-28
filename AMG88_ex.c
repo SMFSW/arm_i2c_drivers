@@ -1,6 +1,6 @@
 /*!\file AMG88_ex.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief AMG88 Driver extensions
 ** \details AMG88: Infrared Array Sensor (Grid-EYE)
 **/
@@ -145,11 +145,11 @@ FctERR NONNULL__ AMG88_Set_Interrupt_Levels(AMG88_t * const pCpnt, const float t
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ AMG88_INT_GPIO_Init(AMG88_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
-	return I2C_peripheral_GPIO_init(&pCpnt->cfg.INT_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+__WEAK void NONNULL__ AMG88_INT_GPIO_Init(AMG88_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	I2C_peripheral_GPIO_init(&pCpnt->cfg.INT_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
 
-__WEAK FctERR NONNULL__ AMG88_INT_GPIO_Get(AMG88_t * const pCpnt, bool * const pState) {
-	return I2C_peripheral_GPIO_get(&pCpnt->cfg.INT_GPIO, pState); }
+__WEAK void NONNULL__ AMG88_INT_GPIO_Get(AMG88_t * const pCpnt, bool * const pState) {
+	I2C_peripheral_GPIO_get(&pCpnt->cfg.INT_GPIO, pState); }
 
 
 /****************************************************************/

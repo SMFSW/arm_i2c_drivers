@@ -1,6 +1,6 @@
 /*!\file PCA9532.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief PCA9532 Driver
 ** \details PCA9532: 16-bit I2C-bus LED dimmer
 **/
@@ -28,8 +28,9 @@ FctERR NONNULL__ PCA9532_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 
 	I2C_PERIPHERAL_SET_DEFAULTS(PCA9532, idx);
 
-	err = I2C_slave_init(&PCA9532_hal[idx], hi2c, devAddress, PCA9532_hal[idx].cfg.timeout);
-	PCA9532_Set_Auto_Increment(&PCA9532[idx], PCA95xx__AUTO_INC_ALL);
+	I2C_slave_init(&PCA9532_hal[idx], hi2c, devAddress, PCA9532_hal[idx].cfg.timeout);
+
+	err = PCA9532_Set_Auto_Increment(&PCA9532[idx], PCA95xx__AUTO_INC_ALL);
 	if (!err)	{ err = PCA9532_Init_Sequence(&PCA9532[idx]); }
 
 	if (err)	{ I2C_set_enable(&PCA9532_hal[idx], false); }

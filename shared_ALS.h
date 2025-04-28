@@ -1,11 +1,11 @@
 /*!\file shared_ALS.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief Ambient Light Sensing shared
 **/
 /****************************************************************/
-#ifndef __SHARED_ALS_H__
-	#define __SHARED_ALS_H__
+#ifndef SHARED_ALS_H__
+	#define SHARED_ALS_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -28,5 +28,5 @@
 	}
 #endif
 
-#endif /* __SHARED_ALS_H__ */
+#endif /* SHARED_ALS_H__ */
 /****************************************************************/

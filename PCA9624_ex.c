@@ -1,6 +1,6 @@
 /*!\file PCA9624_ex.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief PCA9624 Driver extensions
 ** \details PCA9624: 8-bit Fm+ I2C-bus 100mA 40V LED driver
 **/
@@ -157,11 +157,11 @@ FctERR NONNULL__ PCA9624_ReadRegister(PCA9624_t * const pCpnt, const PCA9624_reg
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ PCA9624_OE_GPIO_Init(PCA9624_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
-	return I2C_peripheral_GPIO_init(&pCpnt->cfg.OE_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+__WEAK void NONNULL__ PCA9624_OE_GPIO_Init(PCA9624_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	I2C_peripheral_GPIO_init(&pCpnt->cfg.OE_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
 
-__WEAK FctERR NONNULL__ PCA9624_OE_GPIO_Set(PCA9624_t * const pCpnt, const bool state) {
-	return I2C_peripheral_GPIO_set(&pCpnt->cfg.OE_GPIO, state); }
+__WEAK void NONNULL__ PCA9624_OE_GPIO_Set(PCA9624_t * const pCpnt, const bool state) {
+	I2C_peripheral_GPIO_set(&pCpnt->cfg.OE_GPIO, state); }
 
 
 /****************************************************************/

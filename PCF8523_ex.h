@@ -1,12 +1,12 @@
 /*!\file PCF8523_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief PCF8523 Driver extensions
 ** \details PCF8523: Real-Time Clock (RTC) and calendar
 **/
 /****************************************************************/
-#ifndef __PCF8523_EX_H__
-	#define __PCF8523_EX_H__
+#ifndef PCF8523_EX_H__
+	#define PCF8523_EX_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -130,16 +130,14 @@ FctERR NONNULL__ PCF8523_Check_Clock_Integrity(bool * integrity);
 ** \param[in] GPIOx - INT1 port
 ** \param[in] GPIO_Pin - INT1 pin
 ** \param[in] GPIO_Active: INT1 pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCF8523_INT1_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ PCF8523_INT1_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Interrupt 1 GPIO pin getter for PCF8523
 ** \weak PCF8523 Interrupt 1 GPIO pin getter may be user implemented if needed
 ** \param[in,out] pState - Pointer to INT1 pin state variable (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCF8523_INT1_GPIO_Get(bool * const pState);
+void NONNULL__ PCF8523_INT1_GPIO_Get(bool * const pState);
 
 
 /*!\brief Interrupt 2 GPIO pin init for PCF8523
@@ -147,16 +145,14 @@ FctERR NONNULL__ PCF8523_INT1_GPIO_Get(bool * const pState);
 ** \param[in] GPIOx - INT2 port
 ** \param[in] GPIO_Pin - INT2 pin
 ** \param[in] GPIO_Active: INT2 pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCF8523_INT2_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ PCF8523_INT2_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Interrupt 2 GPIO pin getter for PCF8523
 ** \weak PCF8523 Interrupt 2 GPIO pin getter may be user implemented if needed
 ** \param[in,out] pState - Pointer to INT2 pin state variable (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCF8523_INT2_GPIO_Get(bool * const pState);
+void NONNULL__ PCF8523_INT2_GPIO_Get(bool * const pState);
 
 
 /****************************************************************/
@@ -166,5 +162,5 @@ FctERR NONNULL__ PCF8523_INT2_GPIO_Get(bool * const pState);
 	}
 #endif
 
-#endif /* __PCF8523_EX_H__ */
+#endif /* PCF8523_EX_H__ */
 /****************************************************************/

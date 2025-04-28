@@ -1,12 +1,12 @@
 /*!\file PCA9532_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief PCA9532 Driver extensions
 ** \details PCA9532: 16-bit I2C-bus LED dimmer
 **/
 /****************************************************************/
-#ifndef __PCA9532_EX_H__
-	#define __PCA9532_EX_H__
+#ifndef PCA9532_EX_H__
+	#define PCA9532_EX_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -166,17 +166,15 @@ FctERR NONNULL__ PCA9532_SetDuty(PCA9532_t * const pCpnt, const float duty, cons
 ** \param[in] GPIOx - RST port
 ** \param[in] GPIO_Pin - RST pin
 ** \param[in] GPIO_Active: RST pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCA9532_RST_GPIO_Init(PCA9532_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ PCA9532_RST_GPIO_Init(PCA9532_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Reset GPIO pin setter for PCA9532
 ** \weak PCA9532 Reset GPIO pin setter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to PCA9532 component
 ** \param[in] state - state to write on RST pin (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCA9532_RST_GPIO_Set(PCA9532_t * const pCpnt, const bool state);
+void NONNULL__ PCA9532_RST_GPIO_Set(PCA9532_t * const pCpnt, const bool state);
 
 
 /****************************************************************/
@@ -186,5 +184,5 @@ FctERR NONNULL__ PCA9532_RST_GPIO_Set(PCA9532_t * const pCpnt, const bool state)
 	}
 #endif
 
-#endif	/* __PCA9532_EX_H__ */
+#endif	/* PCA9532_EX_H__ */
 /****************************************************************/

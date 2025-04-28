@@ -1,6 +1,6 @@
 /*!\file AMG88.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief AMG88 Driver
 ** \details AMG88: Infrared Array Sensor (Grid-EYE)
 **/
@@ -28,8 +28,9 @@ FctERR NONNULL__ AMG88_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, c
 
 	I2C_PERIPHERAL_SET_DEFAULTS(AMG88, idx);
 
-	err = I2C_slave_init(&AMG88_hal[idx], hi2c, devAddress, AMG88_hal[idx].cfg.timeout);
-	if (!err)	{ err = AMG88_Init_Sequence(&AMG88[idx]); }
+	I2C_slave_init(&AMG88_hal[idx], hi2c, devAddress, AMG88_hal[idx].cfg.timeout);
+
+	err = AMG88_Init_Sequence(&AMG88[idx]);
 
 	if (err)	{ I2C_set_enable(&AMG88_hal[idx], false); }
 

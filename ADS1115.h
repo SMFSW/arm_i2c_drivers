@@ -1,6 +1,6 @@
 /*!\file ADS1115.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief ADS1115 Driver
 ** \details ADS1115: Ultra-Small, Low-Power, 16-Bit Analog-to-Digital Converter with Internal Reference
 ** \note	Compatibility with:
@@ -11,8 +11,8 @@
 **				- ADS1x1x (check datasheets for compatibility informations)
 **/
 /****************************************************************/
-#ifndef __ADS1115_H__
-	#define __ADS1115_H__
+#ifndef ADS1115_H__
+	#define ADS1115_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -226,5 +226,5 @@ FctERR NONNULL__ ADS1115_Read(I2C_slave_t * const pSlave, uint16_t * data, const
 	}
 #endif
 
-#endif /* __ADS1115_H__ */
+#endif /* ADS1115_H__ */
 /****************************************************************/

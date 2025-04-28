@@ -1,6 +1,6 @@
 /*!\file MCP9808_ex.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief MCP9808 Driver extensions
 ** \details MCP9808: +/-0.5C Maximum Accuracy Digital Temperature Sensor
 **/
@@ -142,11 +142,11 @@ FctERR NONNULL__ MCP9808_Get_Resolution(MCP9808_t * const pCpnt, MCP9808_res * r
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ MCP9808_Alert_GPIO_Init(MCP9808_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
-	return I2C_peripheral_GPIO_init(&pCpnt->cfg.Alert_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+__WEAK void NONNULL__ MCP9808_Alert_GPIO_Init(MCP9808_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	I2C_peripheral_GPIO_init(&pCpnt->cfg.Alert_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
 
-__WEAK FctERR NONNULL__ MCP9808_Alert_GPIO_Get(MCP9808_t * const pCpnt, bool * const pState) {
-	return I2C_peripheral_GPIO_get(&pCpnt->cfg.Alert_GPIO, pState); }
+__WEAK void NONNULL__ MCP9808_Alert_GPIO_Get(MCP9808_t * const pCpnt, bool * const pState) {
+	I2C_peripheral_GPIO_get(&pCpnt->cfg.Alert_GPIO, pState); }
 
 
 /****************************************************************/

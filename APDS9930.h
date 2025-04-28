@@ -1,12 +1,12 @@
 /*!\file APDS9930.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief APDS9930 Driver
 ** \details APDS9930: Digital Proximity and Ambient Light Sensor
 **/
 /****************************************************************/
-#ifndef __APDS9930_H__
-	#define __APDS9930_H__
+#ifndef APDS9930_H__
+	#define APDS9930_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -343,5 +343,5 @@ FctERR NONNULL__ APDS9930_Write_Special(I2C_slave_t * const pSlave, const APDS99
 	}
 #endif
 
-#endif /* __APDS9930_H__ */
+#endif /* APDS9930_H__ */
 /****************************************************************/

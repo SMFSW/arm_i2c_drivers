@@ -1,6 +1,6 @@
 /*!\file NCA9595.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief NCA9595 Driver
 ** \details NCA9595: Low-voltage 16-bit I²C and SMBus I/O expander
 **/
@@ -28,16 +28,14 @@ FctERR NONNULL__ NCA9595_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 
 	I2C_PERIPHERAL_SET_DEFAULTS(NCA9595, idx);
 
-	err = I2C_slave_init(&NCA9595_hal[idx], hi2c, devAddress, NCA9595_hal[idx].cfg.timeout);
-	if (!err)
-	{
-		NCA9595[idx].cfg.NCA9595_Cfg.Word = 0xFFFF;	// Set default as inputs
-		err = NCA9595_Init_Sequence(&NCA9595[idx]);
-	}
+	I2C_slave_init(&NCA9595_hal[idx], hi2c, devAddress, NCA9595_hal[idx].cfg.timeout);
+
+	NCA9595[idx].cfg.NCA9595_Cfg.Word = 0xFFFF;	// Set default as inputs
+	err = NCA9595_Init_Sequence(&NCA9595[idx]);
 
 	if (err)	{ I2C_set_enable(&NCA9595_hal[idx], false); }
 
-	return ERROR_OK;
+	return err;
 }
 
 FctERR NCA9595_Init_Single(void) {

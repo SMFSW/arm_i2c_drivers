@@ -1,6 +1,6 @@
 /*!\file APDS9930_ex.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief APDS9930 Driver extensions
 ** \details APDS9930: Digital Proximity and Ambient Light Sensor
 **/
@@ -308,11 +308,11 @@ FctERR NONNULL__ APDS9930_Set_Wait_Time(APDS9930_t * const pCpnt, const uint16_t
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ APDS9930_INT_GPIO_Init(APDS9930_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
-	return I2C_peripheral_GPIO_init(&pCpnt->cfg.INT_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+__WEAK void NONNULL__ APDS9930_INT_GPIO_Init(APDS9930_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	I2C_peripheral_GPIO_init(&pCpnt->cfg.INT_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
 
-__WEAK FctERR NONNULL__ APDS9930_INT_GPIO_Get(APDS9930_t * const pCpnt, bool * const pState) {
-	return I2C_peripheral_GPIO_get(&pCpnt->cfg.INT_GPIO, pState); }
+__WEAK void NONNULL__ APDS9930_INT_GPIO_Get(APDS9930_t * const pCpnt, bool * const pState) {
+	I2C_peripheral_GPIO_get(&pCpnt->cfg.INT_GPIO, pState); }
 
 
 /****************************************************************/

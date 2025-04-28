@@ -1,12 +1,12 @@
 /*!\file TCS3472_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief TCS3472 Driver procedures
 ** \details TCS3472: Color light-to-digital converter with IR filter
 **/
 /****************************************************************/
-#ifndef __TCS3472_PROC_H__
-	#define __TCS3472_PROC_H__
+#ifndef TCS3472_PROC_H__
+	#define TCS3472_PROC_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -145,5 +145,5 @@ __INLINE void INLINE__ TCS3472_handler_it_all(void) {
 	}
 #endif
 
-#endif /* __TCS3472_PROC_H__ */
+#endif /* TCS3472_PROC_H__ */
 /****************************************************************/

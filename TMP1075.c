@@ -1,6 +1,6 @@
 /*!\file TMP1075.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief TMP1075 Driver
 ** \details TMP1075: Temperature Sensor With I2C and SMBus Interface in Industry Standard LM75 Form Factor and Pinout
 **/
@@ -28,8 +28,9 @@ FctERR NONNULL__ TMP1075_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 
 	I2C_PERIPHERAL_SET_DEFAULTS(TMP1075, idx);
 
-	err = I2C_slave_init(&TMP1075_hal[idx], hi2c, devAddress, TMP1075_hal[idx].cfg.timeout);
-	if (!err)	{ err = TMP1075_Init_Sequence(&TMP1075[idx]); }
+	I2C_slave_init(&TMP1075_hal[idx], hi2c, devAddress, TMP1075_hal[idx].cfg.timeout);
+
+	err = TMP1075_Init_Sequence(&TMP1075[idx]);
 
 	if (err)	{ I2C_set_enable(&TMP1075_hal[idx], false); }
 

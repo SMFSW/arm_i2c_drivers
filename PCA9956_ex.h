@@ -1,12 +1,12 @@
 /*!\file PCA9956_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief PCA9956 Driver extensions
 ** \details PCA9956: 24-channel Fm+ I2C-bus 57 mA/20 V constant current LED driver
 **/
 /****************************************************************/
-#ifndef __PCA9956_EX_H__
-	#define __PCA9956_EX_H__
+#ifndef PCA9956_EX_H__
+	#define PCA9956_EX_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -247,17 +247,15 @@ FctERR NONNULL__ PCA9956_ReadRegister(PCA9956_t * const pCpnt, const PCA9956_reg
 ** \param[in] GPIOx - RST port
 ** \param[in] GPIO_Pin - RST pin
 ** \param[in] GPIO_Active: RST pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCA9956_RST_GPIO_Init(PCA9956_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ PCA9956_RST_GPIO_Init(PCA9956_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Reset GPIO pin setter for PCA9956
 ** \weak PCA9956 Reset GPIO pin setter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to PCA9956 component
 ** \param[in] state - state to write on RST pin (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCA9956_RST_GPIO_Set(PCA9956_t * const pCpnt, const bool state);
+void NONNULL__ PCA9956_RST_GPIO_Set(PCA9956_t * const pCpnt, const bool state);
 
 
 /*!\brief Output Enable GPIO pin init for PCA9956
@@ -266,17 +264,15 @@ FctERR NONNULL__ PCA9956_RST_GPIO_Set(PCA9956_t * const pCpnt, const bool state)
 ** \param[in] GPIOx - OE port
 ** \param[in] GPIO_Pin - OE pin
 ** \param[in] GPIO_Active: OE pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCA9956_OE_GPIO_Init(PCA9956_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ PCA9956_OE_GPIO_Init(PCA9956_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Output Enable GPIO pin setter for PCA9956
 ** \weak PCA9956 Output Enable GPIO pin setter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to PCA9956 component
 ** \param[in] state - state to write on OE pin (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCA9956_OE_GPIO_Set(PCA9956_t * const pCpnt, const bool state);
+void NONNULL__ PCA9956_OE_GPIO_Set(PCA9956_t * const pCpnt, const bool state);
 
 
 /****************************************************************/
@@ -286,5 +282,5 @@ FctERR NONNULL__ PCA9956_OE_GPIO_Set(PCA9956_t * const pCpnt, const bool state);
 	}
 #endif
 
-#endif	/* __PCA9956_EX_H__ */
+#endif	/* PCA9956_EX_H__ */
 /****************************************************************/

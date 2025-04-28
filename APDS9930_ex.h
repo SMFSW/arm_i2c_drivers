@@ -1,12 +1,12 @@
 /*!\file APDS9930_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief APDS9930 Driver extensions
 ** \details APDS9930: Digital Proximity and Ambient Light Sensor
 **/
 /****************************************************************/
-#ifndef __APDS9930_EX_H__
-	#define __APDS9930_EX_H__
+#ifndef APDS9930_EX_H__
+	#define APDS9930_EX_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -346,17 +346,15 @@ __INLINE FctERR NONNULL_INLINE__ APDS9930_Get_Prox(APDS9930_t * const pCpnt, uin
 ** \param[in] GPIOx - INT port
 ** \param[in] GPIO_Pin - INT pin
 ** \param[in] GPIO_Active: INT pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ APDS9930_INT_GPIO_Init(APDS9930_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ APDS9930_INT_GPIO_Init(APDS9930_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Interrupt GPIO pin getter for APDS9930
 ** \weak APDS9930 Interrupt GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to APDS9930 component
 ** \param[in,out] pState - Pointer to INT pin state variable (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ APDS9930_INT_GPIO_Get(APDS9930_t * const pCpnt, bool * const pState);
+void NONNULL__ APDS9930_INT_GPIO_Get(APDS9930_t * const pCpnt, bool * const pState);
 
 
 /****************************************************************/
@@ -366,5 +364,5 @@ FctERR NONNULL__ APDS9930_INT_GPIO_Get(APDS9930_t * const pCpnt, bool * const pS
 	}
 #endif
 
-#endif /* __APDS9930_EX_H__ */
+#endif /* APDS9930_EX_H__ */
 /****************************************************************/

@@ -1,12 +1,12 @@
 /*!\file DS_GPMS_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief DS-GPM.S Driver procedures
 ** \details DS-GPM.S: 99 Channel Positioning System (GPS + GLONASS) Shield
 **/
 /****************************************************************/
-#ifndef __DS_GPMS_PROC_H__
-	#define __DS_GPMS_PROC_H__
+#ifndef DS_GPMS_PROC_H__
+	#define DS_GPMS_PROC_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -115,5 +115,5 @@ FctERR GPMS_handler(void);
 	}
 #endif
 
-#endif /* __DS_GPMS_PROC_H__ */
+#endif /* DS_GPMS_PROC_H__ */
 /****************************************************************/

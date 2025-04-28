@@ -1,12 +1,12 @@
 /*!\file TCS3472.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief TCS3472 Driver
 ** \details TCS3472: Color light-to-digital converter with IR filter
 **/
 /****************************************************************/
-#ifndef __TCS3472_H__
-	#define __TCS3472_H__
+#ifndef TCS3472_H__
+	#define TCS3472_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -279,5 +279,5 @@ FctERR NONNULL__ TCS3472_Write_Special(I2C_slave_t * const pSlave, const TCS3472
 	}
 #endif
 
-#endif /* __TCS3472_H__ */
+#endif /* TCS3472_H__ */
 /****************************************************************/

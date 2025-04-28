@@ -1,6 +1,6 @@
 /*!\file PCA9952_ex.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief PCA9952 Driver extensions
 ** \details PCA9952: 16-channel Fm+ I2C-bus 57 mA constant current LED driver
 **/
@@ -209,18 +209,18 @@ FctERR NONNULL__ PCA9952_ReadRegister(PCA9952_t * const pCpnt, const PCA9952_reg
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ PCA9952_RST_GPIO_Init(PCA9952_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
-	return I2C_peripheral_GPIO_init(&pCpnt->cfg.RST_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+__WEAK void NONNULL__ PCA9952_RST_GPIO_Init(PCA9952_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	I2C_peripheral_GPIO_init(&pCpnt->cfg.RST_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
 
-__WEAK FctERR NONNULL__ PCA9952_RST_GPIO_Set(PCA9952_t * const pCpnt, const bool state) {
-	return I2C_peripheral_GPIO_set(&pCpnt->cfg.RST_GPIO, state); }
+__WEAK void NONNULL__ PCA9952_RST_GPIO_Set(PCA9952_t * const pCpnt, const bool state) {
+	I2C_peripheral_GPIO_set(&pCpnt->cfg.RST_GPIO, state); }
 
 
-__WEAK FctERR NONNULL__ PCA9952_OE_GPIO_Init(PCA9952_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
-	return I2C_peripheral_GPIO_init(&pCpnt->cfg.OE_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+__WEAK void NONNULL__ PCA9952_OE_GPIO_Init(PCA9952_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	I2C_peripheral_GPIO_init(&pCpnt->cfg.OE_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
 
-__WEAK FctERR NONNULL__ PCA9952_OE_GPIO_Set(PCA9952_t * const pCpnt, const bool state) {
-	return I2C_peripheral_GPIO_set(&pCpnt->cfg.OE_GPIO, state); }
+__WEAK void NONNULL__ PCA9952_OE_GPIO_Set(PCA9952_t * const pCpnt, const bool state) {
+	I2C_peripheral_GPIO_set(&pCpnt->cfg.OE_GPIO, state); }
 
 
 /****************************************************************/

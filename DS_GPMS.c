@@ -1,6 +1,6 @@
 /*!\file DS_GPMS.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief DS-GPM.S Driver
 ** \details DS-GPM.S: 99 Channel Positioning System (GPS + GLONASS) Shield
 **/
@@ -26,8 +26,9 @@ __WEAK FctERR GPMS_Init(void)
 
 	I2C_PERIPHERAL_SET_DEFAULTS_SINGLETON(GPMS);
 
-	err = I2C_slave_init(&GPMS_hal, I2C_GPMS, GPMS_BASE_ADDR, GPMS_hal.cfg.timeout);
-	if (!err)	{ err = GPMS_Init_Sequence(); }
+	I2C_slave_init(&GPMS_hal, I2C_GPMS, GPMS_BASE_ADDR, GPMS_hal.cfg.timeout);
+
+	err = GPMS_Init_Sequence();
 
 	if (err)	{ I2C_set_enable(&GPMS_hal, false); }
 

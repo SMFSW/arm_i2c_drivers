@@ -1,6 +1,6 @@
 /*!\file PCA9624.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief PCA9624 Driver
 ** \details PCA9624: 8-bit Fm+ I2C-bus 100mA 40V LED driver
 **/
@@ -32,8 +32,9 @@ FctERR NONNULL__ PCA9624_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 
 	I2C_PERIPHERAL_SET_DEFAULTS(PCA9624, idx);
 
-	err = I2C_slave_init(&PCA9624_hal[idx], hi2c, devAddress, PCA9624_hal[idx].cfg.timeout);
-	PCA9624_Set_Auto_Increment(&PCA9624[idx], PCA9xxx__AUTO_INC_ALL);
+	I2C_slave_init(&PCA9624_hal[idx], hi2c, devAddress, PCA9624_hal[idx].cfg.timeout);
+
+	err = PCA9624_Set_Auto_Increment(&PCA9624[idx], PCA9xxx__AUTO_INC_ALL);
 	if (!err)	{ err = PCA9624_Init_Sequence(&PCA9624[idx]); }
 
 	if (err)	{ I2C_set_enable(&PCA9624_hal[idx], false); }

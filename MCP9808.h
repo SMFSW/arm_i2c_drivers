@@ -1,12 +1,12 @@
 /*!\file MCP9808.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief MCP9808 Driver
 ** \details MCP9808: +/-0.5C Maximum Accuracy Digital Temperature Sensor
 **/
 /****************************************************************/
-#ifndef __MCP9808_H__
-	#define __MCP9808_H__
+#ifndef MCP9808_H__
+	#define MCP9808_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -185,5 +185,5 @@ FctERR NONNULL__ MCP9808_Read(I2C_slave_t * const pSlave, uint16_t * data, const
 	}
 #endif
 
-#endif /* __MCP9808_H__ */
+#endif /* MCP9808_H__ */
 /****************************************************************/

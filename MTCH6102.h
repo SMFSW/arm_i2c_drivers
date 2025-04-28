@@ -1,12 +1,12 @@
 /*!\file MTCH6102.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief MTCH6102 Driver
 ** \details MTCH6102: Low-Power Projected Capacitive Touch Controller
 **/
 /****************************************************************/
-#ifndef __MTCH6102_H__
-	#define __MTCH6102_H__
+#ifndef MTCH6102_H__
+	#define MTCH6102_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -433,5 +433,5 @@ FctERR NONNULL__ MTCH6102_Read(I2C_slave_t * const pSlave, uint8_t * data, const
 	}
 #endif
 
-#endif	/* __MTCH6102_H__ */
+#endif	/* MTCH6102_H__ */
 /****************************************************************/

@@ -1,6 +1,6 @@
 /*!\file APDS9930_proc.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief APDS9930 Driver procedures
 ** \details APDS9930: Digital Proximity and Ambient Light Sensor
 **/
@@ -180,11 +180,11 @@ __WEAK FctERR NONNULL__ APDS9930_handler(APDS9930_t * const pCpnt)
 
 __WEAK FctERR NONNULL__ APDS9930_handler_it(APDS9930_t * const pCpnt)
 {
-	FctERR	err;
+	FctERR	err = ERROR_OK;
 	bool	interrupt;
 
-	err = APDS9930_INT_GPIO_Get(pCpnt, &interrupt);
-	if ((!err) && interrupt)	{ err = APDS9930_handler(pCpnt); }
+	APDS9930_INT_GPIO_Get(pCpnt, &interrupt);
+	if (interrupt)	{ err = APDS9930_handler(pCpnt); }
 
 	return err;
 }

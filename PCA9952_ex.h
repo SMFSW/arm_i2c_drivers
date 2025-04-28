@@ -1,12 +1,12 @@
 /*!\file PCA9952_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief PCA9952 Driver extensions
 ** \details PCA9952: 16-channel Fm+ I2C-bus 57 mA constant current LED driver
 **/
 /****************************************************************/
-#ifndef __PCA9952_EX_H__
-	#define __PCA9952_EX_H__
+#ifndef PCA9952_EX_H__
+	#define PCA9952_EX_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -247,17 +247,15 @@ FctERR NONNULL__ PCA9952_ReadRegister(PCA9952_t * const pCpnt, const PCA9952_reg
 ** \param[in] GPIOx - RST port
 ** \param[in] GPIO_Pin - RST pin
 ** \param[in] GPIO_Active: RST pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCA9952_RST_GPIO_Init(PCA9952_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ PCA9952_RST_GPIO_Init(PCA9952_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Reset GPIO pin setter for PCA9952
 ** \weak PCA9952 Reset GPIO pin setter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to PCA9952 component
 ** \param[in] state - state to write on RST pin (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCA9952_RST_GPIO_Set(PCA9952_t * const pCpnt, const bool state);
+void NONNULL__ PCA9952_RST_GPIO_Set(PCA9952_t * const pCpnt, const bool state);
 
 
 /*!\brief Output Enable GPIO pin init for PCA9952
@@ -267,18 +265,16 @@ FctERR NONNULL__ PCA9952_RST_GPIO_Set(PCA9952_t * const pCpnt, const bool state)
 ** \param[in] GPIOx - OE port
 ** \param[in] GPIO_Pin - OE pin
 ** \param[in] GPIO_Active: OE pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCA9952_OE_GPIO_Init(PCA9952_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ PCA9952_OE_GPIO_Init(PCA9952_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Output Enable GPIO pin setter for PCA9952
 ** \weak PCA9952 Output Enable GPIO pin setter may be user implemented if needed
 ** \warning Only for PCA9952; No OE pin on PCA9955
 ** \param[in] pCpnt - Pointer to PCA9952 component
 ** \param[in] state - state to write on OE pin (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCA9952_OE_GPIO_Set(PCA9952_t * const pCpnt, const bool state);
+void NONNULL__ PCA9952_OE_GPIO_Set(PCA9952_t * const pCpnt, const bool state);
 
 
 /****************************************************************/
@@ -288,5 +284,5 @@ FctERR NONNULL__ PCA9952_OE_GPIO_Set(PCA9952_t * const pCpnt, const bool state);
 	}
 #endif
 
-#endif	/* __PCA9952_EX_H__ */
+#endif	/* PCA9952_EX_H__ */
 /****************************************************************/

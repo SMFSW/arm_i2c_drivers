@@ -1,12 +1,12 @@
 /*!\file APDS9930_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief APDS9930 Driver procedures
 ** \details APDS9930: Digital Proximity and Ambient Light Sensor
 **/
 /****************************************************************/
-#ifndef __APDS9930_PROC_H__
-	#define __APDS9930_PROC_H__
+#ifndef APDS9930_PROC_H__
+	#define APDS9930_PROC_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -185,5 +185,5 @@ __INLINE void INLINE__ APDS9930_handler_it_all(void) {
 	}
 #endif
 
-#endif /* __APDS9930_PROC_H__ */
+#endif /* APDS9930_PROC_H__ */
 /****************************************************************/

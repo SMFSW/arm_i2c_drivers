@@ -1,6 +1,6 @@
 /*!\file shared_APS.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief Ambient Pressure Sensing shared
 **/
 /****************************************************************/

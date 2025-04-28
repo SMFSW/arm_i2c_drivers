@@ -1,6 +1,6 @@
 /*!\file MB85RC256V_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief MB85RC256V FRAM Driver procedures
 ** \details MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM
 ** \note	Compatibility (tested):
@@ -8,8 +8,8 @@
 **				- FM24CL64B
 **/
 /****************************************************************/
-#ifndef __MB85RC256V_PROC_H__
-	#define __MB85RC256V_PROC_H__
+#ifndef MB85RC256V_PROC_H__
+	#define MB85RC256V_PROC_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -58,5 +58,5 @@ FctERR NONNULL__ MB85RC256V_Get_ID(MB85RC256V_t * const pCpnt);
 	}
 #endif
 
-#endif /* __MB85RC256V_PROC_H__ */
+#endif /* MB85RC256V_PROC_H__ */
 /****************************************************************/

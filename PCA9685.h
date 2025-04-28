@@ -1,12 +1,12 @@
 /*!\file PCA9685.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief PCA9685 Driver
 ** \details PCA9685: 16-channel, 12-bit PWM Fm+ I2C-bus LED controller
 **/
 /****************************************************************/
-#ifndef __PCA9685_H__
-	#define __PCA9685_H__
+#ifndef PCA9685_H__
+	#define PCA9685_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -229,5 +229,5 @@ FctERR NONNULL__ PCA9685_Read(I2C_slave_t * const pSlave, uint8_t * data, const 
 	}
 #endif
 
-#endif	/* __PCA9685_H__ */
+#endif	/* PCA9685_H__ */
 /****************************************************************/

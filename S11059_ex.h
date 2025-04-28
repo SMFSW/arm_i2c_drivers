@@ -1,12 +1,12 @@
 /*!\file S11059_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief S11059 Driver extensions
 ** \details S11059: I2C interface-compatible color sensor
 **/
 /****************************************************************/
-#ifndef __S11059_EX_H__
-	#define __S11059_EX_H__
+#ifndef S11059_EX_H__
+	#define S11059_EX_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -170,5 +170,5 @@ __INLINE FctERR NONNULL_INLINE__ S11059_Get_IR(S11059_t * const pCpnt, uint16_t 
 	}
 #endif
 
-#endif /* __S11059_EX_H__ */
+#endif /* S11059_EX_H__ */
 /****************************************************************/

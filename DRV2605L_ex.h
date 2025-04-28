@@ -1,12 +1,12 @@
 /*!\file DRV2605L.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief DRV2605L Driver extensions
 ** \details DRV2605L: 2 to 5.2V Haptic Driver for LRA and ERM With Effect Library and Smart-Loop Architecture
 **/
 /****************************************************************/
-#ifndef __DRV2605L_EX_H__
-	#define __DRV2605L_EX_H__
+#ifndef DRV2605L_EX_H__
+	#define DRV2605L_EX_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -335,16 +335,14 @@ __INLINE FctERR NONNULL_INLINE__ DRV2605L_Get_ChipID(uint8_t * id) {
 ** \param[in] GPIOx - EN port
 ** \param[in] GPIO_Pin - EN pin
 ** \param[in] GPIO_Active: EN pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ DRV2605L_EN_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ DRV2605L_EN_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Enable GPIO pin setter for DRV2605L
 ** \weak DRV2605L Enable GPIO pin setter may be user implemented if needed
 ** \param[in] state - state to write on EN pin (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR DRV2605L_EN_GPIO_Set(const bool state);
+void DRV2605L_EN_GPIO_Set(const bool state);
 
 
 /*!\brief Trigger GPIO pin init for DRV2605L
@@ -352,16 +350,14 @@ FctERR DRV2605L_EN_GPIO_Set(const bool state);
 ** \param[in] GPIOx - TRIG port
 ** \param[in] GPIO_Pin - TRIG pin
 ** \param[in] GPIO_Active: TRIG pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ DRV2605L_TRIG_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ DRV2605L_TRIG_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Trigger GPIO pin setter for DRV2605L
 ** \weak DRV2605L Trigger GPIO pin setter may be user implemented if needed
 ** \param[in] state - state to write on TRIG pin (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR DRV2605L_TRIG_GPIO_Set(const bool state);
+void DRV2605L_TRIG_GPIO_Set(const bool state);
 
 
 /****************************************************************/
@@ -371,5 +367,5 @@ FctERR DRV2605L_TRIG_GPIO_Set(const bool state);
 	}
 #endif
 
-#endif /* __DRV2605L_EX_H__ */
+#endif /* DRV2605L_EX_H__ */
 /****************************************************************/

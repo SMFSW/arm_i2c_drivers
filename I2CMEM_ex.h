@@ -1,13 +1,13 @@
 /*!\file I2CMEM_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief FRAM / EEPROM Driver extensions
 ** \note Fully compatible between EEPROM / FRAM type components
 ** \note When EEPROM compatibility is not needed, buf_size at init can be set to \ref I2CMEM_WBUF_NONE for more efficiency
 **/
 /****************************************************************/
-#ifndef __I2CMEM_EX_H__
-	#define __I2CMEM_EX_H__
+#ifndef I2CMEM_EX_H__
+	#define I2CMEM_EX_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -98,17 +98,15 @@ FctERR NONNULL__ I2CMEM_Mass_Erase(I2CMEM_t * const pCpnt);
 ** \param[in] GPIOx - WP port
 ** \param[in] GPIO_Pin - WP pin
 ** \param[in] GPIO_Active: WP pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ I2CMEM_WP_GPIO_Init(I2CMEM_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ I2CMEM_WP_GPIO_Init(I2CMEM_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Write Protect GPIO pin setter for I2CMEM
 ** \weak I2CMEM Write Protect GPIO pin setter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to I2CMEM component
 ** \param[in] state - state to write on WP pin (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ I2CMEM_WP_GPIO_Set(I2CMEM_t * const pCpnt, const bool state);
+void NONNULL__ I2CMEM_WP_GPIO_Set(I2CMEM_t * const pCpnt, const bool state);
 
 
 /****************************************************************/
@@ -118,5 +116,5 @@ FctERR NONNULL__ I2CMEM_WP_GPIO_Set(I2CMEM_t * const pCpnt, const bool state);
 	}
 #endif
 
-#endif /* __I2CMEM_EX_H__ */
+#endif /* I2CMEM_EX_H__ */
 /****************************************************************/

@@ -1,6 +1,6 @@
 /*!\file MCP9808_proc.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief MCP9808 Driver procedures
 ** \details MCP9808: +/-0.5C Maximum Accuracy Digital Temperature Sensor
 **/
@@ -161,11 +161,11 @@ __WEAK FctERR NONNULL__ MCP9808_handler(MCP9808_t * const pCpnt)
 
 __WEAK FctERR NONNULL__ MCP9808_handler_it(MCP9808_t * const pCpnt)
 {
-	FctERR	err;
+	FctERR	err = ERROR_OK;
 	bool	interrupt;
 
-	err = MCP9808_Alert_GPIO_Get(pCpnt, &interrupt);
-	if ((!err) && interrupt)
+	MCP9808_Alert_GPIO_Get(pCpnt, &interrupt);
+	if (interrupt)
 	{
 		pCpnt->NewData = true;
 		err = MCP9808_handler(pCpnt);

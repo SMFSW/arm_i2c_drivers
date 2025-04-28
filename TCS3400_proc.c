@@ -1,6 +1,6 @@
 /*!\file TCS3400_proc.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief TCS3400 Driver procedures
 ** \details TCS3400: Color Light-to-Digital Converter
 **/
@@ -137,11 +137,11 @@ __WEAK FctERR NONNULL__ TCS3400_handler(TCS3400_t * const pCpnt)
 
 __WEAK FctERR NONNULL__ TCS3400_handler_it(TCS3400_t * const pCpnt)
 {
-	FctERR	err;
+	FctERR	err = ERROR_OK;
 	bool	interrupt;
 
-	err = TCS3400_INT_GPIO_Get(pCpnt, &interrupt);
-	if ((!err) && interrupt)	{ err = TCS3400_handler(pCpnt); }
+	TCS3400_INT_GPIO_Get(pCpnt, &interrupt);
+	if (interrupt)	{ err = TCS3400_handler(pCpnt); }
 
 	return err;
 }

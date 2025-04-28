@@ -1,6 +1,6 @@
 /*!\file MCP9808.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief MCP9808 Driver
 ** \details MCP9808: +/-0.5C Maximum Accuracy Digital Temperature Sensor
 **/
@@ -28,8 +28,9 @@ FctERR NONNULL__ MCP9808_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 
 	I2C_PERIPHERAL_SET_DEFAULTS(MCP9808, idx);
 
-	err = I2C_slave_init(&MCP9808_hal[idx], hi2c, devAddress, MCP9808_hal[idx].cfg.timeout);
-	if (!err)	{ err = MCP9808_Init_Sequence(&MCP9808[idx]); }
+	I2C_slave_init(&MCP9808_hal[idx], hi2c, devAddress, MCP9808_hal[idx].cfg.timeout);
+
+	err = MCP9808_Init_Sequence(&MCP9808[idx]);
 
 	if (err)	{ I2C_set_enable(&MCP9808_hal[idx], false); }
 

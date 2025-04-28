@@ -1,11 +1,11 @@
 /*!\file shared_APS.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief Ambient Pressure Sensing shared
 **/
 /****************************************************************/
-#ifndef __SHARED_APS_H__
-	#define __SHARED_APS_H__
+#ifndef SHARED_APS_H__
+	#define SHARED_APS_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -60,5 +60,5 @@ float Altitude_To_SeaLevel_Pressure(const float pressure, const float altitude);
 	}
 #endif
 
-#endif /* __SHARED_APS_H__ */
+#endif /* SHARED_APS_H__ */
 /****************************************************************/

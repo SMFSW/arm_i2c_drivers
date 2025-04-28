@@ -1,6 +1,6 @@
 /*!\file FM24C.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief FM24C FRAM Driver (bank switching at I2C address level protocol)
 ** \details FM24C16B: 16-Kbit (2K * 8) Serial I2C F-RAM
 **			FM24C04B: 4-Kbit (512 * 8) Serial I2C F-RAM
@@ -32,15 +32,11 @@ FM24C_t FM24C[I2C_FM24C_NB] = { 0 };
 
 FctERR NONNULL__ FM24C_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress)
 {
-	FctERR err;
-
 	assert_param(IS_I2C_PERIPHERAL(FM24C, idx));
 
 	I2C_PERIPHERAL_SET_DEFAULTS(FM24C, idx);
 
-	err = I2C_slave_init(&FM24C_hal[idx], hi2c, devAddress, FM24C_hal[idx].cfg.timeout);
-
-	if (err)	{ I2C_set_enable(&FM24C_hal[idx], false); }
+	I2C_slave_init(&FM24C_hal[idx], hi2c, devAddress, FM24C_hal[idx].cfg.timeout);
 
 	return ERROR_OK;
 }

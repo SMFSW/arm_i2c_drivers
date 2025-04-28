@@ -1,12 +1,12 @@
 /*!\file MCP4725_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief MCP4725 Driver procedures
 ** \details MCP4725: 12-Bit Digital-to-Analog Converter with EEPROM Memory
 **/
 /****************************************************************/
-#ifndef __MCP4725_PROC_H__
-	#define __MCP4725_PROC_H__
+#ifndef MCP4725_PROC_H__
+	#define MCP4725_PROC_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -98,5 +98,5 @@ FctERR NONNULL__ MCP4725_Set_Volts(MCP4725_t * const pCpnt, const float volts);
 	}
 #endif
 
-#endif /* __MCP4725_PROC_H__ */
+#endif /* MCP4725_PROC_H__ */
 /****************************************************************/

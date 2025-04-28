@@ -1,12 +1,12 @@
 /*!\file MTCH6102_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief MTCH6102 Driver extensions
 ** \details MTCH6102: Low-Power Projected Capacitive Touch Controller
 **/
 /****************************************************************/
-#ifndef __MTCH6102_EX_H__
-	#define __MTCH6102_EX_H__
+#ifndef MTCH6102_EX_H__
+	#define MTCH6102_EX_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -265,17 +265,15 @@ __INLINE FctERR NONNULL_INLINE__ MTCH6102_Get_Gest(const MTCH6102_t * const pCpn
 ** \param[in] GPIOx - INT port
 ** \param[in] GPIO_Pin - INT pin
 ** \param[in] GPIO_Active: INT pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ MTCH6102_INT_GPIO_Init(MTCH6102_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ MTCH6102_INT_GPIO_Init(MTCH6102_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Interrupt GPIO pin getter for MTCH6102
 ** \weak MTCH6102 Interrupt GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to MTCH6102 component
 ** \param[in,out] pState - Pointer to INT pin state variable (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ MTCH6102_INT_GPIO_Get(MTCH6102_t * const pCpnt, bool * const pState);
+void NONNULL__ MTCH6102_INT_GPIO_Get(MTCH6102_t * const pCpnt, bool * const pState);
 
 
 /*!\brief Synchro GPIO pin init for MTCH6102
@@ -284,17 +282,15 @@ FctERR NONNULL__ MTCH6102_INT_GPIO_Get(MTCH6102_t * const pCpnt, bool * const pS
 ** \param[in] GPIOx - SYNC port
 ** \param[in] GPIO_Pin - SYNC pin
 ** \param[in] GPIO_Active: SYNC pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ MTCH6102_SYNC_GPIO_Init(MTCH6102_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ MTCH6102_SYNC_GPIO_Init(MTCH6102_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Synchro GPIO pin getter for MTCH6102
 ** \weak MTCH6102 Synchro GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to MTCH6102 component
 ** \param[in,out] pState - Pointer to SYNC pin state variable (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ MTCH6102_SYNC_GPIO_Get(MTCH6102_t * const pCpnt, bool * const pState);
+void NONNULL__ MTCH6102_SYNC_GPIO_Get(MTCH6102_t * const pCpnt, bool * const pState);
 
 
 /****************************************************************/
@@ -304,5 +300,5 @@ FctERR NONNULL__ MTCH6102_SYNC_GPIO_Get(MTCH6102_t * const pCpnt, bool * const p
 	}
 #endif
 
-#endif	/* __MTCH6102_EX_H__ */
+#endif	/* MTCH6102_EX_H__ */
 /****************************************************************/

@@ -1,12 +1,12 @@
 /*!\file PCF8523_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief PCF8523 Driver procedures
 ** \details PCF8523: Real-Time Clock (RTC) and calendar
 **/
 /****************************************************************/
-#ifndef __PCF8523_PROC_H__
-	#define __PCF8523_PROC_H__
+#ifndef PCF8523_PROC_H__
+	#define PCF8523_PROC_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -112,5 +112,5 @@ FctERR PCF8523_handler_it(void);
 	}
 #endif
 
-#endif /* __PCF8523_PROC_H__ */
+#endif /* PCF8523_PROC_H__ */
 /****************************************************************/

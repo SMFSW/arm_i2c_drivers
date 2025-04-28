@@ -1,6 +1,6 @@
 /*!\file DRV2605L.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief DRV2605L Driver
 ** \details DRV2605L: 2 to 5.2V Haptic Driver for LRA and ERM With Effect Library and Smart-Loop Architecture
 **/
@@ -26,8 +26,9 @@ __WEAK FctERR DRV2605L_Init(void)
 
 	I2C_PERIPHERAL_SET_DEFAULTS_SINGLETON(DRV2605L);
 
-	err = I2C_slave_init(&DRV2605L_hal, I2C_DRV2605L, DRV2605L_BASE_ADDR, DRV2605L_hal.cfg.timeout);
-	if (!err)	{ err = DRV2605L_Init_Sequence(); }
+	I2C_slave_init(&DRV2605L_hal, I2C_DRV2605L, DRV2605L_BASE_ADDR, DRV2605L_hal.cfg.timeout);
+
+	err = DRV2605L_Init_Sequence();
 
 	if (err)	{ I2C_set_enable(&DRV2605L_hal, false); }
 

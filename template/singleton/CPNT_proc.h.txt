@@ -1,12 +1,12 @@
 /*!\file $CPNT$_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief $CPNT$ Driver procedures
 ** \details $CPNT$:
 **/
 /****************************************************************/
-#ifndef __$CPNT$_PROC_H__
-	#define __$CPNT$_PROC_H__
+#ifndef $CPNT$_PROC_H__
+	#define $CPNT$_PROC_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -84,5 +84,5 @@ FctERR NONNULL__ $CPNT$_handler_it(void);
 	}
 #endif
 
-#endif /* __$CPNT$_PROC_H__ */
+#endif /* $CPNT$_PROC_H__ */
 /****************************************************************/

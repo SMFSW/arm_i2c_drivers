@@ -1,12 +1,12 @@
 /*!\file $CPNT$.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief $CPNT$ Driver
 ** \details $CPNT$:
 **/
 /****************************************************************/
-#ifndef __$CPNT$_H__
-	#define __$CPNT$_H__
+#ifndef $CPNT$_H__
+	#define $CPNT$_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -145,5 +145,5 @@ FctERR NONNULL__ $CPNT$_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, c
 	}
 #endif
 
-#endif /* __$CPNT$_H__ */
+#endif /* $CPNT$_H__ */
 /****************************************************************/

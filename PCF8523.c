@@ -1,6 +1,6 @@
 /*!\file PCF8523.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief PCF8523 Driver
 ** \details PCF8523: Real-Time Clock (RTC) and calendar
 **/
@@ -26,8 +26,9 @@ __WEAK FctERR PCF8523_Init(void)
 
 	I2C_PERIPHERAL_SET_DEFAULTS_SINGLETON(PCF8523);
 
-	err = I2C_slave_init(&PCF8523_hal, I2C_PCF8523, PCF8523_BASE_ADDR, PCF8523_hal.cfg.timeout);
-	if (!err)	{ err = PCF8523_Init_Sequence(); }
+	I2C_slave_init(&PCF8523_hal, I2C_PCF8523, PCF8523_BASE_ADDR, PCF8523_hal.cfg.timeout);
+
+	err = PCF8523_Init_Sequence();
 
 	if (err)	{ I2C_set_enable(&PCF8523_hal, false); }
 

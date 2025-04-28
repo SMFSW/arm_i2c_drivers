@@ -1,12 +1,12 @@
 /*!\file DS_GPMS.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief DS-GPM.S Driver
 ** \details DS-GPM.S: 99 Channel Positioning System (GPS + GLONASS) Shield
 **/
 /****************************************************************/
-#ifndef __DS_GPMS_H__
-	#define __DS_GPMS_H__
+#ifndef DS_GPMS_H__
+	#define DS_GPMS_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -221,5 +221,5 @@ FctERR NONNULL__ GPMS_Read(uint8_t * data, const uint16_t addr, const uint16_t n
 	}
 #endif
 
-#endif /* __DS_GPMS_H__ */
+#endif /* DS_GPMS_H__ */
 /****************************************************************/

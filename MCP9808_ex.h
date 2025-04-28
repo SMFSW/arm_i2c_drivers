@@ -1,12 +1,12 @@
 /*!\file MCP9808_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief MCP9808 Driver extensions
 ** \details MCP9808: +/-0.5C Maximum Accuracy Digital Temperature Sensor
 **/
 /****************************************************************/
-#ifndef __MCP9808_EX_H__
-	#define __MCP9808_EX_H__
+#ifndef MCP9808_EX_H__
+	#define MCP9808_EX_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -150,17 +150,15 @@ __INLINE FctERR NONNULL_INLINE__ MCP9808_Get_ChipID(MCP9808_t * const pCpnt, uin
 ** \param[in] GPIOx - Alert port
 ** \param[in] GPIO_Pin - Alert pin
 ** \param[in] GPIO_Active: Alert pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ MCP9808_Alert_GPIO_Init(MCP9808_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ MCP9808_Alert_GPIO_Init(MCP9808_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Change GPIO pin getter for MCP9808
 ** \weak MCP9808 Change GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to MCP9808 component
 ** \param[in,out] pState - Pointer to Alert pin state variable (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ MCP9808_Alert_GPIO_Get(MCP9808_t * const pCpnt, bool * const pState);
+void NONNULL__ MCP9808_Alert_GPIO_Get(MCP9808_t * const pCpnt, bool * const pState);
 
 
 /****************************************************************/
@@ -170,5 +168,5 @@ FctERR NONNULL__ MCP9808_Alert_GPIO_Get(MCP9808_t * const pCpnt, bool * const pS
 	}
 #endif
 
-#endif /* __MCP9808_EX_H__ */
+#endif /* MCP9808_EX_H__ */
 /****************************************************************/

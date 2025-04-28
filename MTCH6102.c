@@ -1,6 +1,6 @@
 /*!\file MTCH6102.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief MTCH6102 Driver
 ** \details MTCH6102: Low-Power Projected Capacitive Touch Controller
 **/
@@ -33,8 +33,9 @@ FctERR NONNULL__ MTCH6102_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c
 
 	MTCH6102_last_access[idx] = 0;
 
-	err = I2C_slave_init(&MTCH6102_hal[idx], hi2c, devAddress, MTCH6102_hal[idx].cfg.timeout);
-	if (!err)	{ err = MTCH6102_Init_Sequence(&MTCH6102[idx]); }
+	I2C_slave_init(&MTCH6102_hal[idx], hi2c, devAddress, MTCH6102_hal[idx].cfg.timeout);
+
+	err = MTCH6102_Init_Sequence(&MTCH6102[idx]);
 
 	if (err)	{ I2C_set_enable(&MTCH6102_hal[idx], false); }
 

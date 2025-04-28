@@ -1,12 +1,12 @@
 /*!\file S11059.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief S11059 Driver
 ** \details S11059: I2C interface-compatible color sensor
 **/
 /****************************************************************/
-#ifndef __S11059_H__
-	#define __S11059_H__
+#ifndef S11059_H__
+	#define S11059_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -191,5 +191,5 @@ FctERR NONNULL__ S11059_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, c
 	}
 #endif
 
-#endif /* __S11059_H__ */
+#endif /* S11059_H__ */
 /****************************************************************/

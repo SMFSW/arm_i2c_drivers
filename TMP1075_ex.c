@@ -1,6 +1,6 @@
 /*!\file TMP1075_ex.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief TMP1075 Driver extensions
 ** \details TMP1075: Temperature Sensor With I2C and SMBus Interface in Industry Standard LM75 Form Factor and Pinout
 **/
@@ -125,11 +125,11 @@ FctERR NONNULL__ TMP1075_Set_AlertNbFaults(TMP1075_t * const pCpnt, const TMP107
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ TMP1075_INT_GPIO_Init(TMP1075_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
-	return I2C_peripheral_GPIO_init(&pCpnt->cfg.INT_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+__WEAK void NONNULL__ TMP1075_INT_GPIO_Init(TMP1075_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	I2C_peripheral_GPIO_init(&pCpnt->cfg.INT_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
 
-__WEAK FctERR NONNULL__ TMP1075_INT_GPIO_Get(TMP1075_t * const pCpnt, bool * const pState) {
-	return I2C_peripheral_GPIO_get(&pCpnt->cfg.INT_GPIO, pState); }
+__WEAK void NONNULL__ TMP1075_INT_GPIO_Get(TMP1075_t * const pCpnt, bool * const pState) {
+	I2C_peripheral_GPIO_get(&pCpnt->cfg.INT_GPIO, pState); }
 
 
 /****************************************************************/

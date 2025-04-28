@@ -1,6 +1,6 @@
 /*!\file TCS3472_ex.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief TCS3472 Driver extensions
 ** \details TCS3472: Color light-to-digital converter with IR filter
 **/
@@ -165,11 +165,11 @@ FctERR NONNULL__ TCS3472_Get_Channels(TCS3472_t * const pCpnt, uint16_t buf[])
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ TCS3472_INT_GPIO_Init(TCS3472_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
-	return I2C_peripheral_GPIO_init(&pCpnt->cfg.INT_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+__WEAK void NONNULL__ TCS3472_INT_GPIO_Init(TCS3472_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	I2C_peripheral_GPIO_init(&pCpnt->cfg.INT_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
 
-__WEAK FctERR NONNULL__ TCS3472_INT_GPIO_Get(TCS3472_t * const pCpnt, bool * const pState) {
-	return I2C_peripheral_GPIO_get(&pCpnt->cfg.INT_GPIO, pState); }
+__WEAK void NONNULL__ TCS3472_INT_GPIO_Get(TCS3472_t * const pCpnt, bool * const pState) {
+	I2C_peripheral_GPIO_get(&pCpnt->cfg.INT_GPIO, pState); }
 
 
 /****************************************************************/

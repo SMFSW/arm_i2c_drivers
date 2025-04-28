@@ -1,12 +1,12 @@
 /*!\file AMG88_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief AMG88 Driver extensions
 ** \details AMG88: Infrared Array Sensor (Grid-EYE)
 **/
 /****************************************************************/
-#ifndef __AMG88_EX_H__
-	#define __AMG88_EX_H__
+#ifndef AMG88_EX_H__
+	#define AMG88_EX_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -192,17 +192,15 @@ __INLINE FctERR NONNULL_INLINE__ AMG88_Get_Pixel_Raw(AMG88_t * const pCpnt, uint
 ** \param[in] GPIOx - INT port
 ** \param[in] GPIO_Pin - INT pin
 ** \param[in] GPIO_Active: INT pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ AMG88_INT_GPIO_Init(AMG88_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ AMG88_INT_GPIO_Init(AMG88_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Interrupt GPIO pin getter for AMG88
 ** \weak AMG88 Interrupt GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to AMG88 component
 ** \param[in,out] pState - Pointer to INT pin state variable (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ AMG88_INT_GPIO_Get(AMG88_t * const pCpnt, bool * const pState);
+void NONNULL__ AMG88_INT_GPIO_Get(AMG88_t * const pCpnt, bool * const pState);
 
 
 /****************************************************************/
@@ -212,5 +210,5 @@ FctERR NONNULL__ AMG88_INT_GPIO_Get(AMG88_t * const pCpnt, bool * const pState);
 	}
 #endif
 
-#endif /* __AMG88_EX_H__ */
+#endif /* AMG88_EX_H__ */
 /****************************************************************/

@@ -1,12 +1,12 @@
 /*!\file AMG88.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief AMG88 Driver
 ** \details AMG88: Infrared Array Sensor (Grid-EYE)
 **/
 /****************************************************************/
-#ifndef __AMG88_H__
-	#define __AMG88_H__
+#ifndef AMG88_H__
+	#define AMG88_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -449,5 +449,5 @@ FctERR NONNULL__ AMG88_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, co
 	}
 #endif
 
-#endif /* __AMG88_H__ */
+#endif /* AMG88_H__ */
 /****************************************************************/

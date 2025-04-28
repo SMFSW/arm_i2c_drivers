@@ -1,12 +1,12 @@
 /*!\file NCA9595_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief NCA9595 Driver procedures
 ** \details NCA9595: Low-voltage 16-bit I²C and SMBus I/O expander
 **/
 /****************************************************************/
-#ifndef __NCA9595_PROC_H__
-	#define __NCA9595_PROC_H__
+#ifndef NCA9595_PROC_H__
+	#define NCA9595_PROC_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -100,5 +100,5 @@ __INLINE void INLINE__ NCA9595_handler_it_all(void) {
 	}
 #endif
 
-#endif /* __NCA9595_PROC_H__ */
+#endif /* NCA9595_PROC_H__ */
 /****************************************************************/

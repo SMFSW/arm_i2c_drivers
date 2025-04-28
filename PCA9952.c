@@ -1,6 +1,6 @@
 /*!\file PCA9952.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief PCA9952 Driver
 ** \details PCA9952: 16-channel Fm+ I2C-bus 57 mA constant current LED driver
 **/
@@ -32,8 +32,9 @@ FctERR NONNULL__ PCA9952_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 
 	I2C_PERIPHERAL_SET_DEFAULTS(PCA9952, idx);
 
-	err = I2C_slave_init(&PCA9952_hal[idx], hi2c, devAddress, PCA9952_hal[idx].cfg.timeout);
-	if (!err)	{ err = PCA9952_Init_Sequence(&PCA9952[idx]); }
+	I2C_slave_init(&PCA9952_hal[idx], hi2c, devAddress, PCA9952_hal[idx].cfg.timeout);
+
+	err = PCA9952_Init_Sequence(&PCA9952[idx]);
 
 	if (err)	{ I2C_set_enable(&PCA9952_hal[idx], false); }
 

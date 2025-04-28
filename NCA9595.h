@@ -1,12 +1,12 @@
 /*!\file NCA9595.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief NCA9595 Driver
 ** \details NCA9595: Low-voltage 16-bit I²C and SMBus I/O expander
 **/
 /****************************************************************/
-#ifndef __NCA9595_H__
-	#define __NCA9595_H__
+#ifndef NCA9595_H__
+	#define NCA9595_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -296,5 +296,5 @@ FctERR NONNULL__ NCA9595_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, 
 	}
 #endif
 
-#endif /* __NCA9595_H__ */
+#endif /* NCA9595_H__ */
 /****************************************************************/

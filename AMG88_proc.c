@@ -1,6 +1,6 @@
 /*!\file AMG88_proc.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief AMG88 Driver procedures
 ** \details AMG88: Infrared Array Sensor (Grid-EYE)
 **/
@@ -84,11 +84,11 @@ __WEAK FctERR NONNULL__ AMG88_handler(AMG88_t * const pCpnt)
 
 __WEAK FctERR NONNULL__ AMG88_handler_it(AMG88_t * const pCpnt)
 {
-	FctERR	err;
+	FctERR	err = ERROR_OK;
 	bool	interrupt;
 
-	err = AMG88_INT_GPIO_Get(pCpnt, &interrupt);
-	if ((!err) && interrupt)	{ err = AMG88_handler(pCpnt); }
+	AMG88_INT_GPIO_Get(pCpnt, &interrupt);
+	if (interrupt)	{ err = AMG88_handler(pCpnt); }
 
 	return err;
 }

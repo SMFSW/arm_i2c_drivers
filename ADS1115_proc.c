@@ -1,6 +1,6 @@
 /*!\file ADS1115_proc.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief ADS1115 Driver procedures
 ** \details ADS1115: Ultra-Small, Low-Power, 16-Bit Analog-to-Digital Converter with Internal Reference
 ** \note	Compatibility with:
@@ -85,11 +85,11 @@ __WEAK FctERR NONNULL__ ADS1115_handler(ADS1115_t * const pCpnt)
 
 __WEAK FctERR NONNULL__ ADS1115_handler_it(ADS1115_t * const pCpnt)
 {
-	FctERR	err;
+	FctERR	err = ERROR_OK;
 	bool	interrupt;
 
-	err = ADS1115_RDY_GPIO_Get(pCpnt, &interrupt);
-	if ((!err) && interrupt)	{ err = ADS1115_handler(pCpnt); }
+	ADS1115_RDY_GPIO_Get(pCpnt, &interrupt);
+	if (interrupt)	{ err = ADS1115_handler(pCpnt); }
 
 	return err;
 }

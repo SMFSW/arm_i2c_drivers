@@ -1,6 +1,6 @@
 /*!\file MB85RC256V_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief MB85RC256V FRAM Driver extensions
 ** \details MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM
 ** \note	Compatibility (tested):
@@ -8,8 +8,8 @@
 **				- MB85RC256VL64B
 **/
 /****************************************************************/
-#ifndef __MB85RC256V_EX_H__
-	#define __MB85RC256V_EX_H__
+#ifndef MB85RC256V_EX_H__
+	#define MB85RC256V_EX_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -57,17 +57,15 @@ FctERR NONNULL__ MB85RC256V_Mass_Erase(MB85RC256V_t * const pCpnt);
 ** \param[in] GPIOx - WP port
 ** \param[in] GPIO_Pin - WP pin
 ** \param[in] GPIO_Active: WP pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ MB85RC256V_WP_GPIO_Init(MB85RC256V_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ MB85RC256V_WP_GPIO_Init(MB85RC256V_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Write Protect GPIO pin getter for MB85RC256V
 ** \weak MB85RC256V Write Protect GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to MB85RC256V component
 ** \param[in,out] pState - Pointer to WP pin state variable (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ MB85RC256V_WP_GPIO_Get(MB85RC256V_t * const pCpnt, bool * const pState);
+void NONNULL__ MB85RC256V_WP_GPIO_Get(MB85RC256V_t * const pCpnt, bool * const pState);
 
 
 /****************************************************************/
@@ -77,5 +75,5 @@ FctERR NONNULL__ MB85RC256V_WP_GPIO_Get(MB85RC256V_t * const pCpnt, bool * const
 	}
 #endif
 
-#endif /* __MB85RC256V_EX_H__ */
+#endif /* MB85RC256V_EX_H__ */
 /****************************************************************/

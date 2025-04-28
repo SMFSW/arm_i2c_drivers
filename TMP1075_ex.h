@@ -1,12 +1,12 @@
 /*!\file TMP1075_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief TMP1075 Driver extensions
 ** \details TMP1075: Temperature Sensor With I2C and SMBus Interface in Industry Standard LM75 Form Factor and Pinout
 **/
 /****************************************************************/
-#ifndef __TMP1075_EX_H__
-	#define __TMP1075_EX_H__
+#ifndef TMP1075_EX_H__
+	#define TMP1075_EX_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -111,17 +111,15 @@ __INLINE FctERR NONNULL_INLINE__ TMP1075N_Get_ChipID(TMP1075_t * const pCpnt, ui
 ** \param[in] GPIOx - INT port
 ** \param[in] GPIO_Pin - INT pin
 ** \param[in] GPIO_Active: INT pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ TMP1075_INT_GPIO_Init(TMP1075_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ TMP1075_INT_GPIO_Init(TMP1075_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Interrupt GPIO pin getter for ADS1115
 ** \weak TMP1075 Interrupt GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to TMP1075 component
 ** \param[in,out] pState - Pointer to INT pin state variable (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ TMP1075_INT_GPIO_Get(TMP1075_t * const pCpnt, bool * const pState);
+void NONNULL__ TMP1075_INT_GPIO_Get(TMP1075_t * const pCpnt, bool * const pState);
 
 
 /****************************************************************/
@@ -131,5 +129,5 @@ FctERR NONNULL__ TMP1075_INT_GPIO_Get(TMP1075_t * const pCpnt, bool * const pSta
 	}
 #endif
 
-#endif /* __TMP1075_EX_H__ */
+#endif /* TMP1075_EX_H__ */
 /****************************************************************/

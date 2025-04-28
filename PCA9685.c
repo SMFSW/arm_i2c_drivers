@@ -1,6 +1,6 @@
 /*!\file PCA9685.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief PCA9685 Driver
 ** \details PCA9685: 16-channel, 12-bit PWM Fm+ I2C-bus LED controller
 **/
@@ -32,8 +32,9 @@ FctERR NONNULL__ PCA9685_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 
 	I2C_PERIPHERAL_SET_DEFAULTS(PCA9685, idx);
 
-	err = I2C_slave_init(&PCA9685_hal[idx], hi2c, devAddress, PCA9685_hal[idx].cfg.timeout);
-	if (!err)	{ err = PCA9685_Init_Sequence(&PCA9685[idx]); }
+	I2C_slave_init(&PCA9685_hal[idx], hi2c, devAddress, PCA9685_hal[idx].cfg.timeout);
+
+	err = PCA9685_Init_Sequence(&PCA9685[idx]);
 
 	if (err)	{ I2C_set_enable(&PCA9685_hal[idx], false); }
 

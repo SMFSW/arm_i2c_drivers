@@ -1,12 +1,12 @@
 /*!\file TSL2591_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief TSL2591 Driver procedures
 ** \details TSL2591: Very-high sensitivity light-to-digital converter
 **/
 /****************************************************************/
-#ifndef __TSL2591_PROC_H__
-	#define __TSL2591_PROC_H__
+#ifndef TSL2591_PROC_H__
+	#define TSL2591_PROC_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -139,5 +139,5 @@ __INLINE void INLINE__ TSL2591_handler_it_all(void) {
 	}
 #endif
 
-#endif /* __TSL2591_PROC_H__ */
+#endif /* TSL2591_PROC_H__ */
 /****************************************************************/

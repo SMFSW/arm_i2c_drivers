@@ -1,12 +1,12 @@
 /*!\file TSL2591_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief TSL2591 Driver extensions
 ** \details TSL2591: Very-high sensitivity light-to-digital converter
 **/
 /****************************************************************/
-#ifndef __TSL2591_EX_H__
-	#define __TSL2591_EX_H__
+#ifndef TSL2591_EX_H__
+	#define TSL2591_EX_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -262,17 +262,15 @@ __INLINE FctERR NONNULL_INLINE__ TSL2591_Get_IR(TSL2591_t * const pCpnt, uint16_
 ** \param[in] GPIOx - INT port
 ** \param[in] GPIO_Pin - INT pin
 ** \param[in] GPIO_Active: INT pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ TSL2591_INT_GPIO_Init(TSL2591_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ TSL2591_INT_GPIO_Init(TSL2591_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Interrupt GPIO pin getter for TSL2591
 ** \weak TSL2591 Interrupt GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to TSL2591 component
 ** \param[in,out] pState - Pointer to INT pin state variable (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ TSL2591_INT_GPIO_Get(TSL2591_t * const pCpnt, bool * const pState);
+void NONNULL__ TSL2591_INT_GPIO_Get(TSL2591_t * const pCpnt, bool * const pState);
 
 
 /****************************************************************/
@@ -282,5 +280,5 @@ FctERR NONNULL__ TSL2591_INT_GPIO_Get(TSL2591_t * const pCpnt, bool * const pSta
 	}
 #endif
 
-#endif /* __TSL2591_EX_H__ */
+#endif /* TSL2591_EX_H__ */
 /****************************************************************/

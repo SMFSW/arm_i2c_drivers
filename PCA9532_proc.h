@@ -1,12 +1,12 @@
 /*!\file PCA9532_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief PCA9532 Driver procedures
 ** \details PCA9532: 16-bit I2C-bus LED dimmer
 **/
 /****************************************************************/
-#ifndef __PCA9532_PROC_H__
-	#define __PCA9532_PROC_H__
+#ifndef PCA9532_PROC_H__
+	#define PCA9532_PROC_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -68,5 +68,5 @@ FctERR NONNULL__ PCA9532_Init_Sequence(PCA9532_t * const pCpnt);
 	}
 #endif
 
-#endif	/* __PCA9532_PROC_H__ */
+#endif	/* PCA9532_PROC_H__ */
 /****************************************************************/

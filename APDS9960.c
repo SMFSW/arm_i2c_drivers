@@ -1,6 +1,6 @@
 /*!\file APDS9960.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief APDS9960 Driver
 ** \details APDS9960: Digital Proximity, Ambient Light, RGB and Gesture Sensor
 **/
@@ -32,8 +32,9 @@ FctERR NONNULL__ APDS9960_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c
 
 	I2C_PERIPHERAL_SET_DEFAULTS(APDS9960, idx);
 
-	err = I2C_slave_init(&APDS9960_hal[idx], hi2c, devAddress, APDS9960_hal[idx].cfg.timeout);
-	if (!err)	{ err = APDS9960_Init_Sequence(&APDS9960[idx]); }
+	I2C_slave_init(&APDS9960_hal[idx], hi2c, devAddress, APDS9960_hal[idx].cfg.timeout);
+
+	err = APDS9960_Init_Sequence(&APDS9960[idx]);
 
 	if (err)	{ I2C_set_enable(&APDS9960_hal[idx], false); }
 

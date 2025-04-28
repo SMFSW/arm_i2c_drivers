@@ -1,6 +1,6 @@
 /*!\file MB85RC256V.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief MB85RC256V FRAM Driver
 ** \details MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM
 ** \note Legacy component: consider switching to I2CMEM component for new designs
@@ -34,8 +34,9 @@ FctERR NONNULL__ MB85RC256V_Init(const uint8_t idx, I2C_HandleTypeDef * const hi
 
 	I2C_PERIPHERAL_SET_DEFAULTS(MB85RC256V, idx);
 
-	err = I2C_slave_init(&MB85RC256V_hal[idx], hi2c, devAddress, MB85RC256V_hal[idx].cfg.timeout);
-	if (!err)	{ err = MB85RC256V_Init_Sequence(&MB85RC256V[idx]); }
+	I2C_slave_init(&MB85RC256V_hal[idx], hi2c, devAddress, MB85RC256V_hal[idx].cfg.timeout);
+
+	err = MB85RC256V_Init_Sequence(&MB85RC256V[idx]);
 
 	if (err)	{ I2C_set_enable(&MB85RC256V_hal[idx], false); }
 

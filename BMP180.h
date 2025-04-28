@@ -1,12 +1,12 @@
 /*!\file BMP180.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief BMP180 Driver
 ** \details BMP180: Digital pressure sensor
 **/
 /****************************************************************/
-#ifndef __BMP180_H__
-	#define __BMP180_H__
+#ifndef BMP180_H__
+	#define BMP180_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -201,5 +201,5 @@ FctERR NONNULL__ BMP180_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, c
 	}
 #endif
 
-#endif /* __BMP180_H__ */
+#endif /* BMP180_H__ */
 /****************************************************************/

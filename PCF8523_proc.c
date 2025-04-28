@@ -1,6 +1,6 @@
 /*!\file PCF8523_proc.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief PCF8523 Driver procedures
 ** \details PCF8523: Real-Time Clock (RTC) and calendar
 **/
@@ -216,12 +216,12 @@ __WEAK FctERR PCF8523_handler(void)
 
 __WEAK FctERR NONNULL__ PCF8523_handler_it(void)
 {
-	FctERR	err;
+	FctERR	err = ERROR_OK;
 	bool	interrupt1, interrupt2;
 
-	err = PCF8523_INT1_GPIO_Get(&interrupt1);
-	err = PCF8523_INT2_GPIO_Get(&interrupt2);
-	if ((!err) && (interrupt1 || interrupt2))	{ err = PCF8523_handler(); }
+	PCF8523_INT1_GPIO_Get(&interrupt1);
+	PCF8523_INT2_GPIO_Get(&interrupt2);
+	if (interrupt1 || interrupt2)	{ err = PCF8523_handler(); }
 
 	return err;
 }

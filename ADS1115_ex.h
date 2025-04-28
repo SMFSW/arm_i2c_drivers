@@ -1,6 +1,6 @@
 /*!\file ADS1115_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief ADS1115 Driver extensions
 ** \details ADS1115: Ultra-Small, Low-Power, 16-Bit Analog-to-Digital Converter with Internal Reference
 ** \note	Compatibility with:
@@ -11,8 +11,8 @@
 **				- ADS1x1x (check datasheets for compatibility informations)
 **/
 /****************************************************************/
-#ifndef __ADS1115_EX_H__
-	#define __ADS1115_EX_H__
+#ifndef ADS1115_EX_H__
+	#define ADS1115_EX_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -222,17 +222,15 @@ float NONNULL__ ADS1115_Get_converted_value_V(ADS1115_t * const pCpnt, const uin
 ** \param[in] GPIOx - RDY port
 ** \param[in] GPIO_Pin - RDY pin
 ** \param[in] GPIO_Active: RDY pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ ADS1115_RDY_GPIO_Init(ADS1115_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ ADS1115_RDY_GPIO_Init(ADS1115_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Ready GPIO pin getter for ADS1115
 ** \weak ADS1115 Ready GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to ADS1115 component
 ** \param[in,out] pState - Pointer to RDY pin state variable (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ ADS1115_RDY_GPIO_Get(ADS1115_t * const pCpnt, bool * const pState);
+void NONNULL__ ADS1115_RDY_GPIO_Get(ADS1115_t * const pCpnt, bool * const pState);
 
 
 /****************************************************************/
@@ -242,5 +240,5 @@ FctERR NONNULL__ ADS1115_RDY_GPIO_Get(ADS1115_t * const pCpnt, bool * const pSta
 	}
 #endif
 
-#endif /* __ADS1115_EX_H__ */
+#endif /* ADS1115_EX_H__ */
 /****************************************************************/

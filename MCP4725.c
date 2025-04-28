@@ -1,6 +1,6 @@
 /*!\file MCP4725.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief MCP4725 Driver
 ** \details MCP4725: 12-Bit Digital-to-Analog Converter with EEPROM Memory
 **/
@@ -28,8 +28,9 @@ FctERR NONNULL__ MCP4725_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 
 	I2C_PERIPHERAL_SET_DEFAULTS(MCP4725, idx);
 
-	err = I2C_slave_init(&MCP4725_hal[idx], hi2c, devAddress, MCP4725_hal[idx].cfg.timeout);
-	if (!err)	{ err = MCP4725_Init_Sequence(&MCP4725[idx]); }
+	I2C_slave_init(&MCP4725_hal[idx], hi2c, devAddress, MCP4725_hal[idx].cfg.timeout);
+
+	err = MCP4725_Init_Sequence(&MCP4725[idx]);
 
 	if (err)	{ I2C_set_enable(&MCP4725_hal[idx], false); }
 

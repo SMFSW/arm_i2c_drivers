@@ -1,6 +1,6 @@
 /*!\file PCF8523_ex.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief PCF8523 Driver extensions
 ** \details PCF8523: Real-Time Clock (RTC) and calendar
 **/
@@ -99,18 +99,18 @@ FctERR NONNULL__ PCF8523_Check_Clock_Integrity(bool * integrity)
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ PCF8523_INT1_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
-	return I2C_peripheral_GPIO_init(&PCF8523.cfg.INT1_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+__WEAK void NONNULL__ PCF8523_INT1_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	I2C_peripheral_GPIO_init(&PCF8523.cfg.INT1_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
 
-__WEAK FctERR NONNULL__ PCF8523_INT1_GPIO_Get(bool * const pState) {
-	return I2C_peripheral_GPIO_get(&PCF8523.cfg.INT1_GPIO, pState); }
+__WEAK void NONNULL__ PCF8523_INT1_GPIO_Get(bool * const pState) {
+	I2C_peripheral_GPIO_get(&PCF8523.cfg.INT1_GPIO, pState); }
 
 
-__WEAK FctERR NONNULL__ PCF8523_INT2_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
-	return I2C_peripheral_GPIO_init(&PCF8523.cfg.INT2_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+__WEAK void NONNULL__ PCF8523_INT2_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	I2C_peripheral_GPIO_init(&PCF8523.cfg.INT2_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
 
-__WEAK FctERR NONNULL__ PCF8523_INT2_GPIO_Get(bool * const pState) {
-	return I2C_peripheral_GPIO_get(&PCF8523.cfg.INT2_GPIO, pState); }
+__WEAK void NONNULL__ PCF8523_INT2_GPIO_Get(bool * const pState) {
+	I2C_peripheral_GPIO_get(&PCF8523.cfg.INT2_GPIO, pState); }
 
 
 /****************************************************************/

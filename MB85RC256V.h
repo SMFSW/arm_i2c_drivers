@@ -1,6 +1,6 @@
 /*!\file MB85RC256V.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief MB85RC256V FRAM Driver
 ** \details MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM
 ** \note Legacy component: consider switching to I2CMEM component for new designs
@@ -9,8 +9,8 @@
 **				- FM24CL64B
 **/
 /****************************************************************/
-#ifndef __MB85RC256V_H__
-	#define __MB85RC256V_H__
+#ifndef MB85RC256V_H__
+	#define MB85RC256V_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -124,5 +124,5 @@ FctERR NONNULL__ MB85RC256V_Read_ID(MB85RC256V_t * const pCpnt, uint8_t * data);
 	}
 #endif
 
-#endif /* __MB85RC256V_H__ */
+#endif /* MB85RC256V_H__ */
 /****************************************************************/

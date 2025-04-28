@@ -1,12 +1,12 @@
 /*!\file TSL2591.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief TSL2591 Driver
 ** \details TSL2591: Very-high sensitivity light-to-digital converter
 **/
 /****************************************************************/
-#ifndef __TSL2591_H__
-	#define __TSL2591_H__
+#ifndef TSL2591_H__
+	#define TSL2591_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -278,5 +278,5 @@ FctERR NONNULL__ TSL2591_Write_Special(I2C_slave_t * const pSlave, const TSL2591
 	}
 #endif
 
-#endif /* __TSL2591_H__ */
+#endif /* TSL2591_H__ */
 /****************************************************************/

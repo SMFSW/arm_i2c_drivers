@@ -1,6 +1,6 @@
 /*!\file APDS9960_proc.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief APDS9960 Driver procedures
 ** \details APDS9960: Digital Proximity, Ambient Light, RGB and Gesture Sensor
 **/
@@ -178,11 +178,11 @@ __WEAK FctERR NONNULL__ APDS9960_handler(APDS9960_t * const pCpnt)
 
 __WEAK FctERR NONNULL__ APDS9960_handler_it(APDS9960_t * const pCpnt)
 {
-	FctERR	err;
+	FctERR	err = ERROR_OK;
 	bool	interrupt;
 
-	err = APDS9960_INT_GPIO_Get(pCpnt, &interrupt);
-	if ((!err) && interrupt)	{ err = APDS9960_handler(pCpnt); }
+	APDS9960_INT_GPIO_Get(pCpnt, &interrupt);
+	if (interrupt)	{ err = APDS9960_handler(pCpnt); }
 
 	return err;
 }

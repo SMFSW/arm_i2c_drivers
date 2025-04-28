@@ -1,13 +1,13 @@
 /*!\file I2CMEM.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief FRAM / EEPROM Driver
 ** \note Fully compatible between EEPROM / FRAM type components
 ** \note When EEPROM compatibility is not needed, buf_size at init can be set to \ref I2CMEM_WBUF_NONE for more efficiency
 **/
 /****************************************************************/
-#ifndef __I2CMEM_H__
-	#define __I2CMEM_H__
+#ifndef I2CMEM_H__
+	#define I2CMEM_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -119,5 +119,5 @@ FctERR NONNULL__ I2CMEM_Read(I2CMEM_t * const pCpnt, uint8_t * const data, const
 	}
 #endif
 
-#endif /* __I2CMEM_H__ */
+#endif /* I2CMEM_H__ */
 /****************************************************************/

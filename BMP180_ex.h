@@ -1,12 +1,12 @@
 /*!\file BMP180_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief BMP180 Driver extensions
 ** \details BMP180: Digital pressure sensor
 **/
 /****************************************************************/
-#ifndef __BMP180_EX_H__
-	#define __BMP180_EX_H__
+#ifndef BMP180_EX_H__
+	#define BMP180_EX_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -79,5 +79,5 @@ FctERR NONNULL__ BMP180_Get_Pressure_Raw(BMP180_t * const pCpnt, int32_t * pr);
 	}
 #endif
 
-#endif /* __BMP180_EX_H__ */
+#endif /* BMP180_EX_H__ */
 /****************************************************************/

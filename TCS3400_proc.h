@@ -1,12 +1,12 @@
 /*!\file TCS3400_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief TCS3400 Driver procedures
 ** \details TCS3400: Color Light-to-Digital Converter
 **/
 /****************************************************************/
-#ifndef __TCS3400_PROC_H__
-	#define __TCS3400_PROC_H__
+#ifndef TCS3400_PROC_H__
+	#define TCS3400_PROC_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -146,5 +146,5 @@ __INLINE void INLINE__ TCS3400_handler_it_all(void) {
 	}
 #endif
 
-#endif /* __TCS3400_PROC_H__ */
+#endif /* TCS3400_PROC_H__ */
 /****************************************************************/

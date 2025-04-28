@@ -1,6 +1,6 @@
 /*!\file MTCH6102_proc.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief MTCH6102 Driver procedures
 ** \details MTCH6102: Low-Power Projected Capacitive Touch Controller
 **/
@@ -377,7 +377,7 @@ __WEAK FctERR NONNULL__ MTCH6102_handler(MTCH6102_t * const pCpnt)
 		MTCH6102_gesture_to_str(str_gest, pCpnt->touch.State);
 		MTCH6102_diag_to_str(str_diag, pCpnt->touch.Diag);
 
-		printf("MTCH6102 id%d: T%d G%d L%d STATE: 0x%02X\t DIAG:0x%02X", idx, pCpnt->touch.Touch, pCpnt->touch.Gesture, pCpnt->touch.Large, pCpnt->touch.State, pCpnt->touch.Diag);
+		printf("MTCH6102 id%d: T%d G%d L%d STATE: %#02X\t DIAG:%#02X", idx, pCpnt->touch.Touch, pCpnt->touch.Gesture, pCpnt->touch.Large, pCpnt->touch.State, pCpnt->touch.Diag);
 		printf("\tX: %-4ld\tY: %-4ld\t\tFrm: %d", pCpnt->touch.Coords.x, pCpnt->touch.Coords.y, pCpnt->touch.Frame);	// Coords padded to 3 digits with sign
 		printf("\tST: %-18s\tDG: %s\r\n", str_gest, str_diag);	// Gesture string padded to 18 chars
 
@@ -400,11 +400,11 @@ __WEAK FctERR NONNULL__ MTCH6102_handler(MTCH6102_t * const pCpnt)
 
 __WEAK FctERR NONNULL__ MTCH6102_handler_it(MTCH6102_t * const pCpnt)
 {
-	FctERR	err;
+	FctERR	err = ERROR_OK;
 	bool	interrupt;
 
-	err = MTCH6102_INT_GPIO_Get(pCpnt, &interrupt);
-	if ((!err) && interrupt)	{ err = MTCH6102_handler(pCpnt); }
+	MTCH6102_INT_GPIO_Get(pCpnt, &interrupt);
+	if (interrupt)	{ err = MTCH6102_handler(pCpnt); }
 
 	return err;
 }

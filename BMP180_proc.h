@@ -1,12 +1,12 @@
 /*!\file BMP180_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief BMP180 Driver procedures
 ** \details BMP180: Digital pressure sensor
 **/
 /****************************************************************/
-#ifndef __BMP180_PROC_H__
-	#define __BMP180_PROC_H__
+#ifndef BMP180_PROC_H__
+	#define BMP180_PROC_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -144,5 +144,5 @@ __INLINE void INLINE__ BMP180_handler_all(void) {
 	}
 #endif
 
-#endif /* __BMP180_PROC_H__ */
+#endif /* BMP180_PROC_H__ */
 /****************************************************************/

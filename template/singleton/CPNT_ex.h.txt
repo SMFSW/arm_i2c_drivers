@@ -1,12 +1,12 @@
 /*!\file $CPNT$_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief $CPNT$ Driver extensions
 ** \details $CPNT$:
 **/
 /****************************************************************/
-#ifndef __$CPNT$_EX_H__
-	#define __$CPNT$_EX_H__
+#ifndef $CPNT$_EX_H__
+	#define $CPNT$_EX_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -80,16 +80,14 @@ FctERR $CPNT$_fct(void);
 ** \param[in] GPIOx - INT port
 ** \param[in] GPIO_Pin - INT pin
 ** \param[in] GPIO_Active: INT pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ $CPNT$_INT_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ $CPNT$_INT_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Interrupt GPIO pin getter for ADS1115
 ** \weak $CPNT$ Interrupt GPIO pin getter may be user implemented if needed
 ** \param[in,out] pState - Pointer to INT pin state variable (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ $CPNT$_INT_GPIO_Get(bool * const pState);
+void NONNULL__ $CPNT$_INT_GPIO_Get(bool * const pState);
 
 
 /*!\brief Reset GPIO pin init for $CPNT$
@@ -97,16 +95,14 @@ FctERR NONNULL__ $CPNT$_INT_GPIO_Get(bool * const pState);
 ** \param[in] GPIOx - RST port
 ** \param[in] GPIO_Pin - RST pin
 ** \param[in] GPIO_Active: RST pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ $CPNT$_RST_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ $CPNT$_RST_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Reset GPIO pin setter for $CPNT$
 ** \weak $CPNT$ Reset GPIO pin setter may be user implemented if needed
 ** \param[in] state - state to write on RST pin (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR $CPNT$_RST_GPIO_Set(const bool state);
+void $CPNT$_RST_GPIO_Set(const bool state);
 
 
 /****************************************************************/
@@ -116,5 +112,5 @@ FctERR $CPNT$_RST_GPIO_Set(const bool state);
 	}
 #endif
 
-#endif /* __$CPNT$_EX_H__ */
+#endif /* $CPNT$_EX_H__ */
 /****************************************************************/

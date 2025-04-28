@@ -1,6 +1,6 @@
 /*!\file PCA9956_proc.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief PCA9956 Driver procedures
 ** \details PCA9956: 24-channel Fm+ I2C-bus 57 mA/20 V constant current LED driver
 **/
@@ -55,9 +55,9 @@ FctERR PCA9956_calc_IREF(uint8_t * const pIREF, const float Rext, const float cu
 	// IO(LEDn) (mA) = IREFx * (0.9 / 4) / Rext (KOhm)
 	const uint32_t iref = (current * Rext * (4 / 0.9f));
 
-	*pIREF = min(255, iref);
+	*pIREF = min(255UL, iref);
 
-	return (iref > 255) ? ERROR_OVERFLOW : ERROR_OK;
+	return (iref > 255UL) ? ERROR_OVERFLOW : ERROR_OK;
 }
 
 /****************************************************************/

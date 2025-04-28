@@ -1,6 +1,6 @@
 /*!\file DRV2605L_ex.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief DRV2605L Driver extensions
 ** \details DRV2605L: 2 to 5.2V Haptic Driver for LRA and ERM With Effect Library and Smart-Loop Architecture
 **/
@@ -417,18 +417,18 @@ FctERR NONNULL__ DRV2605L_Get_ResonancePeriod(uint16_t * per)
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ DRV2605L_EN_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
-	return I2C_peripheral_GPIO_init(&DRV2605L.cfg.EN_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+__WEAK void NONNULL__ DRV2605L_EN_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	I2C_peripheral_GPIO_init(&DRV2605L.cfg.EN_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
 
-__WEAK FctERR DRV2605L_EN_GPIO_Set(const bool state) {
-	return I2C_peripheral_GPIO_set(&DRV2605L.cfg.EN_GPIO, state); }
+__WEAK void DRV2605L_EN_GPIO_Set(const bool state) {
+	I2C_peripheral_GPIO_set(&DRV2605L.cfg.EN_GPIO, state); }
 
 
-__WEAK FctERR NONNULL__ DRV2605L_TRIG_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
-	return I2C_peripheral_GPIO_init(&DRV2605L.cfg.TRIG_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+__WEAK void NONNULL__ DRV2605L_TRIG_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	I2C_peripheral_GPIO_init(&DRV2605L.cfg.TRIG_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
 
-__WEAK FctERR DRV2605L_TRIG_GPIO_Set(const bool state) {
-	return I2C_peripheral_GPIO_set(&DRV2605L.cfg.TRIG_GPIO, state); }
+__WEAK void DRV2605L_TRIG_GPIO_Set(const bool state) {
+	I2C_peripheral_GPIO_set(&DRV2605L.cfg.TRIG_GPIO, state); }
 
 
 /****************************************************************/

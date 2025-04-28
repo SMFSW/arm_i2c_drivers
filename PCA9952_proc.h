@@ -1,12 +1,12 @@
 /*!\file PCA9952_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief PCA9952 Driver procedures
 ** \details PCA9952: 16-channel Fm+ I2C-bus 57 mA constant current LED driver
 **/
 /****************************************************************/
-#ifndef __PCA9952_PROC_H__
-	#define __PCA9952_PROC_H__
+#ifndef PCA9952_PROC_H__
+	#define PCA9952_PROC_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -77,5 +77,5 @@ FctERR PCA9952_calc_IREF(uint8_t * const pIREF, const float Rext, const float cu
 	}
 #endif
 
-#endif	/* __PCA9952_PROC_H__ */
+#endif	/* PCA9952_PROC_H__ */
 /****************************************************************/

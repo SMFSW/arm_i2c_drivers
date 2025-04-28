@@ -1,6 +1,6 @@
 /*!\file AT42QT1244_proc.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief AT42QT1244 Driver procedures
 ** \details AT42QT1244: 24-key QMatrix FMEA IEC/EN/UL60730 Touch Sensor
 **/
@@ -77,11 +77,11 @@ __WEAK FctERR NONNULL__ AT42QT1244_Init_Sequence(AT42QT1244_t * const pCpnt)
 
 void NONNULL__ AT42QT1244_Delay_PowerOn(AT42QT1244_t * const pCpnt)
 {
-	const uint8_t	loop_delay = 2;		// 2ms delay for each loop (consider watchdog period if used, on ms basis)
+	const int8_t	loop_delay = 2;		// 2ms delay for each loop (consider watchdog period if used, on ms basis)
 	const int32_t	PON_time = 100;		// Power on time with initialization given in datasheet (95ms rounded to 100)
 	const int32_t	loops = max(0, (int32_t) (PON_time - (HAL_GetTick() - pCpnt->hPowerOn))) / loop_delay;
 
-	for (uintCPU_t i = 0 ; i < loops ; i++)
+	for (intCPU_t i = 0 ; i < loops ; i++)
 	{
 		#if defined(HAL_IWDG_MODULE_ENABLED)
 			HAL_IWDG_Refresh(&hiwdg);
@@ -224,7 +224,7 @@ __WEAK FctERR NONNULL__ AT42QT1244_handler(AT42QT1244_t * const pCpnt)
 
 #if defined(VERBOSE)
 	const uint8_t idx = pCpnt - AT42QT1244;
-	printf("AT42QT1244 id%d: keys state 0x%lX", idx, pCpnt->keys);
+	printf("AT42QT1244 id%d: keys state %#lX", idx, pCpnt->keys);
 #endif
 
 	return err;
@@ -233,11 +233,11 @@ __WEAK FctERR NONNULL__ AT42QT1244_handler(AT42QT1244_t * const pCpnt)
 
 __WEAK FctERR NONNULL__ AT42QT1244_handler_it(AT42QT1244_t * const pCpnt)
 {
-	FctERR	err;
+	FctERR	err = ERROR_OK;
 	bool	interrupt;
 
-	err = AT42QT1244_CHANGE_GPIO_Get(pCpnt, &interrupt);
-	if ((!err) && interrupt)	{ err = AT42QT1244_handler(pCpnt); }
+	AT42QT1244_CHANGE_GPIO_Get(pCpnt, &interrupt);
+	if (interrupt)	{ err = AT42QT1244_handler(pCpnt); }
 
 	return err;
 }

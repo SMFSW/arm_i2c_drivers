@@ -1,12 +1,12 @@
 /*!\file MTCH6102_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief MTCH6102 Driver procedures
 ** \details MTCH6102: Low-Power Projected Capacitive Touch Controller
 **/
 /****************************************************************/
-#ifndef __MTCH6102_PROC_H__
-	#define __MTCH6102_PROC_H__
+#ifndef MTCH6102_PROC_H__
+	#define MTCH6102_PROC_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -226,5 +226,5 @@ __INLINE void INLINE__ MTCH6102_handler_it_all(void) {
 	}
 #endif
 
-#endif	/* __MTCH6102_PROC_H__ */
+#endif	/* MTCH6102_PROC_H__ */
 /****************************************************************/

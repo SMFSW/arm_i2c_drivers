@@ -1,6 +1,6 @@
 /*!\file FM24C_ex.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief FM24C FRAM Driver (bank switching at I2C address level protocol) extensions
 ** \details FM24C16B: 16-Kbit (2K * 8) Serial I2C F-RAM
 **			FM24C04B: 4-Kbit (512 * 8) Serial I2C F-RAM
@@ -39,11 +39,11 @@ FctERR NONNULL__ FM24C_Mass_Erase(FM24C_t * const pCpnt)
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ FM24C_WP_GPIO_Init(FM24C_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
-	return I2C_peripheral_GPIO_init(&pCpnt->cfg.WP_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+__WEAK void NONNULL__ FM24C_WP_GPIO_Init(FM24C_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	I2C_peripheral_GPIO_init(&pCpnt->cfg.WP_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
 
-__WEAK FctERR NONNULL__ FM24C_WP_GPIO_Set(FM24C_t * const pCpnt, const bool state) {
-	return I2C_peripheral_GPIO_set(&pCpnt->cfg.WP_GPIO, state); }
+__WEAK void NONNULL__ FM24C_WP_GPIO_Set(FM24C_t * const pCpnt, const bool state) {
+	I2C_peripheral_GPIO_set(&pCpnt->cfg.WP_GPIO, state); }
 
 
 /****************************************************************/

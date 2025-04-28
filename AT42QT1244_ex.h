@@ -1,12 +1,12 @@
 /*!\file AT42QT1244_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief AT42QT1244 Driver extensions
 ** \details AT42QT1244: 24-key QMatrix FMEA IEC/EN/UL60730 Touch Sensor
 **/
 /****************************************************************/
-#ifndef __AT42QT1244_EX_H__
-	#define __AT42QT1244_EX_H__
+#ifndef AT42QT1244_EX_H__
+	#define AT42QT1244_EX_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -165,17 +165,15 @@ intCPU_t NONNULL__ AT42QT1244_is_Calib_Pending(AT42QT1244_t * const pCpnt);
 ** \param[in] GPIOx - CHANGE port
 ** \param[in] GPIO_Pin - CHANGE pin
 ** \param[in] GPIO_Active: CHANGE pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ AT42QT1244_CHANGE_GPIO_Init(AT42QT1244_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ AT42QT1244_CHANGE_GPIO_Init(AT42QT1244_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Change GPIO pin getter for AT42QT1244
 ** \weak AT42QT1244 Change GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
 ** \param[in,out] pState - Pointer to CHANGE pin state variable (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ AT42QT1244_CHANGE_GPIO_Get(AT42QT1244_t * const pCpnt, bool * const pState);
+void NONNULL__ AT42QT1244_CHANGE_GPIO_Get(AT42QT1244_t * const pCpnt, bool * const pState);
 
 
 /*!\brief Reset GPIO pin init for AT42QT1244
@@ -184,17 +182,15 @@ FctERR NONNULL__ AT42QT1244_CHANGE_GPIO_Get(AT42QT1244_t * const pCpnt, bool * c
 ** \param[in] GPIOx - RST port
 ** \param[in] GPIO_Pin - RST pin
 ** \param[in] GPIO_Active: RST pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ AT42QT1244_RST_GPIO_Init(AT42QT1244_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ AT42QT1244_RST_GPIO_Init(AT42QT1244_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Reset GPIO pin setter for AT42QT1244
 ** \weak AT42QT1244 Reset GPIO pin setter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
 ** \param[in] state - state to write on RST pin (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ AT42QT1244_RST_GPIO_Set(AT42QT1244_t * const pCpnt, const bool state);
+void NONNULL__ AT42QT1244_RST_GPIO_Set(AT42QT1244_t * const pCpnt, const bool state);
 
 
 /****************************************************************/
@@ -204,5 +200,5 @@ FctERR NONNULL__ AT42QT1244_RST_GPIO_Set(AT42QT1244_t * const pCpnt, const bool 
 	}
 #endif
 
-#endif /* __AT42QT1244_EX_H__ */
+#endif /* AT42QT1244_EX_H__ */
 /****************************************************************/

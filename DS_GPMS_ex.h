@@ -1,12 +1,12 @@
 /*!\file DS_GPMS_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief DS-GPM.S Driver extensions
 ** \details DS-GPM.S: 99 Channel Positioning System (GPS + GLONASS) Shield
 **/
 /****************************************************************/
-#ifndef __DS_GPMS_EX_H__
-	#define __DS_GPMS_EX_H__
+#ifndef DS_GPMS_EX_H__
+	#define DS_GPMS_EX_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -146,5 +146,5 @@ __INLINE FctERR NONNULL_INLINE__ GPMS_Get_IO_Value(uint8_t * io, uint8_t chan) {
 	}
 #endif
 
-#endif /* __DS_GPMS_EX_H__ */
+#endif /* DS_GPMS_EX_H__ */
 /****************************************************************/

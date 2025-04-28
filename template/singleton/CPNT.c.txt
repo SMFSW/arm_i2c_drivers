@@ -1,6 +1,6 @@
 /*!\file $CPNT$.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief $CPNT$ Driver
 ** \details $CPNT$:
 **/
@@ -30,8 +30,9 @@ __WEAK FctERR $CPNT$_Init(void)
 	
 	I2C_PERIPHERAL_SET_DEFAULTS_SINGLETON($CPNT$);
 
-	err = I2C_slave_init(&$CPNT$_hal, I2C_$CPNT$, $CPNT$_BASE_ADDR, $CPNT$_hal.cfg.timeout);
-	if (!err)	{ err = $CPNT$_Init_Sequence(); }
+	I2C_slave_init(&$CPNT$_hal, I2C_$CPNT$, $CPNT$_BASE_ADDR, $CPNT$_hal.cfg.timeout);
+	
+	err = $CPNT$_Init_Sequence();
 
 	if (err)	{ I2C_set_enable(&$CPNT$_hal, false); }
 

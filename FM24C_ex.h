@@ -1,6 +1,6 @@
 /*!\file FM24C_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief FM24C FRAM Driver (bank switching at I2C address level protocol) extensions
 ** \details FM24C16B: 16-Kbit (2K * 8) Serial I2C F-RAM
 **			FM24C04B: 4-Kbit (512 * 8) Serial I2C F-RAM
@@ -10,8 +10,8 @@
 **				- BR24T04FVM
 **/
 /****************************************************************/
-#ifndef __FM24C_EX_H__
-	#define __FM24C_EX_H__
+#ifndef FM24C_EX_H__
+	#define FM24C_EX_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -61,17 +61,15 @@ FctERR NONNULL__ FM24C_Mass_Erase(FM24C_t * const pCpnt);
 ** \param[in] GPIOx - WP port
 ** \param[in] GPIO_Pin - WP pin
 ** \param[in] GPIO_Active: WP pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ FM24C_WP_GPIO_Init(FM24C_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ FM24C_WP_GPIO_Init(FM24C_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Write Protect GPIO pin getter for FM24C
 ** \weak FM24C Write Protect GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to FM24C component
 ** \param[in,out] pState - Pointer to WP pin state variable (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ FM24C_WP_GPIO_Get(FM24C_t * const pCpnt, bool * const pState);
+void NONNULL__ FM24C_WP_GPIO_Get(FM24C_t * const pCpnt, bool * const pState);
 
 
 /****************************************************************/
@@ -81,5 +79,5 @@ FctERR NONNULL__ FM24C_WP_GPIO_Get(FM24C_t * const pCpnt, bool * const pState);
 	}
 #endif
 
-#endif /* __FM24C_EX_H__ */
+#endif /* FM24C_EX_H__ */
 /****************************************************************/

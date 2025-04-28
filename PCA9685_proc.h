@@ -1,12 +1,12 @@
 /*!\file PCA9685_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief PCA9685 Driver procedures
 ** \details PCA9685: 16-channel, 12-bit PWM Fm+ I2C-bus LED controller
 **/
 /****************************************************************/
-#ifndef __PCA9685_PROC_H__
-	#define __PCA9685_PROC_H__
+#ifndef PCA9685_PROC_H__
+	#define PCA9685_PROC_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -93,5 +93,5 @@ __INLINE uint32_t NONNULL_INLINE__ PCA9685_Get_Clock_Freq(PCA9685_t * const pCpn
 	}
 #endif
 
-#endif	/* __PCA9685_PROC_H__ */
+#endif	/* PCA9685_PROC_H__ */
 /****************************************************************/

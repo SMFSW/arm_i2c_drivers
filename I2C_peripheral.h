@@ -1,11 +1,11 @@
 /*!\file I2C_peripheral.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief I2C peripheral common
 **/
 /****************************************************************/
-#ifndef __I2C_PERIPHERAL_H__
-	#define __I2C_PERIPHERAL_H__
+#ifndef I2C_PERIPHERAL_H__
+	#define I2C_PERIPHERAL_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -60,23 +60,20 @@ typedef struct PeripheralGPIO_t{
 ** \param[in] GPIOx - GPIO port
 ** \param[in] GPIO_Pin - GPIO pin
 ** \param[in] GPIO_Active: GPIO pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ I2C_peripheral_GPIO_init(PeripheralGPIO_t * const pGPIO, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ I2C_peripheral_GPIO_init(PeripheralGPIO_t * const pGPIO, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief I2C peripheral GPIO pin getter
 ** \param[in] pGPIO - Pointer to GPIO structure instance
 ** \param[in,out] pState - Pointer to GPIO state variable (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ I2C_peripheral_GPIO_get(const PeripheralGPIO_t * const pGPIO, bool * const pState);
+void NONNULL__ I2C_peripheral_GPIO_get(const PeripheralGPIO_t * const pGPIO, bool * const pState);
 
 /*!\brief I2C peripheral GPIO pin setter
 ** \param[in] pGPIO - Pointer to GPIO structure instance
 ** \param[in] state - state to write on GPIO (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ I2C_peripheral_GPIO_set(const PeripheralGPIO_t * const pGPIO, const bool state);
+void NONNULL__ I2C_peripheral_GPIO_set(const PeripheralGPIO_t * const pGPIO, const bool state);
 
 
 /****************************************************************/
@@ -86,5 +83,5 @@ FctERR NONNULL__ I2C_peripheral_GPIO_set(const PeripheralGPIO_t * const pGPIO, c
 	}
 #endif
 
-#endif	/* __I2C_PERIPHERAL_H__ */
+#endif	/* I2C_PERIPHERAL_H__ */
 /****************************************************************/

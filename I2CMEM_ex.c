@@ -1,6 +1,6 @@
 /*!\file I2CMEM_ex.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief FRAM / EEPROM Driver extensions
 ** \note Fully compatible between EEPROM / FRAM type components
 ** \note When EEPROM compatibility is not needed, buf_size at init can be set to \ref I2CMEM_WBUF_NONE for more efficiency
@@ -38,11 +38,11 @@ FctERR NONNULL__ I2CMEM_Mass_Erase(I2CMEM_t * const pCpnt)
 /****************************************************************/
 
 
-__WEAK FctERR NONNULL__ I2CMEM_WP_GPIO_Init(I2CMEM_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
-	return I2C_peripheral_GPIO_init(&pCpnt->cfg.WP_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
+__WEAK void NONNULL__ I2CMEM_WP_GPIO_Init(I2CMEM_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
+	I2C_peripheral_GPIO_init(&pCpnt->cfg.WP_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
 
-__WEAK FctERR NONNULL__ I2CMEM_WP_GPIO_Set(I2CMEM_t * const pCpnt, const bool state) {
-	return I2C_peripheral_GPIO_set(&pCpnt->cfg.WP_GPIO, state); }
+__WEAK void NONNULL__ I2CMEM_WP_GPIO_Set(I2CMEM_t * const pCpnt, const bool state) {
+	I2C_peripheral_GPIO_set(&pCpnt->cfg.WP_GPIO, state); }
 
 
 /****************************************************************/

@@ -1,12 +1,12 @@
 /*!\file PCA9685_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief PCA9685 Driver extensions
 ** \details PCA9685: 16-channel, 12-bit PWM Fm+ I2C-bus LED controller
 **/
 /****************************************************************/
-#ifndef __PCA9685_EX_H__
-	#define __PCA9685_EX_H__
+#ifndef PCA9685_EX_H__
+	#define PCA9685_EX_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -195,17 +195,15 @@ FctERR NONNULL__ PCA9685_ReadRegister(PCA9685_t * const pCpnt, const PCA9685_reg
 ** \param[in] GPIOx - OE port
 ** \param[in] GPIO_Pin - OE pin
 ** \param[in] GPIO_Active: OE pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCA9685_OE_GPIO_Init(PCA9685_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ PCA9685_OE_GPIO_Init(PCA9685_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Output Enable GPIO pin setter for PCA9685
 ** \weak PCA9685 Output Enable GPIO pin setter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to PCA9685 component
 ** \param[in] state - state to write on OE pin (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ PCA9685_OE_GPIO_Set(PCA9685_t * const pCpnt, const bool state);
+void NONNULL__ PCA9685_OE_GPIO_Set(PCA9685_t * const pCpnt, const bool state);
 
 
 /****************************************************************/
@@ -215,5 +213,5 @@ FctERR NONNULL__ PCA9685_OE_GPIO_Set(PCA9685_t * const pCpnt, const bool state);
 	}
 #endif
 
-#endif	/* __PCA9685_EX_H__ */
+#endif	/* PCA9685_EX_H__ */
 /****************************************************************/

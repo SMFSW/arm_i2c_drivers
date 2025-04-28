@@ -1,6 +1,6 @@
 /*!\file TSL2591_proc.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief TSL2591 Driver procedures
 ** \details TSL2591: Very-high sensitivity light-to-digital converter
 **/
@@ -141,11 +141,11 @@ __WEAK FctERR NONNULL__ TSL2591_handler(TSL2591_t * const pCpnt)
 
 __WEAK FctERR NONNULL__ TSL2591_handler_it(TSL2591_t * const pCpnt)
 {
-	FctERR	err;
+	FctERR	err = ERROR_OK;
 	bool	interrupt;
 
-	err = TSL2591_INT_GPIO_Get(pCpnt, &interrupt);
-	if ((!err) && interrupt)	{ err = TSL2591_handler(pCpnt); }
+	TSL2591_INT_GPIO_Get(pCpnt, &interrupt);
+	if (interrupt)	{ err = TSL2591_handler(pCpnt); }
 
 	return err;
 }

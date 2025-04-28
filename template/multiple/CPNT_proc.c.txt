@@ -1,6 +1,6 @@
 /*!\file $CPNT$_proc.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief $CPNT$ Driver procedures
 ** \details $CPNT$:
 **/
@@ -42,9 +42,7 @@ __WEAK FctERR NONNULL__ $CPNT$_Init_Sequence($CPNT$_t * const pCpnt)
 
 __WEAK FctERR NONNULL__ $CPNT$_handler($CPNT$_t * const pCpnt)
 {
-	FctERR	err;
-
-	err = $CPNT$_Read(pCpnt->cfg.slave_inst, &pCpnt->$CPNT$_val_1, $CPNT$__REG1, 1);
+	FctERR	err = $CPNT$_Read(pCpnt->cfg.slave_inst, &pCpnt->$CPNT$_val_1, $CPNT$__REG1, 1);
 	if (err)	{ return err; }
 
 	#if defined(VERBOSE)
@@ -52,7 +50,7 @@ __WEAK FctERR NONNULL__ $CPNT$_handler($CPNT$_t * const pCpnt)
 		printf("$CPNT$ id%d: FUBARED %d", idx, pCpnt->$CPNT$_val_1);
 	#endif
 
-	return ERROR_OK;
+	return err;
 }
 
 
@@ -61,8 +59,8 @@ __WEAK FctERR NONNULL__ $CPNT$_handler_it($CPNT$_t * const pCpnt)
 	FctERR	err;
 	bool	interrupt;
 
-	err = $CPNT$_RDY_GPIO_Get(pCpnt, &interrupt);
-	if ((!err) && interrupt)	{ err = $CPNT$_handler(pCpnt); }
+	$CPNT$_RDY_GPIO_Get(pCpnt, &interrupt);
+	if (interrupt)	{ err = $CPNT$_handler(pCpnt); }
 
 	return err;
 }

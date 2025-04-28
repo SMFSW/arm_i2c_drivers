@@ -1,12 +1,12 @@
 /*!\file TMP1075.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief TMP1075 Driver
 ** \details TMP1075: Temperature Sensor With I2C and SMBus Interface in Industry Standard LM75 Form Factor and Pinout
 **/
 /****************************************************************/
-#ifndef __TMP1075_H__
-	#define __TMP1075_H__
+#ifndef TMP1075_H__
+	#define TMP1075_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -207,5 +207,5 @@ FctERR NONNULL__ TMP1075_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, 
 	}
 #endif
 
-#endif /* __TMP1075_H__ */
+#endif /* TMP1075_H__ */
 /****************************************************************/

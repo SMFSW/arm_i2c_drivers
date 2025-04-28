@@ -1,6 +1,6 @@
 /*!\file ADS1115.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief ADS1115 Driver
 ** \details ADS1115: Ultra-Small, Low-Power, 16-Bit Analog-to-Digital Converter with Internal Reference
 ** \note	Compatibility with:
@@ -37,8 +37,9 @@ FctERR NONNULL__ ADS1115_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 
 	I2C_PERIPHERAL_SET_DEFAULTS(ADS1115, idx);
 
-	err = I2C_slave_init(&ADS1115_hal[idx], hi2c, devAddress, ADS1115_hal[idx].cfg.timeout);
-	if (!err)	{ err = ADS1115_Init_Sequence(&ADS1115[idx]); }
+	I2C_slave_init(&ADS1115_hal[idx], hi2c, devAddress, ADS1115_hal[idx].cfg.timeout);
+
+	err = ADS1115_Init_Sequence(&ADS1115[idx]);
 
 	if (err)	{ I2C_set_enable(&ADS1115_hal[idx], false); }
 	else		{ init_Delay_Generator(); }

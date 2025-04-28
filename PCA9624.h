@@ -1,12 +1,12 @@
 /*!\file PCA9624.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief PCA9624 Driver
 ** \details PCA9624: 8-bit Fm+ I2C-bus 100mA 40V LED driver
 **/
 /****************************************************************/
-#ifndef __PCA9624_H__
-	#define __PCA9624_H__
+#ifndef PCA9624_H__
+	#define PCA9624_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -173,5 +173,5 @@ FctERR NONNULL__ PCA9624_Read(I2C_slave_t * const pSlave, uint8_t * data, const 
 	}
 #endif
 
-#endif	/* __PCA9624_H__ */
+#endif	/* PCA9624_H__ */
 /****************************************************************/

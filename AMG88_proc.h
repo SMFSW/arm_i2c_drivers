@@ -1,12 +1,12 @@
 /*!\file AMG88_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief AMG88 Driver procedures
 ** \details AMG88: Infrared Array Sensor (Grid-EYE)
 **/
 /****************************************************************/
-#ifndef __AMG88_PROC_H__
-	#define __AMG88_PROC_H__
+#ifndef AMG88_PROC_H__
+	#define AMG88_PROC_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -103,5 +103,5 @@ __INLINE void INLINE__ AMG88_handler_it_all(void) {
 	}
 #endif
 
-#endif /* __AMG88_PROC_H__ */
+#endif /* AMG88_PROC_H__ */
 /****************************************************************/

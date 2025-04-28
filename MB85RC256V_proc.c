@@ -1,6 +1,6 @@
 /*!\file MB85RC256V_proc.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief MB85RC256V FRAM Driver procedures
 ** \details MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM
 ** \note	Compatibility (tested):
@@ -20,6 +20,8 @@
 
 __WEAK FctERR NONNULL__ MB85RC256V_Init_Sequence(MB85RC256V_t * const pCpnt)
 {
+	UNUSED(pCpnt);
+
 	/**\code
 	FctERR err = MB85RC256V_Get_ID(pCpnt);
 	if (err)	{ return err; }

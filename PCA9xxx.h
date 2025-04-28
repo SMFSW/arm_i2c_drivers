@@ -1,11 +1,11 @@
 /*!\file PCA9xxx.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief PCA9xxx shared declarations
 **/
 /****************************************************************/
-#ifndef __PCA9XXX_H__
-	#define __PCA9XXX_H__
+#ifndef PCA9XXX_H__
+	#define PCA9XXX_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -386,5 +386,5 @@ typedef uPCA9xxx_REG__EFLAG5		uPCA995x_REG__EFLAG5;	//!< Union for EFLAG5 regist
 	}
 #endif
 
-#endif	/* __PCA9XXX_H__ */
+#endif	/* PCA9XXX_H__ */
 /****************************************************************/

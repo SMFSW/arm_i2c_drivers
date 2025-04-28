@@ -1,12 +1,12 @@
 /*!\file TMP1075_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief TMP1075 Driver procedures
 ** \details TMP1075: Temperature Sensor With I2C and SMBus Interface in Industry Standard LM75 Form Factor and Pinout
 **/
 /****************************************************************/
-#ifndef __TMP1075_PROC_H__
-	#define __TMP1075_PROC_H__
+#ifndef TMP1075_PROC_H__
+	#define TMP1075_PROC_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -113,7 +113,7 @@ FctERR NONNULLX__(1) TMP1075_Get_Temperature(TMP1075_t * const pCpnt, float * te
 FctERR NONNULL__ TMP1075_handler(TMP1075_t * const pCpnt);
 
 /*!\brief Handler for TMP1075 peripheral GPIO interrupt
-** \note \ref TMP1075_XXX_GPIO_Init has to be called at init before using interrupt handler function
+** \note \ref TMP1075_INT_GPIO_Init has to be called at init before using interrupt handler function
 ** \weak TMP1075 GPIO interrupt handler may be user implemented to suit custom needs
 ** \note May be called periodically to handle TMP1075 tasks through interrupts
 ** \param[in] pCpnt - Pointer to TMP1075 component
@@ -131,7 +131,7 @@ __INLINE void INLINE__ TMP1075_handler_all(void) {
 }
 
 /*!\brief Handler for all TMP1075 peripherals GPIO interrupt
-** \note \ref TMP1075_XXX_GPIO_Init has to be called at init before using interrupt handler function
+** \note \ref TMP1075_INT_GPIO_Init has to be called at init before using interrupt handler function
 ** \note May be called periodically to handle all TMP1075 tasks
 **/
 __INLINE void INLINE__ TMP1075_handler_it_all(void) {
@@ -147,5 +147,5 @@ __INLINE void INLINE__ TMP1075_handler_it_all(void) {
 	}
 #endif
 
-#endif /* __TMP1075_PROC_H__ */
+#endif /* TMP1075_PROC_H__ */
 /****************************************************************/

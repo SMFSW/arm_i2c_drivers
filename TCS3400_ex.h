@@ -1,12 +1,12 @@
 /*!\file TCS3400_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief TCS3400 Driver extensions
 ** \details TCS3400: Color Light-to-Digital Converter
 **/
 /****************************************************************/
-#ifndef __TCS3400_EX_H__
-	#define __TCS3400_EX_H__
+#ifndef TCS3400_EX_H__
+	#define TCS3400_EX_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -268,17 +268,15 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Get_Blue(TCS3400_t * const pCpnt, uint1
 ** \param[in] GPIOx - INT port
 ** \param[in] GPIO_Pin - INT pin
 ** \param[in] GPIO_Active: INT pin active state
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ TCS3400_INT_GPIO_Init(TCS3400_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
+void NONNULL__ TCS3400_INT_GPIO_Init(TCS3400_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
 /*!\brief Interrupt GPIO pin getter for TCS3400
 ** \weak TCS3400 Interrupt GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to TCS3400 component
 ** \param[in,out] pState - Pointer to INT pin state variable (0: inactive, 1: active)
-** \return FctERR - ErrorCode
 **/
-FctERR NONNULL__ TCS3400_INT_GPIO_Get(TCS3400_t * const pCpnt, bool * const pState);
+void NONNULL__ TCS3400_INT_GPIO_Get(TCS3400_t * const pCpnt, bool * const pState);
 
 
 /****************************************************************/
@@ -288,5 +286,5 @@ FctERR NONNULL__ TCS3400_INT_GPIO_Get(TCS3400_t * const pCpnt, bool * const pSta
 	}
 #endif
 
-#endif /* __TCS3400_EX_H__ */
+#endif /* TCS3400_EX_H__ */
 /****************************************************************/

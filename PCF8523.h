@@ -1,12 +1,12 @@
 /*!\file PCF8523.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief PCF8523 Driver
 ** \details PCF8523: Real-Time Clock (RTC) and calendar
 **/
 /****************************************************************/
-#ifndef __PCF8523_H__
-	#define __PCF8523_H__
+#ifndef PCF8523_H__
+	#define PCF8523_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -332,5 +332,5 @@ FctERR NONNULL__ PCF8523_Read(uint8_t * data, const uint16_t addr, const uint16_
 	}
 #endif
 
-#endif /* __PCF8523_H__ */
+#endif /* PCF8523_H__ */
 /****************************************************************/

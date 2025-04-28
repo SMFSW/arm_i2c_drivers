@@ -1,6 +1,6 @@
 /*!\file NCA9595_proc.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief NCA9595 Driver procedures
 ** \details NCA9595: Low-voltage 16-bit I²C and SMBus I/O expander
 **/
@@ -55,11 +55,11 @@ __WEAK FctERR NONNULL__ NCA9595_handler(NCA9595_t * const pCpnt)
 
 __WEAK FctERR NONNULL__ NCA9595_handler_it(NCA9595_t * const pCpnt)
 {
-	FctERR	err;
+	FctERR	err = ERROR_OK;
 	bool	interrupt;
 
-	err = NCA9595_INT_GPIO_Get(pCpnt, &interrupt);
-	if ((!err) && interrupt)	{ err = NCA9595_handler(pCpnt); }
+	NCA9595_INT_GPIO_Get(pCpnt, &interrupt);
+	if (interrupt)	{ err = NCA9595_handler(pCpnt); }
 
 	return err;
 }

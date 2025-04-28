@@ -1,11 +1,11 @@
 /*!\file shared_CLS.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief Color Light Sensing shared
 **/
 /****************************************************************/
-#ifndef __SHARED_CLS_H__
-	#define __SHARED_CLS_H__
+#ifndef SHARED_CLS_H__
+	#define SHARED_CLS_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -48,5 +48,5 @@ FctERR NONNULL__ CLS_get_CCT(uint32_t * const cct, const float xy[2]);
 	}
 #endif
 
-#endif /* __SHARED_CLS_H__ */
+#endif /* SHARED_CLS_H__ */
 /****************************************************************/

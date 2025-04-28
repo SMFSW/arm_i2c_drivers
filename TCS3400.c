@@ -1,6 +1,6 @@
 /*!\file TCS3400.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief TCS3400 Driver
 ** \details TCS3400: Color Light-to-Digital Converter
 **/
@@ -32,8 +32,9 @@ FctERR NONNULL__ TCS3400_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 
 	I2C_PERIPHERAL_SET_DEFAULTS(TCS3400, idx);
 
-	err = I2C_slave_init(&TCS3400_hal[idx], hi2c, devAddress, TCS3400_hal[idx].cfg.timeout);
-	if (!err)	{ err = TCS3400_Init_Sequence(&TCS3400[idx]); }
+	I2C_slave_init(&TCS3400_hal[idx], hi2c, devAddress, TCS3400_hal[idx].cfg.timeout);
+
+	err = TCS3400_Init_Sequence(&TCS3400[idx]);
 
 	if (err)	{ I2C_set_enable(&TCS3400_hal[idx], false); }
 

@@ -1,6 +1,6 @@
 /*!\file $CPNT$_proc.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief $CPNT$ Driver procedures
 ** \details $CPNT$:
 **/
@@ -42,16 +42,14 @@ __WEAK FctERR $CPNT$_Init_Sequence(void)
 
 __WEAK FctERR $CPNT$_handler(void)
 {
-	FctERR err;
-
-	err = $CPNT$_Read($CPNT$.$CPNT$_val_1, $CPNT$__REG1, 1);
+	FctERR err = $CPNT$_Read($CPNT$.$CPNT$_val_1, $CPNT$__REG1, 1);
 	if (err)	{ return err; }
 
 	#if defined(VERBOSE)
 		printf("$CPNT$: FUBARED %d", $CPNT$.$CPNT$_val_1);
 	#endif
 
-	return ERROR_OK;
+	return err;
 }
 
 
@@ -60,8 +58,8 @@ __WEAK FctERR NONNULL__ $CPNT$_handler_it(void)
 	FctERR	err;
 	bool	interrupt;
 
-	err = $CPNT$_RDY_GPIO_Get(&interrupt);
-	if ((!err) && interrupt)	{ err = $CPNT$_handler(); }
+	$CPNT$_RDY_GPIO_Get(&interrupt);
+	if (interrupt)	{ err = $CPNT$_handler(); }
 
 	return err;
 }

@@ -1,6 +1,6 @@
 /*!\file TCS3472_proc.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief TCS3472 Driver procedures
 ** \details TCS3472: Color light-to-digital converter with IR filter
 **/
@@ -134,11 +134,11 @@ __WEAK FctERR NONNULL__ TCS3472_handler(TCS3472_t * const pCpnt)
 
 __WEAK FctERR NONNULL__ TCS3472_handler_it(TCS3472_t * const pCpnt)
 {
-	FctERR	err;
+	FctERR	err = ERROR_OK;
 	bool	interrupt;
 
-	err = TCS3472_INT_GPIO_Get(pCpnt, &interrupt);
-	if ((!err) && interrupt)	{ err = TCS3472_handler(pCpnt); }
+	TCS3472_INT_GPIO_Get(pCpnt, &interrupt);
+	if (interrupt)	{ err = TCS3472_handler(pCpnt); }
 
 	return err;
 }

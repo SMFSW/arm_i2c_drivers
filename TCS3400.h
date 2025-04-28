@@ -1,12 +1,12 @@
 /*!\file TCS3400.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2024, SMFSW
+** \copyright MIT (c) 2017-2025, SMFSW
 ** \brief TCS3400 Driver
 ** \details TCS3400: Color Light-to-Digital Converter
 **/
 /****************************************************************/
-#ifndef __TCS3400_H__
-	#define __TCS3400_H__
+#ifndef TCS3400_H__
+	#define TCS3400_H__
 
 #ifdef __cplusplus
 	extern "C" {
@@ -278,5 +278,5 @@ FctERR NONNULL__ TCS3400_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, 
 	}
 #endif
 
-#endif /* __TCS3400_H__ */
+#endif /* TCS3400_H__ */
 /****************************************************************/

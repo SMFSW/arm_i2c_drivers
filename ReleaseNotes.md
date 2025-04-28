@@ -2,7 +2,7 @@
 
 The MIT License (MIT)
 
-Copyright (c) 2017-2024 SMFSW (Sebastien Bizien)
+Copyright (c) 2017-2025 SMFSW (Sebastien Bizien)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22,6 +22,8 @@ SOFTWARE.
 
 ## v1.1
 
+* GPIO init, getters, setters functions returns nothing
+* Few signedness fixes
 * TMP1075: added
 * NCA9595: added
 * I2CMEM: fix use of STM HAL_I2C_IsDeviceReady (fix for eeprom devices) 
