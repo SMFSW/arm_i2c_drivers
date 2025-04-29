@@ -1,4 +1,4 @@
-# ARM I2C drivers [![Build Status](https://app.travis-ci.com/SMFSW/arm_i2c_drivers.svg?branch=master)](https://app.travis-ci.com/SMFSW/arm_i2c_drivers)
+# ARM I2C drivers
 
 ARM I2C Drivers for various components
 
