@@ -1,4 +1,4 @@
-# ARM I2C drivers
+# ARM I2C drivers [![CodeFactor](https://www.codefactor.io/repository/github/smfsw/arm_i2c_drivers/badge)](https://www.codefactor.io/repository/github/smfsw/arm_i2c_drivers)
 
 ARM I2C Drivers for various components
 
