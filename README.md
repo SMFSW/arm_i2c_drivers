@@ -1,4 +1,16 @@
-# ARM I2C drivers [![CodeFactor](https://www.codefactor.io/repository/github/smfsw/arm_i2c_drivers/badge)](https://www.codefactor.io/repository/github/smfsw/arm_i2c_drivers)
+# ARM I2C drivers
+
+[![author](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/SMFSW/a9a2b2a02fda1b33461d53ddfe69d649/raw/auth_SMFSW.json)](https://github.com/SMFSW)
+![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/SMFSW/a9a2b2a02fda1b33461d53ddfe69d649/raw/i2c_drivers_status_badge.json)
+[![license](https://img.shields.io/badge/License-MIT-darkred.svg)](LICENSE)
+[![CodeFactor](https://www.codefactor.io/repository/github/smfsw/arm_i2c_drivers/badge)](https://www.codefactor.io/repository/github/smfsw/arm_i2c_drivers)
+
+![platform](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/SMFSW/a9a2b2a02fda1b33461d53ddfe69d649/raw/platform_STM32.json)
+
+[![doxy](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/SMFSW/a9a2b2a02fda1b33461d53ddfe69d649/raw/tool_DOXY.json)](https://smfsw.github.io/arm_i2c_drivers)
+[![re_note](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/SMFSW/a9a2b2a02fda1b33461d53ddfe69d649/raw/tool_RN.json)](ReleaseNotes.md)
+
+![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/SMFSW/a9a2b2a02fda1b33461d53ddfe69d649/raw/arm_i2c_drivers_custom_repo_badge.json)
 
 ARM I2C Drivers for various components
 
@@ -170,13 +182,3 @@ Feel free to share your thoughts @ xgarmanboziax@gmail.com about:
 - issues encountered (might also raise issue on github directly)
 - optimizations
 - improvements & new functionalities
-
-## Documentation
-
-Doxygen documentation can be generated using "Doxyfile"
-
-See [generated documentation](https://smfsw.github.io/arm_i2c_drivers/)
-
-## Release Notes
-
-See [release notes](ReleaseNotes.md)
