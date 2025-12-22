@@ -1,0 +1,2 @@
+invalidPrintfArgType_sint	// using int32_t blurs cppcheck for printf like string format
+invalidPrintfArgType_uint	// using int32_t blurs cppcheck for printf like string format
