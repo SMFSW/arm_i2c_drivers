@@ -171,7 +171,7 @@ static FctERR NONNULL__ I2CMEM_ReadWrite_Pages(I2CMEM_t * const pCpnt, uint8_t *
 
 		if (wr)		{ err = I2CMEM_Write_Page(pCpnt, pData, address, nb_rw); }	// Write
 		else		{ err = I2CMEM_Read_Page(pCpnt, pData, address, nb_rw); }	// Read
-		if (err)	{ break; }
+		if (err != ERROR_OK)	{ break; }
 
 		data_len -= nb_rw;
 		address += nb_rw;

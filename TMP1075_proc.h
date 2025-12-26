@@ -121,23 +121,18 @@ FctERR NONNULL__ TMP1075_handler(TMP1075_t * const pCpnt);
 **/
 FctERR NONNULL__ TMP1075_handler_it(TMP1075_t * const pCpnt);
 
-
 /*!\brief Handler for all TMP1075 peripherals
 ** \note May be called periodically to handle all TMP1075 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ TMP1075_handler_all(void) {
-	for (TMP1075_t * pCpnt = TMP1075 ; pCpnt < &TMP1075[I2C_TMP1075_NB] ; pCpnt++) {
-		TMP1075_handler(pCpnt); }
-}
+FctERR TMP1075_handler_all(void);
 
 /*!\brief Handler for all TMP1075 peripherals GPIO interrupt
 ** \note \ref TMP1075_INT_GPIO_Init has to be called at init before using interrupt handler function
 ** \note May be called periodically to handle all TMP1075 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ TMP1075_handler_it_all(void) {
-	for (TMP1075_t * pCpnt = TMP1075 ; pCpnt < &TMP1075[I2C_TMP1075_NB] ; pCpnt++) {
-		TMP1075_handler_it(pCpnt); }
-}
+FctERR TMP1075_handler_it_all(void);
 
 
 /****************************************************************/

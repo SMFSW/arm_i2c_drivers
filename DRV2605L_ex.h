@@ -321,7 +321,7 @@ __INLINE FctERR NONNULL_INLINE__ DRV2605L_Get_ChipID(uint8_t * id) {
 	uint8_t	ID;
 
 	err = DRV2605L_Read(&ID, DRV__STATUS, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	*id = ID & 0xE0;	// Keep only 3 msb
 	return err; }
 

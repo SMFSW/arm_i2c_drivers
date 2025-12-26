@@ -14,10 +14,10 @@
 
 TMP1075_t TMP1075[I2C_TMP1075_NB] = { 0 };
 
-static const uint8_t TMP1075_Single_conv_time[2] = { 7, 15 };		//!< Single shot conversion times for TMP1075, TMP1075N
-static const uint8_t TMP1075_conv_time[4] = { 28, 55, 110, 220 };	//!< Conversion times for TMP1075
-static const uint8_t TMP1075N_conv_time[4] = { 28, 55, 110, 250 };	//!< Conversion times for TMP1075N
-static const float TMP1075_resolution = 0.0625f;					//!< Resolution steps for TMP1075
+static const uint8_t TMP1075_Single_conv_time[2] = { 7U, 15U };			//!< Single shot conversion times for TMP1075, TMP1075N
+static const uint8_t TMP1075_conv_time[4] = { 28U, 55U, 110U, 220U };	//!< Conversion times for TMP1075
+static const uint8_t TMP1075N_conv_time[4] = { 28U, 55U, 110U, 250U };	//!< Conversion times for TMP1075N
+static const float TMP1075_resolution = 0.0625f;						//!< Resolution steps for TMP1075
 
 
 /****************************************************************/
@@ -30,7 +30,7 @@ __WEAK FctERR NONNULL__ TMP1075_Init_Sequence(TMP1075_t * const pCpnt)
 
 	// get CFGR word to check if TMP1075 or TMP1075N
 	err = TMP1075_Read_Word(pCpnt->cfg.slave_inst, &CFG.Word, TMP1075__CFGR);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	if (CFG.Bits.FFh != TMP1075_CFGR_7_0)	{ pCpnt->cfg.TMP1075N = true; }	// Set to TMP1075N
 	pCpnt->cfg.Rate = CFG.Bits.R;
@@ -38,12 +38,12 @@ __WEAK FctERR NONNULL__ TMP1075_Init_Sequence(TMP1075_t * const pCpnt)
 	if (pCpnt->cfg.TMP1075N)
 	{
 		err = TMP1075N_Get_ChipID(pCpnt, &pCpnt->cfg.Id);
-		if (err)								{ return err; }
+		if (err != ERROR_OK)								{ return err; }
 		if (pCpnt->cfg.Id != TMP1075N_CHIP_ID)	{ return ERROR_COMMON; }	// Unknown device
 	}
 
 	err = TMP1075_Set_AlertMode(pCpnt, TMP1075__MODE_INT);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	return TMP1075_Set_ConversionRate(pCpnt, TMP1075__CR_220MS);
 }
@@ -66,13 +66,13 @@ static int16_t TMP1075_convert_to_raw_temp(const float temp)
 FctERR NONNULL__ TMP1075_Set_LimitTemp(TMP1075_t * const pCpnt, const float temp, const TMP1075_limit lim)
 {
 	if (lim > TMP1075__LIMIT_HIGH)				{ return ERROR_VALUE; }	// Unknown limit
-	if ((temp < 128.0f) || (temp > 127.9375f))	{ return ERROR_RANGE; }	// Temperature too low/high
+	if ((temp < -128.0f) || (temp > 127.9375f))	{ return ERROR_RANGE; }	// Temperature too low/high
 
 	float *	limit = &pCpnt->cfg.LowLimit + lim;
 	const int16_t TEMP = TMP1075_convert_to_raw_temp(temp);
 
 	FctERR err = TMP1075_Write_Word(pCpnt->cfg.slave_inst, (uint16_t *) &TEMP, TMP1075__LLIM + lim);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	*limit = temp;
 
@@ -88,7 +88,7 @@ FctERR NONNULLX__(1) TMP1075_Get_LimitTemp(TMP1075_t * const pCpnt, float * temp
 	int16_t	TEMP;
 
 	FctERR err = TMP1075_Read_Word(pCpnt->cfg.slave_inst, (uint16_t *) &TEMP, TMP1075__LLIM + lim);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	*limit = TMP1075_convert_raw_temp(TEMP);
 
@@ -104,7 +104,7 @@ FctERR NONNULLX__(1) TMP1075_Get_Temperature(TMP1075_t * const pCpnt, float * te
 	FctERR	err;
 
 	err = TMP1075_Get_Temperature_Raw(pCpnt, &TEMP);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->Temperature = TMP1075_convert_raw_temp(TEMP);
 
@@ -116,7 +116,7 @@ FctERR NONNULLX__(1) TMP1075_Get_Temperature(TMP1075_t * const pCpnt, float * te
 
 __WEAK FctERR NONNULL__ TMP1075_handler(TMP1075_t * const pCpnt)
 {
-	FctERR err = ERROR_NOTAVAIL;	// In case no new data available
+	FctERR err = ERROR_OK;
 
 	if (!pCpnt->NewData)
 	{
@@ -134,7 +134,7 @@ __WEAK FctERR NONNULL__ TMP1075_handler(TMP1075_t * const pCpnt)
 	if (pCpnt->NewData)
 	{
 		err = TMP1075_Get_Temperature(pCpnt, 0);
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ goto ret; }
 
 		pCpnt->NewData = false;
 		pCpnt->hLast = HAL_GetTick();
@@ -145,20 +145,44 @@ __WEAK FctERR NONNULL__ TMP1075_handler(TMP1075_t * const pCpnt)
 		#endif
 	}
 
+	ret:
 	return err;
 }
 
 
 __WEAK FctERR NONNULL__ TMP1075_handler_it(TMP1075_t * const pCpnt)
 {
-	FctERR	err = ERROR_OK;
-	bool	interrupt;
+	FctERR err = ERROR_OK;
 
-	TMP1075_INT_GPIO_Get(pCpnt, &interrupt);
-	if (interrupt)
+	if (TMP1075_INT_GPIO_Get(pCpnt))
 	{
 		pCpnt->NewData = true;
 		err = TMP1075_handler(pCpnt);
+	}
+
+	return err;
+}
+
+
+FctERR TMP1075_handler_all(void)
+{
+	FctERR err = ERROR_OK;
+
+	for (TMP1075_t * pCpnt = TMP1075 ; pCpnt < &TMP1075[I2C_TMP1075_NB] ; pCpnt++)
+	{
+		err |= TMP1075_handler(pCpnt);
+	}
+
+	return err;
+}
+
+FctERR TMP1075_handler_it_all(void)
+{
+	FctERR err = ERROR_OK;
+
+	for (TMP1075_t * pCpnt = TMP1075 ; pCpnt < &TMP1075[I2C_TMP1075_NB] ; pCpnt++)
+	{
+		err |= TMP1075_handler_it(pCpnt);
 	}
 
 	return err;

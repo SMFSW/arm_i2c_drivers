@@ -95,23 +95,18 @@ FctERR NONNULL__ ADS1115_handler(ADS1115_t * const pCpnt);
 **/
 FctERR NONNULL__ ADS1115_handler_it(ADS1115_t * const pCpnt);
 
-
 /*!\brief Handler for all ADS1115 peripherals
 ** \note May be called periodically to handle all ADS1115 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ ADS1115_handler_all(void) {
-	for (ADS1115_t * pCpnt = ADS1115 ; pCpnt < &ADS1115[I2C_ADS1115_NB] ; pCpnt++) {
-		ADS1115_handler(pCpnt); }
-}
+FctERR ADS1115_handler_all(void);
 
 /*!\brief Handler for all ADS1115 peripherals GPIO interrupt
-** \note \ref ADS1115_RDY_GPIO_Init has to be called at init before using interrupt handler function
+** \note \ref ADS1115_INT_GPIO_Init has to be called at init before using interrupt handler function
 ** \note May be called periodically to handle all ADS1115 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ ADS1115_handler_it_all(void) {
-	for (ADS1115_t * pCpnt = ADS1115 ; pCpnt < &ADS1115[I2C_ADS1115_NB] ; pCpnt++) {
-		ADS1115_handler_it(pCpnt); }
-}
+FctERR ADS1115_handler_it_all(void);
 
 
 /****************************************************************/

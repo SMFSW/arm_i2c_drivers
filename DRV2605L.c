@@ -30,7 +30,7 @@ __WEAK FctERR DRV2605L_Init(void)
 
 	err = DRV2605L_Init_Sequence();
 
-	if (err)	{ I2C_set_enable(&DRV2605L_hal, false); }
+	if (err != ERROR_OK)	{ I2C_set_enable(&DRV2605L_hal, false); }
 
 	return err;
 }

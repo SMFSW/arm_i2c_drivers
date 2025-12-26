@@ -192,8 +192,10 @@ FctERR NONNULL__ BMP180_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, c
 
 
 /****************************************************************/
+// cppcheck-suppress-begin misra-c2012-20.1 ; include directives after other declarations
 #include "BMP180_proc.h"	// Include procedures
 #include "BMP180_ex.h"		// Include extensions
+// cppcheck-suppress-end misra-c2012-20.1
 
 #endif
 

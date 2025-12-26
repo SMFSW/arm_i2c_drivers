@@ -120,23 +120,18 @@ FctERR NONNULL__ TCS3400_handler(TCS3400_t * const pCpnt);
 **/
 FctERR NONNULL__ TCS3400_handler_it(TCS3400_t * const pCpnt);
 
-
 /*!\brief Handler for all TCS3400 peripherals
 ** \note May be called periodically to handle all TCS3400 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ TCS3400_handler_all(void) {
-	for (TCS3400_t * pCpnt = TCS3400 ; pCpnt < &TCS3400[I2C_TCS3400_NB] ; pCpnt++) {
-		TCS3400_handler(pCpnt); }
-}
+FctERR TCS3400_handler_all(void);
 
 /*!\brief Handler for all TCS3400 peripherals GPIO interrupt
 ** \note \ref TCS3400_INT_GPIO_Init has to be called at init before using interrupt handler function
 ** \note May be called periodically to handle all TCS3400 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ TCS3400_handler_it_all(void) {
-	for (TCS3400_t * pCpnt = TCS3400 ; pCpnt < &TCS3400[I2C_TCS3400_NB] ; pCpnt++) {
-		TCS3400_handler_it(pCpnt); }
-}
+FctERR TCS3400_handler_it_all(void);
 
 
 /****************************************************************/

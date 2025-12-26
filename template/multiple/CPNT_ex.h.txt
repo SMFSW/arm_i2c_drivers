@@ -85,12 +85,12 @@ FctERR NONNULL__ $CPNT$_fct($CPNT$_t * const pCpnt);
 **/
 void NONNULL__ $CPNT$_INT_GPIO_Init($CPNT$_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active);
 
-/*!\brief Interrupt GPIO pin getter for ADS1115
+/*!\brief Interrupt GPIO pin getter for $CPNT$
 ** \weak $CPNT$ Interrupt GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to $CPNT$ component
-** \param[in,out] pState - Pointer to INT pin state variable (0: inactive, 1: active)
+** \return INT pin state value (0: inactive, 1: active)
 **/
-void NONNULL__ $CPNT$_INT_GPIO_Get($CPNT$_t * const pCpnt, bool * const pState);
+bool NONNULL__ $CPNT$_INT_GPIO_Get($CPNT$_t * const pCpnt);
 
 
 /*!\brief Reset GPIO pin init for $CPNT$

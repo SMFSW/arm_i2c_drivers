@@ -270,8 +270,10 @@ FctERR NONNULL__ TCS3472_Write_Special(I2C_slave_t * const pSlave, const TCS3472
 
 
 /****************************************************************/
+// cppcheck-suppress-begin misra-c2012-20.1 ; include directives after other declarations
 #include "TCS3472_proc.h"	// Include procedures
 #include "TCS3472_ex.h"		// Include extensions
+// cppcheck-suppress-end misra-c2012-20.1
 
 #endif
 

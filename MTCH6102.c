@@ -37,7 +37,7 @@ FctERR NONNULL__ MTCH6102_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c
 
 	err = MTCH6102_Init_Sequence(&MTCH6102[idx]);
 
-	if (err)	{ I2C_set_enable(&MTCH6102_hal[idx], false); }
+	if (err != ERROR_OK)	{ I2C_set_enable(&MTCH6102_hal[idx], false); }
 
 	return err;
 }

@@ -352,9 +352,9 @@ void NONNULL__ APDS9930_INT_GPIO_Init(APDS9930_t * const pCpnt, GPIO_TypeDef * c
 /*!\brief Interrupt GPIO pin getter for APDS9930
 ** \weak APDS9930 Interrupt GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to APDS9930 component
-** \param[in,out] pState - Pointer to INT pin state variable (0: inactive, 1: active)
+** \return INT pin state value (0: inactive, 1: active)
 **/
-void NONNULL__ APDS9930_INT_GPIO_Get(APDS9930_t * const pCpnt, bool * const pState);
+bool NONNULL__ APDS9930_INT_GPIO_Get(APDS9930_t * const pCpnt);
 
 
 /****************************************************************/

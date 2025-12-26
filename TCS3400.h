@@ -269,8 +269,10 @@ FctERR NONNULL__ TCS3400_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, 
 
 
 /****************************************************************/
+// cppcheck-suppress-begin misra-c2012-20.1 ; include directives after other declarations
 #include "TCS3400_proc.h"	// Include procedures
 #include "TCS3400_ex.h"		// Include extensions
+// cppcheck-suppress-end misra-c2012-20.1
 
 #endif
 

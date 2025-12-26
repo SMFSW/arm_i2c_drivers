@@ -136,8 +136,10 @@ FctERR NONNULL__ MCP4725_Read(I2C_slave_t * const pSlave, uint8_t * data, const 
 
 
 /****************************************************************/
+// cppcheck-suppress-begin misra-c2012-20.1 ; include directives after other declarations
 #include "MCP4725_proc.h"	// Include procedures
 #include "MCP4725_ex.h"		// Include extensions
+// cppcheck-suppress-end misra-c2012-20.1
 
 #endif
 

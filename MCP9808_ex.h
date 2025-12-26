@@ -156,9 +156,9 @@ void NONNULL__ MCP9808_Alert_GPIO_Init(MCP9808_t * const pCpnt, GPIO_TypeDef * c
 /*!\brief Change GPIO pin getter for MCP9808
 ** \weak MCP9808 Change GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to MCP9808 component
-** \param[in,out] pState - Pointer to Alert pin state variable (0: inactive, 1: active)
+** \return Alert pin state value (0: inactive, 1: active)
 **/
-void NONNULL__ MCP9808_Alert_GPIO_Get(MCP9808_t * const pCpnt, bool * const pState);
+bool NONNULL__ MCP9808_Alert_GPIO_Get(MCP9808_t * const pCpnt);
 
 
 /****************************************************************/

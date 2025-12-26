@@ -469,8 +469,10 @@ FctERR NONNULL__ APDS9960_Write_Special(I2C_slave_t * const pSlave, const APDS99
 
 
 /****************************************************************/
+// cppcheck-suppress-begin misra-c2012-20.1 ; include directives after other declarations
 #include "APDS9960_proc.h"	// Include procedures
 #include "APDS9960_ex.h"	// Include extensions
+// cppcheck-suppress-end misra-c2012-20.1
 
 #endif
 

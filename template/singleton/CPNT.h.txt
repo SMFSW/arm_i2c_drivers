@@ -121,8 +121,10 @@ FctERR NONNULL__ $CPNT$_Read_Word(uint16_t * data, const uint16_t addr);
 
 
 /****************************************************************/
+// cppcheck-suppress-begin misra-c2012-20.1 ; include directives after other declarations
 #include "$CPNT$_proc.h"	// Include procedures
 #include "$CPNT$_ex.h"		// Include extensions
+// cppcheck-suppress-end misra-c2012-20.1
 
 #endif
 

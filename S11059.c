@@ -32,7 +32,7 @@ FctERR NONNULL__ S11059_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, 
 
 	err = S11059_Init_Sequence(&S11059[idx]);
 
-	if (err)	{ I2C_set_enable(&S11059_hal[idx], false); }
+	if (err != ERROR_OK)	{ I2C_set_enable(&S11059_hal[idx], false); }
 
 	return err;
 }
@@ -88,7 +88,7 @@ FctERR NONNULL__ S11059_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, c
 	if ((addr % sizeof(uint16_t)) == 0)		{ return ERROR_FRAMING; }		// Unaligned word access
 
 	err = S11059_Read(pSlave, WREG, addr, 2);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	*data = MAKEWORD(WREG[1], WREG[0]);
 	return ERROR_OK;

@@ -47,13 +47,13 @@ FctERR NONNULL__ MTCH6102_Command(const MTCH6102_t * const pCpnt, const MTCH6102
 
 	// Send command
 	err = MTCH6102_Write(pCpnt->cfg.slave_inst, &MTCH_CMD.Byte, MTCH__CMD, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	// Wait for command to complete
 	while ((MTCH_CMD.Byte & MEM_MTCH_CMD.Byte) != 0)
 	{
 		err = MTCH6102_Read(pCpnt->cfg.slave_inst, &MTCH_CMD.Byte, MTCH__CMD, 1);
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ return err; }
 		//HAL_Delay(1);
 	}
 
@@ -67,7 +67,7 @@ FctERR NONNULL__ MTCH6102_Get_Active_Period(const MTCH6102_t * const pCpnt, uint
 	FctERR	err;
 
 	err = MTCH6102_Read(pCpnt->cfg.slave_inst, DAT, MTCH__ACTIVE_PERIOD_L, sizeof(DAT));
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	*period = perReg2perVal(LSHIFT(DAT[1], 8) + DAT[0]);
 	return ERROR_OK;
@@ -80,7 +80,7 @@ FctERR NONNULL__ MTCH6102_Get_Idle_Period(const MTCH6102_t * const pCpnt, uint16
 	FctERR	err;
 
 	err = MTCH6102_Read(pCpnt->cfg.slave_inst, DAT, MTCH__IDLE_PERIOD_L, sizeof(DAT));
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	*period = perReg2perVal(LSHIFT(DAT[1], 8) + DAT[0]);
 	return ERROR_OK;
@@ -123,7 +123,7 @@ FctERR NONNULL__ MTCH6102_Set_Filter(const MTCH6102_t * const pCpnt, const MTCH6
 
 	// Send configuration parameters
 	err = MTCH6102_Write(pCpnt->cfg.slave_inst, &MTCH_FILTER[0], baseline_filter ? MTCH__BASE_FILTER_TYPE : MTCH__FILTER_TYPE, 2);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	// Send configuration request
 	err = MTCH6102_Configuration_Request(pCpnt);
@@ -138,15 +138,15 @@ FctERR NONNULL__ MTCH6102_Set_Filter(const MTCH6102_t * const pCpnt, const MTCH6
 __WEAK void NONNULL__ MTCH6102_INT_GPIO_Init(MTCH6102_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
 	I2C_peripheral_GPIO_init(&pCpnt->cfg.INT_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
 
-__WEAK void NONNULL__ MTCH6102_INT_GPIO_Get(MTCH6102_t * const pCpnt, bool * const pState) {
-	I2C_peripheral_GPIO_get(&pCpnt->cfg.INT_GPIO, pState); }
+__WEAK bool NONNULL__ MTCH6102_INT_GPIO_Get(MTCH6102_t * const pCpnt) {
+	return I2C_peripheral_GPIO_get(&pCpnt->cfg.INT_GPIO); }
 
 
 __WEAK void NONNULL__ MTCH6102_SYNC_GPIO_Init(MTCH6102_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
 	I2C_peripheral_GPIO_init(&pCpnt->cfg.SYNC_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
 
-__WEAK void NONNULL__ MTCH6102_SYNC_GPIO_Get(MTCH6102_t * const pCpnt, bool * const pState) {
-	I2C_peripheral_GPIO_get(&pCpnt->cfg.SYNC_GPIO, pState); }
+__WEAK bool NONNULL__ MTCH6102_SYNC_GPIO_Get(MTCH6102_t * const pCpnt) {
+	return I2C_peripheral_GPIO_get(&pCpnt->cfg.SYNC_GPIO); }
 
 
 /****************************************************************/

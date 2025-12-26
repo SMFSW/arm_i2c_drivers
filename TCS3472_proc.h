@@ -119,23 +119,18 @@ FctERR NONNULL__ TCS3472_handler(TCS3472_t * const pCpnt);
 **/
 FctERR NONNULL__ TCS3472_handler_it(TCS3472_t * const pCpnt);
 
-
 /*!\brief Handler for all TCS3472 peripherals
 ** \note May be called periodically to handle all TCS3472 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ TCS3472_handler_all(void) {
-	for (TCS3472_t * pCpnt = TCS3472 ; pCpnt < &TCS3472[I2C_TCS3472_NB] ; pCpnt++) {
-		TCS3472_handler(pCpnt); }
-}
+FctERR TCS3472_handler_all(void);
 
 /*!\brief Handler for all TCS3472 peripherals GPIO interrupt
 ** \note \ref TCS3472_INT_GPIO_Init has to be called at init before using interrupt handler function
 ** \note May be called periodically to handle all TCS3472 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ TCS3472_handler_it_all(void) {
-	for (TCS3472_t * pCpnt = TCS3472 ; pCpnt < &TCS3472[I2C_TCS3472_NB] ; pCpnt++) {
-		TCS3472_handler_it(pCpnt); }
-}
+FctERR TCS3472_handler_it_all(void);
 
 
 /****************************************************************/

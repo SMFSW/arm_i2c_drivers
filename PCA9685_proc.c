@@ -29,18 +29,18 @@ __WEAK FctERR NONNULL__ PCA9685_Init_Sequence(PCA9685_t * const pCpnt)
 	// Set Delay time & all led OFF
 	uint8_t DATA[4] = { 0, 0, 0, DefBitFullOnOff };
 	err = PCA9685_Write(pCpnt->cfg.slave_inst, DATA, PCA9685__ALL_LED_ON_L, sizeof(DATA));
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	// MODE1: SLEEP + Respond to ALLCALL
 	MODE1.Bits.ALLCALL = true;
 	MODE1.Bits.SLEEP = true;
 	err = PCA9685_Write(pCpnt->cfg.slave_inst, &MODE1.Byte, PCA9685__MODE1, sizeof(MODE1));
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	// Send prescaler to obtain desired frequency (only in SLEEP)
 	PCA9685_Freq_To_Byte(pCpnt, &DATA[0], PCA9685_DEF_FREQ);
 	err = PCA9685_Write(pCpnt->cfg.slave_inst, DATA, PCA9685__PRE_SCALE, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	pCpnt->cfg.Frequency = PCA9685_Byte_To_Freq(pCpnt, DATA[0]);
 
 	// MODE1: Restart Enabled + Auto Increment

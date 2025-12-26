@@ -41,7 +41,7 @@ FctERR NONNULL__ ADS1115_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 
 	err = ADS1115_Init_Sequence(&ADS1115[idx]);
 
-	if (err)	{ I2C_set_enable(&ADS1115_hal[idx], false); }
+	if (err != ERROR_OK)	{ I2C_set_enable(&ADS1115_hal[idx], false); }
 	else		{ init_Delay_Generator(); }
 
 	return ERROR_OK;

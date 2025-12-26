@@ -274,9 +274,9 @@ void NONNULL__ TCS3400_INT_GPIO_Init(TCS3400_t * const pCpnt, GPIO_TypeDef * con
 /*!\brief Interrupt GPIO pin getter for TCS3400
 ** \weak TCS3400 Interrupt GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to TCS3400 component
-** \param[in,out] pState - Pointer to INT pin state variable (0: inactive, 1: active)
+** \return INT pin state value (0: inactive, 1: active)
 **/
-void NONNULL__ TCS3400_INT_GPIO_Get(TCS3400_t * const pCpnt, bool * const pState);
+bool NONNULL__ TCS3400_INT_GPIO_Get(TCS3400_t * const pCpnt);
 
 
 /****************************************************************/

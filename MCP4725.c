@@ -32,7 +32,7 @@ FctERR NONNULL__ MCP4725_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 
 	err = MCP4725_Init_Sequence(&MCP4725[idx]);
 
-	if (err)	{ I2C_set_enable(&MCP4725_hal[idx], false); }
+	if (err != ERROR_OK)	{ I2C_set_enable(&MCP4725_hal[idx], false); }
 
 	return err;
 }

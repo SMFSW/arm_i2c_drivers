@@ -30,7 +30,7 @@ __WEAK FctERR NONNULL__ PCA9956_Init_Sequence(PCA9956_t * const pCpnt)
 	MODE1.Bits.ALLCALL = true;
 	MODE1.Bits.SLEEP = true;
 	err = PCA9956_Write(pCpnt->cfg.slave_inst, &MODE1.Byte, PCA9956__MODE1, sizeof(MODE1));
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	err |= PCA9956_Set_Auto_Increment(pCpnt, PCA9xxx__AUTO_INC_ALL);
 

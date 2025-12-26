@@ -31,10 +31,10 @@ __WEAK FctERR DRV2605L_Init_Sequence(void)
 	DRV2605L.cfg.RTP_Format = DRV__RTP_SIGNED;
 
 	err = DRV2605L_Set_Standby(false);
-	if (err)										{ goto init_seq_ret; }
+	if (err != ERROR_OK)										{ goto init_seq_ret; }
 
 	err = DRV2605L_Get_ChipID(&DRV2605L.cfg.Id);
-	if (err)										{ goto init_seq_ret; }
+	if (err != ERROR_OK)										{ goto init_seq_ret; }
 	if (	(DRV2605L.cfg.Id != DRV2604_CHIP_ID)
 		&&	(DRV2605L.cfg.Id != DRV2604L_CHIP_ID)
 		&&	(DRV2605L.cfg.Id != DRV2605_CHIP_ID)
@@ -42,33 +42,33 @@ __WEAK FctERR DRV2605L_Init_Sequence(void)
 
 	// TODO: write library selection reg if using lib
 	err = DRV2605L_Write(EFFECT, DRV__WAVEFORM_SEQUENCER_1, 2);
-	if (err)										{ goto init_seq_ret; }
+	if (err != ERROR_OK)										{ goto init_seq_ret; }
 
 	// Write no Overdrive time offset & Sustain Pos/Neg
 	err = DRV2605L_Set_OverdriveTimeOffset(0);
-	if (err)										{ goto init_seq_ret; }
+	if (err != ERROR_OK)										{ goto init_seq_ret; }
 	err = DRV2605L_Set_SustainTimeOffset(0, false);
-	if (err)										{ goto init_seq_ret; }
+	if (err != ERROR_OK)										{ goto init_seq_ret; }
 	err = DRV2605L_Set_SustainTimeOffset(0, true);
-	if (err)										{ goto init_seq_ret; }
+	if (err != ERROR_OK)										{ goto init_seq_ret; }
 	err = DRV2605L_Set_BrakeTimeOffset(0);
-	if (err)										{ goto init_seq_ret; }
+	if (err != ERROR_OK)										{ goto init_seq_ret; }
 
 	err = DRV2605L_Set_ATVInputLevel_Raw(0x64, true);
-	if (err)										{ goto init_seq_ret; }
+	if (err != ERROR_OK)										{ goto init_seq_ret; }
 
 	CTL1.Byte = 0;
 	CTL1.Bits.STARTUP_BOOST = 1;
 	CTL1.Bits.DRIVE_TIME = 20;
 
 	err = DRV2605L_Write(&CTL1.Byte, DRV__CONTROL_1, 1);
-	if (err)										{ goto init_seq_ret; }
+	if (err != ERROR_OK)										{ goto init_seq_ret; }
 
 	// TODO: write CTL1,2,3 for operating mode selection
 	err = DRV2605L_Set_ActType(DRV2605L.cfg.ERM_LRA);
-	if (err)										{ goto init_seq_ret; }
+	if (err != ERROR_OK)										{ goto init_seq_ret; }
 	err = DRV2605L_Set_LoopMode(DRV2605L.cfg.Open_Loop);
-	if (err)										{ goto init_seq_ret; }
+	if (err != ERROR_OK)										{ goto init_seq_ret; }
 
 	//MODE.Bits.STANDBY = 1;
 	init_seq_ret:
@@ -93,16 +93,16 @@ FctERR DRV2605L_Auto_Calib(void)
 	MODE.Byte = 0;
 
 	err = DRV2605L_Write(&MODE.Byte, DRV__MODE, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	err = DRV2605L_Read(&FB_CTL.Byte, DRV__FEEDBACK_CONTROL, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	err = DRV2605L_Read(&CTL1.Byte, DRV__CONTROL_1, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	err = DRV2605L_Read(&CTL2.Byte, DRV__CONTROL_2, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	err = DRV2605L_Read(&CTL4.Byte, DRV__CONTROL_4, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	FB_CTL.Bits.N_ERM_LRA = DRV2605L.cfg.ERM_LRA;
 	FB_CTL.Bits.FB_BRAKE_FACTOR = 2;
@@ -123,28 +123,28 @@ FctERR DRV2605L_Auto_Calib(void)
 	// call auto-calibration procedure
 	MODE.Bits.MODE = DRV__MODE_AUTO_CALIBRATION;
 	err = DRV2605L_Write(&MODE.Byte, DRV__MODE, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 
 	err = DRV2605L_Write(&FB_CTL.Byte, DRV__FEEDBACK_CONTROL, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	err = DRV2605L_Write(&RATED_VOLTAGE, DRV__RATED_VOLTAGE, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	err = DRV2605L_Write(&OD_CLAMP, DRV__OVERDRIVE_CLAMP_VOLTAGE, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	err = DRV2605L_Write(&CTL1.Byte, DRV__CONTROL_1, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	err = DRV2605L_Write(&CTL2.Byte, DRV__CONTROL_2, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	err = DRV2605L_Write(&CTL4.Byte, DRV__CONTROL_4, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 
 	err = DRV2605L_Vibe(DRV__START);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	err = DRV2605L_Read(&ST.Byte, DRV__STATUS, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	MODE.Bits.STANDBY = 1;
 	MODE.Bits.MODE = DRV__MODE_INTERNAL_TRIGGER;

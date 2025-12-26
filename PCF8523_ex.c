@@ -60,7 +60,7 @@ FctERR PCF8523_Set_12_24(const bool twelve)
 	FctERR				err;
 
 	err = PCF8523_Read(&CTRL1.Byte, PCF8523__CONTROL_1, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	CTRL1.Bits.H12_24 = twelve;
 	return PCF8523_Write(&CTRL1.Byte, PCF8523__CONTROL_1, 1);
@@ -89,7 +89,7 @@ FctERR NONNULL__ PCF8523_Check_Clock_Integrity(bool * integrity)
 	FctERR					err;
 
 	err = PCF8523_Read(&SEC.Byte, PCF8523__SECONDS, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	*integrity = SEC.Bits.OS;
 	return ERROR_OK;
@@ -102,15 +102,15 @@ FctERR NONNULL__ PCF8523_Check_Clock_Integrity(bool * integrity)
 __WEAK void NONNULL__ PCF8523_INT1_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
 	I2C_peripheral_GPIO_init(&PCF8523.cfg.INT1_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
 
-__WEAK void NONNULL__ PCF8523_INT1_GPIO_Get(bool * const pState) {
-	I2C_peripheral_GPIO_get(&PCF8523.cfg.INT1_GPIO, pState); }
+__WEAK bool NONNULL__ PCF8523_INT1_GPIO_Get(void) {
+	return I2C_peripheral_GPIO_get(&PCF8523.cfg.INT1_GPIO); }
 
 
 __WEAK void NONNULL__ PCF8523_INT2_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
 	I2C_peripheral_GPIO_init(&PCF8523.cfg.INT2_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
 
-__WEAK void NONNULL__ PCF8523_INT2_GPIO_Get(bool * const pState) {
-	I2C_peripheral_GPIO_get(&PCF8523.cfg.INT2_GPIO, pState); }
+__WEAK bool NONNULL__ PCF8523_INT2_GPIO_Get(void) {
+	return I2C_peripheral_GPIO_get(&PCF8523.cfg.INT2_GPIO); }
 
 
 /****************************************************************/

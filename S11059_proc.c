@@ -38,13 +38,13 @@ __WEAK FctERR NONNULL__ S11059_Init_Sequence(S11059_t * const pCpnt)
 	CTL.Bits.INTEG_PRESCL = pCpnt->cfg.IntegrationPrescaler;
 
 	err = S11059_Write_Ctl(pCpnt->cfg.slave_inst, CTL.Byte);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->cfg.FullIntegrationTime = S11059_Get_Full_Integration_Time(pCpnt->cfg.IntegrationMode, pCpnt->cfg.IntegrationPrescaler, pCpnt->cfg.IntegrationTimeMult);
 
 	CTL.Bits.ADC_RESET = pCpnt->cfg.ADCMode;
 	err = S11059_Write_Ctl(pCpnt->cfg.slave_inst, CTL.Byte);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->hStartConversion = HAL_GetTick();
 
@@ -61,9 +61,9 @@ uint32_t S11059_Get_Full_Integration_Time(const S11059_integ mode, const S11059_
 	if (prescaler > S11059__INTEG_179_2MS)			{ return ERROR_VALUE; }
 
 	float		t = S11059_Integ_tab[prescaler] * 4;		// Prescaler multiplied by 4 channels
-	uint16_t	m = (!mult) ? 1 : mult;
+	uint16_t	m = (!mult) ? 1U : mult;
 
-	if (mode == S11059__MANUAL_INTEGRATION)	{ t *= 2 * m; }
+	if (mode == S11059__MANUAL_INTEGRATION)	{ t *= 2U * m; }
 
 	return (uint32_t) t;
 }
@@ -72,14 +72,14 @@ uint32_t S11059_Get_Full_Integration_Time(const S11059_integ mode, const S11059_
 __WEAK FctERR NONNULL__ S11059_handler(S11059_t * const pCpnt)
 {
 	uint8_t	DATA[8];
-	FctERR	err;
+	FctERR	err = ERROR_OK;
 
-	if (TPSSUP_MS(pCpnt->hStartConversion, (uint32_t) ((pCpnt->cfg.FullIntegrationTime / 1000) + 1)))	// true at least after 1ms in the worst case (fixed period set to 87.5us)
+	if (TPSSUP_MS(pCpnt->hStartConversion, (uint32_t) ((pCpnt->cfg.FullIntegrationTime / 1000U) + 1U)))	// true at least after 1ms in the worst case (fixed period set to 87.5us)
 	{
 		pCpnt->hStartConversion = HAL_GetTick();
 
 		err = S11059_Read(pCpnt->cfg.slave_inst, DATA, S11059__RED_DATA_MSB, sizeof(DATA));
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ goto ret; }
 
 		pCpnt->Red = MAKEWORD(DATA[1], DATA[0]);
 		pCpnt->Green = MAKEWORD(DATA[3], DATA[2]);
@@ -92,7 +92,21 @@ __WEAK FctERR NONNULL__ S11059_handler(S11059_t * const pCpnt)
 		#endif
 	}
 
-	return ERROR_OK;
+	ret:
+	return err;
+}
+
+
+FctERR S11059_handler_all(void)
+{
+	FctERR err = ERROR_OK;
+
+	for (S11059_t * pCpnt = S11059 ; pCpnt < &S11059[I2C_S11059_NB] ; pCpnt++)
+	{
+		err |= S11059_handler(pCpnt);
+	}
+
+	return err;
 }
 
 

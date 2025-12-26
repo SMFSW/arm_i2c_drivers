@@ -118,7 +118,9 @@ FctERR NONNULL__ FM24C_Read(FM24C_t * const pCpnt, uint8_t * const data, const u
 
 
 /****************************************************************/
+// cppcheck-suppress-begin misra-c2012-20.1 ; include directives after other declarations
 #include "FM24C_ex.h"		// Include extensions
+// cppcheck-suppress-end misra-c2012-20.1
 
 #endif
 

@@ -45,29 +45,29 @@ __WEAK FctERR NONNULL__ APDS9930_Init_Sequence(APDS9930_t * const pCpnt)
 
 	// get ID & check against values for APDS9930
 	err = APDS9930_Get_ChipID(pCpnt, &pCpnt->cfg.Id);
-	if (err)								{ return err; }
+	if (err != ERROR_OK)								{ return err; }
 	if (pCpnt->cfg.Id != APDS9930_CHIP_ID)	{ return ERROR_COMMON; }	// Unknown device
 
 	EN.Bits.PON = true;		// Turn ON Osc
 	err = APDS9930_Write_En(pCpnt, EN.Byte);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	err = APDS9930_Set_ALS_Gain(pCpnt, pCpnt->cfg.ALS_Gain);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	err = APDS9930_Set_Prox_Gain(pCpnt, pCpnt->cfg.Prox_Gain);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	err = APDS9930_Set_Prox_Drive_Strength(pCpnt, pCpnt->cfg.Prox_Strength);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	err = APDS9930_Write(pCpnt->cfg.slave_inst, &pCpnt->cfg.Prox_Pulses, APDS9930__PPULSE, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	err = APDS9930_Set_ALS_Integration_Time(pCpnt, pCpnt->cfg.ALS_Integ);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	err = APDS9930_Set_Prox_Integration_Time(pCpnt, pCpnt->cfg.Prox_Integ);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	err = APDS9930_Set_Wait_Time(pCpnt, pCpnt->cfg.Wait);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	APDS9930_Set_LPC(pCpnt);
 
@@ -135,13 +135,12 @@ __WEAK FctERR NONNULL__ APDS9930_handler(APDS9930_t * const pCpnt)
 {
 	uint8_t					DATA[7];
 	uAPDS9930_REG__STATUS *	ST = (uAPDS9930_REG__STATUS *) DATA;
-	FctERR					err;
 	#if defined(VERBOSE)
 		const uint8_t		idx = pCpnt - APDS9930;
 	#endif
 
-	err = APDS9930_Read(pCpnt->cfg.slave_inst, DATA, APDS9930__STATUS, sizeof(DATA));
-	if (err)	{ return err; }
+	FctERR err = APDS9930_Read(pCpnt->cfg.slave_inst, DATA, APDS9930__STATUS, sizeof(DATA));
+	if (err != ERROR_OK)	{ goto ret; }
 
 	if (pCpnt->cfg.AIEN)
 	{
@@ -170,21 +169,45 @@ __WEAK FctERR NONNULL__ APDS9930_handler(APDS9930_t * const pCpnt)
 		}
 	}
 
-	if ((pCpnt->cfg.AIEN) && (pCpnt->cfg.PIEN))	{ return APDS9930_SF_Clear_ALS_PROX_IT(pCpnt); }
-	else if (pCpnt->cfg.AIEN)					{ return APDS9930_SF_Clear_ALS_IT(pCpnt); }
-	else if (pCpnt->cfg.PIEN)					{ return APDS9930_SF_Clear_PROX_IT(pCpnt); }
+	if ((pCpnt->cfg.AIEN) && (pCpnt->cfg.PIEN))	{ err = APDS9930_SF_Clear_ALS_PROX_IT(pCpnt); }
+	else if (pCpnt->cfg.AIEN)					{ err = APDS9930_SF_Clear_ALS_IT(pCpnt); }
+	else if (pCpnt->cfg.PIEN)					{ err = APDS9930_SF_Clear_PROX_IT(pCpnt); }
 
-	return ERROR_OK;
+	ret:
+	return err;
 }
 
 
 __WEAK FctERR NONNULL__ APDS9930_handler_it(APDS9930_t * const pCpnt)
 {
-	FctERR	err = ERROR_OK;
-	bool	interrupt;
+	FctERR err = ERROR_OK;
 
-	APDS9930_INT_GPIO_Get(pCpnt, &interrupt);
-	if (interrupt)	{ err = APDS9930_handler(pCpnt); }
+	if (APDS9930_INT_GPIO_Get(pCpnt))	{ err = APDS9930_handler(pCpnt); }
+
+	return err;
+}
+
+
+FctERR APDS9930_handler_all(void)
+{
+	FctERR err = ERROR_OK;
+
+	for (APDS9930_t * pCpnt = APDS9930 ; pCpnt < &APDS9930[I2C_APDS9930_NB] ; pCpnt++)
+	{
+		err |= APDS9930_handler(pCpnt);
+	}
+
+	return err;
+}
+
+FctERR APDS9930_handler_it_all(void)
+{
+	FctERR err = ERROR_OK;
+
+	for (APDS9930_t * pCpnt = APDS9930 ; pCpnt < &APDS9930[I2C_APDS9930_NB] ; pCpnt++)
+	{
+		err |= APDS9930_handler_it(pCpnt);
+	}
 
 	return err;
 }

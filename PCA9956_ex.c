@@ -26,7 +26,7 @@ FctERR NONNULL__ PCA9956_Set_Auto_Increment(PCA9956_t * const pCpnt, const PCA96
 	pCpnt->cfg.auto_inc = inc & PCA9xxx__AUTO_INC_BRIGHT_GLOBAL;		// Mask inc just in case
 
 	err = PCA9956_Read(pCpnt->cfg.slave_inst, (uint8_t *) &MODE1, PCA9956__MODE1, sizeof(MODE1));
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	MODE1.Byte = (MODE1.Byte & ~0xE0) | pCpnt->cfg.auto_inc;
 	return PCA9956_Write(pCpnt->cfg.slave_inst, (uint8_t *) &MODE1, PCA9956__MODE1, sizeof(MODE1));
@@ -41,7 +41,7 @@ FctERR NONNULL__ PCA9956_Set_Latch(PCA9956_t * const pCpnt, const PCA96xx_latch 
 	if (latch > PCA9xxx__LATCH_ON_ACK)	{ return ERROR_VALUE; }	// Unknown latch mode
 
 	err = PCA9956_Read(pCpnt->cfg.slave_inst, (uint8_t *) &MODE2, PCA9956__MODE2, sizeof(MODE2));
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	MODE2.Bits.OCH = latch;
 	return PCA9956_Write(pCpnt->cfg.slave_inst, (uint8_t *) &MODE2, PCA9956__MODE2, sizeof(MODE2));
@@ -189,7 +189,7 @@ FctERR NONNULL__ PCA9956_ReadEFLAGs(PCA9956_t * const pCpnt, uPCA9956_REG__EFLAG
 {
 	uint8_t EFLAG[6];
 	FctERR err = PCA9956_Read(pCpnt->cfg.slave_inst, EFLAG, PCA9956__EFLAG0, sizeof(EFLAG));
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	eflags->LWord = 0;
 	for (uintCPU_t i = 0 ; i < sizeof(EFLAG) ; i++)	{ eflags->LWord |= LSHIFT64(EFLAG[i], i * 8); }

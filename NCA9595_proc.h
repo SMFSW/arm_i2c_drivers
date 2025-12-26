@@ -74,23 +74,18 @@ FctERR NONNULL__ NCA9595_handler(NCA9595_t * const pCpnt);
 **/
 FctERR NONNULL__ NCA9595_handler_it(NCA9595_t * const pCpnt);
 
-
 /*!\brief Handler for all NCA9595 peripherals
 ** \note May be called periodically to handle all NCA9595 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ NCA9595_handler_all(void) {
-	for (NCA9595_t * pCpnt = NCA9595 ; pCpnt < &NCA9595[I2C_NCA9595_NB] ; pCpnt++) {
-		NCA9595_handler(pCpnt); }
-}
+FctERR NCA9595_handler_all(void);
 
 /*!\brief Handler for all NCA9595 peripherals GPIO interrupt
 ** \note \ref NCA9595_INT_GPIO_Init has to be called at init before using interrupt handler function
 ** \note May be called periodically to handle all NCA9595 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ NCA9595_handler_it_all(void) {
-	for (NCA9595_t * pCpnt = NCA9595 ; pCpnt < &NCA9595[I2C_NCA9595_NB] ; pCpnt++) {
-		NCA9595_handler_it(pCpnt); }
-}
+FctERR NCA9595_handler_it_all(void);
 
 
 /****************************************************************/

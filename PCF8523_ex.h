@@ -135,9 +135,9 @@ void NONNULL__ PCF8523_INT1_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t
 
 /*!\brief Interrupt 1 GPIO pin getter for PCF8523
 ** \weak PCF8523 Interrupt 1 GPIO pin getter may be user implemented if needed
-** \param[in,out] pState - Pointer to INT1 pin state variable (0: inactive, 1: active)
+** \return INT1 pin state value (0: inactive, 1: active)
 **/
-void NONNULL__ PCF8523_INT1_GPIO_Get(bool * const pState);
+bool NONNULL__ PCF8523_INT1_GPIO_Get(void);
 
 
 /*!\brief Interrupt 2 GPIO pin init for PCF8523
@@ -150,9 +150,9 @@ void NONNULL__ PCF8523_INT2_GPIO_Init(GPIO_TypeDef * const GPIOx, const uint16_t
 
 /*!\brief Interrupt 2 GPIO pin getter for PCF8523
 ** \weak PCF8523 Interrupt 2 GPIO pin getter may be user implemented if needed
-** \param[in,out] pState - Pointer to INT2 pin state variable (0: inactive, 1: active)
+** \return INT2 pin state value (0: inactive, 1: active)
 **/
-void NONNULL__ PCF8523_INT2_GPIO_Get(bool * const pState);
+bool NONNULL__ PCF8523_INT2_GPIO_Get(void);
 
 
 /****************************************************************/

@@ -18,11 +18,11 @@ FctERR NONNULL__ S11059_Set_ADC(S11059_t * const pCpnt, const S11059_adc_reset a
 	FctERR					err;
 
 	err = S11059_Read(pCpnt->cfg.slave_inst, &CTL.Byte, S11059__CONTROL, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	CTL.Bits.ADC_RESET = adc;
 	err = S11059_Write_Ctl(pCpnt->cfg.slave_inst, CTL.Byte);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->cfg.ADCMode = adc;
 
@@ -36,11 +36,11 @@ FctERR NONNULL__ S11059_Set_Standby(S11059_t * const pCpnt, const S11059_standby
 	FctERR					err;
 
 	err = S11059_Read(pCpnt->cfg.slave_inst, &CTL.Byte, S11059__CONTROL, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	CTL.Bits.STANDBY_FUNCTION = standby;
 	err = S11059_Write_Ctl(pCpnt->cfg.slave_inst, CTL.Byte);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->cfg.Standby = standby;
 
@@ -54,11 +54,11 @@ FctERR NONNULL__ S11059_Set_Gain(S11059_t * const pCpnt, const S11059_gain gain)
 	FctERR					err;
 
 	err = S11059_Read(pCpnt->cfg.slave_inst, &CTL.Byte, S11059__CONTROL, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	CTL.Bits.GAIN_SELECTION = gain;
 	err = S11059_Write_Ctl(pCpnt->cfg.slave_inst, CTL.Byte);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->cfg.GainSelection = gain;
 
@@ -72,12 +72,12 @@ FctERR NONNULL__ S11059_Set_Integration(S11059_t * const pCpnt, const S11059_int
 	FctERR					err;
 
 	err = S11059_Read(pCpnt->cfg.slave_inst, &CTL.Byte, S11059__CONTROL, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	CTL.Bits.INTEG_MODE = mode;
 	CTL.Bits.INTEG_PRESCL = prescaler;
 	err = S11059_Write_Ctl(pCpnt->cfg.slave_inst, CTL.Byte);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->cfg.IntegrationMode = mode;
 	pCpnt->cfg.IntegrationPrescaler = prescaler;
@@ -91,7 +91,7 @@ FctERR NONNULL__ S11059_Set_Integration_Multiplier(S11059_t * const pCpnt, const
 	FctERR	err;
 
 	err = S11059_Write_Word(pCpnt->cfg.slave_inst, &mult, S11059__MANUAL_TIMING_MSB);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->cfg.IntegrationTimeMult = mult;
 
@@ -105,7 +105,7 @@ FctERR NONNULL__ S11059_Get_Standby(S11059_t * const pCpnt, S11059_standby_fct *
 	FctERR					err;
 
 	err = S11059_Read(pCpnt->cfg.slave_inst, (uint8_t *) &CTL, S11059__CONTROL, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	*standby = CTL.Bits.STANDBY_MONITOR;
 	pCpnt->cfg.Standby = CTL.Bits.STANDBY_MONITOR;

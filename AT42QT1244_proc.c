@@ -56,7 +56,7 @@ __WEAK FctERR NONNULL__ AT42QT1244_Init_Sequence(AT42QT1244_t * const pCpnt)
 			err |= AT42QT1244_Send_Setup(pCpnt, DATA, AT42QT__SETUP_KEYS_MODE_10, sizeof(DATA));
 
 			// Some issues encountered while writing setup block (reason unidentified), resetting the MCU and trying to write again seems to solve issue
-			if (err)	{ NVIC_SystemReset(); }
+			if (err != ERROR_OK)	{ NVIC_SystemReset(); }
 			else
 			{
 				NVM_Save_AT42QT1244_HCRC(idx, crc);				// USER IMPLEMENTED: Save new HCRC to host non-volatile memory
@@ -83,9 +83,7 @@ void NONNULL__ AT42QT1244_Delay_PowerOn(AT42QT1244_t * const pCpnt)
 
 	for (intCPU_t i = 0 ; i < loops ; i++)
 	{
-		#if defined(HAL_IWDG_MODULE_ENABLED)
-			HAL_IWDG_Refresh(&hiwdg);
-		#endif
+		I2C_Watchdog_Refresh();
 		HAL_Delay(loop_delay);
 	}
 }
@@ -100,24 +98,22 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * const pCpnt, u
 
 	// Low Level calibration to set automatically FREQ0 to FREQ2
 	err = AT42QT1244_Calibrate_Low_Level(pCpnt);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	// Wait for end of low level calibration
 	while (calib) {
-		#if defined(HAL_IWDG_MODULE_ENABLED)
-			HAL_IWDG_Refresh(&hiwdg);
-		#endif
+		I2C_Watchdog_Refresh();
 		calib = AT42QT1244_is_Calib_Pending(pCpnt);
 		if (calib == -1)	{ return ERROR_NOTAVAIL; }
 	}
 
 	// Get all FREQ
 	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, Freqs, AT42QT__SETUP_FREQ0, sizeof(Freqs));	// Get FREQ0, FREQ1, FREQ2
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	// Disable frequency hoping mode
 	err = AT42QT1244_Setup_FHM(pCpnt, &crc, AT42QT__FHM_OFF);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	for (i = 0 ; i < 2 ; i++)
 	{
@@ -125,17 +121,15 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * const pCpnt, u
 
 		// Send FREQ0, FREQ1, then FREQ2 to FREQ0 reg
 		err = AT42QT1244_Send_Setup(pCpnt, &crc, &Freqs[i], AT42QT__SETUP_FREQ0, 1);
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ return err; }
 
 		// Launch calibration for all keys
 		err = AT42QT1244_Calibrate_All_Keys(pCpnt);
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ return err; }
 
 		// Wait for end of keys calibration
 		while (calib) {
-			#if defined(HAL_IWDG_MODULE_ENABLED)
-				HAL_IWDG_Refresh(&hiwdg);
-			#endif
+			I2C_Watchdog_Refresh();
 			Delay_us(1000);
 			calib = AT42QT1244_is_Calib_Pending(pCpnt);
 			if (calib == -1)	{ return ERROR_NOTAVAIL; }
@@ -145,7 +139,7 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * const pCpnt, u
 		for (j = 0 ; j <= AT42QT__CALIBRATE_KEY_23 ; j++) {
 			uAT42QT_REG__KEY_DATA dat;
 			err = AT42QT1244_Get_Key_Data(pCpnt, &dat, j);
-			if (err)	{ return err; }
+			if (err != ERROR_OK)	{ return err; }
 
 			Refs[i][j] = dat.Data.Reference;
 		}
@@ -153,7 +147,7 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * const pCpnt, u
 
 	// Write FREQ0 back
 	err = AT42QT1244_Send_Setup(pCpnt, &crc, &Freqs[0], AT42QT__SETUP_FREQ0, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	// Compute CFO values
 	for (i = 0 ; i < 2 ; i++) {
@@ -164,7 +158,7 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * const pCpnt, u
 
 	// Write CFO values
 	err = AT42QT1244_Send_Setup(pCpnt, &crc, &CFO[0][0], AT42QT__SETUP_CFO_1_0, sizeof(CFO));
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	// Enable frequency hopping mode
 	err |= AT42QT1244_Setup_FHM(pCpnt, &crc, AT42QT__FHM_ADJ_KEYS_REF_DURING_HOP);
@@ -211,15 +205,13 @@ __WEAK FctERR NONNULL__ AT42QT1244_handler(AT42QT1244_t * const pCpnt)
 #else
 	uint8_t TMP[7];
 	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, TMP, AT42QT__CNT_100MS, sizeof(TMP));
+	if (err != ERROR_OK)	{ goto ret; }
 
-	if (!err)
-	{
-		pCpnt->cnt_100ms = TMP[0];
-		pCpnt->cnt_SignalFail = TMP[1];
-		pCpnt->cnt_MatrixScan = TMP[2];
-		pCpnt->status.Byte = TMP[3];
-		pCpnt->keys = (LSHIFT(TMP[6], 16) + LSHIFT(TMP[5], 8) + TMP[4]) & 0x00FFFFFFUL;
-	}
+	pCpnt->cnt_100ms = TMP[0];
+	pCpnt->cnt_SignalFail = TMP[1];
+	pCpnt->cnt_MatrixScan = TMP[2];
+	pCpnt->status.Byte = TMP[3];
+	pCpnt->keys = (LSHIFT(TMP[6], 16) + LSHIFT(TMP[5], 8) + TMP[4]) & 0x00FFFFFFUL;
 #endif
 
 #if defined(VERBOSE)
@@ -227,17 +219,43 @@ __WEAK FctERR NONNULL__ AT42QT1244_handler(AT42QT1244_t * const pCpnt)
 	printf("AT42QT1244 id%d: keys state %#lX", idx, pCpnt->keys);
 #endif
 
+#if !AT42QT1244_GET_KEYS_ONLY
+	ret:
+#endif
 	return err;
 }
 
 
 __WEAK FctERR NONNULL__ AT42QT1244_handler_it(AT42QT1244_t * const pCpnt)
 {
-	FctERR	err = ERROR_OK;
-	bool	interrupt;
+	FctERR err = ERROR_OK;
 
-	AT42QT1244_CHANGE_GPIO_Get(pCpnt, &interrupt);
-	if (interrupt)	{ err = AT42QT1244_handler(pCpnt); }
+	if (AT42QT1244_CHANGE_GPIO_Get(pCpnt))	{ err = AT42QT1244_handler(pCpnt); }
+
+	return err;
+}
+
+
+FctERR AT42QT1244_handler_all(void)
+{
+	FctERR err = ERROR_OK;
+
+	for (AT42QT1244_t * pCpnt = AT42QT1244 ; pCpnt < &AT42QT1244[I2C_AT42QT1244_NB] ; pCpnt++)
+	{
+		err |= AT42QT1244_handler(pCpnt);
+	}
+
+	return err;
+}
+
+FctERR AT42QT1244_handler_it_all(void)
+{
+	FctERR err = ERROR_OK;
+
+	for (AT42QT1244_t * pCpnt = AT42QT1244 ; pCpnt < &AT42QT1244[I2C_AT42QT1244_NB] ; pCpnt++)
+	{
+		err |= AT42QT1244_handler_it(pCpnt);
+	}
 
 	return err;
 }

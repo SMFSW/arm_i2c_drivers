@@ -495,8 +495,10 @@ FctERR NONNULL__ DRV2605L_Read(uint8_t * data, const uint16_t addr, const uint16
 
 
 /****************************************************************/
+// cppcheck-suppress-begin misra-c2012-20.1 ; include directives after other declarations
 #include "DRV2605L_ex.h"	// Include extensions
 #include "DRV2605L_proc.h"	// Include procedures
+// cppcheck-suppress-end misra-c2012-20.1
 
 #endif
 

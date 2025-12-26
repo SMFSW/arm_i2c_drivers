@@ -323,8 +323,10 @@ FctERR NONNULL__ PCF8523_Read(uint8_t * data, const uint16_t addr, const uint16_
 
 
 /****************************************************************/
+// cppcheck-suppress-begin misra-c2012-20.1 ; include directives after other declarations
 #include "PCF8523_ex.h"		// Include extensions
 #include "PCF8523_proc.h"	// Include procedures
+// cppcheck-suppress-end misra-c2012-20.1
 
 #endif
 

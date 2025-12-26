@@ -113,23 +113,18 @@ FctERR NONNULL__ TSL2591_handler(TSL2591_t * const pCpnt);
 **/
 FctERR NONNULL__ TSL2591_handler_it(TSL2591_t * const pCpnt);
 
-
 /*!\brief Handler for all TSL2591 peripherals
 ** \note May be called periodically to handle all TSL2591 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ TSL2591_handler_all(void) {
-	for (TSL2591_t * pCpnt = TSL2591 ; pCpnt < &TSL2591[I2C_TSL2591_NB] ; pCpnt++) {
-		TSL2591_handler(pCpnt); }
-}
+FctERR TSL2591_handler_all(void);
 
 /*!\brief Handler for all TSL2591 peripherals GPIO interrupt
 ** \note \ref TSL2591_INT_GPIO_Init has to be called at init before using interrupt handler function
 ** \note May be called periodically to handle all TSL2591 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ TSL2591_handler_it_all(void) {
-	for (TSL2591_t * pCpnt = TSL2591 ; pCpnt < &TSL2591[I2C_TSL2591_NB] ; pCpnt++) {
-		TSL2591_handler_it(pCpnt); }
-}
+FctERR TSL2591_handler_it_all(void);
 
 
 /****************************************************************/

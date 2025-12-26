@@ -37,7 +37,7 @@ FctERR NONNULL__ PCA9624_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 	err = PCA9624_Set_Auto_Increment(&PCA9624[idx], PCA9xxx__AUTO_INC_ALL);
 	if (!err)	{ err = PCA9624_Init_Sequence(&PCA9624[idx]); }
 
-	if (err)	{ I2C_set_enable(&PCA9624_hal[idx], false); }
+	if (err != ERROR_OK)	{ I2C_set_enable(&PCA9624_hal[idx], false); }
 
 	return err;
 }

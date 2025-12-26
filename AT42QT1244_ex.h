@@ -171,9 +171,9 @@ void NONNULL__ AT42QT1244_CHANGE_GPIO_Init(AT42QT1244_t * const pCpnt, GPIO_Type
 /*!\brief Change GPIO pin getter for AT42QT1244
 ** \weak AT42QT1244 Change GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
-** \param[in,out] pState - Pointer to CHANGE pin state variable (0: inactive, 1: active)
+** \return CHANGE pin state value (0: inactive, 1: active)
 **/
-void NONNULL__ AT42QT1244_CHANGE_GPIO_Get(AT42QT1244_t * const pCpnt, bool * const pState);
+bool NONNULL__ AT42QT1244_CHANGE_GPIO_Get(AT42QT1244_t * const pCpnt);
 
 
 /*!\brief Reset GPIO pin init for AT42QT1244

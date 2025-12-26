@@ -279,9 +279,9 @@ void NONNULL__ TCS3472_INT_GPIO_Init(TCS3472_t * const pCpnt, GPIO_TypeDef * con
 /*!\brief Interrupt GPIO pin getter for TCS3472
 ** \weak TCS3472 Interrupt GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to TCS3472 component
-** \param[in,out] pState - Pointer to INT pin state variable (0: inactive, 1: active)
+** \return INT pin state value (0: inactive, 1: active)
 **/
-void NONNULL__ TCS3472_INT_GPIO_Get(TCS3472_t * const pCpnt, bool * const pState);
+bool NONNULL__ TCS3472_INT_GPIO_Get(TCS3472_t * const pCpnt);
 
 
 /****************************************************************/

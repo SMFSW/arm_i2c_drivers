@@ -44,7 +44,7 @@ __WEAK FctERR NONNULL__ BMP180_Init_Sequence(BMP180_t * const pCpnt)
 	pCpnt->cfg.OSS = BMP180__OSS_8_TIME;
 
 	err = BMP180_Get_ChipID(pCpnt, &pCpnt->cfg.ID);
-	if (err)								{ return err; }
+	if (err != ERROR_OK)								{ return err; }
 	if (pCpnt->cfg.ID != BMP180_CHIP_ID)	{ return ERROR_COMMON; }	// Unknown device
 
 	err = BMP180_Set_SeaLevel_Pressure(pCpnt);
@@ -90,7 +90,7 @@ FctERR NONNULL__ BMP180_Get_Calibration(BMP180_t * const pCpnt, BMP180_calib * p
 	for (uintCPU_t i = 0 ; i < SZ_OBJ(BMP180_calib, int16_t) ; i++)
 	{
 		err = BMP180_Read_Word(pCpnt->cfg.slave_inst, (uint16_t *) addr++, BMP180__CALIB_AC1_MSB + (i * 2));
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ return err; }
 	}
 
 	return err;
@@ -132,9 +132,9 @@ FctERR NONNULLX__(1) BMP180_Get_Pressure(BMP180_t * const pCpnt, float * pres)
 	/* Get the raw pressure and temperature values */
 	#if !defined(BMP180_TST)
 		err = BMP180_Get_Temperature_Raw(pCpnt, &UT);
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ return err; }
 		err = BMP180_Get_Pressure_Raw(pCpnt, &UP);
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ return err; }
 	#else
 		UT = 27898;		//!< For test purposes
 		UP = 23843;		//!< For test purposes
@@ -191,7 +191,7 @@ FctERR NONNULLX__(1) BMP180_Get_Temperature(BMP180_t * const pCpnt, float * temp
 
 	#if !defined(BMP180_TST)
 		err = BMP180_Get_Temperature_Raw(pCpnt, &UT);
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ return err; }
 	#else
 		UT = 27898;		//!< For test purposes
 	#endif
@@ -217,13 +217,8 @@ FctERR NONNULLX__(1) BMP180_Get_Temperature(BMP180_t * const pCpnt, float * temp
 
 __WEAK FctERR NONNULL__ BMP180_handler(BMP180_t * const pCpnt)
 {
-	FctERR	err;
-
-	//err = BMP180_Get_Temperature(pCpnt, NULL);
-	//if (err)	{ return err; }
-
-	err = BMP180_Get_Pressure(pCpnt, NULL);
-	if (err)	{ return err; }
+	FctERR err = BMP180_Get_Pressure(pCpnt, NULL);	// Get pressure also gets temperature
+	if (err != ERROR_OK)	{ goto ret; }
 
 	#if defined(VERBOSE)
 		const uint8_t idx = pCpnt - BMP180;
@@ -231,6 +226,20 @@ __WEAK FctERR NONNULL__ BMP180_handler(BMP180_t * const pCpnt)
 				idx, (int32_t) pCpnt->Pressure, (int16_t) pCpnt->Temperature, get_fp_dec(pCpnt->Temperature, 2),
 				(int32_t) pCpnt->Altitude, (int32_t) pCpnt->cfg.SeaLevelPressure);
 	#endif
+
+	ret:
+	return err;
+}
+
+
+FctERR BMP180_handler_all(void)
+{
+	FctERR err = ERROR_OK;
+
+	for (BMP180_t * pCpnt = BMP180 ; pCpnt < &BMP180[I2C_BMP180_NB] ; pCpnt++)
+	{
+		err |= BMP180_handler(pCpnt);
+	}
 
 	return err;
 }

@@ -62,7 +62,7 @@ FctERR NONNULL__ PCA9685_Set_Latch(PCA9685_t * const pCpnt, const PCA96xx_latch 
 	if (latch > PCA9xxx__LATCH_ON_ACK)	{ return ERROR_VALUE; }	// Unknown latch mode
 
 	err = PCA9685_Read(pCpnt->cfg.slave_inst, (uint8_t *) &MODE2, PCA9685__MODE2, sizeof(MODE2));
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	MODE2.Bits.OCH = latch;
 	return PCA9685_Write(pCpnt->cfg.slave_inst, (uint8_t *) &MODE2, PCA9685__MODE2, sizeof(MODE2));
@@ -78,15 +78,15 @@ FctERR NONNULL__ PCA9685_Set_Frequency(PCA9685_t * const pCpnt, const uint16_t f
 	if (!err)
 	{
 		err = PCA9685_Read(pCpnt->cfg.slave_inst, &MODE1.Byte, PCA9685__MODE1, sizeof(MODE1));
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ return err; }
 
 		MODE1.Bits.SLEEP = true;
 		err = PCA9685_Write(pCpnt->cfg.slave_inst, &MODE1.Byte, PCA9685__MODE1, sizeof(MODE1));
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ return err; }
 
 		// Send prescaler to obtain desired frequency (only in SLEEP)
 		err = PCA9685_Write(pCpnt->cfg.slave_inst, &DATA, PCA9685__PRE_SCALE, sizeof(DATA));
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ return err; }
 
 		pCpnt->cfg.Frequency = PCA9685_Byte_To_Freq(pCpnt, DATA);
 
@@ -157,7 +157,7 @@ FctERR NONNULL__ PCA9685_PutVal(PCA9685_t * const pCpnt, const PCA9xxx_chan chan
 	else								{ return ERROR_RANGE; }					// Unknown channel
 
 	err = PCA9685_CalcVal(DATA, duty, delay);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	return PCA9685_Write(pCpnt->cfg.slave_inst, DATA, RegAddr, sizeof(DATA));
 }

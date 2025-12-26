@@ -77,23 +77,18 @@ FctERR NONNULL__ AMG88_handler(AMG88_t * const pCpnt);
 **/
 FctERR NONNULL__ AMG88_handler_it(AMG88_t * const pCpnt);
 
-
 /*!\brief Handler for all AMG88 peripherals
 ** \note May be called periodically to handle all AMG88 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ AMG88_handler_all(void) {
-	for (AMG88_t * pCpnt = AMG88 ; pCpnt < &AMG88[I2C_AMG88_NB] ; pCpnt++) {
-		AMG88_handler(pCpnt); }
-}
+FctERR AMG88_handler_all(void);
 
 /*!\brief Handler for all AMG88 peripherals GPIO interrupt
 ** \note \ref AMG88_INT_GPIO_Init has to be called at init before using interrupt handler function
 ** \note May be called periodically to handle all AMG88 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ AMG88_handler_it_all(void) {
-	for (AMG88_t * pCpnt = AMG88 ; pCpnt < &AMG88[I2C_AMG88_NB] ; pCpnt++) {
-		AMG88_handler_it(pCpnt); }
-}
+FctERR AMG88_handler_it_all(void);
 
 
 /****************************************************************/

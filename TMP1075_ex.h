@@ -28,10 +28,10 @@
 
 /*!\brief Set TMP1075 Configuration
 ** \param[in] pCpnt - Pointer to TMP1075 component
-** \param[in,out] cfg - pointer to Configuration value to write from
+** \param[in] cfg - pointer to Configuration value to write from
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TMP1075_Write_Config(TMP1075_t * const pCpnt, uint8_t * cfg) {
+__INLINE FctERR NONNULL_INLINE__ TMP1075_Write_Config(TMP1075_t * const pCpnt, const uint8_t * cfg) {
 	return TMP1075_Write_Byte(pCpnt->cfg.slave_inst, cfg, TMP1075__CFGR); }
 
 /*!\brief Get TMP1075 Configuration
@@ -117,9 +117,9 @@ void NONNULL__ TMP1075_INT_GPIO_Init(TMP1075_t * const pCpnt, GPIO_TypeDef * con
 /*!\brief Interrupt GPIO pin getter for ADS1115
 ** \weak TMP1075 Interrupt GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to TMP1075 component
-** \param[in,out] pState - Pointer to INT pin state variable (0: inactive, 1: active)
+** \return INT pin state value (0: inactive, 1: active)
 **/
-void NONNULL__ TMP1075_INT_GPIO_Get(TMP1075_t * const pCpnt, bool * const pState);
+bool NONNULL__ TMP1075_INT_GPIO_Get(TMP1075_t * const pCpnt);
 
 
 /****************************************************************/

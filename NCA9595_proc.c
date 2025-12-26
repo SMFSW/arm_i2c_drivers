@@ -33,15 +33,13 @@ __WEAK FctERR NONNULL__ NCA9595_Init_Sequence(NCA9595_t * const pCpnt)
 
 __WEAK FctERR NONNULL__ NCA9595_handler(NCA9595_t * const pCpnt)
 {
-	FctERR	err;
-
-	err = NCA9595_Read_Register(pCpnt, &pCpnt->NCA9595_in.Word, NCA9595__InputPorts);
-	if (err)	{ return err; }
+	FctERR err = NCA9595_Read_Register(pCpnt, &pCpnt->NCA9595_in.Word, NCA9595__InputPorts);
+	if (err != ERROR_OK)	{ goto ret; }
 
 	if (pCpnt->cfg.NCA9595_Cfg.Word != 0xFFFF)	// Not all GPIOs set to inputs
 	{
 		err = NCA9595_Write_Outputs(pCpnt, pCpnt->NCA9595_out.Word);
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ goto ret; }
 	}
 
 	#if defined(VERBOSE)
@@ -49,17 +47,41 @@ __WEAK FctERR NONNULL__ NCA9595_handler(NCA9595_t * const pCpnt)
 		printf("NCA9595 id%d: Inputs %x", idx, pCpnt->NCA9595_in.Word);
 	#endif
 
-	return ERROR_OK;
+	ret:
+	return err;
 }
 
 
 __WEAK FctERR NONNULL__ NCA9595_handler_it(NCA9595_t * const pCpnt)
 {
-	FctERR	err = ERROR_OK;
-	bool	interrupt;
+	FctERR err = ERROR_OK;
 
-	NCA9595_INT_GPIO_Get(pCpnt, &interrupt);
-	if (interrupt)	{ err = NCA9595_handler(pCpnt); }
+	if (NCA9595_INT_GPIO_Get(pCpnt))	{ err = NCA9595_handler(pCpnt); }
+
+	return err;
+}
+
+
+FctERR NCA9595_handler_all(void)
+{
+	FctERR err = ERROR_OK;
+
+	for (NCA9595_t * pCpnt = NCA9595 ; pCpnt < &NCA9595[I2C_NCA9595_NB] ; pCpnt++)
+	{
+		err |= NCA9595_handler(pCpnt);
+	}
+
+	return err;
+}
+
+FctERR NCA9595_handler_it_all(void)
+{
+	FctERR err = ERROR_OK;
+
+	for (NCA9595_t * pCpnt = NCA9595 ; pCpnt < &NCA9595[I2C_NCA9595_NB] ; pCpnt++)
+	{
+		err |= NCA9595_handler_it(pCpnt);
+	}
 
 	return err;
 }

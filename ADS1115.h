@@ -217,8 +217,10 @@ FctERR NONNULL__ ADS1115_Read(I2C_slave_t * const pSlave, uint16_t * data, const
 
 
 /****************************************************************/
+// cppcheck-suppress-begin misra-c2012-20.1 ; include directives after other declarations
 #include "ADS1115_proc.h"	// Include procedures
 #include "ADS1115_ex.h"		// Include extensions
+// cppcheck-suppress-end misra-c2012-20.1
 
 #endif
 

@@ -76,7 +76,7 @@ typedef union uTSL2591_REG_MAP {
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TSL2591_Write_En(TSL2591_t * const pCpnt, const uint8_t en) {
-	return TSL2591_Write(pCpnt->cfg.slave_inst, (uint8_t *) &en, TSL2591__ENABLE, 1); }
+	return TSL2591_Write(pCpnt->cfg.slave_inst, &en, TSL2591__ENABLE, 1); }
 
 /*!\brief Write TSL2591 Config
 ** \param[in] pCpnt - Pointer to TSL2591 component
@@ -84,7 +84,7 @@ __INLINE FctERR NONNULL_INLINE__ TSL2591_Write_En(TSL2591_t * const pCpnt, const
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TSL2591_Write_Cfg(TSL2591_t * const pCpnt, const uint8_t cfg) {
-	return TSL2591_Write(pCpnt->cfg.slave_inst, (uint8_t *) &cfg, TSL2591__CONFIG, 1); }
+	return TSL2591_Write(pCpnt->cfg.slave_inst, &cfg, TSL2591__CONFIG, 1); }
 
 
 /*!\brief Oscillator Enable / Disable
@@ -139,7 +139,7 @@ __INLINE FctERR NONNULL_INLINE__ TSL2591_Set_ALS_Pesistence(TSL2591_t * const pC
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TSL2591_Set_AILT(TSL2591_t * const pCpnt, const uint16_t thr) {
-	return TSL2591_Write_Word(pCpnt->cfg.slave_inst, (uint16_t *) &thr, TSL2591__AILTL); }
+	return TSL2591_Write_Word(pCpnt->cfg.slave_inst, &thr, TSL2591__AILTL); }
 
 /*!\brief ALS interrupt high threshold configuration
 ** \param[in] pCpnt - Pointer to TSL2591 component
@@ -147,7 +147,7 @@ __INLINE FctERR NONNULL_INLINE__ TSL2591_Set_AILT(TSL2591_t * const pCpnt, const
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TSL2591_Set_AIHT(TSL2591_t * const pCpnt, const uint16_t thr) {
-	return TSL2591_Write_Word(pCpnt->cfg.slave_inst, (uint16_t *) &thr, TSL2591__AIHTL); }
+	return TSL2591_Write_Word(pCpnt->cfg.slave_inst, &thr, TSL2591__AIHTL); }
 
 /*!\brief ALS interrupt thresholds configuration
 ** \param[in] pCpnt - Pointer to TSL2591 component
@@ -166,7 +166,7 @@ __INLINE FctERR NONNULL_INLINE__ TSL2591_Set_AIT(TSL2591_t * const pCpnt, const 
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TSL2591_Set_NPAILT(TSL2591_t * const pCpnt, const uint16_t thr) {
-	return TSL2591_Write_Word(pCpnt->cfg.slave_inst, (uint16_t *) &thr, TSL2591__NPAILTL); }
+	return TSL2591_Write_Word(pCpnt->cfg.slave_inst, &thr, TSL2591__NPAILTL); }
 
 /*!\brief ALS interrupt Persist High threshold filter configuration
 ** \param[in] pCpnt - Pointer to TSL2591 component
@@ -174,7 +174,7 @@ __INLINE FctERR NONNULL_INLINE__ TSL2591_Set_NPAILT(TSL2591_t * const pCpnt, con
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TSL2591_Set_NPAIHT(TSL2591_t * const pCpnt, const uint16_t thr) {
-	return TSL2591_Write_Word(pCpnt->cfg.slave_inst, (uint16_t *) &thr, TSL2591__NPAIHTL); }
+	return TSL2591_Write_Word(pCpnt->cfg.slave_inst, &thr, TSL2591__NPAIHTL); }
 
 /*!\brief ALS interrupt Persist threshold filters configuration
 ** \param[in] pCpnt - Pointer to TSL2591 component
@@ -268,9 +268,9 @@ void NONNULL__ TSL2591_INT_GPIO_Init(TSL2591_t * const pCpnt, GPIO_TypeDef * con
 /*!\brief Interrupt GPIO pin getter for TSL2591
 ** \weak TSL2591 Interrupt GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to TSL2591 component
-** \param[in,out] pState - Pointer to INT pin state variable (0: inactive, 1: active)
+** \return INT pin state value (0: inactive, 1: active)
 **/
-void NONNULL__ TSL2591_INT_GPIO_Get(TSL2591_t * const pCpnt, bool * const pState);
+bool NONNULL__ TSL2591_INT_GPIO_Get(TSL2591_t * const pCpnt);
 
 
 /****************************************************************/

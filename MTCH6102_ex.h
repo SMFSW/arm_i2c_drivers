@@ -271,9 +271,9 @@ void NONNULL__ MTCH6102_INT_GPIO_Init(MTCH6102_t * const pCpnt, GPIO_TypeDef * c
 /*!\brief Interrupt GPIO pin getter for MTCH6102
 ** \weak MTCH6102 Interrupt GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to MTCH6102 component
-** \param[in,out] pState - Pointer to INT pin state variable (0: inactive, 1: active)
+** \return INT pin state value (0: inactive, 1: active)
 **/
-void NONNULL__ MTCH6102_INT_GPIO_Get(MTCH6102_t * const pCpnt, bool * const pState);
+bool NONNULL__ MTCH6102_INT_GPIO_Get(MTCH6102_t * const pCpnt);
 
 
 /*!\brief Synchro GPIO pin init for MTCH6102
@@ -288,9 +288,9 @@ void NONNULL__ MTCH6102_SYNC_GPIO_Init(MTCH6102_t * const pCpnt, GPIO_TypeDef * 
 /*!\brief Synchro GPIO pin getter for MTCH6102
 ** \weak MTCH6102 Synchro GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to MTCH6102 component
-** \param[in,out] pState - Pointer to SYNC pin state variable (0: inactive, 1: active)
+** \return SYNC pin state value (0: inactive, 1: active)
 **/
-void NONNULL__ MTCH6102_SYNC_GPIO_Get(MTCH6102_t * const pCpnt, bool * const pState);
+bool NONNULL__ MTCH6102_SYNC_GPIO_Get(MTCH6102_t * const pCpnt);
 
 
 /****************************************************************/

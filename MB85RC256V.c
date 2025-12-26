@@ -38,7 +38,7 @@ FctERR NONNULL__ MB85RC256V_Init(const uint8_t idx, I2C_HandleTypeDef * const hi
 
 	err = MB85RC256V_Init_Sequence(&MB85RC256V[idx]);
 
-	if (err)	{ I2C_set_enable(&MB85RC256V_hal[idx], false); }
+	if (err != ERROR_OK)	{ I2C_set_enable(&MB85RC256V_hal[idx], false); }
 
 	return err;
 }

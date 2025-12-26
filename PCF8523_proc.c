@@ -23,9 +23,9 @@ __WEAK FctERR PCF8523_Init_Sequence(void)
 	FctERR err = ERROR_OK;
 
 	err = PCF8523_Get_Date(0, false);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	err = PCF8523_Get_Time(0, false);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	return ERROR_OK;
 }
@@ -87,11 +87,11 @@ FctERR PCF8523_Set_Date(const PCF8523_date date, const bool BCD)
 	{
 		// Conversion to hexadecimal for consistency check
 		err = bcd2hex(&DATE[0], date.Day);
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ return err; }
 		err = bcd2hex(&DATE[2], date.Month);
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ return err; }
 		err = bcd2hex(&DATE[3], date.Year - 0x2000);
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ return err; }
 
 		if ((DATE[0] > 31) || (date.Weekday > PCF8523__SATURDAY) || (DATE[2] > 12) || (DATE[3] > 99))	{ return ERROR_RANGE; }	// Time outside range
 
@@ -124,13 +124,13 @@ FctERR PCF8523_Set_Time(const PCF8523_time time, const bool BCD)
 	{
 		// Conversion to hexadecimal for consistency check
 		err = bcd2hex(&TIME[0], time.Seconds);
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ return err; }
 		err = bcd2hex(&TIME[1], time.Minutes);
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ return err; }
 
 		if (PCF8523.cfg.Hour_Format)	{ /* TODO: handle 12 hours mode too */ }
 		else							{ err = bcd2hex(&TIME[2], time.Hours); }
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ return err; }
 
 		if ((TIME[0] >= 60) || (TIME[1] >= 60) || (TIME[2] >= 24))	{ return ERROR_RANGE; }	// Time outside range
 
@@ -149,7 +149,7 @@ FctERR PCF8523_Get_Date(PCF8523_date * date, const bool BCD)
 	FctERR		err;
 
 	err = PCF8523_Get_Date_Raw((uint8_t *) &DATE);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	err = bcd2hex(&PCF8523.date.Day, DATE[0]);
 	PCF8523.date.Weekday = DATE[1];
@@ -182,7 +182,7 @@ FctERR PCF8523_Get_Time(PCF8523_time * time, const bool BCD)
 	FctERR			err;
 
 	err = PCF8523_Get_Time_Raw((uint8_t *) &TIME);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	TIME.Seconds &= 0x7F;	// Remove OS bit from Seconds
 	TIME.Minutes &= 0x7F;	// Remove OS bit from Minutes
@@ -199,29 +199,31 @@ FctERR PCF8523_Get_Time(PCF8523_time * time, const bool BCD)
 
 __WEAK FctERR PCF8523_handler(void)
 {
-	FctERR	err = ERROR_OK;
+	FctERR err;
 
 	err = PCF8523_Get_Date(0, false);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 	err = PCF8523_Get_Time(0, false);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	#if defined(VERBOSE)
 		printf("PCF8523: %d/%d/%d %d:%d:%d\r\n", PCF8523.date.Year, PCF8523.date.Month, PCF8523.date.Day, PCF8523.time.Hours, PCF8523.time.Minutes, PCF8523.time.Seconds);
 	#endif
 
-	return ERROR_OK;
+	ret:
+	return err;
 }
 
 
 __WEAK FctERR NONNULL__ PCF8523_handler_it(void)
 {
-	FctERR	err = ERROR_OK;
-	bool	interrupt1, interrupt2;
+	FctERR err = ERROR_OK;
 
-	PCF8523_INT1_GPIO_Get(&interrupt1);
-	PCF8523_INT2_GPIO_Get(&interrupt2);
-	if (interrupt1 || interrupt2)	{ err = PCF8523_handler(); }
+	if (	PCF8523_INT1_GPIO_Get()
+		||	PCF8523_INT2_GPIO_Get())
+	{
+		err = PCF8523_handler();
+	}
 
 	return err;
 }

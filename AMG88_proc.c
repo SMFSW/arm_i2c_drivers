@@ -24,14 +24,14 @@ __WEAK FctERR NONNULL__ AMG88_Init_Sequence(AMG88_t * const pCpnt)
 	uAMG88_REG__INT_CONTROL	INT_CTRL = { 0 };
 
 	err = AMG88_Set_Mode(pCpnt, AMG88__NORMAL);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	// Reset
 	err = AMG88_Reset(pCpnt, AMG88__INITIAL_RESET);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	err = AMG88_Set_FPS(pCpnt, true);	// Set to 10FPS
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	// Set thresholds
 
@@ -39,7 +39,7 @@ __WEAK FctERR NONNULL__ AMG88_Init_Sequence(AMG88_t * const pCpnt)
 	INT_CTRL.Bits.INTEN = true;
 	INT_CTRL.Bits.INTMOD = false;
 	err = AMG88_Write(pCpnt->cfg.slave_inst, &INT_CTRL.Byte, AMG88__INTC, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	return ERROR_OK;
 }
@@ -50,15 +50,14 @@ __WEAK FctERR NONNULL__ AMG88_Init_Sequence(AMG88_t * const pCpnt)
 
 __WEAK FctERR NONNULL__ AMG88_handler(AMG88_t * const pCpnt)
 {
-	FctERR						err;
 	uAMG88_REG__STATUS_CLEAR	CLEAR = { 0x0E };
 	float						thermistor, temp[64];
 
-	err = AMG88_Read_Word(pCpnt->cfg.slave_inst, &pCpnt->Thermistor, AMG88__TTHL);
-	if (err)	{ return err; }
+	FctERR err = AMG88_Read_Word(pCpnt->cfg.slave_inst, &pCpnt->Thermistor, AMG88__TTHL);
+	if (err != ERROR_OK)	{ goto ret; }
 
 	err = AMG88_Read(pCpnt->cfg.slave_inst, (uint8_t *) pCpnt->Pixels, AMG88__T01L, sizeof(pCpnt->Pixels));
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	thermistor = AMG88_Convert_Thermistor_Raw(pCpnt->Thermistor);
 	for (uintCPU_t i = 0 ; i < SZ_ARRAY(temp) ; i++)
@@ -78,17 +77,43 @@ __WEAK FctERR NONNULL__ AMG88_handler(AMG88_t * const pCpnt)
 		printf("\r\n");
 	#endif
 
-	return AMG88_Write(pCpnt->cfg.slave_inst, &CLEAR.Byte, AMG88__SCLR, sizeof(pCpnt->Pixels));
+	err = AMG88_Write(pCpnt->cfg.slave_inst, &CLEAR.Byte, AMG88__SCLR, sizeof(pCpnt->Pixels));
+
+	ret:
+	return err;
 }
 
 
 __WEAK FctERR NONNULL__ AMG88_handler_it(AMG88_t * const pCpnt)
 {
-	FctERR	err = ERROR_OK;
-	bool	interrupt;
+	FctERR err = ERROR_OK;
 
-	AMG88_INT_GPIO_Get(pCpnt, &interrupt);
-	if (interrupt)	{ err = AMG88_handler(pCpnt); }
+	if (AMG88_INT_GPIO_Get(pCpnt))	{ err = AMG88_handler(pCpnt); }
+
+	return err;
+}
+
+
+FctERR AMG88_handler_all(void)
+{
+	FctERR err = ERROR_OK;
+
+	for (AMG88_t * pCpnt = AMG88 ; pCpnt < &AMG88[I2C_AMG88_NB] ; pCpnt++)
+	{
+		err |= AMG88_handler(pCpnt);
+	}
+
+	return err;
+}
+
+FctERR AMG88_handler_it_all(void)
+{
+	FctERR err = ERROR_OK;
+
+	for (AMG88_t * pCpnt = AMG88 ; pCpnt < &AMG88[I2C_AMG88_NB] ; pCpnt++)
+	{
+		err |= AMG88_handler_it(pCpnt);
+	}
 
 	return err;
 }

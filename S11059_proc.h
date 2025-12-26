@@ -78,14 +78,11 @@ uint32_t S11059_Get_Full_Integration_Time(const S11059_integ mode, const S11059_
 **/
 FctERR NONNULL__ S11059_handler(S11059_t * const pCpnt);
 
-
 /*!\brief Handler for all S11059 peripherals
 ** \note May be called periodically to handle all S11059 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ S11059_handler_all(void) {
-	for (S11059_t * pCpnt = S11059 ; pCpnt < &S11059[I2C_S11059_NB] ; pCpnt++) {
-		S11059_handler(pCpnt); }
-}
+FctERR S11059_handler_all(void);
 
 
 /****************************************************************/

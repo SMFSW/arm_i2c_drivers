@@ -19,37 +19,37 @@
 
 
 //! \note Assuming max data rate drift following temperature does not exceed 3% (* 1.3)
-#define ADS1115_SPStoUS(SPS)	(uint16_t) (((1.0f / (float) SPS) * 1.3f) * 1000000)
-#define ADS1115_SPStoMS(SPS)	(uint16_t) (((1.0f / (float) SPS) * 1.3f) * 1000)
+#define ADS1115_SPStoUS(SPS)	((uint32_t) (((1.0f / (float) SPS) * 1.3f) * 1000000UL))
+#define ADS1115_SPStoMS(SPS)	((uint32_t) (((1.0f / (float) SPS) * 1.3f) * 1000UL))
 
 /*!\brief ADS1115 conversion time in µs
 ** \note Depending the configured rate \ref ADS1115_rate
 ** \warning A few margin shall be added to cover temperature drift
 **/
-static const uint16_t ADS1115_conv_us[8] = {
-	ADS1115_SPStoUS(8),
-	ADS1115_SPStoUS(16),
-	ADS1115_SPStoUS(32),
-	ADS1115_SPStoUS(64),
-	ADS1115_SPStoUS(128),
-	ADS1115_SPStoUS(250),
-	ADS1115_SPStoUS(475),
-	ADS1115_SPStoUS(860)
+static const uint32_t ADS1115_conv_us[8] = {
+	ADS1115_SPStoUS(8U),
+	ADS1115_SPStoUS(16U),
+	ADS1115_SPStoUS(32U),
+	ADS1115_SPStoUS(64U),
+	ADS1115_SPStoUS(128U),
+	ADS1115_SPStoUS(250U),
+	ADS1115_SPStoUS(475U),
+	ADS1115_SPStoUS(860U)
 };
 
 /*!\brief ADS1115 conversion time in ms
 ** \note Depending the configured rate \ref ADS1115_rate
 ** \warning A few margin shall be added to cover temperature drift
 **/
-static const uint16_t ADS1115_conv_ms[8] = {
-	ADS1115_SPStoMS(8),
-	ADS1115_SPStoMS(16),
-	ADS1115_SPStoMS(32),
-	ADS1115_SPStoMS(64),
-	ADS1115_SPStoMS(128),
-	ADS1115_SPStoMS(250),
-	ADS1115_SPStoMS(475),
-	ADS1115_SPStoMS(860)
+static const uint32_t ADS1115_conv_ms[8] = {
+	ADS1115_SPStoMS(8U),
+	ADS1115_SPStoMS(16U),
+	ADS1115_SPStoMS(32U),
+	ADS1115_SPStoMS(64U),
+	ADS1115_SPStoMS(128U),
+	ADS1115_SPStoMS(250U),
+	ADS1115_SPStoMS(475U),
+	ADS1115_SPStoMS(860U)
 };
 
 
@@ -76,10 +76,10 @@ __STATIC_INLINE FctERR NONNULL_INLINE__ _write_cfg(ADS1115_t * const pCpnt) {
 	return ADS1115_Write(pCpnt->cfg.slave_inst, &pCpnt->cfg.Config.Word, ADS1115__CONFIG); }
 
 
-uint16_t ADS1115_Get_conv_us(ADS1115_t * const pCpnt) {
+uint32_t ADS1115_Get_conv_us(ADS1115_t * const pCpnt) {
 	return ADS1115_conv_us[pCpnt->cfg.Config.Bits.DR]; }
 
-uint16_t ADS1115_Get_conv_ms(ADS1115_t * const pCpnt) {
+uint32_t ADS1115_Get_conv_ms(ADS1115_t * const pCpnt) {
 	return ADS1115_conv_ms[pCpnt->cfg.Config.Bits.DR]; }
 
 
@@ -295,8 +295,8 @@ float NONNULL__ ADS1115_Get_converted_value_V(ADS1115_t * const pCpnt, const uin
 __WEAK void NONNULL__ ADS1115_RDY_GPIO_Init(ADS1115_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
 	I2C_peripheral_GPIO_init(&pCpnt->cfg.RDY_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
 
-__WEAK void NONNULL__ ADS1115_RDY_GPIO_Get(ADS1115_t * const pCpnt, bool * const pState) {
-	I2C_peripheral_GPIO_get(&pCpnt->cfg.RDY_GPIO, pState); }
+__WEAK bool NONNULL__ ADS1115_RDY_GPIO_Get(ADS1115_t * const pCpnt) {
+	return I2C_peripheral_GPIO_get(&pCpnt->cfg.RDY_GPIO); }
 
 
 /****************************************************************/

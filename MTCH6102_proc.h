@@ -200,23 +200,18 @@ FctERR NONNULL__ MTCH6102_handler(MTCH6102_t * const pCpnt);
 **/
 FctERR NONNULL__ MTCH6102_handler_it(MTCH6102_t * const pCpnt);
 
-
 /*!\brief Handler for all MTCH6102 peripherals
 ** \note May be called periodically to handle all MTCH6102 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ MTCH6102_handler_all(void) {
-	for (MTCH6102_t * pCpnt = MTCH6102 ; pCpnt < &MTCH6102[I2C_MTCH6102_NB] ; pCpnt++) {
-		MTCH6102_handler(pCpnt); }
-}
+FctERR MTCH6102_handler_all(void);
 
 /*!\brief Handler for all MTCH6102 peripherals GPIO interrupt
 ** \note \ref MTCH6102_INT_GPIO_Init has to be called at init before using interrupt handler function
 ** \note May be called periodically to handle all MTCH6102 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ MTCH6102_handler_it_all(void) {
-	for (MTCH6102_t * pCpnt = MTCH6102 ; pCpnt < &MTCH6102[I2C_MTCH6102_NB] ; pCpnt++) {
-		MTCH6102_handler_it(pCpnt); }
-}
+FctERR MTCH6102_handler_it_all(void);
 
 
 /****************************************************************/

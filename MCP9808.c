@@ -32,7 +32,7 @@ FctERR NONNULL__ MCP9808_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 
 	err = MCP9808_Init_Sequence(&MCP9808[idx]);
 
-	if (err)	{ I2C_set_enable(&MCP9808_hal[idx], false); }
+	if (err != ERROR_OK)	{ I2C_set_enable(&MCP9808_hal[idx], false); }
 
 	return err;
 }

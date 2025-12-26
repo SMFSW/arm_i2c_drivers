@@ -127,14 +127,11 @@ FctERR NONNULLX__(1) BMP180_Get_Temperature(BMP180_t * const pCpnt, float * temp
 **/
 FctERR NONNULL__ BMP180_handler(BMP180_t * const pCpnt);
 
-
 /*!\brief Handler for all BMP180 peripherals
 ** \note May be called periodically to handle all BMP180 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ BMP180_handler_all(void) {
-	for (BMP180_t * pCpnt = BMP180 ; pCpnt < &BMP180[I2C_BMP180_NB] ; pCpnt++) {
-		BMP180_handler(pCpnt); }
-}
+FctERR BMP180_handler_all(void);
 
 
 /****************************************************************/

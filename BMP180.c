@@ -32,7 +32,7 @@ FctERR NONNULL__ BMP180_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, 
 
 	err = BMP180_Init_Sequence(&BMP180[idx]);
 
-	if (err)	{ I2C_set_enable(&BMP180_hal[idx], false); }
+	if (err != ERROR_OK)	{ I2C_set_enable(&BMP180_hal[idx], false); }
 
 	return err;
 }
@@ -76,7 +76,7 @@ FctERR NONNULL__ BMP180_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, c
 	if (addr % sizeof(uint16_t))	{ return ERROR_FRAMING; }		// Unaligned word access
 
 	err = BMP180_Read(pSlave, RREG, addr, 2);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	*data = MAKEWORD(RREG[1], RREG[0]);
 	return HALERRtoFCTERR(pSlave->status);

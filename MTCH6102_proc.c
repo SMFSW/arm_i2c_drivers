@@ -79,7 +79,7 @@ __WEAK FctERR NONNULL__ MTCH6102_Init_Sequence(MTCH6102_t * const pCpnt)
 
 	// Read Version & ID
 	err = MTCH6102_Read(pCpnt->cfg.slave_inst, MTCH_CORE, MTCH__FW_MAJOR, sizeof(MTCH_CORE));
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->cfg.FW_Major = MTCH_CORE[0];
 	pCpnt->cfg.FW_Minor = MTCH_CORE[1];
@@ -87,7 +87,7 @@ __WEAK FctERR NONNULL__ MTCH6102_Init_Sequence(MTCH6102_t * const pCpnt)
 
 	// Configure with default values
 	err = MTCH6102_Configure(pCpnt, false, 20, 50, Filter_IIR, 1, Filter_Median, 5, 9, 6);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	MTCH6102_Set_Grid(pCpnt);
 
@@ -111,7 +111,7 @@ FctERR NONNULL__ MTCH6102_Configure(MTCH6102_t * const pCpnt, const bool store_t
 
 	// Put in standby mode for configuration
 	err = MTCH6102_Set_Mode(pCpnt, Standby);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	// Send configuration parameters (and retry if not configured correctly after first try)
 	while ((MTCH_ARRAY[0] != pCpnt->cfg.nb_rx) || (MTCH_ARRAY[1] != pCpnt->cfg.nb_tx))
@@ -122,7 +122,7 @@ FctERR NONNULL__ MTCH6102_Configure(MTCH6102_t * const pCpnt, const bool store_t
 		MTCH_ARRAY[2] = LOBYTE(IDLE_PER);
 		MTCH_ARRAY[3] = HIBYTE(IDLE_PER);
 		err = MTCH6102_Write(pCpnt->cfg.slave_inst, MTCH_ARRAY, MTCH__ACTIVE_PERIOD_L, 4);
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ return err; }
 
 		// Set FILTERTYPE / FILTERSTRENGTH + BASEFILTERTYPE / BASEFILTERSTRENGTH
 		MTCH_ARRAY[0] = filter;
@@ -130,28 +130,28 @@ FctERR NONNULL__ MTCH6102_Configure(MTCH6102_t * const pCpnt, const bool store_t
 		MTCH_ARRAY[2] = base_filter;
 		MTCH_ARRAY[3] = base_filter_str;
 		err = MTCH6102_Write(pCpnt->cfg.slave_inst, MTCH_ARRAY, MTCH__FILTER_TYPE, 4);
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ return err; }
 
 		// Set NUMBEROFXCHANNELS / NUMBEROFYCHANNELS
 		MTCH_ARRAY[0] = pCpnt->cfg.nb_rx;
 		MTCH_ARRAY[1] = pCpnt->cfg.nb_tx;
 		err = MTCH6102_Write(pCpnt->cfg.slave_inst, MTCH_ARRAY, MTCH__NUMBER_OF_X_CHANNELS, 2);
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ return err; }
 
 		// Send configuration request
 		err = MTCH6102_Configuration_Request(pCpnt);
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ return err; }
 
 		MTCH_ARRAY[0] = 0;
 		MTCH_ARRAY[1] = 0;
 		err = MTCH6102_Read(pCpnt->cfg.slave_inst, MTCH_ARRAY, MTCH__NUMBER_OF_X_CHANNELS, 2);
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ return err; }
 	}
 
 	if (store_to_nv)
 	{
 		err = MTCH6102_Store_To_Non_Volatile(pCpnt);
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ return err; }
 	}
 
 	// Put in Gesture & Touch mode
@@ -207,7 +207,7 @@ FctERR NONNULL__ MTCH6102_Set_Compensation(MTCH6102_t * const pCpnt)
 	FctERR			err;
 
 	err = MTCH6102_Read(pCpnt->cfg.slave_inst, SENS_VAL, MTCH__SENSOR_VALUE_RX0, nb);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	for (uintCPU_t i = 0 ; i < nb ; i++)	{ average += SENS_VAL[i]; }
 	average /= nb;
@@ -231,19 +231,19 @@ FctERR NONNULL__ MTCH6102_Get_MFG_Results(MTCH6102_t * const pCpnt, uint32_t * c
 
 	// Get MTCH6102 decoding mode
 	err = MTCH6102_Get_Mode(pCpnt, &mode);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	// Put in standby mode for test
 	err = MTCH6102_Set_Mode(pCpnt, Standby);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	// Execute manufacturing test
 	err = MTCH6102_Manufacturing_Test(pCpnt);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	// Read Results
 	err = MTCH6102_Read(pCpnt->cfg.slave_inst, RES, MTCH__RAW_ADC_00, sizeof(RES));
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	for (uintCPU_t i = 0 ; i < 15 ; i++)
 	{
@@ -360,15 +360,13 @@ FctERR NONNULL__ MTCH6102_diag_to_str(char * const str, const MTCH6102_GESTURE_D
 __WEAK FctERR NONNULL__ MTCH6102_handler(MTCH6102_t * const pCpnt)
 {
 	const bool			get_values = false;
-
-	FctERR				err;
 	MTCH6102_raw_gest	Gesture;
 
-	err = MTCH6102_Get_Gest(pCpnt, &Gesture);
-	if (err)	{ return err; }
+	FctERR err = MTCH6102_Get_Gest(pCpnt, &Gesture);
+	if (err != ERROR_OK)	{ goto ret; }
 
 	err = MTCH6102_decode_touch_datas(pCpnt, &Gesture);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	#if defined(VERBOSE)
 		const uint8_t	idx = pCpnt - MTCH6102;
@@ -386,7 +384,7 @@ __WEAK FctERR NONNULL__ MTCH6102_handler(MTCH6102_t * const pCpnt)
 			MTCH6102_raw_sense SensValues;
 
 			err = MTCH6102_Get_Raw(pCpnt, &SensValues);
-			if (err)	{ return err; }
+			if (err != ERROR_OK)	{ goto ret; }
 
 			printf("Sensor Values: ");
 			for (uintCPU_t i = 0; i < sizeof(SensValues) ; i++)	{ printf("%04d ", SensValues.sensor[i]); }
@@ -394,17 +392,41 @@ __WEAK FctERR NONNULL__ MTCH6102_handler(MTCH6102_t * const pCpnt)
 		}
 	#endif
 
-	return ERROR_OK;
+	ret:
+	return err;
 }
 
 
 __WEAK FctERR NONNULL__ MTCH6102_handler_it(MTCH6102_t * const pCpnt)
 {
 	FctERR	err = ERROR_OK;
-	bool	interrupt;
 
-	MTCH6102_INT_GPIO_Get(pCpnt, &interrupt);
-	if (interrupt)	{ err = MTCH6102_handler(pCpnt); }
+	if (MTCH6102_INT_GPIO_Get(pCpnt))	{ err = MTCH6102_handler(pCpnt); }
+
+	return err;
+}
+
+
+FctERR MTCH6102_handler_all(void)
+{
+	FctERR err = ERROR_OK;
+
+	for (MTCH6102_t * pCpnt = MTCH6102 ; pCpnt < &MTCH6102[I2C_MTCH6102_NB] ; pCpnt++)
+	{
+		err |= MTCH6102_handler(pCpnt);
+	}
+
+	return err;
+}
+
+FctERR MTCH6102_handler_it_all(void)
+{
+	FctERR err = ERROR_OK;
+
+	for (MTCH6102_t * pCpnt = MTCH6102 ; pCpnt < &MTCH6102[I2C_MTCH6102_NB] ; pCpnt++)
+	{
+		err |= MTCH6102_handler_it(pCpnt);
+	}
 
 	return err;
 }

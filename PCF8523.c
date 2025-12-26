@@ -30,7 +30,7 @@ __WEAK FctERR PCF8523_Init(void)
 
 	err = PCF8523_Init_Sequence();
 
-	if (err)	{ I2C_set_enable(&PCF8523_hal, false); }
+	if (err != ERROR_OK)	{ I2C_set_enable(&PCF8523_hal, false); }
 
 	return err;
 }

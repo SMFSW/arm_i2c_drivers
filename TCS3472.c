@@ -36,7 +36,7 @@ FctERR NONNULL__ TCS3472_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 
 	err = TCS3472_Init_Sequence(&TCS3472[idx]);
 
-	if (err)	{ I2C_set_enable(&TCS3472_hal[idx], false); }
+	if (err != ERROR_OK)	{ I2C_set_enable(&TCS3472_hal[idx], false); }
 
 	return err;
 }
@@ -104,7 +104,7 @@ FctERR NONNULL__ TCS3472_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, 
 	if (addr % sizeof(uint16_t))	{ return ERROR_FRAMING; }		// Unaligned word access
 
 	err = TCS3472_Read(pSlave, WREG, addr, 2);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	*data = MAKEWORD(WREG[0], WREG[1]);
 	return ERROR_OK;

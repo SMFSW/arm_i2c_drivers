@@ -22,6 +22,11 @@ SOFTWARE.
 
 ## v1.1
 
+* DRV2605: Array access out of bounds fix
+* ADS1115 / APDS9930 / APDS9960 / TCS3400 / TCS3472: Computation overflow fixes
+* TMP1075: low temperature threshold fix
+* I2C_peripheral: GPIO getter returns bool instead of filling value given as pointer parameter
+* I2C_Watchdog_Refresh generic watchdog refresh function added as weak implementation
 * GPIO init, getters, setters functions returns nothing
 * Few signedness fixes
 * TMP1075: added

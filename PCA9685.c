@@ -36,7 +36,7 @@ FctERR NONNULL__ PCA9685_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 
 	err = PCA9685_Init_Sequence(&PCA9685[idx]);
 
-	if (err)	{ I2C_set_enable(&PCA9685_hal[idx], false); }
+	if (err != ERROR_OK)	{ I2C_set_enable(&PCA9685_hal[idx], false); }
 
 	return err;
 }

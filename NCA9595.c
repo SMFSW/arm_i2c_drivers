@@ -33,7 +33,7 @@ FctERR NONNULL__ NCA9595_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 	NCA9595[idx].cfg.NCA9595_Cfg.Word = 0xFFFF;	// Set default as inputs
 	err = NCA9595_Init_Sequence(&NCA9595[idx]);
 
-	if (err)	{ I2C_set_enable(&NCA9595_hal[idx], false); }
+	if (err != ERROR_OK)	{ I2C_set_enable(&NCA9595_hal[idx], false); }
 
 	return err;
 }

@@ -24,11 +24,9 @@ FctERR NONNULL__ I2CMEM_Mass_Erase(I2CMEM_t * const pCpnt)
 
 	for (uintCPU_t i = 0 ; i < (pCpnt->cfg.chip_size / wr_size) ; i++)
 	{
-		#if defined(HAL_IWDG_MODULE_ENABLED)
-			HAL_IWDG_Refresh(&hiwdg);
-		#endif
+		I2C_Watchdog_Refresh();
 		err = I2CMEM_Write(pCpnt, array, i * wr_size, wr_size);
-		if (err) { break; }
+		if (err != ERROR_OK) { break; }
 	}
 
 	return err;

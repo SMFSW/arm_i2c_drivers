@@ -35,22 +35,22 @@ __WEAK FctERR NONNULL__ TSL2591_Init_Sequence(TSL2591_t * const pCpnt)
 
 	// get ID & check against values for TSL2591
 	err = TSL2591_Get_ChipID(pCpnt, &pCpnt->cfg.ID);
-	if (err)								{ return err; }
+	if (err != ERROR_OK)					{ return err; }
 	if (pCpnt->cfg.ID != TSL2591_CHIP_ID)	{ return ERROR_COMMON; }	// Unknown device
 
 	EN.Bits.PON = true;		// Turn ON Osc
 	err = TSL2591_Write_En(pCpnt, EN.Byte);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	CFG.Bits.AGAIN = pCpnt->cfg.Gain;
 	CFG.Bits.ATIME = pCpnt->cfg.Integ;
 	err = TSL2591_Write_Cfg(pCpnt, CFG.Byte);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	TSL2591_Set_CPL(pCpnt);
 
 	err = TSL2591_Set_AIT(pCpnt, pCpnt->cfg.LowThreshold, pCpnt->cfg.HighThreshold);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	EN.Bits.AEN = pCpnt->cfg.AIEN;	// Turn ON ALS following cfg
 	EN.Bits.AIEN = pCpnt->cfg.AIEN;	// Turn ON ALS interrupts following cfg
@@ -115,10 +115,9 @@ __WEAK FctERR NONNULL__ TSL2591_handler(TSL2591_t * const pCpnt)
 {
 	uint8_t					DATA[5];
 	uTSL2591_REG__STATUS *	ST = (uTSL2591_REG__STATUS *) DATA;
-	FctERR					err;
 
-	err = TSL2591_Read(pCpnt->cfg.slave_inst, DATA, TSL2591__STATUS, sizeof(DATA));
-	if (err)	{ return err; }
+	FctERR err = TSL2591_Read(pCpnt->cfg.slave_inst, DATA, TSL2591__STATUS, sizeof(DATA));
+	if (err != ERROR_OK)	{ goto ret; }
 
 	if ((ST->Bits.AINT) && (ST->Bits.AVALID))
 	{
@@ -133,19 +132,43 @@ __WEAK FctERR NONNULL__ TSL2591_handler(TSL2591_t * const pCpnt)
 		#endif
 	}
 
-	if (ST->Bits.AINT)	{ return TSL2591_SF_Clear_IT(pCpnt); }
+	if (ST->Bits.AINT)	{ err = TSL2591_SF_Clear_IT(pCpnt); }
 
-	return ERROR_OK;
+	ret:
+	return err;
 }
 
 
 __WEAK FctERR NONNULL__ TSL2591_handler_it(TSL2591_t * const pCpnt)
 {
-	FctERR	err = ERROR_OK;
-	bool	interrupt;
+	FctERR err = ERROR_OK;
 
-	TSL2591_INT_GPIO_Get(pCpnt, &interrupt);
-	if (interrupt)	{ err = TSL2591_handler(pCpnt); }
+	if (TSL2591_INT_GPIO_Get(pCpnt))	{ err = TSL2591_handler(pCpnt); }
+
+	return err;
+}
+
+
+FctERR TSL2591_handler_all(void)
+{
+	FctERR err = ERROR_OK;
+
+	for (TSL2591_t * pCpnt = TSL2591 ; pCpnt < &TSL2591[I2C_TSL2591_NB] ; pCpnt++)
+	{
+		err |= TSL2591_handler(pCpnt);
+	}
+
+	return err;
+}
+
+FctERR TSL2591_handler_it_all(void)
+{
+	FctERR err = ERROR_OK;
+
+	for (TSL2591_t * pCpnt = TSL2591 ; pCpnt < &TSL2591[I2C_TSL2591_NB] ; pCpnt++)
+	{
+		err |= TSL2591_handler_it(pCpnt);
+	}
 
 	return err;
 }

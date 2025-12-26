@@ -198,8 +198,10 @@ FctERR NONNULL__ TMP1075_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, 
 
 
 /****************************************************************/
+// cppcheck-suppress-begin misra-c2012-20.1 ; include directives after other declarations
 #include "TMP1075_proc.h"	// Include procedures
 #include "TMP1075_ex.h"		// Include extensions
+// cppcheck-suppress-end misra-c2012-20.1
 
 #endif
 

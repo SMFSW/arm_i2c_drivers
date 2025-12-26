@@ -23,11 +23,9 @@ FctERR NONNULL__ MB85RC256V_Mass_Erase(MB85RC256V_t * const pCpnt)
 
 	for (uintCPU_t i = 0 ; i < (MB85RC256V_SIZE / sizeof(bankData)) ; i++)
 	{
-		#if defined(HAL_IWDG_MODULE_ENABLED)
-			HAL_IWDG_Refresh(&hiwdg);
-		#endif
+		I2C_Watchdog_Refresh();
 		err = MB85RC256V_Write(pCpnt, bankData, i * sizeof(bankData), sizeof(bankData));
-		if (err) { break; }
+		if (err != ERROR_OK) { break; }
 	}
 
 	return err;

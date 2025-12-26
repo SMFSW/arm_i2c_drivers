@@ -32,27 +32,27 @@ __WEAK FctERR NONNULL__ MCP9808_Init_Sequence(MCP9808_t * const pCpnt)
 
 	// get ID & check against values for MCP9808
 	err = MCP9808_Get_ManufacturerID(pCpnt, &pCpnt->cfg.Manufacturer_Id);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	err = MCP9808_Get_ChipID(pCpnt, &pCpnt->cfg.Device_Id);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	if (pCpnt->cfg.Device_Id != MCP9808_CHIP_ID)				{ return ERROR_COMMON; }	// Unknown device
 	if (pCpnt->cfg.Manufacturer_Id != MCP9808_MANUFACTURER_ID)	{ return ERROR_COMMON; }	// Unknown device
 
 /*	err = MCP9808_Set_AlertTemp(pCpnt, 30.0f, MCP9808__ALERT_HIGH);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	err = MCP9808_Set_AlertTemp(pCpnt, 32.0f, MCP9808__ALERT_LOW);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	err = MCP9808_Set_AlertTemp(pCpnt, 32.5f, MCP9808__ALERT_CRIT);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	// Checking if Set Alert works properly
 	err = MCP9808_Get_AlertTemp(pCpnt, 0, MCP9808__ALERT_HIGH);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	err = MCP9808_Get_AlertTemp(pCpnt, 0, MCP9808__ALERT_LOW);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	err = MCP9808_Get_AlertTemp(pCpnt, 0, MCP9808__ALERT_CRIT);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 */
 	return MCP9808_Set_Resolution(pCpnt, pCpnt->cfg.Resolution);
 }
@@ -76,10 +76,10 @@ FctERR NONNULL__ MCP9808_Set_AlertTemp(MCP9808_t * const pCpnt, const float temp
 
 	// Temperature alerts shall be set only when in shutdown mode
 	err = MCP9808_Shutdown(pCpnt, true);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	err = MCP9808_Write(pCpnt->cfg.slave_inst, &ALT.Word, MCP9808__ALERT_UPPER + alt, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	*alert = temp;
 
@@ -97,7 +97,7 @@ FctERR NONNULLX__(1) MCP9808_Get_AlertTemp(MCP9808_t * const pCpnt, float * temp
 	if (alt > MCP9808__ALERT_CRIT)	{ return ERROR_VALUE; }	// Unknown alert
 
 	err = MCP9808_Read(pCpnt->cfg.slave_inst, &ALT.Word, MCP9808__ALERT_UPPER + alt, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	tmp = (float) ALT.Bits.Integer;
 	tmp += (ALT.Bits.Decimal * 0.25f);
@@ -118,7 +118,7 @@ FctERR NONNULLX__(1) MCP9808_Get_Temperature(MCP9808_t * const pCpnt, float * te
 	FctERR					err;
 
 	err = MCP9808_Get_Temperature_Raw(pCpnt, &TEMP.Word);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	tmp = (float) TEMP.Bits.Integer;
 	tmp += ((TEMP.Bits.Decimal >> (3 - pCpnt->cfg.Resolution)) * MCP9808_resolution_steps[pCpnt->cfg.Resolution]);
@@ -137,38 +137,62 @@ FctERR NONNULLX__(1) MCP9808_Get_Temperature(MCP9808_t * const pCpnt, float * te
 
 __WEAK FctERR NONNULL__ MCP9808_handler(MCP9808_t * const pCpnt)
 {
-	FctERR	err = ERROR_NOTAVAIL;	// In case no new data available
+	FctERR err = ERROR_OK;
 
 	if ((!pCpnt->NewData) && TPSSUP_MS(pCpnt->hLast, MCP9808_conv_time[pCpnt->cfg.Resolution]))	{ pCpnt->NewData = true; }
 
 	if (pCpnt->NewData)
 	{
 		err = MCP9808_Get_Temperature(pCpnt, 0);
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ goto ret; }
 
 		pCpnt->NewData = false;
 		pCpnt->hLast = HAL_GetTick();
+
+		#if defined(VERBOSE)
+			const uint8_t idx = pCpnt - MCP9808;
+			printf("MCP9808 id%d: Temperature %d.%03ld°C\r\n", idx, (int16_t) pCpnt->Temperature, get_fp_dec(pCpnt->Temperature, 3));
+		#endif
 	}
 
-	#if defined(VERBOSE)
-		const uint8_t idx = pCpnt - MCP9808;
-		printf("MCP9808 id%d: Temperature %d.%03ld°C\r\n", idx, (int16_t) pCpnt->Temperature, get_fp_dec(pCpnt->Temperature, 3));
-	#endif
-
+	ret:
 	return err;
 }
 
 
 __WEAK FctERR NONNULL__ MCP9808_handler_it(MCP9808_t * const pCpnt)
 {
-	FctERR	err = ERROR_OK;
-	bool	interrupt;
+	FctERR err = ERROR_OK;
 
-	MCP9808_Alert_GPIO_Get(pCpnt, &interrupt);
-	if (interrupt)
+	if (MCP9808_Alert_GPIO_Get(pCpnt))
 	{
 		pCpnt->NewData = true;
 		err = MCP9808_handler(pCpnt);
+	}
+
+	return err;
+}
+
+
+FctERR MCP9808_handler_all(void)
+{
+	FctERR err = ERROR_OK;
+
+	for (MCP9808_t * pCpnt = MCP9808 ; pCpnt < &MCP9808[I2C_MCP9808_NB] ; pCpnt++)
+	{
+		err |= MCP9808_handler(pCpnt);
+	}
+
+	return err;
+}
+
+FctERR MCP9808_handler_it_all(void)
+{
+	FctERR err = ERROR_OK;
+
+	for (MCP9808_t * pCpnt = MCP9808 ; pCpnt < &MCP9808[I2C_MCP9808_NB] ; pCpnt++)
+	{
+		err |= MCP9808_handler_it(pCpnt);
 	}
 
 	return err;

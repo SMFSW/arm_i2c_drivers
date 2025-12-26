@@ -58,13 +58,13 @@ typedef union uADS1115_REG_MAP {
 ** \param[in] pCpnt - Pointer to ADS1115 component
 ** \return Conversion time in µs
 **/
-uint16_t NONNULL__ ADS1115_Get_conv_us(ADS1115_t * const pCpnt);
+uint32_t NONNULL__ ADS1115_Get_conv_us(ADS1115_t * const pCpnt);
 
 /*!\brief Get conversion time for ADS1115 component (ms)
 ** \param[in] pCpnt - Pointer to ADS1115 component
 ** \return Conversion time in ms
 **/
-uint16_t NONNULL__ ADS1115_Get_conv_ms(ADS1115_t * const pCpnt);
+uint32_t NONNULL__ ADS1115_Get_conv_ms(ADS1115_t * const pCpnt);
 
 
 /*!\brief Get ADS1115 conversion
@@ -139,7 +139,7 @@ FctERR NONNULL__ ADS1115_Set_CompQueue(ADS1115_t * const pCpnt, const ADS1115_qu
 **/
 __INLINE FctERR NONNULL_INLINE__ ADS1115_Set_LowThreshold(ADS1115_t * const pCpnt, const int16_t thrh) {
 	pCpnt->cfg.Lo_Thresh = thrh;
-	return ADS1115_Write(pCpnt->cfg.slave_inst, (uint16_t *) &thrh, ADS1115__LOW_THRESH); }
+	return ADS1115_Write(pCpnt->cfg.slave_inst, (const uint16_t *) &thrh, ADS1115__LOW_THRESH); }
 
 /*!\brief Set ADS1115 high threshold
 ** \param[in] pCpnt - Pointer to ADS1115 component
@@ -148,7 +148,7 @@ __INLINE FctERR NONNULL_INLINE__ ADS1115_Set_LowThreshold(ADS1115_t * const pCpn
 **/
 __INLINE FctERR NONNULL_INLINE__ ADS1115_Set_HighThreshold(ADS1115_t * const pCpnt, const int16_t thrh) {
 	pCpnt->cfg.Hi_Thresh = thrh;
-	return ADS1115_Write(pCpnt->cfg.slave_inst, (uint16_t *) &thrh, ADS1115__HI_THRESH); }
+	return ADS1115_Write(pCpnt->cfg.slave_inst, (const uint16_t *) &thrh, ADS1115__HI_THRESH); }
 
 
 /*!\brief Get ADS1115 low threshold
@@ -187,7 +187,7 @@ FctERR NONNULL__ ADS1115_Start_NextConversion(ADS1115_t * const pCpnt);
 ** \return Raw channel value
 **/
 __INLINE int16_t NONNULL_INLINE__ ADS1115_Get_raw_value(ADS1115_t * const pCpnt, const uint8_t chan) {
-	return (chan >= 4) ? 0 : pCpnt->AIN[chan]; }
+	return (chan >= 4U) ? 0 : pCpnt->AIN[chan]; }
 
 
 /*!\brief Get ADS1115 raw channel value in µV
@@ -228,9 +228,9 @@ void NONNULL__ ADS1115_RDY_GPIO_Init(ADS1115_t * const pCpnt, GPIO_TypeDef * con
 /*!\brief Ready GPIO pin getter for ADS1115
 ** \weak ADS1115 Ready GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to ADS1115 component
-** \param[in,out] pState - Pointer to RDY pin state variable (0: inactive, 1: active)
+** \return RDY pin state value (0: inactive, 1: active)
 **/
-void NONNULL__ ADS1115_RDY_GPIO_Get(ADS1115_t * const pCpnt, bool * const pState);
+bool NONNULL__ ADS1115_RDY_GPIO_Get(ADS1115_t * const pCpnt);
 
 
 /****************************************************************/

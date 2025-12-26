@@ -37,7 +37,7 @@ __WEAK FctERR NONNULL__ TCS3472_Init_Sequence(TCS3472_t * const pCpnt)
 
 	// get ID & check against values for TCS3472
 	err = TCS3472_Get_ChipID(pCpnt, &pCpnt->cfg.ID);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	if (	(pCpnt->cfg.ID != TCS34725_CHIP_ID)
 		&&	(pCpnt->cfg.ID != TCS34727_CHIP_ID))
@@ -45,17 +45,17 @@ __WEAK FctERR NONNULL__ TCS3472_Init_Sequence(TCS3472_t * const pCpnt)
 
 	EN.Bits.PON = true;		// Turn ON Osc
 	err = TCS3472_Write_En(pCpnt, EN.Byte);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	err = TCS3472_Set_Gain(pCpnt, pCpnt->cfg.Gain);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	err = TCS3472_Set_Integration_Time(pCpnt, pCpnt->cfg.Integ);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	err = TCS3472_Set_Wait_Time(pCpnt, pCpnt->cfg.Wait);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	err = TCS3472_Set_AIT(pCpnt, pCpnt->cfg.LowThreshold, pCpnt->cfg.HighThreshold);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	EN.Bits.WEN = pCpnt->cfg.WEN;		// Turn ON WAIT following cfg
 	EN.Bits.AEN = pCpnt->cfg.AIEN;		// Turn ON ALS following cfg
@@ -102,10 +102,9 @@ __WEAK FctERR NONNULL__ TCS3472_handler(TCS3472_t * const pCpnt)
 {
 	uint8_t					DATA[9];
 	uTCS3472_REG__STATUS *	ST = (uTCS3472_REG__STATUS *) DATA;
-	FctERR					err;
 
-	err = TCS3472_Read(pCpnt->cfg.slave_inst, DATA, TCS3472__STATUS, sizeof(DATA));
-	if (err)	{ return err; }
+	FctERR err = TCS3472_Read(pCpnt->cfg.slave_inst, DATA, TCS3472__STATUS, sizeof(DATA));
+	if (err != ERROR_OK)	{ goto ret; }
 
 	if ((ST->Bits.AINT) && (ST->Bits.AVALID))
 	{
@@ -126,19 +125,43 @@ __WEAK FctERR NONNULL__ TCS3472_handler(TCS3472_t * const pCpnt)
 		#endif
 	}
 
-	if (ST->Bits.AINT)	{ return TCS3472_SF_Clear_IT(pCpnt); }
+	if (ST->Bits.AINT)	{ err = TCS3472_SF_Clear_IT(pCpnt); }
 
-	return ERROR_OK;
+	ret:
+	return err;
 }
 
 
 __WEAK FctERR NONNULL__ TCS3472_handler_it(TCS3472_t * const pCpnt)
 {
-	FctERR	err = ERROR_OK;
-	bool	interrupt;
+	FctERR err = ERROR_OK;
 
-	TCS3472_INT_GPIO_Get(pCpnt, &interrupt);
-	if (interrupt)	{ err = TCS3472_handler(pCpnt); }
+	if (TCS3472_INT_GPIO_Get(pCpnt))	{ err = TCS3472_handler(pCpnt); }
+
+	return err;
+}
+
+
+FctERR TCS3472_handler_all(void)
+{
+	FctERR err = ERROR_OK;
+
+	for (TCS3472_t * pCpnt = TCS3472 ; pCpnt < &TCS3472[I2C_TCS3472_NB] ; pCpnt++)
+	{
+		err |= TCS3472_handler(pCpnt);
+	}
+
+	return err;
+}
+
+FctERR TCS3472_handler_it_all(void)
+{
+	FctERR err = ERROR_OK;
+
+	for (TCS3472_t * pCpnt = TCS3472 ; pCpnt < &TCS3472[I2C_TCS3472_NB] ; pCpnt++)
+	{
+		err |= TCS3472_handler_it(pCpnt);
+	}
 
 	return err;
 }

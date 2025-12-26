@@ -182,8 +182,10 @@ FctERR NONNULL__ S11059_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, c
 
 
 /****************************************************************/
+// cppcheck-suppress-begin misra-c2012-20.1 ; include directives after other declarations
 #include "S11059_proc.h"	// Include procedures
 #include "S11059_ex.h"		// Include extensions
+// cppcheck-suppress-end misra-c2012-20.1
 
 #endif
 

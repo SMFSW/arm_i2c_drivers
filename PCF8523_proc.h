@@ -53,8 +53,8 @@ typedef struct PCF8523_t {
 	PCF8523_time		time;
 	struct {
 	I2C_slave_t *		slave_inst;		//!< Slave structure
-	PeripheralGPIO_t	INT1_GPIO;			//!< Interrupt 1 GPIO struct
-	PeripheralGPIO_t	INT2_GPIO;			//!< Interrupt 2 GPIO struct
+	PeripheralGPIO_t	INT1_GPIO;		//!< Interrupt 1 GPIO struct
+	PeripheralGPIO_t	INT2_GPIO;		//!< Interrupt 2 GPIO struct
 	uint8_t				Src_Clock_A;
 	uint8_t				Src_Clock_B;
 	bool				Hour_Format;	//!< 0: 24h; 1: 12h

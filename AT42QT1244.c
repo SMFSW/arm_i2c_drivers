@@ -39,7 +39,7 @@ FctERR NONNULL__ AT42QT1244_Init(const uint8_t idx, I2C_HandleTypeDef * const hi
 
 	err = AT42QT1244_Init_Sequence(&AT42QT1244[idx]);
 
-	if (err)	{ I2C_set_enable(&AT42QT1244_hal[idx], false); }
+	if (err != ERROR_OK)	{ I2C_set_enable(&AT42QT1244_hal[idx], false); }
 	else		{ init_Delay_Generator(); }
 
 	return err;

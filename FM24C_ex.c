@@ -25,11 +25,9 @@ FctERR NONNULL__ FM24C_Mass_Erase(FM24C_t * const pCpnt)
 
 	for (uintCPU_t i = 0 ; i < (FM24C_SIZE / sizeof(array)) ; i++)
 	{
-		#if defined(HAL_IWDG_MODULE_ENABLED)
-			HAL_IWDG_Refresh(&hiwdg);
-		#endif
+		I2C_Watchdog_Refresh();
 		err = FM24C_Write(pCpnt, array, i * sizeof(array), sizeof(array));
-		if (err) { break; }
+		if (err != ERROR_OK) { break; }
 	}
 
 	return err;

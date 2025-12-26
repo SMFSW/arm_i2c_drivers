@@ -116,7 +116,7 @@ static FctERR NONNULL__ FM24C_ReadWrite_Banked(FM24C_t * const pCpnt, uint8_t * 
 
 		if (wr)		{ err = FM24C_Write_Banked(pCpnt, pData, (uint8_t) address, RSHIFT(address, 8), nb_rw); }	// Write
 		else		{ err = FM24C_Read_Banked(pCpnt, pData, (uint8_t) address, RSHIFT(address, 8), nb_rw); }	// Read
-		if (err)	{ break; }
+		if (err != ERROR_OK)	{ break; }
 
 		data_len -= nb_rw;
 		address += nb_rw;

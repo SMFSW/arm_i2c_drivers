@@ -30,7 +30,7 @@ __WEAK FctERR GPMS_Init(void)
 
 	err = GPMS_Init_Sequence();
 
-	if (err)	{ I2C_set_enable(&GPMS_hal, false); }
+	if (err != ERROR_OK)	{ I2C_set_enable(&GPMS_hal, false); }
 
 	return err;
 }

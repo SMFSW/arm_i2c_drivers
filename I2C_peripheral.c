@@ -21,13 +21,17 @@ void NONNULL__ I2C_peripheral_GPIO_init(PeripheralGPIO_t * const pGPIO, GPIO_Typ
 	pGPIO->GPIO_Active = GPIO_Active;
 }
 
-void NONNULL__ I2C_peripheral_GPIO_get(const PeripheralGPIO_t * const pGPIO, bool * const pState)
+bool NONNULL__ I2C_peripheral_GPIO_get(const PeripheralGPIO_t * const pGPIO)
 {
+	bool state = false;
+
 	if ((pGPIO->GPIOx != NULL) && (pGPIO->GPIO_Pin != 0U))
 	{
 		const GPIO_PinState pin = HAL_GPIO_ReadPin(pGPIO->GPIOx, pGPIO->GPIO_Pin);
-		*pState = binEval(pin == pGPIO->GPIO_Active);
+		state = binEval(pin == pGPIO->GPIO_Active);
 	}
+
+	return state;
 }
 
 void NONNULL__ I2C_peripheral_GPIO_set(const PeripheralGPIO_t * const pGPIO, const bool state)

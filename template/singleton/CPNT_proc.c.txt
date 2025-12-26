@@ -43,23 +43,22 @@ __WEAK FctERR $CPNT$_Init_Sequence(void)
 __WEAK FctERR $CPNT$_handler(void)
 {
 	FctERR err = $CPNT$_Read($CPNT$.$CPNT$_val_1, $CPNT$__REG1, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	#if defined(VERBOSE)
 		printf("$CPNT$: FUBARED %d", $CPNT$.$CPNT$_val_1);
 	#endif
 
+	ret:
 	return err;
 }
 
 
 __WEAK FctERR NONNULL__ $CPNT$_handler_it(void)
 {
-	FctERR	err;
-	bool	interrupt;
+	FctERR err = ERROR_OK;
 
-	$CPNT$_RDY_GPIO_Get(&interrupt);
-	if (interrupt)	{ err = $CPNT$_handler(); }
+	if ($CPNT$_RDY_GPIO_Get())	{ err = $CPNT$_handler(); }
 
 	return err;
 }

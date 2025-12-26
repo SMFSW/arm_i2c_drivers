@@ -58,13 +58,13 @@ __WEAK FctERR NONNULL__ ADS1115_handler(ADS1115_t * const pCpnt)
 	if (pCpnt->cfg.mode == ADS1115__MODE_SINGLE_SHOT)
 	{
 		err = ADS1115_Start_NextConversion(pCpnt);
-		if (err)	{ return err; }
+		if (err != ERROR_OK)	{ goto ret; }
 
 		Delay_us(ADS1115_Get_conv_us(pCpnt));
 	}
 
 	err = ADS1115_Get_Conversion(pCpnt);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	#if defined(VERBOSE)
 		const uint8_t idx = pCpnt - ADS1115;
@@ -79,17 +79,41 @@ __WEAK FctERR NONNULL__ ADS1115_handler(ADS1115_t * const pCpnt)
 		err = ADS1115_Start_NextConversion(pCpnt);
 	}
 
+	ret:
 	return err;
 }
 
 
 __WEAK FctERR NONNULL__ ADS1115_handler_it(ADS1115_t * const pCpnt)
 {
-	FctERR	err = ERROR_OK;
-	bool	interrupt;
+	FctERR err = ERROR_OK;
 
-	ADS1115_RDY_GPIO_Get(pCpnt, &interrupt);
-	if (interrupt)	{ err = ADS1115_handler(pCpnt); }
+	if (ADS1115_RDY_GPIO_Get(pCpnt))	{ err = ADS1115_handler(pCpnt); }
+
+	return err;
+}
+
+
+FctERR ADS1115_handler_all(void)
+{
+	FctERR err = ERROR_OK;
+
+	for (ADS1115_t * pCpnt = ADS1115 ; pCpnt < &ADS1115[I2C_ADS1115_NB] ; pCpnt++)
+	{
+		err |= ADS1115_handler(pCpnt);
+	}
+
+	return err;
+}
+
+FctERR ADS1115_handler_it_all(void)
+{
+	FctERR err = ERROR_OK;
+
+	for (ADS1115_t * pCpnt = ADS1115 ; pCpnt < &ADS1115[I2C_ADS1115_NB] ; pCpnt++)
+	{
+		err |= ADS1115_handler_it(pCpnt);
+	}
 
 	return err;
 }

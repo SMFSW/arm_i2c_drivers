@@ -79,23 +79,18 @@ FctERR NONNULL__ $CPNT$_handler($CPNT$_t * const pCpnt);
 **/
 FctERR NONNULL__ $CPNT$_handler_it($CPNT$_t * const pCpnt);
 
-
 /*!\brief Handler for all $CPNT$ peripherals
 ** \note May be called periodically to handle all $CPNT$ tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ $CPNT$_handler_all(void) {
-	for ($CPNT$_t * pCpnt = $CPNT$ ; pCpnt < &$CPNT$[I2C_$CPNT$_NB] ; pCpnt++) {
-		$CPNT$_handler(pCpnt); }
-}
+FctERR $CPNT$_handler_all(void);
 
 /*!\brief Handler for all $CPNT$ peripherals GPIO interrupt
 ** \note \ref $CPNT$_XXX_GPIO_Init has to be called at init before using interrupt handler function
 ** \note May be called periodically to handle all $CPNT$ tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ $CPNT$_handler_it_all(void) {
-	for ($CPNT$_t * pCpnt = $CPNT$ ; pCpnt < &$CPNT$[I2C_$CPNT$_NB] ; pCpnt++) {
-		$CPNT$_handler_it(pCpnt); }
-}
+FctERR $CPNT$_handler_it_all(void);
 
 
 /****************************************************************/

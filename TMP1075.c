@@ -32,7 +32,7 @@ FctERR NONNULL__ TMP1075_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 
 	err = TMP1075_Init_Sequence(&TMP1075[idx]);
 
-	if (err)	{ I2C_set_enable(&TMP1075_hal[idx], false); }
+	if (err != ERROR_OK)	{ I2C_set_enable(&TMP1075_hal[idx], false); }
 
 	return ERROR_OK;
 }

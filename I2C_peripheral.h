@@ -65,9 +65,9 @@ void NONNULL__ I2C_peripheral_GPIO_init(PeripheralGPIO_t * const pGPIO, GPIO_Typ
 
 /*!\brief I2C peripheral GPIO pin getter
 ** \param[in] pGPIO - Pointer to GPIO structure instance
-** \param[in,out] pState - Pointer to GPIO state variable (0: inactive, 1: active)
+** \return GPIO state value (0: inactive, 1: active)
 **/
-void NONNULL__ I2C_peripheral_GPIO_get(const PeripheralGPIO_t * const pGPIO, bool * const pState);
+bool NONNULL__ I2C_peripheral_GPIO_get(const PeripheralGPIO_t * const pGPIO);
 
 /*!\brief I2C peripheral GPIO pin setter
 ** \param[in] pGPIO - Pointer to GPIO structure instance

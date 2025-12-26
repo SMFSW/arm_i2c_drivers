@@ -107,22 +107,18 @@ FctERR NONNULL__ APDS9960_handler(APDS9960_t * const pCpnt);
 **/
 FctERR NONNULL__ APDS9960_handler_it(APDS9960_t * const pCpnt);
 
-
 /*!\brief Handler for all APDS9960 peripherals
 ** \note May be called periodically to handle all APDS9960 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ APDS9960_handler_all(void) {
-	for (APDS9960_t * pCpnt = APDS9960 ; pCpnt < &APDS9960[I2C_APDS9960_NB] ; pCpnt++) {
-		APDS9960_handler(pCpnt); }
-}
+FctERR APDS9960_handler_all(void);
 
 /*!\brief Handler for all APDS9960 peripherals GPIO interrupt
+** \note \ref APDS9960_INT_GPIO_Init has to be called at init before using interrupt handler function
 ** \note May be called periodically to handle all APDS9960 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ APDS9960_handler_it_all(void) {
-	for (APDS9960_t * pCpnt = APDS9960 ; pCpnt < &APDS9960[I2C_APDS9960_NB] ; pCpnt++) {
-		APDS9960_handler_it(pCpnt); }
-}
+FctERR APDS9960_handler_it_all(void);
 
 
 /****************************************************************/

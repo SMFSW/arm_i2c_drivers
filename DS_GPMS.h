@@ -212,8 +212,10 @@ FctERR NONNULL__ GPMS_Read(uint8_t * data, const uint16_t addr, const uint16_t n
 
 
 /****************************************************************/
+// cppcheck-suppress-begin misra-c2012-20.1 ; include directives after other declarations
 #include "DS_GPMS_ex.h"		// Include extensions
 #include "DS_GPMS_proc.h"	// Include procedures
+// cppcheck-suppress-end misra-c2012-20.1
 
 #endif
 

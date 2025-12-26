@@ -135,23 +135,18 @@ FctERR NONNULL__ AT42QT1244_handler(AT42QT1244_t * const pCpnt);
 **/
 FctERR NONNULL__ AT42QT1244_handler_it(AT42QT1244_t * const pCpnt);
 
-
 /*!\brief Handler for all AT42QT1244 peripherals
 ** \note May be called periodically to handle all AT42QT1244 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ AT42QT1244_handler_all(void) {
-	for (AT42QT1244_t * pCpnt = AT42QT1244 ; pCpnt < &AT42QT1244[I2C_AT42QT1244_NB] ; pCpnt++) {
-		AT42QT1244_handler(pCpnt); }
-}
+FctERR AT42QT1244_handler_all(void);
 
 /*!\brief Handler for all AT42QT1244 peripherals GPIO interrupt
-** \note \ref AT42QT1244_CHANGE_GPIO_Init has to be called at init before using interrupt handler function
+** \note \ref AT42QT1244_INT_GPIO_Init has to be called at init before using interrupt handler function
 ** \note May be called periodically to handle all AT42QT1244 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ AT42QT1244_handler_it_all(void) {
-	for (AT42QT1244_t * pCpnt = AT42QT1244 ; pCpnt < &AT42QT1244[I2C_AT42QT1244_NB] ; pCpnt++) {
-		AT42QT1244_handler_it(pCpnt); }
-}
+FctERR AT42QT1244_handler_it_all(void);
 
 
 /****************************************************************/

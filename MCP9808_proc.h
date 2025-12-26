@@ -120,23 +120,18 @@ FctERR NONNULL__ MCP9808_handler(MCP9808_t * const pCpnt);
 **/
 FctERR NONNULL__ MCP9808_handler_it(MCP9808_t * const pCpnt);
 
-
 /*!\brief Handler for all MCP9808 peripherals
 ** \note May be called periodically to handle all MCP9808 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ MCP9808_handler_all(void) {
-	for (MCP9808_t * pCpnt = MCP9808 ; pCpnt < &MCP9808[I2C_MCP9808_NB] ; pCpnt++) {
-		MCP9808_handler(pCpnt); }
-}
+FctERR MCP9808_handler_all(void);
 
 /*!\brief Handler for all MCP9808 peripherals GPIO interrupt
-** \note \ref MCP9808_Alert_GPIO_Init has to be called at init before using interrupt handler function
+** \note \ref MCP9808_INT_GPIO_Init has to be called at init before using interrupt handler function
 ** \note May be called periodically to handle all MCP9808 tasks
+** \return FctERR - error code
 **/
-__INLINE void INLINE__ MCP9808_handler_it_all(void) {
-	for (MCP9808_t * pCpnt = MCP9808 ; pCpnt < &MCP9808[I2C_MCP9808_NB] ; pCpnt++) {
-		MCP9808_handler_it(pCpnt); }
-}
+FctERR MCP9808_handler_it_all(void);
 
 
 /****************************************************************/

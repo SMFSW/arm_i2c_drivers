@@ -38,7 +38,7 @@ FctERR GPMS_Get_Date(GPMS_date * date)
 	FctERR	err;
 
 	err = GPMS_Read(DATE, GPMS__DAY_OF_MONTH_TENS, sizeof(DATE));
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	GPMS.Date.Day = (DATE[0] * 10) + DATE[1];
 	GPMS.Date.Month = (DATE[2] * 10) + DATE[3];
@@ -55,7 +55,7 @@ FctERR GPMS_Get_Hour(GPMS_hour * hour)
 	FctERR	err;
 
 	err = GPMS_Read(HOUR, GPMS__HOURS_TENS, sizeof(HOUR));
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	GPMS.Hour.Hours = (HOUR[0] * 10) + HOUR[1];
 	GPMS.Hour.Minutes = (HOUR[2] * 10) + HOUR[3];
@@ -96,7 +96,7 @@ FctERR GPMS_Get_Latitude(GPMS_coord * lat)
 	FctERR	err;
 
 	err = GPMS_Read(LAT, GPMS__LATITUDE_DEGREES_TENS, sizeof(LAT));
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	GPMS_Fill_coords(&GPMS.Latitude, LAT);
 
@@ -112,7 +112,7 @@ FctERR GPMS_Get_Longitude(GPMS_coord * lon)
 	FctERR	err;
 
 	err = GPMS_Read(LON, GPMS__LONGITUDE_DEGREES_TENS, sizeof(LON));
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	GPMS_Fill_coords(&GPMS.Longitude, LON);
 
@@ -130,7 +130,7 @@ FctERR GPMS_Get_Heading(float * heading, const GPMS_north type)
 	if (type > GPMS__MAGNETIC_NORTH)	{ return ERROR_VALUE; }	// Unknown north type
 
 	err = GPMS_Read(HEADING, (type == GPMS__MAGNETIC_NORTH) ? GPMS__HEADING_DEGREES_MAGNETIC_HUNDREDS : GPMS__HEADING_DEGREES_TRUE_HUNDREDS, sizeof(HEADING));
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	GPMS_Fill_sp_hd((type == GPMS__MAGNETIC_NORTH) ? &GPMS.Heading_Magnetic : &GPMS.Heading_True, HEADING);
 
@@ -145,7 +145,7 @@ FctERR GPMS_Get_Speed(float * speed)
 	FctERR	err;
 
 	err = GPMS_Read(SPEED, GPMS__SPEED_HUNDREDS, sizeof(SPEED));
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	GPMS_Fill_sp_hd(&GPMS.Speed, SPEED);
 
@@ -161,7 +161,7 @@ FctERR GPMS_Get_Altitude(uint16_t * altitude)
 	FctERR	err;
 
 	err = GPMS_Read(ALT, GPMS__ALTITUDE_TENS_OF_THOUSANDS, sizeof(ALT));
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	GPMS.Altitude = (ALT[0] * 10000) + (ALT[1] * 1000) + (ALT[2] * 100) + (ALT[3] * 10) + ALT[4];
 
@@ -176,28 +176,28 @@ __WEAK FctERR GPMS_handler(void)
 	FctERR	err;
 
 	err = GPMS_Get_Date(0);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 	HAL_Delay(1);
 	err = GPMS_Get_Hour(0);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 	HAL_Delay(1);
 	err = GPMS_Get_Latitude(0);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 	HAL_Delay(1);
 	err = GPMS_Get_Longitude(0);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 	HAL_Delay(1);
 	err = GPMS_Get_Heading(0, GPMS__TRUE_NORTH);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 	HAL_Delay(1);
 	err = GPMS_Get_Heading(0, GPMS__MAGNETIC_NORTH);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 	HAL_Delay(1);
 	err = GPMS_Get_Speed(0);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 	HAL_Delay(1);
 	err = GPMS_Get_Altitude(0);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	#if defined(VERBOSE)
 		printf("GPMS: %d/%d/%d %d:%d:%d\r\n", GPMS.Date.Year, GPMS.Date.Month, GPMS.Date.Day, GPMS.Hour.Hours, GPMS.Hour.Minutes, GPMS.Hour.Seconds);
@@ -211,7 +211,8 @@ __WEAK FctERR GPMS_handler(void)
 				GPMS.Altitude);
 	#endif
 
-	return ERROR_OK;
+	ret:
+	return err;
 }
 
 

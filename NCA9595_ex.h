@@ -164,9 +164,9 @@ void NONNULL__ NCA9595_INT_GPIO_Init(NCA9595_t * const pCpnt, GPIO_TypeDef * con
 /*!\brief Interrupt GPIO pin getter for ADS1115
 ** \weak NCA9595 Interrupt GPIO pin getter may be user implemented if needed
 ** \param[in] pCpnt - Pointer to NCA9595 component
-** \param[in,out] pState - Pointer to INT pin state variable (0: inactive, 1: active)
+** \return INT pin state value (0: inactive, 1: active)
 **/
-void NONNULL__ NCA9595_INT_GPIO_Get(NCA9595_t * const pCpnt, bool * const pState);
+bool NONNULL__ NCA9595_INT_GPIO_Get(NCA9595_t * const pCpnt);
 
 
 /****************************************************************/

@@ -40,7 +40,7 @@ FctERR NONNULL__ MCP4725_Read_DAC(MCP4725_t * const pCpnt, uint16_t * val)
 	FctERR	err;
 
 	err = MCP4725_Read(pCpnt->cfg.slave_inst, REG, 3);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	*val = RSHIFT(REG[2], 4) | LSHIFT(REG[1], 4);
 	return ERROR_OK;
@@ -53,7 +53,7 @@ FctERR NONNULL__ MCP4725_Read_State(MCP4725_t * const pCpnt, bool * state)
 	FctERR	err;
 
 	err = MCP4725_Read(pCpnt->cfg.slave_inst, &REG, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	*state = (REG & 0x80) ? true : false;
 	return ERROR_OK;

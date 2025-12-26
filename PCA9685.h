@@ -220,8 +220,10 @@ FctERR NONNULL__ PCA9685_Read(I2C_slave_t * const pSlave, uint8_t * data, const 
 
 
 /****************************************************************/
+// cppcheck-suppress-begin misra-c2012-20.1 ; include directives after other declarations
 #include "PCA9685_proc.h"	// Include procedures
 #include "PCA9685_ex.h"		// Include extensions
+// cppcheck-suppress-end misra-c2012-20.1
 
 #endif
 

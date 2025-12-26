@@ -33,8 +33,8 @@ FctERR NONNULL__ $CPNT$_fct($CPNT$_t * const pCpnt)
 __WEAK void NONNULL__ $CPNT$_INT_GPIO_Init($CPNT$_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
 	I2C_peripheral_GPIO_init(&pCpnt->cfg.INT_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
 
-__WEAK void NONNULL__ $CPNT$_INT_GPIO_Get($CPNT$_t * const pCpnt, bool * const pState) {
-	I2C_peripheral_GPIO_get(&pCpnt->cfg.INT_GPIO, pState); }
+__WEAK bool NONNULL__ $CPNT$_INT_GPIO_Get($CPNT$_t * const pCpnt) {
+	return I2C_peripheral_GPIO_get(&pCpnt->cfg.INT_GPIO); }
 
 
 __WEAK void NONNULL__ $CPNT$_RST_GPIO_Init($CPNT$_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {

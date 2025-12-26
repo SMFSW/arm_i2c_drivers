@@ -18,7 +18,7 @@ FctERR NONNULL__ APDS9930_Set_PON(APDS9930_t * const pCpnt, const bool en)
 	FctERR					err;
 
 	err = APDS9930_Read(pCpnt->cfg.slave_inst, &EN.Byte, APDS9930__ENABLE, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	EN.Bits.PON = en;
 	return APDS9930_Write_En(pCpnt, EN.Byte);
@@ -31,7 +31,7 @@ FctERR NONNULL__ APDS9930_Set_AEN(APDS9930_t * const pCpnt, const bool en)
 	FctERR					err;
 
 	err = APDS9930_Read(pCpnt->cfg.slave_inst, &EN.Byte, APDS9930__ENABLE, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	EN.Bits.AEN = en;
 	return APDS9930_Write_En(pCpnt, EN.Byte);
@@ -44,7 +44,7 @@ FctERR NONNULL__ APDS9930_Set_PEN(APDS9930_t * const pCpnt, const bool en)
 	FctERR					err;
 
 	err = APDS9930_Read(pCpnt->cfg.slave_inst, &EN.Byte, APDS9930__ENABLE, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	EN.Bits.PEN = en;
 	return APDS9930_Write_En(pCpnt, EN.Byte);
@@ -57,11 +57,11 @@ FctERR NONNULL__ APDS9930_Set_AIEN(APDS9930_t * const pCpnt, const bool en)
 	FctERR					err;
 
 	err = APDS9930_Read(pCpnt->cfg.slave_inst, &EN.Byte, APDS9930__ENABLE, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	EN.Bits.AIEN = en;
 	err = APDS9930_Write_En(pCpnt, EN.Byte);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->cfg.PIEN = en;
 	return err;
@@ -74,11 +74,11 @@ FctERR NONNULL__ APDS9930_Set_PIEN(APDS9930_t * const pCpnt, const bool en)
 	FctERR					err;
 
 	err = APDS9930_Read(pCpnt->cfg.slave_inst, &EN.Byte, APDS9930__ENABLE, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	EN.Bits.PIEN = en;
 	err = APDS9930_Write_En(pCpnt, EN.Byte);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->cfg.PIEN = en;
 	return err;
@@ -91,11 +91,11 @@ FctERR NONNULL__ APDS9930_Set_WEN(APDS9930_t * const pCpnt, const bool en)
 	FctERR					err;
 
 	err = APDS9930_Read(pCpnt->cfg.slave_inst, &EN.Byte, APDS9930__ENABLE, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	EN.Bits.WEN = en;
 	err = APDS9930_Write_En(pCpnt, EN.Byte);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->cfg.WEN = en;
 	return err;
@@ -108,7 +108,7 @@ FctERR NONNULL__ APDS9930_Set_SAI(APDS9930_t * const pCpnt, const bool en)
 	FctERR					err;
 
 	err = APDS9930_Read(pCpnt->cfg.slave_inst, &EN.Byte, APDS9930__ENABLE, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	EN.Bits.SAI = en;
 	return APDS9930_Write_En(pCpnt, EN.Byte);
@@ -124,18 +124,18 @@ FctERR NONNULL__ APDS9930_Set_ALS_Gain(APDS9930_t * const pCpnt, const APDS9930_
 	if (gain > APDS9930__ALS_GAIN_8ON6X)	{ return ERROR_VALUE; }	// Unknown gain
 
 	err = APDS9930_Read(pCpnt->cfg.slave_inst, &CFG.Byte, APDS9930__CONFIG, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	err = APDS9930_Read(pCpnt->cfg.slave_inst, &CTL.Byte, APDS9930__CONTROL, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	CTL.Bits.AGAIN = gain % APDS9930__ALS_GAIN_1ON6X;
 	CFG.Bits.AGL = (gain >= APDS9930__ALS_GAIN_1ON6X) ? true : false;
 
 	err = APDS9930_Write_Cfg(pCpnt, CFG.Byte);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	err = APDS9930_Write_Ctrl(pCpnt, CTL.Byte);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->cfg.ALS_Gain = gain;
 	APDS9930_Set_LPC(pCpnt);
@@ -152,11 +152,11 @@ FctERR NONNULL__ APDS9930_Set_Prox_Gain(APDS9930_t * const pCpnt, const APDS9930
 	if (gain > APDS9930__PROX_8X_GAIN)	{ return ERROR_VALUE; }	// Unknown gain
 
 	err = APDS9930_Read(pCpnt->cfg.slave_inst, &CTL.Byte, APDS9930__CONTROL, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	CTL.Bits.PGAIN = gain;
 	err = APDS9930_Write_Ctrl(pCpnt, CTL.Byte);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->cfg.Prox_Gain = gain;
 
@@ -173,18 +173,18 @@ FctERR NONNULL__ APDS9930_Set_Prox_Drive_Strength(APDS9930_t * const pCpnt, cons
 	if (pdrive > APDS9930__STRENGTH_1_4MA)	{ return ERROR_VALUE; }	// Unknown drive strength
 
 	err = APDS9930_Read(pCpnt->cfg.slave_inst, &CFG.Byte, APDS9930__CONFIG, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	err = APDS9930_Read(pCpnt->cfg.slave_inst, &CTL.Byte, APDS9930__CONTROL, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	CTL.Bits.PDRIVE = pdrive % APDS9930__STRENGTH_11_1MA;
 	CFG.Bits.PDL = (pdrive >= APDS9930__STRENGTH_11_1MA) ? true : false;
 
 	err = APDS9930_Write_Cfg(pCpnt, CFG.Byte);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	err = APDS9930_Write_Ctrl(pCpnt, CTL.Byte);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->cfg.Prox_Strength = pdrive;
 
@@ -200,11 +200,11 @@ FctERR NONNULL__ APDS9930_Set_ALS_Pesistence(APDS9930_t * const pCpnt, const APD
 	if (persist > APDS9930__PERSIST_60_ALS_PERIODS)		{ return ERROR_VALUE; }	// Unknown persistence
 
 	err = APDS9930_Read(pCpnt->cfg.slave_inst, &PERS.Byte, APDS9930__PERS, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	PERS.Bits.APERS = persist;
 	err = APDS9930_Write(pCpnt->cfg.slave_inst, &PERS.Byte, APDS9930__PERS, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	return err;
 }
@@ -218,11 +218,11 @@ FctERR NONNULL__ APDS9930_Set_Prox_Pesistence(APDS9930_t * const pCpnt, const AP
 	if (persist > APDS9930__PERSIST_15_PROX_PERIODS)	{ return ERROR_VALUE; }	// Unknown persistence
 
 	err = APDS9930_Read(pCpnt->cfg.slave_inst, &PERS.Byte, APDS9930__PERS, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	PERS.Bits.PPERS = persist;
 	err = APDS9930_Write(pCpnt->cfg.slave_inst, &PERS.Byte, APDS9930__PERS, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	return err;
 }
@@ -233,13 +233,13 @@ FctERR NONNULL__ APDS9930_Set_ALS_Integration_Time(APDS9930_t * const pCpnt, con
 	uint8_t	ATIME;
 	FctERR	err;
 
-	if ((integ < 3) || (integ > 699))	{ return ERROR_RANGE; }	// Integration time out of range
+	if ((integ < 3U) || (integ > 699U))	{ return ERROR_RANGE; }	// Integration time out of range
 
 	// 2.73ms (0xFF) to 699ms (0x00)
 	//ATIME = (uint8_t) ((integ - 2.73f) * (0x00 - 0xFF) / (699.0f - 2.73f) + 0xFF);
-	ATIME = 256 - (uint8_t) ((float) integ / 2.73f);
+	ATIME = (uint8_t) (256U - (uintCPU_t) ((float) integ / 2.73f));
 	err = APDS9930_Write(pCpnt->cfg.slave_inst, &ATIME, APDS9930__ATIME, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->cfg.ALS_Integ = integ;
 	pCpnt->cfg.ALS_Integ_reg = ATIME;
@@ -254,13 +254,13 @@ FctERR NONNULL__ APDS9930_Set_Prox_Integration_Time(APDS9930_t * const pCpnt, co
 	uint8_t	ATIME;
 	FctERR	err;
 
-	if ((integ < 3) || (integ > 699))	{ return ERROR_RANGE; }	// Integration time out of range
+	if ((integ < 3U) || (integ > 699U))	{ return ERROR_RANGE; }	// Integration time out of range
 
 	// 2.73ms (0xFF) to 699ms (0x00)
 	//ATIME = (uint8_t) ((integ - 2.73f) * (0x00 - 0xFF) / (699.0f - 2.73f) + 0xFF);
-	ATIME = 256 - (uint8_t) ((float) integ / 2.73f);
+	ATIME = (uint8_t) (256U - (uintCPU_t) ((float) integ / 2.73f));
 	err = APDS9930_Write(pCpnt->cfg.slave_inst, &ATIME, APDS9930__PTIME, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->cfg.Prox_Integ = integ;
 
@@ -274,30 +274,30 @@ FctERR NONNULL__ APDS9930_Set_Wait_Time(APDS9930_t * const pCpnt, const uint16_t
 	uint8_t					WAIT;
 	FctERR					err;
 
-	if ((wait < 3) || (wait > 8400))	{ return ERROR_RANGE; }	// Wait time out of range
+	if ((wait < 3U) || (wait > 8400U))	{ return ERROR_RANGE; }	// Wait time out of range
 
 	err = APDS9930_Read(pCpnt->cfg.slave_inst, &CFG.Byte, APDS9930__CONFIG, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
-	if (wait <= 699)
+	if (wait <= 699U)
 	{
 		// 2.73ms (0xFF) to 699ms (0x00)
 		//WAIT = (uint8_t) ((wait - 2.73f) * (0x00 - 0xFF) / (699.0f - 2.73f) + 0xFF);
-		WAIT = 256 - (uint8_t) ((float) wait / 2.73f);
+		WAIT = (uint8_t) (256U - (uintCPU_t) ((float) wait / 2.73f));
 		CFG.Bits.WLONG = 0;
 	}
 	else
 	{
 		// 33ms (0xFF) to 8.4s (0x00)
 		//WAIT = (uint8_t) ((wait - 33.0f) * (0x00 - 0xFF) / (8400.0f - 33.0f) + 0xFF);
-		WAIT = 256 - (uint8_t) (wait / 33.0f);
-		CFG.Bits.WLONG = 1;
+		WAIT = (uint8_t) (256U - (uintCPU_t) (wait / 33.0f));
+		CFG.Bits.WLONG = 1U;
 	}
 
 	err = APDS9930_Write_Cfg(pCpnt, CFG.Byte);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 	err = APDS9930_Write(pCpnt->cfg.slave_inst, &WAIT, APDS9930__WTIME, 1);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->cfg.Wait = wait;
 
@@ -311,8 +311,8 @@ FctERR NONNULL__ APDS9930_Set_Wait_Time(APDS9930_t * const pCpnt, const uint16_t
 __WEAK void NONNULL__ APDS9930_INT_GPIO_Init(APDS9930_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
 	I2C_peripheral_GPIO_init(&pCpnt->cfg.INT_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
 
-__WEAK void NONNULL__ APDS9930_INT_GPIO_Get(APDS9930_t * const pCpnt, bool * const pState) {
-	I2C_peripheral_GPIO_get(&pCpnt->cfg.INT_GPIO, pState); }
+__WEAK bool NONNULL__ APDS9930_INT_GPIO_Get(APDS9930_t * const pCpnt) {
+	return I2C_peripheral_GPIO_get(&pCpnt->cfg.INT_GPIO); }
 
 
 /****************************************************************/

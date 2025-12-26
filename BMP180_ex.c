@@ -41,12 +41,12 @@ FctERR NONNULL__ BMP180_Get_Temperature_Raw(BMP180_t * const pCpnt, int32_t * tp
 	FctERR		err;
 
 	err = BMP180_Start_Conversion(pCpnt, BMP180__MEAS_TEMPERATURE);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	HAL_Delay(5);
 
 	err = BMP180_Read_Word(pCpnt->cfg.slave_inst, &RES, BMP180__OUT_MSB);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	*tp = RES;
 	return err;
@@ -59,12 +59,12 @@ FctERR NONNULL__ BMP180_Get_Pressure_Raw(BMP180_t * const pCpnt, int32_t * pr)
 	FctERR		err;
 
 	err = BMP180_Start_Conversion(pCpnt, BMP180__MEAS_PRESSURE);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	HAL_Delay(BMP180_OSS_time[pCpnt->cfg.OSS]);
 
 	err = BMP180_Read(pCpnt->cfg.slave_inst, RES, BMP180__OUT_MSB, 3);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	*pr = (LSHIFT(RES[0], 16) + LSHIFT(RES[1], 8) + RES[2]) >> (8 - pCpnt->cfg.OSS);
 	return err;

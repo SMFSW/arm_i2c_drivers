@@ -45,7 +45,7 @@ FctERR NONNULL__ AMG88_Get_thermistor_temp(AMG88_t * const pCpnt, float * temp)
 	uint16_t	VAL;
 
 	err = AMG88_Get_Thermistor_Raw(pCpnt, &VAL);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	*temp = AMG88_Convert_Thermistor_Raw(VAL);
 
@@ -59,7 +59,7 @@ FctERR NONNULL__ AMG88_Get_pixel_temp(AMG88_t * const pCpnt, float * temp, const
 	uint16_t	VAL;
 
 	err = AMG88_Get_Pixel_Raw(pCpnt, &VAL, pixel);
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	*temp = AMG88_Convert_Pixel_Raw(VAL);
 
@@ -72,7 +72,7 @@ FctERR NONNULL__ AMG88_Get_pixels_temp(AMG88_t * const pCpnt, float temp[64])
 	uint8_t	raw[128];
 
 	err = AMG88_Read(pCpnt->cfg.slave_inst, raw, AMG88__T01L, sizeof(raw));
-	if (err)	{ return err; }
+	if (err != ERROR_OK)	{ return err; }
 
 	for (uintCPU_t i = 0 ; i < sizeof(raw) / 2 ; i++)
 	{
@@ -148,8 +148,8 @@ FctERR NONNULL__ AMG88_Set_Interrupt_Levels(AMG88_t * const pCpnt, const float t
 __WEAK void NONNULL__ AMG88_INT_GPIO_Init(AMG88_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
 	I2C_peripheral_GPIO_init(&pCpnt->cfg.INT_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
 
-__WEAK void NONNULL__ AMG88_INT_GPIO_Get(AMG88_t * const pCpnt, bool * const pState) {
-	I2C_peripheral_GPIO_get(&pCpnt->cfg.INT_GPIO, pState); }
+__WEAK bool NONNULL__ AMG88_INT_GPIO_Get(AMG88_t * const pCpnt) {
+	return I2C_peripheral_GPIO_get(&pCpnt->cfg.INT_GPIO); }
 
 
 /****************************************************************/
