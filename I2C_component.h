@@ -29,11 +29,11 @@
 // *****************************************************************************
 #define	I2C_ADDR_General_Call	0			//!< I2C general call address
 
-#define I2C_slave_timeout		50			//!< Default timeout for transaction on I2C
-#define I2C_eep_slave_timeout	500			//!< Default timeout for eeprom type components transaction on I2C
+#define I2C_slave_timeout		50U			//!< Default timeout for transaction on I2C
+#define I2C_eep_slave_timeout	500U		//!< Default timeout for eeprom type components transaction on I2C
 
 
-#define I2C_ADDR(a)				((a) << 1)	//!< Macro to shift \b a 1 bit left to define 7b I2C address
+#define I2C_ADDR(a)				((a) << 1U)	//!< Macro to shift \b a 1 bit left to define 7b I2C address
 
 
 // *****************************************************************************
@@ -43,10 +43,10 @@
 **  \brief I2C bus speed
 **/
 typedef enum PACK__ I2C_speed {
-	I2C_STD = 100,		//!< I2C Standard speed (100KHz)
-	I2C_FM = 400,		//!< I2C Fast Mode (400KHz)
-	I2C_FMP = 1000,		//!< I2C Fast Mode + (1MHz)
-	I2C_HS = 3400		//!< I2C High Speed (3.4MHz)
+	I2C_STD = 100U,		//!< I2C Standard speed (100KHz)
+	I2C_FM = 400U,		//!< I2C Fast Mode (400KHz)
+	I2C_FMP = 1000U,	//!< I2C Fast Mode + (1MHz)
+	I2C_HS = 3400U		//!< I2C High Speed (3.4MHz)
 } I2C_speed;
 
 
@@ -54,7 +54,7 @@ typedef enum PACK__ I2C_speed {
 **  \brief I2C slave internal address registers size
 **/
 typedef enum PACK__ I2C_reg_size {
-	I2C_NO_REG = 0x00,						//!< Internal address registers not applicable for slave
+	I2C_NO_REG = 0U,						//!< Internal address registers not applicable for slave
 	I2C_8B_REG = I2C_MEMADD_SIZE_8BIT,		//!< Slave internal address registers space is 8bits wide
 	I2C_16B_REG = I2C_MEMADD_SIZE_16BIT		//!< Slave internal address registers space is 16bits wide
 } I2C_reg_size;
@@ -81,7 +81,7 @@ typedef struct I2C_slave_t {
 } I2C_slave_t;
 
 
-#define IS_I2C_7B_ADDR(ADDR)	((ADDR) <= 0x7F)	//!< Macro for use with assert_param to check I2C \b ADDR for slave
+#define IS_I2C_7B_ADDR(ADDR)	((ADDR) <= 0x7FU)	//!< Macro for use with assert_param to check I2C \b ADDR for slave
 
 
 // *****************************************************************************
@@ -204,6 +204,15 @@ __INLINE uint16_t NONNULL_INLINE__ I2C_get_slave_mem_size(const I2C_slave_t * co
 **/
 __INLINE uint16_t NONNULL_INLINE__ I2C_get_slave_max_speed(const I2C_slave_t * const slave) {
 	return slave->cfg.max_speed; }
+
+
+/*****************/
+/*** CALLBACKS ***/
+/*****************/
+/*!\brief I2C Watchdog refresh callback
+** \weak Function declared as weak, can be customly implemented in user code is specific actions needs to be taken (IWDG refreshed by default)
+**/
+void I2C_Watchdog_Refresh(void);
 
 
 /****************************************************************/

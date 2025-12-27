@@ -22,7 +22,7 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define $CPNT$_CHIP_ID		0x00		//!< $CPNT$ Chip ID to check against
+#define $CPNT$_CHIP_ID		0x00U		//!< $CPNT$ Chip ID to check against
 
 
 

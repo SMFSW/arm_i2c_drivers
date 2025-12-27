@@ -23,7 +23,7 @@
 
 #ifndef MB85RC256V_CLR_VAL
 //! \note MB85RC256V_CLR_VAL can be set to any value if needed, defaults to 0xFF
-#define MB85RC256V_CLR_VAL		0xFF	//!< Mass erase value for MB85RC256V
+#define MB85RC256V_CLR_VAL		0xFFU	//!< Mass erase value for MB85RC256V
 #endif
 
 

@@ -25,7 +25,7 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define APDS9960_CHIP_ID		0xAB		//!< APDS9960 Chip ID to check against
+#define APDS9960_CHIP_ID		0xABU		//!< APDS9960 Chip ID to check against
 
 
 

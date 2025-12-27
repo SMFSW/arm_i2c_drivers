@@ -24,7 +24,7 @@
 
 #ifndef I2C_PCA9624_NB
 //! \note Define I2C_PCA9624_NB to enable multiple peripherals of this type
-#define I2C_PCA9624_NB	1	//!< Number of PCA9624 peripherals
+#define I2C_PCA9624_NB	1U	//!< Number of PCA9624 peripherals
 #endif
 
 // *****************************************************************************
@@ -33,7 +33,7 @@
 #ifndef PCA9624_BASE_ADDR
 //! \note Define PCA9624_BASE_ADDR to change default device base address
 //! \warning no real base default address
-#define	PCA9624_BASE_ADDR			0x00		//!< PCA9624 Base Address
+#define	PCA9624_BASE_ADDR			0x00U		//!< PCA9624 Base Address
 #endif
 
 
@@ -44,7 +44,7 @@
 ** \brief Register map enum of PCA9624
 **/
 typedef enum PACK__ PCA9624_reg_map {
-	PCA9624__MODE1 = 0,		//!< register MODE1
+	PCA9624__MODE1 = 0U,	//!< register MODE1
 	PCA9624__MODE2,			//!< register MODE2
 	PCA9624__PWM0,			//!< register PWM0
 	PCA9624__PWM1,			//!< register PWM1

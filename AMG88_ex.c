@@ -27,14 +27,14 @@ float AMG88_Convert_Thermistor_Raw(const uint16_t therm)
 
 float AMG88_Convert_Pixel_Raw(const uint16_t pixel)
 {
-	// VAL is signed 12b, result done by shifting to 16b signed and multiplying by granularity (0.25�C) divided by 16
-	return (float) ((int16_t) (pixel * 16) * 0.015625f);
+	// VAL is signed 12b, result done by shifting to 16b signed and multiplying by granularity (0.25°C) divided by 16
+	return (float) ((int16_t) (pixel * 16U) * 0.015625f);
 }
 
 uint16_t AMG88_Convert_Temp_To_Int(const float temp)
 {
 	uint16_t val = (uint16_t) (fabs(temp) / 0.25f);
-	if (temp < 0.0f)	{ val |= 0x800; }
+	if (temp < 0.0f)	{ val |= 0x800U; }
 	return val;
 }
 
@@ -74,9 +74,9 @@ FctERR NONNULL__ AMG88_Get_pixels_temp(AMG88_t * const pCpnt, float temp[64])
 	err = AMG88_Read(pCpnt->cfg.slave_inst, raw, AMG88__T01L, sizeof(raw));
 	if (err != ERROR_OK)	{ return err; }
 
-	for (uintCPU_t i = 0 ; i < sizeof(raw) / 2 ; i++)
+	for (uintCPU_t i = 0 ; i < sizeof(raw) / 2U ; i++)
 	{
-		uint16_t val = MAKEWORD(raw[i * 2], raw[(i * 2) + 1]);
+		uint16_t val = MAKEWORD(raw[i * 2U], raw[(i * 2U) + 1U]);
 		temp[i] = AMG88_Convert_Pixel_Raw(val);
 	}
 

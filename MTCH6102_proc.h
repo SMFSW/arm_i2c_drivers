@@ -26,7 +26,7 @@
 //#define MTCH6102_DEFAULT_CONFIG_DEF		//!< Define default config constants
 
 #if defined(MTCH6102_DEFAULT_CONFIG_DEF)
-extern uint8_t MTCH6102_default_cfg[MTCH__I2CADDR - MTCH__NUMBER_OF_X_CHANNELS + 1];
+extern uint8_t MTCH6102_default_cfg[MTCH__I2CADDR - MTCH__NUMBER_OF_X_CHANNELS + 1U];
 #endif
 
 

@@ -51,7 +51,7 @@ FctERR PCA9685_Init_Single(void) {
 FctERR NONNULL__ PCA9685_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > PCA9685__TestMode + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > PCA9685__TestMode + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
@@ -63,7 +63,7 @@ FctERR NONNULL__ PCA9685_Write(I2C_slave_t * const pSlave, const uint8_t * data,
 FctERR NONNULL__ PCA9685_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > PCA9685__TestMode + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > PCA9685__TestMode + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);

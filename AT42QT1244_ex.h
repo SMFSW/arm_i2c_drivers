@@ -145,7 +145,7 @@ __INLINE FctERR NONNULL_INLINE__ AT42QT1244_Get_Key_Data(AT42QT1244_t * const pC
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ AT42QT1244_Get_Status(AT42QT1244_t * const pCpnt, uAT42QT_REG__DEVICE_STATUS * st) {
-	return AT42QT1244_Read(pCpnt->cfg.slave_inst, (uint8_t *) st, AT42QT__DEVICE_STATUS, 1); }
+	return AT42QT1244_Read(pCpnt->cfg.slave_inst, &st->Byte, AT42QT__DEVICE_STATUS, 1U); }
 
 
 /*!\brief Get calibration status for AT42QT1244 peripheral

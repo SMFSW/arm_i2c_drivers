@@ -23,13 +23,13 @@
 
 #ifndef I2C_AMG88_NB
 //! \note Define I2C_AMG88_NB to enable multiple peripherals of this type
-#define I2C_AMG88_NB	1	//!< Number of AMG88 peripherals
+#define I2C_AMG88_NB	1U	//!< Number of AMG88 peripherals
 #endif
 
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define AMG88_ADDR			0x68			//!< AMG88 address
+#define AMG88_ADDR			0x68U			//!< AMG88 address
 
 #ifndef AMG88_BASE_ADDR
 //! \note Define AMG88_BASE_ADDR to change default device base address
@@ -44,157 +44,157 @@
 ** \brief Register map enum of AMG88
 **/
 typedef enum PACK__ AMG88_reg_map {
-	AMG88__PCTL = 0,	//!< Set operating mode(Normal, Sleep etc.)
-	AMG88__RST,			//!< Software Reset
-	AMG88__FPSC,		//!< Frame rate
-	AMG88__INTC,		//!< Interrupt Function
-	AMG88__STAT,		//!< Interrupt Flag, low voltage Flag
-	AMG88__SCLR,		//!< Interrupt Flag Clear
-	AMG88__AVE = 0x07,	//!< Moving Average Output Mode
-	AMG88__INTHL,		//!< Interrupt upper value(Lower level)
-	AMG88__INTHH,		//!< Interrupt upper value(Upper level)
-	AMG88__INTLL,		//!< Interrupt lower value(Lower level)
-	AMG88__INTLH,		//!< Interrupt lower value(Upper level)
-	AMG88__IHYSL,		//!< Interrupt hysteresis value(Lower level)
-	AMG88__IHYSH,		//!< Interrupt hysteresis value(Upper level)
-	AMG88__TTHL,		//!< Thermistor Output Value(Lower level)
-	AMG88__TTHH,		//!< Thermistor Output Value(Upper level)
-	AMG88__INT0,		//!< Pixel 1~8 Interrupt Result
-	AMG88__INT1,		//!< Pixel 9~16 Interrupt Result
-	AMG88__INT2,		//!< Pixel 17~24 Interrupt Result
-	AMG88__INT3,		//!< Pixel 25~32 Interrupt Result
-	AMG88__INT4,		//!< Pixel 33~40 Interrupt Result
-	AMG88__INT5,		//!< Pixel 41~48 Interrupt Result
-	AMG88__INT6,		//!< Pixel 49~56 Interrupt Result
-	AMG88__INT7,		//!< Pixel 57~64 Interrupt Result
-	AMG88__T01L = 0x80,	//!< Pixel 01 Output Value (Lower Level)
-	AMG88__T01H,		//!< Pixel 01 Output Value (Upper Level)
-	AMG88__T02L,		//!< Pixel 02 Output Value (Lower Level)
-	AMG88__T02H,		//!< Pixel 02 Output Value (Upper Level)
-	AMG88__T03L,		//!< Pixel 03 Output Value (Lower Level)
-	AMG88__T03H,		//!< Pixel 03 Output Value (Upper Level)
-	AMG88__T04L,		//!< Pixel 04 Output Value (Lower Level)
-	AMG88__T04H,		//!< Pixel 04 Output Value (Upper Level)
-	AMG88__T05L,		//!< Pixel 05 Output Value (Lower Level)
-	AMG88__T05H,		//!< Pixel 05 Output Value (Upper Level)
-	AMG88__T06L,		//!< Pixel 06 Output Value (Lower Level)
-	AMG88__T06H,		//!< Pixel 06 Output Value (Upper Level)
-	AMG88__T07L,		//!< Pixel 07 Output Value (Lower Level)
-	AMG88__T07H,		//!< Pixel 07 Output Value (Upper Level)
-	AMG88__T08L,		//!< Pixel 08 Output Value (Lower Level)
-	AMG88__T08H,		//!< Pixel 08 Output Value (Upper Level)
-	AMG88__T09L,		//!< Pixel 09 Output Value (Lower Level)
-	AMG88__T09H,		//!< Pixel 09 Output Value (Upper Level)
-	AMG88__T10L,		//!< Pixel 10 Output Value (Lower Level)
-	AMG88__T10H,		//!< Pixel 10 Output Value (Upper Level)
-	AMG88__T11L,		//!< Pixel 11 Output Value (Lower Level)
-	AMG88__T11H,		//!< Pixel 11 Output Value (Upper Level)
-	AMG88__T12L,		//!< Pixel 12 Output Value (Lower Level)
-	AMG88__T12H,		//!< Pixel 12 Output Value (Upper Level)
-	AMG88__T13L,		//!< Pixel 13 Output Value (Lower Level)
-	AMG88__T13H,		//!< Pixel 13 Output Value (Upper Level)
-	AMG88__T14L,		//!< Pixel 14 Output Value (Lower Level)
-	AMG88__T14H,		//!< Pixel 14 Output Value (Upper Level)
-	AMG88__T15L,		//!< Pixel 15 Output Value (Lower Level)
-	AMG88__T15H,		//!< Pixel 15 Output Value (Upper Level)
-	AMG88__T16L,		//!< Pixel 16 Output Value (Lower Level)
-	AMG88__T16H,		//!< Pixel 16 Output Value (Upper Level)
-	AMG88__T17L,		//!< Pixel 17 Output Value (Lower Level)
-	AMG88__T17H,		//!< Pixel 17 Output Value (Upper Level)
-	AMG88__T18L,		//!< Pixel 18 Output Value (Lower Level)
-	AMG88__T18H,		//!< Pixel 18 Output Value (Upper Level)
-	AMG88__T19L,		//!< Pixel 19 Output Value (Lower Level)
-	AMG88__T19H,		//!< Pixel 19 Output Value (Upper Level)
-	AMG88__T20L,		//!< Pixel 20 Output Value (Lower Level)
-	AMG88__T20H,		//!< Pixel 20 Output Value (Upper Level)
-	AMG88__T21L,		//!< Pixel 21 Output Value (Lower Level)
-	AMG88__T21H,		//!< Pixel 21 Output Value (Upper Level)
-	AMG88__T22L,		//!< Pixel 22 Output Value (Lower Level)
-	AMG88__T22H,		//!< Pixel 22 Output Value (Upper Level)
-	AMG88__T23L,		//!< Pixel 23 Output Value (Lower Level)
-	AMG88__T23H,		//!< Pixel 23 Output Value (Upper Level)
-	AMG88__T24L,		//!< Pixel 24 Output Value (Lower Level)
-	AMG88__T24H,		//!< Pixel 24 Output Value (Upper Level)
-	AMG88__T25L,		//!< Pixel 25 Output Value (Lower Level)
-	AMG88__T25H,		//!< Pixel 25 Output Value (Upper Level)
-	AMG88__T26L,		//!< Pixel 26 Output Value (Lower Level)
-	AMG88__T26H,		//!< Pixel 26 Output Value (Upper Level)
-	AMG88__T27L,		//!< Pixel 27 Output Value (Lower Level)
-	AMG88__T27H,		//!< Pixel 27 Output Value (Upper Level)
-	AMG88__T28L,		//!< Pixel 28 Output Value (Lower Level)
-	AMG88__T28H,		//!< Pixel 28 Output Value (Upper Level)
-	AMG88__T29L,		//!< Pixel 29 Output Value (Lower Level)
-	AMG88__T29H,		//!< Pixel 29 Output Value (Upper Level)
-	AMG88__T30L,		//!< Pixel 30 Output Value (Lower Level)
-	AMG88__T30H,		//!< Pixel 30 Output Value (Upper Level)
-	AMG88__T31L,		//!< Pixel 31 Output Value (Lower Level)
-	AMG88__T31H,		//!< Pixel 31 Output Value (Upper Level)
-	AMG88__T32L,		//!< Pixel 32 Output Value (Lower Level)
-	AMG88__T32H,		//!< Pixel 32 Output Value (Upper Level)
-	AMG88__T33L,		//!< Pixel 33 Output Value (Lower Level)
-	AMG88__T33H,		//!< Pixel 33 Output Value (Upper Level)
-	AMG88__T34L,		//!< Pixel 34 Output Value (Lower Level)
-	AMG88__T34H,		//!< Pixel 34 Output Value (Upper Level)
-	AMG88__T35L,		//!< Pixel 35 Output Value (Lower Level)
-	AMG88__T35H,		//!< Pixel 35 Output Value (Upper Level)
-	AMG88__T36L,		//!< Pixel 36 Output Value (Lower Level)
-	AMG88__T36H,		//!< Pixel 36 Output Value (Upper Level)
-	AMG88__T37L,		//!< Pixel 37 Output Value (Lower Level)
-	AMG88__T37H,		//!< Pixel 37 Output Value (Upper Level)
-	AMG88__T38L,		//!< Pixel 38 Output Value (Lower Level)
-	AMG88__T38H,		//!< Pixel 38 Output Value (Upper Level)
-	AMG88__T39L,		//!< Pixel 39 Output Value (Lower Level)
-	AMG88__T39H,		//!< Pixel 39 Output Value (Upper Level)
-	AMG88__T40L,		//!< Pixel 40 Output Value (Lower Level)
-	AMG88__T40H,		//!< Pixel 40 Output Value (Upper Level)
-	AMG88__T41L,		//!< Pixel 41 Output Value (Lower Level)
-	AMG88__T41H,		//!< Pixel 41 Output Value (Upper Level)
-	AMG88__T42L,		//!< Pixel 42 Output Value (Lower Level)
-	AMG88__T42H,		//!< Pixel 42 Output Value (Upper Level)
-	AMG88__T43L,		//!< Pixel 43 Output Value (Lower Level)
-	AMG88__T43H,		//!< Pixel 43 Output Value (Upper Level)
-	AMG88__T44L,		//!< Pixel 44 Output Value (Lower Level)
-	AMG88__T44H,		//!< Pixel 44 Output Value (Upper Level)
-	AMG88__T45L,		//!< Pixel 45 Output Value (Lower Level)
-	AMG88__T45H,		//!< Pixel 45 Output Value (Upper Level)
-	AMG88__T46L,		//!< Pixel 46 Output Value (Lower Level)
-	AMG88__T46H,		//!< Pixel 46 Output Value (Upper Level)
-	AMG88__T47L,		//!< Pixel 47 Output Value (Lower Level)
-	AMG88__T47H,		//!< Pixel 47 Output Value (Upper Level)
-	AMG88__T48L,		//!< Pixel 48 Output Value (Lower Level)
-	AMG88__T48H,		//!< Pixel 48 Output Value (Upper Level)
-	AMG88__T49L,		//!< Pixel 49 Output Value (Lower Level)
-	AMG88__T49H,		//!< Pixel 49 Output Value (Upper Level)
-	AMG88__T50L,		//!< Pixel 50 Output Value (Lower Level)
-	AMG88__T50H,		//!< Pixel 50 Output Value (Upper Level)
-	AMG88__T51L,		//!< Pixel 51 Output Value (Lower Level)
-	AMG88__T51H,		//!< Pixel 51 Output Value (Upper Level)
-	AMG88__T52L,		//!< Pixel 52 Output Value (Lower Level)
-	AMG88__T52H,		//!< Pixel 52 Output Value (Upper Level)
-	AMG88__T53L,		//!< Pixel 53 Output Value (Lower Level)
-	AMG88__T53H,		//!< Pixel 53 Output Value (Upper Level)
-	AMG88__T54L,		//!< Pixel 54 Output Value (Lower Level)
-	AMG88__T54H,		//!< Pixel 54 Output Value (Upper Level)
-	AMG88__T55L,		//!< Pixel 55 Output Value (Lower Level)
-	AMG88__T55H,		//!< Pixel 55 Output Value (Upper Level)
-	AMG88__T56L,		//!< Pixel 56 Output Value (Lower Level)
-	AMG88__T56H,		//!< Pixel 56 Output Value (Upper Level)
-	AMG88__T57L,		//!< Pixel 57 Output Value (Lower Level)
-	AMG88__T57H,		//!< Pixel 57 Output Value (Upper Level)
-	AMG88__T58L,		//!< Pixel 58 Output Value (Lower Level)
-	AMG88__T58H,		//!< Pixel 58 Output Value (Upper Level)
-	AMG88__T59L,		//!< Pixel 59 Output Value (Lower Level)
-	AMG88__T59H,		//!< Pixel 59 Output Value (Upper Level)
-	AMG88__T60L,		//!< Pixel 60 Output Value (Lower Level)
-	AMG88__T60H,		//!< Pixel 60 Output Value (Upper Level)
-	AMG88__T61L,		//!< Pixel 61 Output Value (Lower Level)
-	AMG88__T61H,		//!< Pixel 61 Output Value (Upper Level)
-	AMG88__T62L,		//!< Pixel 62 Output Value (Lower Level)
-	AMG88__T62H,		//!< Pixel 62 Output Value (Upper Level)
-	AMG88__T63L,		//!< Pixel 63 Output Value (Lower Level)
-	AMG88__T63H,		//!< Pixel 63 Output Value (Upper Level)
-	AMG88__T64L,		//!< Pixel 64 Output Value (Lower Level)
-	AMG88__T64H			//!< Pixel 64 Output Value (Upper Level)
+	AMG88__PCTL = 0U,		//!< Set operating mode(Normal, Sleep etc.)
+	AMG88__RST,				//!< Software Reset
+	AMG88__FPSC,			//!< Frame rate
+	AMG88__INTC,			//!< Interrupt Function
+	AMG88__STAT,			//!< Interrupt Flag, low voltage Flag
+	AMG88__SCLR,			//!< Interrupt Flag Clear
+	AMG88__AVE = 0x07U,		//!< Moving Average Output Mode
+	AMG88__INTHL,			//!< Interrupt upper value(Lower level)
+	AMG88__INTHH,			//!< Interrupt upper value(Upper level)
+	AMG88__INTLL,			//!< Interrupt lower value(Lower level)
+	AMG88__INTLH,			//!< Interrupt lower value(Upper level)
+	AMG88__IHYSL,			//!< Interrupt hysteresis value(Lower level)
+	AMG88__IHYSH,			//!< Interrupt hysteresis value(Upper level)
+	AMG88__TTHL,			//!< Thermistor Output Value(Lower level)
+	AMG88__TTHH,			//!< Thermistor Output Value(Upper level)
+	AMG88__INT0,			//!< Pixel 1~8 Interrupt Result
+	AMG88__INT1,			//!< Pixel 9~16 Interrupt Result
+	AMG88__INT2,			//!< Pixel 17~24 Interrupt Result
+	AMG88__INT3,			//!< Pixel 25~32 Interrupt Result
+	AMG88__INT4,			//!< Pixel 33~40 Interrupt Result
+	AMG88__INT5,			//!< Pixel 41~48 Interrupt Result
+	AMG88__INT6,			//!< Pixel 49~56 Interrupt Result
+	AMG88__INT7,			//!< Pixel 57~64 Interrupt Result
+	AMG88__T01L = 0x80U,	//!< Pixel 01 Output Value (Lower Level)
+	AMG88__T01H,			//!< Pixel 01 Output Value (Upper Level)
+	AMG88__T02L,			//!< Pixel 02 Output Value (Lower Level)
+	AMG88__T02H,			//!< Pixel 02 Output Value (Upper Level)
+	AMG88__T03L,			//!< Pixel 03 Output Value (Lower Level)
+	AMG88__T03H,			//!< Pixel 03 Output Value (Upper Level)
+	AMG88__T04L,			//!< Pixel 04 Output Value (Lower Level)
+	AMG88__T04H,			//!< Pixel 04 Output Value (Upper Level)
+	AMG88__T05L,			//!< Pixel 05 Output Value (Lower Level)
+	AMG88__T05H,			//!< Pixel 05 Output Value (Upper Level)
+	AMG88__T06L,			//!< Pixel 06 Output Value (Lower Level)
+	AMG88__T06H,			//!< Pixel 06 Output Value (Upper Level)
+	AMG88__T07L,			//!< Pixel 07 Output Value (Lower Level)
+	AMG88__T07H,			//!< Pixel 07 Output Value (Upper Level)
+	AMG88__T08L,			//!< Pixel 08 Output Value (Lower Level)
+	AMG88__T08H,			//!< Pixel 08 Output Value (Upper Level)
+	AMG88__T09L,			//!< Pixel 09 Output Value (Lower Level)
+	AMG88__T09H,			//!< Pixel 09 Output Value (Upper Level)
+	AMG88__T10L,			//!< Pixel 10 Output Value (Lower Level)
+	AMG88__T10H,			//!< Pixel 10 Output Value (Upper Level)
+	AMG88__T11L,			//!< Pixel 11 Output Value (Lower Level)
+	AMG88__T11H,			//!< Pixel 11 Output Value (Upper Level)
+	AMG88__T12L,			//!< Pixel 12 Output Value (Lower Level)
+	AMG88__T12H,			//!< Pixel 12 Output Value (Upper Level)
+	AMG88__T13L,			//!< Pixel 13 Output Value (Lower Level)
+	AMG88__T13H,			//!< Pixel 13 Output Value (Upper Level)
+	AMG88__T14L,			//!< Pixel 14 Output Value (Lower Level)
+	AMG88__T14H,			//!< Pixel 14 Output Value (Upper Level)
+	AMG88__T15L,			//!< Pixel 15 Output Value (Lower Level)
+	AMG88__T15H,			//!< Pixel 15 Output Value (Upper Level)
+	AMG88__T16L,			//!< Pixel 16 Output Value (Lower Level)
+	AMG88__T16H,			//!< Pixel 16 Output Value (Upper Level)
+	AMG88__T17L,			//!< Pixel 17 Output Value (Lower Level)
+	AMG88__T17H,			//!< Pixel 17 Output Value (Upper Level)
+	AMG88__T18L,			//!< Pixel 18 Output Value (Lower Level)
+	AMG88__T18H,			//!< Pixel 18 Output Value (Upper Level)
+	AMG88__T19L,			//!< Pixel 19 Output Value (Lower Level)
+	AMG88__T19H,			//!< Pixel 19 Output Value (Upper Level)
+	AMG88__T20L,			//!< Pixel 20 Output Value (Lower Level)
+	AMG88__T20H,			//!< Pixel 20 Output Value (Upper Level)
+	AMG88__T21L,			//!< Pixel 21 Output Value (Lower Level)
+	AMG88__T21H,			//!< Pixel 21 Output Value (Upper Level)
+	AMG88__T22L,			//!< Pixel 22 Output Value (Lower Level)
+	AMG88__T22H,			//!< Pixel 22 Output Value (Upper Level)
+	AMG88__T23L,			//!< Pixel 23 Output Value (Lower Level)
+	AMG88__T23H,			//!< Pixel 23 Output Value (Upper Level)
+	AMG88__T24L,			//!< Pixel 24 Output Value (Lower Level)
+	AMG88__T24H,			//!< Pixel 24 Output Value (Upper Level)
+	AMG88__T25L,			//!< Pixel 25 Output Value (Lower Level)
+	AMG88__T25H,			//!< Pixel 25 Output Value (Upper Level)
+	AMG88__T26L,			//!< Pixel 26 Output Value (Lower Level)
+	AMG88__T26H,			//!< Pixel 26 Output Value (Upper Level)
+	AMG88__T27L,			//!< Pixel 27 Output Value (Lower Level)
+	AMG88__T27H,			//!< Pixel 27 Output Value (Upper Level)
+	AMG88__T28L,			//!< Pixel 28 Output Value (Lower Level)
+	AMG88__T28H,			//!< Pixel 28 Output Value (Upper Level)
+	AMG88__T29L,			//!< Pixel 29 Output Value (Lower Level)
+	AMG88__T29H,			//!< Pixel 29 Output Value (Upper Level)
+	AMG88__T30L,			//!< Pixel 30 Output Value (Lower Level)
+	AMG88__T30H,			//!< Pixel 30 Output Value (Upper Level)
+	AMG88__T31L,			//!< Pixel 31 Output Value (Lower Level)
+	AMG88__T31H,			//!< Pixel 31 Output Value (Upper Level)
+	AMG88__T32L,			//!< Pixel 32 Output Value (Lower Level)
+	AMG88__T32H,			//!< Pixel 32 Output Value (Upper Level)
+	AMG88__T33L,			//!< Pixel 33 Output Value (Lower Level)
+	AMG88__T33H,			//!< Pixel 33 Output Value (Upper Level)
+	AMG88__T34L,			//!< Pixel 34 Output Value (Lower Level)
+	AMG88__T34H,			//!< Pixel 34 Output Value (Upper Level)
+	AMG88__T35L,			//!< Pixel 35 Output Value (Lower Level)
+	AMG88__T35H,			//!< Pixel 35 Output Value (Upper Level)
+	AMG88__T36L,			//!< Pixel 36 Output Value (Lower Level)
+	AMG88__T36H,			//!< Pixel 36 Output Value (Upper Level)
+	AMG88__T37L,			//!< Pixel 37 Output Value (Lower Level)
+	AMG88__T37H,			//!< Pixel 37 Output Value (Upper Level)
+	AMG88__T38L,			//!< Pixel 38 Output Value (Lower Level)
+	AMG88__T38H,			//!< Pixel 38 Output Value (Upper Level)
+	AMG88__T39L,			//!< Pixel 39 Output Value (Lower Level)
+	AMG88__T39H,			//!< Pixel 39 Output Value (Upper Level)
+	AMG88__T40L,			//!< Pixel 40 Output Value (Lower Level)
+	AMG88__T40H,			//!< Pixel 40 Output Value (Upper Level)
+	AMG88__T41L,			//!< Pixel 41 Output Value (Lower Level)
+	AMG88__T41H,			//!< Pixel 41 Output Value (Upper Level)
+	AMG88__T42L,			//!< Pixel 42 Output Value (Lower Level)
+	AMG88__T42H,			//!< Pixel 42 Output Value (Upper Level)
+	AMG88__T43L,			//!< Pixel 43 Output Value (Lower Level)
+	AMG88__T43H,			//!< Pixel 43 Output Value (Upper Level)
+	AMG88__T44L,			//!< Pixel 44 Output Value (Lower Level)
+	AMG88__T44H,			//!< Pixel 44 Output Value (Upper Level)
+	AMG88__T45L,			//!< Pixel 45 Output Value (Lower Level)
+	AMG88__T45H,			//!< Pixel 45 Output Value (Upper Level)
+	AMG88__T46L,			//!< Pixel 46 Output Value (Lower Level)
+	AMG88__T46H,			//!< Pixel 46 Output Value (Upper Level)
+	AMG88__T47L,			//!< Pixel 47 Output Value (Lower Level)
+	AMG88__T47H,			//!< Pixel 47 Output Value (Upper Level)
+	AMG88__T48L,			//!< Pixel 48 Output Value (Lower Level)
+	AMG88__T48H,			//!< Pixel 48 Output Value (Upper Level)
+	AMG88__T49L,			//!< Pixel 49 Output Value (Lower Level)
+	AMG88__T49H,			//!< Pixel 49 Output Value (Upper Level)
+	AMG88__T50L,			//!< Pixel 50 Output Value (Lower Level)
+	AMG88__T50H,			//!< Pixel 50 Output Value (Upper Level)
+	AMG88__T51L,			//!< Pixel 51 Output Value (Lower Level)
+	AMG88__T51H,			//!< Pixel 51 Output Value (Upper Level)
+	AMG88__T52L,			//!< Pixel 52 Output Value (Lower Level)
+	AMG88__T52H,			//!< Pixel 52 Output Value (Upper Level)
+	AMG88__T53L,			//!< Pixel 53 Output Value (Lower Level)
+	AMG88__T53H,			//!< Pixel 53 Output Value (Upper Level)
+	AMG88__T54L,			//!< Pixel 54 Output Value (Lower Level)
+	AMG88__T54H,			//!< Pixel 54 Output Value (Upper Level)
+	AMG88__T55L,			//!< Pixel 55 Output Value (Lower Level)
+	AMG88__T55H,			//!< Pixel 55 Output Value (Upper Level)
+	AMG88__T56L,			//!< Pixel 56 Output Value (Lower Level)
+	AMG88__T56H,			//!< Pixel 56 Output Value (Upper Level)
+	AMG88__T57L,			//!< Pixel 57 Output Value (Lower Level)
+	AMG88__T57H,			//!< Pixel 57 Output Value (Upper Level)
+	AMG88__T58L,			//!< Pixel 58 Output Value (Lower Level)
+	AMG88__T58H,			//!< Pixel 58 Output Value (Upper Level)
+	AMG88__T59L,			//!< Pixel 59 Output Value (Lower Level)
+	AMG88__T59H,			//!< Pixel 59 Output Value (Upper Level)
+	AMG88__T60L,			//!< Pixel 60 Output Value (Lower Level)
+	AMG88__T60H,			//!< Pixel 60 Output Value (Upper Level)
+	AMG88__T61L,			//!< Pixel 61 Output Value (Lower Level)
+	AMG88__T61H,			//!< Pixel 61 Output Value (Upper Level)
+	AMG88__T62L,			//!< Pixel 62 Output Value (Lower Level)
+	AMG88__T62H,			//!< Pixel 62 Output Value (Upper Level)
+	AMG88__T63L,			//!< Pixel 63 Output Value (Lower Level)
+	AMG88__T63H,			//!< Pixel 63 Output Value (Upper Level)
+	AMG88__T64L,			//!< Pixel 64 Output Value (Lower Level)
+	AMG88__T64H				//!< Pixel 64 Output Value (Upper Level)
 } AMG88_reg;
 
 
@@ -202,8 +202,8 @@ typedef enum PACK__ AMG88_reg_map {
 ** \brief Reset types for AMG88
 **/
 typedef enum PACK__ AMG88_reset {
-	AMG88__FLAG_RESET = 0x30,		//!< Flag Reset can all clear the Status Register(0x04),Interrupt Flag, and Interrupt Table(0x10~0x17).
-	AMG88__INITIAL_RESET = 0x3F,	//!< Initial Reset brings Flag reset and returns to initial setting.
+	AMG88__FLAG_RESET = 0x30U,		//!< Flag Reset can all clear the Status Register(0x04),Interrupt Flag, and Interrupt Table(0x10~0x17).
+	AMG88__INITIAL_RESET = 0x3FU,	//!< Initial Reset brings Flag reset and returns to initial setting.
 } AMG88_reset;
 
 
@@ -211,10 +211,10 @@ typedef enum PACK__ AMG88_reset {
 ** \brief Operating modes for AMG88
 **/
 typedef enum PACK__ AMG88_mode {
-	AMG88__NORMAL = 0,			//!< Normal mode
-	AMG88__SLEEP = 0x10,		//!< Sleep mode
-	AMG88__STANBY_60 = 0x20,	//!< Stand-by mode (60s intermittence)
-	AMG88__STANBY_10 = 0x21,	//!< Stand-by mode (10s intermittence)
+	AMG88__NORMAL = 0U,			//!< Normal mode
+	AMG88__SLEEP = 0x10U,		//!< Sleep mode
+	AMG88__STANBY_60 = 0x20U,	//!< Stand-by mode (60s intermittence)
+	AMG88__STANBY_10 = 0x21U,	//!< Stand-by mode (10s intermittence)
 } AMG88_mode;
 
 
@@ -293,9 +293,9 @@ typedef union uAMG88_REG__TEMP {
 	uint16_t Word;
 	struct PACK__ {
 		//! \warning temp is coded as absolute (thermistor), or as twos complement (pixels and thresholds)
-		uint16_t temp			:11;	//!< Temperature value (absolute)
-		uint16_t sign			:1;		//!< Temperature sign
-		uint16_t				:4;
+		uint16_t temp	:11;	//!< Temperature value (absolute)
+		uint16_t sign	:1;		//!< Temperature sign
+		uint16_t		:4;
 	} Bits;
 } uAMG88_REG__TEMP;
 

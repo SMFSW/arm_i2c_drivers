@@ -17,7 +17,7 @@ FctERR NONNULL__ TCS3472_Set_PON(TCS3472_t * const pCpnt, const bool en)
 	uTCS3472_REG__ENABLE EN;
 	FctERR				err;
 
-	err = TCS3472_Read(pCpnt->cfg.slave_inst, &EN.Byte, TCS3472__ENABLE, 1);
+	err = TCS3472_Read(pCpnt->cfg.slave_inst, &EN.Byte, TCS3472__ENABLE, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	EN.Bits.PON = en;
@@ -30,7 +30,7 @@ FctERR NONNULL__ TCS3472_Set_AEN(TCS3472_t * const pCpnt, const bool en)
 	uTCS3472_REG__ENABLE	EN;
 	FctERR					err;
 
-	err = TCS3472_Read(pCpnt->cfg.slave_inst, &EN.Byte, TCS3472__ENABLE, 1);
+	err = TCS3472_Read(pCpnt->cfg.slave_inst, &EN.Byte, TCS3472__ENABLE, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	EN.Bits.AEN = en;
@@ -43,7 +43,7 @@ FctERR NONNULL__ TCS3472_Set_AIEN(TCS3472_t * const pCpnt, const bool en)
 	uTCS3472_REG__ENABLE	EN;
 	FctERR					err;
 
-	err = TCS3472_Read(pCpnt->cfg.slave_inst, &EN.Byte, TCS3472__ENABLE, 1);
+	err = TCS3472_Read(pCpnt->cfg.slave_inst, &EN.Byte, TCS3472__ENABLE, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	EN.Bits.AIEN = en;
@@ -60,7 +60,7 @@ FctERR NONNULL__ TCS3472_Set_WEN(TCS3472_t * const pCpnt, const bool en)
 	uTCS3472_REG__ENABLE	EN;
 	FctERR					err;
 
-	err = TCS3472_Read(pCpnt->cfg.slave_inst, &EN.Byte, TCS3472__ENABLE, 1);
+	err = TCS3472_Read(pCpnt->cfg.slave_inst, &EN.Byte, TCS3472__ENABLE, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	EN.Bits.WEN = en;
@@ -79,11 +79,11 @@ FctERR NONNULL__ TCS3472_Set_Gain(TCS3472_t * const pCpnt, const TCS3472_gain ga
 
 	if (gain > TCS3472__MAXIMUM_GAIN)	{ return ERROR_VALUE; }	// Unknown gain
 
-	err = TCS3472_Read(pCpnt->cfg.slave_inst, &CTL.Byte, TCS3472__CONTROL, 1);
+	err = TCS3472_Read(pCpnt->cfg.slave_inst, &CTL.Byte, TCS3472__CONTROL, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	CTL.Bits.AGAIN = gain;
-	err = TCS3472_Write(pCpnt->cfg.slave_inst, &CTL.Byte, TCS3472__CONTROL, 1);
+	err = TCS3472_Write(pCpnt->cfg.slave_inst, &CTL.Byte, TCS3472__CONTROL, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->cfg.Gain = gain;
@@ -102,7 +102,7 @@ FctERR NONNULL__ TCS3472_Set_Integration_Time(TCS3472_t * const pCpnt, const uin
 	// 2.4ms (0xFF) to 700ms (0x00)
 	//ATIME = (uint8_t) ((integ - 2.4f) * (0x00 - 0xFF) / (614.0f - 2.4f) + 0xFF);
 	ATIME = (uint8_t) (256U - (uintCPU_t) ((float) integ / 2.4f));
-	err = TCS3472_Write(pCpnt->cfg.slave_inst, &ATIME, TCS3472__ATIME, 1);
+	err = TCS3472_Write(pCpnt->cfg.slave_inst, &ATIME, TCS3472__ATIME, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->cfg.Integ = integ;
@@ -137,7 +137,7 @@ FctERR NONNULL__ TCS3472_Set_Wait_Time(TCS3472_t * const pCpnt, const uint16_t w
 
 	err = TCS3472_Write_Cfg(pCpnt, CFG.Byte);
 	if (err != ERROR_OK)	{ return err; }
-	err = TCS3472_Write(pCpnt->cfg.slave_inst, &WAIT, TCS3472__WTIME, 1);
+	err = TCS3472_Write(pCpnt->cfg.slave_inst, &WAIT, TCS3472__WTIME, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->cfg.Wait = wait;
@@ -151,9 +151,9 @@ FctERR NONNULL__ TCS3472_Get_Channels(TCS3472_t * const pCpnt, uint16_t buf[])
 	uint8_t	TMP[2];
 	FctERR	err;
 
-	for (uintCPU_t i = 0 ; i < 4 ; i++)
+	for (uintCPU_t i = 0 ; i < 4U ; i++)
 	{
-		err = TCS3472_Read(pCpnt->cfg.slave_inst, TMP, TCS3472__CDATAL + (2 * i), 2);
+		err = TCS3472_Read(pCpnt->cfg.slave_inst, TMP, TCS3472__CDATAL + (2U * i), 2U);
 		if (err != ERROR_OK)	{ return err; }
 		buf[i] = MAKEWORD(TMP[0], TMP[1]);
 	}

@@ -26,7 +26,7 @@
 ** \brief Light type channels of S11059
 **/
 typedef enum PACK__ S11059_chan {
-	S11059__CHAN_RED = 0,	//!< Red light channel
+	S11059__CHAN_RED = 0U,	//!< Red light channel
 	S11059__CHAN_GREEN,		//!< Green light channel
 	S11059__CHAN_BLUE,		//!< Blue light channel
 	S11059__CHAN_IR			//!< Infra-red light channel
@@ -68,7 +68,7 @@ typedef union uS11059_REG_MAP {
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ S11059_Write_Ctl(I2C_slave_t * const pSlave, const uint8_t ctl) {
-	return S11059_Write(pSlave, (uint8_t *) &ctl, S11059__CONTROL, 1); }
+	return S11059_Write(pSlave, (uint8_t *) &ctl, S11059__CONTROL, 1U); }
 
 
 /*!\brief ADC Operation / Reset
@@ -128,7 +128,7 @@ FctERR NONNULL__ S11059_Get_Standby(S11059_t * const pCpnt, S11059_standby_fct *
 **/
 __INLINE FctERR NONNULL_INLINE__ S11059_Get_Channel(S11059_t * const pCpnt, uint16_t * buf, const S11059_chan chan) {
 	if (chan > S11059__CHAN_IR)	{ return ERROR_VALUE; }	// Unknown channel
-	return S11059_Read_Word(pCpnt->cfg.slave_inst, buf, S11059__RED_DATA_MSB + (2 * chan)); }
+	return S11059_Read_Word(pCpnt->cfg.slave_inst, buf, S11059__RED_DATA_MSB + (2U * chan)); }
 
 /*!\brief Get Red channel conversion
 ** \param[in] pCpnt - Pointer to S11059 component

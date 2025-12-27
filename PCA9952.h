@@ -24,7 +24,7 @@
 
 #ifndef I2C_PCA9952_NB
 //! \note Define I2C_PCA9952_NB to enable multiple peripherals of this type
-#define I2C_PCA9952_NB	1	//!< Number of PCA9952 peripherals
+#define I2C_PCA9952_NB	1U	//!< Number of PCA9952 peripherals
 #endif
 
 // *****************************************************************************
@@ -32,7 +32,7 @@
 // *****************************************************************************
 #ifndef PCA9952_BASE_ADDR
 //! \note Define PCA9952_BASE_ADDR to change default device base address
-#define	PCA9952_BASE_ADDR		0x60		//!< PCA9952 Base Address
+#define	PCA9952_BASE_ADDR		0x60U		//!< PCA9952 Base Address
 #endif
 
 
@@ -43,55 +43,55 @@
 ** \brief Register map enum of PCA9952
 **/
 typedef enum PACK__ PCA9952_reg_map {
-	PCA9952__MODE1 = 0,		//!< register MODE1
-	PCA9952__MODE2,			//!< register MODE2
-	PCA9952__LEDOUT0,		//!< register LED output state 0
-	PCA9952__LEDOUT1,		//!< register LED output state 1
-	PCA9952__LEDOUT2,		//!< register LED output state 2
-	PCA9952__LEDOUT3,		//!< register LED output state 3
-	PCA9952__GRPPWM = 0x08,	//!< register group duty cycle control
-	PCA9952__GRPFREQ,		//!< register group frequency
-	PCA9952__PWM0,			//!< register brightness control LED0
-	PCA9952__PWM1,			//!< register brightness control LED1
-	PCA9952__PWM2,			//!< register brightness control LED2
-	PCA9952__PWM3,			//!< register brightness control LED3
-	PCA9952__PWM4,			//!< register brightness control LED4
-	PCA9952__PWM5,			//!< register brightness control LED5
-	PCA9952__PWM6,			//!< register brightness control LED6
-	PCA9952__PWM7,			//!< register brightness control LED7
-	PCA9952__PWM8,			//!< register brightness control LED8
-	PCA9952__PWM9,			//!< register brightness control LED9
-	PCA9952__PWM10,			//!< register brightness control LED10
-	PCA9952__PWM11,			//!< register brightness control LED11
-	PCA9952__PWM12,			//!< register brightness control LED12
-	PCA9952__PWM13,			//!< register brightness control LED13
-	PCA9952__PWM14,			//!< register brightness control LED14
-	PCA9952__PWM15,			//!< register brightness control LED15
-	PCA9952__IREF0 = 0x22,	//!< register output gain control 0
-	PCA9952__IREF1,			//!< register output gain control 1
-	PCA9952__IREF2,			//!< register output gain control 2
-	PCA9952__IREF3,			//!< register output gain control 3
-	PCA9952__IREF4,			//!< register output gain control 4
-	PCA9952__IREF5,			//!< register output gain control 5
-	PCA9952__IREF6,			//!< register output gain control 6
-	PCA9952__IREF7,			//!< register output gain control 7
-	PCA9952__IREF8,			//!< register output gain control 8
-	PCA9952__IREF9,			//!< register output gain control 9
-	PCA9952__IREF10,		//!< register output gain control 10
-	PCA9952__IREF11,		//!< register output gain control 11
-	PCA9952__IREF12,		//!< register output gain control 12
-	PCA9952__IREF13,		//!< register output gain control 13
-	PCA9952__IREF14,		//!< register output gain control 14
-	PCA9952__IREF15,		//!< register output gain control 15
-	PCA9952__OFFSET = 0x3A,	//!< register offset / delay on LEDn outputs
-	PCA9952__SUBADR1,		//!< register SUBADR1
-	PCA9952__SUBADR2,		//!< register SUBADR2
-	PCA9952__SUBADR3,		//!< register SUBADR3
-	PCA9952__ALLCALLADR,	//!< register ALLCALLADR
-	PCA9952__PWMALL = 0x42,	//!< register brightness control for all LEDn
-	PCA9952__IREFALL,		//!< register output gain control for all IREF0 to IREF23
-	PCA9952__EFLAG0,		//!< register output error flag 0
-	PCA9952__EFLAG1,		//!< register output error flag 1
+	PCA9952__MODE1 = 0U,		//!< register MODE1
+	PCA9952__MODE2,				//!< register MODE2
+	PCA9952__LEDOUT0,			//!< register LED output state 0
+	PCA9952__LEDOUT1,			//!< register LED output state 1
+	PCA9952__LEDOUT2,			//!< register LED output state 2
+	PCA9952__LEDOUT3,			//!< register LED output state 3
+	PCA9952__GRPPWM = 0x08U,	//!< register group duty cycle control
+	PCA9952__GRPFREQ,			//!< register group frequency
+	PCA9952__PWM0,				//!< register brightness control LED0
+	PCA9952__PWM1,				//!< register brightness control LED1
+	PCA9952__PWM2,				//!< register brightness control LED2
+	PCA9952__PWM3,				//!< register brightness control LED3
+	PCA9952__PWM4,				//!< register brightness control LED4
+	PCA9952__PWM5,				//!< register brightness control LED5
+	PCA9952__PWM6,				//!< register brightness control LED6
+	PCA9952__PWM7,				//!< register brightness control LED7
+	PCA9952__PWM8,				//!< register brightness control LED8
+	PCA9952__PWM9,				//!< register brightness control LED9
+	PCA9952__PWM10,				//!< register brightness control LED10
+	PCA9952__PWM11,				//!< register brightness control LED11
+	PCA9952__PWM12,				//!< register brightness control LED12
+	PCA9952__PWM13,				//!< register brightness control LED13
+	PCA9952__PWM14,				//!< register brightness control LED14
+	PCA9952__PWM15,				//!< register brightness control LED15
+	PCA9952__IREF0 = 0x22U,		//!< register output gain control 0
+	PCA9952__IREF1,				//!< register output gain control 1
+	PCA9952__IREF2,				//!< register output gain control 2
+	PCA9952__IREF3,				//!< register output gain control 3
+	PCA9952__IREF4,				//!< register output gain control 4
+	PCA9952__IREF5,				//!< register output gain control 5
+	PCA9952__IREF6,				//!< register output gain control 6
+	PCA9952__IREF7,				//!< register output gain control 7
+	PCA9952__IREF8,				//!< register output gain control 8
+	PCA9952__IREF9,				//!< register output gain control 9
+	PCA9952__IREF10,			//!< register output gain control 10
+	PCA9952__IREF11,			//!< register output gain control 11
+	PCA9952__IREF12,			//!< register output gain control 12
+	PCA9952__IREF13,			//!< register output gain control 13
+	PCA9952__IREF14,			//!< register output gain control 14
+	PCA9952__IREF15,			//!< register output gain control 15
+	PCA9952__OFFSET = 0x3AU,	//!< register offset / delay on LEDn outputs
+	PCA9952__SUBADR1,			//!< register SUBADR1
+	PCA9952__SUBADR2,			//!< register SUBADR2
+	PCA9952__SUBADR3,			//!< register SUBADR3
+	PCA9952__ALLCALLADR,		//!< register ALLCALLADR
+	PCA9952__PWMALL = 0x42U,	//!< register brightness control for all LEDn
+	PCA9952__IREFALL,			//!< register output gain control for all IREF0 to IREF23
+	PCA9952__EFLAG0,			//!< register output error flag 0
+	PCA9952__EFLAG1,			//!< register output error flag 1
 } PCA9952_reg;
 
 
@@ -99,7 +99,7 @@ typedef enum PACK__ PCA9952_reg_map {
 ** \brief Offset enum for PCA9952 peripheral
 **/
 typedef enum PACK__ PCA9952_offset {
-	PCA9952__OFFSET_NONE = 0,		//!< no delay between outputs (all on, all off at the same time)
+	PCA9952__OFFSET_NONE = 0U,		//!< no delay between outputs (all on, all off at the same time)
 	PCA9952__OFFSET_1_CLOCK_CYCLE,	//!< delay of 1 clock cycle (125 ns) between successive outputs
 	PCA9952__OFFSET_2_CLOCK_CYCLE,	//!< delay of 2 clock cycle (250 ns) between successive outputs
 	PCA9952__OFFSET_3_CLOCK_CYCLE,	//!< delay of 3 clock cycle (375 ns) between successive outputs

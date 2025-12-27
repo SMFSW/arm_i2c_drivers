@@ -35,7 +35,7 @@ FctERR NONNULL__ PCA9624_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 	I2C_slave_init(&PCA9624_hal[idx], hi2c, devAddress, PCA9624_hal[idx].cfg.timeout);
 
 	err = PCA9624_Set_Auto_Increment(&PCA9624[idx], PCA9xxx__AUTO_INC_ALL);
-	if (!err)	{ err = PCA9624_Init_Sequence(&PCA9624[idx]); }
+	if (err == ERROR_OK)	{ err = PCA9624_Init_Sequence(&PCA9624[idx]); }
 
 	if (err != ERROR_OK)	{ I2C_set_enable(&PCA9624_hal[idx], false); }
 
@@ -54,7 +54,7 @@ FctERR NONNULL__ PCA9624_Write(I2C_slave_t * const pSlave, const uint8_t * data,
 	const PCA962x_reg_inc inc_mode = PCA9624[pSlave - PCA9624_hal].cfg.auto_inc;
 
 	if (!I2C_is_enabled(pSlave))							{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > PCA9624__ALLCALLADR + 1)				{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > PCA9624__ALLCALLADR + 1U)				{ return ERROR_OVERFLOW; }	// More bytes than registers
 	if ((nb > 1) && (inc_mode == PCA9xxx__AUTO_INC_NONE))	{ return ERROR_NOTAVAIL; }	// Writing more than 1 byte not available in no auto-increment mode
 
 	I2C_set_busy(pSlave, true);
@@ -69,7 +69,7 @@ FctERR NONNULL__ PCA9624_Read(I2C_slave_t * const pSlave, uint8_t * data, const 
 	const PCA962x_reg_inc inc_mode = PCA9624[pSlave - PCA9624_hal].cfg.auto_inc;
 
 	if (!I2C_is_enabled(pSlave))							{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > PCA9624__ALLCALLADR + 1)				{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > PCA9624__ALLCALLADR + 1U)				{ return ERROR_OVERFLOW; }	// More bytes than registers
 	if ((nb > 1) && (inc_mode == PCA9xxx__AUTO_INC_NONE))	{ return ERROR_NOTAVAIL; }	// Writing more than 1 byte not available in no auto-increment mode
 
 	I2C_set_busy(pSlave, true);

@@ -52,8 +52,8 @@ FctERR NONNULL__ TCS3472_Write(I2C_slave_t * const pSlave, const uint8_t * data,
 {
 	uTCS3472_CMD CMD;
 
-	if (!I2C_is_enabled(pSlave))			{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > TCS3472__CONTROL + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > TCS3472__CONTROL + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	CMD.Bits.CMD = 1;
 	CMD.Bits.TRANSACTION = TCS3472__TRANS_NORMAL_OP;
@@ -71,7 +71,7 @@ FctERR NONNULL__ TCS3472_Read(I2C_slave_t * const pSlave, uint8_t * data, const 
 	uTCS3472_CMD CMD;
 
 	if (!I2C_is_enabled(pSlave))			{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > TCS3472__BDATAH + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > TCS3472__BDATAH + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	CMD.Bits.CMD = 1;
 	CMD.Bits.TRANSACTION = TCS3472__TRANS_NORMAL_OP;
@@ -92,7 +92,7 @@ FctERR NONNULL__ TCS3472_Write_Word(I2C_slave_t * const pSlave, const uint16_t *
 
 	WREG[0] = LOBYTE(*data);
 	WREG[1] = HIBYTE(*data);
-	return TCS3472_Write(pSlave, WREG, addr, 2);
+	return TCS3472_Write(pSlave, WREG, addr, 2U);
 }
 
 
@@ -103,7 +103,7 @@ FctERR NONNULL__ TCS3472_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, 
 
 	if (addr % sizeof(uint16_t))	{ return ERROR_FRAMING; }		// Unaligned word access
 
-	err = TCS3472_Read(pSlave, WREG, addr, 2);
+	err = TCS3472_Read(pSlave, WREG, addr, 2U);
 	if (err != ERROR_OK)	{ return err; }
 
 	*data = MAKEWORD(WREG[0], WREG[1]);
@@ -117,12 +117,12 @@ FctERR NONNULL__ TCS3472_Write_Special(I2C_slave_t * const pSlave, const TCS3472
 
 	if (func != TCS3472__SF_CLR_IT)	{ return ERROR_VALUE; }		// Unknown special function
 
-	CMD.Bits.CMD = 1;
+	CMD.Bits.CMD = 1U;
 	CMD.Bits.TRANSACTION = TCS3472__TRANS_SPECIAL_FUNC;
 	CMD.Bits.ADDR = func;
 
 	I2C_set_busy(pSlave, true);
-	pSlave->status = HAL_I2C_Master_Transmit(pSlave->cfg.bus_inst, pSlave->cfg.addr, &CMD.Byte, 1, pSlave->cfg.timeout);
+	pSlave->status = HAL_I2C_Master_Transmit(pSlave->cfg.bus_inst, pSlave->cfg.addr, &CMD.Byte, 1U, pSlave->cfg.timeout);
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }

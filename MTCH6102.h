@@ -23,7 +23,7 @@
 
 #ifndef I2C_MTCH6102_NB
 //! \note Define I2C_MTCH6102_NB to enable multiple peripherals of this type
-#define I2C_MTCH6102_NB	1	//!< Number of MTCH6102 peripherals
+#define I2C_MTCH6102_NB	1U	//!< Number of MTCH6102 peripherals
 #endif
 
 // *****************************************************************************
@@ -31,7 +31,7 @@
 // *****************************************************************************
 #ifndef MTCH6102_BASE_ADDR
 //! \note Define MTCH6102_BASE_ADDR to change default device base address
-#define MTCH6102_BASE_ADDR	0x25		//!< MTCH6102 default address value
+#define MTCH6102_BASE_ADDR	0x25U		//!< MTCH6102 default address value
 #endif
 
 
@@ -41,7 +41,7 @@
 /*** REGISTERS MEMORY MAP ENUMERATIONS ***/
 
 typedef enum PACK__ MTCH6102_touch_addr_map {
-	MTCH__TOUCH_STATE = 0x10,	// 0x00
+	MTCH__TOUCH_STATE = 0x10U,	// 0x00
 	MTCH__TOUCH_X,				// 0x00
 	MTCH__TOUCH_Y,				// 0x00
 	MTCH__TOUCH_LSB,			// 0x00
@@ -50,7 +50,7 @@ typedef enum PACK__ MTCH6102_touch_addr_map {
 } MTCH6102_touch;
 
 typedef enum PACK__ MTCH6102_acquisition_addr_map {
-	MTCH__SENSOR_VALUE_RX0 = 0x80,
+	MTCH__SENSOR_VALUE_RX0 = 0x80U,
 	MTCH__SENSOR_VALUE_RX1,
 	MTCH__SENSOR_VALUE_RX2,
 	MTCH__SENSOR_VALUE_RX3,
@@ -66,7 +66,7 @@ typedef enum PACK__ MTCH6102_acquisition_addr_map {
 	MTCH__SENSOR_VALUE_RX13,
 	MTCH__SENSOR_VALUE_RX14,
 	// NOT USED,
-	MTCH__RAW_VALUE_RX0_L = 0x90,
+	MTCH__RAW_VALUE_RX0_L = 0x90U,
 	MTCH__RAW_VALUE_RX0_H,
 	MTCH__RAW_VALUE_RX1_L,
 	MTCH__RAW_VALUE_RX1_H,
@@ -97,7 +97,7 @@ typedef enum PACK__ MTCH6102_acquisition_addr_map {
 	MTCH__RAW_VALUE_RX14_L,
 	MTCH__RAW_VALUE_RX14_H,
 	// NOT USED x3,
-	MTCH__BASE_VALUE_RX0_L = 0xB0,
+	MTCH__BASE_VALUE_RX0_L = 0xB0U,
 	MTCH__BASE_VALUE_RX0_H,
 	MTCH__BASE_VALUE_RX1_L,
 	MTCH__BASE_VALUE_RX1_H,
@@ -128,7 +128,7 @@ typedef enum PACK__ MTCH6102_acquisition_addr_map {
 	MTCH__BASE_VALUE_RX14_L,
 	MTCH__BASE_VALUE_RX14_H,
 	// NOT USED x3,
-	MTCH__RAW_ADC_00 = 0xD0,
+	MTCH__RAW_ADC_00 = 0xD0U,
 	MTCH__RAW_ADC_01,
 	MTCH__RAW_ADC_02,
 	MTCH__RAW_ADC_03,
@@ -164,7 +164,7 @@ typedef enum PACK__ MTCH6102_acquisition_addr_map {
 
 // TODO: add reg names
 typedef enum PACK__ MTCH6102_compensation_addr_map {
-	MTCH__SENSOR_COMP_RX0 = 0x50,
+	MTCH__SENSOR_COMP_RX0 = 0x50U,
 	MTCH__SENSOR_COMP_RX1,
 	MTCH__SENSOR_COMP_RX2,
 	MTCH__SENSOR_COMP_RX3,
@@ -183,7 +183,7 @@ typedef enum PACK__ MTCH6102_compensation_addr_map {
 
 
 typedef enum PACK__ MTCH6102_core_addr_map {
-	MTCH__FW_MAJOR = 0x00,		// 0x02
+	MTCH__FW_MAJOR = 0U,		// 0x02
 	MTCH__FW_MINOR,				// 0x00
 	MTCH__APP_ID_H,				// 0x00
 	MTCH__APP_ID_L,				// 0x12
@@ -192,11 +192,9 @@ typedef enum PACK__ MTCH6102_core_addr_map {
 	MTCH__MODE_CON,				// 0x00
 } MTCH6102_core;
 
-extern uint8_t MTCH6102_default_core[MTCH__MODE_CON - MTCH__FW_MAJOR + 1];
-
 
 typedef enum PACK__ MTCH6102_reg_map {
-	MTCH__NUMBER_OF_X_CHANNELS = 0x20,	// 0x09
+	MTCH__NUMBER_OF_X_CHANNELS = 0x20U,	// 0x09
 	MTCH__NUMBER_OF_Y_CHANNELS,			// 0x06
 	MTCH__SCAN_COUNT,					// 0x06
 	MTCH__TOUCH_THRESH_X,				// 0x37
@@ -234,25 +232,24 @@ typedef enum PACK__ MTCH6102_reg_map {
 	MTCH__I2CADDR						// 0x25
 } MTCH6102_reg;
 
-extern uint8_t MTCH6102_default_cfg[MTCH__I2CADDR - MTCH__NUMBER_OF_X_CHANNELS + 1];
 
 // Register fields enumerations
 typedef enum PACK__ MTCH6102_MODE {
-	Standby = 0x00,		//!< Standby
-	Gesture,			//!< Gesture only
-	Touch,				//!< Touch only
-	Full,				//!< Touch & Gesture
-	RawADC				//!< Raw ADC values
+	Standby = 0U,	//!< Standby
+	Gesture,		//!< Gesture only
+	Touch,			//!< Touch only
+	Full,			//!< Touch & Gesture
+	RawADC			//!< Raw ADC values
 } MTCH6102_MODE;
 
 typedef enum PACK__ MTCH6102_TYPE {
-	Computed = 0x00,		//!< (1023 - Res1) + Res2
-	Result1,				//!< Res1 only
-	Result2,				//!< Res2 only
+	Computed = 0U,	//!< (1023 - Res1) + Res2
+	Result1,		//!< Res1 only
+	Result2,		//!< Res2 only
 } MTCH6102_TYPE;
 
 typedef enum PACK__ MTCH6102_CH {
-	RX0 = 0x00,		//!< RX0
+	RX0 = 0U,		//!< RX0
 	RX1,			//!< RX1
 	RX2,			//!< RX2
 	RX3,			//!< RX3
@@ -271,30 +268,30 @@ typedef enum PACK__ MTCH6102_CH {
 } MTCH6102_CH;
 
 typedef enum PACK__ MTCH6102_FILTER_TYPE {
-	Filter_None = 0x00,	//!< No filtering
+	Filter_None = 0U,	//!< No filtering
 	Filter_Median,		//!< Size of median window filtering
 	Filter_IIR,			//!< Weighting of previous to current value filtering
 	Filter_Average,		//!< Size of average window filtering
 } MTCH6102_FILTER_TYPE;
 
 typedef enum PACK__ MTCH6102_GESTURE_STATE {
-	NoGesture = 0x00,			//!< No Gesture Present
-	SingleClick = 0x10,			//!< Single Click gesture
-	ClickNHold = 0x11,			//!< Click and Hold gesture
-	DoubleClick = 0x20,			//!< Double click gesture
-	DownSwipe = 0x31,			//!< Down Swipe gesture
-	DownSwipeNHold = 0x32,		//!< Down Swipe and Hold gesture
-	RightSwipe = 0x41,			//!< Right Swipe gesture
-	RightSwipeNHold = 0x42,		//!< Right Swipe and Hold gesture
-	UpSwipe = 0x51,				//!< Up Swipe gesture
-	UpSwipeNHold = 0x52,		//!< Up Swipe and Hold gesture
-	LeftSwipe = 0x61,			//!< Left Swipe gesture
-	LeftSwipeNHold = 0x62		//!< Left Swipe and Hold gesture
+	NoGesture = 0U,				//!< No Gesture Present
+	SingleClick = 0x10U,		//!< Single Click gesture
+	ClickNHold = 0x11U,			//!< Click and Hold gesture
+	DoubleClick = 0x20U,		//!< Double click gesture
+	DownSwipe = 0x31U,			//!< Down Swipe gesture
+	DownSwipeNHold = 0x32U,		//!< Down Swipe and Hold gesture
+	RightSwipe = 0x41U,			//!< Right Swipe gesture
+	RightSwipeNHold = 0x42U,	//!< Right Swipe and Hold gesture
+	UpSwipe = 0x51U,			//!< Up Swipe gesture
+	UpSwipeNHold = 0x52U,		//!< Up Swipe and Hold gesture
+	LeftSwipe = 0x61U,			//!< Left Swipe gesture
+	LeftSwipeNHold = 0x62U		//!< Left Swipe and Hold gesture
 } MTCH6102_GESTURE_STATE;
 
 
 typedef enum PACK__ MTCH6102_GESTURE_DIAGNOSTIC {
-	ClickTimeout = 0x00,			//!< Click Timeout
+	ClickTimeout = 0U,				//!< Click Timeout
 	SwipeTimeout,					//!< Swipe Timeout
 	GeneralTimeout,					//!< General Timeout
 	ClickThreshExceed,				//!< Click threshold exceeded

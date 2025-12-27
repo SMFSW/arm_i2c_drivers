@@ -36,7 +36,7 @@ FctERR NONNULL__ NCA9595_Read_Inputs(NCA9595_t * const pCpnt, uint16_t * const i
 {
 	const FctERR err = NCA9595_Read_Word(pCpnt->cfg.slave_inst, &pCpnt->NCA9595_in.Word, NCA9595__InputPorts);
 
-	if (!err)	{ *in = pCpnt->NCA9595_in.Word; }
+	if (err == ERROR_OK)	{ *in = pCpnt->NCA9595_in.Word; }
 
 	return err;
 }
@@ -47,7 +47,7 @@ FctERR NONNULL__ NCA9595_Write_Outputs(NCA9595_t * const pCpnt, const uint16_t o
 	const uint16_t data = out & ~pCpnt->cfg.NCA9595_Cfg.Word;	// Keep outputs only
 	const FctERR err = NCA9595_Write_Word(pCpnt->cfg.slave_inst, &data, NCA9595__OutputPorts);
 
-	if (!err)	{ pCpnt->NCA9595_out.Word = data; }
+	if (err == ERROR_OK)	{ pCpnt->NCA9595_out.Word = data; }
 
 	return err;
 }
@@ -61,7 +61,7 @@ FctERR NONNULL__ NCA9595_Write_Outputs_Mask(NCA9595_t * const pCpnt, const uint1
 
 	FctERR err = NCA9595_Write_Word(pCpnt->cfg.slave_inst, &data, NCA9595__OutputPorts);
 
-	if (!err)	{ pCpnt->NCA9595_out.Word = data; }
+	if (err == ERROR_OK)	{ pCpnt->NCA9595_out.Word = data; }
 
 	return err;
 }
@@ -71,7 +71,7 @@ FctERR NONNULL__ NCA9595_Set_Config(NCA9595_t * const pCpnt, const uint16_t cfg)
 {
 	const FctERR err = NCA9595_Write_Word(pCpnt->cfg.slave_inst, &cfg, NCA9595__ConfigPorts);
 
-	if (!err)	{ pCpnt->cfg.NCA9595_Cfg.Word = cfg; }
+	if (err == ERROR_OK)	{ pCpnt->cfg.NCA9595_Cfg.Word = cfg; }
 
 	return err;
 }
@@ -83,7 +83,7 @@ FctERR NONNULL__ NCA9595_Set_Config_Mask(NCA9595_t * const pCpnt, const uint16_t
 
 	const FctERR err = NCA9595_Write_Word(pCpnt->cfg.slave_inst, &data, NCA9595__ConfigPorts);
 
-	if (!err)	{ pCpnt->cfg.NCA9595_Cfg.Word = data; }
+	if (err == ERROR_OK)	{ pCpnt->cfg.NCA9595_Cfg.Word = data; }
 
 	return err;
 }

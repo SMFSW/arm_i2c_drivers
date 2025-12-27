@@ -23,13 +23,13 @@
 
 #ifndef I2C_NCA9595_NB
 //! \note Define I2C_NCA9595_NB to enable multiple peripherals of this type
-#define I2C_NCA9595_NB	1	//!< Number of NCA9595 peripherals
+#define I2C_NCA9595_NB	1U	//!< Number of NCA9595 peripherals
 #endif
 
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define NCA9595_ADDR			0x20			//!< NCA9595 address
+#define NCA9595_ADDR			0x20U			//!< NCA9595 address
 
 #ifndef NCA9595_BASE_ADDR
 //! \note Define NCA9595_BASE_ADDR to change default device base address
@@ -45,7 +45,7 @@
 ** \note Shouldn't be used directly (use \ref NCA9595_wreg_map instead)
 **/
 typedef enum PACK__ NCA9595_reg_map {
-	NCA9595__InputPort0 = 0,	//!< Input port 0
+	NCA9595__InputPort0 = 0U,	//!< Input port 0
 	NCA9595__InputPort1,		//!< Input port 1
 	NCA9595__OutputPort0,		//!< Output port 0
 	NCA9595__OutputPort1,		//!< Output port 1
@@ -82,7 +82,7 @@ typedef enum PACK__ NCA9595_wreg_map {
 ** \brief Configuration register values for NCA9595
 **/
 typedef enum PACK__ NCA9595_Cfg {
-	NCA9595__Cfg_Output = 0,	//!< corresponding port pin is enabled as an output
+	NCA9595__Cfg_Output = 0U,	//!< corresponding port pin is enabled as an output
 	NCA9595__Cfg_Input,			//!< corresponding port pin is enabled as a high-impedance input
 } NCA9595_Config;
 
@@ -91,7 +91,7 @@ typedef enum PACK__ NCA9595_Cfg {
 ** \brief Polarity inversion register values for NCA9595
 **/
 typedef enum PACK__ NCA9595_Polarity {
-	NCA9595__Pol_Direct = 0,	//!< corresponding port pin’s polarity is retained
+	NCA9595__Pol_Direct = 0U,	//!< corresponding port pin’s polarity is retained
 	NCA9595__Pol_Invert,		//!< corresponding port pin’s polarity is inverted in the Input register
 } NCA9595_Polarity;
 
@@ -100,7 +100,7 @@ typedef enum PACK__ NCA9595_Polarity {
 ** \brief Pull-Up configuration register values for NCA9595
 **/
 typedef enum PACK__ NCA9595_PullUp {
-	NCA9595__PUp_Disable = 0,	//!< corresponding port pull-up resistors are disabled
+	NCA9595__PUp_Disable = 0U,	//!< corresponding port pull-up resistors are disabled
 	NCA9595__PUp_Enable,		//!< corresponding port pull-up resistors are enabled
 } NCA9595_PullUp;
 

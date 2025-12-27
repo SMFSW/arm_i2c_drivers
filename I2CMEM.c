@@ -29,7 +29,7 @@ FctERR NONNULL__ I2CMEM_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, 
 
 	I2C_PERIPHERAL_SET_DEFAULTS(I2CMEM, idx);
 
-	I2CMEM_hal[idx].cfg.mem_size = (size > 0x800) ? I2C_16B_REG : I2C_8B_REG;	// 8b register size for up to 2048 bytes, 16b otherwise
+	I2CMEM_hal[idx].cfg.mem_size = (size > 0x800U) ? I2C_16B_REG : I2C_8B_REG;	// 8b register size for up to 2048 bytes, 16b otherwise
 
 	I2CMEM[idx].cfg.chip_size = size;						// Chip size
 	I2CMEM[idx].cfg.buf_size = buf_size ? buf_size : size;	// Write buffer size (typically 16 to 64 for EEPROM, no restriction for FRAM)
@@ -59,14 +59,14 @@ static HAL_StatusTypeDef I2CMEM_IsDeviceReady(I2C_HandleTypeDef * hi2c, const ui
 
 	do
 	{
-		status = HAL_I2C_IsDeviceReady(hi2c, slave_addr, 0xFFFFFFFFU, 2);	// Max retries and 2ms timeout (in case device is not connected)
+		status = HAL_I2C_IsDeviceReady(hi2c, slave_addr, 0xFFFFFFFFU, 2U);	// Max retries and 2ms timeout (in case device is not connected)
 
 		if (status == HAL_OK)
 		{
 			break;
 		}
 	}
-	while (TPSINF_MS(tickstart, 10));	// 10ms timeout (test for write completion of eeprom area, around 5ms)
+	while (TPSINF_MS(tickstart, 10U));	// 10ms timeout (test for write completion of eeprom area, around 5ms)
 
 	return status;
 }
@@ -89,8 +89,8 @@ static FctERR NONNULL__ I2CMEM_Write_Page(I2CMEM_t * const pCpnt, const uint8_t 
 
 	if (pSlave->cfg.mem_size == I2C_8B_REG)
 	{
-		i2c_addr += (RSHIFT(addr, 7) & 0x0E);
-		mem_addr &= 0xFF;
+		i2c_addr += (RSHIFT(addr, 7U) & 0x0EU);
+		mem_addr &= 0xFFU;
 	}
 
 	I2C_set_busy(pSlave, true);
@@ -123,8 +123,8 @@ static FctERR NONNULL__ I2CMEM_Read_Page(I2CMEM_t * const pCpnt, uint8_t * data,
 
 	if (pSlave->cfg.mem_size == I2C_8B_REG)
 	{
-		i2c_addr += (RSHIFT(addr, 7) & 0x0E);
-		mem_addr &= 0xFF;
+		i2c_addr += (RSHIFT(addr, 7U) & 0x0EU);
+		mem_addr &= 0xFFU;
 	}
 
 	I2C_set_busy(pSlave, true);

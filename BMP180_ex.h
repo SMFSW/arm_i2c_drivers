@@ -22,7 +22,7 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define	BMP180_RESET_VAL	0xB6	//!< Reset value for "soft reset" register
+#define	BMP180_RESET_VAL	0xB6U	//!< Reset value for "soft reset" register
 
 
 // *****************************************************************************
@@ -46,7 +46,7 @@ FctERR NONNULL__ BMP180_Start_Conversion(BMP180_t * const pCpnt, const BMP180_me
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ BMP180_Get_ChipID(BMP180_t * const pCpnt, uint8_t * id) {
-	return BMP180_Read(pCpnt->cfg.slave_inst, id, BMP180__ID, 1); }
+	return BMP180_Read(pCpnt->cfg.slave_inst, id, BMP180__ID, 1U); }
 
 /*!\brief Reset BMP180 chip
 ** \param[in] pCpnt - Pointer to BMP180 component
@@ -54,7 +54,7 @@ __INLINE FctERR NONNULL_INLINE__ BMP180_Get_ChipID(BMP180_t * const pCpnt, uint8
 **/
 __INLINE FctERR NONNULL_INLINE__ BMP180_Reset(BMP180_t * const pCpnt) {
 	uint8_t rst = BMP180_RESET_VAL;
-	return BMP180_Write(pCpnt->cfg.slave_inst, &rst, BMP180__SOFT_RESET, 1); }
+	return BMP180_Write(pCpnt->cfg.slave_inst, &rst, BMP180__SOFT_RESET, 1U); }
 
 
 /*!\brief Get Raw Temperature

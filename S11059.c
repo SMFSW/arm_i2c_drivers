@@ -47,7 +47,7 @@ FctERR S11059_Init_Single(void) {
 FctERR NONNULL__ S11059_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(pSlave))						{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > S11059__MANUAL_TIMING_LSB + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers (or write-able registers)
+	if ((addr + nb) > S11059__MANUAL_TIMING_LSB + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers (or write-able registers)
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
@@ -59,7 +59,7 @@ FctERR NONNULL__ S11059_Write(I2C_slave_t * const pSlave, const uint8_t * data, 
 FctERR NONNULL__ S11059_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > S11059__IR_DATA_LSB + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > S11059__IR_DATA_LSB + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
@@ -76,7 +76,7 @@ FctERR NONNULL__ S11059_Write_Word(I2C_slave_t * const pSlave, const uint16_t * 
 
 	WREG[0] = HIBYTE(*data);
 	WREG[1] = LOBYTE(*data);
-	return S11059_Write(pSlave, WREG, addr, 2);
+	return S11059_Write(pSlave, WREG, addr, 2U);
 }
 
 
@@ -87,7 +87,7 @@ FctERR NONNULL__ S11059_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, c
 
 	if ((addr % sizeof(uint16_t)) == 0)		{ return ERROR_FRAMING; }		// Unaligned word access
 
-	err = S11059_Read(pSlave, WREG, addr, 2);
+	err = S11059_Read(pSlave, WREG, addr, 2U);
 	if (err != ERROR_OK)	{ return err; }
 
 	*data = MAKEWORD(WREG[1], WREG[0]);

@@ -22,18 +22,18 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define TSL2591_CHIP_ID				0x50	//!< TSL2591 Chip ID to check against
+#define TSL2591_CHIP_ID				0x50U	//!< TSL2591 Chip ID to check against
 
 
-#if !defined(TSL2591_GLASS_TRANSMISSIVITY)
-#define TSL2591_GLASS_TRANSMISSIVITY	100		//!< Glass transmissivity (in percent)
-#endif
-
-
-#define TSL2591_DEVICE_FACTOR		53		//!< TSL2591 Device factor
+#define TSL2591_DEVICE_FACTOR		53U		//!< TSL2591 Device factor
 
 #define TSL2591_CH0_COUNTS			264.1f	//!< Counts per uW/cm2 for CH0 (Full spectrum)
 #define TSL2591_CH1_COUNTS			34.9f	//!< Counts per uW/cm2 for CH1 (IR)
+
+
+#if !defined(TSL2591_GLASS_TRANSMISSIVITY)
+#define TSL2591_GLASS_TRANSMISSIVITY	100U	//!< Glass transmissivity (in percent)
+#endif
 
 
 // *****************************************************************************

@@ -32,7 +32,7 @@
 ** \brief Function enum for ADS1115
 **/
 typedef enum ADS1115_func {
-	ADS1115__FUNC_SINGLE_DIFF = 0,	//!< Continuous conversion mode
+	ADS1115__FUNC_SINGLE_DIFF = 0U,	//!< Continuous conversion mode
 	ADS1115__FUNC_MULTIPLE_DIFF,	//!< Power-down single-shot mode
 	ADS1115__FUNC_SINGLE_ENDED,		//!< Power-down single-shot mode
 } ADS1115_func;

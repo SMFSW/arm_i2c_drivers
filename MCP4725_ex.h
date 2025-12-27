@@ -22,8 +22,8 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define MCP4725__RESET	0x06	//!< General call reset command
-#define MCP4725__WAKEUP	0x09	//!< General call wake up command
+#define MCP4725__RESET	0x06U	//!< General call reset command
+#define MCP4725__WAKEUP	0x09U	//!< General call wake up command
 
 
 // *****************************************************************************

@@ -23,7 +23,7 @@
 
 #ifndef I2C_I2CMEM_NB
 //! \note Define I2C_I2CMEM_NB to enable multiple peripherals of this type
-#define I2C_I2CMEM_NB	1	//!< Number of I2CMEM peripherals
+#define I2C_I2CMEM_NB	1U	//!< Number of I2CMEM peripherals
 #endif
 
 // *****************************************************************************
@@ -31,10 +31,10 @@
 // *****************************************************************************
 #ifndef I2CMEM_BASE_ADDR
 //! \note Define I2CMEM_BASE_ADDR to change default device base address
-#define I2CMEM_BASE_ADDR		0x50		//!< I2CMEM Base address
+#define I2CMEM_BASE_ADDR		0x50U		//!< I2CMEM Base address
 #endif
 
-#define	I2CMEM_BANK_SIZE		0x100		//!< I2CMEM bank size (in bytes) for <=16Kb devices
+#define	I2CMEM_BANK_SIZE		0x100U		//!< I2CMEM bank size (in bytes) for <=16Kb devices
 
 
 // *****************************************************************************

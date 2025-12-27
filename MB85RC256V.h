@@ -26,7 +26,7 @@
 
 #ifndef I2C_MB85RC256V_NB
 //! \note Define I2C_MB85RC256V_NB to enable multiple peripherals of this type
-#define I2C_MB85RC256V_NB	1	//!< Number of MB85RC256V peripherals
+#define I2C_MB85RC256V_NB	1U	//!< Number of MB85RC256V peripherals
 #endif
 
 // *****************************************************************************
@@ -34,11 +34,11 @@
 // *****************************************************************************
 #ifndef MB85RC256V_BASE_ADDR
 //! \note Define MB85RC256V_BASE_ADDR to change default device base address
-#define MB85RC256V_BASE_ADDR	0x50			//!< MB85RC256V Base address
+#define MB85RC256V_BASE_ADDR	0x50U			//!< MB85RC256V Base address
 #endif
 
 
-#define MB85RC256V_SIZE			0x8000			//!< MB85RC256V size (in bytes)
+#define MB85RC256V_SIZE			0x8000U			//!< MB85RC256V size (in bytes)
 
 
 // *****************************************************************************

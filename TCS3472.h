@@ -22,16 +22,16 @@
 
 #ifndef I2C_TCS3472_NB
 //! \note Define I2C_TCS3472_NB to enable multiple peripherals of this type
-#define I2C_TCS3472_NB	1	//!< Number of TCS3472 peripherals
+#define I2C_TCS3472_NB	1U	//!< Number of TCS3472 peripherals
 #endif
 
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define TCS34721_ADDR			0x39			//!< TCS34721 Base address
-#define TCS34723_ADDR			0x39			//!< TCS34723 Base address
-#define TCS34725_ADDR			0x29			//!< TCS34725 Base address
-#define TCS34727_ADDR			0x29			//!< TCS34727 Base address
+#define TCS34721_ADDR			0x39U			//!< TCS34721 Base address
+#define TCS34723_ADDR			0x39U			//!< TCS34723 Base address
+#define TCS34725_ADDR			0x29U			//!< TCS34725 Base address
+#define TCS34727_ADDR			0x29U			//!< TCS34727 Base address
 
 #ifndef TCS3472_BASE_ADDR
 //! \note Define TCS3472_BASE_ADDR to change default device base address
@@ -46,17 +46,17 @@
 ** \brief Register map enum of TCS3472
 **/
 typedef enum PACK__ TCS3472_reg_map {
-	TCS3472__ENABLE = 0,		//!< Enables states and interrupts
+	TCS3472__ENABLE = 0U,		//!< Enables states and interrupts
 	TCS3472__ATIME,				//!< RGBC time
-	TCS3472__WTIME = 0x03,		//!< Wait time
+	TCS3472__WTIME = 0x03U,		//!< Wait time
 	TCS3472__AILTL,				//!< Interrupt low threshold low byte
 	TCS3472__AILTH,				//!< Interrupt low threshold high byte
 	TCS3472__AIHTL,				//!< Interrupt high threshold low byte
 	TCS3472__AIHTH,				//!< Interrupt high threshold high byte
-	TCS3472__PERSIST = 0x0C,	//!< Interrupt persistence filter
+	TCS3472__PERSIST = 0x0CU,	//!< Interrupt persistence filter
 	TCS3472__CONFIG,			//!< Configuration
-	TCS3472__CONTROL = 0x0F,	//!< Control
-	TCS3472__ID = 0x12,			//!< Device ID
+	TCS3472__CONTROL = 0x0FU,	//!< Control
+	TCS3472__ID = 0x12U,		//!< Device ID
 	TCS3472__STATUS,			//!< Device status
 	TCS3472__CDATAL,			//!< Clear low data byte
 	TCS3472__CDATAH,			//!< Clear high data byte
@@ -72,22 +72,22 @@ typedef enum PACK__ TCS3472_reg_map {
 ** \brief Transaction types of TCS3472
 **/
 typedef enum PACK__ TCS3472_transaction {
-	TCS3472__TRANS_NORMAL_OP = 1,		//!< Normal operation
-	TCS3472__TRANS_SPECIAL_FUNC = 3,	//!< Special Function
+	TCS3472__TRANS_NORMAL_OP = 1U,		//!< Normal operation
+	TCS3472__TRANS_SPECIAL_FUNC = 3U,	//!< Special Function
 } TCS3472_transaction;
 
 /*!\enum TCS3472_spec_func
 ** \brief Special functions of TCS3472
 **/
 typedef enum PACK__ TCS3472_spec_func {
-	TCS3472__SF_CLR_IT = 6,				//!< Clear channel interrupt clear
+	TCS3472__SF_CLR_IT = 6U,	//!< Clear channel interrupt clear
 } TCS3472_spec_func;
 
 /*!\enum TCS3472_gain
 ** \brief Gain values of TCS3472
 **/
 typedef enum PACK__ TCS3472_gain {
-	TCS3472__LOW_GAIN = 0,	//!< Low gain mode (x1)
+	TCS3472__LOW_GAIN = 0U,	//!< Low gain mode (x1)
 	TCS3472__MEDIUM_GAIN,	//!< Medium gain mode (x4)
 	TCS3472__HIGH_GAIN,		//!< High gain mode (x16)
 	TCS3472__MAXIMUM_GAIN	//!< Maximum gain mode (x60)
@@ -98,7 +98,7 @@ typedef enum PACK__ TCS3472_gain {
 ** \brief Persistence control of TCS3472
 **/
 typedef enum PACK__ TCS3472_it_persist {
-	TCS3472__PERSIST_EVERY_RGBC_CYCLE = 0,	//!< Every RGBC cycle generates interrupt
+	TCS3472__PERSIST_EVERY_RGBC_CYCLE = 0U,	//!< Every RGBC cycle generates interrupt
 	TCS3472__PERSIST_1_IT_PERIODS,			//!< 1 integration time periods out of range
 	TCS3472__PERSIST_2_IT_PERIODS,			//!< 2 integration time periods out of range
 	TCS3472__PERSIST_3_IT_PERIODS,			//!< 3 integration time periods out of range

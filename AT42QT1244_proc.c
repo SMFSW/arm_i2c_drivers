@@ -20,11 +20,11 @@ AT42QT1244_t AT42QT1244[I2C_AT42QT1244_NB] = { 0 };
 
 uint16_t AT42QT1244_crc16(uint16_t crc, const uint8_t data)
 {
-	crc ^= (uint16_t) LSHIFT(data, 8);
-	for (uintCPU_t i = 0 ; i < 8 ; i++)
+	crc ^= (uint16_t) LSHIFT(data, 8U);
+	for (uintCPU_t i = 0 ; i < 8U ; i++)
 	{
-		if (crc & 0x8000)	{ crc = (crc << 1) ^ 0x1021; }
-		else				{ crc <<= 1; }
+		if (crc & 0x8000U)	{ crc = (crc << 1U) ^ 0x1021U; }
+		else				{ crc <<= 1U; }
 	}
 
 	return crc;
@@ -41,11 +41,11 @@ __WEAK FctERR NONNULL__ AT42QT1244_Init_Sequence(AT42QT1244_t * const pCpnt)
 
 	AT42QT1244_Delay_PowerOn(pCpnt);	// Trying to ensure component is ready to communicate (assuming host and component are powered and starting almost simultaneously)
 
-	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, DATA, AT42QT__SETUP_HOST_CRC_LSB, 2);	// Read HCRC from device
+	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, DATA, AT42QT__SETUP_HOST_CRC_LSB, 2U);	// Read HCRC from device
 
 /*! \code
 	// Example: Setup the component to disable unused keys (last 14 ones)
-	if (!err)
+	if (err == ERROR_OK)
 	{
 		const uint8_t	idx = pCpnt - AT42QT1244;
 		const uint16_t	HCRC = NVM_Get_AT42QT1244_HCRC(idx);	// USER IMPLEMENTED: Get previously computed HCRC from host to check against component one
@@ -92,7 +92,8 @@ void NONNULL__ AT42QT1244_Delay_PowerOn(AT42QT1244_t * const pCpnt)
 FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * const pCpnt, uint16_t * const hcrc)
 {
 	FctERR		err;
-	intCPU_t	calib = 1, i, j;
+	intCPU_t	calib = 1;
+	uintCPU_t	i, j;
 	uint8_t		Freqs[3], CFO[2][24];
 	uint16_t	Refs[3][24], crc;
 
@@ -115,12 +116,12 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * const pCpnt, u
 	err = AT42QT1244_Setup_FHM(pCpnt, &crc, AT42QT__FHM_OFF);
 	if (err != ERROR_OK)	{ return err; }
 
-	for (i = 0 ; i < 2 ; i++)
+	for (i = 0 ; i < 2U ; i++)
 	{
 		calib = 1;	// Reset calib for while loop
 
 		// Send FREQ0, FREQ1, then FREQ2 to FREQ0 reg
-		err = AT42QT1244_Send_Setup(pCpnt, &crc, &Freqs[i], AT42QT__SETUP_FREQ0, 1);
+		err = AT42QT1244_Send_Setup(pCpnt, &crc, &Freqs[i], AT42QT__SETUP_FREQ0, 1U);
 		if (err != ERROR_OK)	{ return err; }
 
 		// Launch calibration for all keys
@@ -130,7 +131,7 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * const pCpnt, u
 		// Wait for end of keys calibration
 		while (calib) {
 			I2C_Watchdog_Refresh();
-			Delay_us(1000);
+			Delay_us(1000U);
 			calib = AT42QT1244_is_Calib_Pending(pCpnt);
 			if (calib == -1)	{ return ERROR_NOTAVAIL; }
 		}
@@ -146,13 +147,13 @@ FctERR NONNULL__ AT42QT1244_Calibrate_Freq_Hopping(AT42QT1244_t * const pCpnt, u
 	}
 
 	// Write FREQ0 back
-	err = AT42QT1244_Send_Setup(pCpnt, &crc, &Freqs[0], AT42QT__SETUP_FREQ0, 1);
+	err = AT42QT1244_Send_Setup(pCpnt, &crc, &Freqs[0], AT42QT__SETUP_FREQ0, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	// Compute CFO values
-	for (i = 0 ; i < 2 ; i++) {
+	for (i = 0 ; i < 2U ; i++) {
 		for (j = 0 ; j < AT42QT__CALIBRATE_KEY_23 ; j++) {
-			CFO[i][j] = (uint8_t) (Refs[i+1][j] - Refs[i][j]);
+			CFO[i][j] = (uint8_t) (Refs[i+1U][j] - Refs[i][j]);
 		}
 	}
 
@@ -211,7 +212,7 @@ __WEAK FctERR NONNULL__ AT42QT1244_handler(AT42QT1244_t * const pCpnt)
 	pCpnt->cnt_SignalFail = TMP[1];
 	pCpnt->cnt_MatrixScan = TMP[2];
 	pCpnt->status.Byte = TMP[3];
-	pCpnt->keys = (LSHIFT(TMP[6], 16) + LSHIFT(TMP[5], 8) + TMP[4]) & 0x00FFFFFFUL;
+	pCpnt->keys = (LSHIFT(TMP[6], 16U) + LSHIFT(TMP[5], 8U) + TMP[4]) & 0x00FFFFFFUL;
 #endif
 
 #if defined(VERBOSE)

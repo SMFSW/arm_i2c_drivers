@@ -122,21 +122,21 @@ typedef union uGPMS_RD_REG_MAP {
 
 
 __INLINE FctERR INLINE__ GPMS_Set_Mode(const GPMS_mode mode) {
-	return GPMS_Write((uint8_t *) &mode, GPMS__GPS_MODE, 1); }
+	return GPMS_Write((uint8_t *) &mode, GPMS__GPS_MODE, 1U); }
 
 
 __INLINE FctERR NONNULL_INLINE__ GPMS_Get_Mode(GPMS_mode * mode) {
-	return GPMS_Read((uint8_t *) mode, GPMS__GPS_MODE, 1); }
+	return GPMS_Read((uint8_t *) mode, GPMS__GPS_MODE, 1U); }
 
 __INLINE FctERR NONNULL_INLINE__ GPMS_Get_Signal_Quality(GPMS_quality * quality) {
-	return GPMS_Read((uint8_t *) quality, GPMS__GPS_QUALITY_INDICATOR, 1); }
+	return GPMS_Read((uint8_t *) quality, GPMS__GPS_QUALITY_INDICATOR, 1U); }
 
 __INLINE FctERR NONNULL_INLINE__ GPMS_Get_Status(uint8_t * status) {
-	return GPMS_Read(status, GPMS__STATUS, 1); }
+	return GPMS_Read(status, GPMS__STATUS, 1U); }
 
 __INLINE FctERR NONNULL_INLINE__ GPMS_Get_IO_Value(uint8_t * io, uint8_t chan) {
 	if (chan > 4)	{ return ERROR_VALUE; }	// Unknown analogic input
-	return GPMS_Read(io, GPMS__AN0_VALUE + chan, 1); }
+	return GPMS_Read(io, GPMS__AN0_VALUE + chan, 1U); }
 
 
 /****************************************************************/

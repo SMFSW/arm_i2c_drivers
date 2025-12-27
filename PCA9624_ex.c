@@ -19,11 +19,11 @@ FctERR NONNULL__ PCA9624_Set_Latch(PCA9624_t * const pCpnt, const PCA96xx_latch 
 
 	if (latch > PCA9xxx__LATCH_ON_ACK)	{ return ERROR_VALUE; }	// Unknown latch mode
 
-	err = PCA9624_Read(pCpnt->cfg.slave_inst, (uint8_t *) &MODE2, PCA9624__MODE2, sizeof(MODE2));
+	err = PCA9624_Read(pCpnt->cfg.slave_inst, &MODE2.Byte, PCA9624__MODE2, sizeof(MODE2));
 	if (err != ERROR_OK)	{ return err; }
 
 	MODE2.Bits.OCH = latch;
-	return PCA9624_Write(pCpnt->cfg.slave_inst, (uint8_t *) &MODE2, PCA9624__MODE2, sizeof(MODE2));
+	return PCA9624_Write(pCpnt->cfg.slave_inst, &MODE2.Byte, PCA9624__MODE2, sizeof(MODE2));
 }
 
 
@@ -32,15 +32,15 @@ FctERR NONNULL__ PCA9624_Set_Mode_LED(PCA9624_t * const pCpnt, const PCA9xxx_cha
 	if (chan > PCA9xxx__PWM8)			{ return ERROR_RANGE; }	// Unknown channel
 	if (mode > PCA9xxx__GROUP_BRIGHT)	{ return ERROR_VALUE; }	// Unknown control mode
 
-	const uintCPU_t offset = chan / 4;
-	const uintCPU_t shift = chan * 2;
+	const uintCPU_t offset = chan / 4U;
+	const uintCPU_t shift = chan * 2U;
 
-	const uint16_t mask = LSHIFT(0x3, shift);
+	const uint16_t mask = LSHIFT(3U, shift);
 	const uint16_t val = LSHIFT(mode, shift);
 
 	SET_BITS_VAL(pCpnt->LDR.Word, mask, val);
 
-	const uint8_t LDR = RSHIFT(pCpnt->LDR.Word, offset * 8);
+	const uint8_t LDR = RSHIFT(pCpnt->LDR.Word, offset * 8U);
 	return PCA9624_Write(pCpnt->cfg.slave_inst, &LDR, PCA9624__LEDOUT0 + offset, sizeof(LDR));
 }
 
@@ -57,7 +57,7 @@ FctERR NONNULL__ PCA9624_Set_Mode_LEDs(PCA9624_t * const pCpnt, const uint8_t ch
 	{
 		if (LSHIFT(1, chan) & chans)
 		{
-			const uintCPU_t shift = chan * 2;
+			const uintCPU_t shift = chan * 2U;
 			mask |= LSHIFT(0x3, shift);
 			val |= LSHIFT(mode, shift);
 		}
@@ -65,7 +65,7 @@ FctERR NONNULL__ PCA9624_Set_Mode_LEDs(PCA9624_t * const pCpnt, const uint8_t ch
 
 	SET_BITS_VAL(pCpnt->LDR.Word, mask, val);
 
-	for (uintCPU_t i = 0 ; i < sizeof(LDR) ; i++)	{ LDR[i] = RSHIFT(pCpnt->LDR.Word, i * 8); }
+	for (uintCPU_t i = 0 ; i < sizeof(LDR) ; i++)	{ LDR[i] = RSHIFT(pCpnt->LDR.Word, i * 8U); }
 
 	return PCA9624_Write(pCpnt->cfg.slave_inst, LDR, PCA9624__LEDOUT0, sizeof(LDR));
 }
@@ -77,7 +77,7 @@ FctERR NONNULL__ PCA9624_ReadVals(PCA9624_t * const pCpnt, uint8_t pDuty[], cons
 	if (end > PCA9xxx__PWM8)	{ return ERROR_RANGE; }	// Unknown channel
 
 	uint8_t * const pArray = pDuty + (indexed ? start : 0);
-	return PCA9624_Read(pCpnt->cfg.slave_inst, pArray, PCA9624__PWM0 + start, end - start + 1);
+	return PCA9624_Read(pCpnt->cfg.slave_inst, pArray, PCA9624__PWM0 + start, end - start + 1U);
 }
 
 
@@ -96,7 +96,7 @@ FctERR NONNULL__ PCA9624_PutVals(PCA9624_t * const pCpnt, const uint8_t pDuty[],
 
 
 	const uint8_t * const pArray = pDuty + (indexed ? start : 0);
-	return PCA9624_Write(pCpnt->cfg.slave_inst, pArray, PCA9624__PWM0 + start, end - start + 1);
+	return PCA9624_Write(pCpnt->cfg.slave_inst, pArray, PCA9624__PWM0 + start, end - start + 1U);
 }
 
 
@@ -130,7 +130,7 @@ FctERR NONNULL__ PCA9624_ClrVal(PCA9624_t * const pCpnt, const PCA9xxx_chan chan
 
 FctERR NONNULL__ PCA9624_Reset(PCA9624_t * const pCpnt)
 {
-	uint8_t			DATA = 0x06;
+	uint8_t			DATA = 0x06U;
 	I2C_slave_t *	pSlave = pCpnt->cfg.slave_inst;
 
 	pSlave->status = HAL_I2C_Master_Transmit(pSlave->cfg.bus_inst, pSlave->cfg.addr, &DATA, sizeof(DATA), pSlave->cfg.timeout);
@@ -138,11 +138,11 @@ FctERR NONNULL__ PCA9624_Reset(PCA9624_t * const pCpnt)
 }
 
 
-FctERR NONNULL__ PCA9624_Reset_All(const I2C_HandleTypeDef * const hi2c)
+FctERR NONNULL__ PCA9624_Reset_All(I2C_HandleTypeDef * const hi2c)
 {
-	uint8_t DATA = 0x06;
+	uint8_t DATA = 0x06U;
 
-	return HALERRtoFCTERR(HAL_I2C_Master_Transmit((I2C_HandleTypeDef *) hi2c, I2C_ADDR_General_Call, &DATA, sizeof(DATA), I2C_slave_timeout));
+	return HALERRtoFCTERR(HAL_I2C_Master_Transmit(hi2c, I2C_ADDR_General_Call, &DATA, sizeof(DATA), I2C_slave_timeout));
 }
 
 

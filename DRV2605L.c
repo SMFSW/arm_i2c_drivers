@@ -42,7 +42,7 @@ __WEAK FctERR DRV2605L_Init(void)
 FctERR NONNULL__ DRV2605L_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&DRV2605L_hal))					{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > DRV__LRA_RESONANCE_PERIOD + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > DRV__LRA_RESONANCE_PERIOD + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&DRV2605L_hal, true);
 	DRV2605L_hal.status = HAL_I2C_Mem_Write(DRV2605L_hal.cfg.bus_inst, DRV2605L_hal.cfg.addr, addr, DRV2605L_hal.cfg.mem_size, (uint8_t *) data, nb, DRV2605L_hal.cfg.timeout);
@@ -54,7 +54,7 @@ FctERR NONNULL__ DRV2605L_Write(const uint8_t * data, const uint16_t addr, const
 FctERR NONNULL__ DRV2605L_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(&DRV2605L_hal))					{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > DRV__LRA_RESONANCE_PERIOD + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > DRV__LRA_RESONANCE_PERIOD + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(&DRV2605L_hal, true);
 	DRV2605L_hal.status = HAL_I2C_Mem_Read(DRV2605L_hal.cfg.bus_inst, DRV2605L_hal.cfg.addr, addr, DRV2605L_hal.cfg.mem_size, data, nb, DRV2605L_hal.cfg.timeout);

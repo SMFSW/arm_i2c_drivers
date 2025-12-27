@@ -17,7 +17,7 @@
 
 MCP9808_t MCP9808[I2C_MCP9808_NB] = { 0 };
 
-static const uint8_t MCP9808_conv_time[4] = { 30, 65, 130, 250 };					//!< Conversion times for MCP9808
+static const uint8_t MCP9808_conv_time[4] = { 30U, 65U, 130U, 250U };				//!< Conversion times for MCP9808
 static const float MCP9808_resolution_steps[4] = { 0.5f, 0.25f, 0.125f, 0.0625f };	//!< Resolution steps for MCP9808
 
 
@@ -78,7 +78,7 @@ FctERR NONNULL__ MCP9808_Set_AlertTemp(MCP9808_t * const pCpnt, const float temp
 	err = MCP9808_Shutdown(pCpnt, true);
 	if (err != ERROR_OK)	{ return err; }
 
-	err = MCP9808_Write(pCpnt->cfg.slave_inst, &ALT.Word, MCP9808__ALERT_UPPER + alt, 1);
+	err = MCP9808_Write(pCpnt->cfg.slave_inst, &ALT.Word, MCP9808__ALERT_UPPER + alt, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	*alert = temp;
@@ -96,7 +96,7 @@ FctERR NONNULLX__(1) MCP9808_Get_AlertTemp(MCP9808_t * const pCpnt, float * temp
 
 	if (alt > MCP9808__ALERT_CRIT)	{ return ERROR_VALUE; }	// Unknown alert
 
-	err = MCP9808_Read(pCpnt->cfg.slave_inst, &ALT.Word, MCP9808__ALERT_UPPER + alt, 1);
+	err = MCP9808_Read(pCpnt->cfg.slave_inst, &ALT.Word, MCP9808__ALERT_UPPER + alt, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	tmp = (float) ALT.Bits.Integer;
@@ -121,7 +121,7 @@ FctERR NONNULLX__(1) MCP9808_Get_Temperature(MCP9808_t * const pCpnt, float * te
 	if (err != ERROR_OK)	{ return err; }
 
 	tmp = (float) TEMP.Bits.Integer;
-	tmp += ((TEMP.Bits.Decimal >> (3 - pCpnt->cfg.Resolution)) * MCP9808_resolution_steps[pCpnt->cfg.Resolution]);
+	tmp += ((TEMP.Bits.Decimal >> (3U - pCpnt->cfg.Resolution)) * MCP9808_resolution_steps[pCpnt->cfg.Resolution]);
 	if (TEMP.Bits.Sign)	{ tmp = -tmp; }
 	pCpnt->Temperature = tmp;
 
@@ -151,7 +151,7 @@ __WEAK FctERR NONNULL__ MCP9808_handler(MCP9808_t * const pCpnt)
 
 		#if defined(VERBOSE)
 			const uint8_t idx = pCpnt - MCP9808;
-			printf("MCP9808 id%d: Temperature %d.%03ld°C\r\n", idx, (int16_t) pCpnt->Temperature, get_fp_dec(pCpnt->Temperature, 3));
+			printf("MCP9808 id%d: Temperature %d.%03ld°C\r\n", idx, (int16_t) pCpnt->Temperature, get_fp_dec(pCpnt->Temperature, 3U));
 		#endif
 	}
 

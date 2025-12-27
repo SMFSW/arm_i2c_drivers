@@ -24,12 +24,12 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define GPMS_ADDR			0x68								//!< DS-GPM.S address
+#define GPMS_ADDR			0x68U								//!< DS-GPM.S address
 
-#define GPMS_JUMPER_A0_A1	0									//!< DS-GPM.S index with jumper A0 & A1
-#define GPMS_JUMPER_A1		1									//!< DS-GPM.S index with jumper A1
-#define GPMS_JUMPER_A0		2									//!< DS-GPM.S index with jumper A0
-#define GPMS_JUMPER_NONE	3									//!< DS-GPM.S index with no jumper
+#define GPMS_JUMPER_A0_A1	0U									//!< DS-GPM.S index with jumper A0 & A1
+#define GPMS_JUMPER_A1		1U									//!< DS-GPM.S index with jumper A1
+#define GPMS_JUMPER_A0		2U									//!< DS-GPM.S index with jumper A0
+#define GPMS_JUMPER_NONE	3U									//!< DS-GPM.S index with no jumper
 
 #ifndef GPMS_BASE_ADDR
 //! \note Define GPMS_BASE_ADDR to change default device base address
@@ -44,16 +44,16 @@
 ** \brief Write register map enum of DS-GPM.S
 **/
 typedef enum PACK__ GPMS_wr_reg_map {
-	GPMS__IO_DIRECTION = 0,						//!< Local IO port direction register
-	GPMS__IO_INPUT_TYPE,						//!< Local IO port input type register
-	GPMS__IO_PORT_OUTPUT,						//!< Local IO port output data register
+	GPMS__IO_DIRECTION = 0U,	//!< Local IO port direction register
+	GPMS__IO_INPUT_TYPE,		//!< Local IO port input type register
+	GPMS__IO_PORT_OUTPUT,		//!< Local IO port output data register
 } GPMS_wr_reg;
 
 /*!\enum GPMS_rd_reg_map
 ** \brief Read register map enum of DS-GPM.S
 **/
 typedef enum PACK__ GPMS_rd_reg_map {
-	GPMS__HOURS_TENS = 0,						//!< Hours tens register
+	GPMS__HOURS_TENS = 0U,						//!< Hours tens register
 	GPMS__HOURS_UNITS,							//!< Hours units register
 	GPMS__MINUTES_TENS,							//!< Minutes tens register
 	GPMS__MINUTES_UNITS,						//!< Minutes units register
@@ -134,7 +134,7 @@ typedef enum PACK__ GPMS_direction {
 ** \brief DS-GPM.S signal quality
 **/
 typedef enum PACK__ GPMS_quality {
-	GPMS__NO_GPS = 0,	//!< No GPS
+	GPMS__NO_GPS = 0U,	//!< No GPS
 	GPMS__GPS,			//!< GPS
 	GPMS__DGPS			//!< DGPS
 } GPMS_quality;
@@ -156,7 +156,7 @@ typedef enum PACK__ GPMS_mode {
 ** \brief DS-GPM.S north type
 **/
 typedef enum PACK__ GPMS_north {
-	GPMS__TRUE_NORTH = 0,		//!< True north
+	GPMS__TRUE_NORTH = 0U,		//!< True north
 	GPMS__MAGNETIC_NORTH		//!< Magnetic north
 } GPMS_north;
 

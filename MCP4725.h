@@ -22,7 +22,7 @@
 
 #ifndef I2C_MCP4725_NB
 //! \note Define I2C_MCP4725_NB to enable multiple peripherals of this type
-#define I2C_MCP4725_NB	1	//!< Number of MCP4725 peripherals
+#define I2C_MCP4725_NB	1U	//!< Number of MCP4725 peripherals
 #endif
 
 // *****************************************************************************
@@ -31,9 +31,9 @@
 // For Adafruit MCP4725A1 the address is 0x62 (default) or 0x63 (ADDR pin tied to VDD)
 // For MCP4725A0 the address is 0x60 or 0x61  // Microchip EvalBoard
 // For MCP4725A2 the address is 0x64 or 0x65
-#define MCP4725A0_ADDR		0x60			//!< MCP4725 address
-#define MCP4725A1_ADDR		0x62			//!< MCP4725 with A1 address
-#define MCP4725A2_ADDR		0x64			//!< MCP4725 with A2 address
+#define MCP4725A0_ADDR		0x60U			//!< MCP4725 address
+#define MCP4725A1_ADDR		0x62U			//!< MCP4725 with A1 address
+#define MCP4725A2_ADDR		0x64U			//!< MCP4725 with A2 address
 
 #ifndef MCP4725_BASE_ADDR
 //! \note Define MCP4725_BASE_ADDR to change default device base address
@@ -48,8 +48,8 @@
 ** \brief Register map enum of MCP4725
 **/
 typedef enum PACK__ MCP4725_cmd {
-	MCP4725__FAST_MODE = 0,		//!< This command is used to change the DAC register. EEPROM is not affected
-	MCP4725__WRITE_DAC = 2,		//!< Load configuration bits and data code to the DAC Register
+	MCP4725__FAST_MODE = 0U,	//!< This command is used to change the DAC register. EEPROM is not affected
+	MCP4725__WRITE_DAC = 2U,	//!< Load configuration bits and data code to the DAC Register
 	MCP4725__WRITE_DAC_EEP,		//!< Load configuration bits and data code to the DAC Register and also write the EEPROM
 	MCP4725__RESERVED_1,		//!< Reserved for future use
 	MCP4725__RESERVED_2,		//!< Reserved for future use
@@ -62,7 +62,7 @@ typedef enum PACK__ MCP4725_cmd {
 ** \brief Power down enum of MCP4725
 **/
 typedef enum PACK__ MCP4725_pd {
-	MCP4725__PWR_NORMAL = 0,	//!< Normal mode
+	MCP4725__PWR_NORMAL = 0U,	//!< Normal mode
 	MCP4725__PWR_DOWN_1K,		//!< 1K Ohm resistor to ground
 	MCP4725__PWR_DOWN_100K,		//!< 100K Ohm resistor to ground
 	MCP4725__PWR_DOWN_500K		//!< 500K Ohm resistor to ground
@@ -75,10 +75,10 @@ typedef enum PACK__ MCP4725_pd {
 typedef union uMCP4725_REG__CMD {
 	uint8_t Byte;
 	struct PACK__ {
-		uint8_t				:1;
-		MCP4725_pd	PD		:2;		//!< Power down mode
-		uint8_t				:2;
-		MCP4725_cmd	C		:3;		//!< Write command type
+		uint8_t			:1;
+		MCP4725_pd	PD	:2;		//!< Power down mode
+		uint8_t			:2;
+		MCP4725_cmd	C	:3;		//!< Write command type
 	} Bits;
 } uMCP4725_REG__CMD;
 

@@ -20,13 +20,13 @@ FctERR NONNULL__ MCP9808_Write_Config(MCP9808_t * const pCpnt, const uint16_t cf
 	CFG.Word = cfg;
 	CFG.Bits.SHDN = true;	// Writing config when in shutdown mode (yet trying to write cfg when shutting down)
 
-	err = MCP9808_Write(pCpnt->cfg.slave_inst, &CFG.Word, MCP9808__CONFIGURATION, 1);
+	err = MCP9808_Write(pCpnt->cfg.slave_inst, &CFG.Word, MCP9808__CONFIGURATION, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	CFG.Word = cfg;
 	CFG.Bits.SHDN = false;	// Re-enable continuous conversion when sending config
 
-	err = MCP9808_Write(pCpnt->cfg.slave_inst, &CFG.Word, MCP9808__CONFIGURATION, 1);
+	err = MCP9808_Write(pCpnt->cfg.slave_inst, &CFG.Word, MCP9808__CONFIGURATION, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	return ERROR_OK;
@@ -42,7 +42,7 @@ FctERR NONNULL__ MCP9808_Shutdown(MCP9808_t * const pCpnt, const bool shutdown)
 	if (err != ERROR_OK)	{ return err; }
 
 	CFG.Bits.SHDN = shutdown;
-	return MCP9808_Write(pCpnt->cfg.slave_inst, &CFG.Word, MCP9808__CONFIGURATION, 1);
+	return MCP9808_Write(pCpnt->cfg.slave_inst, &CFG.Word, MCP9808__CONFIGURATION, 1U);
 }
 
 
@@ -101,10 +101,17 @@ FctERR NONNULL__ MCP9808_Set_AlertLock(MCP9808_t * const pCpnt, const MCP9808_al
 	err = MCP9808_Read_Config(pCpnt, &CFG.Word);
 	if (err != ERROR_OK)	{ return err; }
 
-	switch (alt) {
-		case MCP9808__ALERT_CRIT:	CFG.Bits.CrtLoc = lock; break;
-		default:					CFG.Bits.WinLoc = lock; break;
+	switch (alt)
+	{
+		case MCP9808__ALERT_CRIT:
+			CFG.Bits.CrtLoc = lock;
+			break;
+
+		default:
+			CFG.Bits.WinLoc = lock;
+			break;
 	}
+
 	return MCP9808_Write_Config(pCpnt, CFG.Word);
 }
 
@@ -116,7 +123,7 @@ FctERR NONNULL__ MCP9808_Set_Resolution(MCP9808_t * const pCpnt, const MCP9808_r
 
 	if (res > MCP9808__RES_0_0625)	{ return ERROR_VALUE; }	// Unknown resolution
 
-	err = MCP9808_Write(pCpnt->cfg.slave_inst, &RES, MCP9808__RESOLUTION, 1);
+	err = MCP9808_Write(pCpnt->cfg.slave_inst, &RES, MCP9808__RESOLUTION, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->NewData = false;
@@ -131,7 +138,7 @@ FctERR NONNULL__ MCP9808_Get_Resolution(MCP9808_t * const pCpnt, MCP9808_res * r
 	uint16_t	RES;
 	FctERR		err;
 
-	err = MCP9808_Read(pCpnt->cfg.slave_inst, &RES, MCP9808__RESOLUTION, 1);
+	err = MCP9808_Read(pCpnt->cfg.slave_inst, &RES, MCP9808__RESOLUTION, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	*res = RES;

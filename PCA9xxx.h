@@ -21,7 +21,7 @@
 // Section: Constants
 // *****************************************************************************
 // PCA9xxx general addresses
-#define	PCA9xxx_DEFAULT_ALL_CALL_ADDR		(0xE0 >> 1)		//!< PCA9xxx ALL CALL Address (for all channels)
+#define	PCA9xxx_DEFAULT_ALL_CALL_ADDR		(0xE0U >> 1U)	//!< PCA9xxx ALL CALL Address (for all channels)
 
 
 // *****************************************************************************
@@ -35,7 +35,7 @@
 ** \brief Channels for PCA9xxx
 **/
 typedef enum PACK__ PCA9xxx_chan {
-	PCA9xxx__PWM1 = 0,		//!< PCA9xxx Channel 1 PWM
+	PCA9xxx__PWM1 = 0U,		//!< PCA9xxx Channel 1 PWM
 	PCA9xxx__PWM2,			//!< PCA9xxx Channel 2 PWM
 	PCA9xxx__PWM3,			//!< PCA9xxx Channel 3 PWM
 	PCA9xxx__PWM4,			//!< PCA9xxx Channel 4 PWM
@@ -59,7 +59,7 @@ typedef enum PACK__ PCA9xxx_chan {
 	PCA9xxx__PWM22,			//!< PCA9xxx Channel 22 PWM
 	PCA9xxx__PWM23,			//!< PCA9xxx Channel 23 PWM
 	PCA9xxx__PWM24,			//!< PCA9xxx Channel 24 PWM
-	PCA9xxx__ALL = 0xFF		//!< PCA9xxx All PWM Channels
+	PCA9xxx__ALL = 0xFFU	//!< PCA9xxx All PWM Channels
 } PCA9xxx_chan;
 
 
@@ -67,8 +67,8 @@ typedef enum PACK__ PCA9xxx_chan {
 ** \brief Latch type enum for PCA9xxx
 **/
 typedef enum PACK__ PCA9xxx_latch {
-	PCA9xxx__LATCH_ON_STOP = 0,	//!< Duty cycle update on I2C stop
-	PCA9xxx__LATCH_ON_ACK		//!< Duty cycle update on I2C acknowledge
+	PCA9xxx__LATCH_ON_STOP = 0U,	//!< Duty cycle update on I2C stop
+	PCA9xxx__LATCH_ON_ACK			//!< Duty cycle update on I2C acknowledge
 } PCA9xxx_latch;
 
 typedef PCA9xxx_latch		PCA96xx_latch;	//!< Latch type enum for PCA96xx
@@ -83,19 +83,19 @@ typedef PCA9xxx_latch		PCA99xx_latch;	//!< Latch type enum for PCA99xx
 ** \brief Registers increment options enum of PCA95xx
 **/
 typedef enum PACK__ PCA95xx_reg_inc {
-	PCA95xx__AUTO_INC_NONE = 0x00,		//!< no Auto-Increment
-	PCA95xx__AUTO_INC_ALL = 0x10,		//!< Auto-Increment for all registers
+	PCA95xx__AUTO_INC_NONE = 0U,	//!< no Auto-Increment
+	PCA95xx__AUTO_INC_ALL = 0x10U,	//!< Auto-Increment for all registers
 } PCA95xx_reg_inc;
 
 /*!\enum PCA9xxx_reg_inc
 ** \brief Registers increment options enum of PCA9xxx
 **/
 typedef enum PACK__ PCA9xxx_reg_inc {
-	PCA9xxx__AUTO_INC_NONE = 0x00,				//!< no Auto-Increment
-	PCA9xxx__AUTO_INC_ALL = 0x80,				//!< Auto-Increment for all registers
-	PCA9xxx__AUTO_INC_BRIGHT = 0xA0,			//!< Auto-Increment for individual brightness registers only
-	PCA9xxx__AUTO_INC_GLOBAL = 0xC0,			//!< Auto-Increment for global control registers only
-	PCA9xxx__AUTO_INC_BRIGHT_GLOBAL = 0xE0,		//!< Auto-Increment for individual and global control registers only
+	PCA9xxx__AUTO_INC_NONE = 0U,				//!< no Auto-Increment
+	PCA9xxx__AUTO_INC_ALL = 0x80U,				//!< Auto-Increment for all registers
+	PCA9xxx__AUTO_INC_BRIGHT = 0xA0U,			//!< Auto-Increment for individual brightness registers only
+	PCA9xxx__AUTO_INC_GLOBAL = 0xC0U,			//!< Auto-Increment for global control registers only
+	PCA9xxx__AUTO_INC_BRIGHT_GLOBAL = 0xE0U,	//!< Auto-Increment for individual and global control registers only
 } PCA9xxx_reg_inc;
 
 typedef PCA9xxx_reg_inc		PCA962x_reg_inc;	//!< Registers increment options enum of PCA962x
@@ -105,7 +105,7 @@ typedef PCA9xxx_reg_inc		PCA995x_reg_inc;	//!< Registers increment options enum 
 ** \brief enum for PCA95xx output drive
 **/
 typedef enum PACK__ PCA95xx_ledsel {
-	PCA95xx__LED_OFF = 0,	//!< Output is set high-impedance (LED off; default)
+	PCA95xx__LED_OFF = 0U,	//!< Output is set high-impedance (LED off; default)
 	PCA95xx__LED_ON,		//!< Output is set LOW (LED on)
 	PCA95xx__LED_PWM0,		//!< Output blinks at PWM0 rate
 	PCA95xx__LED_PWM1		//!< Output blinks at PWM1 rate
@@ -115,7 +115,7 @@ typedef enum PACK__ PCA95xx_ledsel {
 ** \brief enum for PCA9xxx dimming type
 **/
 typedef enum PACK__ PCA9xxx_dim {
-	PCA9xxx__DIMMING = 0,	//!< Dimming
+	PCA9xxx__DIMMING = 0U,	//!< Dimming
 	PCA9xxx__BLINKING		//!< Blinking
 } PCA9xxx_dim;
 
@@ -127,7 +127,7 @@ typedef PCA9xxx_dim		PCA995x_dim;	//!< enum for PCA995x dimming type
 ** \brief enum for PCA9xxx output drive
 **/
 typedef enum PACK__ PCA9xxx_ledout {
-	PCA9xxx__LED_DRV_OFF = 0,	//!< Off
+	PCA9xxx__LED_DRV_OFF = 0U,	//!< Off
 	PCA9xxx__LED_DRV_FULL_ON,	//!< On
 	PCA9xxx__INDIV_BRIGHT,		//!< Individual Dimming
 	PCA9xxx__GROUP_BRIGHT		//!< Group Dimming
@@ -258,7 +258,7 @@ typedef uPCA9xxx_REG__LEDOUT5		uPCA995x_REG__LEDOUT5;	//!< Union for LEDOUT5 reg
 ** \brief enum for PCA9xxx error status
 **/
 typedef enum PACK__ PCA9xxx_eflag {
-	PCA9xxx__ERR_OK = 0,	//!< In normal operation and no error
+	PCA9xxx__ERR_OK = 0U,	//!< In normal operation and no error
 	PCA9xxx__ERR_SHORT,		//!< Detected LED short-circuit condition
 	PCA9xxx__ERR_OPEN,		//!< Detected LED open-circuit condition
 	PCA9xxx__ERR_DNE		//!< This condition does not exist

@@ -6,6 +6,8 @@
 **			Please keep in mind some components are somewhat custom and needs to be accesses through CPNT->cfg.slave_inst_xxx instead if needed.
 **/
 /****************************************************************/
+#include "WDG_ex.h"
+
 #include "I2C_component.h"
 
 #if defined(HAL_I2C_MODULE_ENABLED)
@@ -42,6 +44,13 @@ void NONNULL__ I2C_set_slave_address(I2C_slave_t * const slave, const uint16_t d
 	slave->cfg.addr = I2C_ADDR(devAddress);
 }
 
+
+__WEAK void I2C_Watchdog_Refresh(void)
+{
+	#if defined(HAL_IWDG_MODULE_ENABLED)
+	WDG_ex_refresh_IWDG();
+	#endif
+}
 
 /****************************************************************/
 #endif

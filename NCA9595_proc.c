@@ -36,7 +36,7 @@ __WEAK FctERR NONNULL__ NCA9595_handler(NCA9595_t * const pCpnt)
 	FctERR err = NCA9595_Read_Register(pCpnt, &pCpnt->NCA9595_in.Word, NCA9595__InputPorts);
 	if (err != ERROR_OK)	{ goto ret; }
 
-	if (pCpnt->cfg.NCA9595_Cfg.Word != 0xFFFF)	// Not all GPIOs set to inputs
+	if (pCpnt->cfg.NCA9595_Cfg.Word != 0xFFFFU)	// Not all GPIOs set to inputs
 	{
 		err = NCA9595_Write_Outputs(pCpnt, pCpnt->NCA9595_out.Word);
 		if (err != ERROR_OK)	{ goto ret; }

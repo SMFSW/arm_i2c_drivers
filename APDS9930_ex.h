@@ -27,7 +27,7 @@
 ** \brief Light types of APDS9930
 **/
 typedef enum PACK__ APDS9930_chan {
-	APDS9930__CHAN_FULL = 0,	//!< Full light spectrum channel (channel 0)
+	APDS9930__CHAN_FULL = 0U,	//!< Full light spectrum channel (channel 0)
 	APDS9930__CHAN_IR,			//!< Infra Red light channel (channel 1)
 	APDS9930__CHAN_PROXIMITY,	//!< Proximity channel
 	APDS9930__CHAN_VISIBLE		//!< Visible light (channel 0 - channel 1)
@@ -89,7 +89,7 @@ typedef union uAPDS9930_REG_MAP {
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ APDS9930_Write_En(APDS9930_t * const pCpnt, const uint8_t en) {
-	return APDS9930_Write(pCpnt->cfg.slave_inst, (uint8_t *) &en, APDS9930__ENABLE, 1); }
+	return APDS9930_Write(pCpnt->cfg.slave_inst, (uint8_t *) &en, APDS9930__ENABLE, 1U); }
 
 /*!\brief Write APDS9930 Config
 ** \param[in] pCpnt - Pointer to APDS9930 component
@@ -97,7 +97,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9930_Write_En(APDS9930_t * const pCpnt, con
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ APDS9930_Write_Cfg(APDS9930_t * const pCpnt, const uint8_t cfg) {
-	return APDS9930_Write(pCpnt->cfg.slave_inst, (uint8_t *) &cfg, APDS9930__CONFIG, 1); }
+	return APDS9930_Write(pCpnt->cfg.slave_inst, (uint8_t *) &cfg, APDS9930__CONFIG, 1U); }
 
 
 /*!\brief Write APDS9930 Control
@@ -109,7 +109,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9930_Write_Ctrl(APDS9930_t * const pCpnt, c
 	uAPDS9930_REG__CONTROL CTRL;
 	CTRL.Byte = ctrl;
 	CTRL.Bits.PDIODE = APDS9930__PDIODE_CH1;
-	return APDS9930_Write(pCpnt->cfg.slave_inst, &CTRL.Byte, APDS9930__CONTROL, 1); }
+	return APDS9930_Write(pCpnt->cfg.slave_inst, &CTRL.Byte, APDS9930__CONTROL, 1U); }
 
 
 /*!\brief Oscillator Enable / Disable
@@ -229,7 +229,7 @@ FctERR NONNULL__ APDS9930_Set_Wait_Time(APDS9930_t * const pCpnt, const uint16_t
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ APDS9930_Set_AILT(APDS9930_t * const pCpnt, const uint16_t thr) {
-	return APDS9930_Write_Word(pCpnt->cfg.slave_inst, (uint16_t *) &thr, APDS9930__AILTL); }
+	return APDS9930_Write_Word(pCpnt->cfg.slave_inst, &thr, APDS9930__AILTL); }
 
 /*!\brief ALS interrupt high threshold configuration
 ** \param[in] pCpnt - Pointer to APDS9930 component
@@ -237,7 +237,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9930_Set_AILT(APDS9930_t * const pCpnt, con
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ APDS9930_Set_AIHT(APDS9930_t * const pCpnt, const uint16_t thr) {
-	return APDS9930_Write_Word(pCpnt->cfg.slave_inst, (uint16_t *) &thr, APDS9930__AIHTL); }
+	return APDS9930_Write_Word(pCpnt->cfg.slave_inst, &thr, APDS9930__AIHTL); }
 
 /*!\brief ALS interrupt thresholds configuration
 ** \param[in] pCpnt - Pointer to APDS9930 component
@@ -256,7 +256,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9930_Set_AIT(APDS9930_t * const pCpnt, cons
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ APDS9930_Set_PILT(APDS9930_t * const pCpnt, const uint16_t thr) {
-	return APDS9930_Write_Word(pCpnt->cfg.slave_inst, (uint16_t *) &thr, APDS9930__PILTL); }
+	return APDS9930_Write_Word(pCpnt->cfg.slave_inst, &thr, APDS9930__PILTL); }
 
 /*!\brief Proximity interrupt Persist High threshold filter configuration
 ** \param[in] pCpnt - Pointer to APDS9930 component
@@ -264,7 +264,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9930_Set_PILT(APDS9930_t * const pCpnt, con
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ APDS9930_Set_PIHT(APDS9930_t * const pCpnt, const uint16_t thr) {
-	return APDS9930_Write_Word(pCpnt->cfg.slave_inst, (uint16_t *) &thr, APDS9930__PIHTL); }
+	return APDS9930_Write_Word(pCpnt->cfg.slave_inst, &thr, APDS9930__PIHTL); }
 
 /*!\brief Proximity interrupt Persist threshold filters configuration
 ** \param[in] pCpnt - Pointer to APDS9930 component
@@ -309,7 +309,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9930_SF_Clear_ALS_PROX_IT(APDS9930_t * cons
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ APDS9930_Get_ChipID(APDS9930_t * const pCpnt, uint8_t * id) {
-	return APDS9930_Read(pCpnt->cfg.slave_inst, id, APDS9930__ID, 1); }
+	return APDS9930_Read(pCpnt->cfg.slave_inst, id, APDS9930__ID, 1U); }
 
 /*!\brief Get Full conversion (Channel 0)
 ** \param[in] pCpnt - Pointer to APDS9930 component

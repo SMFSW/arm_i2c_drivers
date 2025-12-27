@@ -27,7 +27,7 @@ __WEAK FctERR NONNULL__ PCA9624_Init_Sequence(PCA9624_t * const pCpnt)
 	err = PCA9624_Write(pCpnt->cfg.slave_inst, &DATA, PCA9624__MODE1, sizeof(DATA));
 
 	// LEDOUTx: allow individual brightness control for all channels
-	err |= PCA9624_Set_Mode_LEDs(pCpnt, 0xFF, PCA9xxx__INDIV_BRIGHT);
+	err |= PCA9624_Set_Mode_LEDs(pCpnt, 0xFFU, PCA9xxx__INDIV_BRIGHT);
 
 	return err;
 }

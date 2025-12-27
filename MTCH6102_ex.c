@@ -20,23 +20,23 @@ FctERR NONNULL__ MTCH6102_Command(const MTCH6102_t * const pCpnt, const MTCH6102
 	switch (cmd)
 	{
 		case MTCH_StoreToNV:
-			MTCH_CMD.Bits.NV = 1;
+			MTCH_CMD.Bits.NV = 1U;
 			break;
 
 		case MTCH_RestoreDefaults:
-			MTCH_CMD.Bits.DEF = 1;
+			MTCH_CMD.Bits.DEF = 1U;
 			break;
 
 		case MTCH_Configure:
-			MTCH_CMD.Bits.CFG = 1;
+			MTCH_CMD.Bits.CFG = 1U;
 			break;
 
 		case MTCH_ManufacturingTest:
-			MTCH_CMD.Bits.MFG = 1;
+			MTCH_CMD.Bits.MFG = 1U;
 			break;
 
 		case MTCH_ForceBaseline:
-			MTCH_CMD.Bits.BS = 1;
+			MTCH_CMD.Bits.BS = 1U;
 			break;
 
 		default:
@@ -46,13 +46,13 @@ FctERR NONNULL__ MTCH6102_Command(const MTCH6102_t * const pCpnt, const MTCH6102
 	MEM_MTCH_CMD = MTCH_CMD;
 
 	// Send command
-	err = MTCH6102_Write(pCpnt->cfg.slave_inst, &MTCH_CMD.Byte, MTCH__CMD, 1);
+	err = MTCH6102_Write(pCpnt->cfg.slave_inst, &MTCH_CMD.Byte, MTCH__CMD, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	// Wait for command to complete
 	while ((MTCH_CMD.Byte & MEM_MTCH_CMD.Byte) != 0)
 	{
-		err = MTCH6102_Read(pCpnt->cfg.slave_inst, &MTCH_CMD.Byte, MTCH__CMD, 1);
+		err = MTCH6102_Read(pCpnt->cfg.slave_inst, &MTCH_CMD.Byte, MTCH__CMD, 1U);
 		if (err != ERROR_OK)	{ return err; }
 		//HAL_Delay(1);
 	}
@@ -69,7 +69,7 @@ FctERR NONNULL__ MTCH6102_Get_Active_Period(const MTCH6102_t * const pCpnt, uint
 	err = MTCH6102_Read(pCpnt->cfg.slave_inst, DAT, MTCH__ACTIVE_PERIOD_L, sizeof(DAT));
 	if (err != ERROR_OK)	{ return err; }
 
-	*period = perReg2perVal(LSHIFT(DAT[1], 8) + DAT[0]);
+	*period = perReg2perVal(LSHIFT(DAT[1], 8U) + DAT[0]);
 	return ERROR_OK;
 }
 
@@ -82,7 +82,7 @@ FctERR NONNULL__ MTCH6102_Get_Idle_Period(const MTCH6102_t * const pCpnt, uint16
 	err = MTCH6102_Read(pCpnt->cfg.slave_inst, DAT, MTCH__IDLE_PERIOD_L, sizeof(DAT));
 	if (err != ERROR_OK)	{ return err; }
 
-	*period = perReg2perVal(LSHIFT(DAT[1], 8) + DAT[0]);
+	*period = perReg2perVal(LSHIFT(DAT[1], 8U) + DAT[0]);
 	return ERROR_OK;
 }
 
@@ -101,20 +101,20 @@ FctERR NONNULL__ MTCH6102_Set_Filter(const MTCH6102_t * const pCpnt, const MTCH6
 
 		case Filter_Median:
 			MTCH_FILTER[0] = Filter_Median;
-			if ((strength >= 3) && (strength <= 9) && (strength & 0x01))	MTCH_FILTER[1] = strength;
-			else															MTCH_FILTER[1] = 5;		// Default Median strength
+			if ((strength >= 3U) && (strength <= 9U) && (strength & 0x01U))	MTCH_FILTER[1] = strength;
+			else															MTCH_FILTER[1] = 5U;	// Default Median strength
 			break;
 
 		case Filter_IIR:
 			MTCH_FILTER[0] = Filter_IIR;
-			if ((strength > 0) && (strength <= 3))	MTCH_FILTER[1] = strength;
-			else									MTCH_FILTER[1] = 1;		// Default IIR strength
+			if ((strength > 0) && (strength <= 3U))	MTCH_FILTER[1] = strength;
+			else									MTCH_FILTER[1] = 1U;	// Default IIR strength
 			break;
 
 		case Filter_Average:
 			MTCH_FILTER[0] = Filter_Average;
-			if ((strength > 0) && (strength <= 3))	MTCH_FILTER[1] = strength;
-			else									MTCH_FILTER[1] = 1;		// Default Average strength
+			if ((strength > 0) && (strength <= 3U))	MTCH_FILTER[1] = strength;
+			else									MTCH_FILTER[1] = 1U;	// Default Average strength
 			break;
 
 		default:
@@ -122,7 +122,7 @@ FctERR NONNULL__ MTCH6102_Set_Filter(const MTCH6102_t * const pCpnt, const MTCH6
 	}
 
 	// Send configuration parameters
-	err = MTCH6102_Write(pCpnt->cfg.slave_inst, &MTCH_FILTER[0], baseline_filter ? MTCH__BASE_FILTER_TYPE : MTCH__FILTER_TYPE, 2);
+	err = MTCH6102_Write(pCpnt->cfg.slave_inst, &MTCH_FILTER[0], baseline_filter ? MTCH__BASE_FILTER_TYPE : MTCH__FILTER_TYPE, 2U);
 	if (err != ERROR_OK)	{ return err; }
 
 	// Send configuration request

@@ -60,7 +60,7 @@ uint32_t S11059_Get_Full_Integration_Time(const S11059_integ mode, const S11059_
 	if (mode > S11059__FIXED_PERIOD_INTEGRATION)	{ return ERROR_VALUE; }
 	if (prescaler > S11059__INTEG_179_2MS)			{ return ERROR_VALUE; }
 
-	float		t = S11059_Integ_tab[prescaler] * 4;		// Prescaler multiplied by 4 channels
+	float		t = S11059_Integ_tab[prescaler] * 4U;		// Prescaler multiplied by 4 channels
 	uint16_t	m = (!mult) ? 1U : mult;
 
 	if (mode == S11059__MANUAL_INTEGRATION)	{ t *= 2U * m; }

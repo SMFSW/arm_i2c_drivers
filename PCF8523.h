@@ -27,7 +27,7 @@
 // *****************************************************************************
 #ifndef PCF8523_BASE_ADDR
 //! \note Define PCF8523_BASE_ADDR to change default device base address
-#define PCF8523_BASE_ADDR	0x68		//!< PCF8523 Base address
+#define PCF8523_BASE_ADDR	0x68U		//!< PCF8523 Base address
 #endif
 
 
@@ -39,7 +39,7 @@
 **/
 typedef enum PACK__ PCF8523_reg_map {
 	// Control registers
-	PCF8523__CONTROL_1 = 0,		//!< Control and status register 1
+	PCF8523__CONTROL_1 = 0U,	//!< Control and status register 1
 	PCF8523__CONTROL_2,			//!< Control and status register 2
 	PCF8523__CONTROL_3,			//!< Control and status register 3
 	// Time and Date registers
@@ -70,7 +70,7 @@ typedef enum PACK__ PCF8523_reg_map {
 ** \note For reference only, Weekdays can start from any day for week
 **/
 typedef enum PACK__ PCF8523_weekdays {
-	PCF8523__SUNDAY = 0,	//!< Sunday
+	PCF8523__SUNDAY = 0U,	//!< Sunday
 	PCF8523__MONDAY,		//!< Monday
 	PCF8523__TUESDAY,		//!< Tuesday
 	PCF8523__WEDNESDAY,		//!< Wednesday
@@ -85,7 +85,7 @@ typedef enum PACK__ PCF8523_weekdays {
 ** \brief Weekdays enum for PCF8523 peripheral
 **/
 typedef enum PACK__ PCF8523_months {
-	PCF8523__JANUARY = 0x01,	//!< January
+	PCF8523__JANUARY = 0x01U,	//!< January
 	PCF8523__FEBRUARY,			//!< February
 	PCF8523__MARCH,				//!< March
 	PCF8523__APRIL,				//!< April
@@ -94,7 +94,7 @@ typedef enum PACK__ PCF8523_months {
 	PCF8523__JULY,				//!< July
 	PCF8523__AUGUST,			//!< August
 	PCF8523__SEPTEMBER,			//!< September
-	PCF8523__OCTOBER = 0x10,	//!< October
+	PCF8523__OCTOBER = 0x10U,	//!< October
 	PCF8523__NOVEMBER,			//!< November
 	PCF8523__DECEMBER,			//!< December
 } PCF8523_months;
@@ -104,14 +104,14 @@ typedef enum PACK__ PCF8523_months {
 ** \brief Power Management enum for PCF8523 peripheral
 **/
 typedef enum PACK__ PCF8523_power {
-	PCF8523__SO_EN_STANDARD = 0,			//!< battery switch-over function is enabled in standard mode; battery low detection function is enabled
+	PCF8523__SO_EN_STANDARD = 0U,			//!< battery switch-over function is enabled in standard mode; battery low detection function is enabled
 	PCF8523__SO_EN_DIRECT_SWITCHING,		//!< battery switch-over function is enabled in direct switching mode; battery low detection function is enabled
 	PCF8523__SO_DI_POWER_VDD,				//!< battery switch-over function is disabled - only one power supply (VDD); battery low detection function is enabled
 	//PCF8523__SO_DI_POWER_VDD,				//!< battery switch-over function is disabled - only one power supply (VDD); battery low detection function is enabled
-	PCF8523__SO_EN_STANDARD_NO_BL = 4,		//!< battery switch-over function is enabled in standard mode; battery low detection function is disabled
+	PCF8523__SO_EN_STANDARD_NO_BL = 4U,		//!< battery switch-over function is enabled in standard mode; battery low detection function is disabled
 	PCF8523__SO_EN_DIRECT_SWITCHING_NO_BL,	//!< battery switch-over function is enabled in direct switching mode; battery low detection function is disabled
 	//PCF8523__NOT_ALLOWED,					//!< not allowed
-	PCF8523__SO_DI_POWER_VDD_NO_BL = 7		//!< battery switch-over function is disabled - only one power supply (VDD); battery low detection function is disabled
+	PCF8523__SO_DI_POWER_VDD_NO_BL = 7U		//!< battery switch-over function is disabled - only one power supply (VDD); battery low detection function is disabled
 } PCF8523_power;
 
 

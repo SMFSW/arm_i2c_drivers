@@ -17,7 +17,7 @@ FctERR NONNULL__ APDS9960_Set_PON(APDS9960_t * const pCpnt, const bool en)
 	uAPDS9960_REG__ENABLE	EN;
 	FctERR					err;
 
-	err = APDS9960_Read(pCpnt->cfg.slave_inst, &EN.Byte, APDS9960__ENABLE, 1);
+	err = APDS9960_Read(pCpnt->cfg.slave_inst, &EN.Byte, APDS9960__ENABLE, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	EN.Bits.PON = en;
@@ -30,7 +30,7 @@ FctERR NONNULL__ APDS9960_Set_AEN(APDS9960_t * const pCpnt, const bool en)
 	uAPDS9960_REG__ENABLE	EN;
 	FctERR					err;
 
-	err = APDS9960_Read(pCpnt->cfg.slave_inst, &EN.Byte, APDS9960__ENABLE, 1);
+	err = APDS9960_Read(pCpnt->cfg.slave_inst, &EN.Byte, APDS9960__ENABLE, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	EN.Bits.AEN = en;
@@ -43,7 +43,7 @@ FctERR NONNULL__ APDS9960_Set_PEN(APDS9960_t * const pCpnt, const bool en)
 	uAPDS9960_REG__ENABLE	EN;
 	FctERR					err;
 
-	err = APDS9960_Read(pCpnt->cfg.slave_inst, &EN.Byte, APDS9960__ENABLE, 1);
+	err = APDS9960_Read(pCpnt->cfg.slave_inst, &EN.Byte, APDS9960__ENABLE, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	EN.Bits.PEN = en;
@@ -56,7 +56,7 @@ FctERR NONNULL__ APDS9960_Set_AIEN(APDS9960_t * const pCpnt, const bool en)
 	uAPDS9960_REG__ENABLE	EN;
 	FctERR					err;
 
-	err = APDS9960_Read(pCpnt->cfg.slave_inst, &EN.Byte, APDS9960__ENABLE, 1);
+	err = APDS9960_Read(pCpnt->cfg.slave_inst, &EN.Byte, APDS9960__ENABLE, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	EN.Bits.AIEN = en;
@@ -73,7 +73,7 @@ FctERR NONNULL__ APDS9960_Set_PIEN(APDS9960_t * const pCpnt, const bool en)
 	uAPDS9960_REG__ENABLE	EN;
 	FctERR					err;
 
-	err = APDS9960_Read(pCpnt->cfg.slave_inst, &EN.Byte, APDS9960__ENABLE, 1);
+	err = APDS9960_Read(pCpnt->cfg.slave_inst, &EN.Byte, APDS9960__ENABLE, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	EN.Bits.PIEN = en;
@@ -90,7 +90,7 @@ FctERR NONNULL__ APDS9960_Set_WEN(APDS9960_t * const pCpnt, const bool en)
 	uAPDS9960_REG__ENABLE	EN;
 	FctERR					err;
 
-	err = APDS9960_Read(pCpnt->cfg.slave_inst, &EN.Byte, APDS9960__ENABLE, 1);
+	err = APDS9960_Read(pCpnt->cfg.slave_inst, &EN.Byte, APDS9960__ENABLE, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	EN.Bits.WEN = en;
@@ -107,7 +107,7 @@ FctERR NONNULL__ APDS9960_Set_GEN(APDS9960_t * const pCpnt, const bool en)
 	uAPDS9960_REG__ENABLE	EN;
 	FctERR					err;
 
-	err = APDS9960_Read(pCpnt->cfg.slave_inst, &EN.Byte, APDS9960__ENABLE, 1);
+	err = APDS9960_Read(pCpnt->cfg.slave_inst, &EN.Byte, APDS9960__ENABLE, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	EN.Bits.GEN = en;
@@ -122,11 +122,11 @@ FctERR NONNULL__ APDS9960_Set_ALS_Pesistence(APDS9960_t * const pCpnt, const APD
 
 	if (persist > APDS9960__PERSIST_60_ALS_PERIODS)		{ return ERROR_VALUE; }	// Unknown persistence
 
-	err = APDS9960_Read(pCpnt->cfg.slave_inst, &PERS.Byte, APDS9960__PERS, 1);
+	err = APDS9960_Read(pCpnt->cfg.slave_inst, &PERS.Byte, APDS9960__PERS, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	PERS.Bits.APERS = persist;
-	err = APDS9960_Write(pCpnt->cfg.slave_inst, &PERS.Byte, APDS9960__PERS, 1);
+	err = APDS9960_Write(pCpnt->cfg.slave_inst, &PERS.Byte, APDS9960__PERS, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	return err;
@@ -140,11 +140,11 @@ FctERR NONNULL__ APDS9960_Set_Prox_Pesistence(APDS9960_t * const pCpnt, const AP
 
 	if (persist > APDS9960__PERSIST_15_PROX_PERIODS)	{ return ERROR_VALUE; }	// Unknown persistence
 
-	err = APDS9960_Read(pCpnt->cfg.slave_inst, &PERS.Byte, APDS9960__PERS, 1);
+	err = APDS9960_Read(pCpnt->cfg.slave_inst, &PERS.Byte, APDS9960__PERS, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	PERS.Bits.PPERS = persist;
-	err = APDS9960_Write(pCpnt->cfg.slave_inst, &PERS.Byte, APDS9960__PERS, 1);
+	err = APDS9960_Write(pCpnt->cfg.slave_inst, &PERS.Byte, APDS9960__PERS, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	return err;
@@ -158,11 +158,11 @@ FctERR NONNULL__ APDS9960_Set_Prox_Pulse_Length(APDS9960_t * const pCpnt, const 
 
 	if (length > APDS9960__PL_32US)	{ return ERROR_VALUE; }	// Unknown pulse length
 
-	err = APDS9960_Read(pCpnt->cfg.slave_inst, &PPULSE.Byte, APDS9960__PPULSE, 1);
+	err = APDS9960_Read(pCpnt->cfg.slave_inst, &PPULSE.Byte, APDS9960__PPULSE, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	PPULSE.Bits.PLEN = length;
-	err = APDS9960_Write(pCpnt->cfg.slave_inst, &PPULSE.Byte, APDS9960__PPULSE, 1);
+	err = APDS9960_Write(pCpnt->cfg.slave_inst, &PPULSE.Byte, APDS9960__PPULSE, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->cfg.Prox_Length = length;
@@ -176,13 +176,13 @@ FctERR NONNULL__ APDS9960_Set_Prox_Pulse_Count(APDS9960_t * const pCpnt, const u
 	uAPDS9960_REG__PULSE	PPULSE;
 	FctERR					err;
 
-	if (cnt > 63)	{ return ERROR_VALUE; }	// Unknown pulse count
+	if (cnt > 63U)	{ return ERROR_VALUE; }	// Unknown pulse count
 
-	err = APDS9960_Read(pCpnt->cfg.slave_inst, &PPULSE.Byte, APDS9960__PPULSE, 1);
+	err = APDS9960_Read(pCpnt->cfg.slave_inst, &PPULSE.Byte, APDS9960__PPULSE, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	PPULSE.Bits.PULSE = cnt;
-	err = APDS9960_Write(pCpnt->cfg.slave_inst, &PPULSE.Byte, APDS9960__PPULSE, 1);
+	err = APDS9960_Write(pCpnt->cfg.slave_inst, &PPULSE.Byte, APDS9960__PPULSE, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->cfg.Prox_Pulses = cnt;
@@ -198,7 +198,7 @@ FctERR NONNULL__ APDS9960_Set_ALS_Gain(APDS9960_t * const pCpnt, const APDS9960_
 
 	if (gain > APDS9960__ALS_64X_GAIN)	{ return ERROR_VALUE; }	// Unknown gain
 
-	err = APDS9960_Read(pCpnt->cfg.slave_inst, &CTL.Byte, APDS9960__CONTROL, 1);
+	err = APDS9960_Read(pCpnt->cfg.slave_inst, &CTL.Byte, APDS9960__CONTROL, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	CTL.Bits.AGAIN = gain;
@@ -218,7 +218,7 @@ FctERR NONNULL__ APDS9960_Set_Prox_Gain(APDS9960_t * const pCpnt, const APDS9960
 
 	if (gain > APDS9960__PROX_8X_GAIN)	{ return ERROR_VALUE; }	// Unknown gain
 
-	err = APDS9960_Read(pCpnt->cfg.slave_inst, &CTL.Byte, APDS9960__CONTROL, 1);
+	err = APDS9960_Read(pCpnt->cfg.slave_inst, &CTL.Byte, APDS9960__CONTROL, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	CTL.Bits.PGAIN = gain;
@@ -238,7 +238,7 @@ FctERR NONNULL__ APDS9960_Set_Prox_Drive_Strength(APDS9960_t * const pCpnt, cons
 
 	if (ldrive > APDS9960__DS_12_5MA)	{ return ERROR_VALUE; }	// Unknown drive strength
 
-	err = APDS9960_Read(pCpnt->cfg.slave_inst, &CTL.Byte, APDS9960__CONTROL, 1);
+	err = APDS9960_Read(pCpnt->cfg.slave_inst, &CTL.Byte, APDS9960__CONTROL, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	CTL.Bits.LDRIVE = ldrive;
@@ -261,7 +261,7 @@ FctERR NONNULL__ APDS9960_Set_ADC_Integration_Time(APDS9960_t * const pCpnt, con
 	// 2.78ms (0xFF) to 712ms (0x00)
 	//ATIME = (uint8_t) ((integ - 2.78f) * (0x00 - 0xFF) / (712.0f - 2.78f) + 0xFF);
 	ATIME = (uint8_t) (256U - (uintCPU_t) ((float) integ / 2.78f));
-	err = APDS9960_Write(pCpnt->cfg.slave_inst, &ATIME, APDS9960__ATIME, 1);
+	err = APDS9960_Write(pCpnt->cfg.slave_inst, &ATIME, APDS9960__ATIME, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->cfg.ADC_Integ = integ;
@@ -279,7 +279,7 @@ FctERR NONNULL__ APDS9960_Set_Wait_Time(APDS9960_t * const pCpnt, const uint16_t
 
 	if ((wait < 3U) || (wait > 8540U))	{ return ERROR_RANGE; }	// Wait time out of range
 
-	err = APDS9960_Read(pCpnt->cfg.slave_inst, &CFG1.Byte, APDS9960__CONFIG1, 1);
+	err = APDS9960_Read(pCpnt->cfg.slave_inst, &CFG1.Byte, APDS9960__CONFIG1, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	if (wait <= 712U)
@@ -299,7 +299,7 @@ FctERR NONNULL__ APDS9960_Set_Wait_Time(APDS9960_t * const pCpnt, const uint16_t
 
 	err = APDS9960_Write_Cfg1(pCpnt, CFG1.Byte);
 	if (err != ERROR_OK)	{ return err; }
-	err = APDS9960_Write(pCpnt->cfg.slave_inst, &WAIT, APDS9960__WTIME, 1);
+	err = APDS9960_Write(pCpnt->cfg.slave_inst, &WAIT, APDS9960__WTIME, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	pCpnt->cfg.Wait = wait;

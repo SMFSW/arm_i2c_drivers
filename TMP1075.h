@@ -23,13 +23,13 @@
 
 #ifndef I2C_TMP1075_NB
 //! \note Define I2C_TMP1075_NB to enable multiple peripherals of this type
-#define I2C_TMP1075_NB	1	//!< Number of TMP1075 peripherals
+#define I2C_TMP1075_NB	1U	//!< Number of TMP1075 peripherals
 #endif
 
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define TMP1075_ADDR		0x48				//!< TMP1075 address
+#define TMP1075_ADDR		0x48U				//!< TMP1075 address
 
 #ifndef TMP1075_BASE_ADDR
 //! \note Define TMP1075_BASE_ADDR to change default device base address
@@ -44,11 +44,11 @@
 ** \brief Register map enum of TMP1075
 **/
 typedef enum PACK__ TMP1075_reg_map {
-	TMP1075__TEMP = 0,		//!< default value for reference
+	TMP1075__TEMP = 0U,		//!< default value for reference
 	TMP1075__CFGR,			//!< default value for reference
 	TMP1075__LLIM,			//!< default value for reference
 	TMP1075__HLIM,			//!< default value for reference
-	TMP1075__DIEID = 0x0F,	//!< default value for reference
+	TMP1075__DIEID = 0x0FU,	//!< default value for reference
 } TMP1075_reg;
 
 
@@ -56,10 +56,10 @@ typedef enum PACK__ TMP1075_reg_map {
 ** \brief Conversion rate enum values for TMP1075
 **/
 typedef enum PACK__ TMP1075_conv_rate {
-	TMP1075__CR_27_5MS = 0,	//!< 27.5ms conversion rate
-	TMP1075__CR_55MS,		//!< 55ms conversion rate
-	TMP1075__CR_110MS,		//!< 110ms conversion rate
-	TMP1075__CR_220MS		//!< 220ms conversion rate (250ms TMP1075N)
+	TMP1075__CR_27_5MS = 0U,	//!< 27.5ms conversion rate
+	TMP1075__CR_55MS,			//!< 55ms conversion rate
+	TMP1075__CR_110MS,			//!< 110ms conversion rate
+	TMP1075__CR_220MS			//!< 220ms conversion rate (250ms TMP1075N)
 } TMP1075_conv_rate;
 
 
@@ -67,7 +67,7 @@ typedef enum PACK__ TMP1075_conv_rate {
 ** \brief Number of faults to trigger alert enum values for TMP1075
 **/
 typedef enum PACK__ TMP1075_nb_faults {
-	TMP1075__1_FAULT = 0,	//!< 1 fault
+	TMP1075__1_FAULT = 0U,	//!< 1 fault
 	TMP1075__2_FAULTS,		//!< 2 faults
 	TMP1075__3_4_FAULTS,	//!< 3 faults (4 faults TMP1075N)
 	TMP1075__4_6_FAULTS		//!< 4 faults (6 faults TMP1075N)
@@ -78,7 +78,7 @@ typedef enum PACK__ TMP1075_nb_faults {
 ** \brief Alert pin polarity enum values for TMP1075
 **/
 typedef enum PACK__ TMP1075_alert_pol {
-	TMP1075__POL_LOW = 0,	//!< Active low ALERT pin
+	TMP1075__POL_LOW = 0U,	//!< Active low ALERT pin
 	TMP1075__POL_HIGH		//!< Active high ALERT pin
 } TMP1075_alert_pol;
 
@@ -87,8 +87,8 @@ typedef enum PACK__ TMP1075_alert_pol {
 ** \brief Alert pin function enum values for TMP1075
 **/
 typedef enum PACK__ TMP1075_alert_mode {
-	TMP1075__MODE_COMP = 0,	//!< ALERT pin functions in comparator mode
-	TMP1075__MODE_INT		//!< ALERT pin functions in interrupt mode
+	TMP1075__MODE_COMP = 0U,	//!< ALERT pin functions in comparator mode
+	TMP1075__MODE_INT			//!< ALERT pin functions in interrupt mode
 } TMP1075_alert_mode;
 
 
@@ -96,7 +96,7 @@ typedef enum PACK__ TMP1075_alert_mode {
 ** \brief Shutdown mode enum values for TMP1075
 **/
 typedef enum PACK__ TMP1075_shutdown_mode {
-	TMP1075__MODE_CONTINUOUS = 0,	//!< Device is in continuous conversion
+	TMP1075__MODE_CONTINUOUS = 0U,	//!< Device is in continuous conversion
 	TMP1075__MODE_SINGLE			//!< Device is in shutdown mode
 } TMP1075_shutdown_mode;
 

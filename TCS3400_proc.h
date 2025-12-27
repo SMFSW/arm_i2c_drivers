@@ -24,8 +24,8 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define TCS34005_CHIP_ID		0x90		//!< TCS34001/TCS34005 Chip ID to check against
-#define TCS34007_CHIP_ID		0x93		//!< TCS34003/TCS34007 Chip ID to check against
+#define TCS34005_CHIP_ID		0x90U		//!< TCS34001/TCS34005 Chip ID to check against
+#define TCS34007_CHIP_ID		0x93U		//!< TCS34003/TCS34007 Chip ID to check against
 
 
 #define TCS3400_IR_COUNT		13.3f		//!< Counts per uW/cm2 for IR channel

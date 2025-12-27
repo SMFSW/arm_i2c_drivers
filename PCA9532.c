@@ -31,7 +31,7 @@ FctERR NONNULL__ PCA9532_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c,
 	I2C_slave_init(&PCA9532_hal[idx], hi2c, devAddress, PCA9532_hal[idx].cfg.timeout);
 
 	err = PCA9532_Set_Auto_Increment(&PCA9532[idx], PCA95xx__AUTO_INC_ALL);
-	if (!err)	{ err = PCA9532_Init_Sequence(&PCA9532[idx]); }
+	if (err == ERROR_OK)	{ err = PCA9532_Init_Sequence(&PCA9532[idx]); }
 
 	if (err != ERROR_OK)	{ I2C_set_enable(&PCA9532_hal[idx], false); }
 
@@ -50,8 +50,8 @@ FctERR NONNULL__ PCA9532_Write(I2C_slave_t * const pSlave, const uint8_t * data,
 	const PCA95xx_reg_inc inc_mode = PCA9532[pSlave - PCA9532_hal].cfg.auto_inc;
 
 	if (!I2C_is_enabled(pSlave))							{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > PCA9532__LS3 + 1)						{ return ERROR_OVERFLOW; }	// More bytes than registers
-	if ((nb > 1) && (inc_mode == PCA95xx__AUTO_INC_NONE))	{ return ERROR_NOTAVAIL; }	// Writing more than 1 byte not available in no auto-increment mode
+	if ((addr + nb) > PCA9532__LS3 + 1U)					{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if ((nb > 1U) && (inc_mode == PCA95xx__AUTO_INC_NONE))	{ return ERROR_NOTAVAIL; }	// Writing more than 1 byte not available in no auto-increment mode
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr | inc_mode, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
@@ -65,8 +65,8 @@ FctERR NONNULL__ PCA9532_Read(I2C_slave_t * const pSlave, uint8_t * data, const 
 	const PCA95xx_reg_inc inc_mode = PCA9532[pSlave - PCA9532_hal].cfg.auto_inc;
 
 	if (!I2C_is_enabled(pSlave))							{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > PCA9532__LS3 + 1)						{ return ERROR_OVERFLOW; }	// More bytes than registers
-	if ((nb > 1) && (inc_mode == PCA95xx__AUTO_INC_NONE))	{ return ERROR_NOTAVAIL; }	// Writing more than 1 byte not available in no auto-increment mode
+	if ((addr + nb) > PCA9532__LS3 + 1U)					{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if ((nb > 1U) && (inc_mode == PCA95xx__AUTO_INC_NONE))	{ return ERROR_NOTAVAIL; }	// Writing more than 1 byte not available in no auto-increment mode
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr | inc_mode, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);

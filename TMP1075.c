@@ -49,7 +49,7 @@ FctERR NONNULL__ TMP1075_Write_Byte(I2C_slave_t * const pSlave, const uint8_t * 
 	if (addr > TMP1075__HLIM)			{ return ERROR_VALUE; }		// Address mismatch
 
 	I2C_set_busy(pSlave, true);
-	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, 1, pSlave->cfg.timeout);
+	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, 1U, pSlave->cfg.timeout);
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }
@@ -61,7 +61,7 @@ FctERR NONNULL__ TMP1075_Read_Byte(I2C_slave_t * const pSlave, uint8_t * data, c
 	if ((addr > TMP1075__HLIM) && (addr != TMP1075__DIEID))	{ return ERROR_VALUE; }		// Address mismatch
 
 	I2C_set_busy(pSlave, true);
-	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, data, 1, pSlave->cfg.timeout);
+	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, data, 1U, pSlave->cfg.timeout);
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }

@@ -19,43 +19,43 @@ MTCH6102_t MTCH6102[I2C_MTCH6102_NB] = { 0 };
 
 
 #if defined(MTCH6102_DEFAULT_CONFIG_DEF)
-uint8_t MTCH6102_default_cfg[MTCH__I2CADDR - MTCH__NUMBER_OF_X_CHANNELS + 1] = {
-	0x09,	// NUMBER_OF_X_CHANNELS @ 0x20
-	0x06,	// NUMBER_OF_Y_CHANNELS
-	0x06,	// SCAN_COUNT
-	0x37,	// TOUCH_THRESH_X
-	0x28,	// TOUCH_THRESH_Y
-	0x85,	// ACTIVE_PERIOD_L
-	0x02,	// ACTIVE_PERIOD_H
-	0x4C,	// IDLE_PERIOD_L
-	0x06,	// IDLE_PERIOD_H
-	0x10,	// IDLE_TIMEOUT
-	0x04,	// HYSTERESIS
-	0x01,	// DEBOUNCE_UP
-	0x01,	// DEBOUNCE_DOWN
-	0x0A,	// BASE_INTERVAL_L
-	0x00,	// BASE_INTERVAL_H
-	0x14,	// BASE_POS_FILTER
-	0x14,	// BASE_NEG_FILTER
-	0x02,	// FILTER_TYPE
-	0x01,	// FILTER_STRENGTH
-	0x01,	// BASE_FILTER_TYPE
-	0x05,	// BASE_FILTER_STRENGTH
-	0x00,	// LARGE_ACTIVATION_THRESH_L
-	0x00,	// LARGE_ACTIVATION_THRESH_H
-	0x40,	// HORIZONTAL_SWIPE_DISTANCE
-	0x40,	// VERTICAL_SWIPE_DISTANCE
-	0x19,	// SWIPE_HOLD_BOUNDARY
-	0x19,	// TAP_DISTANCE
-	0x40,	// DISTANCE_BETWEEN_TAPS
-	0x32,	// TAP_HOLD_TIME_L
-	0x09,	// TAP_HOLD_TIME_H
-	0x0C,	// GESTURE_CLICK_TIME
-	0x20,	// SWIPE_HOLD_THRESH
-	0x04,	// MIN_SWIPE_VELOCITY
-	0x2D,	// HORIZONTAL_GESTURE_ANGLE
-	0x2D,	// VERTICAL_GESTURE_ANGLE
-	0x25,	// I2CADDR
+uint8_t MTCH6102_default_cfg[MTCH__I2CADDR - MTCH__NUMBER_OF_X_CHANNELS + 1U] = {
+	0x09U,	// NUMBER_OF_X_CHANNELS @ 0x20
+	0x06U,	// NUMBER_OF_Y_CHANNELS
+	0x06U,	// SCAN_COUNT
+	0x37U,	// TOUCH_THRESH_X
+	0x28U,	// TOUCH_THRESH_Y
+	0x85U,	// ACTIVE_PERIOD_L
+	0x02U,	// ACTIVE_PERIOD_H
+	0x4CU,	// IDLE_PERIOD_L
+	0x06U,	// IDLE_PERIOD_H
+	0x10U,	// IDLE_TIMEOUT
+	0x04U,	// HYSTERESIS
+	0x01U,	// DEBOUNCE_UP
+	0x01U,	// DEBOUNCE_DOWN
+	0x0AU,	// BASE_INTERVAL_L
+	0x00U,	// BASE_INTERVAL_H
+	0x14U,	// BASE_POS_FILTER
+	0x14U,	// BASE_NEG_FILTER
+	0x02U,	// FILTER_TYPE
+	0x01U,	// FILTER_STRENGTH
+	0x01U,	// BASE_FILTER_TYPE
+	0x05U,	// BASE_FILTER_STRENGTH
+	0x00U,	// LARGE_ACTIVATION_THRESH_L
+	0x00U,	// LARGE_ACTIVATION_THRESH_H
+	0x40U,	// HORIZONTAL_SWIPE_DISTANCE
+	0x40U,	// VERTICAL_SWIPE_DISTANCE
+	0x19U,	// SWIPE_HOLD_BOUNDARY
+	0x19U,	// TAP_DISTANCE
+	0x40U,	// DISTANCE_BETWEEN_TAPS
+	0x32U,	// TAP_HOLD_TIME_L
+	0x09U,	// TAP_HOLD_TIME_H
+	0x0CU,	// GESTURE_CLICK_TIME
+	0x20U,	// SWIPE_HOLD_THRESH
+	0x04U,	// MIN_SWIPE_VELOCITY
+	0x2DU,	// HORIZONTAL_GESTURE_ANGLE
+	0x2DU,	// VERTICAL_GESTURE_ANGLE
+	0x25U,	// I2CADDR
 };
 #endif
 
@@ -86,7 +86,7 @@ __WEAK FctERR NONNULL__ MTCH6102_Init_Sequence(MTCH6102_t * const pCpnt)
 	pCpnt->cfg.APP_ID = MAKEWORD(MTCH_CORE[3], MTCH_CORE[2]);
 
 	// Configure with default values
-	err = MTCH6102_Configure(pCpnt, false, 20, 50, Filter_IIR, 1, Filter_Median, 5, 9, 6);
+	err = MTCH6102_Configure(pCpnt, false, 20U, 50U, Filter_IIR, 1U, Filter_Median, 5U, 9U, 6U);
 	if (err != ERROR_OK)	{ return err; }
 
 	MTCH6102_Set_Grid(pCpnt);
@@ -121,7 +121,7 @@ FctERR NONNULL__ MTCH6102_Configure(MTCH6102_t * const pCpnt, const bool store_t
 		MTCH_ARRAY[1] = HIBYTE(ACTIVE_PER);
 		MTCH_ARRAY[2] = LOBYTE(IDLE_PER);
 		MTCH_ARRAY[3] = HIBYTE(IDLE_PER);
-		err = MTCH6102_Write(pCpnt->cfg.slave_inst, MTCH_ARRAY, MTCH__ACTIVE_PERIOD_L, 4);
+		err = MTCH6102_Write(pCpnt->cfg.slave_inst, MTCH_ARRAY, MTCH__ACTIVE_PERIOD_L, 4U);
 		if (err != ERROR_OK)	{ return err; }
 
 		// Set FILTERTYPE / FILTERSTRENGTH + BASEFILTERTYPE / BASEFILTERSTRENGTH
@@ -129,13 +129,13 @@ FctERR NONNULL__ MTCH6102_Configure(MTCH6102_t * const pCpnt, const bool store_t
 		MTCH_ARRAY[1] = filter_str;
 		MTCH_ARRAY[2] = base_filter;
 		MTCH_ARRAY[3] = base_filter_str;
-		err = MTCH6102_Write(pCpnt->cfg.slave_inst, MTCH_ARRAY, MTCH__FILTER_TYPE, 4);
+		err = MTCH6102_Write(pCpnt->cfg.slave_inst, MTCH_ARRAY, MTCH__FILTER_TYPE, 4U);
 		if (err != ERROR_OK)	{ return err; }
 
 		// Set NUMBEROFXCHANNELS / NUMBEROFYCHANNELS
 		MTCH_ARRAY[0] = pCpnt->cfg.nb_rx;
 		MTCH_ARRAY[1] = pCpnt->cfg.nb_tx;
-		err = MTCH6102_Write(pCpnt->cfg.slave_inst, MTCH_ARRAY, MTCH__NUMBER_OF_X_CHANNELS, 2);
+		err = MTCH6102_Write(pCpnt->cfg.slave_inst, MTCH_ARRAY, MTCH__NUMBER_OF_X_CHANNELS, 2U);
 		if (err != ERROR_OK)	{ return err; }
 
 		// Send configuration request
@@ -144,7 +144,7 @@ FctERR NONNULL__ MTCH6102_Configure(MTCH6102_t * const pCpnt, const bool store_t
 
 		MTCH_ARRAY[0] = 0;
 		MTCH_ARRAY[1] = 0;
-		err = MTCH6102_Read(pCpnt->cfg.slave_inst, MTCH_ARRAY, MTCH__NUMBER_OF_X_CHANNELS, 2);
+		err = MTCH6102_Read(pCpnt->cfg.slave_inst, MTCH_ARRAY, MTCH__NUMBER_OF_X_CHANNELS, 2U);
 		if (err != ERROR_OK)	{ return err; }
 	}
 
@@ -215,7 +215,7 @@ FctERR NONNULL__ MTCH6102_Set_Compensation(MTCH6102_t * const pCpnt)
 	for (uintCPU_t i = 0 ; i < nb ; i++)
 	{
 		const float temp = (float) SENS_VAL[i] / average;
-		SENS_VAL[i] = (uint8_t) ((temp == 1.0) ? 0 : (temp * 64));	// Compensation set to 0 if median is equal to sensor value for faster computing on the channel
+		SENS_VAL[i] = (uint8_t) ((temp == 1.0) ? 0 : (temp * 64.0f));	// Compensation set to 0 if median is equal to sensor value for faster computing on the channel
 	}
 
 	return MTCH6102_Write(pCpnt->cfg.slave_inst, SENS_VAL, MTCH__SENSOR_COMP_RX0, nb);
@@ -245,35 +245,35 @@ FctERR NONNULL__ MTCH6102_Get_MFG_Results(MTCH6102_t * const pCpnt, uint32_t * c
 	err = MTCH6102_Read(pCpnt->cfg.slave_inst, RES, MTCH__RAW_ADC_00, sizeof(RES));
 	if (err != ERROR_OK)	{ return err; }
 
-	for (uintCPU_t i = 0 ; i < 15 ; i++)
+	for (uintCPU_t i = 0 ; i < 15U ; i++)
 	{
-		if (i <= 2)
+		if (i <= 2U)
 		{
-			vdd = (RES[4] & (0x20 << i)) ? 1 : 0;
-			gnd = (RES[5] & (0x20 << i)) ? 1 : 0;
+			vdd = (RES[4] & (0x20U << i)) ? 1U : 0U;
+			gnd = (RES[5] & (0x20U << i)) ? 1U : 0U;
 		}
 		else if (i <= 8)
 		{
-			vdd = (RES[2] & (0x01 << i)) ? 1 : 0;
-			gnd = (RES[3] & (0x01 << i)) ? 1 : 0;
+			vdd = (RES[2] & (0x01U << i)) ? 1U : 0U;
+			gnd = (RES[3] & (0x01U << i)) ? 1U : 0U;
 		}
 		else if (i <= 12)
 		{
-			vdd = (RES[0] & (0x01 << i)) ? 1 : 0;
-			gnd = (RES[1] & (0x01 << i)) ? 1 : 0;
+			vdd = (RES[0] & (0x01U << i)) ? 1U : 0U;
+			gnd = (RES[1] & (0x01U << i)) ? 1U : 0U;
 		}
 		else if (i == 13)
 		{
-			vdd = (RES[0] & 0x20) ? 1 : 0;
-			gnd = (RES[1] & 0x20) ? 1 : 0;
+			vdd = (RES[0] & 0x20U) ? 1U : 0U;
+			gnd = (RES[1] & 0x20U) ? 1U : 0U;
 		}
 		else if (i == 14)
 		{
-			vdd = (RES[4] & 0x04) ? 1 : 0;
-			gnd = (RES[5] & 0x04) ? 1 : 0;
+			vdd = (RES[4] & 0x04U) ? 1U : 0U;
+			gnd = (RES[5] & 0x04U) ? 1U : 0U;
 		}
 
-		result |= LSHIFT(gnd | LSHIFT(vdd, 16), i);
+		result |= LSHIFT(gnd | LSHIFT(vdd, 16U), i);
 	}
 
 	*res = result;	// Store MFG result
@@ -296,8 +296,8 @@ FctERR NONNULL__ MTCH6102_decode_touch_datas(MTCH6102_t * const pCpnt, const MTC
 	pCpnt->touch.Touch = dat->Touch_state.Bits.TCH;
 	pCpnt->touch.Frame = dat->Touch_state.Bits.FRAME;
 
-	pCpnt->touch.Coords.x = (LSHIFT(dat->Touch_x.Byte, 4) & 0x0FF0) | (dat->Touch_lsb.Bits.TOUCHX3_0 & 0x000F);
-	pCpnt->touch.Coords.y = (LSHIFT(dat->Touch_y.Byte, 4) & 0x0FF0) | (dat->Touch_lsb.Bits.TOUCHY3_0 & 0x000F);
+	pCpnt->touch.Coords.x = (LSHIFT(dat->Touch_x.Byte, 4U) & 0x0FF0U) | (dat->Touch_lsb.Bits.TOUCHX3_0 & 0x000FU);
+	pCpnt->touch.Coords.y = (LSHIFT(dat->Touch_y.Byte, 4U) & 0x0FF0U) | (dat->Touch_lsb.Bits.TOUCHY3_0 & 0x000FU);
 
 	if (pCpnt->cfg.RxDownwards)	{ pCpnt->touch.Coords.x = pCpnt->cfg.max_rx - pCpnt->touch.Coords.x; }
 	if (pCpnt->cfg.TxDownwards)	{ pCpnt->touch.Coords.y = pCpnt->cfg.max_tx - pCpnt->touch.Coords.y; }
@@ -387,7 +387,7 @@ __WEAK FctERR NONNULL__ MTCH6102_handler(MTCH6102_t * const pCpnt)
 			if (err != ERROR_OK)	{ goto ret; }
 
 			printf("Sensor Values: ");
-			for (uintCPU_t i = 0; i < sizeof(SensValues) ; i++)	{ printf("%04d ", SensValues.sensor[i]); }
+			for (uintCPU_t i = 0 ; i < sizeof(SensValues) ; i++)	{ printf("%04d ", SensValues.sensor[i]); }
 			printf("\r\n");
 		}
 	#endif

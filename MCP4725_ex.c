@@ -20,16 +20,16 @@ FctERR NONNULL__ MCP4725_Write_Command(MCP4725_t * const pCpnt, const uint16_t v
 
 	if (pCpnt->cfg.Mode == MCP4725__FAST_MODE)
 	{
-		CMD[0] = LSHIFT(pCpnt->cfg.PowerDown, 4) + (RSHIFT(val, 8) & 0x0F);
+		CMD[0] = LSHIFT(pCpnt->cfg.PowerDown, 4U) + (RSHIFT(val, 8U) & 0x0FU);
 		CMD[1] = (uint8_t) val;
 		return MCP4725_Write(pCpnt->cfg.slave_inst, CMD, 2);
 	}
 	else
 	{
-		CMD[0] = LSHIFT(pCpnt->cfg.Mode, 5) + (pCpnt->cfg.PowerDown << 1);
-		CMD[1] = RSHIFT(val, 4);
-		CMD[2] = LSHIFT(val & 0x0F, 4);
-		return MCP4725_Write(pCpnt->cfg.slave_inst, CMD, 3);
+		CMD[0] = LSHIFT(pCpnt->cfg.Mode, 5U) + LSHIFT(pCpnt->cfg.PowerDown, 1U);
+		CMD[1] = RSHIFT(val, 4U);
+		CMD[2] = LSHIFT(val & 0x0FU, 4U);
+		return MCP4725_Write(pCpnt->cfg.slave_inst, CMD, 3U);
 	}
 }
 
@@ -39,10 +39,10 @@ FctERR NONNULL__ MCP4725_Read_DAC(MCP4725_t * const pCpnt, uint16_t * val)
 	uint8_t	REG[3];
 	FctERR	err;
 
-	err = MCP4725_Read(pCpnt->cfg.slave_inst, REG, 3);
+	err = MCP4725_Read(pCpnt->cfg.slave_inst, REG, 3U);
 	if (err != ERROR_OK)	{ return err; }
 
-	*val = RSHIFT(REG[2], 4) | LSHIFT(REG[1], 4);
+	*val = RSHIFT(REG[2], 4U) | LSHIFT(REG[1], 4U);
 	return ERROR_OK;
 }
 
@@ -52,10 +52,10 @@ FctERR NONNULL__ MCP4725_Read_State(MCP4725_t * const pCpnt, bool * state)
 	uint8_t	REG;
 	FctERR	err;
 
-	err = MCP4725_Read(pCpnt->cfg.slave_inst, &REG, 1);
+	err = MCP4725_Read(pCpnt->cfg.slave_inst, &REG, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
-	*state = (REG & 0x80) ? true : false;
+	*state = (REG & 0x80U) ? true : false;
 	return ERROR_OK;
 }
 

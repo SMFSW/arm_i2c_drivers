@@ -65,7 +65,7 @@ FctERR NONNULL__ MCP4725_Set_Val(MCP4725_t * const pCpnt, const uint16_t val)
 	FctERR err;
 
 	if (pCpnt->cfg.VRef == 0.0f)	{ return ERROR_COMMON; }	// VRef not initialized
-	if (val > 4095)					{ return ERROR_VALUE; }		// Value over the limit
+	if (val > 4095U)				{ return ERROR_VALUE; }		// Value over the limit
 
 	err = MCP4725_Write_Command(pCpnt, val);
 	if (err != ERROR_OK)	{ return err; }

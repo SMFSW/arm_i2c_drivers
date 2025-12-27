@@ -45,8 +45,8 @@ FctERR AMG88_Init_Single(void) {
 
 FctERR NONNULL__ AMG88_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(pSlave))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > AMG88__IHYSH + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(pSlave))			{ return ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > AMG88__IHYSH + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
@@ -57,8 +57,8 @@ FctERR NONNULL__ AMG88_Write(I2C_slave_t * const pSlave, const uint8_t * data, c
 
 FctERR NONNULL__ AMG88_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(pSlave))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > AMG88__T64H + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(pSlave))			{ return ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > AMG88__T64H + 1U)		{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
@@ -75,7 +75,7 @@ FctERR NONNULL__ AMG88_Write_Word(I2C_slave_t * const pSlave, const uint16_t * d
 
 	WREG[0] = LOBYTE(*data);
 	WREG[1] = HIBYTE(*data);
-	return AMG88_Write(pSlave, WREG, addr, 2);
+	return AMG88_Write(pSlave, WREG, addr, 2U);
 }
 
 
@@ -86,7 +86,7 @@ FctERR NONNULL__ AMG88_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, co
 
 	if (addr % sizeof(uint16_t))	{ return ERROR_FRAMING; }		// Unaligned word access
 
-	err = AMG88_Read(pSlave, WREG, addr, 2);
+	err = AMG88_Read(pSlave, WREG, addr, 2U);
 	if (err != ERROR_OK)	{ return err; }
 
 	*data = MAKEWORD(WREG[0], WREG[1]);

@@ -49,7 +49,7 @@ FctERR NONNULL__ MCP9808_Write(I2C_slave_t * const pSlave, const uint16_t * data
 	uint8_t DATA[2];
 
 	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > MCP9808__RESOLUTION + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > MCP9808__RESOLUTION + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
 
@@ -57,16 +57,16 @@ FctERR NONNULL__ MCP9808_Write(I2C_slave_t * const pSlave, const uint16_t * data
 	{
 		DATA[0] = (uint8_t) *data;
 
-		pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, MCP9808__RESOLUTION, pSlave->cfg.mem_size, DATA, 1, pSlave->cfg.timeout);
+		pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, MCP9808__RESOLUTION, pSlave->cfg.mem_size, DATA, 1U, pSlave->cfg.timeout);
 	}
 	else
 	{
-		for (uintCPU_t i = 0; i < nb ; i++)
+		for (uintCPU_t i = 0 ; i < nb ; i++)
 		{
 			DATA[0] = HIBYTE(data[i]);
 			DATA[1] = LOBYTE(data[i]);
 
-			pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, DATA, 2, pSlave->cfg.timeout);
+			pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, DATA, 2U, pSlave->cfg.timeout);
 			if (pSlave->status != HAL_OK)	{ break; }
 		}
 	}
@@ -81,21 +81,21 @@ FctERR NONNULL__ MCP9808_Read(I2C_slave_t * const pSlave, uint16_t * data, const
 	uint8_t DATA[2];
 
 	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > MCP9808__RESOLUTION + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > MCP9808__RESOLUTION + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
 
 	if (addr == MCP9808__RESOLUTION)
 	{
-		pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, MCP9808__RESOLUTION, pSlave->cfg.mem_size, DATA, 1, pSlave->cfg.timeout);
+		pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, MCP9808__RESOLUTION, pSlave->cfg.mem_size, DATA, 1U, pSlave->cfg.timeout);
 
 		if (pSlave->status == HAL_OK)	{ *data = DATA[0]; }
 	}
 	else
 	{
-		for (uintCPU_t i = 0; i < nb ; i++)
+		for (uintCPU_t i = 0 ; i < nb ; i++)
 		{
-			pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, DATA, 2, pSlave->cfg.timeout);
+			pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, DATA, 2U, pSlave->cfg.timeout);
 			if (pSlave->status != HAL_OK)	{ break; }
 
 			data[i] = MAKEWORD(DATA[1], DATA[0]);

@@ -22,10 +22,10 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define DRV2604_CHIP_ID			0x80	//!< DRV2604 Chip ID to check against
-#define DRV2605_CHIP_ID			0x60	//!< DRV2605 Chip ID to check against
-#define DRV2604L_CHIP_ID		0xA0	//!< DRV2604L Chip ID to check against
-#define DRV2605L_CHIP_ID		0xE0	//!< DRV2605L Chip ID to check against
+#define DRV2604_CHIP_ID			0x80U	//!< DRV2604 Chip ID to check against
+#define DRV2605_CHIP_ID			0x60U	//!< DRV2605 Chip ID to check against
+#define DRV2604L_CHIP_ID		0xA0U	//!< DRV2604L Chip ID to check against
+#define DRV2605L_CHIP_ID		0xE0U	//!< DRV2605L Chip ID to check against
 
 
 // *****************************************************************************

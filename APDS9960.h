@@ -23,13 +23,13 @@
 
 #ifndef I2C_APDS9960_NB
 //! \note Define I2C_APDS9960_NB to enable multiple peripherals of this type
-#define I2C_APDS9960_NB	1	//!< Number of APDS9960 peripherals
+#define I2C_APDS9960_NB	1U	//!< Number of APDS9960 peripherals
 #endif
 
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define APDS9960_ADDR		0x39				//!< APDS9960 address
+#define APDS9960_ADDR		0x39U				//!< APDS9960 address
 
 #ifndef APDS9960_BASE_ADDR
 //! \note Define APDS9960_BASE_ADDR to change default device base address
@@ -44,62 +44,62 @@
 ** \brief Register map enum of APDS9960
 **/
 typedef enum PACK__ APDS9960_reg_map {
-	APDS9960__ENABLE = 0x80,	//!< Enables states and interrupts
-	APDS9960__ATIME,			//!< ADC integration time
-	APDS9960__WTIME = 0x83,		//!< Wait time (non-gesture)
-	APDS9960__AILTL,			//!< ALS interrupt low threshold low byte
-	APDS9960__AILTH,			//!< ALS interrupt low threshold high byte
-	APDS9960__AIHTL,			//!< ALS interrupt high threshold low byte
-	APDS9960__AIHTH,			//!< ALS interrupt high threshold high byte
-	APDS9960__PILT = 0x89,		//!< Proximity interrupt low threshold
-	APDS9960__PIHT = 0x8B,		//!< Proximity interrupt high threshold
-	APDS9960__PERS,				//!< Interrupt persistence filters (non-gesture)
-	APDS9960__CONFIG1,			//!< Configuration register one
-	APDS9960__PPULSE,			//!< Proximity pulse count and length
-	APDS9960__CONTROL,			//!< Gain control
-	APDS9960__CONFIG2,			//!< Configuration register two
-	APDS9960__ID = 0x92,		//!< Device ID
-	APDS9960__STATUS,			//!< Device status
-	APDS9960__CDATAL,			//!< Low byte of clear channel data
-	APDS9960__CDATAH,			//!< High byte of clear channel data
-	APDS9960__RDATAL,			//!< Low byte of red channel data
-	APDS9960__RDATAH,			//!< High byte of red channel data
-	APDS9960__GDATAL,			//!< Low byte of green channel data
-	APDS9960__GDATAH,			//!< High byte of green channel data
-	APDS9960__BDATAL,			//!< Low byte of blue channel data
-	APDS9960__BDATAH,			//!< High byte of blue channel data
-	APDS9960__PDATA,			//!< Proximity data
-	APDS9960__POFFSET_UR,		//!< Proximity offset for UP and RIGHT photodiodes
-	APDS9960__POFFSET_DL,		//!< Proximity offset for DOWN and LEFT photodiodes
-	APDS9960__CONFIG3,			//!< Configuration register three
-	APDS9960__GPENTH,			//!< Gesture proximity enter threshold
-	APDS9960__GEXTH,			//!< Gesture exit threshold
-	APDS9960__GCONF1,			//!< Gesture configuration one
-	APDS9960__GCONF2,			//!< Gesture configuration two
-	APDS9960__GOFFSET_U,		//!< Gesture UP offset register
-	APDS9960__GOFFSET_D,		//!< Gesture DOWN offset register
-	APDS9960__GPULSE,			//!< Gesture pulse count and length
-	APDS9960__GOFFSET_L,		//!< Gesture LEFT offset register
-	APDS9960__GOFFSET_R = 0xA9,	//!< Gesture RIGHT offset register
-	APDS9960__GCONF3,			//!< Gesture configuration three
-	APDS9960__GCONF4,			//!< Gesture configuration four
-	APDS9960__GFLVL = 0xAE,		//!< Gesture FIFO level
-	APDS9960__GSTATUS,			//!< Gesture status
-	APDS9960__IFORCE = 0xE4,	//!< Force interrupt
-	APDS9960__PICLEAR,			//!< Proximity interrupt clear
-	APDS9960__CICLEAR,			//!< ALS clear channel interrupt clear
-	APDS9960__AICLEAR,			//!< All non-gesture interrupts clear
-	APDS9960__GFIFO_U = 0xFC,	//!< Gesture FIFO UP value
-	APDS9960__GFIFO_D,			//!< Gesture FIFO DOWN value
-	APDS9960__GFIFO_L,			//!< Gesture FIFO LEFT value
-	APDS9960__GFIFO_R,			//!< Gesture FIFO RIGHT value
+	APDS9960__ENABLE = 0x80U,		//!< Enables states and interrupts
+	APDS9960__ATIME,				//!< ADC integration time
+	APDS9960__WTIME = 0x83U,		//!< Wait time (non-gesture)
+	APDS9960__AILTL,				//!< ALS interrupt low threshold low byte
+	APDS9960__AILTH,				//!< ALS interrupt low threshold high byte
+	APDS9960__AIHTL,				//!< ALS interrupt high threshold low byte
+	APDS9960__AIHTH,				//!< ALS interrupt high threshold high byte
+	APDS9960__PILT = 0x89U,			//!< Proximity interrupt low threshold
+	APDS9960__PIHT = 0x8BU,			//!< Proximity interrupt high threshold
+	APDS9960__PERS,					//!< Interrupt persistence filters (non-gesture)
+	APDS9960__CONFIG1,				//!< Configuration register one
+	APDS9960__PPULSE,				//!< Proximity pulse count and length
+	APDS9960__CONTROL,				//!< Gain control
+	APDS9960__CONFIG2,				//!< Configuration register two
+	APDS9960__ID = 0x92U,			//!< Device ID
+	APDS9960__STATUS,				//!< Device status
+	APDS9960__CDATAL,				//!< Low byte of clear channel data
+	APDS9960__CDATAH,				//!< High byte of clear channel data
+	APDS9960__RDATAL,				//!< Low byte of red channel data
+	APDS9960__RDATAH,				//!< High byte of red channel data
+	APDS9960__GDATAL,				//!< Low byte of green channel data
+	APDS9960__GDATAH,				//!< High byte of green channel data
+	APDS9960__BDATAL,				//!< Low byte of blue channel data
+	APDS9960__BDATAH,				//!< High byte of blue channel data
+	APDS9960__PDATA,				//!< Proximity data
+	APDS9960__POFFSET_UR,			//!< Proximity offset for UP and RIGHT photodiodes
+	APDS9960__POFFSET_DL,			//!< Proximity offset for DOWN and LEFT photodiodes
+	APDS9960__CONFIG3,				//!< Configuration register three
+	APDS9960__GPENTH,				//!< Gesture proximity enter threshold
+	APDS9960__GEXTH,				//!< Gesture exit threshold
+	APDS9960__GCONF1,				//!< Gesture configuration one
+	APDS9960__GCONF2,				//!< Gesture configuration two
+	APDS9960__GOFFSET_U,			//!< Gesture UP offset register
+	APDS9960__GOFFSET_D,			//!< Gesture DOWN offset register
+	APDS9960__GPULSE,				//!< Gesture pulse count and length
+	APDS9960__GOFFSET_L,			//!< Gesture LEFT offset register
+	APDS9960__GOFFSET_R = 0xA9U,	//!< Gesture RIGHT offset register
+	APDS9960__GCONF3,				//!< Gesture configuration three
+	APDS9960__GCONF4,				//!< Gesture configuration four
+	APDS9960__GFLVL = 0xAEU,		//!< Gesture FIFO level
+	APDS9960__GSTATUS,				//!< Gesture status
+	APDS9960__IFORCE = 0xE4U,		//!< Force interrupt
+	APDS9960__PICLEAR,				//!< Proximity interrupt clear
+	APDS9960__CICLEAR,				//!< ALS clear channel interrupt clear
+	APDS9960__AICLEAR,				//!< All non-gesture interrupts clear
+	APDS9960__GFIFO_U = 0xFCU,		//!< Gesture FIFO UP value
+	APDS9960__GFIFO_D,				//!< Gesture FIFO DOWN value
+	APDS9960__GFIFO_L,				//!< Gesture FIFO LEFT value
+	APDS9960__GFIFO_R,				//!< Gesture FIFO RIGHT value
 } APDS9960_reg;
 
 /*!\enum APDS9960_spec_func
 ** \brief Special functions of APDS9960
 **/
 typedef enum PACK__ APDS9960_spec_func {
-	APDS9960__SF_IFORCE = 0,	//!< Forces an interrupt
+	APDS9960__SF_IFORCE = 0U,	//!< Forces an interrupt
 	APDS9960__SF_PICLEAR,		//!< Proximity interrupt clear
 	APDS9960__SF_CICLEAR,		//!< ALS interrupt clear
 	APDS9960__SF_AICLEAR		//!< Clears all non-gesture interrupts
@@ -110,7 +110,7 @@ typedef enum PACK__ APDS9960_spec_func {
 ** \brief Persistence control of APDS9960 ALS
 **/
 typedef enum PACK__ APDS9960_als_it_persist {
-	APDS9960__PERSIST_EVERY_ALS_CYCLE = 0,	//!< Every ALS cycle generates interrupt
+	APDS9960__PERSIST_EVERY_ALS_CYCLE = 0U,	//!< Every ALS cycle generates interrupt
 	APDS9960__PERSIST_1_ALS_PERIODS,		//!< 1 consecutive Ch0 channel values out of range
 	APDS9960__PERSIST_2_ALS_PERIODS,		//!< 2 consecutive Ch0 channel values out of range
 	APDS9960__PERSIST_3_ALS_PERIODS,		//!< 3 consecutive Ch0 channel values out of range
@@ -132,29 +132,29 @@ typedef enum PACK__ APDS9960_als_it_persist {
 ** \brief Persistence control of APDS9960 Proximity
 **/
 typedef enum PACK__ APDS9960_prox_it_persist {
-	APDS9960__PERSIST_EVERY_PROX_CYCLE = 0,	//!< Every proximity cycle generates an interrupt
-	APDS9960__PERSIST_1_PROX_PERIODS,		//!< 1 consecutive proximity values out of range
-	APDS9960__PERSIST_2_PROX_PERIODS,		//!< 2 consecutive proximity values out of range
-	APDS9960__PERSIST_3_PROX_PERIODS,		//!< 3 consecutive proximity values out of range
-	APDS9960__PERSIST_4_PROX_PERIODS,		//!< 4 consecutive proximity values out of range
-	APDS9960__PERSIST_5_PROX_PERIODS,		//!< 5 consecutive proximity values out of range
-	APDS9960__PERSIST_6_PROX_PERIODS,		//!< 6 consecutive proximity values out of range
-	APDS9960__PERSIST_7_PROX_PERIODS,		//!< 7 consecutive proximity values out of range
-	APDS9960__PERSIST_8_PROX_PERIODS,		//!< 8 consecutive proximity values out of range
-	APDS9960__PERSIST_9_PROX_PERIODS,		//!< 9 consecutive proximity values out of range
-	APDS9960__PERSIST_10_PROX_PERIODS,		//!< 10 consecutive proximity values out of range
-	APDS9960__PERSIST_11_PROX_PERIODS,		//!< 11 consecutive proximity values out of range
-	APDS9960__PERSIST_12_PROX_PERIODS,		//!< 12 consecutive proximity values out of range
-	APDS9960__PERSIST_13_PROX_PERIODS,		//!< 13 consecutive proximity values out of range
-	APDS9960__PERSIST_14_PROX_PERIODS,		//!< 14 consecutive proximity values out of range
-	APDS9960__PERSIST_15_PROX_PERIODS,		//!< 15 consecutive proximity values out of range
+	APDS9960__PERSIST_EVERY_PROX_CYCLE = 0U,	//!< Every proximity cycle generates an interrupt
+	APDS9960__PERSIST_1_PROX_PERIODS,			//!< 1 consecutive proximity values out of range
+	APDS9960__PERSIST_2_PROX_PERIODS,			//!< 2 consecutive proximity values out of range
+	APDS9960__PERSIST_3_PROX_PERIODS,			//!< 3 consecutive proximity values out of range
+	APDS9960__PERSIST_4_PROX_PERIODS,			//!< 4 consecutive proximity values out of range
+	APDS9960__PERSIST_5_PROX_PERIODS,			//!< 5 consecutive proximity values out of range
+	APDS9960__PERSIST_6_PROX_PERIODS,			//!< 6 consecutive proximity values out of range
+	APDS9960__PERSIST_7_PROX_PERIODS,			//!< 7 consecutive proximity values out of range
+	APDS9960__PERSIST_8_PROX_PERIODS,			//!< 8 consecutive proximity values out of range
+	APDS9960__PERSIST_9_PROX_PERIODS,			//!< 9 consecutive proximity values out of range
+	APDS9960__PERSIST_10_PROX_PERIODS,			//!< 10 consecutive proximity values out of range
+	APDS9960__PERSIST_11_PROX_PERIODS,			//!< 11 consecutive proximity values out of range
+	APDS9960__PERSIST_12_PROX_PERIODS,			//!< 12 consecutive proximity values out of range
+	APDS9960__PERSIST_13_PROX_PERIODS,			//!< 13 consecutive proximity values out of range
+	APDS9960__PERSIST_14_PROX_PERIODS,			//!< 14 consecutive proximity values out of range
+	APDS9960__PERSIST_15_PROX_PERIODS,			//!< 15 consecutive proximity values out of range
 } APDS9960_prox_it_persist;
 
 /*!\enum APDS9960_pulse_length
 ** \brief Proximity LED Pulse Length values
 **/
 typedef enum PACK__ APDS9960_pulse_length {
-	APDS9960__PL_4US = 0,	//!< Pulse Length 4�s
+	APDS9960__PL_4US = 0U,	//!< Pulse Length 4�s
 	APDS9960__PL_8US,		//!< Pulse Length 8�s
 	APDS9960__PL_16US,		//!< Pulse Length 16�s
 	APDS9960__PL_32US,		//!< Pulse Length 32�s
@@ -165,7 +165,7 @@ typedef enum PACK__ APDS9960_pulse_length {
 ** \brief Gain values of APDS9960 ALS & Color
 **/
 typedef enum PACK__ APDS9960_als_gain {
-	APDS9960__ALS_1X_GAIN = 0,	//!< ALS 1X Gain
+	APDS9960__ALS_1X_GAIN = 0U,	//!< ALS 1X Gain
 	APDS9960__ALS_4X_GAIN,		//!< ALS 4X Gain
 	APDS9960__ALS_16X_GAIN,		//!< ALS 16X Gain
 	APDS9960__ALS_64X_GAIN		//!< ALS 64X Gain
@@ -175,10 +175,10 @@ typedef enum PACK__ APDS9960_als_gain {
 ** \brief Gain values of APDS9960 proximity
 **/
 typedef enum PACK__ APDS9960_prox_gain {
-	APDS9960__PROX_1X_GAIN = 0,	//!< Proximity 1X Gain
-	APDS9960__PROX_2X_GAIN,		//!< Proximity 2X Gain
-	APDS9960__PROX_4X_GAIN,		//!< Proximity 4X Gain
-	APDS9960__PROX_8X_GAIN		//!< Proximity 8X Gain
+	APDS9960__PROX_1X_GAIN = 0U,	//!< Proximity 1X Gain
+	APDS9960__PROX_2X_GAIN,			//!< Proximity 2X Gain
+	APDS9960__PROX_4X_GAIN,			//!< Proximity 4X Gain
+	APDS9960__PROX_8X_GAIN			//!< Proximity 8X Gain
 } APDS9960_prox_gain;
 
 
@@ -186,27 +186,27 @@ typedef enum PACK__ APDS9960_prox_gain {
 ** \brief Proximity LED Drive strength values
 **/
 typedef enum PACK__ APDS9960_drive_strength {
-	APDS9960__DS_100MA = 0,	//!< Proximity LED Drive Strength 100mA
-	APDS9960__DS_50MA,		//!< Proximity LED Drive Strength 50mA
-	APDS9960__DS_25MA,		//!< Proximity LED Drive Strength 25mA
-	APDS9960__DS_12_5MA,	//!< Proximity LED Drive Strength 12.5mA
+	APDS9960__DS_100MA = 0U,	//!< Proximity LED Drive Strength 100mA
+	APDS9960__DS_50MA,			//!< Proximity LED Drive Strength 50mA
+	APDS9960__DS_25MA,			//!< Proximity LED Drive Strength 25mA
+	APDS9960__DS_12_5MA,		//!< Proximity LED Drive Strength 12.5mA
 } APDS9960_drive_strength;
 
 /*!\enum APDS9960_led_boost
 ** \brief Proximity LED boost values
 **/
 typedef enum PACK__ APDS9960_led_boost {
-	APDS9960__BOOST_1X = 0,	//!< LED Boost 100%. A LED_BOOST value of 0 results in 100% of the current as set by LDRIVE (no additional current)
-	APDS9960__BOOST_1_5X,	//!< LED Boost 150%
-	APDS9960__BOOST_2X,		//!< LED Boost 200%
-	APDS9960__BOOST_3X,		//!< LED Boost 300%
+	APDS9960__BOOST_1X = 0U,	//!< LED Boost 100%. A LED_BOOST value of 0 results in 100% of the current as set by LDRIVE (no additional current)
+	APDS9960__BOOST_1_5X,		//!< LED Boost 150%
+	APDS9960__BOOST_2X,			//!< LED Boost 200%
+	APDS9960__BOOST_3X,			//!< LED Boost 300%
 } APDS9960_led_boost;
 
 /*!\enum APDS9960_gesture_dim
 ** \brief Gesture dimension values
 **/
 typedef enum PACK__ APDS9960_gesture_dim {
-	APDS9960__GD_UDLR = 0,	//!< Both pairs are active. UP-DOWN and LEFT-RIGHT FIFO data is valid.
+	APDS9960__GD_UDLR = 0U,	//!< Both pairs are active. UP-DOWN and LEFT-RIGHT FIFO data is valid.
 	APDS9960__GD_UD,		//!< Only the UP-DOWN pair is active. Ignore LEFT-RIGHT data in FIFO.
 	APDS9960__GD_LR,		//!< Only the LEFT-RIGHT pair is active. Ignore UP-DOWN data in FIFO.
 	APDS9960__GD_UDLR2,		//!< Both pairs are active. UP-DOWN and LEFT-RIGHT FIFO data is valid.

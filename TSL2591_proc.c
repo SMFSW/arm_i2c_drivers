@@ -14,8 +14,8 @@
 
 TSL2591_t TSL2591[I2C_TSL2591_NB] = { 0 };
 
-const uint16_t TSL2591_gain_tab[4] = { 1, 25, 400, 9200 };	// Medium gain is 24.5, thus 25 used
-const uint16_t TSL2591_integ_tab[6] = { 100, 200, 300, 400, 500, 600 };
+const uint16_t TSL2591_gain_tab[4] = { 1U, 25U, 400U, 9200U };	// Medium gain is 24.5, thus 25 used
+const uint16_t TSL2591_integ_tab[6] = { 100U, 200U, 300U, 400U, 500U, 600U };
 
 
 /****************************************************************/
@@ -29,8 +29,8 @@ __WEAK FctERR NONNULL__ TSL2591_Init_Sequence(TSL2591_t * const pCpnt)
 
 	pCpnt->cfg.Gain = TSL2591__MEDIUM_GAIN;
 	pCpnt->cfg.Integ = TSL2591__INTEG_100MS;
-	pCpnt->cfg.LowThreshold = 0x8FF;
-	pCpnt->cfg.HighThreshold = 0x8FF;
+	pCpnt->cfg.LowThreshold = 0x8FFU;
+	pCpnt->cfg.HighThreshold = 0x8FFU;
 	pCpnt->cfg.AIEN = true;
 
 	// get ID & check against values for TSL2591
@@ -70,7 +70,7 @@ void NONNULL__ TSL2591_Set_CPL(TSL2591_t * const pCpnt)
 	float CPL = (TSL2591_integ_tab[pCpnt->cfg.Integ] * TSL2591_gain_tab[pCpnt->cfg.Gain]) / (GA * TSL2591_DEVICE_FACTOR);
 
 	pCpnt->cfg.DER = 2.0f / CPL;
-	pCpnt->cfg.CPkL = (uint32_t) (CPL * 1000);	// convert Counts Per Lux into kCounts
+	pCpnt->cfg.CPkL = (uint32_t) (CPL * 1000.0f);	// convert Counts Per Lux into kCounts
 }
 
 
@@ -83,7 +83,7 @@ static NONNULL__ FctERR calculateLux(TSL2591_t * const pCpnt, const uint16_t ful
 {
 	const float	B = 1.64f, C = 0.59f, D = 0.86f, DF = 408.0f;
 	// SATURATION = 1024 * (256 - ATIME_ms) if ATIME_ms > 172ms
-	uint16_t	sat = (TSL2591_integ_tab[pCpnt->cfg.Integ] > 172) ? 65535 : 36863;
+	uint16_t	sat = (TSL2591_integ_tab[pCpnt->cfg.Integ] > 172U) ? 65535U : 36863U;
 
 	// Check for saturation
 	if ((full >= sat) || (ir >= sat))

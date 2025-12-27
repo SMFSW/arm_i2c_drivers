@@ -19,8 +19,8 @@
 
 
 //! \note Assuming max data rate drift following temperature does not exceed 3% (* 1.3)
-#define ADS1115_SPStoUS(SPS)	((uint32_t) (((1.0f / (float) SPS) * 1.3f) * 1000000UL))
-#define ADS1115_SPStoMS(SPS)	((uint32_t) (((1.0f / (float) SPS) * 1.3f) * 1000UL))
+#define ADS1115_SPStoUS(SPS)	((uint32_t) (((1.0f / (float) (SPS)) * 1.3f) * 1000000UL))
+#define ADS1115_SPStoMS(SPS)	((uint32_t) (((1.0f / (float) (SPS)) * 1.3f) * 1000UL))
 
 /*!\brief ADS1115 conversion time in µs
 ** \note Depending the configured rate \ref ADS1115_rate
@@ -91,7 +91,7 @@ FctERR NONNULL__ ADS1115_Set_Function(ADS1115_t * const pCpnt, const ADS1115_fun
 {
 	if (func > ADS1115__FUNC_SINGLE_ENDED)	{ return ERROR_VALUE; }	// Unknown conversion
 	if (mode > ADS1115__MODE_SINGLE_SHOT)	{ return ERROR_VALUE; }	// Unknown mode
-	if ((!nb) || (nb > 4))					{ return ERROR_VALUE; }	// Too much or 0 channels
+	if ((!nb) || (nb > 4U))					{ return ERROR_VALUE; }	// Too much or 0 channels
 
 	pCpnt->cfg.nb = nb;
 	pCpnt->cfg.Config.Bits.MODE = mode;
@@ -108,7 +108,7 @@ FctERR NONNULL__ ADS1115_Set_Function(ADS1115_t * const pCpnt, const ADS1115_fun
 		case ADS1115__FUNC_SINGLE_DIFF:
 		{
 			pCpnt->cfg.Config.Bits.MUX = ADS1115__MUX_pAIN0_nAIN1;
-			pCpnt->cfg.nb = 1;
+			pCpnt->cfg.nb = 1U;
 		}
 		break;
 
@@ -222,7 +222,7 @@ FctERR NONNULL__ ADS1115_Start_NextConversion(ADS1115_t * const pCpnt)
 	FctERR err = ERROR_NOTAVAIL;
 
 	if (	(pCpnt->cfg.function == ADS1115__FUNC_SINGLE_DIFF)
-		||	(pCpnt->cfg.nb <= 1))
+		||	(pCpnt->cfg.nb <= 1U))
 	{
 		if (pCpnt->cfg.mode == ADS1115__MODE_SINGLE_SHOT)
 		{
@@ -259,7 +259,7 @@ static float ADS1115_convert_to_uV(const int16_t val, const ADS1115_gain gain)
 **/
 __STATIC_INLINE float ADS1115_convert_to_mV(const int16_t val, const ADS1115_gain gain)
 {
-	return (ADS1115_convert_to_uV(val, gain) / 1000);
+	return (ADS1115_convert_to_uV(val, gain) / 1000U);
 }
 
 /*!\brief Convert ADS1115 value to V
@@ -269,7 +269,7 @@ __STATIC_INLINE float ADS1115_convert_to_mV(const int16_t val, const ADS1115_gai
 **/
 __STATIC_INLINE float ADS1115_convert_to_V(const int16_t val, const ADS1115_gain gain)
 {
-	return (ADS1115_convert_to_uV(val, gain) / 1000000);
+	return (ADS1115_convert_to_uV(val, gain) / 1000000UL);
 }
 
 

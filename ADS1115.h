@@ -29,16 +29,16 @@
 
 #ifndef I2C_ADS1115_NB
 //! \note Define I2C_ADS1115_NB to enable multiple peripherals of this type
-#define I2C_ADS1115_NB	1	//!< Number of ADS1115 peripherals
+#define I2C_ADS1115_NB	1U	//!< Number of ADS1115 peripherals
 #endif
 
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define ADS1115_ADDR_GND	0x48				//!< ADS1115 address (ADR tied to GND)
-#define ADS1115_ADDR_VDD	0x49				//!< ADS1115 address (ADR tied to VDD)
-#define ADS1115_ADDR_SDA	0x4A				//!< ADS1115 address (ADR tied to SDA)
-#define ADS1115_ADDR_SCL	0x4B				//!< ADS1115 address (ADR tied to SCL)
+#define ADS1115_ADDR_GND	0x48U				//!< ADS1115 address (ADR tied to GND)
+#define ADS1115_ADDR_VDD	0x49U				//!< ADS1115 address (ADR tied to VDD)
+#define ADS1115_ADDR_SDA	0x4AU				//!< ADS1115 address (ADR tied to SDA)
+#define ADS1115_ADDR_SCL	0x4BU				//!< ADS1115 address (ADR tied to SCL)
 
 #ifndef ADS1115_BASE_ADDR
 //! \note Define ADS1115_BASE_ADDR to change default device base address
@@ -53,7 +53,7 @@
 ** \brief Register map enum of ADS1115
 **/
 typedef enum PACK__ ADS1115_reg_map {
-	ADS1115__CONVERSION = 0,	//!< Conversion register
+	ADS1115__CONVERSION = 0U,	//!< Conversion register
 	ADS1115__CONFIG,			//!< Config register
 	ADS1115__LOW_THRESH,		//!< Lo_thresh register
 	ADS1115__HI_THRESH,			//!< Hi_thresh register
@@ -64,7 +64,7 @@ typedef enum PACK__ ADS1115_reg_map {
 ** \brief MUX enum for ADS1115
 **/
 typedef enum PACK__ ADS1115_mux {
-	ADS1115__MUX_pAIN0_nAIN1 = 0,	//!< AINP = AIN0 and AINN = AIN1
+	ADS1115__MUX_pAIN0_nAIN1 = 0U,	//!< AINP = AIN0 and AINN = AIN1
 	ADS1115__MUX_pAIN0_nAIN3,		//!< AINP = AIN0 and AINN = AIN3
 	ADS1115__MUX_pAIN1_nAIN3,		//!< AINP = AIN1 and AINN = AIN3
 	ADS1115__MUX_pAIN2_nAIN3,		//!< AINP = AIN2 and AINN = AIN3
@@ -79,14 +79,14 @@ typedef enum PACK__ ADS1115_mux {
 ** \brief GAIN enum for ADS1115
 **/
 typedef enum PACK__ ADS1115_gain {
-	ADS1115__FS_6144mV = 0,	//!< FS = ±6.144V (step = 187.5µV)
-	ADS1115__FS_4096mV,		//!< FS = ±4.096V (step = 125µV)
-	ADS1115__FS_2048mV,		//!< FS = ±2.048V (step = 62.5µV)
-	ADS1115__FS_1024mV,		//!< FS = ±1.024V (step = 31.25µV)
-	ADS1115__FS_512mV,		//!< FS = ±0.512V (step = 15.625µV)
-	ADS1115__FS_256mV,		//!< FS = ±0.256V (step = 7.8125µV)
-	ADS1115__FS_256mV_2,	//!< FS = ±0.256V (step = 7.8125µV)
-	ADS1115__FS_256mV_3,	//!< FS = ±0.256V (step = 7.8125µV)
+	ADS1115__FS_6144mV = 0U,	//!< FS = ±6.144V (step = 187.5µV)
+	ADS1115__FS_4096mV,			//!< FS = ±4.096V (step = 125µV)
+	ADS1115__FS_2048mV,			//!< FS = ±2.048V (step = 62.5µV)
+	ADS1115__FS_1024mV,			//!< FS = ±1.024V (step = 31.25µV)
+	ADS1115__FS_512mV,			//!< FS = ±0.512V (step = 15.625µV)
+	ADS1115__FS_256mV,			//!< FS = ±0.256V (step = 7.8125µV)
+	ADS1115__FS_256mV_2,		//!< FS = ±0.256V (step = 7.8125µV)
+	ADS1115__FS_256mV_3,		//!< FS = ±0.256V (step = 7.8125µV)
 } ADS1115_gain;
 
 
@@ -94,7 +94,7 @@ typedef enum PACK__ ADS1115_gain {
 ** \brief MODE enum for ADS1115
 **/
 typedef enum PACK__ ADS1115_mode {
-	ADS1115__MODE_CONTINUOUS = 0,	//!< Continuous conversion mode
+	ADS1115__MODE_CONTINUOUS = 0U,	//!< Continuous conversion mode
 	ADS1115__MODE_SINGLE_SHOT,		//!< Power-down single-shot mode
 } ADS1115_mode;
 
@@ -103,7 +103,7 @@ typedef enum PACK__ ADS1115_mode {
 ** \brief Data rate enum for ADS1115
 **/
 typedef enum PACK__ ADS1115_rate {
-	ADS1115__SPS_8 = 0,		//!< 8 SPS (Samples Per Second)
+	ADS1115__SPS_8 = 0U,	//!< 8 SPS (Samples Per Second)
 	ADS1115__SPS_16,		//!< 16 SPS
 	ADS1115__SPS_32,		//!< 32 SPS
 	ADS1115__SPS_64,		//!< 64 SPS
@@ -118,8 +118,8 @@ typedef enum PACK__ ADS1115_rate {
 ** \brief Comparator Mode enum for ADS1115
 **/
 typedef enum PACK__ ADS1115_comp {
-	ADS1115__COMP_HYST = 0,	//!< Traditional comparator with hysteresis
-	ADS1115__COMP_WINDOW,	//!< Window comparator
+	ADS1115__COMP_HYST = 0U,	//!< Traditional comparator with hysteresis
+	ADS1115__COMP_WINDOW,		//!< Window comparator
 } ADS1115_comp;
 
 
@@ -127,7 +127,7 @@ typedef enum PACK__ ADS1115_comp {
 ** \brief Comparator Polarity enum for ADS1115
 **/
 typedef enum PACK__ ADS1115_polarity {
-	ADS1115__POL_LOW = 0,	//!< Active Low
+	ADS1115__POL_LOW = 0U,	//!< Active Low
 	ADS1115__POL_HIGH,		//!< Active High
 } ADS1115_polarity;
 
@@ -136,8 +136,8 @@ typedef enum PACK__ ADS1115_polarity {
 ** \brief Comparator Latching enum for ADS1115
 **/
 typedef enum PACK__ ADS1115_latch {
-	ADS1115__LATCH_DISABLE = 0,	//!< Non-latching comparator
-	ADS1115__LATCH_ENABLE,		//!< Latching comparator
+	ADS1115__LATCH_DISABLE = 0U,	//!< Non-latching comparator
+	ADS1115__LATCH_ENABLE,			//!< Latching comparator
 } ADS1115_latch;
 
 
@@ -145,7 +145,7 @@ typedef enum PACK__ ADS1115_latch {
 ** \brief Comparator Queue and Disable enum for ADS1115
 **/
 typedef enum PACK__ ADS1115_queue {
-	ADS1115__QUEUE_1CONV = 0,	//!< Assert after one conversion
+	ADS1115__QUEUE_1CONV = 0U,	//!< Assert after one conversion
 	ADS1115__QUEUE_2CONV,		//!< Assert after two conversions
 	ADS1115__QUEUE_4CONV,		//!< Assert after four conversions
 	ADS1115__QUEUE_DISABLE,		//!< Disable comparator

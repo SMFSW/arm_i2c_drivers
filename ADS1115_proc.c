@@ -32,10 +32,10 @@ __WEAK FctERR NONNULL__ ADS1115_Init_Sequence(ADS1115_t * const pCpnt)
 	pCpnt->cfg.Lo_Thresh = 0x8000;		// - max Default value
 	pCpnt->cfg.Hi_Thresh = 0x7FFF;		// + max Default value
 
-	pCpnt->cfg.Config.Word = 0x8583;	// Default value
+	pCpnt->cfg.Config.Word = 0x8583U;	// Default value
 	pCpnt->cfg.Config.Bits.PGA = ADS1115__FS_4096mV;
 
-	return ADS1115_Set_Function(pCpnt, ADS1115__FUNC_SINGLE_ENDED, ADS1115__MODE_CONTINUOUS, 4);
+	return ADS1115_Set_Function(pCpnt, ADS1115__FUNC_SINGLE_ENDED, ADS1115__MODE_CONTINUOUS, 4U);
 }
 
 

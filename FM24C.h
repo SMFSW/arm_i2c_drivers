@@ -28,7 +28,7 @@
 
 #ifndef I2C_FM24C_NB
 //! \note Define I2C_FM24C_NB to enable multiple peripherals of this type
-#define I2C_FM24C_NB	1	//!< Number of FM24C peripherals
+#define I2C_FM24C_NB	1U	//!< Number of FM24C peripherals
 #endif
 
 // *****************************************************************************
@@ -36,13 +36,13 @@
 // *****************************************************************************
 #ifndef FM24C_BASE_ADDR
 //! \note Define FM24C_BASE_ADDR to change default device base address
-#define FM24C_BASE_ADDR			0x50					//!< FM24C Base address
+#define FM24C_BASE_ADDR			0x50U					//!< FM24C Base address
 #endif
 
-#define	FM24C_BANK_SIZE			0x100					//!< FM24C bank size (in bytes)
+#define	FM24C_BANK_SIZE			0x100U					//!< FM24C bank size (in bytes)
 
-#define	FM24C04B_SIZE			0x200					//!< FM24C04 size (in bytes)
-#define	FM24C16B_SIZE			0x800					//!< FM24C16 size (in bytes)
+#define	FM24C04B_SIZE			0x200U					//!< FM24C04 size (in bytes)
+#define	FM24C16B_SIZE			0x800U					//!< FM24C16 size (in bytes)
 
 #ifndef FM24C_SIZE
 //! \note FM24C_SIZE defaults to FM24C16B size, but can be defined to FM24C04B_SIZE (for example)

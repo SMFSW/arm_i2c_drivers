@@ -31,7 +31,7 @@
 ** \brief Type channels of APDS9960
 **/
 typedef enum PACK__ APDS9960_chan {
-	APDS9960__CHAN_CLEAR = 0,	//!< Clear light channel
+	APDS9960__CHAN_CLEAR = 0U,	//!< Clear light channel
 	APDS9960__CHAN_RED,			//!< Red light channel
 	APDS9960__CHAN_GREEN,		//!< Green light channel
 	APDS9960__CHAN_BLUE,		//!< Blue light channel
@@ -113,7 +113,7 @@ typedef union uAPDS9960_REG_MAP {
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ APDS9960_Write_En(APDS9960_t * const pCpnt, const uint8_t en) {
-	return APDS9960_Write(pCpnt->cfg.slave_inst, (uint8_t *) &en, APDS9960__ENABLE, 1); }
+	return APDS9960_Write(pCpnt->cfg.slave_inst, (uint8_t *) &en, APDS9960__ENABLE, 1U); }
 
 
 /*!\brief Write APDS9960 Config1
@@ -123,7 +123,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9960_Write_En(APDS9960_t * const pCpnt, con
 **/
 __INLINE FctERR NONNULL_INLINE__ APDS9960_Write_Cfg1(APDS9960_t * const pCpnt, const uint8_t cfg1) {
 	uAPDS9960_REG__CONFIG1	CFG1 = { .Byte = (cfg1 & 0x02) | 0x60 };	// Mask WLONG & Set WRITE1 bits to 1
-	return APDS9960_Write(pCpnt->cfg.slave_inst, &CFG1.Byte, APDS9960__CONFIG1, 1); }
+	return APDS9960_Write(pCpnt->cfg.slave_inst, &CFG1.Byte, APDS9960__CONFIG1, 1U); }
 
 /*!\brief Write APDS9960 Config2
 ** \param[in] pCpnt - Pointer to APDS9960 component
@@ -132,7 +132,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9960_Write_Cfg1(APDS9960_t * const pCpnt, c
 **/
 __INLINE FctERR NONNULL_INLINE__ APDS9960_Write_Cfg2(APDS9960_t * const pCpnt, const uint8_t cfg2) {
 	uAPDS9960_REG__CONFIG2	CFG2 = { .Byte = (cfg2 & 0xF0) | 0x01 };	// Mask used bits & Set WRITE1 bit to 1
-	return APDS9960_Write(pCpnt->cfg.slave_inst, &CFG2.Byte, APDS9960__CONFIG2, 1); }
+	return APDS9960_Write(pCpnt->cfg.slave_inst, &CFG2.Byte, APDS9960__CONFIG2, 1U); }
 
 
 /*!\brief Write APDS9960 Control
@@ -141,7 +141,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9960_Write_Cfg2(APDS9960_t * const pCpnt, c
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ APDS9960_Write_Ctrl(APDS9960_t * const pCpnt, const uint8_t ctrl) {
-	return APDS9960_Write(pCpnt->cfg.slave_inst, &ctrl, APDS9960__CONTROL, 1); }
+	return APDS9960_Write(pCpnt->cfg.slave_inst, &ctrl, APDS9960__CONTROL, 1U); }
 
 
 /*!\brief Oscillator Enable / Disable

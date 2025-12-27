@@ -22,13 +22,13 @@
 
 #ifndef I2C_S11059_NB
 //! \note Define I2C_S11059_NB to enable multiple peripherals of this type
-#define I2C_S11059_NB	1	//!< Number of S11059 peripherals
+#define I2C_S11059_NB	1U	//!< Number of S11059 peripherals
 #endif
 
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define S11059_ADDR			0x2A			//!< S11059 address
+#define S11059_ADDR			0x2AU			//!< S11059 address
 
 #ifndef S11059_BASE_ADDR
 //! \note Define S11059_BASE_ADDR to change default device base address
@@ -43,7 +43,7 @@
 ** \brief Register map enum of S11059
 **/
 typedef enum PACK__ S11059_reg_map {
-	S11059__CONTROL = 0,			//!< Control register
+	S11059__CONTROL = 0U,			//!< Control register
 	S11059__MANUAL_TIMING_MSB,		//!< Manual timing register MSB
 	S11059__MANUAL_TIMING_LSB,		//!< Manual timing register LSB
 	S11059__RED_DATA_MSB,			//!< Sensor data register Red MSB
@@ -61,7 +61,7 @@ typedef enum PACK__ S11059_reg_map {
 ** \brief Integration times of S11059
 **/
 typedef enum PACK__ S11059_integ {
-	S11059__INTEG_87_5US = 0,	//!< 87.5us integration time
+	S11059__INTEG_87_5US = 0U,	//!< 87.5us integration time
 	S11059__INTEG_1_4MS,		//!< 1.4ms integration time
 	S11059__INTEG_22_4MS,		//!< 22.4ms integration time
 	S11059__INTEG_179_2MS,		//!< 179.2ms integration time
@@ -71,7 +71,7 @@ typedef enum PACK__ S11059_integ {
 ** \brief Integration modes of S11059
 **/
 typedef enum PACK__ S11059_integ_mode {
-	S11059__FIXED_PERIOD_INTEGRATION = 0,	//!< Fixed period mode
+	S11059__FIXED_PERIOD_INTEGRATION = 0U,	//!< Fixed period mode
 	S11059__MANUAL_INTEGRATION,				//!< Manual setting mode
 } S11059_integ;
 
@@ -79,7 +79,7 @@ typedef enum PACK__ S11059_integ_mode {
 ** \brief Gain values of S11059
 **/
 typedef enum PACK__ S11059_gain {
-	S11059__LOW_GAIN = 0,	//!< Low gain mode (x1)
+	S11059__LOW_GAIN = 0U,	//!< Low gain mode (x1)
 	S11059__HIGH_GAIN,		//!< High gain mode (x10)
 } S11059_gain;
 
@@ -87,15 +87,15 @@ typedef enum PACK__ S11059_gain {
 ** \brief Standby function of S11059
 **/
 typedef enum PACK__ S11059_standby_fct {
-	S11059__OPERATING_MODE = 0,	//!< Operating mode
-	S11059__STANDBY_MODE,		//!< Standby mode
+	S11059__OPERATING_MODE = 0U,	//!< Operating mode
+	S11059__STANDBY_MODE,			//!< Standby mode
 } S11059_standby_fct;
 
 /*!\enum S11059_adc_reset
 ** \brief ADC operation mode of S11059
 **/
 typedef enum PACK__ S11059_adc_reset {
-	S11059__ADC_OPERATION = 0,	//!< Operation
+	S11059__ADC_OPERATION = 0U,	//!< Operation
 	S11059__ADC_RESET,			//!< Reset
 } S11059_adc_reset;
 

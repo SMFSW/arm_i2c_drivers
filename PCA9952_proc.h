@@ -22,9 +22,9 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define	PCA9952_NB_CHANNELS					16				//!< PCA9952 Number of channels
+#define	PCA9952_NB_CHANNELS					16U				//!< PCA9952 Number of channels
 
-#define	PCA9952_DEFAULT_SUBX_CALL_ADDR		(0xEC >> 1)		//!< PCA9952 SUBx CALL Address
+#define	PCA9952_DEFAULT_SUBX_CALL_ADDR		(0xECU >> 1U)	//!< PCA9952 SUBx CALL Address
 
 
 // *****************************************************************************

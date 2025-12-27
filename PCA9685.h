@@ -24,7 +24,7 @@
 
 #ifndef I2C_PCA9685_NB
 //! \note Define I2C_PCA9685_NB to enable multiple peripherals of this type
-#define I2C_PCA9685_NB	1	//!< Number of PCA9685 peripherals
+#define I2C_PCA9685_NB	1U	//!< Number of PCA9685 peripherals
 #endif
 
 // *****************************************************************************
@@ -32,7 +32,7 @@
 // *****************************************************************************
 #ifndef PCA9685_BASE_ADDR
 //! \note Define PCA9685_BASE_ADDR to change default device base address
-#define	PCA9685_BASE_ADDR		0x40		//!< PCA9685 Base Address
+#define	PCA9685_BASE_ADDR		0x40U		//!< PCA9685 Base Address
 #endif
 
 
@@ -43,7 +43,7 @@
 ** \brief Register map enum of PCA9685
 **/
 typedef enum PACK__ PCA9685_reg_map {
-	PCA9685__MODE1 = 0,				//!< register MODE1
+	PCA9685__MODE1 = 0U,			//!< register MODE1
 	PCA9685__MODE2,					//!< register MODE2
 	PCA9685__SUBADR1,				//!< register SUBADR1
 	PCA9685__SUBADR2,				//!< register SUBADR2
@@ -113,7 +113,7 @@ typedef enum PACK__ PCA9685_reg_map {
 	PCA9685__LED15_ON_H,			//!< register LED 15 ON High
 	PCA9685__LED15_OFF_L,			//!< register LED 15 OFF Low
 	PCA9685__LED15_OFF_H,			//!< register LED 15 OFF High
-	PCA9685__ALL_LED_ON_L = 0xFA,	//!< register ALL LED ON Low
+	PCA9685__ALL_LED_ON_L = 0xFAU,	//!< register ALL LED ON Low
 	PCA9685__ALL_LED_ON_H,			//!< register ALL LED ON High
 	PCA9685__ALL_LED_OFF_L,			//!< register ALL LED OFF Low
 	PCA9685__ALL_LED_OFF_H,			//!< register ALL LED OFF High

@@ -30,13 +30,13 @@ __WEAK FctERR NONNULL__ APDS9960_Init_Sequence(APDS9960_t * const pCpnt)
 
 	pCpnt->cfg.ADC_Gain = APDS9960__ALS_16X_GAIN;
 	pCpnt->cfg.Prox_Gain = APDS9960__PROX_2X_GAIN;
-	pCpnt->cfg.ADC_Integ = 100;
-	pCpnt->cfg.Wait = 1000;
-	pCpnt->cfg.ADC_LowThreshold = 0x8FF;
-	pCpnt->cfg.ADC_HighThreshold = 0x8FF;
-	pCpnt->cfg.Prox_LowThreshold = 0x8F;
-	pCpnt->cfg.Prox_HighThreshold = 0x8F;
-	pCpnt->cfg.Prox_Pulses = 8;
+	pCpnt->cfg.ADC_Integ = 100U;
+	pCpnt->cfg.Wait = 1000U;
+	pCpnt->cfg.ADC_LowThreshold = 0x8FFU;
+	pCpnt->cfg.ADC_HighThreshold = 0x8FFU;
+	pCpnt->cfg.Prox_LowThreshold = 0x8FU;
+	pCpnt->cfg.Prox_HighThreshold = 0x8FU;
+	pCpnt->cfg.Prox_Pulses = 8U;
 	pCpnt->cfg.Prox_Length = APDS9960__PL_8US;
 	pCpnt->cfg.Prox_Strength = APDS9960__DS_12_5MA;
 	pCpnt->cfg.AIEN = true;
@@ -62,7 +62,7 @@ __WEAK FctERR NONNULL__ APDS9960_Init_Sequence(APDS9960_t * const pCpnt)
 
 	err = APDS9960_Set_Prox_Drive_Strength(pCpnt, pCpnt->cfg.Prox_Strength);
 	if (err != ERROR_OK)	{ return err; }
-	err = APDS9960_Write(pCpnt->cfg.slave_inst, &pCpnt->cfg.Prox_Pulses, APDS9960__PPULSE, 1);
+	err = APDS9960_Write(pCpnt->cfg.slave_inst, &pCpnt->cfg.Prox_Pulses, APDS9960__PPULSE, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	err = APDS9960_Set_ADC_Integration_Time(pCpnt, pCpnt->cfg.ADC_Integ);

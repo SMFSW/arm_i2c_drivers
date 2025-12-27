@@ -31,7 +31,7 @@
 ** \brief Extension map enum for $CPNT$
 **/
 typedef enum PACK__ $CPNT$_ext_map {
-	$CPNT$__EXT1 = 0,	//!< default value for reference
+	$CPNT$__EXT1 = 0U,	//!< default value for reference
 	$CPNT$__EXT2,		//!< default value for reference
 } $CPNT$_ext;
 
@@ -39,9 +39,9 @@ typedef enum PACK__ $CPNT$_ext_map {
 typedef union u$CPNT$_EXT__EXT1 {
 	uint8_t Byte;
 	struct PACK__ {
-		uint8_t BIT1			:1;		//!< BIT1 description
-		uint8_t 				:6;
-		uint8_t BIT2			:1;		//!< BIT2 description
+		uint8_t BIT1	:1;		//!< BIT1 description
+		uint8_t 		:6;
+		uint8_t BIT2	:1;		//!< BIT2 description
 	} Bits;
 } u$CPNT$_EXT__EXT1;
 

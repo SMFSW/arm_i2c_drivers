@@ -21,7 +21,7 @@
 
 #ifndef I2CMEM_CLR_VAL
 //! \note I2CMEM_CLR_VAL can be set to any value if needed, defaults to 0xFF
-#define I2CMEM_CLR_VAL		0xFF	//!< Mass erase value for I2CMEM
+#define I2CMEM_CLR_VAL		0xFFU	//!< Mass erase value for I2CMEM
 #endif
 
 
@@ -31,21 +31,21 @@
 #define I2CMEM_Write_Type(cpnt, name, type, addr)	__INLINE FctERR INLINE__ I2CMEM_Set_##name(type wr) {	\
 														return I2CMEM_Write(cpnt, &wr, addr, sizeof(type)); }	//!< Macro to create function to write value(s) to I2CMEM
 
-#define I2CMEM_1K			0x0080	//!< 1Kb size
-#define I2CMEM_2K			0x0100	//!< 2Kb size
-#define I2CMEM_4K			0x0200	//!< 4Kb size
-#define I2CMEM_8K			0x0400	//!< 8Kb size
-#define I2CMEM_16K			0x0800	//!< 16Kb size
-#define I2CMEM_32K			0x1000	//!< 32Kb size
-#define I2CMEM_64K			0x2000	//!< 64Kb size
-#define I2CMEM_128K			0x4000	//!< 128Kb size
-#define I2CMEM_256K			0x8000	//!< 256Kb size
+#define I2CMEM_1K			0x0080U	//!< 1Kb size
+#define I2CMEM_2K			0x0100U	//!< 2Kb size
+#define I2CMEM_4K			0x0200U	//!< 4Kb size
+#define I2CMEM_8K			0x0400U	//!< 8Kb size
+#define I2CMEM_16K			0x0800U	//!< 16Kb size
+#define I2CMEM_32K			0x1000U	//!< 32Kb size
+#define I2CMEM_64K			0x2000U	//!< 64Kb size
+#define I2CMEM_128K			0x4000U	//!< 128Kb size
+#define I2CMEM_256K			0x8000U	//!< 256Kb size
 
 #define I2CMEM_WBUF_NONE	0		//!< No buffer
-#define I2CMEM_WBUF_8		8		//!< 8B buffer
-#define I2CMEM_WBUF_16		16		//!< 16B buffer
-#define I2CMEM_WBUF_32		32		//!< 32B buffer
-#define I2CMEM_WBUF_64		64		//!< 64B buffer
+#define I2CMEM_WBUF_8		8U		//!< 8B buffer
+#define I2CMEM_WBUF_16		16U		//!< 16B buffer
+#define I2CMEM_WBUF_32		32U		//!< 32B buffer
+#define I2CMEM_WBUF_64		64U		//!< 64B buffer
 
 
 /*** Known device aliases ***/

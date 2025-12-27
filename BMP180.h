@@ -22,7 +22,7 @@
 
 #ifndef I2C_BMP180_NB
 //! \note Define I2C_BMP180_NB to enable multiple peripherals of this type
-#define I2C_BMP180_NB	1	//!< Number of BMP180 peripherals
+#define I2C_BMP180_NB	1U	//!< Number of BMP180 peripherals
 #endif
 
 // *****************************************************************************
@@ -30,7 +30,7 @@
 // *****************************************************************************
 #ifndef BMP180_BASE_ADDR
 //! \note Define BMP180_BASE_ADDR to change default device base address
-#define BMP180_BASE_ADDR	0x77		//!< BMP180 Base address
+#define BMP180_BASE_ADDR	0x77U		//!< BMP180 Base address
 #endif
 
 
@@ -41,7 +41,7 @@
 ** \brief Register map enum of BMP180
 **/
 typedef enum PACK__ BMP180_reg_map {
-	BMP180__CALIB_AC1_MSB = 0xAA,	//!< AC1 MSB
+	BMP180__CALIB_AC1_MSB = 0xAAU,	//!< AC1 MSB
 	BMP180__CALIB_AC1_LSB,			//!< AC1 LSB
 	BMP180__CALIB_AC2_MSB,			//!< AC2 MSB
 	BMP180__CALIB_AC2_LSB,			//!< AC2 LSB
@@ -63,11 +63,11 @@ typedef enum PACK__ BMP180_reg_map {
 	BMP180__CALIB_MC_LSB,			//!< MC LSB
 	BMP180__CALIB_MD_MSB,			//!< MD MSB
 	BMP180__CALIB_MD_LSB,			//!< MD LSB
-	BMP180__ID = 0xD0,				//!< Identifier
+	BMP180__ID = 0xD0U,				//!< Identifier
 	BMP180__VERSION,				//!< Version
-	BMP180__SOFT_RESET = 0xE0,		//!< Software reset
-	BMP180__CTRL_MEAS = 0xF4,		//!< Measurements Control
-	BMP180__OUT_MSB = 0xF6,			//!< Output MSB
+	BMP180__SOFT_RESET = 0xE0U,		//!< Software reset
+	BMP180__CTRL_MEAS = 0xF4U,		//!< Measurements Control
+	BMP180__OUT_MSB = 0xF6U,		//!< Output MSB
 	BMP180__OUT_LSB,				//!< Output LSB
 	BMP180__OUT_XLSB,				//!< Output XLSB
 } BMP180_reg;
@@ -77,7 +77,7 @@ typedef enum PACK__ BMP180_reg_map {
 ** \brief Oversampling enum of BMP180
 **/
 typedef enum PACK__ BMP180_oversampling {
-	BMP180__OSS_1_TIME = 0,		//!< Oversampling 1 time
+	BMP180__OSS_1_TIME = 0U,	//!< Oversampling 1 time
 	BMP180__OSS_2_TIME,			//!< Oversampling 1 time
 	BMP180__OSS_4_TIME,			//!< Oversampling 1 time
 	BMP180__OSS_8_TIME,			//!< Oversampling 1 time
@@ -88,8 +88,8 @@ typedef enum PACK__ BMP180_oversampling {
 ** \brief BMP180 measure types
 **/
 typedef enum PACK__ BMP180_measure {
-	BMP180__MEAS_TEMPERATURE = 0xE,	//!< Temperature
-	BMP180__MEAS_PRESSURE = 0x14	//!< Pressure
+	BMP180__MEAS_TEMPERATURE = 0x0EU,	//!< Temperature
+	BMP180__MEAS_PRESSURE = 0x14U		//!< Pressure
 } BMP180_meas;
 
 

@@ -26,10 +26,10 @@ __WEAK FctERR NONNULL__ TCS3472_Init_Sequence(TCS3472_t * const pCpnt)
 	FctERR					err = ERROR_OK;
 
 	pCpnt->cfg.Gain = TCS3472__LOW_GAIN;
-	pCpnt->cfg.Integ = 200;
-	pCpnt->cfg.Wait = 1000;
-	pCpnt->cfg.LowThreshold = 0x8FF;
-	pCpnt->cfg.HighThreshold = 0x8FF;
+	pCpnt->cfg.Integ = 200U;
+	pCpnt->cfg.Wait = 1000U;
+	pCpnt->cfg.LowThreshold = 0x8FFU;
+	pCpnt->cfg.HighThreshold = 0x8FFU;
 	pCpnt->cfg.AIEN = true;
 	pCpnt->cfg.WEN = true;
 
@@ -76,7 +76,7 @@ __WEAK FctERR NONNULL__ TCS3472_Init_Sequence(TCS3472_t * const pCpnt)
 static FctERR NONNULL__ TCS3472_calc(TCS3472_t * const pCpnt, const uint16_t r, const uint16_t g, const uint16_t b)
 {
 	// SATURATION = 1024 * (256 - ATIME) if ATIME > 192 (<154ms)
-	uint16_t sat = (pCpnt->cfg.Integ_reg <= 192) ? 65535 : 1024 * (256 - pCpnt->cfg.Integ_reg);
+	uint16_t sat = (pCpnt->cfg.Integ_reg <= 192U) ? 65535U : 1024U * (256U - pCpnt->cfg.Integ_reg);
 
 	// Check for saturation
 	if ((r >= sat) || (g >= sat) || (b >= sat))
@@ -119,8 +119,8 @@ __WEAK FctERR NONNULL__ TCS3472_handler(TCS3472_t * const pCpnt)
 			if (err == ERROR_OVERFLOW)	{ printf("TCS3472 id%d: Sensor saturation reached!\r\n", idx); }
 			else						{ printf("TCS3472 id%d: C%d R%d G%d B%d x%d.%04ld y%d.%04ld Lux: %lul Temp: %luK\r\n",
 												idx, pCpnt->Clear, pCpnt->Red, pCpnt->Green, pCpnt->Blue,
-												(uint16_t) pCpnt->xy[0], get_fp_dec(pCpnt->xy[0], 4),
-												(uint16_t) pCpnt->xy[1], get_fp_dec(pCpnt->xy[1], 4),
+												(uint16_t) pCpnt->xy[0], get_fp_dec(pCpnt->xy[0], 4U),
+												(uint16_t) pCpnt->xy[1], get_fp_dec(pCpnt->xy[1], 4U),
 												pCpnt->Lux, pCpnt->Temp); }
 		#endif
 	}

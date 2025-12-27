@@ -22,8 +22,8 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define MCP9808_MANUFACTURER_ID		0x0054		//!< MCP9808 Manufacturer ID to check against
-#define MCP9808_CHIP_ID				0x0400		//!< MCP9808 Chip ID to check against
+#define MCP9808_MANUFACTURER_ID		0x0054U		//!< MCP9808 Manufacturer ID to check against
+#define MCP9808_CHIP_ID				0x0400U		//!< MCP9808 Chip ID to check against
 
 
 // *****************************************************************************
@@ -33,7 +33,7 @@
 ** \brief Alerts enum of MCP9808
 **/
 typedef enum PACK__ MCP9808_alert {
-	MCP9808__ALERT_HIGH = 0,	//!< High temperature alert
+	MCP9808__ALERT_HIGH = 0U,	//!< High temperature alert
 	MCP9808__ALERT_LOW,			//!< Low temperature alert
 	MCP9808__ALERT_CRIT			//!< Critical temperature alert
 } MCP9808_alert;

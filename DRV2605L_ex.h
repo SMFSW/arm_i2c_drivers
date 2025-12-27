@@ -269,17 +269,17 @@ FctERR DRV2605L_Set_LRAOpenLoopPeriod_us(const uint16_t per);
 
 /*!\brief Get min/max Audio To Vibe Input voltage
 ** \param[in,out] volt - pointer to Audio To Vibe Input voltage result
-** \param[in] max - 0 Min, 1 Max
+** \param[in] maxi - 0 Min, 1 Max
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ DRV2605L_Get_ATVInput_Volt(float * volt, const bool max);
+FctERR NONNULL__ DRV2605L_Get_ATVInput_Volt(float * volt, const bool maxi);
 
 /*!\brief Get min/max Audio To Vibe Drive
 ** \param[in,out] perc - pointer to Audio To Vibe Drive result
-** \param[in] max - 0 Min, 1 Max
+** \param[in] maxi - 0 Min, 1 Max
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ DRV2605L_Get_ATVDrive_Percent(float * perc, const bool max);
+FctERR NONNULL__ DRV2605L_Get_ATVDrive_Percent(float * perc, const bool maxi);
 
 /*!\brief Get haptic Blanking time
 ** \param[in,out] time - pointer to Blanking time value result

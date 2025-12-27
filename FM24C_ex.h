@@ -26,7 +26,7 @@
 
 #ifndef FM24C_CLR_VAL
 //! \note FM24C_CLR_VAL can be set to any value if needed, defaults to 0xFF
-#define FM24C_CLR_VAL		0xFF	//!< Mass erase value for FM24C
+#define FM24C_CLR_VAL		0xFFU	//!< Mass erase value for FM24C
 #endif
 
 

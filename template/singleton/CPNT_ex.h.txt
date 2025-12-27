@@ -31,7 +31,7 @@
 ** \brief Extension map enum for $CPNT$
 **/
 typedef enum PACK__ $CPNT$_ext_map {
-	$CPNT$__EXT1 = 0,	//!< default value for reference
+	$CPNT$__EXT1 = 0U,	//!< default value for reference
 	$CPNT$__EXT2,		//!< default value for reference
 } $CPNT$_ext;
 

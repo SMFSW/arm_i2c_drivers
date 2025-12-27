@@ -57,11 +57,11 @@ FctERR DRV2605L_Set_ActType(const DRV2605L_act act)
 
 	if (act > DRV__ACT_LRA)	{ return ERROR_VALUE; }	// Unknown actuator type
 
-	err = DRV2605L_Read(&FB_CTL.Byte, DRV__FEEDBACK_CONTROL, 1);
+	err = DRV2605L_Read(&FB_CTL.Byte, DRV__FEEDBACK_CONTROL, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	FB_CTL.Bits.N_ERM_LRA = act;
-	err = DRV2605L_Write(&FB_CTL.Byte, DRV__FEEDBACK_CONTROL, 1);
+	err = DRV2605L_Write(&FB_CTL.Byte, DRV__FEEDBACK_CONTROL, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	DRV2605L.cfg.ERM_LRA = act;
@@ -76,11 +76,11 @@ FctERR DRV2605L_Set_OperatingMode(const DRV2605L_mode mode)
 
 	if (mode > DRV__MODE_AUTO_CALIBRATION)	{ return ERROR_VALUE; }	// Unknown mode
 
-	err = DRV2605L_Read(&MODE.Byte, DRV__MODE, 1);
+	err = DRV2605L_Read(&MODE.Byte, DRV__MODE, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	MODE.Bits.MODE = mode;
-	err = DRV2605L_Write(&MODE.Byte, DRV__MODE, 1);
+	err = DRV2605L_Write(&MODE.Byte, DRV__MODE, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	DRV2605L.cfg.Mode = mode;
@@ -93,11 +93,11 @@ FctERR DRV2605L_Set_Standby(const bool stdby)
 	uDRV_REG__MODE	MODE;
 	FctERR			err;
 
-	err = DRV2605L_Read(&MODE.Byte, DRV__MODE, 1);
+	err = DRV2605L_Read(&MODE.Byte, DRV__MODE, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	MODE.Bits.STANDBY = stdby;
-	return  DRV2605L_Write(&MODE.Byte, DRV__MODE, 1);
+	return  DRV2605L_Write(&MODE.Byte, DRV__MODE, 1U);
 }
 
 
@@ -108,11 +108,11 @@ FctERR DRV2605L_Set_InputMode(const DRV2605L_input input)
 
 	if (input > DRV__IN_ANALOG)		{ return ERROR_VALUE; }	// Unknown input type
 
-	err = DRV2605L_Read(&CTL3.Byte, DRV__CONTROL_3, 1);
+	err = DRV2605L_Read(&CTL3.Byte, DRV__CONTROL_3, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	CTL3.Bits.N_PWM_ANALOG = input;
-	err = DRV2605L_Write(&CTL3.Byte, DRV__CONTROL_3, 1);
+	err = DRV2605L_Write(&CTL3.Byte, DRV__CONTROL_3, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	DRV2605L.cfg.Input_Mode = input;
@@ -127,13 +127,13 @@ FctERR DRV2605L_Set_LoopMode(const DRV2605L_loop loop)
 
 	if (loop > DRV__OPEN_LOOP)		{ return ERROR_VALUE; }	// Unknown loop mode
 
-	err = DRV2605L_Read(&CTL3.Byte, DRV__CONTROL_3, 1);
+	err = DRV2605L_Read(&CTL3.Byte, DRV__CONTROL_3, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	if (DRV2605L.cfg.ERM_LRA == DRV__ACT_ERM)	{ CTL3.Bits.ERM_OPEN_LOOP = loop; }
 	else										{ CTL3.Bits.LRA_OPEN_LOOP = loop; }
 
-	err = DRV2605L_Write(&CTL3.Byte, DRV__CONTROL_3, 1);
+	err = DRV2605L_Write(&CTL3.Byte, DRV__CONTROL_3, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	DRV2605L.cfg.Open_Loop = loop;
@@ -148,7 +148,7 @@ FctERR DRV2605L_Set_Library(const DRV2605L_lib lib)
 	if (lib > DRV__LIB_TS2200_LIBRARY_F)	{ return ERROR_VALUE; }	// Unknown library
 
 	LIB.Bits.LIBRARY_SEL = lib;
-	return DRV2605L_Write(&LIB.Byte, DRV__LIBRARY_SELECTION, 1);
+	return DRV2605L_Write(&LIB.Byte, DRV__LIBRARY_SELECTION, 1U);
 }
 
 
@@ -156,12 +156,12 @@ FctERR DRV2605L_Set_Waveform(const uint16_t chan, const DRV2605L_eff effect, con
 {
 	uDRV_REG__WAVEFORM_SEQUENCER WAVEFORM;
 
-	if (chan > 7)						{ return ERROR_VALUE; }	// Unknown channel
+	if (chan > 7U)						{ return ERROR_VALUE; }	// Unknown channel
 	if (effect > DRV__EFF_SMOOTH_HUM_5)	{ return ERROR_VALUE; }	// Unknown effect
 
 	WAVEFORM.Bits.WAIT = wait;
 	WAVEFORM.Bits.WAV_FRM_SEQ = effect;
-	return DRV2605L_Write(&WAVEFORM.Byte, DRV__WAVEFORM_SEQUENCER_1 + chan, 1);
+	return DRV2605L_Write(&WAVEFORM.Byte, DRV__WAVEFORM_SEQUENCER_1 + chan, 1U);
 }
 
 
@@ -172,12 +172,12 @@ FctERR DRV2605L_Set_RTPDataFormat(const DRV2605L_rtp_format format)
 
 	if (format > DRV__RTP_UNSIGNED)	{ return ERROR_VALUE; }	// Unknown RTP data format
 
-	err = DRV2605L_Read(&CTL3.Byte, DRV__CONTROL_3, 1);
+	err = DRV2605L_Read(&CTL3.Byte, DRV__CONTROL_3, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	CTL3.Bits.DATA_FORMAT_RTP = format;
 
-	err = DRV2605L_Write(&CTL3.Byte, DRV__CONTROL_3, 1);
+	err = DRV2605L_Write(&CTL3.Byte, DRV__CONTROL_3, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	DRV2605L.cfg.RTP_Format = format;
@@ -192,11 +192,11 @@ FctERR DRV2605L_Set_ATVPeakTime(const DRV2605L_peak peak)
 
 	if (peak > DRV__PEAK_40MS)	{ return ERROR_VALUE; }	// Unknown peak time
 
-	err = DRV2605L_Read(&ATV.Byte, DRV__ATV_CONTROL, 1);
+	err = DRV2605L_Read(&ATV.Byte, DRV__ATV_CONTROL, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	ATV.Bits.ATH_PEAK_TIME = peak;
-	return DRV2605L_Write(&ATV.Byte, DRV__ATV_CONTROL, 1);
+	return DRV2605L_Write(&ATV.Byte, DRV__ATV_CONTROL, 1U);
 }
 
 
@@ -207,11 +207,11 @@ FctERR DRV2605L_Set_ATVLowPassFilter(const DRV2605L_filter filt)
 
 	if (filt > DRV__FILTER_200HZ)	{ return ERROR_VALUE; }	// Unknown low pass filter frequency
 
-	err = DRV2605L_Read(&ATV.Byte, DRV__ATV_CONTROL, 1);
+	err = DRV2605L_Read(&ATV.Byte, DRV__ATV_CONTROL, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	ATV.Bits.ATH_FILTER = filt;
-	return DRV2605L_Write(&ATV.Byte, DRV__ATV_CONTROL, 1);
+	return DRV2605L_Write(&ATV.Byte, DRV__ATV_CONTROL, 1U);
 }
 
 
@@ -231,7 +231,7 @@ FctERR DRV2605L_Set_ATVDrive_Percent(const uint16_t perc, const bool max)
 {
 	uint8_t	VAL;
 
-	if (perc > 100)	{ return ERROR_VALUE; }	// percent desired is too high
+	if (perc > 100U)	{ return ERROR_VALUE; }	// percent desired is too high
 
 	VAL = (uint8_t) ((perc * 255.0f) / 100.0f);
 	return DRV2605L_Set_ATVOutputDrive_Raw(VAL, max);
@@ -304,10 +304,10 @@ FctERR DRV2605L_Set_LRAOpenLoopPeriod_us(const uint16_t per)
 {
 	uint8_t PER;
 
-	if (per > 25107)	{ return ERROR_VALUE; }	// Period is out of range
+	if (per > 25107U)	{ return ERROR_VALUE; }	// Period is out of range
 
 	PER = (uint8_t) (per / 98.46f);
-	return DRV2605L_Write(&PER, DRV__LRA_OPEN_LOOP_PERIOD, 1);
+	return DRV2605L_Write(&PER, DRV__LRA_OPEN_LOOP_PERIOD, 1U);
 }
 
 
@@ -326,7 +326,7 @@ FctERR NONNULL__ DRV2605L_Get_BlankingTime(uint16_t * time)
 
 	if (CFG.Reg.fdbck_ctl.Bits.N_ERM_LRA)
 	{// LRA mode
-		idx = CFG.Reg.ctl2.Bits.BLANKING_TIME | LSHIFT(CFG.Reg.ctl5.Bits.BLANKING_TIME, 2);
+		idx = CFG.Reg.ctl2.Bits.BLANKING_TIME | LSHIFT(CFG.Reg.ctl5.Bits.BLANKING_TIME, 2U);
 		*time = DRV2605L_time_table_LRA[idx];
 	}
 	else
@@ -339,12 +339,12 @@ FctERR NONNULL__ DRV2605L_Get_BlankingTime(uint16_t * time)
 }
 
 
-FctERR NONNULL__ DRV2605L_Get_ATVInput_Volt(float * volt, const bool max)
+FctERR NONNULL__ DRV2605L_Get_ATVInput_Volt(float * volt, const bool maxi)
 {
 	uint8_t	VAL;
 	FctERR	err;
 
-	err = DRV2605L_Read(&VAL, DRV__ATV_MIN_INPUT_LEVEL + max, 1);
+	err = DRV2605L_Read(&VAL, DRV__ATV_MIN_INPUT_LEVEL + maxi, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	*volt = (VAL * 1.8f) / 255.0f;
@@ -352,12 +352,12 @@ FctERR NONNULL__ DRV2605L_Get_ATVInput_Volt(float * volt, const bool max)
 }
 
 
-FctERR NONNULL__ DRV2605L_Get_ATVDrive_Percent(float * perc, const bool max)
+FctERR NONNULL__ DRV2605L_Get_ATVDrive_Percent(float * perc, const bool maxi)
 {
 	uint8_t	VAL;
 	FctERR	err;
 
-	err = DRV2605L_Read(&VAL, DRV__ATV_MIN_OUTPUT_DRIVE + max, 1);
+	err = DRV2605L_Read(&VAL, DRV__ATV_MIN_OUTPUT_DRIVE + maxi, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	*perc = (VAL / 255.0f) * 100.0;
@@ -376,7 +376,7 @@ FctERR NONNULL__ DRV2605L_Get_CurrentDissipationTime(uint16_t * time)
 
 	if (CFG.Reg.fdbck_ctl.Bits.N_ERM_LRA)
 	{// LRA mode
-		idx = CFG.Reg.ctl2.Bits.IDISS_TIME | LSHIFT(CFG.Reg.ctl5.Bits.IDISS_TIME, 2);
+		idx = CFG.Reg.ctl2.Bits.IDISS_TIME | LSHIFT(CFG.Reg.ctl5.Bits.IDISS_TIME, 2U);
 		*time = DRV2605L_time_table_LRA[idx];
 	}
 	else
@@ -394,8 +394,8 @@ FctERR NONNULL__ DRV2605L_Get_Voltage(uint16_t * vbat)
 	uint8_t VBAT = 0;
 	FctERR	err;
 
-	err = DRV2605L_Read(&VBAT, DRV__VBAT_VOLTAGE_MONITOR, 1);
-	*vbat = (uint16_t) ((VBAT * 5.6f) / 255);
+	err = DRV2605L_Read(&VBAT, DRV__VBAT_VOLTAGE_MONITOR, 1U);
+	*vbat = (uint16_t) ((VBAT * 5.6f) / 255U);
 	return err;
 }
 
@@ -405,7 +405,7 @@ FctERR NONNULL__ DRV2605L_Get_LRAOpenLoopPeriod(uint16_t * per)
 	uint8_t PER = 0;
 	FctERR	err;
 
-	err = DRV2605L_Read(&PER, DRV__LRA_OPEN_LOOP_PERIOD, 1);
+	err = DRV2605L_Read(&PER, DRV__LRA_OPEN_LOOP_PERIOD, 1U);
 	*per = (uint16_t) (PER * 98.46f);
 	return err;
 }
@@ -416,7 +416,7 @@ FctERR NONNULL__ DRV2605L_Get_ResonancePeriod(uint16_t * per)
 	uint8_t PER = 0;
 	FctERR	err;
 
-	err = DRV2605L_Read(&PER, DRV__LRA_RESONANCE_PERIOD, 1);
+	err = DRV2605L_Read(&PER, DRV__LRA_RESONANCE_PERIOD, 1U);
 	*per = (uint16_t) (PER * 98.46f);
 	return err;
 }

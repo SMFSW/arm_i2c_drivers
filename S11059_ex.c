@@ -17,7 +17,7 @@ FctERR NONNULL__ S11059_Set_ADC(S11059_t * const pCpnt, const S11059_adc_reset a
 	uS11059_REG__CONTROL	CTL;
 	FctERR					err;
 
-	err = S11059_Read(pCpnt->cfg.slave_inst, &CTL.Byte, S11059__CONTROL, 1);
+	err = S11059_Read(pCpnt->cfg.slave_inst, &CTL.Byte, S11059__CONTROL, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	CTL.Bits.ADC_RESET = adc;
@@ -35,7 +35,7 @@ FctERR NONNULL__ S11059_Set_Standby(S11059_t * const pCpnt, const S11059_standby
 	uS11059_REG__CONTROL	CTL;
 	FctERR					err;
 
-	err = S11059_Read(pCpnt->cfg.slave_inst, &CTL.Byte, S11059__CONTROL, 1);
+	err = S11059_Read(pCpnt->cfg.slave_inst, &CTL.Byte, S11059__CONTROL, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	CTL.Bits.STANDBY_FUNCTION = standby;
@@ -53,7 +53,7 @@ FctERR NONNULL__ S11059_Set_Gain(S11059_t * const pCpnt, const S11059_gain gain)
 	uS11059_REG__CONTROL	CTL;
 	FctERR					err;
 
-	err = S11059_Read(pCpnt->cfg.slave_inst, &CTL.Byte, S11059__CONTROL, 1);
+	err = S11059_Read(pCpnt->cfg.slave_inst, &CTL.Byte, S11059__CONTROL, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	CTL.Bits.GAIN_SELECTION = gain;
@@ -71,7 +71,7 @@ FctERR NONNULL__ S11059_Set_Integration(S11059_t * const pCpnt, const S11059_int
 	uS11059_REG__CONTROL	CTL;
 	FctERR					err;
 
-	err = S11059_Read(pCpnt->cfg.slave_inst, &CTL.Byte, S11059__CONTROL, 1);
+	err = S11059_Read(pCpnt->cfg.slave_inst, &CTL.Byte, S11059__CONTROL, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	CTL.Bits.INTEG_MODE = mode;
@@ -104,7 +104,7 @@ FctERR NONNULL__ S11059_Get_Standby(S11059_t * const pCpnt, S11059_standby_fct *
 	uS11059_REG__CONTROL	CTL;
 	FctERR					err;
 
-	err = S11059_Read(pCpnt->cfg.slave_inst, (uint8_t *) &CTL, S11059__CONTROL, 1);
+	err = S11059_Read(pCpnt->cfg.slave_inst, (uint8_t *) &CTL, S11059__CONTROL, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	*standby = CTL.Bits.STANDBY_MONITOR;

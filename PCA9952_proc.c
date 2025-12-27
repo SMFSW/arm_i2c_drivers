@@ -38,7 +38,7 @@ __WEAK FctERR NONNULL__ PCA9952_Init_Sequence(PCA9952_t * const pCpnt)
 	err |= PCA9952_Set_Mode_LEDs(pCpnt, 0xFFFF, PCA9xxx__INDIV_BRIGHT);
 
 	// Set IREF to 1/4 of max capability for all channels
-	err |= PCA9952_Set_IREF(pCpnt, PCA9xxx__ALL, 64);
+	err |= PCA9952_Set_IREF(pCpnt, PCA9xxx__ALL, 64U);
 
 	// Set PWM shifting to 6 clock cycles
 	err |= PCA9952_Set_Offset(pCpnt, PCA9952__OFFSET_6_CLOCK_CYCLE);
@@ -53,11 +53,11 @@ __WEAK FctERR NONNULL__ PCA9952_Init_Sequence(PCA9952_t * const pCpnt)
 FctERR PCA9952_calc_IREF(uint8_t * const pIREF, const float Rext, const float current)
 {
 	// IO(LEDn) (mA) = IREFx * (0.9 / 4) / Rext (KOhm)
-	const uint32_t iref = (current * Rext * (4 / 0.9f));
+	const uint32_t iref = (uint32_t) (current * Rext * (4.0f / 0.9f));
 
-	*pIREF = min(255UL, iref);
+	*pIREF = min(255U, iref);
 
-	return (iref > 255UL) ? ERROR_OVERFLOW : ERROR_OK;
+	return (iref > 255U) ? ERROR_OVERFLOW : ERROR_OK;
 }
 
 /****************************************************************/

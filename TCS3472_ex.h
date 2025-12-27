@@ -26,7 +26,7 @@
 ** \brief Light type channels of TCS3472
 **/
 typedef enum PACK__ TCS3472_chan {
-	TCS3472__CHAN_CLEAR = 0,	//!< Clear light channel
+	TCS3472__CHAN_CLEAR = 0U,	//!< Clear light channel
 	TCS3472__CHAN_RED,			//!< Red light channel
 	TCS3472__CHAN_GREEN,		//!< Green light channel
 	TCS3472__CHAN_BLUE			//!< Blue light channel
@@ -85,7 +85,7 @@ typedef union uTCS3472_REG_MAP {
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3472_Write_En(TCS3472_t * const pCpnt, const uint8_t en) {
-	return TCS3472_Write(pCpnt->cfg.slave_inst, (uint8_t *) &en, TCS3472__ENABLE, 1); }
+	return TCS3472_Write(pCpnt->cfg.slave_inst, &en, TCS3472__ENABLE, 1U); }
 
 /*!\brief Write TCS3472 Config register
 ** \param[in] pCpnt - Pointer to TCS3472 component
@@ -93,7 +93,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_Write_En(TCS3472_t * const pCpnt, const
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3472_Write_Cfg(TCS3472_t * const pCpnt, const uint8_t cfg) {
-	return TCS3472_Write(pCpnt->cfg.slave_inst, (uint8_t *) &cfg, TCS3472__CONFIG, 1); }
+	return TCS3472_Write(pCpnt->cfg.slave_inst, &cfg, TCS3472__CONFIG, 1U); }
 
 /*!\brief Write TCS3472 Control register
 ** \param[in] pCpnt - Pointer to TCS3472 component
@@ -101,7 +101,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_Write_Cfg(TCS3472_t * const pCpnt, cons
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3472_Write_Ctl(TCS3472_t * const pCpnt, const uint8_t ctl) {
-	return TCS3472_Write(pCpnt->cfg.slave_inst, (uint8_t *) &ctl, TCS3472__CONTROL, 1); }
+	return TCS3472_Write(pCpnt->cfg.slave_inst, &ctl, TCS3472__CONTROL, 1U); }
 
 
 /*!\brief Oscillator Enable / Disable
@@ -148,7 +148,7 @@ FctERR NONNULL__ TCS3472_Set_Gain(TCS3472_t * const pCpnt, const TCS3472_gain ga
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3472_Set_Pesistence(TCS3472_t * const pCpnt, const TCS3472_it_persist persist) {
 	uTCS3472_REG__PERSIST PERS = { .Bits.PERSIST = persist };
-	return TCS3472_Write(pCpnt->cfg.slave_inst, &PERS.Byte, TCS3472__PERSIST, 1); }
+	return TCS3472_Write(pCpnt->cfg.slave_inst, &PERS.Byte, TCS3472__PERSIST, 1U); }
 
 
 /*!\brief Integration time configuration
@@ -172,7 +172,7 @@ FctERR NONNULL__ TCS3472_Set_Wait_Time(TCS3472_t * const pCpnt, const uint16_t w
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3472_Set_AILT(TCS3472_t * const pCpnt, const uint16_t thr) {
-	return TCS3472_Write_Word(pCpnt->cfg.slave_inst, (uint16_t *) &thr, TCS3472__AILTL); }
+	return TCS3472_Write_Word(pCpnt->cfg.slave_inst, &thr, TCS3472__AILTL); }
 
 /*!\brief ALS interrupt high threshold configuration
 ** \param[in] pCpnt - Pointer to TCS3472 component
@@ -180,7 +180,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_Set_AILT(TCS3472_t * const pCpnt, const
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3472_Set_AIHT(TCS3472_t * const pCpnt, const uint16_t thr) {
-	return TCS3472_Write_Word(pCpnt->cfg.slave_inst, (uint16_t *) &thr, TCS3472__AIHTL); }
+	return TCS3472_Write_Word(pCpnt->cfg.slave_inst, &thr, TCS3472__AIHTL); }
 
 /*!\brief ALS interrupt thresholds configuration
 ** \param[in] pCpnt - Pointer to TCS3472 component
@@ -210,7 +210,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_SF_Clear_IT(TCS3472_t * const pCpnt) {
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3472_Get_ChipID(TCS3472_t * const pCpnt, uint8_t * id) {
-	return TCS3472_Read(pCpnt->cfg.slave_inst, id, TCS3472__ID, 1); }
+	return TCS3472_Read(pCpnt->cfg.slave_inst, id, TCS3472__ID, 1U); }
 
 
 /*!\brief Get All channels conversions
@@ -228,7 +228,7 @@ FctERR NONNULL__ TCS3472_Get_Channels(TCS3472_t * const pCpnt, uint16_t tab[]);
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Channel(TCS3472_t * const pCpnt, uint16_t * buf, const TCS3472_chan chan) {
 	if (chan > TCS3472__CHAN_BLUE)	{ return ERROR_VALUE; }	// Unknown channel
-	return TCS3472_Read_Word(pCpnt->cfg.slave_inst, buf, TCS3472__CDATAL + (2 * chan)); }
+	return TCS3472_Read_Word(pCpnt->cfg.slave_inst, buf, TCS3472__CDATAL + (2U * chan)); }
 
 /*!\brief Get Clear channel conversion
 ** \param[in] pCpnt - Pointer to TCS3472 component

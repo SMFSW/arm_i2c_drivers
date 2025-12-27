@@ -38,7 +38,7 @@ __WEAK FctERR NONNULL__ TMP1075_Init_Sequence(TMP1075_t * const pCpnt)
 	if (pCpnt->cfg.TMP1075N)
 	{
 		err = TMP1075N_Get_ChipID(pCpnt, &pCpnt->cfg.Id);
-		if (err != ERROR_OK)								{ return err; }
+		if (err != ERROR_OK)					{ return err; }
 		if (pCpnt->cfg.Id != TMP1075N_CHIP_ID)	{ return ERROR_COMMON; }	// Unknown device
 	}
 
@@ -59,7 +59,7 @@ static float TMP1075_convert_raw_temp(const int16_t temp)
 
 static int16_t TMP1075_convert_to_raw_temp(const float temp)
 {
-	return (int16_t) ((temp * 16) / TMP1075_resolution);	// Multiply by 16 as value is 12 bit resolution of MSBs (with sign as MSB)
+	return (int16_t) ((temp * 16.0f) / TMP1075_resolution);	// Multiply by 16 as value is 12 bit resolution of MSBs (with sign as MSB)
 }
 
 
@@ -141,7 +141,7 @@ __WEAK FctERR NONNULL__ TMP1075_handler(TMP1075_t * const pCpnt)
 
 		#if defined(VERBOSE)
 			const uint8_t idx = pCpnt - TMP1075;
-			printf("TMP1075 id%d: Temperature %d.%03ld°C\r\n", idx, (int16_t) pCpnt->Temperature, get_fp_dec(pCpnt->Temperature, 3));
+			printf("TMP1075 id%d: Temperature %d.%03ld°C\r\n", idx, (int16_t) pCpnt->Temperature, get_fp_dec(pCpnt->Temperature, 3U));
 		#endif
 	}
 

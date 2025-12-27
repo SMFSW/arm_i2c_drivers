@@ -28,7 +28,7 @@
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ PCA9956_Set_MODE1(PCA9956_t * const pCpnt, const uPCA9956_REG__MODE1 MODE1) {
-	return PCA9956_Write(pCpnt->cfg.slave_inst, (uint8_t *) &MODE1, PCA9956__MODE1, sizeof(MODE1)); }
+	return PCA9956_Write(pCpnt->cfg.slave_inst, &MODE1.Byte, PCA9956__MODE1, sizeof(MODE1)); }
 
 /*!\brief Set MODE2 register
 ** \param[in,out] pCpnt - Pointer to PCA9956 component
@@ -36,8 +36,8 @@ __INLINE FctERR NONNULL_INLINE__ PCA9956_Set_MODE1(PCA9956_t * const pCpnt, cons
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ PCA9956_Set_MODE2(PCA9956_t * const pCpnt, uPCA9956_REG__MODE2 MODE2) {
-	MODE2.Byte = (MODE2.Byte | 0x05) & ~0xC2;	// Setting reserved bits to appropriate values
-	return PCA9956_Write(pCpnt->cfg.slave_inst, (uint8_t *) &MODE2, PCA9956__MODE2, sizeof(MODE2)); }
+	MODE2.Byte = (MODE2.Byte | 0x05U) & ~0xC2U;	// Setting reserved bits to appropriate values
+	return PCA9956_Write(pCpnt->cfg.slave_inst, &MODE2.Byte, PCA9956__MODE2, sizeof(MODE2)); }
 
 
 /*!\brief Set auto increment option for PCA9956 registers

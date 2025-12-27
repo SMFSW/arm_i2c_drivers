@@ -26,7 +26,7 @@
 ** \brief Light types of TSL2591
 **/
 typedef enum PACK__ TSL2591_light {
-	TSL2591__LIGHT_FULL = 0,	//!< Full light spectrum (channel 0)
+	TSL2591__LIGHT_FULL = 0U,	//!< Full light spectrum (channel 0)
 	TSL2591__LIGHT_IR,			//!< Infra Red light (channel 1)
 	TSL2591__LIGHT_VISIBLE		//!< Visible light (channel 0 - channel 1)
 } TSL2591_light;
@@ -76,7 +76,7 @@ typedef union uTSL2591_REG_MAP {
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TSL2591_Write_En(TSL2591_t * const pCpnt, const uint8_t en) {
-	return TSL2591_Write(pCpnt->cfg.slave_inst, &en, TSL2591__ENABLE, 1); }
+	return TSL2591_Write(pCpnt->cfg.slave_inst, &en, TSL2591__ENABLE, 1U); }
 
 /*!\brief Write TSL2591 Config
 ** \param[in] pCpnt - Pointer to TSL2591 component
@@ -84,7 +84,7 @@ __INLINE FctERR NONNULL_INLINE__ TSL2591_Write_En(TSL2591_t * const pCpnt, const
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TSL2591_Write_Cfg(TSL2591_t * const pCpnt, const uint8_t cfg) {
-	return TSL2591_Write(pCpnt->cfg.slave_inst, &cfg, TSL2591__CONFIG, 1); }
+	return TSL2591_Write(pCpnt->cfg.slave_inst, &cfg, TSL2591__CONFIG, 1U); }
 
 
 /*!\brief Oscillator Enable / Disable
@@ -130,7 +130,7 @@ FctERR NONNULL__ TSL2591_Set_Integration_Time(TSL2591_t * const pCpnt, const TSL
 **/
 __INLINE FctERR NONNULL_INLINE__ TSL2591_Set_ALS_Pesistence(TSL2591_t * const pCpnt, const TSL2591_it_persist persist) {
 	uTSL2591_REG__PERSIST PERS = { .Bits.PERSIST = persist };
-	return TSL2591_Write(pCpnt->cfg.slave_inst, &PERS.Byte, TSL2591__PERSIST, 1); }
+	return TSL2591_Write(pCpnt->cfg.slave_inst, &PERS.Byte, TSL2591__PERSIST, 1U); }
 
 
 /*!\brief ALS interrupt low threshold configuration
@@ -226,14 +226,14 @@ __INLINE FctERR NONNULL_INLINE__ TSL2591_SF_Clear_PERS(TSL2591_t * const pCpnt) 
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TSL2591_Get_ChipID(TSL2591_t * const pCpnt, uint8_t * id) {
-	return TSL2591_Read(pCpnt->cfg.slave_inst, id, TSL2591__ID, 1); }
+	return TSL2591_Read(pCpnt->cfg.slave_inst, id, TSL2591__ID, 1U); }
 
 /*!\brief Reset TSL2591 chip
 ** \param[in] pCpnt - Pointer to TSL2591 component
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TSL2591_Reset(TSL2591_t * const pCpnt) {
-	return TSL2591_Write_En(pCpnt, 0x80); }
+	return TSL2591_Write_En(pCpnt, 0x80U); }
 
 /*!\brief Get Full conversion (Channel 0)
 ** \param[in] pCpnt - Pointer to TSL2591 component

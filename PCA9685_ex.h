@@ -22,16 +22,16 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define	PCA9685_FREQ_HZ_MIN		24			//!< Lower admissible frequency (when internal clock used)
-#define	PCA9685_FREQ_HZ_MAX		1526		//!< Upper admissible frequency (when internal clock used)
+#define	PCA9685_FREQ_HZ_MIN		24U			//!< Lower admissible frequency (when internal clock used)
+#define	PCA9685_FREQ_HZ_MAX		1526U		//!< Upper admissible frequency (when internal clock used)
 
 #define PCA9685_CLOCK_FREQ		25000000UL	//!< PCA9685 Internal clock frequency
 
-#define	DefBitFullOnOff			0x10		//!< Full ON / OFF bit on LEDxx_xxx_H
+#define	DefBitFullOnOff			0x10U		//!< Full ON / OFF bit on LEDxx_xxx_H
 
 /** 4 registers per channel -> 2 shifts left for next address **/
-#define	LED_OFFSET_H(chan)		(uint8_t) (PCA9685__LED0_ON_H + LSHIFT(chan, 2))	//!< Macro for address offset computation ON_H for PWM channels
-#define	LED_OFFSET_L(chan)		(uint8_t) (PCA9685__LED0_ON_L + LSHIFT(chan, 2))	//!< Macro for address offset computation ON_L for PWM channels
+#define	LED_OFFSET_H(chan)		((uint8_t) (PCA9685__LED0_ON_H + LSHIFT(chan, 2U)))	//!< Macro for address offset computation ON_H for PWM channels
+#define	LED_OFFSET_L(chan)		((uint8_t) (PCA9685__LED0_ON_L + LSHIFT(chan, 2U)))	//!< Macro for address offset computation ON_L for PWM channels
 
 
 // *****************************************************************************
@@ -61,11 +61,7 @@ FctERR NONNULL__ PCA9685_CalcVal_NoDelay(uint8_t val[4], const uint16_t duty);
 ** \param[in] freq - Outputs frequency in Hz
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL__ PCA9685_Freq_To_Byte(PCA9685_t * const pCpnt, uint8_t * const byte, const uint16_t freq) {
-	if (	(freq > (uint16_t) (((float) pCpnt->cfg.Clock / PCA9685_CLOCK_FREQ) * PCA9685_FREQ_HZ_MAX))
-		||	(freq < (uint16_t) (((float) pCpnt->cfg.Clock / PCA9685_CLOCK_FREQ) * PCA9685_FREQ_HZ_MIN)))	{ return ERROR_RANGE; }
-	*byte = (uint8_t) (round((float) pCpnt->cfg.Clock / (4096.0f * freq)) - 1.0f);
-	return ERROR_OK; }
+FctERR NONNULL__ PCA9685_Freq_To_Byte(PCA9685_t * const pCpnt, uint8_t * const byte, const uint16_t freq);
 
 /*!\brief Convert Prescaler byte register to Frequency (in Hz)
 ** \param[in] pCpnt - Pointer to PCA9685 component
@@ -73,7 +69,7 @@ __INLINE FctERR NONNULL__ PCA9685_Freq_To_Byte(PCA9685_t * const pCpnt, uint8_t 
 ** \return Frequency of PCA9685 outputs
 **/
 __INLINE float NONNULL__ PCA9685_Byte_To_Freq(PCA9685_t * const pCpnt, const uint8_t reg) {
-	return (pCpnt->cfg.Clock / (4096 * ((float) reg + 1))); }
+	return ((float) pCpnt->cfg.Clock / (4096U * (reg + 1U))); }
 
 
 /*!\brief Set latch type for PCA9685 peripheral
@@ -130,7 +126,7 @@ FctERR NONNULL__ PCA9685_PutVal(PCA9685_t * const pCpnt, const PCA9xxx_chan chan
 ** \return FctERR - ErrorCode
 **/
 __INLINE FctERR NONNULL_INLINE__ PCA9685_PutValByte(PCA9685_t * const pCpnt, const PCA9xxx_chan chan, const uint8_t duty, const uint8_t delay) {
-	return PCA9685_PutVal(pCpnt, chan, conv8upto16Bits(duty, 4), conv8upto16Bits(delay, 4)); }
+	return PCA9685_PutVal(pCpnt, chan, conv8upto16Bits(duty, 4U), conv8upto16Bits(delay, 4U)); }
 
 /*!\brief Compute and send PWM lighting values to apply on a PCA9685 channel or all channels (Percent)
 ** \param[in] pCpnt - Pointer to PCA9685 component
@@ -139,10 +135,7 @@ __INLINE FctERR NONNULL_INLINE__ PCA9685_PutValByte(PCA9685_t * const pCpnt, con
 ** \param[in] delay - Delay coded on float (0.0-<100.0%)
 ** \return FctERR - ErrorCode
 **/
-__INLINE FctERR NONNULL__ PCA9685_PutValPerc(PCA9685_t * const pCpnt, const PCA9xxx_chan chan, const float duty, const float delay) {
-	if ((duty < 0.0f) || (duty > 100.0f))		{ return ERROR_RANGE; }
-	if ((delay < 0.0f) || (delay >= 100.0f))	{ return ERROR_RANGE; }
-	return PCA9685_PutVal(pCpnt, chan, (uint16_t) ((duty / 100.0f) * 4095), (uint16_t) ((delay / 100.0f) * 4095)); }
+FctERR NONNULL__ PCA9685_PutValPerc(PCA9685_t * const pCpnt, const PCA9xxx_chan chan, const float duty, const float delay);
 
 /*!\brief Compute and send PWM Full ON value to apply on a PCA9685 channel or all channels (no delay)
 ** \note No configured delay
@@ -173,7 +166,7 @@ FctERR NONNULL__ PCA9685_Reset(PCA9685_t * const pCpnt);
 ** \param[in] hi2c - pointer to general call I2C instance
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ PCA9685_Reset_All(I2C_HandleTypeDef * hi2c);
+FctERR NONNULL__ PCA9685_Reset_All(I2C_HandleTypeDef * const hi2c);
 
 
 /*!\brief Reads register from PCA9685

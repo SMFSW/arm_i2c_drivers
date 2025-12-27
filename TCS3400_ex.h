@@ -26,7 +26,7 @@
 ** \brief Light type channels of TCS3400
 **/
 typedef enum PACK__ TCS3400_chan {
-	TCS3400__CHAN_CLEAR = 0,	//!< Clear light channel
+	TCS3400__CHAN_CLEAR = 0U,	//!< Clear light channel
 	TCS3400__CHAN_RED,			//!< Red light channel
 	TCS3400__CHAN_GREEN,		//!< Green light channel
 	TCS3400__CHAN_BLUE			//!< Blue light channel
@@ -47,7 +47,7 @@ typedef enum PACK__ TCS3400_chan {
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3400_Write_En(TCS3400_t * const pCpnt, const uint8_t en) {
-	return TCS3400_Write(pCpnt->cfg.slave_inst, (uint8_t *) &en, TCS3400__ENABLE, 1); }
+	return TCS3400_Write(pCpnt->cfg.slave_inst, &en, TCS3400__ENABLE, 1U); }
 
 /*!\brief Write TCS3400 Config register
 ** \param[in] pCpnt - Pointer to TCS3400 component
@@ -55,7 +55,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Write_En(TCS3400_t * const pCpnt, const
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3400_Write_Cfg(TCS3400_t * const pCpnt, const uint8_t cfg) {
-	return TCS3400_Write(pCpnt->cfg.slave_inst, (uint8_t *) &cfg, TCS3400__CONFIG, 1); }
+	return TCS3400_Write(pCpnt->cfg.slave_inst, &cfg, TCS3400__CONFIG, 1U); }
 
 /*!\brief Write TCS3400 Control register
 ** \param[in] pCpnt - Pointer to TCS3400 component
@@ -63,7 +63,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Write_Cfg(TCS3400_t * const pCpnt, cons
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3400_Write_Ctl(TCS3400_t * const pCpnt, const uint8_t ctl) {
-	return TCS3400_Write(pCpnt->cfg.slave_inst, (uint8_t *) &ctl, TCS3400__CONTROL, 1); }
+	return TCS3400_Write(pCpnt->cfg.slave_inst, &ctl, TCS3400__CONTROL, 1); }
 
 
 /*!\brief Oscillator Enable / Disable
@@ -117,7 +117,7 @@ FctERR NONNULL__ TCS3400_Set_Gain(TCS3400_t * const pCpnt, const TCS3400_gain ga
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3400_Set_Pesistence(TCS3400_t * const pCpnt, const TCS3400_it_persist persist) {
 	uTCS3400_REG__PERSIST PERS = { .Bits.PERSIST = persist };
-	return TCS3400_Write(pCpnt->cfg.slave_inst, &PERS.Byte, TCS3400__PERSIST, 1); }
+	return TCS3400_Write(pCpnt->cfg.slave_inst, &PERS.Byte, TCS3400__PERSIST, 1U); }
 
 
 /*!\brief Integration time configuration
@@ -141,7 +141,7 @@ FctERR NONNULL__ TCS3400_Set_Wait_Time(TCS3400_t * const pCpnt, const uint16_t w
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3400_Set_AILT(TCS3400_t * const pCpnt, const uint16_t thr) {
-	return TCS3400_Write_Word(pCpnt->cfg.slave_inst, (uint16_t *) &thr, TCS3400__AILTL); }
+	return TCS3400_Write_Word(pCpnt->cfg.slave_inst, &thr, TCS3400__AILTL); }
 
 /*!\brief ALS interrupt high threshold configuration
 ** \param[in] pCpnt - Pointer to TCS3400 component
@@ -149,7 +149,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Set_AILT(TCS3400_t * const pCpnt, const
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3400_Set_AIHT(TCS3400_t * const pCpnt, const uint16_t thr) {
-	return TCS3400_Write_Word(pCpnt->cfg.slave_inst, (uint16_t *) &thr, TCS3400__AIHTL); }
+	return TCS3400_Write_Word(pCpnt->cfg.slave_inst, &thr, TCS3400__AIHTL); }
 
 /*!\brief ALS interrupt thresholds configuration
 ** \param[in] pCpnt - Pointer to TCS3400 component
@@ -168,8 +168,8 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Set_AIT(TCS3400_t * const pCpnt, const 
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3400_Force_IT(TCS3400_t * const pCpnt) {
-	uint8_t REG = 0xFF;
-	return TCS3400_Write(pCpnt->cfg.slave_inst, &REG, TCS3400__IFORCE, 1); }
+	const uint8_t REG = 0xFFU;
+	return TCS3400_Write(pCpnt->cfg.slave_inst, &REG, TCS3400__IFORCE, 1U); }
 
 /*!\brief Clear pending IR interruption
 ** \warning if event pin enabled, shall be called after read to reset pin
@@ -177,8 +177,8 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Force_IT(TCS3400_t * const pCpnt) {
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3400_Clear_IR_IT(TCS3400_t * const pCpnt) {
-	uint8_t REG = 0xFF;
-	return TCS3400_Write(pCpnt->cfg.slave_inst, &REG, TCS3400__CICLEAR, 1); }
+	const uint8_t REG = 0xFFU;
+	return TCS3400_Write(pCpnt->cfg.slave_inst, &REG, TCS3400__CICLEAR, 1U); }
 
 /*!\brief Clear All pending interruptions
 ** \warning if event pin enabled, shall be called after read to reset pin
@@ -186,8 +186,8 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Clear_IR_IT(TCS3400_t * const pCpnt) {
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3400_Clear_All_IT(TCS3400_t * const pCpnt) {
-	uint8_t REG = 0xFF;
-	return TCS3400_Write(pCpnt->cfg.slave_inst, &REG, TCS3400__AICLEAR, 1); }
+	const uint8_t REG = 0xFFU;
+	return TCS3400_Write(pCpnt->cfg.slave_inst, &REG, TCS3400__AICLEAR, 1U); }
 
 
 /*** Operation ***/
@@ -197,7 +197,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Clear_All_IT(TCS3400_t * const pCpnt) {
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3400_Get_RevID(TCS3400_t * const pCpnt, uint8_t * id) {
-	return TCS3400_Read(pCpnt->cfg.slave_inst, id, TCS3400__REVID, 1); }
+	return TCS3400_Read(pCpnt->cfg.slave_inst, id, TCS3400__REVID, 1U); }
 
 /*!\brief Get TCS3400 Device ID
 ** \param[in] pCpnt - Pointer to TCS3400 component
@@ -205,7 +205,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3400_Get_RevID(TCS3400_t * const pCpnt, uint
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3400_Get_DeviceID(TCS3400_t * const pCpnt, uint8_t * id) {
-	return TCS3400_Read(pCpnt->cfg.slave_inst, id, TCS3400__ID, 1); }
+	return TCS3400_Read(pCpnt->cfg.slave_inst, id, TCS3400__ID, 1U); }
 
 
 /*!\brief Get All channels conversions
@@ -223,7 +223,7 @@ FctERR NONNULL__ TCS3400_Get_Channels(TCS3400_t * const pCpnt, uint16_t buf[]);
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3400_Get_Channel(TCS3400_t * const pCpnt, uint16_t * buf, const TCS3400_chan chan) {
 	if (chan > TCS3400__CHAN_BLUE)	{ return ERROR_VALUE; }	// Unknown channel
-	return TCS3400_Read_Word(pCpnt->cfg.slave_inst, buf, TCS3400__CDATAL + (2 * chan)); }
+	return TCS3400_Read_Word(pCpnt->cfg.slave_inst, buf, TCS3400__CDATAL + (2U * chan)); }
 
 /*!\brief Get Clear channel conversion
 ** \param[in] pCpnt - Pointer to TCS3400 component

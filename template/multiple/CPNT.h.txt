@@ -23,13 +23,13 @@
 
 #ifndef I2C_$CPNT$_NB
 //! \note Define I2C_$CPNT$_NB to enable multiple peripherals of this type
-#define I2C_$CPNT$_NB	1	//!< Number of $CPNT$ peripherals
+#define I2C_$CPNT$_NB	1U	//!< Number of $CPNT$ peripherals
 #endif
 
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define $CPNT$_ADDR			0x00			//!< $CPNT$ address
+#define $CPNT$_ADDR			0x00U			//!< $CPNT$ address
 
 #ifndef $CPNT$_BASE_ADDR
 //! \note Define $CPNT$_BASE_ADDR to change default device base address
@@ -44,7 +44,7 @@
 ** \brief Register map enum of $CPNT$
 **/
 typedef enum PACK__ $CPNT$_reg_map {
-	$CPNT$__REG1 = 0,	//!< default value for reference
+	$CPNT$__REG1 = 0U,	//!< default value for reference
 	$CPNT$__REG2,		//!< default value for reference
 } $CPNT$_reg;
 
@@ -53,7 +53,7 @@ typedef enum PACK__ $CPNT$_reg_map {
 ** \brief Values enum for $CPNT$
 **/
 typedef enum PACK__ $CPNT$_enum {
-	$CPNT$__VAL1 = 0,	//!< default value for reference
+	$CPNT$__VAL1 = 0U,	//!< default value for reference
 	$CPNT$__VAL2,		//!< default value for reference
 } $CPNT$_enum;
 
@@ -64,9 +64,9 @@ typedef enum PACK__ $CPNT$_enum {
 typedef union u$CPNT$_REG__REG1 {
 	uint8_t Byte;
 	struct PACK__ {
-		uint8_t BIT0			:1;		//!< BIT0 description (LSB first)
-		uint8_t 				:6;
-		uint8_t BIT1			:1;		//!< BIT1 description (MSB last)
+		uint8_t BIT0	:1;		//!< BIT0 description (LSB first)
+		uint8_t 		:6;
+		uint8_t BIT1	:1;		//!< BIT1 description (MSB last)
 	} Bits;
 } u$CPNT$_REG__REG1;
 
@@ -87,7 +87,7 @@ typedef union u$CPNT$_REG__REG1 {
 FctERR NONNULL__ $CPNT$_Init(const uint8_t idx, I2C_HandleTypeDef * const hi2c, const uint16_t devAddress);
 
 /*!\brief Initialization for $CPNT$ peripheral
-** \warning In case multiple devices (defined by I2C_$CPNT$_NB > 1), you shall use $CPNT$_Init instead
+** \warning In case multiple devices (defined by I2C_$CPNT$_NB > 1U), you shall use $CPNT$_Init instead
 ** \return FctERR - error code
 **/
 FctERR $CPNT$_Init_Single(void);

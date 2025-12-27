@@ -44,7 +44,7 @@ __WEAK FctERR NONNULL__ BMP180_Init_Sequence(BMP180_t * const pCpnt)
 	pCpnt->cfg.OSS = BMP180__OSS_8_TIME;
 
 	err = BMP180_Get_ChipID(pCpnt, &pCpnt->cfg.ID);
-	if (err != ERROR_OK)								{ return err; }
+	if (err != ERROR_OK)					{ return err; }
 	if (pCpnt->cfg.ID != BMP180_CHIP_ID)	{ return ERROR_COMMON; }	// Unknown device
 
 	err = BMP180_Set_SeaLevel_Pressure(pCpnt);
@@ -84,12 +84,12 @@ FctERR NONNULL__ BMP180_Set_Oversampling(BMP180_t * const pCpnt, const BMP180_ov
 
 FctERR NONNULL__ BMP180_Get_Calibration(BMP180_t * const pCpnt, BMP180_calib * pCalib)
 {
-	int16_t *	addr = (int16_t *) pCalib;
+	uint16_t *	addr = (uint16_t *) pCalib;
 	FctERR		err = ERROR_OK;
 
 	for (uintCPU_t i = 0 ; i < SZ_OBJ(BMP180_calib, int16_t) ; i++)
 	{
-		err = BMP180_Read_Word(pCpnt->cfg.slave_inst, (uint16_t *) addr++, BMP180__CALIB_AC1_MSB + (i * 2));
+		err = BMP180_Read_Word(pCpnt->cfg.slave_inst, addr++, BMP180__CALIB_AC1_MSB + (i * 2U));
 		if (err != ERROR_OK)	{ return err; }
 	}
 

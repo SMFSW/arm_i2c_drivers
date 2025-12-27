@@ -35,7 +35,7 @@ FctERR NONNULL__ TMP1075_Start_SingleConversion(TMP1075_t * const pCpnt)
 	err = TMP1075_Read_Config(pCpnt, &CFGR.Byte);
 	if (err != ERROR_OK)	{ return err; }
 
-	CFGR.Bits.OS = 1;
+	CFGR.Bits.OS = 1U;
 	CFGR.Bits.SD = TMP1075__MODE_SINGLE;
 	err = TMP1075_Write_Config(pCpnt, &CFGR.Byte);
 	if (err != ERROR_OK)	{ return err; }

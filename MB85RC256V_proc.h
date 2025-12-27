@@ -25,8 +25,8 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define MB85RC256V_MANUFACTURE_ID	0x0A		//!< MB85RC256V Manufacture ID (Fujitsu) to check against
-#define MB85RC256V_PRODUCT_ID		0x10		//!< MB85RC256V Product ID to check against
+#define MB85RC256V_MANUFACTURE_ID	0x0AU		//!< MB85RC256V Manufacture ID (Fujitsu) to check against
+#define MB85RC256V_PRODUCT_ID		0x10U		//!< MB85RC256V Product ID to check against
 
 
 // *****************************************************************************

@@ -36,7 +36,7 @@ __WEAK FctERR NONNULL__ PCA9532_Init_Sequence(PCA9532_t * const pCpnt)
 	pCpnt->cfg.Duty1 = PCA9532_Byte_To_Duty(Data[3]);
 
 	// Set all LEDs to Off
-	err |= PCA9532_Set_Mode_LEDs(pCpnt, 0xFFFF, PCA95xx__LED_OFF);
+	err |= PCA9532_Set_Mode_LEDs(pCpnt, 0xFFFFU, PCA95xx__LED_OFF);
 
 	return err;
 }

@@ -22,9 +22,9 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define	PCA9956_NB_CHANNELS		24							//!< PCA9956 Number of channels
+#define	PCA9956_NB_CHANNELS		24U							//!< PCA9956 Number of channels
 
-#define	PCA9956_DEFAULT_SUBX_CALL_ADDR		(0xEE >> 1)		//!< PCA9956 SUBx CALL Address
+#define	PCA9956_DEFAULT_SUBX_CALL_ADDR		(0xEEU >> 1U)	//!< PCA9956 SUBx CALL Address
 
 
 // *****************************************************************************

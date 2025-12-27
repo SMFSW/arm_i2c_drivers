@@ -20,8 +20,8 @@ FctERR NONNULL__ $CPNT$_fct($CPNT$_t * const pCpnt)
 {
 	FctERR err;
 
-	err = $CPNT$_Read(pCpnt->cfg.slave_inst, &pCpnt->$CPNT$_val_1, $CPNT$__REG1, 1);
-	if (err)	{ return err; }
+	err = $CPNT$_Read(pCpnt->cfg.slave_inst, &pCpnt->$CPNT$_val_1, $CPNT$__REG1, 1U);
+	if (err != ERROR_OK)	{ return err; }
 
 	return err;
 }

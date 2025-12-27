@@ -46,8 +46,8 @@ FctERR BMP180_Init_Single(void) {
 
 FctERR NONNULL__ BMP180_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(pSlave))			{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > BMP180__OUT_XLSB + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > BMP180__OUT_XLSB + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
@@ -58,8 +58,8 @@ FctERR NONNULL__ BMP180_Write(I2C_slave_t * const pSlave, const uint8_t * data, 
 
 FctERR NONNULL__ BMP180_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(pSlave))			{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > BMP180__OUT_XLSB + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > BMP180__OUT_XLSB + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
@@ -75,7 +75,7 @@ FctERR NONNULL__ BMP180_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, c
 
 	if (addr % sizeof(uint16_t))	{ return ERROR_FRAMING; }		// Unaligned word access
 
-	err = BMP180_Read(pSlave, RREG, addr, 2);
+	err = BMP180_Read(pSlave, RREG, addr, 2U);
 	if (err != ERROR_OK)	{ return err; }
 
 	*data = MAKEWORD(RREG[1], RREG[0]);

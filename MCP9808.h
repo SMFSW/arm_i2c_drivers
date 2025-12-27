@@ -22,13 +22,13 @@
 
 #ifndef I2C_MCP9808_NB
 //! \note Define I2C_MCP9808_NB to enable multiple peripherals of this type
-#define I2C_MCP9808_NB	1	//!< Number of MCP9808 peripherals
+#define I2C_MCP9808_NB	1U	//!< Number of MCP9808 peripherals
 #endif
 
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define MCP9808_ADDR		0x18			//!< MCP9808 address
+#define MCP9808_ADDR		0x18U			//!< MCP9808 address
 
 #ifndef MCP9808_BASE_ADDR
 //! \note Define MCP9808_BASE_ADDR to change default device base address
@@ -43,7 +43,7 @@
 ** \brief Register map enum of MCP9808
 **/
 typedef enum PACK__ MCP9808_reg_map {
-	MCP9808__RFU = 0,				//!< RFU, Reserved for Future Use (Read-Only register)
+	MCP9808__RFU = 0U,				//!< RFU, Reserved for Future Use (Read-Only register)
 	MCP9808__CONFIGURATION,			//!< Configuration register (CONFIG)
 	MCP9808__ALERT_UPPER,			//!< Alert Temperature Upper Boundary Trip register (T UPPER)
 	MCP9808__ALERT_LOWER,			//!< Alert Temperature Lower Boundary Trip register (T LOWER)
@@ -59,7 +59,7 @@ typedef enum PACK__ MCP9808_reg_map {
 ** \brief Resolution enum of MCP9808
 **/
 typedef enum PACK__ MCP9808_res {
-	MCP9808__RES_0_5 = 0,			//!< Resolution +0.5 Celsius degrees
+	MCP9808__RES_0_5 = 0U,			//!< Resolution +0.5 Celsius degrees
 	MCP9808__RES_0_25,				//!< Resolution +0.25 Celsius degrees
 	MCP9808__RES_0_125,				//!< Resolution +0.125 Celsius degrees
 	MCP9808__RES_0_0625				//!< Resolution +0.0625 Celsius degrees
@@ -70,7 +70,7 @@ typedef enum PACK__ MCP9808_res {
 ** \brief Resolution enum of MCP9808
 **/
 typedef enum PACK__ MCP9808_hyst {
-	MCP9808__HYST_0 = 0,			//!< Hysteresis +0.0 Celsius degrees
+	MCP9808__HYST_0 = 0U,			//!< Hysteresis +0.0 Celsius degrees
 	MCP9808__HYST_1_5,				//!< Hysteresis +1.5 Celsius degrees
 	MCP9808__HYST_3_0,				//!< Hysteresis +3.0 Celsius degrees
 	MCP9808__HYST_6_0				//!< Hysteresis +6.0 Celsius degrees

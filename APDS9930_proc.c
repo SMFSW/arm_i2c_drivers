@@ -14,8 +14,8 @@
 
 APDS9930_t APDS9930[I2C_APDS9930_NB] = { 0 };
 
-const uint8_t APDS9930_ALS_gain_tab[4] = { 1, 8, 16, 120 };
-const uint8_t APDS9930_Prox_gain_tab[4] = { 1, 2, 4, 8 };
+const uint8_t APDS9930_ALS_gain_tab[4] = { 1U, 8U, 16U, 120U };
+const uint8_t APDS9930_Prox_gain_tab[4] = { 1U, 2U, 4U, 8U };
 
 
 /****************************************************************/
@@ -30,13 +30,13 @@ __WEAK FctERR NONNULL__ APDS9930_Init_Sequence(APDS9930_t * const pCpnt)
 
 	pCpnt->cfg.ALS_Gain = APDS9930__ALS_GAIN_16X;
 	pCpnt->cfg.Prox_Gain = APDS9930__PROX_2X_GAIN;
-	pCpnt->cfg.ALS_Integ = 100;
-	pCpnt->cfg.Prox_Integ = 3;	// Value recommended in datasheet
-	pCpnt->cfg.Wait = 1000;
-	pCpnt->cfg.ALS_LowThreshold = 0x8FF;
-	pCpnt->cfg.ALS_HighThreshold = 0x8FF;
-	pCpnt->cfg.Prox_LowThreshold = 0x8FF;
-	pCpnt->cfg.Prox_HighThreshold = 0x8FF;
+	pCpnt->cfg.ALS_Integ = 100U;
+	pCpnt->cfg.Prox_Integ = 3U;	// Value recommended in datasheet
+	pCpnt->cfg.Wait = 1000U;
+	pCpnt->cfg.ALS_LowThreshold = 0x8FFU;
+	pCpnt->cfg.ALS_HighThreshold = 0x8FFU;
+	pCpnt->cfg.Prox_LowThreshold = 0x8FFU;
+	pCpnt->cfg.Prox_HighThreshold = 0x8FFU;
 	pCpnt->cfg.Prox_Pulses = APDS9930_DEF_PROX_PULSES;
 	pCpnt->cfg.Prox_Strength = APDS9930__STRENGTH_11_1MA;
 	pCpnt->cfg.AIEN = true;
@@ -45,7 +45,7 @@ __WEAK FctERR NONNULL__ APDS9930_Init_Sequence(APDS9930_t * const pCpnt)
 
 	// get ID & check against values for APDS9930
 	err = APDS9930_Get_ChipID(pCpnt, &pCpnt->cfg.Id);
-	if (err != ERROR_OK)								{ return err; }
+	if (err != ERROR_OK)					{ return err; }
 	if (pCpnt->cfg.Id != APDS9930_CHIP_ID)	{ return ERROR_COMMON; }	// Unknown device
 
 	EN.Bits.PON = true;		// Turn ON Osc
@@ -59,7 +59,7 @@ __WEAK FctERR NONNULL__ APDS9930_Init_Sequence(APDS9930_t * const pCpnt)
 
 	err = APDS9930_Set_Prox_Drive_Strength(pCpnt, pCpnt->cfg.Prox_Strength);
 	if (err != ERROR_OK)	{ return err; }
-	err = APDS9930_Write(pCpnt->cfg.slave_inst, &pCpnt->cfg.Prox_Pulses, APDS9930__PPULSE, 1);
+	err = APDS9930_Write(pCpnt->cfg.slave_inst, &pCpnt->cfg.Prox_Pulses, APDS9930__PPULSE, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	err = APDS9930_Set_ALS_Integration_Time(pCpnt, pCpnt->cfg.ALS_Integ);
@@ -105,7 +105,7 @@ static NONNULL__ FctERR APDS9930_calc(APDS9930_t * const pCpnt, const uint16_t f
 {
 	const float	B = 1.862f, C = 0.746f, D = 1.291f;
 	// SATURATION = 1024 * (256 - ATIME) if ATIME > 192 (<175ms)
-	uint16_t	sat = (pCpnt->cfg.ALS_Integ_reg <= 192) ? 65535 : (1024 * (256 - pCpnt->cfg.ALS_Integ_reg));
+	uint16_t	sat = (pCpnt->cfg.ALS_Integ_reg <= 192U) ? 65535U : (1024U * (256U - pCpnt->cfg.ALS_Integ_reg));
 
 	// Check for saturation
 	if ((full >= sat) || (ir >= sat))

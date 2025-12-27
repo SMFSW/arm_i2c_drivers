@@ -18,13 +18,13 @@
 
 FctERR NONNULL__ PCA9685_CalcVal(uint8_t val[4], const uint16_t duty, const uint16_t delay)
 {
-	if ((duty > 4095) || (delay >= 4095))	{ return ERROR_RANGE; }
+	if ((duty > 4095U) || (delay >= 4095U))	{ return ERROR_RANGE; }
 
 	uint16_t ONCount = delay;
-	uint16_t OFFCount = (delay + duty) % 4095;
+	uint16_t OFFCount = (delay + duty) % 4095U;
 
-	if (duty == 0)			{ OFFCount |= 0x1000; }	// Off count set to 4096 to fill bit FullOnOff
-	else if (duty == 4095)	{ ONCount |= 0x1000; }	// On count set to 4096 to fill bit FullOnOff
+	if (duty == 0)			{ OFFCount |= 0x1000U; }	// Off count set to 4096 to fill bit FullOnOff
+	else if (duty == 4095U)	{ ONCount |= 0x1000U; }		// On count set to 4096 to fill bit FullOnOff
 
 	val[0] = LOBYTE(ONCount);
 	val[1] = HIBYTE(ONCount);
@@ -37,13 +37,13 @@ FctERR NONNULL__ PCA9685_CalcVal(uint8_t val[4], const uint16_t duty, const uint
 
 FctERR NONNULL__ PCA9685_CalcVal_NoDelay(uint8_t val[4], const uint16_t duty)
 {
-	if (duty > 4095)	{ return ERROR_RANGE; }
+	if (duty > 4095U)	{ return ERROR_RANGE; }
 
 	uint16_t ONCount = 0;
 	uint16_t OFFCount = duty;
 
-	if (duty == 0)			{ OFFCount |= 0x1000; }	// Off count set to 4096 to fill bit FullOnOff
-	else if (duty == 4095)	{ ONCount |= 0x1000; }	// On count set to 4096 to fill bit FullOnOff
+	if (duty == 0)			{ OFFCount |= 0x1000U; }	// Off count set to 4096 to fill bit FullOnOff
+	else if (duty == 4095U)	{ ONCount |= 0x1000U; }		// On count set to 4096 to fill bit FullOnOff
 
 	val[0] = LOBYTE(ONCount);
 	val[1] = HIBYTE(ONCount);
@@ -53,6 +53,15 @@ FctERR NONNULL__ PCA9685_CalcVal_NoDelay(uint8_t val[4], const uint16_t duty)
 	return ERROR_OK;
 }
 
+FctERR NONNULL__ PCA9685_Freq_To_Byte(PCA9685_t * const pCpnt, uint8_t * const byte, const uint16_t freq)
+{
+	if (	(freq > (uint16_t) (((float) pCpnt->cfg.Clock / PCA9685_CLOCK_FREQ) * PCA9685_FREQ_HZ_MAX))
+		||	(freq < (uint16_t) (((float) pCpnt->cfg.Clock / PCA9685_CLOCK_FREQ) * PCA9685_FREQ_HZ_MIN)))	{ return ERROR_RANGE; }
+
+	*byte = (uint8_t) (round((float) pCpnt->cfg.Clock / (4096.0f * freq)) - 1.0f);
+
+	return ERROR_OK;
+}
 
 FctERR NONNULL__ PCA9685_Set_Latch(PCA9685_t * const pCpnt, const PCA96xx_latch latch)
 {
@@ -61,11 +70,11 @@ FctERR NONNULL__ PCA9685_Set_Latch(PCA9685_t * const pCpnt, const PCA96xx_latch 
 
 	if (latch > PCA9xxx__LATCH_ON_ACK)	{ return ERROR_VALUE; }	// Unknown latch mode
 
-	err = PCA9685_Read(pCpnt->cfg.slave_inst, (uint8_t *) &MODE2, PCA9685__MODE2, sizeof(MODE2));
+	err = PCA9685_Read(pCpnt->cfg.slave_inst, &MODE2.Byte, PCA9685__MODE2, sizeof(MODE2));
 	if (err != ERROR_OK)	{ return err; }
 
 	MODE2.Bits.OCH = latch;
-	return PCA9685_Write(pCpnt->cfg.slave_inst, (uint8_t *) &MODE2, PCA9685__MODE2, sizeof(MODE2));
+	return PCA9685_Write(pCpnt->cfg.slave_inst, &MODE2.Byte, PCA9685__MODE2, sizeof(MODE2));
 }
 
 
@@ -75,7 +84,7 @@ FctERR NONNULL__ PCA9685_Set_Frequency(PCA9685_t * const pCpnt, const uint16_t f
 	uint8_t				DATA;
 	FctERR				err = PCA9685_Freq_To_Byte(pCpnt, &DATA, freq);
 
-	if (!err)
+	if (err == ERROR_OK)
 	{
 		err = PCA9685_Read(pCpnt->cfg.slave_inst, &MODE1.Byte, PCA9685__MODE1, sizeof(MODE1));
 		if (err != ERROR_OK)	{ return err; }
@@ -109,7 +118,7 @@ FctERR NONNULL__ PCA9685_ReadVal(PCA9685_t * const pCpnt, const PCA9xxx_chan cha
 
 	if (DATA[1] & DefBitFullOnOff)
 	{
-		*duty = 4095;
+		*duty = 4095U;
 	}
 	else if (!(DATA[3] & DefBitFullOnOff))
 	{
@@ -133,7 +142,7 @@ FctERR NONNULL__ PCA9685_ReadValByte(PCA9685_t * const pCpnt, const PCA9xxx_chan
 
 	if (DATA[1] & DefBitFullOnOff)
 	{
-		*duty = 255;
+		*duty = 255U;
 	}
 	else if (!(DATA[3] & DefBitFullOnOff))
 	{
@@ -160,6 +169,15 @@ FctERR NONNULL__ PCA9685_PutVal(PCA9685_t * const pCpnt, const PCA9xxx_chan chan
 	if (err != ERROR_OK)	{ return err; }
 
 	return PCA9685_Write(pCpnt->cfg.slave_inst, DATA, RegAddr, sizeof(DATA));
+}
+
+
+FctERR NONNULL__ PCA9685_PutValPerc(PCA9685_t * const pCpnt, const PCA9xxx_chan chan, const float duty, const float delay)
+{
+	if (	((duty < 0.0f) || (duty > 100.0f))
+		||	((delay < 0.0f) || (delay >= 100.0f)))	{ return ERROR_RANGE; }
+
+	return PCA9685_PutVal(pCpnt, chan, (uint16_t) ((duty / 100.0f) * 4095U), (uint16_t) ((delay / 100.0f) * 4095U));
 }
 
 
@@ -191,7 +209,7 @@ FctERR NONNULL__ PCA9685_ClrVal(PCA9685_t * const pCpnt, const PCA9xxx_chan chan
 
 FctERR NONNULL__ PCA9685_Reset(PCA9685_t * const pCpnt)
 {
-	uint8_t			DATA = 0x06;
+	uint8_t			DATA = 0x06U;
 	I2C_slave_t *	pSlave = pCpnt->cfg.slave_inst;
 
 	pSlave->status = HAL_I2C_Master_Transmit(pSlave->cfg.bus_inst, pSlave->cfg.addr, &DATA, 1, pSlave->cfg.timeout);
@@ -199,9 +217,9 @@ FctERR NONNULL__ PCA9685_Reset(PCA9685_t * const pCpnt)
 }
 
 
-FctERR NONNULL__ PCA9685_Reset_All(I2C_HandleTypeDef * hi2c)
+FctERR NONNULL__ PCA9685_Reset_All(I2C_HandleTypeDef * const hi2c)
 {
-	uint8_t DATA = 0x06;
+	uint8_t DATA = 0x06U;
 
 	return HALERRtoFCTERR(HAL_I2C_Master_Transmit(hi2c, I2C_ADDR_General_Call, &DATA, 1, I2C_slave_timeout));
 }

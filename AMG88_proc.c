@@ -38,7 +38,7 @@ __WEAK FctERR NONNULL__ AMG88_Init_Sequence(AMG88_t * const pCpnt)
 	// Set interrupts
 	INT_CTRL.Bits.INTEN = true;
 	INT_CTRL.Bits.INTMOD = false;
-	err = AMG88_Write(pCpnt->cfg.slave_inst, &INT_CTRL.Byte, AMG88__INTC, 1);
+	err = AMG88_Write(pCpnt->cfg.slave_inst, &INT_CTRL.Byte, AMG88__INTC, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	return ERROR_OK;
@@ -50,7 +50,7 @@ __WEAK FctERR NONNULL__ AMG88_Init_Sequence(AMG88_t * const pCpnt)
 
 __WEAK FctERR NONNULL__ AMG88_handler(AMG88_t * const pCpnt)
 {
-	uAMG88_REG__STATUS_CLEAR	CLEAR = { 0x0E };
+	uAMG88_REG__STATUS_CLEAR	CLEAR = { 0x0EU };
 	float						thermistor, temp[64];
 
 	FctERR err = AMG88_Read_Word(pCpnt->cfg.slave_inst, &pCpnt->Thermistor, AMG88__TTHL);
@@ -62,7 +62,7 @@ __WEAK FctERR NONNULL__ AMG88_handler(AMG88_t * const pCpnt)
 	thermistor = AMG88_Convert_Thermistor_Raw(pCpnt->Thermistor);
 	for (uintCPU_t i = 0 ; i < SZ_ARRAY(temp) ; i++)
 	{
-		temp[i] = AMG88_Convert_Pixel_Raw(pCpnt->Pixels[i / 8][i % 8]);
+		temp[i] = AMG88_Convert_Pixel_Raw(pCpnt->Pixels[i / 8U][i % 8U]);
 	}
 
 	#if defined(VERBOSE)
@@ -71,8 +71,8 @@ __WEAK FctERR NONNULL__ AMG88_handler(AMG88_t * const pCpnt)
 		printf("AMG88 id%d: Pixels Temperature (°C)", idx);
 		for (uintCPU_t i = 0 ; i < SZ_ARRAY(temp) ; i++)
 		{
-			if (i % 8 == 0)	{ printf("\r\n"); }
-			printf("%03d.%02ld ", (int16_t) temp[i], get_fp_dec(temp[i], 2));
+			if (i % 8U == 0)	{ printf("\r\n"); }
+			printf("%03d.%02ld ", (int16_t) temp[i], get_fp_dec(temp[i], 2U));
 		}
 		printf("\r\n");
 	#endif

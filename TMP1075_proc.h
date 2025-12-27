@@ -22,8 +22,8 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define TMP1075_CFGR_7_0	0xFF		//!< TMP1075 Reserved bits set to FFh
-#define TMP1075N_CHIP_ID	0x7500		//!< TMP1075 Chip ID to check against
+#define TMP1075_CFGR_7_0	0xFFU		//!< TMP1075 Reserved bits set to FFh
+#define TMP1075N_CHIP_ID	0x7500U		//!< TMP1075 Chip ID to check against
 
 
 
@@ -34,7 +34,7 @@
 ** \brief Limits enum of TMP1075
 **/
 typedef enum PACK__ TMP1075_limit {
-	TMP1075__LIMIT_LOW = 0,		//!< Low temperature limit
+	TMP1075__LIMIT_LOW = 0U,	//!< Low temperature limit
 	TMP1075__LIMIT_HIGH			//!< High temperature limit
 } TMP1075_limit;
 
@@ -43,19 +43,19 @@ typedef enum PACK__ TMP1075_limit {
 ** \brief TMP1075 user interface struct
 **/
 typedef struct TMP1075_t {
-	float				Temperature;		//!< Current temperature
-	bool				NewData;			//!< New data available
-	bool				Ongoing;			//!< Single conversion launched
-	uint32_t			hLast;				//!< Tick from last data
+	float				Temperature;	//!< Current temperature
+	bool				NewData;		//!< New data available
+	bool				Ongoing;		//!< Single conversion launched
+	uint32_t			hLast;			//!< Tick from last data
 	struct {
-	I2C_slave_t *		slave_inst;			//!< Slave structure
-	PeripheralGPIO_t	INT_GPIO;			//!< Interrupt GPIO struct
-	TMP1075_conv_rate	Rate;				//!< Conversion rate config
-	bool				Continuous;			//!< Continuous conversion mode
-	bool				TMP1075N;			//!< Set to true if TMP1075N
-	float				LowLimit;			//!< Low limit config
-	float				HighLimit;			//!< High limit config
-	uint16_t			Id;					//!< Device ID
+	I2C_slave_t *		slave_inst;		//!< Slave structure
+	PeripheralGPIO_t	INT_GPIO;		//!< Interrupt GPIO struct
+	TMP1075_conv_rate	Rate;			//!< Conversion rate config
+	bool				Continuous;		//!< Continuous conversion mode
+	bool				TMP1075N;		//!< Set to true if TMP1075N
+	float				LowLimit;		//!< Low limit config
+	float				HighLimit;		//!< High limit config
+	uint16_t			Id;				//!< Device ID
 	} cfg;
 } TMP1075_t;
 

@@ -38,7 +38,7 @@ void NONNULL__ I2C_peripheral_GPIO_set(const PeripheralGPIO_t * const pGPIO, con
 {
 	if ((pGPIO->GPIOx != NULL) && (pGPIO->GPIO_Pin != 0U))
 	{
-		const GPIO_PinState val = state ^ (pGPIO->GPIO_Active ? 0 : 1);
+		const GPIO_PinState val = state ^ (pGPIO->GPIO_Active ? 0U : 1U);
 		HAL_GPIO_WritePin(pGPIO->GPIOx, pGPIO->GPIO_Pin, val);
 	}
 }

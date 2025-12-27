@@ -24,20 +24,20 @@
 											(I2C_PERIPHERAL_IDX(addr, name) < I2C_##name##_NB))	//!< Macro for use with assert_param to check I2C peripheral \b addr is valid for \b name peripheral
 
 
-#define I2C_PERIPHERAL_IDX(name, addr)		((int32_t) (((name##_t *) addr) - name))			//!< Macro to get I2C peripheral index given \b addr for \b name peripheral
+#define I2C_PERIPHERAL_IDX(name, addr)		((uintCPU_t) (((name##_t *) addr) - name))			//!< Macro to get I2C peripheral index given \b addr for \b name peripheral
 
 
 /***********************************/
 /*** Peripheral defaults setters ***/
 /***********************************/
 
-#define I2C_PERIPHERAL_SET_DEFAULTS(name, idx)							\
-	memcpy(&name##_hal[idx], &name##_defaults, sizeof(I2C_slave_t));	\
+#define I2C_PERIPHERAL_SET_DEFAULTS(name, idx)									\
+	UNUSED_RET memcpy(&name##_hal[idx], &name##_defaults, sizeof(I2C_slave_t));	\
 	name[idx].cfg.slave_inst = &name##_hal[idx];	//!< Macro to set working defaults for peripheral \b name on index \b idx
 
 
-#define I2C_PERIPHERAL_SET_DEFAULTS_SINGLETON(name)				\
-	memcpy(&name##_hal, &name##_defaults, sizeof(I2C_slave_t));	\
+#define I2C_PERIPHERAL_SET_DEFAULTS_SINGLETON(name)							\
+	UNUSED_RET memcpy(&name##_hal, &name##_defaults, sizeof(I2C_slave_t));	\
 	name.cfg.slave_inst = &name##_hal;				//!< Macro to set working defaults for singleton peripheral \b name
 
 

@@ -48,10 +48,10 @@ FctERR NONNULL__ TSL2591_Write(I2C_slave_t * const pSlave, const uint8_t * data,
 {
 	uTSL2591_CMD CMD;
 
-	if (!I2C_is_enabled(pSlave))			{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > TSL2591__PERSIST + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > TSL2591__PERSIST + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
-	CMD.Bits.CMD = 1;
+	CMD.Bits.CMD = 1U;
 	CMD.Bits.TRANSACTION = TSL2591__TRANS_NORMAL_OP;
 	CMD.Bits.ADDR = addr;
 
@@ -66,10 +66,10 @@ FctERR NONNULL__ TSL2591_Read(I2C_slave_t * const pSlave, uint8_t * data, const 
 {
 	uTSL2591_CMD CMD;
 
-	if (!I2C_is_enabled(pSlave))			{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > TSL2591__C1DATAH + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > TSL2591__C1DATAH + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
-	CMD.Bits.CMD = 1;
+	CMD.Bits.CMD = 1U;
 	CMD.Bits.TRANSACTION = TSL2591__TRANS_NORMAL_OP;
 	CMD.Bits.ADDR = addr;
 
@@ -88,7 +88,7 @@ FctERR NONNULL__ TSL2591_Write_Word(I2C_slave_t * const pSlave, const uint16_t *
 
 	WREG[0] = LOBYTE(*data);
 	WREG[1] = HIBYTE(*data);
-	return TSL2591_Write(pSlave, WREG, addr, 2);
+	return TSL2591_Write(pSlave, WREG, addr, 2U);
 }
 
 
@@ -99,7 +99,7 @@ FctERR NONNULL__ TSL2591_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, 
 
 	if (addr % sizeof(uint16_t))	{ return ERROR_FRAMING; }		// Unaligned word access
 
-	err = TSL2591_Read(pSlave, WREG, addr, 2);
+	err = TSL2591_Read(pSlave, WREG, addr, 2U);
 	if (err != ERROR_OK)	{ return err; }
 
 	*data = MAKEWORD(WREG[0], WREG[1]);
@@ -116,12 +116,12 @@ FctERR NONNULL__ TSL2591_Write_Special(I2C_slave_t * const pSlave, const TSL2591
 		&&	(func != TSL2591__SF_CLR_ALS_AND_NO_PERS)
 		&&	(func != TSL2591__SF_CLR_NO_PERS))			{ return ERROR_VALUE; }		// Unknown special function
 
-	CMD.Bits.CMD = 1;
+	CMD.Bits.CMD = 1U;
 	CMD.Bits.TRANSACTION = TSL2591__TRANS_SPECIAL_FUNC;
 	CMD.Bits.ADDR = func;
 
 	I2C_set_busy(pSlave, true);
-	pSlave->status = HAL_I2C_Master_Transmit(pSlave->cfg.bus_inst, pSlave->cfg.addr, &CMD.Byte, 1, pSlave->cfg.timeout);
+	pSlave->status = HAL_I2C_Master_Transmit(pSlave->cfg.bus_inst, pSlave->cfg.addr, &CMD.Byte, 1U, pSlave->cfg.timeout);
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }

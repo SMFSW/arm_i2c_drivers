@@ -37,15 +37,15 @@ FctERR NONNULL__ PCA9532_Set_Mode_LED(PCA9532_t * const pCpnt, const PCA9xxx_cha
 	if (chan > PCA9xxx__PWM16)		{ return ERROR_RANGE; }	// Unknown channel
 	if (mode > PCA95xx__LED_PWM1)	{ return ERROR_VALUE; }	// Unknown control mode
 
-	const uintCPU_t offset = chan / 4;
-	const uintCPU_t shift = chan * 2;
+	const uintCPU_t offset = chan / 4U;
+	const uintCPU_t shift = chan * 2U;
 
-	const uint32_t mask = LSHIFT(0x3, shift);
+	const uint32_t mask = LSHIFT(3U, shift);
 	const uint32_t val = LSHIFT(mode, shift);
 
 	SET_BITS_VAL(pCpnt->LS.DWord, mask, val);
 
-	const uint8_t LS = RSHIFT(pCpnt->LS.DWord, offset * 8);
+	const uint8_t LS = RSHIFT(pCpnt->LS.DWord, offset * 8U);
 	return PCA9532_Write(pCpnt->cfg.slave_inst, &LS, PCA9532__LS0 + offset, sizeof(LS));
 }
 
@@ -62,15 +62,15 @@ FctERR NONNULL__ PCA9532_Set_Mode_LEDs(PCA9532_t * const pCpnt, const uint16_t c
 	{
 		if (LSHIFT(1, chan) & chans)
 		{
-			const uintCPU_t shift = chan * 2;
-			mask |= LSHIFT(0x3, shift);
+			const uintCPU_t shift = chan * 2U;
+			mask |= LSHIFT(3U, shift);
 			val |= LSHIFT(mode, shift);
 		}
 	}
 
 	SET_BITS_VAL(pCpnt->LS.DWord, mask, val);
 
-	for (uintCPU_t i = 0 ; i < sizeof(LS) ; i++)	{ LS[i] = RSHIFT(pCpnt->LS.DWord, i * 8); }
+	for (uintCPU_t i = 0 ; i < sizeof(LS) ; i++)	{ LS[i] = RSHIFT(pCpnt->LS.DWord, i * 8U); }
 
 	return PCA9532_Write(pCpnt->cfg.slave_inst, LS, PCA9532__LS0, sizeof(LS));
 }
@@ -81,9 +81,9 @@ FctERR NONNULL__ PCA9532_SetFrequency(PCA9532_t * const pCpnt, const float freq,
 	uint8_t freq_byte;
 	FctERR	err = PCA9532_Freq_To_Byte(&freq_byte, freq);
 
-	if (!err)
+	if (err == ERROR_OK)
 	{
-		err = PCA9532_Write(pCpnt->cfg.slave_inst, &freq_byte, PCA9532__PSC0 + (index * 2), sizeof(uint8_t));
+		err = PCA9532_Write(pCpnt->cfg.slave_inst, &freq_byte, PCA9532__PSC0 + (index * 2U), sizeof(uint8_t));
 
 		float * const pFreq = index ? &pCpnt->cfg.Freq1 : &pCpnt->cfg.Freq0;
 		*pFreq = PCA9532_Byte_To_Freq(freq_byte);
@@ -98,9 +98,9 @@ FctERR NONNULL__ PCA9532_SetDuty(PCA9532_t * const pCpnt, const float duty, cons
 	uint8_t duty_byte;
 	FctERR	err = PCA9532_DutyCycle_To_Byte(&duty_byte, duty);
 
-	if (!err)
+	if (err == ERROR_OK)
 	{
-		err = PCA9532_Write(pCpnt->cfg.slave_inst, &duty_byte, PCA9532__PWM0 + (index * 2), sizeof(uint8_t));
+		err = PCA9532_Write(pCpnt->cfg.slave_inst, &duty_byte, PCA9532__PWM0 + (index * 2U), sizeof(uint8_t));
 
 		float * const pDuty = index ? &pCpnt->cfg.Duty1 : &pCpnt->cfg.Duty0;
 		*pDuty = PCA9532_Byte_To_Freq(duty_byte);

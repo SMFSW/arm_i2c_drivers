@@ -22,22 +22,22 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define		MTCH_RES_STEP		64		//!< MTCH6102 Resolution of a single RX/TX
+#define		MTCH_RES_STEP		64U		//!< MTCH6102 Resolution of a single RX/TX
 
-#define		perVal2perReg(ms)	(uint16_t) (((ms * 1000) / 31) + 1)		//!< Compute reg value for period \b ms
-#define		perReg2perVal(rv)	(uint16_t) (((rv - 1) * 31) / 1000)		//!< Get period in ms from register \b rv
+#define		perVal2perReg(ms)	(uint16_t) (((ms * 1000U) / 31U) + 1U)	//!< Compute reg value for period \b ms
+#define		perReg2perVal(rv)	(uint16_t) (((rv - 1U) * 31U) / 1000U)	//!< Get period in ms from register \b rv
 
-#define		per10ms		0x0142		//!< example period register value for 10ms
-#define		per20ms		0x0284		//!< example period register value for 20ms
-#define		per50ms		0x064C		//!< example period register value for 50ms
-#define		per100ms	0x0C99		//!< example period register value for 100ms
+#define		per10ms		0x0142U		//!< example period register value for 10ms
+#define		per20ms		0x0284U		//!< example period register value for 20ms
+#define		per50ms		0x064CU		//!< example period register value for 50ms
+#define		per100ms	0x0C99U		//!< example period register value for 100ms
 
 
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
 typedef enum PACK__ MTCH6102_COMMAND {
-	MTCH_StoreToNV = 0x00,	//!< Write to non volatile storage
+	MTCH_StoreToNV = 0U,	//!< Write to non volatile storage
 	MTCH_RestoreDefaults,	//!< Restore controller to default configuration values
 	MTCH_Configure,			//!< Configure controller (after parameters have been changed)
 	MTCH_ManufacturingTest,	//!< Execute manufacturing test
@@ -63,7 +63,7 @@ typedef struct MTCH6102_raw {
 **/
 __INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Mode(const MTCH6102_t * const pCpnt, const MTCH6102_MODE mode) {
 	if (mode > RawADC)	{ return ERROR_VALUE; }
-	return MTCH6102_Write(pCpnt->cfg.slave_inst, &mode, MTCH__MODE, 1); }
+	return MTCH6102_Write(pCpnt->cfg.slave_inst, &mode, MTCH__MODE, 1U); }
 
 /*!\brief Get MTCH6102 gesture decoding
 ** \param[in] pCpnt - Pointer to MTCH6102 component
@@ -71,7 +71,7 @@ __INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Mode(const MTCH6102_t * const pCpn
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ MTCH6102_Get_Mode(const MTCH6102_t * const pCpnt, MTCH6102_MODE * const mode) {
-	return MTCH6102_Read(pCpnt->cfg.slave_inst, mode, MTCH__MODE, 1); }
+	return MTCH6102_Read(pCpnt->cfg.slave_inst, mode, MTCH__MODE, 1U); }
 
 /*!\brief Execute MTCH6102 command
 ** \param[in] pCpnt - Pointer to MTCH6102 component
@@ -143,7 +143,7 @@ __INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Idle_Period(const MTCH6102_t * con
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Idle_Timeout(const MTCH6102_t * const pCpnt, const uint8_t timeout) {
-	return MTCH6102_Write(pCpnt->cfg.slave_inst, &timeout, MTCH__IDLE_TIMEOUT, 1); }
+	return MTCH6102_Write(pCpnt->cfg.slave_inst, &timeout, MTCH__IDLE_TIMEOUT, 1U); }
 
 /*!\brief Set MTCH6102 debounce period
 ** \param[in] pCpnt - Pointer to MTCH6102 component
@@ -186,7 +186,7 @@ FctERR NONNULL__ MTCH6102_Set_Filter(const MTCH6102_t * const pCpnt, const MTCH6
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Scan_Count(const MTCH6102_t * const pCpnt, const uint8_t count) {
-	return MTCH6102_Write(pCpnt->cfg.slave_inst, &count, MTCH__SCAN_COUNT, 1); }
+	return MTCH6102_Write(pCpnt->cfg.slave_inst, &count, MTCH__SCAN_COUNT, 1U); }
 
 /*!\brief Set MTCH6102 touch threshold
 ** \param[in] pCpnt - Pointer to MTCH6102 component
@@ -204,7 +204,7 @@ __INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Touch_Threshold(const MTCH6102_t *
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Hysteresis(const MTCH6102_t * const pCpnt, const uint8_t hyst) {
-	return MTCH6102_Write(pCpnt->cfg.slave_inst, &hyst, MTCH__HYSTERESIS, 1); }
+	return MTCH6102_Write(pCpnt->cfg.slave_inst, &hyst, MTCH__HYSTERESIS, 1U); }
 
 /*!\brief Set MTCH6102 large activation threshold
 ** \param[in] pCpnt - Pointer to MTCH6102 component

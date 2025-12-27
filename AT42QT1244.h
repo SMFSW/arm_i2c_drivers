@@ -23,16 +23,16 @@
 
 #ifndef I2C_AT42QT1244_NB
 //! \note Define I2C_AT42QT1244_NB to enable multiple peripherals of this type
-#define I2C_AT42QT1244_NB	1	//!< Number of AT42QT1244 peripherals
+#define I2C_AT42QT1244_NB	1U	//!< Number of AT42QT1244 peripherals
 #endif
 
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define AT42QT1244_ADDR			57					//!< AT42QT1244 address (A0 & A1 tied to GND)
-#define AT42QT1244_ADDR_A0		7					//!< AT42QT1244 address (A0 tied to PWR & A1 tied to GND)
-#define AT42QT1244_ADDR_A1		17					//!< AT42QT1244 address (A0 tied to GND & A1 tied to PWR)
-#define AT42QT1244_ADDR_A01		117					//!< AT42QT1244 address (A0 & A1 tied to PWR)
+#define AT42QT1244_ADDR			57U					//!< AT42QT1244 address (A0 & A1 tied to GND)
+#define AT42QT1244_ADDR_A0		7U					//!< AT42QT1244 address (A0 tied to PWR & A1 tied to GND)
+#define AT42QT1244_ADDR_A1		17U					//!< AT42QT1244 address (A0 tied to GND & A1 tied to PWR)
+#define AT42QT1244_ADDR_A01		117U				//!< AT42QT1244 address (A0 & A1 tied to PWR)
 
 #ifndef AT42QT1244_BASE_ADDR
 //! \note Define AT42QT1244_BASE_ADDR to change default device base address
@@ -44,7 +44,7 @@
 #define AT42QT1244_CHECK_CRC	1					//!< AT42QT1244 read transactions CRC check
 #endif
 
-#define AT42QT1244_MAX_KEYS		24					//!< AT42QT1244 peripheral maximum number of keys
+#define AT42QT1244_MAX_KEYS		24U					//!< AT42QT1244 peripheral maximum number of keys
 
 
 // *****************************************************************************
@@ -53,117 +53,117 @@
 typedef enum PACK__ AT42QT_reg_map {
 	//AT42QT__RES,	//!< Reserved
 	//AT42QT__RES,	//!< Reserved
-	AT42QT__CNT_100MS				= 2,	//!<
-	AT42QT__CNT_SIGNAL_FAIL			= 3,	//!<
-	AT42QT__CNT_MTX_SCAN			= 4,	//!<
-	AT42QT__DEVICE_STATUS			= 5,	//!<
-	AT42QT__DETECT_STATUS_1			= 6,	//!<
-	AT42QT__DETECT_STATUS_2			= 7,	//!<
-	AT42QT__DETECT_STATUS_3			= 8,	//!<
+	AT42QT__CNT_100MS				= 2U,	//!<
+	AT42QT__CNT_SIGNAL_FAIL			= 3U,	//!<
+	AT42QT__CNT_MTX_SCAN			= 4U,	//!<
+	AT42QT__DEVICE_STATUS			= 5U,	//!<
+	AT42QT__DETECT_STATUS_1			= 6U,	//!<
+	AT42QT__DETECT_STATUS_2			= 7U,	//!<
+	AT42QT__DETECT_STATUS_3			= 8U,	//!<
 	//AT42QT__RES,	//!< Reserved
-	AT42QT__CURRENT_FREQUENCY		= 10,	//!<
-	AT42QT__CURRENT_PULSE_SPACING	= 11,	//!<
-	AT42QT__DATA_KEY_0				= 12,	//!<
-	AT42QT__DATA_KEY_1				= 16,	//!<
-	AT42QT__DATA_KEY_2				= 20,	//!<
-	AT42QT__DATA_KEY_3				= 24,	//!<
-	AT42QT__DATA_KEY_4				= 28,	//!<
-	AT42QT__DATA_KEY_5				= 32,	//!<
-	AT42QT__DATA_KEY_6				= 36,	//!<
-	AT42QT__DATA_KEY_7				= 40,	//!<
-	AT42QT__DATA_KEY_8				= 44,	//!<
-	AT42QT__DATA_KEY_9				= 48,	//!<
-	AT42QT__DATA_KEY_10				= 52,	//!<
-	AT42QT__DATA_KEY_11				= 56,	//!<
-	AT42QT__DATA_KEY_12				= 60,	//!<
-	AT42QT__DATA_KEY_13				= 64,	//!<
-	AT42QT__DATA_KEY_14				= 68,	//!<
-	AT42QT__DATA_KEY_15				= 72,	//!<
-	AT42QT__DATA_KEY_16				= 76,	//!<
-	AT42QT__DATA_KEY_17				= 80,	//!<
-	AT42QT__DATA_KEY_18				= 84,	//!<
-	AT42QT__DATA_KEY_19				= 88,	//!<
-	AT42QT__DATA_KEY_20				= 92,	//!<
-	AT42QT__DATA_KEY_21				= 96,	//!<
-	AT42QT__DATA_KEY_22				= 100,	//!<
-	AT42QT__DATA_KEY_23				= 104,	//!<
-	AT42QT__CONTROL_COMMAND			= 140,	//!<
-	//AT42QT__SETUPS							= 141	//!<
-	AT42QT__SETUP_KEYS_THRESHOLD_0				= 141,	//!<
+	AT42QT__CURRENT_FREQUENCY		= 10U,	//!<
+	AT42QT__CURRENT_PULSE_SPACING	= 11U,	//!<
+	AT42QT__DATA_KEY_0				= 12U,	//!<
+	AT42QT__DATA_KEY_1				= 16U,	//!<
+	AT42QT__DATA_KEY_2				= 20U,	//!<
+	AT42QT__DATA_KEY_3				= 24U,	//!<
+	AT42QT__DATA_KEY_4				= 28U,	//!<
+	AT42QT__DATA_KEY_5				= 32U,	//!<
+	AT42QT__DATA_KEY_6				= 36U,	//!<
+	AT42QT__DATA_KEY_7				= 40U,	//!<
+	AT42QT__DATA_KEY_8				= 44U,	//!<
+	AT42QT__DATA_KEY_9				= 48U,	//!<
+	AT42QT__DATA_KEY_10				= 52U,	//!<
+	AT42QT__DATA_KEY_11				= 56U,	//!<
+	AT42QT__DATA_KEY_12				= 60U,	//!<
+	AT42QT__DATA_KEY_13				= 64U,	//!<
+	AT42QT__DATA_KEY_14				= 68U,	//!<
+	AT42QT__DATA_KEY_15				= 72U,	//!<
+	AT42QT__DATA_KEY_16				= 76U,	//!<
+	AT42QT__DATA_KEY_17				= 80U,	//!<
+	AT42QT__DATA_KEY_18				= 84U,	//!<
+	AT42QT__DATA_KEY_19				= 88U,	//!<
+	AT42QT__DATA_KEY_20				= 92U,	//!<
+	AT42QT__DATA_KEY_21				= 96U,	//!<
+	AT42QT__DATA_KEY_22				= 100U,	//!<
+	AT42QT__DATA_KEY_23				= 104U,	//!<
+	AT42QT__CONTROL_COMMAND			= 140U,	//!<
+	//AT42QT__SETUPS							= 141U	//!<
+	AT42QT__SETUP_KEYS_THRESHOLD_0				= 141U,	//!<
 	AT42QT__SETUP_KEYS_THRESHOLD_1,		AT42QT__SETUP_KEYS_THRESHOLD_2,		AT42QT__SETUP_KEYS_THRESHOLD_3,		AT42QT__SETUP_KEYS_THRESHOLD_4,
 	AT42QT__SETUP_KEYS_THRESHOLD_5,		AT42QT__SETUP_KEYS_THRESHOLD_6,		AT42QT__SETUP_KEYS_THRESHOLD_7,		AT42QT__SETUP_KEYS_THRESHOLD_8,
 	AT42QT__SETUP_KEYS_THRESHOLD_9,		AT42QT__SETUP_KEYS_THRESHOLD_10,	AT42QT__SETUP_KEYS_THRESHOLD_11,	AT42QT__SETUP_KEYS_THRESHOLD_12,
 	AT42QT__SETUP_KEYS_THRESHOLD_13,	AT42QT__SETUP_KEYS_THRESHOLD_14,	AT42QT__SETUP_KEYS_THRESHOLD_15,	AT42QT__SETUP_KEYS_THRESHOLD_16,
 	AT42QT__SETUP_KEYS_THRESHOLD_17,	AT42QT__SETUP_KEYS_THRESHOLD_18,	AT42QT__SETUP_KEYS_THRESHOLD_19,	AT42QT__SETUP_KEYS_THRESHOLD_20,
 	AT42QT__SETUP_KEYS_THRESHOLD_21,	AT42QT__SETUP_KEYS_THRESHOLD_22,	AT42QT__SETUP_KEYS_THRESHOLD_23,
-	AT42QT__SETUP_KEYS_MODE_0					= 165,	//!<
+	AT42QT__SETUP_KEYS_MODE_0					= 165U,	//!<
 	AT42QT__SETUP_KEYS_MODE_1,	AT42QT__SETUP_KEYS_MODE_2,	AT42QT__SETUP_KEYS_MODE_3,	AT42QT__SETUP_KEYS_MODE_4,	AT42QT__SETUP_KEYS_MODE_5,
 	AT42QT__SETUP_KEYS_MODE_6,	AT42QT__SETUP_KEYS_MODE_7,	AT42QT__SETUP_KEYS_MODE_8,	AT42QT__SETUP_KEYS_MODE_9,	AT42QT__SETUP_KEYS_MODE_10,
 	AT42QT__SETUP_KEYS_MODE_11,	AT42QT__SETUP_KEYS_MODE_12,	AT42QT__SETUP_KEYS_MODE_13,	AT42QT__SETUP_KEYS_MODE_14,	AT42QT__SETUP_KEYS_MODE_15,
 	AT42QT__SETUP_KEYS_MODE_16,	AT42QT__SETUP_KEYS_MODE_17,	AT42QT__SETUP_KEYS_MODE_18,	AT42QT__SETUP_KEYS_MODE_19,	AT42QT__SETUP_KEYS_MODE_20,
 	AT42QT__SETUP_KEYS_MODE_21,	AT42QT__SETUP_KEYS_MODE_22,	AT42QT__SETUP_KEYS_MODE_23,
-	AT42QT__SETUP_CFO_1_0						= 189,	//!<
+	AT42QT__SETUP_CFO_1_0						= 189U,	//!<
 	AT42QT__SETUP_CFO_1_1,	AT42QT__SETUP_CFO_1_2,	AT42QT__SETUP_CFO_1_3,	AT42QT__SETUP_CFO_1_4,	AT42QT__SETUP_CFO_1_5,
 	AT42QT__SETUP_CFO_1_6,	AT42QT__SETUP_CFO_1_7,	AT42QT__SETUP_CFO_1_8,	AT42QT__SETUP_CFO_1_9,	AT42QT__SETUP_CFO_1_10,
 	AT42QT__SETUP_CFO_1_11,	AT42QT__SETUP_CFO_1_12,	AT42QT__SETUP_CFO_1_13,	AT42QT__SETUP_CFO_1_14,	AT42QT__SETUP_CFO_1_15,
 	AT42QT__SETUP_CFO_1_16,	AT42QT__SETUP_CFO_1_17,	AT42QT__SETUP_CFO_1_18,	AT42QT__SETUP_CFO_1_19,	AT42QT__SETUP_CFO_1_20,
 	AT42QT__SETUP_CFO_1_21,	AT42QT__SETUP_CFO_1_22,	AT42QT__SETUP_CFO_1_23,
-	AT42QT__SETUP_CFO_2_0						= 213,	//!<
+	AT42QT__SETUP_CFO_2_0						= 213U,	//!<
 	AT42QT__SETUP_CFO_2_1,	AT42QT__SETUP_CFO_2_2,	AT42QT__SETUP_CFO_2_3,	AT42QT__SETUP_CFO_2_4,	AT42QT__SETUP_CFO_2_5,
 	AT42QT__SETUP_CFO_2_6,	AT42QT__SETUP_CFO_2_7,	AT42QT__SETUP_CFO_2_8,	AT42QT__SETUP_CFO_2_9,	AT42QT__SETUP_CFO_2_10,
 	AT42QT__SETUP_CFO_2_11,	AT42QT__SETUP_CFO_2_12,	AT42QT__SETUP_CFO_2_13,	AT42QT__SETUP_CFO_2_14,	AT42QT__SETUP_CFO_2_15,
 	AT42QT__SETUP_CFO_2_16,	AT42QT__SETUP_CFO_2_17,	AT42QT__SETUP_CFO_2_18,	AT42QT__SETUP_CFO_2_19,	AT42QT__SETUP_CFO_2_20,
 	AT42QT__SETUP_CFO_2_21,	AT42QT__SETUP_CFO_2_22,	AT42QT__SETUP_CFO_2_23,
-	AT42QT__SETUP_NEGATIVE_RECALL_DELAY			= 237,	//!<
-	AT42QT__SETUP_DEBUG_MSYNC					= 238,	//!<
-	AT42QT__SETUP_AWAKE_TIMEOUT					= 239,	//!<
-	AT42QT__SETUP_DRIFT_HOLD_TIME				= 240,	//!<
-	AT42QT__SETUP_DRIFT							= 241,	//!<
-	AT42QT__SETUP_LOWER_SIGNAL_LIMIT_1			= 242,	//!<
-	AT42QT__SETUP_LOWER_SIGNAL_LIMIT_2			= 243,	//!<
-	AT42QT__SETUP_FREQ_HOPING_DWELL				= 244,	//!<
-	AT42QT__SETUP_FREQ0							= 245,	//!<
-	AT42QT__SETUP_FREQ1							= 246,	//!<
-	AT42QT__SETUP_FREQ2							= 247,	//!<
-	AT42QT__SETUP_NOISE							= 248,	//!<
-	AT42QT__SETUP_HOST_CRC_LSB					= 249,	//!<
-	AT42QT__SETUP_HOST_CRC_MSB					= 250	//!<
+	AT42QT__SETUP_NEGATIVE_RECALL_DELAY			= 237U,	//!<
+	AT42QT__SETUP_DEBUG_MSYNC					= 238U,	//!<
+	AT42QT__SETUP_AWAKE_TIMEOUT					= 239U,	//!<
+	AT42QT__SETUP_DRIFT_HOLD_TIME				= 240U,	//!<
+	AT42QT__SETUP_DRIFT							= 241U,	//!<
+	AT42QT__SETUP_LOWER_SIGNAL_LIMIT_1			= 242U,	//!<
+	AT42QT__SETUP_LOWER_SIGNAL_LIMIT_2			= 243U,	//!<
+	AT42QT__SETUP_FREQ_HOPING_DWELL				= 244U,	//!<
+	AT42QT__SETUP_FREQ0							= 245U,	//!<
+	AT42QT__SETUP_FREQ1							= 246U,	//!<
+	AT42QT__SETUP_FREQ2							= 247U,	//!<
+	AT42QT__SETUP_NOISE							= 248U,	//!<
+	AT42QT__SETUP_HOST_CRC_LSB					= 249U,	//!<
+	AT42QT__SETUP_HOST_CRC_MSB					= 250U	//!<
 } AT42QT_reg;
 
 
 typedef enum PACK__ AT42QT_ctl_cmd {
-	AT42QT__CALIBRATE_KEY_0			= 0,	//!< Calibration: Key 0
-	AT42QT__CALIBRATE_KEY_1,				//!< Calibration: Key 1
-	AT42QT__CALIBRATE_KEY_2,				//!< Calibration: Key 2
-	AT42QT__CALIBRATE_KEY_3,				//!< Calibration: Key 3
-	AT42QT__CALIBRATE_KEY_4,				//!< Calibration: Key 4
-	AT42QT__CALIBRATE_KEY_5,				//!< Calibration: Key 5
-	AT42QT__CALIBRATE_KEY_6,				//!< Calibration: Key 6
-	AT42QT__CALIBRATE_KEY_7,				//!< Calibration: Key 7
-	AT42QT__CALIBRATE_KEY_8,				//!< Calibration: Key 8
-	AT42QT__CALIBRATE_KEY_9,				//!< Calibration: Key 9
-	AT42QT__CALIBRATE_KEY_10,				//!< Calibration: Key 10
-	AT42QT__CALIBRATE_KEY_11,				//!< Calibration: Key 11
-	AT42QT__CALIBRATE_KEY_12,				//!< Calibration: Key 12
-	AT42QT__CALIBRATE_KEY_13,				//!< Calibration: Key 13
-	AT42QT__CALIBRATE_KEY_14,				//!< Calibration: Key 14
-	AT42QT__CALIBRATE_KEY_15,				//!< Calibration: Key 15
-	AT42QT__CALIBRATE_KEY_16,				//!< Calibration: Key 16
-	AT42QT__CALIBRATE_KEY_17,				//!< Calibration: Key 17
-	AT42QT__CALIBRATE_KEY_18,				//!< Calibration: Key 18
-	AT42QT__CALIBRATE_KEY_19,				//!< Calibration: Key 19
-	AT42QT__CALIBRATE_KEY_20,				//!< Calibration: Key 20
-	AT42QT__CALIBRATE_KEY_21,				//!< Calibration: Key 21
-	AT42QT__CALIBRATE_KEY_22,				//!< Calibration: Key 22
-	AT42QT__CALIBRATE_KEY_23,				//!< Calibration: Key 23
-	AT42QT__RESET_DEVICE			= 0x18,	//!< Reset device
-	AT42QT__LOW_LEVEL_CALIBRATION	= 0xFD,	//!< Calibration: Low level and frequency hoping
-	AT42QT__WRITE_SETUPS			= 0xFE,	//!< Write 0xFD immediately before writing setups
-	AT42QT__CALIBRATE_ALL_KEYS		= 0xFF,	//!< Calibration: all keys
+	AT42QT__CALIBRATE_KEY_0			= 0U,		//!< Calibration: Key 0
+	AT42QT__CALIBRATE_KEY_1,					//!< Calibration: Key 1
+	AT42QT__CALIBRATE_KEY_2,					//!< Calibration: Key 2
+	AT42QT__CALIBRATE_KEY_3,					//!< Calibration: Key 3
+	AT42QT__CALIBRATE_KEY_4,					//!< Calibration: Key 4
+	AT42QT__CALIBRATE_KEY_5,					//!< Calibration: Key 5
+	AT42QT__CALIBRATE_KEY_6,					//!< Calibration: Key 6
+	AT42QT__CALIBRATE_KEY_7,					//!< Calibration: Key 7
+	AT42QT__CALIBRATE_KEY_8,					//!< Calibration: Key 8
+	AT42QT__CALIBRATE_KEY_9,					//!< Calibration: Key 9
+	AT42QT__CALIBRATE_KEY_10,					//!< Calibration: Key 10
+	AT42QT__CALIBRATE_KEY_11,					//!< Calibration: Key 11
+	AT42QT__CALIBRATE_KEY_12,					//!< Calibration: Key 12
+	AT42QT__CALIBRATE_KEY_13,					//!< Calibration: Key 13
+	AT42QT__CALIBRATE_KEY_14,					//!< Calibration: Key 14
+	AT42QT__CALIBRATE_KEY_15,					//!< Calibration: Key 15
+	AT42QT__CALIBRATE_KEY_16,					//!< Calibration: Key 16
+	AT42QT__CALIBRATE_KEY_17,					//!< Calibration: Key 17
+	AT42QT__CALIBRATE_KEY_18,					//!< Calibration: Key 18
+	AT42QT__CALIBRATE_KEY_19,					//!< Calibration: Key 19
+	AT42QT__CALIBRATE_KEY_20,					//!< Calibration: Key 20
+	AT42QT__CALIBRATE_KEY_21,					//!< Calibration: Key 21
+	AT42QT__CALIBRATE_KEY_22,					//!< Calibration: Key 22
+	AT42QT__CALIBRATE_KEY_23,					//!< Calibration: Key 23
+	AT42QT__RESET_DEVICE			= 0x18U,	//!< Reset device
+	AT42QT__LOW_LEVEL_CALIBRATION	= 0xFDU,	//!< Calibration: Low level and frequency hoping
+	AT42QT__WRITE_SETUPS			= 0xFEU,	//!< Write 0xFD immediately before writing setups
+	AT42QT__CALIBRATE_ALL_KEYS		= 0xFFU,	//!< Calibration: all keys
 } AT42QT_cmd;
 
 typedef enum PACK__ AT42QT_fhm_mode {
-	AT42QT__FHM_OFF = 0,					//!< Frequency Hoping Mode OFF
+	AT42QT__FHM_OFF = 0U,					//!< Frequency Hoping Mode OFF
 	AT42QT__FHM_CALIB_AFTER_HOP,			//!< Calibrate all keys after hop
 	AT42QT__FHM_ADJ_KEYS_REF_DURING_HOP,	//!< Adjust each keys reference during hop
 	AT42QT__FHM_FREQUENCY_SWEEP,			//!< Frequency sweep

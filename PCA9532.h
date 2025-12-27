@@ -24,7 +24,7 @@
 
 #ifndef I2C_PCA9532_NB
 //! \note Define I2C_PCA9532_NB to enable multiple peripherals of this type
-#define I2C_PCA9532_NB	1	//!< Number of PCA9532 peripherals
+#define I2C_PCA9532_NB	1U	//!< Number of PCA9532 peripherals
 #endif
 
 // *****************************************************************************
@@ -32,7 +32,7 @@
 // *****************************************************************************
 #ifndef PCA9532_BASE_ADDR
 //! \note Define PCA9532_BASE_ADDR to change default device base address
-#define	PCA9532_BASE_ADDR			0x60		//!< PCA9532 Base Address
+#define	PCA9532_BASE_ADDR			0x60U		//!< PCA9532 Base Address
 #endif
 
 
@@ -43,7 +43,7 @@
 ** \brief Register map enum of PCA9532
 **/
 typedef enum PACK__ PCA9532_reg_map {
-	PCA9532__INPUT0 = 0,	//!< register INPUT0
+	PCA9532__INPUT0 = 0U,	//!< register INPUT0
 	PCA9532__INPUT1,		//!< register INPUT1
 	PCA9532__PSC0,			//!< register Frequency Prescaler 0
 	PCA9532__PWM0,			//!< register PWM0

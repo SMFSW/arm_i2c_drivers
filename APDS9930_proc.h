@@ -25,7 +25,7 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define APDS9930_CHIP_ID				0x39	//!< APDS9930 Chip ID to check against
+#define APDS9930_CHIP_ID				0x39U	//!< APDS9930 Chip ID to check against
 
 
 #if !defined(APDS9930_OPEN_AIR_ATTENUATION)
@@ -36,9 +36,9 @@
 #endif
 
 
-#define APDS9930_DEVICE_FACTOR			52		//!< APDS9930 Device factor
+#define APDS9930_DEVICE_FACTOR			52U		//!< APDS9930 Device factor
 
-#define APDS9930_DEF_PROX_PULSES		8		//!< Recommended proximity pulses in a cycle
+#define APDS9930_DEF_PROX_PULSES		8U		//!< Recommended proximity pulses in a cycle
 
 
 // *****************************************************************************
@@ -49,7 +49,7 @@
 ** \warning Datasheet p9 states ok, but CONFIG register description p22 states not to use 16 or 120 gain when AGL asserted
 **/
 typedef enum PACK__ APDS9930_als_gain_ex {
-	APDS9930__ALS_GAIN_1X = 0,		//!< ALS 1X Gain
+	APDS9930__ALS_GAIN_1X = 0U,		//!< ALS 1X Gain
 	APDS9930__ALS_GAIN_8X,			//!< ALS 8X Gain
 	APDS9930__ALS_GAIN_16X,			//!< ALS 16X Gain
 	APDS9930__ALS_GAIN_120X,		//!< ALS 120X Gain
@@ -63,7 +63,7 @@ typedef enum PACK__ APDS9930_als_gain_ex {
 ** \brief Proximity LED Drive strength values
 **/
 typedef enum PACK__ APDS9930_drive_strength_ex {
-	APDS9930__STRENGTH_100MA = 0,	//!< PDL=0 : 100mA
+	APDS9930__STRENGTH_100MA = 0U,	//!< PDL=0 : 100mA
 	APDS9930__STRENGTH_50MA,		//!< PDL=0 : 50mA
 	APDS9930__STRENGTH_25MA,		//!< PDL=0 : 25mA
 	APDS9930__STRENGTH_12_5MA,		//!< PDL=0 : 12.5mA

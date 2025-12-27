@@ -21,15 +21,15 @@ FctERR NONNULL__ PCA9952_Set_Auto_Increment(PCA9952_t * const pCpnt, const PCA96
 	uPCA9952_REG__MODE1	MODE1;
 	FctERR				err;
 
-	if (RSHIFT(inc, 5) > RSHIFT(PCA9xxx__AUTO_INC_BRIGHT_GLOBAL, 5))	{ return ERROR_VALUE; }
+	if (RSHIFT(inc, 5U) > RSHIFT(PCA9xxx__AUTO_INC_BRIGHT_GLOBAL, 5U))	{ return ERROR_VALUE; }
 
 	pCpnt->cfg.auto_inc = inc & PCA9xxx__AUTO_INC_BRIGHT_GLOBAL;		// Mask inc just in case
 
-	err = PCA9952_Read(pCpnt->cfg.slave_inst, (uint8_t *) &MODE1, PCA9952__MODE1, sizeof(MODE1));
+	err = PCA9952_Read(pCpnt->cfg.slave_inst, &MODE1.Byte, PCA9952__MODE1, sizeof(MODE1));
 	if (err != ERROR_OK)	{ return err; }
 
 	MODE1.Byte = (MODE1.Byte & ~0xE0) | pCpnt->cfg.auto_inc;
-	return PCA9952_Write(pCpnt->cfg.slave_inst, (uint8_t *) &MODE1, PCA9952__MODE1, sizeof(MODE1));
+	return PCA9952_Write(pCpnt->cfg.slave_inst, &MODE1.Byte, PCA9952__MODE1, sizeof(MODE1));
 }
 
 
@@ -40,11 +40,11 @@ FctERR NONNULL__ PCA9952_Set_Latch(PCA9952_t * const pCpnt, const PCA96xx_latch 
 
 	if (latch > PCA9xxx__LATCH_ON_ACK)	{ return ERROR_VALUE; }	// Unknown latch mode
 
-	err = PCA9952_Read(pCpnt->cfg.slave_inst, (uint8_t *) &MODE2, PCA9952__MODE2, sizeof(MODE2));
+	err = PCA9952_Read(pCpnt->cfg.slave_inst, &MODE2.Byte, PCA9952__MODE2, sizeof(MODE2));
 	if (err != ERROR_OK)	{ return err; }
 
 	MODE2.Bits.OCH = latch;
-	return PCA9952_Write(pCpnt->cfg.slave_inst, (uint8_t *) &MODE2, PCA9952__MODE2, sizeof(MODE2));
+	return PCA9952_Write(pCpnt->cfg.slave_inst, &MODE2.Byte, PCA9952__MODE2, sizeof(MODE2));
 }
 
 
@@ -53,15 +53,15 @@ FctERR NONNULL__ PCA9952_Set_Mode_LED(PCA9952_t * const pCpnt, const PCA9xxx_cha
 	if (chan > PCA9xxx__PWM16)			{ return ERROR_RANGE; }	// Unknown channel
 	if (mode > PCA9xxx__GROUP_BRIGHT)	{ return ERROR_VALUE; }	// Unknown control mode
 
-	const uintCPU_t offset = chan / 4;
-	const uintCPU_t shift = chan * 2;
+	const uintCPU_t offset = chan / 4U;
+	const uintCPU_t shift = chan * 2U;
 
-	const uint16_t mask = LSHIFT(0x3, shift);
+	const uint16_t mask = LSHIFT(3U, shift);
 	const uint16_t val = LSHIFT(mode, shift);
 
 	SET_BITS_VAL(pCpnt->LDR.DWord, mask, val);
 
-	const uint8_t LDR = RSHIFT(pCpnt->LDR.DWord, offset * 8);
+	const uint8_t LDR = RSHIFT(pCpnt->LDR.DWord, offset * 8U);
 	return PCA9952_Write(pCpnt->cfg.slave_inst, &LDR, PCA9952__LEDOUT0 + offset, sizeof(LDR));
 }
 
@@ -78,7 +78,7 @@ FctERR NONNULL__ PCA9952_Set_Mode_LEDs(PCA9952_t * const pCpnt, const uint16_t c
 	{
 		if (LSHIFT(1, chan) & chans)
 		{
-			const uintCPU_t shift = chan * 2;
+			const uintCPU_t shift = chan * 2U;
 			mask |= LSHIFT(0x3, shift);
 			val |= LSHIFT(mode, shift);
 		}
@@ -86,7 +86,7 @@ FctERR NONNULL__ PCA9952_Set_Mode_LEDs(PCA9952_t * const pCpnt, const uint16_t c
 
 	SET_BITS_VAL(pCpnt->LDR.DWord, mask, val);
 
-	for (uintCPU_t i = 0 ; i < sizeof(LDR) ; i++)	{ LDR[i] = RSHIFT(pCpnt->LDR.DWord, i * 8); }
+	for (uintCPU_t i = 0 ; i < sizeof(LDR) ; i++)	{ LDR[i] = RSHIFT(pCpnt->LDR.DWord, i * 8U); }
 
 	return PCA9952_Write(pCpnt->cfg.slave_inst, LDR, PCA9952__LEDOUT0, sizeof(LDR));
 }
@@ -109,7 +109,7 @@ FctERR NONNULL__ PCA9952_Set_IREFs(PCA9952_t * const pCpnt, const uint16_t chans
 
 	for (PCA9xxx_chan chan = PCA9xxx__PWM1 ; chan <= PCA9xxx__PWM16 ; chan++)
 	{
-		if (LSHIFT(1, chan) & chans)
+		if (LSHIFT(1U, chan) & chans)
 		{
 			err |= PCA9952_Write(pCpnt->cfg.slave_inst, &iref, PCA9952__IREF0 + chan, sizeof(iref));
 		}
@@ -133,7 +133,7 @@ FctERR NONNULL__ PCA9952_ReadVals(PCA9952_t * const pCpnt, uint8_t pDuty[], cons
 	if (end > PCA9xxx__PWM16)	{ return ERROR_RANGE; }	// Unknown channel
 
 	uint8_t * const pArray = pDuty + (indexed ? start : 0);
-	return PCA9952_Read(pCpnt->cfg.slave_inst, pArray, PCA9952__PWM0 + start, end - start + 1);
+	return PCA9952_Read(pCpnt->cfg.slave_inst, pArray, PCA9952__PWM0 + start, end - start + 1U);
 }
 
 
@@ -152,7 +152,7 @@ FctERR NONNULL__ PCA9952_PutVals(PCA9952_t * const pCpnt, const uint8_t pDuty[],
 	if (end > PCA9xxx__PWM16)	{ return ERROR_RANGE; }	// Unknown channel
 
 	const uint8_t * const pArray = pDuty + (indexed ? start : 0);
-	return PCA9952_Write(pCpnt->cfg.slave_inst, pArray, PCA9952__PWM0 + start, end - start + 1);
+	return PCA9952_Write(pCpnt->cfg.slave_inst, pArray, PCA9952__PWM0 + start, end - start + 1U);
 }
 
 
@@ -192,7 +192,7 @@ FctERR NONNULL__ PCA9952_ReadEFLAGs(PCA9952_t * const pCpnt, uPCA9952_REG__EFLAG
 	if (err != ERROR_OK)	{ return err; }
 
 	eflags->Word = 0;
-	for (uintCPU_t i = 0 ; i < sizeof(EFLAG) ; i++)	{ eflags->Word |= LSHIFT(EFLAG[i], i * 8); }
+	for (uintCPU_t i = 0 ; i < sizeof(EFLAG) ; i++)	{ eflags->Word |= LSHIFT(EFLAG[i], i * 8U); }
 
 	return ERROR_OK;
 }

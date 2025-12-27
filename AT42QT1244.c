@@ -40,7 +40,7 @@ FctERR NONNULL__ AT42QT1244_Init(const uint8_t idx, I2C_HandleTypeDef * const hi
 	err = AT42QT1244_Init_Sequence(&AT42QT1244[idx]);
 
 	if (err != ERROR_OK)	{ I2C_set_enable(&AT42QT1244_hal[idx], false); }
-	else		{ init_Delay_Generator(); }
+	else					{ init_Delay_Generator(); }
 
 	return err;
 }
@@ -55,11 +55,11 @@ FctERR AT42QT1244_Init_Single(void) {
 FctERR NONNULL__ AT42QT1244_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(pSlave))						{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > AT42QT__SETUP_HOST_CRC_MSB + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > AT42QT__SETUP_HOST_CRC_MSB + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	I2C_set_busy(pSlave, true);
 	// MemAddress then 0x00 has to be sent, trick is to tell MEMADD size is 16 bit and send addr as the MSB
-	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, LSHIFT(addr, 8), I2C_MEMADD_SIZE_16BIT, (uint8_t *) data, nb, pSlave->cfg.timeout);
+	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, LSHIFT(addr, 8U), I2C_MEMADD_SIZE_16BIT, (uint8_t *) data, nb, pSlave->cfg.timeout);
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }
@@ -68,10 +68,10 @@ FctERR NONNULL__ AT42QT1244_Write(I2C_slave_t * const pSlave, const uint8_t * da
 FctERR NONNULL__ AT42QT1244_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
 	if (!I2C_is_enabled(pSlave))						{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > AT42QT__SETUP_HOST_CRC_MSB + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if ((addr + nb) > AT42QT__SETUP_HOST_CRC_MSB + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 #if AT42QT1244_CHECK_CRC
-	uint8_t * read = malloc(nb + 2);
+	uint8_t * read = malloc(nb + 2U);
 	if (read == NULL)									{ return ERROR_MEMORY; }	// Memory allocation failed
 #endif
 
@@ -83,12 +83,12 @@ FctERR NONNULL__ AT42QT1244_Read(I2C_slave_t * const pSlave, uint8_t * data, con
 	I2C_set_busy(pSlave, false);
 	err = HALERRtoFCTERR(pSlave->status);
 
-	if (!err)
+	if (err == ERROR_OK)
 	{
-		Delay_us(150);	// Have to wait for 150us
+		Delay_us(150U);	// Have to wait for 150us
 		I2C_set_busy(pSlave, true);
 #if AT42QT1244_CHECK_CRC
-		pSlave->status = HAL_I2C_Master_Receive(pSlave->cfg.bus_inst, pSlave->cfg.addr, read, nb + 2, pSlave->cfg.timeout);
+		pSlave->status = HAL_I2C_Master_Receive(pSlave->cfg.bus_inst, pSlave->cfg.addr, read, nb + 2U, pSlave->cfg.timeout);
 #else
 		pSlave->status = HAL_I2C_Master_Receive(pSlave->cfg.bus_inst, pSlave->cfg.addr, data, nb, pSlave->cfg.timeout);
 #endif
@@ -97,16 +97,16 @@ FctERR NONNULL__ AT42QT1244_Read(I2C_slave_t * const pSlave, uint8_t * data, con
 	}
 
 #if AT42QT1244_CHECK_CRC
-	if (!err)
+	if (err == ERROR_OK)
 	{
 		// Checksum calculation
-		uint16_t crc = AT42QT1244_crc16(0, RSHIFT(pSlave->cfg.addr, 1));
+		uint16_t crc = AT42QT1244_crc16(0, RSHIFT(pSlave->cfg.addr, 1U));
 		for (uintCPU_t i = 0 ; i < sizeof(preamble) ; i++)	{ crc = AT42QT1244_crc16(crc, preamble[i]); }
-		for (uintCPU_t i = 0 ; i < nb ; i++)					{ crc = AT42QT1244_crc16(crc, read[i]); }
+		for (uintCPU_t i = 0 ; i < nb ; i++)				{ crc = AT42QT1244_crc16(crc, read[i]); }
 
 		// Copy to destination if crc is ok
-		if (crc == MAKEWORD(read[nb], read[nb + 1]))			{ memcpy(data, read, nb); }
-		else													{ err = ERROR_CRC; }
+		if (crc == MAKEWORD(read[nb], read[nb + 1U]))		{ memcpy(data, read, nb); }
+		else												{ err = ERROR_CRC; }
 	}
 
 	free(read);

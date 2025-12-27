@@ -24,7 +24,7 @@
 
 #ifndef I2C_PCA9956_NB
 //! \note Define I2C_PCA9956_NB to enable multiple peripherals of this type
-#define I2C_PCA9956_NB	1	//!< Number of PCA9956 peripherals
+#define I2C_PCA9956_NB	1U	//!< Number of PCA9956 peripherals
 #endif
 
 // *****************************************************************************
@@ -32,7 +32,7 @@
 // *****************************************************************************
 #ifndef PCA9956_BASE_ADDR
 //! \note Define PCA9956_BASE_ADDR to change default device base address
-#define	PCA9956_BASE_ADDR		0x01		//!< PCA9956 Base Address
+#define	PCA9956_BASE_ADDR		0x01U		//!< PCA9956 Base Address
 #endif
 
 
@@ -43,7 +43,7 @@
 ** \brief Register map enum of PCA9956
 **/
 typedef enum PACK__ PCA9956_reg_map {
-	PCA9956__MODE1 = 0,		//!< register MODE1
+	PCA9956__MODE1 = 0U,	//!< register MODE1
 	PCA9956__MODE2,			//!< register MODE2
 	PCA9956__LEDOUT0,		//!< register LED output state 0
 	PCA9956__LEDOUT1,		//!< register LED output state 1
@@ -121,7 +121,7 @@ typedef enum PACK__ PCA9956_reg_map {
 ** \brief Offset enum for PCA9956 peripheral
 **/
 typedef enum PACK__ PCA9956_offset {
-	PCA9956__OFFSET_NONE = 0,		//!< no delay between outputs (all on, all off at the same time)
+	PCA9956__OFFSET_NONE = 0U,		//!< no delay between outputs (all on, all off at the same time)
 	PCA9956__OFFSET_1_CLOCK_CYCLE,	//!< delay of 1 clock cycle (125 ns) between successive outputs
 	PCA9956__OFFSET_2_CLOCK_CYCLE,	//!< delay of 2 clock cycle (250 ns) between successive outputs
 	PCA9956__OFFSET_3_CLOCK_CYCLE,	//!< delay of 3 clock cycle (375 ns) between successive outputs

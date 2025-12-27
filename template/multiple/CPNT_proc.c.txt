@@ -28,10 +28,10 @@ __WEAK FctERR NONNULL__ $CPNT$_Init_Sequence($CPNT$_t * const pCpnt)
 
 	// get ID & check against values for $CPNT$
 	err = $CPNT$_Get_ChipID(pCpnt, &pCpnt->cfg.Id);
-	if (err)								{ return err; }
+	if (err != ERROR_OK)					{ return err; }
 	if (pCpnt->cfg.Id != $CPNT$_CHIP_ID)	{ return ERROR_COMMON; }	// Unknown device
 
-	pCpnt->cfg.$CPNT$_param_1 = 1;
+	pCpnt->cfg.$CPNT$_param_1 = 1U;
 
 	return ERROR_OK;
 }
@@ -42,7 +42,7 @@ __WEAK FctERR NONNULL__ $CPNT$_Init_Sequence($CPNT$_t * const pCpnt)
 
 __WEAK FctERR NONNULL__ $CPNT$_handler($CPNT$_t * const pCpnt)
 {
-	FctERR	err = $CPNT$_Read(pCpnt->cfg.slave_inst, &pCpnt->$CPNT$_val_1, $CPNT$__REG1, 1);
+	FctERR err = $CPNT$_Read(pCpnt->cfg.slave_inst, &pCpnt->$CPNT$_val_1, $CPNT$__REG1, 1U);
 	if (err != ERROR_OK)	{ goto ret; }
 
 	#if defined(VERBOSE)

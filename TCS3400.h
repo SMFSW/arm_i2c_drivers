@@ -22,16 +22,16 @@
 
 #ifndef I2C_TCS3400_NB
 //! \note Define I2C_TCS3400_NB to enable multiple peripherals of this type
-#define I2C_TCS3400_NB	1	//!< Number of TCS3400 peripherals
+#define I2C_TCS3400_NB	1U	//!< Number of TCS3400 peripherals
 #endif
 
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define TCS34001_ADDR			0x39			//!< TCS34001 Base address
-#define TCS34003_ADDR			0x39			//!< TCS34003 Base address
-#define TCS34005_ADDR			0x29			//!< TCS34005 Base address
-#define TCS34007_ADDR			0x29			//!< TCS34007 Base address
+#define TCS34001_ADDR			0x39U			//!< TCS34001 Base address
+#define TCS34003_ADDR			0x39U			//!< TCS34003 Base address
+#define TCS34005_ADDR			0x29U			//!< TCS34005 Base address
+#define TCS34007_ADDR			0x29U			//!< TCS34007 Base address
 
 #ifndef TCS3400_BASE_ADDR
 //! \note Define TCS3400_BASE_ADDR to change default device base address
@@ -46,16 +46,16 @@
 ** \brief Register map enum of TCS3400
 **/
 typedef enum PACK__ TCS3400_reg_map {
-	TCS3400__ENABLE = 0x80,		//!< Enables states and interrupts
+	TCS3400__ENABLE = 0x80U,	//!< Enables states and interrupts
 	TCS3400__ATIME,				//!< RGBC time
-	TCS3400__WTIME = 0x83,		//!< Wait time
+	TCS3400__WTIME = 0x83U,		//!< Wait time
 	TCS3400__AILTL,				//!< Clear interrupt low threshold low byte
 	TCS3400__AILTH,				//!< Clear interrupt low threshold high byte
 	TCS3400__AIHTL,				//!< Clear interrupt high threshold low byte
 	TCS3400__AIHTH,				//!< Clear interrupt high threshold high byte
-	TCS3400__PERSIST = 0x8C,	//!< Interrupt persistence filter
+	TCS3400__PERSIST = 0x8CU,	//!< Interrupt persistence filter
 	TCS3400__CONFIG,			//!< Configuration
-	TCS3400__CONTROL = 0x8F,	//!< Control
+	TCS3400__CONTROL = 0x8FU,	//!< Control
 	TCS3400__AUX,				//!< Auxiliary control
 	TCS3400__REVID,				//!< Revision ID
 	TCS3400__ID,				//!< Device ID
@@ -68,10 +68,10 @@ typedef enum PACK__ TCS3400_reg_map {
 	TCS3400__GDATAH,			//!< Green high data byte
 	TCS3400__BDATAL,			//!< Blue low data byte
 	TCS3400__BDATAH,			//!< Blue high data byte
-	TCS3400__IR = 0xC0,			//!< Access IR channel
-	TCS3400__IFORCE = 0xE4,		//!< Force interrupt
-	TCS3400__CICLEAR = 0xE6,	//!< Clear channel interrupt clear
-	TCS3400__AICLEAR = 0xE7		//!< Clear all interrupts
+	TCS3400__IR = 0xC0U,		//!< Access IR channel
+	TCS3400__IFORCE = 0xE4U,	//!< Force interrupt
+	TCS3400__CICLEAR = 0xE6U,	//!< Clear channel interrupt clear
+	TCS3400__AICLEAR = 0xE7U	//!< Clear all interrupts
 } TCS3400_reg;
 
 
@@ -79,7 +79,7 @@ typedef enum PACK__ TCS3400_reg_map {
 ** \brief Gain values of TCS3400
 **/
 typedef enum PACK__ TCS3400_gain {
-	TCS3400__LOW_GAIN = 0,	//!< Low gain mode (x1)
+	TCS3400__LOW_GAIN = 0U,	//!< Low gain mode (x1)
 	TCS3400__MEDIUM_GAIN,	//!< Medium gain mode (x4)
 	TCS3400__HIGH_GAIN,		//!< High gain mode (x16)
 	TCS3400__MAXIMUM_GAIN	//!< Maximum gain mode (x64)
@@ -90,7 +90,7 @@ typedef enum PACK__ TCS3400_gain {
 ** \brief Persistence control of TCS3400
 **/
 typedef enum PACK__ TCS3400_it_persist {
-	TCS3400__PERSIST_EVERY_RGBC_CYCLE = 0,	//!< Every RGBC cycle generates interrupt
+	TCS3400__PERSIST_EVERY_RGBC_CYCLE = 0U,	//!< Every RGBC cycle generates interrupt
 	TCS3400__PERSIST_ANY_OUTSIDE_THRESHOLD,	//!< Any value outside of threshold range
 	TCS3400__PERSIST_2_IT_PERIODS,			//!< 2 consecutive values out of range
 	TCS3400__PERSIST_3_IT_PERIODS,			//!< 3 consecutive values out of range

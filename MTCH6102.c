@@ -51,8 +51,8 @@ FctERR MTCH6102_Init_Single(void) {
 
 FctERR NONNULL__ MTCH6102_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(pSlave))			{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > MTCH__RAW_ADC_31 + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > MTCH__RAW_ADC_31 + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	while (TPSINF_MS(MTCH6102_last_access[pSlave - MTCH6102_hal], MTCH6102_TIME_BETWEEN_TRANSACTIONS));
 	I2C_set_busy(pSlave, true);
@@ -67,8 +67,8 @@ FctERR NONNULL__ MTCH6102_Write(I2C_slave_t * const pSlave, const uint8_t * data
 
 FctERR NONNULL__ MTCH6102_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(pSlave))			{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > MTCH__RAW_ADC_31 + 1)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > MTCH__RAW_ADC_31 + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
 
 	while (TPSINF_MS(MTCH6102_last_access[pSlave - MTCH6102_hal], MTCH6102_TIME_BETWEEN_TRANSACTIONS));
 	I2C_set_busy(pSlave, true);

@@ -85,7 +85,7 @@ FctERR NONNULL__ MB85RC256V_Read_ID(MB85RC256V_t * const pCpnt, uint8_t * data)
 	if (!I2C_is_enabled(pSlave))		{ return ERROR_DISABLED; }	// Peripheral disabled
 
 	I2C_set_busy(pSlave, true);
-	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, 0xF8, pSlave->cfg.addr, I2C_MEMADD_SIZE_8BIT, data, 3, pSlave->cfg.timeout);
+	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, 0xF8, pSlave->cfg.addr, I2C_MEMADD_SIZE_8BIT, data, 3U, pSlave->cfg.timeout);
 	I2C_set_busy(pSlave, false);
 	return HALERRtoFCTERR(pSlave->status);
 }

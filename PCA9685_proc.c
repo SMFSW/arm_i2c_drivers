@@ -39,7 +39,7 @@ __WEAK FctERR NONNULL__ PCA9685_Init_Sequence(PCA9685_t * const pCpnt)
 
 	// Send prescaler to obtain desired frequency (only in SLEEP)
 	PCA9685_Freq_To_Byte(pCpnt, &DATA[0], PCA9685_DEF_FREQ);
-	err = PCA9685_Write(pCpnt->cfg.slave_inst, DATA, PCA9685__PRE_SCALE, 1);
+	err = PCA9685_Write(pCpnt->cfg.slave_inst, DATA, PCA9685__PRE_SCALE, 1U);
 	if (err != ERROR_OK)	{ return err; }
 	pCpnt->cfg.Frequency = PCA9685_Byte_To_Freq(pCpnt, DATA[0]);
 

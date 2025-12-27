@@ -22,7 +22,7 @@
 
 #ifndef I2C_TSL2591_NB
 //! \note Define I2C_TSL2591_NB to enable multiple peripherals of this type
-#define I2C_TSL2591_NB	1	//!< Number of TSL2591 peripherals
+#define I2C_TSL2591_NB	1U	//!< Number of TSL2591 peripherals
 #endif
 
 // *****************************************************************************
@@ -30,7 +30,7 @@
 // *****************************************************************************
 #ifndef TSL2591_BASE_ADDR
 //! \note Define TSL2591_BASE_ADDR to change default device base address
-#define TSL2591_BASE_ADDR		0x29		//!< TSL2591 Base address
+#define TSL2591_BASE_ADDR		0x29U		//!< TSL2591 Base address
 #endif
 
 
@@ -41,9 +41,9 @@
 ** \brief Register map enum of TSL2591
 **/
 typedef enum PACK__ TSL2591_reg_map {
-	TSL2591__ENABLE = 0,	//!< Enables states and interrupts
+	TSL2591__ENABLE = 0U,	//!< Enables states and interrupts
 	TSL2591__CONFIG,		//!< ALS gain and integration time configuration
-	TSL2591__AILTL = 0x04,	//!< ALS interrupt low threshold low byte
+	TSL2591__AILTL = 0x04U,	//!< ALS interrupt low threshold low byte
 	TSL2591__AILTH,			//!< ALS interrupt low threshold high byte
 	TSL2591__AIHTL,			//!< ALS interrupt high threshold low byte
 	TSL2591__AIHTH,			//!< ALS interrupt high threshold high byte
@@ -52,7 +52,7 @@ typedef enum PACK__ TSL2591_reg_map {
 	TSL2591__NPAIHTL,		//!< No Persist ALS interrupt high threshold low byte
 	TSL2591__NPAIHTH,		//!< No Persist ALS interrupt high threshold high byte
 	TSL2591__PERSIST,		//!< Interrupt persistence filter
-	TSL2591__PID = 0x11,	//!< Package ID
+	TSL2591__PID = 0x11U,	//!< Package ID
 	TSL2591__ID,			//!< Device ID
 	TSL2591__STATUS,		//!< Device status
 	TSL2591__C0DATAL,		//!< CH0 ADC low data byte
@@ -65,25 +65,25 @@ typedef enum PACK__ TSL2591_reg_map {
 ** \brief Transaction types of TSL2591
 **/
 typedef enum PACK__ TSL2591_transaction {
-	TSL2591__TRANS_NORMAL_OP = 1,		//!< Normal operation
-	TSL2591__TRANS_SPECIAL_FUNC = 3,	//!< Special Function
+	TSL2591__TRANS_NORMAL_OP = 1U,		//!< Normal operation
+	TSL2591__TRANS_SPECIAL_FUNC = 3U,	//!< Special Function
 } TSL2591_transaction;
 
 /*!\enum TSL2591_spec_func
 ** \brief Special functions of TSL2591
 **/
 typedef enum PACK__ TSL2591_spec_func {
-	TSL2591__SF_FORCE_IT = 4,				//!< Interrupt set (forces an interrupt)
-	TSL2591__SF_CLR_ALS_IT = 6,				//!< Clears ALS interrupt
-	TSL2591__SF_CLR_ALS_AND_NO_PERS = 7,	//!< Clears ALS and no persist ALS interrupt
-	TSL2591__SF_CLR_NO_PERS = 9				//!< Clears no persist ALS interrupt
+	TSL2591__SF_FORCE_IT = 4U,				//!< Interrupt set (forces an interrupt)
+	TSL2591__SF_CLR_ALS_IT = 6U,			//!< Clears ALS interrupt
+	TSL2591__SF_CLR_ALS_AND_NO_PERS = 7U,	//!< Clears ALS and no persist ALS interrupt
+	TSL2591__SF_CLR_NO_PERS = 9U			//!< Clears no persist ALS interrupt
 } TSL2591_spec_func;
 
 /*!\enum TSL2591_gain
 ** \brief Gain values of TSL2591
 **/
 typedef enum PACK__ TSL2591_gain {
-	TSL2591__LOW_GAIN = 0,	//!< Low gain mode (x1)
+	TSL2591__LOW_GAIN = 0U,	//!< Low gain mode (x1)
 	TSL2591__MEDIUM_GAIN,	//!< Medium gain mode (x25)
 	TSL2591__HIGH_GAIN,		//!< High gain mode (x428)
 	TSL2591__MAXIMUM_GAIN	//!< Maximum gain mode (x9876)
@@ -93,7 +93,7 @@ typedef enum PACK__ TSL2591_gain {
 ** \brief Integration times of TSL2591
 **/
 typedef enum PACK__ TSL2591_integ {
-	TSL2591__INTEG_100MS = 0,	//!< 100ms integration time
+	TSL2591__INTEG_100MS = 0U,	//!< 100ms integration time
 	TSL2591__INTEG_200MS,		//!< 200ms integration time
 	TSL2591__INTEG_300MS,		//!< 300ms integration time
 	TSL2591__INTEG_400MS,		//!< 400ms integration time
@@ -105,7 +105,7 @@ typedef enum PACK__ TSL2591_integ {
 ** \brief Persistence control of TSL2591
 **/
 typedef enum PACK__ TSL2591_it_persist {
-	TSL2591__PERSIST_EVERY_ADC_CYCLE = 0,	//!< Every ADC cycle generates interrupt
+	TSL2591__PERSIST_EVERY_ADC_CYCLE = 0U,	//!< Every ADC cycle generates interrupt
 	TSL2591__PERSIST_ANY_OUTSIDE_THRESHOLD,	//!< Any value outside of threshold range
 	TSL2591__PERSIST_2_IT_PERIODS,			//!< 2 integration time periods out of range
 	TSL2591__PERSIST_3_IT_PERIODS,			//!< 3 integration time periods out of range

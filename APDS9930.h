@@ -22,13 +22,13 @@
 
 #ifndef I2C_APDS9930_NB
 //! \note Define I2C_APDS9930_NB to enable multiple peripherals of this type
-#define I2C_APDS9930_NB	1	//!< Number of APDS9930 peripherals
+#define I2C_APDS9930_NB	1U	//!< Number of APDS9930 peripherals
 #endif
 
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define APDS9930_ADDR		0x39				//!< APDS9930 address
+#define APDS9930_ADDR		0x39U				//!< APDS9930 address
 
 #ifndef APDS9930_BASE_ADDR
 //! \note Define APDS9930_BASE_ADDR to change default device base address
@@ -43,7 +43,7 @@
 ** \brief Register map enum of APDS9930
 **/
 typedef enum PACK__ APDS9930_reg_map {
-	APDS9930__ENABLE = 0,	//!< Enables states and interrupts
+	APDS9930__ENABLE = 0U,	//!< Enables states and interrupts
 	APDS9930__ATIME,		//!< ALS ADC time
 	APDS9930__PTIME,		//!< Proximity ADC time
 	APDS9930__WTIME,		//!< Wait time
@@ -74,25 +74,25 @@ typedef enum PACK__ APDS9930_reg_map {
 ** \brief Transaction types of APDS9930
 **/
 typedef enum PACK__ APDS9930_transaction {
-	APDS9930__TRANS_REPEATED_BYTE = 0,	//!< Repeated Byte protocol transaction
-	APDS9930__TRANS_AUTO_INCREMENT = 1,	//!< Auto-Increment protocol transaction
-	APDS9930__TRANS_SPECIAL_FUNC = 3,	//!< Special Function
+	APDS9930__TRANS_REPEATED_BYTE = 0U,		//!< Repeated Byte protocol transaction
+	APDS9930__TRANS_AUTO_INCREMENT = 1U,	//!< Auto-Increment protocol transaction
+	APDS9930__TRANS_SPECIAL_FUNC = 3U,		//!< Special Function
 } APDS9930_transaction;
 
 /*!\enum APDS9930_spec_func
 ** \brief Special functions of APDS9930
 **/
 typedef enum PACK__ APDS9930_spec_func {
-	APDS9930__SF_CLR_PROX_IT = 5,		//!< Proximity interrupt clear
-	APDS9930__SF_CLR_ALS_IT = 6,		//!< ALS interrupt clear
-	APDS9930__SF_CLR_PROX_ALS_IT = 7	//!< Proximity and ALS interrupt clear
+	APDS9930__SF_CLR_PROX_IT = 5U,		//!< Proximity interrupt clear
+	APDS9930__SF_CLR_ALS_IT = 6U,		//!< ALS interrupt clear
+	APDS9930__SF_CLR_PROX_ALS_IT = 7U	//!< Proximity and ALS interrupt clear
 } APDS9930_spec_func;
 
 /*!\enum APDS9930_als_gain
 ** \brief Gain values of APDS9930 ALS
 **/
 typedef enum PACK__ APDS9930_als_gain {
-	APDS9930__ALS_1X_GAIN = 0,	//!< ALS 1X Gain
+	APDS9930__ALS_1X_GAIN = 0U,	//!< ALS 1X Gain
 	APDS9930__ALS_8X_GAIN,		//!< ALS 8X Gain
 	APDS9930__ALS_16X_GAIN,		//!< ALS 16X Gain
 	APDS9930__ALS_120X_GAIN		//!< ALS 120X Gain
@@ -102,37 +102,37 @@ typedef enum PACK__ APDS9930_als_gain {
 ** \brief Gain values of APDS9930 proximity
 **/
 typedef enum PACK__ APDS9930_prox_gain {
-	APDS9930__PROX_1X_GAIN = 0,	//!< Proximity 1X Gain
-	APDS9930__PROX_2X_GAIN,		//!< Proximity 2X Gain
-	APDS9930__PROX_4X_GAIN,		//!< Proximity 4X Gain
-	APDS9930__PROX_8X_GAIN		//!< Proximity 8X Gain
+	APDS9930__PROX_1X_GAIN = 0U,	//!< Proximity 1X Gain
+	APDS9930__PROX_2X_GAIN,			//!< Proximity 2X Gain
+	APDS9930__PROX_4X_GAIN,			//!< Proximity 4X Gain
+	APDS9930__PROX_8X_GAIN			//!< Proximity 8X Gain
 } APDS9930_prox_gain;
 
 /*!\enum APDS9930_prox_diode
 ** \brief Proximity Diode Select values
 **/
 typedef enum PACK__ APDS9930_prox_diode {
-	APDS9930__PDIODE_RESERVED1 = 0,	//!< Reserved
-	APDS9930__PDIODE_RESERVED2,		//!< Reserved
-	APDS9930__PDIODE_CH1,			//!< Proximity uses the Ch1 diode
-	APDS9930__PDIODE_RESERVED3		//!< Reserved
+	APDS9930__PDIODE_RESERVED1 = 0U,	//!< Reserved
+	APDS9930__PDIODE_RESERVED2,			//!< Reserved
+	APDS9930__PDIODE_CH1,				//!< Proximity uses the Ch1 diode
+	APDS9930__PDIODE_RESERVED3			//!< Reserved
 } APDS9930_prox_diode;
 
 /*!\enum APDS9930_drive_strength
 ** \brief Proximity LED Drive strength values
 **/
 typedef enum PACK__ APDS9930_drive_strength {
-	APDS9930__STRENGTH_MAX = 0,	//!< PDL=0 : 100mA ; PDL=1 : 11.1mA
-	APDS9930__STRENGTH_HIGH,	//!< PDL=0 : 50mA ; PDL=1 : 5.6mA
-	APDS9930__STRENGTH_MEDIUM,	//!< PDL=0 : 25mA ; PDL=1 : 2.8mA
-	APDS9930__STRENGTH_LOW,		//!< PDL=0 : 12.5mA ; PDL=1 : 1.4mA
+	APDS9930__STRENGTH_MAX = 0U,	//!< PDL=0 : 100mA ; PDL=1 : 11.1mA
+	APDS9930__STRENGTH_HIGH,		//!< PDL=0 : 50mA ; PDL=1 : 5.6mA
+	APDS9930__STRENGTH_MEDIUM,		//!< PDL=0 : 25mA ; PDL=1 : 2.8mA
+	APDS9930__STRENGTH_LOW,			//!< PDL=0 : 12.5mA ; PDL=1 : 1.4mA
 } APDS9930_drive_strength;
 
 /*!\enum APDS9930_als_it_persist
 ** \brief Persistence control of APDS9930 ALS
 **/
 typedef enum PACK__ APDS9930_als_it_persist {
-	APDS9930__PERSIST_EVERY_ALS_CYCLE = 0,	//!< Every ALS cycle generates interrupt
+	APDS9930__PERSIST_EVERY_ALS_CYCLE = 0U,	//!< Every ALS cycle generates interrupt
 	APDS9930__PERSIST_1_ALS_PERIODS,		//!< 1 consecutive Ch0 channel values out of range
 	APDS9930__PERSIST_2_ALS_PERIODS,		//!< 2 consecutive Ch0 channel values out of range
 	APDS9930__PERSIST_3_ALS_PERIODS,		//!< 3 consecutive Ch0 channel values out of range
@@ -154,22 +154,22 @@ typedef enum PACK__ APDS9930_als_it_persist {
 ** \brief Persistence control of APDS9930 Proximity
 **/
 typedef enum PACK__ APDS9930_prox_it_persist {
-	APDS9930__PERSIST_EVERY_PROX_CYCLE = 0,	//!< Every proximity cycle generates an interrupt
-	APDS9930__PERSIST_1_PROX_PERIODS,		//!< 1 consecutive proximity values out of range
-	APDS9930__PERSIST_2_PROX_PERIODS,		//!< 2 consecutive proximity values out of range
-	APDS9930__PERSIST_3_PROX_PERIODS,		//!< 3 consecutive proximity values out of range
-	APDS9930__PERSIST_4_PROX_PERIODS,		//!< 4 consecutive proximity values out of range
-	APDS9930__PERSIST_5_PROX_PERIODS,		//!< 5 consecutive proximity values out of range
-	APDS9930__PERSIST_6_PROX_PERIODS,		//!< 6 consecutive proximity values out of range
-	APDS9930__PERSIST_7_PROX_PERIODS,		//!< 7 consecutive proximity values out of range
-	APDS9930__PERSIST_8_PROX_PERIODS,		//!< 8 consecutive proximity values out of range
-	APDS9930__PERSIST_9_PROX_PERIODS,		//!< 9 consecutive proximity values out of range
-	APDS9930__PERSIST_10_PROX_PERIODS,		//!< 10 consecutive proximity values out of range
-	APDS9930__PERSIST_11_PROX_PERIODS,		//!< 11 consecutive proximity values out of range
-	APDS9930__PERSIST_12_PROX_PERIODS,		//!< 12 consecutive proximity values out of range
-	APDS9930__PERSIST_13_PROX_PERIODS,		//!< 13 consecutive proximity values out of range
-	APDS9930__PERSIST_14_PROX_PERIODS,		//!< 14 consecutive proximity values out of range
-	APDS9930__PERSIST_15_PROX_PERIODS,		//!< 15 consecutive proximity values out of range
+	APDS9930__PERSIST_EVERY_PROX_CYCLE = 0U,	//!< Every proximity cycle generates an interrupt
+	APDS9930__PERSIST_1_PROX_PERIODS,			//!< 1 consecutive proximity values out of range
+	APDS9930__PERSIST_2_PROX_PERIODS,			//!< 2 consecutive proximity values out of range
+	APDS9930__PERSIST_3_PROX_PERIODS,			//!< 3 consecutive proximity values out of range
+	APDS9930__PERSIST_4_PROX_PERIODS,			//!< 4 consecutive proximity values out of range
+	APDS9930__PERSIST_5_PROX_PERIODS,			//!< 5 consecutive proximity values out of range
+	APDS9930__PERSIST_6_PROX_PERIODS,			//!< 6 consecutive proximity values out of range
+	APDS9930__PERSIST_7_PROX_PERIODS,			//!< 7 consecutive proximity values out of range
+	APDS9930__PERSIST_8_PROX_PERIODS,			//!< 8 consecutive proximity values out of range
+	APDS9930__PERSIST_9_PROX_PERIODS,			//!< 9 consecutive proximity values out of range
+	APDS9930__PERSIST_10_PROX_PERIODS,			//!< 10 consecutive proximity values out of range
+	APDS9930__PERSIST_11_PROX_PERIODS,			//!< 11 consecutive proximity values out of range
+	APDS9930__PERSIST_12_PROX_PERIODS,			//!< 12 consecutive proximity values out of range
+	APDS9930__PERSIST_13_PROX_PERIODS,			//!< 13 consecutive proximity values out of range
+	APDS9930__PERSIST_14_PROX_PERIODS,			//!< 14 consecutive proximity values out of range
+	APDS9930__PERSIST_15_PROX_PERIODS,			//!< 15 consecutive proximity values out of range
 } APDS9930_prox_it_persist;
 
 

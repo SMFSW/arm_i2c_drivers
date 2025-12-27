@@ -15,7 +15,7 @@
 FctERR NONNULL__ AT42QT1244_Send_Command(AT42QT1244_t * const pCpnt, const AT42QT_cmd cmd)
 {
 	if ((cmd > AT42QT__RESET_DEVICE) && (cmd < AT42QT__LOW_LEVEL_CALIBRATION) && (cmd != AT42QT__WRITE_SETUPS))	{ return ERROR_VALUE; }
-	return AT42QT1244_Write(pCpnt->cfg.slave_inst, (uint8_t *) &cmd, AT42QT__CONTROL_COMMAND, 1);
+	return AT42QT1244_Write(pCpnt->cfg.slave_inst, (uint8_t *) &cmd, AT42QT__CONTROL_COMMAND, 1U);
 }
 
 
@@ -27,21 +27,21 @@ FctERR NONNULL__ AT42QT1244_Send_Setup(AT42QT1244_t * const pCpnt, uint16_t * co
 	*hcrc = 0;
 
 	if ((addr < AT42QT__SETUP_KEYS_THRESHOLD_0) || (addr > AT42QT__SETUP_NOISE))	{ return ERROR_VALUE; }
-	if (Nb > AT42QT__SETUP_NOISE - AT42QT__SETUP_KEYS_THRESHOLD_0 + 1)				{ return ERROR_RANGE; }
+	if (Nb > AT42QT__SETUP_NOISE - AT42QT__SETUP_KEYS_THRESHOLD_0 + 1U)				{ return ERROR_RANGE; }
 
 	I2C_Watchdog_Refresh();		// Refresh watchdog (as the whole procedure may take up some time)
 
-	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, &SETUP[1], AT42QT__SETUP_KEYS_THRESHOLD_0, sizeof(SETUP) - 3);	// No need to read COMMAND & CRC registers
+	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, &SETUP[1], AT42QT__SETUP_KEYS_THRESHOLD_0, sizeof(SETUP) - 3U);	// No need to read COMMAND & CRC registers
 
-	if (!err)
+	if (err == ERROR_OK)
 	{
 		SETUP[0] = AT42QT__WRITE_SETUPS;
-		memcpy(&SETUP[addr - AT42QT__SETUP_KEYS_THRESHOLD_0] + 1, setup, Nb);
+		memcpy(&SETUP[addr - AT42QT__SETUP_KEYS_THRESHOLD_0] + 1U, setup, Nb);
 
 		// Compute CRC excluding COMMAND & CRC registers
-		for (uintCPU_t i = 1 ; i < sizeof(SETUP) - 2 ; i++)	{ *hcrc = AT42QT1244_crc16(*hcrc, SETUP[i]); }
-		SETUP[sizeof(SETUP) - 2] = LOBYTE(*hcrc);
-		SETUP[sizeof(SETUP) - 1] = HIBYTE(*hcrc);
+		for (uintCPU_t i = 1U ; i < sizeof(SETUP) - 2U ; i++)	{ *hcrc = AT42QT1244_crc16(*hcrc, SETUP[i]); }
+		SETUP[sizeof(SETUP) - 2U] = LOBYTE(*hcrc);
+		SETUP[sizeof(SETUP) - 1U] = HIBYTE(*hcrc);
 
 		err |= AT42QT1244_Write(pCpnt->cfg.slave_inst, SETUP, AT42QT__CONTROL_COMMAND, sizeof(SETUP));
 	}
@@ -52,14 +52,14 @@ FctERR NONNULL__ AT42QT1244_Send_Setup(AT42QT1244_t * const pCpnt, uint16_t * co
 
 FctERR NONNULL__ AT42QT1244_Setup_Keys(AT42QT1244_t * const pCpnt, uint16_t * const hcrc, const uint32_t mask_keys, const bool use)
 {
-	const uint8_t				NDIL_Val = 4;				// 4 is the default NDIL value
+	const uint8_t				NDIL_Val = 4U;				// 4 is the default NDIL value
 	uAT42QT_REG__SETUP_165_188	TMP[AT42QT1244_MAX_KEYS];
 	FctERR						err;
 
 	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, &TMP[0].Byte, AT42QT__SETUP_KEYS_MODE_0, sizeof(TMP));	// 165 is the NDIL register of the 1st key
 	if (err != ERROR_OK)	{ return err; }
 
-	for (uintCPU_t i = 0, j = 1 ; i < AT42QT1244_MAX_KEYS ; i++, j <<= 1)
+	for (uintCPU_t i = 0, j = 1U ; i < AT42QT1244_MAX_KEYS ; i++, j <<= 1U)
 	{
 		if (!(mask_keys & j))	{ continue; }	// Skip key if not in the mask
 
@@ -77,11 +77,11 @@ FctERR NONNULL__ AT42QT1244_Setup_FHM(AT42QT1244_t * const pCpnt, uint16_t * con
 
 	if (FHM > AT42QT__FHM_FREQUENCY_SWEEP)	{ return ERROR_VALUE; }
 
-	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, &TMP.Byte, AT42QT__SETUP_FREQ_HOPING_DWELL, 1);
+	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, &TMP.Byte, AT42QT__SETUP_FREQ_HOPING_DWELL, 1U);
 	if (err != ERROR_OK)	{ return err; }
 
 	TMP.Bits.FHM = FHM;
-	return AT42QT1244_Send_Setup(pCpnt, hcrc, &TMP.Byte, AT42QT__SETUP_FREQ_HOPING_DWELL, 1);
+	return AT42QT1244_Send_Setup(pCpnt, hcrc, &TMP.Byte, AT42QT__SETUP_FREQ_HOPING_DWELL, 1U);
 }
 
 
@@ -92,7 +92,7 @@ FctERR NONNULL__ AT42QT1244_Reset(AT42QT1244_t * const pCpnt)
 	AT42QT1244_Set_Reset_Time(pCpnt);
 	err = AT42QT1244_Send_Command(pCpnt, AT42QT__RESET_DEVICE);
 
-	if (!err)	{ AT42QT1244_Delay_PowerOn(pCpnt); }
+	if (err == ERROR_OK)	{ AT42QT1244_Delay_PowerOn(pCpnt); }
 
 	return err;
 }
@@ -104,7 +104,7 @@ FctERR NONNULL__ AT42QT1244_Get_Keys(AT42QT1244_t * const pCpnt, uint32_t * Keys
 	FctERR	err = AT42QT1244_Read(pCpnt->cfg.slave_inst, TMP, AT42QT__DETECT_STATUS_1, sizeof(TMP));
 	if (err != ERROR_OK)	{ return err; }
 
-	*Keys = (LSHIFT(TMP[2], 16) + LSHIFT(TMP[1], 8) + TMP[0]) & 0x00FFFFFFUL;
+	*Keys = (LSHIFT(TMP[2], 16U) + LSHIFT(TMP[1], 8U) + TMP[0]) & 0x00FFFFFFUL;
 	return ERROR_OK;
 }
 

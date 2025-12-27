@@ -24,8 +24,8 @@
 // *****************************************************************************
 // Section: Constants
 // *****************************************************************************
-#define TCS34725_CHIP_ID		0x44		//!< TCS34721/TCS34725 Chip ID to check against
-#define TCS34727_CHIP_ID		0x4D		//!< TCS34723/TCS34727 Chip ID to check against
+#define TCS34725_CHIP_ID		0x44U		//!< TCS34721/TCS34725 Chip ID to check against
+#define TCS34727_CHIP_ID		0x4DU		//!< TCS34723/TCS34727 Chip ID to check against
 
 
 #define TCS3472_IR_COUNT		0.0f		//!< Counts per uW/cm2 for IR channel

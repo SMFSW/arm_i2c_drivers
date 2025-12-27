@@ -60,7 +60,7 @@ FctERR FM24C_Init_Single(void) {
 static FctERR NONNULL__ FM24C_Write_Banked(FM24C_t * const pCpnt, const uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb)
 {
 	I2C_slave_t * const pSlave = pCpnt->cfg.slave_inst;
-	const uint16_t i2c_addr = pSlave->cfg.addr + (bank << 1);
+	const uint16_t i2c_addr = pSlave->cfg.addr + (bank << 1U);
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, i2c_addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
@@ -81,7 +81,7 @@ static FctERR NONNULL__ FM24C_Write_Banked(FM24C_t * const pCpnt, const uint8_t 
 static FctERR NONNULL__ FM24C_Read_Banked(FM24C_t * const pCpnt, uint8_t * data, const uint16_t addr, const uint8_t bank, const uint16_t nb)
 {
 	I2C_slave_t * const pSlave = pCpnt->cfg.slave_inst;
-	const uint16_t i2c_addr = pSlave->cfg.addr + (bank << 1);
+	const uint16_t i2c_addr = pSlave->cfg.addr + (bank << 1U);
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, i2c_addr, addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
@@ -114,8 +114,8 @@ static FctERR NONNULL__ FM24C_ReadWrite_Banked(FM24C_t * const pCpnt, uint8_t * 
 		size_t nb_rw = FM24C_BANK_SIZE - (address % FM24C_BANK_SIZE);	// Compute possible page/bank crossing access
 		nb_rw = min(data_len, nb_rw);									// Choose between page/bank size data length max, or remaining data page/bank length
 
-		if (wr)		{ err = FM24C_Write_Banked(pCpnt, pData, (uint8_t) address, RSHIFT(address, 8), nb_rw); }	// Write
-		else		{ err = FM24C_Read_Banked(pCpnt, pData, (uint8_t) address, RSHIFT(address, 8), nb_rw); }	// Read
+		if (wr)		{ err = FM24C_Write_Banked(pCpnt, pData, (uint8_t) address, RSHIFT(address, 8U), nb_rw); }	// Write
+		else		{ err = FM24C_Read_Banked(pCpnt, pData, (uint8_t) address, RSHIFT(address, 8U), nb_rw); }	// Read
 		if (err != ERROR_OK)	{ break; }
 
 		data_len -= nb_rw;
