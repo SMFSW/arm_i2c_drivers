@@ -39,10 +39,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum PCA9685_reg_map
+/*!\enum _PCA9685_reg
 ** \brief Register map enum of PCA9685
 **/
-typedef enum PACK__ PCA9685_reg_map {
+typedef enum PACK__ _PCA9685_reg {
 	PCA9685__MODE1 = 0U,			//!< register MODE1
 	PCA9685__MODE2,					//!< register MODE2
 	PCA9685__SUBADR1,				//!< register SUBADR1
@@ -122,10 +122,10 @@ typedef enum PACK__ PCA9685_reg_map {
 } PCA9685_reg;
 
 
-/*!\union uPCA9685_REG__MODE1
+/*!\union _uPCA9685_REG__MODE1
 ** \brief Union for MODE1 register of PCA9685
 **/
-typedef union PACK__ uPCA9685_REG__MODE1 {
+typedef union PACK__ _uPCA9685_REG__MODE1 {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t ALLCALL	:1;		//!< All CALL address acknowledgment
@@ -141,10 +141,10 @@ typedef union PACK__ uPCA9685_REG__MODE1 {
 	} Bits;
 } uPCA9685_REG__MODE1;
 
-/*!\union uPCA9685_REG__MODE2
+/*!\union _uPCA9685_REG__MODE2
 ** \brief Union for MODE2 register of PCA9685
 **/
-typedef union PACK__ uPCA9685_REG__MODE2 {
+typedef union PACK__ _uPCA9685_REG__MODE2 {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t 		OUTNE	:2;
@@ -156,10 +156,10 @@ typedef union PACK__ uPCA9685_REG__MODE2 {
 } uPCA9685_REG__MODE2;
 
 
-/*!\union uPCA9685_REG__DUTY
+/*!\union _uPCA9685_REG__DUTY
 ** \brief Union for Duty Cycle registers of PCA9624
 **/
-typedef union PACK__ uPCA9685_REG__DUTY {
+typedef union PACK__ _uPCA9685_REG__DUTY {
 	uint16_t Word;
 	struct PACK__ {
 		uint8_t LSB;				//!< Less significant byte

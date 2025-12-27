@@ -31,10 +31,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct DRV2605L_t
+/*!\struct _DRV2605L_t
 ** \brief DRV2605L user interface struct
 **/
-typedef struct DRV2605L_t {
+typedef struct _DRV2605L_t {
 	struct {
 	I2C_slave_t *		slave_inst;	//!< Slave structure
 	PeripheralGPIO_t	EN_GPIO;	//!< Enable GPIO struct

@@ -40,10 +40,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct I2CMEM_t
+/*!\struct _I2CMEM_t
 ** \brief I2CMEM user interface struct
 **/
-typedef struct I2CMEM_t {
+typedef struct _I2CMEM_t {
 	struct {
 	I2C_slave_t *		slave_inst;		//!< Slave structure
 	size_t				chip_size;		//!< Memory range (number of bytes)

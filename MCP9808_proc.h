@@ -29,20 +29,20 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum MCP9808_alert
+/*!\enum _MCP9808_alert
 ** \brief Alerts enum of MCP9808
 **/
-typedef enum PACK__ MCP9808_alert {
+typedef enum PACK__ _MCP9808_alert {
 	MCP9808__ALERT_HIGH = 0U,	//!< High temperature alert
 	MCP9808__ALERT_LOW,			//!< Low temperature alert
 	MCP9808__ALERT_CRIT			//!< Critical temperature alert
 } MCP9808_alert;
 
 
-/*!\struct MCP9808_t
+/*!\struct _MCP9808_t
 ** \brief MCP9808 user interface struct
 **/
-typedef struct MCP9808_t {
+typedef struct _MCP9808_t {
 	float				Temperature;		//!< Current temperature
 	bool				TUpper;				//!< Upper alert reached
 	bool				TLower;				//!< Lower alert reached
@@ -127,7 +127,7 @@ FctERR NONNULL__ MCP9808_handler_it(MCP9808_t * const pCpnt);
 FctERR MCP9808_handler_all(void);
 
 /*!\brief Handler for all MCP9808 peripherals GPIO interrupt
-** \note \ref MCP9808_INT_GPIO_Init has to be called at init before using interrupt handler function
+** \note \ref MCP9808_Alert_GPIO_Init has to be called at init before using interrupt handler function
 ** \note May be called periodically to handle all MCP9808 tasks
 ** \return FctERR - error code
 **/

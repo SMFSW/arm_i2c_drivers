@@ -27,10 +27,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\union uPCF8523_REG_MAP
+/*!\union _uPCF8523_REG_MAP
 ** \brief Union of PCF8523 registry map
 **/
-typedef union uPCF8523_REG_MAP {
+typedef union _uPCF8523_REG_MAP {
 	uint8_t Bytes[20];
 	struct PACK__ {
 		uPCF8523_REG__CTRL1			Control_1;

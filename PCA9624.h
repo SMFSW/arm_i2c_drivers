@@ -40,10 +40,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum PCA9624_reg_map
+/*!\enum _PCA9624_reg
 ** \brief Register map enum of PCA9624
 **/
-typedef enum PACK__ PCA9624_reg_map {
+typedef enum PACK__ _PCA9624_reg {
 	PCA9624__MODE1 = 0U,	//!< register MODE1
 	PCA9624__MODE2,			//!< register MODE2
 	PCA9624__PWM0,			//!< register PWM0
@@ -65,10 +65,10 @@ typedef enum PACK__ PCA9624_reg_map {
 } PCA9624_reg;
 
 
-/*!\union uPCA9624_REG__MODE1
+/*!\union _uPCA9624_REG__MODE1
 ** \brief Union for MODE1 register of PCA9624
 **/
-typedef union PACK__ uPCA9624_REG__MODE1 {
+typedef union PACK__ _uPCA9624_REG__MODE1 {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t ALLCALL	:1;		//!< All CALL address acknowledgment
@@ -82,10 +82,10 @@ typedef union PACK__ uPCA9624_REG__MODE1 {
 	} Bits;
 } uPCA9624_REG__MODE1;
 
-/*!\union uPCA9624_REG__MODE2
+/*!\union _uPCA9624_REG__MODE2
 ** \brief Union for MODE2 register of PCA9624
 **/
-typedef union PACK__ uPCA9624_REG__MODE2 {
+typedef union PACK__ _uPCA9624_REG__MODE2 {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t			Res0_1	:1;		//!< Reserved bit 0: reads 1
@@ -99,10 +99,10 @@ typedef union PACK__ uPCA9624_REG__MODE2 {
 } uPCA9624_REG__MODE2;
 
 
-/*!\union uPCA9624_REG__LEDOUT
+/*!\union _uPCA9624_REG__LEDOUT
 ** \brief Union for LEDOUT registers of PCA9624
 **/
-typedef union PACK__ uPCA9624_REG__LEDOUT {
+typedef union PACK__ _uPCA9624_REG__LEDOUT {
 	uint16_t Word;
 	struct PACK__ {
 		PCA962x_ledout LDR0	:2;		//!< LED0 output state control

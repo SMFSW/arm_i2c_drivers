@@ -22,10 +22,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum TCS3400_chan
+/*!\enum _TCS3400_chan
 ** \brief Light type channels of TCS3400
 **/
-typedef enum PACK__ TCS3400_chan {
+typedef enum PACK__ _TCS3400_chan {
 	TCS3400__CHAN_CLEAR = 0U,	//!< Clear light channel
 	TCS3400__CHAN_RED,			//!< Red light channel
 	TCS3400__CHAN_GREEN,		//!< Green light channel

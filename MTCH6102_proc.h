@@ -33,7 +33,7 @@ extern uint8_t MTCH6102_default_cfg[MTCH__I2CADDR - MTCH__NUMBER_OF_X_CHANNELS +
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-typedef struct MTCH6102_raw_gesture {
+typedef struct _MTCH6102_raw_gest {
 	uMTCH_REG__TOUCHSTATE		Touch_state;	//!< Raw touch state
 	uMTCH_REG__TOUCHX			Touch_x;		//!< Raw x coordinate (MSB)
 	uMTCH_REG__TOUCHY			Touch_y;		//!< Raw y coordinate (MSB)
@@ -43,7 +43,7 @@ typedef struct MTCH6102_raw_gesture {
 } MTCH6102_raw_gest;
 
 
-typedef struct MTCH6102_gesture {
+typedef struct _MTCH6102_gest {
 	sCoord2D						Coords;		//!< Coordinates
 	MTCH6102_GESTURE_STATE			State;		//!< State
 	MTCH6102_GESTURE_DIAGNOSTIC		Diag;		//!< Diagnostic
@@ -54,7 +54,10 @@ typedef struct MTCH6102_gesture {
 } MTCH6102_gest;
 
 
-typedef struct MTCH6102_t {
+/*!\struct _MTCH6102_t
+** \brief MTCH6102 user interface struct
+**/
+typedef struct _MTCH6102_t {
 	MTCH6102_gest		touch;			//!< MTCH6102 decoded coordinates & gesture
 	int16_t				min_x;			//!< Minimum possible x value
 	int16_t				max_x;			//!< Maximum possible x value

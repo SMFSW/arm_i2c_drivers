@@ -27,10 +27,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct AT42QT1244_t
+/*!\struct _AT42QT1244_t
 ** \brief AT42QT1244 user interface struct
 **/
-typedef struct AT42QT1244_t {
+typedef struct _AT42QT1244_t {
 	uint32_t					hPowerOn;			//!< Time of the last reset
 #if	!AT42QT1244_GET_KEYS_ONLY
 	uint8_t						cnt_100ms;			//!< 100ms counter
@@ -142,7 +142,7 @@ FctERR NONNULL__ AT42QT1244_handler_it(AT42QT1244_t * const pCpnt);
 FctERR AT42QT1244_handler_all(void);
 
 /*!\brief Handler for all AT42QT1244 peripherals GPIO interrupt
-** \note \ref AT42QT1244_INT_GPIO_Init has to be called at init before using interrupt handler function
+** \note \ref AT42QT1244_CHANGE_GPIO_Init has to be called at init before using interrupt handler function
 ** \note May be called periodically to handle all AT42QT1244 tasks
 ** \return FctERR - error code
 **/

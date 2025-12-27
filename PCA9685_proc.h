@@ -37,10 +37,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct PCA9685_t
+/*!\struct _PCA9685_t
 ** \brief PCA9685 user interface struct
 **/
-typedef struct PCA9685_t {
+typedef struct _PCA9685_t {
 	struct {
 	I2C_slave_t *		slave_inst;		//!< Slave structure
 	PeripheralGPIO_t	OE_GPIO;		//!< Output Enable GPIO struct

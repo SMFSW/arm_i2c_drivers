@@ -44,11 +44,11 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum APDS9930_als_gain_ex
+/*!\enum _APDS9930_als_gain_ex
 ** \brief Gain values of APDS9930 ALS
 ** \warning Datasheet p9 states ok, but CONFIG register description p22 states not to use 16 or 120 gain when AGL asserted
 **/
-typedef enum PACK__ APDS9930_als_gain_ex {
+typedef enum PACK__ _APDS9930_als_gain_ex {
 	APDS9930__ALS_GAIN_1X = 0U,		//!< ALS 1X Gain
 	APDS9930__ALS_GAIN_8X,			//!< ALS 8X Gain
 	APDS9930__ALS_GAIN_16X,			//!< ALS 16X Gain
@@ -59,10 +59,10 @@ typedef enum PACK__ APDS9930_als_gain_ex {
 	//APDS9930__ALS_GAIN_120ON6X	//!< ALS 120/6X Gain
 } APDS9930_als_gain_ex;
 
-/*!\enum APDS9930_drive_strength_ex
+/*!\enum _APDS9930_drive_strength_ex
 ** \brief Proximity LED Drive strength values
 **/
-typedef enum PACK__ APDS9930_drive_strength_ex {
+typedef enum PACK__ _APDS9930_drive_strength_ex {
 	APDS9930__STRENGTH_100MA = 0U,	//!< PDL=0 : 100mA
 	APDS9930__STRENGTH_50MA,		//!< PDL=0 : 50mA
 	APDS9930__STRENGTH_25MA,		//!< PDL=0 : 25mA
@@ -74,10 +74,10 @@ typedef enum PACK__ APDS9930_drive_strength_ex {
 } APDS9930_drive_strength_ex;
 
 
-/*!\struct APDS9930_t
+/*!\struct _APDS9930_t
 ** \brief APDS9930 user interface struct
 **/
-typedef struct APDS9930_t {
+typedef struct _APDS9930_t {
 	uint16_t					Full;				//!< Current Full spectrum raw value
 	uint16_t					IR;					//!< Current IR raw value
 	uint16_t					Prox;				//!< Current Proximity raw value

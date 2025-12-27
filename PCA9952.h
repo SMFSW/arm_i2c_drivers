@@ -39,10 +39,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum PCA9952_reg_map
+/*!\enum _PCA9952_reg
 ** \brief Register map enum of PCA9952
 **/
-typedef enum PACK__ PCA9952_reg_map {
+typedef enum PACK__ _PCA9952_reg {
 	PCA9952__MODE1 = 0U,		//!< register MODE1
 	PCA9952__MODE2,				//!< register MODE2
 	PCA9952__LEDOUT0,			//!< register LED output state 0
@@ -95,10 +95,10 @@ typedef enum PACK__ PCA9952_reg_map {
 } PCA9952_reg;
 
 
-/*!\enum PCA9952_offset
+/*!\enum _PCA9952_offset
 ** \brief Offset enum for PCA9952 peripheral
 **/
-typedef enum PACK__ PCA9952_offset {
+typedef enum PACK__ _PCA9952_offset {
 	PCA9952__OFFSET_NONE = 0U,		//!< no delay between outputs (all on, all off at the same time)
 	PCA9952__OFFSET_1_CLOCK_CYCLE,	//!< delay of 1 clock cycle (125 ns) between successive outputs
 	PCA9952__OFFSET_2_CLOCK_CYCLE,	//!< delay of 2 clock cycle (250 ns) between successive outputs
@@ -114,10 +114,10 @@ typedef enum PACK__ PCA9952_offset {
 } PCA9952_offset;
 
 
-/*!\union uPCA9952_REG__MODE1
+/*!\union _uPCA9952_REG__MODE1
 ** \brief Union for MODE1 register of PCA9952
 **/
-typedef union PACK__ uPCA9952_REG__MODE1 {
+typedef union PACK__ _uPCA9952_REG__MODE1 {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t ALLCALL	:1;		//!< All CALL address acknowledgment
@@ -131,10 +131,10 @@ typedef union PACK__ uPCA9952_REG__MODE1 {
 	} Bits;
 } uPCA9952_REG__MODE1;
 
-/*!\union uPCA9952_REG__MODE2
+/*!\union _uPCA9952_REG__MODE2
 ** \brief Union for MODE2 register of PCA9952
 **/
-typedef union PACK__ uPCA9952_REG__MODE2 {
+typedef union PACK__ _uPCA9952_REG__MODE2 {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t			Res0_1		:1;		//!< Reserved bit 0: reads 1
@@ -149,10 +149,10 @@ typedef union PACK__ uPCA9952_REG__MODE2 {
 } uPCA9952_REG__MODE2;
 
 
-/*!\union uPCA9952_REG__LEDOUT
+/*!\union _uPCA9952_REG__LEDOUT
 ** \brief Union for LEDOUT registers of PCA9952
 **/
-typedef union PACK__ uPCA9952_REG__LEDOUT {
+typedef union PACK__ _uPCA9952_REG__LEDOUT {
 	uint32_t DWord;
 	struct PACK__ {
 		PCA995x_ledout LDR0		:2;		//!< LED0 output state control
@@ -175,10 +175,10 @@ typedef union PACK__ uPCA9952_REG__LEDOUT {
 } uPCA9952_REG__LEDOUT;
 
 
-/*!\union uPCA9952_REG__EFLAG
+/*!\union _uPCA9952_REG__EFLAG
 ** \brief Union for EFLAG registers of PCA9952
 **/
-typedef union PACK__ uPCA9952_REG__EFLAG {
+typedef union PACK__ _uPCA9952_REG__EFLAG {
 	uint16_t Word;
 	struct PACK__ {
 		uint16_t ERR0		:1;		//!< LED0 error status

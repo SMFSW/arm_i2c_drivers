@@ -23,10 +23,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum APDS9930_chan
+/*!\enum _APDS9930_chan
 ** \brief Light types of APDS9930
 **/
-typedef enum PACK__ APDS9930_chan {
+typedef enum PACK__ _APDS9930_chan {
 	APDS9930__CHAN_FULL = 0U,	//!< Full light spectrum channel (channel 0)
 	APDS9930__CHAN_IR,			//!< Infra Red light channel (channel 1)
 	APDS9930__CHAN_PROXIMITY,	//!< Proximity channel
@@ -34,10 +34,10 @@ typedef enum PACK__ APDS9930_chan {
 } APDS9930_chan;
 
 
-/*!\union uAPDS9930_REG_MAP
+/*!\union _uAPDS9930_REG_MAP
 ** \brief Union of APDS9930 registry map
 **/
-typedef union uAPDS9930_REG_MAP {
+typedef union _uAPDS9930_REG_MAP {
 	uint8_t Bytes[31];
 	struct PACK__ {
 		uAPDS9930_REG__ENABLE	ENABLE;		//!< Enables of states and interrupts

@@ -30,10 +30,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct PCA9956_t
+/*!\struct _PCA9956_t
 ** \brief PCA9956 user interface struct
 **/
-typedef struct PCA9956_t {
+typedef struct _PCA9956_t {
 	uPCA9956_REG__LEDOUT	LDR;				//!< LED output drive registers
 	struct {
 	I2C_slave_t *			slave_inst;			//!< Slave structure

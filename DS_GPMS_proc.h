@@ -28,35 +28,38 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct GPMS_date
+/*!\struct _GPMS_date
 ** \brief DS-GPM.S Date struct
 **/
-typedef struct GPMS_date {
+typedef struct _GPMS_date {
 	uint16_t	Year;	//!< Year
 	uint8_t		Month;	//!< Month
 	uint8_t		Day;	//!< Day
 } GPMS_date;
 
-/*!\struct GPMS_hour
+/*!\struct _GPMS_hour
 ** \brief DS-GPM.S Time of day struct
 **/
-typedef struct GPMS_hour {
+typedef struct _GPMS_hour {
 	uint8_t	Hours;		//!< Hours
 	uint8_t	Minutes;	//!< Minutes
 	uint8_t	Seconds;	//!< Seconds
 } GPMS_hour;
 
-/*!\struct GPMS_coord
+/*!\struct _GPMS_coord
 ** \brief DS-GPM.S coordinate struct
 **/
-typedef struct GPMS_coord {
+typedef struct _GPMS_coord {
 	uint8_t			Degrees;	//!< Degrees coordinate
 	float			Minutes;	//!< Minutes coordinate
 	GPMS_direction	Direction;	//!< Direction coordinate
 } GPMS_coord;
 
 
-typedef struct GPMS_t {
+/*!\struct _GPMS_t
+** \brief GPMS user interface struct
+**/
+typedef struct _GPMS_t {
 	GPMS_date		Date;
 	GPMS_hour		Hour;
 	GPMS_coord		Latitude;

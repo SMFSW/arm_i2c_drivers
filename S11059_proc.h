@@ -22,10 +22,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct S11059_t
+/*!\struct _S11059_t
 ** \brief S11059 user interface struct
 **/
-typedef struct S11059_t {
+typedef struct _S11059_t {
 	uint16_t			Red;					//!< Current Red value
 	uint16_t			Green;					//!< Current Green value
 	uint16_t			Blue;					//!< Current Blue value

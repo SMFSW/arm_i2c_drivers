@@ -22,10 +22,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum TCS3472_chan
+/*!\enum _TCS3472_chan
 ** \brief Light type channels of TCS3472
 **/
-typedef enum PACK__ TCS3472_chan {
+typedef enum PACK__ _TCS3472_chan {
 	TCS3472__CHAN_CLEAR = 0U,	//!< Clear light channel
 	TCS3472__CHAN_RED,			//!< Red light channel
 	TCS3472__CHAN_GREEN,		//!< Green light channel
@@ -33,10 +33,10 @@ typedef enum PACK__ TCS3472_chan {
 } TCS3472_chan;
 
 
-/*!\union uTCS3472_REG_MAP
+/*!\union _uTCS3472_REG_MAP
 ** \brief Union of TCS3472 registry map
 **/
-typedef union uTCS3472_REG_MAP {
+typedef union _uTCS3472_REG_MAP {
 	uint8_t Bytes[28];
 	struct PACK__ {
 		uTCS3472_REG__ENABLE	ENABLE;		//!< Enables states and interrupts

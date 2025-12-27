@@ -27,10 +27,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\union uAMG88_REG_MAP
+/*!\union _uAMG88_REG_MAP
 ** \brief Union of AMG88 registry map
 **/
-typedef union uAMG88_REG_MAP {
+typedef union _uAMG88_REG_MAP {
 	uint8_t Bytes[256];
 } uAMG88_REG_MAP;
 

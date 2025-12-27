@@ -28,10 +28,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct PCA9532_t
+/*!\struct _PCA9532_t
 ** \brief PCA9532 user interface struct
 **/
-typedef struct PCA9532_t {
+typedef struct _PCA9532_t {
 	uPCA9532_REG__LS	LS;				//!< LED selector registers
 	struct {
 	I2C_slave_t *		slave_inst;		//!< Slave structure

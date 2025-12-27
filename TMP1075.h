@@ -40,10 +40,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum TMP1075_reg_map
+/*!\enum _TMP1075_reg
 ** \brief Register map enum of TMP1075
 **/
-typedef enum PACK__ TMP1075_reg_map {
+typedef enum PACK__ _TMP1075_reg {
 	TMP1075__TEMP = 0U,		//!< default value for reference
 	TMP1075__CFGR,			//!< default value for reference
 	TMP1075__LLIM,			//!< default value for reference
@@ -52,10 +52,10 @@ typedef enum PACK__ TMP1075_reg_map {
 } TMP1075_reg;
 
 
-/*!\enum TMP1075_conv_rate
+/*!\enum _TMP1075_conv_rate
 ** \brief Conversion rate enum values for TMP1075
 **/
-typedef enum PACK__ TMP1075_conv_rate {
+typedef enum PACK__ _TMP1075_conv_rate {
 	TMP1075__CR_27_5MS = 0U,	//!< 27.5ms conversion rate
 	TMP1075__CR_55MS,			//!< 55ms conversion rate
 	TMP1075__CR_110MS,			//!< 110ms conversion rate
@@ -63,10 +63,10 @@ typedef enum PACK__ TMP1075_conv_rate {
 } TMP1075_conv_rate;
 
 
-/*!\enum TMP1075_nb_faults
+/*!\enum _TMP1075_nb_faults
 ** \brief Number of faults to trigger alert enum values for TMP1075
 **/
-typedef enum PACK__ TMP1075_nb_faults {
+typedef enum PACK__ _TMP1075_nb_faults {
 	TMP1075__1_FAULT = 0U,	//!< 1 fault
 	TMP1075__2_FAULTS,		//!< 2 faults
 	TMP1075__3_4_FAULTS,	//!< 3 faults (4 faults TMP1075N)
@@ -74,38 +74,38 @@ typedef enum PACK__ TMP1075_nb_faults {
 } TMP1075_nb_faults;
 
 
-/*!\enum TMP1075_alert_pol
+/*!\enum _TMP1075_alert_pol
 ** \brief Alert pin polarity enum values for TMP1075
 **/
-typedef enum PACK__ TMP1075_alert_pol {
+typedef enum PACK__ _TMP1075_alert_pol {
 	TMP1075__POL_LOW = 0U,	//!< Active low ALERT pin
 	TMP1075__POL_HIGH		//!< Active high ALERT pin
 } TMP1075_alert_pol;
 
 
-/*!\enum TMP1075_alert_mode
+/*!\enum _TMP1075_alert_mode
 ** \brief Alert pin function enum values for TMP1075
 **/
-typedef enum PACK__ TMP1075_alert_mode {
+typedef enum PACK__ _TMP1075_alert_mode {
 	TMP1075__MODE_COMP = 0U,	//!< ALERT pin functions in comparator mode
 	TMP1075__MODE_INT			//!< ALERT pin functions in interrupt mode
 } TMP1075_alert_mode;
 
 
-/*!\enum TMP1075_shutdown_mode
+/*!\enum _TMP1075_shutdown_mode
 ** \brief Shutdown mode enum values for TMP1075
 **/
-typedef enum PACK__ TMP1075_shutdown_mode {
+typedef enum PACK__ _TMP1075_shutdown_mode {
 	TMP1075__MODE_CONTINUOUS = 0U,	//!< Device is in continuous conversion
 	TMP1075__MODE_SINGLE			//!< Device is in shutdown mode
 } TMP1075_shutdown_mode;
 
 
 
-/*!\union uTMP1075_REG__CFGR
+/*!\union _uTMP1075_REG__CFGR
 ** \brief Union for CFGR register of TMP1075 (as BYTE)
 **/
-typedef union uTMP1075_REG__CFGR {
+typedef union _uTMP1075_REG__CFGR {
 	uint8_t Byte;
 	struct PACK__ {
 		TMP1075_shutdown_mode	SD	:1;	//!< Sets the device in shutdown mode to conserve power
@@ -118,10 +118,10 @@ typedef union uTMP1075_REG__CFGR {
 } uTMP1075_REG__CFGR;
 
 
-/*!\union uTMP1075_REG__CFGR_WORD
+/*!\union _uTMP1075_REG__CFGR_WORD
 ** \brief Union for CFGR register of TMP1075 (as WORD)
 **/
-typedef union uTMP1075_REG__CFGR_WORD {
+typedef union _uTMP1075_REG__CFGR_WORD {
 	uint16_t Word;
 	struct PACK__ {
 		uint16_t				FFh	:8;	//!< Not used (Reserved: on TMP1075 package, reads 0xFF)

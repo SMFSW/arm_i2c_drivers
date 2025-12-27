@@ -38,10 +38,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct TCS3400_t
+/*!\struct _TCS3400_t
 ** \brief TCS3400 user interface struct
 **/
-typedef struct TCS3400_t {
+typedef struct _TCS3400_t {
 	uint16_t			Red;				//!< Current Red conversion
 	uint16_t			Green;				//!< Current Green conversion
 	uint16_t			Blue;				//!< Current Blue conversion

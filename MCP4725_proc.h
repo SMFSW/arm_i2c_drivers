@@ -22,10 +22,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct MCP4725_t
+/*!\struct _MCP4725_t
 ** \brief MCP4725 user interface struct
 **/
-typedef struct MCP4725_t {
+typedef struct _MCP4725_t {
 	uint16_t		DAC_4096;		//!< DAC output value (12bits)
 	float			DAC_Volts;		//!< DAC output in Volts
 	struct {

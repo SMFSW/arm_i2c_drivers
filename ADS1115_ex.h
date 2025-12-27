@@ -33,11 +33,11 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\union uADS1115_REG_MAP
+/*!\union _uADS1115_REG_MAP
 ** \brief Union of ADS1115 registry map
 ** \warning Using the particular union depends on the target endian (Big endian needed)
 **/
-typedef union uADS1115_REG_MAP {
+typedef union _uADS1115_REG_MAP {
 	uint16_t Words[4];
 	struct PACK__ {
 		int16_t				Conversion;	// Conversion register

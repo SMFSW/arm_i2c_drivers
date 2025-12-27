@@ -36,7 +36,7 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-typedef enum PACK__ MTCH6102_COMMAND {
+typedef enum PACK__ _MTCH6102_COMMAND {
 	MTCH_StoreToNV = 0U,	//!< Write to non volatile storage
 	MTCH_RestoreDefaults,	//!< Restore controller to default configuration values
 	MTCH_Configure,			//!< Configure controller (after parameters have been changed)
@@ -45,7 +45,7 @@ typedef enum PACK__ MTCH6102_COMMAND {
 } MTCH6102_COMMAND;
 
 
-typedef struct MTCH6102_raw {
+typedef struct _MTCH6102_raw_sense {
 	uint8_t	sensor[16];
 } MTCH6102_raw_sense;
 

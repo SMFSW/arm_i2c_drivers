@@ -39,10 +39,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum MCP9808_reg_map
+/*!\enum _MCP9808_reg
 ** \brief Register map enum of MCP9808
 **/
-typedef enum PACK__ MCP9808_reg_map {
+typedef enum PACK__ _MCP9808_reg {
 	MCP9808__RFU = 0U,				//!< RFU, Reserved for Future Use (Read-Only register)
 	MCP9808__CONFIGURATION,			//!< Configuration register (CONFIG)
 	MCP9808__ALERT_UPPER,			//!< Alert Temperature Upper Boundary Trip register (T UPPER)
@@ -55,10 +55,10 @@ typedef enum PACK__ MCP9808_reg_map {
 } MCP9808_reg;
 
 
-/*!\enum MCP9808_res
+/*!\enum _MCP9808_res
 ** \brief Resolution enum of MCP9808
 **/
-typedef enum PACK__ MCP9808_res {
+typedef enum PACK__ _MCP9808_res {
 	MCP9808__RES_0_5 = 0U,			//!< Resolution +0.5 Celsius degrees
 	MCP9808__RES_0_25,				//!< Resolution +0.25 Celsius degrees
 	MCP9808__RES_0_125,				//!< Resolution +0.125 Celsius degrees
@@ -66,10 +66,10 @@ typedef enum PACK__ MCP9808_res {
 } MCP9808_res;
 
 
-/*!\enum MCP9808_hyst
+/*!\enum _MCP9808_hyst
 ** \brief Resolution enum of MCP9808
 **/
-typedef enum PACK__ MCP9808_hyst {
+typedef enum PACK__ _MCP9808_hyst {
 	MCP9808__HYST_0 = 0U,			//!< Hysteresis +0.0 Celsius degrees
 	MCP9808__HYST_1_5,				//!< Hysteresis +1.5 Celsius degrees
 	MCP9808__HYST_3_0,				//!< Hysteresis +3.0 Celsius degrees
@@ -77,10 +77,10 @@ typedef enum PACK__ MCP9808_hyst {
 } MCP9808_hyst;
 
 
-/*!\union uMCP9808_REG__CFG
+/*!\union _uMCP9808_REG__CFG
 ** \brief Union for CFG of MCP9808
 **/
-typedef union uMCP9808_REG__CFG {
+typedef union _uMCP9808_REG__CFG {
 	uint16_t Word;
 	struct PACK__ {
 		uint16_t		AlertMod	:1;		//!< Alert output mode bit (0: Comparator output, 1: Interrupt output)
@@ -98,10 +98,10 @@ typedef union uMCP9808_REG__CFG {
 } uMCP9808_REG__CFG;
 
 
-/*!\union uMCP9808_REG__TEMP_LIM
+/*!\union _uMCP9808_REG__TEMP_LIM
 ** \brief Union for Temperature Limit registers of MCP9808
 **/
-typedef union uMCP9808_REG__TEMP_LIM {
+typedef union _uMCP9808_REG__TEMP_LIM {
 	uint16_t Word;
 	struct PACK__ {
 		uint16_t			:2;
@@ -113,10 +113,10 @@ typedef union uMCP9808_REG__TEMP_LIM {
 } uMCP9808_REG__TEMP_LIM;
 
 
-/*!\union uMCP9808_REG__TEMP_AMB
+/*!\union _uMCP9808_REG__TEMP_AMB
 ** \brief Union for Ambient temperature register of MCP9808
 **/
-typedef union uMCP9808_REG__TEMP_AMB {
+typedef union _uMCP9808_REG__TEMP_AMB {
 	uint16_t Word;
 	struct PACK__ {
 		uint16_t Decimal	:4;		//!< Ambient temperature (fractional part)

@@ -30,19 +30,19 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum TMP1075_limit
+/*!\enum _TMP1075_limit
 ** \brief Limits enum of TMP1075
 **/
-typedef enum PACK__ TMP1075_limit {
+typedef enum PACK__ _TMP1075_limit {
 	TMP1075__LIMIT_LOW = 0U,	//!< Low temperature limit
 	TMP1075__LIMIT_HIGH			//!< High temperature limit
 } TMP1075_limit;
 
 
-/*!\struct TMP1075_t
+/*!\struct _TMP1075_t
 ** \brief TMP1075 user interface struct
 **/
-typedef struct TMP1075_t {
+typedef struct _TMP1075_t {
 	float				Temperature;	//!< Current temperature
 	bool				NewData;		//!< New data available
 	bool				Ongoing;		//!< Single conversion launched

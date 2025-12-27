@@ -39,10 +39,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*! \enum I2C_speed
+/*! \enum _I2C_speed
 **  \brief I2C bus speed
 **/
-typedef enum PACK__ I2C_speed {
+typedef enum PACK__ _I2C_speed {
 	I2C_STD = 100U,		//!< I2C Standard speed (100KHz)
 	I2C_FM = 400U,		//!< I2C Fast Mode (400KHz)
 	I2C_FMP = 1000U,	//!< I2C Fast Mode + (1MHz)
@@ -50,20 +50,20 @@ typedef enum PACK__ I2C_speed {
 } I2C_speed;
 
 
-/*! \enum I2C_reg_size
+/*! \enum _I2C_reg_size
 **  \brief I2C slave internal address registers size
 **/
-typedef enum PACK__ I2C_reg_size {
+typedef enum PACK__ _I2C_reg_size {
 	I2C_NO_REG = 0U,						//!< Internal address registers not applicable for slave
 	I2C_8B_REG = I2C_MEMADD_SIZE_8BIT,		//!< Slave internal address registers space is 8bits wide
 	I2C_16B_REG = I2C_MEMADD_SIZE_16BIT		//!< Slave internal address registers space is 16bits wide
 } I2C_reg_size;
 
 
-/*! \struct I2C_slave_t
+/*! \struct _I2C_slave_t
 **  \brief i2c slave config and control parameters
 **/
-typedef struct I2C_slave_t {
+typedef struct _I2C_slave_t {
 	/*! \struct cfg
 	**  \brief I2C slave parameters
 	**/

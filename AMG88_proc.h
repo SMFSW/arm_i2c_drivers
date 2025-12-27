@@ -29,10 +29,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct AMG88_t
+/*!\struct _AMG88_t
 ** \brief AMG88 user interface struct
 **/
-typedef struct AMG88_t {
+typedef struct _AMG88_t {
 	uint16_t			Pixels[8][8];		//!< Grid-EYE current raw temperature
 	uint16_t			Thermistor;			//!< Thermistor raw temperature
 	struct {

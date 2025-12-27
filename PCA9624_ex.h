@@ -22,7 +22,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-typedef union uPCA9624_REG_MAP {
+/*!\union _uPCA9624_REG_MAP
+** \brief PCA9624 Register map union
+**/
+typedef union _uPCA9624_REG_MAP {
 	uint8_t Bytes[0x11];
 	struct PACK__ {
 		uPCA9624_REG__MODE1		MODE1;

@@ -32,10 +32,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct APDS9960_t
+/*!\struct _APDS9960_t
 ** \brief APDS9960 user interface struct
 **/
-typedef struct APDS9960_t {
+typedef struct _APDS9960_t {
 	uint16_t					Red;				//!< Current Red conversion
 	uint16_t					Green;				//!< Current Green conversion
 	uint16_t					Blue;				//!< Current Blue conversion

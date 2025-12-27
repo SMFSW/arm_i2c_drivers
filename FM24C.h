@@ -53,10 +53,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct FM24C_t
+/*!\struct _FM24C_t
 ** \brief FM24C user interface struct
 **/
-typedef struct FM24C_t {
+typedef struct _FM24C_t {
 	struct {
 	I2C_slave_t *		slave_inst;		//!< Slave structure
 	PeripheralGPIO_t	WP_GPIO;		//!< Write Protect GPIO struct

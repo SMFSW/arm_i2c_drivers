@@ -45,10 +45,10 @@
 /*** Peripheral GPIO access ***/
 /******************************/
 
-/*! \struct PeripheralGPIO_t
+/*! \struct _PeripheralGPIO_t
 **  \brief i2c peripheral GPIO pin parameters
 **/
-typedef struct PeripheralGPIO_t{
+typedef struct _PeripheralGPIO_t{
 	GPIO_TypeDef *	GPIOx;			//!< HAL GPIO instance
 	uint16_t		GPIO_Pin;		//!< HAL GPIO pin
 	GPIO_PinState	GPIO_Active;	//!< HAL GPIO pin active state

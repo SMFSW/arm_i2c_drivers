@@ -40,11 +40,11 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum NCA9595_reg_map
+/*!\enum _NCA9595_reg
 ** \brief Register map enum of NCA9595
-** \note Shouldn't be used directly (use \ref NCA9595_wreg_map instead)
+** \note Shouldn't be used directly (use \ref NCA9595_wreg instead)
 **/
-typedef enum PACK__ NCA9595_reg_map {
+typedef enum PACK__ _NCA9595_reg {
 	NCA9595__InputPort0 = 0U,	//!< Input port 0
 	NCA9595__InputPort1,		//!< Input port 1
 	NCA9595__OutputPort0,		//!< Output port 0
@@ -57,10 +57,10 @@ typedef enum PACK__ NCA9595_reg_map {
 	NCA9595__PullUpConfigPort1,	//!< Configuration pull-up port 1
 } NCA9595_reg;
 
-/*!\enum NCA9595_wreg_map
+/*!\enum _NCA9595_wreg
 ** \brief Register map enum of NCA9595
 **/
-typedef enum PACK__ NCA9595_wreg_map {
+typedef enum PACK__ _NCA9595_wreg {
 	// WORDs map
 #if defined(__BIG_ENDIAN__)
 	NCA9595__InputPorts = NCA9595__InputPort1,				//!< Input ports
@@ -78,37 +78,37 @@ typedef enum PACK__ NCA9595_wreg_map {
 } NCA9595_wreg;
 
 
-/*!\enum NCA9595_Cfg
+/*!\enum _NCA9595_Config
 ** \brief Configuration register values for NCA9595
 **/
-typedef enum PACK__ NCA9595_Cfg {
+typedef enum PACK__ _NCA9595_Config {
 	NCA9595__Cfg_Output = 0U,	//!< corresponding port pin is enabled as an output
 	NCA9595__Cfg_Input,			//!< corresponding port pin is enabled as a high-impedance input
 } NCA9595_Config;
 
 
-/*!\enum NCA9595_Polarity
+/*!\enum _NCA9595_Polarity
 ** \brief Polarity inversion register values for NCA9595
 **/
-typedef enum PACK__ NCA9595_Polarity {
+typedef enum PACK__ _NCA9595_Polarity {
 	NCA9595__Pol_Direct = 0U,	//!< corresponding port pin’s polarity is retained
 	NCA9595__Pol_Invert,		//!< corresponding port pin’s polarity is inverted in the Input register
 } NCA9595_Polarity;
 
 
-/*!\enum NCA9595_PullUp
+/*!\enum _NCA9595_PullUp
 ** \brief Pull-Up configuration register values for NCA9595
 **/
-typedef enum PACK__ NCA9595_PullUp {
+typedef enum PACK__ _NCA9595_PullUp {
 	NCA9595__PUp_Disable = 0U,	//!< corresponding port pull-up resistors are disabled
 	NCA9595__PUp_Enable,		//!< corresponding port pull-up resistors are enabled
 } NCA9595_PullUp;
 
 
-/*!\union uNCA9595_REG__IN
+/*!\union _uNCA9595_REG__IN
 ** \brief Union for Input register pair of NCA9595
 **/
-typedef union uNCA9595_REG__IN {
+typedef union _uNCA9595_REG__IN {
 	uint16_t Word;
 	struct PACK__ {
 		// Less significant bit first
@@ -132,10 +132,10 @@ typedef union uNCA9595_REG__IN {
 } uNCA9595_REG__IN;
 
 
-/*!\union uNCA9595_REG__OUT
+/*!\union _uNCA9595_REG__OUT
 ** \brief Union for Output register pair of NCA9595
 **/
-typedef union uNCA9595_REG__OUT {
+typedef union _uNCA9595_REG__OUT {
 	uint16_t Word;
 	struct PACK__ {
 		// Less significant bit first
@@ -159,10 +159,10 @@ typedef union uNCA9595_REG__OUT {
 } uNCA9595_REG__OUT;
 
 
-/*!\union uNCA9595_REG__CFG
+/*!\union _uNCA9595_REG__CFG
 ** \brief Union for Config register pair of NCA9595
 **/
-typedef union uNCA9595_REG__CFG {
+typedef union _uNCA9595_REG__CFG {
 	uint16_t Word;
 	struct PACK__ {
 		// Less significant bit first
@@ -186,10 +186,10 @@ typedef union uNCA9595_REG__CFG {
 } uNCA9595_REG__CFG;
 
 
-/*!\union uNCA9595_REG__POL
+/*!\union _uNCA9595_REG__POL
 ** \brief Union for Polarity inversion register pair of NCA9595
 **/
-typedef union uNCA9595_REG__POL {
+typedef union _uNCA9595_REG__POL {
 	uint16_t Word;
 	struct PACK__ {
 		// Less significant bit first
@@ -213,10 +213,10 @@ typedef union uNCA9595_REG__POL {
 } uNCA9595_REG__POL;
 
 
-/*!\union uNCA9595_REG__PUP
+/*!\union _uNCA9595_REG__PUP
 ** \brief Union for PullUp register pair of NCA9595
 **/
-typedef union uNCA9595_REG__PUP {
+typedef union _uNCA9595_REG__PUP {
 	uint16_t Word;
 	struct PACK__ {
 		// Less significant bit first

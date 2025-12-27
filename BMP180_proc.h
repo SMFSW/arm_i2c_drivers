@@ -30,10 +30,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct BMP180_calibration
+/*!\struct _BMP180_calibration
 ** \brief BMP180 calibration parameters structure
 **/
-typedef struct BMP180_calibration {
+typedef struct _BMP180_calibration {
 	int16_t		AC1;	//!< ac1 calibration value
 	int16_t		AC2;	//!< ac2 calibration value
 	int16_t		AC3;	//!< ac3 calibration value
@@ -47,10 +47,10 @@ typedef struct BMP180_calibration {
 	int16_t		MD;		//!< md calibration value
 } BMP180_calib;
 
-/*!\struct BMP180_t
+/*!\struct _BMP180_t
 ** \brief BMP180 user interface struct
 **/
-typedef struct BMP180_t {
+typedef struct _BMP180_t {
 	float					Pressure;			//!< Current atmospheric pressure
 	float					Temperature;		//!< Current temperature
 	float					Altitude;			//!< Current altitude

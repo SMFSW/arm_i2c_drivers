@@ -22,10 +22,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\union uAT42QT_REG_MAP
+/*!\union _uAT42QT_REG_MAP
 ** \brief Union of AT42QT1244 registry map
 **/
-typedef union uAT42QT_REG_MAP {
+typedef union _uAT42QT_REG_MAP {
 	uint8_t Bytes[251];
 	struct PACK__ {
 		uint8_t						Res_1;

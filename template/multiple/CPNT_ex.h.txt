@@ -27,16 +27,19 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum $CPNT$_ext_map
+/*!\enum _$CPNT$_ext
 ** \brief Extension map enum for $CPNT$
 **/
-typedef enum PACK__ $CPNT$_ext_map {
+typedef enum PACK__ _$CPNT$_ext_map {
 	$CPNT$__EXT1 = 0U,	//!< default value for reference
 	$CPNT$__EXT2,		//!< default value for reference
-} $CPNT$_ext;
+} $CPNT$_ext_map;
 
 
-typedef union u$CPNT$_EXT__EXT1 {
+/*!\union _u$CPNT$_EXT__EXT1
+** \brief Union of $CPNT$ EXT1
+**/
+typedef union _u$CPNT$_EXT__EXT1 {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t BIT1	:1;		//!< BIT1 description
@@ -46,10 +49,10 @@ typedef union u$CPNT$_EXT__EXT1 {
 } u$CPNT$_EXT__EXT1;
 
 
-/*!\union u$CPNT$_REG_MAP
+/*!\union _u$CPNT$_REG_MAP
 ** \brief Union of $CPNT$ registry map
 **/
-typedef union u$CPNT$_REG_MAP {
+typedef union _u$CPNT$_REG_MAP {
 	uint8_t Bytes[2];
 	struct PACK__ {
 		u$CPNT$_REG__REG1	Reg_1;

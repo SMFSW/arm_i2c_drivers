@@ -28,10 +28,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum ADS1115_func
+/*!\enum _ADS1115_func
 ** \brief Function enum for ADS1115
 **/
-typedef enum ADS1115_func {
+typedef enum _ADS1115_func {
 	ADS1115__FUNC_SINGLE_DIFF = 0U,	//!< Continuous conversion mode
 	ADS1115__FUNC_MULTIPLE_DIFF,	//!< Power-down single-shot mode
 	ADS1115__FUNC_SINGLE_ENDED,		//!< Power-down single-shot mode
@@ -41,10 +41,10 @@ typedef enum ADS1115_func {
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct ADS1115_t
+/*!\struct _ADS1115_t
 ** \brief ADS1115 user interface struct
 **/
-typedef struct ADS1115_t {
+typedef struct _ADS1115_t {
 	int16_t				AIN[4];				//!< Conversion results
 	uint8_t				AIN_idx;			//!< Current AIN index
 	struct {
@@ -102,7 +102,7 @@ FctERR NONNULL__ ADS1115_handler_it(ADS1115_t * const pCpnt);
 FctERR ADS1115_handler_all(void);
 
 /*!\brief Handler for all ADS1115 peripherals GPIO interrupt
-** \note \ref ADS1115_INT_GPIO_Init has to be called at init before using interrupt handler function
+** \note \ref ADS1115_RDY_GPIO_Init has to be called at init before using interrupt handler function
 ** \note May be called periodically to handle all ADS1115 tasks
 ** \return FctERR - error code
 **/

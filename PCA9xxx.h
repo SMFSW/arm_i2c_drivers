@@ -31,10 +31,10 @@
 /*** PCA96xx enums ***/
 /*********************/
 
-/*!\enum PCA9xxx_chan
+/*!\enum _PCA9xxx_chan
 ** \brief Channels for PCA9xxx
 **/
-typedef enum PACK__ PCA9xxx_chan {
+typedef enum PACK__ _PCA9xxx_chan {
 	PCA9xxx__PWM1 = 0U,		//!< PCA9xxx Channel 1 PWM
 	PCA9xxx__PWM2,			//!< PCA9xxx Channel 2 PWM
 	PCA9xxx__PWM3,			//!< PCA9xxx Channel 3 PWM
@@ -63,10 +63,10 @@ typedef enum PACK__ PCA9xxx_chan {
 } PCA9xxx_chan;
 
 
-/*!\enum PCA9xxx_latch
+/*!\enum _PCA9xxx_latch
 ** \brief Latch type enum for PCA9xxx
 **/
-typedef enum PACK__ PCA9xxx_latch {
+typedef enum PACK__ _PCA9xxx_latch {
 	PCA9xxx__LATCH_ON_STOP = 0U,	//!< Duty cycle update on I2C stop
 	PCA9xxx__LATCH_ON_ACK			//!< Duty cycle update on I2C acknowledge
 } PCA9xxx_latch;
@@ -79,18 +79,18 @@ typedef PCA9xxx_latch		PCA99xx_latch;	//!< Latch type enum for PCA99xx
 /*** PCA962x enums ***/
 /*********************/
 
-/*!\enum PCA95xx_reg_inc
+/*!\enum _PCA95xx_reg_inc
 ** \brief Registers increment options enum of PCA95xx
 **/
-typedef enum PACK__ PCA95xx_reg_inc {
+typedef enum PACK__ _PCA95xx_reg_inc {
 	PCA95xx__AUTO_INC_NONE = 0U,	//!< no Auto-Increment
 	PCA95xx__AUTO_INC_ALL = 0x10U,	//!< Auto-Increment for all registers
 } PCA95xx_reg_inc;
 
-/*!\enum PCA9xxx_reg_inc
+/*!\enum _PCA9xxx_reg_inc
 ** \brief Registers increment options enum of PCA9xxx
 **/
-typedef enum PACK__ PCA9xxx_reg_inc {
+typedef enum PACK__ _PCA9xxx_reg_inc {
 	PCA9xxx__AUTO_INC_NONE = 0U,				//!< no Auto-Increment
 	PCA9xxx__AUTO_INC_ALL = 0x80U,				//!< Auto-Increment for all registers
 	PCA9xxx__AUTO_INC_BRIGHT = 0xA0U,			//!< Auto-Increment for individual brightness registers only
@@ -101,20 +101,20 @@ typedef enum PACK__ PCA9xxx_reg_inc {
 typedef PCA9xxx_reg_inc		PCA962x_reg_inc;	//!< Registers increment options enum of PCA962x
 typedef PCA9xxx_reg_inc		PCA995x_reg_inc;	//!< Registers increment options enum of PCA995x
 
-/*!\enum PCA95xx_ledsel
+/*!\enum _PCA95xx_ledsel
 ** \brief enum for PCA95xx output drive
 **/
-typedef enum PACK__ PCA95xx_ledsel {
+typedef enum PACK__ _PCA95xx_ledsel {
 	PCA95xx__LED_OFF = 0U,	//!< Output is set high-impedance (LED off; default)
 	PCA95xx__LED_ON,		//!< Output is set LOW (LED on)
 	PCA95xx__LED_PWM0,		//!< Output blinks at PWM0 rate
 	PCA95xx__LED_PWM1		//!< Output blinks at PWM1 rate
 } PCA95xx_ledsel;
 
-/*!\enum PCA9xxx_dim
+/*!\enum _PCA9xxx_dim
 ** \brief enum for PCA9xxx dimming type
 **/
-typedef enum PACK__ PCA9xxx_dim {
+typedef enum PACK__ _PCA9xxx_dim {
 	PCA9xxx__DIMMING = 0U,	//!< Dimming
 	PCA9xxx__BLINKING		//!< Blinking
 } PCA9xxx_dim;
@@ -123,10 +123,10 @@ typedef PCA9xxx_dim		PCA962x_dim;	//!< enum for PCA962x dimming type
 typedef PCA9xxx_dim		PCA995x_dim;	//!< enum for PCA995x dimming type
 
 
-/*!\enum PCA9xxx_ledout
+/*!\enum _PCA9xxx_ledout
 ** \brief enum for PCA9xxx output drive
 **/
-typedef enum PACK__ PCA9xxx_ledout {
+typedef enum PACK__ _PCA9xxx_ledout {
 	PCA9xxx__LED_DRV_OFF = 0U,	//!< Off
 	PCA9xxx__LED_DRV_FULL_ON,	//!< On
 	PCA9xxx__INDIV_BRIGHT,		//!< Individual Dimming
@@ -137,10 +137,10 @@ typedef PCA9xxx_ledout		PCA962x_ledout;	//!< enum for PCA962x output drive
 typedef PCA9xxx_ledout		PCA995x_ledout;	//!< enum for PCA995x output drive
 
 
-/*!\union uPCA9xxx_REG__LEDOUTx
+/*!\union _uPCA9xxx_REG__LEDOUTx
 ** \brief Union for LEDOUTx register of PCA9xxx
 **/
-typedef union PACK__ uPCA9xxx_REG__LEDOUTx {
+typedef union PACK__ _uPCA9xxx_REG__LEDOUTx {
 	uint8_t Byte;
 	struct PACK__ {
 		PCA9xxx_ledout LDRx0	:2;		//!< LEDx + 0 output state control
@@ -154,10 +154,10 @@ typedef uPCA9xxx_REG__LEDOUTx		uPCA962x_REG__LEDOUTx;	//!< Union for LEDOUTx reg
 typedef uPCA9xxx_REG__LEDOUTx		uPCA995x_REG__LEDOUTx;	//!< Union for LEDOUTx register of PCA995x
 
 
-/*!\union uPCA9xxx_REG__LEDOUT0
+/*!\union _uPCA9xxx_REG__LEDOUT0
 ** \brief Union for LEDOUT0 register of PCA9xxx
 **/
-typedef union PACK__ uPCA9xxx_REG__LEDOUT0 {
+typedef union PACK__ _uPCA9xxx_REG__LEDOUT0 {
 	uint8_t Byte;
 	struct PACK__ {
 		PCA9xxx_ledout LDR0		:2;		//!< LED0 output state control
@@ -171,10 +171,10 @@ typedef uPCA9xxx_REG__LEDOUT0		uPCA962x_REG__LEDOUT0;	//!< Union for LEDOUT0 reg
 typedef uPCA9xxx_REG__LEDOUT0		uPCA995x_REG__LEDOUT0;	//!< Union for LEDOUT0 register of PCA995x
 
 
-/*!\union uPCA9xxx_REG__LEDOUT1
+/*!\union _uPCA9xxx_REG__LEDOUT1
 ** \brief Union for LEDOUT1 register of PCA9xxx
 **/
-typedef union PACK__ uPCA9xxx_REG__LEDOUT1 {
+typedef union PACK__ _uPCA9xxx_REG__LEDOUT1 {
 	uint8_t Byte;
 	struct PACK__ {
 		PCA9xxx_ledout LDR4		:2;		//!< LED4 output state control
@@ -188,10 +188,10 @@ typedef uPCA9xxx_REG__LEDOUT1		uPCA962x_REG__LEDOUT1;	//!< Union for LEDOUT1 reg
 typedef uPCA9xxx_REG__LEDOUT1		uPCA995x_REG__LEDOUT1;	//!< Union for LEDOUT1 register of PCA995x
 
 
-/*!\union uPCA9xxx_REG__LEDOUT2
+/*!\union _uPCA9xxx_REG__LEDOUT2
 ** \brief Union for LEDOUT2 register of PCA9xxx
 **/
-typedef union PACK__ uPCA9xxx_REG__LEDOUT2 {
+typedef union PACK__ _uPCA9xxx_REG__LEDOUT2 {
 	uint8_t Byte;
 	struct PACK__ {
 		PCA9xxx_ledout LDR8		:2;		//!< LED8 output state control
@@ -205,10 +205,10 @@ typedef uPCA9xxx_REG__LEDOUT2		uPCA962x_REG__LEDOUT2;	//!< Union for LEDOUT2 reg
 typedef uPCA9xxx_REG__LEDOUT2		uPCA995x_REG__LEDOUT2;	//!< Union for LEDOUT2 register of PCA995x
 
 
-/*!\union uPCA9xxx_REG__LEDOUT3
+/*!\union _uPCA9xxx_REG__LEDOUT3
 ** \brief Union for LEDOUT3 register of PCA9xxx
 **/
-typedef union PACK__ uPCA9xxx_REG__LEDOUT3 {
+typedef union PACK__ _uPCA9xxx_REG__LEDOUT3 {
 	uint8_t Byte;
 	struct PACK__ {
 		PCA9xxx_ledout LDR12	:2;		//!< LED12 output state control
@@ -222,10 +222,10 @@ typedef uPCA9xxx_REG__LEDOUT3		uPCA962x_REG__LEDOUT3;	//!< Union for LEDOUT3 reg
 typedef uPCA9xxx_REG__LEDOUT3		uPCA995x_REG__LEDOUT3;	//!< Union for LEDOUT3 register of PCA995x
 
 
-/*!\union uPCA9xxx_REG__LEDOUT4
+/*!\union _uPCA9xxx_REG__LEDOUT4
 ** \brief Union for LEDOUT4 register of PCA9xxx
 **/
-typedef union PACK__ uPCA9xxx_REG__LEDOUT4 {
+typedef union PACK__ _uPCA9xxx_REG__LEDOUT4 {
 	uint8_t Byte;
 	struct PACK__ {
 		PCA9xxx_ledout LDR16	:2;		//!< LED16 output state control
@@ -238,10 +238,10 @@ typedef union PACK__ uPCA9xxx_REG__LEDOUT4 {
 typedef uPCA9xxx_REG__LEDOUT4		uPCA995x_REG__LEDOUT4;	//!< Union for LEDOUT4 register of PCA995x
 
 
-/*!\union uPCA9xxx_REG__LEDOUT5
+/*!\union _uPCA9xxx_REG__LEDOUT5
 ** \brief Union for LEDOUT5 register of PCA9xxx
 **/
-typedef union PACK__ uPCA9xxx_REG__LEDOUT5 {
+typedef union PACK__ _uPCA9xxx_REG__LEDOUT5 {
 	uint8_t Byte;
 	struct PACK__ {
 		PCA9xxx_ledout LDR20	:2;		//!< LED20 output state control
@@ -254,10 +254,10 @@ typedef union PACK__ uPCA9xxx_REG__LEDOUT5 {
 typedef uPCA9xxx_REG__LEDOUT5		uPCA995x_REG__LEDOUT5;	//!< Union for LEDOUT5 register of PCA995x
 
 
-/*!\enum PCA9xxx_eflag
+/*!\enum _PCA9xxx_eflag
 ** \brief enum for PCA9xxx error status
 **/
-typedef enum PACK__ PCA9xxx_eflag {
+typedef enum PACK__ _PCA9xxx_eflag {
 	PCA9xxx__ERR_OK = 0U,	//!< In normal operation and no error
 	PCA9xxx__ERR_SHORT,		//!< Detected LED short-circuit condition
 	PCA9xxx__ERR_OPEN,		//!< Detected LED open-circuit condition
@@ -267,10 +267,10 @@ typedef enum PACK__ PCA9xxx_eflag {
 typedef PCA9xxx_eflag		PCA9956_eflag;	//!< enum for PCA9965 error status
 
 
-/*!\union uPCA9xxx_REG__EFLAGx
+/*!\union _uPCA9xxx_REG__EFLAGx
 ** \brief Union for EFLAGx register of PCA9xxx
 **/
-typedef union PACK__ uPCA9xxx_REG__EFLAGx {
+typedef union PACK__ _uPCA9xxx_REG__EFLAGx {
 	uint8_t Byte;
 	struct PACK__ {
 		PCA9xxx_eflag ERRx0	:2;		//!< LEDx + 0 error status
@@ -283,10 +283,10 @@ typedef union PACK__ uPCA9xxx_REG__EFLAGx {
 typedef uPCA9xxx_REG__EFLAGx		uPCA995x_REG__EFLAGx;	//!< Union for EFLAGx register of PCA995x
 
 
-/*!\union uPCA9xxx_REG__EFLAG0
+/*!\union _uPCA9xxx_REG__EFLAG0
 ** \brief Union for EFLAG0 register of PCA9xxx
 **/
-typedef union PACK__ uPCA9xxx_REG__EFLAG0 {
+typedef union PACK__ _uPCA9xxx_REG__EFLAG0 {
 	uint8_t Byte;
 	struct PACK__ {
 		PCA9xxx_eflag ERR0		:2;		//!< LED0 error status
@@ -299,10 +299,10 @@ typedef union PACK__ uPCA9xxx_REG__EFLAG0 {
 typedef uPCA9xxx_REG__EFLAG0		uPCA995x_REG__EFLAG0;	//!< Union for EFLAG0 register of PCA995x
 
 
-/*!\union uPCA9xxx_REG__EFLAG1
+/*!\union _uPCA9xxx_REG__EFLAG1
 ** \brief Union for EFLAG1 register of PCA9xxx
 **/
-typedef union PACK__ uPCA9xxx_REG__EFLAG1 {
+typedef union PACK__ _uPCA9xxx_REG__EFLAG1 {
 	uint8_t Byte;
 	struct PACK__ {
 		PCA9xxx_eflag ERR4		:2;		//!< LED4 error status
@@ -315,10 +315,10 @@ typedef union PACK__ uPCA9xxx_REG__EFLAG1 {
 typedef uPCA9xxx_REG__EFLAG1		uPCA995x_REG__EFLAG1;	//!< Union for EFLAG1 register of PCA995x
 
 
-/*!\union uPCA9xxx_REG__EFLAG2
+/*!\union _uPCA9xxx_REG__EFLAG2
 ** \brief Union for EFLAG2 register of PCA9xxx
 **/
-typedef union PACK__ uPCA9xxx_REG__EFLAG2 {
+typedef union PACK__ _uPCA9xxx_REG__EFLAG2 {
 	uint8_t Byte;
 	struct PACK__ {
 		PCA9xxx_eflag ERR8		:2;		//!< LED8 error status
@@ -331,10 +331,10 @@ typedef union PACK__ uPCA9xxx_REG__EFLAG2 {
 typedef uPCA9xxx_REG__EFLAG2		uPCA995x_REG__EFLAG2;	//!< Union for EFLAG2 register of PCA995x
 
 
-/*!\union uPCA9xxx_REG__EFLAG3
+/*!\union _uPCA9xxx_REG__EFLAG3
 ** \brief Union for EFLAG3 register of PCA9xxx
 **/
-typedef union PACK__ uPCA9xxx_REG__EFLAG3 {
+typedef union PACK__ _uPCA9xxx_REG__EFLAG3 {
 	uint8_t Byte;
 	struct PACK__ {
 		PCA9xxx_eflag ERR12		:2;		//!< LED12 error status
@@ -347,10 +347,10 @@ typedef union PACK__ uPCA9xxx_REG__EFLAG3 {
 typedef uPCA9xxx_REG__EFLAG3		uPCA995x_REG__EFLAG3;	//!< Union for EFLAG3 register of PCA995x
 
 
-/*!\union uPCA9xxx_REG__EFLAG4
+/*!\union _uPCA9xxx_REG__EFLAG4
 ** \brief Union for EFLAG4 register of PCA9xxx
 **/
-typedef union PACK__ uPCA9xxx_REG__EFLAG4 {
+typedef union PACK__ _uPCA9xxx_REG__EFLAG4 {
 	uint8_t Byte;
 	struct PACK__ {
 		PCA9xxx_eflag ERR16		:2;		//!< LED16 error status
@@ -363,10 +363,10 @@ typedef union PACK__ uPCA9xxx_REG__EFLAG4 {
 typedef uPCA9xxx_REG__EFLAG4		uPCA995x_REG__EFLAG4;	//!< Union for EFLAG4 register of PCA995x
 
 
-/*!\union uPCA9xxx_REG__EFLAG5
+/*!\union _uPCA9xxx_REG__EFLAG5
 ** \brief Union for EFLAG5 register of PCA9xxx
 **/
-typedef union PACK__ uPCA9xxx_REG__EFLAG5 {
+typedef union PACK__ _uPCA9xxx_REG__EFLAG5 {
 	uint8_t Byte;
 	struct PACK__ {
 		PCA9xxx_eflag ERR20		:2;		//!< LED20 error status

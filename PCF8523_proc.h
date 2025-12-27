@@ -27,10 +27,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct PCF8523_date
+/*!\struct _PCF8523_date
 ** \brief PCF8523 Date struct
 **/
-typedef struct PCF8523_date {
+typedef struct _PCF8523_date {
 	uint8_t		Day;		//!< Day
 	uint8_t		Weekday;	//!< Weekday
 	uint8_t		Month;		//!< Month
@@ -38,17 +38,20 @@ typedef struct PCF8523_date {
 } PCF8523_date;
 
 
-/*!\struct PCF8523_time
+/*!\struct _PCF8523_time
 ** \brief PCF8523 Time of day struct
 **/
-typedef struct PCF8523_time {
+typedef struct _PCF8523_time {
 	uint8_t		Seconds;	//!< Seconds
 	uint8_t		Minutes;	//!< Minutes
 	uint8_t		Hours;		//!< Hours
 } PCF8523_time;
 
 
-typedef struct PCF8523_t {
+/*!\struct _PCF8523_t
+** \brief PCF8523 user interface struct
+**/
+typedef struct _PCF8523_t {
 	PCF8523_date		date;
 	PCF8523_time		time;
 	struct {

@@ -22,10 +22,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\union uMCP9808_REG_MAP
+/*!\union _uMCP9808_REG_MAP
 ** \brief Union of MCP9808 registry map
 **/
-typedef union uMCP9808_REG_MAP {
+typedef union _uMCP9808_REG_MAP {
 	uint16_t Words[9];
 	struct PACK__ {
 		uint16_t				RFU;				//!< RFU, Reserved for Future Use (Read-Only register)

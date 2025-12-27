@@ -22,7 +22,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-typedef union uPCA9532_REG_MAP {
+/*!\union _uPCA9532_REG_MAP
+** \brief PCA9532 Register map union
+**/
+typedef union _uPCA9532_REG_MAP {
 	uint8_t Bytes[10];
 	struct PACK__ {
 		uPCA9532_REG__INPUT0	INPUT0;

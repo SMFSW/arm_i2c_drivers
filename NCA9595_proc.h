@@ -22,10 +22,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct NCA9595_t
+/*!\struct _NCA9595_t
 ** \brief NCA9595 user interface struct
 **/
-typedef struct NCA9595_t {
+typedef struct _NCA9595_t {
 	uNCA9595_REG__IN	NCA9595_in;			//!< Latest read inputs
 	uNCA9595_REG__OUT	NCA9595_out;		//!< Latest written outputs
 	struct {

@@ -35,28 +35,28 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum $CPNT$_reg_map
+/*!\enum _$CPNT$_reg_
 ** \brief Register map enum of $CPNT$
 **/
-typedef enum PACK__ $CPNT$_reg_map {
+typedef enum PACK__ _$CPNT$_reg {
 	$CPNT$__REG1 = 0U,	//!< default value for reference
 	$CPNT$__REG2,		//!< default value for reference
 } $CPNT$_reg;
 
 
-/*!\enum $CPNT$_enum
+/*!\enum _$CPNT$_enum
 ** \brief Values enum for $CPNT$
 **/
-typedef enum PACK__ $CPNT$_enum {
+typedef enum PACK__ _$CPNT$_enum {
 	$CPNT$__VAL1 = 0U,	//!< default value for reference
 	$CPNT$__VAL2,		//!< default value for reference
 } $CPNT$_enum;
 
 
-/*!\union u$CPNT$_REG__REG1
+/*!\union _u$CPNT$_REG__REG1
 ** \brief Union for REG1 register of $CPNT$
 **/
-typedef union u$CPNT$_REG__REG1 {
+typedef union _u$CPNT$_REG__REG1 {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t BIT0	:1;		//!< BIT0 description (LSB first)

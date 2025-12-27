@@ -27,10 +27,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum APDS9960_chan
+/*!\enum _APDS9960_chan
 ** \brief Type channels of APDS9960
 **/
-typedef enum PACK__ APDS9960_chan {
+typedef enum PACK__ _APDS9960_chan {
 	APDS9960__CHAN_CLEAR = 0U,	//!< Clear light channel
 	APDS9960__CHAN_RED,			//!< Red light channel
 	APDS9960__CHAN_GREEN,		//!< Green light channel
@@ -39,10 +39,10 @@ typedef enum PACK__ APDS9960_chan {
 } APDS9960_chan;
 
 
-/*!\union uAPDS9960_REG_MAP
+/*!\union _uAPDS9960_REG_MAP
 ** \brief Union of APDS9960 registry map
 **/
-typedef union uAPDS9960_REG_MAP {
+typedef union _uAPDS9960_REG_MAP {
 	uint8_t Bytes[176];
 	struct PACK__ {
 		uint8_t					RAM[128];	//!< APDS9960 RAM

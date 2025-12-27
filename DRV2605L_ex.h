@@ -22,10 +22,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\union uDRV_REG_MAP
+/*!\union _uDRV_REG_MAP
 ** \brief DRV2605L Register map union
 **/
-typedef union uDRV_REG_MAP {
+typedef union _uDRV_REG_MAP {
 	uint8_t Bytes[35];
 	struct PACK__ {
 		uDRV_REG__STATUS				Status;

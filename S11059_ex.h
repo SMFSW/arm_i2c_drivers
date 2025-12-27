@@ -22,10 +22,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum S11059_chan
+/*!\enum _S11059_chan
 ** \brief Light type channels of S11059
 **/
-typedef enum PACK__ S11059_chan {
+typedef enum PACK__ _S11059_chan {
 	S11059__CHAN_RED = 0U,	//!< Red light channel
 	S11059__CHAN_GREEN,		//!< Green light channel
 	S11059__CHAN_BLUE,		//!< Blue light channel
@@ -33,10 +33,10 @@ typedef enum PACK__ S11059_chan {
 } S11059_chan;
 
 
-/*!\union uS11059_REG_MAP
+/*!\union _uS11059_REG_MAP
 ** \brief Union of S11059 registry map
 **/
-typedef union uS11059_REG_MAP {
+typedef union _uS11059_REG_MAP {
 	uint8_t Bytes[11];
 	struct PACK__ {
 		uS11059_REG__CONTROL	Control;			//!< Control register

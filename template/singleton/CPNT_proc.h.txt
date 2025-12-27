@@ -29,10 +29,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct $CPNT$_t
+/*!\struct _$CPNT$_t
 ** \brief $CPNT$ user interface struct
 **/
-typedef struct $CPNT$_t {
+typedef struct _$CPNT$_t {
 	uint8_t				$CPNT$_val_1;		//!< Current val_1
 	struct {
 	I2C_slave_t *		slave_inst;			//!< Slave structure

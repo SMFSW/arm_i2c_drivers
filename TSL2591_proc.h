@@ -39,10 +39,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct TSL2591_t
+/*!\struct _TSL2591_t
 ** \brief TSL2591 user interface struct
 **/
-typedef struct TSL2591_t {
+typedef struct _TSL2591_t {
 	uint16_t			Full;				//!< Current Full spectrum raw value
 	uint16_t			IR;					//!< Current IR raw value
 	uint32_t			Lux;				//!< Current Illuminance (lux)

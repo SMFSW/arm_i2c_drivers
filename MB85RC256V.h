@@ -44,7 +44,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-typedef struct MB85RC256V_t {
+/*!\struct _MB85RC256V_t
+** \brief MB85RC256V user interface struct
+**/
+typedef struct _MB85RC256V_t {
 	struct {
 	I2C_slave_t *		slave_inst;		//!< Slave structure
 	PeripheralGPIO_t	WP_GPIO;		//!< Write Protect GPIO struct
