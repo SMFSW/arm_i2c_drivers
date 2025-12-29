@@ -69,7 +69,7 @@ void NONNULL__ FM24C_WP_GPIO_Init(FM24C_t * const pCpnt, GPIO_TypeDef * const GP
 ** \param[in] pCpnt - Pointer to FM24C component
 ** \param[in,out] pState - Pointer to WP pin state variable (0: inactive, 1: active)
 **/
-void NONNULL__ FM24C_WP_GPIO_Get(FM24C_t * const pCpnt, bool * const pState);
+void NONNULL__ FM24C_WP_GPIO_Get(const FM24C_t * const pCpnt, bool * const pState);
 
 
 /****************************************************************/

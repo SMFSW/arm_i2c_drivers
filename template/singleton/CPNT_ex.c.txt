@@ -21,8 +21,9 @@ FctERR $CPNT$_fct(void)
 	FctERR err;
 
 	err = $CPNT$_Read($CPNT$.$CPNT$_val_1, $CPNT$__REG1, 1U);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
+	ret:
 	return err;
 }
 

@@ -93,7 +93,7 @@ FctERR NONNULL__ AMG88_Get_pixels_temp(AMG88_t * const pCpnt, float temp[64]);
 ** \return Error code
 **/
 __INLINE FctERR NONNULL_INLINE__ AMG88_Reset(AMG88_t * const pCpnt, const AMG88_reset rst) {
-	return AMG88_Write(pCpnt->cfg.slave_inst, &rst, AMG88__RST, 1); }
+	return AMG88_Write(pCpnt->cfg.slave_inst, &rst, AMG88__RST, 1U); }
 
 
 /*!\brief AMG88 Set mode
@@ -102,7 +102,7 @@ __INLINE FctERR NONNULL_INLINE__ AMG88_Reset(AMG88_t * const pCpnt, const AMG88_
 ** \return Error code
 **/
 __INLINE FctERR NONNULL_INLINE__ AMG88_Set_Mode(AMG88_t * const pCpnt, const AMG88_mode mode) {
-	return AMG88_Write(pCpnt->cfg.slave_inst, &mode, AMG88__PCTL, 1); }
+	return AMG88_Write(pCpnt->cfg.slave_inst, &mode, AMG88__PCTL, 1U); }
 
 /*!\brief Set AMG88 Frame Per Seconds multiplier
 ** \param[in] pCpnt - Pointer to AMG88 component
@@ -111,7 +111,7 @@ __INLINE FctERR NONNULL_INLINE__ AMG88_Set_Mode(AMG88_t * const pCpnt, const AMG
 **/
 __INLINE FctERR NONNULL_INLINE__ AMG88_Set_FPS(AMG88_t * const pCpnt, const bool ten) {
 	uAMG88_REG__FRAME_RATE FPS = { .Bits.FPS = !ten };
-	return AMG88_Write(pCpnt->cfg.slave_inst, &FPS.Byte, AMG88__FPSC, 1); }
+	return AMG88_Write(pCpnt->cfg.slave_inst, &FPS.Byte, AMG88__FPSC, 1U); }
 
 /*!\brief Set AMG88 Moving Average
 ** \param[in] pCpnt - Pointer to AMG88 component
@@ -120,7 +120,7 @@ __INLINE FctERR NONNULL_INLINE__ AMG88_Set_FPS(AMG88_t * const pCpnt, const bool
 **/
 __INLINE FctERR NONNULL_INLINE__ AMG88_Set_MA(AMG88_t * const pCpnt, const bool twice) {
 	uAMG88_REG__AVERAGE MA = { .Bits.MAMOD = twice };
-	return AMG88_Write(pCpnt->cfg.slave_inst, &MA.Byte, AMG88__AVE, 1); }
+	return AMG88_Write(pCpnt->cfg.slave_inst, &MA.Byte, AMG88__AVE, 1U); }
 
 
 /*!\brief Set AMG88 Interrupt Level upper limit
@@ -160,7 +160,7 @@ FctERR NONNULL__ AMG88_Set_Interrupt_Levels(AMG88_t * const pCpnt, const float t
 ** \return Error code
 **/
 __INLINE FctERR NONNULL_INLINE__ AMG88_Get_interrupts(AMG88_t * const pCpnt, uAMG88_REG__INT * interrupts) {
-	return AMG88_Read(pCpnt->cfg.slave_inst, interrupts->Bytes, AMG88__INT0, 8); }
+	return AMG88_Read(pCpnt->cfg.slave_inst, interrupts->Bytes, AMG88__INT0, 8U); }
 
 /*!\brief Get thermistor raw value
 ** \param[in] pCpnt - Pointer to AMG88 component
@@ -177,9 +177,7 @@ __INLINE FctERR NONNULL_INLINE__ AMG88_Get_Thermistor_Raw(AMG88_t * const pCpnt,
 ** \param[in] pixel - Pixel index to retrieve data
 ** \return Error code
 **/
-__INLINE FctERR NONNULL_INLINE__ AMG88_Get_Pixel_Raw(AMG88_t * const pCpnt, uint16_t * raw, const uint8_t pixel) {
-	if ((!pixel) || (pixel > 64))	{ return ERROR_VALUE; }
-	return AMG88_Read_Word(pCpnt->cfg.slave_inst, raw, AMG88__T01L + (2 * pixel)); }
+FctERR NONNULL__ AMG88_Get_Pixel_Raw(AMG88_t * const pCpnt, uint16_t * raw, const uint8_t pixel);
 
 
 /*******************/
@@ -200,7 +198,7 @@ void NONNULL__ AMG88_INT_GPIO_Init(AMG88_t * const pCpnt, GPIO_TypeDef * const G
 ** \param[in] pCpnt - Pointer to AMG88 component
 ** \return INT pin state value (0: inactive, 1: active)
 **/
-bool NONNULL__ AMG88_INT_GPIO_Get(AMG88_t * const pCpnt);
+bool NONNULL__ AMG88_INT_GPIO_Get(const AMG88_t * const pCpnt);
 
 
 /****************************************************************/

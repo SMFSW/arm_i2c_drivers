@@ -147,7 +147,7 @@ FctERR NONNULL__ TCS3472_Set_Gain(TCS3472_t * const pCpnt, const TCS3472_gain ga
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3472_Set_Pesistence(TCS3472_t * const pCpnt, const TCS3472_it_persist persist) {
-	uTCS3472_REG__PERSIST PERS = { .Bits.PERSIST = persist };
+	const uTCS3472_REG__PERSIST PERS = { .Bits.PERSIST = persist };
 	return TCS3472_Write(pCpnt->cfg.slave_inst, &PERS.Byte, TCS3472__PERSIST, 1U); }
 
 
@@ -189,7 +189,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_Set_AIHT(TCS3472_t * const pCpnt, const
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TCS3472_Set_AIT(TCS3472_t * const pCpnt, const uint16_t lthr, const uint16_t hthr) {
-	uint8_t DAT[4] = { LOBYTE(lthr), HIBYTE(lthr), LOBYTE(hthr), HIBYTE(hthr) };
+	const uint8_t DAT[4] = { LOBYTE(lthr), HIBYTE(lthr), LOBYTE(hthr), HIBYTE(hthr) };
 	return TCS3472_Write(pCpnt->cfg.slave_inst, DAT, TCS3472__AILTL, sizeof(DAT)); }
 
 
@@ -209,33 +209,31 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_SF_Clear_IT(TCS3472_t * const pCpnt) {
 ** \param[in,out] id - pointer to chip ID result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_ChipID(TCS3472_t * const pCpnt, uint8_t * id) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_ChipID(TCS3472_t * const pCpnt, uint8_t * const id) {
 	return TCS3472_Read(pCpnt->cfg.slave_inst, id, TCS3472__ID, 1U); }
 
 
 /*!\brief Get All channels conversions
 ** \param[in] pCpnt - Pointer to TCS3472 component
-** \param[in,out] tab - pointer to conversions tab result
+** \param[in,out] buf - pointer to conversions tab result
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TCS3472_Get_Channels(TCS3472_t * const pCpnt, uint16_t tab[]);
+FctERR NONNULL__ TCS3472_Get_Channels(TCS3472_t * const pCpnt, uint16_t buf[]);
 
 /*!\brief Get Specific channel conversion
 ** \param[in] pCpnt - Pointer to TCS3472 component
-** \param[in,out] buf - pointer to conversions result
+** \param[in,out] val - pointer to conversions result
 ** \param[in] chan - Channel to get
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Channel(TCS3472_t * const pCpnt, uint16_t * buf, const TCS3472_chan chan) {
-	if (chan > TCS3472__CHAN_BLUE)	{ return ERROR_VALUE; }	// Unknown channel
-	return TCS3472_Read_Word(pCpnt->cfg.slave_inst, buf, TCS3472__CDATAL + (2U * chan)); }
+FctERR NONNULL__ TCS3472_Get_Channel(TCS3472_t * const pCpnt, uint16_t * const val, const TCS3472_chan chan);
 
 /*!\brief Get Clear channel conversion
 ** \param[in] pCpnt - Pointer to TCS3472 component
 ** \param[in,out] clr - pointer to Clear conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Clear(TCS3472_t * const pCpnt, uint16_t * clr) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Clear(TCS3472_t * const pCpnt, uint16_t * const clr) {
 	return TCS3472_Read_Word(pCpnt->cfg.slave_inst, clr, TCS3472__CDATAL); }
 
 /*!\brief Get Red channel conversion
@@ -243,7 +241,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Clear(TCS3472_t * const pCpnt, uint
 ** \param[in,out] r - pointer to Red conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Red(TCS3472_t * const pCpnt, uint16_t * r) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Red(TCS3472_t * const pCpnt, uint16_t * const r) {
 	return TCS3472_Read_Word(pCpnt->cfg.slave_inst, r, TCS3472__RDATAL); }
 
 /*!\brief Get Green channel conversion
@@ -251,7 +249,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Red(TCS3472_t * const pCpnt, uint16
 ** \param[in,out] g - pointer to Green conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Green(TCS3472_t * const pCpnt, uint16_t * g) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Green(TCS3472_t * const pCpnt, uint16_t * const g) {
 	return TCS3472_Read_Word(pCpnt->cfg.slave_inst, g, TCS3472__GDATAL); }
 
 /*!\brief Get Blue channel conversion
@@ -259,7 +257,7 @@ __INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Green(TCS3472_t * const pCpnt, uint
 ** \param[in,out] b - pointer to Blue conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Blue(TCS3472_t * const pCpnt, uint16_t * b) {
+__INLINE FctERR NONNULL_INLINE__ TCS3472_Get_Blue(TCS3472_t * const pCpnt, uint16_t * const b) {
 	return TCS3472_Read_Word(pCpnt->cfg.slave_inst, b, TCS3472__BDATAL); }
 
 
@@ -281,7 +279,7 @@ void NONNULL__ TCS3472_INT_GPIO_Init(TCS3472_t * const pCpnt, GPIO_TypeDef * con
 ** \param[in] pCpnt - Pointer to TCS3472 component
 ** \return INT pin state value (0: inactive, 1: active)
 **/
-bool NONNULL__ TCS3472_INT_GPIO_Get(TCS3472_t * const pCpnt);
+bool NONNULL__ TCS3472_INT_GPIO_Get(const TCS3472_t * const pCpnt);
 
 
 /****************************************************************/

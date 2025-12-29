@@ -65,7 +65,7 @@ void NONNULL__ MB85RC256V_WP_GPIO_Init(MB85RC256V_t * const pCpnt, GPIO_TypeDef 
 ** \param[in] pCpnt - Pointer to MB85RC256V component
 ** \param[in,out] pState - Pointer to WP pin state variable (0: inactive, 1: active)
 **/
-void NONNULL__ MB85RC256V_WP_GPIO_Get(MB85RC256V_t * const pCpnt, bool * const pState);
+void NONNULL__ MB85RC256V_WP_GPIO_Get(const MB85RC256V_t * const pCpnt, bool * const pState);
 
 
 /****************************************************************/

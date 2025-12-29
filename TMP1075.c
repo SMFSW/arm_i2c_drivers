@@ -45,55 +45,79 @@ FctERR TMP1075_Init_Single(void) {
 
 FctERR NONNULL__ TMP1075_Write_Byte(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr)
 {
-	if (!I2C_is_enabled(pSlave))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (addr > TMP1075__HLIM)			{ return ERROR_VALUE; }		// Address mismatch
+	FctERR err = ERROR_OK;
+
+	if (!I2C_is_enabled(pSlave))		{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if (addr > TMP1075__HLIM)			{ err = ERROR_VALUE; }		// Address mismatch
+	if (err != ERROR_OK)				{ goto ret; }
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, 1U, pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 
 FctERR NONNULL__ TMP1075_Read_Byte(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr)
 {
-	if (!I2C_is_enabled(pSlave))							{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr > TMP1075__HLIM) && (addr != TMP1075__DIEID))	{ return ERROR_VALUE; }		// Address mismatch
+	FctERR err = ERROR_OK;
+
+	if (!I2C_is_enabled(pSlave))							{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr > TMP1075__HLIM) && (addr != TMP1075__DIEID))	{ err = ERROR_VALUE; }		// Address mismatch
+	if (err != ERROR_OK)									{ goto ret; }
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, data, 1U, pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 
 FctERR NONNULL__ TMP1075_Write_Word(I2C_slave_t * const pSlave, const uint16_t * data, const uint16_t addr)
 {
-	if (!I2C_is_enabled(pSlave))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (addr > TMP1075__HLIM)			{ return ERROR_VALUE; }		// Address mismatch
+	FctERR err = ERROR_OK;
 
-	uint8_t	WREG[2] = { HIBYTE(*data), LOBYTE(*data) };
+	if (!I2C_is_enabled(pSlave))	{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if (addr > TMP1075__HLIM)		{ err = ERROR_VALUE; }		// Address mismatch
+	if (err != ERROR_OK)			{ goto ret; }
+
+	uint8_t WREG[2] = { HIBYTE(*data), LOBYTE(*data) };
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, WREG, sizeof(WREG), pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 
 FctERR NONNULL__ TMP1075_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, const uint16_t addr)
 {
-	if (!I2C_is_enabled(pSlave))							{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr > TMP1075__HLIM) && (addr != TMP1075__DIEID))	{ return ERROR_VALUE; }		// Address mismatch
+	FctERR err = ERROR_OK;
 
-	uint8_t	WREG[2];
+	if (!I2C_is_enabled(pSlave))							{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr > TMP1075__HLIM) && (addr != TMP1075__DIEID))	{ err = ERROR_VALUE; }		// Address mismatch
+	if (err != ERROR_OK)									{ goto ret; }
+
+	uint8_t RREG[2];
 
 	I2C_set_busy(pSlave, true);
-	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, WREG, sizeof(WREG), pSlave->cfg.timeout);
+	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, RREG, sizeof(RREG), pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
 
-	*data = MAKEWORD(WREG[1], WREG[0]);
-	return HALERRtoFCTERR(pSlave->status);
+	*data = MAKEWORD(RREG[1], RREG[0]);
+
+	ret:
+	return err;
 }
 
 

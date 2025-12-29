@@ -20,21 +20,14 @@
 
 __WEAK FctERR NONNULL__ MB85RC256V_Init_Sequence(MB85RC256V_t * const pCpnt)
 {
-	UNUSED(pCpnt);
-
-	/**\code
 	FctERR err = MB85RC256V_Get_ID(pCpnt);
 	if (err != ERROR_OK)	{ goto ret; }
 
 	if (	(pCpnt->Manufacture_ID != MB85RC256V_MANUFACTURE_ID)
-		||	(pCpnt->Product_ID != MB85RC256V_PRODUCT_ID))
-	{ err = ERROR_COMMON; }	// Unknown device
+		||	(pCpnt->Product_ID != MB85RC256V_PRODUCT_ID))	{ err = ERROR_COMMON; }	// Unknown device
 
 	ret:
 	return err;
-	\endcode**/
-
-	return ERROR_OK;
 }
 
 
@@ -47,13 +40,14 @@ FctERR NONNULL__ MB85RC256V_Get_ID(MB85RC256V_t * const pCpnt)
 	FctERR	err;
 
 	err = MB85RC256V_Read_ID(pCpnt, ID);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	pCpnt->Manufacture_ID = LSHIFT(ID[0], 4U) + RSHIFT(ID[1], 4U);
 	pCpnt->Density = ID[1] & 0x0FU;
 	pCpnt->Product_ID = ID[2];
 
-	return ERROR_OK;
+	ret:
+	return err;
 }
 
 

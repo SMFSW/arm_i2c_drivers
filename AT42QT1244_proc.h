@@ -73,7 +73,7 @@ __INLINE void NONNULL_INLINE__ AT42QT1244_Set_Reset_Time(AT42QT1244_t * const pC
 ** \warning Delay is in blocking mode (only interrupts will run) and can take up to 100ms
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
 **/
-void NONNULL__ AT42QT1244_Delay_PowerOn(AT42QT1244_t * const pCpnt);
+void NONNULL__ AT42QT1244_Delay_PowerOn(const AT42QT1244_t * const pCpnt);
 
 
 /*!\brief 16bits CRC calculation for AT42QT1244

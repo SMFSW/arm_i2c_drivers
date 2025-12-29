@@ -69,9 +69,9 @@ __WEAK FctERR NONNULL__ ADS1115_handler(ADS1115_t * const pCpnt)
 	#if defined(VERBOSE)
 		const uint8_t idx = pCpnt - ADS1115;
 		const uint8_t chan = pCpnt->AIN_idx;
-		printf("ADS1115 id%d: Chan%d %-6d %ldmV\r\n", idx, chan,
-				ADS1115_Get_raw_value(pCpnt, chan),
-				(int32_t) ADS1115_Get_converted_value_mV(pCpnt, chan));
+		UNUSED_RET printf("ADS1115 id%d: Chan%d %-6d %ldmV\r\n", idx, chan,
+							ADS1115_Get_raw_value(pCpnt, chan),
+							(int32_t) ADS1115_Get_converted_value_mV(pCpnt, chan));
 	#endif
 
 	if (pCpnt->cfg.mode != ADS1115__MODE_SINGLE_SHOT)

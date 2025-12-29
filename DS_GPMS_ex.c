@@ -16,6 +16,17 @@
 /****************************************************************/
 
 
+FctERR NONNULL__ GPMS_Get_IO_Value(uint8_t * const io, const uint8_t chan)
+{
+	FctERR err;
+
+	if (chan > 4)	{ err = ERROR_VALUE; }	// Unknown analogic input
+	else			{ err = GPMS_Read(io, GPMS__AN0_VALUE + chan, 1U); }
+
+	return err;
+}
+
+
 /****************************************************************/
 #endif
 #endif

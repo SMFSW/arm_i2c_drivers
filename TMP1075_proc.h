@@ -55,7 +55,7 @@ typedef struct _TMP1075_t {
 	bool				TMP1075N;		//!< Set to true if TMP1075N
 	float				LowLimit;		//!< Low limit config
 	float				HighLimit;		//!< High limit config
-	uint16_t			Id;				//!< Device ID
+	uint16_t			ChipID;			//!< Device ID
 	} cfg;
 } TMP1075_t;
 

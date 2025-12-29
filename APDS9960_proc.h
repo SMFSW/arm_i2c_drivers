@@ -68,7 +68,7 @@ typedef struct _APDS9960_t {
 	bool						PIEN;				//!< Sensor Proximity interrupts enabled config
 	bool						GIEN;				//!< Gestures enabled config
 	bool						WEN;				//!< Wait between conversions enabled config
-	uint8_t						Id;					//!< APDS9960 chip ID
+	uint8_t						ChipID;				//!< chip ID
 	} cfg;
 } APDS9960_t;
 

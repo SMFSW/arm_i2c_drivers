@@ -50,10 +50,7 @@ typedef union _uPCA9532_REG_MAP {
 ** \param[in] inc - auto increment option
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ PCA9532_Set_Auto_Increment(PCA9532_t * const pCpnt, const PCA95xx_reg_inc inc) {
-	if (RSHIFT(inc, 4U) > 1U)	{ return ERROR_VALUE; }
-	pCpnt->cfg.auto_inc = inc & PCA95xx__AUTO_INC_ALL;	// Mask inc just in case
-	return ERROR_OK; }
+FctERR NONNULL__ PCA9532_Set_Auto_Increment(PCA9532_t * const pCpnt, const PCA95xx_reg_inc inc);
 
 
 /*!\brief Convert Frequency to PSCx byte register
@@ -63,10 +60,7 @@ __INLINE FctERR NONNULL_INLINE__ PCA9532_Set_Auto_Increment(PCA9532_t * const pC
 ** \param[in] freq - Frequency in Hz (0.592Hz to 152Hz)
 ** \return FctERR - error code
 **/
-__INLINE FctERR PCA9532_Freq_To_Byte(uint8_t * const byte, const float freq) {
-	if ((freq < 0.592f)	|| (freq > 152.0f))	{ return ERROR_RANGE; }	// Told 0.591Hz min in datasheet, but would be an issue for cast after calculation
-	*byte = (uint8_t) (152.0f / freq) - 1U;
-	return ERROR_OK; }
+FctERR NONNULL__ PCA9532_Freq_To_Byte(uint8_t * const byte, const float freq);
 
 
 /*!\brief Convert Frequency to PWMx byte register
@@ -76,10 +70,7 @@ __INLINE FctERR PCA9532_Freq_To_Byte(uint8_t * const byte, const float freq) {
 ** \param[in] duty - Duty Cycle in %
 ** \return FctERR - error code
 **/
-__INLINE FctERR PCA9532_DutyCycle_To_Byte(uint8_t * const byte, const float duty) {
-	if ((duty < 0.0f) || (duty > 100.0f))	{ return ERROR_RANGE; }
-	*byte = (uint8_t) min(255U, (duty * 2.56f));
-	return ERROR_OK; }
+FctERR NONNULL__ PCA9532_DutyCycle_To_Byte(uint8_t * const byte, const float duty);
 
 
 /*!\brief Convert PSCx byte register to Frequency (in Hz)

@@ -89,7 +89,7 @@ typedef union _uAPDS9930_REG_MAP {
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ APDS9930_Write_En(APDS9930_t * const pCpnt, const uint8_t en) {
-	return APDS9930_Write(pCpnt->cfg.slave_inst, (uint8_t *) &en, APDS9930__ENABLE, 1U); }
+	return APDS9930_Write(pCpnt->cfg.slave_inst, &en, APDS9930__ENABLE, 1U); }
 
 /*!\brief Write APDS9930 Config
 ** \param[in] pCpnt - Pointer to APDS9930 component
@@ -97,7 +97,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9930_Write_En(APDS9930_t * const pCpnt, con
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ APDS9930_Write_Cfg(APDS9930_t * const pCpnt, const uint8_t cfg) {
-	return APDS9930_Write(pCpnt->cfg.slave_inst, (uint8_t *) &cfg, APDS9930__CONFIG, 1U); }
+	return APDS9930_Write(pCpnt->cfg.slave_inst, &cfg, APDS9930__CONFIG, 1U); }
 
 
 /*!\brief Write APDS9930 Control
@@ -246,7 +246,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9930_Set_AIHT(APDS9930_t * const pCpnt, con
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ APDS9930_Set_AIT(APDS9930_t * const pCpnt, const uint16_t lthr, const uint16_t hthr) {
-	uint8_t DAT[4] = { LOBYTE(lthr), HIBYTE(lthr), LOBYTE(hthr), HIBYTE(hthr) };
+	const uint8_t DAT[4] = { LOBYTE(lthr), HIBYTE(lthr), LOBYTE(hthr), HIBYTE(hthr) };
 	return APDS9930_Write(pCpnt->cfg.slave_inst, DAT, APDS9930__AILTL, sizeof(DAT)); }
 
 
@@ -273,7 +273,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9930_Set_PIHT(APDS9930_t * const pCpnt, con
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ APDS9930_Set_PIT(APDS9930_t * const pCpnt, const uint16_t lthr, const uint16_t hthr) {
-	uint8_t DAT[4] = { LOBYTE(lthr), HIBYTE(lthr), LOBYTE(hthr), HIBYTE(hthr) };
+	const uint8_t DAT[4] = { LOBYTE(lthr), HIBYTE(lthr), LOBYTE(hthr), HIBYTE(hthr) };
 	return APDS9930_Write(pCpnt->cfg.slave_inst, DAT, APDS9930__PILTL, sizeof(DAT)); }
 
 /*** Special Functions ***/
@@ -308,7 +308,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9930_SF_Clear_ALS_PROX_IT(APDS9930_t * cons
 ** \param[in,out] id - pointer to chip ID result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ APDS9930_Get_ChipID(APDS9930_t * const pCpnt, uint8_t * id) {
+__INLINE FctERR NONNULL_INLINE__ APDS9930_Get_ChipID(APDS9930_t * const pCpnt, uint8_t * const id) {
 	return APDS9930_Read(pCpnt->cfg.slave_inst, id, APDS9930__ID, 1U); }
 
 /*!\brief Get Full conversion (Channel 0)
@@ -316,7 +316,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9930_Get_ChipID(APDS9930_t * const pCpnt, u
 ** \param[in,out] full - pointer to Full conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ APDS9930_Get_Full(APDS9930_t * const pCpnt, uint16_t * full) {
+__INLINE FctERR NONNULL_INLINE__ APDS9930_Get_Full(APDS9930_t * const pCpnt, uint16_t * const full) {
 	return APDS9930_Read_Word(pCpnt->cfg.slave_inst, full, APDS9930__CH0DATAL); }
 
 /*!\brief Get IR conversion (Channel 1)
@@ -324,7 +324,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9930_Get_Full(APDS9930_t * const pCpnt, uin
 ** \param[in,out] ir - pointer to IR conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ APDS9930_Get_IR(APDS9930_t * const pCpnt, uint16_t * ir) {
+__INLINE FctERR NONNULL_INLINE__ APDS9930_Get_IR(APDS9930_t * const pCpnt, uint16_t * const ir) {
 	return APDS9930_Read_Word(pCpnt->cfg.slave_inst, ir, APDS9930__CH1DATAL); }
 
 /*!\brief Get Proximity conversion
@@ -332,7 +332,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9930_Get_IR(APDS9930_t * const pCpnt, uint1
 ** \param[in,out] prox - pointer to Proximity conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ APDS9930_Get_Prox(APDS9930_t * const pCpnt, uint16_t * prox) {
+__INLINE FctERR NONNULL_INLINE__ APDS9930_Get_Prox(APDS9930_t * const pCpnt, uint16_t * const prox) {
 	return APDS9930_Read_Word(pCpnt->cfg.slave_inst, prox, APDS9930__PDATAL); }
 
 
@@ -354,7 +354,7 @@ void NONNULL__ APDS9930_INT_GPIO_Init(APDS9930_t * const pCpnt, GPIO_TypeDef * c
 ** \param[in] pCpnt - Pointer to APDS9930 component
 ** \return INT pin state value (0: inactive, 1: active)
 **/
-bool NONNULL__ APDS9930_INT_GPIO_Get(APDS9930_t * const pCpnt);
+bool NONNULL__ APDS9930_INT_GPIO_Get(const APDS9930_t * const pCpnt);
 
 
 /****************************************************************/

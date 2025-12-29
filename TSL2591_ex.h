@@ -129,7 +129,7 @@ FctERR NONNULL__ TSL2591_Set_Integration_Time(TSL2591_t * const pCpnt, const TSL
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TSL2591_Set_ALS_Pesistence(TSL2591_t * const pCpnt, const TSL2591_it_persist persist) {
-	uTSL2591_REG__PERSIST PERS = { .Bits.PERSIST = persist };
+	const uTSL2591_REG__PERSIST PERS = { .Bits.PERSIST = persist };
 	return TSL2591_Write(pCpnt->cfg.slave_inst, &PERS.Byte, TSL2591__PERSIST, 1U); }
 
 
@@ -156,7 +156,7 @@ __INLINE FctERR NONNULL_INLINE__ TSL2591_Set_AIHT(TSL2591_t * const pCpnt, const
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TSL2591_Set_AIT(TSL2591_t * const pCpnt, const uint16_t lthr, const uint16_t hthr) {
-	uint8_t DAT[4] = { LOBYTE(lthr), HIBYTE(lthr), LOBYTE(hthr), HIBYTE(hthr) };
+	const uint8_t DAT[4] = { LOBYTE(lthr), HIBYTE(lthr), LOBYTE(hthr), HIBYTE(hthr) };
 	return TSL2591_Write(pCpnt->cfg.slave_inst, DAT, TSL2591__AILTL, sizeof(DAT)); }
 
 
@@ -183,7 +183,7 @@ __INLINE FctERR NONNULL_INLINE__ TSL2591_Set_NPAIHT(TSL2591_t * const pCpnt, con
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ TSL2591_Set_NPAIT(TSL2591_t * const pCpnt, const uint16_t lthr, const uint16_t hthr) {
-	uint8_t DAT[4] = { LOBYTE(lthr), HIBYTE(lthr), LOBYTE(hthr), HIBYTE(hthr) };
+	const uint8_t DAT[4] = { LOBYTE(lthr), HIBYTE(lthr), LOBYTE(hthr), HIBYTE(hthr) };
 	return TSL2591_Write(pCpnt->cfg.slave_inst, DAT, TSL2591__NPAILTL, sizeof(DAT)); }
 
 /*** Special Functions ***/
@@ -225,7 +225,7 @@ __INLINE FctERR NONNULL_INLINE__ TSL2591_SF_Clear_PERS(TSL2591_t * const pCpnt) 
 ** \param[in,out] id - pointer to chip ID result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TSL2591_Get_ChipID(TSL2591_t * const pCpnt, uint8_t * id) {
+__INLINE FctERR NONNULL_INLINE__ TSL2591_Get_ChipID(TSL2591_t * const pCpnt, uint8_t * const id) {
 	return TSL2591_Read(pCpnt->cfg.slave_inst, id, TSL2591__ID, 1U); }
 
 /*!\brief Reset TSL2591 chip
@@ -240,7 +240,7 @@ __INLINE FctERR NONNULL_INLINE__ TSL2591_Reset(TSL2591_t * const pCpnt) {
 ** \param[in,out] full - pointer to Full conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TSL2591_Get_Full(TSL2591_t * const pCpnt, uint16_t * full) {
+__INLINE FctERR NONNULL_INLINE__ TSL2591_Get_Full(TSL2591_t * const pCpnt, uint16_t * const full) {
 	return TSL2591_Read_Word(pCpnt->cfg.slave_inst, full, TSL2591__C0DATAL); }
 
 /*!\brief Get IR conversion (Channel 1)
@@ -248,7 +248,7 @@ __INLINE FctERR NONNULL_INLINE__ TSL2591_Get_Full(TSL2591_t * const pCpnt, uint1
 ** \param[in,out] ir - pointer to IR conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TSL2591_Get_IR(TSL2591_t * const pCpnt, uint16_t * ir) {
+__INLINE FctERR NONNULL_INLINE__ TSL2591_Get_IR(TSL2591_t * const pCpnt, uint16_t * const ir) {
 	return TSL2591_Read_Word(pCpnt->cfg.slave_inst, ir, TSL2591__C1DATAL); }
 
 
@@ -270,7 +270,7 @@ void NONNULL__ TSL2591_INT_GPIO_Init(TSL2591_t * const pCpnt, GPIO_TypeDef * con
 ** \param[in] pCpnt - Pointer to TSL2591 component
 ** \return INT pin state value (0: inactive, 1: active)
 **/
-bool NONNULL__ TSL2591_INT_GPIO_Get(TSL2591_t * const pCpnt);
+bool NONNULL__ TSL2591_INT_GPIO_Get(const TSL2591_t * const pCpnt);
 
 
 /****************************************************************/

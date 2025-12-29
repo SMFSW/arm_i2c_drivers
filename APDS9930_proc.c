@@ -24,7 +24,12 @@ const uint8_t APDS9930_Prox_gain_tab[4] = { 1U, 2U, 4U, 8U };
 __WEAK FctERR NONNULL__ APDS9930_Init_Sequence(APDS9930_t * const pCpnt)
 {
 	uAPDS9930_REG__ENABLE	EN = { 0 };
-	FctERR					err = ERROR_OK;
+	FctERR					err;
+
+	// get ID & check against values for APDS9930
+	err = APDS9930_Get_ChipID(pCpnt, &pCpnt->cfg.ChipID);
+	if (err != ERROR_OK)						{ goto ret; }
+	if (pCpnt->cfg.ChipID != APDS9930_CHIP_ID)	{ err = ERROR_COMMON; goto ret; }	// Unknown device
 
 	pCpnt->cfg.GA = APDS9930_GLASS_ATTENUATION;
 
@@ -43,43 +48,48 @@ __WEAK FctERR NONNULL__ APDS9930_Init_Sequence(APDS9930_t * const pCpnt)
 	pCpnt->cfg.PIEN = true;
 	pCpnt->cfg.WEN = true;
 
-	// get ID & check against values for APDS9930
-	err = APDS9930_Get_ChipID(pCpnt, &pCpnt->cfg.Id);
-	if (err != ERROR_OK)					{ return err; }
-	if (pCpnt->cfg.Id != APDS9930_CHIP_ID)	{ return ERROR_COMMON; }	// Unknown device
-
 	EN.Bits.PON = true;		// Turn ON Osc
 	err = APDS9930_Write_En(pCpnt, EN.Byte);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	err = APDS9930_Set_ALS_Gain(pCpnt, pCpnt->cfg.ALS_Gain);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
+
 	err = APDS9930_Set_Prox_Gain(pCpnt, pCpnt->cfg.Prox_Gain);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	err = APDS9930_Set_Prox_Drive_Strength(pCpnt, pCpnt->cfg.Prox_Strength);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
+
 	err = APDS9930_Write(pCpnt->cfg.slave_inst, &pCpnt->cfg.Prox_Pulses, APDS9930__PPULSE, 1U);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	err = APDS9930_Set_ALS_Integration_Time(pCpnt, pCpnt->cfg.ALS_Integ);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
+
 	err = APDS9930_Set_Prox_Integration_Time(pCpnt, pCpnt->cfg.Prox_Integ);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
+
 	err = APDS9930_Set_Wait_Time(pCpnt, pCpnt->cfg.Wait);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	APDS9930_Set_LPC(pCpnt);
 
 	err = APDS9930_Set_AIT(pCpnt, pCpnt->cfg.ALS_LowThreshold, pCpnt->cfg.ALS_HighThreshold);
+	if (err != ERROR_OK)	{ goto ret; }
+
 	err = APDS9930_Set_PIT(pCpnt, pCpnt->cfg.Prox_LowThreshold, pCpnt->cfg.Prox_HighThreshold);
+	if (err != ERROR_OK)	{ goto ret; }
 
 	EN.Bits.WEN = pCpnt->cfg.WEN;	// Turn ON Wait following cfg
 	EN.Bits.AEN = pCpnt->cfg.AIEN;	// Turn ON ALS following cfg
 	EN.Bits.PEN = pCpnt->cfg.PIEN;	// Turn ON Proximity following cfg
 	EN.Bits.AIEN = pCpnt->cfg.AIEN;	// Turn ON ALS interrupts following cfg
 	EN.Bits.PIEN = pCpnt->cfg.PIEN;	// Turn ON Proximity interrupts following cfg
-	return APDS9930_Write_En(pCpnt, EN.Byte);
+	err = APDS9930_Write_En(pCpnt, EN.Byte);
+
+	ret:
+	return err;
 }
 
 
@@ -103,40 +113,45 @@ void NONNULL__ APDS9930_Set_LPC(APDS9930_t * const pCpnt)
 **/
 static NONNULL__ FctERR APDS9930_calc(APDS9930_t * const pCpnt, const uint16_t full, const uint16_t ir)
 {
-	const float	B = 1.862f, C = 0.746f, D = 1.291f;
+	FctERR err = ERROR_OK;
+
 	// SATURATION = 1024 * (256 - ATIME) if ATIME > 192 (<175ms)
-	uint16_t	sat = (pCpnt->cfg.ALS_Integ_reg <= 192U) ? 65535U : (1024U * (256U - pCpnt->cfg.ALS_Integ_reg));
+	uint16_t sat = (pCpnt->cfg.ALS_Integ_reg <= 192U) ? 65535U : (1024U * (256U - pCpnt->cfg.ALS_Integ_reg));
 
 	// Check for saturation
 	if ((full >= sat) || (ir >= sat))
 	{
 		pCpnt->Saturation = true;
-		return ERROR_OVERFLOW;	// Signal an overflow
+		err = ERROR_OVERFLOW;	// Signal an overflow
 	}
-	else { pCpnt->Saturation = false; }
+	else
+	{
+		pCpnt->Saturation = false;
 
-	// Check for ripple saturation
-	sat *= 0.75f;
-	if ((full >= sat) || (ir >= sat))	{ pCpnt->SaturationRipple = true; }
-	else								{ pCpnt->SaturationRipple = false; }
+		// Check for ripple saturation
+		sat = (uint16_t) (sat * 0.75f);
+		pCpnt->SaturationRipple = binEval((full >= sat) || (ir >= sat));
 
-	float IAC1 = full - (B * ir);			// IAC1 = (C0DATA - (B * C1DATA))
-	float IAC2 = (C * full) - (D * ir);		// IAC2 = (C * C0DATA) - (D * C1DATA)
-	float IAC = max(0, max(IAC1, IAC2));	// IAC = MAX(IAC1, IAC2, 0)
+		const float	B = 1.862f, C = 0.746f, D = 1.291f;
 
-	pCpnt->Lux = IAC * pCpnt->cfg.LPC;		// Lux = IAC * LPC
-	pCpnt->IRF = IAC / full;				// IRF = IAC / C0DATA (Infra Red Factor)
+		float IAC1 = full - (B * ir);					// IAC1 = (C0DATA - (B * C1DATA))
+		float IAC2 = (C * full) - (D * ir);				// IAC2 = (C * C0DATA) - (D * C1DATA)
+		float IAC = max(0, max(IAC1, IAC2));			// IAC = MAX(IAC1, IAC2, 0)
 
-	return ERROR_OK;
+		pCpnt->Lux = IAC * pCpnt->cfg.LPC;				// Lux = IAC * LPC
+		pCpnt->IRF = (full == 0) ? 0.0f : IAC / full;	// IRF = IAC / C0DATA (Infra Red Factor)
+	}
+
+	return err;
 }
 
 
 __WEAK FctERR NONNULL__ APDS9930_handler(APDS9930_t * const pCpnt)
 {
-	uint8_t					DATA[7];
-	uAPDS9930_REG__STATUS *	ST = (uAPDS9930_REG__STATUS *) DATA;
+	uint8_t								DATA[7];
+	const uAPDS9930_REG__STATUS * const	ST = (const uAPDS9930_REG__STATUS *) DATA;
 	#if defined(VERBOSE)
-		const uint8_t		idx = pCpnt - APDS9930;
+		const uint8_t					idx = pCpnt - APDS9930;
 	#endif
 
 	FctERR err = APDS9930_Read(pCpnt->cfg.slave_inst, DATA, APDS9930__STATUS, sizeof(DATA));
@@ -151,8 +166,8 @@ __WEAK FctERR NONNULL__ APDS9930_handler(APDS9930_t * const pCpnt)
 			err = APDS9930_calc(pCpnt, pCpnt->Full, pCpnt->IR);
 
 			#if defined(VERBOSE)
-				if (err == ERROR_OVERFLOW)	{ printf("APDS9930 id%d: ALS Sensor saturation reached!\r\n", idx); }
-				else						{ printf("APDS9930 id%d: Full %d IR %d Lux: %lul\r\n", idx, pCpnt->Full, pCpnt->IR, pCpnt->Lux); }
+				if (err == ERROR_OVERFLOW)	{ UNUSED_RET printf("APDS9930 id%d: ALS Sensor saturation reached!\r\n", idx); }
+				else						{ UNUSED_RET printf("APDS9930 id%d: Full %d IR %d Lux: %lul\r\n", idx, pCpnt->Full, pCpnt->IR, pCpnt->Lux); }
 			#endif
 		}
 	}
@@ -164,7 +179,7 @@ __WEAK FctERR NONNULL__ APDS9930_handler(APDS9930_t * const pCpnt)
 			pCpnt->Prox = MAKEWORD(DATA[5], DATA[6]);
 
 			#if defined(VERBOSE)
-				printf("APDS9930 id%d: Prox %d\r\n", idx, pCpnt->Prox);
+				UNUSED_RET printf("APDS9930 id%d: Prox %d\r\n", idx, pCpnt->Prox);
 			#endif
 		}
 	}

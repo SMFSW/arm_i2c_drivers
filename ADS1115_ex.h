@@ -155,14 +155,14 @@ __INLINE FctERR NONNULL_INLINE__ ADS1115_Set_HighThreshold(ADS1115_t * const pCp
 ** \param[in] pCpnt - Pointer to ADS1115 component
 ** \return Low threshold value
 **/
-__INLINE int16_t NONNULL_INLINE__ ADS1115_Get_LowThreshold(ADS1115_t * const pCpnt) {
+__INLINE int16_t NONNULL_INLINE__ ADS1115_Get_LowThreshold(const ADS1115_t * const pCpnt) {
 	return pCpnt->cfg.Lo_Thresh; }
 
 /*!\brief Get ADS1115 high threshold
 ** \param[in] pCpnt - Pointer to ADS1115 component
 ** \return High threshold value
 **/
-__INLINE int16_t NONNULL_INLINE__ ADS1115_Get_HighThreshold(ADS1115_t * const pCpnt) {
+__INLINE int16_t NONNULL_INLINE__ ADS1115_Get_HighThreshold(const ADS1115_t * const pCpnt) {
 	return pCpnt->cfg.Hi_Thresh; }
 
 
@@ -186,7 +186,7 @@ FctERR NONNULL__ ADS1115_Start_NextConversion(ADS1115_t * const pCpnt);
 ** \param[in] chan - ADS1115 channel
 ** \return Raw channel value
 **/
-__INLINE int16_t NONNULL_INLINE__ ADS1115_Get_raw_value(ADS1115_t * const pCpnt, const uint8_t chan) {
+__INLINE int16_t NONNULL_INLINE__ ADS1115_Get_raw_value(const ADS1115_t * const pCpnt, const uint8_t chan) {
 	return (chan >= 4U) ? 0 : pCpnt->AIN[chan]; }
 
 
@@ -195,21 +195,21 @@ __INLINE int16_t NONNULL_INLINE__ ADS1115_Get_raw_value(ADS1115_t * const pCpnt,
 ** \param[in] chan - ADS1115 channel
 ** \return Converted channel value (µV)
 **/
-float NONNULL__ ADS1115_Get_converted_value_uV(ADS1115_t * const pCpnt, const uint8_t chan);
+float NONNULL__ ADS1115_Get_converted_value_uV(const ADS1115_t * const pCpnt, const uint8_t chan);
 
 /*!\brief Get ADS1115 raw channel value in mV
 ** \param[in] pCpnt - Pointer to ADS1115 component
 ** \param[in] chan - ADS1115 channel
 ** \return Converted channel value (mV)
 **/
-float NONNULL__ ADS1115_Get_converted_value_mV(ADS1115_t * const pCpnt, const uint8_t chan);
+float NONNULL__ ADS1115_Get_converted_value_mV(const ADS1115_t * const pCpnt, const uint8_t chan);
 
 /*!\brief Get ADS1115 raw channel value in V
 ** \param[in] pCpnt - Pointer to ADS1115 component
 ** \param[in] chan - ADS1115 channel
 ** \return Converted channel value (V)
 **/
-float NONNULL__ ADS1115_Get_converted_value_V(ADS1115_t * const pCpnt, const uint8_t chan);
+float NONNULL__ ADS1115_Get_converted_value_V(const ADS1115_t * const pCpnt, const uint8_t chan);
 
 
 /*******************/
@@ -230,7 +230,7 @@ void NONNULL__ ADS1115_RDY_GPIO_Init(ADS1115_t * const pCpnt, GPIO_TypeDef * con
 ** \param[in] pCpnt - Pointer to ADS1115 component
 ** \return RDY pin state value (0: inactive, 1: active)
 **/
-bool NONNULL__ ADS1115_RDY_GPIO_Get(ADS1115_t * const pCpnt);
+bool NONNULL__ ADS1115_RDY_GPIO_Get(const ADS1115_t * const pCpnt);
 
 
 /****************************************************************/

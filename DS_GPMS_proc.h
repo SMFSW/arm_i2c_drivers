@@ -90,19 +90,19 @@ extern GPMS_t	GPMS;					//!< GPMS User structure
 **/
 FctERR GPMS_Init_Sequence(void);
 
-FctERR GPMS_Get_Date(GPMS_date * date);
+FctERR GPMS_Get_Date(GPMS_date * const date);
 
-FctERR GPMS_Get_Hour(GPMS_hour * hour);
+FctERR GPMS_Get_Hour(GPMS_hour * const hour);
 
-FctERR GPMS_Get_Latitude(GPMS_coord * lat);
+FctERR GPMS_Get_Latitude(GPMS_coord * const lat);
 
-FctERR GPMS_Get_Longitude(GPMS_coord * lon);
+FctERR GPMS_Get_Longitude(GPMS_coord * const lon);
 
-FctERR GPMS_Get_Heading(float * heading, const GPMS_north type);
+FctERR GPMS_Get_Heading(float * const heading, const GPMS_north type);
 
-FctERR GPMS_Get_Speed(float * speed);
+FctERR GPMS_Get_Speed(float * const speed);
 
-FctERR GPMS_Get_Altitude(uint16_t * altitude);
+FctERR GPMS_Get_Altitude(uint16_t * const altitude);
 
 /*!\brief Handler for GPMS peripheral
 ** \weak GPMS handler may be user implemented to suit custom needs

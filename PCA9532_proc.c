@@ -25,10 +25,14 @@ __WEAK FctERR NONNULL__ PCA9532_Init_Sequence(PCA9532_t * const pCpnt)
 
 	err = PCA9532_DutyCycle_To_Byte(&Data[0], 66.0f);
 	err |= PCA9532_Write(pCpnt->cfg.slave_inst, &Data[0], PCA9532__PWM0, sizeof(uint8_t));
-	err |= PCA9532_DutyCycle_To_Byte(&Data[0], 33.0f);
-	err |= PCA9532_Write(pCpnt->cfg.slave_inst, &Data[0], PCA9532__PWM1, sizeof(uint8_t));
+	if (err != ERROR_OK)	{ goto ret; }
 
-	err |= PCA9532_Read(pCpnt->cfg.slave_inst, Data, PCA9532__PSC0, sizeof(Data));
+	err = PCA9532_DutyCycle_To_Byte(&Data[0], 33.0f);
+	err |= PCA9532_Write(pCpnt->cfg.slave_inst, &Data[0], PCA9532__PWM1, sizeof(uint8_t));
+	if (err != ERROR_OK)	{ goto ret; }
+
+	err = PCA9532_Read(pCpnt->cfg.slave_inst, Data, PCA9532__PSC0, sizeof(Data));
+	if (err != ERROR_OK)	{ goto ret; }
 
 	pCpnt->cfg.Freq0 = PCA9532_Byte_To_Freq(Data[0]);
 	pCpnt->cfg.Duty0 = PCA9532_Byte_To_Duty(Data[1]);
@@ -36,8 +40,9 @@ __WEAK FctERR NONNULL__ PCA9532_Init_Sequence(PCA9532_t * const pCpnt)
 	pCpnt->cfg.Duty1 = PCA9532_Byte_To_Duty(Data[3]);
 
 	// Set all LEDs to Off
-	err |= PCA9532_Set_Mode_LEDs(pCpnt, 0xFFFFU, PCA95xx__LED_OFF);
+	err = PCA9532_Set_Mode_LEDs(pCpnt, 0xFFFFU, PCA95xx__LED_OFF);
 
+	ret:
 	return err;
 }
 

@@ -53,7 +53,7 @@ __INLINE FctERR NONNULL_INLINE__ BMP180_Get_ChipID(BMP180_t * const pCpnt, uint8
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ BMP180_Reset(BMP180_t * const pCpnt) {
-	uint8_t rst = BMP180_RESET_VAL;
+	const uint8_t rst = BMP180_RESET_VAL;
 	return BMP180_Write(pCpnt->cfg.slave_inst, &rst, BMP180__SOFT_RESET, 1U); }
 
 

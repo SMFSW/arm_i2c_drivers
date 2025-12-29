@@ -68,7 +68,7 @@ typedef union _uS11059_REG_MAP {
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ S11059_Write_Ctl(I2C_slave_t * const pSlave, const uint8_t ctl) {
-	return S11059_Write(pSlave, (uint8_t *) &ctl, S11059__CONTROL, 1U); }
+	return S11059_Write(pSlave, &ctl, S11059__CONTROL, 1U); }
 
 
 /*!\brief ADC Operation / Reset
@@ -118,24 +118,22 @@ FctERR NONNULL__ S11059_Set_Integration_Multiplier(S11059_t * const pCpnt, const
 ** \param[in,out] standby - pointer to standby function result
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ S11059_Get_Standby(S11059_t * const pCpnt, S11059_standby_fct * standby);
+FctERR NONNULL__ S11059_Get_Standby(S11059_t * const pCpnt, S11059_standby_fct * const standby);
 
 /*!\brief Get Specific channel conversion
 ** \param[in] pCpnt - Pointer to S11059 component
-** \param[in,out] buf - pointer to conversions result
+** \param[in,out] val - pointer to conversions result
 ** \param[in] chan - Channel to get
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ S11059_Get_Channel(S11059_t * const pCpnt, uint16_t * buf, const S11059_chan chan) {
-	if (chan > S11059__CHAN_IR)	{ return ERROR_VALUE; }	// Unknown channel
-	return S11059_Read_Word(pCpnt->cfg.slave_inst, buf, S11059__RED_DATA_MSB + (2U * chan)); }
+FctERR NONNULL__ S11059_Get_Channel(S11059_t * const pCpnt, uint16_t * const val, const S11059_chan chan);
 
 /*!\brief Get Red channel conversion
 ** \param[in] pCpnt - Pointer to S11059 component
 ** \param[in,out] r - pointer to Red conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ S11059_Get_Red(S11059_t * const pCpnt, uint16_t * r) {
+__INLINE FctERR NONNULL_INLINE__ S11059_Get_Red(S11059_t * const pCpnt, uint16_t * const r) {
 	return S11059_Read_Word(pCpnt->cfg.slave_inst, r, S11059__RED_DATA_MSB); }
 
 /*!\brief Get Green channel conversion
@@ -143,7 +141,7 @@ __INLINE FctERR NONNULL_INLINE__ S11059_Get_Red(S11059_t * const pCpnt, uint16_t
 ** \param[in,out] g - pointer to Green conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ S11059_Get_Green(S11059_t * const pCpnt, uint16_t * g) {
+__INLINE FctERR NONNULL_INLINE__ S11059_Get_Green(S11059_t * const pCpnt, uint16_t * const g) {
 	return S11059_Read_Word(pCpnt->cfg.slave_inst, g, S11059__GREEN_DATA_MSB); }
 
 /*!\brief Get Blue channel conversion
@@ -151,7 +149,7 @@ __INLINE FctERR NONNULL_INLINE__ S11059_Get_Green(S11059_t * const pCpnt, uint16
 ** \param[in,out] b - pointer to Blue conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ S11059_Get_Blue(S11059_t * const pCpnt, uint16_t * b) {
+__INLINE FctERR NONNULL_INLINE__ S11059_Get_Blue(S11059_t * const pCpnt, uint16_t * const b) {
 	return S11059_Read_Word(pCpnt->cfg.slave_inst, b, S11059__BLUE_DATA_MSB); }
 
 /*!\brief Get Infra-red channel conversion
@@ -159,7 +157,7 @@ __INLINE FctERR NONNULL_INLINE__ S11059_Get_Blue(S11059_t * const pCpnt, uint16_
 ** \param[in,out] ir - pointer to Infra-red conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ S11059_Get_IR(S11059_t * const pCpnt, uint16_t * ir) {
+__INLINE FctERR NONNULL_INLINE__ S11059_Get_IR(S11059_t * const pCpnt, uint16_t * const ir) {
 	return S11059_Read_Word(pCpnt->cfg.slave_inst, ir, S11059__IR_DATA_MSB); }
 
 

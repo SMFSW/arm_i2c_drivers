@@ -22,13 +22,17 @@
 static FctERR NONNULL__ NCA9595_Write_Reg_Mask(NCA9595_t * const pCpnt, const uint16_t val, const uint16_t mask, const NCA9595_wreg reg)
 {
 	uint16_t data;
-	const FctERR err = NCA9595_Read_Word(pCpnt->cfg.slave_inst, &data, reg);
-	if (err != ERROR_OK)	{ return err; }
+
+	FctERR err = NCA9595_Read_Word(pCpnt->cfg.slave_inst, &data, reg);
+	if (err != ERROR_OK)	{ goto ret; }
 
 	const uint16_t final_mask = ~pCpnt->cfg.NCA9595_Cfg.Word & mask;
 	SET_BITS_VAL(data, final_mask, val);
 
-	return NCA9595_Write_Word(pCpnt->cfg.slave_inst, &data, reg);
+	err = NCA9595_Write_Word(pCpnt->cfg.slave_inst, &data, reg);
+
+	ret:
+	return err;
 }
 
 
@@ -117,7 +121,7 @@ FctERR NONNULL__ NCA9595_Set_PullUp_Mask(NCA9595_t * const pCpnt, const uint16_t
 __WEAK void NONNULL__ NCA9595_INT_GPIO_Init(NCA9595_t * const pCpnt, GPIO_TypeDef * const GPIOx, const uint16_t GPIO_Pin, const GPIO_PinState GPIO_Active) {
 	I2C_peripheral_GPIO_init(&pCpnt->cfg.INT_GPIO, GPIOx, GPIO_Pin, GPIO_Active); }
 
-__WEAK bool NONNULL__ NCA9595_INT_GPIO_Get(NCA9595_t * const pCpnt) {
+__WEAK bool NONNULL__ NCA9595_INT_GPIO_Get(const NCA9595_t * const pCpnt) {
 	return I2C_peripheral_GPIO_get(&pCpnt->cfg.INT_GPIO); }
 
 

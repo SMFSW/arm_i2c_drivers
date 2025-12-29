@@ -51,33 +51,45 @@ FctERR MTCH6102_Init_Single(void) {
 
 FctERR NONNULL__ MTCH6102_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > MTCH__RAW_ADC_31 + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	FctERR err = ERROR_OK;
 
-	while (TPSINF_MS(MTCH6102_last_access[pSlave - MTCH6102_hal], MTCH6102_TIME_BETWEEN_TRANSACTIONS));
+	if (!I2C_is_enabled(pSlave))				{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > MTCH__RAW_ADC_31 + 1U)	{ err = ERROR_OVERFLOW; }	// More bytes than registers
+	if (err != ERROR_OK)						{ goto ret; }
+
+	do {} while (TPSINF_MS(MTCH6102_last_access[pSlave - MTCH6102_hal], MTCH6102_TIME_BETWEEN_TRANSACTIONS));
+	
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
 
 	MTCH6102_last_access[pSlave - MTCH6102_hal] = HAL_GetTick();
 
-	return HALERRtoFCTERR(pSlave->status);
+	ret:
+	return err;
 }
 
 
 FctERR NONNULL__ MTCH6102_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > MTCH__RAW_ADC_31 + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	FctERR err = ERROR_OK;
 
-	while (TPSINF_MS(MTCH6102_last_access[pSlave - MTCH6102_hal], MTCH6102_TIME_BETWEEN_TRANSACTIONS));
+	if (!I2C_is_enabled(pSlave))				{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > MTCH__RAW_ADC_31 + 1U)	{ err = ERROR_OVERFLOW; }	// More bytes than registers
+	if (err != ERROR_OK)						{ goto ret; }
+
+	do {} while (TPSINF_MS(MTCH6102_last_access[pSlave - MTCH6102_hal], MTCH6102_TIME_BETWEEN_TRANSACTIONS));
+	
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
 
 	MTCH6102_last_access[pSlave - MTCH6102_hal] = HAL_GetTick();
 
-	return HALERRtoFCTERR(pSlave->status);
+	ret:
+	return err;
 }
 
 

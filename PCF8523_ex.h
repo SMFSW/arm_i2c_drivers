@@ -66,33 +66,33 @@ typedef union _uPCF8523_REG_MAP {
 // TODO: add more functions/inlines handling interrupts & clock output
 
 __INLINE FctERR INLINE__ PCF8523_Reset(void) {
-	uint8_t RST = 0x58U;
-	return PCF8523_Write(&RST, PCF8523__CONTROL_1, 1U); }
+	const uint8_t RST = 0x58U;
+	return PCF8523_Write(&RST, PCF8523__CONTROL_1, sizeof(RST)); }
 
 
 __INLINE FctERR INLINE__ PCF8523_Disable_Alarm(void) {
-	uint8_t ALARM[4] = { 0, 0, 0, 0 };
-	return PCF8523_Write(ALARM, PCF8523__MINUTE_ALARM, 4U); }
+	const uint8_t ALARM[4] = { 0 };
+	return PCF8523_Write(ALARM, PCF8523__MINUTE_ALARM, sizeof(ALARM)); }
 
 
 __INLINE FctERR INLINE__ PCF8523_Disable_Minute_Alarm(void) {
-	uint8_t ALARM = 0;
-	return PCF8523_Write(&ALARM, PCF8523__MINUTE_ALARM, 1U); }
+	const uint8_t ALARM = 0;
+	return PCF8523_Write(&ALARM, PCF8523__MINUTE_ALARM, sizeof(ALARM)); }
 
 __INLINE FctERR INLINE__ PCF8523_Disable_Hour_Alarm(void) {
-	uint8_t ALARM = 0;
-	return PCF8523_Write(&ALARM, PCF8523__HOUR_ALARM, 1U); }
+	const uint8_t ALARM = 0;
+	return PCF8523_Write(&ALARM, PCF8523__HOUR_ALARM, sizeof(ALARM)); }
 
 __INLINE FctERR INLINE__ PCF8523_Disable_Day_Alarm(void) {
-	uint8_t ALARM = 0;
-	return PCF8523_Write(&ALARM, PCF8523__DAY_ALARM, 1U); }
+	const uint8_t ALARM = 0;
+	return PCF8523_Write(&ALARM, PCF8523__DAY_ALARM, sizeof(ALARM)); }
 
 __INLINE FctERR INLINE__ PCF8523_Disable_Weekday_Alarm(void) {
-	uint8_t ALARM = 0;
-	return PCF8523_Write(&ALARM, PCF8523__WEEKDAY_ALARM, 1U); }
+	const uint8_t ALARM = 0;
+	return PCF8523_Write(&ALARM, PCF8523__WEEKDAY_ALARM, sizeof(ALARM)); }
 
 
-FctERR PCF8523_Enable_Minute_Alarm(const uint8_t min);
+FctERR PCF8523_Enable_Minute_Alarm(const uint8_t minute);
 FctERR PCF8523_Enable_Hour_Alarm(const uint8_t hour);
 FctERR PCF8523_Enable_Day_Alarm(const uint8_t day);
 FctERR PCF8523_Enable_Weekday_Alarm(const uint8_t weekday);
@@ -112,13 +112,13 @@ __INLINE FctERR NONNULL_INLINE__ PCF8523_Set_Time_Raw(const uint8_t time[3]) {
 **/
 FctERR NONNULL__ PCF8523_Get_Countdown(uint8_t * ctdw, const uint16_t period, const uint8_t timer);
 
-__INLINE FctERR NONNULL_INLINE__ PCF8523_Get_Date_Raw(uint8_t * date) {
+__INLINE FctERR NONNULL_INLINE__ PCF8523_Get_Date_Raw(uint8_t * const date) {
 	return PCF8523_Read(date, PCF8523__DAYS, 4U); }
 
-__INLINE FctERR NONNULL_INLINE__ PCF8523_Get_Time_Raw(uint8_t * time) {
+__INLINE FctERR NONNULL_INLINE__ PCF8523_Get_Time_Raw(uint8_t * const time) {
 	return PCF8523_Read(time, PCF8523__SECONDS, 3U); }
 
-FctERR NONNULL__ PCF8523_Check_Clock_Integrity(bool * integrity);
+FctERR NONNULL__ PCF8523_Check_Clock_Integrity(bool * const integrity);
 
 
 /*******************/

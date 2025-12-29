@@ -55,14 +55,14 @@ __INLINE FctERR NONNULL_INLINE__ MCP4725_WakeUp(I2C_HandleTypeDef * const hi2c) 
 ** \param[in] val - pointer to DAC value to read to
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP4725_Read_DAC(MCP4725_t * const pCpnt, uint16_t * val);
+FctERR NONNULL__ MCP4725_Read_DAC(MCP4725_t * const pCpnt, uint16_t * const val);
 
 /*!\brief Read DAC state
 ** \param[in] pCpnt - Pointer to MCP4725 component
 ** \param[in] state - pointer to state to read to (0 Ready, 1 Busy)
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ MCP4725_Read_State(MCP4725_t * const pCpnt, bool * state);
+FctERR NONNULL__ MCP4725_Read_State(MCP4725_t * const pCpnt, bool * const state);
 
 
 /****************************************************************/

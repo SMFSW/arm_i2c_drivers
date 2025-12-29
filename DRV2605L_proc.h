@@ -44,7 +44,7 @@ typedef struct _DRV2605L_t {
 	DRV2605L_loop		Open_Loop;	//!< Current loop type (0 closed loop / auto resonance, 1 open)
 	DRV2605L_input		Input_Mode;	//!< Current input mode(PWM / Analog)
 	DRV2605L_rtp_format	RTP_Format;	//!< Current Real Time Playback format
-	uint8_t				Id;			//!< Chip ID
+	uint8_t				ChipID;		//!< Chip ID
 	} cfg;
 } DRV2605L_t;
 

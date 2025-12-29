@@ -45,52 +45,71 @@ __WEAK FctERR $CPNT$_Init(void)
 
 FctERR NONNULL__ $CPNT$_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(&$CPNT$_hal))	{ return ERROR_DISABLED; }	// Peripheral disabled
-	//if ((addr + nb) > last_reg + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	FctERR err = ERROR_OK;
+
+	if (!I2C_is_enabled(&$CPNT$_hal))	{ err = ERROR_DISABLED; }	// Peripheral disabled
+	//if ((addr + nb) > last_reg + 1U)	{ err = ERROR_OVERFLOW; }	// More bytes than registers
+	if (err != ERROR_OK)				{ goto ret; }
 
 	I2C_set_busy(&$CPNT$_hal, true);
 	$CPNT$_hal.status = HAL_I2C_Mem_Write($CPNT$_hal.cfg.bus_inst, $CPNT$_hal.cfg.addr, addr, $CPNT$_hal.cfg.mem_size, (uint8_t *) data, nb, $CPNT$_hal.cfg.timeout);
+	err = HALERRtoFCTERR($CPNT$_hal.status);
 	I2C_set_busy(&$CPNT$_hal, false);
-	return HALERRtoFCTERR($CPNT$_hal.status);
+
+	ret:
+	return err;
 }
 
 
 FctERR NONNULL__ $CPNT$_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(&$CPNT$_hal))	{ return ERROR_DISABLED; }	// Peripheral disabled
-	//if ((addr + nb) > last_reg + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	FctERR err = ERROR_OK;
+
+	if (!I2C_is_enabled(&$CPNT$_hal))	{ err = ERROR_DISABLED; }	// Peripheral disabled
+	//if ((addr + nb) > last_reg + 1U)	{ err = ERROR_OVERFLOW; }	// More bytes than registers
+	if (err != ERROR_OK)				{ goto ret; }
 
 	I2C_set_busy(&$CPNT$_hal, true);
 	$CPNT$_hal.status = HAL_I2C_Mem_Read($CPNT$_hal.cfg.bus_inst, $CPNT$_hal.cfg.addr, addr, $CPNT$_hal.cfg.mem_size, data, nb, $CPNT$_hal.cfg.timeout);
+	err = HALERRtoFCTERR($CPNT$_hal.status);
 	I2C_set_busy(&$CPNT$_hal, false);
-	return HALERRtoFCTERR($CPNT$_hal.status);
+
+	ret:
+	return err;
 }
 
 
 FctERR NONNULL__ $CPNT$_Write_Word(const uint16_t * data, const uint16_t addr)
 {
-	uint8_t	WREG[2];
+	FctERR err = ERROR_FRAMING;
 
-	if (addr % sizeof(uint16_t))	{ return ERROR_FRAMING; }		// Unaligned word access
+	if (isEven(addr))	// Check unaligned word access
+	{
+		const uint8_t WREG[2] = { LOBYTE(*data), HIBYTE(*data) };
 
-	WREG[0] = LOBYTE(*data);
-	WREG[1] = HIBYTE(*data);
-	return $CPNT$_Write(WREG, addr, 2U);
+		err = $CPNT$_Write(WREG, addr, 2U);
+	}
+
+	return err;
 }
 
 
 FctERR NONNULL__ $CPNT$_Read_Word(uint16_t * data, const uint16_t addr)
 {
-	uint8_t	WREG[2];
-	FctERR	err;
+	FctERR err = ERROR_FRAMING;
 
-	if (addr % sizeof(uint16_t))	{ return ERROR_FRAMING; }		// Unaligned word access
+	if (isEven(addr))	// Check unaligned word access
+	{
+		uint8_t	RREG[2] = { 0 };
+		
+		err = $CPNT$_Read(pSlave, RREG, addr, 2U);
+		if (err != ERROR_OK)	{ goto ret; }
 
-	err = $CPNT$_Read(WREG, addr, 2U);
-	if (err != ERROR_OK)	{ return err; }
+		*data = MAKEWORD(RREG[0], RREG[1]);
+	}
 
-	*data = MAKEWORD(WREG[0], WREG[1]);
-	return ERROR_OK;
+	ret:
+	return err;
 }
 
 

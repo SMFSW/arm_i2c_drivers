@@ -12,17 +12,17 @@
 /****************************************************************/
 
 
-static float PCF8523_Clock_Timer_A_B[8] = { 4096.0f, 64.0f, 1.0f, (1.0f/60.0f), (1.0f/3600.0f), 0.0f, (1.0f/3600.0f), (1.0f/3600.0f) };
+static float PCF8523_Clock_Timer_A_B[8] = { 4096.0f, 64.0f, 1.0f, (1.0f / 60.0f), (1.0f / 3600.0f), 0.0f, (1.0f / 3600.0f), (1.0f / 3600.0f) };
 
 static float PCF8523_Low_Pulse_Width_B[8] = { 46.875f, 62.5f, 78.125f, 93.750f, 125.0f, 156.250f, 187.5f, 218.75f };
 
 
-FctERR PCF8523_Enable_Minute_Alarm(const uint8_t min)
+FctERR PCF8523_Enable_Minute_Alarm(const uint8_t minute)
 {
 	uPCF8523_REG__MINUTES ALARM;
 
 	ALARM.Bits.AEN_M = 1U;
-	ALARM.Bits.MINUTES = min;
+	ALARM.Bits.MINUTES = minute;
 	return PCF8523_Write(&ALARM.Byte, PCF8523__MINUTE_ALARM, 1U);
 }
 
@@ -60,39 +60,48 @@ FctERR PCF8523_Set_12_24(const bool twelve)
 	FctERR				err;
 
 	err = PCF8523_Read(&CTRL1.Byte, PCF8523__CONTROL_1, 1U);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	CTRL1.Bits.H12_24 = twelve;
-	return PCF8523_Write(&CTRL1.Byte, PCF8523__CONTROL_1, 1U);
+	err = PCF8523_Write(&CTRL1.Byte, PCF8523__CONTROL_1, 1U);
+
+	ret:
+	return err;
 }
 
 
 FctERR NONNULL__ PCF8523_Get_Countdown(uint8_t * ctdw, const uint16_t period, const uint8_t timer)
 {
-	uintCPU_t	T_x;
-	float		Clk_Timer = PCF8523_Clock_Timer_A_B[(timer ? PCF8523.cfg.Src_Clock_B : PCF8523.cfg.Src_Clock_A)];
+	FctERR err = ERROR_OK;
 
-	if (timer > 1U)		{ return ERROR_VALUE; }	// Unknown timer
+	if (timer > 1U)			{ err = ERROR_VALUE; }	// Unknown timer
+	if (err != ERROR_OK)	{ goto ret; }
 
-	T_x = (uintCPU_t) (period * Clk_Timer);
+	const float	Clk_Timer = PCF8523_Clock_Timer_A_B[(timer ? PCF8523.cfg.Src_Clock_B : PCF8523.cfg.Src_Clock_A)];
+	uintCPU_t T_x = (uintCPU_t) (period * Clk_Timer);
 
-	if (T_x > 0xFFU)	{ return ERROR_RANGE; }	// Period too high
+	if (T_x > 0xFFU)		{ err = ERROR_RANGE; }	// Period too high
+	if (err != ERROR_OK)	{ goto ret; }
 
 	*ctdw = (uint8_t) T_x;
-	return ERROR_OK;
+
+	ret:
+	return err;
 }
 
 
-FctERR NONNULL__ PCF8523_Check_Clock_Integrity(bool * integrity)
+FctERR NONNULL__ PCF8523_Check_Clock_Integrity(bool * const integrity)
 {
 	uPCF8523_REG__SECONDS	SEC;
 	FctERR					err;
 
 	err = PCF8523_Read(&SEC.Byte, PCF8523__SECONDS, 1U);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	*integrity = SEC.Bits.OS;
-	return ERROR_OK;
+
+	ret:
+	return err;
 }
 
 

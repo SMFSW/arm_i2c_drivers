@@ -65,8 +65,8 @@ typedef struct _TCS3400_t {
 	uint16_t			HighThreshold;		//!< High Threshold config
 	bool				AIEN;				//!< Sensor ALS (Ambient Light Sensing) interrupts enabled config
 	bool				WEN;				//!< Wait between ALS conversions enabled config
-	uint8_t				Revision_ID;		//!< Revision ID
-	uint8_t				Device_ID;			//!< Chip ID
+	uint8_t				RevID;				//!< Revision ID
+	uint8_t				ChipID;				//!< Chip ID
 	} cfg;
 } TCS3400_t;
 
@@ -91,14 +91,14 @@ FctERR NONNULL__ TCS3400_Init_Sequence(TCS3400_t * const pCpnt);
 ** \param[in] pCpnt - Pointer to TCS3400 component
 ** \return FctERR - error code
 **/
-__INLINE uint32_t NONNULL_INLINE__ TCS3400_Get_Temp(TCS3400_t * const pCpnt) {
+__INLINE uint32_t NONNULL_INLINE__ TCS3400_Get_Temp(const TCS3400_t * const pCpnt) {
 	return pCpnt->Temp; }
 
 /*!\brief Get current Illuminance (in lux)
 ** \param[in] pCpnt - Pointer to TCS3400 component
 ** \return FctERR - error code
 **/
-__INLINE uint32_t NONNULL_INLINE__ TCS3400_Get_Lux(TCS3400_t * const pCpnt) {
+__INLINE uint32_t NONNULL_INLINE__ TCS3400_Get_Lux(const TCS3400_t * const pCpnt) {
 	return pCpnt->Lux; }
 
 

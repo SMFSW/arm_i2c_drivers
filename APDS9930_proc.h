@@ -105,7 +105,7 @@ typedef struct _APDS9930_t {
 	bool						AIEN;				//!< Sensor ALS (Ambient Light Sensing) interrupts enabled config
 	bool						PIEN;				//!< Sensor Proximity interrupts enabled config
 	bool						WEN;				//!< Wait between conversions enabled config
-	uint8_t						Id;					//!< APDS9930 Chip ID
+	uint8_t						ChipID;				//!< Chip ID
 	} cfg;
 } APDS9930_t;
 
@@ -137,7 +137,7 @@ void NONNULL__ APDS9930_Set_LPC(APDS9930_t * const pCpnt);
 ** \param[in] pCpnt - Pointer to APDS9930 component
 ** \return FctERR - error code
 **/
-__INLINE uint32_t NONNULL_INLINE__ APDS9930_Get_Lux(APDS9930_t * const pCpnt) {
+__INLINE uint32_t NONNULL_INLINE__ APDS9930_Get_Lux(const APDS9930_t * const pCpnt) {
 	return pCpnt->Lux; }
 
 

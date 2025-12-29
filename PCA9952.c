@@ -50,29 +50,39 @@ FctERR PCA9952_Init_Single(void) {
 
 FctERR NONNULL__ PCA9952_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	const PCA962x_reg_inc inc_mode = PCA9952[pSlave - PCA9952_hal].cfg.auto_inc & 0x80U;
+	FctERR					err = ERROR_OK;
+	const PCA962x_reg_inc	inc_mode = PCA9952[pSlave - PCA9952_hal].cfg.auto_inc & 0x80U;
 
-	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > PCA9952__IREFALL + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(pSlave))				{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > PCA9952__IREFALL + 1U)	{ err = ERROR_OVERFLOW; }	// More bytes than registers
+	if (err != ERROR_OK)						{ goto ret; }
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr | inc_mode, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 
 FctERR NONNULL__ PCA9952_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	const PCA962x_reg_inc inc_mode = PCA9952[pSlave - PCA9952_hal].cfg.auto_inc & 0x80U;
+	FctERR					err = ERROR_OK;
+	const PCA962x_reg_inc	inc_mode = PCA9952[pSlave - PCA9952_hal].cfg.auto_inc & 0x80U;
 
-	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > PCA9952__EFLAG1 + 1U)		{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(pSlave))				{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > PCA9952__EFLAG1 + 1U)		{ err = ERROR_OVERFLOW; }	// More bytes than registers
+	if (err != ERROR_OK)						{ goto ret; }
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr | inc_mode, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 

@@ -93,7 +93,7 @@ void NONNULL__ $CPNT$_INT_GPIO_Init($CPNT$_t * const pCpnt, GPIO_TypeDef * const
 ** \param[in] pCpnt - Pointer to $CPNT$ component
 ** \return INT pin state value (0: inactive, 1: active)
 **/
-bool NONNULL__ $CPNT$_INT_GPIO_Get($CPNT$_t * const pCpnt);
+bool NONNULL__ $CPNT$_INT_GPIO_Get(const $CPNT$_t * const pCpnt);
 
 
 /*!\brief Reset GPIO pin init for $CPNT$

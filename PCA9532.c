@@ -47,31 +47,41 @@ FctERR PCA9532_Init_Single(void) {
 
 FctERR NONNULL__ PCA9532_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	const PCA95xx_reg_inc inc_mode = PCA9532[pSlave - PCA9532_hal].cfg.auto_inc;
+	FctERR					err = ERROR_OK;
+	const PCA95xx_reg_inc	inc_mode = PCA9532[pSlave - PCA9532_hal].cfg.auto_inc;
 
-	if (!I2C_is_enabled(pSlave))							{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > PCA9532__LS3 + 1U)					{ return ERROR_OVERFLOW; }	// More bytes than registers
-	if ((nb > 1U) && (inc_mode == PCA95xx__AUTO_INC_NONE))	{ return ERROR_NOTAVAIL; }	// Writing more than 1 byte not available in no auto-increment mode
+	if (!I2C_is_enabled(pSlave))							{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > PCA9532__LS3 + 1U)					{ err = ERROR_OVERFLOW; }	// More bytes than registers
+	if ((nb > 1U) && (inc_mode == PCA95xx__AUTO_INC_NONE))	{ err = ERROR_NOTAVAIL; }	// Writing more than 1 byte not available in no auto-increment mode
+	if (err != ERROR_OK)									{ goto ret; }
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr | inc_mode, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 
 FctERR NONNULL__ PCA9532_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	const PCA95xx_reg_inc inc_mode = PCA9532[pSlave - PCA9532_hal].cfg.auto_inc;
+	FctERR					err = ERROR_OK;
+	const PCA95xx_reg_inc	inc_mode = PCA9532[pSlave - PCA9532_hal].cfg.auto_inc;
 
-	if (!I2C_is_enabled(pSlave))							{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > PCA9532__LS3 + 1U)					{ return ERROR_OVERFLOW; }	// More bytes than registers
-	if ((nb > 1U) && (inc_mode == PCA95xx__AUTO_INC_NONE))	{ return ERROR_NOTAVAIL; }	// Writing more than 1 byte not available in no auto-increment mode
+	if (!I2C_is_enabled(pSlave))							{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > PCA9532__LS3 + 1U)					{ err = ERROR_OVERFLOW; }	// More bytes than registers
+	if ((nb > 1U) && (inc_mode == PCA95xx__AUTO_INC_NONE))	{ err = ERROR_NOTAVAIL; }	// Writing more than 1 byte not available in no auto-increment mode
+	if (err != ERROR_OK)									{ goto ret; }
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr | inc_mode, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 

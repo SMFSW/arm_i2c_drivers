@@ -252,7 +252,7 @@ typedef union _uPCF8523_REG__OFFSET {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t OFFSET	:7;		//!< offset value (+63 to -64) MODE = 0: offset step 4.340ppm, MODE = 1: offset step 4.069ppm
-		int8_t MODE		:1;		//!< 0: offset is made once every two hours, 1: offset is made once every minute
+		uint8_t MODE	:1;		//!< 0: offset is made once every two hours, 1: offset is made once every minute
 	} Bits;
 } uPCF8523_REG__OFFSET;
 

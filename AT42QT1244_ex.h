@@ -136,7 +136,7 @@ FctERR NONNULL__ AT42QT1244_Get_Keys(AT42QT1244_t * const pCpnt, uint32_t * Keys
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ AT42QT1244_Get_Key_Data(AT42QT1244_t * const pCpnt, uAT42QT_REG__KEY_DATA * Key_Data, const uint8_t Key_Num) {
-	return AT42QT1244_Read(pCpnt->cfg.slave_inst, (uint8_t *) Key_Data, AT42QT__DATA_KEY_1 + (Key_Num * sizeof(uAT42QT_REG__KEY_DATA)), sizeof(uAT42QT_REG__KEY_DATA)); }
+	return AT42QT1244_Read(pCpnt->cfg.slave_inst, Key_Data->Bytes, AT42QT__DATA_KEY_1 + (Key_Num * sizeof(uAT42QT_REG__KEY_DATA)), sizeof(uAT42QT_REG__KEY_DATA)); }
 
 
 /*!\brief Get status of AT42QT1244 peripheral
@@ -152,7 +152,7 @@ __INLINE FctERR NONNULL_INLINE__ AT42QT1244_Get_Status(AT42QT1244_t * const pCpn
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
 ** \return Calibration status
 **/
-intCPU_t NONNULL__ AT42QT1244_is_Calib_Pending(AT42QT1244_t * const pCpnt);
+bool NONNULL__ AT42QT1244_is_Calib_Pending(AT42QT1244_t * const pCpnt);
 
 
 /*******************/
@@ -173,7 +173,7 @@ void NONNULL__ AT42QT1244_CHANGE_GPIO_Init(AT42QT1244_t * const pCpnt, GPIO_Type
 ** \param[in] pCpnt - Pointer to AT42QT1244 component
 ** \return CHANGE pin state value (0: inactive, 1: active)
 **/
-bool NONNULL__ AT42QT1244_CHANGE_GPIO_Get(AT42QT1244_t * const pCpnt);
+bool NONNULL__ AT42QT1244_CHANGE_GPIO_Get(const AT42QT1244_t * const pCpnt);
 
 
 /*!\brief Reset GPIO pin init for AT42QT1244

@@ -17,7 +17,8 @@ FctERR NONNULL__ I2CMEM_Mass_Erase(I2CMEM_t * const pCpnt)
 {
 	FctERR	err = ERROR_OK;
 	uint8_t	array[I2CMEM_BANK_SIZE];
-	memset(array, I2CMEM_CLR_VAL, sizeof(array));
+
+	UNUSED_RET memset(array, I2CMEM_CLR_VAL, sizeof(array));
 
 	// Choose between bank size and buffer size for iterations (FRAM vs EEPROM)
 	const size_t wr_size = (pCpnt->cfg.buf_size == I2CMEM_WBUF_NONE) ? I2CMEM_BANK_SIZE : pCpnt->cfg.buf_size;

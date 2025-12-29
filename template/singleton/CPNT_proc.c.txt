@@ -24,16 +24,15 @@ $CPNT$_t $CPNT$ = { 0 };
 
 __WEAK FctERR $CPNT$_Init_Sequence(void)
 {
-	FctERR err;
-
 	// get ID & check against values for $CPNT$
-	err = $CPNT$_Get_ChipID(&$CPNT$.cfg.Id);
-	if (err != ERROR_OK)					{ return err; }
-	if ($CPNT$.cfg.Id != $CPNT$_CHIP_ID)	{ return ERROR_COMMON; }	// Unknown device
+	FctERR err = $CPNT$_Get_ChipID(&$CPNT$.cfg.ChipID);
+	if (err != ERROR_OK)						{ goto ret; }
+	if ($CPNT$.cfg.ChipID != $CPNT$_CHIP_ID)	{ err = ERROR_COMMON; goto ret; }	// Unknown device
 
 	$CPNT$.cfg.$CPNT$_param_1 = 1U;
 
-	return ERROR_OK;
+	ret:
+	return err;
 }
 
 

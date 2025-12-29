@@ -49,65 +49,89 @@ FctERR APDS9960_Init_Single(void) {
 
 FctERR NONNULL__ APDS9960_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > APDS9960__AICLEAR + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	FctERR err = ERROR_OK;
+
+	if (!I2C_is_enabled(pSlave))				{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > APDS9960__AICLEAR + 1U)	{ err = ERROR_OVERFLOW; }	// More bytes than registers
+	if (err != ERROR_OK)						{ goto ret; }
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 
 FctERR NONNULL__ APDS9960_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > APDS9960__GFIFO_R + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	FctERR err = ERROR_OK;
+
+	if (!I2C_is_enabled(pSlave))				{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > APDS9960__GFIFO_R + 1U)	{ err = ERROR_OVERFLOW; }	// More bytes than registers
+	if (err != ERROR_OK)						{ goto ret; }
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 
 FctERR NONNULL__ APDS9960_Write_Word(I2C_slave_t * const pSlave, const uint16_t * data, const uint16_t addr)
 {
-	uint8_t	WREG[2];
+	FctERR err = ERROR_FRAMING;
 
-	if (addr % sizeof(uint16_t))	{ return ERROR_FRAMING; }		// Unaligned word access
+	if (isEven(addr))	// Check unaligned word access
+	{
+		const uint8_t WREG[2] = { LOBYTE(*data), HIBYTE(*data) };
 
-	WREG[0] = LOBYTE(*data);
-	WREG[1] = HIBYTE(*data);
-	return APDS9960_Write(pSlave, WREG, addr, 2U);
+		err = APDS9960_Write(pSlave, WREG, addr, 2U);
+	}
+
+	return err;
 }
 
 
 FctERR NONNULL__ APDS9960_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, const uint16_t addr)
 {
-	uint8_t	WREG[2];
-	FctERR	err;
+	FctERR err = ERROR_FRAMING;
 
-	if (addr % sizeof(uint16_t))	{ return ERROR_FRAMING; }		// Unaligned word access
+	if (isEven(addr))	// Check unaligned word access
+	{
+		uint8_t	RREG[2] = { 0 };
 
-	err = APDS9960_Read(pSlave, WREG, addr, 2U);
-	if (err != ERROR_OK)	{ return err; }
+		err = APDS9960_Read(pSlave, RREG, addr, 2U);
+		if (err != ERROR_OK)	{ goto ret; }
 
-	*data = MAKEWORD(WREG[0], WREG[1]);
-	return ERROR_OK;
+		*data = MAKEWORD(RREG[0], RREG[1]);
+	}
+
+	ret:
+	return err;
 }
 
 
 FctERR NONNULL__ APDS9960_Write_Special(I2C_slave_t * const pSlave, const APDS9960_spec_func func)
 {
-	if (func > APDS9960__SF_AICLEAR)	{ return ERROR_VALUE; }		// Unknown special function
+	FctERR err;
+
+	if (func > APDS9960__SF_AICLEAR)	{ err = ERROR_VALUE; goto ret; }	// Unknown special function
 
 	const uint8_t DATA = APDS9960__IFORCE + func;
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Master_Transmit(pSlave->cfg.bus_inst, pSlave->cfg.addr, (uint8_t *) &DATA, 1U, pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 /****************************************************************/

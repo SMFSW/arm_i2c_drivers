@@ -65,7 +65,7 @@ typedef struct _TCS3472_t {
 	uint16_t			HighThreshold;		//!< High Threshold config
 	bool				AIEN;				//!< Sensor ALS (Ambient Light Sensing) interrupts enabled config
 	bool				WEN;				//!< Wait between ALS conversions enabled config
-	uint8_t				ID;					//!< Chip ID
+	uint8_t				ChipID;				//!< Chip ID
 	} cfg;
 } TCS3472_t;
 
@@ -90,14 +90,14 @@ FctERR NONNULL__ TCS3472_Init_Sequence(TCS3472_t * const pCpnt);
 ** \param[in] pCpnt - Pointer to TCS3472 component
 ** \return FctERR - error code
 **/
-__INLINE uint32_t NONNULL_INLINE__ TCS3472_Get_Temp(TCS3472_t * const pCpnt) {
+__INLINE uint32_t NONNULL_INLINE__ TCS3472_Get_Temp(const TCS3472_t * const pCpnt) {
 	return pCpnt->Temp; }
 
 /*!\brief Get current Illuminance (in lux)
 ** \param[in] pCpnt - Pointer to TCS3472 component
 ** \return FctERR - error code
 **/
-__INLINE uint32_t NONNULL_INLINE__ TCS3472_Get_Lux(TCS3472_t * const pCpnt) {
+__INLINE uint32_t NONNULL_INLINE__ TCS3472_Get_Lux(const TCS3472_t * const pCpnt) {
 	return pCpnt->Lux; }
 
 

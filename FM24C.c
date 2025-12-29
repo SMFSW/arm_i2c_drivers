@@ -101,21 +101,24 @@ static FctERR NONNULL__ FM24C_Read_Banked(FM24C_t * const pCpnt, uint8_t * data,
 **/
 static FctERR NONNULL__ FM24C_ReadWrite_Banked(FM24C_t * const pCpnt, uint8_t * const data, const uint16_t addr, const uint16_t nb, const bool wr)
 {
-	if (!I2C_is_enabled(pCpnt->cfg.slave_inst))	{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > FM24C_SIZE)				{ return ERROR_OVERFLOW; }	// More bytes than registers
+	FctERR err = ERROR_OK;
 
-	FctERR			err = ERROR_OK;
-	size_t			data_len = nb;
-	uint16_t		address = addr;
-	uint8_t *		pData = data;
+	if (!I2C_is_enabled(pCpnt->cfg.slave_inst))	{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > FM24C_SIZE)				{ err = ERROR_OVERFLOW; }	// More bytes than registers
+	if (err != ERROR_OK)						{ goto ret; }
 
-	while (data_len)
+	size_t		data_len = nb;
+	uint16_t	address = addr;
+	uint8_t *	pData = data;
+
+	while (data_len != 0)
 	{
 		size_t nb_rw = FM24C_BANK_SIZE - (address % FM24C_BANK_SIZE);	// Compute possible page/bank crossing access
 		nb_rw = min(data_len, nb_rw);									// Choose between page/bank size data length max, or remaining data page/bank length
 
-		if (wr)		{ err = FM24C_Write_Banked(pCpnt, pData, (uint8_t) address, RSHIFT(address, 8U), nb_rw); }	// Write
-		else		{ err = FM24C_Read_Banked(pCpnt, pData, (uint8_t) address, RSHIFT(address, 8U), nb_rw); }	// Read
+		if (wr)					{ err = FM24C_Write_Banked(pCpnt, pData, (uint8_t) address, RSHIFT(address, 8U), nb_rw); }	// Write
+		else					{ err = FM24C_Read_Banked(pCpnt, pData, (uint8_t) address, RSHIFT(address, 8U), nb_rw); }	// Read
+
 		if (err != ERROR_OK)	{ break; }
 
 		data_len -= nb_rw;
@@ -123,6 +126,7 @@ static FctERR NONNULL__ FM24C_ReadWrite_Banked(FM24C_t * const pCpnt, uint8_t * 
 		pData += nb_rw;
 	}
 
+	ret:
 	return err;
 }
 

@@ -46,10 +46,12 @@ FctERR TSL2591_Init_Single(void) {
 
 FctERR NONNULL__ TSL2591_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	uTSL2591_CMD CMD;
+	FctERR			err = ERROR_OK;
+	uTSL2591_CMD	CMD;
 
-	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > TSL2591__PERSIST + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(pSlave))				{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > TSL2591__PERSIST + 1U)	{ err = ERROR_OVERFLOW; }	// More bytes than registers
+	if (err != ERROR_OK)						{ goto ret; }
 
 	CMD.Bits.CMD = 1U;
 	CMD.Bits.TRANSACTION = TSL2591__TRANS_NORMAL_OP;
@@ -57,17 +59,22 @@ FctERR NONNULL__ TSL2591_Write(I2C_slave_t * const pSlave, const uint8_t * data,
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, CMD.Byte, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 
 FctERR NONNULL__ TSL2591_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	uTSL2591_CMD CMD;
+	FctERR			err = ERROR_OK;
+	uTSL2591_CMD	CMD;
 
-	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > TSL2591__C1DATAH + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(pSlave))				{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > TSL2591__C1DATAH + 1U)	{ err = ERROR_OVERFLOW; }	// More bytes than registers
+	if (err != ERROR_OK)						{ goto ret; }
 
 	CMD.Bits.CMD = 1U;
 	CMD.Bits.TRANSACTION = TSL2591__TRANS_NORMAL_OP;
@@ -75,46 +82,57 @@ FctERR NONNULL__ TSL2591_Read(I2C_slave_t * const pSlave, uint8_t * data, const 
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, CMD.Byte, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 
 FctERR NONNULL__ TSL2591_Write_Word(I2C_slave_t * const pSlave, const uint16_t * data, const uint16_t addr)
 {
-	uint8_t	WREG[2];
+	FctERR err = ERROR_FRAMING;
 
-	if (addr % sizeof(uint16_t))	{ return ERROR_FRAMING; }		// Unaligned word access
+	if (isEven(addr))	// Check unaligned word access
+	{
+		const uint8_t WREG[2] = { LOBYTE(*data), HIBYTE(*data) };
 
-	WREG[0] = LOBYTE(*data);
-	WREG[1] = HIBYTE(*data);
-	return TSL2591_Write(pSlave, WREG, addr, 2U);
+		err = TSL2591_Write(pSlave, WREG, addr, 2U);
+	}
+
+	return err;
 }
 
 
 FctERR NONNULL__ TSL2591_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, const uint16_t addr)
 {
-	uint8_t	WREG[2];
-	FctERR	err;
+	FctERR err = ERROR_FRAMING;
 
-	if (addr % sizeof(uint16_t))	{ return ERROR_FRAMING; }		// Unaligned word access
+	if (isEven(addr))	// Check unaligned word access
+	{
+		uint8_t	RREG[2] = { 0 };
 
-	err = TSL2591_Read(pSlave, WREG, addr, 2U);
-	if (err != ERROR_OK)	{ return err; }
+		err = TSL2591_Read(pSlave, RREG, addr, 2U);
+		if (err != ERROR_OK)	{ goto ret; }
 
-	*data = MAKEWORD(WREG[0], WREG[1]);
-	return ERROR_OK;
+		*data = MAKEWORD(RREG[0], RREG[1]);
+	}
+
+	ret:
+	return err;
 }
 
 
 FctERR NONNULL__ TSL2591_Write_Special(I2C_slave_t * const pSlave, const TSL2591_spec_func func)
 {
-	uTSL2591_CMD CMD;
+	FctERR			err;
+	uTSL2591_CMD	CMD;
 
 	if (	(func != TSL2591__SF_FORCE_IT)
 		&&	(func != TSL2591__SF_CLR_ALS_IT)
 		&&	(func != TSL2591__SF_CLR_ALS_AND_NO_PERS)
-		&&	(func != TSL2591__SF_CLR_NO_PERS))			{ return ERROR_VALUE; }		// Unknown special function
+		&&	(func != TSL2591__SF_CLR_NO_PERS))	{ err = ERROR_VALUE; goto ret; }	// Unknown special function
 
 	CMD.Bits.CMD = 1U;
 	CMD.Bits.TRANSACTION = TSL2591__TRANS_SPECIAL_FUNC;
@@ -122,8 +140,11 @@ FctERR NONNULL__ TSL2591_Write_Special(I2C_slave_t * const pSlave, const TSL2591
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Master_Transmit(pSlave->cfg.bus_inst, pSlave->cfg.addr, &CMD.Byte, 1U, pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 

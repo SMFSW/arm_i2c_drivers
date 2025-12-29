@@ -19,12 +19,14 @@ FctERR NONNULL__ MB85RC256V_Mass_Erase(MB85RC256V_t * const pCpnt)
 {
 	FctERR	err = ERROR_OK;
 	uint8_t	bankData[256];
-	memset(&bankData, MB85RC256V_CLR_VAL, sizeof(bankData));
+	const size_t sz_bank = sizeof(bankData);
 
-	for (uintCPU_t i = 0 ; i < (MB85RC256V_SIZE / sizeof(bankData)) ; i++)
+	UNUSED_RET memset(&bankData, MB85RC256V_CLR_VAL, sz_bank);
+
+	for (uintCPU_t i = 0 ; i < (MB85RC256V_SIZE / sz_bank) ; i++)
 	{
 		I2C_Watchdog_Refresh();
-		err = MB85RC256V_Write(pCpnt, bankData, i * sizeof(bankData), sizeof(bankData));
+		err = MB85RC256V_Write(pCpnt, bankData, i * sz_bank, sz_bank);
 		if (err != ERROR_OK) { break; }
 	}
 

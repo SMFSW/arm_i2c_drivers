@@ -18,10 +18,11 @@ static uint8_t BMP180_OSS_time[4] = { 5U, 8U, 14U, 26U };	//!< BMP180 Oversampli
 FctERR NONNULL__ BMP180_Start_Conversion(BMP180_t * const pCpnt, const BMP180_meas meas)
 {
 	uBMP180_REG__MEAS_CTRL	CTRL = { 0 };
-	FctERR					err;
+	FctERR					err = ERROR_OK;
 
 	if (	(meas != BMP180__MEAS_PRESSURE)
-		&&	(meas != BMP180__MEAS_TEMPERATURE))	{ return ERROR_VALUE; }	// Unknown conversion
+		&&	(meas != BMP180__MEAS_TEMPERATURE))	{ err = ERROR_VALUE; }	// Unknown conversion
+	if (err != ERROR_OK)						{ goto ret; }
 
 	CTRL.Bits.SCO = 1U;
 	CTRL.Bits.MEAS_CTRL = meas;
@@ -31,6 +32,7 @@ FctERR NONNULL__ BMP180_Start_Conversion(BMP180_t * const pCpnt, const BMP180_me
 	err = BMP180_Write(pCpnt->cfg.slave_inst, (uint8_t *) &CTRL.Byte, BMP180__CTRL_MEAS, 1U);
 	pCpnt->hStartConversion = HAL_GetTick();
 
+	ret:
 	return err;
 }
 
@@ -41,14 +43,16 @@ FctERR NONNULL__ BMP180_Get_Temperature_Raw(BMP180_t * const pCpnt, int32_t * tp
 	FctERR		err;
 
 	err = BMP180_Start_Conversion(pCpnt, BMP180__MEAS_TEMPERATURE);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	HAL_Delay(5);
 
 	err = BMP180_Read_Word(pCpnt->cfg.slave_inst, &RES, BMP180__OUT_MSB);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	*tp = RES;
+
+	ret:
 	return err;
 }
 
@@ -59,14 +63,16 @@ FctERR NONNULL__ BMP180_Get_Pressure_Raw(BMP180_t * const pCpnt, int32_t * pr)
 	FctERR		err;
 
 	err = BMP180_Start_Conversion(pCpnt, BMP180__MEAS_PRESSURE);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	HAL_Delay(BMP180_OSS_time[pCpnt->cfg.OSS]);
 
 	err = BMP180_Read(pCpnt->cfg.slave_inst, RES, BMP180__OUT_MSB, 3U);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	*pr = (LSHIFT(RES[0], 16U) + LSHIFT(RES[1], 8U) + RES[2]) >> (8U - pCpnt->cfg.OSS);
+
+	ret:
 	return err;
 }
 

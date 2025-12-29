@@ -73,9 +73,8 @@ typedef union _uDRV_REG_MAP {
 **/
 __INLINE FctERR INLINE__ DRV2605L_Vibe(const DRV2605L_go go) {
 	uDRV_REG__GO GO = { 0 };
-
 	GO.Bits.GO = go;
-	return DRV2605L_Write(&GO.Byte, DRV__GO, 1); }
+	return DRV2605L_Write(&GO.Byte, DRV__GO, 1U); }
 
 
 /*!\brief Reset DRV260x chip
@@ -83,9 +82,8 @@ __INLINE FctERR INLINE__ DRV2605L_Vibe(const DRV2605L_go go) {
 **/
 __INLINE FctERR INLINE__ DRV2605L_Reset(void) {
 	uDRV_REG__MODE MODE = { 0 };
-
 	MODE.Bits.DEV_RESET = 1;
-	return DRV2605L_Write(&MODE.Byte, DRV__MODE, 1); }
+	return DRV2605L_Write(&MODE.Byte, DRV__MODE, 1U); }
 
 
 /*!\brief Set haptic actuator type
@@ -150,7 +148,7 @@ FctERR DRV2605L_Set_Waveform(const uint16_t chan, const DRV2605L_eff effect, con
 ** \return FctERR - error code
 **/
 __INLINE FctERR INLINE__ DRV2605L_Set_OverdriveTimeOffset(const uint8_t val) {
-	return DRV2605L_Write((uint8_t *) &val, DRV__OVERDRIVE_TIME_OFFSET, 1); }
+	return DRV2605L_Write(&val, DRV__OVERDRIVE_TIME_OFFSET, 1U); }
 
 /*!\brief Set Sustain time offset
 ** \param[in] val - Sustain time offset value
@@ -158,14 +156,14 @@ __INLINE FctERR INLINE__ DRV2605L_Set_OverdriveTimeOffset(const uint8_t val) {
 ** \return FctERR - error code
 **/
 __INLINE FctERR INLINE__ DRV2605L_Set_SustainTimeOffset(const uint8_t val, const bool pos) {
-	return DRV2605L_Write((uint8_t *) &val, DRV__SUSTAIN_TIME_OFFSET_NEG - pos, 1); }
+	return DRV2605L_Write(&val, DRV__SUSTAIN_TIME_OFFSET_NEG - pos, 1U); }
 
 /*!\brief Set Brake time offset
 ** \param[in] val - Brake time offset value
 ** \return FctERR - error code
 **/
 __INLINE FctERR INLINE__ DRV2605L_Set_BrakeTimeOffset(const uint8_t val) {
-	return DRV2605L_Write((uint8_t *) &val, DRV__BRAKE_TIME_OFFSET, 1); }
+	return DRV2605L_Write(&val, DRV__BRAKE_TIME_OFFSET, 1U); }
 
 
 /*!\brief Set RTP input level
@@ -173,7 +171,7 @@ __INLINE FctERR INLINE__ DRV2605L_Set_BrakeTimeOffset(const uint8_t val) {
 ** \return FctERR - error code
 **/
 __INLINE FctERR INLINE__ DRV2605L_Set_RTP(const uint8_t val) {
-	return DRV2605L_Write((uint8_t *) &val, DRV__RTP_INPUT, 1); }
+	return DRV2605L_Write(&val, DRV__RTP_INPUT, 1U); }
 
 /*!\brief Set RTP format
 ** \param[in] format - 0: Signed, 1: Unsigned
@@ -196,33 +194,33 @@ FctERR DRV2605L_Set_ATVLowPassFilter(const DRV2605L_filter filt);
 
 /*!\brief Set Audio To Vibe min/max input level
 ** \param[in] val - Audio To Vibe Input level value
-** \param[in] max - 0 Min, 1 Max
+** \param[in] maxi - 0 Min, 1 Max
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ DRV2605L_Set_ATVInputLevel_Raw(const uint8_t val, const bool max) {
-	return DRV2605L_Write((uint8_t *) &val, DRV__ATV_MIN_INPUT_LEVEL + max, 1); }
+__INLINE FctERR INLINE__ DRV2605L_Set_ATVInputLevel_Raw(const uint8_t val, const bool maxi) {
+	return DRV2605L_Write(&val, DRV__ATV_MIN_INPUT_LEVEL + maxi, 1U); }
 
 /*!\brief Set Audio To Vibe min/max output drive
 ** \param[in] val - Audio To Vibe Output drive value
-** \param[in] max - 0 Min, 1 Max
+** \param[in] maxi - 0 Min, 1 Max
 ** \return FctERR - error code
 **/
-__INLINE FctERR INLINE__ DRV2605L_Set_ATVOutputDrive_Raw(const uint8_t val, const bool max) {
-	return DRV2605L_Write((uint8_t *) &val, DRV__ATV_MIN_OUTPUT_DRIVE + max, 1); }
+__INLINE FctERR INLINE__ DRV2605L_Set_ATVOutputDrive_Raw(const uint8_t val, const bool maxi) {
+	return DRV2605L_Write(&val, DRV__ATV_MIN_OUTPUT_DRIVE + maxi, 1U); }
 
 /*!\brief Set Audio To Vibe min/max input voltage
 ** \param[in] volt - Audio To Vibe Input voltage value
-** \param[in] max - 0 Min, 1 Max
+** \param[in] maxi - 0 Min, 1 Max
 ** \return FctERR - error code
 **/
-FctERR DRV2605L_Set_ATVInput_Volt(const float volt, const bool max);
+FctERR DRV2605L_Set_ATVInput_Volt(const float volt, const bool maxi);
 
 /*!\brief Set Audio To Vibe min/max Drive
 ** \param[in] perc - Audio To Vibe drive value (in percent)
-** \param[in] max - 0 Min, 1 Max
+** \param[in] maxi - 0 Min, 1 Max
 ** \return FctERR - error code
 **/
-FctERR DRV2605L_Set_ATVDrive_Percent(const uint16_t perc, const bool max);
+FctERR DRV2605L_Set_ATVDrive_Percent(const uint16_t perc, const bool maxi);
 
 
 /*!\brief Set haptic Rated voltage
@@ -230,14 +228,14 @@ FctERR DRV2605L_Set_ATVDrive_Percent(const uint16_t perc, const bool max);
 ** \return FctERR - error code
 **/
 __INLINE FctERR INLINE__ DRV2605L_Set_RatedVoltage(const uint8_t val) {
-	return DRV2605L_Write((uint8_t *) &val, DRV__RATED_VOLTAGE, 1); }
+	return DRV2605L_Write(&val, DRV__RATED_VOLTAGE, 1U); }
 
 /*!\brief Set haptic Overdrive Clamp
 ** \param[in] val - Overdrive clamp value
 ** \return FctERR - error code
 **/
 __INLINE FctERR INLINE__ DRV2605L_Set_ODClamp(const uint8_t val) {
-	return DRV2605L_Write((uint8_t *) &val, DRV__OVERDRIVE_CLAMP_VOLTAGE, 1); }
+	return DRV2605L_Write(&val, DRV__OVERDRIVE_CLAMP_VOLTAGE, 1U); }
 
 
 /*!\brief Set haptic Blanking time
@@ -257,7 +255,7 @@ FctERR DRV2605L_Set_CurrentDissipationTime(const uint16_t time);
 ** \return FctERR - error code
 **/
 __INLINE FctERR INLINE__ DRV2605L_Set_LRAOpenLoopPeriod_Raw(const uint8_t val) {
-	return DRV2605L_Write((uint8_t *) &val, DRV__LRA_OPEN_LOOP_PERIOD, 1); }
+	return DRV2605L_Write(&val, DRV__LRA_OPEN_LOOP_PERIOD, 1U); }
 
 /*!\brief Set haptic LRA Open loop period
 ** \param[in] per - LRA Open loop period (in us)
@@ -272,58 +270,51 @@ FctERR DRV2605L_Set_LRAOpenLoopPeriod_us(const uint16_t per);
 ** \param[in] maxi - 0 Min, 1 Max
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ DRV2605L_Get_ATVInput_Volt(float * volt, const bool maxi);
+FctERR NONNULL__ DRV2605L_Get_ATVInput_Volt(float * const volt, const bool maxi);
 
 /*!\brief Get min/max Audio To Vibe Drive
 ** \param[in,out] perc - pointer to Audio To Vibe Drive result
 ** \param[in] maxi - 0 Min, 1 Max
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ DRV2605L_Get_ATVDrive_Percent(float * perc, const bool maxi);
+FctERR NONNULL__ DRV2605L_Get_ATVDrive_Percent(float * const perc, const bool maxi);
 
 /*!\brief Get haptic Blanking time
 ** \param[in,out] time - pointer to Blanking time value result
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ DRV2605L_Get_BlankingTime(uint16_t * time);
+FctERR NONNULL__ DRV2605L_Get_BlankingTime(uint16_t * const time);
 
 /*!\brief Get haptic Current dissipation time
 ** \param[in,out] time - pointer to Blanking time value result
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ DRV2605L_Get_CurrentDissipationTime(uint16_t * time);
+FctERR NONNULL__ DRV2605L_Get_CurrentDissipationTime(uint16_t * const time);
 
 /*!\brief Get haptic Voltage
 ** \param[in,out] vbat - pointer to Battery voltage result
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ DRV2605L_Get_Voltage(uint16_t * vbat);
+FctERR NONNULL__ DRV2605L_Get_Voltage(uint16_t * const vbat);
 
 /*!\brief Get haptic LRA Open loop period
 ** \param[in,out] per - pointer to LRA open loop period result
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ DRV2605L_Get_LRAOpenLoopPeriod(uint16_t * per);
+FctERR NONNULL__ DRV2605L_Get_LRAOpenLoopPeriod(uint16_t * const per);
 
 /*!\brief Get haptic LRA Resonance period
 ** \param[in,out] per - pointer to LRA Resonance period result
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ DRV2605L_Get_ResonancePeriod(uint16_t * per);
+FctERR NONNULL__ DRV2605L_Get_ResonancePeriod(uint16_t * const per);
 
 
 /*!\brief Get DRV260x chip ID
 ** \param[in,out] id - pointer to chip ID result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ DRV2605L_Get_ChipID(uint8_t * id) {
-	FctERR	err;
-	uint8_t	ID;
-
-	err = DRV2605L_Read(&ID, DRV__STATUS, 1);
-	if (err != ERROR_OK)	{ return err; }
-	*id = ID & 0xE0;	// Keep only 3 msb
-	return err; }
+FctERR NONNULL__ DRV2605L_Get_ChipID(uint8_t * const id);
 
 
 /*******************/

@@ -47,7 +47,7 @@ __INLINE FctERR NONNULL_INLINE__ TMP1075_Read_Config(TMP1075_t * const pCpnt, ui
 ** \param[in,out] temp - pointer to Temperature value to read to
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ TMP1075_Get_Temperature_Raw(TMP1075_t * const pCpnt, int16_t * temp);
+FctERR NONNULL__ TMP1075_Get_Temperature_Raw(TMP1075_t * const pCpnt, int16_t * const temp);
 
 /*!\brief Start TMP1075 single conversion
 ** \note Stops continuous conversions automatically
@@ -97,7 +97,7 @@ FctERR NONNULL__ TMP1075_Set_AlertNbFaults(TMP1075_t * const pCpnt, const TMP107
 ** \param[in,out] id - pointer to chip ID result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ TMP1075N_Get_ChipID(TMP1075_t * const pCpnt, uint16_t * id) {
+__INLINE FctERR NONNULL_INLINE__ TMP1075N_Get_ChipID(TMP1075_t * const pCpnt, uint16_t * const id) {
 	return TMP1075_Read_Word(pCpnt->cfg.slave_inst, id, TMP1075__DIEID); }
 
 
@@ -119,7 +119,7 @@ void NONNULL__ TMP1075_INT_GPIO_Init(TMP1075_t * const pCpnt, GPIO_TypeDef * con
 ** \param[in] pCpnt - Pointer to TMP1075 component
 ** \return INT pin state value (0: inactive, 1: active)
 **/
-bool NONNULL__ TMP1075_INT_GPIO_Get(TMP1075_t * const pCpnt);
+bool NONNULL__ TMP1075_INT_GPIO_Get(const TMP1075_t * const pCpnt);
 
 
 /****************************************************************/

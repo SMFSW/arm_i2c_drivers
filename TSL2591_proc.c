@@ -25,7 +25,12 @@ __WEAK FctERR NONNULL__ TSL2591_Init_Sequence(TSL2591_t * const pCpnt)
 {
 	uTSL2591_REG__ENABLE	EN = { 0 };
 	uTSL2591_REG__CONFIG	CFG = { 0 };
-	FctERR					err = ERROR_OK;
+	FctERR					err;
+
+	// get ID & check against values for TSL2591
+	err = TSL2591_Get_ChipID(pCpnt, &pCpnt->cfg.ChipID);
+	if (err != ERROR_OK)						{ goto ret; }
+	if (pCpnt->cfg.ChipID != TSL2591_CHIP_ID)	{ err = ERROR_COMMON; goto ret; }	// Unknown device
 
 	pCpnt->cfg.Gain = TSL2591__MEDIUM_GAIN;
 	pCpnt->cfg.Integ = TSL2591__INTEG_100MS;
@@ -33,28 +38,26 @@ __WEAK FctERR NONNULL__ TSL2591_Init_Sequence(TSL2591_t * const pCpnt)
 	pCpnt->cfg.HighThreshold = 0x8FFU;
 	pCpnt->cfg.AIEN = true;
 
-	// get ID & check against values for TSL2591
-	err = TSL2591_Get_ChipID(pCpnt, &pCpnt->cfg.ID);
-	if (err != ERROR_OK)					{ return err; }
-	if (pCpnt->cfg.ID != TSL2591_CHIP_ID)	{ return ERROR_COMMON; }	// Unknown device
-
 	EN.Bits.PON = true;		// Turn ON Osc
 	err = TSL2591_Write_En(pCpnt, EN.Byte);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	CFG.Bits.AGAIN = pCpnt->cfg.Gain;
 	CFG.Bits.ATIME = pCpnt->cfg.Integ;
 	err = TSL2591_Write_Cfg(pCpnt, CFG.Byte);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	TSL2591_Set_CPL(pCpnt);
 
 	err = TSL2591_Set_AIT(pCpnt, pCpnt->cfg.LowThreshold, pCpnt->cfg.HighThreshold);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	EN.Bits.AEN = pCpnt->cfg.AIEN;	// Turn ON ALS following cfg
 	EN.Bits.AIEN = pCpnt->cfg.AIEN;	// Turn ON ALS interrupts following cfg
-	return TSL2591_Write_En(pCpnt, EN.Byte);
+	err = TSL2591_Write_En(pCpnt, EN.Byte);
+
+	ret:
+	return err;
 }
 
 
@@ -63,6 +66,12 @@ __WEAK FctERR NONNULL__ TSL2591_Init_Sequence(TSL2591_t * const pCpnt)
 
 void NONNULL__ TSL2591_Set_CPL(TSL2591_t * const pCpnt)
 {
+#if TSL2591_GLASS_TRANSMISSIVITY == 0
+#error "ERROR_MATH: TSL2591_GLASS_TRANSMISSIVITY [1U-100U]%"
+#endif
+#if TSL2591_DEVICE_FACTOR == 0
+#error "ERROR_MATH: TSL2591_DEVICE_FACTOR shall be different than 0"
+#endif
 	// GA = 1 / Transmitivity -> e.g., for 5% transmissive glass, GA = 1 / 0.05
 	const float	GA = 100.0f / TSL2591_GLASS_TRANSMISSIVITY;
 
@@ -81,40 +90,44 @@ void NONNULL__ TSL2591_Set_CPL(TSL2591_t * const pCpnt)
 **/
 static NONNULL__ FctERR calculateLux(TSL2591_t * const pCpnt, const uint16_t full, const uint16_t ir)
 {
-	const float	B = 1.64f, C = 0.59f, D = 0.86f, DF = 408.0f;
+	FctERR err = ERROR_OK;
+
 	// SATURATION = 1024 * (256 - ATIME_ms) if ATIME_ms > 172ms
-	uint16_t	sat = (TSL2591_integ_tab[pCpnt->cfg.Integ] > 172U) ? 65535U : 36863U;
+	uint16_t sat = (TSL2591_integ_tab[pCpnt->cfg.Integ] > 172U) ? 65535U : 36863U;
 
 	// Check for saturation
 	if ((full >= sat) || (ir >= sat))
 	{
 		pCpnt->Saturation = true;
-		return ERROR_OVERFLOW;	// Signal an overflow
+		err = ERROR_OVERFLOW;	// Signal an overflow
 	}
-	else { pCpnt->Saturation = false; }
+	else
+	{
+		pCpnt->Saturation = false;
 
-	// Check for ripple saturation
-	sat *= 0.75f;
-	if ((full >= sat) || (ir >= sat))	{ pCpnt->SaturationRipple = true; }
-	else								{ pCpnt->SaturationRipple = false; }
+		// Check for ripple saturation
+		sat = (uint16_t) (sat * 0.75f);
+		pCpnt->SaturationRipple = binEval((full >= sat) || (ir >= sat));
 
-	float CPL = (TSL2591_integ_tab[pCpnt->cfg.Integ] * TSL2591_gain_tab[pCpnt->cfg.Gain]) / DF;
+		const float	B = 1.64f, C = 0.59f, D = 0.86f, DF = 408.0f;
 
-	float IAC1 = full - (B * ir);			// IAC1 = (C0DATA - (B * C1DATA))
-	float IAC2 = (C * full) - (D * ir);		// IAC2 = (C * C0DATA) - (D * C1DATA)
-	float IAC = max(0, max(IAC1, IAC2));	// IAC = MAX(IAC1, IAC2, 0)
+		float CPL = (TSL2591_integ_tab[pCpnt->cfg.Integ] * TSL2591_gain_tab[pCpnt->cfg.Gain]) / DF;
+		float IAC1 = full - (B * ir);					// IAC1 = (C0DATA - (B * C1DATA))
+		float IAC2 = (C * full) - (D * ir);				// IAC2 = (C * C0DATA) - (D * C1DATA)
+		float IAC = max(0, max(IAC1, IAC2));			// IAC = MAX(IAC1, IAC2, 0)
 
-	pCpnt->Lux = IAC / CPL;					// Lux = IAC / CPL
-	pCpnt->IRF = IAC / full;				// IRF = IAC / C0DATA (Infra Red Factor)
+		pCpnt->Lux = (CPL == 0.0f) ? 0.0f : IAC / CPL;	// Lux = IAC / CPL
+		pCpnt->IRF = (full == 0) ? 0.0f : IAC / full;	// IRF = IAC / C0DATA (Infra Red Factor)
+	}
 
-	return ERROR_OK;
+	return err;
 }
 
 
 __WEAK FctERR NONNULL__ TSL2591_handler(TSL2591_t * const pCpnt)
 {
-	uint8_t					DATA[5];
-	uTSL2591_REG__STATUS *	ST = (uTSL2591_REG__STATUS *) DATA;
+	uint8_t								DATA[5];
+	const uTSL2591_REG__STATUS * const	ST = (const uTSL2591_REG__STATUS *) DATA;
 
 	FctERR err = TSL2591_Read(pCpnt->cfg.slave_inst, DATA, TSL2591__STATUS, sizeof(DATA));
 	if (err != ERROR_OK)	{ goto ret; }
@@ -127,8 +140,9 @@ __WEAK FctERR NONNULL__ TSL2591_handler(TSL2591_t * const pCpnt)
 
 		#if defined(VERBOSE)
 			const uint8_t idx = pCpnt - TSL2591;
-			if (err == ERROR_OVERFLOW)	{ printf("TSL2591 id%d: Sensor saturation reached!\r\n", idx); }
-			else						{ printf("TSL2591 id%d: Full %d IR %d Lux: %lul\r\n", idx, pCpnt->Full, pCpnt->IR, pCpnt->Lux); }
+			if (err == ERROR_OVERFLOW)	{ UNUSED_RET printf("TSL2591 id%d: Sensor saturation reached!\r\n", idx); }
+			else						{ UNUSED_RET printf("TSL2591 id%d: Full %d IR %d Lux: %lul\r\n", idx,
+															pCpnt->Full, pCpnt->IR, pCpnt->Lux); }
 		#endif
 	}
 

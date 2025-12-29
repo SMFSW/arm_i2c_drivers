@@ -75,9 +75,9 @@ typedef struct _MTCH6102_t {
 	uint8_t				FW_Minor;		//!< MTCH6102 Minor FW version
 	uint16_t			APP_ID;			//!< MTCH6102 App Identifier
 	int16_t				Rotation;		//!< Referential rotation angle (in degrees, counter clockwise): only used when Centered set to true
-	bool				Centered	:1;	//!< Centering 0,0 point on the middle of the pad (allowing it's rotation afterwards using MTCH6102_rotate)
-	bool				RxDownwards	:1;	//!< Set to true if Rx lines are designed to go downwards (as per datasheet guidelines and demo board routing)
-	bool				TxDownwards	:1;	//!< Set to true if Tx lines are designed to go downwards (contrary to datasheet guidelines and demo board routing)
+	uint8_t				Centered	:1;	//!< Centering 0,0 point on the middle of the pad (allowing it's rotation afterwards using MTCH6102_rotate)
+	uint8_t				RxDownwards	:1;	//!< Set to true if Rx lines are designed to go downwards (as per datasheet guidelines and demo board routing)
+	uint8_t				TxDownwards	:1;	//!< Set to true if Tx lines are designed to go downwards (contrary to datasheet guidelines and demo board routing)
 	} cfg;
 } MTCH6102_t;
 
@@ -165,9 +165,8 @@ FctERR NONNULL__ MTCH6102_Get_MFG_Results(MTCH6102_t * const pCpnt, uint32_t * c
 ** \warning You would have to use MTCH6102_Set_RxTx_Direction to change behavior (complementing default demo board design to complement Tx to a Cartesian reference for example)
 ** \param[in] pCpnt - Pointer to MTCH6102 component
 ** \param[in] dat - Raw touch datas
-** \return Decoded touch datas
 **/
-FctERR NONNULL__ MTCH6102_decode_touch_datas(MTCH6102_t * const pCpnt, const MTCH6102_raw_gest * const dat);
+void NONNULL__ MTCH6102_decode_touch_datas(MTCH6102_t * const pCpnt, const MTCH6102_raw_gest * const dat);
 
 
 /*!\brief Get gesture string from gesture data

@@ -72,10 +72,7 @@ FctERR NONNULL__ PCA9685_Init_Sequence(PCA9685_t * const pCpnt);
 ** \param[in] freq - External clock frequency in Hz
 ** \return FctERR - ErrorCode
 **/
-__INLINE FctERR NONNULL_INLINE__ PCA9685_Set_Clock_Freq(PCA9685_t * const pCpnt, const uint32_t freq) {
-	if (freq > PCA9685_MAX_CLOCK_FREQ)	{ return ERROR_VALUE; }
-	pCpnt->cfg.Clock = freq;
-	return ERROR_OK; }
+FctERR NONNULL__ PCA9685_Set_Clock_Freq(PCA9685_t * const pCpnt, const uint32_t freq);
 
 
 /*!\brief Gets external clock frequency

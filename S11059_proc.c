@@ -38,16 +38,18 @@ __WEAK FctERR NONNULL__ S11059_Init_Sequence(S11059_t * const pCpnt)
 	CTL.Bits.INTEG_PRESCL = pCpnt->cfg.IntegrationPrescaler;
 
 	err = S11059_Write_Ctl(pCpnt->cfg.slave_inst, CTL.Byte);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	pCpnt->cfg.FullIntegrationTime = S11059_Get_Full_Integration_Time(pCpnt->cfg.IntegrationMode, pCpnt->cfg.IntegrationPrescaler, pCpnt->cfg.IntegrationTimeMult);
 
 	CTL.Bits.ADC_RESET = pCpnt->cfg.ADCMode;
+
 	err = S11059_Write_Ctl(pCpnt->cfg.slave_inst, CTL.Byte);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	pCpnt->hStartConversion = HAL_GetTick();
 
+	ret:
 	return err;
 }
 
@@ -57,13 +59,19 @@ __WEAK FctERR NONNULL__ S11059_Init_Sequence(S11059_t * const pCpnt)
 
 uint32_t S11059_Get_Full_Integration_Time(const S11059_integ mode, const S11059_prescaler prescaler, const uint16_t mult)
 {
-	if (mode > S11059__FIXED_PERIOD_INTEGRATION)	{ return ERROR_VALUE; }
-	if (prescaler > S11059__INTEG_179_2MS)			{ return ERROR_VALUE; }
+	float t = 0.0f;
 
-	float		t = S11059_Integ_tab[prescaler] * 4U;		// Prescaler multiplied by 4 channels
-	uint16_t	m = (!mult) ? 1U : mult;
+	if (	(mode <= S11059__MANUAL_INTEGRATION)
+		&&	(prescaler <= S11059__INTEG_179_2MS))
+	{
+		t = S11059_Integ_tab[prescaler] * 4.0f;		// Prescaler multiplied by 4 channels
 
-	if (mode == S11059__MANUAL_INTEGRATION)	{ t *= 2U * m; }
+		if (mode == S11059__MANUAL_INTEGRATION)
+		{
+			const uint16_t m = (mult == 0) ? 1U : mult;
+			t *= (float) (2U * m);
+		}
+	}
 
 	return (uint32_t) t;
 }
@@ -88,7 +96,7 @@ __WEAK FctERR NONNULL__ S11059_handler(S11059_t * const pCpnt)
 
 		#if defined(VERBOSE)
 			const uint8_t idx = pCpnt - S11059;
-			printf("S11059 id%d: R%d G%d B%d IR%d\r\n", idx, pCpnt->Red, pCpnt->Green, pCpnt->Blue, pCpnt->IR);
+			UNUSED_RET printf("S11059 id%d: R%d G%d B%d IR%d\r\n", idx, pCpnt->Red, pCpnt->Green, pCpnt->Blue, pCpnt->IR);
 		#endif
 	}
 

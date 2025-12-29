@@ -61,7 +61,7 @@ FctERR NONNULL__ PCA9685_CalcVal_NoDelay(uint8_t val[4], const uint16_t duty);
 ** \param[in] freq - Outputs frequency in Hz
 ** \return FctERR - error code
 **/
-FctERR NONNULL__ PCA9685_Freq_To_Byte(PCA9685_t * const pCpnt, uint8_t * const byte, const uint16_t freq);
+FctERR NONNULL__ PCA9685_Freq_To_Byte(const PCA9685_t * const pCpnt, uint8_t * const byte, const uint16_t freq);
 
 /*!\brief Convert Prescaler byte register to Frequency (in Hz)
 ** \param[in] pCpnt - Pointer to PCA9685 component

@@ -21,12 +21,14 @@ FctERR NONNULL__ FM24C_Mass_Erase(FM24C_t * const pCpnt)
 {
 	FctERR	err = ERROR_OK;
 	uint8_t	array[FM24C_BANK_SIZE];
-	memset(array, FM24C_CLR_VAL, sizeof(array));
+	const size_t sz_array = sizeof(array);
 
-	for (uintCPU_t i = 0 ; i < (FM24C_SIZE / sizeof(array)) ; i++)
+	UNUSED_RET memset(array, FM24C_CLR_VAL, sz_array);
+
+	for (uintCPU_t i = 0 ; i < (FM24C_SIZE / sz_array) ; i++)
 	{
 		I2C_Watchdog_Refresh();
-		err = FM24C_Write(pCpnt, array, i * sizeof(array), sizeof(array));
+		err = FM24C_Write(pCpnt, array, i * sz_array, sz_array);
 		if (err != ERROR_OK) { break; }
 	}
 

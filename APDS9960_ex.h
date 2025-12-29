@@ -20,11 +20,6 @@
 
 
 // *****************************************************************************
-// Section: Constants
-// *****************************************************************************
-
-
-// *****************************************************************************
 // Section: Types
 // *****************************************************************************
 /*!\enum _APDS9960_chan
@@ -113,7 +108,7 @@ typedef union _uAPDS9960_REG_MAP {
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ APDS9960_Write_En(APDS9960_t * const pCpnt, const uint8_t en) {
-	return APDS9960_Write(pCpnt->cfg.slave_inst, (uint8_t *) &en, APDS9960__ENABLE, 1U); }
+	return APDS9960_Write(pCpnt->cfg.slave_inst, &en, APDS9960__ENABLE, 1U); }
 
 
 /*!\brief Write APDS9960 Config1
@@ -122,7 +117,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9960_Write_En(APDS9960_t * const pCpnt, con
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ APDS9960_Write_Cfg1(APDS9960_t * const pCpnt, const uint8_t cfg1) {
-	uAPDS9960_REG__CONFIG1	CFG1 = { .Byte = (cfg1 & 0x02) | 0x60 };	// Mask WLONG & Set WRITE1 bits to 1
+	const uAPDS9960_REG__CONFIG1 CFG1 = { .Byte = (cfg1 & 0x02U) | 0x60U };	// Mask WLONG & Set WRITE1 bits to 1
 	return APDS9960_Write(pCpnt->cfg.slave_inst, &CFG1.Byte, APDS9960__CONFIG1, 1U); }
 
 /*!\brief Write APDS9960 Config2
@@ -131,7 +126,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9960_Write_Cfg1(APDS9960_t * const pCpnt, c
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ APDS9960_Write_Cfg2(APDS9960_t * const pCpnt, const uint8_t cfg2) {
-	uAPDS9960_REG__CONFIG2	CFG2 = { .Byte = (cfg2 & 0xF0) | 0x01 };	// Mask used bits & Set WRITE1 bit to 1
+	const uAPDS9960_REG__CONFIG2 CFG2 = { .Byte = (cfg2 & 0xF0U) | 0x01U };	// Mask used bits & Set WRITE1 bit to 1
 	return APDS9960_Write(pCpnt->cfg.slave_inst, &CFG2.Byte, APDS9960__CONFIG2, 1U); }
 
 
@@ -200,7 +195,7 @@ FctERR NONNULL__ APDS9960_Set_GEN(APDS9960_t * const pCpnt, const bool en);
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ APDS9960_Set_AILT(APDS9960_t * const pCpnt, const uint16_t thr) {
-	return APDS9960_Write_Word(pCpnt->cfg.slave_inst, (uint16_t *) &thr, APDS9960__AILTL); }
+	return APDS9960_Write_Word(pCpnt->cfg.slave_inst, &thr, APDS9960__AILTL); }
 
 /*!\brief ALS interrupt high threshold configuration
 ** \param[in] pCpnt - Pointer to APDS9960 component
@@ -208,7 +203,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9960_Set_AILT(APDS9960_t * const pCpnt, con
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ APDS9960_Set_AIHT(APDS9960_t * const pCpnt, const uint16_t thr) {
-	return APDS9960_Write_Word(pCpnt->cfg.slave_inst, (uint16_t *) &thr, APDS9960__AIHTL); }
+	return APDS9960_Write_Word(pCpnt->cfg.slave_inst, &thr, APDS9960__AIHTL); }
 
 /*!\brief ALS interrupt thresholds configuration
 ** \param[in] pCpnt - Pointer to APDS9960 component
@@ -217,7 +212,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9960_Set_AIHT(APDS9960_t * const pCpnt, con
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ APDS9960_Set_AIT(APDS9960_t * const pCpnt, const uint16_t lthr, const uint16_t hthr) {
-	uint8_t DAT[4] = { LOBYTE(hthr), HIBYTE(hthr), LOBYTE(lthr), HIBYTE(lthr) };
+	const uint8_t DAT[4] = { LOBYTE(hthr), HIBYTE(hthr), LOBYTE(lthr), HIBYTE(lthr) };
 	return APDS9960_Write(pCpnt->cfg.slave_inst, DAT, APDS9960__AILTL, sizeof(DAT)); }
 
 
@@ -227,7 +222,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9960_Set_AIT(APDS9960_t * const pCpnt, cons
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ APDS9960_Set_PILT(APDS9960_t * const pCpnt, const uint8_t thr) {
-	return APDS9960_Write(pCpnt->cfg.slave_inst, (uint8_t *) &thr, APDS9960__PILT, 1); }
+	return APDS9960_Write(pCpnt->cfg.slave_inst, &thr, APDS9960__PILT, 1U); }
 
 /*!\brief Proximity interrupt high threshold configuration
 ** \param[in] pCpnt - Pointer to APDS9960 component
@@ -235,7 +230,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9960_Set_PILT(APDS9960_t * const pCpnt, con
 ** \return FctERR - error code
 **/
 __INLINE FctERR NONNULL_INLINE__ APDS9960_Set_PIHT(APDS9960_t * const pCpnt, const uint8_t thr) {
-	return APDS9960_Write(pCpnt->cfg.slave_inst, (uint8_t *) &thr, APDS9960__PIHT, 1); }
+	return APDS9960_Write(pCpnt->cfg.slave_inst, &thr, APDS9960__PIHT, 1U); }
 
 /*!\brief Proximity interrupt thresholds configuration
 ** \param[in] pCpnt - Pointer to APDS9960 component
@@ -358,8 +353,8 @@ __INLINE FctERR NONNULL_INLINE__ APDS9960_SF_Clear_ALS_PROX_IT(APDS9960_t * cons
 ** \param[in,out] id - pointer to chip ID result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ APDS9960_Get_ChipID(APDS9960_t * const pCpnt, uint8_t * id) {
-	return APDS9960_Read(pCpnt->cfg.slave_inst, id, APDS9960__ID, 1); }
+__INLINE FctERR NONNULL_INLINE__ APDS9960_Get_ChipID(APDS9960_t * const pCpnt, uint8_t * const id) {
+	return APDS9960_Read(pCpnt->cfg.slave_inst, id, APDS9960__ID, 1U); }
 
 
 /*!\brief Get Clear conversion
@@ -367,7 +362,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9960_Get_ChipID(APDS9960_t * const pCpnt, u
 ** \param[in,out] clear - pointer to Clear conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ APDS9960_Get_Clear(APDS9960_t * const pCpnt, uint16_t * clear) {
+__INLINE FctERR NONNULL_INLINE__ APDS9960_Get_Clear(APDS9960_t * const pCpnt, uint16_t * const clear) {
 	return APDS9960_Read_Word(pCpnt->cfg.slave_inst, clear, APDS9960__CDATAL); }
 
 /*!\brief Get Red conversion
@@ -375,7 +370,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9960_Get_Clear(APDS9960_t * const pCpnt, ui
 ** \param[in,out] red - pointer to Red conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ APDS9960_Get_Red(APDS9960_t * const pCpnt, uint16_t * red) {
+__INLINE FctERR NONNULL_INLINE__ APDS9960_Get_Red(APDS9960_t * const pCpnt, uint16_t * const red) {
 	return APDS9960_Read_Word(pCpnt->cfg.slave_inst, red, APDS9960__RDATAL); }
 
 /*!\brief Get Green conversion
@@ -383,7 +378,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9960_Get_Red(APDS9960_t * const pCpnt, uint
 ** \param[in,out] green - pointer to Green conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ APDS9960_Get_Green(APDS9960_t * const pCpnt, uint16_t * green) {
+__INLINE FctERR NONNULL_INLINE__ APDS9960_Get_Green(APDS9960_t * const pCpnt, uint16_t * const green) {
 	return APDS9960_Read_Word(pCpnt->cfg.slave_inst, green, APDS9960__GDATAL); }
 
 /*!\brief Get Blue conversion
@@ -391,7 +386,7 @@ __INLINE FctERR NONNULL_INLINE__ APDS9960_Get_Green(APDS9960_t * const pCpnt, ui
 ** \param[in,out] blue - pointer to blue conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ APDS9960_Get_Blue(APDS9960_t * const pCpnt, uint16_t * blue) {
+__INLINE FctERR NONNULL_INLINE__ APDS9960_Get_Blue(APDS9960_t * const pCpnt, uint16_t * const blue) {
 	return APDS9960_Read_Word(pCpnt->cfg.slave_inst, blue, APDS9960__BDATAL); }
 
 /*!\brief Get Proximity conversion
@@ -399,8 +394,8 @@ __INLINE FctERR NONNULL_INLINE__ APDS9960_Get_Blue(APDS9960_t * const pCpnt, uin
 ** \param[in,out] prox - pointer to Prox conversion result
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ APDS9960_Get_Prox(APDS9960_t * const pCpnt, uint8_t * prox) {
-	return APDS9960_Read(pCpnt->cfg.slave_inst, prox, APDS9960__PDATA, 1); }
+__INLINE FctERR NONNULL_INLINE__ APDS9960_Get_Prox(APDS9960_t * const pCpnt, uint8_t * const prox) {
+	return APDS9960_Read(pCpnt->cfg.slave_inst, prox, APDS9960__PDATA, 1U); }
 
 
 /*******************/
@@ -421,7 +416,7 @@ void NONNULL__ APDS9960_INT_GPIO_Init(APDS9960_t * const pCpnt, GPIO_TypeDef * c
 ** \param[in] pCpnt - Pointer to APDS9960 component
 ** \return INT pin state value (0: inactive, 1: active)
 **/
-bool NONNULL__ APDS9960_INT_GPIO_Get(APDS9960_t * const pCpnt);
+bool NONNULL__ APDS9960_INT_GPIO_Get(const APDS9960_t * const pCpnt);
 
 
 /****************************************************************/

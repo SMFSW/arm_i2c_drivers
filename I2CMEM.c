@@ -151,10 +151,12 @@ static FctERR NONNULL__ I2CMEM_Read_Page(I2CMEM_t * const pCpnt, uint8_t * data,
 **/
 static FctERR NONNULL__ I2CMEM_ReadWrite_Pages(I2CMEM_t * const pCpnt, uint8_t * const data, const uint16_t addr, const uint16_t nb, const bool wr)
 {
-	if (!I2C_is_enabled(pCpnt->cfg.slave_inst))	{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > pCpnt->cfg.chip_size)		{ return ERROR_OVERFLOW; }	// More bytes than registers
+	FctERR err = ERROR_OK;
 
-	FctERR		err = ERROR_OK;
+	if (!I2C_is_enabled(pCpnt->cfg.slave_inst))	{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > pCpnt->cfg.chip_size)		{ err = ERROR_OVERFLOW; }	// More bytes than registers
+	if (err != ERROR_OK)						{ goto ret; }
+
 	size_t		data_len = nb;
 	uint16_t	address = addr;
 	uint8_t *	pData = data;
@@ -164,13 +166,14 @@ static FctERR NONNULL__ I2CMEM_ReadWrite_Pages(I2CMEM_t * const pCpnt, uint8_t *
 	else if (pCpnt->cfg.slave_inst->cfg.mem_size == I2C_16B_REG)	{ page_size = pCpnt->cfg.chip_size; }
 	else															{ page_size = I2CMEM_BANK_SIZE; }
 
-	while (data_len)
+	while (data_len != 0)
 	{
 		size_t nb_rw = page_size - (address % page_size);	// Compute possible page crossing access
 		nb_rw = min(data_len, nb_rw);						// Choose between remaining data length or fitting page boundaries length
 
-		if (wr)		{ err = I2CMEM_Write_Page(pCpnt, pData, address, nb_rw); }	// Write
-		else		{ err = I2CMEM_Read_Page(pCpnt, pData, address, nb_rw); }	// Read
+		if (wr)					{ err = I2CMEM_Write_Page(pCpnt, pData, address, nb_rw); }	// Write
+		else					{ err = I2CMEM_Read_Page(pCpnt, pData, address, nb_rw); }	// Read
+
 		if (err != ERROR_OK)	{ break; }
 
 		data_len -= nb_rw;
@@ -178,6 +181,7 @@ static FctERR NONNULL__ I2CMEM_ReadWrite_Pages(I2CMEM_t * const pCpnt, uint8_t *
 		pData += nb_rw;
 	}
 
+	ret:
 	return err;
 }
 

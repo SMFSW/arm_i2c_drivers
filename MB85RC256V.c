@@ -52,42 +52,57 @@ FctERR MB85RC256V_Init_Single(void) {
 
 FctERR NONNULL__ MB85RC256V_Write(MB85RC256V_t * const pCpnt, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
+	FctERR				err = ERROR_OK;
 	I2C_slave_t * const pSlave = pCpnt->cfg.slave_inst;
 
-	if (!I2C_is_enabled(pSlave))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > MB85RC256V_SIZE)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(pSlave))		{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > MB85RC256V_SIZE)	{ err = ERROR_OVERFLOW; }	// More bytes than registers
+	if (err != ERROR_OK)				{ goto ret; }
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 
 FctERR NONNULL__ MB85RC256V_Read(MB85RC256V_t * const pCpnt, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
+	FctERR				err = ERROR_OK;
 	I2C_slave_t * const pSlave = pCpnt->cfg.slave_inst;
 
-	if (!I2C_is_enabled(pSlave))		{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > MB85RC256V_SIZE)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(pSlave))		{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > MB85RC256V_SIZE)	{ err = ERROR_OVERFLOW; }	// More bytes than registers
+	if (err != ERROR_OK)				{ goto ret; }
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 
 FctERR NONNULL__ MB85RC256V_Read_ID(MB85RC256V_t * const pCpnt, uint8_t * data)
 {
+	FctERR				err = ERROR_OK;
 	I2C_slave_t * const pSlave = pCpnt->cfg.slave_inst;
 
-	if (!I2C_is_enabled(pSlave))		{ return ERROR_DISABLED; }	// Peripheral disabled
+	if (!I2C_is_enabled(pSlave))	{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if (err != ERROR_OK)			{ goto ret; }
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, 0xF8, pSlave->cfg.addr, I2C_MEMADD_SIZE_8BIT, data, 3U, pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 /****************************************************************/

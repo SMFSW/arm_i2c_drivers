@@ -30,22 +30,25 @@ __WEAK FctERR NONNULL__ TMP1075_Init_Sequence(TMP1075_t * const pCpnt)
 
 	// get CFGR word to check if TMP1075 or TMP1075N
 	err = TMP1075_Read_Word(pCpnt->cfg.slave_inst, &CFG.Word, TMP1075__CFGR);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	if (CFG.Bits.FFh != TMP1075_CFGR_7_0)	{ pCpnt->cfg.TMP1075N = true; }	// Set to TMP1075N
 	pCpnt->cfg.Rate = CFG.Bits.R;
 
 	if (pCpnt->cfg.TMP1075N)
 	{
-		err = TMP1075N_Get_ChipID(pCpnt, &pCpnt->cfg.Id);
-		if (err != ERROR_OK)					{ return err; }
-		if (pCpnt->cfg.Id != TMP1075N_CHIP_ID)	{ return ERROR_COMMON; }	// Unknown device
+		err = TMP1075N_Get_ChipID(pCpnt, &pCpnt->cfg.ChipID);
+		if (err != ERROR_OK)						{ goto ret; }
+		if (pCpnt->cfg.ChipID != TMP1075N_CHIP_ID)	{ err = ERROR_COMMON; goto ret; }	// Unknown device
 	}
 
 	err = TMP1075_Set_AlertMode(pCpnt, TMP1075__MODE_INT);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
-	return TMP1075_Set_ConversionRate(pCpnt, TMP1075__CR_220MS);
+	err = TMP1075_Set_ConversionRate(pCpnt, TMP1075__CR_220MS);
+
+	ret:
+	return err;
 }
 
 
@@ -65,35 +68,43 @@ static int16_t TMP1075_convert_to_raw_temp(const float temp)
 
 FctERR NONNULL__ TMP1075_Set_LimitTemp(TMP1075_t * const pCpnt, const float temp, const TMP1075_limit lim)
 {
-	if (lim > TMP1075__LIMIT_HIGH)				{ return ERROR_VALUE; }	// Unknown limit
-	if ((temp < -128.0f) || (temp > 127.9375f))	{ return ERROR_RANGE; }	// Temperature too low/high
+	FctERR err = ERROR_OK;
+
+	if (lim > TMP1075__LIMIT_HIGH)				{ err = ERROR_VALUE; }	// Unknown limit
+	if ((temp < -128.0f) || (temp > 127.9375f))	{ err = ERROR_RANGE; }	// Temperature too low/high
+	if (err != ERROR_OK)						{ goto ret; }
 
 	float *	limit = &pCpnt->cfg.LowLimit + lim;
 	const int16_t TEMP = TMP1075_convert_to_raw_temp(temp);
 
-	FctERR err = TMP1075_Write_Word(pCpnt->cfg.slave_inst, (uint16_t *) &TEMP, TMP1075__LLIM + lim);
-	if (err != ERROR_OK)	{ return err; }
+	err = TMP1075_Write_Word(pCpnt->cfg.slave_inst, (const uint16_t *) &TEMP, TMP1075__LLIM + lim);
+	if (err != ERROR_OK)	{ goto ret; }
 
 	*limit = temp;
 
+	ret:
 	return err;
 }
 
 
 FctERR NONNULLX__(1) TMP1075_Get_LimitTemp(TMP1075_t * const pCpnt, float * temp, const TMP1075_limit lim)
 {
-	if (lim > TMP1075__LIMIT_HIGH)	{ return ERROR_VALUE; }	// Unknown limit
+	FctERR err = ERROR_OK;
+
+	if (lim > TMP1075__LIMIT_HIGH)	{ err = ERROR_VALUE; }	// Unknown limit
+	if (err != ERROR_OK)			{ goto ret; }
 
 	float * limit = &pCpnt->cfg.LowLimit + lim;
 	int16_t	TEMP;
 
-	FctERR err = TMP1075_Read_Word(pCpnt->cfg.slave_inst, (uint16_t *) &TEMP, TMP1075__LLIM + lim);
-	if (err != ERROR_OK)	{ return err; }
+	err = TMP1075_Read_Word(pCpnt->cfg.slave_inst, (uint16_t *) &TEMP, TMP1075__LLIM + lim);
+	if (err != ERROR_OK)	{ goto ret; }
 
 	*limit = TMP1075_convert_raw_temp(TEMP);
 
-	if (temp)	{ *temp = *limit; }
+	if (temp != NULL)	{ *temp = *limit; }
 
+	ret:
 	return err;
 }
 
@@ -104,12 +115,13 @@ FctERR NONNULLX__(1) TMP1075_Get_Temperature(TMP1075_t * const pCpnt, float * te
 	FctERR	err;
 
 	err = TMP1075_Get_Temperature_Raw(pCpnt, &TEMP);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	pCpnt->Temperature = TMP1075_convert_raw_temp(TEMP);
 
 	if (temp != NULL)	{ *temp = pCpnt->Temperature; }
 
+	ret:
 	return err;
 }
 
@@ -141,7 +153,8 @@ __WEAK FctERR NONNULL__ TMP1075_handler(TMP1075_t * const pCpnt)
 
 		#if defined(VERBOSE)
 			const uint8_t idx = pCpnt - TMP1075;
-			printf("TMP1075 id%d: Temperature %d.%03ld°C\r\n", idx, (int16_t) pCpnt->Temperature, get_fp_dec(pCpnt->Temperature, 3U));
+			UNUSED_RET printf("TMP1075 id%d: Temperature %d.%03ld°C\r\n", idx, (int16_t) pCpnt->Temperature,
+								get_fp_dec(pCpnt->Temperature, 3U));
 		#endif
 	}
 

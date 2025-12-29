@@ -166,7 +166,7 @@ void NONNULL__ NCA9595_INT_GPIO_Init(NCA9595_t * const pCpnt, GPIO_TypeDef * con
 ** \param[in] pCpnt - Pointer to NCA9595 component
 ** \return INT pin state value (0: inactive, 1: active)
 **/
-bool NONNULL__ NCA9595_INT_GPIO_Get(NCA9595_t * const pCpnt);
+bool NONNULL__ NCA9595_INT_GPIO_Get(const NCA9595_t * const pCpnt);
 
 
 /****************************************************************/

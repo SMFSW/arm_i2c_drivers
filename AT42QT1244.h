@@ -174,6 +174,7 @@ typedef enum PACK__ _AT42QT_FHM {
 
 
 typedef union _uAT42QT_REG__KEY_DATA {
+	uint8_t	Bytes[4];
 	uint32_t Raw;
 	struct PACK__ {
 		uint32_t Signal						:12;	//!< Signal

@@ -46,33 +46,50 @@ FctERR MCP4725_Init_Single(void) {
 
 FctERR NONNULL__ MCP4725_General_Call(I2C_HandleTypeDef * const hi2c, const uint8_t cmd)
 {
-	if ((cmd != MCP4725__RESET) && (cmd != MCP4725__WAKEUP))	{ return ERROR_CMD; }	// Unknown command
+	FctERR err = ERROR_CMD;
 
-	return HALERRtoFCTERR(HAL_I2C_Master_Transmit(hi2c, I2C_ADDR_General_Call, (uint8_t *) &cmd, 1U, I2C_slave_timeout));
+	if ((cmd == MCP4725__RESET) || (cmd == MCP4725__WAKEUP))	// Check unknown command
+	{
+		err = HALERRtoFCTERR(HAL_I2C_Master_Transmit(hi2c, I2C_ADDR_General_Call, (uint8_t *) &cmd, 1U, I2C_slave_timeout));
+	}
+
+	return err;
 }
 
 
 FctERR NONNULL__ MCP4725_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t nb)
 {
-	if (!I2C_is_enabled(pSlave))	{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (nb > 3U)					{ return ERROR_RANGE; }		// More bytes than registers
+	FctERR err = ERROR_OK;
+
+	if (!I2C_is_enabled(pSlave))	{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if (nb > 3U)					{ err = ERROR_RANGE; }		// More bytes than registers
+	if (err != ERROR_OK)			{ goto ret; }
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Master_Transmit(pSlave->cfg.bus_inst, pSlave->cfg.addr, (uint8_t *) data, nb, pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 
 FctERR NONNULL__ MCP4725_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t nb)
 {
-	if (!I2C_is_enabled(pSlave))	{ return ERROR_DISABLED; }	// Peripheral disabled
-	if (nb > 3U)					{ return ERROR_RANGE; }		// More bytes than registers
+	FctERR err = ERROR_OK;
+
+	if (!I2C_is_enabled(pSlave))	{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if (nb > 3U)					{ err = ERROR_RANGE; }		// More bytes than registers
+	if (err != ERROR_OK)			{ goto ret; }
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Master_Receive(pSlave->cfg.bus_inst, pSlave->cfg.addr, data, nb, pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 

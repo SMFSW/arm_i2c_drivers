@@ -24,8 +24,8 @@
 // *****************************************************************************
 #define		MTCH_RES_STEP		64U		//!< MTCH6102 Resolution of a single RX/TX
 
-#define		perVal2perReg(ms)	(uint16_t) (((ms * 1000U) / 31U) + 1U)	//!< Compute reg value for period \b ms
-#define		perReg2perVal(rv)	(uint16_t) (((rv - 1U) * 31U) / 1000U)	//!< Get period in ms from register \b rv
+#define		perVal2perReg(ms)	(uint16_t) ((((ms) * 1000U) / 31U) + 1U)	//!< Compute reg value for period \b ms
+#define		perReg2perVal(rv)	(uint16_t) ((((rv) - 1U) * 31U) / 1000U)	//!< Get period in ms from register \b rv
 
 #define		per10ms		0x0142U		//!< example period register value for 10ms
 #define		per20ms		0x0284U		//!< example period register value for 20ms
@@ -61,9 +61,7 @@ typedef struct _MTCH6102_raw_sense {
 ** \param[in] mode - Gesture decoding mode
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Mode(const MTCH6102_t * const pCpnt, const MTCH6102_MODE mode) {
-	if (mode > RawADC)	{ return ERROR_VALUE; }
-	return MTCH6102_Write(pCpnt->cfg.slave_inst, &mode, MTCH__MODE, 1U); }
+FctERR NONNULL__ MTCH6102_Set_Mode(const MTCH6102_t * const pCpnt, const MTCH6102_MODE mode);
 
 /*!\brief Get MTCH6102 gesture decoding
 ** \param[in] pCpnt - Pointer to MTCH6102 component
@@ -122,20 +120,14 @@ __INLINE FctERR NONNULL_INLINE__ MTCH6102_Force_Baseline(const MTCH6102_t * cons
 ** \param[in] period - Active period
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Active_Period(const MTCH6102_t * const pCpnt, const uint16_t period) {
-	const uint16_t per = perVal2perReg(period);
-	const uint8_t DAT[2] = { LOBYTE(per), HIBYTE(per) };
-	return MTCH6102_Write(pCpnt->cfg.slave_inst, DAT, MTCH__ACTIVE_PERIOD_L, sizeof(DAT)); }
+FctERR NONNULL__ MTCH6102_Set_Active_Period(const MTCH6102_t * const pCpnt, const uint16_t period);
 
 /*!\brief Set MTCH6102 idle period
 ** \param[in] pCpnt - Pointer to MTCH6102 component
 ** \param[in] period - Idle period
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ MTCH6102_Set_Idle_Period(const MTCH6102_t * const pCpnt, const uint16_t period) {
-	const uint16_t per = perVal2perReg(period);
-	const uint8_t DAT[2] = { LOBYTE(per), HIBYTE(per) };
-	return MTCH6102_Write(pCpnt->cfg.slave_inst, DAT, MTCH__IDLE_PERIOD_L, sizeof(DAT)); }
+FctERR NONNULL__ MTCH6102_Set_Idle_Period(const MTCH6102_t * const pCpnt, const uint16_t period);
 
 /*!\brief Set MTCH6102 idle timeout
 ** \param[in] pCpnt - Pointer to MTCH6102 component
@@ -273,7 +265,7 @@ void NONNULL__ MTCH6102_INT_GPIO_Init(MTCH6102_t * const pCpnt, GPIO_TypeDef * c
 ** \param[in] pCpnt - Pointer to MTCH6102 component
 ** \return INT pin state value (0: inactive, 1: active)
 **/
-bool NONNULL__ MTCH6102_INT_GPIO_Get(MTCH6102_t * const pCpnt);
+bool NONNULL__ MTCH6102_INT_GPIO_Get(const MTCH6102_t * const pCpnt);
 
 
 /*!\brief Synchro GPIO pin init for MTCH6102
@@ -290,7 +282,7 @@ void NONNULL__ MTCH6102_SYNC_GPIO_Init(MTCH6102_t * const pCpnt, GPIO_TypeDef * 
 ** \param[in] pCpnt - Pointer to MTCH6102 component
 ** \return SYNC pin state value (0: inactive, 1: active)
 **/
-bool NONNULL__ MTCH6102_SYNC_GPIO_Get(MTCH6102_t * const pCpnt);
+bool NONNULL__ MTCH6102_SYNC_GPIO_Get(const MTCH6102_t * const pCpnt);
 
 
 /****************************************************************/

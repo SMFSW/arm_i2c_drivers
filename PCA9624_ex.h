@@ -58,10 +58,7 @@ typedef union _uPCA9624_REG_MAP {
 ** \param[in] inc - auto increment option
 ** \return FctERR - error code
 **/
-__INLINE FctERR NONNULL_INLINE__ PCA9624_Set_Auto_Increment(PCA9624_t * const pCpnt, const PCA962x_reg_inc inc) {
-	if (RSHIFT(inc, 5U) > RSHIFT(PCA9xxx__AUTO_INC_BRIGHT_GLOBAL, 5U))	{ return ERROR_VALUE; }
-	pCpnt->cfg.auto_inc = inc & PCA9xxx__AUTO_INC_BRIGHT_GLOBAL;		// Mask inc just in case
-	return ERROR_OK; }
+FctERR NONNULL__ PCA9624_Set_Auto_Increment(PCA9624_t * const pCpnt, const PCA962x_reg_inc inc);
 
 /*!\brief Set MODE1 register
 ** \param[in,out] pCpnt - Pointer to PCA9624 component

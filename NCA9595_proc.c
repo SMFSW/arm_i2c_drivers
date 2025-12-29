@@ -44,7 +44,7 @@ __WEAK FctERR NONNULL__ NCA9595_handler(NCA9595_t * const pCpnt)
 
 	#if defined(VERBOSE)
 		const uint8_t idx = pCpnt - NCA9595;
-		printf("NCA9595 id%d: Inputs %x", idx, pCpnt->NCA9595_in.Word);
+		UNUSED_RET printf("NCA9595 id%d: Inputs %x", idx, pCpnt->NCA9595_in.Word);
 	#endif
 
 	ret:

@@ -39,7 +39,7 @@ typedef struct _$CPNT$_t {
 	PeripheralGPIO_t	INT_GPIO;			//!< Interrupt GPIO struct
 	PeripheralGPIO_t	RST_GPIO;			//!< Reset GPIO struct
 	uint8_t				$CPNT$_param_1;		//!< param_1 config
-	uint8_t				Id;					//!< $CPNT$ chip ID
+	uint8_t				ChipID;				//!< Chip ID
 	} cfg;
 } $CPNT$_t;
 

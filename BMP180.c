@@ -46,40 +46,56 @@ FctERR BMP180_Init_Single(void) {
 
 FctERR NONNULL__ BMP180_Write(I2C_slave_t * const pSlave, const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > BMP180__OUT_XLSB + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	FctERR err = ERROR_OK;
+
+	if (!I2C_is_enabled(pSlave))				{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > BMP180__OUT_XLSB + 1U)	{ err = ERROR_OVERFLOW; }	// More bytes than registers
+	if (err != ERROR_OK)						{ goto ret; }
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, nb, pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 
 FctERR NONNULL__ BMP180_Read(I2C_slave_t * const pSlave, uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > BMP180__OUT_XLSB + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	FctERR err = ERROR_OK;
+
+	if (!I2C_is_enabled(pSlave))				{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > BMP180__OUT_XLSB + 1U)	{ err = ERROR_OVERFLOW; }	// More bytes than registers
+	if (err != ERROR_OK)						{ goto ret; }
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, data, nb, pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 
 FctERR NONNULL__ BMP180_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, const uint16_t addr)
 {
-	uint8_t	RREG[2];
-	FctERR	err;
+	FctERR err = ERROR_FRAMING;
 
-	if (addr % sizeof(uint16_t))	{ return ERROR_FRAMING; }		// Unaligned word access
+	if (isEven(addr))	// Check unaligned word access
+	{
+		uint8_t	RREG[2] = { 0 };
 
-	err = BMP180_Read(pSlave, RREG, addr, 2U);
-	if (err != ERROR_OK)	{ return err; }
+		err = BMP180_Read(pSlave, RREG, addr, 2U);
+		if (err != ERROR_OK)	{ goto ret; }
 
-	*data = MAKEWORD(RREG[1], RREG[0]);
-	return HALERRtoFCTERR(pSlave->status);
+		*data = MAKEWORD(RREG[0], RREG[1]);
+	}
+
+	ret:
+	return err;
 }
 
 

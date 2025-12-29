@@ -34,17 +34,17 @@
 ** \brief BMP180 calibration parameters structure
 **/
 typedef struct _BMP180_calibration {
-	int16_t		AC1;	//!< ac1 calibration value
-	int16_t		AC2;	//!< ac2 calibration value
-	int16_t		AC3;	//!< ac3 calibration value
-	uint16_t	AC4;	//!< ac4 calibration value
-	uint16_t	AC5;	//!< ac5 calibration value
-	uint16_t	AC6;	//!< ac6 calibration value
-	int16_t		B1;		//!< b1 calibration value
-	int16_t		B2;		//!< b2 calibration value
-	int16_t		MB;		//!< mb calibration value
-	int16_t		MC;		//!< mc calibration value
-	int16_t		MD;		//!< md calibration value
+	int16_t		ac1;	//!< ac1 calibration value
+	int16_t		ac2;	//!< ac2 calibration value
+	int16_t		ac3;	//!< ac3 calibration value
+	uint16_t	ac4;	//!< ac4 calibration value
+	uint16_t	ac5;	//!< ac5 calibration value
+	uint16_t	ac6;	//!< ac6 calibration value
+	int16_t		b1;		//!< b1 calibration value
+	int16_t		b2;		//!< b2 calibration value
+	int16_t		mb;		//!< mb calibration value
+	int16_t		mc;		//!< mc calibration value
+	int16_t		md;		//!< md calibration value
 } BMP180_calib;
 
 /*!\struct _BMP180_t
@@ -59,7 +59,7 @@ typedef struct _BMP180_t {
 	I2C_slave_t *			slave_inst;			//!< Slave structure
 	BMP180_oversampling		OSS;				//!< Oversampling
 	BMP180_calib			Calib;				//!< Calibration values
-	uint8_t					ID;					//!< Chip ID
+	uint8_t					ChipID;				//!< Chip ID
 	float					SeaLevelPressure;	//!< Current atmospheric pressure at sea level
 	} cfg;
 } BMP180_t;
@@ -77,9 +77,8 @@ extern BMP180_t BMP180[I2C_BMP180_NB];			//!< BMP180 User structure
 /*!\brief Setter of Sea Level pressure for BMP180 peripheral
 ** \weak BMP180 Sea Level pressure setter may be user implemented
 ** \param[in] pCpnt - Pointer to BMP180 component
-** \return FctERR - error code
 **/
-FctERR NONNULL__ BMP180_Set_SeaLevel_Pressure(BMP180_t * const pCpnt);
+void NONNULL__ BMP180_Set_SeaLevel_Pressure(BMP180_t * const pCpnt);
 
 /*!\brief Initialization Sequence for BMP180 peripheral
 ** \weak BMP180 Init sequence may be user implemented if custom initialization sequence needed

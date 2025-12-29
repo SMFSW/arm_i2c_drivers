@@ -46,37 +46,49 @@ FctERR NCA9595_Init_Single(void) {
 
 FctERR NONNULL__ NCA9595_Write_Word(I2C_slave_t * const pSlave, const uint16_t * data, const uint16_t addr)
 {
-	if (!I2C_is_enabled(pSlave))						{ return ERROR_DISABLED; }	// Peripheral disabled
+	FctERR err = ERROR_OK;
+
+	if (!I2C_is_enabled(pSlave))			{ err = ERROR_DISABLED; }	// Peripheral disabled
 #if defined(__BIG_ENDIAN__)
-	if ((addr & 1U) == 0U)								{ return ERROR_FRAMING; }	// Misaligned access for current endianness
-	if (addr > NCA9595__PullUpConfigPort1)				{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if (isEven(addr))						{ err = ERROR_FRAMING; }	// Misaligned access for current endianness
+	if (addr > NCA9595__PullUpConfigPort1)	{ err = ERROR_OVERFLOW; }	// More bytes than registers
 #else
-	if ((addr & 1U) == 1U)								{ return ERROR_FRAMING; }	// Misaligned access for current endianness
-	if (addr > NCA9595__PullUpConfigPort0)				{ return ERROR_OVERFLOW; }	// Outside registers area
+	if (isOdd(addr))						{ err = ERROR_FRAMING; }	// Misaligned access for current endianness
+	if (addr > NCA9595__PullUpConfigPort0)	{ err = ERROR_OVERFLOW; }	// Outside registers area
 #endif
+	if (err != ERROR_OK)					{ goto ret; }
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Write(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, sizeof(uint16_t), pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 
 FctERR NONNULL__ NCA9595_Read_Word(I2C_slave_t * const pSlave, uint16_t * data, const uint16_t addr)
 {
-	if (!I2C_is_enabled(pSlave))						{ return ERROR_DISABLED; }	// Peripheral disabled
+	FctERR err = ERROR_OK;
+
+	if (!I2C_is_enabled(pSlave))			{ err = ERROR_DISABLED; }	// Peripheral disabled
 #if defined(__BIG_ENDIAN__)
-	if ((addr & 1U) == 0U)								{ return ERROR_FRAMING; }	// Misaligned access for current endianness
-	if (addr > NCA9595__PullUpConfigPort1)				{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if (isEven(addr))						{ err = ERROR_FRAMING; }	// Misaligned access for current endianness
+	if (addr > NCA9595__PullUpConfigPort1)	{ err = ERROR_OVERFLOW; }	// More bytes than registers
 #else
-	if ((addr & 1U) == 1U)								{ return ERROR_FRAMING; }	// Misaligned access for current endianness
-	if (addr > NCA9595__PullUpConfigPort0)				{ return ERROR_OVERFLOW; }	// Outside registers area
+	if (isOdd(addr))						{ err = ERROR_FRAMING; }	// Misaligned access for current endianness
+	if (addr > NCA9595__PullUpConfigPort0)	{ err = ERROR_OVERFLOW; }	// Outside registers area
 #endif
+	if (err != ERROR_OK)					{ goto ret; }
 
 	I2C_set_busy(pSlave, true);
 	pSlave->status = HAL_I2C_Mem_Read(pSlave->cfg.bus_inst, pSlave->cfg.addr, addr, pSlave->cfg.mem_size, (uint8_t *) data, sizeof(uint16_t), pSlave->cfg.timeout);
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 

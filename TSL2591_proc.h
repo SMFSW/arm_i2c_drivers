@@ -59,7 +59,7 @@ typedef struct _TSL2591_t {
 	uint16_t			LowThreshold;		//!< Low Threshold config
 	uint16_t			HighThreshold;		//!< High Threshold config
 	bool				AIEN;				//!< Sensor ALS (Ambient Light Sensing) interrupts enabled config
-	uint8_t				ID;					//!< Chip ID
+	uint8_t				ChipID;				//!< Chip ID
 	} cfg;
 } TSL2591_t;
 
@@ -91,7 +91,7 @@ void NONNULL__ TSL2591_Set_CPL(TSL2591_t * const pCpnt);
 ** \param[in] pCpnt - Pointer to TSL2591 component
 ** \return FctERR - error code
 **/
-__INLINE uint32_t NONNULL_INLINE__ TSL2591_Get_Lux(TSL2591_t * const pCpnt) {
+__INLINE uint32_t NONNULL_INLINE__ TSL2591_Get_Lux(const TSL2591_t * const pCpnt) {
 	return pCpnt->Lux; }
 
 

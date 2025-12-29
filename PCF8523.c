@@ -41,25 +41,37 @@ __WEAK FctERR PCF8523_Init(void)
 
 FctERR NONNULL__ PCF8523_Write(const uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(&PCF8523_hal))			{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > PCF8523__TMR_B_REG + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	FctERR err = ERROR_OK;
+
+	if (!I2C_is_enabled(&PCF8523_hal))			{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > PCF8523__TMR_B_REG + 1U)	{ err = ERROR_OVERFLOW; }	// More bytes than registers
+	if (err != ERROR_OK)						{ goto ret; }
 
 	I2C_set_busy(&PCF8523_hal, true);
 	PCF8523_hal.status = HAL_I2C_Mem_Write(PCF8523_hal.cfg.bus_inst, PCF8523_hal.cfg.addr, addr, PCF8523_hal.cfg.mem_size, (uint8_t *) data, nb, PCF8523_hal.cfg.timeout);
+	err = HALERRtoFCTERR(PCF8523_hal.status);
 	I2C_set_busy(&PCF8523_hal, false);
-	return HALERRtoFCTERR(PCF8523_hal.status);
+
+	ret:
+	return err;
 }
 
 
 FctERR NONNULL__ PCF8523_Read(uint8_t * data, const uint16_t addr, const uint16_t nb)
 {
-	if (!I2C_is_enabled(&PCF8523_hal))			{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > PCF8523__TMR_B_REG + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	FctERR err = ERROR_OK;
+
+	if (!I2C_is_enabled(&PCF8523_hal))			{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > PCF8523__TMR_B_REG + 1U)	{ err = ERROR_OVERFLOW; }	// More bytes than registers
+	if (err != ERROR_OK)						{ goto ret; }
 
 	I2C_set_busy(&PCF8523_hal, true);
 	PCF8523_hal.status = HAL_I2C_Mem_Read(PCF8523_hal.cfg.bus_inst, PCF8523_hal.cfg.addr, addr, PCF8523_hal.cfg.mem_size, data, nb, PCF8523_hal.cfg.timeout);
+	err = HALERRtoFCTERR(PCF8523_hal.status);
 	I2C_set_busy(&PCF8523_hal, false);
-	return HALERRtoFCTERR(PCF8523_hal.status);
+
+	ret:
+	return err;
 }
 
 

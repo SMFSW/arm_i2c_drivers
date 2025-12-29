@@ -14,8 +14,8 @@
 
 APDS9960_t APDS9960[I2C_APDS9960_NB] = { 0 };
 
-const uint8_t APDS9960_ALS_gain_tab[4] = { 1, 4, 16, 64 };
-const uint8_t APDS9960_Prox_gain_tab[4] = { 1, 2, 4, 8 };
+const uint8_t APDS9960_ALS_gain_tab[4] = { 1U, 4U, 16U, 64U };
+const uint8_t APDS9960_Prox_gain_tab[4] = { 1U, 2U, 4U, 8U };
 
 
 /****************************************************************/
@@ -26,7 +26,10 @@ __WEAK FctERR NONNULL__ APDS9960_Init_Sequence(APDS9960_t * const pCpnt)
 	uAPDS9960_REG__ENABLE	EN = { 0 };
 	FctERR					err = ERROR_OK;
 
-	//pCpnt->cfg.GA = APDS9960_GLASS_ATTENUATION;
+	// get ID & check against values for APDS9960
+	err = APDS9960_Get_ChipID(pCpnt, &pCpnt->cfg.ChipID);
+	if (err != ERROR_OK)						{ goto ret; }
+	if (pCpnt->cfg.ChipID != APDS9960_CHIP_ID)	{ err = ERROR_COMMON; goto ret; }	// Unknown device
 
 	pCpnt->cfg.ADC_Gain = APDS9960__ALS_16X_GAIN;
 	pCpnt->cfg.Prox_Gain = APDS9960__PROX_2X_GAIN;
@@ -44,36 +47,35 @@ __WEAK FctERR NONNULL__ APDS9960_Init_Sequence(APDS9960_t * const pCpnt)
 	pCpnt->cfg.GIEN = false;
 	pCpnt->cfg.WEN = true;
 
-	memcpy(&pCpnt->cfg.mat, &CLS_RGB2XYZ_Default, sizeof(pCpnt->cfg.mat));
-
-	// get ID & check against values for APDS9960
-	err = APDS9960_Get_ChipID(pCpnt, &pCpnt->cfg.Id);
-	if (err != ERROR_OK)								{ return err; }
-	if (pCpnt->cfg.Id != APDS9960_CHIP_ID)	{ return ERROR_COMMON; }	// Unknown device
+	UNUSED_RET memcpy(&pCpnt->cfg.mat, &CLS_RGB2XYZ_Default, sizeof(pCpnt->cfg.mat));
 
 	EN.Bits.PON = true;		// Turn ON Osc
 	err = APDS9960_Write_En(pCpnt, EN.Byte);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	err = APDS9960_Set_ALS_Gain(pCpnt, pCpnt->cfg.ADC_Gain);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
+
 	err = APDS9960_Set_Prox_Gain(pCpnt, pCpnt->cfg.Prox_Gain);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	err = APDS9960_Set_Prox_Drive_Strength(pCpnt, pCpnt->cfg.Prox_Strength);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
+
 	err = APDS9960_Write(pCpnt->cfg.slave_inst, &pCpnt->cfg.Prox_Pulses, APDS9960__PPULSE, 1U);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	err = APDS9960_Set_ADC_Integration_Time(pCpnt, pCpnt->cfg.ADC_Integ);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
+
 	err = APDS9960_Set_Wait_Time(pCpnt, pCpnt->cfg.Wait);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	err = APDS9960_Set_AIT(pCpnt, pCpnt->cfg.ADC_LowThreshold, pCpnt->cfg.ADC_HighThreshold);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
+
 	err = APDS9960_Set_PIT(pCpnt, pCpnt->cfg.Prox_LowThreshold, pCpnt->cfg.Prox_HighThreshold);
-	if (err != ERROR_OK)	{ return err; }
+	if (err != ERROR_OK)	{ goto ret; }
 
 	EN.Bits.WEN = pCpnt->cfg.WEN;	// Turn ON Wait following cfg
 	EN.Bits.AEN = pCpnt->cfg.AIEN;	// Turn ON ALS following cfg
@@ -81,7 +83,10 @@ __WEAK FctERR NONNULL__ APDS9960_Init_Sequence(APDS9960_t * const pCpnt)
 	EN.Bits.GEN = pCpnt->cfg.GIEN;	// Turn ON Gesture following cfg
 	EN.Bits.AIEN = pCpnt->cfg.AIEN;	// Turn ON ALS interrupts following cfg
 	EN.Bits.PIEN = pCpnt->cfg.PIEN;	// Turn ON Proximity interrupts following cfg
-	return APDS9960_Write_En(pCpnt, EN.Byte);
+	err = APDS9960_Write_En(pCpnt, EN.Byte);
+
+	ret:
+	return err;
 }
 
 
@@ -96,19 +101,21 @@ __WEAK FctERR NONNULL__ APDS9960_Init_Sequence(APDS9960_t * const pCpnt)
 **/
 static FctERR NONNULL__ APDS9960_calc(APDS9960_t * const pCpnt, const uint16_t r, const uint16_t g, const uint16_t b)
 {
-	CLS_get_chromacity(pCpnt->xy, &pCpnt->Lux, pCpnt->cfg.mat, r, g, b);
-	CLS_get_CCT(&pCpnt->Temp, pCpnt->xy);
+	FctERR err;
 
-	return ERROR_OK;
+	err = CLS_get_chromacity(pCpnt->xy, &pCpnt->Lux, pCpnt->cfg.mat, r, g, b);
+	err |= CLS_get_CCT(&pCpnt->Temp, pCpnt->xy);
+
+	return err;
 }
 
 
 __WEAK FctERR NONNULL__ APDS9960_handler(APDS9960_t * const pCpnt)
 {
-	uint8_t					DATA[10];
-	uAPDS9960_REG__STATUS *	ST = (uAPDS9960_REG__STATUS *) DATA;
+	uint8_t								DATA[10];
+	const uAPDS9960_REG__STATUS * const	ST = (const uAPDS9960_REG__STATUS *) DATA;
 	#if defined(VERBOSE)
-		const uint8_t		idx = pCpnt - APDS9960;
+		const uint8_t					idx = pCpnt - APDS9960;
 	#endif
 
 	FctERR err = APDS9960_Read(pCpnt->cfg.slave_inst, DATA, APDS9960__STATUS, sizeof(DATA));
@@ -125,11 +132,11 @@ __WEAK FctERR NONNULL__ APDS9960_handler(APDS9960_t * const pCpnt)
 			err = APDS9960_calc(pCpnt, pCpnt->Red, pCpnt->Green, pCpnt->Blue);
 
 			#if defined(VERBOSE)
-				printf("APDS9960 id%d: C%d R%d G%d B%d x%d.%04ld y%d.%04ld Lux: %lul Temp: %luK\r\n",
-						idx, pCpnt->Clear, pCpnt->Red, pCpnt->Green, pCpnt->Blue,
-						(uint16_t) pCpnt->xy[0], get_fp_dec(pCpnt->xy[0], 4),
-						(uint16_t) pCpnt->xy[1], get_fp_dec(pCpnt->xy[1], 4),
-						pCpnt->Lux, pCpnt->Temp);
+				UNUSED_RET printf("APDS9960 id%d: C%d R%d G%d B%d x%d.%04ld y%d.%04ld Lux: %lul Temp: %luK\r\n",
+									idx, pCpnt->Clear, pCpnt->Red, pCpnt->Green, pCpnt->Blue,
+									(uint16_t) pCpnt->xy[0], get_fp_dec(pCpnt->xy[0], 4),
+									(uint16_t) pCpnt->xy[1], get_fp_dec(pCpnt->xy[1], 4),
+									pCpnt->Lux, pCpnt->Temp);
 			#endif
 		}
 	}
@@ -141,15 +148,15 @@ __WEAK FctERR NONNULL__ APDS9960_handler(APDS9960_t * const pCpnt)
 			pCpnt->Prox = DATA[9];
 
 			#if defined(VERBOSE)
-				printf("APDS9960 id%d: Prox %d\r\n", idx, pCpnt->Prox);
+				UNUSED_RET printf("APDS9960 id%d: Prox %d\r\n", idx, pCpnt->Prox);
 			#endif
 		}
 	}
 
 	if ((pCpnt->cfg.GIEN) && (ST->Bits.GINT))
 	{
-		uint8_t						GDATA[2], GDATAS[4];
-		uAPDS9960_REG__GSTATUS *	GST = (uAPDS9960_REG__GSTATUS *) &GDATA[1];
+		uint8_t									GDATA[2], GDATAS[4];
+		const uAPDS9960_REG__GSTATUS * const	GST = (const uAPDS9960_REG__GSTATUS *) &GDATA[1];
 
 		err = APDS9960_Read(pCpnt->cfg.slave_inst, GDATA, APDS9960__GFLVL, sizeof(GDATA));
 		if (err != ERROR_OK)	{ goto ret; }

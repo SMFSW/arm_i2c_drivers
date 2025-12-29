@@ -56,8 +56,8 @@ typedef struct _MCP9808_t {
 	float				HighAlert;			//!< High alert config
 	float				LowAlert;			//!< Low alert config
 	float				CriticalAlert;		//!< Critical alert config
-	uint16_t			Manufacturer_Id;	//!< Manufacturer ID
-	uint16_t			Device_Id;			//!< Device ID
+	uint16_t			ManufacturerID;		//!< Manufacturer ID
+	uint16_t			ChipID;				//!< Chip ID
 	} cfg;
 } MCP9808_t;
 

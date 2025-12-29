@@ -46,10 +46,12 @@ FctERR MCP9808_Init_Single(void) {
 
 FctERR NONNULL__ MCP9808_Write(I2C_slave_t * const pSlave, const uint16_t * data, const uint16_t addr, const uint16_t nb)
 {
+	FctERR	err = ERROR_OK;
 	uint8_t DATA[2];
 
-	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > MCP9808__RESOLUTION + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(pSlave))				{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > MCP9808__RESOLUTION + 1U)	{ err = ERROR_OVERFLOW; }	// More bytes than registers
+	if (err != ERROR_OK)						{ goto ret; }
 
 	I2C_set_busy(pSlave, true);
 
@@ -71,17 +73,22 @@ FctERR NONNULL__ MCP9808_Write(I2C_slave_t * const pSlave, const uint16_t * data
 		}
 	}
 
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 
 FctERR NONNULL__ MCP9808_Read(I2C_slave_t * const pSlave, uint16_t * data, const uint16_t addr, const uint16_t nb)
 {
+	FctERR	err = ERROR_OK;
 	uint8_t DATA[2];
 
-	if (!I2C_is_enabled(pSlave))				{ return ERROR_DISABLED; }	// Peripheral disabled
-	if ((addr + nb) > MCP9808__RESOLUTION + 1U)	{ return ERROR_OVERFLOW; }	// More bytes than registers
+	if (!I2C_is_enabled(pSlave))				{ err = ERROR_DISABLED; }	// Peripheral disabled
+	if ((addr + nb) > MCP9808__RESOLUTION + 1U)	{ err = ERROR_OVERFLOW; }	// More bytes than registers
+	if (err != ERROR_OK)						{ goto ret; }
 
 	I2C_set_busy(pSlave, true);
 
@@ -102,8 +109,11 @@ FctERR NONNULL__ MCP9808_Read(I2C_slave_t * const pSlave, uint16_t * data, const
 		}
 	}
 
+	err = HALERRtoFCTERR(pSlave->status);
 	I2C_set_busy(pSlave, false);
-	return HALERRtoFCTERR(pSlave->status);
+
+	ret:
+	return err;
 }
 
 
