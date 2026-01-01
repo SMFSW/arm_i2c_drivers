@@ -1,6 +1,6 @@
 /*!\file APDS9960_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief APDS9960 Driver procedures
 ** \details APDS9960: Digital Proximity, Ambient Light, RGB and Gesture Sensor
 **/
@@ -32,10 +32,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct _APDS9960_t
+/*!\struct APDS9960_t
 ** \brief APDS9960 user interface struct
 **/
-typedef struct _APDS9960_t {
+typedef struct {
 	uint16_t					Red;				//!< Current Red conversion
 	uint16_t					Green;				//!< Current Green conversion
 	uint16_t					Blue;				//!< Current Blue conversion

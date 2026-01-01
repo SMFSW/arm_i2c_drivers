@@ -1,6 +1,6 @@
 /*!\file TCS3472.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief TCS3472 Driver
 ** \details TCS3472: Color light-to-digital converter with IR filter
 **/
@@ -42,10 +42,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _TCS3472_reg
+/*!\enum TCS3472_reg
 ** \brief Register map enum of TCS3472
 **/
-typedef enum PACK__ _TCS3472_reg {
+typedef enum PACK__ {
 	TCS3472__ENABLE = 0U,		//!< Enables states and interrupts
 	TCS3472__ATIME,				//!< RGBC time
 	TCS3472__WTIME = 0x03U,		//!< Wait time
@@ -68,25 +68,25 @@ typedef enum PACK__ _TCS3472_reg {
 	TCS3472__BDATAH				//!< Blue high data byte
 } TCS3472_reg;
 
-/*!\enum _TCS3472_transaction
+/*!\enum TCS3472_transaction
 ** \brief Transaction types of TCS3472
 **/
-typedef enum PACK__ _TCS3472_transaction {
+typedef enum PACK__ {
 	TCS3472__TRANS_NORMAL_OP = 1U,		//!< Normal operation
 	TCS3472__TRANS_SPECIAL_FUNC = 3U,	//!< Special Function
 } TCS3472_transaction;
 
-/*!\enum _TCS3472_spec_func
+/*!\enum TCS3472_spec_func
 ** \brief Special functions of TCS3472
 **/
-typedef enum PACK__ _TCS3472_spec_func {
+typedef enum PACK__ {
 	TCS3472__SF_CLR_IT = 6U,	//!< Clear channel interrupt clear
 } TCS3472_spec_func;
 
-/*!\enum _TCS3472_gain
+/*!\enum TCS3472_gain
 ** \brief Gain values of TCS3472
 **/
-typedef enum PACK__ _TCS3472_gain {
+typedef enum PACK__ {
 	TCS3472__LOW_GAIN = 0U,	//!< Low gain mode (x1)
 	TCS3472__MEDIUM_GAIN,	//!< Medium gain mode (x4)
 	TCS3472__HIGH_GAIN,		//!< High gain mode (x16)
@@ -94,10 +94,10 @@ typedef enum PACK__ _TCS3472_gain {
 } TCS3472_gain;
 
 
-/*!\enum _TCS3472_it_persist
+/*!\enum TCS3472_it_persist
 ** \brief Persistence control of TCS3472
 **/
-typedef enum PACK__ _TCS3472_it_persist {
+typedef enum PACK__ {
 	TCS3472__PERSIST_EVERY_RGBC_CYCLE = 0U,	//!< Every RGBC cycle generates interrupt
 	TCS3472__PERSIST_1_IT_PERIODS,			//!< 1 integration time periods out of range
 	TCS3472__PERSIST_2_IT_PERIODS,			//!< 2 integration time periods out of range
@@ -117,10 +117,10 @@ typedef enum PACK__ _TCS3472_it_persist {
 } TCS3472_it_persist;
 
 
-/*!\union _uTCS3472_CMD
+/*!\union uTCS3472_CMD
 ** \brief Union for COMMAND register of TCS3472
 **/
-typedef union _uTCS3472_CMD {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		TCS3472_spec_func	ADDR		:5;		//!< Address field/special function field
@@ -130,10 +130,10 @@ typedef union _uTCS3472_CMD {
 } uTCS3472_CMD;
 
 
-/*!\union _uTCS3472_REG__ENABLE
+/*!\union uTCS3472_REG__ENABLE
 ** \brief Union for ENABLE register of TCS3472
 **/
-typedef union _uTCS3472_REG__ENABLE {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t PON		:1;	//!< Power ON. This field activates the internal oscillator to permit the timers and ADC channels to operate
@@ -146,10 +146,10 @@ typedef union _uTCS3472_REG__ENABLE {
 } uTCS3472_REG__ENABLE;
 
 
-/*!\union _uTCS3472_REG__PERSIST
+/*!\union uTCS3472_REG__PERSIST
 ** \brief Union for PERSIST register of TCS3472
 **/
-typedef union _uTCS3472_REG__PERSIST {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		TCS3472_it_persist	PERSIST	:4;	//!< ALS interrupt persistence filter
@@ -158,10 +158,10 @@ typedef union _uTCS3472_REG__PERSIST {
 } uTCS3472_REG__PERSIST;
 
 
-/*!\union _uTCS3472_REG__CONFIG
+/*!\union uTCS3472_REG__CONFIG
 ** \brief Union for CONFIG register of TCS3472
 **/
-typedef union _uTCS3472_REG__CONFIG {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t			:1;
@@ -171,10 +171,10 @@ typedef union _uTCS3472_REG__CONFIG {
 } uTCS3472_REG__CONFIG;
 
 
-/*!\union _uTCS3472_REG__CONTROL
+/*!\union uTCS3472_REG__CONTROL
 ** \brief Union for CONTROL register of TCS3472
 **/
-typedef union _uTCS3472_REG__CONTROL {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		TCS3472_gain	AGAIN	:2;	//!< ALS gain sets the gain for internal integration amplifiers for both photo-diode channels
@@ -183,10 +183,10 @@ typedef union _uTCS3472_REG__CONTROL {
 } uTCS3472_REG__CONTROL;
 
 
-/*!\union _uTCS3472_REG__STATUS
+/*!\union uTCS3472_REG__STATUS
 ** \brief Union for STATUS register of TCS3472
 **/
-typedef union _uTCS3472_REG__STATUS {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t AVALID	:1;		//!< RGBC Valid. Indicates that the RGBC channels have completed an integration cycle

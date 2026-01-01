@@ -1,6 +1,6 @@
 /*!\file DS_GPMS.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief DS-GPM.S Driver
 ** \details DS-GPM.S: 99 Channel Positioning System (GPS + GLONASS) Shield
 **/
@@ -40,19 +40,19 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _GPMS_wr_reg
+/*!\enum GPMS_wr_reg
 ** \brief Write register map enum of DS-GPM.S
 **/
-typedef enum PACK__ _GPMS_wr_reg {
+typedef enum PACK__ {
 	GPMS__IO_DIRECTION = 0U,	//!< Local IO port direction register
 	GPMS__IO_INPUT_TYPE,		//!< Local IO port input type register
 	GPMS__IO_PORT_OUTPUT,		//!< Local IO port output data register
 } GPMS_wr_reg;
 
-/*!\enum _GPMS_rd_reg
+/*!\enum GPMS_rd_reg
 ** \brief Read register map enum of DS-GPM.S
 **/
-typedef enum PACK__ _GPMS_rd_reg {
+typedef enum PACK__ {
 	GPMS__HOURS_TENS = 0U,						//!< Hours tens register
 	GPMS__HOURS_UNITS,							//!< Hours units register
 	GPMS__MINUTES_TENS,							//!< Minutes tens register
@@ -119,10 +119,10 @@ typedef enum PACK__ _GPMS_rd_reg {
 } GPMS_rd_reg;
 
 
-/*!\enum _GPMS_direction
+/*!\enum GPMS_direction
 ** \brief DS-GPM.S direction enum
 **/
-typedef enum PACK__ _GPMS_direction {
+typedef enum PACK__ {
 	GPMS__DIR_EAST = 'E',		//!< Direction East
 	GPMS__DIR_NORTH = 'N',		//!< Direction North
 	GPMS__DIR_SOUTH = 'S',		//!< Direction South
@@ -130,20 +130,20 @@ typedef enum PACK__ _GPMS_direction {
 } GPMS_direction;
 
 
-/*!\enum _GPMS_quality
+/*!\enum GPMS_quality
 ** \brief DS-GPM.S signal quality
 **/
-typedef enum PACK__ _GPMS_quality {
+typedef enum PACK__ {
 	GPMS__NO_GPS = 0U,	//!< No GPS
 	GPMS__GPS,			//!< GPS
 	GPMS__DGPS			//!< DGPS
 } GPMS_quality;
 
 
-/*!\enum _GPMS_mode
+/*!\enum GPMS_mode
 ** \brief DS-GPM.S modes enum
 **/
-typedef enum PACK__ _GPMS_mode {
+typedef enum PACK__ {
 	GPMS__MODE_AUTONOMOUS = 'A',		//!< Autonomous mode
 	GPMS__MODE_DIFFERENTIAL = 'D',		//!< Differential mode
 	GPMS__MODE_ESTIMATED = 'E',			//!< Estimated mode
@@ -152,19 +152,19 @@ typedef enum PACK__ _GPMS_mode {
 	GPMS__MODE_DATA_NOT_VALID = 'N'		//!< Data not valid
 } GPMS_mode;
 
-/*!\enum _GPMS_north
+/*!\enum GPMS_north
 ** \brief DS-GPM.S north type
 **/
-typedef enum PACK__ _GPMS_north {
+typedef enum PACK__ {
 	GPMS__TRUE_NORTH = 0U,		//!< True north
 	GPMS__MAGNETIC_NORTH		//!< Magnetic north
 } GPMS_north;
 
 
-/*!\union _uGPMS_REG__STATUS
+/*!\union uGPMS_REG__STATUS
 ** \brief Union for STATUS register of DS-GPM.S
 **/
-typedef union _uGPMS_REG__STATUS {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t FW_VERSION_MINOR	:4;		//!< Firmware version minor (0-15)

@@ -1,6 +1,6 @@
 /*!\file TSL2591_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief TSL2591 Driver procedures
 ** \details TSL2591: Very-high sensitivity light-to-digital converter
 **/
@@ -39,10 +39,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct _TSL2591_t
+/*!\struct TSL2591_t
 ** \brief TSL2591 user interface struct
 **/
-typedef struct _TSL2591_t {
+typedef struct {
 	uint16_t			Full;				//!< Current Full spectrum raw value
 	uint16_t			IR;					//!< Current IR raw value
 	uint32_t			Lux;				//!< Current Illuminance (lux)

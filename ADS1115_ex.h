@@ -1,6 +1,6 @@
 /*!\file ADS1115_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief ADS1115 Driver extensions
 ** \details ADS1115: Ultra-Small, Low-Power, 16-Bit Analog-to-Digital Converter with Internal Reference
 ** \note	Compatibility with:
@@ -33,11 +33,11 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\union _uADS1115_REG_MAP
+/*!\union uADS1115_REG_MAP
 ** \brief Union of ADS1115 registry map
 ** \warning Using the particular union depends on the target endian (Big endian needed)
 **/
-typedef union _uADS1115_REG_MAP {
+typedef union {
 	uint16_t Words[4];
 	struct PACK__ {
 		int16_t				Conversion;	// Conversion register

@@ -1,6 +1,6 @@
 /*!\file TCS3472_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief TCS3472 Driver extensions
 ** \details TCS3472: Color light-to-digital converter with IR filter
 **/
@@ -22,10 +22,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _TCS3472_chan
+/*!\enum TCS3472_chan
 ** \brief Light type channels of TCS3472
 **/
-typedef enum PACK__ _TCS3472_chan {
+typedef enum PACK__ {
 	TCS3472__CHAN_CLEAR = 0U,	//!< Clear light channel
 	TCS3472__CHAN_RED,			//!< Red light channel
 	TCS3472__CHAN_GREEN,		//!< Green light channel
@@ -33,10 +33,10 @@ typedef enum PACK__ _TCS3472_chan {
 } TCS3472_chan;
 
 
-/*!\union _uTCS3472_REG_MAP
+/*!\union uTCS3472_REG_MAP
 ** \brief Union of TCS3472 registry map
 **/
-typedef union _uTCS3472_REG_MAP {
+typedef union {
 	uint8_t Bytes[28];
 	struct PACK__ {
 		uTCS3472_REG__ENABLE	ENABLE;		//!< Enables states and interrupts

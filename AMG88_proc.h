@@ -1,6 +1,6 @@
 /*!\file AMG88_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief AMG88 Driver procedures
 ** \details AMG88: Infrared Array Sensor (Grid-EYE)
 **/
@@ -29,10 +29,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct _AMG88_t
+/*!\struct AMG88_t
 ** \brief AMG88 user interface struct
 **/
-typedef struct _AMG88_t {
+typedef struct {
 	uint16_t			Pixels[8][8];		//!< Grid-EYE current raw temperature
 	uint16_t			Thermistor;			//!< Thermistor raw temperature
 	struct {

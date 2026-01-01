@@ -1,6 +1,6 @@
 /*!\file S11059_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief S11059 Driver procedures
 ** \details S11059: I2C interface-compatible color sensor
 **/
@@ -22,10 +22,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct _S11059_t
+/*!\struct S11059_t
 ** \brief S11059 user interface struct
 **/
-typedef struct _S11059_t {
+typedef struct {
 	uint16_t			Red;					//!< Current Red value
 	uint16_t			Green;					//!< Current Green value
 	uint16_t			Blue;					//!< Current Blue value

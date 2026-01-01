@@ -1,6 +1,6 @@
 /*!\file APDS9930.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief APDS9930 Driver
 ** \details APDS9930: Digital Proximity and Ambient Light Sensor
 **/
@@ -39,10 +39,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _APDS9930_reg
+/*!\enum APDS9930_reg
 ** \brief Register map enum of APDS9930
 **/
-typedef enum PACK__ _APDS9930_reg {
+typedef enum PACK__ {
 	APDS9930__ENABLE = 0U,	//!< Enables states and interrupts
 	APDS9930__ATIME,		//!< ALS ADC time
 	APDS9930__PTIME,		//!< Proximity ADC time
@@ -70,68 +70,68 @@ typedef enum PACK__ _APDS9930_reg {
 	APDS9930__POFFSET,		//!< Proximity offset register
 } APDS9930_reg;
 
-/*!\enum _APDS9930_transaction
+/*!\enum APDS9930_transaction
 ** \brief Transaction types of APDS9930
 **/
-typedef enum PACK__ _APDS9930_transaction {
+typedef enum PACK__ {
 	APDS9930__TRANS_REPEATED_BYTE = 0U,		//!< Repeated Byte protocol transaction
 	APDS9930__TRANS_AUTO_INCREMENT = 1U,	//!< Auto-Increment protocol transaction
 	APDS9930__TRANS_SPECIAL_FUNC = 3U,		//!< Special Function
 } APDS9930_transaction;
 
-/*!\enum _APDS9930_spec_func
+/*!\enum APDS9930_spec_func
 ** \brief Special functions of APDS9930
 **/
-typedef enum PACK__ _APDS9930_spec_func {
+typedef enum PACK__ {
 	APDS9930__SF_CLR_PROX_IT = 5U,		//!< Proximity interrupt clear
 	APDS9930__SF_CLR_ALS_IT = 6U,		//!< ALS interrupt clear
 	APDS9930__SF_CLR_PROX_ALS_IT = 7U	//!< Proximity and ALS interrupt clear
 } APDS9930_spec_func;
 
-/*!\enum _APDS9930_als_gain
+/*!\enum APDS9930_als_gain
 ** \brief Gain values of APDS9930 ALS
 **/
-typedef enum PACK__ _APDS9930_als_gain {
+typedef enum PACK__ {
 	APDS9930__ALS_1X_GAIN = 0U,	//!< ALS 1X Gain
 	APDS9930__ALS_8X_GAIN,		//!< ALS 8X Gain
 	APDS9930__ALS_16X_GAIN,		//!< ALS 16X Gain
 	APDS9930__ALS_120X_GAIN		//!< ALS 120X Gain
 } APDS9930_als_gain;
 
-/*!\enum _APDS9930_prox_gain
+/*!\enum APDS9930_prox_gain
 ** \brief Gain values of APDS9930 proximity
 **/
-typedef enum PACK__ _APDS9930_prox_gain {
+typedef enum PACK__ {
 	APDS9930__PROX_1X_GAIN = 0U,	//!< Proximity 1X Gain
 	APDS9930__PROX_2X_GAIN,			//!< Proximity 2X Gain
 	APDS9930__PROX_4X_GAIN,			//!< Proximity 4X Gain
 	APDS9930__PROX_8X_GAIN			//!< Proximity 8X Gain
 } APDS9930_prox_gain;
 
-/*!\enum _APDS9930_prox_diode
+/*!\enum APDS9930_prox_diode
 ** \brief Proximity Diode Select values
 **/
-typedef enum PACK__ _APDS9930_prox_diode {
+typedef enum PACK__ {
 	APDS9930__PDIODE_RESERVED1 = 0U,	//!< Reserved
 	APDS9930__PDIODE_RESERVED2,			//!< Reserved
 	APDS9930__PDIODE_CH1,				//!< Proximity uses the Ch1 diode
 	APDS9930__PDIODE_RESERVED3			//!< Reserved
 } APDS9930_prox_diode;
 
-/*!\enum _APDS9930_drive_strength
+/*!\enum APDS9930_drive_strength
 ** \brief Proximity LED Drive strength values
 **/
-typedef enum PACK__ _APDS9930_drive_strength {
+typedef enum PACK__ {
 	APDS9930__STRENGTH_MAX = 0U,	//!< PDL=0 : 100mA ; PDL=1 : 11.1mA
 	APDS9930__STRENGTH_HIGH,		//!< PDL=0 : 50mA ; PDL=1 : 5.6mA
 	APDS9930__STRENGTH_MEDIUM,		//!< PDL=0 : 25mA ; PDL=1 : 2.8mA
 	APDS9930__STRENGTH_LOW,			//!< PDL=0 : 12.5mA ; PDL=1 : 1.4mA
 } APDS9930_drive_strength;
 
-/*!\enum _APDS9930_als_it_persist
+/*!\enum APDS9930_als_it_persist
 ** \brief Persistence control of APDS9930 ALS
 **/
-typedef enum PACK__ _APDS9930_als_it_persist {
+typedef enum PACK__ {
 	APDS9930__PERSIST_EVERY_ALS_CYCLE = 0U,	//!< Every ALS cycle generates interrupt
 	APDS9930__PERSIST_1_ALS_PERIODS,		//!< 1 consecutive Ch0 channel values out of range
 	APDS9930__PERSIST_2_ALS_PERIODS,		//!< 2 consecutive Ch0 channel values out of range
@@ -150,10 +150,10 @@ typedef enum PACK__ _APDS9930_als_it_persist {
 	APDS9930__PERSIST_60_ALS_PERIODS,		//!< 60 consecutive Ch0 channel values out of range
 } APDS9930_als_it_persist;
 
-/*!\enum _APDS9930_prox_it_persist
+/*!\enum APDS9930_prox_it_persist
 ** \brief Persistence control of APDS9930 Proximity
 **/
-typedef enum PACK__ _APDS9930_prox_it_persist {
+typedef enum PACK__ {
 	APDS9930__PERSIST_EVERY_PROX_CYCLE = 0U,	//!< Every proximity cycle generates an interrupt
 	APDS9930__PERSIST_1_PROX_PERIODS,			//!< 1 consecutive proximity values out of range
 	APDS9930__PERSIST_2_PROX_PERIODS,			//!< 2 consecutive proximity values out of range
@@ -173,10 +173,10 @@ typedef enum PACK__ _APDS9930_prox_it_persist {
 } APDS9930_prox_it_persist;
 
 
-/*!\union _uAPDS9930_CMD
+/*!\union uAPDS9930_CMD
 ** \brief Union for COMMAND register of APDS9930
 **/
-typedef union _uAPDS9930_CMD {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		APDS9930_spec_func		ADDR		:5;		//!< Address field/special function field
@@ -186,10 +186,10 @@ typedef union _uAPDS9930_CMD {
 } uAPDS9930_CMD;
 
 
-/*!\union _uAPDS9930_REG__ENABLE
+/*!\union uAPDS9930_REG__ENABLE
 ** \brief Union for ENABLE register of APDS9930
 **/
-typedef union _uAPDS9930_REG__ENABLE {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t PON		:1;	//!< Power ON. This field activates the internal oscillator to permit the timers and ADC channels to operate
@@ -204,10 +204,10 @@ typedef union _uAPDS9930_REG__ENABLE {
 } uAPDS9930_REG__ENABLE;
 
 
-/*!\union _uAPDS9930_REG__CONFIG
+/*!\union uAPDS9930_REG__CONFIG
 ** \brief Union for CONFIG register of APDS9930
 **/
-typedef union _uAPDS9930_REG__CONFIG {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t	PDL		:1;	//!< Proximity drive level. When asserted, the proximity LDR drive current is reduced by 9
@@ -218,10 +218,10 @@ typedef union _uAPDS9930_REG__CONFIG {
 } uAPDS9930_REG__CONFIG;
 
 
-/*!\union _uAPDS9930_REG__CONTROL
+/*!\union uAPDS9930_REG__CONTROL
 ** \brief Union for CONTROL register of APDS9930
 **/
-typedef union _uAPDS9930_REG__CONTROL {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		APDS9930_als_gain		AGAIN	:2;	//!< ALS Gain Control.
@@ -232,10 +232,10 @@ typedef union _uAPDS9930_REG__CONTROL {
 } uAPDS9930_REG__CONTROL;
 
 
-/*!\union _uAPDS9930_REG__PERSIST
+/*!\union uAPDS9930_REG__PERSIST
 ** \brief Union for PERSIST register of APDS9930
 **/
-typedef union _uAPDS9930_REG__PERSIST {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		APDS9930_als_it_persist		APERS	:4;	//!< Interrupt persistence. Controls rate of interrupt to the host processor.
@@ -244,10 +244,10 @@ typedef union _uAPDS9930_REG__PERSIST {
 } uAPDS9930_REG__PERSIST;
 
 
-/*!\union _uAPDS9930_REG__STATUS
+/*!\union uAPDS9930_REG__STATUS
 ** \brief Union for STATUS register of APDS9930
 **/
-typedef union _uAPDS9930_REG__STATUS {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t AVALID	:1;		//!< ALS Valid. Indicates that the ALS Ch0/Ch1 channels have completed an integration cycle.

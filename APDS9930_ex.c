@@ -1,6 +1,6 @@
 /*!\file APDS9930_ex.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief APDS9930 Driver extensions
 ** \details APDS9930: Digital Proximity and Ambient Light Sensor
 **/

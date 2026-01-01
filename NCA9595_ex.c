@@ -1,6 +1,6 @@
 /*!\file NCA9595_ex.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief NCA9595 Driver extensions
 ** \details NCA9595: Low-voltage 16-bit I²C and SMBus I/O expander
 **/

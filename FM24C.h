@@ -1,6 +1,6 @@
 /*!\file FM24C.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief FM24C FRAM Driver (bank switching at I2C address level protocol)
 ** \details FM24C16B: 16-Kbit (2K * 8) Serial I2C F-RAM
 **			FM24C04B: 4-Kbit (512 * 8) Serial I2C F-RAM
@@ -53,10 +53,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct _FM24C_t
+/*!\struct FM24C_t
 ** \brief FM24C user interface struct
 **/
-typedef struct _FM24C_t {
+typedef struct {
 	struct {
 	I2C_slave_t *		slave_inst;		//!< Slave structure
 	PeripheralGPIO_t	WP_GPIO;		//!< Write Protect GPIO struct

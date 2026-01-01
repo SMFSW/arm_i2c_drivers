@@ -1,6 +1,6 @@
 /*!\file PCA9952.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief PCA9952 Driver
 ** \details PCA9952: 16-channel Fm+ I2C-bus 57 mA constant current LED driver
 **/

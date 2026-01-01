@@ -1,6 +1,6 @@
 /*!\file S11059.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief S11059 Driver
 ** \details S11059: I2C interface-compatible color sensor
 **/
@@ -39,10 +39,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _S11059_reg
+/*!\enum S11059_reg
 ** \brief Register map enum of S11059
 **/
-typedef enum PACK__ _S11059_reg {
+typedef enum PACK__ {
 	S11059__CONTROL = 0U,			//!< Control register
 	S11059__MANUAL_TIMING_MSB,		//!< Manual timing register MSB
 	S11059__MANUAL_TIMING_LSB,		//!< Manual timing register LSB
@@ -57,53 +57,53 @@ typedef enum PACK__ _S11059_reg {
 } S11059_reg;
 
 
-/*!\enum _S11059_prescaler
+/*!\enum S11059_prescaler
 ** \brief Integration times of S11059
 **/
-typedef enum PACK__ _S11059_prescaler {
+typedef enum PACK__ {
 	S11059__INTEG_87_5US = 0U,	//!< 87.5us integration time
 	S11059__INTEG_1_4MS,		//!< 1.4ms integration time
 	S11059__INTEG_22_4MS,		//!< 22.4ms integration time
 	S11059__INTEG_179_2MS,		//!< 179.2ms integration time
 } S11059_prescaler;
 
-/*!\enum _S11059_integ
+/*!\enum S11059_integ
 ** \brief Integration modes of S11059
 **/
-typedef enum PACK__ _S11059_integ {
+typedef enum PACK__ {
 	S11059__FIXED_PERIOD_INTEGRATION = 0U,	//!< Fixed period mode
 	S11059__MANUAL_INTEGRATION,				//!< Manual setting mode
 } S11059_integ;
 
-/*!\enum _S11059_gain
+/*!\enum S11059_gain
 ** \brief Gain values of S11059
 **/
-typedef enum PACK__ _S11059_gain {
+typedef enum PACK__ {
 	S11059__LOW_GAIN = 0U,	//!< Low gain mode (x1)
 	S11059__HIGH_GAIN,		//!< High gain mode (x10)
 } S11059_gain;
 
-/*!\enum _S11059_standby_fct
+/*!\enum S11059_standby_fct
 ** \brief Standby function of S11059
 **/
-typedef enum PACK__ _S11059_standby_fct {
+typedef enum PACK__ {
 	S11059__OPERATING_MODE = 0U,	//!< Operating mode
 	S11059__STANDBY_MODE,			//!< Standby mode
 } S11059_standby_fct;
 
-/*!\enum _S11059_adc_reset
+/*!\enum S11059_adc_reset
 ** \brief ADC operation mode of S11059
 **/
-typedef enum PACK__ _S11059_adc_reset {
+typedef enum PACK__ {
 	S11059__ADC_OPERATION = 0U,	//!< Operation
 	S11059__ADC_RESET,			//!< Reset
 } S11059_adc_reset;
 
 
-/*!\union _uS11059_REG__CONTROL
+/*!\union uS11059_REG__CONTROL
 ** \brief Union for CONTROL register of S11059
 **/
-typedef union _uS11059_REG__CONTROL {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		S11059_prescaler	INTEG_PRESCL		:2;		//!< Integration time setting (prescaler)

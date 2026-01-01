@@ -1,6 +1,6 @@
 /*!\file PCF8523.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief PCF8523 Driver
 ** \details PCF8523: Real-Time Clock (RTC) and calendar
 **/
@@ -34,10 +34,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _PCF8523_reg
+/*!\enum PCF8523_reg
 ** \brief Register map enum for PCF8523 peripheral peripheral
 **/
-typedef enum PACK__ _PCF8523_reg {
+typedef enum PACK__ {
 	// Control registers
 	PCF8523__CONTROL_1 = 0U,	//!< Control and status register 1
 	PCF8523__CONTROL_2,			//!< Control and status register 2
@@ -65,11 +65,11 @@ typedef enum PACK__ _PCF8523_reg {
 	PCF8523__TMR_B_REG			//!< Timer B value register
 } PCF8523_reg;
 
-/*!\enum _PCF8523_weekdays
+/*!\enum PCF8523_weekdays
 ** \brief Weekdays enum for PCF8523 peripheral
 ** \note For reference only, Weekdays can start from any day for week
 **/
-typedef enum PACK__ _PCF8523_weekdays {
+typedef enum PACK__ {
 	PCF8523__SUNDAY = 0U,	//!< Sunday
 	PCF8523__MONDAY,		//!< Monday
 	PCF8523__TUESDAY,		//!< Tuesday
@@ -80,11 +80,11 @@ typedef enum PACK__ _PCF8523_weekdays {
 } PCF8523_weekdays;
 
 
-/*!\enum _PCF8523_months
+/*!\enum PCF8523_months
 ** \note BCD coded values
 ** \brief Weekdays enum for PCF8523 peripheral
 **/
-typedef enum PACK__ _PCF8523_months {
+typedef enum PACK__ {
 	PCF8523__JANUARY = 0x01U,	//!< January
 	PCF8523__FEBRUARY,			//!< February
 	PCF8523__MARCH,				//!< March
@@ -100,10 +100,10 @@ typedef enum PACK__ _PCF8523_months {
 } PCF8523_months;
 
 
-/*!\enum _PCF8523_power
+/*!\enum PCF8523_power
 ** \brief Power Management enum for PCF8523 peripheral
 **/
-typedef enum PACK__ _PCF8523_power {
+typedef enum PACK__ {
 	PCF8523__SO_EN_STANDARD = 0U,			//!< battery switch-over function is enabled in standard mode; battery low detection function is enabled
 	PCF8523__SO_EN_DIRECT_SWITCHING,		//!< battery switch-over function is enabled in direct switching mode; battery low detection function is enabled
 	PCF8523__SO_DI_POWER_VDD,				//!< battery switch-over function is disabled - only one power supply (VDD); battery low detection function is enabled
@@ -115,10 +115,10 @@ typedef enum PACK__ _PCF8523_power {
 } PCF8523_power;
 
 
-/*!\union _uPCF8523_REG__CTRL1
+/*!\union uPCF8523_REG__CTRL1
 ** \brief Union for Control_1 register for PCF8523 peripheral
 **/
-typedef union _uPCF8523_REG__CTRL1 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t CIE			:1;		//!< 0: no correction interrupt generated, 1: interrupt pulses are generated at every correction cycle
@@ -133,10 +133,10 @@ typedef union _uPCF8523_REG__CTRL1 {
 } uPCF8523_REG__CTRL1;
 
 
-/*!\union _uPCF8523_REG__CTRL2
+/*!\union uPCF8523_REG__CTRL2
 ** \brief Union for Control_2 register for PCF8523 peripheral
 **/
-typedef union _uPCF8523_REG__CTRL2 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t CTBIE	:1;		//!< Countdown timer B enable
@@ -151,10 +151,10 @@ typedef union _uPCF8523_REG__CTRL2 {
 } uPCF8523_REG__CTRL2;
 
 
-/*!\union _uPCF8523_REG__CTRL3
+/*!\union uPCF8523_REG__CTRL3
 ** \brief Union for Control_3 register for PCF8523 peripheral
 **/
-typedef union _uPCF8523_REG__CTRL3 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t			BLIE	:1;		//!< Battery Low (1: interrupt generated when BLF is set)
@@ -167,10 +167,10 @@ typedef union _uPCF8523_REG__CTRL3 {
 } uPCF8523_REG__CTRL3;
 
 
-/*!\union _uPCF8523_REG__SECONDS
+/*!\union uPCF8523_REG__SECONDS
 ** \brief Union for Seconds register for PCF8523 peripheral
 **/
-typedef union _uPCF8523_REG__SECONDS {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t SECONDS	:7;		//!< Seconds
@@ -179,10 +179,10 @@ typedef union _uPCF8523_REG__SECONDS {
 } uPCF8523_REG__SECONDS;
 
 
-/*!\union _uPCF8523_REG__MINUTES
+/*!\union uPCF8523_REG__MINUTES
 ** \brief Union for Minutes and Minute Alarm when in AM/PM mode register for PCF8523 peripheral
 **/
-typedef union _uPCF8523_REG__MINUTES {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t MINUTES	:7;		//!< Minutes
@@ -192,10 +192,10 @@ typedef union _uPCF8523_REG__MINUTES {
 } uPCF8523_REG__MINUTES;
 
 
-/*!\union _uPCF8523_REG__HOURS
+/*!\union uPCF8523_REG__HOURS
 ** \brief Union for Hours and Hour Alarm when in AM/PM mode register for PCF8523 peripheral peripheral
 **/
-typedef union _uPCF8523_REG__HOURS {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		union {
@@ -217,10 +217,10 @@ typedef union _uPCF8523_REG__HOURS {
 } uPCF8523_REG__HOURS;
 
 
-/*!\union _uPCF8523_REG__DAYS
+/*!\union uPCF8523_REG__DAYS
 ** \brief Union for Days and Day Alarm register for PCF8523 peripheral peripheral
 **/
-typedef union _uPCF8523_REG__DAYS {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t DAYS	:6;		//!< Days
@@ -231,10 +231,10 @@ typedef union _uPCF8523_REG__DAYS {
 } uPCF8523_REG__DAYS;
 
 
-/*!\union _uPCF8523_REG__WEEKDAYS
+/*!\union uPCF8523_REG__WEEKDAYS
 ** \brief Union for Weekdays and Weekday Alarm register for PCF8523 peripheral peripheral
 **/
-typedef union _uPCF8523_REG__WEEKDAYS {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		PCF8523_weekdays WEEKDAYS	:3;		//!< Weekdays
@@ -245,10 +245,10 @@ typedef union _uPCF8523_REG__WEEKDAYS {
 } uPCF8523_REG__WEEKDAYS;
 
 
-/*!\union _uPCF8523_REG__OFFSET
+/*!\union uPCF8523_REG__OFFSET
 ** \brief Union for Offset for PCF8523 peripheral peripheral
 **/
-typedef union _uPCF8523_REG__OFFSET {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t OFFSET	:7;		//!< offset value (+63 to -64) MODE = 0: offset step 4.340ppm, MODE = 1: offset step 4.069ppm
@@ -257,10 +257,10 @@ typedef union _uPCF8523_REG__OFFSET {
 } uPCF8523_REG__OFFSET;
 
 
-/*!\union _uPCF8523_REG__CLKOUT_CTRL
+/*!\union uPCF8523_REG__CLKOUT_CTRL
 ** \brief Union for Tmr_CLKOUT_ctrl for PCF8523 peripheral peripheral
 **/
-typedef union _uPCF8523_REG__CLKOUT_CTRL {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t TBC		:1;		//!< timer B is enabled (if CTBIE (register Control_2) is set logic 1, the interrupt is activated when the countdown timed out)
@@ -272,10 +272,10 @@ typedef union _uPCF8523_REG__CLKOUT_CTRL {
 } uPCF8523_REG__CLKOUT_CTRL;
 
 
-/*!\union _uPCF8523_REG__B_FREQ_CTRL
+/*!\union uPCF8523_REG__B_FREQ_CTRL
 ** \brief Union for Tmr_B_freq_ctrl for PCF8523 peripheral peripheral
 **/
-typedef union _uPCF8523_REG__B_FREQ_CTRL {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t TBQ		:3;		//!< source clock for timer B

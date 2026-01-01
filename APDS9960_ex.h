@@ -1,6 +1,6 @@
 /*!\file APDS9960_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief APDS9960 Driver extensions
 ** \details APDS9960: Digital Proximity, Ambient Light, RGB and Gesture Sensor
 **/
@@ -22,10 +22,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _APDS9960_chan
+/*!\enum APDS9960_chan
 ** \brief Type channels of APDS9960
 **/
-typedef enum PACK__ _APDS9960_chan {
+typedef enum PACK__ {
 	APDS9960__CHAN_CLEAR = 0U,	//!< Clear light channel
 	APDS9960__CHAN_RED,			//!< Red light channel
 	APDS9960__CHAN_GREEN,		//!< Green light channel
@@ -34,10 +34,10 @@ typedef enum PACK__ _APDS9960_chan {
 } APDS9960_chan;
 
 
-/*!\union _uAPDS9960_REG_MAP
+/*!\union uAPDS9960_REG_MAP
 ** \brief Union of APDS9960 registry map
 **/
-typedef union _uAPDS9960_REG_MAP {
+typedef union {
 	uint8_t Bytes[176];
 	struct PACK__ {
 		uint8_t					RAM[128];	//!< APDS9960 RAM

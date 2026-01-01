@@ -1,6 +1,6 @@
 /*!\file NCA9595_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief NCA9595 Driver procedures
 ** \details NCA9595: Low-voltage 16-bit I²C and SMBus I/O expander
 **/
@@ -22,10 +22,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct _NCA9595_t
+/*!\struct NCA9595_t
 ** \brief NCA9595 user interface struct
 **/
-typedef struct _NCA9595_t {
+typedef struct {
 	uNCA9595_REG__IN	NCA9595_in;			//!< Latest read inputs
 	uNCA9595_REG__OUT	NCA9595_out;		//!< Latest written outputs
 	struct {

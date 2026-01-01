@@ -1,6 +1,6 @@
 /*!\file PCA9532.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief PCA9532 Driver
 ** \details PCA9532: 16-bit I2C-bus LED dimmer
 **/
@@ -39,10 +39,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _PCA9532_reg
+/*!\enum PCA9532_reg
 ** \brief Register map enum of PCA9532
 **/
-typedef enum PACK__ _PCA9532_reg {
+typedef enum PACK__ {
 	PCA9532__INPUT0 = 0U,	//!< register INPUT0
 	PCA9532__INPUT1,		//!< register INPUT1
 	PCA9532__PSC0,			//!< register Frequency Prescaler 0
@@ -56,10 +56,10 @@ typedef enum PACK__ _PCA9532_reg {
 } PCA9532_reg;
 
 
-/*!\union _uPCA9532_REG__INPUT0
+/*!\union uPCA9532_REG__INPUT0
 ** \brief Union for INPUT0 register of PCA9532
 **/
-typedef union PACK__ _uPCA9532_REG__INPUT0 {
+typedef union PACK__ {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t LED0		:1;		//!< LED0 input pin state
@@ -73,10 +73,10 @@ typedef union PACK__ _uPCA9532_REG__INPUT0 {
 	} Bits;
 } uPCA9532_REG__INPUT0;
 
-/*!\union _uPCA9532_REG__INPUT1
+/*!\union uPCA9532_REG__INPUT1
 ** \brief Union for INPUT1 register of PCA9532
 **/
-typedef union PACK__ _uPCA9532_REG__INPUT1 {
+typedef union PACK__ {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t LED8		:1;		//!< LED8 input pin state
@@ -90,10 +90,10 @@ typedef union PACK__ _uPCA9532_REG__INPUT1 {
 	} Bits;
 } uPCA9532_REG__INPUT1;
 
-/*!\union _uPCA9532_REG__INPUT
+/*!\union uPCA9532_REG__INPUT
 ** \brief Union for INPUT registers of PCA9532
 **/
-typedef union PACK__ _uPCA9532_REG__INPUT {
+typedef union PACK__ {
 	uint16_t Word;
 	struct PACK__ {
 		uint16_t LED0		:1;		//!< LED0 input pin state
@@ -116,10 +116,10 @@ typedef union PACK__ _uPCA9532_REG__INPUT {
 } uPCA9532_REG__INPUT;
 
 
-/*!\union _uPCA9532_REG__LS0
+/*!\union uPCA9532_REG__LS0
 ** \brief Union for LS0 register of PCA9532
 **/
-typedef union PACK__ _uPCA9532_REG__LS0 {
+typedef union PACK__ {
 	uint8_t Byte;
 	struct PACK__ {
 		PCA95xx_ledsel LED0		:2;		//!< LED0 output state control
@@ -129,10 +129,10 @@ typedef union PACK__ _uPCA9532_REG__LS0 {
 	} Bits;
 } uPCA9532_REG__LS0;
 
-/*!\union _uPCA9532_REG__LS1
+/*!\union uPCA9532_REG__LS1
 ** \brief Union for LS1 register of PCA9532
 **/
-typedef union PACK__ _uPCA9532_REG__LS1 {
+typedef union PACK__ {
 	uint8_t Byte;
 	struct PACK__ {
 		PCA95xx_ledsel LED4		:2;		//!< LED4 output state control
@@ -142,10 +142,10 @@ typedef union PACK__ _uPCA9532_REG__LS1 {
 	} Bits;
 } uPCA9532_REG__LS1;
 
-/*!\union _uPCA9532_REG__LS2
+/*!\union uPCA9532_REG__LS2
 ** \brief Union for LS2 register of PCA9532
 **/
-typedef union PACK__ _uPCA9532_REG__LS2 {
+typedef union PACK__ {
 	uint8_t Byte;
 	struct PACK__ {
 		PCA95xx_ledsel LED8		:2;		//!< LED8 output state control
@@ -155,10 +155,10 @@ typedef union PACK__ _uPCA9532_REG__LS2 {
 	} Bits;
 } uPCA9532_REG__LS2;
 
-/*!\union _uPCA9532_REG__LS3
+/*!\union uPCA9532_REG__LS3
 ** \brief Union for LS3 register of PCA9532
 **/
-typedef union PACK__ _uPCA9532_REG__LS3 {
+typedef union PACK__ {
 	uint8_t Byte;
 	struct PACK__ {
 		PCA95xx_ledsel LED12	:2;		//!< LED12 output state control
@@ -168,10 +168,10 @@ typedef union PACK__ _uPCA9532_REG__LS3 {
 	} Bits;
 } uPCA9532_REG__LS3;
 
-/*!\union _uPCA9532_REG__LS
+/*!\union uPCA9532_REG__LS
 ** \brief Union for LS registers of PCA9532
 **/
-typedef union PACK__ _uPCA9532_REG__LS {
+typedef union PACK__ {
 	uint32_t DWord;
 	struct PACK__ {
 		PCA95xx_ledsel LED0		:2;		//!< LED0 output state control

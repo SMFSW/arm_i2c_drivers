@@ -1,6 +1,6 @@
 /*!\file MB85RC256V.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief MB85RC256V FRAM Driver
 ** \details MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM
 ** \note Legacy component: consider switching to I2CMEM component for new designs

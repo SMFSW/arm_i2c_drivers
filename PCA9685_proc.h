@@ -1,6 +1,6 @@
 /*!\file PCA9685_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief PCA9685 Driver procedures
 ** \details PCA9685: 16-channel, 12-bit PWM Fm+ I2C-bus LED controller
 **/
@@ -37,10 +37,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct _PCA9685_t
+/*!\struct PCA9685_t
 ** \brief PCA9685 user interface struct
 **/
-typedef struct _PCA9685_t {
+typedef struct {
 	struct {
 	I2C_slave_t *		slave_inst;		//!< Slave structure
 	PeripheralGPIO_t	OE_GPIO;		//!< Output Enable GPIO struct

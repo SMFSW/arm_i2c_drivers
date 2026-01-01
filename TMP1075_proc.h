@@ -1,6 +1,6 @@
 /*!\file TMP1075_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief TMP1075 Driver procedures
 ** \details TMP1075: Temperature Sensor With I2C and SMBus Interface in Industry Standard LM75 Form Factor and Pinout
 **/
@@ -30,19 +30,19 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _TMP1075_limit
+/*!\enum TMP1075_limit
 ** \brief Limits enum of TMP1075
 **/
-typedef enum PACK__ _TMP1075_limit {
+typedef enum PACK__ {
 	TMP1075__LIMIT_LOW = 0U,	//!< Low temperature limit
 	TMP1075__LIMIT_HIGH			//!< High temperature limit
 } TMP1075_limit;
 
 
-/*!\struct _TMP1075_t
+/*!\struct TMP1075_t
 ** \brief TMP1075 user interface struct
 **/
-typedef struct _TMP1075_t {
+typedef struct {
 	float				Temperature;	//!< Current temperature
 	bool				NewData;		//!< New data available
 	bool				Ongoing;		//!< Single conversion launched

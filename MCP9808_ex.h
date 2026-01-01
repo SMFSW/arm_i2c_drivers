@@ -1,6 +1,6 @@
 /*!\file MCP9808_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief MCP9808 Driver extensions
 ** \details MCP9808: +/-0.5C Maximum Accuracy Digital Temperature Sensor
 **/
@@ -22,10 +22,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\union _uMCP9808_REG_MAP
+/*!\union uMCP9808_REG_MAP
 ** \brief Union of MCP9808 registry map
 **/
-typedef union _uMCP9808_REG_MAP {
+typedef union {
 	uint16_t Words[9];
 	struct PACK__ {
 		uint16_t				RFU;				//!< RFU, Reserved for Future Use (Read-Only register)

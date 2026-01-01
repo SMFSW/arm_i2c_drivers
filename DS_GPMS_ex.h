@@ -1,6 +1,6 @@
 /*!\file DS_GPMS_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief DS-GPM.S Driver extensions
 ** \details DS-GPM.S: 99 Channel Positioning System (GPS + GLONASS) Shield
 **/
@@ -28,10 +28,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\union _uGPMS_WR_REG_MAP
+/*!\union uGPMS_WR_REG_MAP
 ** \brief Union of DS-GPM.S writeable registry map
 **/
-typedef union _uGPMS_WR_REG_MAP {
+typedef union {
 	uint8_t Bytes[3];
 	struct PACK__ {
 		uint8_t		IO_Direction;
@@ -41,10 +41,10 @@ typedef union _uGPMS_WR_REG_MAP {
 } uGPMS_WR_REG_MAP;
 
 
-/*!\union _uGPMS_RD_REG_MAP
+/*!\union uGPMS_RD_REG_MAP
 ** \brief Union of DS-GPM.S readable registry map
 **/
-typedef union _uGPMS_RD_REG_MAP {
+typedef union {
 	uint8_t Bytes[70];
 	struct {
 		uint8_t				Hours_Tens;

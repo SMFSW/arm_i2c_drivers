@@ -1,6 +1,6 @@
 /*!\file MCP4725_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief MCP4725 Driver procedures
 ** \details MCP4725: 12-Bit Digital-to-Analog Converter with EEPROM Memory
 **/
@@ -22,10 +22,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct _MCP4725_t
+/*!\struct MCP4725_t
 ** \brief MCP4725 user interface struct
 **/
-typedef struct _MCP4725_t {
+typedef struct {
 	uint16_t		DAC_4096;		//!< DAC output value (12bits)
 	float			DAC_Volts;		//!< DAC output in Volts
 	struct {

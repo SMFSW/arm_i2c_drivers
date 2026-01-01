@@ -1,6 +1,6 @@
 /*!\file PCA9532_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief PCA9532 Driver extensions
 ** \details PCA9532: 16-bit I2C-bus LED dimmer
 **/
@@ -22,10 +22,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\union _uPCA9532_REG_MAP
+/*!\union uPCA9532_REG_MAP
 ** \brief PCA9532 Register map union
 **/
-typedef union _uPCA9532_REG_MAP {
+typedef union {
 	uint8_t Bytes[10];
 	struct PACK__ {
 		uPCA9532_REG__INPUT0	INPUT0;

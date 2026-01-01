@@ -1,6 +1,6 @@
 /*!\file TSL2591_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief TSL2591 Driver extensions
 ** \details TSL2591: Very-high sensitivity light-to-digital converter
 **/
@@ -22,20 +22,20 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _TSL2591_light
+/*!\enum TSL2591_light
 ** \brief Light types of TSL2591
 **/
-typedef enum PACK__ _TSL2591_light {
+typedef enum PACK__ {
 	TSL2591__LIGHT_FULL = 0U,	//!< Full light spectrum (channel 0)
 	TSL2591__LIGHT_IR,			//!< Infra Red light (channel 1)
 	TSL2591__LIGHT_VISIBLE		//!< Visible light (channel 0 - channel 1)
 } TSL2591_light;
 
 
-/*!\union _uTSL2591_REG_MAP
+/*!\union uTSL2591_REG_MAP
 ** \brief Union of TSL2591 registry map
 **/
-typedef union _uTSL2591_REG_MAP {
+typedef union {
 	uint8_t Bytes[23];
 	struct PACK__ {
 		uTSL2591_REG__ENABLE	ENABLE;		//!< Enables states and interrupts

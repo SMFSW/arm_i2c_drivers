@@ -1,6 +1,6 @@
 /*!\file TCS3472_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief TCS3472 Driver procedures
 ** \details TCS3472: Color light-to-digital converter with IR filter
 **/
@@ -38,10 +38,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct _TCS3472_t
+/*!\struct TCS3472_t
 ** \brief TCS3472 user interface struct
 **/
-typedef struct _TCS3472_t {
+typedef struct {
 	uint16_t			Red;				//!< Current Red conversion
 	uint16_t			Green;				//!< Current Green conversion
 	uint16_t			Blue;				//!< Current Blue conversion

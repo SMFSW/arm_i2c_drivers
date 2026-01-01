@@ -1,6 +1,6 @@
 /*!\file DS_GPMS_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief DS-GPM.S Driver procedures
 ** \details DS-GPM.S: 99 Channel Positioning System (GPS + GLONASS) Shield
 **/
@@ -28,38 +28,38 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct _GPMS_date
+/*!\struct GPMS_date
 ** \brief DS-GPM.S Date struct
 **/
-typedef struct _GPMS_date {
+typedef struct {
 	uint16_t	Year;	//!< Year
 	uint8_t		Month;	//!< Month
 	uint8_t		Day;	//!< Day
 } GPMS_date;
 
-/*!\struct _GPMS_hour
+/*!\struct GPMS_hour
 ** \brief DS-GPM.S Time of day struct
 **/
-typedef struct _GPMS_hour {
+typedef struct {
 	uint8_t	Hours;		//!< Hours
 	uint8_t	Minutes;	//!< Minutes
 	uint8_t	Seconds;	//!< Seconds
 } GPMS_hour;
 
-/*!\struct _GPMS_coord
+/*!\struct GPMS_coord
 ** \brief DS-GPM.S coordinate struct
 **/
-typedef struct _GPMS_coord {
+typedef struct {
 	uint8_t			Degrees;	//!< Degrees coordinate
 	float			Minutes;	//!< Minutes coordinate
 	GPMS_direction	Direction;	//!< Direction coordinate
 } GPMS_coord;
 
 
-/*!\struct _GPMS_t
+/*!\struct GPMS_t
 ** \brief GPMS user interface struct
 **/
-typedef struct _GPMS_t {
+typedef struct {
 	GPMS_date		Date;
 	GPMS_hour		Hour;
 	GPMS_coord		Latitude;

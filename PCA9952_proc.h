@@ -1,6 +1,6 @@
 /*!\file PCA9952_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief PCA9952 Driver procedures
 ** \details PCA9952: 16-channel Fm+ I2C-bus 57 mA constant current LED driver
 **/
@@ -30,10 +30,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct _PCA9952_t
+/*!\struct PCA9952_t
 ** \brief PCA9952 user interface struct
 **/
-typedef struct _PCA9952_t {
+typedef struct {
 	uPCA9952_REG__LEDOUT	LDR;				//!< LED output drive registers
 	struct {
 	I2C_slave_t *			slave_inst;			//!< Slave structure

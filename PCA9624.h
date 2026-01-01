@@ -1,6 +1,6 @@
 /*!\file PCA9624.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief PCA9624 Driver
 ** \details PCA9624: 8-bit Fm+ I2C-bus 100mA 40V LED driver
 **/
@@ -40,10 +40,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _PCA9624_reg
+/*!\enum PCA9624_reg
 ** \brief Register map enum of PCA9624
 **/
-typedef enum PACK__ _PCA9624_reg {
+typedef enum PACK__ {
 	PCA9624__MODE1 = 0U,	//!< register MODE1
 	PCA9624__MODE2,			//!< register MODE2
 	PCA9624__PWM0,			//!< register PWM0
@@ -65,10 +65,10 @@ typedef enum PACK__ _PCA9624_reg {
 } PCA9624_reg;
 
 
-/*!\union _uPCA9624_REG__MODE1
+/*!\union uPCA9624_REG__MODE1
 ** \brief Union for MODE1 register of PCA9624
 **/
-typedef union PACK__ _uPCA9624_REG__MODE1 {
+typedef union PACK__ {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t ALLCALL	:1;		//!< All CALL address acknowledgment
@@ -82,10 +82,10 @@ typedef union PACK__ _uPCA9624_REG__MODE1 {
 	} Bits;
 } uPCA9624_REG__MODE1;
 
-/*!\union _uPCA9624_REG__MODE2
+/*!\union uPCA9624_REG__MODE2
 ** \brief Union for MODE2 register of PCA9624
 **/
-typedef union PACK__ _uPCA9624_REG__MODE2 {
+typedef union PACK__ {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t			Res0_1	:1;		//!< Reserved bit 0: reads 1
@@ -99,10 +99,10 @@ typedef union PACK__ _uPCA9624_REG__MODE2 {
 } uPCA9624_REG__MODE2;
 
 
-/*!\union _uPCA9624_REG__LEDOUT
+/*!\union uPCA9624_REG__LEDOUT
 ** \brief Union for LEDOUT registers of PCA9624
 **/
-typedef union PACK__ _uPCA9624_REG__LEDOUT {
+typedef union PACK__ {
 	uint16_t Word;
 	struct PACK__ {
 		PCA962x_ledout LDR0	:2;		//!< LED0 output state control

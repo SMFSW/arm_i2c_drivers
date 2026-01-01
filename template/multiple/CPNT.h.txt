@@ -1,6 +1,6 @@
 /*!\file $CPNT$.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief $CPNT$ Driver
 ** \details $CPNT$:
 **/
@@ -40,28 +40,28 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _$CPNT$_reg
+/*!\enum $CPNT$_reg
 ** \brief Register map enum of $CPNT$
 **/
-typedef enum PACK__ _$CPNT$_reg {
+typedef enum PACK__ {
 	$CPNT$__REG1 = 0U,	//!< default value for reference
 	$CPNT$__REG2,		//!< default value for reference
 } $CPNT$_reg;
 
 
-/*!\enum _$CPNT$_enum
+/*!\enum $CPNT$_enum
 ** \brief Values enum for $CPNT$
 **/
-typedef enum PACK__ _$CPNT$_enum {
+typedef enum PACK__ {
 	$CPNT$__VAL1 = 0U,	//!< default value for reference
 	$CPNT$__VAL2,		//!< default value for reference
 } $CPNT$_enum;
 
 
-/*!\union _u$CPNT$_REG__REG1
+/*!\union u$CPNT$_REG__REG1
 ** \brief Union for REG1 register of $CPNT$
 **/
-typedef union _u$CPNT$_REG__REG1 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t BIT0	:1;		//!< BIT0 description (LSB first)

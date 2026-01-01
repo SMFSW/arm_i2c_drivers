@@ -1,6 +1,6 @@
 /*!\file MTCH6102_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief MTCH6102 Driver extensions
 ** \details MTCH6102: Low-Power Projected Capacitive Touch Controller
 **/
@@ -36,7 +36,7 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-typedef enum PACK__ _MTCH6102_COMMAND {
+typedef enum PACK__ {
 	MTCH_StoreToNV = 0U,	//!< Write to non volatile storage
 	MTCH_RestoreDefaults,	//!< Restore controller to default configuration values
 	MTCH_Configure,			//!< Configure controller (after parameters have been changed)
@@ -45,7 +45,7 @@ typedef enum PACK__ _MTCH6102_COMMAND {
 } MTCH6102_COMMAND;
 
 
-typedef struct _MTCH6102_raw_sense {
+typedef struct {
 	uint8_t	sensor[16];
 } MTCH6102_raw_sense;
 

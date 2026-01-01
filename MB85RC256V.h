@@ -1,6 +1,6 @@
 /*!\file MB85RC256V.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief MB85RC256V FRAM Driver
 ** \details MB85RC256V: 256-Kbit (32K * 8) I2C Memory FRAM
 ** \note Legacy component: consider switching to I2CMEM component for new designs
@@ -44,10 +44,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct _MB85RC256V_t
+/*!\struct MB85RC256V_t
 ** \brief MB85RC256V user interface struct
 **/
-typedef struct _MB85RC256V_t {
+typedef struct {
 	struct {
 	I2C_slave_t *		slave_inst;		//!< Slave structure
 	PeripheralGPIO_t	WP_GPIO;		//!< Write Protect GPIO struct

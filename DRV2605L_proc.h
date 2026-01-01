@@ -1,6 +1,6 @@
 /*!\file DRV2605L_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief DRV2605L Driver procedures
 ** \details DRV2605L: 2 to 5.2V Haptic Driver for LRA and ERM With Effect Library and Smart-Loop Architecture
 **/
@@ -31,10 +31,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct _DRV2605L_t
+/*!\struct DRV2605L_t
 ** \brief DRV2605L user interface struct
 **/
-typedef struct _DRV2605L_t {
+typedef struct {
 	struct {
 	I2C_slave_t *		slave_inst;	//!< Slave structure
 	PeripheralGPIO_t	EN_GPIO;	//!< Enable GPIO struct

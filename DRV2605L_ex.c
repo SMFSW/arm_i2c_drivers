@@ -1,6 +1,6 @@
 /*!\file DRV2605L_ex.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief DRV2605L Driver extensions
 ** \details DRV2605L: 2 to 5.2V Haptic Driver for LRA and ERM With Effect Library and Smart-Loop Architecture
 **/
@@ -15,7 +15,7 @@
 /*!\union uDRV_CFG
 ** \brief DRV2605L Config registers union
 **/
-typedef union uDRV_CFG {
+typedef union {
 	uint8_t Bytes[6];
 	struct {
 		uDRV_REG__FEEDBACK_CONTROL	fdbck_ctl;

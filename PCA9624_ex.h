@@ -1,6 +1,6 @@
 /*!\file PCA9624_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief PCA9624 Driver extensions
 ** \details PCA9624: 8-bit Fm+ I2C-bus 100mA 40V LED driver
 **/
@@ -22,10 +22,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\union _uPCA9624_REG_MAP
+/*!\union uPCA9624_REG_MAP
 ** \brief PCA9624 Register map union
 **/
-typedef union _uPCA9624_REG_MAP {
+typedef union {
 	uint8_t Bytes[0x11];
 	struct PACK__ {
 		uPCA9624_REG__MODE1		MODE1;

@@ -1,6 +1,6 @@
 /*!\file MCP4725.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief MCP4725 Driver
 ** \details MCP4725: 12-Bit Digital-to-Analog Converter with EEPROM Memory
 **/
@@ -44,10 +44,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _MCP4725_cmd
+/*!\enum MCP4725_cmd
 ** \brief Register map enum of MCP4725
 **/
-typedef enum PACK__ _MCP4725_cmd {
+typedef enum PACK__ {
 	MCP4725__FAST_MODE = 0U,	//!< This command is used to change the DAC register. EEPROM is not affected
 	MCP4725__WRITE_DAC = 2U,	//!< Load configuration bits and data code to the DAC Register
 	MCP4725__WRITE_DAC_EEP,		//!< Load configuration bits and data code to the DAC Register and also write the EEPROM
@@ -58,10 +58,10 @@ typedef enum PACK__ _MCP4725_cmd {
 } MCP4725_cmd;
 
 
-/*!\enum _MCP4725_pd
+/*!\enum MCP4725_pd
 ** \brief Power down enum of MCP4725
 **/
-typedef enum PACK__ _MCP4725_pd {
+typedef enum PACK__ {
 	MCP4725__PWR_NORMAL = 0U,	//!< Normal mode
 	MCP4725__PWR_DOWN_1K,		//!< 1K Ohm resistor to ground
 	MCP4725__PWR_DOWN_100K,		//!< 100K Ohm resistor to ground
@@ -69,10 +69,10 @@ typedef enum PACK__ _MCP4725_pd {
 } MCP4725_pd;
 
 
-/*!\union _uMCP4725_REG__CMD
+/*!\union uMCP4725_REG__CMD
 ** \brief Union for CMD of MCP4725
 **/
-typedef union _uMCP4725_REG__CMD {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t			:1;

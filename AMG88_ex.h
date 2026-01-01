@@ -1,6 +1,6 @@
 /*!\file AMG88_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief AMG88 Driver extensions
 ** \details AMG88: Infrared Array Sensor (Grid-EYE)
 **/
@@ -27,10 +27,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\union _uAMG88_REG_MAP
+/*!\union uAMG88_REG_MAP
 ** \brief Union of AMG88 registry map
 **/
-typedef union _uAMG88_REG_MAP {
+typedef union {
 	uint8_t Bytes[256];
 } uAMG88_REG_MAP;
 

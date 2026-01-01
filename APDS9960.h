@@ -1,6 +1,6 @@
 /*!\file APDS9960.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief APDS9960 Driver
 ** \details APDS9960: Digital Proximity, Ambient Light, RGB and Gesture Sensor
 **/
@@ -40,10 +40,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _APDS9960_reg
+/*!\enum APDS9960_reg
 ** \brief Register map enum of APDS9960
 **/
-typedef enum PACK__ _APDS9960_reg {
+typedef enum PACK__ {
 	APDS9960__ENABLE = 0x80U,		//!< Enables states and interrupts
 	APDS9960__ATIME,				//!< ADC integration time
 	APDS9960__WTIME = 0x83U,		//!< Wait time (non-gesture)
@@ -95,10 +95,10 @@ typedef enum PACK__ _APDS9960_reg {
 	APDS9960__GFIFO_R,				//!< Gesture FIFO RIGHT value
 } APDS9960_reg;
 
-/*!\enum _APDS9960_spec_func
+/*!\enum APDS9960_spec_func
 ** \brief Special functions of APDS9960
 **/
-typedef enum PACK__ _APDS9960_spec_func {
+typedef enum PACK__ {
 	APDS9960__SF_IFORCE = 0U,	//!< Forces an interrupt
 	APDS9960__SF_PICLEAR,		//!< Proximity interrupt clear
 	APDS9960__SF_CICLEAR,		//!< ALS interrupt clear
@@ -106,10 +106,10 @@ typedef enum PACK__ _APDS9960_spec_func {
 } APDS9960_spec_func;
 
 
-/*!\enum _APDS9960_als_it_persist
+/*!\enum APDS9960_als_it_persist
 ** \brief Persistence control of APDS9960 ALS
 **/
-typedef enum PACK__ _APDS9960_als_it_persist {
+typedef enum PACK__ {
 	APDS9960__PERSIST_EVERY_ALS_CYCLE = 0U,	//!< Every ALS cycle generates interrupt
 	APDS9960__PERSIST_1_ALS_PERIODS,		//!< 1 consecutive Ch0 channel values out of range
 	APDS9960__PERSIST_2_ALS_PERIODS,		//!< 2 consecutive Ch0 channel values out of range
@@ -128,10 +128,10 @@ typedef enum PACK__ _APDS9960_als_it_persist {
 	APDS9960__PERSIST_60_ALS_PERIODS,		//!< 60 consecutive Ch0 channel values out of range
 } APDS9960_als_it_persist;
 
-/*!\enum _APDS9960_prox_it_persist
+/*!\enum APDS9960_prox_it_persist
 ** \brief Persistence control of APDS9960 Proximity
 **/
-typedef enum PACK__ _APDS9960_prox_it_persist {
+typedef enum PACK__ {
 	APDS9960__PERSIST_EVERY_PROX_CYCLE = 0U,	//!< Every proximity cycle generates an interrupt
 	APDS9960__PERSIST_1_PROX_PERIODS,			//!< 1 consecutive proximity values out of range
 	APDS9960__PERSIST_2_PROX_PERIODS,			//!< 2 consecutive proximity values out of range
@@ -150,10 +150,10 @@ typedef enum PACK__ _APDS9960_prox_it_persist {
 	APDS9960__PERSIST_15_PROX_PERIODS,			//!< 15 consecutive proximity values out of range
 } APDS9960_prox_it_persist;
 
-/*!\enum _APDS9960_pulse_length
+/*!\enum APDS9960_pulse_length
 ** \brief Proximity LED Pulse Length values
 **/
-typedef enum PACK__ _APDS9960_pulse_length {
+typedef enum PACK__ {
 	APDS9960__PL_4US = 0U,	//!< Pulse Length 4�s
 	APDS9960__PL_8US,		//!< Pulse Length 8�s
 	APDS9960__PL_16US,		//!< Pulse Length 16�s
@@ -161,20 +161,20 @@ typedef enum PACK__ _APDS9960_pulse_length {
 } APDS9960_pulse_length;
 
 
-/*!\enum _APDS9960_als_gain
+/*!\enum APDS9960_als_gain
 ** \brief Gain values of APDS9960 ALS & Color
 **/
-typedef enum PACK__ _APDS9960_als_gain {
+typedef enum PACK__ {
 	APDS9960__ALS_1X_GAIN = 0U,	//!< ALS 1X Gain
 	APDS9960__ALS_4X_GAIN,		//!< ALS 4X Gain
 	APDS9960__ALS_16X_GAIN,		//!< ALS 16X Gain
 	APDS9960__ALS_64X_GAIN		//!< ALS 64X Gain
 } APDS9960_als_gain;
 
-/*!\enum _APDS9960_prox_gain
+/*!\enum APDS9960_prox_gain
 ** \brief Gain values of APDS9960 proximity
 **/
-typedef enum PACK__ _APDS9960_prox_gain {
+typedef enum PACK__ {
 	APDS9960__PROX_1X_GAIN = 0U,	//!< Proximity 1X Gain
 	APDS9960__PROX_2X_GAIN,			//!< Proximity 2X Gain
 	APDS9960__PROX_4X_GAIN,			//!< Proximity 4X Gain
@@ -182,30 +182,30 @@ typedef enum PACK__ _APDS9960_prox_gain {
 } APDS9960_prox_gain;
 
 
-/*!\enum _APDS9960_drive_strength
+/*!\enum APDS9960_drive_strength
 ** \brief Proximity LED Drive strength values
 **/
-typedef enum PACK__ _APDS9960_drive_strength {
+typedef enum PACK__ {
 	APDS9960__DS_100MA = 0U,	//!< Proximity LED Drive Strength 100mA
 	APDS9960__DS_50MA,			//!< Proximity LED Drive Strength 50mA
 	APDS9960__DS_25MA,			//!< Proximity LED Drive Strength 25mA
 	APDS9960__DS_12_5MA,		//!< Proximity LED Drive Strength 12.5mA
 } APDS9960_drive_strength;
 
-/*!\enum _APDS9960_led_boost
+/*!\enum APDS9960_led_boost
 ** \brief Proximity LED boost values
 **/
-typedef enum PACK__ _APDS9960_led_boost {
+typedef enum PACK__ {
 	APDS9960__BOOST_1X = 0U,	//!< LED Boost 100%. A LED_BOOST value of 0 results in 100% of the current as set by LDRIVE (no additional current)
 	APDS9960__BOOST_1_5X,		//!< LED Boost 150%
 	APDS9960__BOOST_2X,			//!< LED Boost 200%
 	APDS9960__BOOST_3X,			//!< LED Boost 300%
 } APDS9960_led_boost;
 
-/*!\enum _APDS9960_gesture_dim
+/*!\enum APDS9960_gesture_dim
 ** \brief Gesture dimension values
 **/
-typedef enum PACK__ _APDS9960_gesture_dim {
+typedef enum PACK__ {
 	APDS9960__GD_UDLR = 0U,	//!< Both pairs are active. UP-DOWN and LEFT-RIGHT FIFO data is valid.
 	APDS9960__GD_UD,		//!< Only the UP-DOWN pair is active. Ignore LEFT-RIGHT data in FIFO.
 	APDS9960__GD_LR,		//!< Only the LEFT-RIGHT pair is active. Ignore UP-DOWN data in FIFO.
@@ -213,10 +213,10 @@ typedef enum PACK__ _APDS9960_gesture_dim {
 } APDS9960_gesture_dim;
 
 
-/*!\union _uAPDS9960_REG__ENABLE
+/*!\union uAPDS9960_REG__ENABLE
 ** \brief Union for ENABLE register of APDS9960
 **/
-typedef union _uAPDS9960_REG__ENABLE {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t PON		:1;	//!< Power ON. This field activates the internal oscillator to permit the timers and ADC channels to operate
@@ -231,10 +231,10 @@ typedef union _uAPDS9960_REG__ENABLE {
 } uAPDS9960_REG__ENABLE;
 
 
-/*!\union _uAPDS9960_REG__PERSIST
+/*!\union uAPDS9960_REG__PERSIST
 ** \brief Union for PERSIST register of APDS9960
 **/
-typedef union _uAPDS9960_REG__PERSIST {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		APDS9960_als_it_persist		APERS	:4;	//!< Interrupt persistence. Controls rate of interrupt to the host processor.
@@ -243,10 +243,10 @@ typedef union _uAPDS9960_REG__PERSIST {
 } uAPDS9960_REG__PERSIST;
 
 
-/*!\union _uAPDS9960_REG__CONFIG1
+/*!\union uAPDS9960_REG__CONFIG1
 ** \brief Union for CONFIG1 register of APDS9960
 **/
-typedef union _uAPDS9960_REG__CONFIG1 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t			:1;
@@ -257,10 +257,10 @@ typedef union _uAPDS9960_REG__CONFIG1 {
 	} Bits;
 } uAPDS9960_REG__CONFIG1;
 
-/*!\union _uAPDS9960_REG__CONFIG2
+/*!\union uAPDS9960_REG__CONFIG2
 ** \brief Union for CONFIG2 register of APDS9960
 **/
-typedef union _uAPDS9960_REG__CONFIG2 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t				_WRITE1		:1;	//!< Reserved. Write as 1
@@ -271,10 +271,10 @@ typedef union _uAPDS9960_REG__CONFIG2 {
 	} Bits;
 } uAPDS9960_REG__CONFIG2;
 
-/*!\union _uAPDS9960_REG__CONFIG3
+/*!\union uAPDS9960_REG__CONFIG3
 ** \brief Union for CONFIG3 register of APDS9960
 **/
-typedef union _uAPDS9960_REG__CONFIG3 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t	PMASK_R		:1;	//!< Proximity Mask RIGHT Enable. Writing a 1 disables this photodiode.
@@ -287,10 +287,10 @@ typedef union _uAPDS9960_REG__CONFIG3 {
 	} Bits;
 } uAPDS9960_REG__CONFIG3;
 
-/*!\union _uAPDS9960_REG__GCONFIG1
+/*!\union uAPDS9960_REG__GCONFIG1
 ** \brief Union for GCONFIG1 register of APDS9960
 **/
-typedef union _uAPDS9960_REG__GCONFIG1 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t	GEXPERS		:2;	//!< Gesture Exit Persistence. When a number of consecutive �gesture end� occurrences become equal or greater to the GEPERS value, the Gesture state machine is exited.
@@ -302,10 +302,10 @@ typedef union _uAPDS9960_REG__GCONFIG1 {
 	} Bits;
 } uAPDS9960_REG__GCONFIG1;
 
-/*!\union _uAPDS9960_REG__GCONFIG2
+/*!\union uAPDS9960_REG__GCONFIG2
 ** \brief Union for GCONFIG2 register of APDS9960
 **/
-typedef union _uAPDS9960_REG__GCONFIG2 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t					GWTIME	:3;	//!< Gesture Wait Time. The GWTIME controls the amount of time in a low power mode between gesture detection cycles.
@@ -315,10 +315,10 @@ typedef union _uAPDS9960_REG__GCONFIG2 {
 	} Bits;
 } uAPDS9960_REG__GCONFIG2;
 
-/*!\union _uAPDS9960_REG__GCONFIG3
+/*!\union uAPDS9960_REG__GCONFIG3
 ** \brief Union for GCONFIG3 register of APDS9960
 **/
-typedef union _uAPDS9960_REG__GCONFIG3 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		APDS9960_gesture_dim	GDIMS	:2;	//!< Gesture Dimension Select. Selects which gesture photodiode pairs are enabled to gather results during gesture.
@@ -326,10 +326,10 @@ typedef union _uAPDS9960_REG__GCONFIG3 {
 	} Bits;
 } uAPDS9960_REG__GCONFIG3;
 
-/*!\union _uAPDS9960_REG__GCONFIG4
+/*!\union uAPDS9960_REG__GCONFIG4
 ** \brief Union for GCONFIG4 register of APDS9960
 **/
-typedef union _uAPDS9960_REG__GCONFIG4 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t	GMODE		:1;	//!< Gesture Mode. Reading this bit reports if the gesture state machine is actively running, 1 = Gesture, 0= ALS, Proximity, Color.
@@ -340,10 +340,10 @@ typedef union _uAPDS9960_REG__GCONFIG4 {
 } uAPDS9960_REG__GCONFIG4;
 
 
-/*!\union _uAPDS9960_REG__PULSE
+/*!\union uAPDS9960_REG__PULSE
 ** \brief Union for PPULSE & GPULSE registers of APDS9960
 **/
-typedef union _uAPDS9960_REG__PULSE {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t					PULSE	:6;	//!< Pulse Count. Specifies the number of pulses to be generated on LDR. Number of pulses is set by xPULSE value plus 1.
@@ -352,10 +352,10 @@ typedef union _uAPDS9960_REG__PULSE {
 } uAPDS9960_REG__PULSE;
 
 
-/*!\union _uAPDS9960_REG__CONTROL
+/*!\union uAPDS9960_REG__CONTROL
 ** \brief Union for CONTROL register of APDS9960
 **/
-typedef union _uAPDS9960_REG__CONTROL {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		APDS9960_als_gain		AGAIN	:2;	//!< ALS and Color Gain Control.
@@ -366,10 +366,10 @@ typedef union _uAPDS9960_REG__CONTROL {
 } uAPDS9960_REG__CONTROL;
 
 
-/*!\union _uAPDS9960_REG__STATUS
+/*!\union uAPDS9960_REG__STATUS
 ** \brief Union for STATUS register of APDS9960
 **/
-typedef union _uAPDS9960_REG__STATUS {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t AVALID	:1;		//!< ALS Valid. Indicates that an ALS cycle has completed since AEN was asserted or since a read from any of the ALS/Color data registers.
@@ -383,10 +383,10 @@ typedef union _uAPDS9960_REG__STATUS {
 	} Bits;
 } uAPDS9960_REG__STATUS;
 
-/*!\union _uAPDS9960_REG__GSTATUS
+/*!\union uAPDS9960_REG__GSTATUS
 ** \brief Union for GSTATUS register of APDS9960
 **/
-typedef union _uAPDS9960_REG__GSTATUS {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t GVALID	:1;		//!< Gesture FIFO Data. GVALID bit is sent when GFLVL becomes greater than GFIFOTH (i.e. FIFO has enough data to set GINT). GFIFOD is reset when GMODE = 0 and the GFLVL=0 (i.e., All FIFO data has been read).

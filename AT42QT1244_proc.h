@@ -1,6 +1,6 @@
 /*!\file AT42QT1244_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief AT42QT1244 Driver procedures
 ** \details AT42QT1244: 24-key QMatrix FMEA IEC/EN/UL60730 Touch Sensor
 **/
@@ -27,10 +27,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct _AT42QT1244_t
+/*!\struct AT42QT1244_t
 ** \brief AT42QT1244 user interface struct
 **/
-typedef struct _AT42QT1244_t {
+typedef struct {
 	uint32_t					hPowerOn;			//!< Time of the last reset
 #if	!AT42QT1244_GET_KEYS_ONLY
 	uint8_t						cnt_100ms;			//!< 100ms counter

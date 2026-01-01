@@ -1,6 +1,6 @@
 /*!\file BMP180_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief BMP180 Driver procedures
 ** \details BMP180: Digital pressure sensor
 **/
@@ -30,10 +30,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct _BMP180_calibration
+/*!\struct BMP180_calibration
 ** \brief BMP180 calibration parameters structure
 **/
-typedef struct _BMP180_calibration {
+typedef struct {
 	int16_t		ac1;	//!< ac1 calibration value
 	int16_t		ac2;	//!< ac2 calibration value
 	int16_t		ac3;	//!< ac3 calibration value
@@ -47,10 +47,10 @@ typedef struct _BMP180_calibration {
 	int16_t		md;		//!< md calibration value
 } BMP180_calib;
 
-/*!\struct _BMP180_t
+/*!\struct BMP180_t
 ** \brief BMP180 user interface struct
 **/
-typedef struct _BMP180_t {
+typedef struct {
 	float					Pressure;			//!< Current atmospheric pressure
 	float					Temperature;		//!< Current temperature
 	float					Altitude;			//!< Current altitude

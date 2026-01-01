@@ -1,6 +1,6 @@
 /*!\file TSL2591.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief TSL2591 Driver
 ** \details TSL2591: Very-high sensitivity light-to-digital converter
 **/
@@ -37,10 +37,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _TSL2591_reg
+/*!\enum TSL2591_reg
 ** \brief Register map enum of TSL2591
 **/
-typedef enum PACK__ _TSL2591_reg {
+typedef enum PACK__ {
 	TSL2591__ENABLE = 0U,	//!< Enables states and interrupts
 	TSL2591__CONFIG,		//!< ALS gain and integration time configuration
 	TSL2591__AILTL = 0x04U,	//!< ALS interrupt low threshold low byte
@@ -61,38 +61,38 @@ typedef enum PACK__ _TSL2591_reg {
 	TSL2591__C1DATAH		//!< CH1 ADC high data byte
 } TSL2591_reg;
 
-/*!\enum _TSL2591_transaction
+/*!\enum TSL2591_transaction
 ** \brief Transaction types of TSL2591
 **/
-typedef enum PACK__ _TSL2591_transaction {
+typedef enum PACK__ {
 	TSL2591__TRANS_NORMAL_OP = 1U,		//!< Normal operation
 	TSL2591__TRANS_SPECIAL_FUNC = 3U,	//!< Special Function
 } TSL2591_transaction;
 
-/*!\enum _TSL2591_spec_func
+/*!\enum TSL2591_spec_func
 ** \brief Special functions of TSL2591
 **/
-typedef enum PACK__ _TSL2591_spec_func {
+typedef enum PACK__ {
 	TSL2591__SF_FORCE_IT = 4U,				//!< Interrupt set (forces an interrupt)
 	TSL2591__SF_CLR_ALS_IT = 6U,			//!< Clears ALS interrupt
 	TSL2591__SF_CLR_ALS_AND_NO_PERS = 7U,	//!< Clears ALS and no persist ALS interrupt
 	TSL2591__SF_CLR_NO_PERS = 9U			//!< Clears no persist ALS interrupt
 } TSL2591_spec_func;
 
-/*!\enum _TSL2591_gain
+/*!\enum TSL2591_gain
 ** \brief Gain values of TSL2591
 **/
-typedef enum PACK__ _TSL2591_gain {
+typedef enum PACK__ {
 	TSL2591__LOW_GAIN = 0U,	//!< Low gain mode (x1)
 	TSL2591__MEDIUM_GAIN,	//!< Medium gain mode (x25)
 	TSL2591__HIGH_GAIN,		//!< High gain mode (x428)
 	TSL2591__MAXIMUM_GAIN	//!< Maximum gain mode (x9876)
 } TSL2591_gain;
 
-/*!\enum _TSL2591_integ
+/*!\enum TSL2591_integ
 ** \brief Integration times of TSL2591
 **/
-typedef enum PACK__ _TSL2591_integ {
+typedef enum PACK__ {
 	TSL2591__INTEG_100MS = 0U,	//!< 100ms integration time
 	TSL2591__INTEG_200MS,		//!< 200ms integration time
 	TSL2591__INTEG_300MS,		//!< 300ms integration time
@@ -101,10 +101,10 @@ typedef enum PACK__ _TSL2591_integ {
 	TSL2591__INTEG_600MS		//!< 600ms integration time
 } TSL2591_integ;
 
-/*!\enum _TSL2591_it_persist
+/*!\enum TSL2591_it_persist
 ** \brief Persistence control of TSL2591
 **/
-typedef enum PACK__ _TSL2591_it_persist {
+typedef enum PACK__ {
 	TSL2591__PERSIST_EVERY_ADC_CYCLE = 0U,	//!< Every ADC cycle generates interrupt
 	TSL2591__PERSIST_ANY_OUTSIDE_THRESHOLD,	//!< Any value outside of threshold range
 	TSL2591__PERSIST_2_IT_PERIODS,			//!< 2 integration time periods out of range
@@ -124,10 +124,10 @@ typedef enum PACK__ _TSL2591_it_persist {
 } TSL2591_it_persist;
 
 
-/*!\union _uTSL2591_CMD
+/*!\union uTSL2591_CMD
 ** \brief Union for COMMAND register of TSL2591
 **/
-typedef union _uTSL2591_CMD {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		TSL2591_spec_func	ADDR		:5;		//!< Address field/special function field
@@ -137,10 +137,10 @@ typedef union _uTSL2591_CMD {
 } uTSL2591_CMD;
 
 
-/*!\union _uTSL2591_REG__ENABLE
+/*!\union uTSL2591_REG__ENABLE
 ** \brief Union for ENABLE register of TSL2591
 **/
-typedef union _uTSL2591_REG__ENABLE {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t PON		:1;	//!< Power ON. This field activates the internal oscillator to permit the timers and ADC channels to operate
@@ -154,10 +154,10 @@ typedef union _uTSL2591_REG__ENABLE {
 } uTSL2591_REG__ENABLE;
 
 
-/*!\union _uTSL2591_REG__CONFIG
+/*!\union uTSL2591_REG__CONFIG
 ** \brief Union for CONFIG register of TSL2591
 **/
-typedef union _uTSL2591_REG__CONFIG {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		TSL2591_integ	ATIME	:3;	//!< ALS time sets the internal ADC integration time for both photo-diode channels
@@ -169,10 +169,10 @@ typedef union _uTSL2591_REG__CONFIG {
 } uTSL2591_REG__CONFIG;
 
 
-/*!\union _uTSL2591_REG__PERSIST
+/*!\union uTSL2591_REG__PERSIST
 ** \brief Union for PERSIST register of TSL2591
 **/
-typedef union _uTSL2591_REG__PERSIST {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		TSL2591_it_persist	PERSIST	:4;	//!< ALS interrupt persistence filter
@@ -181,10 +181,10 @@ typedef union _uTSL2591_REG__PERSIST {
 } uTSL2591_REG__PERSIST;
 
 
-/*!\union _uTSL2591_REG__STATUS
+/*!\union uTSL2591_REG__STATUS
 ** \brief Union for STATUS register of TSL2591
 **/
-typedef union _uTSL2591_REG__STATUS {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t AVALID	:1;		//!< ALS Valid. Indicates that the ADC channels have completed an integration cycle since the AEN bit was asserted

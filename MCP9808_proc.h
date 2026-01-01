@@ -1,6 +1,6 @@
 /*!\file MCP9808_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief MCP9808 Driver procedures
 ** \details MCP9808: +/-0.5C Maximum Accuracy Digital Temperature Sensor
 **/
@@ -29,20 +29,20 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _MCP9808_alert
+/*!\enum MCP9808_alert
 ** \brief Alerts enum of MCP9808
 **/
-typedef enum PACK__ _MCP9808_alert {
+typedef enum PACK__ {
 	MCP9808__ALERT_HIGH = 0U,	//!< High temperature alert
 	MCP9808__ALERT_LOW,			//!< Low temperature alert
 	MCP9808__ALERT_CRIT			//!< Critical temperature alert
 } MCP9808_alert;
 
 
-/*!\struct _MCP9808_t
+/*!\struct MCP9808_t
 ** \brief MCP9808 user interface struct
 **/
-typedef struct _MCP9808_t {
+typedef struct {
 	float				Temperature;		//!< Current temperature
 	bool				TUpper;				//!< Upper alert reached
 	bool				TLower;				//!< Lower alert reached

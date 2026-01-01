@@ -1,6 +1,6 @@
 /*!\file TCS3400_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief TCS3400 Driver procedures
 ** \details TCS3400: Color Light-to-Digital Converter
 **/
@@ -38,10 +38,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct _TCS3400_t
+/*!\struct TCS3400_t
 ** \brief TCS3400 user interface struct
 **/
-typedef struct _TCS3400_t {
+typedef struct {
 	uint16_t			Red;				//!< Current Red conversion
 	uint16_t			Green;				//!< Current Green conversion
 	uint16_t			Blue;				//!< Current Blue conversion

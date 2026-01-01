@@ -1,6 +1,6 @@
 /*!\file DRV2605L.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief DRV2605L Driver
 ** \details DRV2605L: 2 to 5.2V Haptic Driver for LRA and ERM With Effect Library and Smart-Loop Architecture
 **/
@@ -33,10 +33,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _DRV2605L_reg
+/*!\enum DRV2605L_reg
 ** \brief Register map enum of DRV2605L
 **/
-typedef enum PACK__ _DRV2605L_reg {
+typedef enum PACK__ {
 	DRV__STATUS = 0U,						//!< Status register
 	DRV__MODE,								//!< Mode register
 	DRV__RTP_INPUT,							//!< Real Time Playback Input register
@@ -75,10 +75,10 @@ typedef enum PACK__ _DRV2605L_reg {
 } DRV2605L_reg;
 
 
-/*!\enum _DRV2605L_lib
+/*!\enum DRV2605L_lib
 ** \brief Waveform library selection value.
 **/
-typedef enum PACK__ _DRV2605L_lib {
+typedef enum PACK__ {
 	DRV__LIB_EMPTY = 0U,		//!< Empty
 	DRV__LIB_TS2200_LIBRARY_A,	//!< TS2200 Library A
 	DRV__LIB_TS2200_LIBRARY_B,	//!< TS2200 Library B
@@ -90,10 +90,10 @@ typedef enum PACK__ _DRV2605L_lib {
 } DRV2605L_lib;
 
 
-/*!\enum _DRV2605L_mode
+/*!\enum DRV2605L_mode
 ** \brief DRV2605L operating mode
 **/
-typedef enum PACK__ _DRV2605L_mode {
+typedef enum PACK__ {
 	DRV__MODE_INTERNAL_TRIGGER = 0U,	//!< Internal trigger
 	DRV__MODE_EXTERNAL_TRIGGER_EDGE,	//!< External trigger (edge mode)
 	DRV__MODE_EXTERNAL_TRIGGER_LEVEL,	//!< External trigger (level mode)
@@ -104,72 +104,72 @@ typedef enum PACK__ _DRV2605L_mode {
 	DRV__MODE_AUTO_CALIBRATION			//!< Auto calibration
 } DRV2605L_mode;
 
-/*!\enum _DRV2605L_actuator
+/*!\enum DRV2605L_act
 ** \brief DRV2605L actuator
 **/
-typedef enum PACK__ _DRV2605L_actuator {
+typedef enum PACK__ {
 	DRV__ACT_ERM = 0U,		//!< Eccentric Rotating Mass actuator
 	DRV__ACT_LRA			//!< Linear Resonant Actuators actuator
 } DRV2605L_act;
 
-/*!\enum _DRV2605L_go
+/*!\enum DRV2605L_go
 ** \brief DRV2605L Go mode
 **/
-typedef enum PACK__ _DRV2605L_go {
+typedef enum PACK__ {
 	DRV__STOP = 0U,	//!< Start haptic
 	DRV__START		//!< Stop haptic
 } DRV2605L_go;
 
-/*!\enum _DRV2605L_peak
+/*!\enum DRV2605L_peak
 ** \brief Peak detection time for the audio-to-vibe signal path
 **/
-typedef enum PACK__ _DRV2605L_peak {
+typedef enum PACK__ {
 	DRV__PEAK_10MS = 0U,	//!< 10ms peak time
 	DRV__PEAK_20MS,			//!< 20ms peak time
 	DRV__PEAK_30MS,			//!< 30ms peak time
 	DRV__PEAK_40MS			//!< 40ms peak time
 } DRV2605L_peak;
 
-/*!\enum _DRV2605L_filter
+/*!\enum DRV2605L_filter
 ** \brief Low-pass filter frequency for the audio-to-vibe signal path
 **/
-typedef enum PACK__ _DRV2605L_filter {
+typedef enum PACK__ {
 	DRV__FILTER_100HZ = 0U,	//!< 100Hz low-pass filter
 	DRV__FILTER_125HZ,		//!< 125Hz low-pass filter
 	DRV__FILTER_150HZ,		//!< 150Hz low-pass filter
 	DRV__FILTER_200HZ		//!< 200Hz low-pass filter
 } DRV2605L_filter;
 
-/*!\enum _DRV2605L_loop
+/*!\enum DRV2605L_loop
 ** \brief DRV2605L loop mode
 **/
-typedef enum PACK__ _DRV2605L_loop {
+typedef enum PACK__ {
 	DRV__CLOSED_LOOP = 0U,	//!< ERM: Close Loop / LRA: Auto resonance
 	DRV__OPEN_LOOP			//!< Open Loop
 } DRV2605L_loop;
 
-/*!\enum _DRV2605L_input
+/*!\enum DRV2605L_input
 ** \brief DRV2605L input pin mode
 **/
-typedef enum PACK__ _DRV2605L_input {
+typedef enum PACK__ {
 	DRV__IN_PWM = 0U,	//!< PWM input
 	DRV__IN_ANALOG		//!< Analog input
 } DRV2605L_input;
 
 
-/*!\enum _DRV2605L_rtp_format
+/*!\enum DRV2605L_rtp_format
 ** \brief DRV2605L RTP format
 **/
-typedef enum PACK__ _DRV2605L_rtp_format {
+typedef enum PACK__ {
 	DRV__RTP_SIGNED = 0U,	//!< RTP signed format
 	DRV__RTP_UNSIGNED		//!< RTP unsigned format
 } DRV2605L_rtp_format;
 
 
-/*!\enum _DRV2605L_eff
+/*!\enum DRV2605L_eff
 ** \brief Waveform Library Effects List
 **/
-typedef enum PACK__ _DRV2605L_eff {
+typedef enum PACK__ {
 	DRV__EFF_STRONG_CLK_100 = 1U,						//!< Strong Click - 100%
 	DRV__EFF_STRONG_CLK_60 = 2U,						//!< Strong Click - 60%
 	DRV__EFF_STRONG_CLK_30 = 3U,						//!< Strong Click - 30%
@@ -296,10 +296,10 @@ typedef enum PACK__ _DRV2605L_eff {
 } DRV2605L_eff;
 
 
-/*!\union _uDRV_REG__STATUS
+/*!\union uDRV_REG__STATUS
 ** \brief DRV2605L STATUS register union
 **/
-typedef union _uDRV_REG__STATUS {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t OC_DETECT		:1;		//!< Latching over current detection flag
@@ -311,10 +311,10 @@ typedef union _uDRV_REG__STATUS {
 	} Bits;
 } uDRV_REG__STATUS;
 
-/*!\union _uDRV_REG__MODE
+/*!\union uDRV_REG__MODE
 ** \brief DRV2605L MODE register union
 **/
-typedef union _uDRV_REG__MODE {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		DRV2605L_mode	MODE		:3;		//!< Working mode
@@ -324,10 +324,10 @@ typedef union _uDRV_REG__MODE {
 	} Bits;
 } uDRV_REG__MODE;
 
-/*!\union _uDRV_REG__LIBRARY_SELECTION
+/*!\union uDRV_REG__LIBRARY_SELECTION
 ** \brief DRV2605L LIBRARY SELECTION register union
 **/
-typedef union _uDRV_REG__LIBRARY_SELECTION {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		DRV2605L_lib	LIBRARY_SEL	:3;		//!< Waveform library selection value
@@ -337,10 +337,10 @@ typedef union _uDRV_REG__LIBRARY_SELECTION {
 	} Bits;
 } uDRV_REG__LIBRARY_SELECTION;
 
-/*!\union _uDRV_REG__WAVEFORM_SEQUENCER
+/*!\union uDRV_REG__WAVEFORM_SEQUENCER
 ** \brief DRV2605L WAVEFORM SEQUENCER register union
 **/
-typedef union _uDRV_REG__WAVEFORM_SEQUENCER {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		DRV2605L_eff	WAV_FRM_SEQ	:7;		//!< Waveform sequence value
@@ -348,10 +348,10 @@ typedef union _uDRV_REG__WAVEFORM_SEQUENCER {
 	} Bits;
 } uDRV_REG__WAVEFORM_SEQUENCER;
 
-/*!\union _uDRV_REG__GO
+/*!\union uDRV_REG__GO
 ** \brief DRV2605L GO register union
 **/
-typedef union _uDRV_REG__GO {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		DRV2605L_go GO	:1;		//!< Fire processes
@@ -359,10 +359,10 @@ typedef union _uDRV_REG__GO {
 	} Bits;
 } uDRV_REG__GO;
 
-/*!\union _uDRV_REG__ATV_CONTROL
+/*!\union uDRV_REG__ATV_CONTROL
 ** \brief DRV2605L audio-to-vibe CONTROL register union
 **/
-typedef union _uDRV_REG__ATV_CONTROL {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		DRV2605L_filter	ATH_FILTER		:2;		//!< Low pass filter frequency
@@ -371,10 +371,10 @@ typedef union _uDRV_REG__ATV_CONTROL {
 	} Bits;
 } uDRV_REG__ATV_CONTROL;
 
-/*!\union _uDRV_REG__FEEDBACK_CONTROL
+/*!\union uDRV_REG__FEEDBACK_CONTROL
 ** \brief DRV2605L FEEDBACK CONTROL register union
 **/
-typedef union _uDRV_REG__FEEDBACK_CONTROL {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t			BEMF_GAIN		:2;		//!< Analog gain for back-EMF amplifier
@@ -384,10 +384,10 @@ typedef union _uDRV_REG__FEEDBACK_CONTROL {
 	} Bits;
 } uDRV_REG__FEEDBACK_CONTROL;
 
-/*!\union _uDRV_REG__CONTROL_1
+/*!\union uDRV_REG__CONTROL_1
 ** \brief DRV2605L CONTROL 1 register union
 **/
-typedef union _uDRV_REG__CONTROL_1 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t DRIVE_TIME		:5;		//!< LRA: sets initial guess for LRA drive-time / ERM: sets the sample rate for the back-EMF detection
@@ -397,10 +397,10 @@ typedef union _uDRV_REG__CONTROL_1 {
 	} Bits;
 } uDRV_REG__CONTROL_1;
 
-/*!\union _uDRV_REG__CONTROL_2
+/*!\union uDRV_REG__CONTROL_2
 ** \brief DRV2605L CONTROL 2 register union
 **/
-typedef union _uDRV_REG__CONTROL_2 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t IDISS_TIME			:2;		//!< Current dissipation time
@@ -411,10 +411,10 @@ typedef union _uDRV_REG__CONTROL_2 {
 	} Bits;
 } uDRV_REG__CONTROL_2;
 
-/*!\union _uDRV_REG__CONTROL_3
+/*!\union uDRV_REG__CONTROL_3
 ** \brief DRV2605L CONTROL 3 register union
 **/
-typedef union _uDRV_REG__CONTROL_3 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		DRV2605L_loop		LRA_OPEN_LOOP	:1;		//!< Open-loop drive option for LRA mode (auto-resonance/open loop)
@@ -427,10 +427,10 @@ typedef union _uDRV_REG__CONTROL_3 {
 	} Bits;
 } uDRV_REG__CONTROL_3;
 
-/*!\union _uDRV_REG__CONTROL_4
+/*!\union uDRV_REG__CONTROL_4
 ** \brief DRV2605L CONTROL 4 register union
 **/
-typedef union _uDRV_REG__CONTROL_4 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t OTP_PROGRAM		:1;		//!< Launch programming process of OTP
@@ -442,10 +442,10 @@ typedef union _uDRV_REG__CONTROL_4 {
 	} Bits;
 } uDRV_REG__CONTROL_4;
 
-/*!\union _uDRV_REG__CONTROL_5
+/*!\union uDRV_REG__CONTROL_5
 ** \brief DRV2605L CONTROL 5 register union
 **/
-typedef union _uDRV_REG__CONTROL_5 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t IDISS_TIME			:2;		//!< MSB of IDISS_TIME from CONTROL_2

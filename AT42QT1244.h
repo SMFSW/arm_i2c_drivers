@@ -1,6 +1,6 @@
 /*!\file AT42QT1244.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief AT42QT1244 Driver
 ** \details AT42QT1244: 24-key QMatrix FMEA IEC/EN/UL60730 Touch Sensor
 **/
@@ -50,10 +50,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _AT42QT_reg
+/*!\enum AT42QT_reg
 ** \brief Register map enum of AT42QT
 **/
-typedef enum PACK__ _AT42QT_reg {
+typedef enum PACK__ {
 	//AT42QT__RES,	//!< Reserved
 	//AT42QT__RES,	//!< Reserved
 	AT42QT__CNT_100MS				= 2U,	//!<
@@ -134,7 +134,7 @@ typedef enum PACK__ _AT42QT_reg {
 } AT42QT_reg;
 
 
-typedef enum PACK__ _AT42QT_cmd {
+typedef enum PACK__ {
 	AT42QT__CALIBRATE_KEY_0			= 0U,		//!< Calibration: Key 0
 	AT42QT__CALIBRATE_KEY_1,					//!< Calibration: Key 1
 	AT42QT__CALIBRATE_KEY_2,					//!< Calibration: Key 2
@@ -165,7 +165,7 @@ typedef enum PACK__ _AT42QT_cmd {
 	AT42QT__CALIBRATE_ALL_KEYS		= 0xFFU,	//!< Calibration: all keys
 } AT42QT_cmd;
 
-typedef enum PACK__ _AT42QT_FHM {
+typedef enum PACK__ {
 	AT42QT__FHM_OFF = 0U,					//!< Frequency Hoping Mode OFF
 	AT42QT__FHM_CALIB_AFTER_HOP,			//!< Calibrate all keys after hop
 	AT42QT__FHM_ADJ_KEYS_REF_DURING_HOP,	//!< Adjust each keys reference during hop
@@ -173,7 +173,7 @@ typedef enum PACK__ _AT42QT_FHM {
 } AT42QT_FHM;
 
 
-typedef union _uAT42QT_REG__KEY_DATA {
+typedef union {
 	uint8_t	Bytes[4];
 	uint32_t Raw;
 	struct PACK__ {
@@ -186,7 +186,7 @@ typedef union _uAT42QT_REG__KEY_DATA {
 	} Data;
 } uAT42QT_REG__KEY_DATA;
 
-typedef union _uAT42QT_REG__DEVICE_STATUS {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t CRC_Incorrect		:1;		//!< Setups CRC does not match HCRC
@@ -199,7 +199,7 @@ typedef union _uAT42QT_REG__DEVICE_STATUS {
 } uAT42QT_REG__DEVICE_STATUS;
 
 
-typedef union _uAT42QT_REG__SETUP_141_164 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t NTHR_PTHR	:2;		//!< Threshold
@@ -208,7 +208,7 @@ typedef union _uAT42QT_REG__SETUP_141_164 {
 	} Bits;
 } uAT42QT_REG__SETUP_141_164;
 
-typedef union _uAT42QT_REG__SETUP_165_188 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t NDIL	:3;		//!< No detection
@@ -218,7 +218,7 @@ typedef union _uAT42QT_REG__SETUP_165_188 {
 	} Bits;
 } uAT42QT_REG__SETUP_165_188;
 
-typedef union _uAT42QT_REG__SETUP_238 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t SLEEP	:3;		//!< Sleep duration
@@ -228,7 +228,7 @@ typedef union _uAT42QT_REG__SETUP_238 {
 	} Bits;
 } uAT42QT_REG__SETUP_238;
 
-typedef union _uAT42QT_REG__SETUP_241 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t PDRIFT	:3;		//!< Positive drift compensation
@@ -236,14 +236,14 @@ typedef union _uAT42QT_REG__SETUP_241 {
 	} Bits;
 } uAT42QT_REG__SETUP_241;
 
-typedef union _uAT42QT_REG__SETUP_242 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t LSL		:8;		//!< Lower signal limit (LSB)
 	} Bits;
 } uAT42QT_REG__SETUP_242;
 
-typedef union _uAT42QT_REG__SETUP_243 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t LSL		:3;		//!< Lower signal limit (MSB)
@@ -251,7 +251,7 @@ typedef union _uAT42QT_REG__SETUP_243 {
 	} Bits;
 } uAT42QT_REG__SETUP_243;
 
-typedef union _uAT42QT_REG__SETUP_244 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t		DWELL	:3;		//!< Dwell time
@@ -261,7 +261,7 @@ typedef union _uAT42QT_REG__SETUP_244 {
 	} Bits;
 } uAT42QT_REG__SETUP_244;
 
-typedef union _uAT42QT_REG__SETUP_248 {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t NSTHR	:4;		//!< Noise threshold

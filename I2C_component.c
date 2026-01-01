@@ -1,6 +1,6 @@
 /*!\file I2C_component.c
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief Base I2C component
 ** \warning Components with a xxx_proc file can access I2C_slave_t instance through CPNT->cfg.slave_inst.
 **			Please keep in mind some components are somewhat custom and needs to be accesses through CPNT->cfg.slave_inst_xxx instead if needed.

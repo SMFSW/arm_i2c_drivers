@@ -1,6 +1,6 @@
 /*!\file PCA9532_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief PCA9532 Driver procedures
 ** \details PCA9532: 16-bit I2C-bus LED dimmer
 **/
@@ -28,10 +28,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct _PCA9532_t
+/*!\struct PCA9532_t
 ** \brief PCA9532 user interface struct
 **/
-typedef struct _PCA9532_t {
+typedef struct {
 	uPCA9532_REG__LS	LS;				//!< LED selector registers
 	struct {
 	I2C_slave_t *		slave_inst;		//!< Slave structure

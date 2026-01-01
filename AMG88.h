@@ -1,6 +1,6 @@
 /*!\file AMG88.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief AMG88 Driver
 ** \details AMG88: Infrared Array Sensor (Grid-EYE)
 **/
@@ -40,10 +40,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _AMG88_reg
+/*!\enum AMG88_reg
 ** \brief Register map enum of AMG88
 **/
-typedef enum PACK__ _AMG88_reg {
+typedef enum PACK__ {
 	AMG88__PCTL = 0U,		//!< Set operating mode(Normal, Sleep etc.)
 	AMG88__RST,				//!< Software Reset
 	AMG88__FPSC,			//!< Frame rate
@@ -198,19 +198,19 @@ typedef enum PACK__ _AMG88_reg {
 } AMG88_reg;
 
 
-/*!\enum _AMG88_reset
+/*!\enum AMG88_reset
 ** \brief Reset types for AMG88
 **/
-typedef enum PACK__ _AMG88_reset {
+typedef enum PACK__ {
 	AMG88__FLAG_RESET = 0x30U,		//!< Flag Reset can all clear the Status Register(0x04),Interrupt Flag, and Interrupt Table(0x10~0x17).
 	AMG88__INITIAL_RESET = 0x3FU,	//!< Initial Reset brings Flag reset and returns to initial setting.
 } AMG88_reset;
 
 
-/*!\enum _AMG88_mode
+/*!\enum AMG88_mode
 ** \brief Operating modes for AMG88
 **/
-typedef enum PACK__ _AMG88_mode {
+typedef enum PACK__ {
 	AMG88__NORMAL = 0U,			//!< Normal mode
 	AMG88__SLEEP = 0x10U,		//!< Sleep mode
 	AMG88__STANBY_60 = 0x20U,	//!< Stand-by mode (60s intermittence)
@@ -218,10 +218,10 @@ typedef enum PACK__ _AMG88_mode {
 } AMG88_mode;
 
 
-/*!\union _uAMG88_REG__FRAME_RATE
+/*!\union uAMG88_REG__FRAME_RATE
 ** \brief Union for frame rate register of AMG88
 **/
-typedef union _uAMG88_REG__FRAME_RATE {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t FPS		:1;	//!< Frame mode (1: 1FPS ; 0: 10FPS)
@@ -230,10 +230,10 @@ typedef union _uAMG88_REG__FRAME_RATE {
 } uAMG88_REG__FRAME_RATE;
 
 
-/*!\union _uAMG88_REG__INT_CONTROL
+/*!\union uAMG88_REG__INT_CONTROL
 ** \brief Union for interrupt control register of AMG88
 **/
-typedef union _uAMG88_REG__INT_CONTROL {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t INTEN	:1;	//!< INT Output (0: reactive (Hi-Z) ; 1: active)
@@ -243,10 +243,10 @@ typedef union _uAMG88_REG__INT_CONTROL {
 } uAMG88_REG__INT_CONTROL;
 
 
-/*!\union _uAMG88_REG__STATUS
+/*!\union uAMG88_REG__STATUS
 ** \brief Union for status register of AMG88
 **/
-typedef union _uAMG88_REG__STATUS {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t			:1;
@@ -258,10 +258,10 @@ typedef union _uAMG88_REG__STATUS {
 } uAMG88_REG__STATUS;
 
 
-/*!\union _uAMG88_REG__STATUS_CLEAR
+/*!\union uAMG88_REG__STATUS_CLEAR
 ** \brief Union for status clear register of AMG88
 **/
-typedef union _uAMG88_REG__STATUS_CLEAR {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t			:1;
@@ -273,10 +273,10 @@ typedef union _uAMG88_REG__STATUS_CLEAR {
 } uAMG88_REG__STATUS_CLEAR;
 
 
-/*!\union _uAMG88_REG__AVERAGE
+/*!\union uAMG88_REG__AVERAGE
 ** \brief Union for average register of AMG88
 **/
-typedef union _uAMG88_REG__AVERAGE {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t			:5;
@@ -286,10 +286,10 @@ typedef union _uAMG88_REG__AVERAGE {
 } uAMG88_REG__AVERAGE;
 
 
-/*!\union _uAMG88_REG__TEMP
+/*!\union uAMG88_REG__TEMP
 ** \brief Union for any temperature register of AMG88
 **/
-typedef union _uAMG88_REG__TEMP {
+typedef union {
 	uint16_t Word;
 	struct PACK__ {
 		//! \warning temp is coded as absolute (thermistor), or as twos complement (pixels and thresholds)
@@ -300,10 +300,10 @@ typedef union _uAMG88_REG__TEMP {
 } uAMG88_REG__TEMP;
 
 
-/*!\union _uAMG88_REG__TEMP
+/*!\union uAMG88_REG__TEMP
 ** \brief Union for any temperature register of AMG88
 **/
-typedef union _uAMG88_REG__INT {
+typedef union {
 	uint64_t LWord;
 	uint8_t Bytes[8];
 	struct PACK__ {

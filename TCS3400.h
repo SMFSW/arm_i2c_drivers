@@ -1,6 +1,6 @@
 /*!\file TCS3400.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief TCS3400 Driver
 ** \details TCS3400: Color Light-to-Digital Converter
 **/
@@ -42,10 +42,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _TCS3400_reg
+/*!\enum TCS3400_reg
 ** \brief Register map enum of TCS3400
 **/
-typedef enum PACK__ _TCS3400_reg {
+typedef enum PACK__ {
 	TCS3400__ENABLE = 0x80U,	//!< Enables states and interrupts
 	TCS3400__ATIME,				//!< RGBC time
 	TCS3400__WTIME = 0x83U,		//!< Wait time
@@ -75,10 +75,10 @@ typedef enum PACK__ _TCS3400_reg {
 } TCS3400_reg;
 
 
-/*!\enum _TCS3400_gain
+/*!\enum TCS3400_gain
 ** \brief Gain values of TCS3400
 **/
-typedef enum PACK__ _TCS3400_gain {
+typedef enum PACK__ {
 	TCS3400__LOW_GAIN = 0U,	//!< Low gain mode (x1)
 	TCS3400__MEDIUM_GAIN,	//!< Medium gain mode (x4)
 	TCS3400__HIGH_GAIN,		//!< High gain mode (x16)
@@ -86,10 +86,10 @@ typedef enum PACK__ _TCS3400_gain {
 } TCS3400_gain;
 
 
-/*!\enum _TCS3400_it_persist
+/*!\enum TCS3400_it_persist
 ** \brief Persistence control of TCS3400
 **/
-typedef enum PACK__ _TCS3400_it_persist {
+typedef enum PACK__ {
 	TCS3400__PERSIST_EVERY_RGBC_CYCLE = 0U,	//!< Every RGBC cycle generates interrupt
 	TCS3400__PERSIST_ANY_OUTSIDE_THRESHOLD,	//!< Any value outside of threshold range
 	TCS3400__PERSIST_2_IT_PERIODS,			//!< 2 consecutive values out of range
@@ -109,10 +109,10 @@ typedef enum PACK__ _TCS3400_it_persist {
 } TCS3400_it_persist;
 
 
-/*!\union _uTCS3400_REG__ENABLE
+/*!\union uTCS3400_REG__ENABLE
 ** \brief Union for ENABLE register of TCS3400
 **/
-typedef union _uTCS3400_REG__ENABLE {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t PON		:1;	//!< Power ON. This field activates the internal oscillator to permit the timers and ADC channels to operate
@@ -127,10 +127,10 @@ typedef union _uTCS3400_REG__ENABLE {
 } uTCS3400_REG__ENABLE;
 
 
-/*!\union _uTCS3400_REG__PERSIST
+/*!\union uTCS3400_REG__PERSIST
 ** \brief Union for PERSIST register of TCS3400
 **/
-typedef union _uTCS3400_REG__PERSIST {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		TCS3400_it_persist	PERSIST	:4;	//!< ALS interrupt persistence filter
@@ -139,10 +139,10 @@ typedef union _uTCS3400_REG__PERSIST {
 } uTCS3400_REG__PERSIST;
 
 
-/*!\union _uTCS3400_REG__CONFIG
+/*!\union uTCS3400_REG__CONFIG
 ** \brief Union for CONFIG register of TCS3400
 **/
-typedef union _uTCS3400_REG__CONFIG {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t			:1;
@@ -152,10 +152,10 @@ typedef union _uTCS3400_REG__CONFIG {
 } uTCS3400_REG__CONFIG;
 
 
-/*!\union _uTCS3400_REG__CONTROL
+/*!\union uTCS3400_REG__CONTROL
 ** \brief Union for CONTROL register of TCS3400
 **/
-typedef union _uTCS3400_REG__CONTROL {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		TCS3400_gain	AGAIN	:2;	//!< ALS gain sets the gain for internal integration amplifiers for both photo-diode channels
@@ -164,10 +164,10 @@ typedef union _uTCS3400_REG__CONTROL {
 } uTCS3400_REG__CONTROL;
 
 
-/*!\union _uTCS3400_REG__AUX
+/*!\union uTCS3400_REG__AUX
 ** \brief Union for AUX register of TCS3400
 **/
-typedef union _uTCS3400_REG__AUX {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t			:5;
@@ -177,10 +177,10 @@ typedef union _uTCS3400_REG__AUX {
 } uTCS3400_REG__AUX;
 
 
-/*!\union _uTCS3400_REG__STATUS
+/*!\union uTCS3400_REG__STATUS
 ** \brief Union for STATUS register of TCS3400
 **/
-typedef union _uTCS3400_REG__STATUS {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t AVALID	:1;		//!< RGBC Valid. Indicates that the RGBC channels have completed an integration cycle
@@ -192,10 +192,10 @@ typedef union _uTCS3400_REG__STATUS {
 } uTCS3400_REG__STATUS;
 
 
-/*!\union _uTCS3400_REG__IR
+/*!\union uTCS3400_REG__IR
 ** \brief Union for IR sensor access register of TCS3400
 **/
-typedef union _uTCS3400_REG__IR {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t		:7;

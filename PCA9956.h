@@ -1,6 +1,6 @@
 /*!\file PCA9956.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief PCA9956 Driver
 ** \details PCA9956: 24-channel Fm+ I2C-bus 57 mA/20 V constant current LED driver
 **/
@@ -39,10 +39,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _PCA9956_reg
+/*!\enum PCA9956_reg
 ** \brief Register map enum of PCA9956
 **/
-typedef enum PACK__ _PCA9956_reg {
+typedef enum PACK__ {
 	PCA9956__MODE1 = 0U,	//!< register MODE1
 	PCA9956__MODE2,			//!< register MODE2
 	PCA9956__LEDOUT0,		//!< register LED output state 0
@@ -117,10 +117,10 @@ typedef enum PACK__ _PCA9956_reg {
 } PCA9956_reg;
 
 
-/*!\enum _PCA9956_offset
+/*!\enum PCA9956_offset
 ** \brief Offset enum for PCA9956 peripheral
 **/
-typedef enum PACK__ _PCA9956_offset {
+typedef enum PACK__ {
 	PCA9956__OFFSET_NONE = 0U,		//!< no delay between outputs (all on, all off at the same time)
 	PCA9956__OFFSET_1_CLOCK_CYCLE,	//!< delay of 1 clock cycle (125 ns) between successive outputs
 	PCA9956__OFFSET_2_CLOCK_CYCLE,	//!< delay of 2 clock cycle (250 ns) between successive outputs
@@ -136,10 +136,10 @@ typedef enum PACK__ _PCA9956_offset {
 } PCA9956_offset;
 
 
-/*!\union _uPCA9956_REG__MODE1
+/*!\union uPCA9956_REG__MODE1
 ** \brief Union for MODE1 register of PCA9956
 **/
-typedef union PACK__ _uPCA9956_REG__MODE1 {
+typedef union PACK__ {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t ALLCALL	:1;		//!< All CALL address acknowledgment
@@ -153,10 +153,10 @@ typedef union PACK__ _uPCA9956_REG__MODE1 {
 	} Bits;
 } uPCA9956_REG__MODE1;
 
-/*!\union _uPCA9956_REG__MODE2
+/*!\union uPCA9956_REG__MODE2
 ** \brief Union for MODE2 register of PCA9956
 **/
-typedef union PACK__ _uPCA9956_REG__MODE2 {
+typedef union PACK__ {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t			Res0_1		:1;		//!< Reserved bit 0: reads 1
@@ -171,10 +171,10 @@ typedef union PACK__ _uPCA9956_REG__MODE2 {
 } uPCA9956_REG__MODE2;
 
 
-/*!\union _uPCA9956_REG__LEDOUT
+/*!\union uPCA9956_REG__LEDOUT
 ** \brief Union for LEDOUT registers of PCA9956
 **/
-typedef union PACK__ _uPCA9956_REG__LEDOUT {
+typedef union PACK__ {
 	uint64_t LWord;
 	struct PACK__ {
 		PCA995x_ledout LDR0		:2;		//!< LED0 output state control
@@ -206,10 +206,10 @@ typedef union PACK__ _uPCA9956_REG__LEDOUT {
 } uPCA9956_REG__LEDOUT;
 
 
-/*!\union _uPCA9956_REG__EFLAG
+/*!\union uPCA9956_REG__EFLAG
 ** \brief Union for EFLAG registers of PCA9956
 **/
-typedef union PACK__ _uPCA9956_REG__EFLAG {
+typedef union PACK__ {
 	uint64_t LWord;
 	struct PACK__ {
 		PCA9956_eflag ERR0		:2;		//!< LED0 error status

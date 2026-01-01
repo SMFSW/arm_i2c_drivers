@@ -1,6 +1,6 @@
 /*!\file ADS1115_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief ADS1115 Driver procedures
 ** \details ADS1115: Ultra-Small, Low-Power, 16-Bit Analog-to-Digital Converter with Internal Reference
 ** \note	Compatibility with:
@@ -28,10 +28,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _ADS1115_func
+/*!\enum ADS1115_func
 ** \brief Function enum for ADS1115
 **/
-typedef enum _ADS1115_func {
+typedef enum {
 	ADS1115__FUNC_SINGLE_DIFF = 0U,	//!< Continuous conversion mode
 	ADS1115__FUNC_MULTIPLE_DIFF,	//!< Power-down single-shot mode
 	ADS1115__FUNC_SINGLE_ENDED,		//!< Power-down single-shot mode
@@ -41,10 +41,10 @@ typedef enum _ADS1115_func {
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct _ADS1115_t
+/*!\struct ADS1115_t
 ** \brief ADS1115 user interface struct
 **/
-typedef struct _ADS1115_t {
+typedef struct {
 	int16_t				AIN[4];				//!< Conversion results
 	uint8_t				AIN_idx;			//!< Current AIN index
 	struct {

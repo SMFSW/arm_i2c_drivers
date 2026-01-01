@@ -1,6 +1,6 @@
 /*!\file ADS1115.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief ADS1115 Driver
 ** \details ADS1115: Ultra-Small, Low-Power, 16-Bit Analog-to-Digital Converter with Internal Reference
 ** \note	Compatibility with:
@@ -49,10 +49,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _ADS1115_reg
+/*!\enum ADS1115_reg
 ** \brief Register map enum of ADS1115
 **/
-typedef enum PACK__ _ADS1115_reg {
+typedef enum PACK__ {
 	ADS1115__CONVERSION = 0U,	//!< Conversion register
 	ADS1115__CONFIG,			//!< Config register
 	ADS1115__LOW_THRESH,		//!< Lo_thresh register
@@ -60,10 +60,10 @@ typedef enum PACK__ _ADS1115_reg {
 } ADS1115_reg;
 
 
-/*!\enum _ADS1115_mux
+/*!\enum ADS1115_mux
 ** \brief MUX enum for ADS1115
 **/
-typedef enum PACK__ _ADS1115_mux {
+typedef enum PACK__ {
 	ADS1115__MUX_pAIN0_nAIN1 = 0U,	//!< AINP = AIN0 and AINN = AIN1
 	ADS1115__MUX_pAIN0_nAIN3,		//!< AINP = AIN0 and AINN = AIN3
 	ADS1115__MUX_pAIN1_nAIN3,		//!< AINP = AIN1 and AINN = AIN3
@@ -75,10 +75,10 @@ typedef enum PACK__ _ADS1115_mux {
 } ADS1115_mux;
 
 
-/*!\enum _ADS1115_gain
+/*!\enum ADS1115_gain
 ** \brief GAIN enum for ADS1115
 **/
-typedef enum PACK__ _ADS1115_gain {
+typedef enum PACK__ {
 	ADS1115__FS_6144mV = 0U,	//!< FS = ±6.144V (step = 187.5µV)
 	ADS1115__FS_4096mV,			//!< FS = ±4.096V (step = 125µV)
 	ADS1115__FS_2048mV,			//!< FS = ±2.048V (step = 62.5µV)
@@ -90,19 +90,19 @@ typedef enum PACK__ _ADS1115_gain {
 } ADS1115_gain;
 
 
-/*!\enum _ADS1115_mode
+/*!\enum ADS1115_mode
 ** \brief MODE enum for ADS1115
 **/
-typedef enum PACK__ _ADS1115_mode {
+typedef enum PACK__ {
 	ADS1115__MODE_CONTINUOUS = 0U,	//!< Continuous conversion mode
 	ADS1115__MODE_SINGLE_SHOT,		//!< Power-down single-shot mode
 } ADS1115_mode;
 
 
-/*!\enum _ADS1115_rate
+/*!\enum ADS1115_rate
 ** \brief Data rate enum for ADS1115
 **/
-typedef enum PACK__ _ADS1115_rate {
+typedef enum PACK__ {
 	ADS1115__SPS_8 = 0U,	//!< 8 SPS (Samples Per Second)
 	ADS1115__SPS_16,		//!< 16 SPS
 	ADS1115__SPS_32,		//!< 32 SPS
@@ -114,37 +114,37 @@ typedef enum PACK__ _ADS1115_rate {
 } ADS1115_rate;
 
 
-/*!\enum _ADS1115_comp
+/*!\enum ADS1115_comp
 ** \brief Comparator Mode enum for ADS1115
 **/
-typedef enum PACK__ _ADS1115_comp {
+typedef enum PACK__ {
 	ADS1115__COMP_HYST = 0U,	//!< Traditional comparator with hysteresis
 	ADS1115__COMP_WINDOW,		//!< Window comparator
 } ADS1115_comp;
 
 
-/*!\enum _ADS1115_polarity
+/*!\enum ADS1115_polarity
 ** \brief Comparator Polarity enum for ADS1115
 **/
-typedef enum PACK__ _ADS1115_polarity {
+typedef enum PACK__ {
 	ADS1115__POL_LOW = 0U,	//!< Active Low
 	ADS1115__POL_HIGH,		//!< Active High
 } ADS1115_polarity;
 
 
-/*!\enum _ADS1115_latch
+/*!\enum ADS1115_latch
 ** \brief Comparator Latching enum for ADS1115
 **/
-typedef enum PACK__ _ADS1115_latch {
+typedef enum PACK__ {
 	ADS1115__LATCH_DISABLE = 0U,	//!< Non-latching comparator
 	ADS1115__LATCH_ENABLE,			//!< Latching comparator
 } ADS1115_latch;
 
 
-/*!\enum _ADS1115_queue
+/*!\enum ADS1115_queue
 ** \brief Comparator Queue and Disable enum for ADS1115
 **/
-typedef enum PACK__ _ADS1115_queue {
+typedef enum PACK__ {
 	ADS1115__QUEUE_1CONV = 0U,	//!< Assert after one conversion
 	ADS1115__QUEUE_2CONV,		//!< Assert after two conversions
 	ADS1115__QUEUE_4CONV,		//!< Assert after four conversions
@@ -152,10 +152,10 @@ typedef enum PACK__ _ADS1115_queue {
 } ADS1115_queue;
 
 
-/*!\union _uADS1115_REG__CFG
+/*!\union uADS1115_REG__CFG
 ** \brief Union for Config register of ADS1115
 **/
-typedef union _uADS1115_REG__CFG {
+typedef union {
 	uint16_t	Word;
 	uint8_t		Bytes[2];
 	struct PACK__ {

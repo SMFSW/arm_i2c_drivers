@@ -1,6 +1,6 @@
 /*!\file TCS3400_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief TCS3400 Driver extensions
 ** \details TCS3400: Color Light-to-Digital Converter
 **/
@@ -22,10 +22,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _TCS3400_chan
+/*!\enum TCS3400_chan
 ** \brief Light type channels of TCS3400
 **/
-typedef enum PACK__ _TCS3400_chan {
+typedef enum PACK__ {
 	TCS3400__CHAN_CLEAR = 0U,	//!< Clear light channel
 	TCS3400__CHAN_RED,			//!< Red light channel
 	TCS3400__CHAN_GREEN,		//!< Green light channel

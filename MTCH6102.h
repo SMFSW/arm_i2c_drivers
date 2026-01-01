@@ -1,6 +1,6 @@
 /*!\file MTCH6102.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief MTCH6102 Driver
 ** \details MTCH6102: Low-Power Projected Capacitive Touch Controller
 **/
@@ -40,7 +40,7 @@
 // *****************************************************************************
 /*** REGISTERS MEMORY MAP ENUMERATIONS ***/
 
-typedef enum PACK__ _MTCH6102_touch_addr_map {
+typedef enum PACK__ {
 	MTCH__TOUCH_STATE = 0x10U,	// 0x00
 	MTCH__TOUCH_X,				// 0x00
 	MTCH__TOUCH_Y,				// 0x00
@@ -49,7 +49,7 @@ typedef enum PACK__ _MTCH6102_touch_addr_map {
 	MTCH__GESTURE_DIAG			// 0x00
 } MTCH6102_touch;
 
-typedef enum PACK__ _MTCH6102_acquisition_addr_map {
+typedef enum PACK__ {
 	MTCH__SENSOR_VALUE_RX0 = 0x80U,
 	MTCH__SENSOR_VALUE_RX1,
 	MTCH__SENSOR_VALUE_RX2,
@@ -182,7 +182,7 @@ typedef enum PACK__ _MTCH6102_compensation_addr_map {
 } MTCH6102_compensation;
 
 
-typedef enum PACK__ _MTCH6102_core_addr_map {
+typedef enum PACK__ {
 	MTCH__FW_MAJOR = 0U,		// 0x02
 	MTCH__FW_MINOR,				// 0x00
 	MTCH__APP_ID_H,				// 0x00
@@ -193,10 +193,10 @@ typedef enum PACK__ _MTCH6102_core_addr_map {
 } MTCH6102_core;
 
 
-/*!\enum _MTCH6102_reg
+/*!\enum MTCH6102_reg
 ** \brief Register map enum of MTCH6102
 **/
-typedef enum PACK__ _MTCH6102_reg {
+typedef enum PACK__ {
 	MTCH__NUMBER_OF_X_CHANNELS = 0x20U,	// 0x09
 	MTCH__NUMBER_OF_Y_CHANNELS,			// 0x06
 	MTCH__SCAN_COUNT,					// 0x06
@@ -237,7 +237,7 @@ typedef enum PACK__ _MTCH6102_reg {
 
 
 // Register fields enumerations
-typedef enum PACK__ _MTCH6102_MODE {
+typedef enum PACK__ {
 	Standby = 0U,	//!< Standby
 	Gesture,		//!< Gesture only
 	Touch,			//!< Touch only
@@ -245,13 +245,13 @@ typedef enum PACK__ _MTCH6102_MODE {
 	RawADC			//!< Raw ADC values
 } MTCH6102_MODE;
 
-typedef enum PACK__ _MTCH6102_TYPE {
+typedef enum PACK__ {
 	Computed = 0U,	//!< (1023 - Res1) + Res2
 	Result1,		//!< Res1 only
 	Result2,		//!< Res2 only
 } MTCH6102_TYPE;
 
-typedef enum PACK__ _MTCH6102_CH {
+typedef enum PACK__ {
 	RX0 = 0U,		//!< RX0
 	RX1,			//!< RX1
 	RX2,			//!< RX2
@@ -270,14 +270,14 @@ typedef enum PACK__ _MTCH6102_CH {
 	// Reserved,	//!< Reserved, do not use
 } MTCH6102_CH;
 
-typedef enum PACK__ _MTCH6102_FILTER_TYPE {
+typedef enum PACK__ {
 	Filter_None = 0U,	//!< No filtering
 	Filter_Median,		//!< Size of median window filtering
 	Filter_IIR,			//!< Weighting of previous to current value filtering
 	Filter_Average,		//!< Size of average window filtering
 } MTCH6102_FILTER_TYPE;
 
-typedef enum PACK__ _MTCH6102_GESTURE_STATE {
+typedef enum PACK__ {
 	NoGesture = 0U,				//!< No Gesture Present
 	SingleClick = 0x10U,		//!< Single Click gesture
 	ClickNHold = 0x11U,			//!< Click and Hold gesture
@@ -293,7 +293,7 @@ typedef enum PACK__ _MTCH6102_GESTURE_STATE {
 } MTCH6102_GESTURE_STATE;
 
 
-typedef enum PACK__ _MTCH6102_GESTURE_DIAGNOSTIC {
+typedef enum PACK__ {
 	ClickTimeout = 0U,				//!< Click Timeout
 	SwipeTimeout,					//!< Swipe Timeout
 	GeneralTimeout,					//!< General Timeout
@@ -309,7 +309,7 @@ typedef enum PACK__ _MTCH6102_GESTURE_DIAGNOSTIC {
 
 /*** REGISTERS (ONES THAT NEED SOME BITFIELD UNIONS) DEFINITION ***/
 // TOUCH REGISTERS
-typedef union _uMTCH_REG__TOUCHSTATE {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t FRAME	:4;		//!< Increments on every touch frame
@@ -320,21 +320,21 @@ typedef union _uMTCH_REG__TOUCHSTATE {
 	} Bits;
 } uMTCH_REG__TOUCHSTATE;
 
-typedef union _uMTCH_REG__TOUCHX {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t TOUCHX11_4	:8;		//!< coord TOUCHX<11:4>
 	} Bits;
 } uMTCH_REG__TOUCHX;
 
-typedef union _uMTCH_REG__TOUCHY {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t TOUCHY11_4	:8;		//!< coord TOUCHY<11:4>
 	} Bits;
 } uMTCH_REG__TOUCHY;
 
-typedef union _uMTCH_REG__TOUCHLSB {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t TOUCHX3_0	:4;		//!< coord TOUCHX<3:0>
@@ -343,7 +343,7 @@ typedef union _uMTCH_REG__TOUCHLSB {
 } uMTCH_REG__TOUCHLSB;
 
 // CORE REGISTERS
-typedef union _uMTCH_REG__CMD {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t NV	:1;
@@ -356,7 +356,7 @@ typedef union _uMTCH_REG__CMD {
 	} Bits;
 } uMTCH_REG__CMD;
 
-typedef union _uMTCH_REG__MODE {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t				:4;
@@ -364,7 +364,7 @@ typedef union _uMTCH_REG__MODE {
 	} Bits;
 } uMTCH_REG__MODE;
 
-typedef union _uMTCH_REG__MODE_CON {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		MTCH6102_TYPE	TYPE	:4;		//!< Type of result

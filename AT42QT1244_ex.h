@@ -1,6 +1,6 @@
 /*!\file AT42QT1244_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief AT42QT1244 Driver extensions
 ** \details AT42QT1244: 24-key QMatrix FMEA IEC/EN/UL60730 Touch Sensor
 **/
@@ -22,10 +22,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\union _uAT42QT_REG_MAP
+/*!\union uAT42QT_REG_MAP
 ** \brief Union of AT42QT1244 registry map
 **/
-typedef union _uAT42QT_REG_MAP {
+typedef union {
 	uint8_t Bytes[251];
 	struct PACK__ {
 		uint8_t						Res_1;

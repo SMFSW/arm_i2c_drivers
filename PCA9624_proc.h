@@ -1,6 +1,6 @@
 /*!\file PCA9624_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief PCA9624 Driver procedures
 ** \details PCA9624: 8-bit Fm+ I2C-bus 100mA 40V LED driver
 **/
@@ -28,10 +28,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct _PCA9624_t
+/*!\struct PCA9624_t
 ** \brief PCA9624 user interface struct
 **/
-typedef struct _PCA9624_t {
+typedef struct {
 	uPCA9624_REG__LEDOUT	LDR;			//!< LED output drive registers
 	struct {
 	I2C_slave_t *			slave_inst;		//!< Slave structure

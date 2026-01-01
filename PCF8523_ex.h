@@ -1,6 +1,6 @@
 /*!\file PCF8523_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief PCF8523 Driver extensions
 ** \details PCF8523: Real-Time Clock (RTC) and calendar
 **/
@@ -27,10 +27,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\union _uPCF8523_REG_MAP
+/*!\union uPCF8523_REG_MAP
 ** \brief Union of PCF8523 registry map
 **/
-typedef union _uPCF8523_REG_MAP {
+typedef union {
 	uint8_t Bytes[20];
 	struct PACK__ {
 		uPCF8523_REG__CTRL1			Control_1;

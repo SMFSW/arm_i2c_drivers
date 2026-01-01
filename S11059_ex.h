@@ -1,6 +1,6 @@
 /*!\file S11059_ex.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief S11059 Driver extensions
 ** \details S11059: I2C interface-compatible color sensor
 **/
@@ -22,10 +22,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _S11059_chan
+/*!\enum S11059_chan
 ** \brief Light type channels of S11059
 **/
-typedef enum PACK__ _S11059_chan {
+typedef enum PACK__ {
 	S11059__CHAN_RED = 0U,	//!< Red light channel
 	S11059__CHAN_GREEN,		//!< Green light channel
 	S11059__CHAN_BLUE,		//!< Blue light channel
@@ -33,10 +33,10 @@ typedef enum PACK__ _S11059_chan {
 } S11059_chan;
 
 
-/*!\union _uS11059_REG_MAP
+/*!\union uS11059_REG_MAP
 ** \brief Union of S11059 registry map
 **/
-typedef union _uS11059_REG_MAP {
+typedef union {
 	uint8_t Bytes[11];
 	struct PACK__ {
 		uS11059_REG__CONTROL	Control;			//!< Control register

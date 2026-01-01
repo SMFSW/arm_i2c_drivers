@@ -1,6 +1,6 @@
 /*!\file MTCH6102_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief MTCH6102 Driver procedures
 ** \details MTCH6102: Low-Power Projected Capacitive Touch Controller
 **/
@@ -33,7 +33,7 @@ extern uint8_t MTCH6102_default_cfg[MTCH__I2CADDR - MTCH__NUMBER_OF_X_CHANNELS +
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-typedef struct _MTCH6102_raw_gest {
+typedef struct {
 	uMTCH_REG__TOUCHSTATE		Touch_state;	//!< Raw touch state
 	uMTCH_REG__TOUCHX			Touch_x;		//!< Raw x coordinate (MSB)
 	uMTCH_REG__TOUCHY			Touch_y;		//!< Raw y coordinate (MSB)
@@ -43,7 +43,7 @@ typedef struct _MTCH6102_raw_gest {
 } MTCH6102_raw_gest;
 
 
-typedef struct _MTCH6102_gest {
+typedef struct {
 	sCoord2D						Coords;		//!< Coordinates
 	MTCH6102_GESTURE_STATE			State;		//!< State
 	MTCH6102_GESTURE_DIAGNOSTIC		Diag;		//!< Diagnostic
@@ -54,10 +54,10 @@ typedef struct _MTCH6102_gest {
 } MTCH6102_gest;
 
 
-/*!\struct _MTCH6102_t
+/*!\struct MTCH6102_t
 ** \brief MTCH6102 user interface struct
 **/
-typedef struct _MTCH6102_t {
+typedef struct {
 	MTCH6102_gest		touch;			//!< MTCH6102 decoded coordinates & gesture
 	int16_t				min_x;			//!< Minimum possible x value
 	int16_t				max_x;			//!< Maximum possible x value

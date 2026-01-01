@@ -1,6 +1,6 @@
 /*!\file I2CMEM.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief FRAM / EEPROM Driver
 ** \note Fully compatible between EEPROM / FRAM type components
 ** \note When EEPROM compatibility is not needed, buf_size at init can be set to \ref I2CMEM_WBUF_NONE for more efficiency
@@ -40,10 +40,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct _I2CMEM_t
+/*!\struct I2CMEM_t
 ** \brief I2CMEM user interface struct
 **/
-typedef struct _I2CMEM_t {
+typedef struct {
 	struct {
 	I2C_slave_t *		slave_inst;		//!< Slave structure
 	size_t				chip_size;		//!< Memory range (number of bytes)

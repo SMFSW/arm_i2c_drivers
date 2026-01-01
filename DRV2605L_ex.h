@@ -1,6 +1,6 @@
 /*!\file DRV2605L.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief DRV2605L Driver extensions
 ** \details DRV2605L: 2 to 5.2V Haptic Driver for LRA and ERM With Effect Library and Smart-Loop Architecture
 **/
@@ -22,10 +22,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\union _uDRV_REG_MAP
+/*!\union uDRV_REG_MAP
 ** \brief DRV2605L Register map union
 **/
-typedef union _uDRV_REG_MAP {
+typedef union {
 	uint8_t Bytes[35];
 	struct PACK__ {
 		uDRV_REG__STATUS				Status;

@@ -1,6 +1,6 @@
 /*!\file I2C_peripheral.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief I2C peripheral common
 **/
 /****************************************************************/
@@ -45,10 +45,10 @@
 /*** Peripheral GPIO access ***/
 /******************************/
 
-/*! \struct _PeripheralGPIO_t
-**  \brief i2c peripheral GPIO pin parameters
+/*!\struct PeripheralGPIO_t
+** \brief i2c peripheral GPIO pin parameters
 **/
-typedef struct _PeripheralGPIO_t{
+typedef struct {
 	GPIO_TypeDef *	GPIOx;			//!< HAL GPIO instance
 	uint16_t		GPIO_Pin;		//!< HAL GPIO pin
 	GPIO_PinState	GPIO_Active;	//!< HAL GPIO pin active state

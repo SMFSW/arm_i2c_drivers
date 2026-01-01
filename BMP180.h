@@ -1,6 +1,6 @@
 /*!\file BMP180.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief BMP180 Driver
 ** \details BMP180: Digital pressure sensor
 **/
@@ -37,10 +37,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\enum _BMP180_reg
+/*!\enum BMP180_reg
 ** \brief Register map enum of BMP180
 **/
-typedef enum PACK__ _BMP180_reg {
+typedef enum PACK__ {
 	BMP180__CALIB_AC1_MSB = 0xAAU,	//!< AC1 MSB
 	BMP180__CALIB_AC1_LSB,			//!< AC1 LSB
 	BMP180__CALIB_AC2_MSB,			//!< AC2 MSB
@@ -73,10 +73,10 @@ typedef enum PACK__ _BMP180_reg {
 } BMP180_reg;
 
 
-/*!\enum _BMP180_oversampling
+/*!\enum BMP180_oversampling
 ** \brief Oversampling enum of BMP180
 **/
-typedef enum PACK__ _BMP180_oversampling {
+typedef enum PACK__ {
 	BMP180__OSS_1_TIME = 0U,	//!< Oversampling 1 time
 	BMP180__OSS_2_TIME,			//!< Oversampling 1 time
 	BMP180__OSS_4_TIME,			//!< Oversampling 1 time
@@ -84,39 +84,39 @@ typedef enum PACK__ _BMP180_oversampling {
 } BMP180_oversampling;
 
 
-/*!\enum _BMP180_meas
+/*!\enum BMP180_meas
 ** \brief BMP180 measure types
 **/
-typedef enum PACK__ _BMP180_meas {
+typedef enum PACK__ {
 	BMP180__MEAS_TEMPERATURE = 0x0EU,	//!< Temperature
 	BMP180__MEAS_PRESSURE = 0x14U		//!< Pressure
 } BMP180_meas;
 
 
-/*!\union _uBMP180_REG__OUT_MSB
+/*!\union uBMP180_REG__OUT_MSB
 ** \brief Union for out_msb of BMP180
 **/
-typedef union _uBMP180_REG__OUT_MSB {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t ADC_OUT_MSB		:8;		//!< ADC out msb
 	} Bits;
 } uBMP180_REG__OUT_MSB;
 
-/*!\union _uBMP180_REG__OUT_LSB
+/*!\union uBMP180_REG__OUT_LSB
 ** \brief Union for out_lsb of BMP180
 **/
-typedef union _uBMP180_REG__OUT_LSB {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t ADC_OUT_LSB		:8;		//!< ADC out lsb
 	} Bits;
 } uBMP180_REG__OUT_LSB;
 
-/*!\union _uBMP180_REG__OUT_XLSB
+/*!\union uBMP180_REG__OUT_XLSB
 ** \brief Union for out_xlsb of BMP180
 **/
-typedef union _uBMP180_REG__OUT_XLSB {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		uint8_t 				:3;
@@ -124,10 +124,10 @@ typedef union _uBMP180_REG__OUT_XLSB {
 	} Bits;
 } uBMP180_REG__OUT_XLSB;
 
-/*!\union _uBMP180_REG__MEAS_CTRL
+/*!\union uBMP180_REG__MEAS_CTRL
 ** \brief Union for meas_ctrl of BMP180
 **/
-typedef union _uBMP180_REG__MEAS_CTRL {
+typedef union {
 	uint8_t Byte;
 	struct PACK__ {
 		BMP180_meas			MEAS_CTRL	:5;		//!< Command temperature or pressure

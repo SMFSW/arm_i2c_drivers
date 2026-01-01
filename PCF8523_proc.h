@@ -1,6 +1,6 @@
 /*!\file PCF8523_proc.h
 ** \author SMFSW
-** \copyright MIT (c) 2017-2025, SMFSW
+** \copyright MIT (c) 2017-2026, SMFSW
 ** \brief PCF8523 Driver procedures
 ** \details PCF8523: Real-Time Clock (RTC) and calendar
 **/
@@ -27,10 +27,10 @@
 // *****************************************************************************
 // Section: Types
 // *****************************************************************************
-/*!\struct _PCF8523_date
+/*!\struct PCF8523_date
 ** \brief PCF8523 Date struct
 **/
-typedef struct _PCF8523_date {
+typedef struct {
 	uint8_t		Day;		//!< Day
 	uint8_t		Weekday;	//!< Weekday
 	uint8_t		Month;		//!< Month
@@ -38,20 +38,20 @@ typedef struct _PCF8523_date {
 } PCF8523_date;
 
 
-/*!\struct _PCF8523_time
+/*!\struct PCF8523_time
 ** \brief PCF8523 Time of day struct
 **/
-typedef struct _PCF8523_time {
+typedef struct {
 	uint8_t		Seconds;	//!< Seconds
 	uint8_t		Minutes;	//!< Minutes
 	uint8_t		Hours;		//!< Hours
 } PCF8523_time;
 
 
-/*!\struct _PCF8523_t
+/*!\struct PCF8523_t
 ** \brief PCF8523 user interface struct
 **/
-typedef struct _PCF8523_t {
+typedef struct {
 	PCF8523_date		date;
 	PCF8523_time		time;
 	struct {

@@ -2,7 +2,7 @@
 
 The MIT License (MIT)
 
-Copyright (c) 2017-2025 SMFSW (Sebastien Bizien)
+Copyright (c) 2017-2026 SMFSW (Sebastien Bizien)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22,6 +22,7 @@ SOFTWARE.
 
 ## v1.1
 
+* Unused tags removal (enum/struct/union)
 * DRV2605: Array access out of bounds fix
 * ADS1115 / APDS9930 / APDS9960 / TCS3400 / TCS3472: Computation overflow fixes
 * TMP1075: low temperature threshold fix
@@ -47,7 +48,7 @@ SOFTWARE.
 * FM24C: R/W refactoring to allow operations on the whole chip, bank switching handled internally
 * Every components _hal structures are now hidden to user
 * Singleton components initialized as other components (const copy)
-* I2C address only written one (calling to slave init function), not set by I2C_PERIPHERAL_SET_DEFAULTS anymore
+* I2C address only written once (calling to slave init function), not set by I2C_PERIPHERAL_SET_DEFAULTS anymore
 * DRV2605L: few refactoring of DRV2605L_Init_Sequence
 * Doxygen comments fixes for the whole library
 * Fix case in include names
